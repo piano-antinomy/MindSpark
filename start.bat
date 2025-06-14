@@ -56,16 +56,31 @@ start /B npm start
 REM Wait for frontend to start
 timeout /t 3 /nobreak >nul
 
+REM Get local IP address
+for /f "tokens=2 delims=:" %%a in ('ipconfig ^| findstr /c:"IPv4 Address"') do (
+    set LOCAL_IP=%%a
+    goto :ip_found
+)
+:ip_found
+set LOCAL_IP=%LOCAL_IP: =%
+if "%LOCAL_IP%"=="" set LOCAL_IP=localhost
+
 echo.
 echo 🎉 MindSpark Learning Platform is running!
-echo ======================================
-echo 🌐 Frontend: http://localhost:3000
-echo 🔗 Backend API: http://localhost:5000
+echo ==========================================
+echo 🌐 Local access:
+echo    Frontend:    http://localhost:3000
+echo    Backend API: http://localhost:4092
+echo.
+echo 📱 Network access (other devices):
+echo    Frontend:    http://%LOCAL_IP%:3000
+echo    Backend API: http://%LOCAL_IP%:4092
 echo.
 echo 📚 Test Credentials:
 echo    Username: student1  ^|  Password: password123
 echo    Username: demo      ^|  Password: demo123
 echo.
+echo 💡 Share the network URL with other devices on your network!
 echo Press any key to stop both servers...
 pause >nul
 

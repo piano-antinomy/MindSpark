@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const os = require('os');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -27,7 +28,28 @@ app.get('/math', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'math.html'));
 });
 
-app.listen(PORT, () => {
-    console.log(`MindSpark website server running on http://localhost:${PORT}`);
+// Function to get local IP address
+function getLocalIPAddress() {
+    const interfaces = os.networkInterfaces();
+    for (const name of Object.keys(interfaces)) {
+        for (const interface of interfaces[name]) {
+            if (interface.family === 'IPv4' && !interface.internal) {
+                return interface.address;
+            }
+        }
+    }
+    return 'localhost';
+}
+
+app.listen(PORT, '0.0.0.0', () => {
+    const localIP = getLocalIPAddress();
+    console.log('🎉 MindSpark website server is running!');
+    console.log('==========================================');
+    console.log(`🌐 Local access:    http://localhost:${PORT}`);
+    console.log(`📱 Network access:  http://${localIP}:${PORT}`);
+    console.log('==========================================');
     console.log('Welcome to the MindSpark learning space!');
+    console.log('');
+    console.log('💡 Other devices on your network can access:');
+    console.log(`   http://${localIP}:${PORT}`);
 }); 

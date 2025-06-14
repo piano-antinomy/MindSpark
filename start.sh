@@ -66,16 +66,31 @@ FRONTEND_PID=$!
 # Wait a moment for frontend to start
 sleep 3
 
+# Get local IP address
+LOCAL_IP=$(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | head -1)
+if [ -z "$LOCAL_IP" ]; then
+    LOCAL_IP=$(hostname -I | awk '{print $1}' 2>/dev/null)
+fi
+if [ -z "$LOCAL_IP" ]; then
+    LOCAL_IP="localhost"
+fi
+
 echo ""
 echo "🎉 MindSpark Learning Platform is running!"
-echo "======================================"
-echo "🌐 Frontend: http://localhost:3000"
-echo "🔗 Backend API: http://localhost:5000"
+echo "=========================================="
+echo "🌐 Local access:"
+echo "   Frontend:    http://localhost:3000"
+echo "   Backend API: http://localhost:4092"
+echo ""
+echo "📱 Network access (other devices):"
+echo "   Frontend:    http://$LOCAL_IP:3000"
+echo "   Backend API: http://$LOCAL_IP:4092"
 echo ""
 echo "📚 Test Credentials:"
 echo "   Username: student1  |  Password: password123"
 echo "   Username: demo      |  Password: demo123"
 echo ""
+echo "💡 Share the network URL with other devices on your network!"
 echo "Press Ctrl+C to stop both servers"
 echo ""
 

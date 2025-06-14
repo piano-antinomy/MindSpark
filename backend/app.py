@@ -307,4 +307,26 @@ def submit_quiz(topic):
     })
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000) 
+    import socket
+    
+    def get_local_ip():
+        try:
+            # Connect to a remote server to determine local IP
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.connect(("8.8.8.8", 80))
+            ip = s.getsockname()[0]
+            s.close()
+            return ip
+        except:
+            return 'localhost'
+    
+    local_ip = get_local_ip()
+    print('🐍 MindSpark backend server is running!')
+    print('=====================================')
+    print(f'🌐 Local access:    http://localhost:4092')
+    print(f'📡 Network access:  http://{local_ip}:4092')
+    print('=====================================')
+    print('Backend API is ready for connections!')
+    print('')
+    
+    app.run(debug=True, host='0.0.0.0', port=4092) 

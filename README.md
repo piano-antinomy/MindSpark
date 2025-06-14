@@ -47,49 +47,49 @@ MindSpark/
 - Node.js 14+
 - npm or yarn
 
-### Backend Setup (Python Flask)
+### Option 1: Quick Start (Automated)
 
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
+**For macOS/Linux:**
+```bash
+./start.sh
+```
 
-2. Create a virtual environment (recommended):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+**For Windows:**
+```bash
+start.bat
+```
 
-3. Install Python dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+The automated scripts will handle dependency installation and start both servers automatically.
 
-4. Run the Flask backend:
-   ```bash
-   python app.py
-   ```
+### Option 2: Manual Setup
 
-The backend will start on `http://localhost:5000`
+If you prefer to start the servers manually or need more control:
 
-### Frontend Setup (Node.js)
+#### 1. Backend Setup (Python Flask)
 
-1. Navigate to the website directory:
-   ```bash
-   cd website
-   ```
+**Terminal 1 - Backend Server:**
+```bash
+cd backend
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+```
 
-2. Install Node.js dependencies:
-   ```bash
-   npm install
-   ```
+The backend will start on `http://localhost:4092`
 
-3. Start the frontend server:
-   ```bash
-   npm start
-   ```
+#### 2. Frontend Setup (Node.js)
+
+**Terminal 2 - Frontend Server:**
+```bash
+cd website
+npm install
+npm start
+```
 
 The website will be available at `http://localhost:3000`
+
+**Note:** Both servers must be running simultaneously for the platform to work properly.
 
 ## 🎓 How to Use
 

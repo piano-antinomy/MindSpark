@@ -1,4 +1,5 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+// Dynamically determine API base URL based on current host
+const API_BASE_URL = `http://${window.location.hostname}:4092/api`;
 
 document.addEventListener('DOMContentLoaded', function() {
     // Check if user is logged in
