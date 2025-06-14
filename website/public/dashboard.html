@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MindSpark</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>MindSpark Dashboard</h1>
+                <div class="user-info">
+                    <span id="userWelcome">Welcome, User!</span>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <div class="dashboard-grid">
+                <!-- Scoreboard Section -->
+                <div class="dashboard-card scoreboard-card">
+                    <h2>📊 Your Scoreboard</h2>
+                    <div class="score-display">
+                        <div class="total-score">
+                            <h3>Total Score</h3>
+                            <span id="totalScore" class="score-number">0</span>
+                        </div>
+                        <div class="level-info">
+                            <h4>Math Level</h4>
+                            <span id="mathLevel" class="level-badge">Not Assessed</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <h4>Recent Progress</h4>
+                        <div id="recentQuizzes" class="quiz-history">
+                            <p>No quiz results yet. Start learning to see your progress!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="dashboard-card stats-card">
+                    <h2>📈 Quick Stats</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number" id="completedLessons">0</span>
+                            <span class="stat-label">Lessons Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="quizzesTaken">0</span>
+                            <span class="stat-label">Quizzes Taken</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Path -->
+                <div class="dashboard-card learning-path-card">
+                    <h2>🎯 Your Learning Path</h2>
+                    <p>Choose what you want to learn next:</p>
+                    <a href="subjects.html" class="btn btn-primary">Explore Subjects</a>
+                    <div class="current-progress">
+                        <h4>Continue Learning</h4>
+                        <div id="currentSubject" class="current-subject">
+                            <p>Take an assessment to get started!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-card activity-card">
+                    <h2>⚡ Recent Activity</h2>
+                    <div id="recentActivity" class="activity-list">
+                        <p>Start learning to see your activity here!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html> 

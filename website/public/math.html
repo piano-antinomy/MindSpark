@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics Learning - MindSpark</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="math-container">
+        <header class="page-header">
+            <div class="header-content">
+                <h1>📊 Mathematics Learning</h1>
+                <p>Master math concepts at your own pace</p>
+                <nav class="breadcrumb">
+                    <a href="dashboard.html">Dashboard</a> > 
+                    <a href="subjects.html">Subjects</a> > 
+                    Mathematics
+                </nav>
+            </div>
+        </header>
+
+        <main class="math-main">
+            <!-- Assessment Section -->
+            <section id="assessmentSection" class="math-section">
+                <div class="section-card">
+                    <h2>🎯 Let's Find Your Math Level</h2>
+                    <p>Take a quick assessment to personalize your learning experience</p>
+                    <button id="startAssessmentBtn" class="btn btn-primary">Start Assessment</button>
+                </div>
+            </section>
+
+            <!-- Assessment Questions -->
+            <section id="assessmentQuestions" class="math-section" style="display: none;">
+                <div class="section-card">
+                    <h2>Assessment Questions</h2>
+                    <div id="questionsContainer">
+                        <!-- Questions will be loaded here -->
+                    </div>
+                    <button id="submitAssessmentBtn" class="btn btn-primary" style="display: none;">Submit Assessment</button>
+                </div>
+            </section>
+
+            <!-- Topics Section -->
+            <section id="topicsSection" class="math-section" style="display: none;">
+                <div class="section-card">
+                    <h2>📚 Available Topics</h2>
+                    <div class="level-info">
+                        <span>Your Level: </span>
+                        <span id="currentLevel" class="level-badge">Beginner</span>
+                    </div>
+                    <div id="topicsContainer" class="topics-grid">
+                        <!-- Topics will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lesson Section -->
+            <section id="lessonSection" class="math-section" style="display: none;">
+                <div class="section-card">
+                    <div class="lesson-header">
+                        <h2 id="lessonTitle">Lesson Title</h2>
+                        <button id="backToTopics" class="btn btn-secondary">← Back to Topics</button>
+                    </div>
+                    <div id="lessonContent" class="lesson-content">
+                        <!-- Lesson content will be loaded here -->
+                    </div>
+                    <div class="lesson-actions">
+                        <button id="takeQuizBtn" class="btn btn-primary">Take Quiz</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Section -->
+            <section id="quizSection" class="math-section" style="display: none;">
+                <div class="section-card">
+                    <div class="quiz-header">
+                        <h2 id="quizTitle">Quiz: Topic Name</h2>
+                        <div class="quiz-progress">
+                            <span id="questionCounter">Question 1 of 5</span>
+                        </div>
+                    </div>
+                    <div id="quizContainer">
+                        <!-- Quiz questions will be loaded here -->
+                    </div>
+                    <div class="quiz-actions">
+                        <button id="nextQuestionBtn" class="btn btn-primary" style="display: none;">Next Question</button>
+                        <button id="submitQuizBtn" class="btn btn-primary" style="display: none;">Submit Quiz</button>
+                        <button id="backToLessonBtn" class="btn btn-secondary">← Back to Lesson</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="math-section" style="display: none;">
+                <div class="section-card">
+                    <h2>🎉 Quiz Results</h2>
+                    <div id="resultsContent" class="results-content">
+                        <!-- Results will be shown here -->
+                    </div>
+                    <div class="results-actions">
+                        <button id="backToTopicsFromResults" class="btn btn-primary">Continue Learning</button>
+                        <button id="retakeQuizBtn" class="btn btn-secondary">Retake Quiz</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/math.js"></script>
+</body>
+</html> 
