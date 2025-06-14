@@ -570,14 +570,78 @@ body {
 .score-display {
     font-size: 3rem;
     font-weight: bold;
-    color: #4f46e5;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.score-display.perfect {
+    color: #059669;
+    text-shadow: 0 0 10px rgba(5, 150, 105, 0.3);
+}
+
+.score-display.excellent {
+    color: #0284c7;
+    text-shadow: 0 0 10px rgba(2, 132, 199, 0.3);
+}
+
+.score-display.good {
+    color: #7c3aed;
+    text-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+}
+
+.score-display.needs-practice {
+    color: #dc2626;
+    text-shadow: 0 0 10px rgba(220, 38, 38, 0.3);
+}
+
+.motivational-message {
+    margin-bottom: 1.5rem;
+}
+
+.motivational-message h3 {
+    font-size: 1.5rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.results-details {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.points-earned {
+    font-weight: 600;
+    color: #059669;
+    margin-top: 0.5rem;
+}
+
+.progress-indicator {
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
     margin-bottom: 1rem;
 }
 
-.results-message {
-    font-size: 1.2rem;
-    color: #1f2937;
-    margin-bottom: 2rem;
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4f46e5, #06b6d4);
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.quiz-theme-info {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+    font-style: italic;
 }
 
 .loading {

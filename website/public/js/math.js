@@ -237,7 +237,17 @@ async function startQuiz() {
                 currentQuizAnswers = new Array(data.questions.length).fill(null);
                 currentQuestionIndex = 0;
                 
-                document.getElementById('quizTitle').textContent = `Quiz: ${data.topic}`;
+                // Display themed quiz title and intro
+                document.getElementById('quizTitle').textContent = `${data.intro}`;
+                
+                // Add theme info if available
+                if (data.theme) {
+                    const themeInfo = document.createElement('div');
+                    themeInfo.className = 'quiz-theme-info';
+                    themeInfo.innerHTML = `<p><em>Theme: ${data.theme.replace('_', ' ').toUpperCase()}</em></p>`;
+                    document.getElementById('quizTitle').appendChild(themeInfo);
+                }
+                
                 displayCurrentQuestion();
                 showQuizSection();
             }
@@ -316,6 +326,9 @@ async function submitQuiz() {
     if (!currentLesson) return;
     
     try {
+        // Collect correct answers from quiz questions
+        const correctAnswers = currentQuizQuestions.map(q => q.correct);
+        
         const response = await fetch(`${API_BASE_URL}/math/quiz/${encodeURIComponent(currentLesson.topic)}`, {
             method: 'POST',
             headers: {
@@ -323,7 +336,8 @@ async function submitQuiz() {
             },
             credentials: 'include',
             body: JSON.stringify({
-                answers: currentQuizAnswers
+                answers: currentQuizAnswers,
+                correct_answers: correctAnswers
             })
         });
 
@@ -346,13 +360,24 @@ async function submitQuiz() {
 }
 
 function displayResults(results) {
+    const scoreClass = results.score >= 90 ? 'perfect' : 
+                      results.score >= 75 ? 'excellent' : 
+                      results.score >= 60 ? 'good' : 'needs-practice';
+    
     const resultsHTML = `
-        <div class="score-display">${results.score.toFixed(1)}%</div>
-        <div class="results-message">
-            You got ${results.correct} out of ${results.total} questions correct!<br>
-            You earned ${results.points_earned} points!
+        <div class="score-display ${scoreClass}">${results.score.toFixed(1)}%</div>
+        <div class="motivational-message">
+            <h3>${results.message}</h3>
         </div>
-        <p>${results.message}</p>
+        <div class="results-details">
+            <p>${results.detailed_message}</p>
+            <p class="points-earned">🎉 You earned ${results.points_earned} points!</p>
+        </div>
+        <div class="progress-indicator">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: ${results.score}%"></div>
+            </div>
+        </div>
     `;
     
     document.getElementById('resultsContent').innerHTML = resultsHTML;

@@ -27,44 +27,12 @@ users_db = {
     }
 }
 
-# Math content organized by level
-math_content = {
-    "beginner": {
-        "topics": ["Basic Addition", "Basic Subtraction", "Numbers 1-100"],
-        "lessons": {
-            "Basic Addition": {
-                "content": "Addition is combining two or more numbers to get a total. For example: 2 + 3 = 5",
-                "examples": ["1 + 1 = 2", "5 + 3 = 8", "10 + 7 = 17"]
-            },
-            "Basic Subtraction": {
-                "content": "Subtraction is taking away one number from another. For example: 5 - 2 = 3",
-                "examples": ["10 - 3 = 7", "8 - 4 = 4", "15 - 6 = 9"]
-            }
-        }
-    },
-    "intermediate": {
-        "topics": ["Multiplication", "Division", "Fractions"],
-        "lessons": {
-            "Multiplication": {
-                "content": "Multiplication is repeated addition. For example: 3 × 4 = 12 (adding 3 four times)",
-                "examples": ["2 × 3 = 6", "5 × 4 = 20", "7 × 6 = 42"]
-            },
-            "Division": {
-                "content": "Division is splitting a number into equal parts. For example: 12 ÷ 3 = 4",
-                "examples": ["15 ÷ 3 = 5", "24 ÷ 6 = 4", "35 ÷ 7 = 5"]
-            }
-        }
-    },
-    "advanced": {
-        "topics": ["Algebra", "Geometry", "Calculus Basics"],
-        "lessons": {
-            "Algebra": {
-                "content": "Algebra uses letters to represent unknown numbers. For example: x + 5 = 10, so x = 5",
-                "examples": ["2x = 10, x = 5", "x + 3 = 8, x = 5", "3x - 6 = 9, x = 5"]
-            }
-        }
-    }
-}
+# Import the new math module
+from math_content.content import math_content
+from math_content.quiz_generator import QuizGenerator
+
+# Initialize quiz generator
+quiz_generator = QuizGenerator()
 
 @app.route('/api/login', methods=['POST'])
 def login():
@@ -226,65 +194,44 @@ def get_math_quiz(topic):
     if 'username' not in session:
         return jsonify({'success': False, 'message': 'Not authenticated'}), 401
     
-    # Generate random quiz questions based on topic
-    quiz_questions = []
+    username = session['username']
+    user_level = users_db[username]['math_level'] or 'beginner'
     
-    if topic == "Basic Addition":
-        for i in range(5):
-            a = random.randint(1, 20)
-            b = random.randint(1, 20)
-            correct = a + b
-            options = [correct, correct + 1, correct - 1, correct + 2]
-            random.shuffle(options)
-            quiz_questions.append({
-                'id': i + 1,
-                'question': f'What is {a} + {b}?',
-                'options': options,
-                'correct': options.index(correct)
-            })
+    # Generate fun themed quiz using the new quiz generator
+    quiz_data = quiz_generator.generate_quiz(topic, difficulty=user_level, num_questions=5)
     
-    elif topic == "Basic Subtraction":
-        for i in range(5):
-            a = random.randint(10, 30)
-            b = random.randint(1, a)
-            correct = a - b
-            options = [correct, correct + 1, correct - 1, correct + 2]
-            random.shuffle(options)
-            quiz_questions.append({
-                'id': i + 1,
-                'question': f'What is {a} - {b}?',
-                'options': options,
-                'correct': options.index(correct)
-            })
-    
-    else:
-        # Default questions for other topics
-        quiz_questions = [
-            {
-                'id': 1,
-                'question': f'This is a sample question for {topic}',
-                'options': ['A', 'B', 'C', 'D'],
-                'correct': 0
-            }
-        ]
-    
-    return jsonify({'success': True, 'questions': quiz_questions, 'topic': topic})
+    return jsonify({
+        'success': True, 
+        'questions': quiz_data['questions'], 
+        'topic': topic,
+        'theme': quiz_data['theme'],
+        'intro': quiz_data['intro']
+    })
 
 @app.route('/api/math/quiz/<topic>', methods=['POST'])
 def submit_quiz(topic):
     if 'username' not in session:
         return jsonify({'success': False, 'message': 'Not authenticated'}), 401
     
+    from math_content.content import get_score_message
+    
     data = request.get_json()
     answers = data.get('answers', [])
+    correct_answers = data.get('correct_answers', [])
     
-    # For demo purposes, we'll assume the quiz was generated correctly
-    # In a real app, you'd store the quiz questions and validate against them
-    correct_count = sum(1 for i, answer in enumerate(answers) if answer is not None)
+    # Calculate score properly
+    correct_count = 0
+    for i, answer in enumerate(answers):
+        if answer is not None and i < len(correct_answers):
+            if answer == correct_answers[i]:
+                correct_count += 1
+    
     total_questions = len(answers)
-    
     score = (correct_count / total_questions) * 100 if total_questions > 0 else 0
     points = correct_count * 5
+    
+    # Get motivational message based on score
+    motivational_message = get_score_message(score)
     
     username = session['username']
     users_db[username]['score'] += points
@@ -303,7 +250,8 @@ def submit_quiz(topic):
         'correct': correct_count,
         'total': total_questions,
         'points_earned': points,
-        'message': f'Quiz completed! You scored {score:.1f}%'
+        'message': motivational_message,
+        'detailed_message': f'You got {correct_count} out of {total_questions} questions correct!'
     })
 
 if __name__ == '__main__':
