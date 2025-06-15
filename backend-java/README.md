@@ -81,7 +81,16 @@ java -cp target/classes:target/dependency/* com.mindspark.MindSparkApplication
 
 The server runs on **port 4072** and provides the following endpoints:
 
-### Base URL: `http://localhost:4072/api/questions/math`
+### Authentication Endpoints: `http://localhost:4072/api/auth`
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/login` | User login with username/password |
+| POST | `/logout` | User logout |
+| GET | `/profile` | Get user profile (requires authentication) |
+| GET | `/status` | Check authentication status |
+
+### Questions Endpoints: `http://localhost:4072/api/questions/math`
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -90,6 +99,19 @@ The server runs on **port 4072** and provides the following endpoints:
 | GET | `/health` | Health check endpoint |
 
 ### Examples
+
+**Login:**
+```bash
+curl -X POST http://localhost:4072/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"demo","password":"demo123"}'
+```
+
+**Get user profile (with session):**
+```bash
+curl http://localhost:4072/api/auth/profile \
+  --cookie-jar cookies.txt --cookie cookies.txt
+```
 
 **Get available math levels:**
 ```bash
@@ -146,6 +168,16 @@ To change the server port, modify the `PORT` constant in `MindSparkApplication.j
 private static final int PORT = 4072; // Change this
 ```
 
+### Demo Users
+The following test users are available for login:
+
+| Username | Password | Level | Score | Description |
+|----------|----------|-------|-------|-------------|
+| demo | demo123 | intermediate | 150 | Demo user |
+| student1 | password123 | beginner | 200 | Student account |
+| teacher | teacher123 | advanced | 500 | Teacher account |
+| admin | admin123 | advanced | 1000 | Admin account |
+
 ### Adding Questions
 1. Create JSON files in the appropriate `questions/level-{n}/` directory
 2. Follow the existing JSON structure
@@ -158,8 +190,16 @@ private static final int PORT = 4072; // Change this
 # Test health endpoint
 curl http://localhost:4072/api/questions/math/health
 
+# Test authentication
+curl -X POST http://localhost:4072/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"username":"demo","password":"demo123"}'
+
 # Test question retrieval
 curl http://localhost:4072/api/questions/math/level/1
+
+# Run comprehensive test
+./test-auth.sh
 ```
 
 ## 📝 Logging

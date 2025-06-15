@@ -6,6 +6,8 @@ import com.google.inject.servlet.GuiceServletContextListener;
 import com.google.inject.servlet.ServletModule;
 import com.mindspark.config.MindSparkModule;
 import com.mindspark.controller.QuestionController;
+import com.mindspark.controller.AuthController;
+import com.mindspark.controller.SubjectController;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.slf4j.Logger;
@@ -49,6 +51,11 @@ public class MindSparkApplication {
             logger.info("✅ MindSpark Java Backend started successfully!");
             logger.info("🌐 Server running on: http://localhost:{}", PORT);
             logger.info("📚 Available endpoints:");
+            logger.info("   POST /api/auth/login              - User login");
+            logger.info("   POST /api/auth/logout             - User logout");
+            logger.info("   GET  /api/auth/profile            - Get user profile");
+            logger.info("   GET  /api/auth/status             - Check authentication status");
+            logger.info("   GET  /api/subjects                - Get available subjects");
             logger.info("   GET  /api/questions/math          - Get available levels for math");
             logger.info("   GET  /api/questions/math/level/1  - Get math questions for level 1");
             logger.info("   GET  /api/questions/math/level/2  - Get math questions for level 2");
@@ -75,6 +82,8 @@ public class MindSparkApplication {
                     @Override
                     protected void configureServlets() {
                         serve("/api/questions/math/*").with(QuestionController.class);
+                        serve("/api/auth/*").with(AuthController.class);
+                        serve("/api/subjects").with(SubjectController.class);
                     }
                 }
             );

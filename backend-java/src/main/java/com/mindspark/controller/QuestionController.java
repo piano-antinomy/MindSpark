@@ -3,6 +3,7 @@ package com.mindspark.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mindspark.model.Question;
 import com.mindspark.service.QuestionService;
+import com.mindspark.util.CorsUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,9 +40,7 @@ public class QuestionController extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         
         // Enable CORS
-        response.setHeader("Access-Control-Allow-Origin", "*");
-        response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        CorsUtils.setCorsHeaders(request, response);
         
         String pathInfo = request.getPathInfo();
         logger.debug("Processing GET request for path: {}", pathInfo);
@@ -67,9 +66,7 @@ public class QuestionController extends HttpServlet {
     protected void doOptions(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         // Handle preflight CORS request
-        response.setHeader("Access-Control-Allow-Origin", "*");
-        response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+        CorsUtils.setCorsHeaders(request, response);
         response.setStatus(HttpServletResponse.SC_OK);
     }
     
