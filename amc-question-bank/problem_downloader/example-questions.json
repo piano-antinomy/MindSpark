@@ -25,10 +25,26 @@
     "answer": "D",
     "solutions": [
       {
-        "solution_id": 1,
-        "type": "text",
-        "value": ["First, we need to evaluate the expression inside the parentheses. The order of operations dictates that we perform multiplication before addition. So, we calculate \\(8 \\times 4 = 32\\) and \\(8 + 4 \\times 2 = 8 + 8 = 16\\). Now, we can substitute these values back into the expression:\\[(8 \\times 4 + 2) - (8 + 4 \\times 2) = (32 + 2) - 16 = 34 - 16 = 18\\]Therefore, the value of the expression is \\(18\\)."]
-      }
+        "text": "<p>By the <a href=\"/wiki/index.php/Order_of_operations\" title=\"Order of operations\">order of operations</a>, we have <INSERTION_INDEX_1></p>~apex304, TaeKim, MRENTHUSIASM",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/c/a/6/ca65b4deda49fe016bb9a5e17aa20b0b81e87a39.png",
+            "alt_type": "latex",
+            "alt_value": "\\[(8 \\times 4 + 2) - (8 + 4 \\times 2) = (32+2) - (8+8) = 34 - 16 = \\boxed{\\textbf{(D)}\\ 18}.\\]"
+          }
+        }
+      },
+      {
+        "text": "<p>We can simplify the expression above in another way: <INSERTION_INDEX_1></p><p>~MathFun1000</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/6/2/3/6234432209092a582bac14d392cbfca5ee640b6e.png",
+            "alt_type": "latex",
+            "alt_value": "\\[(8 \\times 4 + 2) - (8 + 4 \\times 2)=8\\times4+2-8-4\\times2=32+2-8-8=34-16=\\boxed{\\textbf{(D)}\\ 18}.\\]"
+          }
+        }
+      },
+
     ]
   },
   {
@@ -56,10 +72,35 @@
     "answer": "B",
     "solutions": [
       {
-        "solution_id": 1,
-        "type": "text",
-        "value": [""]
-      }
+        "text": "<p>Notice that when we unfold the paper along the vertical fold line, we get the following shape:</p><p><br /><INSERTION_INDEX_1></p><p>Therefore the answer is <INSERTION_INDEX_2>.</p><p>~MrThinker</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/e/a/1/ea168c59de1838ccc582149a810ed68af3cb9940.png",
+            "alt_type": "asy",
+            "alt_value": "[asy]  size(90); path sq = (-0.5,0)--(0.5,0)--(0.5,0.5)--(-0.5,0.5)--cycle; path trE = (-0.25,0)--(0.25,0)--(0,0.25)--cycle;  real sh = 1.5; filldraw(shift((sh,-sh))*sq,mediumgrey,black); filldraw(shift((sh,-sh))*trE,white,black);  size(90); path sq = (-0.5,-0.5)--(0.5,-0.5)--(0.5,0.5)--(-0.5,0.5)--cycle; path sqE = (-0.25,0)--(0,-0.25)--(0.25,0)--(0,0.25)--cycle;  real sh = 1.5; filldraw(shift((sh,-sh))*sq,mediumgrey,black); filldraw(shift((sh,-sh))*sqE,white,black); [/asy]"
+          },
+          "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/b/f/6bfc0829f3f29bbf35d0a861644e00cfef0f50ca.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(E)}}$"
+          }
+        }
+      },
+      {
+        "text": "<p>When you fold the paper in that specific way, it shows the top left square. That means that any cut you make on that folded part will look like that on that top left square. Since it is folded into four parts, the cut will reflect on all of the other 3 parts. Since there is a cut diagonally on the bottom right of that square, that will reflect on the other squares, making the shape of <INSERTION_INDEX_1> <INSERTION_INDEX_2></p><p>~AliceDubbleYou</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/6/b/f/6bfc0829f3f29bbf35d0a861644e00cfef0f50ca.png",
+            "alt_type": "latex",
+            "alt_value": "$\\boxed{\\textbf{(E)}}$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/e/a/1/ea168c59de1838ccc582149a810ed68af3cb9940.png",
+            "alt_type": "asy",
+            "alt_value": "[asy]  size(90); path sq = (-0.5,0)--(0.5,0)--(0.5,0.5)--(-0.5,0.5)--cycle; path trE = (-0.25,0)--(0.25,0)--(0,0.25)--cycle;  real sh = 1.5; filldraw(shift((sh,-sh))*sq,mediumgrey,black); filldraw(shift((sh,-sh))*trE,white,black);  size(90); path sq = (-0.5,-0.5)--(0.5,-0.5)--(0.5,0.5)--(-0.5,0.5)--cycle; path sqE = (-0.25,0)--(0,-0.25)--(0.25,0)--(0,0.25)--cycle;  real sh = 1.5; filldraw(shift((sh,-sh))*sq,mediumgrey,black); filldraw(shift((sh,-sh))*sqE,white,black); [/asy]"
+          }
+        }
+      },
     ]
   }
 ]
