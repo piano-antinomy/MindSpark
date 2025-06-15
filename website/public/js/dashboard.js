@@ -1,5 +1,11 @@
-// Dynamically determine API base URL based on current host
-const API_BASE_URL = `http://${window.location.hostname}:4092/api`;
+// Java Backend API Configuration - updated to use Java backend
+const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
+
+// Configuration using Java backend
+const DASHBOARD_CONFIG = {
+    backend: 'java',
+    baseUrl: JAVA_API_BASE_URL
+};
 
 document.addEventListener('DOMContentLoaded', function() {
     // Check if user is logged in
@@ -25,7 +31,7 @@ function checkAuthStatus() {
 
 async function logout() {
     try {
-        await fetch(`${API_BASE_URL}/logout`, {
+        await fetch(`${DASHBOARD_CONFIG.baseUrl}/auth/logout`, {
             method: 'POST',
             credentials: 'include'
         });
@@ -51,7 +57,7 @@ function initializeDashboard() {
 
 async function loadUserProfile() {
     try {
-        const response = await fetch(`${API_BASE_URL}/user/profile`, {
+        const response = await fetch(`${DASHBOARD_CONFIG.baseUrl}/auth/profile`, {
             credentials: 'include'
         });
 
@@ -66,6 +72,11 @@ async function loadUserProfile() {
         }
     } catch (error) {
         console.error('Error loading user profile:', error);
+        // Fallback to localStorage if server request fails
+        const currentUser = checkAuthStatus();
+        if (currentUser) {
+            updateDashboard(currentUser);
+        }
     }
 }
 

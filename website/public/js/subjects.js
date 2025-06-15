@@ -1,5 +1,5 @@
 // Dynamically determine API base URL based on current host
-const API_BASE_URL = `http://${window.location.hostname}:4092/api`;
+const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
 document.addEventListener('DOMContentLoaded', function() {
     // Check if user is logged in
@@ -21,7 +21,7 @@ async function loadSubjects() {
     const subjectsGrid = document.getElementById('subjectsGrid');
     
     try {
-        const response = await fetch(`${API_BASE_URL}/subjects`, {
+        const response = await fetch(`${JAVA_API_BASE_URL}/subjects`, {
             credentials: 'include'
         });
 

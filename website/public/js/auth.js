@@ -1,5 +1,11 @@
-// Dynamically determine API base URL based on current host
-const API_BASE_URL = `http://${window.location.hostname}:4092/api`;
+// Java Backend API Configuration - updated to use Java backend
+const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
+
+// Configuration using Java backend
+const AUTH_CONFIG = {
+    backend: 'java',
+    baseUrl: JAVA_API_BASE_URL
+};
 
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('loginForm');
@@ -12,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const password = document.getElementById('password').value;
         
         try {
-            const response = await fetch(`${API_BASE_URL}/login`, {
+            const response = await fetch(`${AUTH_CONFIG.baseUrl}/auth/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +67,7 @@ function checkAuthStatus() {
 // Logout function
 async function logout() {
     try {
-        await fetch(`${API_BASE_URL}/logout`, {
+        await fetch(`${AUTH_CONFIG.baseUrl}/auth/logout`, {
             method: 'POST',
             credentials: 'include'
         });
@@ -71,4 +77,47 @@ async function logout() {
     
     localStorage.removeItem('currentUser');
     window.location.href = 'login.html';
+}
+
+// Enhanced authentication functions for Java backend
+async function checkServerAuthStatus() {
+    try {
+        const response = await fetch(`${AUTH_CONFIG.baseUrl}/auth/status`, {
+            credentials: 'include'
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            if (data.success && data.authenticated) {
+                localStorage.setItem('currentUser', JSON.stringify(data.user));
+                return data.user;
+            }
+        }
+    } catch (error) {
+        console.error('Auth status check failed:', error);
+    }
+    
+    localStorage.removeItem('currentUser');
+    return null;
+}
+
+// Get user profile from server
+async function getUserProfile() {
+    try {
+        const response = await fetch(`${AUTH_CONFIG.baseUrl}/auth/profile`, {
+            credentials: 'include'
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            if (data.success) {
+                localStorage.setItem('currentUser', JSON.stringify(data.user));
+                return data.user;
+            }
+        }
+    } catch (error) {
+        console.error('Profile fetch failed:', error);
+    }
+    
+    return null;
 } 
