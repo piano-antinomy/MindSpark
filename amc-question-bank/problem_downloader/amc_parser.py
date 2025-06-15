@@ -99,24 +99,51 @@ class AMCParser:
     
     def extract_solutions(self, soup):
         solutions = []
-        solution_sections = soup.find_all('h2')
-        for section in solution_sections:
-            if 'Solution' in section.text:
-                solution_id = len(solutions) + 1
-                solution_text = []
-                current = section.next_sibling
-                while current and (not getattr(current, 'name', None) == 'h2'):
-                    if getattr(current, 'name', None) == 'p':
-                        text = current.text.strip()
-                        if text:
-                            solution_text.append(text)
-                    current = current.next_sibling
-                if solution_text:
-                    solutions.append({
-                        'solution_id': solution_id,
-                        'type': 'text',
-                        'value': solution_text
-                    })
+        
+        # Find all h2 tags that contain solution content
+        solution_headers = []
+        for h2 in soup.find_all('h2'):
+            span = h2.find('span', class_='mw-headline')
+            if span:
+                span_id = span.get('id', '')
+                # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
+                if (span_id == 'Solution' or 
+                    (span_id.startswith('Solution_') and span_id.replace('Solution_', '').isdigit())):
+                    solution_headers.append(h2)
+        
+        # Process each solution section
+        for idx, header in enumerate(solution_headers):
+            insertions = {}
+            insertion_index = 1
+            
+            # Create a copy of the content to modify
+            solution_content = []
+            current = header.next_sibling
+            
+            # Collect all content until next h2
+            while current and (not (getattr(current, 'name', None) == 'h2')):
+                if getattr(current, 'name', None) == 'p':
+                    # Create a copy of the p element to modify
+                    p_copy = current.__copy__()
+                    
+                    # Process images in this p element
+                    insertion_index = self.process_images(p_copy, insertion_index, insertions)
+                    
+                    # Get the HTML content preserving structure
+                    p_html = str(p_copy)
+                    if p_html.strip():
+                        solution_content.append(p_html)
+                        
+                current = current.next_sibling
+            
+            # Combine all paragraph content
+            if solution_content:
+                combined_text = ''.join(solution_content)
+                solutions.append({
+                    'text': combined_text,
+                    'insertions': insertions
+                })
+        
         return solutions
     
     def extract_answer(self, soup):
@@ -188,7 +215,7 @@ def main():
     parser = AMCParser()
     problems = parser.parse_all_problems()
     os.makedirs('backend-java/questions/level-1', exist_ok=True)
-    output_file = 'amc-question-bank/problem_downloader/amc_2023_problems.json'
+    output_file = 'backend-java/questions/level-1/amc_2023_problems.json'
     parser.save_to_json(problems, output_file)
     print(f"Saved {len(problems)} problems to {output_file}")
 
