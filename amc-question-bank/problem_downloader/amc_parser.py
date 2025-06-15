@@ -15,7 +15,7 @@ class AMCParser:
     
     def fetch_problem_page(self, url):
         try:
-            response = requests.get(url, timeout=10)
+            response = requests.get(url, timeout=30)
             response.raise_for_status()
             return response.text
         except requests.RequestException as e:
@@ -32,7 +32,7 @@ class AMCParser:
                 "alt_type": "asy" if "[asy]" in alt_text else "latex",
                 "alt_value": alt_text
             }
-            img.replace_with(f"[{insertion_key}]")
+            img.replace_with(f"<{insertion_key}>")
             insertion_index += 1
         return insertion_index
     
@@ -107,8 +107,9 @@ class AMCParser:
             if span:
                 span_id = span.get('id', '')
                 # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
-                if (span_id == 'Solution' or 
-                    (span_id.startswith('Solution_') and span_id.replace('Solution_', '').isdigit())):
+                if ((span_id == 'Solution' or 
+                    (span_id.startswith('Solution_') and span_id.replace('Solution_', '').isdigit())) and
+                    'Video_Solution' not in span_id):
                     solution_headers.append(h2)
         
         # Process each solution section
@@ -116,11 +117,10 @@ class AMCParser:
             insertions = {}
             insertion_index = 1
             
-            # Create a copy of the content to modify
-            solution_content = []
+            # Collect all content until next h2
+            solution_html_parts = []
             current = header.next_sibling
             
-            # Collect all content until next h2
             while current and (not (getattr(current, 'name', None) == 'h2')):
                 if getattr(current, 'name', None) == 'p':
                     # Create a copy of the p element to modify
@@ -129,18 +129,24 @@ class AMCParser:
                     # Process images in this p element
                     insertion_index = self.process_images(p_copy, insertion_index, insertions)
                     
-                    # Get the HTML content preserving structure
-                    p_html = str(p_copy)
-                    if p_html.strip():
-                        solution_content.append(p_html)
+                    # Convert to string but clean up the HTML
+                    p_html = str(p_copy).strip()
+                    if p_html:
+                        solution_html_parts.append(p_html)
                         
                 current = current.next_sibling
             
-            # Combine all paragraph content
-            if solution_content:
-                combined_text = ''.join(solution_content)
+            # Join with no extra spacing and clean up
+            if solution_html_parts:
+                combined_html = ''.join(solution_html_parts)
+                # Clean up any extra whitespace while preserving structure
+                combined_html = combined_html.replace('\n', '').replace('  ', ' ')
+                # Unescape the insertion placeholders
+                combined_html = combined_html.replace('&lt;INSERTION_INDEX_', '<INSERTION_INDEX_')
+                combined_html = combined_html.replace('&gt;', '>')
+                
                 solutions.append({
-                    'text': combined_text,
+                    'text': combined_html,
                     'insertions': insertions
                 })
         
@@ -163,11 +169,12 @@ class AMCParser:
                     return answer_match.group(1)
         solutions = self.extract_solutions(soup)
         for solution in solutions:
-            for text in solution['value']:
-                for pattern in patterns:
-                    answer_match = re.search(pattern, text)
-                    if answer_match:
-                        return answer_match.group(1)
+            # Search in the solution text content
+            text_content = solution.get('text', '')
+            for pattern in patterns:
+                answer_match = re.search(pattern, text_content)
+                if answer_match:
+                    return answer_match.group(1)
         return None
     
     def parse_problem(self, level, problem_number):
