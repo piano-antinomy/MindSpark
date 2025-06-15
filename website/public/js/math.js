@@ -1,6 +1,16 @@
 // Java Backend API Configuration
 const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
+// Debug mode - set to true to enable detailed console logging
+const DEBUG_MODE = true;
+
+// Debug logging helper
+function debugLog(...args) {
+    if (DEBUG_MODE) {
+        console.log(...args);
+    }
+}
+
 // Global variables
 let availableLevels = [];
 let currentLevel = null;
@@ -26,7 +36,7 @@ function checkAuthStatus() {
 }
 
 function initializeMathPage() {
-    console.log('Initializing Math Page with Java Backend');
+    debugLog('Initializing Math Page with Java Backend');
     hideAllSections();
     initializeLevelSelection();
 }
@@ -52,7 +62,7 @@ async function loadAvailableLevels() {
             }
         }
         throw new Error('Failed to load available levels');
-    } catch (error) {
+            } catch (error) {
         console.error('Error loading available levels:', error);
         showError('Failed to connect to the backend. Please make sure the Java backend server is running on port 4072.');
         return [];
@@ -71,6 +81,8 @@ async function loadQuestionsByLevel(level) {
         if (response.ok) {
             const data = await response.json();
             if (data.success) {
+                debugLog('Raw questions data from backend:', data.questions);
+                debugLog('First question insertions:', data.questions[0]?.question?.insertions);
                 return data.questions;
             }
         }
@@ -247,6 +259,13 @@ function displayCurrentQuestion() {
  * Process question text by replacing insertion markers with actual content
  */
 function processQuestionText(questionText, insertions) {
+    debugLog('processQuestionText called with:', {
+        questionText: questionText,
+        insertions: insertions,
+        insertionsType: typeof insertions,
+        insertionsKeys: insertions ? Object.keys(insertions) : 'null/undefined'
+    });
+    
     if (!insertions) return questionText;
     
     let processedText = questionText;
@@ -256,16 +275,48 @@ function processQuestionText(questionText, insertions) {
         const insertion = insertions[key];
         const marker = key; // e.g., "INSERTION_INDEX_1"
         
+        debugLog(`Processing insertion ${marker}:`, {
+            alt_type: insertion.alt_type,
+            alt_value: insertion.alt_value,
+            picture: insertion.picture
+        });
+        
         if (insertion.alt_type === 'latex' && insertion.alt_value) {
-            // Use LaTeX content
-            processedText = processedText.replace(`[${marker}]`, `\\(${insertion.alt_value}\\)`);
+            // Check if alt_value already has LaTeX delimiters
+            let latexContent = insertion.alt_value;
+            
+            // Fix backslash escaping issues - replace tab characters back to \t
+            latexContent = latexContent.replace(/\t/g, '\\t');
+            // Also fix other common LaTeX commands that might be affected
+            latexContent = latexContent.replace(/	imes/g, '\\times');
+            latexContent = latexContent.replace(/	ext/g, '\\text');
+            latexContent = latexContent.replace(/	frac/g, '\\frac');
+            
+            debugLog(`Original latex: ${insertion.alt_value}`);
+            debugLog(`Fixed latex: ${latexContent}`);
+            
+            if (latexContent.startsWith('$') && latexContent.endsWith('$')) {
+                // Already has $ delimiters, use as-is
+                debugLog(`Using existing $ delimiters: ${latexContent}`);
+                processedText = processedText.replace(`<${marker}>`, latexContent);
+            } else if (latexContent.startsWith('\\(') && latexContent.endsWith('\\)')) {
+                // Already has \\( \\) delimiters, use as-is
+                debugLog(`Using existing \\\\( \\\\) delimiters: ${latexContent}`);
+                processedText = processedText.replace(`<${marker}>`, latexContent);
+            } else {
+                // No delimiters, add \\( \\) for inline math
+                debugLog(`Adding \\\\( \\\\) delimiters to: ${latexContent}`);
+                processedText = processedText.replace(`<${marker}>`, `\\(${latexContent}\\)`);
+            }
         } else if (insertion.picture) {
             // Use picture URL
-            processedText = processedText.replace(`[${marker}]`, `<img src="${insertion.picture}" alt="${insertion.alt_value || 'Question image'}" class="question-image" />`);
+            processedText = processedText.replace(`<${marker}>`, `<img src="${insertion.picture}" alt="${insertion.alt_value || 'Question image'}" class="question-image" />`);
         } else if (insertion.alt_value) {
             // Use alternative text value
-            processedText = processedText.replace(`[${marker}]`, insertion.alt_value);
+            processedText = processedText.replace(`<${marker}>`, insertion.alt_value);
         }
+        
+        debugLog(`After processing ${marker}, text is now:`, processedText);
     });
     
     return processedText;
@@ -281,12 +332,56 @@ function extractQuestionChoices(question) {
     if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
         return questionDetails.text_choices;
     } else if (questionDetails.latex_choices && questionDetails.latex_choices.length > 0) {
-        return questionDetails.latex_choices.map(latex => `\\(${latex}\\)`);
+        // Parse LaTeX choices - they're often in format like:
+        // "$\\textbf{(A)}\\ 0 \\qquad \\textbf{(B)}\\ 6 \\qquad ..."
+        return parseLatexChoices(questionDetails.latex_choices[0]);
     } else if (questionDetails.picture_choices && questionDetails.picture_choices.length > 0) {
         return questionDetails.picture_choices.map(url => `<img src="${url}" alt="Choice" class="choice-image" />`);
     }
     
     return [];
+}
+
+/**
+ * Parse LaTeX choice string into individual choices
+ */
+function parseLatexChoices(latexString) {
+    debugLog('Parsing LaTeX choices:', latexString);
+    
+    // Remove outer $ delimiters if present
+    let cleanString = latexString;
+    if (cleanString.startsWith('$') && cleanString.endsWith('$')) {
+        cleanString = cleanString.slice(1, -1);
+    }
+    
+    debugLog('After removing $ delimiters:', cleanString);
+    
+    // Fix backslash escaping issues like we did for insertions
+    cleanString = cleanString.replace(/	extbf/g, '\\textbf');
+    cleanString = cleanString.replace(/	quad/g, '\\quad');
+    
+    // Split by \\qquad (which separates choices)
+    const parts = cleanString.split('\\qquad');
+    debugLog('Split by \\qquad:', parts);
+    
+    const choices = parts.map(part => {
+        // Clean up each part
+        let choice = part.trim();
+        
+        // Extract choice letter and content from patterns like "\\textbf{(A)}\\ 0"
+        const match = choice.match(/\\textbf\{([^}]+)\}\\?\s*(.+)/);
+        if (match) {
+            const letter = match[1]; // e.g., "(A)" - we don't need this since rendering adds A., B., etc.
+            const content = match[2].trim(); // e.g., "0" - this is what we want
+            return content; // Return only the content, not the letter
+        }
+        
+        // If no match, return the original (might be simpler format)
+        return choice;
+    });
+    
+    debugLog('Parsed choices:', choices);
+    return choices.filter(choice => choice.length > 0);
 }
 
 /**
