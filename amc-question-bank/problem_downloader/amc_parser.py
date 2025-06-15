@@ -221,8 +221,8 @@ class AMCParser:
 def main():
     parser = AMCParser()
     problems = parser.parse_all_problems()
-    os.makedirs('backend-java/questions/level-1', exist_ok=True)
-    output_file = 'backend-java/questions/level-1/amc_2023_problems.json'
+    os.makedirs('../../backend-java/questions/level-1', exist_ok=True)
+    output_file = '../../backend-java/questions/level-1/amc_2023_problems.json'
     parser.save_to_json(problems, output_file)
     print(f"Saved {len(problems)} problems to {output_file}")
 
