@@ -22,46 +22,65 @@ class AMCParser:
             start_year = range_data['start']
             end_year = range_data['end']  # inclusive
             
-            for level_data in range_data['levels']:
-                level = level_data['level']
-                suffix = level_data.get('suffix', '')
-                has_fall_version = level_data.get('has_fall_version', [])  # List of years with fall versions
-                num_problems = level_data.get('num_problems', 25)
-                
-                # Generate competitions for each year in the range
-                for year in range(start_year, end_year + 1):  # +1 because end is inclusive
-                    # Generate regular competition
+            # Check if this is AJHSME
+            if range_data.get('is_AJHSME', False):
+                # Generate AJHSME competitions (no levels, just years)
+                num_problems = range_data.get('num_problems', 25)
+                for year in range(start_year, end_year + 1):
                     competitions.append({
                         'year': year,
-                        'level': level,
-                        'suffix': suffix,
+                        'is_AJHSME': True,
                         'fall_version': False,
                         'num_problems': num_problems
                     })
+            else:
+                # Generate regular AMC competitions
+                for level_data in range_data['levels']:
+                    level = level_data['level']
+                    suffix = level_data.get('suffix', '')
+                    has_fall_version = level_data.get('has_fall_version', [])  # List of years with fall versions
+                    num_problems = level_data.get('num_problems', 25)
                     
-                    # Generate fall version if this year is in the fall version list
-                    if year in has_fall_version:
+                    # Generate competitions for each year in the range
+                    for year in range(start_year, end_year + 1):  # +1 because end is inclusive
+                        # Generate regular competition
                         competitions.append({
                             'year': year,
                             'level': level,
                             'suffix': suffix,
-                            'fall_version': True,
+                            'fall_version': False,
                             'num_problems': num_problems
                         })
+                        
+                        # Generate fall version if this year is in the fall version list
+                        if year in has_fall_version:
+                            competitions.append({
+                                'year': year,
+                                'level': level,
+                                'suffix': suffix,
+                                'fall_version': True,
+                                'num_problems': num_problems
+                            })
         
         return competitions
         
     def get_problem_url(self, competition, problem_number):
         year = competition['year']
-        level = competition['level']
-        suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
         fall_version = competition['fall_version']
         
-        # Build the competition identifier
-        if fall_version:
-            comp_id = f"{year}_Fall_AMC_{level}{suffix}"
+        # Check if this is AJHSME
+        if competition.get('is_AJHSME', False):
+            comp_id = f"{year}_AJHSME"
         else:
-            comp_id = f"{year}_AMC_{level}{suffix}"
+            # Regular AMC competition
+            level = competition['level']
+            suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
+            
+            # Build the competition identifier
+            if fall_version:
+                comp_id = f"{year}_Fall_AMC_{level}{suffix}"
+            else:
+                comp_id = f"{year}_AMC_{level}{suffix}"
             
         return f"{self.base_url}/{comp_id}_Problems/Problem_{problem_number}"
     
@@ -313,26 +332,38 @@ class AMCParser:
     def _get_competition_id(self, competition):
         """Generate human-readable competition identifier for error messages"""
         year = competition['year']
-        level = competition['level']
-        suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
         fall_version = competition['fall_version']
         
-        if fall_version:
-            return f"{year} Fall AMC {level}{suffix}"
+        # Check if this is AJHSME
+        if competition.get('is_AJHSME', False):
+            return f"{year} AJHSME"
         else:
-            return f"{year} AMC {level}{suffix}"
+            # Regular AMC competition
+            level = competition['level']
+            suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
+            
+            if fall_version:
+                return f"{year} Fall AMC {level}{suffix}"
+            else:
+                return f"{year} AMC {level}{suffix}"
     
     def _generate_problem_id(self, competition, problem_number):
         """Generate unique problem ID"""
         year = competition['year']
-        level = competition['level']
-        suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
         fall_version = competition['fall_version']
         
-        if fall_version:
-            return f'amc_{year}_fall_{level}{suffix.lower()}_{problem_number}'
+        # Check if this is AJHSME
+        if competition.get('is_AJHSME', False):
+            return f'ajhsme_{year}_{problem_number}'
         else:
-            return f'amc_{year}_{level}{suffix.lower()}_{problem_number}'
+            # Regular AMC competition
+            level = competition['level']
+            suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
+            
+            if fall_version:
+                return f'amc_{year}_fall_{level}{suffix.lower()}_{problem_number}'
+            else:
+                return f'amc_{year}_{level}{suffix.lower()}_{problem_number}'
     
     def parse_all_problems(self):
         all_problems = []
