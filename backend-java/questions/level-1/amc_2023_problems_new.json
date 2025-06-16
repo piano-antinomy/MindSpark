@@ -2,7 +2,7 @@
   {
     "id": "amc_2023_8_1",
     "question": {
-      "text": "What is the value of <INSERTION_INDEX_1>?",
+      "text": "<p>What is the value of <INSERTION_INDEX_1>?</p>",
       "insertions": {
         "INSERTION_INDEX_1": {
           "picture": "//latex.artofproblemsolving.com/c/1/4/c1483a016785d8481f90f7b8a41b9480bd806ede.png",
@@ -49,7 +49,7 @@
   {
     "id": "amc_2023_8_2",
     "question": {
-      "text": "A square piece of paper is folded twice into four equal quarters, as shown below, then cut along the dashed line. When unfolded, the paper will match which of the following figures?\n<INSERTION_INDEX_1>",
+      "text": "<p>A square piece of paper is folded twice into four equal quarters, as shown below, then cut along the dashed line. When unfolded, the paper will match which of the following figures?<INSERTION_INDEX_1></p>",
       "insertions": {
         "INSERTION_INDEX_1": {
           "picture": "//latex.artofproblemsolving.com/6/d/3/6d385621437744e469b64fd20d5c8183e9e93ac1.png",
@@ -106,7 +106,7 @@
   {
     "id": "amc_2023_8_3",
     "question": {
-      "text": "Wind chill is a measure of how cold people feel when exposed to wind outside. A good estimate for wind chill can be found using this calculation\n<INSERTION_INDEX_1>\nwhere temperature is measured in degrees Fahrenheit <INSERTION_INDEX_2> and the wind speed is measured in miles per hour (mph). Suppose the air temperature is <INSERTION_INDEX_3> and the wind speed is <INSERTION_INDEX_4> mph. Which of the following is closest to the approximate wind chill?",
+      "text": "<p><i>Wind chill</i> is a measure of how cold people feel when exposed to wind outside. A good estimate for wind chill can be found using this calculation<INSERTION_INDEX_1>where temperature is measured in degrees Fahrenheit <INSERTION_INDEX_2> and the wind speed is measured in miles per hour (mph). Suppose the air temperature is <INSERTION_INDEX_3> and the wind speed is <INSERTION_INDEX_4> mph. Which of the following is closest to the approximate wind chill?</p>",
       "insertions": {
         "INSERTION_INDEX_1": {
           "picture": "//latex.artofproblemsolving.com/6/6/8/66810c2843261301faabc4441239f8fa51b1f231.png",
@@ -168,7 +168,7 @@
   {
     "id": "amc_2023_8_4",
     "question": {
-      "text": "The numbers from <INSERTION_INDEX_1> to <INSERTION_INDEX_2> are arranged in a spiral pattern on a square grid, beginning at the center. The first few numbers have been entered into the grid below. Consider the four numbers that will appear in the shaded squares, on the same diagonal as the number <INSERTION_INDEX_3> How many of these four numbers are prime?\n<INSERTION_INDEX_4>\n<INSERTION_INDEX_5>",
+      "text": "<p>The numbers from <INSERTION_INDEX_1> to <INSERTION_INDEX_2> are arranged in a spiral pattern on a square grid, beginning at the center. The first few numbers have been entered into the grid below. Consider the four numbers that will appear in the shaded squares, on the same diagonal as the number <INSERTION_INDEX_3> How many of these four numbers are prime?<INSERTION_INDEX_4><INSERTION_INDEX_5></p>",
       "insertions": {
         "INSERTION_INDEX_1": {
           "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
@@ -198,20 +198,9 @@
       },
       "type": "multiple-choice",
       "text_choices": [],
-      "picture_choices": [
-        "//latex.artofproblemsolving.com/6/e/c/6ec6820e4734959c2e1ea32455e6e37e6ee38967.png",
-        "//latex.artofproblemsolving.com/0/2/a/02af645f20a9874a363187aa704686ebf6104a6a.png",
-        "//latex.artofproblemsolving.com/4/5/3/45378034a4897f58209cf8faa61ce2a2a342548a.png",
-        "//latex.artofproblemsolving.com/c/8/d/c8d06fc910703a003655e44dbcd4f3626ee6d02f.png"
-      ],
-      "latex_choices": [
-        "$\\boxed{\\textbf{(D)}\\ 3}$",
-        "$19,23,$",
-        "$47.$"
-      ],
-      "asy_choices": [
-        "[asy] /* Made by MRENTHUSIASM */ size(175);  void ds(pair p) { \tfilldraw((0.5,0.5)+p--(-0.5,0.5)+p--(-0.5,-0.5)+p--(0.5,-0.5)+p--cycle,mediumgrey); }  ds((0.5,4.5)); ds((1.5,3.5)); ds((3.5,1.5)); ds((4.5,0.5));  add(grid(7,7,grey+linewidth(1.25)));  int adj = 1; int curUp = 2; int curLeft = 4; int curDown = 6; int curRight = 8;  label(\"$1$\",(3.5,3.5));  for (int len = 3; len<=7; len+=2) { \tfor (int i=1; i<=len-1; ++i)     \t\t{ \t\t\tlabel(\"$\"+string(curUp)+\"$\",(3.5+adj,3.5-adj+i));     \t\tlabel(\"$\"+string(curLeft)+\"$\",(3.5+adj-i,3.5+adj));      \t\tlabel(\"$\"+string(curDown)+\"$\",(3.5-adj,3.5+adj-i));     \t\tlabel(\"$\"+string(curRight)+\"$\",(3.5-adj+i,3.5-adj));     \t\t++curDown;     \t\t++curLeft;     \t\t++curUp;     \t\t++curRight; \t\t} \t++adj;     curUp = len^2 + 1;     curLeft = len^2 + len + 2;     curDown = len^2 + 2*len + 3;     curRight = len^2 + 3*len + 4; }  draw((4,4)--(3,4)--(3,3)--(5,3)--(5,5)--(2,5)--(2,2)--(6,2)--(6,6)--(1,6)--(1,1)--(7,1)--(7,7)--(0,7)--(0,0)--(7,0),linewidth(2)); [/asy]"
-      ]
+      "picture_choices": [],
+      "latex_choices": [],
+      "asy_choices": []
     },
     "tags": [],
     "sources": [],

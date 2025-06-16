@@ -22,7 +22,9 @@ class AMCParser:
             print(f"Error fetching {url}: {e}")
             return None
     
-    def process_images(self, element, insertion_index, insertions):
+    def process_images(self, element, insertion_index, insertions, extract_answer=False):
+        extracted_answer = None
+        
         for img in element.find_all('img'):
             alt_text = img.get('alt', '')
             img_src = img.get('src', '')
@@ -32,9 +34,29 @@ class AMCParser:
                 "alt_type": "asy" if "[asy]" in alt_text else "latex",
                 "alt_value": alt_text
             }
+            
+            # Extract answer from LaTeX alt text if requested and not already found
+            if extract_answer and not extracted_answer and alt_text:
+                # Look for the 2 patterns actually found in AMC problems
+                answer_patterns = [
+                    r'\\boxed\{\\textbf\{\(([A-E])\)\}\\?.*?\}',  # \boxed{\textbf{(D)}\ 18}
+                    r'\\boxed\{\\textbf\{\(([A-E])\)\}\}',        # \boxed{\textbf{(D)}}
+                ]
+                
+                for pattern in answer_patterns:
+                    match = re.search(pattern, alt_text)
+                    if match:
+                        extracted_answer = match.group(1)
+                        print(f"Found answer '{extracted_answer}' in LaTeX: {alt_text}")
+                        break
+            
             img.replace_with(f"<{insertion_key}>")
             insertion_index += 1
-        return insertion_index
+        
+        if extract_answer:
+            return insertion_index, extracted_answer
+        else:
+            return insertion_index
     
     def extract_question_and_choices(self, soup):
         # Find the first h2 header that contains the problem
@@ -46,24 +68,52 @@ class AMCParser:
         
         if not problem_header:
             return None, None, None
-            
-        # Get the first p block for question
-        question_p = problem_header.find_next('p')
-        if not question_p:
+        
+        # Collect all p elements under the Problem header until next h2
+        question_p_elements = []
+        current = problem_header.next_sibling
+        
+        while current and (not (getattr(current, 'name', None) == 'h2')):
+            if getattr(current, 'name', None) == 'p':
+                question_p_elements.append(current)
+            current = current.next_sibling
+        
+        if not question_p_elements:
             return None, None, None
-            
-        # Process images and text from the question part
+        
+        # Separate question (all but last p) from choices (last p)
+        question_ps = question_p_elements[:-1] if len(question_p_elements) > 1 else question_p_elements
+        choices_p = question_p_elements[-1] if len(question_p_elements) > 1 else None
+        
+        # Process question part with HTML preservation
         insertions = {}
         insertion_index = 1
-        insertion_index = self.process_images(question_p, insertion_index, insertions)
-        question_text = question_p.text.strip()
+        question_html_parts = []
         
-        # Get the second p block for multiple choice
-        choices_p = question_p.find_next('p')
-        if not choices_p:
-            return None, None, None
+        for p_element in question_ps:
+            # Create a copy of the p element to modify
+            p_copy = p_element.__copy__()
             
-        # Extract choices from the second p block
+            # Process images in this p element
+            insertion_index = self.process_images(p_copy, insertion_index, insertions)
+            
+            # Convert to string but clean up the HTML
+            p_html = str(p_copy).strip()
+            if p_html:
+                question_html_parts.append(p_html)
+        
+        # Join question parts and clean up
+        if question_html_parts:
+            question_text = ''.join(question_html_parts)
+            # Clean up any extra whitespace while preserving structure
+            question_text = question_text.replace('\n', '').replace('  ', ' ')
+            # Unescape the insertion placeholders
+            question_text = question_text.replace('&lt;INSERTION_INDEX_', '<INSERTION_INDEX_')
+            question_text = question_text.replace('&gt;', '>')
+        else:
+            return None, None, None
+        
+        # Process choices if they exist
         choices = {
             'text_choices': [],
             'picture_choices': [],
@@ -71,34 +121,35 @@ class AMCParser:
             'asy_choices': []
         }
         
-        # Process all images in the choices block
-        for img in choices_p.find_all('img'):
-            img_src = img.get('src', '')
-            alt_text = img.get('alt', '')
-            img_class = img.get('class', [])
-            
-            if img_src:
-                # Always add the image source to picture_choices
-                choices['picture_choices'].append(img_src)
+        if choices_p:
+            # Process all images in the choices block
+            for img in choices_p.find_all('img'):
+                img_src = img.get('src', '')
+                alt_text = img.get('alt', '')
                 
-                # Categorize based on alt text
-                if alt_text.startswith('$'):
-                    # This is a LaTeX choice
-                    choices['latex_choices'].append(alt_text)
-                elif alt_text.startswith('[asy]'):
-                    # This is an Asymptote choice
-                    choices['asy_choices'].append(alt_text)
+                if img_src:
+                    # Always add the image source to picture_choices
+                    choices['picture_choices'].append(img_src)
                     
-        # Process asymptote diagrams
-        for asy in choices_p.find_all('pre', class_='asy'):
-            asy_text = asy.text.strip()
-            if asy_text and asy_text not in choices['asy_choices']:
-                choices['asy_choices'].append(asy_text)
+                    # Categorize based on alt text
+                    if alt_text.startswith('$'):
+                        # This is a LaTeX choice
+                        choices['latex_choices'].append(alt_text)
+                    elif alt_text.startswith('[asy]'):
+                        # This is an Asymptote choice
+                        choices['asy_choices'].append(alt_text)
+                        
+            # Process asymptote diagrams
+            for asy in choices_p.find_all('pre', class_='asy'):
+                asy_text = asy.text.strip()
+                if asy_text and asy_text not in choices['asy_choices']:
+                    choices['asy_choices'].append(asy_text)
                 
         return question_text, insertions, choices
     
     def extract_solutions(self, soup):
         solutions = []
+        extracted_answer = None
         
         # Find all h2 tags that contain solution content
         solution_headers = []
@@ -126,8 +177,14 @@ class AMCParser:
                     # Create a copy of the p element to modify
                     p_copy = current.__copy__()
                     
-                    # Process images in this p element
-                    insertion_index = self.process_images(p_copy, insertion_index, insertions)
+                    # Only extract answer if we haven't found one yet
+                    if not extracted_answer:
+                        insertion_index, answer = self.process_images(p_copy, insertion_index, insertions, extract_answer=True)
+                        if answer:
+                            extracted_answer = answer
+                    else:
+                        # We already have an answer, just process images normally
+                        insertion_index = self.process_images(p_copy, insertion_index, insertions)
                     
                     # Convert to string but clean up the HTML
                     p_html = str(p_copy).strip()
@@ -150,32 +207,7 @@ class AMCParser:
                     'insertions': insertions
                 })
         
-        return solutions
-    
-    def extract_answer(self, soup):
-        question_text, _, _ = self.extract_question_and_choices(soup)
-        if question_text:
-            patterns = [
-                r'\\boxed\{([A-E])\}',
-                r'\\boxed{([A-E])}',
-                r'\\boxed{([A-E])}',
-                r'\\boxed\{([A-E])\}',
-                r'\\boxed{([A-E])}',
-                r'\\boxed\{([A-E])\}'
-            ]
-            for pattern in patterns:
-                answer_match = re.search(pattern, question_text)
-                if answer_match:
-                    return answer_match.group(1)
-        solutions = self.extract_solutions(soup)
-        for solution in solutions:
-            # Search in the solution text content
-            text_content = solution.get('text', '')
-            for pattern in patterns:
-                answer_match = re.search(pattern, text_content)
-                if answer_match:
-                    return answer_match.group(1)
-        return None
+        return solutions, extracted_answer
     
     def parse_problem(self, level, problem_number):
         url = self.get_problem_url(level, problem_number)
@@ -184,10 +216,29 @@ class AMCParser:
             return None
         soup = BeautifulSoup(html, 'html.parser')
         question_text, insertions, choices = self.extract_question_and_choices(soup)
+        
+        # Raise exception if no question found
         if not question_text:
-            return None
-        solutions = self.extract_solutions(soup)
-        answer = self.extract_answer(soup)
+            raise ValueError(f"No question text found for {level} Problem {problem_number}")
+        
+        # Raise exception if no multiple choice options found
+        has_choices = (choices['text_choices'] or 
+                      choices['picture_choices'] or 
+                      choices['latex_choices'] or 
+                      choices['asy_choices'])
+        if not has_choices:
+            raise ValueError(f"No multiple choice options found for {level} Problem {problem_number}")
+        
+        solutions, extracted_answer = self.extract_solutions(soup) # Extract solutions and answer together
+        
+        # Raise exception if no solutions found
+        if not solutions:
+            raise ValueError(f"No solutions found for {level} Problem {problem_number}")
+        
+        # Raise exception if no answer found
+        if not extracted_answer:
+            raise ValueError(f"No answer found for {level} Problem {problem_number}")
+        
         problem_data = {
             'id': f'amc_{self.year}_{level}_{problem_number}',
             'question': {
@@ -198,7 +249,7 @@ class AMCParser:
             },
             'tags': [],
             'sources': [],
-            'answer': answer,
+            'answer': extracted_answer,
             'solutions': solutions
         }
         return problem_data
@@ -222,7 +273,7 @@ def main():
     parser = AMCParser()
     problems = parser.parse_all_problems()
     os.makedirs('../../backend-java/questions/level-1', exist_ok=True)
-    output_file = '../../backend-java/questions/level-1/amc_2023_problems.json'
+    output_file = '../../backend-java/questions/level-1/amc_2023_problems_new.json'
     parser.save_to_json(problems, output_file)
     print(f"Saved {len(problems)} problems to {output_file}")
 
