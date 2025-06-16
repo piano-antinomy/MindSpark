@@ -5,13 +5,65 @@ import re
 import os
 
 class AMCParser:
-    def __init__(self):
+    def __init__(self, target_competitions=None, competition_dict_file="competition_dict.json"):
         self.base_url = "https://artofproblemsolving.com/wiki/index.php"
-        self.year = 2023
-        self.levels = ["8"]#, "10A", "10B", "12A", "12B"]
+        self.competition_dict_file = competition_dict_file
+        # Configure all competitions we want to download
+        self.competitions = target_competitions if target_competitions else self._generate_competitions_from_dict()
         
-    def get_problem_url(self, level, problem_number):
-        return f"{self.base_url}/{self.year}_AMC_{level}_Problems/Problem_{problem_number}"
+    def _generate_competitions_from_dict(self):
+        """Generate competitions from competition_dict.json file"""
+        with open(self.competition_dict_file, 'r', encoding='utf-8') as f:
+            competition_dict = json.load(f)
+        
+        competitions = []
+        
+        for range_data in competition_dict:
+            start_year = range_data['start']
+            end_year = range_data['end']  # inclusive
+            
+            for level_data in range_data['levels']:
+                level = level_data['level']
+                suffix = level_data.get('suffix', '')
+                has_fall_version = level_data.get('has_fall_version', [])  # List of years with fall versions
+                num_problems = level_data.get('num_problems', 25)
+                
+                # Generate competitions for each year in the range
+                for year in range(start_year, end_year + 1):  # +1 because end is inclusive
+                    # Generate regular competition
+                    competitions.append({
+                        'year': year,
+                        'level': level,
+                        'suffix': suffix,
+                        'fall_version': False,
+                        'num_problems': num_problems
+                    })
+                    
+                    # Generate fall version if this year is in the fall version list
+                    if year in has_fall_version:
+                        competitions.append({
+                            'year': year,
+                            'level': level,
+                            'suffix': suffix,
+                            'fall_version': True,
+                            'num_problems': num_problems
+                        })
+        
+        return competitions
+        
+    def get_problem_url(self, competition, problem_number):
+        year = competition['year']
+        level = competition['level']
+        suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
+        fall_version = competition['fall_version']
+        
+        # Build the competition identifier
+        if fall_version:
+            comp_id = f"{year}_Fall_AMC_{level}{suffix}"
+        else:
+            comp_id = f"{year}_AMC_{level}{suffix}"
+            
+        return f"{self.base_url}/{comp_id}_Problems/Problem_{problem_number}"
     
     def fetch_problem_page(self, url):
         try:
@@ -209,17 +261,20 @@ class AMCParser:
         
         return solutions, extracted_answer
     
-    def parse_problem(self, level, problem_number):
-        url = self.get_problem_url(level, problem_number)
+    def parse_problem(self, competition, problem_number):
+        url = self.get_problem_url(competition, problem_number)
         html = self.fetch_problem_page(url)
         if not html:
             return None
         soup = BeautifulSoup(html, 'html.parser')
         question_text, insertions, choices = self.extract_question_and_choices(soup)
         
+        # Generate competition identifier for error messages
+        comp_id = self._get_competition_id(competition)
+        
         # Raise exception if no question found
         if not question_text:
-            raise ValueError(f"No question text found for {level} Problem {problem_number}")
+            raise ValueError(f"No question text found for {comp_id} Problem {problem_number}")
         
         # Raise exception if no multiple choice options found
         has_choices = (choices['text_choices'] or 
@@ -227,20 +282,21 @@ class AMCParser:
                       choices['latex_choices'] or 
                       choices['asy_choices'])
         if not has_choices:
-            raise ValueError(f"No multiple choice options found for {level} Problem {problem_number}")
+            raise ValueError(f"No multiple choice options found for {comp_id} Problem {problem_number}")
         
         solutions, extracted_answer = self.extract_solutions(soup) # Extract solutions and answer together
         
         # Raise exception if no solutions found
         if not solutions:
-            raise ValueError(f"No solutions found for {level} Problem {problem_number}")
+            raise ValueError(f"No solutions found for {comp_id} Problem {problem_number}")
         
         # Raise exception if no answer found
         if not extracted_answer:
-            raise ValueError(f"No answer found for {level} Problem {problem_number}")
+            raise ValueError(f"No answer found for {comp_id} Problem {problem_number}")
         
+        problem_id = self._generate_problem_id(competition, problem_number)
         problem_data = {
-            'id': f'amc_{self.year}_{level}_{problem_number}',
+            'id': problem_id,
             'question': {
                 'text': question_text,
                 'insertions': insertions,
@@ -254,28 +310,132 @@ class AMCParser:
         }
         return problem_data
     
+    def _get_competition_id(self, competition):
+        """Generate human-readable competition identifier for error messages"""
+        year = competition['year']
+        level = competition['level']
+        suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
+        fall_version = competition['fall_version']
+        
+        if fall_version:
+            return f"{year} Fall AMC {level}{suffix}"
+        else:
+            return f"{year} AMC {level}{suffix}"
+    
+    def _generate_problem_id(self, competition, problem_number):
+        """Generate unique problem ID"""
+        year = competition['year']
+        level = competition['level']
+        suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
+        fall_version = competition['fall_version']
+        
+        if fall_version:
+            return f'amc_{year}_fall_{level}{suffix.lower()}_{problem_number}'
+        else:
+            return f'amc_{year}_{level}{suffix.lower()}_{problem_number}'
+    
     def parse_all_problems(self):
         all_problems = []
-        for level in self.levels:
-            num_problems = 4
+        total_competitions = len(self.competitions)
+        
+        for i, competition in enumerate(self.competitions, 1):
+            comp_id = self._get_competition_id(competition)
+            num_problems = competition['num_problems']
+            
+            print(f"Processing competition {i}/{total_competitions}: {comp_id}")
+            
             for problem_number in range(1, num_problems + 1):
-                print(f"Parsing {self.year} AMC {level} Problem {problem_number}...")
-                problem_data = self.parse_problem(level, problem_number)
-                if problem_data:
-                    all_problems.append(problem_data)
+                print(f"  Parsing {comp_id} Problem {problem_number}...")
+                try:
+                    problem_data = self.parse_problem(competition, problem_number)
+                    if problem_data:
+                        all_problems.append(problem_data)
+                        print(f"  ✓ Successfully parsed {comp_id} Problem {problem_number}")
+                    else:
+                        print(f"  ⚠ Skipped {comp_id} Problem {problem_number} (no data returned)")
+                except Exception as e:
+                    print(f"  ✗ Failed to parse {comp_id} Problem {problem_number}: {e}")
+                    # Continue with next problem instead of crashing
+                    continue
+            
+            print(f"Completed {comp_id}: {len([p for p in all_problems if comp_id.replace(' ', '_').lower() in p['id']])} problems parsed")
+            print("-" * 50)
+        
         return all_problems
     
     def save_to_json(self, problems, output_file):
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(problems, f, indent=2, ensure_ascii=False)
 
-def main():
-    parser = AMCParser()
+def main(target_competitions=None):
+    """
+    Main function to download AMC problems
+    
+    Args:
+        target_competitions: List of competition dictionaries to download. None for all competitions.
+                           Each competition dict should have: {'year': int, 'level': str, 'version': str, 'fall_version': bool, 'num_problems': int}
+    
+    Examples:
+        main()  # Download everything
+        
+        # Download specific competitions
+        competitions = [
+            {'year': 2023, 'level': '8', 'version': '', 'fall_version': False, 'num_problems': 25},
+            {'year': 2023, 'level': '10', 'version': 'A', 'fall_version': False, 'num_problems': 5},
+            {'year': 2021, 'level': '12', 'version': 'B', 'fall_version': True, 'num_problems': 10}
+        ]
+        main(target_competitions=competitions)
+    """
+    parser = AMCParser(target_competitions)
+    
+    # Print configuration
+    print("=== AMC Problem Downloader Configuration ===")
+    if target_competitions:
+        print(f"Using custom competition list ({len(target_competitions)} competitions):")
+        for comp in target_competitions:
+            comp_id = parser._get_competition_id(comp)
+            print(f"  - {comp_id} ({comp['num_problems']} problems)")
+    else:
+        print("Using all competitions (1999-2025)")
+    print(f"Total competitions to process: {len(parser.competitions)}")
+    print("=" * 45)
+    
     problems = parser.parse_all_problems()
+    
+    # Generate output filename based on configuration
+    if target_competitions:
+        # Custom filename for specific competitions
+        years = set(comp['year'] for comp in target_competitions)
+        levels = set(comp['level'] for comp in target_competitions)
+        
+        if len(years) == 1:
+            output_filename = f"amc_{list(years)[0]}"
+        else:
+            output_filename = f"amc_{min(years)}_to_{max(years)}"
+        
+        output_filename += f"_levels_{'_'.join(sorted(levels))}_custom.json"
+    else:
+        # Default filename for all competitions
+        output_filename = "amc_1999_to_2025_all_levels_all_problems.json"
+    
     os.makedirs('../../backend-java/questions/level-1', exist_ok=True)
-    output_file = '../../backend-java/questions/level-1/amc_2023_problems_new.json'
+    output_file = f'../../backend-java/questions/level-1/{output_filename}'
     parser.save_to_json(problems, output_file)
     print(f"Saved {len(problems)} problems to {output_file}")
+    
+    # Print summary statistics
+    competitions_summary = {}
+    for problem in problems:
+        comp_key = problem['id'].split('_')[:3]  # Extract year and competition type
+        comp_key = '_'.join(comp_key)
+        competitions_summary[comp_key] = competitions_summary.get(comp_key, 0) + 1
+    
+    print("\nSummary by competition:")
+    for comp, count in sorted(competitions_summary.items()):
+        print(f"  {comp}: {count} problems")
+    
+    print(f"\nTotal problems collected: {len(problems)}")
+    print(f"Total competitions processed: {len(competitions_summary)}")
 
 if __name__ == "__main__":
     main() 
