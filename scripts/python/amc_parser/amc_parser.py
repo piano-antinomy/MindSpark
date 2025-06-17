@@ -5,11 +5,19 @@ import re
 import os
 
 class AMCParser:
-    def __init__(self, target_competitions=None, competition_dict_file="competition_dict.json"):
+    def __init__(self, competition_dict_file="competition_dict.json"):
         self.base_url = "https://artofproblemsolving.com/wiki/index.php"
-        self.competition_dict_file = competition_dict_file
-        # Configure all competitions we want to download
-        self.competitions = target_competitions if target_competitions else self._generate_competitions_from_dict()
+        
+        # Convert to absolute path
+        if not os.path.isabs(competition_dict_file):
+            # If relative path, resolve it relative to the script's directory
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            self.competition_dict_file = os.path.join(script_dir, competition_dict_file)
+        else:
+            self.competition_dict_file = competition_dict_file
+            
+        # Configure all competitions we want to download from the dictionary file
+        self.competitions = self._generate_competitions_from_dict()
         
     def _generate_competitions_from_dict(self):
         """Generate competitions from competition_dict.json file"""
@@ -21,6 +29,7 @@ class AMCParser:
         for range_data in competition_dict:
             start_year = range_data['start']
             end_year = range_data['end']  # inclusive
+            problem_number_override = range_data.get('problem_number')  # Optional override
             
             # Check if this is AJHSME
             if range_data.get('is_AJHSME', False):
@@ -33,7 +42,8 @@ class AMCParser:
                         'is_AJHSME': True,
                         'fall_version': False,
                         'num_problems': num_problems,
-                        'group': group
+                        'group': group,
+                        'problem_number_override': problem_number_override
                     })
             else:
                 # Generate regular AMC competitions
@@ -43,15 +53,7 @@ class AMCParser:
                     has_fall_version = level_data.get('has_fall_version', [])  # List of years with fall versions
                     num_problems = level_data.get('num_problems', 25)
                     
-                    # Determine group based on level
-                    if level == '8':
-                        group = "AMC_8"
-                    elif level == '10':
-                        group = "AMC_10"
-                    elif level == '12':
-                        group = "AMC_12"
-                    else:
-                        group = f"AMC_{level}"
+                    group = f"AMC_{level}"
                     
                     # Generate competitions for each year in the range
                     for year in range(start_year, end_year + 1):  # +1 because end is inclusive
@@ -62,7 +64,8 @@ class AMCParser:
                             'suffix': suffix,
                             'fall_version': False,
                             'num_problems': num_problems,
-                            'group': group
+                            'group': group,
+                            'problem_number_override': problem_number_override
                         })
                         
                         # Generate fall version if this year is in the fall version list
@@ -73,7 +76,8 @@ class AMCParser:
                                 'suffix': suffix,
                                 'fall_version': True,
                                 'num_problems': num_problems,
-                                'group': group
+                                'group': group,
+                                'problem_number_override': problem_number_override
                             })
         
         return competitions
@@ -122,10 +126,17 @@ class AMCParser:
             
             # Extract answer from LaTeX alt text if requested and not already found
             if extract_answer and not extracted_answer and alt_text:
-                # Look for the 2 patterns actually found in AMC problems
+                # Look for the patterns actually found in AMC problems
                 answer_patterns = [
-                    r'\\boxed\{\\textbf\{\(([A-E])\)\}\\?.*?\}',  # \boxed{\textbf{(D)}\ 18}
+                    r'\\boxed\{\\textbf\{\(([A-E])\)\}\\?',       # \boxed{\textbf{(D)}\ } - simplified
                     r'\\boxed\{\\textbf\{\(([A-E])\)\}\}',        # \boxed{\textbf{(D)}}
+                    r'\\boxed\{\\textbf\{\(([A-E])\) \}',         # \boxed{\textbf{(D) }} - space after letter
+                    r'\\boxed\{\\textbf\{([A-E])\}\}',            # \boxed{\textbf{A}} (no parentheses)
+                    r'\\boxed\{\\text\{\(([A-E])\)\\?',           # \boxed{\text{(C)\ } - simplified
+                    r'\\boxed\{\\text\{\(([A-E])\)\}\}',          # \boxed{\text{(C)}}
+                    r'\\boxed\{\\text\{([A-E])\}\}',              # \boxed{\text{A}} (no parentheses)
+                    r'\\mathbf\{\(([A-E])\)\\,?\}',               # \mathbf{(A)\,} - without \boxed{}
+                    r'\\mathbf\{\(([A-E])\)\}',                   # \mathbf{(A)} - without \boxed{}
                 ]
                 
                 for pattern in answer_patterns:
@@ -167,8 +178,33 @@ class AMCParser:
             return None, None, None
         
         # Separate question (all but last p) from choices (last p)
-        question_ps = question_p_elements[:-1] if len(question_p_elements) > 1 else question_p_elements
-        choices_p = question_p_elements[-1] if len(question_p_elements) > 1 else None
+        if len(question_p_elements) > 1:
+            question_ps = question_p_elements[:-1]
+            choices_p = question_p_elements[-1]
+        else:
+            # Handle case where question and choices are in the same <p> element
+            single_p = question_p_elements[0]
+            img_tags = single_p.find_all('img')
+            
+            if len(img_tags) > 1:
+                # Assume the last img tag contains the choices
+                last_img = img_tags[-1]
+                
+                # Create a copy of the single_p for the question (without the last img)
+                question_p_copy = single_p.__copy__()
+                last_img_in_copy = question_p_copy.find_all('img')[-1]
+                last_img_in_copy.decompose()  # Remove the last img from question
+                
+                # Create a new element for choices containing only the last img
+                from bs4 import Tag
+                choices_p = Tag(name='p')
+                choices_p.append(last_img.__copy__())
+                
+                question_ps = [question_p_copy]
+            else:
+                # If there's only one or no img tags, treat the whole thing as question
+                question_ps = question_p_elements
+                choices_p = None
         
         # Process question part with HTML preservation
         insertions = {}
@@ -234,7 +270,7 @@ class AMCParser:
     
     def extract_solutions(self, soup):
         solutions = []
-        extracted_answer = None
+        all_extracted_answers = []  # Collect answers from all solutions
         
         # Find all h2 tags that contain solution content
         solution_headers = []
@@ -252,6 +288,7 @@ class AMCParser:
         for idx, header in enumerate(solution_headers):
             insertions = {}
             insertion_index = 1
+            solution_answers = []  # Answers found in this specific solution
             
             # Collect all content until next h2
             solution_html_parts = []
@@ -262,14 +299,11 @@ class AMCParser:
                     # Create a copy of the p element to modify
                     p_copy = current.__copy__()
                     
-                    # Only extract answer if we haven't found one yet
-                    if not extracted_answer:
-                        insertion_index, answer = self.process_images(p_copy, insertion_index, insertions, extract_answer=True)
-                        if answer:
-                            extracted_answer = answer
-                    else:
-                        # We already have an answer, just process images normally
-                        insertion_index = self.process_images(p_copy, insertion_index, insertions)
+                    # Always try to extract answer from each solution
+                    insertion_index, answer = self.process_images(p_copy, insertion_index, insertions, extract_answer=True)
+                    if answer:
+                        solution_answers.append(answer)
+                        all_extracted_answers.append(answer)
                     
                     # Convert to string but clean up the HTML
                     p_html = str(p_copy).strip()
@@ -287,12 +321,31 @@ class AMCParser:
                 combined_html = combined_html.replace('&lt;INSERTION_INDEX_', '<INSERTION_INDEX_')
                 combined_html = combined_html.replace('&gt;', '>')
                 
-                solutions.append({
-                    'text': combined_html,
-                    'insertions': insertions
-                })
+                # Validate answers within this solution (if any found)
+                if solution_answers:
+                    # Check if all answers in this solution are the same
+                    unique_solution_answers = list(set(solution_answers))
+                    if len(unique_solution_answers) > 1:
+                        # Multiple different answers in the same solution - error
+                        solution_name = f"Solution {idx + 1}" if idx > 0 else "Solution"
+                        raise ValueError(f"Inconsistent answers within {solution_name}: found {solution_answers}")
+                    
+                    solutions.append({
+                        'text': combined_html,
+                        'insertions': insertions,
+                        'answers_found': solution_answers,  # Include answers found in this solution
+                        'solution_answer': unique_solution_answers[0]  # The consistent answer for this solution
+                    })
+                else:
+                    # No answer found in this solution - this is now OK
+                    solutions.append({
+                        'text': combined_html,
+                        'insertions': insertions,
+                        'answers_found': solution_answers,  # Empty list
+                        'solution_answer': None  # No answer in this solution
+                    })
         
-        return solutions, extracted_answer
+        return solutions, all_extracted_answers
     
     def parse_problem(self, competition, problem_number):
         url = self.get_problem_url(competition, problem_number)
@@ -317,15 +370,25 @@ class AMCParser:
         if not has_choices:
             raise ValueError(f"No multiple choice options found for {comp_id} Problem {problem_number}")
         
-        solutions, extracted_answer = self.extract_solutions(soup) # Extract solutions and answer together
+        solutions, all_extracted_answers = self.extract_solutions(soup) # Extract solutions and all answers
         
         # Raise exception if no solutions found
         if not solutions:
             raise ValueError(f"No solutions found for {comp_id} Problem {problem_number}")
         
-        # Raise exception if no answer found
-        if not extracted_answer:
+        # Validate answer consistency
+        if not all_extracted_answers:
             raise ValueError(f"No answer found for {comp_id} Problem {problem_number}")
+        
+        # Check if all answers are the same
+        unique_answers = list(set(all_extracted_answers))
+        if len(unique_answers) > 1:
+            # Multiple different answers found - this is an error
+            answer_counts = {ans: all_extracted_answers.count(ans) for ans in unique_answers}
+            raise ValueError(f"Inconsistent answers found for {comp_id} Problem {problem_number}: {answer_counts}. All answers found: {all_extracted_answers}")
+        
+        # All answers are consistent, use the first one
+        final_answer = unique_answers[0]
         
         problem_id = self._generate_problem_id(competition, problem_number)
         problem_data = {
@@ -338,7 +401,12 @@ class AMCParser:
             },
             'tags': [],
             'sources': [],
-            'answer': extracted_answer,
+            'answer': final_answer,
+            'answer_validation': {
+                'all_answers_found': all_extracted_answers,
+                'unique_answers': unique_answers,
+                'is_consistent': len(unique_answers) == 1
+            },
             'solutions': solutions
         }
         return problem_data
@@ -383,61 +451,164 @@ class AMCParser:
         """Generate competition name for file/folder naming"""
         year = competition['year']
         fall_version = competition['fall_version']
+        problem_override = competition.get('problem_number_override')
         
         # Check if this is AJHSME
         if competition.get('is_AJHSME', False):
-            return f"{year}_AJHSME"
+            base_name = f"{year}_AJHSME"
         else:
             # Regular AMC competition
             level = competition['level']
             suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
             
             if fall_version:
-                return f"{year}_Fall_AMC_{level}{suffix}"
+                base_name = f"{year}_Fall_AMC_{level}{suffix}"
             else:
-                return f"{year}_AMC_{level}{suffix}"
+                base_name = f"{year}_AMC_{level}{suffix}"
+        
+        # Add problem number suffix if there's an override
+        if problem_override is not None:
+            return f"{base_name}_Problem_{problem_override}"
+        else:
+            return base_name
 
     def parse_competition(self, competition):
         """Parse all problems for a single competition"""
         comp_id = self._get_competition_id(competition)
+        comp_name = self._get_competition_name(competition)
         num_problems = competition['num_problems']
+        problem_override = competition.get('problem_number_override')
         
-        print(f"Processing competition: {comp_id}")
+        # Determine which problems to parse
+        if problem_override is not None:
+            problem_numbers = [problem_override]
+            print(f"Processing competition: {comp_id} (Problem {problem_override} only)")
+        else:
+            problem_numbers = list(range(1, num_problems + 1))
+            print(f"Processing competition: {comp_id}")
         
         competition_problems = []
+        parsing_results = {
+            "competition_info": {
+                "name": comp_name,
+                "id": comp_id,
+                "group": competition['group'],
+                "year": competition['year'],
+                "is_AJHSME": competition.get('is_AJHSME', False),
+                "level": competition.get('level', 'AJHSME'),
+                "suffix": competition.get('suffix', ''),
+                "fall_version": competition['fall_version'],
+                "total_problems_expected": len(problem_numbers),
+                "problem_number_override": problem_override
+            },
+            "successful_problems": [],
+            "failed_problems": [],
+            "skipped_problems": [],
+            "summary": {
+                "successful": 0,
+                "failed": 0,
+                "skipped": 0
+            }
+        }
         
-        for problem_number in range(1, num_problems + 1):
+        for problem_number in problem_numbers:
             print(f"  Parsing {comp_id} Problem {problem_number}...")
+            
+            url = self.get_problem_url(competition, problem_number)
+            
             try:
                 problem_data = self.parse_problem(competition, problem_number)
                 if problem_data:
                     competition_problems.append(problem_data)
+                    
+                    # Add to successful problems list
+                    success_entry = {
+                        "problem_number": problem_number,
+                        "url": url,
+                        "problem_id": problem_data.get("problem_id", f"Problem {problem_number}"),
+                        "question_length": len(problem_data.get("question_text", "")),
+                        "has_choices": bool(problem_data.get("choices", {}).get("text_choices")),
+                        "has_solution": bool(problem_data.get("solution_text")),
+                        "has_answer": bool(problem_data.get("answer"))
+                    }
+                    parsing_results["successful_problems"].append(success_entry)
+                    parsing_results["summary"]["successful"] += 1
                     print(f"  ✓ Successfully parsed {comp_id} Problem {problem_number}")
                 else:
+                    # Add to skipped problems list
+                    skip_entry = {
+                        "problem_number": problem_number,
+                        "url": url,
+                        "reason": "No data returned from parser"
+                    }
+                    parsing_results["skipped_problems"].append(skip_entry)
+                    parsing_results["summary"]["skipped"] += 1
                     print(f"  ⚠ Skipped {comp_id} Problem {problem_number} (no data returned)")
             except Exception as e:
+                # Add to failed problems list with detailed error
+                fail_entry = {
+                    "problem_number": problem_number,
+                    "url": url,
+                    "error_type": type(e).__name__,
+                    "error_message": str(e),
+                    "error_details": self._get_error_details(e)
+                }
+                parsing_results["failed_problems"].append(fail_entry)
+                parsing_results["summary"]["failed"] += 1
                 print(f"  ✗ Failed to parse {comp_id} Problem {problem_number}: {e}")
                 # Continue with next problem instead of crashing
                 continue
         
+        # Save parsing log
+        self._save_parsing_log(competition, parsing_results)
+        
         print(f"Completed {comp_id}: {len(competition_problems)} problems parsed")
         return competition_problems
+
+    def _get_error_details(self, exception):
+        """Get detailed error information for logging"""
+        import traceback
+        
+        error_details = {
+            "traceback": traceback.format_exc(),
+        }
+        
+        # Add specific error details based on exception type
+        if isinstance(exception, requests.RequestException):
+            error_details["category"] = "Network Error"
+            error_details["description"] = "Failed to fetch problem page from server"
+        elif isinstance(exception, AttributeError):
+            error_details["category"] = "Parsing Error" 
+            error_details["description"] = "HTML structure differs from expected format"
+        elif isinstance(exception, KeyError):
+            error_details["category"] = "Data Error"
+            error_details["description"] = "Missing expected data fields"
+        elif isinstance(exception, ValueError):
+            error_details["category"] = "Format Error"
+            error_details["description"] = "Data format is not as expected"
+        else:
+            error_details["category"] = "Unknown Error"
+            error_details["description"] = "Unexpected error occurred during parsing"
+            
+        return error_details
 
     def save_competition_to_file(self, competition, problems):
         """Save a single competition's problems to its own file"""
         group = competition['group']
         comp_name = self._get_competition_name(competition)
         
-        # Create directory structure: backend-java/questions/AMC/<group>/<competition name>/
-        base_dir = "../../../backend-java/questions/AMC"
+        # Create directory structure: backend-java/questions/AMC/<group>/
+        # Get the project root directory (3 levels up from script location)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
+        base_dir = os.path.join(project_root, "backend-java", "questions", "AMC")
         group_dir = os.path.join(base_dir, group)
-        comp_dir = os.path.join(group_dir, comp_name)
         
         # Create directories if they don't exist
-        os.makedirs(comp_dir, exist_ok=True)
+        os.makedirs(group_dir, exist_ok=True)
         
-        # Save problems to JSON file
-        output_file = os.path.join(comp_dir, f"{comp_name}.json")
+        # Save problems to JSON file directly in the group directory
+        output_file = os.path.join(group_dir, f"{comp_name}.json")
         
         # Create competition metadata
         competition_data = {
@@ -449,7 +620,8 @@ class AMCParser:
                 "level": competition.get('level', 'AJHSME'),
                 "suffix": competition.get('suffix', ''),
                 "fall_version": competition['fall_version'],
-                "total_problems": len(problems)
+                "total_problems": len(problems),
+                "problem_number_override": competition.get('problem_number_override')
             },
             "problems": problems
         }
@@ -459,6 +631,43 @@ class AMCParser:
         
         print(f"Saved {len(problems)} problems to {output_file}")
         return output_file
+
+    def _save_parsing_log(self, competition, parsing_results):
+        """Save parsing results log for a competition"""
+        comp_name = self._get_competition_name(competition)
+        
+        # Create parsing_log directory structure
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        log_dir = os.path.join(script_dir, "parsing_log")
+        os.makedirs(log_dir, exist_ok=True)
+        
+        # Save parsing log to JSON file with same name as competition
+        log_file = os.path.join(log_dir, f"{comp_name}.json")
+        
+        with open(log_file, 'w', encoding='utf-8') as f:
+            json.dump(parsing_results, f, indent=2, ensure_ascii=False)
+        
+        # Print detailed summary
+        summary = parsing_results["summary"]
+        successful_problems = parsing_results["successful_problems"]
+        failed_problems = parsing_results["failed_problems"]
+        skipped_problems = parsing_results["skipped_problems"]
+        
+        print(f"  📝 Parsing log saved: {log_file}")
+        print(f"  📊 Results: {summary['successful']} successful, {summary['failed']} failed, {summary['skipped']} skipped")
+        
+        if successful_problems:
+            problem_nums = [str(p["problem_number"]) for p in successful_problems]
+            print(f"  ✅ Successful problems: {', '.join(problem_nums)}")
+        
+        if failed_problems:
+            print(f"  ❌ Failed problems:")
+            for fail in failed_problems:
+                print(f"    Problem {fail['problem_number']}: {fail['error_details']['category']} - {fail['error_message'][:100]}{'...' if len(fail['error_message']) > 100 else ''}")
+        
+        if skipped_problems:
+            problem_nums = [str(p["problem_number"]) for p in skipped_problems]
+            print(f"  ⏭️  Skipped problems: {', '.join(problem_nums)}")
 
     def parse_all_competitions(self):
         """Parse all competitions and save each to separate files"""
@@ -487,36 +696,23 @@ class AMCParser:
         
         return saved_files, total_problems
 
-def main(target_competitions=None):
+def main(competition_dict_file="competition_dict.json"):
     """
     Main function to download AMC problems
     
     Args:
-        target_competitions: List of competition dictionaries to download. None for all competitions.
-                           Each competition dict should have: {'year': int, 'level': str, 'suffix': str, 'fall_version': bool, 'num_problems': int, 'group': str}
+        competition_dict_file: Path to the JSON file containing competition configuration.
+                              Defaults to "competition_dict.json"
     
     Examples:
-        main()  # Download everything
-        
-        # Download specific competitions
-        competitions = [
-            {'year': 2023, 'level': '8', 'suffix': '', 'fall_version': False, 'num_problems': 25, 'group': 'AMC_8'},
-            {'year': 2023, 'level': '10', 'suffix': 'A', 'fall_version': False, 'num_problems': 25, 'group': 'AMC_10'},
-            {'year': 2021, 'level': '12', 'suffix': 'B', 'fall_version': True, 'num_problems': 25, 'group': 'AMC_12'}
-        ]
-        main(target_competitions=competitions)
+        main()  # Use default competition_dict.json
+        main("custom_competitions.json")  # Use custom competition file
     """
-    parser = AMCParser(target_competitions)
+    parser = AMCParser(competition_dict_file)
     
     # Print configuration
     print("=== AMC Problem Downloader Configuration ===")
-    if target_competitions:
-        print(f"Using custom competition list ({len(target_competitions)} competitions):")
-        for comp in target_competitions:
-            comp_id = parser._get_competition_id(comp)
-            print(f"  - {comp_id} ({comp['num_problems']} problems)")
-    else:
-        print("Using all competitions from configuration file")
+    print(f"Using competition configuration from: {competition_dict_file}")
     print(f"Total competitions to process: {len(parser.competitions)}")
     print("=" * 45)
     
@@ -529,7 +725,15 @@ def main(target_competitions=None):
     print(f"{'='*60}")
     print(f"Total competitions processed: {len(saved_files)}")
     print(f"Total problems collected: {total_problems}")
-    print(f"Files saved to: ../../backend-java/questions/AMC/")
+    
+    # Show absolute path for output directory
+    if saved_files:
+        # Extract the base directory from the first saved file
+        first_file = saved_files[0]
+        amc_dir = first_file.split('/AMC/')[0] + '/AMC/'
+        print(f"Files saved to: {amc_dir}")
+    else:
+        print("No files were saved.")
     
     # Group summary by competition group
     group_summary = {}
@@ -548,10 +752,23 @@ def main(target_competitions=None):
     
     print(f"\nAll competition files saved successfully!")
     print("Directory structure:")
-    print("  backend-java/questions/AMC/")
-    for group in sorted(group_summary.keys()):
-        print(f"    ├── {group}/")
-        print(f"    │   └── [competition files]")
+    
+    # Show output directory
+    if saved_files:
+        first_file = saved_files[0]
+        amc_dir = first_file.split('/AMC/')[0] + '/AMC/'
+        print(f"  Competition data: {amc_dir}")
+        for group in sorted(group_summary.keys()):
+            print(f"    ├── {group}/")
+            print(f"    │   ├── 2023_AMC_{group.split('_')[1]}.json")
+            print(f"    │   ├── 2024_AMC_{group.split('_')[1]}.json")
+            print(f"    │   └── [other competition files]")
+    
+    # Show parsing log directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    log_dir = os.path.join(script_dir, "parsing_log")
+    print(f"  Parsing logs: {log_dir}")
+    print(f"    └── [parsing result files]")
 
 if __name__ == "__main__":
-    main() 
+    main("small_competition_dict.json") 
