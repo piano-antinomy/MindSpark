@@ -47,7 +47,8 @@ class AMCParser:
         except Exception as e:
             print(f"Error loading answer overrides: {e}")
             return {}
-        
+    
+
     def _generate_competitions_from_dict(self):
         """Generate competitions from competition_dict.json file"""
         with open(self.competition_dict_file, 'r', encoding='utf-8') as f:
@@ -141,7 +142,7 @@ class AMCParser:
             return None
     
     def process_images(self, element, insertion_index, insertions, extract_answer=False):
-        extracted_answer = None
+        found_answers = []  # List of (answer, tier_num, alt_text) tuples
         
         for img in element.find_all('img'):
             alt_text = img.get('alt', '')
@@ -153,44 +154,89 @@ class AMCParser:
                 "alt_value": alt_text
             }
             
-            # Extract answer from LaTeX alt text if requested and not already found
-            if extract_answer and not extracted_answer and alt_text:
-                # Look for the patterns actually found in AMC problems
-                answer_patterns = [
-                    r'\\boxed\{\\textbf\{\(([A-E])\)',            # \boxed{\textbf{(D) - stops at closing parenthesis
-                    r'\\boxed\{\\textbf\{([A-E])',               # \boxed{\textbf{A - stops at letter (no parentheses)
-                    r'\\boxed\{\\text\{\(([A-E])\)',             # \boxed{\text{(C) - stops at closing parenthesis
-                    r'\\boxed\{\\text\{([A-E])',                 # \boxed{\text{A - stops at letter (no parentheses)
-                    r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
-                    r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
+            # Extract answer from LaTeX alt text if requested
+            if extract_answer and alt_text:
+                # Multi-tier answer pattern matching (higher tiers have priority)
+                answer_pattern_tiers = [
+                    # Tier 1: Boxed answers (highest priority - final answers)
+                    [
+                        r'\\boxed\{\\textbf\{\(([A-E])\)',            # \boxed{\textbf{(D) - stops at closing parenthesis
+                        r'\\boxed\{\\textbf\{([A-E])',               # \boxed{\textbf{A - stops at letter (no parentheses)
+                        r'\\boxed\{\\text\{\(([A-E])\)',             # \boxed{\text{(C) - stops at closing parenthesis
+                        r'\\boxed\{\\text\{([A-E])',                 # \boxed{\text{A - stops at letter (no parentheses)
+                        r'\\boxed\{\(\\textbf\{([A-E])\}\)}',        # \boxed{(\textbf{C})} - parentheses around \textbf{C}
+                        r'\\framebox\{([A-E])\}',                    # \framebox{C} - framebox pattern
+                    ],
+                    # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
+                    [
+                        r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
+                        r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
+                    ]
                 ]
                 
-                for pattern in answer_patterns:
-                    match = re.search(pattern, alt_text)
-                    if match:
-                        extracted_answer = match.group(1)
-                        print(f"Found answer '{extracted_answer}' in LaTeX: {alt_text}")
-                        break
+                # Check all tiers for this image
+                for tier_num, patterns in enumerate(answer_pattern_tiers, 1):
+                    for pattern in patterns:
+                        match = re.search(pattern, alt_text)
+                        if match:
+                            answer = match.group(1)
+                            found_answers.append((answer, tier_num, alt_text))
+                            print(f"Found answer '{answer}' in LaTeX (Tier {tier_num}): {alt_text}")
+                            break  # Only take first match per tier per image
+                    # Don't break here - continue checking other tiers for this image
             
             img.replace_with(f"<{insertion_key}>")
             insertion_index += 1
         
+        # Also check for answers in [mathjax] text content
         if extract_answer:
-            return insertion_index, extracted_answer
+            element_text = element.get_text()
+            if '[mathjax]' in element_text and '[/mathjax]' in element_text:
+                # Extract content between [mathjax] tags
+                mathjax_pattern = r'\[mathjax\](.*?)\[/mathjax\]'
+                mathjax_matches = re.findall(mathjax_pattern, element_text, re.DOTALL)
+                
+                for mathjax_content in mathjax_matches:
+                    # Apply the same tier-based pattern matching to mathjax content
+                    answer_pattern_tiers = [
+                        # Tier 1: Boxed answers (highest priority - final answers)
+                        [
+                            r'\\boxed\{\\textbf\{\(([A-E])\)',            # \boxed{\textbf{(D) - stops at closing parenthesis
+                            r'\\boxed\{\\textbf\{([A-E])',               # \boxed{\textbf{A - stops at letter (no parentheses)
+                            r'\\boxed\{\\text\{\(([A-E])\)',             # \boxed{\text{(C) - stops at closing parenthesis
+                            r'\\boxed\{\\text\{([A-E])',                 # \boxed{\text{A - stops at letter (no parentheses)
+                            r'\\boxed\{\(\\textbf\{([A-E])\}\)}',        # \boxed{(\textbf{C})} - parentheses around \textbf{C}
+                            r'\\framebox\{([A-E])\}',                    # \framebox{C} - framebox pattern
+                        ],
+                        # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
+                        [
+                            r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
+                            r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
+                        ]
+                    ]
+                    
+                    # Check all tiers for this mathjax content
+                    for tier_num, patterns in enumerate(answer_pattern_tiers, 1):
+                        for pattern in patterns:
+                            match = re.search(pattern, mathjax_content)
+                            if match:
+                                answer = match.group(1)
+                                found_answers.append((answer, tier_num, f"[mathjax]{mathjax_content}[/mathjax]"))
+                                print(f"Found answer '{answer}' in [mathjax] (Tier {tier_num}): {mathjax_content}")
+                                break  # Only take first match per tier per mathjax block
+                        # Don't break here - continue checking other tiers for this mathjax content
+        
+        if extract_answer:
+            return insertion_index, found_answers  # Return all found answers for global ranking
         else:
             return insertion_index, None
     
     def _is_empty_p_element(self, p_element):
-        """Check if a <p> element is empty (contains only whitespace, <br> tags, or no <img> tags)"""
-        # Check if there are any img tags - if no img tags, consider it empty
-        img_tags = p_element.find_all('img')
-        if not img_tags:
-            return True
-        
+        """Check if a <p> element is empty (contains only whitespace or <br> tags)"""
         # Get all text content and strip whitespace
         text_content = p_element.get_text(strip=True)
         if text_content:
-            return False
+            return False  # If there's any text content, it's not empty
         
         # Check if element contains only <br> tags or whitespace
         for child in p_element.children:
@@ -324,6 +370,25 @@ class AMCParser:
                 asy_text = asy.text.strip()
                 if asy_text and asy_text not in choices['asy_choices']:
                     choices['asy_choices'].append(asy_text)
+            
+            # Process [mathjax] text choices
+            choices_text = choices_p.get_text()
+            if '[mathjax]' in choices_text and '[/mathjax]' in choices_text:
+                # Extract content between [mathjax] tags
+                mathjax_pattern = r'\[mathjax\](.*?)\[/mathjax\]'
+                mathjax_matches = re.findall(mathjax_pattern, choices_text, re.DOTALL)
+                for mathjax_content in mathjax_matches:
+                    choices['text_choices'].append(f'[mathjax]{mathjax_content.strip()}[/mathjax]')
+            
+            # If no other choices found, check for plain text choices patterns
+            elif not any([choices['picture_choices'], choices['latex_choices'], choices['asy_choices']]):
+                # Look for choice patterns like \textbf{(A) }50\qquad\textbf{(B) }70...
+                choice_pattern = r'\\textbf\{([A-E])\s*\}\s*([^\\]+?)(?=\\textbf\{[A-E]\s*\}|$)'
+                choice_matches = re.findall(choice_pattern, choices_text)
+                if choice_matches:
+                    for letter, content in choice_matches:
+                        choice_text = f'\\textbf{{{letter}}} {content.strip()}'
+                        choices['text_choices'].append(choice_text)
                 
         return question_text, insertions, choices
     
@@ -331,37 +396,64 @@ class AMCParser:
         solutions = []
         all_extracted_answers = []  # Collect answers from all solutions
         
-        # Find all h2 tags that contain solution content
+        # Find solution headers - try hierarchical structure first, then flat structure
         solution_headers = []
+        
+        # First, try to find hierarchical structure: h2 "Solutions" with h3 children
+        solutions_h2 = None
         for h2 in soup.find_all('h2'):
             span = h2.find('span', class_='mw-headline')
-            if span:
-                span_id = span.get('id', '')
-                # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
-                if (span_id == 'Solution' or span_id.startswith('Solution_')) and 'Video_Solution' not in span_id:
-                    solution_headers.append(h2)
+            if span and span.get('id', '') == 'Solutions':
+                solutions_h2 = h2
+                break
+        
+        if solutions_h2:
+            # Found hierarchical structure - look for h3 solution headers after the "Solutions" h2
+            current = solutions_h2.next_sibling
+            while current and (not (getattr(current, 'name', None) == 'h2')):
+                if getattr(current, 'name', None) == 'h3':
+                    span = current.find('span', class_='mw-headline')
+                    if span:
+                        span_id = span.get('id', '')
+                        # Look for Solution_1, Solution_2, etc. but exclude Video solutions
+                        if span_id.startswith('Solution_') and 'Video_Solution' not in span_id:
+                            solution_headers.append(current)
+                current = current.next_sibling
+        else:
+            # Fall back to flat structure - look for h2 solution headers directly
+            for h2 in soup.find_all('h2'):
+                span = h2.find('span', class_='mw-headline')
+                if span:
+                    span_id = span.get('id', '')
+                    # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
+                    if (span_id == 'Solution' or span_id.startswith('Solution_')) and 'Video_Solution' not in span_id:
+                        solution_headers.append(h2)
         
         # Process each solution section
         for idx, header in enumerate(solution_headers):
             insertions = {}
             insertion_index = 1
-            solution_answers = []  # Answers found in this specific solution
+            solution_answer_candidates = []  # All answer candidates from this solution
             
-            # Collect all content until next h2
+            # Collect all content until next header (h2 or h3)
             solution_html_parts = []
             current = header.next_sibling
+            header_tag = getattr(header, 'name', None)  # Get the tag name (h2 or h3)
             
-            while current and (not (getattr(current, 'name', None) == 'h2')):
+            while current:
                 element_name = getattr(current, 'name', None)
+                # Stop at next h2, or if we're processing h3, also stop at next h3
+                if element_name == 'h2' or (header_tag == 'h3' and element_name == 'h3'):
+                    break
+                    
                 if element_name in ['p', 'ul']:
                     # Create a copy of the element to modify
                     element_copy = current.__copy__()
                     
-                    # Extract answer from each solution only if requested
-                    insertion_index, answer = self.process_images(element_copy, insertion_index, insertions, extract_answer=extract_answers)
-                    if answer:
-                        solution_answers.append(answer)
-                        all_extracted_answers.append(answer)
+                    # Extract answers from each insertion
+                    insertion_index, found_answers = self.process_images(element_copy, insertion_index, insertions, extract_answer=extract_answers)
+                    if found_answers:
+                        solution_answer_candidates.extend(found_answers)  # Add all answers from this insertion
                     
                     # Convert to string but clean up the HTML
                     element_html = str(element_copy).strip()
@@ -369,6 +461,15 @@ class AMCParser:
                         solution_html_parts.append(element_html)
                         
                 current = current.next_sibling
+            
+            # Select the best answer for this solution from all candidates
+            best_solution_answer = None
+            if extract_answers and solution_answer_candidates:
+                # Sort by tier (ascending), so tier 1 comes first
+                solution_answer_candidates.sort(key=lambda x: x[1])
+                best_solution_answer = solution_answer_candidates[0][0]  # Take the answer from the highest priority tier
+                print(f"Solution {idx + 1}: Selected answer '{best_solution_answer}' from {len(solution_answer_candidates)} candidates")
+                all_extracted_answers.append(best_solution_answer)
             
             # Join with no extra spacing and clean up
             if solution_html_parts:
@@ -379,25 +480,11 @@ class AMCParser:
                 combined_html = combined_html.replace('&lt;INSERTION_INDEX_', '<INSERTION_INDEX_')
                 combined_html = combined_html.replace('&gt;', '>')
                 
-                # Validate answers within this solution (if any found)
-                if solution_answers:
-                    # Check if all answers in this solution are the same
-                    unique_solution_answers = list(set(solution_answers))
-                    if len(unique_solution_answers) > 1:
-                        # Multiple different answers in the same solution - error
-                        solution_name = f"Solution {idx + 1}" if idx > 0 else "Solution"
-                        raise ValueError(f"Inconsistent answers within {solution_name}: found {solution_answers}")
-                    
-                    solutions.append({
-                        'text': combined_html,
-                        'insertions': insertions
-                    })
-                else:
-                    # No answer found in this solution - this is now OK
-                    solutions.append({
-                        'text': combined_html,
-                        'insertions': insertions
-                    })
+                # Always add the solution (we've already handled answer extraction above)
+                solutions.append({
+                    'text': combined_html,
+                    'insertions': insertions
+                })
         
         return solutions, all_extracted_answers
     
@@ -562,7 +649,6 @@ class AMCParser:
                 "total_problems_expected": len(problem_numbers),
                 "problem_number_override": problem_override
             },
-            "successful_problems": [],
             "failed_problems": [],
             "skipped_problems": [],
             "summary": {
@@ -581,18 +667,6 @@ class AMCParser:
                 problem_data = self.parse_problem(competition, problem_number)
                 if problem_data:
                     competition_problems.append(problem_data)
-                    
-                    # Add to successful problems list
-                    success_entry = {
-                        "problem_number": problem_number,
-                        "url": url,
-                        "problem_id": problem_data.get("id", f"Problem {problem_number}"),
-                        "question_length": len(problem_data.get("question", {}).get("text", "")),
-                        "has_choices": bool(problem_data.get("question", {}).get("text_choices")),
-                        "has_solution": bool(problem_data.get("solutions")),
-                        "has_answer": bool(problem_data.get("answer"))
-                    }
-                    parsing_results["successful_problems"].append(success_entry)
                     parsing_results["summary"]["successful"] += 1
                     print(f"  ✓ Successfully parsed {comp_id} Problem {problem_number}")
                 else:
@@ -710,16 +784,11 @@ class AMCParser:
         
         # Print detailed summary
         summary = parsing_results["summary"]
-        successful_problems = parsing_results["successful_problems"]
         failed_problems = parsing_results["failed_problems"]
         skipped_problems = parsing_results["skipped_problems"]
         
         print(f"  📝 Parsing log saved: {log_file}")
         print(f"  📊 Results: {summary['successful']} successful, {summary['failed']} failed, {summary['skipped']} skipped")
-        
-        if successful_problems:
-            problem_nums = [str(p["problem_number"]) for p in successful_problems]
-            print(f"  ✅ Successful problems: {', '.join(problem_nums)}")
         
         if failed_problems:
             print(f"  ❌ Failed problems:")
