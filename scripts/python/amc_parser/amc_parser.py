@@ -5,19 +5,48 @@ import re
 import os
 
 class AMCParser:
-    def __init__(self, competition_dict_file="competition_dict.json"):
+    def __init__(self, competition_dict_file="competition_dict.json", answer_overrides_file="answer_overrides.json"):
         self.base_url = "https://artofproblemsolving.com/wiki/index.php"
         
-        # Convert to absolute path
+        # Convert to absolute path for competition dict
         if not os.path.isabs(competition_dict_file):
             # If relative path, resolve it relative to the script's directory
             script_dir = os.path.dirname(os.path.abspath(__file__))
             self.competition_dict_file = os.path.join(script_dir, competition_dict_file)
         else:
             self.competition_dict_file = competition_dict_file
+        
+        # Convert to absolute path for answer overrides
+        if not os.path.isabs(answer_overrides_file):
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            self.answer_overrides_file = os.path.join(script_dir, answer_overrides_file)
+        else:
+            self.answer_overrides_file = answer_overrides_file
+            
+        # Load answer overrides
+        self.answer_overrides = self._load_answer_overrides()
             
         # Configure all competitions we want to download from the dictionary file
         self.competitions = self._generate_competitions_from_dict()
+    
+    def _load_answer_overrides(self):
+        """Load answer overrides from JSON file"""
+        try:
+            with open(self.answer_overrides_file, 'r', encoding='utf-8') as f:
+                overrides = json.load(f)
+                # Filter out comment keys
+                filtered_overrides = {k: v for k, v in overrides.items() if not k.startswith('_')}
+                print(f"Loaded {len(filtered_overrides)} answer overrides from {self.answer_overrides_file}")
+                return filtered_overrides
+        except FileNotFoundError:
+            print(f"Answer overrides file not found: {self.answer_overrides_file}")
+            return {}
+        except json.JSONDecodeError as e:
+            print(f"Error parsing answer overrides file: {e}")
+            return {}
+        except Exception as e:
+            print(f"Error loading answer overrides: {e}")
+            return {}
         
     def _generate_competitions_from_dict(self):
         """Generate competitions from competition_dict.json file"""
@@ -128,15 +157,12 @@ class AMCParser:
             if extract_answer and not extracted_answer and alt_text:
                 # Look for the patterns actually found in AMC problems
                 answer_patterns = [
-                    r'\\boxed\{\\textbf\{\(([A-E])\)\}\\?',       # \boxed{\textbf{(D)}\ } - simplified
-                    r'\\boxed\{\\textbf\{\(([A-E])\)\}\}',        # \boxed{\textbf{(D)}}
-                    r'\\boxed\{\\textbf\{\(([A-E])\) \}',         # \boxed{\textbf{(D) }} - space after letter
-                    r'\\boxed\{\\textbf\{([A-E])\}\}',            # \boxed{\textbf{A}} (no parentheses)
-                    r'\\boxed\{\\text\{\(([A-E])\)\\?',           # \boxed{\text{(C)\ } - simplified
-                    r'\\boxed\{\\text\{\(([A-E])\)\}\}',          # \boxed{\text{(C)}}
-                    r'\\boxed\{\\text\{([A-E])\}\}',              # \boxed{\text{A}} (no parentheses)
-                    r'\\mathbf\{\(([A-E])\)\\,?\}',               # \mathbf{(A)\,} - without \boxed{}
-                    r'\\mathbf\{\(([A-E])\)\}',                   # \mathbf{(A)} - without \boxed{}
+                    r'\\boxed\{\\textbf\{\(([A-E])\)',            # \boxed{\textbf{(D) - stops at closing parenthesis
+                    r'\\boxed\{\\textbf\{([A-E])',               # \boxed{\textbf{A - stops at letter (no parentheses)
+                    r'\\boxed\{\\text\{\(([A-E])\)',             # \boxed{\text{(C) - stops at closing parenthesis
+                    r'\\boxed\{\\text\{([A-E])',                 # \boxed{\text{A - stops at letter (no parentheses)
+                    r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
+                    r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
                 ]
                 
                 for pattern in answer_patterns:
@@ -152,8 +178,34 @@ class AMCParser:
         if extract_answer:
             return insertion_index, extracted_answer
         else:
-            return insertion_index
+            return insertion_index, None
     
+    def _is_empty_p_element(self, p_element):
+        """Check if a <p> element is empty (contains only whitespace, <br> tags, or no <img> tags)"""
+        # Check if there are any img tags - if no img tags, consider it empty
+        img_tags = p_element.find_all('img')
+        if not img_tags:
+            return True
+        
+        # Get all text content and strip whitespace
+        text_content = p_element.get_text(strip=True)
+        if text_content:
+            return False
+        
+        # Check if element contains only <br> tags or whitespace
+        for child in p_element.children:
+            child_name = getattr(child, 'name', None)
+            if child_name is not None:
+                # If it's a tag and not a <br> tag, it's not empty
+                if child_name != 'br':
+                    return False
+            else:
+                # If it's text content and not just whitespace, it's not empty
+                if str(child).strip():
+                    return False
+        
+        return True
+
     def extract_question_and_choices(self, soup):
         # Find the first h2 header that contains the problem
         problem_header = None
@@ -173,6 +225,13 @@ class AMCParser:
             if getattr(current, 'name', None) == 'p':
                 question_p_elements.append(current)
             current = current.next_sibling
+        
+        if not question_p_elements:
+            return None, None, None
+        
+        # Remove empty <p> elements from the end (travel from last to first)
+        while question_p_elements and self._is_empty_p_element(question_p_elements[-1]):
+            question_p_elements.pop()
         
         if not question_p_elements:
             return None, None, None
@@ -215,8 +274,8 @@ class AMCParser:
             # Create a copy of the p element to modify
             p_copy = p_element.__copy__()
             
-            # Process images in this p element
-            insertion_index = self.process_images(p_copy, insertion_index, insertions)
+            # Process images in this p element (no answer extraction needed for questions)
+            insertion_index, _ = self.process_images(p_copy, insertion_index, insertions, extract_answer=False)
             
             # Convert to string but clean up the HTML
             p_html = str(p_copy).strip()
@@ -268,7 +327,7 @@ class AMCParser:
                 
         return question_text, insertions, choices
     
-    def extract_solutions(self, soup):
+    def extract_solutions(self, soup, extract_answers=True):
         solutions = []
         all_extracted_answers = []  # Collect answers from all solutions
         
@@ -279,9 +338,7 @@ class AMCParser:
             if span:
                 span_id = span.get('id', '')
                 # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
-                if ((span_id == 'Solution' or 
-                    (span_id.startswith('Solution_') and span_id.replace('Solution_', '').isdigit())) and
-                    'Video_Solution' not in span_id):
+                if (span_id == 'Solution' or span_id.startswith('Solution_')) and 'Video_Solution' not in span_id:
                     solution_headers.append(h2)
         
         # Process each solution section
@@ -295,20 +352,21 @@ class AMCParser:
             current = header.next_sibling
             
             while current and (not (getattr(current, 'name', None) == 'h2')):
-                if getattr(current, 'name', None) == 'p':
-                    # Create a copy of the p element to modify
-                    p_copy = current.__copy__()
+                element_name = getattr(current, 'name', None)
+                if element_name in ['p', 'ul']:
+                    # Create a copy of the element to modify
+                    element_copy = current.__copy__()
                     
-                    # Always try to extract answer from each solution
-                    insertion_index, answer = self.process_images(p_copy, insertion_index, insertions, extract_answer=True)
+                    # Extract answer from each solution only if requested
+                    insertion_index, answer = self.process_images(element_copy, insertion_index, insertions, extract_answer=extract_answers)
                     if answer:
                         solution_answers.append(answer)
                         all_extracted_answers.append(answer)
                     
                     # Convert to string but clean up the HTML
-                    p_html = str(p_copy).strip()
-                    if p_html:
-                        solution_html_parts.append(p_html)
+                    element_html = str(element_copy).strip()
+                    if element_html:
+                        solution_html_parts.append(element_html)
                         
                 current = current.next_sibling
             
@@ -332,17 +390,13 @@ class AMCParser:
                     
                     solutions.append({
                         'text': combined_html,
-                        'insertions': insertions,
-                        'answers_found': solution_answers,  # Include answers found in this solution
-                        'solution_answer': unique_solution_answers[0]  # The consistent answer for this solution
+                        'insertions': insertions
                     })
                 else:
                     # No answer found in this solution - this is now OK
                     solutions.append({
                         'text': combined_html,
-                        'insertions': insertions,
-                        'answers_found': solution_answers,  # Empty list
-                        'solution_answer': None  # No answer in this solution
+                        'insertions': insertions
                     })
         
         return solutions, all_extracted_answers
@@ -350,13 +404,14 @@ class AMCParser:
     def parse_problem(self, competition, problem_number):
         url = self.get_problem_url(competition, problem_number)
         html = self.fetch_problem_page(url)
-        if not html:
-            return None
-        soup = BeautifulSoup(html, 'html.parser')
-        question_text, insertions, choices = self.extract_question_and_choices(soup)
         
         # Generate competition identifier for error messages
         comp_id = self._get_competition_id(competition)
+        
+        if not html:
+            raise ValueError(f"Failed to fetch problem page for {comp_id} Problem {problem_number}")
+        soup = BeautifulSoup(html, 'html.parser')
+        question_text, insertions, choices = self.extract_question_and_choices(soup)
         
         # Raise exception if no question found
         if not question_text:
@@ -370,27 +425,38 @@ class AMCParser:
         if not has_choices:
             raise ValueError(f"No multiple choice options found for {comp_id} Problem {problem_number}")
         
-        solutions, all_extracted_answers = self.extract_solutions(soup) # Extract solutions and all answers
-        
-        # Raise exception if no solutions found
-        if not solutions:
-            raise ValueError(f"No solutions found for {comp_id} Problem {problem_number}")
-        
-        # Validate answer consistency
-        if not all_extracted_answers:
-            raise ValueError(f"No answer found for {comp_id} Problem {problem_number}")
-        
-        # Check if all answers are the same
-        unique_answers = list(set(all_extracted_answers))
-        if len(unique_answers) > 1:
-            # Multiple different answers found - this is an error
-            answer_counts = {ans: all_extracted_answers.count(ans) for ans in unique_answers}
-            raise ValueError(f"Inconsistent answers found for {comp_id} Problem {problem_number}: {answer_counts}. All answers found: {all_extracted_answers}")
-        
-        # All answers are consistent, use the first one
-        final_answer = unique_answers[0]
-        
+        # Generate problem ID for override checking
         problem_id = self._generate_problem_id(competition, problem_number)
+        
+        # Check for answer override first
+        if problem_id in self.answer_overrides:
+            final_answer = self.answer_overrides[problem_id]
+            print(f"Using answer override for {comp_id} Problem {problem_number}: {final_answer}")
+            # Still extract solutions but don't extract answers
+            solutions, all_extracted_answers = self.extract_solutions(soup, extract_answers=False)
+            if not solutions:
+                raise ValueError(f"No solutions found for {comp_id} Problem {problem_number}")
+        else:
+            # No override, proceed with normal answer extraction
+            solutions, all_extracted_answers = self.extract_solutions(soup, extract_answers=True) # Extract solutions and all answers
+            
+            # Raise exception if no solutions found
+            if not solutions:
+                raise ValueError(f"No solutions found for {comp_id} Problem {problem_number}")
+            
+            # Validate answer consistency
+            if not all_extracted_answers:
+                raise ValueError(f"No answer found for {comp_id} Problem {problem_number}")
+            
+            # Check if all answers are the same
+            unique_answers = list(set(all_extracted_answers))
+            if len(unique_answers) > 1:
+                # Multiple different answers found - this is an error
+                answer_counts = {ans: all_extracted_answers.count(ans) for ans in unique_answers}
+                raise ValueError(f"Inconsistent answers found for {comp_id} Problem {problem_number}: {answer_counts}. All answers found: {all_extracted_answers}")
+            
+            # All answers are consistent, use the first one
+            final_answer = unique_answers[0]
         problem_data = {
             'id': problem_id,
             'question': {
@@ -402,11 +468,6 @@ class AMCParser:
             'tags': [],
             'sources': [],
             'answer': final_answer,
-            'answer_validation': {
-                'all_answers_found': all_extracted_answers,
-                'unique_answers': unique_answers,
-                'is_consistent': len(unique_answers) == 1
-            },
             'solutions': solutions
         }
         return problem_data
@@ -525,10 +586,10 @@ class AMCParser:
                     success_entry = {
                         "problem_number": problem_number,
                         "url": url,
-                        "problem_id": problem_data.get("problem_id", f"Problem {problem_number}"),
-                        "question_length": len(problem_data.get("question_text", "")),
-                        "has_choices": bool(problem_data.get("choices", {}).get("text_choices")),
-                        "has_solution": bool(problem_data.get("solution_text")),
+                        "problem_id": problem_data.get("id", f"Problem {problem_number}"),
+                        "question_length": len(problem_data.get("question", {}).get("text", "")),
+                        "has_choices": bool(problem_data.get("question", {}).get("text_choices")),
+                        "has_solution": bool(problem_data.get("solutions")),
                         "has_answer": bool(problem_data.get("answer"))
                     }
                     parsing_results["successful_problems"].append(success_entry)

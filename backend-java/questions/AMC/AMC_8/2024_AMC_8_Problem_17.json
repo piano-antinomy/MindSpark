@@ -1,0 +1,152 @@
+{
+  "competition_info": {
+    "name": "2024_AMC_8_Problem_17",
+    "group": "AMC_8",
+    "year": 2024,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 1,
+    "problem_number_override": 17
+  },
+  "problems": [
+    {
+      "id": "amc_2024_8_17",
+      "question": {
+        "text": "<p>A chess king is said to attack all the squares one step away from it, horizontally, vertically, or diagonally. For instance, a king on the center square of a <INSERTION_INDEX_1> x <INSERTION_INDEX_2> grid attacks all <INSERTION_INDEX_3> other squares, as shown below. Suppose a white king and a black king are placed on different squares of a <INSERTION_INDEX_4> x <INSERTION_INDEX_5> grid so that they do not attack each other (in other words, not right next to each other). In how many ways can this be done?</p><p><INSERTION_INDEX_6></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+            "alt_type": "latex",
+            "alt_value": "$3$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+            "alt_type": "latex",
+            "alt_value": "$3$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+            "alt_type": "latex",
+            "alt_value": "$8$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+            "alt_type": "latex",
+            "alt_value": "$3$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+            "alt_type": "latex",
+            "alt_value": "$3$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/c/6/c/c6c43bfb745a1d180e54999f2ef50d6a26900b98.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] /* AMC8 P17 2024, revised by Teacher David */ unitsize(29pt); import math; add(grid(3,3));  pair [] a = {(0.5,0.5), (0.5, 1.5), (0.5, 2.5), (1.5, 2.5), (2.5,2.5), (2.5,1.5), (2.5,0.5), (1.5,0.5)};  for (int i=0; i<a.length; ++i) {     pair x = (1.5,1.5) + 0.4*dir(225-45*i);     draw(x -- a[i], arrow=EndArrow()); }  label(\"$K$\", (1.5,1.5)); [/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/c/7/3/c73a90a7194bf033ab1f928bc366ed261dc80303.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 20 \\qquad \\textbf{(B)}\\ 24 \\qquad \\textbf{(C)}\\ 27 \\qquad \\textbf{(D)}\\ 28 \\qquad \\textbf{(E)}\\ 32$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>If you place a king in any of the <INSERTION_INDEX_1> corners, the other king will have <INSERTION_INDEX_2> spots to go and there are <INSERTION_INDEX_3> corners, so <INSERTION_INDEX_4>.If you place a king in any of the <INSERTION_INDEX_5> edges, the other king will have <INSERTION_INDEX_6> spots to go and there are <INSERTION_INDEX_7> edges so <INSERTION_INDEX_8>. That gives us <INSERTION_INDEX_9> spots for the other king to go into in total.So <INSERTION_INDEX_10> is the answer.~andliu766, captaindiamond868 (minor edits)~AliceDubbleYou</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/0/9/d/09d5dcbff39099361cc0bf85d5fa603db2067483.png",
+              "alt_type": "latex",
+              "alt_value": "$5 \\times 4=20$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/a/f/8/af85e67238f3076d072a408df3202a98b7c8462d.png",
+              "alt_type": "latex",
+              "alt_value": "$3 \\times 4=12$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/0/b/9/0b9d49628dd6d288b70421b6e2591b8bdc47411b.png",
+              "alt_type": "latex",
+              "alt_value": "$20+12=32$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/a/5/c/a5c81f1f2c1232b163ae0066e5e924c2c63e6769.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(E)} 32}$"
+            }
+          }
+        },
+        {
+          "text": "<p>We see that the center is not a viable spot for either of the kings to be in, as it would attack all nearby squares.</p><p>This gives three combinations: </p><p>Corner-corner: There are 4 corners, and none of them are touching orthogonally or diagonally, so it's <INSERTION_INDEX_1></p><p>Corner-edge: For each corner, there are two edges that don't border it, <INSERTION_INDEX_2></p><p>Edge-edge: The only possible combinations of this that work are top-bottom and left-right edges, so <INSERTION_INDEX_3> for this type</p><p><br/><INSERTION_INDEX_4></p><p>Multiply by two to account for arrangements of colors to get <INSERTION_INDEX_5> ~ c_double_sharp</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/5/c/9/5c9b68a04fadb4cbe90954c537de424c1519ef51.png",
+              "alt_type": "latex",
+              "alt_value": "$\\binom{4}{2}=6$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/f/4/6f40e5d9698ac8f7f58e674d2c9aaf86b19f104c.png",
+              "alt_type": "latex",
+              "alt_value": "$4\\cdot2=8$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/6/4/764b4e58fdf78e924cf51d668d99c5119db8d735.png",
+              "alt_type": "latex",
+              "alt_value": "$6+8+2=16$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/2/b/7/2b7cabc56760de8934bd3b8f44e940058b6b47f0.png",
+              "alt_type": "latex",
+              "alt_value": "$\\fbox{E) 32}$"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
