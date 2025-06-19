@@ -419,6 +419,17 @@ class AMCParser:
                         if span_id.startswith('Solution_') and 'Video_Solution' not in span_id:
                             solution_headers.append(current)
                 current = current.next_sibling
+            
+            # If no h3 solutions found under "Solutions" h2, check if there's an h2 "Solution" instead
+            # This handles the edge case where there's both h2 "Solutions" (empty) and h2 "Solution" (actual)
+            if not solution_headers:
+                for h2 in soup.find_all('h2'):
+                    span = h2.find('span', class_='mw-headline')
+                    if span:
+                        span_id = span.get('id', '')
+                        # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
+                        if (span_id == 'Solution' or span_id.startswith('Solution_')) and 'Video_Solution' not in span_id:
+                            solution_headers.append(h2)
         else:
             # Fall back to flat structure - look for h2 solution headers directly
             for h2 in soup.find_all('h2'):
