@@ -7,7 +7,7 @@
     "level": "8",
     "suffix": "",
     "fall_version": false,
-    "total_problems": 24,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
@@ -819,6 +819,71 @@
               "picture": "//latex.artofproblemsolving.com/7/6/0/760a948e3f1d763c40fef6f4baca7846a7f13036.png",
               "alt_type": "latex",
               "alt_value": "$\\boxed{\\textbf{(D)}\\ 120}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2019_8_5",
+      "question": {
+        "text": "<p>A tortoise challenges a hare to a race. The hare eagerly agrees and quickly runs ahead, leaving the slow-moving tortoise behind. Confident that he will win, the hare stops to take a nap. Meanwhile, the tortoise walks at a slow steady pace for the entire race. The hare awakes and runs to the finish line, only to find the tortoise already there. Which of the following graphs matches the description of the race, showing the distance <INSERTION_INDEX_1> traveled by the two animals over time <INSERTION_INDEX_2> from start to finish?</p><p><a class=\"image\" href=\"/wiki/index.php/File:2019_AMC_8_-4_Image_1.png\"><INSERTION_INDEX_3></a></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/9/6/a/96ab646de7704969b91c76a214126b45f2b07b25.png",
+            "alt_type": "latex",
+            "alt_value": "$d$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/e/0/d/e0d2bf360290fd61d1c1557e763f2622363b3d35.png",
+            "alt_type": "latex",
+            "alt_value": "$t$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "https://wiki-images.artofproblemsolving.com//thumb/5/56/2019_AMC_8_-4_Image_1.png/900px-2019_AMC_8_-4_Image_1.png",
+            "alt_type": "latex",
+            "alt_value": "2019 AMC 8 -4 Image 1.png"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "https://wiki-images.artofproblemsolving.com//thumb/6/63/2019_AMC_8_-4_Image_2.png/600px-2019_AMC_8_-4_Image_2.png"
+        ],
+        "latex_choices": [],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>First, the tortoise walks at a constant rate, ruling out <INSERTION_INDEX_1>. Second, when the hare is resting, the distance will stay the same, ruling out <INSERTION_INDEX_2> and <INSERTION_INDEX_3>. Third, the tortoise wins the race, meaning that the non-constant one should go off the graph last, ruling out <INSERTION_INDEX_4>. The answer <INSERTION_INDEX_5> is the only one left.</p><p><br/></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/7/b/4/7b4066cd24c53cd4053f840d210f974f46e1d913.png",
+              "alt_type": "latex",
+              "alt_value": "$(D)$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/0/2/a/02ad991c2821130f0d7e456d453252c19a320752.png",
+              "alt_type": "latex",
+              "alt_value": "$(E)$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/a/b/d/abd337e8b85dc471b3cb7c333dea9fd5d610a2f2.png",
+              "alt_type": "latex",
+              "alt_value": "$(C)$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/5/6/5/565ab5e3715db52b9176b04dd9991b71f4e93a86.png",
+              "alt_type": "latex",
+              "alt_value": "$(A)$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/a/2/1/a2194b81820e8380be586c1564c3f5d03d5c100d.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(B)}}$"
             }
           }
         }

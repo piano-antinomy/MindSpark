@@ -1,0 +1,44 @@
+{
+  "competition_info": {
+    "name": "2016_AMC_8",
+    "id": "2016 AMC 8",
+    "group": "AMC_8",
+    "year": 2016,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems_expected": 25,
+    "problem_number_override": null
+  },
+  "failed_problems": [
+    {
+      "problem_number": 9,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_9",
+      "error_type": "ValueError",
+      "error_message": "No multiple choice options found for 2016 AMC 8 Problem 9",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 646, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 492, in parse_problem\n    raise ValueError(f\"No multiple choice options found for {comp_id} Problem {problem_number}\")\nValueError: No multiple choice options found for 2016 AMC 8 Problem 9\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    },
+    {
+      "problem_number": 19,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_19",
+      "error_type": "ValueError",
+      "error_message": "No question text found for 2016 AMC 8 Problem 19",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 646, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 484, in parse_problem\n    raise ValueError(f\"No question text found for {comp_id} Problem {problem_number}\")\nValueError: No question text found for 2016 AMC 8 Problem 19\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    }
+  ],
+  "skipped_problems": [],
+  "summary": {
+    "successful": 23,
+    "failed": 2,
+    "skipped": 0
+  }
+}

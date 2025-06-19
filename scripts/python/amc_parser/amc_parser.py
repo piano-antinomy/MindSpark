@@ -396,49 +396,17 @@ class AMCParser:
         solutions = []
         all_extracted_answers = []  # Collect answers from all solutions
         
-        # Find solution headers - try hierarchical structure first, then flat structure
+        # Find solution headers - look for any h2 or h3 with span id that starts with "Solution_" or equals "Solution"
         solution_headers = []
         
-        # First, try to find hierarchical structure: h2 "Solutions" with h3 children
-        solutions_h2 = None
-        for h2 in soup.find_all('h2'):
-            span = h2.find('span', class_='mw-headline')
-            if span and span.get('id', '') == 'Solutions':
-                solutions_h2 = h2
-                break
-        
-        if solutions_h2:
-            # Found hierarchical structure - look for h3 solution headers after the "Solutions" h2
-            current = solutions_h2.next_sibling
-            while current and (not (getattr(current, 'name', None) == 'h2')):
-                if getattr(current, 'name', None) == 'h3':
-                    span = current.find('span', class_='mw-headline')
-                    if span:
-                        span_id = span.get('id', '')
-                        # Look for Solution_1, Solution_2, etc. but exclude Video solutions
-                        if span_id.startswith('Solution_') and 'Video_Solution' not in span_id:
-                            solution_headers.append(current)
-                current = current.next_sibling
-            
-            # If no h3 solutions found under "Solutions" h2, check if there's an h2 "Solution" instead
-            # This handles the edge case where there's both h2 "Solutions" (empty) and h2 "Solution" (actual)
-            if not solution_headers:
-                for h2 in soup.find_all('h2'):
-                    span = h2.find('span', class_='mw-headline')
-                    if span:
-                        span_id = span.get('id', '')
-                        # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
-                        if (span_id == 'Solution' or span_id.startswith('Solution_')) and 'Video_Solution' not in span_id:
-                            solution_headers.append(h2)
-        else:
-            # Fall back to flat structure - look for h2 solution headers directly
-            for h2 in soup.find_all('h2'):
-                span = h2.find('span', class_='mw-headline')
-                if span:
-                    span_id = span.get('id', '')
-                    # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
-                    if (span_id == 'Solution' or span_id.startswith('Solution_')) and 'Video_Solution' not in span_id:
-                        solution_headers.append(h2)
+        # Search through all h2 and h3 headers
+        for header in soup.find_all(['h2', 'h3']):
+            span = header.find('span', class_='mw-headline')
+            if span:
+                span_id = span.get('id', '')
+                # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
+                if (span_id == 'Solution' or span_id.startswith('Solution_')) and 'Video_Solution' not in span_id:
+                    solution_headers.append(header)
         
         # Process each solution section
         for idx, header in enumerate(solution_headers):
