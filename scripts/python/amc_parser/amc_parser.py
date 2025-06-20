@@ -252,94 +252,210 @@ class AMCParser:
         
         return True
 
-    def extract_question_and_choices(self, soup):
-        # Find the first h2 header that contains the problem
-        problem_header = None
+    def _collect_question_paragraphs(self, soup):
+        """
+        Collect paragraph elements that contain the question content.
+        
+        Uses a two-strategy approach to handle different page structures:
+        
+        STRATEGY 1 (Standard): Look for "Problem" header
+        - Most AMC pages have an h2 header containing "Problem"
+        - Collect all <p> elements between this header and the next h2
+        - This works for the majority of well-structured pages
+        
+        STRATEGY 2 (Fallback): Content-based collection
+        - Some pages (like 2015 AMC 8 Problems 10, 25) lack proper headers
+        - Collect all <p> elements before the first h2 in the main content div
+        - Assumes the first h2 marks the start of solutions
+        
+        Args:
+            soup: BeautifulSoup object of the problem page
+            
+        Returns:
+            list: List of paragraph elements containing question content,
+                  empty list if no content found
+        """
+        # Strategy 1: Look for Problem header and collect p elements after it
         for h2 in soup.find_all('h2'):
             if 'Problem' in h2.text:
-                problem_header = h2
-                break
+                question_p_elements = []
+                current = h2.next_sibling
+                
+                while current and (getattr(current, 'name', None) != 'h2'):
+                    if getattr(current, 'name', None) == 'p':
+                        question_p_elements.append(current)
+                    current = current.next_sibling
+                
+                if question_p_elements:
+                    return question_p_elements
         
-        if not problem_header:
-            return None, None, None
+        # Strategy 2: Fallback - collect all p elements before first h2 in main content
+        content_div = soup.find('div', class_='mw-parser-output')
+        if content_div:
+            question_p_elements = []
+            for element in content_div.children:
+                if getattr(element, 'name', None) == 'h2':
+                    break  # Stop at first h2 (solutions start)
+                elif getattr(element, 'name', None) == 'p':
+                    question_p_elements.append(element)
+            
+            if question_p_elements:
+                return question_p_elements
         
-        # Collect all p elements under the Problem header until next h2
-        question_p_elements = []
-        current = problem_header.next_sibling
-        
-        while current and (not (getattr(current, 'name', None) == 'h2')):
-            if getattr(current, 'name', None) == 'p':
-                question_p_elements.append(current)
-            current = current.next_sibling
-        
-        if not question_p_elements:
-            return None, None, None
-        
-        # Remove empty <p> elements from the end (travel from last to first)
+        return []
+    
+    def _clean_question_paragraphs(self, question_p_elements):
+        """Remove empty paragraphs from the end and return cleaned list."""
+        # Remove empty <p> elements from the end
         while question_p_elements and self._is_empty_p_element(question_p_elements[-1]):
             question_p_elements.pop()
         
-        if not question_p_elements:
-            return None, None, None
+        return question_p_elements
+    
+    def _paragraph_contains_choices(self, p_element):
+        """
+        Check if a paragraph contains multiple choice options.
         
-        # Separate question (all but last p) from choices (last p)
+        This method detects choice patterns in various formats:
+        1. LaTeX images with alt text like "$\\textbf{(A) }9\\qquad\\textbf{(B) }12..."
+        2. Mathjax blocks with choice patterns
+        3. Plain text with choice formatting
+        
+        Args:
+            p_element: BeautifulSoup paragraph element to check
+            
+        Returns:
+            bool: True if paragraph contains multiple choice options, False otherwise
+        """
+        # Check for images with choice-like alt text (most common format)
+        for img in p_element.find_all('img'):
+            alt_text = img.get('alt', '')
+            if alt_text and ('\\textbf{(A)' in alt_text or '\\textbf{(B)' in alt_text):
+                return True
+        
+        # Check for mathjax blocks with choice patterns
+        text_content = p_element.get_text()
+        if '[mathjax]' in text_content and ('\\textbf{(A)' in text_content or '\\textbf{(B)' in text_content):
+            return True
+        
+        # Check for plain text choice patterns (rare but possible)
+        if '\\textbf{(A)' in text_content and '\\textbf{(B)' in text_content:
+            return True
+        
+        return False
+    
+    def _separate_question_and_choices(self, question_p_elements):
+        """
+        Separate question paragraphs from choice paragraphs.
+        
+        OLD LOGIC PROBLEM:
+        The original logic assumed that in multi-paragraph problems, the last paragraph
+        always contains the choices. This worked for most problems but failed for cases like:
+        - Paragraph 1: Question text
+        - Paragraph 2: Multiple choice options (actual choices)
+        - Paragraph 3: Empty "Solution" link or other non-choice content
+        
+        NEW LOGIC SOLUTION:
+        Now we intelligently search through all paragraphs to find the one that actually
+        contains choice patterns (\\textbf{(A)}, \\textbf{(B)}, etc.) rather than blindly
+        assuming the last paragraph has choices.
+        
+        Args:
+            question_p_elements: List of paragraph elements from the problem section
+            
+        Returns:
+            tuple: (question_paragraphs, choices_paragraph) where:
+                - question_paragraphs: List of paragraphs containing question text
+                - choices_paragraph: Single paragraph containing multiple choice options
+        """
         if len(question_p_elements) > 1:
-            question_ps = question_p_elements[:-1]
-            choices_p = question_p_elements[-1]
-        else:
-            # Handle case where question and choices are in the same <p> element
+            # Multiple paragraphs: intelligently find the one that contains choices
+            choices_p = None
+            question_ps = []
+            
+            for p in question_p_elements:
+                if self._paragraph_contains_choices(p):
+                    choices_p = p
+                else:
+                    question_ps.append(p)
+            
+            # Fallback: if no paragraph with clear choices found, use old logic
+            # (take last paragraph as choices, which works for most standard problems)
+            if not choices_p:
+                return question_p_elements[:-1], question_p_elements[-1]
+            
+            return question_ps, choices_p
+        
+        elif len(question_p_elements) == 1:
+            # Single paragraph: check if it contains multiple images (question + choices)
+            # This handles cases where both question and choices are in one paragraph
             single_p = question_p_elements[0]
             img_tags = single_p.find_all('img')
             
             if len(img_tags) > 1:
-                # Assume the last img tag contains the choices
-                last_img = img_tags[-1]
+                # Assumption: last image contains choices, earlier images are part of question
+                # Split: question gets all but last image, choices gets last image
+                from bs4 import Tag
                 
-                # Create a copy of the single_p for the question (without the last img)
                 question_p_copy = single_p.__copy__()
                 last_img_in_copy = question_p_copy.find_all('img')[-1]
-                last_img_in_copy.decompose()  # Remove the last img from question
+                last_img_in_copy.decompose()  # Remove last image from question
                 
-                # Create a new element for choices containing only the last img
-                from bs4 import Tag
+                # Create new paragraph containing only the choices image
                 choices_p = Tag(name='p')
-                choices_p.append(last_img.__copy__())
+                choices_p.append(img_tags[-1].__copy__())
                 
-                question_ps = [question_p_copy]
+                return [question_p_copy], choices_p
+            elif len(img_tags) == 1 and self._paragraph_contains_choices(single_p):
+                # Special case: single paragraph with only choices (no question text)
+                # This happens in malformed pages like 2016 AMC 8 Problem 19
+                # The entire paragraph is just the multiple choice options
+                from bs4 import Tag
+                
+                # Create an empty question paragraph
+                empty_question_p = Tag(name='p')
+                empty_question_p.string = "Problem text not found on page."
+                
+                return [empty_question_p], single_p
             else:
-                # If there's only one or no img tags, treat the whole thing as question
-                question_ps = question_p_elements
-                choices_p = None
+                # Single image or no images: treat entire paragraph as question only
+                # This means no separate choices were found
+                return question_p_elements, None
         
-        # Process question part with HTML preservation
+        # Edge case: no paragraphs found
+        return [], None
+    
+    def _process_question_html(self, question_ps):
+        """Convert question paragraphs to HTML with image insertions."""
         insertions = {}
         insertion_index = 1
         question_html_parts = []
         
         for p_element in question_ps:
-            # Create a copy of the p element to modify
             p_copy = p_element.__copy__()
             
-            # Process images in this p element (no answer extraction needed for questions)
+            # Process images (no answer extraction for questions)
             insertion_index, _ = self.process_images(p_copy, insertion_index, insertions, extract_answer=False)
             
-            # Convert to string but clean up the HTML
+            # Convert to HTML string
             p_html = str(p_copy).strip()
             if p_html:
                 question_html_parts.append(p_html)
         
-        # Join question parts and clean up
-        if question_html_parts:
-            question_text = ''.join(question_html_parts)
-            # Clean up any extra whitespace while preserving structure
-            question_text = question_text.replace('\n', '').replace('  ', ' ')
-            # Unescape the insertion placeholders
-            question_text = question_text.replace('&lt;INSERTION_INDEX_', '<INSERTION_INDEX_')
-            question_text = question_text.replace('&gt;', '>')
-        else:
-            return None, None, None
+        if not question_html_parts:
+            return None, None
         
-        # Process choices if they exist
+        # Join and clean up HTML
+        question_text = ''.join(question_html_parts)
+        question_text = question_text.replace('\n', '').replace('  ', ' ')
+        # Unescape insertion placeholders
+        question_text = question_text.replace('&lt;INSERTION_INDEX_', '<INSERTION_INDEX_')
+        question_text = question_text.replace('&gt;', '>')
+        
+        return question_text, insertions
+    
+    def _process_choices(self, choices_p):
+        """Extract and categorize choice options from the choices paragraph."""
         choices = {
             'text_choices': [],
             'picture_choices': [],
@@ -347,49 +463,101 @@ class AMCParser:
             'asy_choices': []
         }
         
-        if choices_p:
-            # Process all images in the choices block
-            for img in choices_p.find_all('img'):
-                img_src = img.get('src', '')
-                alt_text = img.get('alt', '')
-                
-                if img_src:
-                    # Always add the image source to picture_choices
-                    choices['picture_choices'].append(img_src)
-                    
-                    # Categorize based on alt text
-                    if alt_text.startswith('$'):
-                        # This is a LaTeX choice
-                        choices['latex_choices'].append(alt_text)
-                    elif alt_text.startswith('[asy]'):
-                        # This is an Asymptote choice
-                        choices['asy_choices'].append(alt_text)
-                        
-            # Process asymptote diagrams
-            for asy in choices_p.find_all('pre', class_='asy'):
-                asy_text = asy.text.strip()
-                if asy_text and asy_text not in choices['asy_choices']:
-                    choices['asy_choices'].append(asy_text)
+        if not choices_p:
+            return choices
+        
+        # Process images in choices
+        for img in choices_p.find_all('img'):
+            img_src = img.get('src', '')
+            alt_text = img.get('alt', '')
             
-            # Process [mathjax] text choices
-            choices_text = choices_p.get_text()
-            if '[mathjax]' in choices_text and '[/mathjax]' in choices_text:
-                # Extract content between [mathjax] tags
-                mathjax_pattern = r'\[mathjax\](.*?)\[/mathjax\]'
-                mathjax_matches = re.findall(mathjax_pattern, choices_text, re.DOTALL)
-                for mathjax_content in mathjax_matches:
-                    choices['text_choices'].append(f'[mathjax]{mathjax_content.strip()}[/mathjax]')
-            
-            # If no other choices found, check for plain text choices patterns
-            elif not any([choices['picture_choices'], choices['latex_choices'], choices['asy_choices']]):
-                # Look for choice patterns like \textbf{(A) }50\qquad\textbf{(B) }70...
-                choice_pattern = r'\\textbf\{([A-E])\s*\}\s*([^\\]+?)(?=\\textbf\{[A-E]\s*\}|$)'
-                choice_matches = re.findall(choice_pattern, choices_text)
-                if choice_matches:
-                    for letter, content in choice_matches:
-                        choice_text = f'\\textbf{{{letter}}} {content.strip()}'
-                        choices['text_choices'].append(choice_text)
+            if img_src:
+                choices['picture_choices'].append(img_src)
                 
+                # Categorize based on alt text
+                if alt_text.startswith('$'):
+                    choices['latex_choices'].append(alt_text)
+                elif alt_text.startswith('[asy]'):
+                    choices['asy_choices'].append(alt_text)
+        
+        # Process asymptote diagrams
+        for asy in choices_p.find_all('pre', class_='asy'):
+            asy_text = asy.text.strip()
+            if asy_text and asy_text not in choices['asy_choices']:
+                choices['asy_choices'].append(asy_text)
+        
+        # Process text choices
+        choices_text = choices_p.get_text()
+        if '[mathjax]' in choices_text and '[/mathjax]' in choices_text:
+            # Extract mathjax content
+            mathjax_pattern = r'\[mathjax\](.*?)\[/mathjax\]'
+            mathjax_matches = re.findall(mathjax_pattern, choices_text, re.DOTALL)
+            for mathjax_content in mathjax_matches:
+                choices['text_choices'].append(f'[mathjax]{mathjax_content.strip()}[/mathjax]')
+        
+        # If no image/mathjax choices found, look for plain text choice patterns
+        elif not any([choices['picture_choices'], choices['latex_choices'], choices['asy_choices']]):
+            choice_pattern = r'\\textbf\{([A-E])\s*\}\s*([^\\]+?)(?=\\textbf\{[A-E]\s*\}|$)'
+            choice_matches = re.findall(choice_pattern, choices_text)
+            if choice_matches:
+                for letter, content in choice_matches:
+                    choice_text = f'\\textbf{{{letter}}} {content.strip()}'
+                    choices['text_choices'].append(choice_text)
+        
+        return choices
+
+    def extract_question_and_choices(self, soup):
+        """
+        Extract question text, insertions, and multiple choice options from soup.
+        
+        This method handles the complex task of parsing AMC problem pages which can have
+        various HTML structures. The main challenges addressed:
+        
+        1. FINDING CONTENT: Some pages have "Problem" headers, others don't
+        2. SEPARATING PARTS: Question text vs. multiple choice options can be mixed
+        3. CHOICE DETECTION: Choices can be in images, mathjax, or plain text
+        4. HTML PROCESSING: Converting to clean HTML while preserving math/images
+        
+        ALGORITHM:
+        1. Collect all paragraph elements that contain the problem content
+        2. Clean up empty/irrelevant paragraphs from the end
+        3. Intelligently separate question paragraphs from choice paragraphs
+        4. Process question paragraphs into clean HTML with image insertions
+        5. Extract and categorize multiple choice options
+        
+        Args:
+            soup: BeautifulSoup object of the problem page
+            
+        Returns:
+            tuple: (question_text, insertions, choices) where:
+                - question_text: Clean HTML string of the question
+                - insertions: Dict mapping insertion keys to image/math content
+                - choices: Dict with categorized choice options (text, picture, latex, asy)
+                Returns (None, None, None) if parsing fails at any step
+        """
+        # Step 1: Collect question paragraph elements
+        question_p_elements = self._collect_question_paragraphs(soup)
+        if not question_p_elements:
+            return None, None, None
+        
+        # Step 2: Clean up empty paragraphs
+        question_p_elements = self._clean_question_paragraphs(question_p_elements)
+        if not question_p_elements:
+            return None, None, None
+        
+        # Step 3: Separate question from choices
+        question_ps, choices_p = self._separate_question_and_choices(question_p_elements)
+        if not question_ps:
+            return None, None, None
+        
+        # Step 4: Process question into HTML
+        question_text, insertions = self._process_question_html(question_ps)
+        if not question_text:
+            return None, None, None
+        
+        # Step 5: Process choices
+        choices = self._process_choices(choices_p)
+        
         return question_text, insertions, choices
     
     def extract_solutions(self, soup, extract_answers=True):

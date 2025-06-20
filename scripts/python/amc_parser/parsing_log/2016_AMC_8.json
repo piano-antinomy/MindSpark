@@ -13,23 +13,23 @@
   },
   "failed_problems": [
     {
-      "problem_number": 9,
-      "url": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_9",
+      "problem_number": 12,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_12",
       "error_type": "ValueError",
-      "error_message": "No multiple choice options found for 2016 AMC 8 Problem 9",
+      "error_message": "Failed to fetch problem page for 2016 AMC 8 Problem 12",
       "error_details": {
-        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 646, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 492, in parse_problem\n    raise ValueError(f\"No multiple choice options found for {comp_id} Problem {problem_number}\")\nValueError: No multiple choice options found for 2016 AMC 8 Problem 9\n",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 814, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 646, in parse_problem\n    raise ValueError(f\"Failed to fetch problem page for {comp_id} Problem {problem_number}\")\nValueError: Failed to fetch problem page for 2016 AMC 8 Problem 12\n",
         "category": "Format Error",
         "description": "Data format is not as expected"
       }
     },
     {
-      "problem_number": 19,
-      "url": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_19",
+      "problem_number": 13,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2016_AMC_8_Problems/Problem_13",
       "error_type": "ValueError",
-      "error_message": "No question text found for 2016 AMC 8 Problem 19",
+      "error_message": "Failed to fetch problem page for 2016 AMC 8 Problem 13",
       "error_details": {
-        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 646, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 484, in parse_problem\n    raise ValueError(f\"No question text found for {comp_id} Problem {problem_number}\")\nValueError: No question text found for 2016 AMC 8 Problem 19\n",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 814, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 646, in parse_problem\n    raise ValueError(f\"Failed to fetch problem page for {comp_id} Problem {problem_number}\")\nValueError: Failed to fetch problem page for 2016 AMC 8 Problem 13\n",
         "category": "Format Error",
         "description": "Data format is not as expected"
       }
