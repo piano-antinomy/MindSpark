@@ -56,8 +56,9 @@ def load_expected_answers_from_amc_files():
     """Load expected answers from the test AMC JSON files"""
     import os
     
-    # Use test directory for edge cases test
-    amc_dir = os.path.join("test_output", "AMC", "AMC_8")
+    # Use test directory for edge cases test (in same folder as script)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    amc_dir = os.path.join(script_dir, "test_output", "AMC", "AMC_8")
     
     expected_answers = {}
     
@@ -99,7 +100,8 @@ def validate_parsing_results():
     expected_answers = load_expected_answers_from_amc_files()
     print()
     
-    parsing_log_dir = os.path.join("test_output", "parsing_log")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    parsing_log_dir = os.path.join(script_dir, "test_output", "parsing_log")
     
     # Generate expected log files from edge_cases_test.json
     expected_files_info = generate_expected_files_from_config()
@@ -172,8 +174,9 @@ def run_edge_cases_test():
     import shutil
     
     try:
-        # Create test directories
-        test_dir = "test_output"
+        # Create test directories in the same folder as this script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        test_dir = os.path.join(script_dir, "test_output")
         test_parsing_log_dir = os.path.join(test_dir, "parsing_log")
         test_amc_dir = os.path.join(test_dir, "AMC", "AMC_8")
         
@@ -327,9 +330,11 @@ def save_validation_results(validation_results, test_success):
         ]
     }
     
-    # Save to test_output directory
-    report_file = os.path.join("test_output", "validation_report.json")
-    os.makedirs("test_output", exist_ok=True)
+    # Save to test_output directory in the same folder as this script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    test_output_dir = os.path.join(script_dir, "test_output")
+    report_file = os.path.join(test_output_dir, "validation_report.json")
+    os.makedirs(test_output_dir, exist_ok=True)
     
     with open(report_file, 'w', encoding='utf-8') as f:
         json.dump(validation_report, f, indent=2, ensure_ascii=False)
@@ -369,7 +374,8 @@ def print_summary(validation_results, test_success):
 
 def view_validation_report():
     """View the latest validation report"""
-    report_file = os.path.join("test_output", "validation_report.json")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    report_file = os.path.join(script_dir, "test_output", "validation_report.json")
     
     if not os.path.exists(report_file):
         print(f"❌ No validation report found at {report_file}")

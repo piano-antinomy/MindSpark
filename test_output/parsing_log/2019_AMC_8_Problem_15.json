@@ -11,11 +11,23 @@
     "total_problems_expected": 1,
     "problem_number_override": 15
   },
-  "failed_problems": [],
+  "failed_problems": [
+    {
+      "problem_number": 15,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2019_AMC_8_Problems/Problem_15",
+      "error_type": "ValueError",
+      "error_message": "Failed to fetch problem page for 2019 AMC 8 Problem 15",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 814, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 646, in parse_problem\n    raise ValueError(f\"Failed to fetch problem page for {comp_id} Problem {problem_number}\")\nValueError: Failed to fetch problem page for 2019 AMC 8 Problem 15\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    }
+  ],
   "skipped_problems": [],
   "summary": {
-    "successful": 1,
-    "failed": 0,
+    "successful": 0,
+    "failed": 1,
     "skipped": 0
   }
 }

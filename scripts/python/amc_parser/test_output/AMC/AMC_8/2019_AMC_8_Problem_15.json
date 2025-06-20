@@ -1,0 +1,192 @@
+{
+  "competition_info": {
+    "name": "2019_AMC_8_Problem_15",
+    "group": "AMC_8",
+    "year": 2019,
+    "is_AJHSME": false,
+    "level": 8,
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 1,
+    "problem_number_override": 15
+  },
+  "problems": [
+    {
+      "id": "amc_2019_8_15",
+      "question": {
+        "text": "<p>On a beach <INSERTION_INDEX_1> people are wearing sunglasses and <INSERTION_INDEX_2> people are wearing caps. Some people are wearing both sunglasses and caps. If one of the people wearing a cap is selected at random, the probability that this person is also wearing sunglasses is <INSERTION_INDEX_3>. If instead, someone wearing sunglasses is selected at random, what is the probability that this person is also wearing a cap? </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/9/0/6/906734e2f1010e9a171ffee8050cbc0649cea37c.png",
+            "alt_type": "latex",
+            "alt_value": "$50$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/8/c/7/8c7f6c79f2148f0cec592c9517b40ee1b82ef22e.png",
+            "alt_type": "latex",
+            "alt_value": "$35$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/c/a/2/ca2297526ede0e6c616802ca72adf69c82518f25.png",
+            "alt_type": "latex",
+            "alt_value": "$\\frac{2}{5}$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/2/3/6/2367473ff66bf51ba65434f0b5f3f89c07049417.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A) }\\frac{14}{85}\\qquad\\textbf{(B) }\\frac{7}{25}\\qquad\\textbf{(C) }\\frac{2}{5}\\qquad\\textbf{(D) }\\frac{4}{7}\\qquad\\textbf{(E) }\\frac{7}{10}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>The number of people wearing caps and sunglasses is <INSERTION_INDEX_1>. So then, 14 people out of the 50 people wearing sunglasses also have caps.</p><p><INSERTION_INDEX_2></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/9/e/e/9eeb2705c14247820a20fd9ecafd354ace3400af.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{2}{5}\\cdot35=14$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/f/e/9/fe9a1bb7b10915aadbe93e72de00339f0ce7b555.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{14}{50}=\\boxed{\\textbf{(B)}\\frac{7}{25}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Let <INSERTION_INDEX_1> be the event that a randomly selected person is wearing sunglasses, and let <INSERTION_INDEX_2> be the event that a randomly selected person is wearing a cap. We can write <INSERTION_INDEX_3> in two ways: <INSERTION_INDEX_4> or <INSERTION_INDEX_5>. Suppose there are <INSERTION_INDEX_6> people in total. Then <INSERTION_INDEX_7> and <INSERTION_INDEX_8> Additionally, we know that the probability that someone is wearing sunglasses given that they wear a cap is <INSERTION_INDEX_9>, so <INSERTION_INDEX_10>. We let <INSERTION_INDEX_11>, which is the quantity we want to find, be equal to <INSERTION_INDEX_12>. Substituting in, we get <INSERTION_INDEX_13><INSERTION_INDEX_14><INSERTION_INDEX_15><INSERTION_INDEX_16><INSERTION_INDEX_17></p><p>Note: This solution makes use of the dependent events probability formula, <INSERTION_INDEX_18>, where <INSERTION_INDEX_19> represents the probability that <INSERTION_INDEX_20> occurs given that <INSERTION_INDEX_21> has already occurred and <INSERTION_INDEX_22> represents the probability of both <INSERTION_INDEX_23> and <INSERTION_INDEX_24> happening.</p><p>~ cxsmi</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+              "alt_type": "latex",
+              "alt_value": "$A$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+              "alt_type": "latex",
+              "alt_value": "$B$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/7/4/1/741b6419750786f6aeec526c58b0795c9b4d7edc.png",
+              "alt_type": "latex",
+              "alt_value": "$P(A \\cap B)$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/2/0/7/207808e6109fd29041c34860ce73e8b4d9c0d086.png",
+              "alt_type": "latex",
+              "alt_value": "$P(A)P(B|A)$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/d/d/7dd8741efa2dbad7c412a841c762832320a9138e.png",
+              "alt_type": "latex",
+              "alt_value": "$P(B)P(A|B)$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/e/0/d/e0d2bf360290fd61d1c1557e763f2622363b3d35.png",
+              "alt_type": "latex",
+              "alt_value": "$t$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/d/b/c/dbc343187707bf83976dc6799117d87d9d53c806.png",
+              "alt_type": "latex",
+              "alt_value": "\\[P(A) = \\frac{50}{t}\\]"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/1/7/2/172081cf9ae341f6ccd674b57aa6adef57fd3c51.png",
+              "alt_type": "latex",
+              "alt_value": "\\[P(B) = \\frac{35}{t}.\\]"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/c/a/2/ca2297526ede0e6c616802ca72adf69c82518f25.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{2}{5}$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/e/5/f/e5f635d91b77549171b5f252db72a84b32540483.png",
+              "alt_type": "latex",
+              "alt_value": "$P(A|B) = \\frac{2}{5}$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/6/e/f/6ef4444d0c9b6137fcca7ea0dcbce936601cb09e.png",
+              "alt_type": "latex",
+              "alt_value": "$P(B|A)$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/7/f/a/7fa08897c48d996f17200ce25b5c6ea135a8c22b.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{50}{t} \\cdot x = \\frac{35}{t} \\cdot \\frac{2}{5}\\]"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/0/4/d/04d370350c482dd77a7b85b169461c7f9742235a.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\implies 50x = 35 \\cdot \\frac{2}{5}\\]"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/2/a/1/2a13ba71a39ae3000c4824ac1b38e05e283931fc.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\implies 50x = 14\\]"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/1/a/3/1a3432b7fccf475dff21a9b3d18190d7703cf227.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\implies x = \\frac{14}{50}\\]"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/c/0/1/c0108c695129183cb29e116e6985d7522b4ebcaf.png",
+              "alt_type": "latex",
+              "alt_value": "\\[= \\boxed{\\textbf{(B)}~\\frac{7}{25}}\\]"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/e/0/8/e081c615f0350c245657c6aaaf81de1aa52889ae.png",
+              "alt_type": "latex",
+              "alt_value": "$P(A \\cap B) = P(A)P(B|A)$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/6/e/f/6ef4444d0c9b6137fcca7ea0dcbce936601cb09e.png",
+              "alt_type": "latex",
+              "alt_value": "$P(B|A)$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+              "alt_type": "latex",
+              "alt_value": "$B$"
+            },
+            "INSERTION_INDEX_21": {
+              "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+              "alt_type": "latex",
+              "alt_value": "$A$"
+            },
+            "INSERTION_INDEX_22": {
+              "picture": "//latex.artofproblemsolving.com/f/b/3/fb35c26a5cacaaf5417eec965cf53b579f4565ca.png",
+              "alt_type": "latex",
+              "alt_value": "$P(A \\cup B)$"
+            },
+            "INSERTION_INDEX_23": {
+              "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+              "alt_type": "latex",
+              "alt_value": "$A$"
+            },
+            "INSERTION_INDEX_24": {
+              "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+              "alt_type": "latex",
+              "alt_value": "$B$"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
