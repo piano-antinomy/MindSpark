@@ -1,0 +1,33 @@
+{
+  "_comment": "Solution Overrides for AMC Problems",
+  "_description": "This file contains manually specified solutions for problems where the parser fails to extract solutions correctly",
+  "_format": "problem_id -> solution_data",
+  "_example": {
+    "amc_2009_8_17": {
+      "solutions": [
+        {
+          "text": "<p>Manual solution text here...</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "image_url_here",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{2}$"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "_notes": [
+    "Use this when the parser fails to extract solutions or extracts incorrect solutions",
+    "Problem IDs should match the format: amc_YYYY_L_P (e.g., amc_2012_8_11)",
+    "Solution format should match the parser's expected structure",
+    "Include all necessary insertions for images and LaTeX content"
+  ],
+  
+  "amc_2009_8_17": {
+    "_comment": "2012 AMC 8 Problem 11 - Example override for testing",
+    "_reason": "There is no solution on the page, so we give an empty solution",
+    "solutions": []
+  }
+} 
