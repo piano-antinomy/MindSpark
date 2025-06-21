@@ -5,7 +5,7 @@ import re
 import os
 
 class AMCParser:
-    def __init__(self, competition_dict_file="competition_dict.json", answer_overrides_file="answer_overrides.json"):
+    def __init__(self, competition_dict_file="competition_dict.json", answer_overrides_file="answer_overrides.json", question_overrides_file="question_overrides.json"):
         self.base_url = "https://artofproblemsolving.com/wiki/index.php"
         
         # Convert to absolute path for competition dict
@@ -23,8 +23,18 @@ class AMCParser:
         else:
             self.answer_overrides_file = answer_overrides_file
             
+        # Convert to absolute path for question overrides
+        if not os.path.isabs(question_overrides_file):
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            self.question_overrides_file = os.path.join(script_dir, question_overrides_file)
+        else:
+            self.question_overrides_file = question_overrides_file
+            
         # Load answer overrides
         self.answer_overrides = self._load_answer_overrides()
+        
+        # Load question overrides
+        self.question_overrides = self._load_question_overrides()
             
         # Configure all competitions we want to download from the dictionary file
         self.competitions = self._generate_competitions_from_dict()
@@ -48,7 +58,25 @@ class AMCParser:
             print(f"Error loading answer overrides: {e}")
             return {}
     
-
+    def _load_question_overrides(self):
+        """Load question overrides from JSON file"""
+        try:
+            with open(self.question_overrides_file, 'r', encoding='utf-8') as f:
+                overrides = json.load(f)
+                # Filter out comment keys
+                filtered_overrides = {k: v for k, v in overrides.items() if not k.startswith('_')}
+                print(f"Loaded {len(filtered_overrides)} question overrides from {self.question_overrides_file}")
+                return filtered_overrides
+        except FileNotFoundError:
+            print(f"Question overrides file not found: {self.question_overrides_file}")
+            return {}
+        except json.JSONDecodeError as e:
+            print(f"Error parsing question overrides file: {e}")
+            return {}
+        except Exception as e:
+            print(f"Error loading question overrides: {e}")
+            return {}
+    
     def _generate_competitions_from_dict(self):
         """Generate competitions from competition_dict.json file"""
         with open(self.competition_dict_file, 'r', encoding='utf-8') as f:
@@ -171,6 +199,11 @@ class AMCParser:
                     [
                         r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
                         r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
+                    ],
+                    # Tier 3: Alternative boxed formats (lowest priority - fallback patterns)
+                    [
+                        r'\\boxed\{\(\\text\{([A-E])\}\)',           # \boxed{(\text{A}) - parentheses around \text{A}
+                        r'\\boxed\{\(([A-E])\)',                     # \boxed{(B) - simple parentheses around letter
                     ]
                 ]
                 
@@ -212,6 +245,10 @@ class AMCParser:
                         [
                             r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
                             r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
+                        ],
+                        # Tier 3: Alternative boxed formats (lowest priority - fallback patterns)
+                        [
+                            r'\\boxed\{\(\\text\{([A-E])\}\)',           # \boxed{(\text{A}) - parentheses around \text{A}
                         ]
                     ]
                     
@@ -644,34 +681,51 @@ class AMCParser:
         
         if not html:
             raise ValueError(f"Failed to fetch problem page for {comp_id} Problem {problem_number}")
-        soup = BeautifulSoup(html, 'html.parser')
-        question_text, insertions, choices = self.extract_question_and_choices(soup)
-        
-        # Raise exception if no question found
-        if not question_text:
-            raise ValueError(f"No question text found for {comp_id} Problem {problem_number}")
-        
-        # Raise exception if no multiple choice options found
-        has_choices = (choices['text_choices'] or 
-                      choices['picture_choices'] or 
-                      choices['latex_choices'] or 
-                      choices['asy_choices'])
-        if not has_choices:
-            raise ValueError(f"No multiple choice options found for {comp_id} Problem {problem_number}")
         
         # Generate problem ID for override checking
         problem_id = self._generate_problem_id(competition, problem_number)
         
-        # Check for answer override first
+        # Check for question override first
+        if problem_id in self.question_overrides:
+            print(f"Using question override for {comp_id} Problem {problem_number}")
+            question_override = self.question_overrides[problem_id]
+            question_text = question_override['question']['text']
+            insertions = question_override['question']['insertions']
+            choices = {
+                'text_choices': question_override['question'].get('text_choices', []),
+                'picture_choices': question_override['question'].get('picture_choices', []),
+                'latex_choices': question_override['question'].get('latex_choices', []),
+                'asy_choices': question_override['question'].get('asy_choices', [])
+            }
+        else:
+            # No question override, parse from HTML
+            soup = BeautifulSoup(html, 'html.parser')
+            question_text, insertions, choices = self.extract_question_and_choices(soup)
+            
+            # Raise exception if no question found
+            if not question_text:
+                raise ValueError(f"No question text found for {comp_id} Problem {problem_number}")
+            
+            # Raise exception if no multiple choice options found
+            has_choices = (choices['text_choices'] or 
+                          choices['picture_choices'] or 
+                          choices['latex_choices'] or 
+                          choices['asy_choices'])
+            if not has_choices:
+                raise ValueError(f"No multiple choice options found for {comp_id} Problem {problem_number}")
+        
+        # Check for answer override
         if problem_id in self.answer_overrides:
             final_answer = self.answer_overrides[problem_id]
             print(f"Using answer override for {comp_id} Problem {problem_number}: {final_answer}")
             # Still extract solutions but don't extract answers
+            soup = BeautifulSoup(html, 'html.parser')
             solutions, all_extracted_answers = self.extract_solutions(soup, extract_answers=False)
             if not solutions:
                 raise ValueError(f"No solutions found for {comp_id} Problem {problem_number}")
         else:
             # No override, proceed with normal answer extraction
+            soup = BeautifulSoup(html, 'html.parser')
             solutions, all_extracted_answers = self.extract_solutions(soup, extract_answers=True) # Extract solutions and all answers
             
             # Raise exception if no solutions found
@@ -691,6 +745,7 @@ class AMCParser:
             
             # All answers are consistent, use the first one
             final_answer = unique_answers[0]
+        
         problem_data = {
             'id': problem_id,
             'question': {
@@ -985,7 +1040,7 @@ def main(competition_dict_file="competition_dict.json"):
         main()  # Use default competition_dict.json
         main("custom_competitions.json")  # Use custom competition file
     """
-    parser = AMCParser(competition_dict_file)
+    parser = AMCParser(competition_dict_file, "answer_overrides.json", "question_overrides.json")
     
     # Print configuration
     print("=== AMC Problem Downloader Configuration ===")

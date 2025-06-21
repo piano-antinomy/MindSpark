@@ -1,0 +1,49 @@
+{
+  "_comment": "Override questions and choices for problems that are difficult to parse automatically",
+  "_format": "Key: problem_id (e.g., 'amc_2024_8_1'), Value: complete question object with text, insertions, and choices",
+  "_structure": {
+    "question": {
+      "text": "HTML question text with <INSERTION_INDEX_X> placeholders",
+      "insertions": {
+        "INSERTION_INDEX_1": {
+          "picture": "image_url",
+          "alt_type": "latex|asy",
+          "alt_value": "LaTeX or Asymptote code"
+        }
+      },
+      "type": "multiple-choice",
+      "text_choices": ["choice text"],
+      "picture_choices": ["image_url"],
+      "latex_choices": ["$LaTeX$"],
+      "asy_choices": ["[asy]code[/asy]"]
+    }
+  },
+  
+  "amc_2014_8_18": {
+    "question": {
+      "text": "<p>Four children were born at City Hospital yesterday. Assume each child is equally likely to be a boy or a girl. Which of the following outcomes is most likely?</p>",
+      "insertions": {},
+      "type": "multiple-choice",
+      "text_choices": [],
+      "picture_choices": [],
+      "latex_choices": [
+        "$\\textbf{(A) } all 4 are boys\\qquad\\textbf{(B) } all 4 are girls \\qquad\\textbf{(C) } 2 are girls and 2 are boys \\qquad\\textbf{(D) } 3 are of one gender and 1 is of the other gender \\qquad\\textbf{(E) } all of these outcomes are equally likely$"
+      ],
+      "asy_choices": []
+    }
+  },
+  
+  "amc_2024_8_simple_example": {
+    "question": {
+      "text": "What is the sum of the first 10 positive integers?",
+      "insertions": {},
+      "type": "multiple-choice",
+      "text_choices": [
+        "\\textbf{(A) }45\\qquad\\textbf{(B) }50\\qquad\\textbf{(C) }55\\qquad\\textbf{(D) }60\\qquad\\textbf{(E) }65"
+      ],
+      "picture_choices": [],
+      "latex_choices": [],
+      "asy_choices": []
+    }
+  }
+} 

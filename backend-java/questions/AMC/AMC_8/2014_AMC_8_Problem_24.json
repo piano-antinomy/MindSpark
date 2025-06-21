@@ -1,0 +1,142 @@
+{
+  "competition_info": {
+    "name": "2014_AMC_8_Problem_24",
+    "group": "AMC_8",
+    "year": 2014,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 1,
+    "problem_number_override": 24
+  },
+  "problems": [
+    {
+      "id": "amc_2014_8_24",
+      "question": {
+        "text": "<p>One day the Beverage Barn sold <INSERTION_INDEX_1> cans of soda to <INSERTION_INDEX_2> customers, and every customer bought at least one can of soda. What is the maximum possible median number of cans of soda bought per customer on that day?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/6/5/e/65e844b013cb07a4ccd130fcea1b7ab985ba0b3a.png",
+            "alt_type": "latex",
+            "alt_value": "$252$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+            "alt_type": "latex",
+            "alt_value": "$100$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/e/7/f/e7f46289d1bcb24b07aace1d99fe8d7fd061679b.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A) }2.5\\qquad\\textbf{(B) }3.0\\qquad\\textbf{(C) }3.5\\qquad\\textbf{(D) }4.0\\qquad \\textbf{(E) }4.5$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>In order to maximize the median, we need to make the first half of the numbers as small as possible. Since there are <INSERTION_INDEX_1> people, the median will be the average of the <INSERTION_INDEX_2> and <INSERTION_INDEX_3> largest amount of cans per person. To minimize the first <INSERTION_INDEX_4>, they would each have one can. Subtracting these <INSERTION_INDEX_5> cans from the <INSERTION_INDEX_6> cans gives us <INSERTION_INDEX_7> cans left to divide among <INSERTION_INDEX_8> people. Taking <INSERTION_INDEX_9> gives us <INSERTION_INDEX_10> and a remainder of <INSERTION_INDEX_11>. Seeing this, the largest number of cans the <INSERTION_INDEX_12>th person could have is <INSERTION_INDEX_13>, which leaves <INSERTION_INDEX_14> to the rest of the people. The average of <INSERTION_INDEX_15> and <INSERTION_INDEX_16> is <INSERTION_INDEX_17>. Thus our answer is <INSERTION_INDEX_18>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+              "alt_type": "latex",
+              "alt_value": "$100$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/5/f/75f588a99d0550340e54aa73effc9346d062f32d.png",
+              "alt_type": "latex",
+              "alt_value": "$50\\text{th}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/a/9/c/a9cadebdf623edeb5f6a617003959c5423412c3b.png",
+              "alt_type": "latex",
+              "alt_value": "$51\\text{st}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/3/4/c/34c8e6bf4d57cd6f2bb0d7d43e00f0f442f53b84.png",
+              "alt_type": "latex",
+              "alt_value": "$49$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/3/4/c/34c8e6bf4d57cd6f2bb0d7d43e00f0f442f53b84.png",
+              "alt_type": "latex",
+              "alt_value": "$49$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/6/5/e/65e844b013cb07a4ccd130fcea1b7ab985ba0b3a.png",
+              "alt_type": "latex",
+              "alt_value": "$252$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/b/e/8/be8552ecdfa2e81447b42240f15cfeca7bf44ba7.png",
+              "alt_type": "latex",
+              "alt_value": "$203$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/6/e/1/6e1fd7cb028e27b8648efbfb002f3e6d4fcb33a5.png",
+              "alt_type": "latex",
+              "alt_value": "$51$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/d/4/d/d4d49bf74b6ce53685328d866f9d881144e309dc.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{203}{51}$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/9/0/6/906734e2f1010e9a171ffee8050cbc0649cea37c.png",
+              "alt_type": "latex",
+              "alt_value": "$50$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/9/0/6/906734e2f1010e9a171ffee8050cbc0649cea37c.png",
+              "alt_type": "latex",
+              "alt_value": "$50$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/8/7/b/87b8245e043508c7c928c89b42f9ce38f04d720d.png",
+              "alt_type": "latex",
+              "alt_value": "$3.5$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/0/8/9/089d158f8b41e77774041cf14e8b593e6e3be52d.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\text{(C) }3.5}$"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

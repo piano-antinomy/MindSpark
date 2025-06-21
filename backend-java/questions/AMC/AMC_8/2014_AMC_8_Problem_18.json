@@ -1,0 +1,69 @@
+{
+  "competition_info": {
+    "name": "2014_AMC_8_Problem_18",
+    "group": "AMC_8",
+    "year": 2014,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 1,
+    "problem_number_override": 18
+  },
+  "problems": [
+    {
+      "id": "amc_2014_8_18",
+      "question": {
+        "text": "<p>Four children were born at City Hospital yesterday. Assume each child is equally likely to be a boy or a girl. Which of the following outcomes is most likely?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [],
+        "latex_choices": [
+          "$\\textbf{(A) } all 4 are boys\\qquad\\textbf{(B) } all 4 are girls \\qquad\\textbf{(C) } 2 are girls and 2 are boys \\qquad\\textbf{(D) } 3 are of one gender and 1 is of the other gender \\qquad\\textbf{(E) } all of these outcomes are equally likely$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>We'll just start by breaking cases down. The probability of A occurring is <INSERTION_INDEX_1>. The probability of B occurring is <INSERTION_INDEX_2>.</p><p>The probability of C occurring is <INSERTION_INDEX_3>, because we need to choose 2 of the 4 slots to be girls. </p><p>For D, there are two possible cases, 3 girls and 1 boy or 3 boys and 1 girl. The probability of the first case is <INSERTION_INDEX_4> because we need to choose 1 of the 4 slots to be a boy. However, the second case has the same probability because we are choosing 1 of the 4 children to be a girl, so the total probability is <INSERTION_INDEX_5>.</p><p><br/>So out of the four fractions, D is the largest. So our answer is <INSERTION_INDEX_6></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/2/5/2256004ade091f969a0da9aa19a6911238a21cd8.png",
+              "alt_type": "latex",
+              "alt_value": "$\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{16}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/2/5/2256004ade091f969a0da9aa19a6911238a21cd8.png",
+              "alt_type": "latex",
+              "alt_value": "$\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{16}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/4/d/9/4d9fb27a79c767fa6eb35a14f43424fa8e55c04c.png",
+              "alt_type": "latex",
+              "alt_value": "$\\dbinom{4}{2}\\cdot \\left(\\frac{1}{2}\\right)^4 = \\frac{3}{8}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/8/0/c80c385a37a4a26ba4b1527e657876b1b0bcb99d.png",
+              "alt_type": "latex",
+              "alt_value": "$\\dbinom{4}{1}\\cdot\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{4}$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/b/d/c/bdc9ecf8d1a5521ed5e1c263eaf6107b4c5c1232.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{4} \\cdot 2 = \\frac{1}{2}$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/e/9/9/e9984c7494d177b80ccfbd097858206c9877f6fb.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\text{(D) 3 are of one gender and 1 is of the other gender}}.$"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

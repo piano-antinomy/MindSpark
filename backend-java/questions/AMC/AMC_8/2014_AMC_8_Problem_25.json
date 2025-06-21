@@ -1,0 +1,202 @@
+{
+  "competition_info": {
+    "name": "2014_AMC_8_Problem_25",
+    "group": "AMC_8",
+    "year": 2014,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 1,
+    "problem_number_override": 25
+  },
+  "problems": [
+    {
+      "id": "amc_2014_8_25",
+      "question": {
+        "text": "<p>A straight one-mile stretch of highway, 40 feet wide, is closed. Robert rides his bike on a path composed of semicircles as shown. If he rides at 5 miles per hour, how many hours will it take to cover the one-mile stretch?<INSERTION_INDEX_1>Note: 1 mile = 5280 feet</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/7/1/a/71a0b57907e6bd351febe1d78fad2839d5131421.png",
+            "alt_type": "asy",
+            "alt_value": "[asy]size(10cm); pathpen=black; pointpen=black; D(arc((-2,0),1,300,360)); D(arc((0,0),1,0,180)); D(arc((2,0),1,180,360)); D(arc((4,0),1,0,180)); D(arc((6,0),1,180,240)); D((-1.5,-1)--(5.5,-1));[/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/c/9/1/c91a475829e5cbdd00db1426252ec6730c30cd09.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A) }\\frac{\\pi}{11}\\qquad\\textbf{(B) }\\frac{\\pi}{10}\\qquad\\textbf{(C) }\\frac{\\pi}{5}\\qquad\\textbf{(D) }\\frac{2\\pi}{5}\\qquad\\textbf{(E) }\\frac{2\\pi}{3}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>There are two possible interpretations of the problem: that the road as a whole is <INSERTION_INDEX_1> feet wide, or that each lane is <INSERTION_INDEX_2> feet wide. Both interpretations will arrive at the same result. However, let us stick with the first interpretation for simplicity. Each lane must then be <INSERTION_INDEX_3> feet wide, so Robert must be riding his bike in semicircles with radius <INSERTION_INDEX_4> feet and diameter <INSERTION_INDEX_5> feet. Since the road is <INSERTION_INDEX_6> feet long, over the whole mile, Robert rides <INSERTION_INDEX_7> semicircles in total. Were the semicircles full circles, their circumference would be <INSERTION_INDEX_8> feet; as it is, the circumference of each is half that, or <INSERTION_INDEX_9> feet. Therefore, over the stretch of highway, Robert rides a total of <INSERTION_INDEX_10> feet, equivalent to <INSERTION_INDEX_11> miles. Robert rides at 5 miles per hour, so divide the <INSERTION_INDEX_12> miles by <INSERTION_INDEX_13> mph (because <INSERTION_INDEX_14> and time = distance/rate) to arrive at <INSERTION_INDEX_15> hours.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/7/8/7/78792fe4680a164f537ea72a4f900e4471433c3b.png",
+              "alt_type": "latex",
+              "alt_value": "$40$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/8/7/78792fe4680a164f537ea72a4f900e4471433c3b.png",
+              "alt_type": "latex",
+              "alt_value": "$40$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png",
+              "alt_type": "latex",
+              "alt_value": "$20$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png",
+              "alt_type": "latex",
+              "alt_value": "$20$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/8/7/78792fe4680a164f537ea72a4f900e4471433c3b.png",
+              "alt_type": "latex",
+              "alt_value": "$40$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/2/f/c/2fc92cb8cdff39ca4dac9ec6fb3224dbe5fa50a3.png",
+              "alt_type": "latex",
+              "alt_value": "$5280$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/3/d/4/3d4a5093b3e4297035b4804707810f8f6b5b16b2.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{5280}{40} =132$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/8/6/f/86fd9eb5a5c016caaa2ede0062581473fa439184.png",
+              "alt_type": "latex",
+              "alt_value": "$2\\pi\\cdot 20=40\\pi$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/9/c/f/9cf5d779e3740a6916b73852f858ab4a72c82e92.png",
+              "alt_type": "latex",
+              "alt_value": "$20\\pi$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/4/f/2/4f24b805dcc743fc6e6277172520d767a7873276.png",
+              "alt_type": "latex",
+              "alt_value": "$132\\cdot 20\\pi =2640\\pi$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/a/e/e/aeebb746f8c0d3dac5219c3635617032430afee9.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{\\pi}{2}$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/a/e/e/aeebb746f8c0d3dac5219c3635617032430afee9.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{\\pi}{2}$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/a/8/b/a8b3cd511f74e21a0af276dcae0e3754fd0bf9a4.png",
+              "alt_type": "latex",
+              "alt_value": "$t = \\frac{d}{r}$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/4/2/e/42e75f2ff032ca9516cfb85369ae47ce9e9c4bdb.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(B) }\\frac{\\pi}{10}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>There are two possible interpretations of the problem: that the road as a whole is <INSERTION_INDEX_1> feet wide, or that each lane is <INSERTION_INDEX_2> feet wide. Both interpretations will arrive at the same result. However, let us stick with the first interpretation for simplicity. Each lane must then be <INSERTION_INDEX_3> feet wide, so Robert must be riding his bike in semicircles with radius <INSERTION_INDEX_4> feet and diameter <INSERTION_INDEX_5> feet. Since the road is <INSERTION_INDEX_6> feet long, over the whole mile, Robert rides <INSERTION_INDEX_7> semicircles in total. Were the semicircles full circles, their circumference would be <INSERTION_INDEX_8> feet; as it is, the circumference of each is half that, or <INSERTION_INDEX_9> feet. Therefore, over the stretch of highway, Robert rides a total of <INSERTION_INDEX_10> feet, equivalent to <INSERTION_INDEX_11> miles. Robert rides at 5 miles per hour, so divide the <INSERTION_INDEX_12> miles by <INSERTION_INDEX_13> mph (because <INSERTION_INDEX_14> and time = distance/rate) to arrive at <INSERTION_INDEX_15> hours.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/7/8/7/78792fe4680a164f537ea72a4f900e4471433c3b.png",
+              "alt_type": "latex",
+              "alt_value": "$40$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/8/7/78792fe4680a164f537ea72a4f900e4471433c3b.png",
+              "alt_type": "latex",
+              "alt_value": "$40$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png",
+              "alt_type": "latex",
+              "alt_value": "$20$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png",
+              "alt_type": "latex",
+              "alt_value": "$20$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/8/7/78792fe4680a164f537ea72a4f900e4471433c3b.png",
+              "alt_type": "latex",
+              "alt_value": "$40$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/2/f/c/2fc92cb8cdff39ca4dac9ec6fb3224dbe5fa50a3.png",
+              "alt_type": "latex",
+              "alt_value": "$5280$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/3/d/4/3d4a5093b3e4297035b4804707810f8f6b5b16b2.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{5280}{40} =132$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/8/6/f/86fd9eb5a5c016caaa2ede0062581473fa439184.png",
+              "alt_type": "latex",
+              "alt_value": "$2\\pi\\cdot 20=40\\pi$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/9/c/f/9cf5d779e3740a6916b73852f858ab4a72c82e92.png",
+              "alt_type": "latex",
+              "alt_value": "$20\\pi$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/4/f/2/4f24b805dcc743fc6e6277172520d767a7873276.png",
+              "alt_type": "latex",
+              "alt_value": "$132\\cdot 20\\pi =2640\\pi$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/a/e/e/aeebb746f8c0d3dac5219c3635617032430afee9.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{\\pi}{2}$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/a/e/e/aeebb746f8c0d3dac5219c3635617032430afee9.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{\\pi}{2}$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/a/8/b/a8b3cd511f74e21a0af276dcae0e3754fd0bf9a4.png",
+              "alt_type": "latex",
+              "alt_value": "$t = \\frac{d}{r}$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/4/2/e/42e75f2ff032ca9516cfb85369ae47ce9e9c4bdb.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(B) }\\frac{\\pi}{10}}$"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
