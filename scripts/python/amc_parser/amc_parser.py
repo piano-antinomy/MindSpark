@@ -188,6 +188,7 @@ class AMCParser:
                 answer_pattern_tiers = [
                     # Tier 1: Boxed answers (highest priority - final answers)
                     [
+                        r'\\boxed\{\{\\textbf\{\(([A-E])\)',          # \boxed{{\textbf{(D) - double braces
                         r'\\boxed\{\\textbf\{\(([A-E])\)',            # \boxed{\textbf{(D) - stops at closing parenthesis
                         r'\\boxed\{\\textbf\{([A-E])',               # \boxed{\textbf{A - stops at letter (no parentheses)
                         r'\\boxed\{\\text\{\(([A-E])\)',             # \boxed{\text{(C) - stops at closing parenthesis
@@ -234,6 +235,7 @@ class AMCParser:
                     answer_pattern_tiers = [
                         # Tier 1: Boxed answers (highest priority - final answers)
                         [
+                            r'\\boxed\{\{\\textbf\{\(([A-E])\)',          # \boxed{{\textbf{(D) - double braces
                             r'\\boxed\{\\textbf\{\(([A-E])\)',            # \boxed{\textbf{(D) - stops at closing parenthesis
                             r'\\boxed\{\\textbf\{([A-E])',               # \boxed{\textbf{A - stops at letter (no parentheses)
                             r'\\boxed\{\\text\{\(([A-E])\)',             # \boxed{\text{(C) - stops at closing parenthesis
