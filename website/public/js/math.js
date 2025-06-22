@@ -298,22 +298,30 @@ function processQuestionText(questionText, insertions) {
             if (latexContent.startsWith('$') && latexContent.endsWith('$')) {
                 // Already has $ delimiters, use as-is
                 debugLog(`Using existing $ delimiters: ${latexContent}`);
-                processedText = processedText.replace(`<${marker}>`, latexContent);
+                processedText = processedText.replace(`[${marker}]`, latexContent);
             } else if (latexContent.startsWith('\\(') && latexContent.endsWith('\\)')) {
                 // Already has \\( \\) delimiters, use as-is
                 debugLog(`Using existing \\\\( \\\\) delimiters: ${latexContent}`);
-                processedText = processedText.replace(`<${marker}>`, latexContent);
+                processedText = processedText.replace(`[${marker}]`, latexContent);
+            } else if (latexContent.startsWith('\\[') && latexContent.endsWith('\\]')) {
+                // Already has \\[ \\] delimiters (display math), use as-is
+                debugLog(`Using existing \\\\[ \\\\] delimiters: ${latexContent}`);
+                processedText = processedText.replace(`[${marker}]`, latexContent);
             } else {
                 // No delimiters, add \\( \\) for inline math
                 debugLog(`Adding \\\\( \\\\) delimiters to: ${latexContent}`);
-                processedText = processedText.replace(`<${marker}>`, `\\(${latexContent}\\)`);
+                processedText = processedText.replace(`[${marker}]`, `\\(${latexContent}\\)`);
             }
+        } else if (insertion.alt_type === 'asy' && insertion.picture) {
+            // Handle Asymptote diagrams - use picture field for asy type
+            debugLog(`Processing asy insertion - using picture field: ${insertion.picture}`);
+            processedText = processedText.replace(`[${marker}]`, `<img src="${insertion.picture}" alt="${insertion.alt_value || 'Question diagram'}" class="question-image" />`);
         } else if (insertion.picture) {
-            // Use picture URL
-            processedText = processedText.replace(`<${marker}>`, `<img src="${insertion.picture}" alt="${insertion.alt_value || 'Question image'}" class="question-image" />`);
+            // Use picture URL for other types
+            processedText = processedText.replace(`[${marker}]`, `<img src="${insertion.picture}" alt="${insertion.alt_value || 'Question image'}" class="question-image" />`);
         } else if (insertion.alt_value) {
             // Use alternative text value
-            processedText = processedText.replace(`<${marker}>`, insertion.alt_value);
+            processedText = processedText.replace(`[${marker}]`, insertion.alt_value);
         }
         
         debugLog(`After processing ${marker}, text is now:`, processedText);
