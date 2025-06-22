@@ -5,7 +5,7 @@ import re
 import os
 
 class AMCParser:
-    def __init__(self, competition_dict_file="competition_dict.json", answer_overrides_file="answer_overrides.json", question_overrides_file="question_overrides.json", solution_overrides_file="solution_overrides.json"):
+    def __init__(self, competition_dict_file="competition_dict.json", answer_overrides_file="answer_overrides.json", question_overrides_file="question_overrides.json", solution_overrides_file="solution_overrides.json", no_choices_overrides_file="no_choices_overrides.json"):
         self.base_url = "https://artofproblemsolving.com/wiki/index.php"
         
         # Convert to absolute path for competition dict
@@ -37,6 +37,13 @@ class AMCParser:
         else:
             self.solution_overrides_file = solution_overrides_file
             
+        # Convert to absolute path for no choices overrides
+        if not os.path.isabs(no_choices_overrides_file):
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            self.no_choices_overrides_file = os.path.join(script_dir, no_choices_overrides_file)
+        else:
+            self.no_choices_overrides_file = no_choices_overrides_file
+            
         # Load answer overrides
         self.answer_overrides = self._load_answer_overrides()
         
@@ -45,6 +52,9 @@ class AMCParser:
         
         # Load solution overrides
         self.solution_overrides = self._load_solution_overrides()
+        
+        # Load no choices overrides
+        self.no_choices_overrides = self._load_no_choices_overrides()
             
         # Configure all competitions we want to download from the dictionary file
         self.competitions = self._generate_competitions_from_dict()
@@ -104,6 +114,25 @@ class AMCParser:
             return {}
         except Exception as e:
             print(f"Error loading solution overrides: {e}")
+            return {}
+    
+    def _load_no_choices_overrides(self):
+        """Load no choices overrides from JSON file"""
+        try:
+            with open(self.no_choices_overrides_file, 'r', encoding='utf-8') as f:
+                overrides = json.load(f)
+                # Filter out comment keys
+                filtered_overrides = {k: v for k, v in overrides.items() if not k.startswith('_')}
+                print(f"Loaded {len(filtered_overrides)} no choices overrides from {self.no_choices_overrides_file}")
+                return filtered_overrides
+        except FileNotFoundError:
+            print(f"No choices overrides file not found: {self.no_choices_overrides_file}")
+            return {}
+        except json.JSONDecodeError as e:
+            print(f"Error parsing no choices overrides file: {e}")
+            return {}
+        except Exception as e:
+            print(f"Error loading no choices overrides: {e}")
             return {}
     
     def _generate_competitions_from_dict(self):
@@ -201,6 +230,50 @@ class AMCParser:
     def process_images(self, element, insertion_index, insertions, extract_answer=False):
         found_answers = []  # List of (answer, tier_num, alt_text) tuples
         
+        def extract_answers_from_text(text_content, source_name="LaTeX"):
+            """Helper method to extract answers from text using tier-based pattern matching"""
+            local_found_answers = []
+            
+            # Multi-tier answer pattern matching (higher tiers have priority)
+            answer_pattern_tiers = [
+                # Tier 1: Boxed answers (highest priority - final answers)
+                [
+                    r'\\boxed{\\mathrm{\(([A-E])\)[^}]*}',  # \boxed{\mathrm{(C)} 79}
+                    r'\\boxed\{\\textbf\{\(([A-E])\)',
+                    r'\\boxed\{\\textbf\{([A-E])',
+                    r'\\boxed\{\\text\{\(([A-E])\)',
+                    r'\\boxed\{\\text\{([A-E])',
+                    r'\\boxed\s*\{\\text\s*\{\(([A-E])\)[^}]*\}',  # \boxed {\text {(D)} 5}
+                    r'\\boxed\{\(\\textbf\{([A-E])\}\)}',
+                    r'\\framebox\{([A-E])\}',
+                ],
+                # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
+                [
+                    r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
+                    r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
+                ],
+                # Tier 3: Alternative boxed formats (lowest priority - fallback patterns)
+                [
+                    r'\\boxed\{\(\\text\{([A-E])\}\)',           # \boxed{(\text{A}) - parentheses around \text{A}
+                    r'\\boxed\{\(([A-E])\)',                     # \boxed{(B) - simple parentheses around letter
+                    r'\\fbox\{([A-E])\}',                        # \fbox{D} - simple framed box
+                    r'\\boxed\{([A-E])\}',                       # \boxed{C} - simple boxed letter
+                ]
+            ]
+            
+            # Check all tiers for this text content
+            for tier_num, patterns in enumerate(answer_pattern_tiers, 1):
+                for pattern in patterns:
+                    match = re.search(pattern, text_content)
+                    if match:
+                        answer = match.group(1)
+                        local_found_answers.append((answer, tier_num, text_content))
+                        print(f"Found answer '{answer}' in {source_name} (Tier {tier_num}): {text_content}")
+                        break  # Only take first match per tier per text block
+                # Don't break here - continue checking other tiers for this text content
+            
+            return local_found_answers
+        
         for img in element.find_all('img'):
             alt_text = img.get('alt', '')
             img_src = img.get('src', '')
@@ -213,40 +286,7 @@ class AMCParser:
             
             # Extract answer from LaTeX alt text if requested
             if extract_answer and alt_text:
-                # Multi-tier answer pattern matching (higher tiers have priority)
-                answer_pattern_tiers = [
-                    # Tier 1: Boxed answers (highest priority - final answers)
-                    [
-                        r'\\boxed{\\mathrm{\(([A-E])\)[^}]*}',  # \boxed{\mathrm{(C)} 79}
-                        r'\\boxed\{\\textbf\{\(([A-E])\)',
-                        r'\\boxed\{\\textbf\{([A-E])',
-                        r'\\boxed\{\\text\{\(([A-E])\)',
-                        r'\\boxed\{\\text\{([A-E])',
-                        r'\\boxed\{\(\\textbf\{([A-E])\}\)}',
-                        r'\\framebox\{([A-E])\}',
-                    ],
-                    # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
-                    [
-                        r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
-                        r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
-                    ],
-                    # Tier 3: Alternative boxed formats (lowest priority - fallback patterns)
-                    [
-                        r'\\boxed\{\(\\text\{([A-E])\}\)',           # \boxed{(\text{A}) - parentheses around \text{A}
-                        r'\\boxed\{\(([A-E])\)',                     # \boxed{(B) - simple parentheses around letter
-                    ]
-                ]
-                
-                # Check all tiers for this image
-                for tier_num, patterns in enumerate(answer_pattern_tiers, 1):
-                    for pattern in patterns:
-                        match = re.search(pattern, alt_text)
-                        if match:
-                            answer = match.group(1)
-                            found_answers.append((answer, tier_num, alt_text))
-                            print(f"Found answer '{answer}' in LaTeX (Tier {tier_num}): {alt_text}")
-                            break  # Only take first match per tier per image
-                    # Don't break here - continue checking other tiers for this image
+                found_answers.extend(extract_answers_from_text(alt_text, "LaTeX"))
             
             img.replace_with(f"<{insertion_key}>")
             insertion_index += 1
@@ -261,38 +301,10 @@ class AMCParser:
                 
                 for mathjax_content in mathjax_matches:
                     # Apply the same tier-based pattern matching to mathjax content
-                    answer_pattern_tiers = [
-                        # Tier 1: Boxed answers (highest priority - final answers)
-                        [
-                            r'\\boxed{\\mathrm{\(([A-E])\)[^}]*}',  # \boxed{\mathrm{(C)} 79}
-                            r'\\boxed\{\\textbf\{\(([A-E])\)',
-                            r'\\boxed\{\\textbf\{([A-E])',
-                            r'\\boxed\{\\text\{\(([A-E])\)',
-                            r'\\boxed\{\\text\{([A-E])',
-                            r'\\boxed\{\(\\textbf\{([A-E])\}\)}',
-                            r'\\framebox\{([A-E])\}',
-                        ],
-                        # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
-                        [
-                            r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
-                            r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
-                        ],
-                        # Tier 3: Alternative boxed formats (lowest priority - fallback patterns)
-                        [
-                            r'\\boxed\{\(\\text\{([A-E])\}\)',           # \boxed{(\text{A}) - parentheses around \text{A}
-                        ]
-                    ]
-                    
-                    # Check all tiers for this mathjax content
-                    for tier_num, patterns in enumerate(answer_pattern_tiers, 1):
-                        for pattern in patterns:
-                            match = re.search(pattern, mathjax_content)
-                            if match:
-                                answer = match.group(1)
-                                found_answers.append((answer, tier_num, f"[mathjax]{mathjax_content}[/mathjax]"))
-                                print(f"Found answer '{answer}' in [mathjax] (Tier {tier_num}): {mathjax_content}")
-                                break  # Only take first match per tier per mathjax block
-                        # Don't break here - continue checking other tiers for this mathjax content
+                    mathjax_answers = extract_answers_from_text(mathjax_content, "[mathjax]")
+                    # Update the source name for mathjax answers
+                    for answer, tier, content in mathjax_answers:
+                        found_answers.append((answer, tier, f"[mathjax]{content}[/mathjax]"))
         
         if extract_answer:
             return insertion_index, found_answers  # Return all found answers for global ranking
@@ -632,7 +644,7 @@ class AMCParser:
         solutions = []
         all_extracted_answers = []  # Collect answers from all solutions
         
-        # Find solution headers - look for any h2 or h3 with span id that starts with "Solution_" or equals "Solution"
+        # Find solution headers - look for any h2 or h3 with span id that starts with "Solution" (with or without underscore)
         solution_headers = []
         
         # Search through all h2 and h3 headers
@@ -640,8 +652,9 @@ class AMCParser:
             span = header.find('span', class_='mw-headline')
             if span:
                 span_id = span.get('id', '')
-                # Look for Solution, Solution_1, Solution_2, etc. but exclude Video solutions
-                if (span_id == 'Solution' or span_id.startswith('Solution_')) and 'Video_Solution' not in span_id:
+                # Look for Solution, Solution_1, Solution1, Solution_2, Solution2, etc. but exclude Video solutions
+                if (span_id == 'Solution' or span_id.startswith('Solution_') or 
+                    (span_id.startswith('Solution') and span_id != 'Solution' and 'Video_Solution' not in span_id)):
                     solution_headers.append(header)
         
         # Process each solution section
@@ -716,6 +729,11 @@ class AMCParser:
         # Generate problem ID for override checking
         problem_id = self._generate_problem_id(competition, problem_number)
         
+        # Check if this problem should skip multiple choice options
+        skip_choices = self.no_choices_overrides.get(problem_id, False)
+        if skip_choices:
+            print(f"Skipping multiple choice extraction for {comp_id} Problem {problem_number} (no_choices override)")
+        
         # Check for question override first
         if problem_id in self.question_overrides:
             print(f"Using question override for {comp_id} Problem {problem_number}")
@@ -737,13 +755,22 @@ class AMCParser:
             if not question_text:
                 raise ValueError(f"No question text found for {comp_id} Problem {problem_number}")
             
-            # Raise exception if no multiple choice options found
-            has_choices = (choices['text_choices'] or 
-                          choices['picture_choices'] or 
-                          choices['latex_choices'] or 
-                          choices['asy_choices'])
-            if not has_choices:
-                raise ValueError(f"No multiple choice options found for {comp_id} Problem {problem_number}")
+            # Only check for multiple choice options if not skipping choices
+            if not skip_choices:
+                has_choices = (choices['text_choices'] or 
+                              choices['picture_choices'] or 
+                              choices['latex_choices'] or 
+                              choices['asy_choices'])
+                if not has_choices:
+                    raise ValueError(f"No multiple choice options found for {comp_id} Problem {problem_number}")
+            else:
+                # For problems with no choices override, set empty choices
+                choices = {
+                    'text_choices': [],
+                    'picture_choices': [],
+                    'latex_choices': [],
+                    'asy_choices': []
+                }
         
         # Check for answer override
         if problem_id in self.answer_overrides:
@@ -784,7 +811,7 @@ class AMCParser:
             'question': {
                 'text': question_text,
                 'insertions': insertions,
-                'type': 'multiple-choice',
+                'type': 'free-response' if skip_choices else 'multiple-choice',
                 **choices
             },
             'tags': [],
@@ -1073,7 +1100,7 @@ def main(competition_dict_file="competition_dict.json"):
         main()  # Use default competition_dict.json
         main("custom_competitions.json")  # Use custom competition file
     """
-    parser = AMCParser(competition_dict_file, "answer_overrides.json", "question_overrides.json", "solution_overrides.json")
+    parser = AMCParser(competition_dict_file, "answer_overrides.json", "question_overrides.json", "solution_overrides.json", "no_choices_overrides.json")
     
     # Print configuration
     print("=== AMC Problem Downloader Configuration ===")
