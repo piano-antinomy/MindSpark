@@ -14,7 +14,11 @@ import os
 def generate_expected_files_from_config():
     """Generate expected file names and problem keys from edge_cases_test.json"""
     try:
-        with open('edge_cases_test.json', 'r') as f:
+        # Use absolute path to ensure we can find the file regardless of working directory
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        config_file = os.path.join(script_dir, 'edge_cases_test.json')
+        
+        with open(config_file, 'r') as f:
             config = json.load(f)
         
         expected_files = []

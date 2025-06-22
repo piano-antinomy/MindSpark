@@ -217,13 +217,13 @@ class AMCParser:
                 answer_pattern_tiers = [
                     # Tier 1: Boxed answers (highest priority - final answers)
                     [
-                        r'\\boxed\{\{\\textbf\{\(([A-E])\)',          # \boxed{{\textbf{(D) - double braces
-                        r'\\boxed\{\\textbf\{\(([A-E])\)',            # \boxed{\textbf{(D) - stops at closing parenthesis
-                        r'\\boxed\{\\textbf\{([A-E])',               # \boxed{\textbf{A - stops at letter (no parentheses)
-                        r'\\boxed\{\\text\{\(([A-E])\)',             # \boxed{\text{(C) - stops at closing parenthesis
-                        r'\\boxed\{\\text\{([A-E])',                 # \boxed{\text{A - stops at letter (no parentheses)
-                        r'\\boxed\{\(\\textbf\{([A-E])\}\)}',        # \boxed{(\textbf{C})} - parentheses around \textbf{C}
-                        r'\\framebox\{([A-E])\}',                    # \framebox{C} - framebox pattern
+                        r'\\boxed{\\mathrm{\(([A-E])\)[^}]*}',  # \boxed{\mathrm{(C)} 79}
+                        r'\\boxed\{\\textbf\{\(([A-E])\)',
+                        r'\\boxed\{\\textbf\{([A-E])',
+                        r'\\boxed\{\\text\{\(([A-E])\)',
+                        r'\\boxed\{\\text\{([A-E])',
+                        r'\\boxed\{\(\\textbf\{([A-E])\}\)}',
+                        r'\\framebox\{([A-E])\}',
                     ],
                     # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
                     [
@@ -264,13 +264,13 @@ class AMCParser:
                     answer_pattern_tiers = [
                         # Tier 1: Boxed answers (highest priority - final answers)
                         [
-                            r'\\boxed\{\{\\textbf\{\(([A-E])\)',          # \boxed{{\textbf{(D) - double braces
-                            r'\\boxed\{\\textbf\{\(([A-E])\)',            # \boxed{\textbf{(D) - stops at closing parenthesis
-                            r'\\boxed\{\\textbf\{([A-E])',               # \boxed{\textbf{A - stops at letter (no parentheses)
-                            r'\\boxed\{\\text\{\(([A-E])\)',             # \boxed{\text{(C) - stops at closing parenthesis
-                            r'\\boxed\{\\text\{([A-E])',                 # \boxed{\text{A - stops at letter (no parentheses)
-                            r'\\boxed\{\(\\textbf\{([A-E])\}\)}',        # \boxed{(\textbf{C})} - parentheses around \textbf{C}
-                            r'\\framebox\{([A-E])\}',                    # \framebox{C} - framebox pattern
+                            r'\\boxed{\\mathrm{\(([A-E])\)[^}]*}',  # \boxed{\mathrm{(C)} 79}
+                            r'\\boxed\{\\textbf\{\(([A-E])\)',
+                            r'\\boxed\{\\textbf\{([A-E])',
+                            r'\\boxed\{\\text\{\(([A-E])\)',
+                            r'\\boxed\{\\text\{([A-E])',
+                            r'\\boxed\{\(\\textbf\{([A-E])\}\)}',
+                            r'\\framebox\{([A-E])\}',
                         ],
                         # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
                         [
