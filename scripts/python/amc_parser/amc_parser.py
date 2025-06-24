@@ -246,6 +246,7 @@ class AMCParser:
                     r'\\boxed\s*\{\\text\s*\{\(([A-E])\)[^}]*\}',  # \boxed {\text {(D)} 5}
                     r'\\boxed\{\(\\textbf\{([A-E])\}\)}',
                     r'\\framebox\{([A-E])\}',
+                    r'\\boxed\{([A-E])\([^}]*\)\}',  # \boxed{E(92)} - new pattern for 2024 AMC 10B Problem 25
                 ],
                 # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
                 [

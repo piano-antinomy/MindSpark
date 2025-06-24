@@ -1,0 +1,33 @@
+{
+  "competition_info": {
+    "name": "2015_AMC_8_Problem_10",
+    "id": "2015 AMC 8",
+    "group": "AMC_8",
+    "year": 2015,
+    "is_AJHSME": false,
+    "level": 8,
+    "suffix": "",
+    "fall_version": false,
+    "total_problems_expected": 1,
+    "problem_number_override": 10
+  },
+  "failed_problems": [
+    {
+      "problem_number": 10,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2015_AMC_8_Problems/Problem_10",
+      "error_type": "ValueError",
+      "error_message": "Failed to fetch problem page for 2015 AMC 8 Problem 10",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 929, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 727, in parse_problem\n    raise ValueError(f\"Failed to fetch problem page for {comp_id} Problem {problem_number}\")\nValueError: Failed to fetch problem page for 2015 AMC 8 Problem 10\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    }
+  ],
+  "skipped_problems": [],
+  "summary": {
+    "successful": 0,
+    "failed": 1,
+    "skipped": 0
+  }
+}

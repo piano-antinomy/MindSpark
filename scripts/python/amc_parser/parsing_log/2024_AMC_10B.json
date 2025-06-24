@@ -1,0 +1,55 @@
+{
+  "competition_info": {
+    "name": "2024_AMC_10B",
+    "id": "2024 AMC 10B",
+    "group": "AMC_10",
+    "year": 2024,
+    "is_AJHSME": false,
+    "level": "10",
+    "suffix": "B",
+    "fall_version": false,
+    "total_problems_expected": 25,
+    "problem_number_override": null
+  },
+  "failed_problems": [
+    {
+      "problem_number": 5,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2024_AMC_10B_Problems/Problem_5",
+      "error_type": "ValueError",
+      "error_message": "Failed to fetch problem page for 2024 AMC 10B Problem 5",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 930, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 728, in parse_problem\n    raise ValueError(f\"Failed to fetch problem page for {comp_id} Problem {problem_number}\")\nValueError: Failed to fetch problem page for 2024 AMC 10B Problem 5\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    },
+    {
+      "problem_number": 6,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2024_AMC_10B_Problems/Problem_6",
+      "error_type": "ValueError",
+      "error_message": "Failed to fetch problem page for 2024 AMC 10B Problem 6",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 930, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 728, in parse_problem\n    raise ValueError(f\"Failed to fetch problem page for {comp_id} Problem {problem_number}\")\nValueError: Failed to fetch problem page for 2024 AMC 10B Problem 6\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    },
+    {
+      "problem_number": 8,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2024_AMC_10B_Problems/Problem_8",
+      "error_type": "ValueError",
+      "error_message": "Failed to fetch problem page for 2024 AMC 10B Problem 8",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 930, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 728, in parse_problem\n    raise ValueError(f\"Failed to fetch problem page for {comp_id} Problem {problem_number}\")\nValueError: Failed to fetch problem page for 2024 AMC 10B Problem 8\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    }
+  ],
+  "skipped_problems": [],
+  "summary": {
+    "successful": 22,
+    "failed": 3,
+    "skipped": 0
+  }
+}
