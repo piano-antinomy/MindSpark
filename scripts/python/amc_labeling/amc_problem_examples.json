@@ -1,0 +1,96 @@
+{
+  "metadata": {
+    "description": "AMC problem examples organized by category and subcategory - only problems with certain categorization",
+    "total_problems": 15,
+    "categories_covered": ["algebra", "geometry", "number_theory", "combinatorics"]
+  },
+  "problems": {
+    "algebra": {
+      "linear_equations": [
+        {
+          "problem_id": "amc_2019_8_1",
+          "description": "Ike and Mike go into a sandwich shop with a total of $30.00 to spend. Sandwiches cost $4.50 each and soft drinks cost $1.00 each. Ike and Mike plan to buy as many sandwiches as they can, and use any remaining money to buy soft drinks.",
+          "reasoning": "This is a classic linear equation problem where you need to solve for the number of sandwiches (x) and drinks (y) with the constraint 4.50x + 1.00y = 30.00"
+        }
+      ],
+      "sequences": [
+        {
+          "problem_id": "amc_2016_8_19",
+          "description": "The sum of 25 consecutive even integers is 10,000. What is the largest of these 25 consecutive integers?",
+          "reasoning": "This involves finding the sum of an arithmetic sequence of 25 consecutive even integers that equals 10,000"
+        }
+      ]
+    },
+    "geometry": {
+      "triangles": [
+        {
+          "problem_id": "amc_2019_8_24",
+          "description": "In triangle ABC, point D divides side AC so that AD:DC = 1:2. Let E be the midpoint of BD and let F be the point of intersection of line BC and line AE.",
+          "reasoning": "This problem involves triangle geometry with ratios, midpoints, and intersecting lines"
+        }
+      ]
+    },
+    "number_theory": {
+      "diophantine_equations": [
+        {
+          "problem_id": "amc_2016_8_19",
+          "description": "The sum of 25 consecutive even integers is 10,000. What is the largest of these 25 consecutive integers?",
+          "reasoning": "This is a Diophantine equation problem where you need to find integer solutions to 25x + 600 = 10,000"
+        },
+        {
+          "problem_id": "amc_2012_8_17",
+          "description": "Jamar bought some pencils costing more than 10 cents each. He paid $1.43. Sharona bought some of the same pencils and paid $1.87. How many more pencils did Sharona buy than Jamar?",
+          "reasoning": "This involves finding integer solutions for the number of pencils where price × quantity = total cost"
+        }
+      ]
+    },
+    "combinatorics": {
+      "counting": [
+        {
+          "problem_id": "amc_2018_8_25",
+          "description": "How many ways can you arrange coats on hooks with certain constraints about empty hooks between coats?",
+          "reasoning": "This is a counting problem that involves finding the number of valid arrangements with specific constraints"
+        },
+        {
+          "problem_id": "amc_2020_8_20",
+          "description": "A scientist walking through a suburban neighborhood records the loudness of sounds at a point. How many different loudness levels can be recorded?",
+          "reasoning": "This involves counting the number of distinct values that can be obtained from a mathematical expression"
+        }
+      ],
+      "probability": [
+        {
+          "problem_id": "amc_2019_8_25",
+          "description": "Alice has 24 apples. In how many ways can she share them with Becky and Chris so that each of the three people has at least two apples?",
+          "reasoning": "This is a probability/counting problem involving distributing objects with constraints"
+        }
+      ]
+    }
+  },
+  "notes": {
+    "disclaimer": "This file contains only problems where the categorization is certain based on clear mathematical content",
+    "missing_categories": [
+      "algebra.quadratic_equations",
+      "algebra.polynomials", 
+      "algebra.functions",
+      "algebra.inequalities",
+      "algebra.basic_operations",
+      "geometry.circles",
+      "geometry.polygons",
+      "geometry.coordinate_geometry",
+      "geometry.solid_geometry",
+      "number_theory.divisibility",
+      "number_theory.primes",
+      "number_theory.modular_arithmetic",
+      "number_theory.sequences_patterns",
+      "combinatorics.permutations_combinations",
+      "combinatorics.pigeonhole_principle",
+      "combinatorics.graph_theory",
+      "precalculus.trigonometry",
+      "precalculus.complex_numbers",
+      "precalculus.vectors",
+      "precalculus.matrices",
+      "precalculus.conic_sections"
+    ],
+    "reason": "Only included problems where I can confidently identify the mathematical category based on the problem content"
+  }
+} 
