@@ -262,6 +262,108 @@ class LatexBasedCategorizer:
                     (r'\\text\{[^}]*ellipse[^}]*\}', 2),  # Example: \text{ellipse foci}
                     (r'\\text\{[^}]*hyperbola[^}]*\}', 2),  # Example: \text{hyperbola graph}
                 ]
+            },
+            'logic': {
+                'logical_reasoning': [
+                    (r'\\text\{[^}]*if[^}]*then[^}]*\}', 3),
+                    (r'\\text\{[^}]*implies[^}]*\}', 3),
+                    (r'\\text\{[^}]*therefore[^}]*\}', 3),
+                    (r'\\text\{[^}]*conclude[^}]*\}', 3),
+                    (r'\\text\{[^}]*deduce[^}]*\}', 3),
+                    (r'\\text\{[^}]*syllogism[^}]*\}', 3),
+                    (r'\\text\{[^}]*premise[^}]*\}', 3),
+                    (r'\\text\{[^}]*logical[^}]*reasoning[^}]*\}', 3),
+                    (r'\\bif\\b', 2),
+                    (r'\\bthen\\b', 2),
+                    (r'\\bimplies\\b', 2),
+                    (r'\\btherefore\\b', 2),
+                    (r'\\bconclude\\b', 2),
+                    (r'\\bdeduce\\b', 2),
+                    (r'\\bsyllogism\\b', 2),
+                    (r'\\bpremise\\b', 2),
+                    (r'\\blogical reasoning\\b', 2),
+                    (r'\\ball are\\b', 2),
+                    (r'\\bsome are\\b', 2),
+                    (r'\\bnone are\\b', 2),
+                    (r'\\bevery\\b', 2),
+                    (r'\\beach\\b', 2),
+                    (r'\\bonly\\b', 2),
+                    (r'\\bunless\\b', 2),
+                    (r'\\bnecessary\\b', 2),
+                    (r'\\bsufficient\\b', 2)
+                ],
+                'truth_tables': [
+                    (r'\\text\{[^}]*truth[^}]*table[^}]*\}', 3),
+                    (r'\\text\{[^}]*true[^}]*false[^}]*\}', 3),
+                    (r'\\text\{[^}]*boolean[^}]*\}', 3),
+                    (r'\\text\{[^}]*AND[^}]*\}', 3),
+                    (r'\\text\{[^}]*OR[^}]*\}', 3),
+                    (r'\\text\{[^}]*NOT[^}]*\}', 3),
+                    (r'\\text\{[^}]*XOR[^}]*\}', 3),
+                    (r'\\text\{[^}]*NAND[^}]*\}', 3),
+                    (r'\\text\{[^}]*NOR[^}]*\}', 3),
+                    (r'\\wedge', 3),
+                    (r'\\vee', 3),
+                    (r'\\neg', 3),
+                    (r'\\oplus', 3),
+                    (r'\\btruth table\\b', 2),
+                    (r'\\btrue false\\b', 2),
+                    (r'\\bboolean\\b', 2),
+                    (r'\\bAND\\b', 2),
+                    (r'\\bOR\\b', 2),
+                    (r'\\bNOT\\b', 2),
+                    (r'\\bXOR\\b', 2),
+                    (r'\\bNAND\\b', 2),
+                    (r'\\bNOR\\b', 2),
+                    (r'\\b1 0\\b', 2),
+                    (r'\\bT F\\b', 2)
+                ],
+                'logical_equivalence': [
+                    (r'\\text\{[^}]*equivalent[^}]*\}', 3),
+                    (r'\\text\{[^}]*contrapositive[^}]*\}', 3),
+                    (r'\\text\{[^}]*converse[^}]*\}', 3),
+                    (r'\\text\{[^}]*inverse[^}]*\}', 3),
+                    (r'\\text\{[^}]*tautology[^}]*\}', 3),
+                    (r'\\text\{[^}]*contradiction[^}]*\}', 3),
+                    (r'\\text\{[^}]*De[^}]*Morgan[^}]*\}', 3),
+                    (r'\\text\{[^}]*distributive[^}]*\}', 3),
+                    (r'\\text\{[^}]*associative[^}]*\}', 3),
+                    (r'\\text\{[^}]*commutative[^}]*\}', 3),
+                    (r'\\text\{[^}]*double[^}]*negation[^}]*\}', 3),
+                    (r'\\text\{[^}]*identity[^}]*\}', 3),
+                    (r'\\text\{[^}]*domination[^}]*\}', 3),
+                    (r'\\text\{[^}]*absorption[^}]*\}', 3),
+                    (r'\\leftrightarrow', 3),
+                    (r'\\equiv', 3),
+                    (r'\\bequivalent\\b', 2),
+                    (r'\\bcontrapositive\\b', 2),
+                    (r'\\bconverse\\b', 2),
+                    (r'\\binverse\\b', 2),
+                    (r'\\btautology\\b', 2),
+                    (r'\\bcontradiction\\b', 2),
+                    (r'\\bde morgan\\b', 2),
+                    (r'\\bdistributive\\b', 2),
+                    (r'\\bassociative\\b', 2),
+                    (r'\\bcommutative\\b', 2),
+                    (r'\\bdouble negation\\b', 2),
+                    (r'\\bidentity\\b', 2),
+                    (r'\\bdomination\\b', 2),
+                    (r'\\babsorption\\b', 2),
+                    (r'\\bleftrightarrow\\b', 2),
+                    (r'\\bequiv\\b', 2)
+                ],
+                'uncategorized': [
+                    (r'\\text\{[^}]*logic[^}]*\}', 2),
+                    (r'\\text\{[^}]*reasoning[^}]*\}', 2),
+                    (r'\\text\{[^}]*argument[^}]*\}', 2),
+                    (r'\\text\{[^}]*statement[^}]*\}', 2),
+                    (r'\\text\{[^}]*proposition[^}]*\}', 2),
+                    (r'\\blogic\\b', 1),
+                    (r'\\breasoning\\b', 1),
+                    (r'\\bargument\\b', 1),
+                    (r'\\bstatement\\b', 1),
+                    (r'\\bproposition\\b', 1)
+                ]
             }
         }
         
@@ -394,6 +496,12 @@ class LatexBasedCategorizer:
                 'vectors': ['vector'],
                 'matrices': ['matrix', 'determinant'],
                 'conic_sections': ['parabola', 'ellipse', 'hyperbola']
+            },
+            'logic': {
+                'logical_reasoning': ['if', 'then', 'implies', 'therefore', 'conclude', 'deduce', 'syllogism', 'premise', 'logical reasoning', 'all are', 'some are', 'none are', 'every', 'each', 'only', 'unless', 'necessary', 'sufficient'],
+                'truth_tables': ['truth table', 'true false', 'boolean', 'AND', 'OR', 'NOT', 'XOR', 'NAND', 'NOR', 'wedge', 'vee', 'neg', 'oplus', '1 0', 'T F'],
+                'logical_equivalence': ['equivalent', 'contrapositive', 'converse', 'inverse', 'tautology', 'contradiction', 'de morgan', 'distributive', 'associative', 'commutative', 'double negation', 'identity', 'domination', 'absorption', 'leftrightarrow', 'equiv'],
+                'uncategorized': ['logic', 'reasoning', 'argument', 'statement', 'proposition']
             }
         }
         
@@ -465,6 +573,15 @@ class LatexBasedCategorizer:
             # Vectors
             r'\\vec\{([^}]+)\}': r'vector(\1)',
             
+            # Logic symbols
+            r'\\wedge': 'AND',
+            r'\\vee': 'OR',
+            r'\\neg': 'NOT',
+            r'\\oplus': 'XOR',
+            r'\\leftrightarrow': 'iff',
+            r'\\implies': 'implies',
+            r'\\equiv': 'equivalent',
+            
             # Remove LaTeX commands that don't have plain text equivalents
             r'\\text\{([^}]+)\}': r'\1',
             r'\\textbf\{([^}]+)\}': r'\1',
@@ -513,16 +630,16 @@ def main():
     """Test the LaTeX-based categorizer"""
     categorizer = LatexBasedCategorizer()
     
-    # Test with a sample problem
+    # Test with a sample logic problem
     test_problem = {
         'question': {
-            'text': 'What is the value of $\\frac{3}{4} + \\frac{1}{2}$?',
+            'text': 'If all A are B and all B are C, what can we conclude about A and C?',
             'latex_choices': [
-                '$\\textbf{(A) }\\frac{5}{4}\\qquad\\textbf{(B) }\\frac{3}{2}\\qquad\\textbf{(C) }\\frac{7}{4}\\qquad\\textbf{(D) }2\\qquad\\textbf{(E) }\\frac{9}{4}$'
+                '$\textbf{(A) }$All A are C$\qquad\textbf{(B) }$Some A are not C$\qquad\textbf{(C) }$No A are C$'
             ]
         },
         'solutions': [
-            {'text': 'To add fractions, we need a common denominator...'}
+            {'text': 'By transitivity, if all A are B and all B are C, then all A are C.'}
         ]
     }
     
