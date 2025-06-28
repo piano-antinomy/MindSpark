@@ -1,96 +1,281 @@
 {
   "metadata": {
-    "description": "AMC problem examples organized by category and subcategory - only problems with certain categorization",
+    "description": "Complete AMC problem categorization reference with all categories and subcategories",
     "total_problems": 15,
-    "categories_covered": ["algebra", "geometry", "number_theory", "combinatorics"]
+    "categories_covered": ["algebra", "geometry", "number_theory", "combinatorics", "precalculus", "logic"]
   },
   "problems": {
     "algebra": {
-      "linear_equations": [
-        {
-          "problem_id": "amc_2019_8_1",
-          "description": "Ike and Mike go into a sandwich shop with a total of $30.00 to spend. Sandwiches cost $4.50 each and soft drinks cost $1.00 each. Ike and Mike plan to buy as many sandwiches as they can, and use any remaining money to buy soft drinks.",
-          "reasoning": "This is a classic linear equation problem where you need to solve for the number of sandwiches (x) and drinks (y) with the constraint 4.50x + 1.00y = 30.00"
-        }
-      ],
-      "sequences": [
-        {
-          "problem_id": "amc_2016_8_19",
-          "description": "The sum of 25 consecutive even integers is 10,000. What is the largest of these 25 consecutive integers?",
-          "reasoning": "This involves finding the sum of an arithmetic sequence of 25 consecutive even integers that equals 10,000"
-        }
-      ]
+      "linear_equations": {
+        "description": "Problems involving first-degree equations with variables, typically requiring solving for unknown values using algebraic manipulation",
+        "example_question": "If 3x + 5 = 20, what is the value of x?",
+        "AMC_problems": ["amc_2019_8_1", "amc_2023_10a_2", "amc_2024_10a_15"]
+      },
+      "quadratic_equations": {
+        "description": "Problems involving second-degree equations (ax² + bx + c = 0), often requiring factoring, completing the square, or using the quadratic formula",
+        "example_question": "Solve for x: x² - 5x + 6 = 0",
+        "AMC_problems": []
+      },
+      "polynomials": {
+        "description": "Problems involving polynomial expressions, operations, factoring, and finding roots or coefficients",
+        "example_question": "If (x-2)(x+3)(x-5) = 0, what are all possible values of x?",
+        "AMC_problems": []
+      },
+      "functions": {
+        "description": "Problems involving function definitions, evaluations, compositions, inverses, and functional relationships",
+        "example_question": "If f(x) = 2x + 3 and g(x) = x², what is f(g(2))?",
+        "AMC_problems": ["amc_2023_12a_2"]
+      },
+      "inequalities": {
+        "description": "Problems involving mathematical inequalities, absolute values, and systems of inequalities",
+        "example_question": "For what values of x is |x-3| < 5?",
+        "AMC_problems": []
+      },
+      "basic_operations": {
+        "description": "Problems involving fundamental arithmetic operations (addition, subtraction, multiplication, division) with variables or complex expressions",
+        "example_question": "Simplify: (2x + 3y) + (4x - 2y)",
+        "AMC_problems": ["amc_2023_10a_1"]
+      },
+      "sequences": {
+        "description": "Problems involving arithmetic, geometric, or other patterns in sequences, finding terms, sums, or recursive relationships",
+        "example_question": "Find the 10th term of the arithmetic sequence: 3, 7, 11, 15, ...",
+        "AMC_problems": ["amc_2016_8_19"]
+      }
     },
     "geometry": {
-      "triangles": [
-        {
-          "problem_id": "amc_2019_8_24",
-          "description": "In triangle ABC, point D divides side AC so that AD:DC = 1:2. Let E be the midpoint of BD and let F be the point of intersection of line BC and line AE.",
-          "reasoning": "This problem involves triangle geometry with ratios, midpoints, and intersecting lines"
-        }
-      ]
+      "triangles": {
+        "description": "Problems involving triangle properties, angles, sides, area, perimeter, similarity, congruence, and special triangle types",
+        "example_question": "In triangle ABC, if angle A = 30° and angle B = 60°, what is angle C?",
+        "AMC_problems": ["amc_2019_8_24"]
+      },
+      "circles": {
+        "description": "Problems involving circle properties, circumference, area, arcs, chords, tangents, and circle theorems",
+        "example_question": "What is the area of a circle with radius 5?",
+        "AMC_problems": [
+          "amc_2006_10a_16",
+          "amc_2006_10b_19",
+          "amc_2006_10b_6",
+          "amc_2006_10b_8"
+        ]
+      },
+      "polygons": {
+        "description": "Problems involving regular and irregular polygons, angles, sides, area, perimeter, and polygon properties",
+        "example_question": "What is the sum of the interior angles of a hexagon?",
+        "AMC_problems": []
+      },
+      "coordinate_geometry": {
+        "description": "Problems involving points, lines, and shapes in the coordinate plane, including distance, slope, and equations",
+        "example_question": "What is the distance between points (3,4) and (7,1)?",
+        "AMC_problems": []
+      },
+      "solid_geometry": {
+        "description": "Problems involving three-dimensional shapes, volume, surface area, and spatial relationships",
+        "example_question": "What is the volume of a cube with side length 4?",
+        "AMC_problems": [
+          "amc_2000_12_10",
+          "amc_2004_12a_22",
+          "amc_2004_12b_19",
+          "amc_2005_12a_17",
+          "amc_2005_12a_22",
+          "amc_2005_12b_16",
+          "amc_2007_12a_20",
+          "amc_2008_10a_21",
+          "amc_2008_12a_8",
+          "amc_2008_12b_11",
+          "amc_2008_12b_18",
+          "amc_2009_12a_22",
+          "amc_2009_12a_5",
+          "amc_2010_12a_7",
+          "amc_2011_12a_15",
+          "amc_2012_12b_19",
+          "amc_2015_12b_16",
+          "amc_2018_10b_10",
+          "amc_2018_8_24"
+        ]
+      },
+      "general": {
+        "description": "General geometric problems involving multiple concepts, transformations, or geometric reasoning",
+        "example_question": "If two lines are perpendicular and one has slope 2, what is the slope of the other?",
+        "AMC_problems": ["amc_2023_10a_3"]
+      },
+      "uncategorized": {
+        "description": "Geometry problems that haven't been analyzed for specific subcategory classification yet",
+        "example_question": "Various geometry problems requiring analysis to determine specific category",
+        "AMC_problems": [
+          "amc_2002_10a_25",
+          "amc_2002_10b_17",
+          "amc_2002_10b_5",
+          "amc_2002_12a_23",
+          "amc_2003_12a_15",
+          "amc_2004_10b_25",
+          "amc_2004_12b_7",
+          "amc_2005_10b_14",
+          "amc_2005_12b_5",
+          "amc_2006_10a_12",
+          "amc_2006_10a_17",
+          "amc_2006_10b_15",
+          "amc_2006_10b_19",
+          "amc_2006_10b_23",
+          "amc_2006_10b_8",
+          "amc_2007_12a_10",
+          "amc_2007_12b_25",
+          "amc_2008_12b_25",
+          "amc_2009_12a_22",
+          "amc_2009_12b_9",
+          "amc_2010_12b_2",
+          "amc_2011_12a_17",
+          "amc_2012_10a_18",
+          "amc_2012_12b_20",
+          "amc_2013_10b_15",
+          "amc_2013_10b_16",
+          "amc_2013_12a_1",
+          "amc_2013_12a_23"
+        ]
+      }
     },
     "number_theory": {
-      "diophantine_equations": [
-        {
-          "problem_id": "amc_2016_8_19",
-          "description": "The sum of 25 consecutive even integers is 10,000. What is the largest of these 25 consecutive integers?",
-          "reasoning": "This is a Diophantine equation problem where you need to find integer solutions to 25x + 600 = 10,000"
-        },
-        {
-          "problem_id": "amc_2012_8_17",
-          "description": "Jamar bought some pencils costing more than 10 cents each. He paid $1.43. Sharona bought some of the same pencils and paid $1.87. How many more pencils did Sharona buy than Jamar?",
-          "reasoning": "This involves finding integer solutions for the number of pencils where price × quantity = total cost"
-        }
-      ]
+      "divisibility": {
+        "description": "Problems involving factors, multiples, divisibility rules, and properties of divisibility",
+        "example_question": "What is the greatest common factor of 48 and 36?",
+        "AMC_problems": ["amc_2023_10a_4"]
+      },
+      "primes": {
+        "description": "Problems involving prime numbers, prime factorization, and properties of prime numbers",
+        "example_question": "What is the prime factorization of 84?",
+        "AMC_problems": []
+      },
+      "modular_arithmetic": {
+        "description": "Problems involving remainders, congruence, and arithmetic modulo n",
+        "example_question": "What is 17 mod 5?",
+        "AMC_problems": []
+      },
+      "diophantine_equations": {
+        "description": "Problems involving equations where solutions must be integers, often requiring finding integer solutions to equations",
+        "example_question": "Find all positive integer solutions to 3x + 4y = 20",
+        "AMC_problems": ["amc_2016_8_19", "amc_2012_8_17"]
+      },
+      "sequences_patterns": {
+        "description": "Problems involving number patterns, sequences, and finding rules or relationships in number sequences",
+        "example_question": "What comes next in the sequence: 2, 6, 12, 20, 30, ...?",
+        "AMC_problems": []
+      },
+      "general": {
+        "description": "General number theory problems involving properties of integers, number systems, and mathematical reasoning",
+        "example_question": "Prove that the sum of two odd numbers is even",
+        "AMC_problems": []
+      },
+      "uncategorized": {
+        "description": "Number theory problems that haven't been analyzed for specific subcategory classification yet",
+        "example_question": "Various number theory problems requiring analysis to determine specific category",
+        "AMC_problems": [
+          "amc_2004_12b_25",
+          "amc_2009_12a_18",
+          "amc_2010_12a_23",
+          "amc_2014_12b_23",
+          "amc_2015_10a_23"
+        ]
+      }
     },
     "combinatorics": {
-      "counting": [
-        {
-          "problem_id": "amc_2018_8_25",
-          "description": "How many ways can you arrange coats on hooks with certain constraints about empty hooks between coats?",
-          "reasoning": "This is a counting problem that involves finding the number of valid arrangements with specific constraints"
-        },
-        {
-          "problem_id": "amc_2020_8_20",
-          "description": "A scientist walking through a suburban neighborhood records the loudness of sounds at a point. How many different loudness levels can be recorded?",
-          "reasoning": "This involves counting the number of distinct values that can be obtained from a mathematical expression"
-        }
-      ],
-      "probability": [
-        {
-          "problem_id": "amc_2019_8_25",
-          "description": "Alice has 24 apples. In how many ways can she share them with Becky and Chris so that each of the three people has at least two apples?",
-          "reasoning": "This is a probability/counting problem involving distributing objects with constraints"
-        }
-      ]
+      "counting": {
+        "description": "Problems involving counting principles, arrangements, and finding the number of possible outcomes",
+        "example_question": "How many ways can you arrange 5 books on a shelf?",
+        "AMC_problems": ["amc_2018_8_25", "amc_2020_8_20", "amc_2023_10a_5"]
+      },
+      "permutations_combinations": {
+        "description": "Problems involving permutations (ordered arrangements) and combinations (unordered selections)",
+        "example_question": "How many ways can you choose 3 people from a group of 8?",
+        "AMC_problems": []
+      },
+      "pigeonhole_principle": {
+        "description": "Problems involving the pigeonhole principle, which states that if n items are put into m containers with n > m, then at least one container must contain more than one item",
+        "example_question": "In a group of 13 people, show that at least 2 were born in the same month",
+        "AMC_problems": []
+      },
+      "graph_theory": {
+        "description": "Problems involving graphs, vertices, edges, paths, and graph properties",
+        "example_question": "How many edges does a complete graph with 6 vertices have?",
+        "AMC_problems": []
+      },
+      "probability": {
+        "description": "Problems involving probability calculations, expected values, and probabilistic reasoning",
+        "example_question": "What is the probability of rolling a sum of 7 with two dice?",
+        "AMC_problems": ["amc_2019_8_25", "amc_2017_12b_20", "amc_2017_12b_22"]
+      },
+      "uncategorized": {
+        "description": "Combinatorics problems that haven't been analyzed for specific subcategory classification yet",
+        "example_question": "Various combinatorics problems requiring analysis to determine specific category",
+        "AMC_problems": [
+          "amc_2000_12_25",
+          "amc_2004_12a_13",
+          "amc_2005_12b_25",
+          "amc_2006_12a_25",
+          "amc_2007_12a_25",
+          "amc_2010_12a_25",
+          "amc_2011_10a_22",
+          "amc_2014_10a_24",
+          "amc_2017_10a_23",
+          "amc_2017_10a_25",
+          "amc_2017_12a_22",
+          "amc_2017_12b_25",
+          "amc_2018_10a_20",
+          "amc_2018_12b_22"
+        ]
+      }
+    },
+    "precalculus": {
+      "trigonometry": {
+        "description": "Problems involving trigonometric functions, identities, angles, and trigonometric relationships",
+        "example_question": "What is sin(30°)?",
+        "AMC_problems": ["amc_2023_12a_3", "amc_2004_12b_24", "amc_2022_12a_17"]
+      },
+      "complex_numbers": {
+        "description": "Problems involving complex numbers, their arithmetic, and geometric interpretations",
+        "example_question": "What is (3+4i)(2-i)?",
+        "AMC_problems": []
+      },
+      "vectors": {
+        "description": "Problems involving vector operations, dot products, cross products, and vector geometry",
+        "example_question": "What is the dot product of vectors <2,3> and <4,1>?",
+        "AMC_problems": []
+      },
+      "matrices": {
+        "description": "Problems involving matrix operations, determinants, and matrix applications",
+        "example_question": "What is the determinant of the 2x2 matrix [[3,1],[2,4]]?",
+        "AMC_problems": []
+      },
+      "conic_sections": {
+        "description": "Problems involving circles, ellipses, parabolas, and hyperbolas and their equations",
+        "example_question": "What is the center and radius of the circle (x-2)² + (y+3)² = 16?",
+        "AMC_problems": []
+      }
+    },
+    "logic": {
+      "logical_reasoning": {
+        "description": "Problems involving logical deduction, syllogisms, and determining logical consequences from given premises",
+        "example_question": "If all A are B and all B are C, what can we conclude about A and C?",
+        "AMC_problems": []
+      },
+      "truth_tables": {
+        "description": "Problems involving truth tables, logical operators, and boolean logic",
+        "example_question": "Complete the truth table for (P AND Q) OR (NOT P)",
+        "AMC_problems": []
+      },
+      "logical_equivalence": {
+        "description": "Problems involving logical equivalence, contrapositives, and logical transformations",
+        "example_question": "What is the contrapositive of 'If it rains, then the ground is wet'?",
+        "AMC_problems": []
+      },
+      "uncategorized": {
+        "description": "Logic problems that haven't been analyzed for specific subcategory classification yet",
+        "example_question": "Various logic problems requiring analysis to determine specific category",
+        "AMC_problems": []
+      }
     }
   },
   "notes": {
-    "disclaimer": "This file contains only problems where the categorization is certain based on clear mathematical content",
-    "missing_categories": [
-      "algebra.quadratic_equations",
-      "algebra.polynomials", 
-      "algebra.functions",
-      "algebra.inequalities",
-      "algebra.basic_operations",
-      "geometry.circles",
-      "geometry.polygons",
-      "geometry.coordinate_geometry",
-      "geometry.solid_geometry",
-      "number_theory.divisibility",
-      "number_theory.primes",
-      "number_theory.modular_arithmetic",
-      "number_theory.sequences_patterns",
-      "combinatorics.permutations_combinations",
-      "combinatorics.pigeonhole_principle",
-      "combinatorics.graph_theory",
-      "precalculus.trigonometry",
-      "precalculus.complex_numbers",
-      "precalculus.vectors",
-      "precalculus.matrices",
-      "precalculus.conic_sections"
-    ],
-    "reason": "Only included problems where I can confidently identify the mathematical category based on the problem content"
+    "disclaimer": "This file contains all categories and subcategories from the AMC categorizer with descriptions and example questions",
+    "AMC_problems_note": "AMC_problems arrays contain only problems where the categorization is certain based on clear mathematical content",
+    "example_questions_note": "Example questions are representative problems that demonstrate the mathematical concept, not necessarily from AMC"
   }
 } 
