@@ -252,6 +252,7 @@ class AMCParser:
                     r'\\boxed\{\(\\textbf\{([A-E])\}\)[^}]*\}',  # \boxed{(\textbf{B})\ 14} - new pattern for 2017 AMC 10A Problem 4
                     r'\\framebox\{([A-E])\}',
                     r'\\boxed\{([A-E])\([^}]*\)\}',  # \boxed{E(92)} - new pattern for 2024 AMC 10B Problem 25
+                    r'\\boxed\s*\{([A-E])\}',  # \boxed {B} - new pattern for 2012 AMC 10B Problem 12
                 ],
                 # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
                 [
@@ -718,7 +719,72 @@ class AMCParser:
                     'text': combined_html,
                     'insertions': insertions
                 })
-        
+        '''
+        # Additional pass: check all insertions across all solutions for answers
+        if extract_answers and not all_extracted_answers:
+            print("No answers found in main text, checking insertions...")
+            for idx, solution in enumerate(solutions):
+                for key, insertion in solution['insertions'].items():
+                    if insertion.get('alt_type') == 'latex' and insertion.get('alt_value'):
+                        alt_text = insertion['alt_value']
+                        # Use the same answer extraction logic as in process_images
+                        def extract_answers_from_text(text_content):
+                            """Helper method to extract answers from text using tier-based pattern matching"""
+                            local_found_answers = []
+                            
+                            # Multi-tier answer pattern matching (higher tiers have priority)
+                            answer_pattern_tiers = [
+                                # Tier 1: Boxed answers (highest priority - final answers)
+                                [
+                                    r'\\boxed{\\mathrm{\(([A-E])\)[^}]*}',  # \boxed{\mathrm{(C)} 79}
+                                    r'\\boxed\{\\textbf\{\(([A-E])\)',
+                                    r'\\boxed\{\\textbf\{([A-E])',
+                                    r'\\boxed\{\\text\{\(([A-E])\)',
+                                    r'\\boxed\{\\text\{([A-E])',
+                                    r'\\boxed\s*\{\\text\s*\{\(([A-E])\)[^}]*\}',  # \boxed {\text {(D)} 5}
+                                    r'\\boxed\{\(\\textbf\{([A-E])\}\)}',
+                                    r'\\boxed\{\\text\{\(\\textbf\{([A-E])\}\)[^}]*\}',  # \boxed{\text{(\textbf C) ...}} - new pattern for 2015 AMC 10B Problem 10
+                                    r'\\boxed\{\\text\{\(\\textbf\s*([A-E])\s*\)[^}]*\}',  # \boxed{\text{(\textbf C) ...}} - fixed pattern for 2015 AMC 10B Problem 10
+                                    r'\\boxed\{\\text\{\(\\textbf\{([A-E])\}\)[^}]*\}',  # $...$ delimited version of the above pattern
+                                    r'\\boxed\{\\textbf\s*([A-E])\s*\}',  # \boxed{\textbf B} - new pattern for 2016 AMC 10A Problem 10
+                                    r'\\boxed\{\(\\textbf\{([A-E])\}\)[^}]*\}',  # \boxed{(\textbf{B})\ 14} - new pattern for 2017 AMC 10A Problem 4
+                                    r'\\framebox\{([A-E])\}',
+                                    r'\\boxed\{([A-E])\([^}]*\)\}',  # \boxed{E(92)} - new pattern for 2024 AMC 10B Problem 25
+                                ],
+                                # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
+                                [
+                                    r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
+                                    r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
+                                ],
+                                # Tier 3: Alternative boxed formats (lowest priority - fallback patterns)
+                                [
+                                    r'\\boxed\{\(\\text\{([A-E])\}\)',           # \boxed{(\text{A}) - parentheses around \text{A}
+                                    r'\\boxed\{\(([A-E])\)',                     # \boxed{(B) - simple parentheses around letter
+                                    r'\\fbox\{([A-E])\}',                        # \fbox{D} - simple framed box
+                                    r'\\boxed\{([A-E])\}',                       # \boxed{C} - simple boxed letter
+                                ]
+                            ]
+                            
+                            # Check all tiers for this text content
+                            for tier_num, patterns in enumerate(answer_pattern_tiers, 1):
+                                for pattern in patterns:
+                                    match = re.search(pattern, text_content)
+                                    if match:
+                                        answer = match.group(1)
+                                        local_found_answers.append((answer, tier_num, text_content))
+                                        break  # Only take first match per tier per text block
+                                # Don't break here - continue checking other tiers for this text content
+                            
+                            return local_found_answers
+                        
+                        found_answers = extract_answers_from_text(alt_text)
+                        if found_answers:
+                            # Sort by tier and take the best answer
+                            found_answers.sort(key=lambda x: x[1])
+                            best_answer = found_answers[0][0]
+                            print(f"Found answer '{best_answer}' in insertion {key} of solution {idx + 1}")
+                            all_extracted_answers.append(best_answer)
+        '''
         return solutions, all_extracted_answers
     
     def parse_problem(self, competition, problem_number):
