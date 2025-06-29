@@ -245,6 +245,11 @@ class AMCParser:
                     r'\\boxed\{\\text\{([A-E])',
                     r'\\boxed\s*\{\\text\s*\{\(([A-E])\)[^}]*\}',  # \boxed {\text {(D)} 5}
                     r'\\boxed\{\(\\textbf\{([A-E])\}\)}',
+                    r'\\boxed\{\\text\{\(\\textbf\{([A-E])\}\)[^}]*\}',  # \boxed{\text{(\textbf C) ...}} - new pattern for 2015 AMC 10B Problem 10
+                    r'\\boxed\{\\text\{\(\\textbf\s*([A-E])\s*\)[^}]*\}',  # \boxed{\text{(\textbf C) ...}} - fixed pattern for 2015 AMC 10B Problem 10
+                    r'\\boxed\{\\text\{\(\\textbf\{([A-E])\}\)[^}]*\}',  # $...$ delimited version of the above pattern
+                    r'\\boxed\{\\textbf\s*([A-E])\s*\}',  # \boxed{\textbf B} - new pattern for 2016 AMC 10A Problem 10
+                    r'\\boxed\{\(\\textbf\{([A-E])\}\)[^}]*\}',  # \boxed{(\textbf{B})\ 14} - new pattern for 2017 AMC 10A Problem 4
                     r'\\framebox\{([A-E])\}',
                     r'\\boxed\{([A-E])\([^}]*\)\}',  # \boxed{E(92)} - new pattern for 2024 AMC 10B Problem 25
                 ],
@@ -269,7 +274,6 @@ class AMCParser:
                     if match:
                         answer = match.group(1)
                         local_found_answers.append((answer, tier_num, text_content))
-                        print(f"Found answer '{answer}' in {source_name} (Tier {tier_num}): {text_content}")
                         break  # Only take first match per tier per text block
                 # Don't break here - continue checking other tiers for this text content
             
