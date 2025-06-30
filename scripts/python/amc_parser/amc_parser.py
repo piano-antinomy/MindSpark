@@ -220,7 +220,7 @@ class AMCParser:
     
     def fetch_problem_page(self, url):
         try:
-            response = requests.get(url, timeout=30)
+            response = requests.get(url, timeout=60)
             response.raise_for_status()
             return response.text
         except requests.RequestException as e:
