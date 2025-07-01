@@ -7,7 +7,7 @@
     "level": "10",
     "suffix": "A",
     "fall_version": false,
-    "total_problems": 24,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
@@ -2479,6 +2479,88 @@
               "picture": "//latex.artofproblemsolving.com/9/1/6/916ae324e8df00b7856f831d84c16d8ae754e1af.png",
               "alt_type": "latex",
               "alt_value": "$\\boxed{\\textbf(A)}.$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_18",
+      "question": {
+        "text": "<p>A license plate in a certain state consists of <INSERTION_INDEX_1> digits, not necessarily distinct, and <INSERTION_INDEX_2> letters, also not necessarily distinct. These six characters may appear in any order, except that the two letters must appear next to each other. How many distinct license plates are possible? </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+            "alt_type": "latex",
+            "alt_value": "$4$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+            "alt_type": "latex",
+            "alt_value": "$2$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/8/1/1/811203c133e3217b676c38601f926b0e9397952c.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A) } 10^4\\times 26^2\\qquad\\textbf{(B) } 10^3\\times 26^3\\qquad\\textbf{(C) } 5\\times 10^4\\times 26^2\\qquad\\textbf{(D) } 10^2\\times 26^4\\qquad\\textbf{(E) } 5\\times 10^3\\times 26^3\\qquad$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>There are <INSERTION_INDEX_1> ways to choose 4 digits.</p><p>There are <INSERTION_INDEX_2> ways to choose the 2 letters. </p><p>For the letters to be next to each other, they can be the 1st and 2nd, 2nd and 3rd, 3rd and 4th, 4th and 5th, or the 5th and 6th characters. So, there are <INSERTION_INDEX_3> choices for the position of the letters.</p><p>Therefore, the number of distinct license plates is <INSERTION_INDEX_4>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/0/8/d08114ee4db6dd8f480fb3434f3bc9cbb8595628.png",
+              "alt_type": "latex",
+              "alt_value": "$10\\cdot10\\cdot10\\cdot10 = 10^4$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/8/7/a/87a6a838ce4da87e07761ef4f3619b37d523b657.png",
+              "alt_type": "latex",
+              "alt_value": "$26 \\cdot 26 = 26^2$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/7/4/d/74dbf5a4d426fb8bb63d88ab4f21b351d2ee670c.png",
+              "alt_type": "latex",
+              "alt_value": "$6 - 1 = 5$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/5/4/3/543de661b5a80f03ebb0e9e0bd40f3d5fffc346b.png",
+              "alt_type": "latex",
+              "alt_value": "$5\\times 10^4\\times 26^2 \\Longrightarrow \\boxed{\\mathrm{C}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>There are <INSERTION_INDEX_1> ways to choose the digits and <INSERTION_INDEX_2> ways to choose the 2 letters. However, since the letters are next to each other, the result must be <INSERTION_INDEX_3>. The only answer choice that matches this is <INSERTION_INDEX_4>.</p><p>~ Andrew2019</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/e/d/9/ed99f78014bdf57b62e04864d28c977b06fb23ed.png",
+              "alt_type": "latex",
+              "alt_value": "$10^4$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/3/0/6300905274a14e3662f985359df57de52aaabb29.png",
+              "alt_type": "latex",
+              "alt_value": "$26^2$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/a/f/d/afdbb3b27bc5dac8b7215aa2d866e2fc624e963a.png",
+              "alt_type": "latex",
+              "alt_value": "$10^4\\cdot 26^2 \\cdot \\text{something}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/f/f/1/ff1cac0ec2caa1645f90b48b2827793673636a84.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\mathrm{C}}$"
             }
           }
         }

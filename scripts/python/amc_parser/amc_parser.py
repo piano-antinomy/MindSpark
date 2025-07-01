@@ -238,9 +238,10 @@ class AMCParser:
             answer_pattern_tiers = [
                 # Tier 1: Boxed answers (highest priority - final answers)
                 [
-                    r'\\boxed{\\mathrm{\(([A-E])\)[^}]*}',  # \boxed{\mathrm{(C)} 79}
-                    r'\\boxed\{\\textbf\{\(([A-E])\)',
-                    r'\\boxed\{\\textbf\{([A-E])',
+                    r'\\boxed{\\mathrm{\\(([A-E])\\)[^}]*}',  # \\boxed{\\mathrm{(C)} 79}
+                    r'\\boxed{\\mathrm{([A-E])}}',  # \\boxed{\\mathrm{C}}
+                    r'\\boxed\{\\textbf\{\\(([A-E])\\)',
+                    r'\\boxed\{\\textbf\{([A-E])\)',
                     r'\\boxed\{\\text\{\(([A-E])\)',
                     r'\\boxed\{\\text\{([A-E])',
                     r'\\boxed\s*\{\\text\s*\{\(([A-E])\)[^}]*\}',  # \boxed {\text {(D)} 5}
@@ -736,9 +737,10 @@ class AMCParser:
                             answer_pattern_tiers = [
                                 # Tier 1: Boxed answers (highest priority - final answers)
                                 [
-                                    r'\\boxed{\\mathrm{\(([A-E])\)[^}]*}',  # \boxed{\mathrm{(C)} 79}
-                                    r'\\boxed\{\\textbf\{\(([A-E])\)',
-                                    r'\\boxed\{\\textbf\{([A-E])',
+                                    r'\\boxed{\\mathrm{\\(([A-E])\\)[^}]*}',  # \\boxed{\\mathrm{(C)} 79}
+                                    r'\\boxed{\\mathrm{([A-E])}}',  # \\boxed{\\mathrm{C}}
+                                    r'\\boxed\{\\textbf\{\\(([A-E])\\)',
+                                    r'\\boxed\{\\textbf\{([A-E])\)',
                                     r'\\boxed\{\\text\{\(([A-E])\)',
                                     r'\\boxed\{\\text\{([A-E])',
                                     r'\\boxed\s*\{\\text\s*\{\(([A-E])\)[^}]*\}',  # \boxed {\text {(D)} 5}

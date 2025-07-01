@@ -7,10 +7,57 @@
     "level": "10",
     "suffix": "B",
     "fall_version": false,
-    "total_problems": 24,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
+    {
+      "id": "amc_2003_10b_1",
+      "question": {
+        "text": "<p>Which of the following is the same as</p><p><INSERTION_INDEX_1></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/d/d/a/ddaa33db347793c4318c6123185c74195fe22c74.png",
+            "alt_type": "latex",
+            "alt_value": "\\[\\frac{2-4+6-8+10-12+14}{3-6+9-12+15-18+21}?\\]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/0/5/2/05251bde871a7ae30ded735bb9326d2d8edaa84b.png"
+        ],
+        "latex_choices": [
+          "$\\text {(A) } -1 \\qquad \\text {(B) } -\\frac{2}{3} \\qquad \\text {(C) } \\frac{2}{3} \\qquad \\text {(D) } 1 \\qquad \\text {(E) } \\frac{14}{3}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p><INSERTION_INDEX_1></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/c/0/3/c0305053f7e67176f9a4dfc8d0885136c1f778d8.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{2-4+6-8+10-12+14}{3-6+9-12+15-18+21}=\\frac{2+(-4+6)+(-8+10)+(-12+14)}{3+(-6+9)+(-12+15)+(-18+21)}=\\frac{2\\cdot4}{3\\cdot4}=\\text {(C) } \\frac{2}{3}\\]"
+            }
+          }
+        },
+        {
+          "text": "<p>Each term in the numerator is <INSERTION_INDEX_1> of a corresponding term in the denominator, so this must be the quotient.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/9/269bc66c550904bc41748eae77acfcc489ba6fc8.png",
+              "alt_type": "latex",
+              "alt_value": "$\\text {(C) } \\frac{2}{3}$"
+            }
+          }
+        }
+      ]
+    },
     {
       "id": "amc_2003_10b_2",
       "question": {
