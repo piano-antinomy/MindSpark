@@ -255,11 +255,14 @@ class AMCParser:
                     r'\\boxed\{([A-E])\([^}]*\)\}',  # \boxed{E(92)} - new pattern for 2024 AMC 10B Problem 25
                     r'\\boxed\s*\{([A-E])\}',  # \boxed {B} - new pattern for 2012 AMC 10B Problem 12
                     r'\\boxed\s*\{\s*([A-E])\s*\}',  # \boxed{ B } - new pattern for 2006 AMC 10B Problem 25
+                    r'\\boxed\s*\{\s*\\mathrm\{\(([A-E])\s*\)[^}]*\}',  # \boxed {\mathrm{(E )} \frac 58\ } - simpler pattern for 2007 AMC 10A Problem 16
+                    r'\\boxed.*?\(([A-E])\).*?',  # $\boxed {(D)60}$ - new pattern for 2007 AMC 10A Problem 17
                 ],
                 # Tier 2: Non-boxed answers (lower priority - could be intermediate mentions)
                 [
                     r'\\mathbf\{\(([A-E])\)',                    # \mathbf{(A) - stops at closing parenthesis
                     r'\\textbf\s*\{\s*\(([A-E])\)',              # \textbf {(B) } - with optional spaces
+                    r'\\mathrm\{\(([A-E])\)',                    # \mathrm{(A)} - new pattern for 2007 AMC 10A Problem 6
                 ],
                 # Tier 3: Alternative boxed formats (lowest priority - fallback patterns)
                 [

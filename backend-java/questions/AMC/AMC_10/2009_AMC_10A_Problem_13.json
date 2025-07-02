@@ -1,0 +1,67 @@
+{
+  "competition_info": {
+    "name": "2009_AMC_10A_Problem_13",
+    "group": "AMC_10",
+    "year": 2009,
+    "is_AJHSME": false,
+    "level": "10",
+    "suffix": "A",
+    "fall_version": false,
+    "total_problems": 1,
+    "problem_number_override": 13
+  },
+  "problems": [
+    {
+      "id": "amc_2009_10a_13",
+      "question": {
+        "text": "<p>Suppose that <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. Which of the following is equal to <INSERTION_INDEX_3> for every pair of integers <INSERTION_INDEX_4>?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/a/e/a/aea489c18f09efe3835367785ebc5e043757a75f.png",
+            "alt_type": "latex",
+            "alt_value": "$P = 2^m$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/3/2/d/32dd7832ce97cd702126aaa8e7874aeb95d81282.png",
+            "alt_type": "latex",
+            "alt_value": "$Q = 3^n$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/2/6/b/26bf0cf9c0c6a643b9da8c3fe00fe59dcce55d3a.png",
+            "alt_type": "latex",
+            "alt_value": "$12^{mn}$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/7/c/a/7ca10ffe3531cf1faf6222be7eac407c47bef878.png",
+            "alt_type": "latex",
+            "alt_value": "$(m,n)$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/6/0/7/607b00eabe7c4813567f82e7f2786e94f47fa457.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ P^2Q \\qquad \\textbf{(B)}\\ P^nQ^m \\qquad \\textbf{(C)}\\ P^nQ^{2m} \\qquad \\textbf{(D)}\\ P^{2m}Q^n \\qquad \\textbf{(E)}\\ P^{2n}Q^m$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p>We have <INSERTION_INDEX_1>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/f/7/2f7918e85dfd4318d456b3050a6fbe3ea83164cd.png",
+              "alt_type": "latex",
+              "alt_value": "$12^{mn} = (2\\cdot 2\\cdot 3)^{mn} = 2^{2mn} \\cdot 3^{mn} = (2^m)^{2n} \\cdot (3^n)^m = \\boxed{\\bold{E)} P^{2n} Q^m}$"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

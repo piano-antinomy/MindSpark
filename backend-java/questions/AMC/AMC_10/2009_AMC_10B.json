@@ -7,7 +7,7 @@
     "level": "10",
     "suffix": "B",
     "fall_version": false,
-    "total_problems": 15,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
@@ -346,6 +346,323 @@
       ]
     },
     {
+      "id": "amc_2009_10b_3",
+      "question": {
+        "text": "<p>Paula the painter had just enough paint for 30 identically sized rooms. Unfortunately, on the way to work, three cans of paint fell off her truck, so she had only enough paint for 25 rooms. How many cans of paint did she use for the 25 rooms?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/e/7/7/e7735cc42acc4acddd9cec2714514e49a742faa3.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 10\\qquad \\mathrm{(B)}\\ 12\\qquad \\mathrm{(C)}\\ 15\\qquad \\mathrm{(D)}\\ 18\\qquad \\mathrm{(E)}\\ 25$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>Losing three cans of paint corresponds to being able to paint five fewer rooms. So <INSERTION_INDEX_1>. The answer is <INSERTION_INDEX_2>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/5/5/7/557e45944d0b815327839dbde2fc9a87ce8d4d4a.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac 35 \\cdot 25 = \\boxed{15}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/4/8/2484f88154fadcf9c781bba19becdae88696b77f.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(C)}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10b_4",
+      "question": {
+        "text": "<p>A rectangular yard contains two flower beds in the shape of congruent isosceles right triangles. The remainder of the yard has a trapezoidal shape, as shown. The parallel sides of the trapezoid have lengths <INSERTION_INDEX_1> and <INSERTION_INDEX_2> meters. What fraction of the yard is occupied by the flower beds?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/f/1/9/f1965fae079a9ba2c0726c307070c2355dfcb213.png",
+            "alt_type": "latex",
+            "alt_value": "$15$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png",
+            "alt_type": "latex",
+            "alt_value": "$25$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/8/9/b/89b6a3af4a4ee2be754999adb7bf52063beebf26.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\frac {1}{8}\\qquad \\mathrm{(B)}\\frac {1}{6}\\qquad \\mathrm{(C)}\\frac {1}{5}\\qquad \\mathrm{(D)}\\frac {1}{4}\\qquad \\mathrm{(E)}\\frac {1}{3}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>Each triangle has leg length <INSERTION_INDEX_1> meters and area <INSERTION_INDEX_2> square meters. Thus the flower beds have a total area of <INSERTION_INDEX_3> square meters. The entire yard has length <INSERTION_INDEX_4> m and width <INSERTION_INDEX_5> m, so its area is <INSERTION_INDEX_6> square meters. The fraction of the yard occupied by the flower beds is <INSERTION_INDEX_7>. The answer is <INSERTION_INDEX_8>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/6/c/4/6c4ea36dad3ab8801f39b790b541f128426eca9a.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac 12 \\cdot (25 - 15) = 5$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/e/b/e/ebe6a523b09334213cf53e0be45fcb8e9dfd0c75.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac 12 \\cdot 5^2 = \\frac {25}{2}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png",
+              "alt_type": "latex",
+              "alt_value": "$25$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png",
+              "alt_type": "latex",
+              "alt_value": "$25$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/b/8/2/b829a6f0810a25e9ca9f85d690f2bafd0f2c1773.png",
+              "alt_type": "latex",
+              "alt_value": "$125$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/b/f/4/bf41181d87602ea04467baab46f5f868e6d2a03a.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac {25}{125} = \\boxed{\\frac15}$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/2/4/8/2484f88154fadcf9c781bba19becdae88696b77f.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(C)}$"
+            }
+          }
+        },
+        {
+          "text": "<p>The length of each triangle is <INSERTION_INDEX_1> meters. By translating then rotating the top right triangle so that it forms a square with the top left triangle, the ratio we desire is literally the ratio of the <INSERTION_INDEX_2> and the total area, which is <INSERTION_INDEX_3>. Alternatively we can use side length ratios, but each way we get <INSERTION_INDEX_4>. Select <INSERTION_INDEX_5>.</p><p>~hastapasta</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/5/7/8/5788f1ca454db0401c772d20712bcf638b608b38.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{25-15}{2}=5$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/0/b/5/0b5090ead8776c17df9bf55d1af249c57cd65b4d.png",
+              "alt_type": "latex",
+              "alt_value": "$5*5=25$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/e/3/a/e3a9ae6a707dbdd71f063434842bfb85d08b86e7.png",
+              "alt_type": "latex",
+              "alt_value": "$5*25=125$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/9/4/5/945fdc7d5433e72e3a70d4006519a7dc02e80184.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{25}{125}=\\frac{1}{5}$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/2/4/8/2484f88154fadcf9c781bba19becdae88696b77f.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(C)}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10b_5",
+      "question": {
+        "text": "<p>Twenty percent less than 60 is one-third more than what number?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/a/d/8/ad8c6e1a257b1905006cf3911914815081d95e5e.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 16\\qquad \\mathrm{(B)}\\ 30\\qquad \\mathrm{(C)}\\ 32\\qquad \\mathrm{(D)}\\ 36\\qquad \\mathrm{(E)}\\ 48$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>Twenty percent less than 60 is <INSERTION_INDEX_1>. One-third more than a number <i>n</i> is <INSERTION_INDEX_2>. Therefore <INSERTION_INDEX_3> and the number is <INSERTION_INDEX_4>. The answer is <INSERTION_INDEX_5>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/e/0/0/e0031ceb574bca4e580e1f9fe1b804481d4d4849.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac 45 \\cdot 60 = 48$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/e/3/a/e3a6f378701f62c9836669845fed09aa90d1d255.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac 43n$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/0/1/1/011ae594987119ed49b8fe439ebefddae5e51141.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac 43n = 48$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/b/e/cbe2aae6f1a66f9429942fdaacfd62a22a5b27ee.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed {36}$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/b/f/b/bfbf4df7c25681bb178ddc50ee0c0d656aa25b5e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(D)}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10b_6",
+      "question": {
+        "text": "<p>Kiana has two older twin brothers. The product of their three ages is 128. What is the sum of their three ages?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/5/f/c/5fcfb154d8959ebc740df8ff1115802b795c417d.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 10\\qquad \\mathrm{(B)}\\ 12\\qquad \\mathrm{(C)}\\ 16\\qquad \\mathrm{(D)}\\ 18\\qquad \\mathrm{(E)}\\ 24$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>The age of each person is a factor of <INSERTION_INDEX_1>. So the twins could be <INSERTION_INDEX_2> years of age and, consequently Kiana could be <INSERTION_INDEX_3>, <INSERTION_INDEX_4>, <INSERTION_INDEX_5>, or <INSERTION_INDEX_6> years old, respectively. Because Kiana is younger than her brothers, she must be <INSERTION_INDEX_7> years old. So the sum of their ages is <INSERTION_INDEX_8>. The answer is <INSERTION_INDEX_9>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/0/f/5/0f5fe435e1ce1fcf87a236b1e7a8b9d5f6d687b8.png",
+              "alt_type": "latex",
+              "alt_value": "$128 = 2^7$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/2/1/72113c07dfa96f0590003eec4c4e2c22663cff9a.png",
+              "alt_type": "latex",
+              "alt_value": "$2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 8$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/0/a/e/0aed56990dedba5a88a65e21245ccfd5d5e43ae2.png",
+              "alt_type": "latex",
+              "alt_value": "$128$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/4/f/4/4f4b8590f8aa9f9894b3891dd5dede0e354fa04e.png",
+              "alt_type": "latex",
+              "alt_value": "$32$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/2/b/2/2b2e51e949008d1fdceffc3c46abb2d44c2880f6.png",
+              "alt_type": "latex",
+              "alt_value": "$2 + 8 + 8 = \\boxed{18}$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/b/f/b/bfbf4df7c25681bb178ddc50ee0c0d656aa25b5e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(D)}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10b_7",
+      "question": {
+        "text": "<p>By inserting parentheses, it is possible to give the expression<INSERTION_INDEX_1>several values. How many different values can be obtained?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/5/7/4/5749b941fd5ab876b3610ecff97cfbbf6ffd4981.png",
+            "alt_type": "latex",
+            "alt_value": "\\[2\\times3 + 4\\times5\\]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/c/e/4/ce4e305858d2968a7a35e72d8e8d6f848ef4e8a5.png"
+        ],
+        "latex_choices": [
+          "$\\text{(A) } 2 \\qquad \\text{(B) } 3 \\qquad \\text{(C) } 4 \\qquad \\text{(D) } 5 \\qquad \\text{(E) } 6$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>The three operations can be performed on any of <INSERTION_INDEX_1> orders. However, if the addition is performed either first or last, then multiplying in either order produces the same result. So at most four distinct values can be obtained. It is easy to check that the values of the four expressions<INSERTION_INDEX_2>are in fact all distinct. So the answer is <INSERTION_INDEX_3>, which is choice <INSERTION_INDEX_4>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/4/d/b/4db3b59940e4f5cd42bbab2b7815c452a0197507.png",
+              "alt_type": "latex",
+              "alt_value": "$3! = 6$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/a/e/4/ae4e15557bcda228a1dbe886c24d7814e740971d.png",
+              "alt_type": "latex",
+              "alt_value": "\\begin{align*} (2\\times3) + (4\\times5) &= 26,\\\\ (2\\times3 + 4)\\times5 &= 50,\\\\ 2\\times(3 + 4\\times5) &= 46,\\\\ 2\\times(3 + 4)\\times5 &= 70 \\end{align*}"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/6/c/4/6c4c6c07150a0f6e56b0a6e198d1d19155dfe96c.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{4}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/2/4/8/2484f88154fadcf9c781bba19becdae88696b77f.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(C)}$"
+            }
+          }
+        }
+      ]
+    },
+    {
       "id": "amc_2009_10b_8",
       "question": {
         "text": "<p>In a certain year the price of gasoline rose by <INSERTION_INDEX_1> during January, fell by <INSERTION_INDEX_2> during February, rose by <INSERTION_INDEX_3> during March, and fell by <INSERTION_INDEX_4> during April. The price of gasoline at the end of April was the same as it had been at the beginning of January. To the nearest integer, what is <INSERTION_INDEX_5></p>",
@@ -502,6 +819,340 @@
               "picture": "//latex.artofproblemsolving.com/0/4/1/041c07f811ae43e46d24cb06a605761f96fc6397.png",
               "alt_type": "latex",
               "alt_value": "$\\boxed{\\textbf{(B) } 17}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10b_9",
+      "question": {
+        "text": "<p>Segment <INSERTION_INDEX_1> and <INSERTION_INDEX_2> intersect at <INSERTION_INDEX_3>, as shown, <INSERTION_INDEX_4>, and <INSERTION_INDEX_5>. What is the degree measure of <INSERTION_INDEX_6>? </p><p><INSERTION_INDEX_7></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png",
+            "alt_type": "latex",
+            "alt_value": "$BD$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/9/a/6/9a65c05bd85d2609bea5db2b109ed5f556463511.png",
+            "alt_type": "latex",
+            "alt_value": "$AE$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png",
+            "alt_type": "latex",
+            "alt_value": "$C$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/6/e/8/6e821ade0898eedcb1cf0f0ae3fb14980cd2991d.png",
+            "alt_type": "latex",
+            "alt_value": "$AB=BC=CD=CE$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/3/5/a/35a31a7b55ee18069f9dcb157537a1f868c8fa77.png",
+            "alt_type": "latex",
+            "alt_value": "$\\angle A = \\frac 52 \\angle B$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/a/e/1/ae15cd6fc137587ad1676133c8342dc210dc6364.png",
+            "alt_type": "latex",
+            "alt_value": "$\\angle D$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/2/6/4/2648b032deb3bc4fba6f53bcb3b07b32bcfad484.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] unitsize(2cm); defaultpen(linewidth(.8pt)+fontsize(8pt)); dotfactor=4;  pair C=(0,0), Ep=dir(35), D=dir(-35), B=dir(145); pair A=intersectionpoints(Circle(B,1),C--(-1*Ep))[0]; pair[] ds={A,B,C,D,Ep};  dot(ds); draw(A--Ep--D--B--cycle);  label(\"$A$\",A,SW); label(\"$B$\",B,NW); label(\"$C$\",C,N); label(\"$E$\",Ep,E); label(\"$D$\",D,E); [/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/8/3/2/832242bbce4c990ccf05ee970a0bd9a40c605a37.png"
+        ],
+        "latex_choices": [
+          "$\\text{(A) } 52.5 \\qquad \\text{(B) } 55 \\qquad \\text{(C) } 57.7 \\qquad \\text{(D) } 60 \\qquad \\text{(E) } 62.5$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "A",
+      "solutions": [
+        {
+          "text": "<p><INSERTION_INDEX_1> is isosceles, hence <INSERTION_INDEX_2>. </p><p>The sum of internal angles of <INSERTION_INDEX_3> can now be expressed as <INSERTION_INDEX_4>, hence <INSERTION_INDEX_5>, and each of the other two angles is <INSERTION_INDEX_6>. </p><p>Now we know that <INSERTION_INDEX_7>.</p><p>Finally, <INSERTION_INDEX_8> is isosceles, hence each of the two remaining angles (<INSERTION_INDEX_9> and <INSERTION_INDEX_10>) is equal to <INSERTION_INDEX_11>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/8/c/3/8c3a2d2224f7d163b46d702132425d47828bf538.png",
+              "alt_type": "latex",
+              "alt_value": "$\\triangle ABC$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/8/e/c/8ec657286c4fef5beb788b93ce53761c66577b88.png",
+              "alt_type": "latex",
+              "alt_value": "$\\angle ACB = \\angle CAB$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/8/c/3/8c3a2d2224f7d163b46d702132425d47828bf538.png",
+              "alt_type": "latex",
+              "alt_value": "$\\triangle ABC$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/1/f/0/1f063e9cc4bc31d11c186abeb90e0063236ac932.png",
+              "alt_type": "latex",
+              "alt_value": "$\\angle B + \\frac 52 \\angle B + \\frac 52 \\angle B = 6\\angle B$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/8/3/b/83b275c7c9471c1789184e7a6e9884e24e76d206.png",
+              "alt_type": "latex",
+              "alt_value": "$\\angle B = 30^\\circ$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/d/e/d/dedd77d029c19ec5ed32b0f5b1275ad02b22b1ef.png",
+              "alt_type": "latex",
+              "alt_value": "$75^\\circ$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/6/5/b/65bb60d589fb4b5aa4ae43f3c499731c48de7258.png",
+              "alt_type": "latex",
+              "alt_value": "$\\angle DCE = \\angle ACB = 75^\\circ$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/b/9/8/b984c55719cc5f992ee62656d920ac15c78d9137.png",
+              "alt_type": "latex",
+              "alt_value": "$\\triangle CDE$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/a/e/1/ae15cd6fc137587ad1676133c8342dc210dc6364.png",
+              "alt_type": "latex",
+              "alt_value": "$\\angle D$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/e/f/8/ef820980d93fb66d6f4b2883b9630d6bbdfd2667.png",
+              "alt_type": "latex",
+              "alt_value": "$\\angle E$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/7/4/3/7433fc481fc9adca45c9adc84623944f4cc9adc6.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{180^\\circ - 75^\\circ}2 = \\frac{105^\\circ}2 = \\boxed{52.5}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10b_10",
+      "question": {
+        "text": "<p>A flagpole is originally <INSERTION_INDEX_1> meters tall. A hurricane snaps the flagpole at a point <INSERTION_INDEX_2> meters above the ground so that the upper part, still attached to the stump, touches the ground <INSERTION_INDEX_3> meter away from the base. What is <INSERTION_INDEX_4>?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+            "alt_type": "latex",
+            "alt_value": "$5$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+            "alt_type": "latex",
+            "alt_value": "$x$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+            "alt_type": "latex",
+            "alt_value": "$1$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+            "alt_type": "latex",
+            "alt_value": "$x$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/f/c/9/fc9e043d421a587288f84be9379a42ae4beede0e.png"
+        ],
+        "latex_choices": [
+          "$\\text{(A) } 2.0 \\qquad \\text{(B) } 2.1 \\qquad \\text{(C) } 2.2 \\qquad \\text{(D) } 2.3 \\qquad \\text{(E) } 2.4$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p>The broken flagpole forms a right triangle with legs <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, and hypotenuse <INSERTION_INDEX_3>. The <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> now states that <INSERTION_INDEX_4>, hence <INSERTION_INDEX_5>, and <INSERTION_INDEX_6>.</p><p>(Note that the resulting triangle is the well-known <INSERTION_INDEX_7> right triangle, scaled by <INSERTION_INDEX_8>.)</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/c/4/4/c445a843f7b9a5ae5e089d62c7a3d22d55a9bee6.png",
+              "alt_type": "latex",
+              "alt_value": "$5-x$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/2/2/8/2280ebae350361fbb97f83df70548e00050e0acf.png",
+              "alt_type": "latex",
+              "alt_value": "$1^2 + x^2 = (5-x)^2$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/d/3/c/d3cea1909af8942ec6b1396f41b6e7e12ed0235a.png",
+              "alt_type": "latex",
+              "alt_value": "$10x = 24$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/7/d/8/7d8b68ab5b524966d48cb53c25e57a0b8509601f.png",
+              "alt_type": "latex",
+              "alt_value": "$x=\\boxed{2.4}$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/c/1/6/c1645fea006e40422df8465ad25c74bc33e615eb.png",
+              "alt_type": "latex",
+              "alt_value": "$5-12-13$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/4/3/8/4386436ff16509fe977cc2c9f87c3f170990b8f3.png",
+              "alt_type": "latex",
+              "alt_value": "$1/5$"
+            }
+          }
+        },
+        {
+          "text": "<p>A right triangle is formed with the bottom of the flagpole, the snapped part, and the ground. One leg is of length <INSERTION_INDEX_1> and the other is length <INSERTION_INDEX_2>. By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a>, we know that <INSERTION_INDEX_3> must be the length of the snapped part of the flagpole. Observe that all the answer choices are rational. If <INSERTION_INDEX_4> is rational, <INSERTION_INDEX_5>, which is the snapped part, must also be rational. Therefore, <INSERTION_INDEX_6> must form a scaled Pythagorean triple. We know that <INSERTION_INDEX_7> is a Pythagorean triple, so the corresponding answer must be <INSERTION_INDEX_8>. Adding together the <INSERTION_INDEX_9> and the snapped part, this does indeed equal <INSERTION_INDEX_10>, so our solution is done.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/0/3/7/037a3d897de2590489fa217621f1f15ab7d00481.png",
+              "alt_type": "latex",
+              "alt_value": "$\\sqrt{x^2+1^2}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/c/4/4/c445a843f7b9a5ae5e089d62c7a3d22d55a9bee6.png",
+              "alt_type": "latex",
+              "alt_value": "$5-x$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/0/6/9/069461de83aa25490006a00cfe07f04031894303.png",
+              "alt_type": "latex",
+              "alt_value": "$1, x, 5-x$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/e/4/b/e4bb9ba576d1b34375aaee161649ad43c31ad736.png",
+              "alt_type": "latex",
+              "alt_value": "$10, 24, 26$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/3/0/0/30044f11ce1fed406f305e002d236d39ce95ffe3.png",
+              "alt_type": "latex",
+              "alt_value": "$1, 2.4, 2.6$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            }
+          }
+        },
+        {
+          "text": "<p>Let <INSERTION_INDEX_1> represent the flagpole in the diagram above. After the flagpole breaks at point <INSERTION_INDEX_2>, its tip lies at point <INSERTION_INDEX_3>. Since none of the flagpole is destroyed, we know that <INSERTION_INDEX_4>. Therefore, triangle <INSERTION_INDEX_5> is isosceles.</p><p>Draw the altitude <INSERTION_INDEX_6>. Since <INSERTION_INDEX_7> is isosceles, we know that <INSERTION_INDEX_8>. Also note that <INSERTION_INDEX_9>. Therefore,<INSERTION_INDEX_10></p><p>Since <INSERTION_INDEX_11> and <INSERTION_INDEX_12>, we have that <INSERTION_INDEX_13>, and thus <INSERTION_INDEX_14>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png",
+              "alt_type": "latex",
+              "alt_value": "$AB$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+              "alt_type": "latex",
+              "alt_value": "$D$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png",
+              "alt_type": "latex",
+              "alt_value": "$C$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/e/b/9/eb9f4cb8cd01ce230066f3ce5412abf38dc79b4f.png",
+              "alt_type": "latex",
+              "alt_value": "$DA=DC$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/b/8/e/b8eabc87afe4c11a47e4aa27628d5517af4866b9.png",
+              "alt_type": "latex",
+              "alt_value": "$\\triangle ADC$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/8/d/9/8d93370bf0c5138121cb37672163df670898ccd1.png",
+              "alt_type": "latex",
+              "alt_value": "$DE \\perp AC$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/b/8/e/b8eabc87afe4c11a47e4aa27628d5517af4866b9.png",
+              "alt_type": "latex",
+              "alt_value": "$\\triangle ADC$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/6/7/5/6756daa2d442d14b9249c7a3da5b395cfa91e10e.png",
+              "alt_type": "latex",
+              "alt_value": "$AE = EC$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/1/f/c/1fc048d1d191847da8b9c72bca6934ebae688907.png",
+              "alt_type": "latex",
+              "alt_value": "$\\triangle AED \\sim \\triangle ABC$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/9/7/d/97de9345df687bcdd5ca0c87f5b1379129c57426.png",
+              "alt_type": "latex",
+              "alt_value": "\\begin{align*} AD &= AE \\times \\frac{AD}{AE} \\\\ &= \\frac{AC}{2} \\times \\frac{AC}{AB} \\\\ &= \\frac{AC^2}{2 AB} \\\\ &= \\frac{AB^2 + BC^2}{2 AB} \\end{align*}"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/d/8/8/d88d3b225d4dcf1a78380f5c98940f6107e3deca.png",
+              "alt_type": "latex",
+              "alt_value": "$AB = 5$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/7/4/6/74666022a42f4446ed551033a088108882c5ec09.png",
+              "alt_type": "latex",
+              "alt_value": "$BC = 1$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/9/e/e/9eed01ed1e979df597c2dbf0e747c9cf1c5eaf63.png",
+              "alt_type": "latex",
+              "alt_value": "$AD = \\frac{5^2 + 1^2}{2 \\cdot 5} = 2.6$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/4/2/2/42251b0751f35ab06a574694095a1e9254aff345.png",
+              "alt_type": "latex",
+              "alt_value": "$x = AB - AD = \\boxed{2.4}$"
             }
           }
         }
@@ -3240,6 +3891,560 @@
       ]
     },
     {
+      "id": "amc_2009_10b_20",
+      "question": {
+        "text": "<p>Triangle <INSERTION_INDEX_1> has a right angle at <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, and <INSERTION_INDEX_4>. The bisector of <INSERTION_INDEX_5> meets <INSERTION_INDEX_6> at <INSERTION_INDEX_7>. What is <INSERTION_INDEX_8>?</p><p><INSERTION_INDEX_9></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png",
+            "alt_type": "latex",
+            "alt_value": "$ABC$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+            "alt_type": "latex",
+            "alt_value": "$B$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/4/e/4/4e4e71e9c0786b12fb9b4b5c67364147ed6e402f.png",
+            "alt_type": "latex",
+            "alt_value": "$AB=1$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/8/b/1/8b1929493a2042af1208c7b6bb285c11b19a6108.png",
+            "alt_type": "latex",
+            "alt_value": "$BC=2$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/5/8/6/5862947b38a495ec9be80e5b9c7582de6cf0d269.png",
+            "alt_type": "latex",
+            "alt_value": "$\\angle BAC$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/e/3/3/e33fe7d65facd8868f58b6e94ddc7f153a5a3f9f.png",
+            "alt_type": "latex",
+            "alt_value": "$\\overline{BC}$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+            "alt_type": "latex",
+            "alt_value": "$D$"
+          },
+          "INSERTION_INDEX_8": {
+            "picture": "//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png",
+            "alt_type": "latex",
+            "alt_value": "$BD$"
+          },
+          "INSERTION_INDEX_9": {
+            "picture": "//latex.artofproblemsolving.com/f/0/b/f0b6594577eb2fc6916bc732b5f99843acda5c60.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] unitsize(2cm); defaultpen(linewidth(.8pt)+fontsize(8pt)); dotfactor=4;  pair A=(0,1), B=(0,0), C=(2,0); pair D=extension(A,bisectorpoint(B,A,C),B,C); pair[] ds={A,B,C,D};  dot(ds); draw(A--B--C--A--D);  label(\"$1$\",midpoint(A--B),W); label(\"$B$\",B,SW); label(\"$D$\",D,S); label(\"$C$\",C,SE); label(\"$A$\",A,NW); draw(rightanglemark(C,B,A,2)); [/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/3/4/6/3468e42356950b1d1916e01e180ddd2c2b9a7d0e.png"
+        ],
+        "latex_choices": [
+          "$\\text{(A) } \\frac {\\sqrt3 - 1}{2} \\qquad \\text{(B) } \\frac {\\sqrt5 - 1}{2} \\qquad \\text{(C) } \\frac {\\sqrt5 + 1}{2} \\qquad \\text{(D) } \\frac {\\sqrt6 + \\sqrt2}{2} \\qquad \\text{(E) } 2\\sqrt 3 - 1$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>By the Pythagorean Theorem, <INSERTION_INDEX_1>. Then, from the Angle Bisector Theorem, we have:</p><p><INSERTION_INDEX_2><INSERTION_INDEX_3><INSERTION_INDEX_4><INSERTION_INDEX_5></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/7/d/0/7d080380fb2eda22d597e35957f097f7055f964e.png",
+              "alt_type": "latex",
+              "alt_value": "$AC=\\sqrt5$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/e/e/4/ee49863a65032430d463c11c7fe4d79e8f835f7a.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{BD}{1}=\\frac{2-BD}{\\sqrt5}\\]"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/b/e/d/bed2118f676735873b3f70b76b80da3e768e6f09.png",
+              "alt_type": "latex",
+              "alt_value": "\\[BD\\left(1+\\frac{1}{\\sqrt5}\\right)=\\frac{2}{\\sqrt5}\\]"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/8/c/e/8ce6030a738e7f201c181755b0debb9af82fdf00.png",
+              "alt_type": "latex",
+              "alt_value": "\\[BD(\\sqrt5+1)=2\\]"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/d/c/d/dcddc28812bc31826035b9c23f6655a6f63c5422.png",
+              "alt_type": "latex",
+              "alt_value": "\\[BD=\\frac{2}{\\sqrt5+1}=\\boxed{\\frac{\\sqrt5-1}{2}} \\implies {B}\\]"
+            }
+          }
+        },
+        {
+          "text": "<p>Let <INSERTION_INDEX_1>. Notice <INSERTION_INDEX_2> and <INSERTION_INDEX_3>. By the double angle identity, <INSERTION_INDEX_4></p><p>Remarks: You could also use tangent half angle formula</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/a/7/d/a7d3dbc9f9659fd19a6e4a7b20cc6ddcb64b98e5.png",
+              "alt_type": "latex",
+              "alt_value": "$\\theta = \\angle BAD = \\angle DAC$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/9/c/9/9c9276f35fa9ed931d2358426438466df3b85370.png",
+              "alt_type": "latex",
+              "alt_value": "$\\tan \\theta = BD$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/a/0/2/a02fc54e9a3f32ab2b9bbf8b373175b84c3f2a93.png",
+              "alt_type": "latex",
+              "alt_value": "$\\tan 2 \\theta = 2$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/4/0/f/40fe0cdac1eb06b3a723c98fa33b0cbe5afdb94b.png",
+              "alt_type": "latex",
+              "alt_value": "\\[2 = \\frac{2 BD}{1 - BD^2} \\implies BD = \\boxed{\\frac{\\sqrt5 - 1}{2} \\implies B}.\\]"
+            }
+          }
+        },
+        {
+          "text": "<p>Let <INSERTION_INDEX_1>.</p><p>Make <INSERTION_INDEX_2> a line so that it is perpendicular to <INSERTION_INDEX_3>. Since <INSERTION_INDEX_4> is an angle bisector, <INSERTION_INDEX_5> is congruent to <INSERTION_INDEX_6>.Using the Pythagorean Theorem:</p><p><INSERTION_INDEX_7></p><p><INSERTION_INDEX_8></p><p><INSERTION_INDEX_9></p><p>We know that <INSERTION_INDEX_10> by the congruent triangles, so <INSERTION_INDEX_11>. We know that <INSERTION_INDEX_12>, <INSERTION_INDEX_13>, and <INSERTION_INDEX_14>. We now have right triangle <INSERTION_INDEX_15> and its 3 sides. Using the Pythagorean Thereom, we get:</p><p><INSERTION_INDEX_16></p><p><INSERTION_INDEX_17></p><p>So, <INSERTION_INDEX_18></p><p>~HelloWorld21</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/8/5/d8553582f0b6fb27e92102a8ba39b074975ab770.png",
+              "alt_type": "latex",
+              "alt_value": "$BD=y$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/d/5/6d5c9afa92ae3180f02754c177e530d9d0f8b4d4.png",
+              "alt_type": "latex",
+              "alt_value": "$DE$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png",
+              "alt_type": "latex",
+              "alt_value": "$AC$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png",
+              "alt_type": "latex",
+              "alt_value": "$AD$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/1/8/1/18167d788fd698322ba516cf8bfdba2c931fa17d.png",
+              "alt_type": "latex",
+              "alt_value": "$\\triangle AED$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/f/7/5/f75d6d58b03031bd7cb52a7ca886a8ddf369d21c.png",
+              "alt_type": "latex",
+              "alt_value": "$\\triangle ABD$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/8/5/d/85df678441f26e9c1e11179c993abf214d0183a6.png",
+              "alt_type": "latex",
+              "alt_value": "$AC^2=1^2+2^2$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/1/a/4/1a45031fc88c4acee01ed2b66a46ec49772f978a.png",
+              "alt_type": "latex",
+              "alt_value": "$AC^2=5$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/1/b/a/1ba36cbbcccc0c3b99c21887f8f6a6281585c245.png",
+              "alt_type": "latex",
+              "alt_value": "$AC=\\sqrt{5}$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/2/4/0/24096979a27c72ccde79e7e4889bf4e4be7a632b.png",
+              "alt_type": "latex",
+              "alt_value": "$AE=1$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/1/0/0/100d141326af0311cd2b0a55a7f24207b91b172d.png",
+              "alt_type": "latex",
+              "alt_value": "$EC=\\sqrt{5}-1$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/7/b/2/7b2e18cd757eb3201f8e8edabaf8568c7b33ae7a.png",
+              "alt_type": "latex",
+              "alt_value": "$DE=y$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/1/0/0/100d141326af0311cd2b0a55a7f24207b91b172d.png",
+              "alt_type": "latex",
+              "alt_value": "$EC=\\sqrt{5}-1$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/6/5/5/655fe60148c5b76f319d2aba43f4056d4956dbc2.png",
+              "alt_type": "latex",
+              "alt_value": "$DC=2-y$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/b/7/a/b7a9191aefcf2eb237d1999486083ed78f6d515f.png",
+              "alt_type": "latex",
+              "alt_value": "$DEC$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/e/4/5/e45504626304e28f931914cc4bc8ca85acbb26e7.png",
+              "alt_type": "latex",
+              "alt_value": "$y^2+(\\sqrt{5}-1)^2=(2-y)^2$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/e/1/6/e1625c6a8480da5cd2248ff12cca0579dd39bcf9.png",
+              "alt_type": "latex",
+              "alt_value": "$-4y=2-2\\sqrt{5}$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/d/1/3/d1308943149b096c0b73add8c7343814a908610c.png",
+              "alt_type": "latex",
+              "alt_value": "$y=BD=\\boxed{\\frac{\\sqrt5-1}{2} \\implies B}.$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10b_21",
+      "question": {
+        "text": "<p>What is the remainder when <INSERTION_INDEX_1> is divided by 8?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/6/8/4/68434db7869612b348e56966f4ae2ffa786d788b.png",
+            "alt_type": "latex",
+            "alt_value": "$3^0 + 3^1 + 3^2 + \\cdots + 3^{2009}$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/e/b/2/eb29ca57051e7f39f8ade96c4576eb75817d49c8.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 0\\qquad \\mathrm{(B)}\\ 1\\qquad \\mathrm{(C)}\\ 2\\qquad \\mathrm{(D)}\\ 4\\qquad \\mathrm{(E)}\\ 6$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>The sum of any four consecutive powers of 3 is divisible by <INSERTION_INDEX_1> and hence is divisible by 8. Therefore</p><p>is divisible by 8. So the required remainder is <INSERTION_INDEX_2>. The answer is <INSERTION_INDEX_3>.</p><p>We have <INSERTION_INDEX_4>. Hence for any <INSERTION_INDEX_5> we have <INSERTION_INDEX_6>, and then <INSERTION_INDEX_7>.</p><p>Therefore our sum gives the same remainder modulo <INSERTION_INDEX_8> as <INSERTION_INDEX_9>. There are <INSERTION_INDEX_10> terms in the sum, hence there are <INSERTION_INDEX_11> pairs of <INSERTION_INDEX_12>, and thus the sum is <INSERTION_INDEX_13>.</p><p>We have the formula <INSERTION_INDEX_14> for the sum of a finite geometric sequence which we want to find the residue modulo 8.<INSERTION_INDEX_15><INSERTION_INDEX_16><INSERTION_INDEX_17>Therefore, the numerator of the fraction is divisible by <INSERTION_INDEX_18>. However, when we divide the numerator by <INSERTION_INDEX_19>, we get a remainder of <INSERTION_INDEX_20> modulo <INSERTION_INDEX_21>, giving us <INSERTION_INDEX_22>.</p><p>Note: you need to prove that <INSERTION_INDEX_23> is not congruent to 0 mod 16 because if so, then the whole thing would be congruent to 0 mod 8, even after dividing by 2 ~ ilikepi12</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/6/2668b54017f235efee8d36e015154b1ff46561b8.png",
+              "alt_type": "latex",
+              "alt_value": "$3^0 + 3^1 + 3^2 +3^3 = 40$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/1/9/2/192f17bf83c572d3298ff161665f5b270d7dccb8.png",
+              "alt_type": "latex",
+              "alt_value": "$3^0 + 3^1 = \\boxed {4}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/b/f/b/bfbf4df7c25681bb178ddc50ee0c0d656aa25b5e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(D)}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/5/5/9/559a50826726cbb95c60c32517544bed2a954e42.png",
+              "alt_type": "latex",
+              "alt_value": "$3^2 = 9 \\equiv 1 \\pmod 8$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png",
+              "alt_type": "latex",
+              "alt_value": "$k$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/8/7/8/878f598749a91a7c88d72d686dd5ecd0b3e33c1d.png",
+              "alt_type": "latex",
+              "alt_value": "$3^{2k}\\equiv 1^k = 1 \\pmod 8$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/9/6/6/96655ad2e9da41626471ce5e2045651eca786c35.png",
+              "alt_type": "latex",
+              "alt_value": "$3^{2k+1} = 3\\cdot 3^{2k} \\equiv 3\\cdot 1 = 3  \\pmod 8$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/f/8/2/f825e3ce0f4942d027b5ec05ecbac8feb9708196.png",
+              "alt_type": "latex",
+              "alt_value": "$1 + 3 + 1 + 3 + 1 + \\cdots + 1 + 3$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/0/5/4/054090e60a5dcb8bc33213620b3af9278f9a3e12.png",
+              "alt_type": "latex",
+              "alt_value": "$2010$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/5/f/a/5fa61da555b703baf7f541194b95d331878f9463.png",
+              "alt_type": "latex",
+              "alt_value": "$2010/2 = 1005$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/1/9/3/193b9b8ef461adf0e723da43776cfb7386b5ebd1.png",
+              "alt_type": "latex",
+              "alt_value": "$1+3$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/4/5/f/45f2226320bf7847e220e7dda5bbba065d2b4350.png",
+              "alt_type": "latex",
+              "alt_value": "$1005 \\cdot 4 = 4020 \\equiv 20 \\equiv \\boxed{4} \\pmod 8$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/d/5/d/d5ddfa82b7af3f68e8b6a37031e1e107d82d44c2.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{a(r^n-1)}{r-1}$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/6/d/b/6db10a23c131768960b3f0f57e141d4e9d2edcec.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{1 \\cdot (3^{2010}-1)}{2}\\]"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/d/0/5/d05bd1b955c4f2eb083e52b012d3d33c86a94702.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{3^{2010}-1}{2} = \\frac{9^{1005}-1}{2}\\]"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/6/8/a/68a6dafa6a361a53ef0f2421e265eed91901085a.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{9^{1005}-1}{2} \\equiv \\frac{1^{1005}-1}{2} \\equiv \\frac{0}{2} \\pmod 8\\]"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_21": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_22": {
+              "picture": "//latex.artofproblemsolving.com/b/f/b/bfbf4df7c25681bb178ddc50ee0c0d656aa25b5e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(D)}$"
+            },
+            "INSERTION_INDEX_23": {
+              "picture": "//latex.artofproblemsolving.com/b/9/e/b9e6e42c3fae1e6d2f6a9b861c9e974a79a5cbd4.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{9^{1005}-1}{2}\\]"
+            }
+          }
+        },
+        {
+          "text": "<p>The sum of any four consecutive powers of 3 is divisible by <INSERTION_INDEX_1> and hence is divisible by 8. Therefore</p><p>is divisible by 8. So the required remainder is <INSERTION_INDEX_2>. The answer is <INSERTION_INDEX_3>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/6/2668b54017f235efee8d36e015154b1ff46561b8.png",
+              "alt_type": "latex",
+              "alt_value": "$3^0 + 3^1 + 3^2 +3^3 = 40$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/1/9/2/192f17bf83c572d3298ff161665f5b270d7dccb8.png",
+              "alt_type": "latex",
+              "alt_value": "$3^0 + 3^1 = \\boxed {4}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/b/f/b/bfbf4df7c25681bb178ddc50ee0c0d656aa25b5e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(D)}$"
+            }
+          }
+        },
+        {
+          "text": "<p>We have <INSERTION_INDEX_1>. Hence for any <INSERTION_INDEX_2> we have <INSERTION_INDEX_3>, and then <INSERTION_INDEX_4>.</p><p>Therefore our sum gives the same remainder modulo <INSERTION_INDEX_5> as <INSERTION_INDEX_6>. There are <INSERTION_INDEX_7> terms in the sum, hence there are <INSERTION_INDEX_8> pairs of <INSERTION_INDEX_9>, and thus the sum is <INSERTION_INDEX_10>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/5/5/9/559a50826726cbb95c60c32517544bed2a954e42.png",
+              "alt_type": "latex",
+              "alt_value": "$3^2 = 9 \\equiv 1 \\pmod 8$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png",
+              "alt_type": "latex",
+              "alt_value": "$k$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/8/7/8/878f598749a91a7c88d72d686dd5ecd0b3e33c1d.png",
+              "alt_type": "latex",
+              "alt_value": "$3^{2k}\\equiv 1^k = 1 \\pmod 8$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/9/6/6/96655ad2e9da41626471ce5e2045651eca786c35.png",
+              "alt_type": "latex",
+              "alt_value": "$3^{2k+1} = 3\\cdot 3^{2k} \\equiv 3\\cdot 1 = 3  \\pmod 8$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/f/8/2/f825e3ce0f4942d027b5ec05ecbac8feb9708196.png",
+              "alt_type": "latex",
+              "alt_value": "$1 + 3 + 1 + 3 + 1 + \\cdots + 1 + 3$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/0/5/4/054090e60a5dcb8bc33213620b3af9278f9a3e12.png",
+              "alt_type": "latex",
+              "alt_value": "$2010$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/5/f/a/5fa61da555b703baf7f541194b95d331878f9463.png",
+              "alt_type": "latex",
+              "alt_value": "$2010/2 = 1005$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/1/9/3/193b9b8ef461adf0e723da43776cfb7386b5ebd1.png",
+              "alt_type": "latex",
+              "alt_value": "$1+3$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/4/5/f/45f2226320bf7847e220e7dda5bbba065d2b4350.png",
+              "alt_type": "latex",
+              "alt_value": "$1005 \\cdot 4 = 4020 \\equiv 20 \\equiv \\boxed{4} \\pmod 8$"
+            }
+          }
+        },
+        {
+          "text": "<p>We have the formula <INSERTION_INDEX_1> for the sum of a finite geometric sequence which we want to find the residue modulo 8.<INSERTION_INDEX_2><INSERTION_INDEX_3><INSERTION_INDEX_4>Therefore, the numerator of the fraction is divisible by <INSERTION_INDEX_5>. However, when we divide the numerator by <INSERTION_INDEX_6>, we get a remainder of <INSERTION_INDEX_7> modulo <INSERTION_INDEX_8>, giving us <INSERTION_INDEX_9>.</p><p>Note: you need to prove that <INSERTION_INDEX_10> is not congruent to 0 mod 16 because if so, then the whole thing would be congruent to 0 mod 8, even after dividing by 2 ~ ilikepi12</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/5/d/d5ddfa82b7af3f68e8b6a37031e1e107d82d44c2.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{a(r^n-1)}{r-1}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/d/b/6db10a23c131768960b3f0f57e141d4e9d2edcec.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{1 \\cdot (3^{2010}-1)}{2}\\]"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/d/0/5/d05bd1b955c4f2eb083e52b012d3d33c86a94702.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{3^{2010}-1}{2} = \\frac{9^{1005}-1}{2}\\]"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/6/8/a/68a6dafa6a361a53ef0f2421e265eed91901085a.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{9^{1005}-1}{2} \\equiv \\frac{1^{1005}-1}{2} \\equiv \\frac{0}{2} \\pmod 8\\]"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/b/f/b/bfbf4df7c25681bb178ddc50ee0c0d656aa25b5e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(D)}$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/b/9/e/b9e6e42c3fae1e6d2f6a9b861c9e974a79a5cbd4.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{9^{1005}-1}{2}\\]"
+            }
+          }
+        },
+        {
+          "text": "<p>We can see that <INSERTION_INDEX_1> is has a remainder of 1. <INSERTION_INDEX_2> has a remainder of 4. <INSERTION_INDEX_3> also has a remainder of 4. <INSERTION_INDEX_4> has a remainder of 0.</p><p>If we keep on going, we can see that this pattern repeats every 4 powers of 3 - that is to say, the reminder cycles through <INSERTION_INDEX_5>, <INSERTION_INDEX_6>, <INSERTION_INDEX_7>, and <INSERTION_INDEX_8>.</p><p>Using simple math, we can see that if assume the pattern repeats every 4 numbers, <INSERTION_INDEX_9> has a remainder of <INSERTION_INDEX_10>. The answer is <INSERTION_INDEX_11>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/5/0/5/505a49f28af2cfdb15beb4e98b87d8ec09bac6f7.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{3^0}{8}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/4/5/c/45cc0207e1a3ac7cdff6b6782ab1c439b7d827c3.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{3^1}{8}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/c/3/2/c3247298535bbea8f441af9c51a44724d02e3310.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{3^2}{8}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/3/2/1/32112cd7df379fbb0c74dfd207c31efd7fd433b0.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{3^3}{8}$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/d/b/d/dbd814028e2603221a9b87157018efdd1b657dc8.png",
+              "alt_type": "latex",
+              "alt_value": "$3^{2009}$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/2/b/a/2ba40d958b633a6fc4adbdbc781a84d744f37731.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed {4}$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/b/f/b/bfbf4df7c25681bb178ddc50ee0c0d656aa25b5e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(D)}$"
+            }
+          }
+        }
+      ]
+    },
+    {
       "id": "amc_2009_10b_22",
       "question": {
         "text": "<p>A cubical cake with edge length <INSERTION_INDEX_1> inches is iced on the sides and the top. It is cut vertically into three pieces as shown in this top view, where <INSERTION_INDEX_2> is the midpoint of a top edge. The piece whose top is triangle <INSERTION_INDEX_3> contains <INSERTION_INDEX_4> cubic inches of cake and <INSERTION_INDEX_5> square inches of icing. What is <INSERTION_INDEX_6>?</p><p><INSERTION_INDEX_7></p>",
@@ -4828,6 +6033,121 @@
               "alt_value": "$\\boxed{\\textbf{(B) } \\frac{32}{5}}$"
             }
           }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10b_23",
+      "question": {
+        "text": "<p>Rachel and Robert run on a circular track. Rachel runs counterclockwise and completes a lap every 90 seconds, and Robert runs clockwise and completes a lap every 80 seconds. Both start from the same line at the same time. At some random time between 10 minutes and 11 minutes after they begin to run, a photographer standing inside the track takes a picture that shows one-fourth of the track, centered on the starting line. What is the probability that both Rachel and Robert are in the picture?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/1/c/5/1c50102db0750173a6242ce3b2db3d4eb7f9ee28.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\frac {1}{16}\\qquad \\mathrm{(B)}\\frac 18\\qquad \\mathrm{(C)}\\frac {3}{16}\\qquad \\mathrm{(D)}\\frac 14\\qquad \\mathrm{(E)}\\frac {5}{16}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>After <INSERTION_INDEX_1> minutes <INSERTION_INDEX_2> seconds<INSERTION_INDEX_3> Rachel will have completed <INSERTION_INDEX_4> laps and be <INSERTION_INDEX_5> seconds from completing her seventh lap. Because Rachel runs one-fourth of a lap in <INSERTION_INDEX_6> seconds, she will be in the picture between <INSERTION_INDEX_7> seconds and <INSERTION_INDEX_8> seconds of the tenth minute. After 10 minutes, Robert will have completed <INSERTION_INDEX_9> laps and be <INSERTION_INDEX_10> seconds from completing his eighth lap. Because Robert runs one-fourth of a lap in <INSERTION_INDEX_11> seconds, he will be in the picture between <INSERTION_INDEX_12> seconds and <INSERTION_INDEX_13> seconds of the tenth minute. Hence both Rachel and Robert will be in the picture if it is taken between <INSERTION_INDEX_14> seconds and <INSERTION_INDEX_15> seconds of the tenth minute. So the probability that both runners are in the picture is <INSERTION_INDEX_16>. The answer is <INSERTION_INDEX_17>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png",
+              "alt_type": "latex",
+              "alt_value": "$10$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/c/e/3/ce3b33448115127f15871da09d1ab63a1cddd435.png",
+              "alt_type": "latex",
+              "alt_value": "$(600$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/b/8/f/b8ff48facb2d169243b88fba455ef6c48e0b0504.png",
+              "alt_type": "latex",
+              "alt_value": "$),$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/6/5/1/651ba418a810d971dbc8a326d49a71fe1541fae0.png",
+              "alt_type": "latex",
+              "alt_value": "$30$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/9/1/d/91d413c0964b8ba3371f882fd21fa87baeb74e92.png",
+              "alt_type": "latex",
+              "alt_value": "$22.5$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/6/a/f/6af17885838cfff31a3105dbea2d198fd16788df.png",
+              "alt_type": "latex",
+              "alt_value": "$18.75$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/4/2/c/42ca2a2ba7ab76e1101c3f3aeb5775c4035e1df9.png",
+              "alt_type": "latex",
+              "alt_value": "$41.25$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png",
+              "alt_type": "latex",
+              "alt_value": "$7$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/7/8/7/78792fe4680a164f537ea72a4f900e4471433c3b.png",
+              "alt_type": "latex",
+              "alt_value": "$40$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png",
+              "alt_type": "latex",
+              "alt_value": "$20$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/6/5/1/651ba418a810d971dbc8a326d49a71fe1541fae0.png",
+              "alt_type": "latex",
+              "alt_value": "$30$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/9/0/6/906734e2f1010e9a171ffee8050cbc0649cea37c.png",
+              "alt_type": "latex",
+              "alt_value": "$50$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/6/5/1/651ba418a810d971dbc8a326d49a71fe1541fae0.png",
+              "alt_type": "latex",
+              "alt_value": "$30$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/4/2/c/42ca2a2ba7ab76e1101c3f3aeb5775c4035e1df9.png",
+              "alt_type": "latex",
+              "alt_value": "$41.25$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/6/e/d/6ed529199646ae67b9a04dd4b29b4387bf770b70.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac {41.25 - 30} {60} = \\boxed{\\frac {3}{16}}$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/2/4/8/2484f88154fadcf9c781bba19becdae88696b77f.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{(C)}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Video: <a class=\"external free\" href=\"https://youtu.be/eZjJ5MQV47o\" rel=\"nofollow\">https://youtu.be/eZjJ5MQV47o</a>~DaBobWhoLikeMath</p>",
+          "insertions": {}
         }
       ]
     },

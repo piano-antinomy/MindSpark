@@ -7,10 +7,112 @@
     "level": "10",
     "suffix": "A",
     "fall_version": false,
-    "total_problems": 18,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
+    {
+      "id": "amc_2009_10a_1",
+      "question": {
+        "text": "<p>One can holds <INSERTION_INDEX_1> ounces of soda, what is the minimum number of cans needed to provide a gallon (<INSERTION_INDEX_2> ounces) of soda?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png",
+            "alt_type": "latex",
+            "alt_value": "$12$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/0/a/e/0aed56990dedba5a88a65e21245ccfd5d5e43ae2.png",
+            "alt_type": "latex",
+            "alt_value": "$128$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/5/1/7/51759c5d163f15c81016db64d956313190af02c2.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 7\\qquad \\textbf{(B)}\\ 8\\qquad \\textbf{(C)}\\ 9\\qquad \\textbf{(D)}\\ 10\\qquad \\textbf{(E)}\\ 11$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p><INSERTION_INDEX_1> cans would hold <INSERTION_INDEX_2> ounces, but <INSERTION_INDEX_3>, so <INSERTION_INDEX_4> cans are required. Thus, the answer is <INSERTION_INDEX_5>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png",
+              "alt_type": "latex",
+              "alt_value": "$10$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/a/a/a/aaa4de95cc6371d125d5cf773cdd9f9913dd1d8e.png",
+              "alt_type": "latex",
+              "alt_value": "$120$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/2/b/a/2ba4fba5d31a8e7bc362b935d410dcf8dccb51c8.png",
+              "alt_type": "latex",
+              "alt_value": "$128>120$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/6/8/c6878713578626763c38433b3f4c8c2205ad0c15.png",
+              "alt_type": "latex",
+              "alt_value": "$11$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/a/5/a/a5abdecb0c5d3fb0a0b8bb683bfcac06850020d8.png",
+              "alt_type": "latex",
+              "alt_value": "$\\mathrm{\\boxed{{(E)}11}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>We want to find <INSERTION_INDEX_1> because there are a whole number of cans.</p><p><INSERTION_INDEX_2></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/9/d/1/9d16f4363cc8429f2a47a9ca36db90e26fb6368e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\left\\lceil\\frac{128}{12}\\right\\rceil$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/4/7/b/47b24810788b71cf766606d2a8716ea8bf42967e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{128}{12} = 10R8\\longrightarrow 11\\longrightarrow \\fbox{(E)}.$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_2",
+      "question": {
+        "text": "<p>Four coins are picked out of a piggy bank that contains a collection of pennies, nickels, dimes, and quarters. Which of the following could <em>not</em> be the total value of the four coins, in cents?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/a/9/f/a9fe01f43deb04600b2071d0f1e9f90487acd65b.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 15 \\qquad \\textbf{(B)}\\ 25 \\qquad \\textbf{(C)}\\ 35 \\qquad \\textbf{(D)}\\ 45 \\qquad \\textbf{(E)}\\ 55$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "A",
+      "solutions": [
+        {
+          "text": "<p>We need to find which total value cannot be made with exactly 4 coins from pennies (1¢), nickels (5¢), dimes (10¢), and quarters (25¢).</p><p>Let's check each option:</p><p>A) 15¢: We need 4 coins that sum to 15. The maximum with 4 coins is 4 quarters = 100¢, so this is possible. But can we make 15¢ with exactly 4 coins? The smallest 4 coins would be 4 pennies = 4¢, which is too small. We need to use some larger coins. Let's try: 1 nickel + 3 pennies = 5 + 3 = 8¢ (too small), 2 nickels + 2 pennies = 10 + 2 = 12¢ (too small), 3 nickels + 1 penny = 15 + 1 = 16¢ (too large). We cannot make exactly 15¢ with 4 coins.</p><p>B) 25¢: 1 quarter = 25¢, but we need 4 coins. 1 quarter + 3 pennies = 25 + 3 = 28¢ (too large). 5 nickels = 25¢, but we need exactly 4 coins. 4 nickels + 1 penny = 20 + 1 = 21¢ (too small). 3 nickels + 2 pennies = 15 + 2 = 17¢ (too small). We cannot make exactly 25¢ with 4 coins either.</p><p>Wait, let me reconsider. The problem asks which total value could NOT be made. Let me check more carefully:</p><p>A) 15¢: Can we make 15¢ with exactly 4 coins? 1 dime + 1 nickel = 15¢, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 10 + 5 + 2 = 17¢ (too large). 3 nickels = 15¢, but that's only 3 coins. We cannot make exactly 15¢ with 4 coins.</p><p>B) 25¢: 1 quarter = 25¢, but we need 4 coins. 1 quarter + 3 pennies = 28¢ (too large). 5 nickels = 25¢, but we need exactly 4 coins. 4 nickels + 1 penny = 21¢ (too small). We cannot make exactly 25¢ with 4 coins.</p><p>C) 35¢: 1 quarter + 1 dime = 35¢, but that's only 2 coins. 1 quarter + 1 dime + 2 pennies = 37¢ (too large). 3 dimes + 1 nickel = 30 + 5 = 35¢, but that's only 4 coins. Wait, 3 dimes + 1 nickel = 30 + 5 = 35¢ with exactly 4 coins. This is possible.</p><p>D) 45¢: 1 quarter + 2 dimes = 25 + 20 = 45¢, but that's only 3 coins. 1 quarter + 2 dimes + 1 penny = 46¢ (too large). 4 dimes + 1 nickel = 40 + 5 = 45¢, but that's 5 coins. We cannot make exactly 45¢ with 4 coins.</p><p>E) 55¢: 2 quarters + 1 nickel = 50 + 5 = 55¢, but that's only 3 coins. 2 quarters + 1 nickel + 1 penny = 56¢ (too large). 1 quarter + 3 dimes = 25 + 30 = 55¢, but that's only 4 coins. Wait, 1 quarter + 3 dimes = 25 + 30 = 55¢ with exactly 4 coins. This is possible.</p><p>So the values that cannot be made with exactly 4 coins are: A (15¢), B (25¢), and D (45¢). But the problem asks for which one could NOT be made, implying only one answer. Let me check more carefully:</p><p>Actually, let me list all possible combinations of 4 coins and see what totals we can make:</p><p>4 pennies = 4¢</p><p>3 pennies + 1 nickel = 8¢</p><p>2 pennies + 2 nickels = 12¢</p><p>1 penny + 3 nickels = 16¢</p><p>4 nickels = 20¢</p><p>3 nickels + 1 dime = 25¢</p><p>2 nickels + 2 dimes = 30¢</p><p>1 nickel + 3 dimes = 35¢</p><p>4 dimes = 40¢</p><p>3 dimes + 1 quarter = 55¢</p><p>2 dimes + 2 quarters = 70¢</p><p>1 dime + 3 quarters = 85¢</p><p>4 quarters = 100¢</p><p>And combinations with pennies: 3 pennies + 1 dime = 13¢, 2 pennies + 1 nickel + 1 dime = 17¢, 1 penny + 2 nickels + 1 dime = 21¢, etc.</p><p>Looking at the options: A) 15¢ - not in our list, B) 25¢ - possible (3 nickels + 1 dime), C) 35¢ - possible (1 nickel + 3 dimes), D) 45¢ - not in our list, E) 55¢ - possible (3 dimes + 1 quarter).</p><p>So A (15¢) and D (45¢) cannot be made. But the problem asks for which one could NOT be made, implying only one answer. Let me check if I missed any combinations.</p><p>Actually, let me be more systematic. The problem is asking which total value could NOT be the total value of the four coins. Let me check each option:</p><p>A) 15¢: Can we make 15¢ with exactly 4 coins? Let's try: 1 dime + 1 nickel = 15¢, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 17¢ (too large). 3 nickels = 15¢, but that's only 3 coins. 3 nickels + 1 penny = 16¢ (too large). 2 nickels + 2 pennies = 12¢ (too small). 1 nickel + 4 pennies = 9¢ (too small). We cannot make exactly 15¢ with 4 coins.</p><p>Therefore, the answer is A) 15¢.</p>",
+          "insertions": {}
+        }
+      ]
+    },
     {
       "id": "amc_2009_10a_3",
       "question": {
@@ -610,7 +712,7 @@
           }
         },
         {
-          "text": "<p>If we change the question to 2% fat in the carton which is 50% less than whole milk, this means that there is 4% fat in the whole milk. The only answer closest and less than 4 is 10/3 <INSERTION_INDEX_1>. 38% fat is a lot of fat in milk :O-RealityWrites</p>",
+          "text": "<p>If we change the question to 2% fat in the carton which is 50% less than whole milk, this means that there is 4% fat in the whole milk. The only answer closest and less than 4 is 10/3 <INSERTION_INDEX_1>. 38% fat is a lot of fat in milk O O O O O O O O O -RealityWrites</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/0/1/8/0183fce65b5bc254a852f2e89cdabdb08204a8ea.png",
@@ -1444,6 +1546,150 @@
               "picture": "//latex.artofproblemsolving.com/0/7/f/07fc69fd1ddd5c84102694627703a1509cd6966d.png",
               "alt_type": "latex",
               "alt_value": "$5^3 = 125\\Rightarrow\\boxed{\\text{(D)}}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_12",
+      "question": {
+        "text": "<p>In quadrilateral <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, <INSERTION_INDEX_4>, <INSERTION_INDEX_5>, and <INSERTION_INDEX_6> is an integer. What is <INSERTION_INDEX_7>?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
+            "alt_type": "latex",
+            "alt_value": "$ABCD$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/d/8/8/d88d3b225d4dcf1a78380f5c98940f6107e3deca.png",
+            "alt_type": "latex",
+            "alt_value": "$AB = 5$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/a/d/d/add662a0bcea3258bd427832357a4d6a542bf69c.png",
+            "alt_type": "latex",
+            "alt_value": "$BC = 17$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/4/d/9/4d99eb629f027ee953f4fce4c24425c6fb800a24.png",
+            "alt_type": "latex",
+            "alt_value": "$CD = 5$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/6/7/9/6790c30f7e0de64cd05074a11aa915120e09ad5a.png",
+            "alt_type": "latex",
+            "alt_value": "$DA = 9$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png",
+            "alt_type": "latex",
+            "alt_value": "$BD$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png",
+            "alt_type": "latex",
+            "alt_value": "$BD$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/f/1/c/f1c91317cfa55d222c95104286c1e90c8ee7c1bf.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 11 \\qquad \\textbf{(B)}\\ 12 \\qquad \\textbf{(C)}\\ 13 \\qquad \\textbf{(D)}\\ 14 \\qquad \\textbf{(E)}\\ 15$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Triangle_inequality\" title=\"Triangle inequality\">triangle inequality</a> we have <INSERTION_INDEX_1>, and also <INSERTION_INDEX_2>, hence <INSERTION_INDEX_3>.</p><p>We get that <INSERTION_INDEX_4>, and as we know that <INSERTION_INDEX_5> is an integer, we must have <INSERTION_INDEX_6>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/6/0/b/60b0a18ae56f591d170e9486dc413779dc75b86a.png",
+              "alt_type": "latex",
+              "alt_value": "$BD < DA + AB = 9 + 5 = 14$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/4/9/74970605a1dea225a719b814cb0428018a7de99f.png",
+              "alt_type": "latex",
+              "alt_value": "$BD + CD > BC$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/8/3/c/83c2a0e0df682b1f94fd40dc2a9ef415d1b658b1.png",
+              "alt_type": "latex",
+              "alt_value": "$BD > BC - CD = 17 - 5 = 12$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/3/f/a/3fa71d1c756ae190f63e4fd935de6b83c722f676.png",
+              "alt_type": "latex",
+              "alt_value": "$12 < BD < 14$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png",
+              "alt_type": "latex",
+              "alt_value": "$BD$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/7/a/b/7abcbbd0f931cc53b4cce01a408c4fa4a4672ca8.png",
+              "alt_type": "latex",
+              "alt_value": "$BD=\\boxed{13}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_13",
+      "question": {
+        "text": "<p>Suppose that <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. Which of the following is equal to <INSERTION_INDEX_3> for every pair of integers <INSERTION_INDEX_4>?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/a/e/a/aea489c18f09efe3835367785ebc5e043757a75f.png",
+            "alt_type": "latex",
+            "alt_value": "$P = 2^m$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/3/2/d/32dd7832ce97cd702126aaa8e7874aeb95d81282.png",
+            "alt_type": "latex",
+            "alt_value": "$Q = 3^n$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/2/6/b/26bf0cf9c0c6a643b9da8c3fe00fe59dcce55d3a.png",
+            "alt_type": "latex",
+            "alt_value": "$12^{mn}$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/7/c/a/7ca10ffe3531cf1faf6222be7eac407c47bef878.png",
+            "alt_type": "latex",
+            "alt_value": "$(m,n)$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/6/0/7/607b00eabe7c4813567f82e7f2786e94f47fa457.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ P^2Q \\qquad \\textbf{(B)}\\ P^nQ^m \\qquad \\textbf{(C)}\\ P^nQ^{2m} \\qquad \\textbf{(D)}\\ P^{2m}Q^n \\qquad \\textbf{(E)}\\ P^{2n}Q^m$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p>We have <INSERTION_INDEX_1>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/f/7/2f7918e85dfd4318d456b3050a6fbe3ea83164cd.png",
+              "alt_type": "latex",
+              "alt_value": "$12^{mn} = (2\\cdot 2\\cdot 3)^{mn} = 2^{2mn} \\cdot 3^{mn} = (2^m)^{2n} \\cdot (3^n)^m = \\boxed{\\bold{E)} P^{2n} Q^m}$"
             }
           }
         }
@@ -2311,6 +2557,828 @@
       ]
     },
     {
+      "id": "amc_2009_10a_17",
+      "question": {
+        "text": "<p>Rectangle <INSERTION_INDEX_1> has <INSERTION_INDEX_2> and <INSERTION_INDEX_3>. Segment <INSERTION_INDEX_4> is constructed through <INSERTION_INDEX_5> so that <INSERTION_INDEX_6> is perpendicular to <INSERTION_INDEX_7>, and <INSERTION_INDEX_8> and <INSERTION_INDEX_9> lie on <INSERTION_INDEX_10> and <INSERTION_INDEX_11>, respectively. What is <INSERTION_INDEX_12>?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
+            "alt_type": "latex",
+            "alt_value": "$ABCD$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/4/b/4/4b44beb78e8be18179bfb7fe6b3424e7fb1aef32.png",
+            "alt_type": "latex",
+            "alt_value": "$AB=4$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/b/e/6/be6680a35b22c11c0ee9f16a760de124151579b2.png",
+            "alt_type": "latex",
+            "alt_value": "$BC=3$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+            "alt_type": "latex",
+            "alt_value": "$EF$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+            "alt_type": "latex",
+            "alt_value": "$B$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+            "alt_type": "latex",
+            "alt_value": "$EF$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/2/0/4/204a6f5a6757f5da4c1b3035ad8d806769744e63.png",
+            "alt_type": "latex",
+            "alt_value": "$DB$"
+          },
+          "INSERTION_INDEX_8": {
+            "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+            "alt_type": "latex",
+            "alt_value": "$A$"
+          },
+          "INSERTION_INDEX_9": {
+            "picture": "//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png",
+            "alt_type": "latex",
+            "alt_value": "$C$"
+          },
+          "INSERTION_INDEX_10": {
+            "picture": "//latex.artofproblemsolving.com/6/d/5/6d5c9afa92ae3180f02754c177e530d9d0f8b4d4.png",
+            "alt_type": "latex",
+            "alt_value": "$DE$"
+          },
+          "INSERTION_INDEX_11": {
+            "picture": "//latex.artofproblemsolving.com/c/7/3/c7387ef3aa3162cea3e516216d4ed946506bd30d.png",
+            "alt_type": "latex",
+            "alt_value": "$DF$"
+          },
+          "INSERTION_INDEX_12": {
+            "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+            "alt_type": "latex",
+            "alt_value": "$EF$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/8/8/8/888f9b4fef6ff6839688c884c4a0c783bbfd8cb0.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 9 \\qquad \\mathrm{(B)}\\ 10 \\qquad \\mathrm{(C)}\\ \\frac {125}{12} \\qquad \\mathrm{(D)}\\ \\frac {103}{9} \\qquad \\mathrm{(E)}\\ 12$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>The situation is shown in the picture below.</p><p><INSERTION_INDEX_1></p><p>From the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> we have <INSERTION_INDEX_2>.</p><p>Triangle <INSERTION_INDEX_3> is similar to <INSERTION_INDEX_4>, as they have the same angles. Segment <INSERTION_INDEX_5> is perpendicular to <INSERTION_INDEX_6>, meaning that angle <INSERTION_INDEX_7> and <INSERTION_INDEX_8> are right angles and congruent. Also, angle <INSERTION_INDEX_9> is a right angle. Because it is a rectangle, angle <INSERTION_INDEX_10> is congruent to <INSERTION_INDEX_11> and angle <INSERTION_INDEX_12> is also a right angle. By the transitive property:</p><p><INSERTION_INDEX_13></p><p><INSERTION_INDEX_14></p><p><INSERTION_INDEX_15></p><p><INSERTION_INDEX_16></p><p>Next, because every triangle has a degree measure of <INSERTION_INDEX_17>, angle <INSERTION_INDEX_18> and angle <INSERTION_INDEX_19> are similar. </p><p><br/>Hence <INSERTION_INDEX_20>, and therefore <INSERTION_INDEX_21>.</p><p>Also triangle <INSERTION_INDEX_22> is similar to <INSERTION_INDEX_23>. Hence <INSERTION_INDEX_24>, and therefore <INSERTION_INDEX_25>.</p><p>We then have <INSERTION_INDEX_26>.</p><p>Since <INSERTION_INDEX_27> is the altitude from <INSERTION_INDEX_28> to <INSERTION_INDEX_29>, we can use the equation <INSERTION_INDEX_30>. </p><p>Looking at the angles, we see that triangle <INSERTION_INDEX_31> is similar to <INSERTION_INDEX_32>. Because of this, <INSERTION_INDEX_33>. From the given information and the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a>, <INSERTION_INDEX_34>, <INSERTION_INDEX_35>, and <INSERTION_INDEX_36>. Solving gives <INSERTION_INDEX_37>. </p><p>We can use the above formula to solve for <INSERTION_INDEX_38>. <INSERTION_INDEX_39>. Solve to obtain <INSERTION_INDEX_40>. </p><p>We now know <INSERTION_INDEX_41> and <INSERTION_INDEX_42>. <INSERTION_INDEX_43>.</p><p>To keep things simple, we will use coordinates in only the first quadrant. The picture will look like the diagram above reflected over the <INSERTION_INDEX_44>-axis.It is also worth noting the <INSERTION_INDEX_45> will lie on the <INSERTION_INDEX_46> axis and <INSERTION_INDEX_47> on the <INSERTION_INDEX_48>. Let <INSERTION_INDEX_49> be the origin, <INSERTION_INDEX_50>, <INSERTION_INDEX_51>, and <INSERTION_INDEX_52>. We can express segment <INSERTION_INDEX_53> as the line <INSERTION_INDEX_54>. Since <INSERTION_INDEX_55> is perpendicular to <INSERTION_INDEX_56>, and we know that <INSERTION_INDEX_57> lies on it, we can use this information to find that segment <INSERTION_INDEX_58>is on the line <INSERTION_INDEX_59>. Since <INSERTION_INDEX_60> and <INSERTION_INDEX_61> are on the <INSERTION_INDEX_62> and <INSERTION_INDEX_63> axis, respectively, we plug in <INSERTION_INDEX_64> for <INSERTION_INDEX_65>and <INSERTION_INDEX_66>, we find that point <INSERTION_INDEX_67> is at <INSERTION_INDEX_68>, and point <INSERTION_INDEX_69> is at <INSERTION_INDEX_70>. Applying the distance formula,we obtain that <INSERTION_INDEX_71>= <INSERTION_INDEX_72>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/3/2/c/32c515543c7a81f453411db67766927addafff00.png",
+              "alt_type": "asy",
+              "alt_value": "[asy] unitsize(0.6cm); defaultpen(0.8); pair A=(0,0), B=(4,0), C=(4,3), D=(0,3); pair EF=rotate(90)*(D-B); pair E=intersectionpoint( (0,-100)--(0,100), (B-100*EF)--(B+100*EF) ); pair F=intersectionpoint( (-100,3)--(100,3), (B-100*EF)--(B+100*EF) ); draw(A--B--C--D--cycle); draw(B--D, dashed); draw(E--F); draw(A--E, dashed); draw(C--F, dashed); label(\"$A$\",A,W); label(\"$B$\",B,SE); label(\"$C$\",C,N); label(\"$D$\",D,NW); label(\"$E$\",E,SW); label(\"$F$\",F,NE); label(\"$3$\",A--D,W); label(\"$4$\",C--D,N); [/asy]"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/b/b/1/bb1064b607676819b46b58a2a13b6f4aea9a22af.png",
+              "alt_type": "latex",
+              "alt_value": "$BD=5$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/0/e/3/0e30e7dec97a3f5e84e0de8a12e3056c6c9a77fc.png",
+              "alt_type": "latex",
+              "alt_value": "$EAB$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/e/5/7e538978649c14e1616fac744e983b5981d0ea8e.png",
+              "alt_type": "latex",
+              "alt_value": "$BAD$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/d/6/6/d66492998689e8303534c9e4f3ba1fa650fd41f0.png",
+              "alt_type": "latex",
+              "alt_value": "$BA$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/0/b/3/0b31cd391bebc36897a8c10ea78e5d584980b049.png",
+              "alt_type": "latex",
+              "alt_value": "$DA$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/1/e/9/1e94f1abd32d37d04a5b77e333689bf70ef83864.png",
+              "alt_type": "latex",
+              "alt_value": "$DAB$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/1/e/d/1eda04afa4b8a0146840e3993cf91206bf6cb7b8.png",
+              "alt_type": "latex",
+              "alt_value": "$BAE$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/a/f/d/afd086bfde3cbcd3899095243a222eee23e40b5c.png",
+              "alt_type": "latex",
+              "alt_value": "$DBE$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/4/0/5/4057c3e63298c2ed6715003afb6f2d9dc6272037.png",
+              "alt_type": "latex",
+              "alt_value": "$BDC$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/6/0/0/600c2c8bf2070476b38b1f452ef77d07759219f6.png",
+              "alt_type": "latex",
+              "alt_value": "$DBA$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/8/4/0/840cb55c82434b9ae047760636a017e9441e6ca5.png",
+              "alt_type": "latex",
+              "alt_value": "$ADC$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/d/b/f/dbfe82ffe084cdc0d2b71c86ca2808be3d164828.png",
+              "alt_type": "latex",
+              "alt_value": "$mADB + mBDC = mDBA + mABE$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/2/5/0/25035825c4e2c1bc8c9ec8672b463cfb449fc42c.png",
+              "alt_type": "latex",
+              "alt_value": "$mBDC = mDBA$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/d/5/7/d57e1699f0a2a6fd5917fd8b50b25eba9e01265f.png",
+              "alt_type": "latex",
+              "alt_value": "$mADB + mBDC = mBDC + mABE$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/e/5/b/e5b528657ea3e68b8342dbe6592340e41572997f.png",
+              "alt_type": "latex",
+              "alt_value": "$mADB = mABE$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/5/c/b/5cb1b41850ab676e4d1cf15c69b1609af4befbc5.png",
+              "alt_type": "latex",
+              "alt_value": "$180$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/e/0/7/e07a934f110b579c0ee7451176a281ae64e8c426.png",
+              "alt_type": "latex",
+              "alt_value": "$BEA$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/6/0/0/600c2c8bf2070476b38b1f452ef77d07759219f6.png",
+              "alt_type": "latex",
+              "alt_value": "$DBA$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/b/7/b/b7bebf8d11d83883302ed2a0e94833e78a2f5817.png",
+              "alt_type": "latex",
+              "alt_value": "$BE/AB = DB/AD$"
+            },
+            "INSERTION_INDEX_21": {
+              "picture": "//latex.artofproblemsolving.com/b/a/2/ba28adfddc06162f640df5b649392987e4a41ca5.png",
+              "alt_type": "latex",
+              "alt_value": "$BE = AB\\cdot DB/AD = 20/3$"
+            },
+            "INSERTION_INDEX_22": {
+              "picture": "//latex.artofproblemsolving.com/d/4/5/d454ccad55388ce38766e919a448421c4633323a.png",
+              "alt_type": "latex",
+              "alt_value": "$CBF$"
+            },
+            "INSERTION_INDEX_23": {
+              "picture": "//latex.artofproblemsolving.com/a/6/a/a6adfd3ad27a2dddeb0af7131d73c33c86991e93.png",
+              "alt_type": "latex",
+              "alt_value": "$ABD$"
+            },
+            "INSERTION_INDEX_24": {
+              "picture": "//latex.artofproblemsolving.com/5/d/6/5d6b041f26cd9dbb6669049f9d30a3432fc62542.png",
+              "alt_type": "latex",
+              "alt_value": "$BF/BC = DB/AB$"
+            },
+            "INSERTION_INDEX_25": {
+              "picture": "//latex.artofproblemsolving.com/7/3/a/73a10e5f78eaf32d45cada6dab8b9762eb2d7d3a.png",
+              "alt_type": "latex",
+              "alt_value": "$BF=BC\\cdot DB / AB = 15/4$"
+            },
+            "INSERTION_INDEX_26": {
+              "picture": "//latex.artofproblemsolving.com/c/f/0/cf063b752f60a99fc163b9ab1cd9a3a2076e0ec6.png",
+              "alt_type": "latex",
+              "alt_value": "$EF = EB+BF = \\frac{20}3 + \\frac{15}4 = \\frac{80 + 45}{12} = \\boxed{\\frac{125}{12}}$"
+            },
+            "INSERTION_INDEX_27": {
+              "picture": "//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png",
+              "alt_type": "latex",
+              "alt_value": "$BD$"
+            },
+            "INSERTION_INDEX_28": {
+              "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+              "alt_type": "latex",
+              "alt_value": "$D$"
+            },
+            "INSERTION_INDEX_29": {
+              "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+              "alt_type": "latex",
+              "alt_value": "$EF$"
+            },
+            "INSERTION_INDEX_30": {
+              "picture": "//latex.artofproblemsolving.com/6/2/2/6221c87e92a08dbf0036dd430533fb99c148ec9e.png",
+              "alt_type": "latex",
+              "alt_value": "$BD^2 = EB\\cdot BF$"
+            },
+            "INSERTION_INDEX_31": {
+              "picture": "//latex.artofproblemsolving.com/9/6/e/96e81e1599a08776bb0799f73128f99332c1d78f.png",
+              "alt_type": "latex",
+              "alt_value": "$BDE$"
+            },
+            "INSERTION_INDEX_32": {
+              "picture": "//latex.artofproblemsolving.com/c/f/5/cf51b47182ee2e945de88c04f653d01d4919d104.png",
+              "alt_type": "latex",
+              "alt_value": "$DCB$"
+            },
+            "INSERTION_INDEX_33": {
+              "picture": "//latex.artofproblemsolving.com/6/c/2/6c271ed3b5e26d0f0606868be65e5cefa88423b3.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{AB}{CB} = \\frac{EB}{DB}$"
+            },
+            "INSERTION_INDEX_34": {
+              "picture": "//latex.artofproblemsolving.com/4/b/4/4b44beb78e8be18179bfb7fe6b3424e7fb1aef32.png",
+              "alt_type": "latex",
+              "alt_value": "$AB=4$"
+            },
+            "INSERTION_INDEX_35": {
+              "picture": "//latex.artofproblemsolving.com/e/a/6/ea6d56408dbf6eed00eb265d7dc919c687afc12f.png",
+              "alt_type": "latex",
+              "alt_value": "$CB=3$"
+            },
+            "INSERTION_INDEX_36": {
+              "picture": "//latex.artofproblemsolving.com/0/0/3/0033fcb53023dac318ccbbb6360a03dae2ca6420.png",
+              "alt_type": "latex",
+              "alt_value": "$DB=5$"
+            },
+            "INSERTION_INDEX_37": {
+              "picture": "//latex.artofproblemsolving.com/2/b/8/2b83bb05bc9a01c2b14712b1dd8b9eed08b6e3f2.png",
+              "alt_type": "latex",
+              "alt_value": "$EB=20/3$"
+            },
+            "INSERTION_INDEX_38": {
+              "picture": "//latex.artofproblemsolving.com/6/5/e/65e4f2d5cc59e5ffbed3734130e8c45b643adc91.png",
+              "alt_type": "latex",
+              "alt_value": "$BF$"
+            },
+            "INSERTION_INDEX_39": {
+              "picture": "//latex.artofproblemsolving.com/6/0/c/60c7b417a06ab86bc0d8e3f085b9b3b6cbfa3c8e.png",
+              "alt_type": "latex",
+              "alt_value": "$BD^2 = 20/3\\cdot BF$"
+            },
+            "INSERTION_INDEX_40": {
+              "picture": "//latex.artofproblemsolving.com/5/c/c/5cc7de7f10f279639d751ed84460f73bca3f048e.png",
+              "alt_type": "latex",
+              "alt_value": "$BF=15/4$"
+            },
+            "INSERTION_INDEX_41": {
+              "picture": "//latex.artofproblemsolving.com/4/b/b/4bbe91133fdaa92f3e58b137fdb4db178296da61.png",
+              "alt_type": "latex",
+              "alt_value": "$EB$"
+            },
+            "INSERTION_INDEX_42": {
+              "picture": "//latex.artofproblemsolving.com/6/5/e/65e4f2d5cc59e5ffbed3734130e8c45b643adc91.png",
+              "alt_type": "latex",
+              "alt_value": "$BF$"
+            },
+            "INSERTION_INDEX_43": {
+              "picture": "//latex.artofproblemsolving.com/c/f/0/cf063b752f60a99fc163b9ab1cd9a3a2076e0ec6.png",
+              "alt_type": "latex",
+              "alt_value": "$EF = EB+BF = \\frac{20}3 + \\frac{15}4 = \\frac{80 + 45}{12} = \\boxed{\\frac{125}{12}}$"
+            },
+            "INSERTION_INDEX_44": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_45": {
+              "picture": "//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png",
+              "alt_type": "latex",
+              "alt_value": "$F$"
+            },
+            "INSERTION_INDEX_46": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_47": {
+              "picture": "//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png",
+              "alt_type": "latex",
+              "alt_value": "$E$"
+            },
+            "INSERTION_INDEX_48": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
+              "alt_type": "latex",
+              "alt_value": "$y$"
+            },
+            "INSERTION_INDEX_49": {
+              "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+              "alt_type": "latex",
+              "alt_value": "$D$"
+            },
+            "INSERTION_INDEX_50": {
+              "picture": "//latex.artofproblemsolving.com/7/5/e/75e208942a293328242e66427058c19f14c8995e.png",
+              "alt_type": "latex",
+              "alt_value": "$A(3,0)$"
+            },
+            "INSERTION_INDEX_51": {
+              "picture": "//latex.artofproblemsolving.com/5/e/3/5e33b3faf5b170f9b3894d8e3da0e7431d536c41.png",
+              "alt_type": "latex",
+              "alt_value": "$C(4,0)$"
+            },
+            "INSERTION_INDEX_52": {
+              "picture": "//latex.artofproblemsolving.com/5/2/a/52a32ef5b9109dce8144e1e3a600634eefbed27f.png",
+              "alt_type": "latex",
+              "alt_value": "$B(4,3)$"
+            },
+            "INSERTION_INDEX_53": {
+              "picture": "//latex.artofproblemsolving.com/2/0/4/204a6f5a6757f5da4c1b3035ad8d806769744e63.png",
+              "alt_type": "latex",
+              "alt_value": "$DB$"
+            },
+            "INSERTION_INDEX_54": {
+              "picture": "//latex.artofproblemsolving.com/b/4/6/b461dd0d35c5aaa53b2e8415a45fcf5af1b98a99.png",
+              "alt_type": "latex",
+              "alt_value": "$y=\\frac{3x}{4}$"
+            },
+            "INSERTION_INDEX_55": {
+              "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+              "alt_type": "latex",
+              "alt_value": "$EF$"
+            },
+            "INSERTION_INDEX_56": {
+              "picture": "//latex.artofproblemsolving.com/2/0/4/204a6f5a6757f5da4c1b3035ad8d806769744e63.png",
+              "alt_type": "latex",
+              "alt_value": "$DB$"
+            },
+            "INSERTION_INDEX_57": {
+              "picture": "//latex.artofproblemsolving.com/5/6/3/563948106c3332662355412547d99acab218c16f.png",
+              "alt_type": "latex",
+              "alt_value": "$(4,3)$"
+            },
+            "INSERTION_INDEX_58": {
+              "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+              "alt_type": "latex",
+              "alt_value": "$EF$"
+            },
+            "INSERTION_INDEX_59": {
+              "picture": "//latex.artofproblemsolving.com/c/5/9/c591241be14c44a5eedb90d2c9a4cb0f99fa25e9.png",
+              "alt_type": "latex",
+              "alt_value": "$y=\\frac{-4x}{3}+\\frac{25}{3}$"
+            },
+            "INSERTION_INDEX_60": {
+              "picture": "//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png",
+              "alt_type": "latex",
+              "alt_value": "$E$"
+            },
+            "INSERTION_INDEX_61": {
+              "picture": "//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png",
+              "alt_type": "latex",
+              "alt_value": "$F$"
+            },
+            "INSERTION_INDEX_62": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
+              "alt_type": "latex",
+              "alt_value": "$y$"
+            },
+            "INSERTION_INDEX_63": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_64": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_65": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_66": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
+              "alt_type": "latex",
+              "alt_value": "$y$"
+            },
+            "INSERTION_INDEX_67": {
+              "picture": "//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png",
+              "alt_type": "latex",
+              "alt_value": "$E$"
+            },
+            "INSERTION_INDEX_68": {
+              "picture": "//latex.artofproblemsolving.com/7/e/a/7ea985e518315d827274fe5cb57ab4e1f718f418.png",
+              "alt_type": "latex",
+              "alt_value": "$(0,\\frac{25}{3})$"
+            },
+            "INSERTION_INDEX_69": {
+              "picture": "//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png",
+              "alt_type": "latex",
+              "alt_value": "$F$"
+            },
+            "INSERTION_INDEX_70": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092100478dc38f0b6d19b83fa46a7e8d047d746d.png",
+              "alt_type": "latex",
+              "alt_value": "$(\\frac{25}{4},0)$"
+            },
+            "INSERTION_INDEX_71": {
+              "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+              "alt_type": "latex",
+              "alt_value": "$EF$"
+            },
+            "INSERTION_INDEX_72": {
+              "picture": "//latex.artofproblemsolving.com/d/e/7/de71bfd477dca3b806354b3d1315bf01b81e5316.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\frac{125}{12}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>The situation is shown in the picture below.</p><p><INSERTION_INDEX_1></p><p>From the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> we have <INSERTION_INDEX_2>.</p><p>Triangle <INSERTION_INDEX_3> is similar to <INSERTION_INDEX_4>, as they have the same angles. Segment <INSERTION_INDEX_5> is perpendicular to <INSERTION_INDEX_6>, meaning that angle <INSERTION_INDEX_7> and <INSERTION_INDEX_8> are right angles and congruent. Also, angle <INSERTION_INDEX_9> is a right angle. Because it is a rectangle, angle <INSERTION_INDEX_10> is congruent to <INSERTION_INDEX_11> and angle <INSERTION_INDEX_12> is also a right angle. By the transitive property:</p><p><INSERTION_INDEX_13></p><p><INSERTION_INDEX_14></p><p><INSERTION_INDEX_15></p><p><INSERTION_INDEX_16></p><p>Next, because every triangle has a degree measure of <INSERTION_INDEX_17>, angle <INSERTION_INDEX_18> and angle <INSERTION_INDEX_19> are similar. </p><p><br/>Hence <INSERTION_INDEX_20>, and therefore <INSERTION_INDEX_21>.</p><p>Also triangle <INSERTION_INDEX_22> is similar to <INSERTION_INDEX_23>. Hence <INSERTION_INDEX_24>, and therefore <INSERTION_INDEX_25>.</p><p>We then have <INSERTION_INDEX_26>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/3/2/c/32c515543c7a81f453411db67766927addafff00.png",
+              "alt_type": "asy",
+              "alt_value": "[asy] unitsize(0.6cm); defaultpen(0.8); pair A=(0,0), B=(4,0), C=(4,3), D=(0,3); pair EF=rotate(90)*(D-B); pair E=intersectionpoint( (0,-100)--(0,100), (B-100*EF)--(B+100*EF) ); pair F=intersectionpoint( (-100,3)--(100,3), (B-100*EF)--(B+100*EF) ); draw(A--B--C--D--cycle); draw(B--D, dashed); draw(E--F); draw(A--E, dashed); draw(C--F, dashed); label(\"$A$\",A,W); label(\"$B$\",B,SE); label(\"$C$\",C,N); label(\"$D$\",D,NW); label(\"$E$\",E,SW); label(\"$F$\",F,NE); label(\"$3$\",A--D,W); label(\"$4$\",C--D,N); [/asy]"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/b/b/1/bb1064b607676819b46b58a2a13b6f4aea9a22af.png",
+              "alt_type": "latex",
+              "alt_value": "$BD=5$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/0/e/3/0e30e7dec97a3f5e84e0de8a12e3056c6c9a77fc.png",
+              "alt_type": "latex",
+              "alt_value": "$EAB$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/e/5/7e538978649c14e1616fac744e983b5981d0ea8e.png",
+              "alt_type": "latex",
+              "alt_value": "$BAD$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/d/6/6/d66492998689e8303534c9e4f3ba1fa650fd41f0.png",
+              "alt_type": "latex",
+              "alt_value": "$BA$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/0/b/3/0b31cd391bebc36897a8c10ea78e5d584980b049.png",
+              "alt_type": "latex",
+              "alt_value": "$DA$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/1/e/9/1e94f1abd32d37d04a5b77e333689bf70ef83864.png",
+              "alt_type": "latex",
+              "alt_value": "$DAB$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/1/e/d/1eda04afa4b8a0146840e3993cf91206bf6cb7b8.png",
+              "alt_type": "latex",
+              "alt_value": "$BAE$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/a/f/d/afd086bfde3cbcd3899095243a222eee23e40b5c.png",
+              "alt_type": "latex",
+              "alt_value": "$DBE$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/4/0/5/4057c3e63298c2ed6715003afb6f2d9dc6272037.png",
+              "alt_type": "latex",
+              "alt_value": "$BDC$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/6/0/0/600c2c8bf2070476b38b1f452ef77d07759219f6.png",
+              "alt_type": "latex",
+              "alt_value": "$DBA$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/8/4/0/840cb55c82434b9ae047760636a017e9441e6ca5.png",
+              "alt_type": "latex",
+              "alt_value": "$ADC$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/d/b/f/dbfe82ffe084cdc0d2b71c86ca2808be3d164828.png",
+              "alt_type": "latex",
+              "alt_value": "$mADB + mBDC = mDBA + mABE$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/2/5/0/25035825c4e2c1bc8c9ec8672b463cfb449fc42c.png",
+              "alt_type": "latex",
+              "alt_value": "$mBDC = mDBA$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/d/5/7/d57e1699f0a2a6fd5917fd8b50b25eba9e01265f.png",
+              "alt_type": "latex",
+              "alt_value": "$mADB + mBDC = mBDC + mABE$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/e/5/b/e5b528657ea3e68b8342dbe6592340e41572997f.png",
+              "alt_type": "latex",
+              "alt_value": "$mADB = mABE$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/5/c/b/5cb1b41850ab676e4d1cf15c69b1609af4befbc5.png",
+              "alt_type": "latex",
+              "alt_value": "$180$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/e/0/7/e07a934f110b579c0ee7451176a281ae64e8c426.png",
+              "alt_type": "latex",
+              "alt_value": "$BEA$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/6/0/0/600c2c8bf2070476b38b1f452ef77d07759219f6.png",
+              "alt_type": "latex",
+              "alt_value": "$DBA$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/b/7/b/b7bebf8d11d83883302ed2a0e94833e78a2f5817.png",
+              "alt_type": "latex",
+              "alt_value": "$BE/AB = DB/AD$"
+            },
+            "INSERTION_INDEX_21": {
+              "picture": "//latex.artofproblemsolving.com/b/a/2/ba28adfddc06162f640df5b649392987e4a41ca5.png",
+              "alt_type": "latex",
+              "alt_value": "$BE = AB\\cdot DB/AD = 20/3$"
+            },
+            "INSERTION_INDEX_22": {
+              "picture": "//latex.artofproblemsolving.com/d/4/5/d454ccad55388ce38766e919a448421c4633323a.png",
+              "alt_type": "latex",
+              "alt_value": "$CBF$"
+            },
+            "INSERTION_INDEX_23": {
+              "picture": "//latex.artofproblemsolving.com/a/6/a/a6adfd3ad27a2dddeb0af7131d73c33c86991e93.png",
+              "alt_type": "latex",
+              "alt_value": "$ABD$"
+            },
+            "INSERTION_INDEX_24": {
+              "picture": "//latex.artofproblemsolving.com/5/d/6/5d6b041f26cd9dbb6669049f9d30a3432fc62542.png",
+              "alt_type": "latex",
+              "alt_value": "$BF/BC = DB/AB$"
+            },
+            "INSERTION_INDEX_25": {
+              "picture": "//latex.artofproblemsolving.com/7/3/a/73a10e5f78eaf32d45cada6dab8b9762eb2d7d3a.png",
+              "alt_type": "latex",
+              "alt_value": "$BF=BC\\cdot DB / AB = 15/4$"
+            },
+            "INSERTION_INDEX_26": {
+              "picture": "//latex.artofproblemsolving.com/c/f/0/cf063b752f60a99fc163b9ab1cd9a3a2076e0ec6.png",
+              "alt_type": "latex",
+              "alt_value": "$EF = EB+BF = \\frac{20}3 + \\frac{15}4 = \\frac{80 + 45}{12} = \\boxed{\\frac{125}{12}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Since <INSERTION_INDEX_1> is the altitude from <INSERTION_INDEX_2> to <INSERTION_INDEX_3>, we can use the equation <INSERTION_INDEX_4>. </p><p>Looking at the angles, we see that triangle <INSERTION_INDEX_5> is similar to <INSERTION_INDEX_6>. Because of this, <INSERTION_INDEX_7>. From the given information and the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a>, <INSERTION_INDEX_8>, <INSERTION_INDEX_9>, and <INSERTION_INDEX_10>. Solving gives <INSERTION_INDEX_11>. </p><p>We can use the above formula to solve for <INSERTION_INDEX_12>. <INSERTION_INDEX_13>. Solve to obtain <INSERTION_INDEX_14>. </p><p>We now know <INSERTION_INDEX_15> and <INSERTION_INDEX_16>. <INSERTION_INDEX_17>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png",
+              "alt_type": "latex",
+              "alt_value": "$BD$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+              "alt_type": "latex",
+              "alt_value": "$D$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+              "alt_type": "latex",
+              "alt_value": "$EF$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/6/2/2/6221c87e92a08dbf0036dd430533fb99c148ec9e.png",
+              "alt_type": "latex",
+              "alt_value": "$BD^2 = EB\\cdot BF$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/9/6/e/96e81e1599a08776bb0799f73128f99332c1d78f.png",
+              "alt_type": "latex",
+              "alt_value": "$BDE$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/c/f/5/cf51b47182ee2e945de88c04f653d01d4919d104.png",
+              "alt_type": "latex",
+              "alt_value": "$DCB$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/6/c/2/6c271ed3b5e26d0f0606868be65e5cefa88423b3.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{AB}{CB} = \\frac{EB}{DB}$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/4/b/4/4b44beb78e8be18179bfb7fe6b3424e7fb1aef32.png",
+              "alt_type": "latex",
+              "alt_value": "$AB=4$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/e/a/6/ea6d56408dbf6eed00eb265d7dc919c687afc12f.png",
+              "alt_type": "latex",
+              "alt_value": "$CB=3$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/0/0/3/0033fcb53023dac318ccbbb6360a03dae2ca6420.png",
+              "alt_type": "latex",
+              "alt_value": "$DB=5$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/2/b/8/2b83bb05bc9a01c2b14712b1dd8b9eed08b6e3f2.png",
+              "alt_type": "latex",
+              "alt_value": "$EB=20/3$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/6/5/e/65e4f2d5cc59e5ffbed3734130e8c45b643adc91.png",
+              "alt_type": "latex",
+              "alt_value": "$BF$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/6/0/c/60c7b417a06ab86bc0d8e3f085b9b3b6cbfa3c8e.png",
+              "alt_type": "latex",
+              "alt_value": "$BD^2 = 20/3\\cdot BF$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/5/c/c/5cc7de7f10f279639d751ed84460f73bca3f048e.png",
+              "alt_type": "latex",
+              "alt_value": "$BF=15/4$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/4/b/b/4bbe91133fdaa92f3e58b137fdb4db178296da61.png",
+              "alt_type": "latex",
+              "alt_value": "$EB$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/6/5/e/65e4f2d5cc59e5ffbed3734130e8c45b643adc91.png",
+              "alt_type": "latex",
+              "alt_value": "$BF$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/c/f/0/cf063b752f60a99fc163b9ab1cd9a3a2076e0ec6.png",
+              "alt_type": "latex",
+              "alt_value": "$EF = EB+BF = \\frac{20}3 + \\frac{15}4 = \\frac{80 + 45}{12} = \\boxed{\\frac{125}{12}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>To keep things simple, we will use coordinates in only the first quadrant. The picture will look like the diagram above reflected over the <INSERTION_INDEX_1>-axis.It is also worth noting the <INSERTION_INDEX_2> will lie on the <INSERTION_INDEX_3> axis and <INSERTION_INDEX_4> on the <INSERTION_INDEX_5>. Let <INSERTION_INDEX_6> be the origin, <INSERTION_INDEX_7>, <INSERTION_INDEX_8>, and <INSERTION_INDEX_9>. We can express segment <INSERTION_INDEX_10> as the line <INSERTION_INDEX_11>. Since <INSERTION_INDEX_12> is perpendicular to <INSERTION_INDEX_13>, and we know that <INSERTION_INDEX_14> lies on it, we can use this information to find that segment <INSERTION_INDEX_15>is on the line <INSERTION_INDEX_16>. Since <INSERTION_INDEX_17> and <INSERTION_INDEX_18> are on the <INSERTION_INDEX_19> and <INSERTION_INDEX_20> axis, respectively, we plug in <INSERTION_INDEX_21> for <INSERTION_INDEX_22>and <INSERTION_INDEX_23>, we find that point <INSERTION_INDEX_24> is at <INSERTION_INDEX_25>, and point <INSERTION_INDEX_26> is at <INSERTION_INDEX_27>. Applying the distance formula,we obtain that <INSERTION_INDEX_28>= <INSERTION_INDEX_29>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png",
+              "alt_type": "latex",
+              "alt_value": "$F$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png",
+              "alt_type": "latex",
+              "alt_value": "$E$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
+              "alt_type": "latex",
+              "alt_value": "$y$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+              "alt_type": "latex",
+              "alt_value": "$D$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/7/5/e/75e208942a293328242e66427058c19f14c8995e.png",
+              "alt_type": "latex",
+              "alt_value": "$A(3,0)$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/5/e/3/5e33b3faf5b170f9b3894d8e3da0e7431d536c41.png",
+              "alt_type": "latex",
+              "alt_value": "$C(4,0)$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/5/2/a/52a32ef5b9109dce8144e1e3a600634eefbed27f.png",
+              "alt_type": "latex",
+              "alt_value": "$B(4,3)$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/2/0/4/204a6f5a6757f5da4c1b3035ad8d806769744e63.png",
+              "alt_type": "latex",
+              "alt_value": "$DB$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/b/4/6/b461dd0d35c5aaa53b2e8415a45fcf5af1b98a99.png",
+              "alt_type": "latex",
+              "alt_value": "$y=\\frac{3x}{4}$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+              "alt_type": "latex",
+              "alt_value": "$EF$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/2/0/4/204a6f5a6757f5da4c1b3035ad8d806769744e63.png",
+              "alt_type": "latex",
+              "alt_value": "$DB$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/5/6/3/563948106c3332662355412547d99acab218c16f.png",
+              "alt_type": "latex",
+              "alt_value": "$(4,3)$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+              "alt_type": "latex",
+              "alt_value": "$EF$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/c/5/9/c591241be14c44a5eedb90d2c9a4cb0f99fa25e9.png",
+              "alt_type": "latex",
+              "alt_value": "$y=\\frac{-4x}{3}+\\frac{25}{3}$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png",
+              "alt_type": "latex",
+              "alt_value": "$E$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png",
+              "alt_type": "latex",
+              "alt_value": "$F$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
+              "alt_type": "latex",
+              "alt_value": "$y$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_21": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_22": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_23": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
+              "alt_type": "latex",
+              "alt_value": "$y$"
+            },
+            "INSERTION_INDEX_24": {
+              "picture": "//latex.artofproblemsolving.com/f/a/2/fa2fa899f0afb05d6837885523503a2d4df434f9.png",
+              "alt_type": "latex",
+              "alt_value": "$E$"
+            },
+            "INSERTION_INDEX_25": {
+              "picture": "//latex.artofproblemsolving.com/7/e/a/7ea985e518315d827274fe5cb57ab4e1f718f418.png",
+              "alt_type": "latex",
+              "alt_value": "$(0,\\frac{25}{3})$"
+            },
+            "INSERTION_INDEX_26": {
+              "picture": "//latex.artofproblemsolving.com/a/0/5/a055f405829e64a3b70253ab67cb45ed6ed5bb29.png",
+              "alt_type": "latex",
+              "alt_value": "$F$"
+            },
+            "INSERTION_INDEX_27": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092100478dc38f0b6d19b83fa46a7e8d047d746d.png",
+              "alt_type": "latex",
+              "alt_value": "$(\\frac{25}{4},0)$"
+            },
+            "INSERTION_INDEX_28": {
+              "picture": "//latex.artofproblemsolving.com/c/1/2/c128243ea8125d0bb007b8132dcfa44461df73a7.png",
+              "alt_type": "latex",
+              "alt_value": "$EF$"
+            },
+            "INSERTION_INDEX_29": {
+              "picture": "//latex.artofproblemsolving.com/d/e/7/de71bfd477dca3b806354b3d1315bf01b81e5316.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\frac{125}{12}}$"
+            }
+          }
+        }
+      ]
+    },
+    {
       "id": "amc_2009_10a_18",
       "question": {
         "text": "<p>At Jefferson Summer Camp, <INSERTION_INDEX_1> of the children play soccer, <INSERTION_INDEX_2> of the children swim, and <INSERTION_INDEX_3> of the soccer players swim. To the nearest whole percent, what percent of the non-swimmers play soccer? </p>",
@@ -2647,6 +3715,375 @@
               "picture": "//latex.artofproblemsolving.com/c/c/c/ccc81172a830bf887ed99c681bd245e70b8afc04.png",
               "alt_type": "latex",
               "alt_value": "$\\boxed{\\textbf{(D) } 51\\%}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_19",
+      "question": {
+        "text": "<p>Circle <INSERTION_INDEX_1> has radius <INSERTION_INDEX_2>. Circle <INSERTION_INDEX_3> has an integer radius <INSERTION_INDEX_4> and remains internally tangent to circle <INSERTION_INDEX_5> as it rolls once around the circumference of circle <INSERTION_INDEX_6>. The two circles have the same points of tangency at the beginning and end of circle <INSERTION_INDEX_7>'s trip. How many possible values can <INSERTION_INDEX_8> have?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+            "alt_type": "latex",
+            "alt_value": "$A$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+            "alt_type": "latex",
+            "alt_value": "$100$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+            "alt_type": "latex",
+            "alt_value": "$B$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/7/6/e/76e03a12434dd7d85770688c60258725c21748d9.png",
+            "alt_type": "latex",
+            "alt_value": "$r<100$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+            "alt_type": "latex",
+            "alt_value": "$A$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+            "alt_type": "latex",
+            "alt_value": "$A$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+            "alt_type": "latex",
+            "alt_value": "$B$"
+          },
+          "INSERTION_INDEX_8": {
+            "picture": "//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png",
+            "alt_type": "latex",
+            "alt_value": "$r$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/1/4/1/141590f6c43fdcfeb877c8a0b57191d42536ee51.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 4\\ \\qquad \\mathrm{(B)}\\ 8\\ \\qquad \\mathrm{(C)}\\ 9\\ \\qquad \\mathrm{(D)}\\ 50\\ \\qquad \\mathrm{(E)}\\ 90\\ \\qquad$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>The circumference of circle <INSERTION_INDEX_1> is <INSERTION_INDEX_2>, and the circumference of circle <INSERTION_INDEX_3> with radius <INSERTION_INDEX_4> is <INSERTION_INDEX_5>. Since circle <INSERTION_INDEX_6> makes a complete revolution and <i>ends up on the same point</i>, the circumference of <INSERTION_INDEX_7> must be a multiple of the circumference of <INSERTION_INDEX_8>, therefore the quotient must be an integer.</p><p>Thus, <INSERTION_INDEX_9>.</p><p>Therefore <INSERTION_INDEX_10> must then be a factor of <INSERTION_INDEX_11>, excluding <INSERTION_INDEX_12> because the problem says that <INSERTION_INDEX_13>. <INSERTION_INDEX_14>. Therefore <INSERTION_INDEX_15> has <INSERTION_INDEX_16> factors*. But you need to subtract <INSERTION_INDEX_17> from <INSERTION_INDEX_18>, in order to exclude <INSERTION_INDEX_19>. Therefore the answer is <INSERTION_INDEX_20>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+              "alt_type": "latex",
+              "alt_value": "$A$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/4/5/c/45cd4cb916f80262a8f8fa797e5ae35a2641c312.png",
+              "alt_type": "latex",
+              "alt_value": "$200\\pi$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+              "alt_type": "latex",
+              "alt_value": "$B$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png",
+              "alt_type": "latex",
+              "alt_value": "$r$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/8/7/0/870ee58cf1ce6e6b945cd3364fe2a65d5c1f782b.png",
+              "alt_type": "latex",
+              "alt_value": "$2r\\pi$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+              "alt_type": "latex",
+              "alt_value": "$B$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+              "alt_type": "latex",
+              "alt_value": "$A$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+              "alt_type": "latex",
+              "alt_value": "$B$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/8/7/d/87d3886b02d043168539795fdc31c9bb1611df5b.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{200\\pi}{2\\pi \\cdot r} = \\frac{100}{r}$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png",
+              "alt_type": "latex",
+              "alt_value": "$r$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+              "alt_type": "latex",
+              "alt_value": "$100$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+              "alt_type": "latex",
+              "alt_value": "$100$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/7/6/e/76e03a12434dd7d85770688c60258725c21748d9.png",
+              "alt_type": "latex",
+              "alt_value": "$r<100$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/0/a/5/0a5200cf67dde054def335b42b9738ac65fdb836.png",
+              "alt_type": "latex",
+              "alt_value": "$100\\: =\\: 2^2\\; \\cdot \\; 5^2$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+              "alt_type": "latex",
+              "alt_value": "$100$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/f/6/3/f63890eb21bbbf402f1e06084d64f14169f354cb.png",
+              "alt_type": "latex",
+              "alt_value": "$(2+1)\\; \\cdot \\; (2+1)\\;$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+              "alt_type": "latex",
+              "alt_value": "$100$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/e/8/1/e81ca9c5c8715be868438500743202d6773d05bd.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{8}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_20",
+      "question": {
+        "text": "<p>Andrea and Lauren are <INSERTION_INDEX_1> kilometers apart. They bike toward one another with Andrea traveling three times as fast as Lauren, and the distance between them decreasing at a rate of <INSERTION_INDEX_2> kilometer per minute. After <INSERTION_INDEX_3> minutes, Andrea stops biking because of a flat tire and waits for Lauren. After how many minutes from the time they started to bike does Lauren reach Andrea?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/f/8/3/f8366cd6196dd8a9da6d38a3e9eafb109e99d53e.png",
+            "alt_type": "latex",
+            "alt_value": "$20$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+            "alt_type": "latex",
+            "alt_value": "$1$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+            "alt_type": "latex",
+            "alt_value": "$5$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/0/8/a/08a462b11071b9d29e5236254bd18c9c20b349d3.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 20 \\qquad \\mathrm{(B)}\\ 30 \\qquad \\mathrm{(C)}\\ 55 \\qquad \\mathrm{(D)}\\ 65 \\qquad \\mathrm{(E)}\\ 80$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>Let their speeds in kilometers per hour be <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. We know that <INSERTION_INDEX_3> and that <INSERTION_INDEX_4>. (The second equation follows from the fact that <INSERTION_INDEX_5>.) This solves to <INSERTION_INDEX_6> and <INSERTION_INDEX_7>. </p><p>As the distance decreases at a rate of <INSERTION_INDEX_8> kilometer per minute, after <INSERTION_INDEX_9> minutes the distance between them will be <INSERTION_INDEX_10> kilometers.</p><p>From this point on, only Lauren will be riding her bike. As there are <INSERTION_INDEX_11> kilometers remaining and <INSERTION_INDEX_12>, she will need exactly an hour to get to Andrea. Therefore the total time in minutes is <INSERTION_INDEX_13>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/1/0/d/10db40cc18d7471c355651971b33d25580f36e42.png",
+              "alt_type": "latex",
+              "alt_value": "$v_A$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/8/d/28d2763dd690247d2ef2c6a39da93856949dbd77.png",
+              "alt_type": "latex",
+              "alt_value": "$v_L$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/7/d/8/7d8399082f4b025a539c9fc5da1e07750c97851a.png",
+              "alt_type": "latex",
+              "alt_value": "$v_A=3v_L$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/a/2/8/a28db62a8252c016b21e8f52cc2ea02f0efcbbd0.png",
+              "alt_type": "latex",
+              "alt_value": "$v_A+v_L=60$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/8/7/a/87a7a619f7e42c9dd20c55cf338d69d507745413.png",
+              "alt_type": "latex",
+              "alt_value": "$1\\mathrm km/min = 60\\mathrm km/h$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/f/7/c/f7ca96e853175591123da0971db5c692dc32c9ce.png",
+              "alt_type": "latex",
+              "alt_value": "$v_A=45$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/7/9/e/79ec6573e9623729e6e5423328a6b3a4dffa9138.png",
+              "alt_type": "latex",
+              "alt_value": "$v_L=15$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/1/7/d/17d78ae2f05f140c2c69a76ab90d1bf5d1116205.png",
+              "alt_type": "latex",
+              "alt_value": "$20-5=15$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/f/1/9/f1965fae079a9ba2c0726c307070c2355dfcb213.png",
+              "alt_type": "latex",
+              "alt_value": "$15$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/7/9/e/79ec6573e9623729e6e5423328a6b3a4dffa9138.png",
+              "alt_type": "latex",
+              "alt_value": "$v_L=15$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/4/9/3/49356d877b021d55f7da9f6118dc8d49504e10c0.png",
+              "alt_type": "latex",
+              "alt_value": "$5+60 = \\boxed{65}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Because the speed of Andrea is 3 times as fast as Lauren and the distance between them is decreasing at a rate of 1 kilometer per minute, Andrea's speed is <INSERTION_INDEX_1>, and Lauren's <INSERTION_INDEX_2>. Therefore, after 5 minutes, Andrea will have biked <INSERTION_INDEX_3>.</p><p>In all, Lauren will have to bike <INSERTION_INDEX_4>. Because her speed is <INSERTION_INDEX_5>, the time elapsed will be <INSERTION_INDEX_6></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/9/1/9/919c6a9c0b084df1dfde15943ec5c5897af9f039.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{3}{4} \\textbf{km/min}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/2/e/62e95639ca6424f8bcba4c98a8b27d04879b1644.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{4} \\textbf{km/min}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/8/0/8/808c9445adbe9db44ee675902e6296f23f125591.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{3}{4} \\cdot 5 = \\frac{15}{4}km$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/d/f/6/df6a83e3fe5f325cfd7d18e781342d60248804c3.png",
+              "alt_type": "latex",
+              "alt_value": "$20 - \\frac{15}{4} = \\frac{80}{4} - \\frac{15}{4} = \\frac{65}{4}km$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/6/2/e/62e95639ca6424f8bcba4c98a8b27d04879b1644.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{4} \\textbf{km/min}$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/8/d/4/8d4d382cfcbd9d135284df592c2bd2d58992618e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{\\frac{65}{4}}{\\frac{1}{4}} = \\boxed{\\textbf{D) 65}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Since the distance between them decreases at a rate of <INSERTION_INDEX_1> kilometer per minute when they are both biking, their combined speed is <INSERTION_INDEX_2> kilometer per minute. Andrea travels three times as fast as Lauren, so they travel at speeds of <INSERTION_INDEX_3> kilometers per minute and <INSERTION_INDEX_4> kilometers per minute, respectively. </p><p>After <INSERTION_INDEX_5> minutes, the distance between them will have decreased by <INSERTION_INDEX_6> kilometers, so they will be <INSERTION_INDEX_7> kilometers apart when Andrea stops. Then, Lauren will take <INSERTION_INDEX_8> more minutes to reach Andrea. </p><p>They started to bike <INSERTION_INDEX_9> minutes before Andrea stopped, so the total time Lauren passed from the time they started biking to the time Lauren reached Andrea is <INSERTION_INDEX_10> minutes. Hence, the answer is <INSERTION_INDEX_11>. ~azc1027</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/e/1/1/e1150a17bf1b733cb666be84d920c71fc96bb3f7.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{3}{4}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/3/3/c339afa03e060d959e4942be7522c0c992f4c41c.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{4}$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/4/5/a/45a68cf2ed22ee191d4f5d3f7af67c1c39838556.png",
+              "alt_type": "latex",
+              "alt_value": "$20-5 = 15$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/f/b/f/fbfc4368eb265a5495830ee17b931a1f62edfb67.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{15}{\\frac{1}{4}} = 15*4=60$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/5/2/b/52bc8cc218ebf03800ce091928e7b1ed5917c4bb.png",
+              "alt_type": "latex",
+              "alt_value": "$60+5=65$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/6/2/f/62f8feb151e3255f5ecdb86539ec8040992a6c8b.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(B) } 65}$"
             }
           }
         }
@@ -3142,7 +4579,7 @@
           }
         },
         {
-          "text": "<p>Using the sine area formula on triangles <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, as <INSERTION_INDEX_3>, we see that </p><p>Since <INSERTION_INDEX_4>, triangles <INSERTION_INDEX_5> and <INSERTION_INDEX_6> are similar. Their ratio is <INSERTION_INDEX_7>. Since <INSERTION_INDEX_8>, we must have <INSERTION_INDEX_9>, so <INSERTION_INDEX_10>.</p>",
+          "text": "<p>Using the sine area formula AREA= absinc/2 on triangles <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, as <INSERTION_INDEX_3>, we see that </p><p>Since <INSERTION_INDEX_4>, triangles <INSERTION_INDEX_5> and <INSERTION_INDEX_6> are similar. Their ratio is <INSERTION_INDEX_7>. Since <INSERTION_INDEX_8>, we must have <INSERTION_INDEX_9>, so <INSERTION_INDEX_10>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/6/f/1/6f1bf55dee68ba4123ca736e3b4b2121ffebc98a.png",

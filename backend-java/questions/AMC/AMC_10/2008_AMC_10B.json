@@ -7,7 +7,7 @@
     "level": "10",
     "suffix": "B",
     "fall_version": false,
-    "total_problems": 21,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
@@ -223,6 +223,68 @@
       ]
     },
     {
+      "id": "amc_2008_10b_5",
+      "question": {
+        "text": "<p>For <a href=\"/wiki/index.php/Real_number\" title=\"Real number\">real numbers</a> <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, define <INSERTION_INDEX_3>. What is <INSERTION_INDEX_4>?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png",
+            "alt_type": "latex",
+            "alt_value": "$a$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/8/1/3/8136a7ef6a03334a7246df9097e5bcc31ba33fd2.png",
+            "alt_type": "latex",
+            "alt_value": "$b$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/e/1/7/e177c64a9bd9fbd2c9981d13826cbac308ae28ca.png",
+            "alt_type": "latex",
+            "alt_value": "$a * b=(a-b)^2$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/d/4/4/d44f897632f63376db40477827d960c937afc573.png",
+            "alt_type": "latex",
+            "alt_value": "$(x-y)^2*(y-x)^2$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/f/a/e/faec476c7b5eecf93252e43ac317c97e29cad02a.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 0\\qquad\\mathrm{(B)}\\ x^2+y^2\\qquad\\mathrm{(C)}\\ 2x^2\\qquad\\mathrm{(D)}\\ 2y^2\\qquad\\mathrm{(E)}\\ 4xy$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "A",
+      "solutions": [
+        {
+          "text": "<p>Since <INSERTION_INDEX_1>, it follows that <INSERTION_INDEX_2>, and <INSERTION_INDEX_3></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/c/b/2/cb291e6d85c652622a4d9fae84cb018590486091.png",
+              "alt_type": "latex",
+              "alt_value": "$(-a)^2 = a^2$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/7/8/778ce670e5329492e792cbb91fdbb454f480e71f.png",
+              "alt_type": "latex",
+              "alt_value": "$(x-y)^2 = (y-x)^2$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/1/3/8/138e0ad8d731afe82997734cb68305608ba9622d.png",
+              "alt_type": "latex",
+              "alt_value": "\\[(x-y)^2 * (y-x)^2 = [(x-y)^2 - (y-x)^2]^2 = [(x-y)^2 - (x-y)^2]^2 = 0\\ \\mathrm{(A)}.\\]"
+            }
+          }
+        }
+      ]
+    },
+    {
       "id": "amc_2008_10b_6",
       "question": {
         "text": "<p>Points <INSERTION_INDEX_1> and <INSERTION_INDEX_2> lie on <INSERTION_INDEX_3>. The length of <INSERTION_INDEX_4> is <INSERTION_INDEX_5> times the length of <INSERTION_INDEX_6>, and the length of <INSERTION_INDEX_7> is <INSERTION_INDEX_8> times the length of <INSERTION_INDEX_9>. The length of <INSERTION_INDEX_10> is what fraction of the length of <INSERTION_INDEX_11>?</p>",
@@ -379,6 +441,404 @@
               "picture": "//latex.artofproblemsolving.com/5/c/a/5ca659cf9e3fdc89377c9419390272ddd08cd220.png",
               "alt_type": "latex",
               "alt_value": "$\\frac{x}{AD} - \\frac{y}{AD} = \\frac{x}{5x} - \\frac{y}{10y} = \\frac{1}{5} - \\frac{1}{10} =  \\boxed{\\textbf{(C)}\\ \\frac{1}{10}}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_7",
+      "question": {
+        "text": "<p>An equilateral triangle of side length <INSERTION_INDEX_1> is completely filled in by non-overlapping equilateral triangles of side length <INSERTION_INDEX_2>. How many small triangles are required?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png",
+            "alt_type": "latex",
+            "alt_value": "$10$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+            "alt_type": "latex",
+            "alt_value": "$1$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/c/4/a/c4a65f67e7b2b0ae9dede3bc9953b17b8a7db2b4.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 10\\qquad\\mathrm{(B)}\\ 25\\qquad\\mathrm{(C)}\\ 100\\qquad\\mathrm{(D)}\\ 250\\qquad\\mathrm{(E)}\\ 1000$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>The area of the large triangle is <INSERTION_INDEX_1>, while the area of each small triangle is <INSERTION_INDEX_2>. Dividing these two quantities results in <INSERTION_INDEX_3>, therefore <INSERTION_INDEX_4> small triangles can fill the large one without overlap.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/9/5/f/95f426fe9394b7519e6bb485eb08f649caa5bb93.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{10^2\\sqrt3}{4}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/d/c/c/dcce9a3682d3f5044bacc68d8057f73c75b068fc.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1^2\\sqrt3}{4}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+              "alt_type": "latex",
+              "alt_value": "$100$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/d/0/0/d00e87bc26843df2c3a4e325d87b1ad26dd14152.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{100} \\mathrm{(C)}$"
+            }
+          }
+        },
+        {
+          "text": "<p><INSERTION_INDEX_1></p><p>The number of triangles is <INSERTION_INDEX_2>.</p><p>Also, another way to do it is to notice that as you go row by row (from the bottom), the number of triangles decrease by 2 from 19, so we have:<INSERTION_INDEX_3></p><p>A fourth solution is to notice that the small triangles are similar to the large triangle as they are both equilateral. Therefore, the ratio of their areas is the square of the ratio of their side lengths. Hence the ratio of their areas is <INSERTION_INDEX_4>, so the answer is <INSERTION_INDEX_5>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/b/6/2b6049d158759587caa572b1d8911fc0deb0b10b.png",
+              "alt_type": "asy",
+              "alt_value": "[asy] unitsize(0.5cm); defaultpen(0.8); for (int i=0; i<10; ++i) { draw( (i*dir(60)) -- ( (10,0) + (i*dir(120)) ) ); } for (int i=0; i<10; ++i) { draw( (i*dir(0)) -- ( 10*dir(60) + (i*dir(-60)) ) ); } for (int i=0; i<10; ++i) { draw( ((10-i)*dir(60)) -- ((10-i)*dir(0)) ); } [/asy]"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/8/3/2/832ca3243340669d4a5b39542d03c7c2534fa530.png",
+              "alt_type": "latex",
+              "alt_value": "$1+3+\\dots+19 = \\boxed{100}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/6/3/a/63a6ef0b753898683ee91f33ea9c71e981bccc26.png",
+              "alt_type": "latex",
+              "alt_value": "$19+17+15...+3+1 = \\frac{19+1}{2}\\cdot 10 = \\boxed{100}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/f/5/7/f576707cb28360ce8b95143ea7517bb3b634758f.png",
+              "alt_type": "latex",
+              "alt_value": "$(1/10)^2=1/100$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/4/3/b/43bc38a3aa247c41492f0162a7f4b8cc4ef1c108.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{100}$"
+            }
+          }
+        },
+        {
+          "text": "<p>The side length of the large equilateral triangle is <INSERTION_INDEX_1>. The number of equilateral triangles with side length <INSERTION_INDEX_2> that can fill it is <INSERTION_INDEX_3>. This is equal to the sum of the first <INSERTION_INDEX_4> odd integers. The sum of the first <INSERTION_INDEX_5> odd integers is <INSERTION_INDEX_6>. In general, an equilateral triangle with side length <INSERTION_INDEX_7> can be filled by <INSERTION_INDEX_8> triangles. The answer is <INSERTION_INDEX_9>.</p><p>~mobius247</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png",
+              "alt_type": "latex",
+              "alt_value": "$10$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/d/b/6/db61fd75a1a8bb6fa2b202b6b73daf9b4c9838d0.png",
+              "alt_type": "latex",
+              "alt_value": "$10^2$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png",
+              "alt_type": "latex",
+              "alt_value": "$10$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png",
+              "alt_type": "latex",
+              "alt_value": "$n$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/6/0/0/6006bba637eef443381fbaff768fa62d9ff41e62.png",
+              "alt_type": "latex",
+              "alt_value": "$n^2$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png",
+              "alt_type": "latex",
+              "alt_value": "$n$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/6/0/0/6006bba637eef443381fbaff768fa62d9ff41e62.png",
+              "alt_type": "latex",
+              "alt_value": "$n^2$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/0/2/d/02dc3c48a9c90d6f5ae4c0c5ed11a668c0de0c16.png",
+              "alt_type": "latex",
+              "alt_value": "$100\\ \\mathrm{(C)}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_8",
+      "question": {
+        "text": "<p>A class collects 50 dollars to buy flowers for a classmate who is in the hospital. Roses cost 3 dollars each, and carnations cost 2 dollars each. No other flowers are to be used. How many different bouquets could be purchased for exactly 50 dollars?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/d/9/6/d9687860bc5de103fa30993f89a451cd2cc65166.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 1 \\qquad \\mathrm{(B)}\\ 7 \\qquad \\mathrm{(C)}\\ 9 \\qquad \\mathrm{(D)}\\ 16 \\qquad \\mathrm{(E)}\\ 17$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>The cost of a rose is odd, hence we need an even number of roses. Let there be <INSERTION_INDEX_1> roses for some <INSERTION_INDEX_2>. Then we have <INSERTION_INDEX_3> dollars left. We can always reach the sum exactly <INSERTION_INDEX_4> by buying <INSERTION_INDEX_5> carnations. Of course, the number of roses must be such that the number of carnations is non-negative. We get the inequality <INSERTION_INDEX_6> which solves to <INSERTION_INDEX_7>. <INSERTION_INDEX_8> must be an integer, so there are <INSERTION_INDEX_9> possible values of <INSERTION_INDEX_10>, and each gives us one solution.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/0/a/5/0a5745df50c8607bdc9b8de4968315633a3047dc.png",
+              "alt_type": "latex",
+              "alt_value": "$2r$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/3/9/a/39ad7957a2fccdb01077981b253b51d278609565.png",
+              "alt_type": "latex",
+              "alt_value": "$r\\geq 0$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/5/e/d/5ed73b1c2accc493935629550279b8f9f2609234.png",
+              "alt_type": "latex",
+              "alt_value": "$50-3\\cdot 2r = 50-6r$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/9/0/6/906734e2f1010e9a171ffee8050cbc0649cea37c.png",
+              "alt_type": "latex",
+              "alt_value": "$50$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/b/d/d/bddd899a12c662f5d581a01b19bc063ad7b6ad7e.png",
+              "alt_type": "latex",
+              "alt_value": "$(50-6r)/2 = 25-3r$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/e/8/1/e81446542d95f4a19150be979fcb099d1c6c95c2.png",
+              "alt_type": "latex",
+              "alt_value": "$25-3r \\geq 0$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/1/f/0/1f083d1eb399c5109a154909e457b55fe7563952.png",
+              "alt_type": "latex",
+              "alt_value": "$r\\leq 8 \\frac13$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png",
+              "alt_type": "latex",
+              "alt_value": "$r$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/3/a/a/3aa914c619be3f1b1d3ec6d672d46a5962fd3723.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{9 \\text{ (C)}}$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png",
+              "alt_type": "latex",
+              "alt_value": "$r$"
+            }
+          }
+        },
+        {
+          "text": "<p>Let <INSERTION_INDEX_1> and <INSERTION_INDEX_2> be the number of roses and carnations bought. The equation should be <INSERTION_INDEX_3>. Since <INSERTION_INDEX_4> is an even number, the product of <INSERTION_INDEX_5> must be even and smaller than <INSERTION_INDEX_6>. You can try nonnegative even integers for <INSERTION_INDEX_7> and you will end up with the numbers <INSERTION_INDEX_8>, <INSERTION_INDEX_9>, <INSERTION_INDEX_10>, <INSERTION_INDEX_11>, <INSERTION_INDEX_12>, <INSERTION_INDEX_13>, <INSERTION_INDEX_14>, <INSERTION_INDEX_15>, and <INSERTION_INDEX_16>. There are <INSERTION_INDEX_17> numbers in total, so the answer is <INSERTION_INDEX_18>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
+              "alt_type": "latex",
+              "alt_value": "$y$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/3/8/3/383d728e1eddb93e65b9fff2c7a4b15112a375a6.png",
+              "alt_type": "latex",
+              "alt_value": "$3x+2y = 50$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/9/0/6/906734e2f1010e9a171ffee8050cbc0649cea37c.png",
+              "alt_type": "latex",
+              "alt_value": "$50$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/0/e/70e634348f8df9eaeac4ced35db64d08a906532e.png",
+              "alt_type": "latex",
+              "alt_value": "$3x$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/9/0/6/906734e2f1010e9a171ffee8050cbc0649cea37c.png",
+              "alt_type": "latex",
+              "alt_value": "$50$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png",
+              "alt_type": "latex",
+              "alt_value": "$10$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png",
+              "alt_type": "latex",
+              "alt_value": "$12$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/8/2/0/820a20de2847dfdc1bc5cffc8d904933150032bd.png",
+              "alt_type": "latex",
+              "alt_value": "$14$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/9/a/5/9a5b4928c8fe50ce3c2428da3bee3505e891b788.png",
+              "alt_type": "latex",
+              "alt_value": "$16$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/3/a/a/3aa914c619be3f1b1d3ec6d672d46a5962fd3723.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{9 \\text{ (C)}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Let <INSERTION_INDEX_1> represent the number of roses, and let <INSERTION_INDEX_2> represent the number of carnations. Then, we get the linear Diophantine equation,<INSERTION_INDEX_3>.Using the Euclidean algorithm, we get the initial solutions to be <INSERTION_INDEX_4> and <INSERTION_INDEX_5>, meaning the complete solution will be,<INSERTION_INDEX_6> <INSERTION_INDEX_7>, <INSERTION_INDEX_8></p><p>The solution range for which both <INSERTION_INDEX_9> and <INSERTION_INDEX_10> are positive is <INSERTION_INDEX_11> <INSERTION_INDEX_12> <INSERTION_INDEX_13> <INSERTION_INDEX_14>. There are <INSERTION_INDEX_15> possible values for <INSERTION_INDEX_16>.</p><p>These problems are copyrighted © by the <a class=\"external text\" href=\"https://www.maa.org\" rel=\"nofollow\">Mathematical Association of America</a>, as part of the <a class=\"external text\" href=\"https://maa.org/student-programs/amc/\" rel=\"nofollow\">American Mathematics Competitions</a>. <a class=\"image\" href=\"/wiki/index.php/File:AMC_logo.png\"><INSERTION_INDEX_17></a></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png",
+              "alt_type": "latex",
+              "alt_value": "$r$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png",
+              "alt_type": "latex",
+              "alt_value": "$c$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/c/7/fc7a73fe70a00f049b0261b1f6333e4f86908cc5.png",
+              "alt_type": "latex",
+              "alt_value": "$3r+2c=50$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/8/6/8/868f802dff3f9f1ff7899a8fd8cbf045c2749f72.png",
+              "alt_type": "latex",
+              "alt_value": "$r_0=50$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/1/3/3/133b6ed388b24e2a49c60f740db920c72ef957b2.png",
+              "alt_type": "latex",
+              "alt_value": "$c_0=-50$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/d/8/2/d829cb9d09b411d8d8b002b3f55c6e8e40be9d08.png",
+              "alt_type": "latex",
+              "alt_value": "$r=50+\\frac{2}{\\gcd(2,3)}$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/0/2/a/02a92c223bdfae3b9d001e98f15ddbbd3f335ddf.png",
+              "alt_type": "latex",
+              "alt_value": "$k=50+2k$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/9/2/3/923d25ce77a4b1309a171c2f0a115f361049f55f.png",
+              "alt_type": "latex",
+              "alt_value": "$c=-50-\\frac{3}{\\gcd(2,3)}k=-50-3k$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/b/5/5/b55ca7a0aa88ab7d58f4fc035317fdac39b17861.png",
+              "alt_type": "latex",
+              "alt_value": "$r$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/3/3/7/3372c1cb6d68cf97c2d231acc0b47b95a9ed04cc.png",
+              "alt_type": "latex",
+              "alt_value": "$c$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/b/7/6/b7616a230c77f0d9a577e5bca01aa06f1c35c457.png",
+              "alt_type": "latex",
+              "alt_value": "$17$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/e/4/f/e4f08038ab1fa2a97bea4f0f98ddca5a74478302.png",
+              "alt_type": "latex",
+              "alt_value": "$\\leq k$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/1/6/3/163b0f326b6f8a5fa311f179ad175849b828e468.png",
+              "alt_type": "latex",
+              "alt_value": "$\\leq$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png",
+              "alt_type": "latex",
+              "alt_value": "$25$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/3/a/a/3aa914c619be3f1b1d3ec6d672d46a5962fd3723.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{9 \\text{ (C)}}$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png",
+              "alt_type": "latex",
+              "alt_value": "$k$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "https://wiki-images.artofproblemsolving.com//thumb/8/8b/AMC_logo.png/50px-AMC_logo.png",
+              "alt_type": "latex",
+              "alt_value": "AMC logo.png"
             }
           }
         }
@@ -1672,6 +2132,128 @@
               "picture": "//latex.artofproblemsolving.com/f/2/e/f2e33ab9a00e021af49e888212645d4667903c49.png",
               "alt_type": "latex",
               "alt_value": "$\\boxed{B}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_19",
+      "question": {
+        "text": "<p>A cylindrical tank with radius <INSERTION_INDEX_1> feet and height <INSERTION_INDEX_2> feet is lying on its side. The tank is filled with water to a depth of <INSERTION_INDEX_3> feet. What is the volume of water, in cubic feet?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+            "alt_type": "latex",
+            "alt_value": "$4$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+            "alt_type": "latex",
+            "alt_value": "$9$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+            "alt_type": "latex",
+            "alt_value": "$2$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/9/a/6/9a62b57c568cffc0fb93acec0563804defc7d308.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 24\\pi - 36 \\sqrt {2} \\qquad \\mathrm{(B)}\\ 24\\pi - 24 \\sqrt {3} \\qquad \\mathrm{(C)}\\ 36\\pi - 36 \\sqrt {3} \\qquad \\mathrm{(D)}\\ 36\\pi - 24 \\sqrt {2} \\qquad \\mathrm{(E)}\\ 48\\pi - 36 \\sqrt {3}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p>Any vertical cross-section of the tank parallel with its base looks as follows:<INSERTION_INDEX_1></p><p>The volume of water can be computed as the height of the tank times the area of the shaded part.</p><p>Let <INSERTION_INDEX_2> be the size of the smaller angle <INSERTION_INDEX_3>. We then have <INSERTION_INDEX_4>, hence <INSERTION_INDEX_5>.</p><p>The figure is symmetrical, so the angle <INSERTION_INDEX_6> has size <INSERTION_INDEX_7>. Hence the shaded part consists of <INSERTION_INDEX_8> of the circle, minus the area of the triangle <INSERTION_INDEX_9>.</p><p>Using the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> we can compute that <INSERTION_INDEX_10>. Thus <INSERTION_INDEX_11>, and the area of the triangle <INSERTION_INDEX_12> is <INSERTION_INDEX_13>.</p><p>The area of the shaded part is then <INSERTION_INDEX_14>, and the volume of water is <INSERTION_INDEX_15>. The answer is <INSERTION_INDEX_16>.</p><p>Alternatively, we can solve for DC and see it is congruent to a 30 60 90 triangle by SSS ~Williamgolly</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/6/7/a/67a702ddd98af1b8d46b21db963afe5d1ae0d985.png",
+              "alt_type": "asy",
+              "alt_value": "[asy] unitsize(0.8cm); defaultpen(0.8); pair s=(0,0), bottom=(0,-4), mid=(0,-2); pair x[]=intersectionpoints( (-10,-2)--(10,-2), circle(s,4) ); fill( arc(s,x[0],x[1]) -- cycle, lightgray ); draw( circle(s,4) ); dot(s); draw( s -- bottom ); label( \"$2$\", (mid+bottom)/2, E ); draw ( s -- x[0] -- x[1] -- s ); label( \"$4$\", (s+x[0])/2, NW ); label( \"$4$\", (s+x[1])/2, NE ); label( \"$A$\", s, N ); label( \"$B$\", x[0], W ); label( \"$C$\", x[1], E ); label( \"$D$\", mid, NW ); label( \"$E$\", bottom, S ); [/asy]"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/5/2/e/52e8ed7a3ba22130ad3984eb2cd413406475a689.png",
+              "alt_type": "latex",
+              "alt_value": "$\\theta$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/6/2/f6250647b3666c03d1363b3a401f37c1d9db3c5f.png",
+              "alt_type": "latex",
+              "alt_value": "$DAC$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/5/b/d/5bda1e0012223e45a8f715966f79cbd65f93944a.png",
+              "alt_type": "latex",
+              "alt_value": "$\\cos\\theta = \\frac{AD}{AC}=\\frac 12$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/8/d/2/8d25be641607d3ca0d4632143cd3507a0c384b16.png",
+              "alt_type": "latex",
+              "alt_value": "$\\theta=60^\\circ$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/4/5/9/459b39e026037707282c95dfdbfd6dc64c855a16.png",
+              "alt_type": "latex",
+              "alt_value": "$CAB$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/9/a/3/9a3b3a6ac9ce35e81e994a4bb0262344d345d2ae.png",
+              "alt_type": "latex",
+              "alt_value": "$2\\cdot 60^\\circ = 120^\\circ$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/b/8/a/b8abd5f84144827235aa7c1926fdd1090ce59c76.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{120^\\circ}{360^\\circ} = \\frac 13$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png",
+              "alt_type": "latex",
+              "alt_value": "$ABC$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/2/7/9/2795ab70cffa329497c67a1f5424b8231218d4fd.png",
+              "alt_type": "latex",
+              "alt_value": "$CD=\\sqrt{AC^2-AD^2}=\\sqrt{16-4}=2\\sqrt 3$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/c/3/9/c39ac0f06b9847b380a95b581e394034ea2ebd5b.png",
+              "alt_type": "latex",
+              "alt_value": "$BC=4\\sqrt 3$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png",
+              "alt_type": "latex",
+              "alt_value": "$ABC$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/2/f/6/2f67850bb5cd690dc2f5ac506731154d45854e8a.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac {2 \\cdot 4\\sqrt 3} 2 = 4\\sqrt 3$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/0/1/7/017ee37972b97e3452c3a06c13940f9088d6a575.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{4^2\\pi}3 - 4\\sqrt 3$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/9/e/5/9e582fa2dca848a8b34fb98eb82fac713a7255b7.png",
+              "alt_type": "latex",
+              "alt_value": "$9\\cdot\\left(\\frac{4^2\\pi}3 - 4\\sqrt 3\\right) = \\boxed{48\\pi - 36\\sqrt 3}$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/7/a/5/7a5bb2aa78132b4b716cfde4a9136c884d94c753.png",
+              "alt_type": "latex",
+              "alt_value": "$\\text{E}$"
             }
           }
         }
