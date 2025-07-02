@@ -7,7 +7,7 @@
     "level": "10",
     "suffix": "B",
     "fall_version": false,
-    "total_problems": 23,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
@@ -3251,6 +3251,357 @@
       ]
     },
     {
+      "id": "amc_2006_10b_21",
+      "question": {
+        "text": "<p>For a particular peculiar pair of dice, the probabilities of rolling <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, <INSERTION_INDEX_4>, <INSERTION_INDEX_5>, and <INSERTION_INDEX_6>, on each die are in the ratio <INSERTION_INDEX_7>. What is the probability of rolling a total of <INSERTION_INDEX_8> on the two dice? </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+            "alt_type": "latex",
+            "alt_value": "$1$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+            "alt_type": "latex",
+            "alt_value": "$2$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+            "alt_type": "latex",
+            "alt_value": "$3$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+            "alt_type": "latex",
+            "alt_value": "$4$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+            "alt_type": "latex",
+            "alt_value": "$5$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+            "alt_type": "latex",
+            "alt_value": "$6$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/a/f/c/afcc813f6e07ebd73007cc3a28ae8b648b58daa2.png",
+            "alt_type": "latex",
+            "alt_value": "$1:2:3:4:5:6$"
+          },
+          "INSERTION_INDEX_8": {
+            "picture": "//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png",
+            "alt_type": "latex",
+            "alt_value": "$7$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/c/8/b/c8bbffc95ea8eab755e030473554f9aea7f5e474.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A) \\ } \\frac{4}{63}\\qquad \\mathrm{(B) \\ } \\frac{1}{8}\\qquad \\mathrm{(C) \\ } \\frac{8}{63}\\qquad \\mathrm{(D) \\ } \\frac{1}{6}\\qquad \\mathrm{(E) \\ } \\frac{2}{7}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>Let <INSERTION_INDEX_1> be the <a href=\"/wiki/index.php/Probability\" title=\"Probability\">probability</a> of rolling a <INSERTION_INDEX_2>. The probabilities of rolling a <INSERTION_INDEX_3>, <INSERTION_INDEX_4>, <INSERTION_INDEX_5>, <INSERTION_INDEX_6>, and <INSERTION_INDEX_7> are <INSERTION_INDEX_8>, <INSERTION_INDEX_9>, <INSERTION_INDEX_10>, <INSERTION_INDEX_11>, and <INSERTION_INDEX_12>, respectively.</p><p>The sum of the probabilities of rolling each number must equal 1, so</p><p><INSERTION_INDEX_13></p><p><INSERTION_INDEX_14></p><p><INSERTION_INDEX_15></p><p>So the probabilities of rolling a <INSERTION_INDEX_16>, <INSERTION_INDEX_17>, <INSERTION_INDEX_18>, <INSERTION_INDEX_19>, <INSERTION_INDEX_20>, and <INSERTION_INDEX_21> are respectively <INSERTION_INDEX_22>, and <INSERTION_INDEX_23>. </p><p>The possible combinations of two rolls that total <INSERTION_INDEX_24> are: <INSERTION_INDEX_25></p><p>The probability P of rolling a total of <INSERTION_INDEX_26> on the two dice is equal to the sum of the probabilities of rolling each combination. </p><p><INSERTION_INDEX_27></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/2/e/c/2ec701493fa72dda5d6747fe14f30e7b1c2fb6c4.png",
+              "alt_type": "latex",
+              "alt_value": "$2x$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/7/0/e/70e634348f8df9eaeac4ced35db64d08a906532e.png",
+              "alt_type": "latex",
+              "alt_value": "$3x$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/e/d/4/ed4977828049d99f20ccd3b4acb6bbd43c2eb70f.png",
+              "alt_type": "latex",
+              "alt_value": "$4x$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/8/7/e/87e9f9eb8f39820b3b8cd2c4b06e10d90e0d3b44.png",
+              "alt_type": "latex",
+              "alt_value": "$5x$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/2/f/3/2f3c6262fbacae6ba07fea6f24758dde08078e97.png",
+              "alt_type": "latex",
+              "alt_value": "$6x$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/8/f/0/8f0f02f7d8d1ec56fe1b3d96205b8c462dda3cc4.png",
+              "alt_type": "latex",
+              "alt_value": "$x+2x+3x+4x+5x+6x=1$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/1/d/2/1d2b58f4d786070af40aee89b2443df38bd64ad7.png",
+              "alt_type": "latex",
+              "alt_value": "$21x=1$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/5/7/6/576b65c4ea5ee0bfb7e81e54f22df00f546cb8c8.png",
+              "alt_type": "latex",
+              "alt_value": "$x=\\frac{1}{21}$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_21": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_22": {
+              "picture": "//latex.artofproblemsolving.com/1/d/2/1d2a49b5034b70785567deaaf3e67d5ded077604.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{21}, \\frac{2}{21}, \\frac{3}{21}, \\frac{4}{21}, \\frac{5}{21}$"
+            },
+            "INSERTION_INDEX_23": {
+              "picture": "//latex.artofproblemsolving.com/7/b/4/7b430768994eb2fb1798616d029451c7c76a64c7.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{6}{21}$"
+            },
+            "INSERTION_INDEX_24": {
+              "picture": "//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png",
+              "alt_type": "latex",
+              "alt_value": "$7$"
+            },
+            "INSERTION_INDEX_25": {
+              "picture": "//latex.artofproblemsolving.com/b/8/d/b8dec27f413128205b303cc78a599aef4173ca68.png",
+              "alt_type": "latex",
+              "alt_value": "$(1,6) ; (2,5) ; (3,4) ; (4,3) ; (5,2) ; (6,1)$"
+            },
+            "INSERTION_INDEX_26": {
+              "picture": "//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png",
+              "alt_type": "latex",
+              "alt_value": "$7$"
+            },
+            "INSERTION_INDEX_27": {
+              "picture": "//latex.artofproblemsolving.com/0/5/2/052096a4f6291195f70a757e00afb9e1468a21d3.png",
+              "alt_type": "latex",
+              "alt_value": "$P = \\frac{1}{21}\\cdot\\frac{6}{21}+\\frac{2}{21}\\cdot\\frac{5}{21}+\\frac{3}{21}\\cdot\\frac{4}{21}+\\frac{4}{21}\\cdot\\frac{3}{21}+\\frac{5}{21}\\cdot\\frac{2}{21}+\\frac{6}{21}\\cdot\\frac{1}{21}=\\frac{8}{63} \\Rightarrow C$"
+            }
+          }
+        },
+        {
+          "text": "<p>(Alcumus solution)On each die the probability of rolling <INSERTION_INDEX_1>, for <INSERTION_INDEX_2>, is <INSERTION_INDEX_3>There are six ways of rolling a total of 7 on the two dice, represented by the ordered pairs <INSERTION_INDEX_4>, <INSERTION_INDEX_5>, <INSERTION_INDEX_6>, <INSERTION_INDEX_7>, <INSERTION_INDEX_8>, and <INSERTION_INDEX_9>. Thus the probability of rolling a total of 7 is <INSERTION_INDEX_10></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/8/c/3/8c325612684d41304b9751c175df7bcc0f61f64f.png",
+              "alt_type": "latex",
+              "alt_value": "$k$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/d/2/2/d2268f1f3ac5b2238c536bd37ed54a13c6775a93.png",
+              "alt_type": "latex",
+              "alt_value": "$1\\leq k\\leq 6$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/8/7/d/87d5315261f355ccfd7dba8fdba995e486bcd238.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{k}{1+2+3+4+5+6}=\\frac{k}{21}.$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/6/2/1/621f951230bd018717e8c0c5cd3bfd6b1f8720a6.png",
+              "alt_type": "latex",
+              "alt_value": "$(1,6)$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/e/a/9/ea9d3308a17610dcb38bfd84b443bdd0ea403605.png",
+              "alt_type": "latex",
+              "alt_value": "$(2,5)$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/9/7/f/97fadfe6bdbd1adb164f263b52f2a290723ad45c.png",
+              "alt_type": "latex",
+              "alt_value": "$(3,4)$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/5/6/3/563948106c3332662355412547d99acab218c16f.png",
+              "alt_type": "latex",
+              "alt_value": "$(4,3)$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/f/3/6/f36c7ac2d4858b3b8738e57407d246e04a7a76e2.png",
+              "alt_type": "latex",
+              "alt_value": "$(5,2)$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/e/1/e/e1eaf4a19058ec391b8085b5272570a5c5e111b3.png",
+              "alt_type": "latex",
+              "alt_value": "$(6,1)$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/6/6/7/667c94da50ba88325171d2b6f81eec3d13702dfd.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1\\cdot6+2\\cdot5+3\\cdot4+4\\cdot3+5\\cdot2+6\\cdot1}{21^2}=\\frac{56}{21^2}=\\boxed{\\frac{8}{63}}.$"
+            }
+          }
+        },
+        {
+          "text": "<p>There are <INSERTION_INDEX_1> ways to get the sum of <INSERTION_INDEX_2> of the dice. Let's do case by case.</p><p>Case <INSERTION_INDEX_3> (Rolling a <INSERTION_INDEX_4> or a <INSERTION_INDEX_5>): <INSERTION_INDEX_6>.</p><p>Case <INSERTION_INDEX_7> (Rolling a <INSERTION_INDEX_8> or a <INSERTION_INDEX_9>): <INSERTION_INDEX_10>. </p><p>Case <INSERTION_INDEX_11> (Rolling a <INSERTION_INDEX_12> or a <INSERTION_INDEX_13>): <INSERTION_INDEX_14>. </p><p>The rest of the cases are symmetric to these cases above. We have <INSERTION_INDEX_15>. We have <INSERTION_INDEX_16>. Therefore, our answer is <INSERTION_INDEX_17></p><p>~Arcticturn</p><p>~Minor Edits by L314159265358979323846264</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png",
+              "alt_type": "latex",
+              "alt_value": "$7$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/3/0/9/3092cbd82b8490acd0b6bd0cacd70613aa7af00c.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac {1}{21} \\cdot \\frac {6}{21} = \\frac {6}{441}$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/7/2/1/721a0ded3fa6f3e7f9bf1068bae86b7495f6a036.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac {2}{21} \\cdot \\frac {5}{21} = \\frac {10}{441}$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/c/9/e/c9ed7894647a37ba2b22960049561ea82dfa424d.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac {3}{21} \\cdot \\frac {4}{21} = \\frac {12}{441}$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/1/5/3/153b78cb1229608fc6be000b6d083561d84ce387.png",
+              "alt_type": "latex",
+              "alt_value": "$2 \\cdot \\frac {28}{441}$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/0/e/8/0e8dd8a49388758f13c782eb1258143f94d615a7.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac {56}{441} = \\frac {8}{63}$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/6/f/d/6fd313488666c218f430c9ff09e2fb6f4c4ca925.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed {\\frac {8}{63}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Notice that the ways to obtain a 7 are (6,1), (5,2), (4,3). Then, because the cases are symmetrical with (3,4), (2,5) and (6,1), look through the answer choices. You see a 4/63 and an 8/63, so obviously MAA wants you to not count the other symmetrical cases, thus giving the answer (C).</p><p>~mathboy282</p>",
+          "insertions": {}
+        }
+      ]
+    },
+    {
       "id": "amc_2006_10b_22",
       "question": {
         "text": "<p>Elmo makes <INSERTION_INDEX_1> sandwiches for a fundraiser. For each sandwich he uses <INSERTION_INDEX_2> globs of peanut butter at <INSERTION_INDEX_3> per glob and <INSERTION_INDEX_4> blobs of jam at <INSERTION_INDEX_5> per blob. The cost of the peanut butter and jam to make all the sandwiches is <INSERTION_INDEX_6>. Assume that <INSERTION_INDEX_7>, <INSERTION_INDEX_8>, and <INSERTION_INDEX_9> are positive integers with <INSERTION_INDEX_10>. What is the cost of the jam Elmo uses to make the sandwiches?</p>",
@@ -4206,6 +4557,832 @@
               "picture": "//latex.artofproblemsolving.com/7/8/b/78b6738f765ab3ecf47499d080ef7bc63ea4e9f4.png",
               "alt_type": "latex",
               "alt_value": "$OBCP$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_25",
+      "question": {
+        "text": "<p>Mr. Jones has eight children of different ages. On a family trip his oldest child, who is 9, spots a license plate with a 4-digit number in which each of two digits appears two times. \"Look, daddy!\" she exclaims. \"That number is evenly divisible by the age of each of us kids!\" \"That's right,\" replies Mr. Jones, \"and the last two digits just happen to be my age.\" Which of the following is <b><i>not</i></b> the age of one of Mr. Jones's children? </p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/c/3/6/c3666861b0032bb3da464d793c0af8565580ce7b.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A) \\ } 4\\qquad \\mathrm{(B) \\ } 5\\qquad \\mathrm{(C) \\ } 6\\qquad \\mathrm{(D) \\ } 7\\qquad \\mathrm{(E) \\ } 8$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>Let <INSERTION_INDEX_1> be the set of the ages of Mr. Jones' children (in other words <INSERTION_INDEX_2> if Mr. Jones has a child who is <INSERTION_INDEX_3> years old). Then <INSERTION_INDEX_4> and <INSERTION_INDEX_5>. Let <INSERTION_INDEX_6> be the positive integer seen on the license plate. Since at least one of <INSERTION_INDEX_7> or <INSERTION_INDEX_8> is contained in <INSERTION_INDEX_9>, we have <INSERTION_INDEX_10>.</p><p>We would like to prove that <INSERTION_INDEX_11>, so for the sake of contradiction, let us suppose that <INSERTION_INDEX_12>. Then <INSERTION_INDEX_13> so the units digit of <INSERTION_INDEX_14> is <INSERTION_INDEX_15>. Since the number has two distinct digits, each appearing twice, another digit of <INSERTION_INDEX_16> must be <INSERTION_INDEX_17>. Since Mr. Jones can't be <INSERTION_INDEX_18> years old, the last two digits can't be <INSERTION_INDEX_19>. Therefore <INSERTION_INDEX_20> must be of the form <INSERTION_INDEX_21>, where <INSERTION_INDEX_22> is a digit. Since <INSERTION_INDEX_23> is divisible by <INSERTION_INDEX_24>, the sum of the digits of <INSERTION_INDEX_25> must be divisible by <INSERTION_INDEX_26> (see <a href=\"/wiki/index.php/Divisibility_rules/Rule_for_3_and_9_proof\" title=\"Divisibility rules/Rule for 3 and 9 proof\"> Divisibility rules for 9</a>). Hence <INSERTION_INDEX_27> which implies <INSERTION_INDEX_28>. But <INSERTION_INDEX_29> is not divisible by <INSERTION_INDEX_30>, contradiction. So <INSERTION_INDEX_31> and <INSERTION_INDEX_32> is not the age of one of Mr. Jones' kids. <INSERTION_INDEX_33></p><p>(We might like to check that there does, indeed, exist such a positive integer <INSERTION_INDEX_34>. If <INSERTION_INDEX_35> is not an age of one of Mr. Jones' kids, then the license plate's number must be a multiple of <INSERTION_INDEX_36>. Since <INSERTION_INDEX_37> and <INSERTION_INDEX_38> is the only <INSERTION_INDEX_39> digit multiple of <INSERTION_INDEX_40> that fits all the conditions of the license plate's number, the license plate's number is <INSERTION_INDEX_41>.)</p><p>Alternatively, we can see that if one of Mr. Jones' children is of the age 5, then the license plate will have to end in the digit <INSERTION_INDEX_42> . The license plate cannot end in the digit <INSERTION_INDEX_43> as <INSERTION_INDEX_44> is a factor of the number, so it must be even. This means that the license plate would have to have two <INSERTION_INDEX_45> digits, and would either be of the form <INSERTION_INDEX_46> or <INSERTION_INDEX_47> (X being the other digit in the license plate) . The condition <INSERTION_INDEX_48> is impossible as Mr. Jones can't be <INSERTION_INDEX_49> years old. If we separate the second condition, <INSERTION_INDEX_50> into its prime factors, we get <INSERTION_INDEX_51>. <INSERTION_INDEX_52> is prime, and therefore can't account for allowing <INSERTION_INDEX_53> being evenly divisible by the childrens' ages. The <INSERTION_INDEX_54> accounts for the 5 and one factor of 2. This leaves <INSERTION_INDEX_55>, but no single digit number contains all the prime factors besides 5 and 2 of the childrens' ages, thus <INSERTION_INDEX_56> <INSERTION_INDEX_57> can't be one of the childrens' ages.</p><p>Another way to do the problem is by the process of elimination. The only possible correct choices are the highest powers of each prime, <INSERTION_INDEX_58>, <INSERTION_INDEX_59>, <INSERTION_INDEX_60>, and <INSERTION_INDEX_61>, since indivisibility by any powers lower than these means indivisibility by a higher power of the prime (for example, indivisibility by <INSERTION_INDEX_62> means indivisibility by <INSERTION_INDEX_63>. Since the number is divisible by <INSERTION_INDEX_64>, it is not the answer, and the digits have to add up to <INSERTION_INDEX_65>. Let <INSERTION_INDEX_66> be the digits: since <INSERTION_INDEX_67>, <INSERTION_INDEX_68>. The only possible choices for <INSERTION_INDEX_69> are <INSERTION_INDEX_70>, <INSERTION_INDEX_71>, <INSERTION_INDEX_72>, <INSERTION_INDEX_73>, and <INSERTION_INDEX_74>. The only number that works is <INSERTION_INDEX_75>, but it is not divisible by <INSERTION_INDEX_76>. <INSERTION_INDEX_77></p><p>~edited by mobius247</p><p>Since 5 has the \"strictest\" divisibility rules of the single digit numbers, we check that case first. To be divisible by 9, the other repeating digit must be 4. Seeing that 5544 is the only arrangement of 2 4's and 2 5's that is divisible by the other single digit numbers and itself is not divisible by 5, the answer is <INSERTION_INDEX_78>.-liu4505~edited by mobius247</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png",
+              "alt_type": "latex",
+              "alt_value": "$S$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/8/6/286e5b654719c01185e5135ebb764e591679f1f5.png",
+              "alt_type": "latex",
+              "alt_value": "$i \\in S$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/3/4/8/34857b3ba74ce5cd8607f3ebd23e9015908ada71.png",
+              "alt_type": "latex",
+              "alt_value": "$i$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/9/2/8/9281aaaaf8711b313657da81b4c4b06db0b3e30b.png",
+              "alt_type": "latex",
+              "alt_value": "$|S| = 8$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/5/a/6/5a60f9dbc8df75ddb4223e9e8895a575ab4c69ea.png",
+              "alt_type": "latex",
+              "alt_value": "$9 \\in S$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png",
+              "alt_type": "latex",
+              "alt_value": "$S$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/0924344717e74106864143d5d4eb22700bf445d6.png",
+              "alt_type": "latex",
+              "alt_value": "$4 | m$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/9/f/3/9f370c0758128bbebbec6d377da5c3114899a469.png",
+              "alt_type": "latex",
+              "alt_value": "$5 \\not\\in S$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/1/0/8/108c0554cdd706cc17f8b9a0b30e62ed5e41971e.png",
+              "alt_type": "latex",
+              "alt_value": "$5 \\in S$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/1/6/4/164dfcb4f9ab638cca459d0d7ecfee5c9a3b8413.png",
+              "alt_type": "latex",
+              "alt_value": "$5\\cdot 4 = 20 | m$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/b/1/f/b1f2c746327924273ba209f0879ea846a0b8dd6b.png",
+              "alt_type": "latex",
+              "alt_value": "$00$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/b/1/f/b1f2c746327924273ba209f0879ea846a0b8dd6b.png",
+              "alt_type": "latex",
+              "alt_value": "$00$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_21": {
+              "picture": "//latex.artofproblemsolving.com/0/d/3/0d3be1593435cf3b5706ae081df4dee76beb4817.png",
+              "alt_type": "latex",
+              "alt_value": "$d0d0$"
+            },
+            "INSERTION_INDEX_22": {
+              "picture": "//latex.artofproblemsolving.com/9/6/a/96ab646de7704969b91c76a214126b45f2b07b25.png",
+              "alt_type": "latex",
+              "alt_value": "$d$"
+            },
+            "INSERTION_INDEX_23": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_24": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_25": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_26": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_27": {
+              "picture": "//latex.artofproblemsolving.com/5/b/3/5b3ad3da7849270fd2199b8910f044efc6ec553c.png",
+              "alt_type": "latex",
+              "alt_value": "$9 | 2d$"
+            },
+            "INSERTION_INDEX_28": {
+              "picture": "//latex.artofproblemsolving.com/5/e/9/5e9bff534770db92aae32442b1c3176f818c2aab.png",
+              "alt_type": "latex",
+              "alt_value": "$d = 9$"
+            },
+            "INSERTION_INDEX_29": {
+              "picture": "//latex.artofproblemsolving.com/e/4/4/e44a914a2c006c373e649e41f286611661c42ec1.png",
+              "alt_type": "latex",
+              "alt_value": "$m = 9090$"
+            },
+            "INSERTION_INDEX_30": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_31": {
+              "picture": "//latex.artofproblemsolving.com/9/f/3/9f370c0758128bbebbec6d377da5c3114899a469.png",
+              "alt_type": "latex",
+              "alt_value": "$5 \\not\\in S$"
+            },
+            "INSERTION_INDEX_32": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_33": {
+              "picture": "//latex.artofproblemsolving.com/e/6/c/e6cf7de7cc0a8d328f0e48f0710c007abf84aa73.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{ B }$"
+            },
+            "INSERTION_INDEX_34": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_35": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_36": {
+              "picture": "//latex.artofproblemsolving.com/4/8/5/485ef3056c9cc339935d6ed2e5b0776d8ddb66b3.png",
+              "alt_type": "latex",
+              "alt_value": "$lcm(1,2,3,4,6,7,8,9) = 504$"
+            },
+            "INSERTION_INDEX_37": {
+              "picture": "//latex.artofproblemsolving.com/8/9/9/899c863425efa5d929a4ff358c93421ad2b69ec4.png",
+              "alt_type": "latex",
+              "alt_value": "$11\\cdot504 = 5544$"
+            },
+            "INSERTION_INDEX_38": {
+              "picture": "//latex.artofproblemsolving.com/4/2/4/4240476d0dffb419ae5dd6c1f2c489c6f2f70e27.png",
+              "alt_type": "latex",
+              "alt_value": "$5544$"
+            },
+            "INSERTION_INDEX_39": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_40": {
+              "picture": "//latex.artofproblemsolving.com/8/7/f/87f385769245cc3c249ec34e15661c168bfb48e5.png",
+              "alt_type": "latex",
+              "alt_value": "$504$"
+            },
+            "INSERTION_INDEX_41": {
+              "picture": "//latex.artofproblemsolving.com/4/2/4/4240476d0dffb419ae5dd6c1f2c489c6f2f70e27.png",
+              "alt_type": "latex",
+              "alt_value": "$5544$"
+            },
+            "INSERTION_INDEX_42": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_43": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_44": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_45": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_46": {
+              "picture": "//latex.artofproblemsolving.com/e/8/e/e8e08d1962e1bd8315ff8fb2b4912bad743b692c.png",
+              "alt_type": "latex",
+              "alt_value": "$XX00$"
+            },
+            "INSERTION_INDEX_47": {
+              "picture": "//latex.artofproblemsolving.com/5/7/6/576bea425612020d020a2e03d47021f00e20215a.png",
+              "alt_type": "latex",
+              "alt_value": "$X0X0$"
+            },
+            "INSERTION_INDEX_48": {
+              "picture": "//latex.artofproblemsolving.com/e/8/e/e8e08d1962e1bd8315ff8fb2b4912bad743b692c.png",
+              "alt_type": "latex",
+              "alt_value": "$XX00$"
+            },
+            "INSERTION_INDEX_49": {
+              "picture": "//latex.artofproblemsolving.com/b/1/f/b1f2c746327924273ba209f0879ea846a0b8dd6b.png",
+              "alt_type": "latex",
+              "alt_value": "$00$"
+            },
+            "INSERTION_INDEX_50": {
+              "picture": "//latex.artofproblemsolving.com/5/7/6/576bea425612020d020a2e03d47021f00e20215a.png",
+              "alt_type": "latex",
+              "alt_value": "$X0X0$"
+            },
+            "INSERTION_INDEX_51": {
+              "picture": "//latex.artofproblemsolving.com/1/f/1/1f1149598f84fc6ca03ccf59d13c99d940ba8541.png",
+              "alt_type": "latex",
+              "alt_value": "$X\\cdot 10\\cdot 101$"
+            },
+            "INSERTION_INDEX_52": {
+              "picture": "//latex.artofproblemsolving.com/9/4/b/94bb6fb7a3ff722532798b45607025254679e7b2.png",
+              "alt_type": "latex",
+              "alt_value": "$101$"
+            },
+            "INSERTION_INDEX_53": {
+              "picture": "//latex.artofproblemsolving.com/5/7/6/576bea425612020d020a2e03d47021f00e20215a.png",
+              "alt_type": "latex",
+              "alt_value": "$X0X0$"
+            },
+            "INSERTION_INDEX_54": {
+              "picture": "//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png",
+              "alt_type": "latex",
+              "alt_value": "$10$"
+            },
+            "INSERTION_INDEX_55": {
+              "picture": "//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png",
+              "alt_type": "latex",
+              "alt_value": "$X$"
+            },
+            "INSERTION_INDEX_56": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_57": {
+              "picture": "//latex.artofproblemsolving.com/e/6/c/e6cf7de7cc0a8d328f0e48f0710c007abf84aa73.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{ B }$"
+            },
+            "INSERTION_INDEX_58": {
+              "picture": "//latex.artofproblemsolving.com/5/7/4/57421b8557f6aa4384653806bfc7a5b80faf557a.png",
+              "alt_type": "latex",
+              "alt_value": "$2^3=8$"
+            },
+            "INSERTION_INDEX_59": {
+              "picture": "//latex.artofproblemsolving.com/6/e/e/6ee19f2230cc721282aa8253c8d9b7e5ff8ffbe9.png",
+              "alt_type": "latex",
+              "alt_value": "$3^2=9$"
+            },
+            "INSERTION_INDEX_60": {
+              "picture": "//latex.artofproblemsolving.com/3/2/1/32115eecc1fb065e5cee4ac42ceaaae727698d47.png",
+              "alt_type": "latex",
+              "alt_value": "$5^1=5$"
+            },
+            "INSERTION_INDEX_61": {
+              "picture": "//latex.artofproblemsolving.com/4/8/b/48b9bd1f4ae512ed331bd0401208caea8fb9b89a.png",
+              "alt_type": "latex",
+              "alt_value": "$7^1=7$"
+            },
+            "INSERTION_INDEX_62": {
+              "picture": "//latex.artofproblemsolving.com/3/f/c/3fcc33a7c840ca476cc3df92991ac6edc1acb78d.png",
+              "alt_type": "latex",
+              "alt_value": "$2^2=4$"
+            },
+            "INSERTION_INDEX_63": {
+              "picture": "//latex.artofproblemsolving.com/7/f/b/7fbca198ac6f2f0c343d1de3b5cf8af5c1e9d32a.png",
+              "alt_type": "latex",
+              "alt_value": "$2^3=8)$"
+            },
+            "INSERTION_INDEX_64": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_65": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_66": {
+              "picture": "//latex.artofproblemsolving.com/8/e/8/8e8da0aef2d19017da7471378386d61620f288f5.png",
+              "alt_type": "latex",
+              "alt_value": "$(a,b)$"
+            },
+            "INSERTION_INDEX_67": {
+              "picture": "//latex.artofproblemsolving.com/7/1/a/71a90bc434bbf8b31045b3f5e8cf98910deea145.png",
+              "alt_type": "latex",
+              "alt_value": "$2\\cdot(a+b) | 9$"
+            },
+            "INSERTION_INDEX_68": {
+              "picture": "//latex.artofproblemsolving.com/8/9/3/8934cdf15a3938158d6c0e043e4105c4d7da305f.png",
+              "alt_type": "latex",
+              "alt_value": "$(a+b)|9$"
+            },
+            "INSERTION_INDEX_69": {
+              "picture": "//latex.artofproblemsolving.com/8/e/8/8e8da0aef2d19017da7471378386d61620f288f5.png",
+              "alt_type": "latex",
+              "alt_value": "$(a,b)$"
+            },
+            "INSERTION_INDEX_70": {
+              "picture": "//latex.artofproblemsolving.com/a/0/8/a08a01be19d538198ba97192d0e85d40442f39c4.png",
+              "alt_type": "latex",
+              "alt_value": "$(0,9)$"
+            },
+            "INSERTION_INDEX_71": {
+              "picture": "//latex.artofproblemsolving.com/b/0/f/b0fd8270f7d7f37bb87d25ef2d7bfc81f148f9c9.png",
+              "alt_type": "latex",
+              "alt_value": "$(1,8)$"
+            },
+            "INSERTION_INDEX_72": {
+              "picture": "//latex.artofproblemsolving.com/d/8/b/d8bd5db8574209fe06220a5d9407e04faa1b1658.png",
+              "alt_type": "latex",
+              "alt_value": "$(2,7)$"
+            },
+            "INSERTION_INDEX_73": {
+              "picture": "//latex.artofproblemsolving.com/6/b/d/6bdab922049ed5ced6b8202f91456dcc1124904c.png",
+              "alt_type": "latex",
+              "alt_value": "$(3,6)$"
+            },
+            "INSERTION_INDEX_74": {
+              "picture": "//latex.artofproblemsolving.com/c/c/0/cc04892c672addda50fb21cd723f160be2443f72.png",
+              "alt_type": "latex",
+              "alt_value": "$(4,5)$"
+            },
+            "INSERTION_INDEX_75": {
+              "picture": "//latex.artofproblemsolving.com/4/2/4/4240476d0dffb419ae5dd6c1f2c489c6f2f70e27.png",
+              "alt_type": "latex",
+              "alt_value": "$5544$"
+            },
+            "INSERTION_INDEX_76": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_77": {
+              "picture": "//latex.artofproblemsolving.com/e/6/c/e6cf7de7cc0a8d328f0e48f0710c007abf84aa73.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{ B }$"
+            },
+            "INSERTION_INDEX_78": {
+              "picture": "//latex.artofproblemsolving.com/3/5/2/352fe4877433492e5933518c7c5f594ad7c2b20e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed {(B) 5}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Let <INSERTION_INDEX_1> be the set of the ages of Mr. Jones' children (in other words <INSERTION_INDEX_2> if Mr. Jones has a child who is <INSERTION_INDEX_3> years old). Then <INSERTION_INDEX_4> and <INSERTION_INDEX_5>. Let <INSERTION_INDEX_6> be the positive integer seen on the license plate. Since at least one of <INSERTION_INDEX_7> or <INSERTION_INDEX_8> is contained in <INSERTION_INDEX_9>, we have <INSERTION_INDEX_10>.</p><p>We would like to prove that <INSERTION_INDEX_11>, so for the sake of contradiction, let us suppose that <INSERTION_INDEX_12>. Then <INSERTION_INDEX_13> so the units digit of <INSERTION_INDEX_14> is <INSERTION_INDEX_15>. Since the number has two distinct digits, each appearing twice, another digit of <INSERTION_INDEX_16> must be <INSERTION_INDEX_17>. Since Mr. Jones can't be <INSERTION_INDEX_18> years old, the last two digits can't be <INSERTION_INDEX_19>. Therefore <INSERTION_INDEX_20> must be of the form <INSERTION_INDEX_21>, where <INSERTION_INDEX_22> is a digit. Since <INSERTION_INDEX_23> is divisible by <INSERTION_INDEX_24>, the sum of the digits of <INSERTION_INDEX_25> must be divisible by <INSERTION_INDEX_26> (see <a href=\"/wiki/index.php/Divisibility_rules/Rule_for_3_and_9_proof\" title=\"Divisibility rules/Rule for 3 and 9 proof\"> Divisibility rules for 9</a>). Hence <INSERTION_INDEX_27> which implies <INSERTION_INDEX_28>. But <INSERTION_INDEX_29> is not divisible by <INSERTION_INDEX_30>, contradiction. So <INSERTION_INDEX_31> and <INSERTION_INDEX_32> is not the age of one of Mr. Jones' kids. <INSERTION_INDEX_33></p><p>(We might like to check that there does, indeed, exist such a positive integer <INSERTION_INDEX_34>. If <INSERTION_INDEX_35> is not an age of one of Mr. Jones' kids, then the license plate's number must be a multiple of <INSERTION_INDEX_36>. Since <INSERTION_INDEX_37> and <INSERTION_INDEX_38> is the only <INSERTION_INDEX_39> digit multiple of <INSERTION_INDEX_40> that fits all the conditions of the license plate's number, the license plate's number is <INSERTION_INDEX_41>.)</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png",
+              "alt_type": "latex",
+              "alt_value": "$S$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/8/6/286e5b654719c01185e5135ebb764e591679f1f5.png",
+              "alt_type": "latex",
+              "alt_value": "$i \\in S$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/3/4/8/34857b3ba74ce5cd8607f3ebd23e9015908ada71.png",
+              "alt_type": "latex",
+              "alt_value": "$i$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/9/2/8/9281aaaaf8711b313657da81b4c4b06db0b3e30b.png",
+              "alt_type": "latex",
+              "alt_value": "$|S| = 8$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/5/a/6/5a60f9dbc8df75ddb4223e9e8895a575ab4c69ea.png",
+              "alt_type": "latex",
+              "alt_value": "$9 \\in S$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/a/d/2/ad28c83c99a8fd0dd2e2e594c9d02ee532765a0a.png",
+              "alt_type": "latex",
+              "alt_value": "$S$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/0924344717e74106864143d5d4eb22700bf445d6.png",
+              "alt_type": "latex",
+              "alt_value": "$4 | m$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/9/f/3/9f370c0758128bbebbec6d377da5c3114899a469.png",
+              "alt_type": "latex",
+              "alt_value": "$5 \\not\\in S$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/1/0/8/108c0554cdd706cc17f8b9a0b30e62ed5e41971e.png",
+              "alt_type": "latex",
+              "alt_value": "$5 \\in S$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/1/6/4/164dfcb4f9ab638cca459d0d7ecfee5c9a3b8413.png",
+              "alt_type": "latex",
+              "alt_value": "$5\\cdot 4 = 20 | m$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/b/1/f/b1f2c746327924273ba209f0879ea846a0b8dd6b.png",
+              "alt_type": "latex",
+              "alt_value": "$00$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/b/1/f/b1f2c746327924273ba209f0879ea846a0b8dd6b.png",
+              "alt_type": "latex",
+              "alt_value": "$00$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_21": {
+              "picture": "//latex.artofproblemsolving.com/0/d/3/0d3be1593435cf3b5706ae081df4dee76beb4817.png",
+              "alt_type": "latex",
+              "alt_value": "$d0d0$"
+            },
+            "INSERTION_INDEX_22": {
+              "picture": "//latex.artofproblemsolving.com/9/6/a/96ab646de7704969b91c76a214126b45f2b07b25.png",
+              "alt_type": "latex",
+              "alt_value": "$d$"
+            },
+            "INSERTION_INDEX_23": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_24": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_25": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_26": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_27": {
+              "picture": "//latex.artofproblemsolving.com/5/b/3/5b3ad3da7849270fd2199b8910f044efc6ec553c.png",
+              "alt_type": "latex",
+              "alt_value": "$9 | 2d$"
+            },
+            "INSERTION_INDEX_28": {
+              "picture": "//latex.artofproblemsolving.com/5/e/9/5e9bff534770db92aae32442b1c3176f818c2aab.png",
+              "alt_type": "latex",
+              "alt_value": "$d = 9$"
+            },
+            "INSERTION_INDEX_29": {
+              "picture": "//latex.artofproblemsolving.com/e/4/4/e44a914a2c006c373e649e41f286611661c42ec1.png",
+              "alt_type": "latex",
+              "alt_value": "$m = 9090$"
+            },
+            "INSERTION_INDEX_30": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_31": {
+              "picture": "//latex.artofproblemsolving.com/9/f/3/9f370c0758128bbebbec6d377da5c3114899a469.png",
+              "alt_type": "latex",
+              "alt_value": "$5 \\not\\in S$"
+            },
+            "INSERTION_INDEX_32": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_33": {
+              "picture": "//latex.artofproblemsolving.com/e/6/c/e6cf7de7cc0a8d328f0e48f0710c007abf84aa73.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{ B }$"
+            },
+            "INSERTION_INDEX_34": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_35": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_36": {
+              "picture": "//latex.artofproblemsolving.com/4/8/5/485ef3056c9cc339935d6ed2e5b0776d8ddb66b3.png",
+              "alt_type": "latex",
+              "alt_value": "$lcm(1,2,3,4,6,7,8,9) = 504$"
+            },
+            "INSERTION_INDEX_37": {
+              "picture": "//latex.artofproblemsolving.com/8/9/9/899c863425efa5d929a4ff358c93421ad2b69ec4.png",
+              "alt_type": "latex",
+              "alt_value": "$11\\cdot504 = 5544$"
+            },
+            "INSERTION_INDEX_38": {
+              "picture": "//latex.artofproblemsolving.com/4/2/4/4240476d0dffb419ae5dd6c1f2c489c6f2f70e27.png",
+              "alt_type": "latex",
+              "alt_value": "$5544$"
+            },
+            "INSERTION_INDEX_39": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_40": {
+              "picture": "//latex.artofproblemsolving.com/8/7/f/87f385769245cc3c249ec34e15661c168bfb48e5.png",
+              "alt_type": "latex",
+              "alt_value": "$504$"
+            },
+            "INSERTION_INDEX_41": {
+              "picture": "//latex.artofproblemsolving.com/4/2/4/4240476d0dffb419ae5dd6c1f2c489c6f2f70e27.png",
+              "alt_type": "latex",
+              "alt_value": "$5544$"
+            }
+          }
+        },
+        {
+          "text": "<p>Alternatively, we can see that if one of Mr. Jones' children is of the age 5, then the license plate will have to end in the digit <INSERTION_INDEX_1> . The license plate cannot end in the digit <INSERTION_INDEX_2> as <INSERTION_INDEX_3> is a factor of the number, so it must be even. This means that the license plate would have to have two <INSERTION_INDEX_4> digits, and would either be of the form <INSERTION_INDEX_5> or <INSERTION_INDEX_6> (X being the other digit in the license plate) . The condition <INSERTION_INDEX_7> is impossible as Mr. Jones can't be <INSERTION_INDEX_8> years old. If we separate the second condition, <INSERTION_INDEX_9> into its prime factors, we get <INSERTION_INDEX_10>. <INSERTION_INDEX_11> is prime, and therefore can't account for allowing <INSERTION_INDEX_12> being evenly divisible by the childrens' ages. The <INSERTION_INDEX_13> accounts for the 5 and one factor of 2. This leaves <INSERTION_INDEX_14>, but no single digit number contains all the prime factors besides 5 and 2 of the childrens' ages, thus <INSERTION_INDEX_15> <INSERTION_INDEX_16> can't be one of the childrens' ages.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+              "alt_type": "latex",
+              "alt_value": "$0$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/e/8/e/e8e08d1962e1bd8315ff8fb2b4912bad743b692c.png",
+              "alt_type": "latex",
+              "alt_value": "$XX00$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/5/7/6/576bea425612020d020a2e03d47021f00e20215a.png",
+              "alt_type": "latex",
+              "alt_value": "$X0X0$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/e/8/e/e8e08d1962e1bd8315ff8fb2b4912bad743b692c.png",
+              "alt_type": "latex",
+              "alt_value": "$XX00$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/b/1/f/b1f2c746327924273ba209f0879ea846a0b8dd6b.png",
+              "alt_type": "latex",
+              "alt_value": "$00$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/5/7/6/576bea425612020d020a2e03d47021f00e20215a.png",
+              "alt_type": "latex",
+              "alt_value": "$X0X0$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/1/f/1/1f1149598f84fc6ca03ccf59d13c99d940ba8541.png",
+              "alt_type": "latex",
+              "alt_value": "$X\\cdot 10\\cdot 101$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/9/4/b/94bb6fb7a3ff722532798b45607025254679e7b2.png",
+              "alt_type": "latex",
+              "alt_value": "$101$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/5/7/6/576bea425612020d020a2e03d47021f00e20215a.png",
+              "alt_type": "latex",
+              "alt_value": "$X0X0$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png",
+              "alt_type": "latex",
+              "alt_value": "$10$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png",
+              "alt_type": "latex",
+              "alt_value": "$X$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/e/6/c/e6cf7de7cc0a8d328f0e48f0710c007abf84aa73.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{ B }$"
+            }
+          }
+        },
+        {
+          "text": "<p>Another way to do the problem is by the process of elimination. The only possible correct choices are the highest powers of each prime, <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, and <INSERTION_INDEX_4>, since indivisibility by any powers lower than these means indivisibility by a higher power of the prime (for example, indivisibility by <INSERTION_INDEX_5> means indivisibility by <INSERTION_INDEX_6>. Since the number is divisible by <INSERTION_INDEX_7>, it is not the answer, and the digits have to add up to <INSERTION_INDEX_8>. Let <INSERTION_INDEX_9> be the digits: since <INSERTION_INDEX_10>, <INSERTION_INDEX_11>. The only possible choices for <INSERTION_INDEX_12> are <INSERTION_INDEX_13>, <INSERTION_INDEX_14>, <INSERTION_INDEX_15>, <INSERTION_INDEX_16>, and <INSERTION_INDEX_17>. The only number that works is <INSERTION_INDEX_18>, but it is not divisible by <INSERTION_INDEX_19>. <INSERTION_INDEX_20></p><p>~edited by mobius247</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/5/7/4/57421b8557f6aa4384653806bfc7a5b80faf557a.png",
+              "alt_type": "latex",
+              "alt_value": "$2^3=8$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/e/e/6ee19f2230cc721282aa8253c8d9b7e5ff8ffbe9.png",
+              "alt_type": "latex",
+              "alt_value": "$3^2=9$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/3/2/1/32115eecc1fb065e5cee4ac42ceaaae727698d47.png",
+              "alt_type": "latex",
+              "alt_value": "$5^1=5$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/4/8/b/48b9bd1f4ae512ed331bd0401208caea8fb9b89a.png",
+              "alt_type": "latex",
+              "alt_value": "$7^1=7$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/3/f/c/3fcc33a7c840ca476cc3df92991ac6edc1acb78d.png",
+              "alt_type": "latex",
+              "alt_value": "$2^2=4$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/7/f/b/7fbca198ac6f2f0c343d1de3b5cf8af5c1e9d32a.png",
+              "alt_type": "latex",
+              "alt_value": "$2^3=8)$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/8/e/8/8e8da0aef2d19017da7471378386d61620f288f5.png",
+              "alt_type": "latex",
+              "alt_value": "$(a,b)$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/7/1/a/71a90bc434bbf8b31045b3f5e8cf98910deea145.png",
+              "alt_type": "latex",
+              "alt_value": "$2\\cdot(a+b) | 9$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/8/9/3/8934cdf15a3938158d6c0e043e4105c4d7da305f.png",
+              "alt_type": "latex",
+              "alt_value": "$(a+b)|9$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/8/e/8/8e8da0aef2d19017da7471378386d61620f288f5.png",
+              "alt_type": "latex",
+              "alt_value": "$(a,b)$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/a/0/8/a08a01be19d538198ba97192d0e85d40442f39c4.png",
+              "alt_type": "latex",
+              "alt_value": "$(0,9)$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/b/0/f/b0fd8270f7d7f37bb87d25ef2d7bfc81f148f9c9.png",
+              "alt_type": "latex",
+              "alt_value": "$(1,8)$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/d/8/b/d8bd5db8574209fe06220a5d9407e04faa1b1658.png",
+              "alt_type": "latex",
+              "alt_value": "$(2,7)$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/6/b/d/6bdab922049ed5ced6b8202f91456dcc1124904c.png",
+              "alt_type": "latex",
+              "alt_value": "$(3,6)$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/c/c/0/cc04892c672addda50fb21cd723f160be2443f72.png",
+              "alt_type": "latex",
+              "alt_value": "$(4,5)$"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/4/2/4/4240476d0dffb419ae5dd6c1f2c489c6f2f70e27.png",
+              "alt_type": "latex",
+              "alt_value": "$5544$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/e/6/c/e6cf7de7cc0a8d328f0e48f0710c007abf84aa73.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{ B }$"
+            }
+          }
+        },
+        {
+          "text": "<p>Since 5 has the \"strictest\" divisibility rules of the single digit numbers, we check that case first. To be divisible by 9, the other repeating digit must be 4. Seeing that 5544 is the only arrangement of 2 4's and 2 5's that is divisible by the other single digit numbers and itself is not divisible by 5, the answer is <INSERTION_INDEX_1>.-liu4505~edited by mobius247</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/3/5/2/352fe4877433492e5933518c7c5f594ad7c2b20e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed {(B) 5}$"
             }
           }
         }
