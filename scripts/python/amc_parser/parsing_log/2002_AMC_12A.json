@@ -1,0 +1,55 @@
+{
+  "competition_info": {
+    "name": "2002_AMC_12A",
+    "id": "2002 AMC 12A",
+    "group": "AMC_12",
+    "year": 2002,
+    "is_AJHSME": false,
+    "level": "12",
+    "suffix": "A",
+    "fall_version": false,
+    "total_problems_expected": 25,
+    "problem_number_override": null
+  },
+  "failed_problems": [
+    {
+      "problem_number": 4,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2002_AMC_12A_Problems/Problem_4",
+      "error_type": "ValueError",
+      "error_message": "No answer found for 2002 AMC 12A Problem 4",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 1006, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 866, in parse_problem\n    raise ValueError(f\"No answer found for {comp_id} Problem {problem_number}\")\nValueError: No answer found for 2002 AMC 12A Problem 4\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    },
+    {
+      "problem_number": 18,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2002_AMC_12A_Problems/Problem_18",
+      "error_type": "ValueError",
+      "error_message": "No answer found for 2002 AMC 12A Problem 18",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 1006, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 866, in parse_problem\n    raise ValueError(f\"No answer found for {comp_id} Problem {problem_number}\")\nValueError: No answer found for 2002 AMC 12A Problem 18\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    },
+    {
+      "problem_number": 25,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2002_AMC_12A_Problems/Problem_25",
+      "error_type": "ValueError",
+      "error_message": "No answer found for 2002 AMC 12A Problem 25",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 1006, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 866, in parse_problem\n    raise ValueError(f\"No answer found for {comp_id} Problem {problem_number}\")\nValueError: No answer found for 2002 AMC 12A Problem 25\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    }
+  ],
+  "skipped_problems": [],
+  "summary": {
+    "successful": 22,
+    "failed": 3,
+    "skipped": 0
+  }
+}

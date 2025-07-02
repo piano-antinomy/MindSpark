@@ -1,0 +1,44 @@
+{
+  "competition_info": {
+    "name": "2004_AMC_12B",
+    "id": "2004 AMC 12B",
+    "group": "AMC_12",
+    "year": 2004,
+    "is_AJHSME": false,
+    "level": "12",
+    "suffix": "B",
+    "fall_version": false,
+    "total_problems_expected": 25,
+    "problem_number_override": null
+  },
+  "failed_problems": [
+    {
+      "problem_number": 18,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2004_AMC_12B_Problems/Problem_18",
+      "error_type": "ValueError",
+      "error_message": "No answer found for 2004 AMC 12B Problem 18",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 1006, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 866, in parse_problem\n    raise ValueError(f\"No answer found for {comp_id} Problem {problem_number}\")\nValueError: No answer found for 2004 AMC 12B Problem 18\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    },
+    {
+      "problem_number": 19,
+      "url": "https://artofproblemsolving.com/wiki/index.php/2004_AMC_12B_Problems/Problem_19",
+      "error_type": "ValueError",
+      "error_message": "No answer found for 2004 AMC 12B Problem 19",
+      "error_details": {
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 1006, in parse_competition\n    problem_data = self.parse_problem(competition, problem_number)\n  File \"/Users/beijxu/vibecoding/MindSpark/scripts/python/amc_parser/amc_parser.py\", line 866, in parse_problem\n    raise ValueError(f\"No answer found for {comp_id} Problem {problem_number}\")\nValueError: No answer found for 2004 AMC 12B Problem 19\n",
+        "category": "Format Error",
+        "description": "Data format is not as expected"
+      }
+    }
+  ],
+  "skipped_problems": [],
+  "summary": {
+    "successful": 23,
+    "failed": 2,
+    "skipped": 0
+  }
+}
