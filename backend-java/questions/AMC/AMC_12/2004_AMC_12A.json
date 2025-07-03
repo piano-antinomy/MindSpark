@@ -7,7 +7,7 @@
     "level": "12",
     "suffix": "A",
     "fall_version": false,
-    "total_problems": 22,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
@@ -73,6 +73,73 @@
               "picture": "//latex.artofproblemsolving.com/1/1/7/1170eac0003d7d478b25d0e30c884019ad93e893.png",
               "alt_type": "latex",
               "alt_value": "$\\Rightarrow\\boxed{\\mathrm{(E)}\\ 29}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_12a_2",
+      "question": {
+        "text": "<p>On the AMC 12, each correct answer is worth <INSERTION_INDEX_1> points, each incorrect answer is worth <INSERTION_INDEX_2> points, and each problem left unanswered is worth <INSERTION_INDEX_3> points. If Charlyn leaves <INSERTION_INDEX_4> of the <INSERTION_INDEX_5> problems unanswered, how many of the remaining problems must she answer correctly in order to score at least <INSERTION_INDEX_6>?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+            "alt_type": "latex",
+            "alt_value": "$6$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/b/c/1/bc1f9d9bf8a1b606a4188b5ce9a2af1809e27a89.png",
+            "alt_type": "latex",
+            "alt_value": "$0$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/4/0/c/40cba44ffc429fc98e11a1605ced22243b655f52.png",
+            "alt_type": "latex",
+            "alt_value": "$2.5$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+            "alt_type": "latex",
+            "alt_value": "$8$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png",
+            "alt_type": "latex",
+            "alt_value": "$25$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+            "alt_type": "latex",
+            "alt_value": "$100$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/9/0/6/90653ae48ec7c13eee2b0241116506aa707c5458.png"
+        ],
+        "latex_choices": [
+          "$\\text {(A)} 11 \\qquad \\text {(B)} 13 \\qquad \\text {(C)} 14 \\qquad \\text {(D)} 16\\qquad \\text {(E)}17$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>She gets <INSERTION_INDEX_1> points for the problems she didn't answer. She must get <INSERTION_INDEX_2> problems right to score at least 100.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/2/b/d2bc58643f9a771f3fdd861ca39fd371bb6bbb8a.png",
+              "alt_type": "latex",
+              "alt_value": "$8*2.5=20$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/1/e/3/1e385b90d7cce2110596730a2a06f40050a051e9.png",
+              "alt_type": "latex",
+              "alt_value": "$\\left\\lceil \\frac{100-20}{6} \\right\\rceil =14 \\Rightarrow \\text {(C)}$"
             }
           }
         }
@@ -376,6 +443,60 @@
               "picture": "//latex.artofproblemsolving.com/8/2/8/828b2127ccab926d5383d0401007ed20bc150b5c.png",
               "alt_type": "latex",
               "alt_value": "$\\boxed{\\mathrm{(E)}\\ 26}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_12a_5",
+      "question": {
+        "text": "<p>The graph of the line <INSERTION_INDEX_1> is shown. Which of the following is true?</p><p><a class=\"image\" href=\"/wiki/index.php/File:2004_AMC_12A_Problem_5.png\"><INSERTION_INDEX_2></a></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/3/3/5/335977913022df1fb3a473f90be2743ad42ada67.png",
+            "alt_type": "latex",
+            "alt_value": "$y=mx+b$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "https://wiki-images.artofproblemsolving.com//9/9a/2004_AMC_12A_Problem_5.png",
+            "alt_type": "latex",
+            "alt_value": "2004 AMC 12A Problem 5.png"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/c/a/1/ca1cab4cfb01c48aabe6a6dbc537b2cc3c323c84.png",
+          "//latex.artofproblemsolving.com/3/e/8/3e88ca3e2a41c8b13f7024c98332d6d9c16f2783.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm {(A)} mb<-1 \\qquad \\mathrm {(B)} -1<mb<0 \\qquad \\mathrm {(C)} mb=0 \\qquad \\mathrm {(D)}$",
+          "$0<mb<1 \\qquad \\mathrm {(E)} mb>1$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>The line appears to have a slope of <INSERTION_INDEX_1> and y-intercept of <INSERTION_INDEX_2> up.</p><p><INSERTION_INDEX_3></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/1/f/3/1f34e107d86da678433f83f6fdb5843aee8d6007.png",
+              "alt_type": "latex",
+              "alt_value": "$-\\dfrac{1}{2}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/a/f/1/af171b50efff5981bffa32b6903c7aa601c8ed7e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\dfrac{4}{5}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/f/d/ffd4ae84b56126399eb0edc16e1690380b2bf0ae.png",
+              "alt_type": "latex",
+              "alt_value": "$\\dfrac{4}{5}\\cdot \\dfrac{-1}{2}=\\dfrac{-4}{10} \\Rightarrow \\mathrm {(B)}$"
             }
           }
         }
@@ -5093,6 +5214,213 @@
               "picture": "//latex.artofproblemsolving.com/8/0/7/807594c4f0b1dc1e4a857cabc341db3b94386c71.png",
               "alt_type": "latex",
               "alt_value": "\\begin{align*} A &= 2(\\mathrm{Blue\\ Sector}) + 2(\\mathrm{Red\\ Sector}) - 2(\\mathrm{Equilateral\\ Triangle}) \\\\ A &= 2\\left(\\frac{120^\\circ}{360^\\circ} \\cdot \\pi (2)^2\\right) + 2\\left(\\frac{60^\\circ}{360^\\circ} \\cdot \\pi (1)^2\\right) - 2\\left(\\frac{(1)^2\\sqrt{3}}{4}\\right) \\\\ A &= \\frac{8\\pi}{3} + \\frac{\\pi}{3} - \\frac{\\sqrt{3}}{2} \\\\ A &= 3\\pi - \\frac{\\sqrt{3}}{2} \\Longrightarrow \\textbf {(C)}\\end{align*}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_12a_25",
+      "question": {
+        "text": "<p>For each integer <INSERTION_INDEX_1>, let <INSERTION_INDEX_2> denote the base-<INSERTION_INDEX_3> number <INSERTION_INDEX_4>. The product <INSERTION_INDEX_5> can be expressed as <INSERTION_INDEX_6>, where <INSERTION_INDEX_7> and <INSERTION_INDEX_8> are positive integers and <INSERTION_INDEX_9> is as small as possible. What is <INSERTION_INDEX_10>?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/6/d/0/6d034b51294ef53e016b9d7fefd837a865e52d2e.png",
+            "alt_type": "latex",
+            "alt_value": "$n\\geq 4$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/6/f/1/6f1a2b6b7c193f9ba2b2134a59f1da5addcfbc98.png",
+            "alt_type": "latex",
+            "alt_value": "$a_n$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png",
+            "alt_type": "latex",
+            "alt_value": "$n$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/9/4/9/94955dabf51a58a99d620be595fe8f76c1fed7e4.png",
+            "alt_type": "latex",
+            "alt_value": "$0.\\overline{133}_n$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/3/2/c/32c613b71010035e4172dfe1fb4b952af14972d8.png",
+            "alt_type": "latex",
+            "alt_value": "$a_4a_5\\cdots a_{99}$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/1/e/9/1e9e139a14911866cbc0ed0733fafc93ed9828c0.png",
+            "alt_type": "latex",
+            "alt_value": "$\\frac {m}{n!}$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+            "alt_type": "latex",
+            "alt_value": "$m$"
+          },
+          "INSERTION_INDEX_8": {
+            "picture": "//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png",
+            "alt_type": "latex",
+            "alt_value": "$n$"
+          },
+          "INSERTION_INDEX_9": {
+            "picture": "//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png",
+            "alt_type": "latex",
+            "alt_value": "$n$"
+          },
+          "INSERTION_INDEX_10": {
+            "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+            "alt_type": "latex",
+            "alt_value": "$m$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/8/5/3/8537979f216242f8c3042329a94920aa7e8d38f2.png"
+        ],
+        "latex_choices": [
+          "$\\text {(A)} 98 \\qquad \\text {(B)} 101 \\qquad \\text {(C)} 132\\qquad \\text {(D)} 798\\qquad \\text {(E)}962$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p>This is an infinite <a class=\"mw-redirect\" href=\"/wiki/index.php/Geometric_series\" title=\"Geometric series\">geometric series</a> with common ratio <INSERTION_INDEX_1> and initial term <INSERTION_INDEX_2>, so <INSERTION_INDEX_3> <INSERTION_INDEX_4> <INSERTION_INDEX_5> <INSERTION_INDEX_6>.</p><p>Alternatively, we could have used the algebraic manipulation for repeating decimals, </p><p><INSERTION_INDEX_7></p><p><a class=\"mw-redirect\" href=\"/wiki/index.php/Telescoping\" title=\"Telescoping\">Telescoping</a>, </p><p><INSERTION_INDEX_8></p><p>Some factors cancel, (after all, <INSERTION_INDEX_9> isn't one of the answer choices)</p><p><INSERTION_INDEX_10></p><p>Since the only factor in the numerator that goes into <INSERTION_INDEX_11> is <INSERTION_INDEX_12>, <INSERTION_INDEX_13> is minimized. Therefore the answer is <INSERTION_INDEX_14>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/1/6/c/16cbf94dd75d7e1d5f7bab6ff540b085826ad77c.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{x^3}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/5/1/5/515bb31b17af15c0c6fc74dbf81b7065e37291ea.png",
+              "alt_type": "latex",
+              "alt_value": "$x^{-1} + 3x^{-2} + 3x^{-3}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/0/e/0/0e0695b2f3eb4e2240b38d0863b274d651134df3.png",
+              "alt_type": "latex",
+              "alt_value": "$a_x = \\left(\\frac{1}{x} + \\frac{3}{x^2} + \\frac{3}{x^3}\\right)\\left(\\frac{1}{1-\\frac{1}{x^3}}\\right)$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/f/3/b/f3bb744f9930e9fdb9c8a884cf0b76376fcdba15.png",
+              "alt_type": "latex",
+              "alt_value": "$= \\frac{x^2 + 3x + 3}{x^3} \\cdot \\frac{x^3}{x^3 - 1}$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/5/2/f/52f7a33bbaf653a2718b0fafde37e2fef8904404.png",
+              "alt_type": "latex",
+              "alt_value": "$= \\frac{x^2 + 3x + 3}{x^3 - 1}$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/2/7/a/27a3cd93be79b63df77dd900cbe6a4d794bb8895.png",
+              "alt_type": "latex",
+              "alt_value": "$= \\frac{(x+1)^3 - 1}{x(x^3 - 1)}$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/f/0/2/f023e74460b3c730d118447967e7f6d1fa6e661b.png",
+              "alt_type": "latex",
+              "alt_value": "\\begin{align*} a_x &= \\frac{1}{x}+\\frac{3}{x^2}+\\frac{3}{x^3}+\\frac{1}{x^4}+\\frac{3}{x^5}+\\frac{3}{x^6}+\\cdots \\\\ a_x \\cdot x^3 &= x^2+3x+3+a_x\\\\ a_x(x^3-1) &= x^2+3x+3\\\\ a_x &= \\frac{x^2+3x+3}{x^3-1}=\\frac{(x+1)^3-1}{x(x^3-1)} \\end{align*}"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/5/8/0/580618e7c0cd904ca791d38be470ebde43342988.png",
+              "alt_type": "latex",
+              "alt_value": "\\begin{align*} a_4a_5\\cdots a_{99}&= \\frac{(5^3-1)(6^3-1)\\cdots (100^3-1)}{4 \\cdot 5 \\cdot 6 \\cdot \\cdots \\cdot 99 \\cdot (4^3-1)(5^3-1)\\cdots(99^3-1)}\\\\ a_4a_5\\cdots a_{99}&= \\frac{999999}{4 \\cdot 5 \\cdot 6 \\cdot \\cdots \\cdot 99 \\cdot 63}=\\frac{13 \\cdot 37 \\cdot 33 \\cdot 6}{99!}\\end{align*}"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/8/c/7/8c7e40ee2ffe8b5f8ec0898d2da93d56515ecca2.png",
+              "alt_type": "latex",
+              "alt_value": "$13 \\cdot 37 \\cdot 33 \\cdot 6$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/5/2/8/52810daca693273a5f69bfa46b11f70a730759a9.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{13 \\cdot 37 \\cdot 33 \\cdot 6}{99!}=\\frac{13 \\cdot 37 \\cdot 2}{98!}\\]"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/7/3/1/73119f04d6ae5f6eb4afc8c9c946a5744a11be50.png",
+              "alt_type": "latex",
+              "alt_value": "$98$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png",
+              "alt_type": "latex",
+              "alt_value": "$n$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/1/1/4/114b8acae2d762b64c1f81dcdd23919140d1fd56.png",
+              "alt_type": "latex",
+              "alt_value": "$13 \\cdot 37 \\cdot 2=962 \\Rightarrow \\text {(E)}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Note that<INSERTION_INDEX_1>by geometric series.Thus, we're aiming to find the value of<INSERTION_INDEX_2>Expanding the product out, this is equivalent to<INSERTION_INDEX_3>Note that the numerator of the <INSERTION_INDEX_4>th fraction and the denominator of the <INSERTION_INDEX_5>th fraction for <INSERTION_INDEX_6> cancel out to be <INSERTION_INDEX_7> since<INSERTION_INDEX_8>by the binomial theorem on the the denominator of the aforementioned. Since this forms a telescoping series, our product is now equivalent to<INSERTION_INDEX_9>which, after simplification gives <INSERTION_INDEX_10> giving an answer of <INSERTION_INDEX_11></p><p>-fidgetboss_4000</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/5/5/1/5515d34ff47fe7730ad2872fdaf7bd36f2fe557d.png",
+              "alt_type": "latex",
+              "alt_value": "\\[0.\\overline{133}_n = \\frac{n^2+3n+3}{n^3-1},\\]"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/7/e/67e270e2d083dd4dce4e9acc3f793d437362f5d0.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\prod_{k=4}^{99} \\frac{k^2+3k+3}{k^3 - 1}.\\]"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/d/b/fdbc97466d7e7c98aeedc597122d6c3d3dc7cf06.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{4^2+3(4)+3}{4^3 - 1} \\cdot \\frac{5^2+3(5)+3}{5^3 - 1} \\cdot \\frac{6^2+3(6)+3}{6^3 - 1} \\cdot ... \\cdot \\frac{99^2+3(99)+3}{99^3 - 1}.\\]"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/7/d/c7d457e388298246adb06c587bccd419ea67f7e8.png",
+              "alt_type": "latex",
+              "alt_value": "$a$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/6/4/b/64be5731bafe97ab8fb5d0f9c52c1c5362f963d8.png",
+              "alt_type": "latex",
+              "alt_value": "$a+1$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/4/f/2/4f25b2323b1014854bd54d77a7cf1b1f666b4f9f.png",
+              "alt_type": "latex",
+              "alt_value": "$1 \\leq a \\leq 95$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/8/3/d/83dde6bf635bb1c7aac5cad1328d5240203e0113.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{a+3},$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/9/c/c/9cce8bcb11a2f7ba2512db00a5e1ec243533553e.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{k^2 + 3k + 3}{(k+1)^3 - 1} = \\frac{k^2 + 3k + 3}{k^3 + 3k^2 + 3k} = \\frac{1}{k},\\]"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/7/9/f/79fe4bc33aedfb1a1f5cb5e0705d5f4466cac7e1.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\frac{99^2 + 3(99) + 3}{4^3 - 1} \\cdot \\prod_{k=4}^{98} \\frac{1}{k},\\]"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/b/e/b/beb78d55e18c0beb1ddf122af3a71f04d6c9de82.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{6}{98!} \\cdot \\frac{10101}{63} = \\frac{962}{98!},$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/7/8/9/789c2e0453f480ccf4bc112f2d27e2eee5fb4acd.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{962}.$"
             }
           }
         }

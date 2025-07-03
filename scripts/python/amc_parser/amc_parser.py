@@ -5,8 +5,10 @@ import re
 import os
 
 class AMCParser:
-    def __init__(self, competition_dict_file="competition_dict.json", answer_overrides_file="answer_overrides.json", question_overrides_file="question_overrides.json", solution_overrides_file="solution_overrides.json", no_choices_overrides_file="no_choices_overrides.json"):
+    def __init__(self, competition_dict_file="competition_dict.json", answer_overrides_file="answer_overrides.json", question_overrides_file="question_overrides.json", solution_overrides_file="solution_overrides.json", no_choices_overrides_file="no_choices_overrides.json", use_answer_sheets=True):
         self.base_url = "https://artofproblemsolving.com/wiki/index.php"
+        self.use_answer_sheets = use_answer_sheets
+        self.answer_sheet_cache = {}  # Cache for answer sheets to avoid refetching
         
         # Convert to absolute path for competition dict
         if not os.path.isabs(competition_dict_file):
@@ -169,7 +171,9 @@ class AMCParser:
                     has_fall_version = level_data.get('has_fall_version', [])  # List of years with fall versions
                     num_problems = level_data.get('num_problems', 25)
                     
-                    group = f"AMC_{level}"
+                    # Extract the base level (e.g., "12" from "12A", "10" from "10B")
+                    base_level = level.rstrip('AB')
+                    group = f"AMC_{base_level}"
                     
                     # Generate competitions for each year in the range
                     for year in range(start_year, end_year + 1):  # +1 because end is inclusive
@@ -197,6 +201,89 @@ class AMCParser:
                             })
         
         return competitions
+    
+    def get_answer_sheet_url(self, competition):
+        """Generate the answer sheet URL for a competition"""
+        year = competition['year']
+        fall_version = competition['fall_version']
+        
+        # Check if this is AJHSME
+        if competition.get('is_AJHSME', False):
+            comp_id = f"{year}_AJHSME"
+        else:
+            # Regular AMC competition
+            level = competition['level']
+            suffix = competition.get('suffix', competition.get('version', ''))  # Support both old and new format
+            
+            # Build the competition identifier
+            if fall_version:
+                comp_id = f"{year}_Fall_AMC_{level}{suffix}"
+            else:
+                comp_id = f"{year}_AMC_{level}{suffix}"
+            
+        return f"{self.base_url}/{comp_id}_Answer_Key"
+    
+    def fetch_answer_sheet(self, competition):
+        """Fetch and parse the answer sheet for a competition"""
+        comp_id = self._get_competition_id(competition)
+        
+        # Check cache first
+        if comp_id in self.answer_sheet_cache:
+            print(f"Using cached answer sheet for {comp_id}")
+            return self.answer_sheet_cache[comp_id]
+        
+        url = self.get_answer_sheet_url(competition)
+        print(f"Fetching answer sheet from: {url}")
+        
+        try:
+            response = requests.get(url, timeout=60)
+            response.raise_for_status()
+            html = response.text
+            
+            # Parse the HTML
+            soup = BeautifulSoup(html, 'html.parser')
+            
+            # Look for the ordered list with answers
+            # The answer key format is typically: <ol><li>E</li><li>C</li>...</li></ol>
+            ol_element = soup.find('ol')
+            if not ol_element:
+                print(f"No ordered list found in answer sheet for {comp_id}")
+                return None
+            
+            # Extract all list items
+            li_elements = ol_element.find_all('li')
+            if not li_elements:
+                print(f"No list items found in answer sheet for {comp_id}")
+                return None
+            
+            # Convert to list of answers (A, B, C, D, E)
+            answers = []
+            for li in li_elements:
+                answer_text = li.get_text(strip=True)
+                if answer_text in ['A', 'B', 'C', 'D', 'E']:
+                    answers.append(answer_text)
+                else:
+                    print(f"Warning: Invalid answer format '{answer_text}' in answer sheet for {comp_id}")
+                    return None
+            
+            # Validate that we have the expected number of answers
+            expected_problems = competition['num_problems']
+            if len(answers) != expected_problems:
+                print(f"Answer sheet validation failed for {comp_id}: expected {expected_problems} answers, got {len(answers)}")
+                return None
+            
+            print(f"Successfully parsed answer sheet for {comp_id}: {len(answers)} answers")
+            
+            # Cache the result
+            self.answer_sheet_cache[comp_id] = answers
+            return answers
+            
+        except requests.RequestException as e:
+            print(f"Error fetching answer sheet for {comp_id}: {e}")
+            return None
+        except Exception as e:
+            print(f"Error parsing answer sheet for {comp_id}: {e}")
+            return None
         
     def get_problem_url(self, competition, problem_number):
         year = competition['year']
@@ -849,15 +936,44 @@ class AMCParser:
                     'asy_choices': []
                 }
         
-        # Check for answer override
+        # Check for answer override first
         if problem_id in self.answer_overrides:
             final_answer = self.answer_overrides[problem_id]
             print(f"Using answer override for {comp_id} Problem {problem_number}: {final_answer}")
             # Still extract solutions but don't extract answers
             soup = BeautifulSoup(html, 'html.parser')
             solutions, all_extracted_answers = self.extract_solutions(soup, extract_answers=False)
+        elif self.use_answer_sheets:
+            # Use answer sheet instead of extracting from problem page
+            print(f"Using answer sheet for {comp_id} Problem {problem_number}")
+            answer_sheet = self.fetch_answer_sheet(competition)
+            if answer_sheet and problem_number <= len(answer_sheet):
+                final_answer = answer_sheet[problem_number - 1]  # Convert to 0-based index
+                print(f"Found answer '{final_answer}' from answer sheet for {comp_id} Problem {problem_number}")
+                # Still extract solutions but don't extract answers
+                soup = BeautifulSoup(html, 'html.parser')
+                solutions, all_extracted_answers = self.extract_solutions(soup, extract_answers=False)
+            else:
+                print(f"Answer sheet not available for {comp_id}, falling back to problem page extraction")
+                # Fall back to normal answer extraction
+                soup = BeautifulSoup(html, 'html.parser')
+                solutions, all_extracted_answers = self.extract_solutions(soup, extract_answers=True)
+                
+                # Validate answer consistency
+                if not all_extracted_answers:
+                    raise ValueError(f"No answer found for {comp_id} Problem {problem_number}")
+                
+                # Check if all answers are the same
+                unique_answers = list(set(all_extracted_answers))
+                if len(unique_answers) > 1:
+                    # Multiple different answers found - this is an error
+                    answer_counts = {ans: all_extracted_answers.count(ans) for ans in unique_answers}
+                    raise ValueError(f"Inconsistent answers found for {comp_id} Problem {problem_number}: {answer_counts}. All answers found: {all_extracted_answers}")
+                
+                # All answers are consistent, use the first one
+                final_answer = unique_answers[0]
         else:
-            # No override, proceed with normal answer extraction
+            # No override and not using answer sheets, proceed with normal answer extraction
             soup = BeautifulSoup(html, 'html.parser')
             solutions, all_extracted_answers = self.extract_solutions(soup, extract_answers=True) # Extract solutions and all answers
             
@@ -1165,23 +1281,28 @@ class AMCParser:
         
         return saved_files, total_problems
 
-def main(competition_dict_file="competition_dict.json"):
+def main(competition_dict_file="competition_dict.json", use_answer_sheets=True):
     """
     Main function to download AMC problems
     
     Args:
         competition_dict_file: Path to the JSON file containing competition configuration.
                               Defaults to "competition_dict.json"
+        use_answer_sheets: If True, use answer key pages instead of extracting answers from problem pages.
+                          Defaults to False.
     
     Examples:
-        main()  # Use default competition_dict.json
-        main("custom_competitions.json")  # Use custom competition file
+        main()  # Use default competition_dict.json and answer sheets
+        main("custom_competitions.json")  # Use custom competition file with answer sheets
+        main(use_answer_sheets=False)  # Use problem page extraction instead of answer sheets
+        main("custom_competitions.json", use_answer_sheets=False)  # Custom file with problem page extraction
     """
-    parser = AMCParser(competition_dict_file, "answer_overrides.json", "question_overrides.json", "solution_overrides.json", "no_choices_overrides.json")
+    parser = AMCParser(competition_dict_file, "answer_overrides.json", "question_overrides.json", "solution_overrides.json", "no_choices_overrides.json", use_answer_sheets)
     
     # Print configuration
     print("=== AMC Problem Downloader Configuration ===")
     print(f"Using competition configuration from: {competition_dict_file}")
+    print(f"Answer extraction method: {'Answer sheets' if use_answer_sheets else 'Problem page extraction'}")
     print(f"Total competitions to process: {len(parser.competitions)}")
     print("=" * 45)
     
@@ -1240,4 +1361,5 @@ def main(competition_dict_file="competition_dict.json"):
     print(f"    └── [parsing result files]")
 
 if __name__ == "__main__":
+    # Use answer sheets by default for more reliable answer extraction
     main("small_competition_dict.json") 
