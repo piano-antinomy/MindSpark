@@ -7,7 +7,7 @@
     "level": "12",
     "suffix": "B",
     "fall_version": false,
-    "total_problems": 24,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
@@ -776,6 +776,93 @@
               "picture": "//latex.artofproblemsolving.com/c/d/7/cd7ae6c302dec5c5be789f3d4d9be37d000d0772.png",
               "alt_type": "latex",
               "alt_value": "$\\boxed{10}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_12b_9",
+      "question": {
+        "text": "<p>Let <INSERTION_INDEX_1> be a linear function for which <INSERTION_INDEX_2> What is <INSERTION_INDEX_3></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/b/b/2/bb2c93730dbb48558bb3c4738c956c4e8f816437.png",
+            "alt_type": "latex",
+            "alt_value": "$f$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/e/c/a/eca2c96a856cbe43b76475f20ee0d6c3f8a8fe61.png",
+            "alt_type": "latex",
+            "alt_value": "$f(6) - f(2) = 12.$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/7/9/1/7912bd947e2855b34d3335324167288e956f9581.png",
+            "alt_type": "latex",
+            "alt_value": "$f(12) - f(2)?$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/8/8/7/8873643f3615c82d04fbbb05c8c463036025e7c8.png"
+        ],
+        "latex_choices": [
+          "$\\text {(A) } 12 \\qquad \\text {(B) } 18 \\qquad \\text {(C) } 24 \\qquad \\text {(D) } 30 \\qquad \\text {(E) } 36$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>Since <INSERTION_INDEX_1> is a linear function with slope <INSERTION_INDEX_2>,</p><p><INSERTION_INDEX_3></p><p><INSERTION_INDEX_4></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/b/b/2/bb2c93730dbb48558bb3c4738c956c4e8f816437.png",
+              "alt_type": "latex",
+              "alt_value": "$f$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
+              "alt_type": "latex",
+              "alt_value": "$m$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/a/a/2/aa203aedcd175b965d80f840ac73c7f9356e3456.png",
+              "alt_type": "latex",
+              "alt_value": "\\[m = \\frac{f(6) - f(2)}{\\Delta x} = \\frac{12}{6 - 2} = 3\\]"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/1/f/d/1fd57e2924ffbf1a5fdb30a0312b68a900db6039.png",
+              "alt_type": "latex",
+              "alt_value": "\\[f(12) - f(2) = m \\Delta x = 3(12 - 2) = 30 \\Rightarrow \\text (D)\\]"
+            }
+          }
+        },
+        {
+          "text": "<p>Since <INSERTION_INDEX_1> is linear, we can easily guess and check to confirm that <INSERTION_INDEX_2>. Indeed, <INSERTION_INDEX_3>. So, we have <INSERTION_INDEX_4></p><p>Solution by franzliszt</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/b/b/2/bb2c93730dbb48558bb3c4738c956c4e8f816437.png",
+              "alt_type": "latex",
+              "alt_value": "$f$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/3/e/1/3e1616fa39ad093d6f1e92ce861f19e2e48ad55b.png",
+              "alt_type": "latex",
+              "alt_value": "$f(x)=3x$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/9/6/0/96023502923433be2af14a1f4b599d8ef8a39521.png",
+              "alt_type": "latex",
+              "alt_value": "$f(6)-f(2)=3(6-2)=12$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/f/4/cf48483c5d0ca72b632f1b996925128e6ea8c7e8.png",
+              "alt_type": "latex",
+              "alt_value": "$f(12)-f(2)=3(12-2)=30 \\Rightarrow \\text (D).$"
             }
           }
         }

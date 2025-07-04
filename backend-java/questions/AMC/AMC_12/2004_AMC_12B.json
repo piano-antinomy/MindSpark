@@ -7,7 +7,7 @@
     "level": "12",
     "suffix": "B",
     "fall_version": false,
-    "total_problems": 23,
+    "total_problems": 25,
     "problem_number_override": null
   },
   "problems": [
@@ -2888,6 +2888,235 @@
               "picture": "//latex.artofproblemsolving.com/6/1/9/619713ce9b26e87814b3e3537ea60625142657d4.png",
               "alt_type": "latex",
               "alt_value": "$a = -8x_1x_2x_3 = -256 \\Rightarrow \\mathrm{(A)}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_12b_18",
+      "question": {
+        "text": "<p>Points <INSERTION_INDEX_1> and <INSERTION_INDEX_2> are on the parabola <INSERTION_INDEX_3>, and the origin is the midpoint of <INSERTION_INDEX_4>. What is the length of <INSERTION_INDEX_5>?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+            "alt_type": "latex",
+            "alt_value": "$A$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+            "alt_type": "latex",
+            "alt_value": "$B$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/b/5/0/b50ba49988458e285a4ebda604c769d6808e7582.png",
+            "alt_type": "latex",
+            "alt_value": "$y=4x^2+7x-1$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png",
+            "alt_type": "latex",
+            "alt_value": "$AB$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png",
+            "alt_type": "latex",
+            "alt_value": "$AB$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/e/6/7/e67a8872f3dad306c3eb22e15d0fbbf50603025b.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 2\\sqrt5 \\qquad \\mathrm{(B)}\\ 5+\\frac{\\sqrt2}{2} \\qquad \\mathrm{(C)}\\ 5+\\sqrt2 \\qquad \\mathrm{(D)}\\ 7 \\qquad \\mathrm{(E)}\\ 5\\sqrt2$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p>Let the coordinates of <INSERTION_INDEX_1> be <INSERTION_INDEX_2>. As <INSERTION_INDEX_3> lies on the parabola, we have <INSERTION_INDEX_4>.As the origin is the midpoint of <INSERTION_INDEX_5>, the coordinates of <INSERTION_INDEX_6> are <INSERTION_INDEX_7>.We need to choose <INSERTION_INDEX_8> so that <INSERTION_INDEX_9> will lie on the parabola as well. In other words, we need <INSERTION_INDEX_10>.</p><p>Substituting for <INSERTION_INDEX_11>, we get: <INSERTION_INDEX_12>.</p><p>This simplifies to <INSERTION_INDEX_13>, which solves to <INSERTION_INDEX_14>. Both roots lead to the same pair of points: <INSERTION_INDEX_15> and <INSERTION_INDEX_16>. Their distance is <INSERTION_INDEX_17>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+              "alt_type": "latex",
+              "alt_value": "$A$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/f/f/4/ff4de5aff3a578973a7ac3aa9f84b9ea69e7510c.png",
+              "alt_type": "latex",
+              "alt_value": "$(x_A,y_A)$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+              "alt_type": "latex",
+              "alt_value": "$A$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/0/9/4/0945a3e0ba78fb474f6218b89d8e0ddee96aeca8.png",
+              "alt_type": "latex",
+              "alt_value": "$y_A=4x_A^2+7x_A-1$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png",
+              "alt_type": "latex",
+              "alt_value": "$AB$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+              "alt_type": "latex",
+              "alt_value": "$B$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/b/4/9/b49c4a8fdd43165dd3d978e209c358db77117a2d.png",
+              "alt_type": "latex",
+              "alt_value": "$(-x_A,-y_A)$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/1/8/f/18fc18a66926b39254d09908f38cf0ab8c24ddb7.png",
+              "alt_type": "latex",
+              "alt_value": "$x_A$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+              "alt_type": "latex",
+              "alt_value": "$B$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/1/f/1/1f1155044d4cab5631a8ce2db6dcebc68e6127ff.png",
+              "alt_type": "latex",
+              "alt_value": "$-y_A = 4(-x_A)^2 + 7(-x_A) - 1$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/9/c/4/9c427e33bd38e90e34efb7c65e3efeef770253c7.png",
+              "alt_type": "latex",
+              "alt_value": "$y_A$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/5/b/2/5b27522eee065a08811a11420ee0fcebf9b16524.png",
+              "alt_type": "latex",
+              "alt_value": "$-4x_A^2 - 7x_A + 1 = 4(-x_A)^2 + 7(-x_A) - 1$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/4/7/7/477c3d3402ed8e1f3bd450cb7339cc4be74423a7.png",
+              "alt_type": "latex",
+              "alt_value": "$8x_A^2 - 2 = 0$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/3/9/c/39c89646128b63c348740f570b6595ee2ec5dba3.png",
+              "alt_type": "latex",
+              "alt_value": "$x_A = \\pm 1/2$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/6/9/c/69c4a98ec52cd27c71fe63e6c9e5be533dd44bc0.png",
+              "alt_type": "latex",
+              "alt_value": "$(1/2,7/2)$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/1/0/2/1027c2cd1c8439d1e1e139870fe9449feca750b9.png",
+              "alt_type": "latex",
+              "alt_value": "$(-1/2,-7/2)$"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/9/0/a/90a4ed0685230cbd7bcda27514a672ae77ea20af.png",
+              "alt_type": "latex",
+              "alt_value": "$\\sqrt{ 1^2 + 7^2 } = \\sqrt{50} = \\boxed{5\\sqrt2}$"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_12b_19",
+      "question": {
+        "text": "<p>A truncated cone has horizontal bases with radii <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. A sphere is tangent to the top, bottom, and lateral surface of the truncated cone. What is the radius of the sphere? </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/5/e/7/5e7a1b6098a8c98b8e4adae526aeef4b91712620.png",
+            "alt_type": "latex",
+            "alt_value": "$18$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+            "alt_type": "latex",
+            "alt_value": "$2$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/a/7/a/a7a394e5e5873a57c973dc4eac1dc7523a33e730.png"
+        ],
+        "latex_choices": [
+          "$\\mathrm{(A)}\\ 6 \\qquad\\mathrm{(B)}\\ 4\\sqrt{5} \\qquad\\mathrm{(C)}\\ 9 \\qquad\\mathrm{(D)}\\ 10 \\qquad\\mathrm{(E)}\\ 6\\sqrt{3}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "A",
+      "solutions": [
+        {
+          "text": "<p>Consider a <a href=\"/wiki/index.php/Trapezoid\" title=\"Trapezoid\">trapezoid</a> (label it <INSERTION_INDEX_1> as follows) cross-section of the truncate cone along a diameter of the bases:</p><p>Above, <INSERTION_INDEX_2> and <INSERTION_INDEX_3> are points of <a href=\"/wiki/index.php/Tangent_(geometry)\" title=\"Tangent (geometry)\">tangency</a>. By the Two Tangent Theorem, <INSERTION_INDEX_4> and <INSERTION_INDEX_5>, so <INSERTION_INDEX_6>. We draw <INSERTION_INDEX_7> such that it is the foot of the altitude <INSERTION_INDEX_8> to <INSERTION_INDEX_9>: </p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, <INSERTION_INDEX_10>Therefore, the answer is <INSERTION_INDEX_11></p><p><br/></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
+              "alt_type": "latex",
+              "alt_value": "$ABCD$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/1/5/7/15702fb3f7b1aeaefff24913baf2a387bdd2d54a.png",
+              "alt_type": "latex",
+              "alt_value": "$E,F,$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/6/e/2/6e28ce12d49d39f160d5a0ef54077fc98e4b9d2b.png",
+              "alt_type": "latex",
+              "alt_value": "$G$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/a/c/6/ac620755efb30ffff0ad4de5c51d4c6f7516a0ec.png",
+              "alt_type": "latex",
+              "alt_value": "$BF = BE = 18$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/c/a/6/ca669f780faf25a2a5171adba0031242c5509f4c.png",
+              "alt_type": "latex",
+              "alt_value": "$CF = CG = 2$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/f/3/d/f3df80c6052a2128b30eb8a39a49d8ed45409800.png",
+              "alt_type": "latex",
+              "alt_value": "$BC = 20$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/b/1/9/b1902d279ba37d60bdce4e0e987b7cd19d48974e.png",
+              "alt_type": "latex",
+              "alt_value": "$H$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/9/b/e/9be32165967b3173aa255274dec44b971d06e9cb.png",
+              "alt_type": "latex",
+              "alt_value": "$\\overline{HD}$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png",
+              "alt_type": "latex",
+              "alt_value": "$\\overline{AB}$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/3/3/8/33818f7f2c5ac679b0137c426359e70d0f71359e.png",
+              "alt_type": "latex",
+              "alt_value": "\\[r = \\frac{DH}2 = \\frac{\\sqrt{20^2 - 16^2}}2 = 12\\]"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/c/c/5/cc5f8a0b3d0c3bc7e9000380526c2881dff9062b.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{{A (6)}}.$"
             }
           }
         }
