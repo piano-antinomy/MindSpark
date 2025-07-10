@@ -1,0 +1,408 @@
+{
+  "competition_info": {
+    "name": "2001_AMC_8",
+    "group": "AMC_8",
+    "year": 2001,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2001_8_1",
+      "question": "<p>Casey's shop class is making a golf trophy. He has to paint 300 dimples on a golf ball. If it takes him 2 seconds to paint one dimple, how many minutes will it take for him to finish </p>",
+      "solutions": [
+        "<p>It will take him $300\\cdot2=600$ seconds to paint all the dimples. </p><p>This is equivalent to $\\frac{600}{60}=10$ minutes $\\Rightarrow \\boxed{D}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving multiplication (300 \u00d7 2 seconds) and unit conversion (seconds to minutes)"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_2",
+      "question": "<p>I'm thinking of two whole numbers. Their product is 24 and their sum is 11. What is the larger number?</p>",
+      "solutions": [
+        "<p>Let the numbers be $x$ and $y$. Then we have $x+y=11$ and $xy=24$. Solving for $x$ in the first equation yields $x=11-y$, and substituting this into the second equation gives $(11-y)(y)=24$. Simplifying this gives $-y^2+11y=24$, or $y^2-11y+24=0$. This factors as $(y-3)(y-8)=0$, so $y=3$ or $y=8$, and the corresponding $x$ values are $x=8$ and $x=3$. These are essentially the same answer: one number is $3$ and one number is $8$, so the largest number is $8, \\boxed{\\text{D}}$.</p>",
+        "<p>Use the answers to attempt to \"reverse engineer\" an appropriate pair of numbers. Looking at option $A$, guess that one of the numbers is $3$. If the sum of two numbers is $11$ and one is $3$, then other must be $11 - 3 = 8$. The product of those numbers is $3\\cdot 8 = 24$, which is the second condition of the problem, so our numbers are $3$ and $8$.</p><p>However, $3$ is the smaller of the two numbers, so the answer is $8$ or $\\boxed{D}$.</p><p>We go through the divisor pairs of $24$ to see which two numbers sum to $11$. The numbers clearly cannot be negative. If one was negative, then the other must also be negative in order to multiply to a positive product, but it would be impossible for the numbers to add up to a positive sum. So, we look at the positive divisor pairs of $24$, namely $1$ and $24$, $2$ and $12$, $3$ and $8$, and $4$ and $6$. The only pair of numbers that sums to $11$ is $3$ and $8$. The larger number is $8$, so the answer is $\\boxed{D}$.</p>",
+        "<p>We go through the divisor pairs of $24$ to see which two numbers sum to $11$. The numbers clearly cannot be negative. If one was negative, then the other must also be negative in order to multiply to a positive product, but it would be impossible for the numbers to add up to a positive sum. So, we look at the positive divisor pairs of $24$, namely $1$ and $24$, $2$ and $12$, $3$ and $8$, and $4$ and $6$. The only pair of numbers that sums to $11$ is $3$ and $8$. The larger number is $8$, so the answer is $\\boxed{D}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "quadratic_equations",
+          "confidence": 0.9,
+          "reasoning": "System of equations problem: x + y = 11 and xy = 24, leading to quadratic equation y\u00b2 - 11y + 24 = 0"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_3",
+      "question": "<p>Granny Smith has $63. Elberta has $2 more than Anjou and Anjou has one-third as much as Granny Smith. How many dollars does Elberta have?</p>",
+      "solutions": [
+        "<p>Since Anjou has $\\frac{1}{3}$ the amount of money as Granny Smith and Granny Smith has $$63$, Anjou has $\\frac{1}{3}\\times63=21$ dollars. Elberta has $$2$ more than this, so she has $$23$, or $\\boxed{\\text{E}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem with fractions and basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_4",
+      "question": "<p>The digits 1, 2, 3, 4 and 9 are each used once to form the smallest possible <b>even</b> five-digit number. The digit in the tens place is</p>",
+      "solutions": [
+        "<p>Since the number is even, the last digit must be $2$ or $4$. To make the smallest possible number, the ten-thousands digit must be as small as possible, so the ten-thousands digit is $1$. Simillarly, the thousands digit has second priority, so it must also be as small as possible once the ten-thousands digit is decided, so the thousands digit is $2$. Similarly, the hundreds digit needs to be the next smallest number, so it is $3$. However, for the tens digit, we can't use $4$, since we already used $2$ and the number must be even, so the units digit must be $4$ and the tens digit is $9, \\boxed{\\text{E}}$(The number is $12394$.)</p>",
+        "<p>We know that the smallest possible number is $12349$. However, $12349$ is an odd number. Thus, by shifting the 4 (the largest even number) into the unit's place and rearranging the rest of the digits from least to greatest, we arrive at $12394$. Thus, the digit in the tens place is $\\boxed{\\text{E}}$ $9$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "general",
+          "confidence": 0.9,
+          "reasoning": "Number formation problem requiring understanding of place value and even number properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_5",
+      "question": "<p>On a dark and stormy night Snoopy suddenly saw a flash of lightning. Ten seconds later he heard the sound of thunder. The speed of sound is 1088 feet per second and one mile is 5280 feet. Estimate, to the nearest half-mile, how far Snoopy was from the flash of lightning.</p>",
+      "solutions": [
+        "<p>During the $10$ seconds, the sound traveled $1088\\times10=10880$ feet from the lightning to Snoopy. This is equivalent to $\\frac{10880}{5280}\\approx2$ miles, $\\boxed{\\text{C}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.9,
+          "reasoning": "Word problem involving multiplication and unit conversion (feet to miles)"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_6",
+      "question": "<p>Six trees are equally spaced along one side of a straight road. The distance from the first tree to the fourth is 60 feet. What is the distance in feet between the first and last trees?</p>",
+      "solutions": [
+        "<p>There are $3$ spaces between the 1st and 4th trees, so each of these spaces has $\\frac{60}{3}=20$ feet. Between the first and last trees there are $5$ spaces, so the distance between them is $20\\times5=100$ feet, $\\boxed{\\text{B}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.85,
+          "reasoning": "Word problem involving division and multiplication to find distance between equally spaced objects"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_7",
+      "question": "<p>To promote her school's annual Kite Olympics, Genevieve makes a small kite and a large kite for a bulletin board display. The kites look like the one in the diagram. For her small kite Genevieve draws the kite on a one-inch grid. For the large kite she triples both the height and width of the entire grid.[asy] for (int a = 0; a < 7; ++a) { for (int b = 0; b < 8; ++b) { dot((a,b)); } }  draw((3,0)--(0,5)--(3,7)--(6,5)--cycle); [/asy]</p><p>What is the number of square inches in the area of the small kite?</p>",
+      "solutions": [
+        "<p>The area of a kite is half the product of its diagonals. The diagonals have lengths of $6$ and $7$, so the area is $\\frac{(6)(7)}{2}=21, \\boxed{\\text{A}}$.</p>",
+        "<p>Drawing in the diagonals of the kite will form four right triangles on the \"inside\" part of the grid. Drawing in the border of the 7 by 6 grid will form four right triangles on the \"outside\" part of the grid. Since each right triangle on the inside can be paired with a congruent right triangle that is on the outside, the area of the kite is half the total area of the grid, or $\\frac{(6)(7)}{2}=21, \\boxed{\\text{A}}$.</p>",
+        "<p>Pick's Theorem states: \\[\\frac{\\text{number of boundary points}}{2}+\\text{number of interior points}-1\\] as the area of a figure on a grid. Counting, we see there are $4$ boundary points and $20$ interior points. Therefore, we have \\[\\frac{4}{2}+20-1\\implies 20+1\\implies 21.\\] Hence, the answer is $\\boxed{\\text{(A)}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.95,
+          "reasoning": "Area calculation of a kite using the formula: area = (diagonal1 \u00d7 diagonal2) / 2"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_8",
+      "question": "<p>To promote her school's annual Kite Olympics, Genevieve makes a small kite and a large kite for a bulletin board display. The kites look like the one in the diagram. For her small kite Genevieve draws the kite on a one-inch grid. For the large kite she triples both the height and width of the entire grid.</p><p>[asy] size(85); for (int a = 0; a < 7; ++a) { for (int b = 0; b < 8; ++b) { dot((a,b)); } }  draw((3,0)--(0,5)--(3,7)--(6,5)--cycle); [/asy]</p><p>Genevieve puts bracing on her large kite in the form of a cross connecting opposite corners of the kite. How many inches of bracing material does she need?</p>",
+      "solutions": [
+        "<p>Each diagonal of the large kite is $3$ times the length of the corresponding diagonal of the short kite since it was made with a grid $3$ times as long in both height and width. The diagonals of the small kite are $6$ and $7$, so the diagonals of the large kite are $3\\cdot6=18$ and $3\\cdot7=21$, and the amount of bracing Genevieve needs is the sum of these lengths, which is $39, \\boxed{\\text{E}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.9,
+          "reasoning": "Perimeter calculation involving scaling (tripling dimensions) and finding diagonal lengths"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_9",
+      "question": "<p>To promote her school's annual Kite Olympics, Genevieve makes a small kite and a large kite for a bulletin board display. The kites look like the one in the diagram. For her small kite Genevieve draws the kite on a one-inch grid. For the large kite she triples both the height and width of the entire grid.</p><p>[asy] for (int a = 0; a < 7; ++a) { for (int b = 0; b < 8; ++b) { dot((a,b)); } }  draw((3,0)--(0,5)--(3,7)--(6,5)--cycle); [/asy]</p><p>The large kite is covered with gold foil. The foil is cut from a rectangular piece that just covers the entire grid. How many square inches of waste material are cut off from the four corners?</p>",
+      "solutions": [
+        "<p>The large grid has dimensions three times that of the small grid, so its dimensions are $3(6)\\times3(7)$, or $18\\times21$, so the area is $(18)(21)=378$. The area of the kite is half of the area of the rectangle as you can see, so the area of the waste material is also half the area of the rectangle. Thus, the area of the waste material is $378/2=\\boxed{189\\textbf{ (D)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.9,
+          "reasoning": "Area calculation involving scaling and understanding that waste area equals kite area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_10",
+      "question": "<p>A collector offers to buy state quarters for 2000% of their face value. At that rate how much will Bryden get for his four state quarters?</p>",
+      "solutions": [
+        "<p>$2000\\%$ is equivalent to $20\\times100\\%$. Therefore, $2000\\%$ of a number is the same as $20$ times that number. $4$ quarters is $1$ dollar, so Bryden will get $20\\times1={20}$ dollars, $\\boxed{\\text{A}}$.</p>",
+        "<p>Since $2000\\%$ is just $\\frac{2000}{100}$, we can multiply that by $100$, because four quarters is a $100$ cents. After the multiplication, we get $2000$. Since our answer is in cents right now, we need to convert it to dollars, which would be $\\boxed{\\text{(A) 20}}$ dollars.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.9,
+          "reasoning": "Percentage word problem involving understanding that 2000% = 20 times the original value"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_11",
+      "question": "<p>Points $A$, $B$, $C$ and $D$ have these coordinates: $A(3,2)$, $B(3,-2)$, $C(-3,-2)$ and $D(-3, 0)$. The area of quadrilateral $ABCD$ is</p><p>[asy] for (int i = -4; i <= 4; ++i) { for (int j = -4; j <= 4; ++j) { dot((i,j)); } }  draw((0,-4)--(0,4),linewidth(1)); draw((-4,0)--(4,0),linewidth(1)); for (int i = -4; i <= 4; ++i) { draw((i,-1/3)--(i,1/3),linewidth(0.5)); draw((-1/3,i)--(1/3,i),linewidth(0.5)); } [/asy]</p>",
+      "solutions": [
+        "<p>[asy] for (int i = -4; i <= 4; ++i) { for (int j = -4; j <= 4; ++j) { dot((i,j)); } }  draw((0,-4)--(0,4),linewidth(1)); draw((-4,0)--(4,0),linewidth(1)); for (int i = -4; i <= 4; ++i) { draw((i,-1/3)--(i,1/3),linewidth(0.5)); draw((-1/3,i)--(1/3,i),linewidth(0.5)); } { draw((3,2)--(3,-2)--(-3,-2)--(-3,0)--cycle,linewidth(1)); }  label(\"$A$\",(3,2),NE); label(\"$B$\",(3,-2),SE); label(\"$C$\",(-3,-2),SW); label(\"$D$\",(-3,0),NW); [/asy]</p><p><br/>This quadrilateral is a trapezoid, because $AB\\parallel CD$ but $BC$ is not parallel to $AD$. The area of a trapezoid is the product of its height and its median, where the median is the average of the side lengths of the bases. The two bases are $AB$ and $CD$, which have lengths $2$ and $4$, respectively, so the length of the median is $\\frac{2+4}{2}=3$. $CB$ is perpendicular to the bases, so it is the height, and has length $6$. Therefore, the area of the trapezoid is $(3)(6)=18, \\boxed{\\text{C}}$</p>",
+        "<p>Using the diagram above, the figure can be divided along the x-axis into two familiar regions that do not overlap: a right triangle and a rectangle. Since the areas do not overlap, the area of the entire trapezoid is the sum of the area of the triangle and the area of the rectangle.</p><p>$A_{trap} = A_{tri} + A_{rect}$</p><p>$A_{trap} = \\frac{1}{2}bh + lw$</p><p>$A_{trap} = \\frac{1}{2}\\cdot 6 \\cdot 2 + 6\\cdot 2$</p><p>$A_{trap}  = 6 + 12 = 18 \\rightarrow \\boxed{C}$</p>",
+        "<p>Using the diagram in solution 1 we can use the Pick\u2019s Theorem to solve this problem.There are twelve lattice points inside the quadrilateral and fourteen lattice points on the quadrilateral. Applying the Pick\u2019s Theorem, 12 + $\\frac{14}{2}$ - 1 = 18 $\\rightarrow \\boxed{C}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry",
+          "confidence": 0.95,
+          "reasoning": "Coordinate geometry problem finding area of a trapezoid using coordinates and trapezoid area formula"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_12",
+      "question": "<p>If $a\\otimes b = \\dfrac{a + b}{a - b}$, then $(6\\otimes 4)\\otimes 3 =$</p>",
+      "solutions": [
+        "<p>$6\\otimes4=\\frac{6+4}{6-4}=\\frac{10}{2}=5$. $5\\otimes3=\\frac{5+3}{5-3}=\\frac{8}{2}=\\boxed{\\textbf{(A)}\\ 4}$</p>",
+        "<p>When you expand the general form of $(a\\otimes b)\\otimes c$, you get \\[(a\\otimes b)\\otimes c = \\dfrac{a\\otimes b + c}{a\\otimes b - c}\\]\\[(a\\otimes b)\\otimes c = \\dfrac{\\dfrac{a + b}{a - b} + c}{\\dfrac{a + b}{a - b} - c}\\]\\[(a\\otimes b)\\otimes c = \\dfrac{\\dfrac{a + b + ac - bc}{a - b}}{\\dfrac{a + b - ac + bc}{a - b}}\\]\\[(a\\otimes b)\\otimes c = \\dfrac{a + b + ac -bc}{a + b - ac + bc}\\]</p><p>Now, substituting $a=6$, $b=4$, and $c=3$:</p><p>\\[(6\\otimes 4)\\otimes 3 = \\dfrac{6 + 4 + 18 - 12}{6 + 4 - 18 + 12}\\]\\[(6\\otimes 4)\\otimes 3 = \\dfrac{16}{4}\\]\\[(6\\otimes 4)\\otimes 3 = 4\\]$\\boxed{\\text {(A)}}$</p><p>~megaboy6679</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions",
+          "confidence": 0.95,
+          "reasoning": "Custom operation problem involving function evaluation and order of operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_13",
+      "question": "<p>Of the 36 students in Richelle's class, 12 prefer chocolate pie, 8 prefer apple, and 6 prefer blueberry. Half of the remaining students prefer cherry pie and half prefer lemon. For Richelle's pie graph showing this data, how many degrees should she use for cherry pie?</p>",
+      "solutions": [
+        "<p>There are $36$ students in the class: $12$ prefer chocolate pie, $8$ prefer apple pie, and $6$ prefer blueberry pie. Therefore, $36-12-8-6=10$ students prefer cherry pie or lemon pie. Half of these prefer each, so $5$ students prefer cherry pie. This means that $\\frac{5}{36}$ of the students prefer cherry pie, so $\\frac{5}{36}$ of the full $360^\\circ$ should be used for cherry pie. This is $(\\frac{5}{36})(360^\\circ)=50^\\circ, \\boxed{\\text{D}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "statistics",
+          "sub_category": "data_analysis",
+          "confidence": 0.9,
+          "reasoning": "Data analysis problem involving pie charts and calculating degrees for a sector"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_14",
+      "question": "<p>Tyler has entered a buffet line in which he chooses one kind of meat, two different vegetables and one dessert. If the order of food items is not important, how many different meals might he choose?</p>",
+      "solutions": [
+        "<p>There are $3$ possibilities for the meat and $4$ possibilites for the dessert, for a total of $4\\times3=12$ possibilities for the meat and the dessert. There are $4$ possibilities for the first vegetable and $3$ possibilities for the second, but order doesn't matter, so we overcounted by a factor of $2$. For example, we counted 'baked beans and corn' and 'corn and baked beans' as $2$ different possibilities, so the total possibilites for the two vegetables is $\\frac{4\\times3}{2}=6$, and the total number of possibilites is $12\\times6=\\boxed{\\textbf{(C)}\\ 72}.$</p>",
+        "<p>To find the total ways, we multiply all the combinations of all 3 items:</p><p>For meat, it's asking how many ways can you pick $1$ item out of $3$ or $\\binom{3}{1} = \\frac{3!}{(3-1)! \\cdot 1!} = \\frac{3 \\cdot 2 \\cdot 1}{2 \\cdot 1 \\cdot 1} = 3$ (plain logic.)</p><p>For vegetables, it's the amount of ways you can pick $2$ items out of $4$ or $\\binom{4}{2} = \\frac{4!}{(4-2)! \\cdot 2!} = \\frac{4 \\cdot 3 \\cdot 2 \\cdot 1}{2 \\cdot 1 \\cdot 2 \\cdot 1} = \\frac{12}{2} = 6$</p><p>For dessert, it's the amount of ways you can pick $1$ item out of $4$ or $\\binom{4}{1} = \\frac{4!}{(4-1)! \\cdot 1!} = \\frac{4 \\cdot 3 \\cdot 2 \\cdot 1}{3 \\cdot 2 \\cdot 1 \\cdot 1} = 4$ (also logic).</p><p>Therefore, it's $3\\times6\\times4=12\\times6=\\boxed{\\textbf{(C)}\\ 72}.$</p><p>~RandomMathGuy500</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.9,
+          "reasoning": "Triangle area problem using the formula area = (base \u00d7 height) / 2"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_15",
+      "question": "<p>Homer began peeling a pile of 44 potatoes at the rate of 3 potatoes per minute. Four minutes later Christen joined him and peeled at the rate of 5 potatoes per minute. When they finished, how many potatoes had Christen peeled?</p>",
+      "solutions": [
+        "<p>After the $4$ minutes of Homer peeling alone, he had peeled $4\\times3=12$ potatoes. This means that there are $44-12=32$ potatoes left. Once Christen joins him, the two are peeling potatoes at a rate of $3+5=8$ potatoes per minute. So, they finish peeling after another $\\frac{32}{8}=4$ minutes. In these $4$ minutes, Christen peeled $4\\times5=20$ potatoes, $\\boxed{\\text{A}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Divisibility problem requiring understanding of when a number is divisible by its units digit"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_16",
+      "question": "<p>A square piece of paper, 4 inches on a side, is folded in half vertically. Both layers are then cut in half parallel to the fold. Three new rectangles are formed, a large one and two small ones. What is the ratio of the perimeter of one of the small rectangles to the perimeter of the large rectangle?</p><p>[asy] draw((0,8)--(0,0)--(4,0)--(4,8)--(0,8)--(3.5,8.5)--(3.5,8)); draw((2,-1)--(2,9),dashed); [/asy]</p>",
+      "solutions": [
+        "<p>The smaller rectangles each have the same height as the original square, but have $\\frac{1}{4}$ the length, since the paper is folded in half and then cut in half the same way. The larger rectangle has the same height as the original square but has $\\frac{1}{2}$ the length, since the paper is cut in half after the fold but the fold retains both sides of the larger rectangle. Therefore, the smaller rectangles have dimensions $4 \\times 1$ and the larger rectangle has dimensions $4 \\times 2$. The ratio of their perimeters is $\\frac{2(4+1)}{2(4+2)}=\\frac{5}{6}, \\boxed{\\text{E}}$</p>",
+        "<p>A simpler way to solve the problem is by brute-forcing it. We know that the side length of the original paper is $4$ inches by $4$ inches. The smaller paper would have a side length of $4$ inches by $4$ \u00b7 $\\frac{1}{4} = 1$ inches, having a perimeter of $2$($4 + 1$) = $2$($5$) = $10$ inches. The larger rectangle would have a side length of $4$ inches by $4$ \u00b7 $\\frac{1}{2} = 2$ inches, having a perimeter of $2$($4 + 2$) = $2$($6$) = $12$ inches. Thus, the answer is $\\frac{10}{12} = \\frac{5}{6}$, i.e. $\\boxed{\\text{E}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.9,
+          "reasoning": "Triangle angle problem involving angle bisectors and understanding that angles in a triangle sum to 180\u00b0"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_17",
+      "question": "<p>For the game show <i>Who Wants To Be A Millionaire?</i>, the dollar values of each question are shown in the following table (where K = 1000).</p><p>\\[\\begin{tabular}{rccccccccccccccc} \\text{Question} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\\\ \\text{Value} & 100 & 200 & 300 & 500 & 1\\text{K} & 2\\text{K} & 4\\text{K} & 8\\text{K} & 16\\text{K} & 32\\text{K} & 64\\text{K} & 125\\text{K} & 250\\text{K} & 500\\text{K} & 1000\\text{K} \\end{tabular}\\]</p><p>Between which two questions is the percent increase of the value the smallest?</p>",
+      "solutions": [
+        "<p>Notice that in two of the increases, the dollar amount doubles. The increases in which this is not true is $2$ to $3$, $3$ to $4$, and $11$ to $12$. We can disregard $11$ to $12$ since that increase is almost $2$ times. The increase from $2$ to $3$ is $\\frac{300-200}{200}=\\frac{1}{2}$, so it's only multiplied by a factor of $1.5$. The increase from $3$ to $4$ is $\\frac{500-300}{300}=\\frac{2}{3}$, so it is multiplied by a factor of $1.\\bar{6}$. Therefore, the smallest percent increase is $\\text{From 2 to 3}, \\boxed{\\text{B}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.85,
+          "reasoning": "Word problem involving averages and understanding how to find missing values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_18",
+      "question": "<p>Two dice are thrown. What is the probability that the product of the two numbers is a multiple of 5?</p>",
+      "solutions": [
+        "<p>This is equivalent to asking for the probability that at least one of the numbers is a multiple of $5$, since if one of the numbers is a multiple of $5$, then the product with it and another integer is also a multiple of $5$, and if a number is a multiple of $5$, then since $5$ is prime, one of the factors must also have a factor of $5$, and $5$ is the only multiple of $5$ on a die, so one of the numbers rolled must be a $5$. To find the probability of rolling at least one $5$, we can find the probability of not rolling a $5$ and subtract that from $1$, since you either roll a $5$ or not roll a $5$. The probability of not rolling a $5$ on either dice is $\\left(\\frac{5}{6} \\right) \\left(\\frac{5}{6} \\right)=\\frac{25}{36}$. Therefore, the probability of rolling at least one five, and thus rolling two numbers whose product is a multiple of $5$, is $1-\\frac{25}{36}=\\frac{11}{36}, \\boxed{\\text{D}}$</p>",
+        "<p>The only way to get a multiple of $5$ is to have at least one $5$. If the first dice rolls a $5$, there are $6$ ways to get a multiple of $5$. If the second dice rolls a $5$, there are also $6$ ways. However, one case is repeated: both dice roll a $5$. Therefore, there are $6 + 6 - 1 = 11$, and there is a total of $6 \\times 6$ ways, so the probability is $\\text{(D)}\\ \\dfrac{11}{36}$</p><p>Solution by <a href=\"/wiki/index.php/User:ILoveMath31415926535\" title=\"User:ILoveMath31415926535\">ILoveMath31415926535</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.9,
+          "reasoning": "Area calculation involving rectangles and understanding how to find area of complex shapes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_19",
+      "question": "<p>Car M traveled at a constant speed for a given time. This is shown by the dashed line. Car N traveled at twice the speed for the same distance. If Car M and Car N's speed and time are shown as solid line, which graph illustrates this?</p>",
+      "solutions": [
+        "<p>Since car N has twice the speed, it must be twice as high on the speed axis. Also, since cars M and N travel at the same distance but car N has twice the speed, car N must take half the time. Therefore, line N must be half the size of line M. Since the speeds are constant, both lines are horizontal. Reviewing the graphs, we see that the only one satisfying these conditions is graph $\\boxed{\\text{D}}$.</p><p><br/></p>",
+        "<p>Since Car N goes at a faster speed than Car M, it will take less time to get to the same destination. Reviewing the graphs, we see that only one graph fits this criteria, graph $\\boxed{\\text{D}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "logical_reasoning",
+          "confidence": 0.9,
+          "reasoning": "Graph analysis problem comparing speed and time for two cars"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_20",
+      "question": "<p>Kaleana shows her test score to Quay, Marty and Shana, but the others keep theirs hidden. Quay thinks, \"At least two of us have the same score.\" Marty thinks, \"I didn't get the lowest score.\" Shana thinks, \"I didn't get the highest score.\" List the scores from lowest to highest for Marty (M), Quay (Q) and Shana (S).</p>",
+      "solutions": [
+        "<p>Since the only other score Quay knows is Kaleana's, and he knows that two of them have the same score, Quay and Kaleana must have the same score, and $K=Q$. Marty knows that he didn't get the lowest score, and the only other score he knows is Kaleana's, so Marty must know that Kaleana must have a lower score than him, and $M>K$. Finally, Shana knows that she didn't get the highest score, and the only other score she knows is Kaleana's, so Shana must know that Kaleana must have a higher score than her, and $S<K$. Putting these together and substituting $Q$ for $K$, we have $S<Q<M$, and from least to greatest this is $\\text{S, Q, M}$, therefore the answer is $\\boxed{\\text{A}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "logical_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logical ordering problem based on given statements about test scores"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_21",
+      "question": "<p>The mean of a set of five different positive integers is 15. The median is 18. The maximum possible value of the largest of these five integers is</p>",
+      "solutions": [
+        "<p>Since there is an odd number of terms, the median is the number in the middle, specifically, the third largest number is $18$, and there are $2$ numbers less than $18$ and $2$ numbers greater than $18$. The sum of these integers is $5(15)=75$, since the mean is $15$. To make the largest possible number with a given sum, the other numbers must be as small as possible. The two numbers less than $18$ must be positive and distinct, so the smallest possible numbers for these are $1$ and $2$. The number right after $18$ also needs to be as small as possible, so it must be $19$. This means that the remaining number, the maximum possible value for a number in the set, is $75-1-2-18-19=35, \\boxed{\\text{(D) 35}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.85,
+          "reasoning": "Word problem involving averages and understanding how to find the common element in overlapping sets"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_22",
+      "question": "<p>On a twenty-question test, each correct answer is worth 5 points, each unanswered question is worth 1 point and each incorrect answer is worth 0 points. Which of the following scores is <b>NOT</b> possible?</p>",
+      "solutions": [
+        "<p>The highest possible score is if you get every answer right, to get $5(20)=100$. The second highest possible score is if you get $19$ questions right and leave the remaining one blank, to get a $5(19)+1(1)=96$. Therefore, no score between $96$ and $100$, exclusive, is possible, so $97$ is not possible, $\\boxed{\\text{E}}$.</p>",
+        "<p>We can equivalently construct the following rules: You have 100 point at first, but if you give the wrong answer, you will lose 5 points, if you don't answer a question you will lose 4 points. Obviously, you can lose 10 points, 9 points, 8 points, 5 points or 4 points, but you cannot lose 3 points. The answer is $\\boxed{\\text{E}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.9,
+          "reasoning": "Area calculation involving rectangles and triangles, understanding how midpoints affect triangle areas"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_23",
+      "question": "<p>Points $R$, $S$ and $T$ are vertices of an equilateral triangle, and points $X$, $Y$ and $Z$ are midpoints of its sides. How many noncongruent triangles can bedrawn using any three of these six points as vertices?</p><p>[asy] pair SS,R,T,X,Y,Z; SS = (2,2*sqrt(3)); R = (0,0); T = (4,0); X = (2,0); Y = (1,sqrt(3)); Z = (3,sqrt(3)); dot(SS); dot(R); dot(T); dot(X); dot(Y); dot(Z); label(\"$S$\",SS,N); label(\"$R$\",R,SW); label(\"$T$\",T,SE); label(\"$X$\",X,S); label(\"$Y$\",Y,NW); label(\"$Z$\",Z,NE); [/asy]</p>",
+      "solutions": [
+        "<p>There are $6$ points in the figure, and $3$ of them are needed to form a triangle, so there are ${6\\choose{3}} =20$ possible triplets of the $6$ points. However, some of these created congruent triangles, and some don't even make triangles at all.</p><p><b>Case 1: Triangles congruent to $\\triangle RST$</b> There is obviously only $1$ of these: $\\triangle RST$ itself.</p><p><b>Case 2: Triangles congruent to $\\triangle SYZ$</b> There are $4$ of these: $\\triangle SYZ, \\triangle RXY, \\triangle TXZ,$ and $\\triangle XYZ$.</p><p><b>Case 3: Triangles congruent to $\\triangle RSX$</b> There are $6$ of these: $\\triangle RSX, \\triangle TSX, \\triangle STY, \\triangle RTY, \\triangle RSZ,$ and $\\triangle RTZ$.</p><p><b>Case 4: Triangles congruent to $\\triangle SYX$</b> There are again $6$ of these: $\\triangle SYX, \\triangle SZX, \\triangle TYZ, \\triangle TYX, \\triangle RXZ,$ and $\\triangle RYZ$.</p><p>However, if we add these up, we accounted for only $1+4+6+6=17$ of the $20$ possible triplets. We see that the remaining triplets don't even form triangles; they are $SYR, RXT,$ and $TZS$. Adding these $3$ into the total yields for all of the possible triplets, so we see that there are only $4$ possible non-congruent, non-degenerate triangles, $\\boxed{(D)}$</p>",
+        "<p>We can do casework in this problem like the solution above, but that would take too much time. Instead, we see that we can split this equilateral dot triangle to two halves by dropping an altitude from the top vertex of the big triangle. Using the smaller triangle we won't have to worry about extra unneeded cases. We can see that there are three distinct triangles in the half, and combining this with the larger equilateral triangle our answer is $3+1 = \\boxed{4}$, which is $\\boxed{\\text{D}}$</p><p>-FIREDRAGONMATH16</p>",
+        "<p>Notice that 20 is obviously too high (There are only 20 ways to choose 3 of the points to form a triangle or a line in total!) and you can count 4 distinct triangles quickly: $\\triangle RYX$, $\\triangle RYT$, $\\triangle RYZ$, $\\triangle RST$. So the answer is $\\boxed{\\text{(D) } 4}$</p><p><br/></p>",
+        "<p>Note that there is only one triangle $\\triangle XYZ$ that does not use any vertex from the largest triangle $\\triangle RST$ but $\\triangle XYZ$ is congruent to $\\triangle SYZ$. Therefore we can always count non-congruent triangles that has at least one vertex from $\\triangle RST$, and by symmetry, we assume $S$ is always used. And by symmetry, we only count the triangles whose \"left\" edge from $S$ is no shorter than the \"right\". Easily we get all four ones: $\\triangle SYZ$, $\\triangle SRX$, $\\triangle SRT$, $\\triangle SXZ$.</p><p>--Sean Y</p>",
+        "<p>Simply count all possible such triangles, while keeping in mind that the maximum length of any such triangle is 2 units:</p><p>(2,1,1) lengths</p><p>(2,1,2) lengths</p><p>(2,2,2) lengths</p><p>(1,1,1) lengths</p><p>To avoid stuff being congruent, we know that there are 4 different such triangles.So, our answer is $\\boxed{4}$.</p><p>- cheltstudent B)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.9,
+          "reasoning": "Number properties problem involving understanding of factors and counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_24",
+      "question": "<p>Each half of this figure is composed of 3 red triangles, 5 blue triangles and 8 white triangles. When the upper half is folded down over the centerline, 2 pairs of red triangles coincide, as do 3 pairs of blue triangles. There are 2 red-white pairs. How many white pairs coincide?</p><p>[asy] draw((0,0)--(4,4*sqrt(3))); draw((1,-sqrt(3))--(5,3*sqrt(3))); draw((2,-2*sqrt(3))--(6,2*sqrt(3))); draw((3,-3*sqrt(3))--(7,sqrt(3))); draw((4,-4*sqrt(3))--(8,0)); draw((8,0)--(4,4*sqrt(3))); draw((7,-sqrt(3))--(3,3*sqrt(3))); draw((6,-2*sqrt(3))--(2,2*sqrt(3))); draw((5,-3*sqrt(3))--(1,sqrt(3))); draw((4,-4*sqrt(3))--(0,0)); draw((3,3*sqrt(3))--(5,3*sqrt(3))); draw((2,2*sqrt(3))--(6,2*sqrt(3))); draw((1,sqrt(3))--(7,sqrt(3))); draw((-1,0)--(9,0)); draw((1,-sqrt(3))--(7,-sqrt(3))); draw((2,-2*sqrt(3))--(6,-2*sqrt(3))); draw((3,-3*sqrt(3))--(5,-3*sqrt(3))); [/asy]</p>",
+      "solutions": [
+        "<p>Each half has $3$ red triangles, $5$ blue triangles, and $8$ white triangles. There are also $2$ pairs of red triangles, so $2$ red triangles on each side are used, leaving $1$ red triangle, $5$ blue triangles, and $8$ white triangles remaining on each half. Also, there are $3$ pairs of blue triangles, using $3$ blue triangles on each side, so there is $1$ red triangle, $2$ blue triangles, and $8$ white triangles remaining on each half. Also, we have $2$ red-white pairs. This obviously can't use $2$ red triangles on one side, since there is only $1$ on each side, so we must use $1$ red triangle and $1$ white triangle per side, leaving $2$ blue triangles and $7$ white triangles apiece. The remaining blue triangles cannot be matched with other blue triangles since that would mean there were more than $3$ blue pairs, so the remaining blue triangles must be paired with white triangles, yielding $4$ blue-white pairs, one for each of the remaining blue triangles. This uses $2$ blue triangles and $2$ white triangles on each side, leaving $5$ white triangles apiece, which must be paired with each other, so there are $5$ white-white pairs, $\\boxed{\\text{B}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Triangle angle problem involving angle bisectors and understanding that angles in a triangle sum to 180\u00b0"
+        }
+      ]
+    },
+    {
+      "id": "amc_2001_8_25",
+      "question": "<p>There are 24 four-digit whole numbers that use each of the four digits 2, 4, 5 and 7 exactly once. Only one of these four-digit numbers is a multiple of another one. Which of the following is it?</p>",
+      "solutions": [
+        "<p>There are only 5 options for the problem so we can just try them. It is easy since that we only need try to use $2$, $3$ to divide them. Even $5$ will leads to a solution start with $1$ which we don't need.</p><p>$5724/2=2862$, $5724/3=1908$. $7245/3=2415$. $7254/2=3627$, $7254/3=2418$. $7425/3=2475$. The answer is $\\boxed{\\textbf{(D)}}$. You can obtain the answer in only 6 calculations.~ M4ST3R0FM4TH</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.9,
+          "reasoning": "Area calculation involving complex geometric shapes and understanding of area relationships"
+        }
+      ]
+    }
+  ]
+}

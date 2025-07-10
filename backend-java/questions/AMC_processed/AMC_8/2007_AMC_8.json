@@ -1,0 +1,409 @@
+{
+  "competition_info": {
+    "name": "2007_AMC_8",
+    "group": "AMC_8",
+    "year": 2007,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2007_8_1",
+      "question": "<p>Theresa's parents have agreed to buy her tickets to see her favorite band if she spends an average of $10$ hours per week helping around the house for $6$ weeks. For the first $5$ weeks she helps around the house for $8$, $11$, $7$, $12$ and $10$ hours. How many hours must she work for the final week to earn the tickets?</p>",
+      "solutions": [
+        "<p>Let $x$ be the number of hours she must work for the final week. We are looking for the average, so \\[\\frac{8 + 11 + 7 + 12 + 10 + x}{6} = 10\\] Solving gives:\\[\\frac{48 + x}{6} = 10\\]</p><p>\\[48 + x = 60\\]</p><p>\\[x = 12\\]</p><p>So, the answer is $\\boxed{\\textbf{(D)}\\ 12}$</p>",
+        "<p>Use average deviation:</p><p>The average is 10 hour per day. If work 8 hours then it is 2 hours short; if work 11 hours then there is 1 hour surplus, the last day need to cancel out the collective deviation from the previous 5 days.</p><p>So we got </p><p>\\[-2+1-3+2+0=-2\\]</p><p>The last day need to have +2 deviation to cancel out the -2 collective deviation to get 10 as average value, so $\\boxed{\\textbf{(D)}\\ 12}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple arithmetic word problem involving basic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_2",
+      "question": "<p>$650$ students were surveyed about their pasta preferences. The choices were lasagna, manicotti, ravioli and spaghetti. The results of the survey are displayed in the bar graph. What is the ratio of the number of students who preferred spaghetti to the number of students who preferred manicotti?</p><p>[asy] size(200); defaultpen(linewidth(0.7)); defaultpen(fontsize(8)); draw(origin--(0,250)); int i; for(i=0; i<6; i=i+1) { draw((0,50*i)--(5,50*i)); } filldraw((25,0)--(75,0)--(75,150)--(25,150)--cycle, gray, black); filldraw((75,0)--(125,0)--(125,100)--(75,100)--cycle, gray, black); filldraw((125,0)--(175,0)--(175,150)--(125,150)--cycle, gray, black); filldraw((225,0)--(175,0)--(175,250)--(225,250)--cycle, gray, black); label(\"$50$\", (0,50), W); label(\"$100$\", (0,100), W); label(\"$150$\", (0,150), W); label(\"$200$\", (0,200), W); label(\"$250$\", (0,250), W); label(rotate(90)*\"Lasagna\", (50,0), S); label(rotate(90)*\"Manicotti\", (100,0), S); label(rotate(90)*\"Ravioli\", (150,0), S); label(rotate(90)*\"Spaghetti\", (200,0), S); label(rotate(90)*\"$\\mbox{Number of People}$\", (-40,140), W); [/asy]</p>",
+      "solutions": [
+        "<p>The answer is $\\dfrac{\\text{number of students who preferred spaghetti}}{\\text{number of students who preferred manicotti}}$</p><p>So,</p><p>$\\frac{250}{100}$</p><p>Simplify,</p><p>$\\frac{5}{2}$</p><p>The answer is $\\boxed{\\textbf{(E)}\\ \\dfrac{5}{2}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating discounts and savings"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_3",
+      "question": "<p>What is the sum of the two smallest prime factors of $250$?</p>",
+      "solutions": [
+        "<p>The prime factorization of $250$ is $2 \\cdot 5^3$. The smallest two are $2$ and $5$. $2+5 = \\boxed{\\text{(C) }7}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving finding area of geometric shapes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_4",
+      "question": "<p>A haunted house has six windows. In how many ways canGeorgie the Ghost enter the house by one window and leaveby a different window?</p>",
+      "solutions": [
+        "<p>Georgie can enter the haunted house through any of the six windows. Then, he can leave through any of the remaining five windows.</p><p>So, Georgie has a total of $6 \\cdot 5$ ways he can enter the house by one window and leaveby a different window.</p><p>Therefore, we have $\\boxed{\\textbf{(D)}\\ 30}$ ways.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_5",
+      "question": "<p>Chandler wants to buy a $500$ dollar mountain bike. For his birthday, his grandparentssend him $50$ dollars, his aunt sends him $35$ dollars and his cousin gives him $15$ dollars. He earns$16$ dollars per week for his paper route. He will use all of his birthday money and allof the money he earns from his paper route. In how many weeks will he be ableto buy the mountain bike?</p>",
+      "solutions": [
+        "<p>Let $x$ be the number of weeks.</p><p>Thus, we have the equation $50 + 35 + 15 + 16x = 500$.</p><p>Simplify,</p><p>$100 + 16x = 500$</p><p>$16x = 400$</p><p>$x = 25$</p><p>The answer is $\\boxed{\\textbf{(B)}\\ 25}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_6",
+      "question": "<p>The average cost of a long-distance call in the USA in $1985$ was$41$ cents per minute, and the average cost of a long-distancecall in the USA in $2005$ was $7$ cents per minute. Find theapproximate percent decrease in the cost per minute of a long-distance call.</p>",
+      "solutions": [
+        "<p>The percent decrease is (the amount of decrease)/(original amount)</p><p>the amount of decrease is $41 - 7 = 34$</p><p>so the percent decrease is $\\frac{34}{41}$ which is about $\\boxed{\\textbf{(E)}\\ 80\\%}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_7",
+      "question": "<p>The average age of $5$ people in a room is $30$ years. An $18$-year-old person leavesthe room. What is the average age of the four remaining people?</p>",
+      "solutions": [
+        "<p>Let $x$ be the average of the remaining $4$ people.</p><p>The equation we get is $\\frac{4x + 18}{5} = 30$</p><p>Simplify,</p><p>$4x + 18 = 150$</p><p>$4x = 132$</p><p>$x = 33$</p><p>Therefore, the answer is $\\boxed{\\textbf{(D)}\\ 33}$</p>",
+        "<p>Since an $18$ year old left from a group of people averaging $30$, The remaining people must total $30 - 18 = 12$ years older than $30$. Therefore, the average is $\\dfrac{12}{4} = 3$ years over $30$. Giving us $\\boxed{\\textbf{(D)}\\ 33}$</p>",
+        "<p>The total ages would be $30*5=150$. Then, if one $18$ year old leaves, we subtract $18$ from $150$ and get $132$. Then, we divide $132$ by $4$ to get the new average, $\\boxed{\\textbf{(D)}\\ 33}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_8",
+      "question": "<p>In trapezoid $ABCD$, $\\overline{AD}$ is perpendicular to $\\overline{DC}$,$AD = AB = 3$, and $DC = 6$. In addition, $E$ is on $\\overline{DC}$, and $\\overline{BE}$ is parallel to $\\overline{AD}$. Find the area of $\\triangle BEC$.[asy] defaultpen(linewidth(0.7)); pair A=(0,3), B=(3,3), C=(6,0), D=origin, E=(3,0); draw(E--B--C--D--A--B); draw(rightanglemark(A, D, C)); label(\"$A$\", A, NW); label(\"$B$\", B, NW); label(\"$C$\", C, SE); label(\"$D$\", D, SW); label(\"$E$\", E, NW); label(\"$3$\", A--D, W); label(\"$3$\", A--B, N); label(\"$6$\", E, S); [/asy]</p>",
+      "solutions": [
+        "<p>Clearly, $ABED$ is a square with side-length $3.$ By segment subtraction, we have $EC = DC - DE = 6 - 3 = 3.$</p><p>The area of $\\triangle BEC$ is \\[\\frac12\\cdot EC\\cdot BE = \\frac12\\cdot3\\cdot3 = \\boxed{\\textbf{(B)}\\ 4.5}.\\]~Aplus95 (Solution)</p><p>~MRENTHUSIASM (Revision)</p>",
+        "<p>Clearly, $ABED$ is a square with side-length $3.$</p><p>Let the brackets denote areas. We apply area subtraction to find the area of $\\triangle BEC:$\\begin{align*} [BEC]&=[ABCD]-[ABED] \\\\ &=\\frac{AB+CD}{2}\\cdot AD - AB^2 \\\\ &=\\frac{3+6}{2}\\cdot 3 - 3^2 \\\\ &=\\boxed{\\textbf{(B)}\\ 4.5}. \\end{align*}~MRENTHUSIASM</p>",
+        "<p>$4.5$ is the only one that isn't an integer, and is the odd one out. \\begin{align*} &\\boxed{\\textbf{(B)}\\ 4.5}. \\end{align*}</p><p>~SHREYANSH</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving divisibility and number properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_9",
+      "question": "<p>To complete the grid below, each of the digits 1 through 4 must occur oncein each row and once in each column. What number will occupy the lowerright-hand square?</p><p>\\[\\begin{tabular}{|c|c|c|c|}\\hline 1 & & 2 &\\\\ \\hline 2 & 3 & &\\\\ \\hline & &&4\\\\ \\hline & &&\\\\ \\hline\\end{tabular}\\]</p>",
+      "solutions": [
+        "<p>The number in the first row, last column must be a $3$ due to the fact if a $3$ was in the first row, second column, there would be two threes in that column. By the same reasoning, the number in the second row, last column has to be a $1$. Therefore the number in the lower right-hand square is $\\boxed{\\textbf{(B)}\\ 2}$.</p>",
+        "<p>Note how the first and second row already contain a $2$. Since the third row, last column already has a $4$, the only possible place a $2$ could be in is the bottom right square. Thus our answer is $\\boxed{\\textbf{(B)}\\ 2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Triangle geometry problem involving angles and side lengths"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_10",
+      "question": "<p>For any positive integer $n$, define $\\boxed{n}$ to be the sum of the positive factors of $n$.For example, $\\boxed{6} = 1 + 2 + 3 + 6 = 12$. Find $\\boxed{\\boxed{11}}$ .</p>",
+      "solutions": [
+        "<p>We have \\begin{align*} \\boxed{\\boxed{11}}&=\\boxed{1+11} \\\\ &=\\boxed{12} \\\\ &=1+2+3+4+6+12 \\\\ &=28, \\end{align*}from which the answer is $\\boxed{\\textbf{(D)}\\ 28}.$</p><p>~Aplus95 (Fundamental Logic)</p><p>~MRENTHUSIASM (Reconstruction)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate word problem involving time, distance, and speed relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_11",
+      "question": "<p>Tiles $I, II, III$ and $IV$ are translated so one tile coincides with each of the rectangles $A, B, C$ and $D$. In the final arrangement, the two numbers on any side common to two adjacent tiles must be the same. Which of the tiles is translated to Rectangle $C$?</p><p>[asy] size(400); defaultpen(linewidth(0.8)); path p=origin--(8,0)--(8,6)--(0,6)--cycle; draw(p^^shift(8.5,0)*p^^shift(8.5,10)*p^^shift(0,10)*p); draw(shift(20,2)*p^^shift(28,2)*p^^shift(20,8)*p^^shift(28,8)*p); label(\"8\", (4,6+10), S); label(\"6\", (4+8.5,6+10), S); label(\"7\", (4,6), S); label(\"2\", (4+8.5,6), S); label(\"I\", (4,6+10), N); label(\"II\", (4+8.5,6+10), N); label(\"III\", (4,6), N); label(\"IV\", (4+8.5,6), N); label(\"3\", (0,3+10), E); label(\"4\", (0+8.5,3+10), E); label(\"1\", (0,3), E); label(\"9\", (0+8.5,3), E); label(\"7\", (4,10), N); label(\"2\", (4+8.5,10), N); label(\"0\", (4,0), N); label(\"6\", (4+8.5,0), N); label(\"9\", (8,3+10), W); label(\"3\", (8+8.5,3+10), W); label(\"5\", (8,3), W); label(\"1\", (8+8.5,3), W); label(\"A\", (24,10), N); label(\"B\", (32,10), N); label(\"C\", (24,4), N); label(\"D\", (32,4), N);[/asy]</p>",
+      "solutions": [
+        "<p>We first notice that tile III has a $0$ on the bottom and a $5$ on the right side. Since no other tile has a $0$ or a $5$, Tile III must be in rectangle $D$. Tile III also has a $1$ on the left, so Tile IV must be in Rectangle $C$.</p><p>The answer is $\\boxed{\\textbf{(D)}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating percentages and changes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_12",
+      "question": "<p>A unit hexagram is composed of a regular hexagon of side length $1$ and its $6$equilateral triangular extensions, as shown in the diagram. What is the ratio ofthe area of the extensions to the area of the original hexagon?</p><p>[asy] defaultpen(linewidth(0.7)); draw(polygon(3)); pair D=origin+1*dir(270), E=origin+1*dir(150), F=1*dir(30); draw(D--E--F--cycle); [/asy]</p>",
+      "solutions": [
+        "<p>The six equilateral triangular extensions fit perfectly into the hexagon meaning the answer is $\\boxed{\\textbf{(A) }1:1}$</p>",
+        "<p>Split the hexagon into six small equilateral triangles. You will see that the six outer triangles can be folded to the hexagon, so the answer is $\\boxed{\\textbf{(A) }1:1}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Arithmetic sequence problem involving finding terms in a sequence"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_13",
+      "question": "<p>Sets $A$ and $B$, shown in the Venn diagram, have the same number of elements.Their union has $2007$ elements and their intersection has $1001$ elements. Findthe number of elements in $A$.</p><p>[asy] defaultpen(linewidth(0.7)); draw(Circle(origin, 5)); draw(Circle((5,0), 5)); label(\"$A$\", (0,5), N); label(\"$B$\", (5,5), N); label(\"$1001$\", (2.5, -0.5), N);[/asy]</p>",
+      "solutions": [
+        "<p>Let $x$ be the number of elements in $A$ and $B$ which is equal. </p><p>Then we could form equation $2x-1001 = 2007$</p><p>$2x = 3008$</p><p>$x = 1504$. </p><p>The answer is $\\boxed{\\textbf{(C)}\\ 1504}$</p>",
+        "<p>Let $x$ be the number of elements in $A$ not including the intersection. $2007-1001=1006$ total elements excluding the intersection. Since we know that $A=B$, we can find that $x=\\frac{1006}2=503$. Now we need to add the intersection. $503+1001=\\boxed{\\textbf{(C)} 1504}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_14",
+      "question": "<p>The base of isosceles $\\triangle ABC$ is $24$ and its area is $60$. What is the length of oneof the congruent sides?</p>",
+      "solutions": [
+        "<p>The area of a triangle is shown by $\\frac{1}{2}bh$. We set the base equal to $24$, and the area equal to $60$, and we get the triangle's height, or altitude, to be $5$. In this isosceles triangle, the height bisects the base, so by using the Pythagorean Theorem, $a^2+b^2=c^2$, we can solve for one of the legs of the triangle (it will be the hypotenuse, $c$).$a = 12$, $b = 5$,$c = 13$.The answer is $\\boxed{\\textbf{(C)}\\ 13}$.</p>",
+        "<p>According to <a href=\"/wiki/index.php/Heron%27s_Formula\" title=\"Heron's Formula\">Heron's Formula</a>, setting side $a$ as $24$, we have \\[\\sqrt{s(s-24)(s-b)(s-c)}=60\\]where $s$ is the triangle's semiperimeter (i.e. $\\frac{a+b+c}{2}$). Since the triangle is isosceles, $b=c$, so we can rewrite $s$ as $\\frac{24+2b}{2}=12+b$. Substituting and solving the equation and taking the positive solution for $b$, \\[\\sqrt{(12+b)(-12+b)(12)(12)}=60\\] \\[\\sqrt{144(144-b^2)}=60\\] \\[144(144-b^2)=3600\\] \\[-b^2=-169\\] \\[b=\\boxed{\\textbf{(C)}\\ 13}\\]</p><p>~megaboy6679</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Circle geometry problem involving area and circumference"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_15",
+      "question": "<p>Let $a, b$ and $c$ be numbers with $0 < a < b < c$. Which of the following isimpossible?</p>",
+      "solutions": [
+        "<p>According to the given rules, every number needs to be positive. Since $c$ is always greater than $b$, adding a positive number ($a$) to $c$ will always make it greater than $b$.</p><p>Therefore, the answer is $\\boxed{\\textbf{(A)}\\ a+c<b}$</p><p><br/></p>",
+        "<p>We can test numbers into the inequality we\u2019re given. The simplest is $0<1<2<3$. We can see that $3+1>2$, so $\\boxed{\\textbf{(A) }a+c<b}$ is correct.</p><p>\u2014jason.ca</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_16",
+      "question": "<p>Amanda Reckonwith draws five circles with radii $1, 2, 3, 4$ and $5$. Then for each circle she plots the point $(C,A)$,where $C$ is its circumference and $A$ is its area. Which of thefollowing could be her graph?</p><p>$\\textbf{(C)}$[asy] size(75); pair A= (1.5,2) , B= (3,6) , C= (4.5,8) , D= (6,6) , E= (7.5,2)\u00a0; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(\"$A$\", (0,8), W); label(\"$C$\", (8,0), S);[/asy]</p><p>$\\textbf{(D)}$[asy] size(75); pair A= (1.5,2) , B= (3,5) , C= (4.5,8) , D= (6,11) , E= (7.5,14)\u00a0; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(\"$A$\", (0,8), W); label(\"$C$\", (8,0), S);[/asy]</p><p>$\\textbf{(E)}$[asy] size(75); pair A= (1.5,15) , B= (3,10) , C= (4.5,6) , D= (6,3) , E= (7.5,1)\u00a0; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(\"$A$\", (0,8), W); label(\"$C$\", (8,0), S);[/asy]</p>",
+      "solutions": [
+        "<p>The circumference of a circle is obtained by simply multiplying the radius by $2\\pi$. So, the C-coordinate (in this case, it is the x-coordinate) will increase at a steady rate. The area, however, is obtained by squaring the radius and multiplying it by $\\pi$. Since squares do not increase in an evenly spaced arithmetic sequence, the increase in the A-coordinates (aka the y- coordinates) will be much more significant. The answer is $\\boxed{\\textbf{(A)}},$[asy] size(75); pair A= (1.5,2) , B= (3,4) , C= (4.5,7) , D= (6,11) , E= (7.5,16)\u00a0; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(\"$A$\", (0,8), W); label(\"$C$\", (8,0), S);[/asy].-RBANDA</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "System of equations problem involving multiple variables"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_17",
+      "question": "<p>A mixture of $30$ liters of paint is $25\\%$ red tint, $30\\%$ yellowtint and $45\\%$ water. Five liters of yellow tint are added tothe original mixture. What is the percent of yellow tintin the new mixture?</p>",
+      "solutions": [
+        "<p>Since $30\\%$ of the original $30$ liters of paint was yellow, and $5$ liters of yellow paint were added to make the new mixture, there are $9+5=14$ liters of yellow tint in the new mixture. Since only $5$ liters of paint were added to the original $30$, there are a total of $35$ liters of paint in the new mixture. This gives $40\\%$ of yellow tint in the new mixture, which is $\\boxed{\\textbf{(C) 40}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_18",
+      "question": "<p>The product of the two $99$-digit numbers</p><p>$303,030,303,...,030,303$ and $505,050,505,...,050,505$</p><p>has thousands digit $A$ and units digit $B$. What is the sum of $A$ and $B$?</p>",
+      "solutions": [
+        "<p>We can first make a small example to find out $A$ and $B$. So, </p><p>$303\\times505=153015$</p><p>The ones digit plus thousands digit is $5+3=8$.</p><p>Note that the ones and thousands digits are, added together, $8$. (and so on...) So the answer is $\\boxed{\\textbf{(D)}\\ 8}$This is a direct multiplication way.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving multiple statements and determining truth values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_19",
+      "question": "<p>Pick two consecutive positive integers whose sum is less than $100$. Square bothof those integers and then find the difference of the squares. Which of thefollowing could be the difference?</p>",
+      "solutions": [
+        "<p>Let the smaller of the two numbers be $x$. Then, the problem states that $(x+1)+x<100$. $(x+1)^2-x^2=x^2+2x+1-x^2=2x+1$. $2x+1$ is obviously odd, so only answer choices C and E need to be considered.</p><p>$2x+1=131$ contradicts the fact that $2x+1<100$, so the answer is $\\boxed{\\mathrm{(C)} 79}$</p>",
+        "<p>Since for two consecutive numbers $a$ and $b$, the difference between their squares is $a^2-b^2=(a+b)(a-b)$, which equals to $a+b$, because $a$ and $b$ are consecutive. Because they are consecutive, one number must be even, and the other odd. Since the sum of an even and an odd number is always odd, and the sum of $a$ and $b$ is less than 100, you can eliminate all answers except for $\\boxed{\\mathrm{(C)} 79}$.</p>",
+        "<p>From the question we can make $a^2-b^2$ and we can let $a$ be $b-1$ where $a+b<100$. First we factor $a^2-b^2$ to $(a+b)(a-b)$ and then plug in $a=b-1$ to have: $(a+a+1)(a-a+1)=(2a+1)(1)=2a+1=a+b$. since $a+b$ will always be an odd number, we can narrow the answers down to (C) and (E). Since $131$ would be too big for our range of $a+b<100$, we would choose $\\boxed{\\mathrm{(C)} 79}$. note that this solution would be better if the question was asking for the values of a and b</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_20",
+      "question": "<p>Before the district play, the Unicorns had won $45\\%$ of their basketball games. During district play, they won six more games and lost two, to finish the season having won half their games. How many games did the Unicorns play in all?</p>",
+      "solutions": [
+        "<p>At the beginning of the problem, the Unicorns had played $y$ games and they had won $x$ of these games. From the information given in the problem, we can say that $\\frac{x}{y}=0.45.$ Next, the Unicorns win 6 more games and lose 2 more, for a total of $6+2=8$ games played during district play. We are told that they end the season having won half of their games, or $0.5$ of their games. We can write another equation: $\\frac{x+6}{y+8}=0.5.$ This gives us a system of equations:$\\frac{x}{y}=0.45$ and $\\frac{x+6}{y+8}=0.5.$We first multiply both sides of the first equation by $y$ to get $x=0.45y.$ Then, we multiply both sides of the second equation by $(y+8)$ to get $x+6=0.5(y+8).$ Applying the Distributive Property gives yields $x+6=0.5y+4.$ Now we substitute $0.45y$ for $x$ to get $0.45y+6=0.5y+4.$ Solving gives us $y=40.$ Since the problem asks for the total number of games, we add on the last 8 games to get the solution $\\boxed{\\textbf{(A)}\\ 48}$.</p>",
+        "<p>We can check each answer choice from left to right to see which one is correct. Suppose the Unicorns played $48$ games in total. Then, after district play, they would have won $24$ games. Now, consider the situation before district play. The Unicorns would have won $18$ games out of $40$. Converting to a percentage, $18/40 = 45\\%$. Thus, the answer is $\\boxed{\\textbf{(A)} 48}$.</p><p>Note: If A didn't work, we would have similarly tested the other choices until we found one that did.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a></p>",
+        "<p>We know that $45\\%=\\frac9{20}$. Therefore, the number of games before district play must be a multiple of $20$ in order for the number of games won to be an integer. The Unicorns played $6+2=8$ more games during district play. The only answer choice that is $8$ more than a multiple of $20$ is $\\boxed{\\textbf{(A)} 48}$.</p>",
+        "<p>At the start of the problem we figure out the Unicorns have won $45\\%$ of their games, which can be represented by $\\frac9{20}$. Since this is a simplified fraction and not necessarily the amount of games they have played, we can add a variable (in this case I am using $x$) to the numerator and denominator to get $\\frac{9x}{20x}$. We then know that during the district play they have won 6 more games and lost 2 of them for a total of 6+2=8 games played. We then can add it to our fraction we have built to make $\\frac{9x+6}{20x+8}$. We also know that the fraction is equal to $\\frac1{2}$. Putting these equations together we get $\\frac{9x+6}{20x+8}=\\frac1{2}$. Now we can cross multiply to come out with $18x+12=20x+8$. We now solve for $x$!$18x+12=20x+8$ ----> $4=2x$ ----> $2=x$. After we get $x$ which comes out to be 2 we then plug it back into the denominator to get $20(2)+8$ which is equal to 48, so the answer must be $\\boxed{\\textbf{(A)} 48}$. </p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Am24\" rel=\"nofollow\">AM24</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving ratios and proportions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_21",
+      "question": "<p>Two cards are dealt from a deck of four red cards labeled $A$, $B$, $C$, $D$ and four green cards labeled $A$, $B$, $C$, $D$. A winning pair is two of the same color or two of the same letter. What is the probability of drawing a winning pair?</p>",
+      "solutions": [
+        "<p>Notice that, no matter which card you choose, there are exactly $4$ cards that either have the same color or letter as it. Since there are $7$ cards left to choose from, the probability is $\\boxed{\\textbf{(D)}\\frac47}$. -theepiccarrot7</p>",
+        "<p>We can use casework to solve this.</p><p>Case $1$: Same letter</p><p>After choosing any letter, there are seven cards left, and only one of them will produce a winning pair. Therefore, the probability is $\\frac17$.</p><p><br/>Case $2$: Same color</p><p>After choosing any letter, there are seven cards left. Three of them will make a winning pair, so the probability is $\\frac37$.</p><p>Now that we have the probability for both cases, we can add them: $\\frac17+\\frac37=\\boxed{\\textbf{(D)} \\frac47}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent events and calculating probabilities"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_22",
+      "question": "<p>A lemming sits at a corner of a square with side length $10$ meters. The lemming runs $6.2$ meters along a diagonal toward the opposite corner. It stops, makes a $90^{\\circ}$ right turn and runs $2$ more meters. A scientist measures the shortest distance between the lemming and each side of the square. What is the average of these four distances in meters?</p>",
+      "solutions": [
+        "<p>The shortest segments would be perpendicular to the square. The lemming went $x$ meters horizontally and $y$ meters vertically. No matter how much it went, the lemming would have been $x$ and $y$ meters from the sides and $10-x$ and $10-y$ meters from the remaining two. To find the average, add the lengths of the four segments and divide by four: $\\frac {\\cancel{x}+10-\\cancel{x}+\\cancel{y}+10-\\cancel{y}}{4} =$ $\\boxed{\\textbf{(C)}\\ 5}$.</p><ul><li>Note that from any point in the square, the average distance from one side to the other is half of the square's side length.</li></ul>",
+        "<p>For any point in the square, the sum of its distance to the left edge and right edge is equal to $10$, and the sum of its distance to the up edge and down edge is also equal to $10$. Thus, the answer is $\\boxed{\\textbf{(C)}\\ 5}$, and the moving progress is misguide at all.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving conditional probability and ratios"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_23",
+      "question": "<p>What is the area of the shaded pinwheel shown in the $5 \\times 5$ grid?</p><p>[asy] filldraw((2.5,2.5)--(0,1)--(1,1)--(1,0)--(2.5,2.5)--(4,0)--(4,1)--(5,1)--(2.5,2.5)--(5,4)--(4,4)--(4,5)--(2.5,2.5)--(1,5)--(1,4)--(0,4)--cycle, gray, black); int i; for(i=0; i<6; i=i+1) { draw((i,0)--(i,5)); draw((0,i)--(5,i)); } [/asy]</p>",
+      "solutions": [
+        "<p>The area of the square around the pinwheel is 25. The area of the pinwheel is equal to $\\text{the square } - \\text{ the white space.}$ Each of the four triangles have a base of 3 units and a height of 2.5 units, and so their combined area is 15 units squared. Then the unshaded space consists of the four triangles with total area of 15, and there are four white corner squares. Therefore the area of the pinwheel is $25-(15+4)$ which is $\\boxed{\\textbf{(B) 6}}$</p>",
+        "<p>The pinwheel is composed of $8$ congruent obtuse triangles whose base measures length $1$ and height measures length $1.5$. Using the area formula for triangles, the pinwheel has an area of\\[8(\\frac12\\cdot1\\cdot1.5)=8(0.75)=\\boxed{\\textbf{(B) 6}}.\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving distance and position relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_24",
+      "question": "<p>A bag contains four pieces of paper, each labeled with one of the digits $1$, $2$, $3$ or $4$, with no repeats. Three of these pieces are drawn, one at a time without replacement, to construct a three-digit number. What is the probability that the three-digit number is a multiple of $3$?</p>",
+      "solutions": [
+        "<p>The number of ways to form a 3-digit number is $4 \\cdot 3 \\cdot 2 = 24$. The combination of digits that give us multiples of 3 are (1,2,3) and (2,3,4), as the integers in the subsets have a sum which is divisible by 3. The number of 3-digit numbers that contain these numbers is $3! + 3! = 12$. Therefore, the probability is $\\frac{12}{24} = \\boxed{\\frac{1}{2}}$.</p><p>~abc2142</p>",
+        "<p>Only (1,2,3) and (2,3,4) are possible combinations that sum to 3. The total ways to choose three numbers from the four numbers is 4 choose 3 which equals 4. The answer is $\\frac{2}{4} = \\boxed{\\frac{1}{2}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_8_25",
+      "question": "<p>On the dart board shown in the figure below, the outer circle has radius $6$ and the inner circle has radius $3$. Three radii divide each circle into three congruent regions, with point values shown. The probability that a dart will hit a given region is proportional to the area of the region. When two darts hit this board, the score is the sum of the point values of the regions hit. What is the probability that the score is odd?</p>",
+      "solutions": [
+        "<p>To get an odd sum, we must add an even number and an odd number (a 1 and a 2). So we have a little casework to do. Before we do that, we also have to figure out some relative areas. You could either find the absolute areas (as is done below for completeness), or apply some proportional reasoning and symmetry to realize the relative areas (which is really all that matters).</p><p><br/>The area of this entire smaller circle is $9\\pi$. The area of each smaller section then must be $\\frac{9\\pi}{3}$ or $3\\pi$. The larger sections trisect a \"ring\" which is the difference of two circles, one with radius $3$, the other radius $6$. So, the area of the ring (<i>annulus</i>) is $36\\pi - 9\\pi$ or $27\\pi$. The area of each larger section must be $\\frac{27\\pi}{3}$ or $9\\pi$. Note that the area of the whole circle is $36\\pi$.</p><p><br/>One smaller section and two larger sections contain an odd number (that is, 1). So the probability of throwing an odd number is $3\\pi + (2 \\cdot 9\\pi) = 21\\pi$. Since the area of the whole circle is $36\\pi$, the probability of getting an odd is $\\frac{21\\pi}{36\\pi} = \\frac{21}{36} = \\frac{7}{12}$.</p><p>Since the remaining sections contain even numbers (that is, 2), the probability of throwing an even is the complement, or $1 - \\frac{7}{12} = \\frac{5}{12}$.</p><p><br/>Now, the two cases: You could either get an odd then an even, or an even then an odd.</p><p><br/>Case 1: Odd, then even. Multiply the probabilities to get $\\frac{7}{12} \\cdot \\frac{5}{12} = \\frac{35}{144}$.</p><p><br/>Case 2: Even, then odd. Multiply the probabilities to get $\\frac{5}{12} \\cdot \\frac{7}{12} = \\frac{35}{144}$. Notice that this is the same.</p><p><br/>Thus, the total probability of an odd sum is $\\frac{35}{144} \\cdot \\frac{2}{1} = \\boxed{\\textbf{(B)} = \\frac{35}{72}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving area calculations and geometric relationships"
+        }
+      ]
+    }
+  ]
+}

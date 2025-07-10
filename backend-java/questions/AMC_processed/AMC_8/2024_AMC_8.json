@@ -1,0 +1,445 @@
+{
+  "competition_info": {
+    "name": "2024_AMC_8",
+    "group": "AMC_8",
+    "year": 2024,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2024_8_1",
+      "question": "<p>What is the unit digit of: \\[222{,}222-22{,}222-2{,}222-222-22-2?\\]</p>",
+      "solutions": [
+        "<p>We can rewrite the expression as $222,222-(22,222+2,222+222+22+2)$. We note that the units digit of $22,222+2,222+222+22+2$ is $0$ because all the units digits of the five numbers are $2$ and $5\\cdot2=10$, which has a units digit of $0$. Now, we have something with a units digit of $0$ subtracted from $222,222$, and so the units digit of this expression is $\\boxed{\\textbf{(B) } 2}$.</p>",
+        "<p>\\[222,222-22,222 = 200,000\\]\\[200,000 - 2,222 = 197778\\]\\[197778 - 222 = 197556\\]\\[197556 - 22 = 197534\\]\\[197534 - 2 = 197532\\]So our answer is $\\boxed{\\textbf{(B) } 2}$.</p>",
+        "<p>We only care about the units digits. Thus, $2-2$ ends in $0$, $0-2$ after regrouping(10-2) ends in $8$, $8-2$ ends in $6$, $6-2$ ends in $4$, and $4-2$ ends in $\\boxed{\\textbf{(B) } 2}$.</p>",
+        "<p>We just take the units digit of each and subtract, adding an extra ten to the first number so we don't get a negative number:\\[(12-2)-(2+2+2+2)=10-8=\\boxed{\\textbf{(B) } 2}\\]</p>",
+        "<p>\\[222{,}222-22{,}222-2{,}222-222-22-2\\equiv2-2-2-2-2\\equiv-8\\equiv\\boxed{\\textbf{(B) } 2}\\pmod{10}\\]</p><p><br/></p>",
+        "<p>We can ignore the other digits and just do $22-2-2-2-2-2$. Because you are subtracting five $2s$ and $2\\cdot5 = 10$, you subtract $10$ from $22$. This gives us 12, so the last digit is $\\boxed{\\textbf{(B) } 2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2024 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_2",
+      "question": "<p>What is the value of this expression in decimal form?\\[\\frac{44}{11} + \\frac{110}{44} + \\frac{44}{1100}\\]</p>",
+      "solutions": [
+        "<p>We see that $\\frac{44}{11}$ is $4$; $\\frac{110}{44}$ simplifies to $\\frac{5}{2}$, which is $2.5$; </p><p>and $\\frac{44}{1100}$ simplifies to $\\frac{1}{25}$, which is $0.04$; </p><p>$4+2.5+0.04$ reveals \\[\\frac{44}{11} + \\frac{110}{44} + \\frac{44}{1100}\\] is $\\boxed{\\text{(C)\\ 6.54}}$. ~ </p><p>~Minor Formatting by GreenPlanet2050</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2024 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_3",
+      "question": "<p>Four squares of side length $4, 7, 9,$ and $10$ are arranged in increasing size order so that their left edges and bottom edges align. The squares alternate in color white-gray-white-gray, respectively, as shown in the figure. What is the area of the visible gray region in square units?[asy]  size(150); filldraw((0,0)--(10,0)--(10,10)--(0,10)--cycle,gray(0.7),linewidth(1)); filldraw((0,0)--(9,0)--(9,9)--(0,9)--cycle,white,linewidth(1)); filldraw((0,0)--(7,0)--(7,7)--(0,7)--cycle,gray(0.7),linewidth(1)); filldraw((0,0)--(4,0)--(4,4)--(0,4)--cycle,white,linewidth(1)); draw((11,0)--(11,4),linewidth(1)); draw((11,6)--(11,10),linewidth(1)); label(\"$10$\",(11,5),fontsize(14pt)); draw((10.75,0)--(11.25,0),linewidth(1)); draw((10.75,10)--(11.25,10),linewidth(1)); draw((0,11)--(3,11),linewidth(1)); draw((5,11)--(9,11),linewidth(1)); draw((0,11.25)--(0,10.75),linewidth(1)); draw((9,11.25)--(9,10.75),linewidth(1)); label(\"$9$\",(4,11),fontsize(14pt)); draw((-1,0)--(-1,1),linewidth(1)); draw((-1,3)--(-1,7),linewidth(1)); draw((-1.25,0)--(-0.75,0),linewidth(1)); draw((-1.25,7)--(-0.75,7),linewidth(1)); label(\"$7$\",(-1,2),fontsize(14pt)); draw((0,-1)--(1,-1),linewidth(1)); draw((3,-1)--(4,-1),linewidth(1)); draw((0,-1.25)--(0,-.75),linewidth(1)); draw((4,-1.25)--(4,-.75),linewidth(1)); label(\"$4$\",(2,-1),fontsize(14pt)); [/asy]</p>",
+      "solutions": [
+        "<p>We work inwards. The area of the outer shaded square is the area of the whole square minus the area of the second largest square. The area of the inner shaded region is the area of the third largest square minus the area of the smallest square. The sum of these areas is \\[10^2 - 9^2 + 7^2 - 4^2 = 100 - 81 + 49 - 16 = 19 + 33 = \\boxed{\\textbf{(E)}\\ 52}\\]</p><p>This problem appears multiple times in various math competitions including the AMC and MATHCOUNTS.</p><p>-Benedict (countmath1) ~Nivaar and anabel.disher</p>",
+        "<p>In solution 1, we can use <a href=\"/wiki/index.php/Difference_of_squares\" title=\"Difference of squares\">Difference of squares</a> to get the answer, rather than calculating the squares of the numbers:\\[10^2 - 9^2 + 7^2 - 4^2 = (10 - 9)(10 + 9) - (7 - 4)(7 + 4) = 1\\cdot19 + 3\\cdot11 = 19 + 33 = \\boxed{\\textbf{(E)}\\ 52}\\]</p><p><br/>~anabel.disher</p>",
+        "<p>Solve for the areas for each square inside the larger one , and then subtract the areas of the white regions from the areas of each square:\\[(10^2 + 7^2) - (9^2 + 4^2) = 149 - 97 = \\boxed{\\textbf{(E)}\\ 52}\\]</p><p>-MrTechguyPCMT and anabel.disher</p>",
+        "<p>We can calculate it as the sum of the areas of $2$ smaller trapezoids and $2$ larger trapezoids. \\[2\\left(\\cfrac{(7+4)(7-4)}{2}\\right)+2\\left(\\cfrac{(10+9)(10-9)}{2}\\right)=10^2 - 9^2 + 7^2 - 4^2 = 19 + 33 = \\boxed{\\textbf{(E)}\\ 52}\\]</p><p>-SahanWijetunga</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2024 AMC 8 - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_4",
+      "question": "<p>When Yunji added all the integers from $1$ to $9$, she mistakenly left out a number. Her incorrect sum turned out to be a square number. What number did Yunji leave out?</p>",
+      "solutions": [
+        "<p>Adding numbers 1 through 9 gives us 45. This was her expected sum, but what she got was a perfect square. Since she got that perfect square sum by forgetting a number, that sum is less than 45. The square number right under 45 is 36. So 45 - 36 = 9. So the solution is E[9].</p><p>~That_One_Dude</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2024 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_5",
+      "question": "<p>Aaliyah rolls two standard 6-sided dice. She notices that the product of the two numbers rolled is a multiple of $6$. Which of the following integers cannot be the sum of the two numbers?</p>",
+      "solutions": [
+        "<p>First, figure out all pairs of numbers whose product is 6. Then, using the process of elimination, we can find the following: </p><p>$\\textbf{(A)}$ is possible: $2\\times 3$</p><p>$\\textbf{(C)}$ is possible: $1\\times 6$</p><p>$\\textbf{(D)}$ is possible: $2\\times 6$</p><p>The only integer that cannot be the sum is $\\boxed{\\textbf{(B) } 6}$.</p>",
+        "<p>First, see that in order for the two numbers to have a product of 6, it must either have 6 as a factor or have factors that have a product of 6 (Notably $2\\times 3$).</p><p>When we look at the answer choices, we see that answers $C, D, E$ all are more than 6, so they can all be added as a sum of 6. Answer $A$ works because $2+3=5$, so 6 is the only answer choice that doesn't work. Thus, the answer is $\\boxed{\\textbf{(B) } 6}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2024 AMC 8 - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_6",
+      "question": "<p>Sergai skated around an ice rink, gliding along different paths. The gray lines in the figures below show four of the paths labeled P, Q, R, and S. What is the sorted order of the four paths from shortest to longest?</p><p><a class=\"image\" href=\"/wiki/index.php/File:2024_AMC_8-Problem_6.png\">2024 AMC 8-Problem 6.png</a></p>",
+      "solutions": [
+        "<p>You can measure the lengths of the paths until you find a couple of guaranteed true inferred statements as such:$Q$ is greater than $S$, $P$ is greater than $R$, and $R$ and $P$ are the smallest two, therefore the order is $R, P, S, Q.$Thus we get the answer $\\boxed{\\textbf{(D)}~R, P, S, Q}$.</p><p>- U-King</p><p><br/></p><p>~TabHawaii (minor formatting edits)</p>",
+        "<p>Obviously Path Q is the longest path, followed by Path S. </p><p>So, it is down to Paths P and R.</p><p>Notice that curved lines are always longer than the straight ones that meet their endpoints, therefore Path P is longer than Path R.</p><p>Thus, the order from shortest to longest is $\\boxed{\\textbf{(D) } \\text{R, P, S, Q}}$.</p><p>~MrThinker</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2024 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_7",
+      "question": "<p>A $3 \\times 7$ rectangle is covered without overlap by 3 shapes of tiles: $2 \\times 2$, $1\\times4$, and $1\\times1$, shown below. What is the minimum possible number of $1\\times1$ tiles used?</p>",
+      "solutions": [
+        "<p>We can eliminate B, C, and D, because they are not $21$ subtracted by any multiple of $4$. Finally, we see that there is no way to have A, so the solution is $\\boxed{\\textbf{(E)\\ 5}}$.</p>",
+        "<p>Let $x$ be the number of $1$ by $1$ tiles. There are $21$ squares and each $2$ by $2$ or $1$ by $4$ tile takes up 4 squares, so $x \\equiv 1 \\pmod{4}$, so it is either $1$ or $5$. Color the columns, starting with red, then blue, and alternating colors, ending with a red column. There are $12$ red squares and $9$ blue squares, but each $2$ by $2$ and $1$ by $4$ shape takes up an equal number of blue and red squares, so there must be $3$ more $1$ by $1$ tiles on red squares than on blue squares, which is impossible if there is just one, so the answer is $\\boxed{\\textbf{(E)\\ 5}}$, which can easily be confirmed to work.</p><p>~arfekete</p>",
+        "<p>Suppose there are $a$ different $2\\times 2$ tiles, $b$ different $4\\times 1$ tiles and $c$ different $1\\times 1$ tiles. Since the areas of these tiles must total up to $21$ (area of the whole grid), we have \\[4a + 4b + c = 21.\\]Reducing modulo $4$ gives $c\\equiv 1\\pmod{4}$, or $c = 1$ or $c = 5$. </p><p>If $c = 1$, then $a + b = 5$. After some testing, there is no valid pair $(a, b)$ that works, so the answer must be $\\boxed{\\textbf{(E)\\ 5}}$, which can be constructed in many ways. </p><p>-Benedict T (countmath1)</p><p><br/></p><p><br/></p>",
+        "<p>Since the rectangle is a 3x7 grid, its total area (or the number of 1x1 squares) is 21. To minimize the number of 1x1 squares used, we begin by filling the area with larger shapes. Specifically, we can use two 2x2 squares, each covering 4 squares, and two 1x4 rectangles, each also covering 4 squares. This gives us a total of 4+4=84+4=8 squares filled by larger shapes.After filling 16 squares, we have 5 squares left. We can then fill in 5 additional 1x1 squares, leaving us with a total of 5 1x1 squares.</p><p>Thus, the least number of 1x1 squares required is $\\boxed{\\textbf{(E)\\ 5}}$. -AADHYA2012</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2024 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_8",
+      "question": "<p>On Monday, Taye has $$2$. Every day, he either gains $$3$ or doubles the amount of money he had on the previous day. How many different dollar amounts could Taye have on Thursday, $3$ days later?</p>",
+      "solutions": [
+        "<p>How many dollar values could be on the first day? Only $2$ dollars. The second day, you can either add $3$ dollars, or double, so you can have $5$ dollars, or $4$. For each of these values, you have $2$ values for each. For $5$ dollars, you have $10$ dollars or $8$, and for $4$ dollars, you have $8$ dollars or $7$ dollars. Now, you have $2$ values for each of these. For $10$ dollars, you have $13$ dollars or $20$, for $8$ dollars, you have $16$ dollars or $11$, for $8$ dollars, you have $16$ dollars or $11$, and for $7$ dollars, you have $14$ dollars or $10$.</p><p>On the final day, there are 11, 11, 16, and 16 repeating, leaving you with $8-2 = \\boxed{\\textbf{(D)\\ 6}}$ different values.</p><p>~ cxsmi (minor formatting edits)</p>",
+        "<p>Continue as in Solution 1 to get $7$, $8$, or $10$ dollars by the 2nd day. The only way to get the same dollar amount occurring twice by branching (multiply by $2$ or adding $3$) from here is if $7+3=10\\cdot 2$ or $7+3=8\\cdot 2$ which both aren't true. Hence our answer is $3\\cdot2=\\boxed{\\textbf{(D)\\ 6}}$. </p><p>~ Sahan Wijetunga</p>",
+        "<p>Let $a$ represent Taye adding $3$ dollars and $d$ represent Taye doubling his money.We can list out all the possibilities:$a$ => $a$ => $a$ = $11$, $a$ => $a$ => $d$ = $16$, $a$ => $d$ => $a$ = $12$, $a$ => $d$ => $d$ = $20$, $d$ => $a$ => $a$ = $10$, $d$ => $a$ => $d$ = $14$, $d$ => $d$ => $a$ = $11$, $d$ => $d$ => $d$ = $16$. The unique values are $10,11,12,14,16,20$. Thus, our desired answer is $\\boxed{\\textbf{(D)\\ 6}}$</p><p>~Irfans123</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2024 AMC 8 - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_9",
+      "question": "<p>All the marbles in Maria's collection are red, green, or blue. Maria has half as many red marbles as green marbles, and twice as many blue marbles as green marbles. Which of the following could be the total number of marbles in Maria's collection?</p>",
+      "solutions": [
+        "<p>Since she has half as many red marbles as green, we can call the number of red marbles $x$, and the number of green marbles $2x$.Since she has half as many green marbles as blue, we can call the number of blue marbles $4x$. Adding them up, we have: $7x$ marbles. The number of marbles therefore must be a multiple of $7$, as $x$ represents an integer, so the only possible answer is $\\boxed{\\textbf{(E) 28}}.$</p>",
+        "<p>Suppose Maria has $g$ green marbles and $t$ total marbles. She then has $\\frac{g}{2}$ red marbles and $2g$ blue marbles. Altogether, Maria has\\[g + \\frac{g}{2} + 2g = \\frac{7g}{2} = t\\]marbles, so $g = \\dfrac{2t}{7},$ so $t$ must be a multiple of $7$. The only multiple of $7$ in the answer choices is $\\boxed{\\textbf{(E) 28}}.$</p><p>-Benedict T (countmath1) and anabel.disher</p><p><br/></p>",
+        "<p>This solution is similar to Solution 1. The most simplest and effective way to solve this problem is equations. We have the following equations: </p><p>2r=gand 2g=bWe essentialy want to find out the total number of mables in Maria's collection or in equation terms (r+g+b). Converting that equation and substituting the values we get r+2r+4r=7r Now, we know the total is a multiple of 7 leaving our answer as $\\boxed{\\textbf{(E) 28}}.$ -AADHYA2012</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2024 AMC 8 - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_10",
+      "question": "<p>In January $1980$ the Mauna Loa Observatory recorded carbon dioxide $(CO2)$ levels of $338$ ppm (parts per million). Over the years the average $CO2$ reading has increased by about $1.515$ ppm each year. What is the expected $CO2$ level in ppm in January $2030$? Round your answer to the nearest integer. </p>",
+      "solutions": [
+        "<p>This is a time period of $2030 - 1980 = 50$ years, so we can expect the ppm to increase by $50*1.515=75.75\\approx\t76$ ppm.Since we started with $338$ ppm, we have $76+338=\\boxed{\\textbf{(B)\\ 414}}$.</p><p>-ILoveMath31415926535</p>",
+        "<p>$2030 - 1980 = 50$ years.The ppm level in 2030 is $338 + 50 * 1.515 = 338 + 75.75 = 413.75$ $\\approx\t\\boxed{\\textbf{(B)\\ 414}}$.</p><p>~thebanker88</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2024 AMC 8 - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_11",
+      "question": "<p>The coordinates of $\\triangle ABC$ are $A(5,7)$, $B(11,7)$, and $C(3,y)$, with $y>7$. The area of $\\triangle ABC$ is 12. What is the value of $y$?</p><p>[asy]  draw((3,11)--(11,7)--(5,7)--(3,11));  dot((5,7)); label(\"$A(5,7)$\",(5,7),S);  dot((11,7)); label(\"$B(11,7)$\",(11,7),S);  dot((3,11)); label(\"$C(3,y)$\",(3,11),NW);  [/asy]</p>",
+      "solutions": [
+        "<p>Since the triangle has a base of $6$, we can plug in that value as the base. Then, we can solve the equation for the height. Doing so gives us, \\[\\dfrac{6h}{2}=3h=12.\\]This means that $h=4$, so that means that we have to add 4 to the $y$-coordinate. So the answer is $7+4=\\boxed{(D) 11}$</p>",
+        "<p>By the Shoelace Theorem, $\\triangle ABC$ has area \\[\\frac{1}{2}|(y \\cdot 11 + 7 \\cdot 5 + 7 \\cdot 3) - (3 \\cdot 7 + 11 \\cdot 7 + 5 \\cdot y)| = \\frac{1}{2}|(11y + 56) - (98 + 5y)| = \\frac{1}{2}|6y - 42|.\\] From the problem, this is equal to $12$. We now solve for y.</p><p>$\\frac{1}{2}|6y - 42| = 12$</p><p>$|6y-42| = 24$</p><p>$6y - 42 = 24$ OR $6y - 42 = -24$</p><p>$6y = 66$ OR $6y = 18$</p><p>$y = 11$ OR $y = 3$</p><p>However, since, as stated in the problem, $y > 7$, our only valid solution is $\\boxed{\\textbf{(D)} 11}$.</p><p>~ <a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a></p>",
+        "<p>As in the figure, the triangle is determined by the vectors $\\begin{bmatrix}-2 \\\\ y-7\\end{bmatrix}$ and $\\begin{bmatrix}6\\\\0\\end{bmatrix}$. Recall that the absolute value of the determinant of these vectors is the area of the parallelogram determined by those vectors; the triangle has half the area of that parallelogram. Then we must have that $\\frac{1}{2}|\\begin{vmatrix}-2 & y-7\\\\6 & 0\\end{vmatrix}| = 12 \\implies \\begin{vmatrix}-2 & y-7\\\\6 & 0\\end{vmatrix} = \\pm 24$. Expanding the determinants, we find that $-6(y-7) = 24$ or $-6(y-7) = -24$. Solving each equation individually, we find that $y = 3$ or $y = 11$. However, the problem states that $y > 7$, so the only valid solution is $\\boxed{\\textbf{(D)} 11}$.</p><p>~ <a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a> (again!)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2024 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_12",
+      "question": "<p>Rohan keeps 90 guppies in 4 fish tanks.</p><p>How many guppies are in the 4th tank?</p>",
+      "solutions": [
+        "<p>Let $x$ denote the number of guppies in the first tank.</p><p>Then, we have the following for the number of guppies in the rest of the tanks:</p><ul><li>The number of guppies in the second tank is $x+1$</li><li>The number of guppies in the third tank is $x+1+2$</li><li>The number of guppies in the fourth tank is $x+1+2+3$</li></ul><p>The number of guppies in all of the tanks combined is 90, so we can write the equation</p><p>\\[(x)+(x+1)+(x+1+2)+(x+1+2+3) = 90.\\]</p><p>Simplifying the equation gives</p><p>\\[4x + 10 = 90.\\]</p><p>Solving the resulting equation gives $x = 20$, so the number of guppies in the fourth tank is $20+1+2+3 = \\boxed{\\textbf{(E)}\\ 26}$.</p><p>~ C. Ren, andliu766</p>",
+        "<p>Suppose there are no guppies in the first tank. Then, the number of guppies in the other tanks are $1,3,$ and $6,$ or $10$ guppies in total. We need to add $90-10 = 80$ guppies into $4$ tanks or $20$ guppies in each tank, so the number of guppies in the fourth tank is $20+6 = \\boxed{\\textbf{(E)}\\ 26}.$</p><p>~vvsss</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2024 AMC 8 - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_13",
+      "question": "<p>Buzz Bunny is hopping up and down a set of stairs, one step at a time. In how many ways can Buzz Bunny start on the ground, make a sequence of $6$ hops, and end up back on the ground?(For example, one sequence of hops is up-up-down-down-up-down.)</p><p><a class=\"image\" href=\"/wiki/index.php/File:2024-AMC8-q13.png\">2024-AMC8-q13.png</a></p>",
+      "solutions": [
+        "<p>Looking at the answer choices, you see that you can list them out. Doing this gets you:</p><p>$\\mathit{UUDDUD}$</p><p>$\\mathit{UDUDUD}$</p><p>$\\mathit{UUUDDD}$</p><p>$\\mathit{UDUUDD}$</p><p>$\\mathit{UUDUDD}$</p><p>Counting all the paths listed above gets you $\\boxed{\\textbf{(B)} \\ 5}$.</p><p>~ALWAYSRIGHT11</p>",
+        "<p>Any combination can be written as some re-arrangement of $\\mathit{UUUDDD}$. Clearly we must end going down, and start going up, so we need the number of ways to insert 2 $U$'s and 2 $D$'s into $U\\, \\_ \\, \\_ \\, \\_ \\, \\_ \\, D$. There are ${4\\choose 2}=6$ ways, but we have to remove the case $\\mathit{UDDUUD}$, giving us $\\boxed{\\textbf{(B)}\\ 5}$. </p><p><br/>- We know there are no more cases since there will be at least one $U$ before we have a $D$ (from the first $U$), at least two $U$'S before two $D$'s (since we removed the one case), and at least three $U$'s before three $D$'s, as we end with the third $D$. </p><p>~Sahan Wijetunga</p>",
+        "<p>These numbers are clearly the Catalan numbers. Since we have $6$ steps, we need the third Catalan number, which is $\\boxed{\\textbf{(B)}\\ 5}$.~andliu766</p>",
+        "<p>The first step must be a U, last step must be a D. After the third step we can get only position 3 or position 1. In the first case there is only one way: UUUDDD. In the second case we have two way to get this position UDU and UUD. Similarly, we have two way return to position 0 (UDD and DUD). Therefore, we have $1 + 2 \\cdot 2 = \\boxed{\\textbf{(B)}\\ 5}$.</p>",
+        "<p>We can find the total cases then deduct the ones that don't work. </p><p>Let $U$ represent \"Up\" and $D$ represent \"Down\". We know that in order to land back at the bottom of the stairs, we must have an equal number of $U$'s and $D$'s, therefore six hops means $3$ of each.</p><p>The number of ways to arrange $3$ $U$'s and $3$ $D$'s is $\\dfrac{6!}{(3!)^2}=\\dfrac{720}{36}=20$.</p><p>Case $1$: Start with $\\mathit D$</p><p>Case $2$: Start with $\\mathit{UDD}$</p><p>Case $3$: Start with $\\mathit{UUDDD}$</p><p>Case $4$: Start with $\\mathit{UDUDD}$</p><p>Case $1$ is asking us how many ways there are to arrange $3$ $U$'s and $2$ $D$'s, which is $\\dfrac{5!}{3!2!}=\\dfrac{120}{12}=10$.</p><p>Case $2$ is asking us how many ways there are to arrange $2$ $U$'s and $1$ $D$, which is $\\dfrac{3!}{2!1!}=\\dfrac{6}{2}=3$.</p><p>Case $3$ is asking us how many ways there are to arrange $1$ $U$, which is $1$.</p><p>Case $4$ is asking us the same thing as Case $3$, giving us $1$.</p><p>Therefore, deducting all cases from $20$ gives $20-10-3-1-1=\\boxed{\\textbf{(B)}\\,5}$.</p><p>~Tacos_are_yummy_1</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2024 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_14",
+      "question": "<p>The one-way routes connecting towns $A,M,C,X,Y,$ and $Z$ are shown in the figure below(not drawn to scale).The distances in kilometers along each route are marked. Traveling along these routes, what is the shortest distance from A to Z in kilometers?</p><p>[asy] /* AMC8 P14 2024, by NUMANA: BUI VAN HIEU */ import graph; unitsize(2cm); real r=0.25; // Define the nodes and their positions pair[] nodes = { (0,0), (2,0), (1,1), (3,1), (4,0), (6,0) }; string[] labels = { \"A\", \"M\", \"X\", \"Y\", \"C\", \"Z\" };  // Draw the nodes as circles with labels for(int i = 0; i < nodes.length; ++i) {     draw(circle(nodes[i], r));     label(\"$\" + labels[i] + \"$\", nodes[i]); } // Define the edges with their node indices and labels int[][] edges = { {0, 1}, {0, 2}, {2, 1}, {2, 3}, {1, 3}, {1, 4}, {3, 4}, {4, 5}, {3, 5} }; string[] edgeLabels = { \"8\", \"5\", \"2\", \"10\", \"6\", \"14\", \"5\", \"10\", \"17\" }; pair[] edgeLabelsPos = { S, SE, SW, S, SE, S, SW, S, NE}; // Draw the edges with labels for (int i = 0; i < edges.length; ++i) {     pair start = nodes[edges[i][0]];     pair end = nodes[edges[i][1]];     draw(start + r*dir(end-start) -- end-r*dir(end-start), Arrow);     label(\"$\" + edgeLabels[i] + \"$\", midpoint(start -- end),  edgeLabelsPos[i]); } // Draw the curved edge with label draw(nodes[1]+r * dir(-45)..controls (3, -0.75) and (5, -0.75)..nodes[5]+r * dir(-135), Arrow); label(\"$25$\", midpoint(nodes[1]..controls (3, -0.75) and (5, -0.75)..nodes[5]), 2S); [/asy]</p>",
+      "solutions": [
+        "<p>We can simply see that path $A \\rightarrow X \\rightarrow M \\rightarrow Y \\rightarrow C \\rightarrow Z$ will give us the smallest value. Adding, $5+2+6+5+10 = \\boxed{28}$. This is nice as it\u2019s also the smallest value, solidifying our answer.</p><p>You can also simply brute-force it or sort of think ahead - for example, getting from A to M can be done $2$ ways; $A \\rightarrow X \\rightarrow M$ ($5+2$) or $A \\rightarrow M (8)$, so you should take the shorter route ($5+2$). Another example is M to C, two ways - one is $6+5$ and the other is $14$. Take the shorter route. After this, you need to consider a few more times - consider if $5+10$ ($Y \\rightarrow C \\rightarrow Z$) is greater than $17 (Y \\rightarrow Z$), which it is not, and consider if $25 (M \\rightarrow Z$) is greater than $14+10$ ($M \\rightarrow C \\rightarrow Z$) or $6+5+10$ ($M \\rightarrow Y \\rightarrow C \\rightarrow Z$) which it is not. TLDR: $5+2+6+5+10 = \\boxed{28}$. [Note: This is probably just the thinking behind the solution.] {Double-note: As MaxyMoosy said, since this answer is the smallest one, it has to be the right answer.}</p><p>~MaxyMoosy ~HACKER2022</p>",
+        "<p>We can execute <a class=\"external text\" href=\"https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm\" rel=\"nofollow\">Dijkstra's algorithm</a> by hand to find the shortest path from $A$ to every other town, including $Z$. This effectively proves that, assuming we execute the algorithm correctly, that we will have found the shortest distance. The distance estimates for each step of the algorithm (from $A$ to each node) are shown below:</p><p>\\[\\begin{array}{|c|c|c|c|c|c|c|} \\hline \\text{Current node} & A & M & C & X & Y & Z \\\\ \\hline A & 0 & 8 & \\infty & 5 & \\infty & \\infty \\\\ X & 0 & 7 & \\infty & 5 & 15 & \\infty \\\\ M & 0 & 7 & 21 & 5 & 13 & 32 \\\\ Y & 0 & 7 & 18 & 5 & 13 & 30 \\\\ C & 0 & 7 & 18 & 5 & 13 & 28 \\\\ Z & 0 & 7 & 18 & 5 & 13 & \\textbf{28} \\\\ \\hline \\end{array}\\]The steps are as follows: starting with the initial node $A$, set $d(A)=0$ and $d(v)=\\infty$ for all $v \\in \\{M,C,X,Y,Z\\}$ where $d(v)$ indicates the distance from $A$ to $v$. Consider the outgoing edges $(A,X)$ and $(A,M)$ and update the distance estimates $d(X)=5$ and $d(M)=8$, completing the first row of the table.</p><p>The node $X$ is the unvisited node with the lowest distance estimate, so we will consider $X$ and its outgoing edges $(X,Y)$ and $(X,M)$. The distance estimate $d(Y)$ equals $d(X)+10=15$, and the distance estimate $d(M)$ updates to $d(X)+2=7$, because $7 < 8$. This completes the second row of the table. Repeating this process for each unvisited node (in order of its distance estimate) yields the correct distance $d(Z) = \\boxed{\\textbf{(A) } 28}$ once the algorithm is complete.</p><p>~scrabbler94</p><p><br/></p>",
+        "<p>From $A$, we want to find the shortest route to $Z$, so we want to try to find the shortest path through each node (not necessarily all of them). We should follow the arrows, since all of them lead to $Z$. From $A$, there are $2$ paths we can take, to $M$ $(8)$, or to $X$ $(5)$. We travel to $X$, since $5 < 8$. From $X$, we go to $M$ $(2 < 10)$, we go to $Y$ $6 < 14 < 25$, we go to $C$, $(5 < 17)$ and finally go to $Z$. Adding up gives $5 + 2 + 6 + 5 + 10 = 28 = \\boxed{\\textbf{(A)}}$.</p><p>~SpeedCuber7</p>",
+        "<p>We can cross off a few routes:</p><ul><li>AM can be crossed off because AXM is shorter</li><li>XY can be crossed off because XMY is shorter</li><li>YZ can be crossed off because YCZ is shorter</li><li>MC can be crossed off because MYC is shorter</li><li>MZ can be crossed off because MCZ is shorter</li></ul><p>Finally, we are left with a single path AXMYCZ from A to Z which adding it up gives $28 = \\boxed{\\textbf{(A)}}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2024 AMC 8 - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_15",
+      "question": "<p>Let the letters $F$,$L$,$Y$,$B$,$U$,$G$ represent distinct digits. Suppose $\\underline{F}~\\underline{L}~\\underline{Y}~\\underline{F}~\\underline{L}~\\underline{Y}$ is the greatest number that satisfies the equation</p><p>\\[8\\cdot\\underline{F}~\\underline{L}~\\underline{Y}~\\underline{F}~\\underline{L}~\\underline{Y}=\\underline{B}~\\underline{U}~\\underline{G}~\\underline{B}~\\underline{U}~\\underline{G}.\\]</p><p>What is the value of $\\underline{F}~\\underline{L}~\\underline{Y}+\\underline{B}~\\underline{U}~\\underline{G}$?</p>",
+      "solutions": [
+        "<p>The highest that $FLYFLY$ can be would have to be $124124$, and it cannot be higher than that, because then it would be $125125$, and $125125$ multiplied by 8 is $1001000$, and then it would exceed the $6$ - digit limit set on $BUGBUG$. </p><p>So, if we start at $124124\\cdot8$, we get $992992$, which would be wrong because both $B  \\&  U$ would be $9$, and the numbers cannot be repeated between different letters. </p><p>If we move on to the next highest, $123123$, and multiply by $8$, we get $984984$. All the digits are different, so $FLY+BUG$ would be $123+984$, which is $1107$. So, the answer is $\\boxed{\\textbf{(C)}1107}$. </p><p>- Akhil Ravuri of John Adams Middle School</p><p><br/></p><p>~ cxsmi (minor formatting edits)</p><p>~ Alice of Evergreen Middle School</p>",
+        "<p>Notice that $\\underline{F}~\\underline{L}~\\underline{Y}~\\underline{F}~\\underline{L}~\\underline{Y} = 1000(\\underline{F}~\\underline{L}~\\underline{Y}) + \\underline{F}~\\underline{L}~\\underline{Y}$. </p><p>Likewise, $\\underline{B}~\\underline{U}~\\underline{G}~\\underline{B}~\\underline{U}~\\underline{G} = 1000(\\underline{B}~\\underline{U}~\\underline{G}) + \\underline{B}~\\underline{U}~\\underline{G}$. </p><p>Therefore, we have the following equation:</p><p>$8 \\times 1001(\\underline{F}~\\underline{L}~\\underline{Y}) = 1001(\\underline{B}~\\underline{U}~\\underline{G})$.</p><p>Simplifying the equation gives</p><p>$8(\\underline{F}~\\underline{L}~\\underline{Y}) = (\\underline{B}~\\underline{U}~\\underline{G})$. </p><p>We can now use our equation to test each answer choice.</p><p>We have that $123123 \\times 8 = 984984$, so we can find the sum:</p><p>$\\underline{F}~\\underline{L}~\\underline{Y}+\\underline{B}~\\underline{U}~\\underline{G} = 123 + 984 = 1107$.</p><p>So, the correct answer is $\\boxed{\\textbf{(C)}\\ 1107}$.</p><p>- C. Re</p>",
+        "<p>Note that $FLY+BUG = 9 \\cdot FLY$. Thus, we can check the answer choices and find $FLY$ through each of the answer choices, we find the 1107 works, so the answer is $\\boxed{\\textbf{(C)}\\ 1107}$.</p><p>~andliu766</p>",
+        "<p>To solve \\( 8 \\cdot FLY = BUG \\) without guessing, we start by noting that \\( FLY \\) and \\( BUG \\) are three-digit numbers with distinct digits. We can write \\( FLY = 100F + 10L + Y \\) and \\( BUG = 100B + 10U + G \\), so the equation becomes:</p><p>\\(8 \\cdot (100 \\cdot F + 10 \\cdot L + Y) = 100 \\cdot B + 10 \\cdot U + G \\)</p><p>Since \\( 8 \\cdot FLY \\) must also be a three-digit number, \\( FLY \\) must be small, specifically \\( 100 \\leq FLY \\leq 124 \\), because \\( 8 \\cdot 124 = 992 \\) (just under $1000$). We try \\( F = 1 \\) (since \\( FLY \\) must remain three digits), which gives \\( B = 8F = 8 \\), leading to \\( FLY = 123 \\) and \\( BUG = 8 \\cdot 123 = 984 \\), where all digits \\( 1, 2, 3, 9, 8, 4 \\) are distinct. Adding \\( FLY + BUG = 123 + 984 = 1107 \\), the final answer is \\(\\boxed{\\text{(C) } 1107} \\).</p><p>~ Sharpwhiz17</p><p>~ yuvag ($\\LaTeX$ and slight formatting edits)</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2024 AMC 8 - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_16",
+      "question": "<p>Minh enters the numbers $1$ through $81$ into the cells of a $9 \\times 9$ grid in some order. She calculates the product of the numbers in each row and column. What is the least number of rows and columns that could have a product divisible by $3$?</p>",
+      "solutions": [
+        "<p>Note you can swap/rotate any configuration of rows, such that all the rows and columns that have a product of 3 are in the top left. Hence the points are bounded by a $a \\times b$ rectangle. This has $ab$ area and $a+b$ rows and columns divisible by $3$. We want $ab\\ge 27$ and $a+b$ minimized. </p><p>If $ab=27$, we achieve minimum with $a+b=9+3=12$.</p><p>If $ab=28$,our best is $a+b=7+4=11$. Note if $a+b=10$, $ab=25$. Because $25<27$, there is no smaller answer, and we get $\\boxed{\\textbf{(D)} 11}$. </p><p>- SahanWijetunga ~vockey(minor edits)~phy6(minor edits)</p>",
+        "<p>For a row or column to have a product divisible by $3$, there must be a multiple of $3$ in the row or column. To create the least amount of rows and columns with multiples of $3$, we must find a way to keep them all together, to minimize the total number of rows and columns with multiples of threes in it. From $1$ to $81$, there are $27$ multiples of $3$ $(81/3 = 27)$. So we have to fill $27$ cells with numbers that are multiples of $3$. If we put $25$ of these numbers in a $5 * 5$ grid, there would be $5$ rows and $5$ columns ($10$ in total), with products divisible by $3$. However, we have $27$ numbers, so $2$ numbers still need to be put in the $9 * 9$ grid. If we put both numbers in the $6$th column, but one in the first row, and one in the second row, (next to the $5$ by $5$ grid already filled), we would have a total of $6$ columns now, and still $5$ rows with products that are multiples of $3$. Since $6 + 5 = 11$, the answer is $\\boxed{\\textbf{(D)} 11}$</p><p>~goofytaipan(minor edit) DehnTwistNil~car0t (a few minor edits)</p>",
+        "<p>In the numbers $1$ to $81$, there are 27 multiples of three. In order to minimize the rows and columns, the best way is to make a square. However, the closest square is $25$, meaning there are two multiples of three remaining. However, you can place these multiples right above the 5x5 square, meaning the answer is $\\boxed{\\textbf {(D)} 11}$~eJust be better~Shriyans Chowdhury (minor configuration error)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2024 AMC 8 - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_17",
+      "question": "<p>A chess king is said to attack all the squares one step away from it, horizontally, vertically, or diagonally. For instance, a king on the center square of a $3$ x $3$ grid attacks all $8$ other squares, as shown below. Suppose a white king and a black king are placed on different squares of a $3$ x $3$ grid so that they do not attack each other (in other words, not right next to each other). In how many ways can this be done?</p><p>[asy] /* AMC8 P17 2024, revised by Teacher David */ unitsize(29pt); import math; add(grid(3,3));  pair [] a = {(0.5,0.5), (0.5, 1.5), (0.5, 2.5), (1.5, 2.5), (2.5,2.5), (2.5,1.5), (2.5,0.5), (1.5,0.5)};  for (int i=0; i<a.length; ++i) {     pair x = (1.5,1.5) + 0.4*dir(225-45*i);     draw(x -- a[i], arrow=EndArrow()); }  label(\"$K$\", (1.5,1.5)); [/asy]</p>",
+      "solutions": [
+        "<p>If you place a king in any of the $4$ corners, the other king will have $5$ spots to go and there are $4$ corners, so $5 \\times 4=20$.If you place a king in any of the $4$ edges, the other king will have $3$ spots to go and there are $4$ edges so $3 \\times 4=12$. That gives us $20+12=32$ spots for the other king to go into in total.So $\\boxed{\\textbf{(E)} 32}$ is the answer.~andliu766, captaindiamond868 (minor edits)~AliceDubbleYou</p>",
+        "<p>We see that the center is not a viable spot for either of the kings to be in, as it would attack all nearby squares.</p><p>This gives three combinations: </p><p>Corner-corner: There are 4 corners, and none of them are touching orthogonally or diagonally, so it's $\\binom{4}{2}=6$</p><p>Corner-edge: For each corner, there are two edges that don't border it, $4\\cdot2=8$</p><p>Edge-edge: The only possible combinations of this that work are top-bottom and left-right edges, so $2$ for this type</p><p><br/>$6+8+2=16$</p><p>Multiply by two to account for arrangements of colors to get $\\fbox{E) 32}$ ~ c_double_sharp</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2024 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_18",
+      "question": "<p>Three concentric circles centered at $O$ have radii of $1$, $2$, and $3$. Points $B$ and $C$ lie on the largest circle. The region between the two smaller circles is shaded, as is the portion of the region between the two larger circles bounded by central angles $BOC$, as shown in the figure below. Suppose the shaded and unshaded regions are equal in area. What is the measure of $\\angle{BOC}$ in degrees?</p>",
+      "solutions": [
+        "<p>Let $x=\\angle{BOC}$.</p><p>We see that the shaded region is the inner ring plus a sector $x^\\circ$ of the outer ring. Using the formula for the area of a circle ($A = \\pi r^2$), we find that the area of $x$ is $\\left( 4 \\pi - \\pi \\right)+\\frac{x}{360} \\left( 9 \\pi - 4 \\pi \\right)$. This simplifies to $3 \\pi + \\frac{x}{360}(5 \\pi)$.</p><p>The unshaded portion is comprised of the smallest circle plus the sector $(360-x)^\\circ$ of the outer ring, which evaluates to $\\pi + \\frac{360-x}{360}(5 \\pi)$.</p><p>We are told these are equal. Therefore, $3 \\pi + \\frac{x}{360}(5 \\pi) = \\pi + \\frac{360-x}{360}(5 \\pi)$. Solving for $x$ reveals $x=\\boxed{\\textbf{(A) } 108}$.</p><p>~MrThinker</p><p>~Dash11 (Edited coefficient of pi. Credit goes to MrThinker for the solution and explanation.)</p>",
+        "<p>Notice that for the 3rd most outer ring of the circle, the ratio of the shaded region to non-shaded region is the ratio of $\\angle{BOC}$ to $360-\\angle{BOC}$. With that, all we need to do is solve for the shaded region.</p><p>The inner most circle has radius $1$, and the second circle has radius 2. Therefore, the first shaded area has $4 \\pi - \\pi = 3 \\pi$ area. The circle has total area $9 \\pi$, so the other shaded region must have $1.5 \\pi$ area, as the non-shaded and shaded area is equivalent. So for the 3rd outer ring, the total area is $9 \\pi - 4 \\pi = 5 \\pi$, so the non-shaded part of the outer ring is $5 \\pi - 1.5 \\pi = 3.5 \\pi$. </p><p>Now as said before, the ratio of these two areas is the ratio of $\\angle{BOC}$ and $360 - \\angle{BOC}$. So, $\\frac{3.5}{1.5} = \\frac{7}{3}$. We have $7x:3x$ where $7x+3x = 360$, $x = 36$, so our answer is $3x = 108, \\boxed{(A) 108}$.</p><p>~MaxyMoosy</p>",
+        "<p>The AMC 8 test allows a ruler tool that you can rotate and drag. You can use the tool to make a straight segment (which we know is $180$ degrees), and we let the angle of desire be $x$. We can estimate that $180-x$ is just about $30$ degrees short of $x$ itself, so $x-30=180-x$, solving gives $x=105$, therefore the closest answer is $\\boxed{\\textbf{(A)}\\,108}$. </p><ul><li>Note: This isn't the most accurate method to use on AMC 8s, this is just a quick method if time is short or you do not know how to do the problem and want to guess at it.</li></ul>",
+        "<p>Suppose the desired angle is some fraction $x$ of the total degree measure of the circle. We now compile a list of the shaded and unshaded areas. The inner circle of radius $1$ is completely unshaded, so it contributes $1$ to the unshaded area. (Everything will be a multiple of $\\pi$, so we omit it.) The inner annulus has area $2^2 - 1^2 = 3$, which it contributes to the shaded area. The outer annulus has a total area of $3^2 - 2^2 = 5$; the fraction $x$ is shaded, so the shaded portion of the outer annulus contributes $5x$ to the shaded area, while the other $1 - x$ fraction is unshaded, so the unshaded portion contributes $5(1-x)$ to the unshaded area. We now equate and solve. \\[1 + 5(1-x) = 3 + 5x\\] Upon solving, we find that $x = \\frac{3}{10}$, so the degree measure is $360 \\cdot \\frac{3}{10} = \\boxed{\\textbf{(A)} 108}$.</p><p>~ <a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a></p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2024 AMC 8 - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_19",
+      "question": "<p>Jordan owns 15 pairs of sneakers. Three fifths of the pairs are red and the rest are white. Two thirds of the pairs are high-top and the rest are low-top. The red high-top sneakers make up a fraction of the collection. What is the least possible value of this fraction?</p>",
+      "solutions": [
+        "<p>Jordan has $10$ high top sneakers, and $6$ white sneakers. We would want as many white high-top sneakers as possible, so we set $6$ high-top sneakers to be white. Then, we have $10-6=4$ red high-top sneakers, so the answer is $\\boxed{\\dfrac{4}{15}}.$</p>",
+        "<p>We first start by finding the amount of red and white sneakers. 3/5 * 15=9 red sneakers, so 6 are white sneakers. Then 2/3 * 15=10 are high top sneakers, so 5 are low top sneakers. Now think about 15 slots and the first 10 are labeled high top sneakers. if we insert the last 5 sneakers as red sneakers there are 4 leftover over red sneakers. Putting those four sneakers as high top sneakers we have our answer as C, or $\\boxed{\\dfrac{4}{15}}.$</p><p>-ermwhatthesigma</p>",
+        "<p>There are $\\dfrac{3}{5}\\cdot 15 = 9$ red pairs of sneakers and $6$ white pairs. There are also $\\dfrac{2}{3}\\cdot 15 = 10$ high-top pairs of sneakers and $5$ low-top pairs. Let $r$ be the number of red high-top sneakers and let $w$ be the number of white high-top sneakers. It follows that there are $9-r$ red pairs of low-top sneakers and $6-r$ white pairs. \\\\\\\\We must have $9-r \\leq 5,$ in order to have a valid amount of white sneakers. Solving this inequality gives $r\\geq 4$, so the smallest possible value for $r$ is $4$. This means that there would be $9-4=5$ pairs of low-top red sneakers, so there are $0$ pairs of low-top white sneakers and $6$ pairs of high top white sneakers. This checks out perfectly, so the smallest fraction is $\\boxed{\\textbf{(C)}\\ \\frac{4}{15}}.$</p><p>-hola</p>",
+        "<p>15 times $\\tfrac{3}{5}$ is $9$, which is the number of red pairs of sneakers. Then, $\\tfrac{2}{3}$ times $15$ is $10$, so there are ten pairs of high-top sneakers. If there are ten high-top sneakers, there are five low top sneakers. To have the lowest amount of high-top red sneakers, all five of the low-top sneakers need to be red. There are four red sneakers remaining so they have to be high-top. So the answer is $\\boxed{\\textbf{(C)}\\ \\frac{4}{15}}.$</p><p>Answer by AliceDubbleYou</p><p>-Minor edit by angieeverfree</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2024 AMC 8 - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_20",
+      "question": "<p>Any three vertices of the cube $PQRSTUVW$, shown in the figure below, can be connected to form a triangle. (For example, vertices $P$, $Q$, and $R$ can be connected to form isosceles $\\triangle PQR$.) How many of these triangles are equilateral and contain $P$ as a vertex?</p><p>[asy] unitsize(4); pair P,Q,R,S,T,U,V,W; P=(0,30); Q=(30,30); R=(40,40); S=(10,40); T=(10,10); U=(40,10); V=(30,0); W=(0,0); draw(W--V); draw(V--Q); draw(Q--P); draw(P--W); draw(T--U); draw(U--R); draw(R--S); draw(S--T); draw(W--T); draw(P--S); draw(V--U); draw(Q--R); dot(P); dot(Q); dot(R); dot(S); dot(T); dot(U); dot(V); dot(W); label(\"$P$\",P,NW); label(\"$Q$\",Q,NW); label(\"$R$\",R,NE); label(\"$S$\",S,N); label(\"$T$\",T,NE); label(\"$U$\",U,NE); label(\"$V$\",V,SE); label(\"$W$\",W,SW); [/asy]</p>",
+      "solutions": [
+        "<p>The only equilateral triangles that can be formed are through the diagonals of the faces of the square. From P you have $3$ possible vertices that are possible to form a diagonal through one of the faces. Therefore, there are $3$ possible triangles. So the answer is $\\boxed{\\textbf{(D) }3}$~Math645, andliu766, e___</p>",
+        "<p>Each other compatible point must be an even number of edges away from P, so the compatible points are R, V, and T. Therefore, we must choose two of the three points, because P must be a point in the triangle. So, the answer is ${3 \\choose 2} = \\boxed{\\textbf{(D) }3}$</p><p>-ILoveMath31415926535</p>",
+        "<p>List them out- you get $PRV$, $PRT$, and $PVT$. Therefore, the answer is $\\boxed{\\textbf{(D) 3}}$</p><p>-Anonymussrvusdmathstudent234234</p>",
+        "<p>After looking at the cube, we realize that an equilateral triangle can only be formed by three lines that form a diagonal along a face of the cube (such as $PV$). Because the problem has a condition that one of the triangle's vertex must be on $P$, the three diagonals that can be formed are $PT, PR$, and $PV$.</p><p>Now, we can choose any of 2 out of the 3 lines we have listed, and connect any of them with another line (for example, if we choose $PT$ and $PR$, the third diagonal is $RT$). Thus, there are 3 ways to choose the 3 diagonals, so the answer is $3$, or $\\boxed{\\textbf{(D) }3}$</p><p>~TechnoDragon</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2024 AMC 8 - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_21",
+      "question": "<p>A group of frogs (called an army) is living in a tree. A frog turns green when in the shade and turns yellowwhen in the sun. Initially, the ratio of green to yellow frogs was $3\u00a0: 1$. Then $3$ green frogs moved to thesunny side and $5$ yellow frogs moved to the shady side. Now the ratio is $4\u00a0: 1$. What is the differencebetween the number of green frogs and the number of yellow frogs now?</p>",
+      "solutions": [
+        "<p>Let the initial number of green frogs be $g$ and the initial number of yellow frogs be $y$. Since the ratio of the number of green frogs to yellow frogs is initially $3\u00a0: 1$, $g = 3y$. Now, $3$ green frogs move to the sunny side and $5$ yellow frogs move to the shade side, thus the new number of green frogs is $g + 2$ and the new number of yellow frogs is $y - 2$. We are given that $\\frac{g + 2}{y - 2} = \\frac{4}{1}$, so $g + 2 = 4y - 8$, since $g = 3y$, we have $3y + 2 = 4y - 8$, so $y = 10$ and $g = 30$. Thus the answer is $(g + 2) - (y - 2) = 32 - 8 = \\boxed{(E) \\hspace{1 mm} 24}.$</p><p>-anonchalantdreadhead</p>",
+        "<p>Since the original ratio is $3:1$ and the new ratio is $4:1$, the number of frogs must be a multiple of $12$, the only solutions left are $(B)$ and $(E)$. </p><p>Let's start with $12$ frogs: </p><p>We must have $9$ frogs in the shade and $3$ frogs in the sun. After the change, there would be $11$ frogs in the shade and $1$ frog in the sun, which is not a $4:1$ ratio. </p><p>Therefore the answer is: $\\boxed{(E) \\hspace{1 mm} 24}$.</p><p>-ILoveMath31415926535</p>",
+        "<p>The ratio of $g$ (green) to $y$ (yellow) frogs is $3:1$. When $3$ green frogs move to the sunny side and $5$ yellow frogs move to the shady side, the ratio becomes $g + 2:y - 2$ which is $4:1$. </p><p>So earlier, $\\frac{3}{4}$, or $\\frac{15}{20}$, of the total frogs were green. Now, $\\frac{4}{5}$, or $\\frac{16}{20}$, of the total frogs are green. When the $2$ frogs transferred from the yellow side to the green, the green side gained $\\frac{1}{20}$ of the total amount of frogs. So, $2$ = $\\frac{1}{20}$$a$, where $a$ is the total number of frogs. Solving for $a$ we get $a$ = $40$.</p><p>If the ratio $4: 1$ has a total of $40$, then we can multiply each of them by $\\frac{40}{(4 + 1)}$, or $8$, and find that there are $32$ green frogs and $8$ yellow frogs. Therefore, the difference between the green and yellow frogs is $\\boxed{\\textbf{(E) }24}$</p><p>~mihikamishra</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2024 AMC 8 - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_22",
+      "question": "<p>A roll of tape is $4$ inches in diameter and is wrapped around a ring that is $2$ inches in diameter. A cross section of the tape is shown in the figure below. The tape is $0.015$ inches thick. If the tape is completely unrolled, approximately how long would it be? Round your answer to the nearest $100$ inches.</p><p>[asy] /* AMC8 P22 2024, revised by Teacher David */ size(150);  pair o = (0,0); real r1 = 1; real r2 = 2;  filldraw(circle(o, r2), mediumgray, linewidth(1pt)); filldraw(circle(o, r1), white, linewidth(1pt));  draw((-2,-2.6)--(-2,-2.4)); draw((2,-2.6)--(2,-2.4)); draw((-2,-2.5)--(2,-2.5), L=Label(\"4 in.\"));  draw((-1,0)--(1,0), L=Label(\"2 in.\", align=(0,1)), arrow=Arrows());  draw((2,0)--(2,-1.3), linewidth(1pt)); [/asy]</p>",
+      "solutions": [
+        "<p>The roll of tape is $1/0.015=66$ layers thick. In order to find the total length, we have to find the average of each concentric circle and multiply it by $66$. Since the diameter of the small circle is $2$ inches and the diameter of the large one is $4$ inches, the \"middle value\" (or mean) is $3$. Therefore, the average circumference is $3\\pi$. Multiplying $3\\pi \\cdot 66$ gives approximately $(B) \\boxed{600}$.- Ilovemath3141592653589The actual answer is around 660, but 660 is closer to 600 than 1200.- 1087780lakewashington200Seojoon Oh, Samantha Smith Elementary School</p>",
+        "<p>There are about $\\dfrac{1}{0.015}=\\dfrac{200}{3}$ \"full circles\" of tape, and with average circumference of $\\dfrac{4+2}{2}\\pi=3\\pi.$ $\\dfrac{200}{3} \\cdot 3\\pi=200\\pi,$ which means the answer is $\\boxed{600}$.</p>",
+        "<p>We can figure out the length of the tape by considering the side of the tape as a really thin rectangle that has a width of $0.015$ inches. The side of the tape is wrapped into an annulus(The shaded region between 2 circles with the same center), meaning the area of the shaded region is equal to the area of the really thin rectangle. </p><p>The area of the shaded region is $\\pi(\\frac{4}{2})^2 -\\pi(\\frac{2}{2})^2 = 3\\pi$, and we divide that by $0.015$ to get $200\\pi$. Approximating $\\pi$ to be 3, we get the final answer to be $200 \\cdot 3 = \\textbf {(B) } 600$.</p>",
+        "<p>The volume of the tape is always the same, but we can either calculate it when the tape is unrolled as a really long, thin rectangular prism, or we can calculate it as a cylinder with a hole cut out of it. When we calculate it as a long rectangular prism, we can say that the length is $X$ (this is what the problem wants!) and the width is $Y$. Then, the volume is, of course, $0.015 \\cdot X \\cdot Y.$ Now, notice that the \"width\" of our rectangular prism is also the \"height\" of our cylinder with a hole cut out of it. Then, we can calculate the volume as base times height, or in this case, $3\\pi \\cdot Y.$ Now, since the volume always stays the same, we know that $3\\pi \\cdot Y = 0.015 \\cdot X \\cdot Y.$ Cancelling the $Y$'s give us an equation for $X$, and if we approximate $\\pi$ as $3$, then $X = \\boxed {600}$.</p>",
+        "<p>If you cannot notice that the average diameter is $3$,you can still solve this problem by the following method. </p><p>The same with solution 1, we have $\\frac{1000}{0.015}$ layers of tape. If we consider every layers with the diameter $2$, the length should be $\\frac{1000}{0.015}2\\pi\\approx 400$. If the diameter is seem as $4$, the length should be $800$. So, the length is between $400$ and $800$, the only possible answer is $\\boxed{600}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2024 AMC 8 - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_23",
+      "question": "<p>Rodrigo has a very large sheet of graph paper. First he draws a line segment connecting point $(0,4)$ to point $(2,0)$ and colors the $4$ cells whose interiors intersect the segment, as shown below. Next Rodrigo draws a line segment connecting point $(2000,3000)$ to point $(5000,8000)$. How many cells will he color this time?</p><p>[asy] // Asymptote code by aoum unitsize(8mm);  fill((1,0)--(2,0)--(2,2)--(1,2)--cycle, lightgray); fill((0,2)--(1,2)--(1,4)--(0,4)--cycle, lightgray);  for (int i = -1; i < 6; ++i) {   draw((-1,i)--(5,i));   draw((i,-1)--(i,5)); }  draw((-1,0)--(5,0), Arrow); draw((0,-1)--(0,5), Arrow);  draw((2,0)--(0,4), black + 1.5bp);  dot((2,0), black + 6bp); dot((0,4), black + 6bp);  label(scale(0.7)*\"$(2,0)$\", (2,0), SE); label(scale(0.7)*\"$(0,4)$\", (0,4), NW); [/asy]</p>",
+      "solutions": [
+        "<p>Let $f(x, y)$ be the number of cells the line segment from $(0, 0)$ to $(x, y)$ passes through. The problem is then equivalent to finding \\[f(5000-2000, 8000-3000)=f(3000, 5000).\\] Sometimes the segment passes through lattice points in between the endpoints, which happens $\\text{gcd}(3000, 5000)-1=999$ times. This partitions the segment into $1000$ congruent pieces that each pass through $f(3, 5)$ cells, which means the answer is \\[1000f(3, 5).\\] Note that a new square is entered when the lines pass through one of the lines in the coordinate grid, which for $f(3, 5)$ happens $3-1+5-1=6$ times. Because $3$ and $5$ are relatively prime, no lattice point except for the endpoints intersects the line segment from $(0, 0)$ to $(3, 5).$ This means that including the first cell closest to $(0, 0),$ The segment passes through $f(3, 5)=6+1=7$ cells. Thus, the answer is $\\boxed{\\textbf{(C)}7000}.$ Alternatively, $f(3, 5)$ can be found by drawing an accurate diagram, leaving you with the same answer.</p><p>~BS2012</p><p>Note: A general form for finding $f(x, y)$ is $x+y-\\text{gcd}(x, y).$ We subtract $\\text{gcd}(x, y)$ to account for overlapping, when the line segment goes through a lattice point.</p><p>~mathkiddus</p><p>$\\textbf{Lemma 1 for Problem 23:}$</p><p>Let $p$ and $q$ be relatively prime positive integers. When a $p\\times q$ rectangle is split up into $pq$ unit squares, exactly $p + q - 1$ unit squares are crossed by the diagonal of this rectangle. </p><p><br/>$\\textbf{Proof:}$</p><p><br/>First, we claim that the diagonal does not cross the corner of a unit square. \\\\\\\\To prove this claim we proceed by way of contradiction. Plot the rectangle on the Cartesian plane at the vertices $(0,0),(p,0),(q,p),(0,q).$ The diagonal has endpoints at $(0,0),(q,p)$, so its slope is $\\frac{p}{q}.$ Now, suppose the diagonal goes through the corner point $(a,b)$, where $a<q$ and $b<p$. The slope of this line is $\\frac{b}{a}$, which must be equal to $\\frac{p}{q},$ implying that $\\frac{p}{q}$ can be reduced, contradicting the fact that $p$ and $q$ are relatively prime. We conclude that no corner points of a grid entry (unit square) are crossed. \\\\\\\\Since no corner points are crossed, each time the diagonal crosses either a horizontal or vertical grid line, exactly one more unit square is touched by the diagonal. There are $p-1$ horizontal lines and $q-1$ vertical lines, so there are $p + q - 2$ total lines crossed by the diagonal. This doesn't include the square in the bottom left corner, crossed initially. Therefore, there are $p + q-2 + 1 = p + q - 1$ unit squares crossed by the diagonal and our claim is proven.</p><p>$\\textbf{Lemma 2 for Problem 23:}$</p><p><br/>Let $p$ and $q$ be positive integers. When a $p\\times q$ rectangle is split up into $pq$ units squares, exactly $p + q - \\gcd(p, q)$ unit squares are crossed by the diagonal of this rectangle.</p><p><br/>If $\\gcd (p,q) = 1$, then we are done by Lemma 1.</p><p>Suppose $\\gcd(p,q) = k>1$, i.e $p = ak$ and $q = bk$, for positive integers $a$ and $b$. We can then split the $p\\times q$ rectangle up into $k$ $\\frac{p}{k} \\times \\frac{q}{k}$ rectangles, strung together at the diagonal. An example for $(p,q)=(4,6)$ is shown below, where two $2\\times 3$ rectangles are strung together: </p><p>[asy] unitsize(1cm); draw((0,0)--(6,4),linewidth(1)); currentpen = linewidth(.5); for (real i = 0; i <= 6; ++i) {     draw((i, 0)--(i, 4)); } for (real i = 0; i < 5; ++i) {     draw((0, i)--(6, i)); }  currentpen = linewidth(1.5); for (real i = 0; i <= 3; ++i) {     draw((i, 0)--(i, 2)); } for (real i = 0; i <= 2; ++i) {     draw((0, i)--(3, i)); }  for (real i = 3; i <= 6; ++i) {     draw((i, 2)--(i, 4)); } for (real i = 3; i <= 5; ++i) {     draw((3, i-1)--(6, i-1)); } [/asy]</p><p>After the diagonal crosses the corner point of a square, the pattern repeats itself with the next one. By Lemma 1, there are $\\frac{p}{k}+ \\frac{q}{k} - 1$ diagonals crossed in each rectangle. There are $k = \\gcd (p, q)$ rectangles, so the number of crossed diagonals in total is\\[k\\left( \\frac{p}{k}+ \\frac{q}{k} - 1 \\right) = p + q - \\gcd(p,q).\\]</p><p>-Benedict T (countmath1)</p>",
+        "<p>Draw a line in the lattice (rulers are allowed on the AMC 8) from $(2,3)$ to $(5,8)$, and notice that the line crossed 7 blocks in this pattern. Such a pattern is repeated 1000 times between $(2000,3000)$ and $(5000,8000)$, so the answer is $\\boxed{\\textbf{(C)}7000}$.</p><p><br/>~Minor edits by mihikamishra</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2024 AMC 8 - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_24",
+      "question": "<p>Jean has made a piece of stained glass art in the shape of two mountains, as shown in the figure below. One mountain peak is $8$ feet high while the other peak is $12$ feet high. Each peak forms a $90^\\circ$ angle, and the straight sides form a $45^\\circ$ angle with the ground. The artwork has an area of $183$ square feet. The sides of the mountain meet at an intersection point near the center of the artwork, $h$ feet above the ground. What is the value of $h?$</p><p>[asy] unitsize(.3cm); filldraw((0,0)--(8,8)--(11,5)--(18,12)--(30,0)--cycle,gray(0.7),linewidth(1)); draw((-1,0)--(-1,8),linewidth(.75)); draw((-1.4,0)--(-.6,0),linewidth(.75)); draw((-1.4,8)--(-.6,8),linewidth(.75)); label(\"$8$\",(-1,4),W); label(\"$12$\",(31,6),E); draw((-1,8)--(8,8),dashed); draw((31,0)--(31,12),linewidth(.75)); draw((30.6,0)--(31.4,0),linewidth(.75)); draw((30.6,12)--(31.4,12),linewidth(.75)); draw((31,12)--(18,12),dashed); label(\"$45^{\\circ}$\",(.75,0),NE,fontsize(10pt)); label(\"$45^{\\circ}$\",(29.25,0),NW,fontsize(10pt)); draw((8,8)--(7.5,7.5)--(8,7)--(8.5,7.5)--cycle); draw((18,12)--(17.5,11.5)--(18,11)--(18.5,11.5)--cycle); draw((11,5)--(11,0),dashed); label(\"$h$\",(11,2.5),E); [/asy]</p>",
+      "solutions": [
+        "<p>Extend the \"inner part\" of the mountain so that the image is two right triangles that overlap in a third right triangle as shown. [asy] unitsize(.2cm); draw((0,0)--(8,8)--(11,5)--(18,12)--(30,0)--cycle,linewidth(1)); draw((11,5)--(6, 0)--(16, 0)--cycle,linewidth(0.5)); label(\"$8\\sqrt{2}$\",(4,4),NW); label(\"$12\\sqrt{2}$\",(24,6),NE); draw((8,8)--(7.5,7.5)--(8,7)--(8.5,7.5)--cycle); draw((18,12)--(17.5,11.5)--(18,11)--(18.5,11.5)--cycle); draw((11,5)--(11,0),dashed); label(\"$h$\",(11,2.5),E); [/asy]The side length of the largest right triangle is $12\\sqrt{2},$ which means its area is $144.$ Similarly, the area of the second largest right triangle is $64$ (the side length is $8\\sqrt{2}$), and the area of the overlap is $h^2$ (the side length is $h\\sqrt{2}$). Because the right triangles have a side ratio of 1:1:$\\sqrt{2}$.Thus,\\[144+64-h^2=183,\\]which means that the answer is $\\boxed{\\mathbf{(B)}\\text{ 5}}.$</p><p>~BS201</p>",
+        "<p>You can measure $h$ with a ruler (rulers are allowed on the AMC 8), and see that $h$ is closest to $\\boxed{\\mathbf{(B)}\\text{ 5}}.$</p><p>~SID-DARTH-VATER</p><p>(Please note: This is not the best way, as diagrams are NOT ALWAYS DRAWN TO SCALE) ~Anonymous ~Continuous_Pi</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2024 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2024_8_25",
+      "question": "<p>A small airplane has $4$ rows of seats with $3$ seats in each row. Eight passengers have boarded the plane and are distributed randomly among the seats. A married couple is next to board. What is the probability there will be 2 adjacent seats in the same row for the couple?</p><p>[asy] // Asymptote by aoum import roundedpath; unitsize(1cm);  path p = roundedpath((0,0)--(1,0)--(1,1)--(0,1)--cycle, 0.1);  for (int r = 0; r < 4; ++r) {   for (int c = 0; c < 3; ++c) {     draw(shift(1.1 * c, 1.3 * r) * p);   } } [/asy]</p>",
+      "solutions": [
+        "<p>Suppose the passengers are indistinguishable. There are $\\binom{12}{8} = 495$ total ways to distribute the passengers. We proceed with complementary counting, and instead, will count the number of passenger arrangements such that the couple cannot sit anywhere. Consider the partitions of $8$ among the rows of $3$ seats, to make our lives easier, assuming they are non-increasing. We have $(3, 3, 2, 0), (3, 3, 1, 1), (3, 2, 2, 1), (2, 2, 2, 2)$. </p><p><br/>For the first partition, clearly, the couple will always be able to sit in the row with $0$ occupied seats, so we have $0$ cases here.</p><p><br/>For the second partition, there are $\\frac{4!}{2!2!} = 6$ ways to permute the partition. Now the rows with exactly $1$ passenger must be in the middle, so this case generates $6$ cases.</p><p><br/>For the third partition, there are $\\frac{4!}{2!} = 12$ ways to permute the partition. For rows with $2$ passengers, there are $\\binom{3}{2} = 3$ ways to arrange them in the row so that the couple cannot sit there. The row with $1$ passenger must be in the middle. We obtain $12 \\cdot 3^2 = 108$ cases.</p><p><br/>For the fourth partition, there is $1$ way to permute the partition. As said before, rows with $2$ passengers can be arranged in $3$ ways, so we obtain $3^4 = 81$ cases.</p><p><br/>Collectively, we obtain a total of $6 + 108 + 81 = 195$ cases. The final probability is $1 - \\frac{195}{495} = \\boxed{\\textbf{(C)}~\\frac{20}{33}}$.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/community/user/1096417\" rel=\"nofollow\">blueprimes</a>, <a href=\"/wiki/index.php/User:Wrenmath\" title=\"User:Wrenmath\">Wrenmath</a></p>",
+        "<p>Suppose the passengers are indistinguishable. </p><p>What this question is asking, is really, if 4 empty seats are placed, what is the probability that there are 2 adjacent seats open.</p><p>We proceed by casework.</p><p><br/>Case 1: There is exactly one pair of open seats. Then the other seat in that row must be occupied. The other two empty seats are distributed across the remaining $3$ rows without being adjacent, which is $\\binom{9}{2}-6=30$ cases per pair of open seats for $30\\cdot8=240$ total cases. </p><p><br/>Case 2: There is one row of open seats. $4$ ways to choose the row and $9$ to choose the final empty seat for $4\\cdot9=36$ cases. </p><p><br/>Case 3: There are $2$ independent pairs of open seats. Choose the $2$ rows, then the placement of each pair within each row for $\\binom{4}{2}\\cdot2^2=24$ cases. </p><p><br/>In total, we get $240+36+24=300$ cases total for a probability of\\[\\frac{300}{\\binom{12}{4}}=\\frac{300}{495}=\\boxed{\\mathbf{(C)}~\\frac{20}{33}}\\]</p><p>~rhydon516 </p>",
+        "<p>We notice that if we have a middle seat in a row, then the couple cannot sit in that row. So, we perform complementary casework. </p><p>Case 1: Four people sitting in middle seats. </p><p>In this case, there are 4 people left to order, and 8 seats. This gives $\\dbinom{8}{4}$ total combinations for this case. </p><p>Case 2: Three people sitting in middle seats.</p><p>In this case, there are $\\dbinom{4}{3}$ ways to permute the rows in which the middle seat is occupied. For the row in which the people do not occupy the middle row, we must have two people sitting at the ends of the rows to guarantee the couple cannot sit there. So, for the rest of the 3 people, there are 6 possible seats. So, there are $\\dbinom{4}{3} \\cdot \\dbinom{6}{3}$ total combinations. </p><p>Case 3: Two people sitting in middle seats. </p><p>In this case, there are $\\dbinom{4}{2}$ ways to permute the rows in which the middle seat is occupied. For the rows in which the people do not occupy the middle row, we must have two people sitting at the ends of the rows to guarantee the couple cannot sit there. So, for the rest of the 2 people, there are 4 possible seats. So, there are $\\dbinom{4}{2} \\cdot \\dbinom{4}{2}$ total combinations. </p><p>Case 4: One person sitting in a middle seat </p><p>In this case, there are $\\dbinom{4}{1}$ ways to permute the rows in which the middle seat is occupied. For the rows in which the people do not occupy the middle row, we must have two people sitting at the ends of the rows to guarantee the couple cannot sit there. So, for the rest of the last person, there are 2 possible seats. So, there are $\\dbinom{4}{1} \\cdot \\dbinom{2}{1}$ total combinations.  </p><p>Case 5: Zero people sitting in a middle seat</p><p>In this case, we must have every person sitting at the ends of the seats. So, there is only 1 combination. </p><p>In total, we have </p><p>\\[\\dbinom{8}{4} + \\dbinom{4}{3} \\cdot \\dbinom{6}{3} + \\dbinom{4}{2} \\cdot \\dbinom{4}{2} + \\dbinom{4}{1} \\cdot \\dbinom{2}{1} +1\\]</p><p>combinations, or 195 combinations. The final step is to find the total amount of combinations without restrictions. This is simply $\\dbinom{12}{4} = 495$. So, finally employing complementary counting, we have that the probability that there will be 2 adjacent seats for the couple is </p><p>\\[1 - \\dfrac{195}{495} = \\dfrac{20}{33}.\\]</p><p>~NTfish</p>",
+        "<p>There are $12\\cdot 11 = 132$ for two people (the married couple) to be seated. This will be our denominator.</p><p>There are $8$ pairs of seats that are next to each other in the diagram ($2$ per row; left-middle and middle-right). This will be our numerator.</p><p>Since there are $8+2=10$ total people on the plane, we should multiply our numerator by that to account for all ways the 10 people could be seated (e.x. the husband and the wife could be switched around and it would still work, same applies to the other passengers)</p><p>Therefore, our numerator is $8 \\cdot 10 = 80$.</p><p>This creates the fraction $\\frac{80}{132}$, which simplifies to\\[\\boxed{(\\text{\\bf{C}}) \\: \\frac{20}{33}}.\\]</p><p>- Siddharth Mirchandani (svm2020), John Adams Middle School</p><p><br/>Remark: This solution is flawed because if there are $9+2=11$ people on the plane, the probablity could not be calculated this way, because intuitively, the probability should be decreased (as the probability for 9 people and 1 couple is $\\frac{19}{55}$), not increased (to be $\\frac{2}{3}$). -ericz</p>",
+        "<p>Consider the couple seated together and there should be 8 seated ways (2 ways in each row). And the other 8 people can be seated in other 10 seats randomly. </p><p>There will be total $8\\cdot P(10, 2)$</p><p>Consider two double counting cases.</p><p><br/>Case I: the other 8 people are seated in (1, 3) (2, 3), (3, 1), (3, 2), (3, 3), (4, 1), (4, 2), (4, 3)</p><p>It was double counted for couple's seats (1, 1) (1, 2) and (2, 1), (2, 2)</p><p>There will be $\\frac{8\\cdot 6}{2}\\times P(8, 8)$</p><p><br/>Case II: one whole row is empty and the other 8 people are randomly seated in other rows</p><p>It was double counted for couple's seats such as (1, 1) (1, 2) and (1, 2) (1, 3)</p><p>There will be $4\\cdot P(9, 8)$</p><p><br/>So the probability is $\\frac{8\\cdot P(10, 2)-\\frac{8\\cdot 2}{2}\\cdot P(8, 8)-4\\cdot P(9, 8)}{P(12, 8)}$</p><p>which simplifies to \\[\\boxed{(\\text{\\bf{C}}) \\: \\frac{20}{33}}.\\]</p><p>- Orlando Liu Cupertino Middle School</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2024 AMC 8 - geometry problem involving area"
+        }
+      ]
+    }
+  ]
+}

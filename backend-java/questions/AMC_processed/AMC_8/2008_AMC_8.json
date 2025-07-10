@@ -1,0 +1,386 @@
+{
+  "competition_info": {
+    "name": "2008_AMC_8",
+    "group": "AMC_8",
+    "year": 2008,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 24,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2008_8_1",
+      "question": "<p>Susan had 50 dollars to spend at the carnival. She spent 12 dollars on food and twice as much on rides. How many dollars did she have left to spend?</p>",
+      "solutions": [
+        "<p>If Susan spent 12 dollars, then twice that much on rides, then she spent $12+12 \\times 2=36$ dollars in total. We subtract $36$ from $50$ to get $\\boxed{\\textbf{(B)}\\ 14}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple arithmetic word problem involving basic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_2",
+      "question": "<p>The ten-letter code $\\text{BEST OF LUCK}$ represents the ten digits $0-9$, in order. What 4-digit number is represented by the code word $\\text{CLUE}$?</p>",
+      "solutions": [
+        "<p>We can derive that $C=8$, $L=6$, $U=7$, and $E=1$. Therefore, the answer is $\\boxed{\\textbf{(A)}\\ 8671}$~edited by Owencheng</p>",
+        "<p>We can easily see that $C=8$, which makes only $(A)$ $8761$ and $(B)$ $8762$ possible. Since the only difference between answer choices $A$ and $B$ is the last digit and that the last digit in the code word \"CLUE\" is $E$, we can just find that $E=1$ and that the answer is $\\boxed{\\textbf{(A)}\\ 8671}$. ~solution by SuperVince1</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating discounts and savings"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_3",
+      "question": "<p>If February is a month that contains Friday the $13^{\\text{th}}$, what day of the week is February 1?</p>",
+      "solutions": [
+        "<p>We can go backwards by days, but we can also backwards by weeks. If we go backwards by weeks, we see that February 6 is a Friday. If we now go backwards by days, February 1 is a $\\boxed{\\textbf{(A)}\\ \\text{Sunday}}$</p>",
+        "<p>Since the days of the week repeat every 7 days and $1-13\\equiv2\\pmod7$, the day of the week of the day 2 days after February 13 is the same as the day of the week of February 1. Since we know that February 13 is a Friday, the day of the week of the day 2 days after February 13 is a Sunday so we get that February 1 is a $\\boxed{\\textbf{(A)}\\ \\text{Sunday}}$.</p>",
+        "<p>We can go back 2 weeks and say that Friday is the -1st of February. Going forward 2 days, we get that February 1st is Sunday. So our answer is $\\boxed{\\textbf{(A)}\\ \\text{Sunday}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving finding area of geometric shapes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_4",
+      "question": "<p>In the figure, the outer equilateral triangle has area $16$, the inner equilateral triangle has area $1$, and the three trapezoids are congruent. What is the area of one of the trapezoids?</p><p>[asy] size((70)); draw((0,0)--(7.5,13)--(15,0)--(0,0)); draw((1.88,3.25)--(9.45,3.25)); draw((11.2,0)--(7.5,6.5)); draw((9.4,9.7)--(5.6,3.25)); [/asy]</p>",
+      "solutions": [
+        "<p>The area outside the small triangle but inside the large triangle is $16-1=15$. This is equally distributed between the three trapezoids. Each trapezoid has an area of $15/3 = \\boxed{\\textbf{(C)}\\ 5}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_5",
+      "question": "<p>Barney Schwinn notices that the odometer on his bicycle reads $1441$, a palindrome, because it reads the same forward and backward. After riding $4$ more hours that day and $6$ the next, he notices that the odometer shows another palindrome, $1661$. What was his average speed in miles per hour?</p>",
+      "solutions": [
+        "<p>Barney travels $1661-1441=220$ miles in $4+6=10$ hours for an average of $220/10=\\boxed{\\textbf{(E)}\\ 22}$ miles per hour.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_6",
+      "question": "<p>In the figure, what is the ratio of the area of the gray squares to the area of the white squares?</p><p>[asy] size((70)); draw((10,0)--(0,10)--(-10,0)--(0,-10)--(10,0)); draw((-2.5,-7.5)--(7.5,2.5)); draw((-5,-5)--(5,5)); draw((-7.5,-2.5)--(2.5,7.5)); draw((-7.5,2.5)--(2.5,-7.5)); draw((-5,5)--(5,-5)); draw((-2.5,7.5)--(7.5,-2.5)); fill((-10,0)--(-7.5,2.5)--(-5,0)--(-7.5,-2.5)--cycle, gray); fill((-5,0)--(0,5)--(5,0)--(0,-5)--cycle, gray); fill((5,0)--(7.5,2.5)--(10,0)--(7.5,-2.5)--cycle, gray); [/asy]</p>",
+      "solutions": [
+        "<p>Dividing the gray square into four smaller squares, there are $6$ gray tiles and $10$ white tiles, giving a ratio of $\\boxed{\\textbf{(D)}\\ 3:5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_7",
+      "question": "<p>If $\\frac{3}{5}=\\frac{M}{45}=\\frac{60}{N}$, what is $M+N$?</p>",
+      "solutions": [
+        "<p>Separate into two equations $\\frac35 = \\frac{M}{45}$ and $\\frac35 = \\frac{60}{N}$ and solve for the unknowns. $M=27$ and $N=100$, therefore $M+N=\\boxed{\\textbf{(E)}\\ 127}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_8",
+      "question": "<p>Candy sales from the Boosters Club from January through April are shown. What were the average sales per month in dollars?</p><p>[asy] draw((0,0)--(36,0)--(36,24)--(0,24)--cycle); draw((0,4)--(36,4)); draw((0,8)--(36,8)); draw((0,12)--(36,12)); draw((0,16)--(36,16)); draw((0,20)--(36,20)); fill((4,0)--(8,0)--(8,20)--(4,20)--cycle, black); fill((12,0)--(16,0)--(16,12)--(12,12)--cycle, black); fill((20,0)--(24,0)--(24,8)--(20,8)--cycle, black); fill((28,0)--(32,0)--(32,24)--(28,24)--cycle, black); label(\"120\", (0,24), W); label(\"80\", (0,16), W); label(\"40\", (0,8), W); label(\"Jan\", (6,0), S); label(\"Feb\", (14,0), S); label(\"Mar\", (22,0), S); label(\"Apr\", (30,0), S); [/asy]</p>",
+      "solutions": [
+        "<p>There are a total of $100+60+40+120=320$ dollars of sales spread through $4$ months, for an average of $320/4 = \\boxed{\\textbf{(D)}\\ 80}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving divisibility and number properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_9",
+      "question": "<p>In $2005$ Tycoon Tammy invested $100$ dollars for two years. During the first yearher investment suffered a $15\\%$ loss, but during the second year the remaininginvestment showed a $20\\%$ gain. Over the two-year period, what was the changein Tammy's investment?</p>",
+      "solutions": [
+        "<p>After the $15 \\%$ loss, Tammy has $100 \\cdot 0.85 = 85$ dollars. After the $20 \\%$ gain, she has $85 \\cdot 1.2 = 102$ dollars. This is an increase in $2$ dollars from her original $100$ dollars, a $\\boxed{\\textbf{(D)}\\ 2 \\%\\ \\text{gain}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Triangle geometry problem involving angles and side lengths"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_10",
+      "question": "<p>The average age of the $6$ people in Room A is $40$. The average age of the $4$ people in Room B is $25$. If the two groups are combined, what is the average age of all the people?</p>",
+      "solutions": [
+        "<p>The total of all their ages over the number of people is</p><p>\\[\\frac{6 \\cdot 40 + 4\\cdot 25}{6+4} = \\frac{340}{10} = \\boxed{\\textbf{(D)}\\ 34}.\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate word problem involving time, distance, and speed relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_11",
+      "question": "<p>Each of the $39$ students in the eighth grade at Lincoln Middle School has one dog or one cat or both a dog and a cat. Twenty students have a dog and $26$ students have a cat. How many students have both a dog and a cat?</p>",
+      "solutions": [
+        "<p>The union of two sets is equal to the sum of each set minus their intersection. The number of students that have both a dog and a cat is $20+26-39 = \\boxed{\\textbf{(A)}\\ 7}$.</p>",
+        "<p>We create a diagram:[asy] draw(circle((0,0),5)); draw(circle((5,0),5)); label(\"$x$\",(2.3,0),S); label(\"$20$\",(7,0),S); label(\"$26$\",(-2,0),S); [/asy]</p><p>Let $x$ be the number of students with both a dog and a cat.</p><p>Therefore, we have</p><p>\\[26+20-x = 39\\]\\[46-x = 39\\]\\[x = \\boxed{\\textbf{(A)} ~7}\\].</p><p>~MrThinker</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating percentages and changes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_12",
+      "question": "<p>A ball is dropped from a height of $3$ meters. On its first bounce it rises to a height of $2$ meters. It keeps falling and bouncing to $\\frac{2}{3}$ of the height it reached in the previous bounce. On which bounce will it not rise to a height of $0.5$ meters?</p>",
+      "solutions": [
+        "<p>Each bounce is $2/3$ times the height of the previous bounce. The first bounce reaches $2$ meters, the second $4/3$, the third $8/9$, the fourth $16/27$, and the fifth $32/81$. Half of $81$ is $40.5$, so the ball does not reach the required height on bounce $\\boxed{\\textbf{(C)}\\ 5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Arithmetic sequence problem involving finding terms in a sequence"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_13",
+      "question": "<p>Mr. Harman needs to know the combined weight in pounds of three boxes he wants to mail. However, the only available scale is not accurate for weights less than $100$ pounds or more than $150$ pounds. So the boxes are weighed in pairs in every possible way. The results are $122$, $125$ and $127$ pounds. What is the combined weight in pounds of the three boxes?</p>",
+      "solutions": [
+        "<p>Each box is weighed twice during this, so the combined weight of the three boxes is half the weight of these separate measures:</p><p>\\[\\frac{122+125+127}{2} = \\frac{374}{2} = \\boxed{\\textbf{(C)}\\ 187}.\\]</p>",
+        "<p>Using variables $a$, $b$, and $c$ to denote the boxes, with $a \\le b \\le c$. It is obvious that $a+b=122$ and $a+c=125$, since these are the two smallest pairs. Subtracting the former equation from the latter results in $c-b=3$. Additionally, $c+b=127$. Solving for $c$ and $b$ gives $c=65$ and $b=62$, so we can thus find $a=60$. Solving $60+62+65=\\boxed{\\textbf{(C) }\\ 187}$</p><p>~megaboy6679</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_14",
+      "question": "<p>Three $\\text{A's}$, three $\\text{B's}$, and three $\\text{C's}$ are placed in the nine spaces so that each row and column contains one of each letter. If $\\text{A}$ is placed in the upper left corner, how many arrangements are possible?</p><p>[asy] size((80)); draw((0,0)--(9,0)--(9,9)--(0,9)--(0,0)); draw((3,0)--(3,9)); draw((6,0)--(6,9)); draw((0,3)--(9,3)); draw((0,6)--(9,6)); label(\"A\", (1.5,7.5)); [/asy]</p>",
+      "solutions": [
+        "<p>There are $2$ ways to place the remaining $\\text{As}$, $2$ ways to place the remaining $\\text{Bs}$, and $1$ way to place the remaining $\\text{Cs}$ for a total of $(2)(2)(1) = \\boxed{\\textbf{(C)}\\ 4}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Circle geometry problem involving area and circumference"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_15",
+      "question": "<p>In Theresa's first $8$ basketball games, she scored $7, 4, 3, 6, 8, 3, 1$ and $5$ points. In her ninth game, she scored fewer than $10$ points and her points-per-game average for the nine games was an integer. Similarly in her tenth game, she scored fewer than $10$ points and her points-per-game average for the $10$ games was also an integer. What is the product of the number of points she scored in the ninth and tenth games?</p>",
+      "solutions": [
+        "<p>The total number of points from the first $8$ games is $7+4+3+6+8+3+1+5=37$. We have to make this a multiple of $9$ by scoring less than $10$ points. The smallest multiple of $9$ that is greater than $37$ is $45$. $45-37=8$. Now we have to add a number to get a multiple of 10. The next multiple of $10$ is $50$, which means that we add $5$. Multiplying these together, you get $8\\cdot5 =$ $\\boxed{\\textbf{(B)}\\ 40}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_16",
+      "question": "<p>A shape is created by joining seven unit cubes, as shown. What is the ratio of the volume in cubic units to the surface area in square units?</p><p>[asy] import three; defaultpen(linewidth(0.8)); real r=0.5; currentprojection=orthographic(1,1/2,1/4); draw(unitcube, white, thick(), nolight); draw(shift(1,0,0)*unitcube, white, thick(), nolight); draw(shift(1,-1,0)*unitcube, white, thick(), nolight); draw(shift(1,0,-1)*unitcube, white, thick(), nolight); draw(shift(2,0,0)*unitcube, white, thick(), nolight); draw(shift(1,1,0)*unitcube, white, thick(), nolight); draw(shift(1,0,1)*unitcube, white, thick(), nolight);[/asy]</p>",
+      "solutions": [
+        "<p>The volume is of seven unit cubes which is $7$. The surface area is the same for each of the protruding cubes which is $5\\cdot 6=30$. The ratio of the volume to the surface area is $\\boxed{\\textbf{(D)}\\: 7\u00a0: 30}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "System of equations problem involving multiple variables"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_17",
+      "question": "<p>Ms.Osborne asks each student in her class to draw a rectangle with integer side lengths and a perimeter of $50$ units. All of her students calculate the area of the rectangle they draw. What is the difference between the largest and smallest possible areas of the rectangles?</p>",
+      "solutions": [
+        "<p>A rectangle's area is maximized when its length and width are equivalent, or the two side lengths are closest together in this case with integer lengths. This occurs with the sides $12 \\times 13 = 156$. Likewise, the area is smallest when the side lengths have the greatest difference, which is $1 \\times 24 = 24$. The difference in area is $156-24=\\boxed{\\textbf{(D)}\\ 132}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_19",
+      "question": "<p>Eight points are spaced around at intervals of one unit around a $2 \\times 2$ square, as shown. Two of the $8$ points are chosen at random. What is the probability that the two points are one unit apart?[asy] size((50)); dot((5,0)); dot((5,5)); dot((0,5)); dot((-5,5)); dot((-5,0)); dot((-5,-5)); dot((0,-5)); dot((5,-5)); [/asy]</p>",
+      "solutions": [
+        "<p>The two points are one unit apart at $8$ places around the edge of the square. There are $8 \\choose 2$$= 28$ ways to choose two points. The probability is</p><p>\\[\\frac{8}{28} = \\boxed{\\textbf{(B)}\\ \\frac27}\\]</p>",
+        "<p>Arbitrarily pick a point in the grid. Clearly, we see two options for the other point to be placed, so the answer is $\\boxed{\\textbf{(B)}\\ \\frac27}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_20",
+      "question": "<p>The students in Mr. Neatkin's class took a penmanship test. Two-thirds of the boys and $\\frac{3}{4}$ of the girls passed the test, and an equal number of boys and girls passed the test. What is the minimum possible number of students in the class?</p>",
+      "solutions": [
+        "<p>Let $b$ be the number of boys and $g$ be the number of girls.</p><p>\\[\\frac23 b = \\frac34 g \\Rightarrow b = \\frac98 g\\]</p><p>For $g$ and $b$ to be integers, $g$ must cancel out with the denominator, and the smallest possible value is $8$. This yields $9$ boys. The minimum number of students is $8+9=\\boxed{\\textbf{(B)}\\ 17}$.</p>",
+        "<p>We know that $\\frac23 B = \\frac34 G$ or $\\frac69 B = \\frac68 G$. So, the ratio of the number of boys to girls is $8:9$ (Not $9:8$ because the numbers $8$ and $9$ are in the denominators of the fractions). The smallest total number of students is $9 + 8 = \\boxed{\\textbf{(B)}\\ 17}$. ~DY, edited by SuperVince1</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving ratios and proportions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_21",
+      "question": "<p>Jerry cuts a wedge from a $6$-cm cylinder of bologna as shown by the dashed curve. Which answer choice is closest to the volume of his wedge in cubic centimeters?</p><p>[asy] defaultpen(linewidth(0.65)); real d=90-63.43494882; draw(ellipse((origin), 2, 4)); fill((0,4)--(0,-4)--(-8,-4)--(-8,4)--cycle, white); draw(ellipse((-4,0), 2, 4)); draw((0,4)--(-4,4)); draw((0,-4)--(-4,-4)); draw(shift(-2,0)*rotate(-d-5)*ellipse(origin, 1.82, 4.56), linetype(\"10 10\")); draw((-4,4)--(-8,4), dashed); draw((-4,-4)--(-8,-4), dashed); draw((-4,4.3)--(-4,5)); draw((0,4.3)--(0,5)); draw((-7,4)--(-7,-4), Arrows(5)); draw((-4,4.7)--(0,4.7), Arrows(5)); label(\"$8$ cm\", (-7,0), W); label(\"$6$ cm\", (-2,4.7), N);[/asy]</p>",
+      "solutions": [
+        "<p>The slice is cutting the cylinder into two equal wedges with equal volume. The cylinder's volume is $\\pi r^2 h = \\pi (4^2)(6) = 96\\pi$. The volume of the wedge is half this which is $48\\pi \\approx \\boxed{\\textbf{(C)}\\ 151}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent events and calculating probabilities"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_22",
+      "question": "<p>For how many positive integer values of $n$ are both $\\frac{n}{3}$ and $3n$ three-digit whole numbers?</p>",
+      "solutions": [
+        "<p>Instead of finding n, we find $x=\\frac{n}{3}$. We want $x$ and $9x$ to be three-digit whole numbers. The smallest three-digit whole number is $100$, so that is our minimum value for $x$, since if $x \\in \\mathbb{Z^+}$, then $9x \\in \\mathbb{Z^+}$. The largest three-digit whole number divisible by $9$ is $999$, so our maximum value for $x$ is $\\frac{999}{9}=111$. There are $12$ whole numbers in the closed set $\\left[100,111\\right]$ , so the answer is $\\boxed{\\textbf{(A)}\\ 12}$.</p><p>- ColtsFan10</p>",
+        "<p>We can set the following inequalities up to satisfy the conditions given by the question,$100 \\leq \\frac{n}{3} \\leq 999$,and $100 \\leq 3n \\leq 999$.Once we simplify these and combine the restrictions, we get the inequality, $300 \\leq n \\leq 333$.Now we have to find all multiples of 3 in this range for $\\frac{n}{3}$ to be an integer. We can compute this by setting $\\frac{n} {3}=x$, where $x \\in \\mathbb{Z^+}$. Substituting $x$ for $n$ in the previous inequality, we get, $100 \\leq x \\leq 111$, and there are $111-100+1$ integers in this range giving us the answer, $\\boxed{\\textbf{(A)}\\ 12}$.</p><p>- kn07</p>",
+        "<p>We can create a list of the positive integers $n$ that fulfill the requirement of $\\frac {n}{3}$ and $3n$ are three-digit whole numbers. The first number of this list must be $300$ since $\\frac {300}{3} = 100$ is the smallest positive integer that satisfies this requirement. The last number of this list must be $333$ since $3 \\cdot 333 = 999$ is the largest positive integer that satisfies this requirement. Since the problem requires $\\frac {n}{3}$ and $3n$ must be whole numbers, the other numbers must be multiples of 3 (just like 300 and 333), so the list would look like this:</p><p>To put this list in to a countable form we must put it in a form similar to $1,2,3, . . ., n$. So, we manipulate it as follows:</p><p>Now we can tell that there are 12 positive integers which satisfies the two requirements, so the answer is $\\boxed{\\textbf{(A)}\\ 12}$.</p><p>~julia333          </p>",
+        "<p>We have to find the range for all numbers first. We can first find the smallest digit in which $\\frac {n}{3}$ is a 3 digit number that 3n is a 3 digit number which is $\\frac {300}{3}$ = 100, then we find the biggest number in which $\\frac {n}{3}$ is a 3 digit number and 3n is a 3 digit number which is $\\frac {333}{3}$ = 111. Now we know that all integers from 100 to 111 are possible values and the amount of integer values in that range is $\\boxed{\\textbf{(A)}\\ 12}$ (note I divided the numbers by 3 for convenience)</p><p>~twinotter</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving conditional probability and ratios"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_23",
+      "question": "<p>In square $ABCE$, $AF=2FE$ and $CD=2DE$. What is the ratio of the area of $\\triangle BFD$ to the area of square $ABCE$?[asy] size((100)); draw((0,0)--(9,0)--(9,9)--(0,9)--cycle); draw((3,0)--(9,9)--(0,3)--cycle); dot((3,0)); dot((0,3)); dot((9,9)); dot((0,0)); dot((9,0)); dot((0,9)); label(\"$A$\", (0,9), NW); label(\"$B$\", (9,9), NE); label(\"$C$\", (9,0), SE); label(\"$D$\", (3,0), S); label(\"$E$\", (0,0), SW); label(\"$F$\", (0,3), W); [/asy]</p>",
+      "solutions": [
+        "<p>The area of $\\triangle BFD$ is the area of square $ABCE$ subtracted by the the area of the three triangles around it. Arbitrarily assign the side length of the square to be $6$.</p><p>[asy] size((100)); pair A=(0,9), B=(9,9), C=(9,0), D=(3,0), E=(0,0), F=(0,3); pair[] ps={A,B,C,D,E,F}; dot(ps); draw(A--B--C--E--cycle); draw(B--F--D--cycle); label(\"$A$\",A, NW); label(\"$B$\",B, NE); label(\"$C$\",C, SE); label(\"$D$\",D, S); label(\"$E$\",E, SW); label(\"$F$\",F, W); label(\"$6$\",A--B,N); label(\"$6$\",(10,4.5),E); label(\"$4$\",D--C,S); label(\"$2$\",E--D,S); label(\"$2$\",E--F,W); label(\"$4$\",F--A,W); [/asy]</p><p>The ratio of the area of $\\triangle BFD$ to the area of $ABCE$ is</p><p>\\[\\frac{36-12-12-2}{36} = \\frac{10}{36} = \\boxed{\\textbf{(C)}\\ \\frac{5}{18}}\\]</p>",
+        "<p>Say that $\\overline{FE}$ has length $x$, and that from there we can infer that $\\overline{AF} = 2x$. We also know that $\\overline{ED} = x$, and that $\\overline{DC} = 2x$. The area of triangle $BFD$ is the square's area subtracted from the area of the excess triangles, which is simply these equations:\\[9x^2 - (3x^2 + \\dfrac{x}{2}^2 + 3x^2)\\]\\[9x^2 - 6.5x^2\\]\\[2.5x^2\\]Thus, the area of the triangle is $2.5x^2$. We can now put the ratio of triangle $BFD$'s area to the area of the square $ABCE$ as a fraction. We have:\\[\\dfrac{2.5x^2}{9x^2}\\]\\[\\dfrac{2.5\\cancel{x^2}}{9\\cancel{x^2}}\\]\\[\\dfrac{2.5}{9}\\]\\[\\dfrac{5}{18}\\]Thus, our answer is $\\boxed{C}$, $\\boxed{\\dfrac{5}{18}}$.</p><p>~Mr.BigBrain_AoPS</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving distance and position relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_24",
+      "question": "<p>Ten tiles numbered $1$ through $10$ are turned face down. One tile is turned up at random, and a die is rolled. What is the probability that the product of the numbers on the tile and the die will be a square?</p>",
+      "solutions": [
+        "<p>The numbers can at most multiply to be $60$. The squares less than $60$ are $1,4,9,16,25,36,$ and $49$. The possible pairs are $(1,1),(1,4),(2,2),(4,1),(3,3),(9,1),(4,4),(8,2),(5,5),(6,6),$ and $(9,4)$. There are $11$ choices and $60$ possibilities giving a probability of $\\boxed{\\textbf{(C)}\\ \\frac{11}{60}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_8_25",
+      "question": "<p>Margie's winning art design is shown. The smallest circle has radius 2 inches, with each successive circle's radius increasing by 2 inches. Which of the following is closest to the percent of the design that is black?</p><p>[asy] real d=320; pair O=origin; pair P=O+8*dir(d); pair A0 = origin; pair A1 = O+1*dir(d); pair A2 = O+2*dir(d); pair A3 = O+3*dir(d); pair A4 = O+4*dir(d); pair A5 = O+5*dir(d); filldraw(Circle(A0, 6), white, black); filldraw(circle(A1, 5), black, black); filldraw(circle(A2, 4), white, black); filldraw(circle(A3, 3), black, black); filldraw(circle(A4, 2), white, black); filldraw(circle(A5, 1), black, black); [/asy]</p>",
+      "solutions": [
+        "<p>Let the smallest circle be 1, the second smallest circle be 2, the third smallest circle be 3, etc. \\[\\begin{array}{c|cc} \\text{circle \\#} & \\text{radius} & \\text{area} \\\\ \\hline 1 & 2 & 4\\pi \\\\ 2 & 4 & 16\\pi \\\\ 3 & 6 & 36\\pi \\\\ 4 & 8 & 64\\pi \\\\ 5 & 10 & 100\\pi \\\\ 6 & 12 & 144\\pi \\end{array}\\]</p><p>The entire circle's area is $144\\pi$. The area of the black regions is $(100-64)\\pi + (36-16)\\pi + 4\\pi = 60\\pi$. The percentage of the design that is black is $\\frac{60\\pi}{144\\pi} = \\frac{5}{12} \\approx \\boxed{\\textbf{(A)}\\ 42}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving area calculations and geometric relationships"
+        }
+      ]
+    }
+  ]
+}

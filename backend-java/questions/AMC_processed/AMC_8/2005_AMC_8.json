@@ -1,0 +1,402 @@
+{
+  "competition_info": {
+    "name": "2005_AMC_8",
+    "group": "AMC_8",
+    "year": 2005,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2005_8_1",
+      "question": "<p>Connie multiplies a number by $2$ and gets $60$ as her answer. However, she should have divided the number by $2$ to get the correct answer. What is the correct answer?</p>",
+      "solutions": [
+        "<p>If $x$ is the number, then $2x=60$ and $x=30$. Dividing the number by $2$ yields $\\dfrac{30}{2} = \\boxed{\\textbf{(B)}\\ 15}$.</p><p>A second way to do it is to divide the number by $4$, as you multiplied by $2$ when you were supposed to divide by $2$. So, $\\dfrac{60}{4} = \\boxed{\\textbf{(B)}\\ 15}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving multiplication and division - Connie multiplied by 2 instead of dividing by 2"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_2",
+      "question": "<p>Karl bought five folders from Pay-A-Lot at a cost of $\\textdollar 2.50$ each.Pay-A-Lot had a 20%-off sale the following day. How much couldKarl have saved on the purchase by waiting a day?</p>",
+      "solutions": [
+        "<p>Karl paid $5 \\cdot 2.50 = \\textdollar 12.50$. $20 \\%$ of this cost that he saved is $12.50 \\cdot .2 = \\boxed{\\textbf{(C)}\\ \\textdollar 2.50}$.</p>",
+        "<p>Each folder can also be $5/2$ dollars, and $20\\%$ can be shown as $(1/5)$. We can multiply $(5/2) \\cdot (1/5) = (1/2)$. $(1/2)$ is also $50$ cents or the amount of money that is saved after the $20\\%$ discount. So each folder is $2.50-0.5 = \\textdollar2$.Since Karl bought 5 folders all of the folders after the discount is $(5)(2) = 10$, and the money bought before the discount is $(5)(2.50) = \\textdollar12.50$. To find the money Karl saves all we have to do is subtract $12.50 - 10 = 2.50$. Thus the answer is $\\boxed{\\textbf{(C)}\\ \\textdollar 2.50}$.</p>",
+        "<p>Having a $20\\%$ off sale is equivalent to a \"Buy 4 get 1 free\" sale. Thus, he would have saved the price of 1 folder, which is $\\boxed{\\textbf{(C)}\\ \\textdollar 2.50}$.</p><p>-JeffersonJ</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating savings from a 20% discount"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_3",
+      "question": "<p>What is the minimum number of small squares that must be colored black so that a line of symmetry lies on the diagonal $\\overline{BD}$ of square $ABCD$?</p><p>[asy] defaultpen(linewidth(1)); for ( int x = 0; x &lt; 5; ++x ) {     draw((0,x)--(4,x));     draw((x,0)--(x,4)); }  fill((1,0)--(2,0)--(2,1)--(1,1)--cycle); fill((0,3)--(1,3)--(1,4)--(0,4)--cycle); fill((2,3)--(4,3)--(4,4)--(2,4)--cycle); fill((3,1)--(4,1)--(4,2)--(3,2)--cycle); label(\"$A$\", (0, 4), NW); label(\"$B$\", (4, 4), NE); label(\"$C$\", (4, 0), SE); label(\"$D$\", (0, 0), SW); [/asy]</p>",
+      "solutions": [
+        "<p>Rotating square $ABCD$ counterclockwise $45^\\circ$ so that the line of symmetry $BD$ is a vertical line makes it easier to see that $\\boxed{\\textbf{(D)}\\ 4}$ squares need to be colored to match its corresponding square.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "symmetry",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving line of symmetry on diagonal of a square grid"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_4",
+      "question": "<p>A square and a triangle have equal perimeters. The lengths of the three sides of the triangle are 6.1 cm, 8.2 cm and 9.7 cm. What is the area of the square in square centimeters?</p>",
+      "solutions": [
+        "<p>The perimeter of the triangle is $6.1+8.2+9.7=24$ cm. A square's perimeter is four times its sidelength, since all its sidelengths are equal. If the square's perimeter is $24$, the sidelength is $24/4=6$, and the area is $6^2=\\boxed{\\textbf{(C)}\\ 36}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "perimeter",
+          "confidence": 0.95,
+          "reasoning": "Perimeter word problem - finding area of square with same perimeter as triangle"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_5",
+      "question": "<p>Soda is sold in packs of 6, 12 and 24 cans. What is the minimum number of packs needed to buy exactly 90 cans of soda?</p>",
+      "solutions": [
+        "<p>Start by buying the largest packs first. After three $24$-packs, $90-3(24)=18$ cans are left. After one $12$-pack, $18-12=6$ cans are left. Then buy one more $6$-pack. The total number of packs is $3+1+1=\\boxed{\\textbf{(B)}\\ 5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "optimization",
+          "confidence": 0.95,
+          "reasoning": "Optimization problem - finding minimum number of packs to buy exactly 90 cans"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_6",
+      "question": "<p>Suppose $d$ is a digit. For how many values of $d$ is $2.00d5 > 2.005$?</p>",
+      "solutions": [
+        "<p>We see that $2.0055$ works but $2.0045$ does not. The digit $d$ can be from $5$ through $9$, which is $\\boxed{\\textbf{(C)}\\ 5}$ values.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "inequalities",
+          "confidence": 0.95,
+          "reasoning": "Decimal comparison problem - finding values of d where 2.00d5 > 2.005"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_7",
+      "question": "<p>Bill walks $\\tfrac12$ mile south, then $\\tfrac34$ mile east, and finally $\\tfrac12$ mile south. How many miles is he, in a direct line, from his starting point?</p>",
+      "solutions": [
+        "<p>We have a right-angle triangle with sides 3/4 and 1. We can divide the simple pythagorean theorem identity 3,4,5 by 4 to get 3/4, 1, 5/4. This shows us the answer is B, or 1 1/4.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "pythagorean_theorem",
+          "confidence": 0.95,
+          "reasoning": "Distance problem using Pythagorean theorem to find direct distance from starting point"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_8",
+      "question": "<p>Suppose m and n are positive odd integers. Which of the following must also be an odd integer?</p>",
+      "solutions": [
+        "<p>Assume <a class=\"mw-redirect\" href=\"/wiki/index.php/WLOG\" title=\"WLOG\">WLOG</a> that $m$ and $n$ are both $1$. Plugging into each of the choices, we get $4, 2, 6, 16,$ and $3$. The only odd integer is $\\boxed{\\textbf{(E)}\\ 3mn}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "parity",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving odd/even properties of integers"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_9",
+      "question": "<p>In quadrilateral $ABCD$, sides $\\overline{AB}$ and $\\overline{BC}$ both have length 10, sides $\\overline{CD}$ and $\\overline{DA}$ both have length 17, and the measure of angle $ADC$ is $60^\\circ$. What is the length of diagonal $\\overline{AC}$?</p><p>[asy]draw((0,0)--(17,0)); draw(rotate(301, (17,0))*(0,0)--(17,0)); picture p; draw(p, (0,0)--(0,10)); draw(p, rotate(115, (0,10))*(0,0)--(0,10)); add(rotate(3)*p);  draw((0,0)--(8.25,14.5), linetype(\"8 8\"));  label(\"$A$\", (8.25, 14.5), N); label(\"$B$\", (-0.25, 10), W); label(\"$C$\", (0,0), SW); label(\"$D$\", (17, 0), E);[/asy]</p>",
+      "solutions": [
+        "<p>Because $\\overline{AD} = \\overline{CD}$, $\\triangle ADC$ is an isosceles triangle with $\\angle DAC = \\angle DCA$. Angles in a triangle add up to $180^\\circ$, and since $\\angle ADC=60^\\circ$, the other two angles are also $60^\\circ$, and $\\triangle ADC$ is an equilateral triangle. Therefore $\\overline{AC}=\\overline{DA}=\\boxed{\\textbf{(D)}\\ 17}$.</p>",
+        "<p>We can divide $\\overline{CD}$ in half and connect this point to A, dividing $\\triangle ADC$ in half. This means the base will be $\\frac{17}{2}$ and the hypotenuse will be 17. By using the Pythagorean's Theorem, we see that if the base and height are shared, the hypotenuse should be the same. This tells us that the length of $\\overline{AC} = \\boxed{(D) 17}$.</p><p>~Champion1234</p>",
+        "<p>Take an equilateral triangle with side length $17$. $\\triangle ADC$ is congruent to this by $SAS$, hence it is equilateral. The answer is $\\boxed{\\textbf{(D)}17}$.</p><p>~yofro</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving isosceles triangle and finding diagonal length"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_10",
+      "question": "<p>Joe had walked half way from home to school when he realized he was late. He ran the rest of the way to school. He ran 3 times as fast as he walked. Joe took 6 minutes to walk half way to school. How many minutes did it take Joe to get from home to school?</p>",
+      "solutions": [
+        "<p>We can use the equation $d=rt$ where $d$ is the distance, $r$ is the rate, and $t$ is the time. The distances he ran and walked are equal, so $r_rt_r=r_wt_w$, where $r_r$ is the rate at which he ran, $t_r$ is the time for which he ran, $r_w$ is the rate at which he walked, and $t_w$ is the time for which he walked. Because he runs three times faster than he walks, $r_r=3r_w$. We want to find the time he ran, $t_r = \\frac{r_wt_w}{t_r} = \\frac{(r_w)(6)}{3r_w} = 2$ minutes. He traveled for a total of $6+2=\\boxed{\\textbf{(D)}\\ 8}$ minutes.</p>",
+        "<p>We know that it took Joe $6$ minutes to walk halfway. If he ran $3$ times as fast as that, he went $\\frac63 = 2$ minutes for the other half (as $t=\\frac{d}{s}$ and if we multiply $s$ by $3$ we are essentially dividing $t$ by $3$). Therefore, we have $6 + 2 = 8$ minutes.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate word problem involving walking and running at different speeds"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_11",
+      "question": "<p>The sales tax rate in Rubenenkoville is 6%. During a sale at the Bergville Coat Closet, the price of a coat is discounted 20% from its $90.00 price. Two clerks, Jack and Jill, calculate the bill independently. Jack rings up $90.00 and adds 6% sales tax, then subtracts 20% from this total. Jill rings up $90.00, subtracts 20% of the price, then adds 6% of the discounted price for sales tax. What is Jack's total minus Jill's total?</p>",
+      "solutions": [
+        "<p>The price Jack rings up is $\\textdollar{(90.00)(1.06)(0.80)}$. The price Jill rings up is $\\textdollar{(90.00)(0.80)(1.06)}$. By the commutative property of multiplication, these quantities are the same, and the difference is $\\boxed{\\textbf{(C)}\\ \\textdollar 0}$.</p><p><br/>Reminder: Commutative states abc = bac= acb =..... and is the same in any order. This only works for addition and multiplication.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage problem involving sales tax and discounts - commutative property shows same result"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_12",
+      "question": "<p>Big Al, the ape, ate 100 bananas from May 1 through May 5. Each day he ate six more bananas than on the previous day. How many bananas did Big Al eat on May 5?</p>",
+      "solutions": [
+        "<p>There are $5$ days from May 1 to May 5. The number of bananas he eats each day is an arithmetic sequence. He eats $n$ bananas on May 5, and $n-4(6)=n-24$ bananas on May 1. The sum of this arithmetic sequence is equal to $100$.</p><p>\\begin{align*} \\frac{n+n-24}{2} \\cdot 5 &= 100\\\\ n-12&=20\\\\ n&=\\boxed{\\textbf{(D)}\\ 32} \\end{align*}</p>",
+        "<p>There are $5$ days from May 1 to May 5. If we set the first day as $n$, the second day can be expressed as $n+6$, the third as $n+12$, and so on, for five days. The sum $n+(n+6)+(n+12)+(n+18)+(n+24)$ is equal to $100$, as stated in the problem. We can write a very simple equation, that is: $5n+60=100$.Now all we do is just solve. $5n=40$, so Big Al eats $8$ bananas on the first day. The fifth day, $n+24$, is then $32$, which is your answer.</p>",
+        "<p>Simply realize that the middle term of the arithmetic sequence is the arithmetic mean of all terms, which is simply $\\frac{100}{5}=20$. This means that the number of bananas the ape ate on May 5th is just $20+6*2=32$. Select $\\boxed{D}$.</p><p>You can do this quicker than you read it if you truly master arithmetic sequences.</p><p>~hastapasta</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Arithmetic sequence word problem - finding number of bananas eaten on specific day"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_13",
+      "question": "<p>The area of polygon $ABCDEF$ is 52 with $AB=8$, $BC=9$ and $FA=5$. What is $DE+EF$?</p><p>[asy] pair a=(0,9), b=(8,9), c=(8,0), d=(4,0), e=(4,4), f=(0,4); draw(a--b--c--d--e--f--cycle); draw(shift(0,-.25)*a--shift(.25,-.25)*a--shift(.25,0)*a); draw(shift(-.25,0)*b--shift(-.25,-.25)*b--shift(0,-.25)*b); draw(shift(-.25,0)*c--shift(-.25,.25)*c--shift(0,.25)*c); draw(shift(.25,0)*d--shift(.25,.25)*d--shift(0,.25)*d); draw(shift(.25,0)*f--shift(.25,.25)*f--shift(0,.25)*f); label(\"$A$\", a, NW); label(\"$B$\", b, NE); label(\"$C$\", c, SE); label(\"$D$\", d, SW); label(\"$E$\", e, SW); label(\"$F$\", f, SW); label(\"5\", (0,6.5), W); label(\"8\", (4,9), N); label(\"9\", (8, 4.5), E); [/asy]</p>",
+      "solutions": [
+        "<p>Notice that $AF + DE = BC$, so $DE=4$. Let $O$ be the intersection of the extensions of $AF$ and $DC$, which makes rectangle $ABCO$. The area of the polygon is the area of $FEDO$ subtracted from the area of $ABCO$.</p><p>\\[\\text{Area} = 52 = 8 \\cdot 9- EF \\cdot 4\\]</p><p>Solving for the unknown, $EF=5$, therefore $DE+EF=4+5=\\boxed{\\textbf{(C)}\\ 9}$.</p>",
+        "<p>Similar to solution 1, $AF + DE = BC$, so $DE=4$. Split the polygon into two rectangles by extending the $DE$ so it intersects $AB$. Let's say the length of $FE$ is equal to $x$. We can form the equation: \\[5x + 9(8-x) = 52\\]. We see that $x = 5$, so we can add $5 + 4 = \\boxed{\\textbf{(C)}\\ 9}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving polygon with given side lengths and area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_14",
+      "question": "<p>The Little Twelve Basketball Conference has two divisions, with six teams in each division. Each team plays each of the other teams in its own division twice and every team in the other division once. How many conference games are scheduled?</p>",
+      "solutions": [
+        "<p>Within each division, there are $\\binom {6}{2} = 15$ pairings, and each of these games happens twice. The same goes for the other division so that there are $4(15)=60$ games within their own divisions. The number of games between the two divisions is $(6)(6)=36$. Together there are $60+36=\\boxed{\\textbf{(B)}\\ 96}$ conference games.</p>",
+        "<p>Each team plays 10 games in its own division and 6 games against teams in the other division. So each of the 12 teams plays 16 conference games. Because each game involves two teams, there are $\\frac{12\\times 16}{2}=\\boxed{96}$ games scheduled. ~aopsav (Credit to AoPS Alcumus)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Circle geometry problem involving area and circumference relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_15",
+      "question": "<p>How many different isosceles triangles have integer side lengths and perimeter 23?</p>",
+      "solutions": [
+        "<p>Let $b$ be the base of the isosceles triangles, and let $a$ be the lengths of the other legs. From this, $2a+b=23$ and $b=23-2a$. From triangle inequality, $2a>b$, then plug in the value from the previous equation to get $2a>23-2a$ or $a>5.75$. The maximum value of $a$ occurs when $b=1$, in which from the first equation $a=11$. Thus, $a$ can have integer side lengths from $6$ to $11$, and there are $\\boxed{\\textbf{(C)}\\ 6}$ triangles.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different ways to arrange items with restrictions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_16",
+      "question": "<p>A five-legged Martian has a drawer full of socks, each of which is red, white or blue, and there are at least five socks of each color. The Martian pulls out one sock at a time without looking. How many socks must the Martian remove from the drawer to be certain there will be 5 socks of the same color?</p>",
+      "solutions": [
+        "<p>The Martian can pull out $12$ socks, $4$ of each color, without having $5$ of the same kind yet. However, the next one he pulls out must be the fifth of one of the colors so he must remove $\\boxed{\\textbf{(D)}\\ 13}$ socks.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "System of equations problem involving multiple variables and constraints"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_17",
+      "question": "<p>The results of a cross-country team's training run are graphed below. Which student has the greatest average speed?</p><p>[asy] for ( int i = 1; i <= 7; ++i ) {     draw((i,0)--(i,6)); }  for ( int i = 1; i <= 5; ++i ) {     draw((0,i)--(8,i)); } draw((-0.5,0)--(8,0), linewidth(1)); draw((0,-0.5)--(0,6), linewidth(1)); label(\"$O$\", (0,0), SW); label(scale(.85)*rotate(90)*\"distance\", (0, 3), W); label(scale(.85)*\"time\", (4, 0), S); dot((1.25, 4.5)); label(scale(.85)*\"Evelyn\", (1.25, 4.8), N); dot((2.5, 2.2)); label(scale(.85)*\"Briana\", (2.5, 2.2), S); dot((4.25,5.2)); label(scale(.85)*\"Carla\", (4.25, 5.2), SE); dot((5.6, 2.8)); label(scale(.85)*\"Debra\", (5.6, 2.8), N); dot((6.8, 1.4)); label(scale(.85)*\"Angela\", (6.8, 1.4), E); [/asy]</p>",
+      "solutions": [
+        "<p>Average speed is distance over time, or the slope of the line through the point and the origin. $\\boxed{\\textbf{(E)}\\ \\text{Evelyn}}$ has the steepest line, and runs the greatest distance for the shortest amount of time.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_18",
+      "question": "<p>How many three-digit numbers are divisible by 13?</p>",
+      "solutions": [
+        "<p>Let $k$ be any positive integer so that $13k$ is a multiple of $13$. For the smallest three-digit number, $13k>100$ and $k>\\frac{100}{13} \\approx 7.7$. For the greatest three-digit number, $13k<999$ and $k<\\frac{999}{13} \\approx 76.8$. The number $k$ can range from $8$ to $76$ so there are $\\boxed{\\textbf{(C)}\\ 69}$ three-digit numbers.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving multiple statements and determining truth values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_19",
+      "question": "<p>What is the perimeter of trapezoid $ABCD$?</p><p>[asy]size(3inch, 1.5inch); pair a=(0,0), b=(18,24), c=(68,24), d=(75,0), f=(68,0), e=(18,0); draw(a--b--c--d--cycle); draw(b--e); draw(shift(0,2)*e--shift(2,2)*e--shift(2,0)*e); label(\"30\", (9,12), W); label(\"50\", (43,24), N); label(\"25\", (71.5, 12), E); label(\"24\", (18, 12), E); label(\"$A$\", a, SW); label(\"$B$\", b, N); label(\"$C$\", c, N); label(\"$D$\", d, SE); label(\"$E$\", e, S);[/asy]</p>",
+      "solutions": [
+        "<p>Draw altitudes from $B$ and $C$ to base $AD$ to create a rectangle and two right triangles. The side opposite $BC$ is equal to $50$. The bases of the right triangles can be found using Pythagorean or special triangles to be $18$ and $7$. Add it together to get $AD=18+50+7=75$. The perimeter is $75+30+50+25=\\boxed{\\textbf{(A)}\\ 180}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_20",
+      "question": "<p>Alice and Bob play a game involving a circle whose circumference is divided by 12 equally-spaced points. The points are numbered clockwise, from 1 to 12. Both start on point 12. Alice moves clockwise and Bob, counterclockwise.In a turn of the game, Alice moves 5 points clockwise and Bob moves 9 points counterclockwise. The game ends when they stop on the same point. How many turns will this take?</p>",
+      "solutions": [
+        "<p>Alice moves $5k$ steps and Bob moves $9k$ steps, where $k$ is the turn they are on. Alice and Bob coincide when the number of steps they move collectively, $14k$, is a multiple of $12$. Since this number must be a multiple of $12$, as stated in the previous sentence, $14$ has a factor $2$, $k$ must have a factor of $6$. The smallest number of turns that is a multiple of $6$ is $\\boxed{\\textbf{(A)}\\ 6}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving people, chairs, and working backwards"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_21",
+      "question": "<p>How many distinct triangles can be drawn using three of the dots below as vertices?</p><p>[asy]dot(origin^^(1,0)^^(2,0)^^(0,1)^^(1,1)^^(2,1));[/asy]</p>",
+      "solutions": [
+        "<p>The number of ways to choose three points to make a triangle is $\\binom 63 = 20$. However, two* of these are a straight line so we subtract $2$ to get $\\boxed{\\textbf{(C)}\\ 18}$.</p><ul><li>Note: We are assuming that there are no degenerate triangles in this problem, and that is why we subtract two.</li></ul>",
+        "<p><b>Case 1: One vertex is on the top 3 points</b></p><p>Here, there is $\\binom 31 =3$ ways to choose the vertex on the top and $\\binom 32 =3$ ways the choose the $2$ on the bottom, so there is $3 \\cdot 3=9$ triangles.</p><p><b>Case 2: One vertex is on the bottom 3 points</b></p><p>By symmetry, there is $9$ triangles.</p><p>Otherwise, the triangle is degenerate. </p><p>Our final answer is $9+9=\\boxed{\\text{(C) 18}}$ ~<a class=\"mw-redirect\" href=\"/wiki/index.php/Ddk001\" title=\"Ddk001\">Ddk001</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent spinners and finding probability of even product"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_22",
+      "question": "<p>A company sells detergent in three different sized boxes: small (S), medium (M) and large (L). The medium size costs 50% more than the small size and contains 20% less detergent than the large size. The large size contains twice as much detergent as the small size and costs 30% more than the medium size. Rank the three sizes from best to worst buy.</p>",
+      "solutions": [
+        "<p>Suppose the small size costs $\\textdollar 1$ and has $5$ oz. The medium size then costs $\\textdollar 1.50$ and has $8$ oz. The large size costs $\\textdollar 1.95$ and has 10 oz. The small, medium, and large size cost respectively, $0.200, 0.188, 0.195$ dollars per oz. The sizes from best to worst buy are $\\boxed{\\textbf{(E)}\\ \\text{MLS}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving single women and married men, finding fraction of married men"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_23",
+      "question": "<p>Isosceles right triangle $ABC$ encloses a semicircle of area $2\\pi$. The circle has its center $O$ on hypotenuse $\\overline{AB}$ and is tangent to sides $\\overline{AC}$ and $\\overline{BC}$. What is the area of triangle $ABC$?</p><p>[asy]pair a=(4,4), b=(0,0), c=(0,4), d=(4,0), o=(2,2); draw(circle(o, 2)); clip(a--b--c--cycle); draw(a--b--c--cycle); dot(o); label(\"$C$\", c, NW); label(\"$A$\", a, NE); label(\"$B$\", b, SW);[/asy]</p><p>First, we notice half a square so first let's create a square. Once we have a square, we will have a full circle. This circle has a diameter of 4 which will be the side of the square. The area would be $4\\cdot 4 = 16.$ Divide 16 by 2 to get the original shape and you get $\\boxed{8}$</p>",
+      "solutions": [
+        "<p>We can figure out the radius of the semicircle from the question states that the area of the semicircle is $2\\pi$ and we can multiply it by 2 to complete the circle to get $4\\pi$ which we can find the radius of 2. Draw line segment OD such that it is the midsegment of triangle ABC, using the midsegment theorem we can see that line segment AC = $2*2=4$. Since triangle ABC is an isosceles right triangle we can calculate the area to be $\\frac{4^2}{2}$ = $\\boxed{8}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem analyzing distance from home as function of position around rectangle"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_24",
+      "question": "<p>A certain calculator has only two keys [+1] and [x2]. When you press one of the keys, the calculator automatically displays the result. For instance, if the calculator originally displayed \"9\" and you pressed [+1], it would display \"10.\" If you then pressed [x2], it would display \"20.\" Starting with the display \"1,\" what is the fewest number of keystrokes you would need to reach \"200\"?</p>",
+      "solutions": [
+        "<p>We can start at $200$ and work our way down to $1$. We want to press the button that multiplies by $2$ the most, but since we are going down instead of up, we divide by $2$ instead. If we come across an odd number, then we will subtract that number by $1$. Notice</p><p>Since we've reached $1$, it's clear that the answer should be $\\boxed{\\textbf{(B)}\\ 9}$- $\\boxed{\\textbf{Javapost}}$. Because we only subtracted $1$ when we had to, this is optimal. ~Roy2020</p>",
+        "<p>We make two key observations. First, pressing [x2] appends a $0$ to the end of a number's binary representation. Second, pressing [x2] and then pressing [+1] appends $1$ to the end of a number's binary representation.</p><p>The base-ten number $200$ is represented as $11001000_2$ in binary. Therefore, the five $0$s contribute $5$ button presses. Similarly, each of the three $1$s each contribute $2$ button presses, although we do not count one of them as the calculator initially starts with the number $1.$ Thus, the answer is $5 + 2 \\cdot 2 = \\boxed{\\textbf{(B)}\\ 9}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem finding height of parallelogram using area calculations and right triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_8_25",
+      "question": "<p>A square with side length 2 and a circle share the same center. The total area of the regions that are inside the circle and outside the square is equal to the total area of the regions that are outside the circle and inside the square. What is the radius of the circle?</p><p>[asy] pair a=(4,4), b=(0,0), c=(0,4), d=(4,0), o=(2,2); draw(a--d--b--c--cycle); draw(circle(o, 2.5)); [/asy]</p>",
+      "solutions": [
+        "<p>Let the region within the circle and square be $a$. In other words, it is the area inside the circle $\\textbf{and}$ the square. Let $r$ be the radius. We know that the area of the circle minus $a$ is equal to the area of the square, minus $a$ . </p><p>We get:</p><p>$\\pi r^2 -a=4-a$</p><p>$r^2=\\frac{4}{\\pi}$</p><p>$r=\\frac{2}{\\sqrt{\\pi}}$</p><p>So the answer is $\\boxed{\\textbf{(A)}\\ \\frac{2}{\\sqrt{\\pi}}}$.</p>",
+        "<p>We realize that since the areas of the regions outside of the circle and the square are equal to each other, the area of the circle must be equal to the area of the square.</p><p>$\\pi r^2=4$</p><p>$r^2=\\frac{4}{\\pi}$</p><p>$r=\\frac{2}{\\sqrt{\\pi}}$</p><p>So the answer is $\\boxed{\\textbf{(A)}\\ \\frac{2}{\\sqrt{\\pi}}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving intersecting squares, circle area, and finding shaded region area"
+        }
+      ]
+    }
+  ]
+}

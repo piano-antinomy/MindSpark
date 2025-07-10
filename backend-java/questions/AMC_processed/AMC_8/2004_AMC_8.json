@@ -1,0 +1,406 @@
+{
+  "competition_info": {
+    "name": "2004_AMC_8",
+    "group": "AMC_8",
+    "year": 2004,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2004_8_1",
+      "question": "<p>On a map, a $12$-centimeter length represents $72$ kilometers. How many kilometers does a $17$-centimeter length represent?</p>",
+      "solutions": [
+        "<p>We set up the proportion $\\frac{12  \\text{cm}}{72  \\text{km}}=\\frac{17 \\text{cm}}{x \\text{km}}$. Thus $x=102 \\Rightarrow \\boxed{\\textbf{(B)}\\ 102}$</p>",
+        "<p>Since we know $12$ centimeters on the map is equal to $72$ kilometers, $1$ centimeter on the map is simply $72/12$, which is $6$. The problem is asking how many kilometers a $17$-centimeter length represents, so we multiply $6$ by $17$ which is simply 102, your answer.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "proportions",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving proportional relationships between map distances and actual distances"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_2",
+      "question": "<p>How many different four-digit numbers can be formed by rearranging the four digits in $2004$?</p>",
+      "solutions": [
+        "<p>We can solve this problem easily, just by calculating how many choices there are for each of the four digits.First off, we know there are only $2$ choices for the first digit, because $0$ isn't a valid choice, or the number would a 3-digit number, which is not what we want. We have $3$ choices for the second digit, since we already used up one of the digits, and $2$ choices for the third, and finally just $1$ choices for the fourth and final one. $2*3*2*1$ is 12, but there are 2 zeros that have been counted as different numbers, so divide by 2 to get $\\boxed{\\textbf{(B)}\\ 6}$.</p>",
+        "<p>Note that the four-digit number must start with either a $2$ or a $4$. The four-digit numbers that start with $2$ are $2400, 2040$, and $2004$. The four-digit numbers that start with $4$ are $4200, 4020$, and $4002$ which gives us a total of $\\boxed{\\textbf{(B)}\\ 6}$.</p>",
+        "<p>In order for the resulting numbers to have four digits, they cannot start with $0$. Therefore, both zeroes must be in the last three places. There are $\\binom32=3$ ways to choose which two of the last three places are zeroes. Then there are $2\\cdot1=2$ ways to arrange the $2$ and the $4$ in the remaining two places, giving us a total of $3\\cdot2=\\boxed{\\textbf{(B)}\\ 6}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "permutations",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving rearranging digits with restrictions (no leading zeros)"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_3",
+      "question": "<p>Twelve friends met for dinner at Oscar's Overstuffed Oyster House, and each ordered one meal. The portions were so large, there was enough food for $18$ people. If they shared, how many meals should they have ordered to have just enough food for the $12$ of them?</p>",
+      "solutions": [
+        "<p>Set up the proportion $\\frac{12\\ \\text{meals}}{18\\ \\text{people}}=\\frac{x\\ \\text{meals}}{12\\ \\text{people}}$. Solving for $x$ gives us $x= \\boxed{\\textbf{(A)}\\ 8}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "proportions",
+          "confidence": 0.95,
+          "reasoning": "Simple proportion word problem involving meals and people"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_4",
+      "question": "<p>Ms. Hamilton\u2019s eighth-grade class wants to participate in the annual three-person-team basketball tournament.</p><p>Lance, Sally, Joy, and Fred are chosen for the team. In how many ways can the three starters be chosen?</p>",
+      "solutions": [
+        "<p>There are $\\binom{4}{3}$ ways to choose three starters. Thus the answer is $\\boxed{\\textbf{(B)}\\ 4}$.</p>",
+        "<p>We can choose $3$ people by eliminating one from a set of $4$ one at a time and the other three get selected. There are $4$ ways to remove a person from a group of four (without considering order), so there are $\\boxed{\\textbf{(B)}\\ 4}$ ways to choose three people, where order doesn't matter.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "combinations",
+          "confidence": 0.95,
+          "reasoning": "Counting problem using combinations to choose 3 starters from 4 people"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_5",
+      "question": "<p>Ms. Hamilton's eighth-grade class wants to participate in the annual three-person-team basketball tournament. The losing team of each game is eliminated from the tournament. If sixteen teams compete, how many games will be played to determine the winner?</p>",
+      "solutions": [
+        "<p>Note that the winning team will the be the only team that wins all of the games. Therefore, to find the total number of games to determine the winner has a 1:1 correspondence to the number of ways to determine the losers. ( Think of it this way: If you want to select two balls from a bag of 6 balls, it is analogous to selecting the 4 balls that you don't want to select, both are 6 choose 2.). There are 15 losing teams, and since each round is unique, there are 15 total rounds. </p><p>~Brackie1331</p>",
+        "<p>There will be $8$ games the first round, $4$ games the second round, $2$ games the third round, and $1$ game in the final round, giving us a total of $8+4+2+1=15$ games. $\\boxed{\\textbf{(D)}\\ 15}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "tournament",
+          "confidence": 0.95,
+          "reasoning": "Tournament elimination problem - each game eliminates one team, so 15 games needed to eliminate 15 teams"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_6",
+      "question": "<p>After Sally takes $20$ shots, she has made $55\\%$ of her shots. After she takes $5$ more shots, she raises her percentage to $56\\%$. How many of the last $5$ shots did she make?</p>",
+      "solutions": [
+        "<p>Sally made $0.55*20=11$ shots originally. Letting $x$ be the number of shots she made, we have $\\frac{11+x}{25}=0.56$. Solving for $x$ gives us $x=\\boxed{\\textbf{(C)}\\ 3}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating new percentage after additional shots"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_7",
+      "question": "<p>An athlete's target heart rate, in beats per minute, is $80\\%$ of the theoretical maximum heart rate. The maximum heart rate is found by subtracting the athlete's age, in years, from $220$. To the nearest whole number, what is the target heart rate of an athlete who is $26$ years old?</p>",
+      "solutions": [
+        "<p>The maximum heart rate is $220-26=194$ beats per minute. The target heart rate is then $0.8*194 \\approx \\boxed{\\textbf{(B)}\\ 155}$ beats per minute.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving percentage calculation of target heart rate based on age"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_8",
+      "question": "<p>Find the number of two-digit positive integers whose digits total $7$.</p>",
+      "solutions": [
+        "<p>The numbers are $16, 25, 34, 43, 52, 61, 70$ which gives us a total of $\\boxed{\\textbf{(B)}\\ 7}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "digit_sum",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem finding two-digit numbers with specific digit sum"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_9",
+      "question": "<p>The average of the five numbers in a list is $54$. The average of the first twonumbers is $48$. What is the average of the last three numbers?</p>",
+      "solutions": [
+        "<p>Let the $5$ numbers be $a, b, c, d$, and $e$. Thus $\\frac{a+b+c+d+e}{5}=54$ and $a+b+c+d+e=270$. Since $\\frac{a+b}{2}=48$, $a+b=96$. Substituting back into our original equation, we have $96+c+d+e=270$ and $c+d+e=174$. Dividing by $3$ gives the average of $\\boxed{\\textbf{(D)}\\ 58}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "averages",
+          "confidence": 0.95,
+          "reasoning": "Average word problem involving finding average of subset given overall and partial averages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_10",
+      "question": "<p>Handy Aaron helped a neighbor $1 \\frac14$ hours on Monday, $50$ minutes on Tuesday, from 8:20 to 10:45 on Wednesday morning, and a half-hour on Friday. He is paid $\\textdollar 3$ per hour. How much did he earn for the week?</p>",
+      "solutions": [
+        "<p>Let's convert everything to minutes and add them together. On Monday he worked for $\\frac54 \\cdot 60 = 75$ minutes. On Tuesday he worked $50$ minutes. On Wednesday he worked for $2$ hours $25$ minutes, or $2(60)+25=145$ minutes. On Friday he worked $\\frac{60}{2}=30$ minutes. This adds up to $75+50+145+30=300$ minutes, or $300/60=5$ hours and $5\\cdot 3 = \\boxed{\\textbf{(E)}\\ \\textdollar 15}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "time_money",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving time conversion and hourly wage calculation"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_11",
+      "question": "<p>The numbers $-2, 4, 6, 9$ and $12$ are rearranged according to these rules:</p><p>What is the average of the first and last numbers?</p>",
+      "solutions": [
+        "<p>From rule 1, the largest number, $12$, can be second or third. From rule 2, because there are five places, the smallest number $-2$ can either be third or fourth. The median, $6$ can be second, third, or fourth. Because we know the middle three numbers, the first and last numbers are $4$ and $9$, disregarding their order. Their average is $(4+9)/2 = \\boxed{\\textbf{(C)}\\ 6.5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "logic",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving arranging numbers according to given rules and finding average of first and last"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_12",
+      "question": "<p>Niki usually leaves her cell phone on. If her cell phone is on butshe is not actually using it, the battery will last for $24$ hours. Ifshe is using it constantly, the battery will last for only $3$ hours.Since the last recharge, her phone has been on $9$ hours, and duringthat time she has used it for $60$ minutes. If she doesn\u2019t use it anymore but leaves the phone on, how many more hours will the battery last?</p>",
+      "solutions": [
+        "<p>When not being used, the cell phone uses up $\\frac{1}{24}$ of its battery per hour. When being used, the cell phone uses up $\\frac{1}{3}$ of its battery per hour. Since Niki's phone has been on for $9$ hours, of those $8$ simply on and $1$ with Niki using her phone, $8(\\frac{1}{24}) + 1(\\frac{1}{3}) = \\frac{2}{3}$ of its battery has been used up. To drain the remaining $\\frac{1}{3}$ the phone can last for $\\frac{\\frac{1}{3}}{\\frac{1}{24}}=\\boxed{\\textbf{(B)}\\ 8}$ more hours without being used.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate problem involving battery consumption at different usage levels"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_13",
+      "question": "<p>Amy, Bill and Celine are friends with different ages. Exactly one of the following statements is true.</p><p>Rank the friends from the oldest to youngest.</p>",
+      "solutions": [
+        "<p>If Bill is the oldest, then Amy is not the oldest, and both statements I and II are true, so statement I is not the true one.</p><p>If Amy is not the oldest, and we know Bill cannot be the oldest, then Celine is the oldest. This would mean she is not the youngest, and both statements II and III are true, so statement II is not the true one.</p><p>Therefore, statement III is the true statement, and both I and II are false. From this, Amy is the oldest, Celine is in the middle, and lastly Bill is the youngest. This order is $\\boxed{\\textbf{(E)}\\ \\text{Amy, Celine, Bill}}$.</p>",
+        "<p>Bashing through/ eliminating the options</p><p>The first statement tells us that Bill is the oldest. In the answer choices, you can see that the first answer is the only option where Bill is the oldest. Bill being the oldest is false (as Amy not being the oldest in the answer choice is also a true statement, but we cannot have two true statements per our conditions), so we can eliminate that answer. Now we know that Bill isn't the oldest and could be the youngest or the second oldest. Don't forget, we have TWO false statements and only one true statement. The second statement where Amy is not the oldest is another false statement. So now we know Amy is the oldest, followed by Celine whom is the second oldest, and Bill, whom is the youngest.Thus, the answer is $\\boxed{\\textbf{(E)}\\ \\text{Amy, Celine, Bill}}$. </p><p>--Angela--</p><p>(amyxin0316)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem with multiple statements where only one is true, requiring deductive reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_14",
+      "question": "<p>What is the area enclosed by the geoboard quadrilateral below?</p><p>[asy] unitsize(3mm); defaultpen(linewidth(.8pt)); dotfactor=2;  for(int a=0; a<=10; ++a) for(int b=0; b<=10; ++b)  {   dot((a,b));  };  draw((4,0)--(0,5)--(3,4)--(10,10)--cycle); [/asy]</p>",
+      "solutions": [
+        "<p>[asy] unitsize(5mm); defaultpen(linewidth(.8pt)); dotfactor=2;  for(int a=0; a<=10; ++a) for(int b=0; b<=10; ++b)  {   dot((a,b));  };  draw((4,0)--(0,5)--(3,4)--(10,10)--cycle); draw((0,0)--(10,0)--(10,10)--(3,4)--(0,5)--cycle); draw((10,4)--(0,4)--cycle);  dot(\"$A$\", (0,5), W); dot(\"$B$\", (3,4), N); dot(\"$C$\", (10,10), NE); dot(\"$D$\", (0,4), W); dot(\"$E$\", (10,4), E); dot(\"$F$\", (0,0), SW); dot(\"$G$\", (10,0), SE); dot(\"$H$\", (4,0), S); [/asy]</p><p>Divide the shape up as above. \\[Area = [DEGF] + [ABD] + [BCE] - [AFH] - [CGH] = 4 \\cdot 10 + \\frac12 \\cdot 1 \\cdot 3 + \\frac12 \\cdot 7 \\cdot 6 - \\frac12 \\cdot 5 \\cdot 4 - \\frac12 \\cdot 6 \\cdot 10 = 40 + \\frac32 + 21 - 10 - 30 = \\boxed{\\textbf{(C)}\\ 22\\frac12}\\]</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>",
+        "<p>Let the bottom left corner be $(0,0)$. The points would then be $(4,0),(0,5),(3,4),$ and $(10,10)$. Applying the <a href=\"/wiki/index.php/Shoelace_Theorem\" title=\"Shoelace Theorem\">Shoelace Theorem</a>,</p><p>\\[\\text{Area} = \\frac12 \\begin{vmatrix} 4 & 0 \\\\ 0 & 5 \\\\ 3 & 4 \\\\ 10 & 10 \\\\ 4 & 0\\end{vmatrix} = \\frac12 |(20+30)-(15+40+40)| = \\frac12 |50-95| = \\boxed{\\textbf{(C)}\\ 22\\frac12}\\]</p>",
+        "<p>The figure contains $21$ interior points and $5$ boundary points. Using <a href=\"/wiki/index.php/Pick%27s_Theorem\" title=\"Pick's Theorem\">Pick's Theorem</a>, the area is \\[21+\\frac{5}{2}-1=\\boxed{\\textbf{(C)}\\ 22\\frac12}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem finding area of quadrilateral on coordinate grid using various methods (Shoelace, Pick's Theorem)"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_15",
+      "question": "<p>Thirteen black and six white hexagonal tiles were used to create the figure below. If a new figure is created by attaching a border of white tiles with the same size and shape as the others, what will be the difference between the total number of white tiles and the total number of black tiles in the new figure?</p><p><br/>[asy] defaultpen(linewidth(1)); real x=sqrt(3)/2; path p=rotate(30)*polygon(6); filldraw(p^^shift(0,3)*p^^shift(4x,0)*p^^shift(3x,1.5)*p^^shift(2x,3)*p^^shift(-4x,0)*p^^shift(-3x,1.5)*p^^shift(-2x,3)*p^^shift(3x,-1.5)*p^^shift(-3x,-1.5)*p^^shift(2x,-3)*p^^shift(-2x,-3)*p^^shift(0,-3)*p, black, black); draw(shift(2x,0)*p^^shift(-2x,0)*p^^shift(x,1.5)*p^^shift(-x,1.5)*p^^shift(x,-1.5)*p^^shift(-x,-1.5)*p); [/asy]</p>",
+      "solutions": [
+        "<p>The first ring around the middle tile has $6$ tiles, and the second has $12$. From this pattern, the third ring has $18$ tiles. Of these, $6+18=24$ are white and $1+12=13$ are black, with a difference of $24-13 = \\boxed{\\textbf{(C)}\\ 11}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "patterns",
+          "confidence": 0.95,
+          "reasoning": "Pattern recognition problem involving hexagonal tiles and counting black vs white tiles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_16",
+      "question": "<p>Two $600$ mL pitchers contain orange juice. One pitcher is $1/3$ full and the other pitcher is $2/5$ full. Water is added to fill each pitcher completely, then both pitchers are poured into one large container. What fraction of the mixture in the large container is orange juice?</p>",
+      "solutions": [
+        "<p>The first pitcher contains $600 \\cdot \\frac13 = 200$ mL of orange juice. The second pitcher contains $600 \\cdot \\frac25 = 240$ mL of orange juice. In the large pitcher, there is a total of $200+240=440$ mL of orange juice and $600+600=1200$ mL of fluids, giving a fraction of $\\frac{440}{1200} = \\boxed{\\textbf{(C)}\\ \\frac{11}{30}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving mixing different concentrations of orange juice"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_17",
+      "question": "<p>Three friends have a total of $6$ identical pencils, and each one has at least one pencil. In how many ways can this happen?</p>",
+      "solutions": [
+        "<p>For each person to have at least one pencil, assign one pencil to each of the three friends so that you have $3$ left. In partitioning the remaining $3$ pencils into $3$ distinct groups, use <a href=\"/wiki/index.php/Ball-and-urn\" title=\"Ball-and-urn\">Ball-and-urn</a> to find the number of possibilities is $\\binom{3+3-1}{3-1} = \\binom{5}{2} = \\boxed{\\textbf{(D)}\\ 10}$.</p><p>Solution by <a href=\"/wiki/index.php/User:Phoenixfire\" title=\"User:Phoenixfire\">phoenixfire</a>Minor Edit by <a href=\"/wiki/index.php/User:Yuvag\" title=\"User:Yuvag\">Yuvag</a></p>",
+        "<p>Like in solution 1, for each person to have at least one pencil, assign one of the pencils to each of the three friends so that you have $3$ left. In partitioning the remaining $3$ pencils into $3$ distinct groups, use number of non-negative integral solutions. Let the three friends be $a, b, c$ respectively.</p><p>$a+b+c = 3$The total being 3 and 2 plus signs, which implies$\\binom{3+2}{2} = \\binom{5}{2} = \\boxed{\\textbf{(D)}\\ 10}$.</p><p>Solution by <a href=\"/wiki/index.php/User:Phoenixfire\" title=\"User:Phoenixfire\">phoenixfire</a>Minor Edit by <a href=\"/wiki/index.php/User:Yuvag\" title=\"User:Yuvag\">Yuvag</a></p>",
+        "<p>For each of the 3 People to have at least one pencil when distributing 6 pencil amongst them, we can use another formula from the <a href=\"/wiki/index.php/Ball-and-urn\" title=\"Ball-and-urn\">Ball-and-urn</a> counting technique, shown below:</p><p>for n = number of items, and s = slots:</p><p>Now we can plug in our values, </p><p>number of items = 6, and slots = 3:</p><p>$\\binom{6-1}{3-1}     =     \\binom{5}{2}     =    \\boxed{\\textbf{(D)}\\ 10}$.</p><p>Solution by <a href=\"/wiki/index.php/User:Yuvag\" title=\"User:Yuvag\">Yuvag</a></p>",
+        "<p>Like in solution 1 and solution 2, assign one pencil to each of the three friends so that you have $3$ left. In partitioning the remaining $3$ pencils into $3$ distinct groups use casework. Let the three friends be $a$, $b$, $c$ repectively.</p><p>$a+b +c = 3$,</p><p><br/>Case $1:a=0$,</p><p>$b+c = 3$,</p><p>$b = 0,1,2,3$ ,</p><p>$c = 3,2,1,0$,</p><p>$\\boxed{\\textbf\\ 4}$ solutions.</p><p><br/>Case $2:a=1$,</p><p>$1 + b + c = 3$,</p><p>$b + c = 2$,</p><p>$b = 0,1,2$ ,</p><p>$c = 2,1,0$ ,</p><p>$\\boxed{\\textbf\\ 3}$ solutions.</p><p><br/>Case $3:a= 2$,</p><p>$2 + b + c = 3$,</p><p>$b + c = 1$,</p><p>$b = 0,1$,</p><p>$c = 1,0$,</p><p>$\\boxed{\\textbf\\ 2}$ solutions.</p><p><br/>Case $4:a = 3$,</p><p>$3+b+c = 3$,</p><p>$b+c = 0$,</p><p>$b = 0$,</p><p>$c = 0$,</p><p>$\\boxed{\\textbf\\ 1}$ solution.</p><p>Therefore there will be a total of $4+3+2+1=\\boxed{\\textbf{(D)}\\ 10}$ solutions.Solution by <a href=\"/wiki/index.php/User:Phoenixfire\" title=\"User:Phoenixfire\">phoenixfire</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "ball_and_urn",
+          "confidence": 0.95,
+          "reasoning": "Combinatorics problem using ball-and-urn method to distribute identical pencils with constraints"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_18",
+      "question": "<p>Five friends compete in a dart-throwing contest. Each one has two darts to throw at the same circular target, and each individual's score is the sum of the scores in the target regions that are hit. The scores for the target regions are the whole numbers $1$ through $10$. Each throw hits the target in a region with a different value. The scores are: Alice $16$ points, Ben $4$ points, Cindy $7$ points, Dave $11$ points, and Ellen $17$ points. Who hits the region worth $6$ points?</p>",
+      "solutions": [
+        "<p>The only way to get Ben's score is with $1+3=4$. Cindy's score can be made of $3+4$ or $2+5$, but since Ben already hit the $3$, Cindy hit $2+5=7$. Similarly, Dave's darts were in the region $4+7=11$. Lastly, because there is no $7$ left, $\\boxed{\\textbf{(A)}\\ \\text{Alice}}$ must have hit the regions $6+10=16$ and Ellen $8+9=17$.</p>",
+        "<p>Taking the 2 largest scores to narrow out the points we get</p><p>Ellen with either $10,7$ or $9,8$ and Alice with either $10,6$ or $9,7$, the 2 pairs that work areAlice=$10,6$Ellen=$9,8$, therefore Alice scored the $6$.</p><p>This way, we don\u2019t need to check anyway if anyone else got $6$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving dart scores and deducing which player hit which region"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_19",
+      "question": "<p>A whole number larger than $2$ leaves a remainder of $2$ when divided by each of the numbers $3, 4, 5,$ and $6$. The smallest such number lies between which two numbers?</p>",
+      "solutions": [
+        "<p>The smallest number divisible by $3,4,5,$ and $6$, or their least common multiple, can be found to be $60$. When $2$ is added to a multiple of number, its remainder when divided by that number is $2$. The number we are looking for is therefore $62$, and between $\\boxed{\\textbf{(B)}\\ 60\\ \\text{and}\\ 79}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem finding smallest number with specific remainder properties using LCM"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_20",
+      "question": "<p>Two-thirds of the people in a room are seated in three-fourths of the chairs. The rest of the people are standing. If there are $6$ empty chairs, how many people are in the room?</p>",
+      "solutions": [
+        "<p>Working backwards, if $3/4$ of the chairs are taken and $6$ are empty, then there are three times as many taken chairs as empty chairs, or $3 \\cdot 6 = 18$. If $x$ is the number of people in the room and $2/3$ are seated, then $\\frac23 x = 18$ and $x = \\boxed{(\\text{D}) 27}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving people, chairs, and working backwards"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_21",
+      "question": "<p>Spinners $A$ and $B$ are spun. On each spinner, the arrow is equally likely to land on each number. What is the probability that the product of the two spinners' numbers is even?</p><p>[asy] pair A=(0,0); pair B=(3,0); draw(Circle(A,1)); draw(Circle(B,1));  draw((-1,0)--(1,0)); draw((0,1)--(0,-1)); draw((3,0)--(3,1)); draw((3+sqrt(3)/2,-.5)--(3,0)); draw((3,0)--(3-sqrt(3)/2,-.5));   label(\"$A$\",(-1,1)); label(\"$B$\",(2,1));  label(\"$1$\",(-.4,.4)); label(\"$2$\",(.4,.4)); label(\"$3$\",(.4,-.4)); label(\"$4$\",(-.4,-.4)); label(\"$1$\",(2.6,.4)); label(\"$2$\",(3.4,.4)); label(\"$3$\",(3,-.5));  [/asy]</p>",
+      "solutions": [
+        "<p>An even number comes from multiplying an even and even, even and odd, or odd and even. Since an odd number only comes from multiplying an odd and odd, there are less cases and it would be easier to find the probability of spinning two odd numbers from $1$. Multiply the independent probabilities of each spinner getting an odd number together and subtract it from $1$.</p><p>\\[1-\\frac24 \\cdot \\frac23 = 1- \\frac13 = \\boxed{\\textbf{(D)}\\ \\frac23}\\]</p>",
+        "<p>We can make a chart and the we see that the 12 possibilities: 1, 2, 3, 2, 4, 6, 3, 6, 9, 4, 8, and 12. Out of these only 8 work; thus the probability is \\[\\boxed{\\textbf{(D)}\\ \\frac23}\\]</p>",
+        "<p>We do a little bit of casework. In order to get a product that's even, we need at least one even number. First, we consider the probability of getting an even number on the first spinner, and then multiply by 1 because the second spinner can be anything. \\[\\frac12 \\cdot 1 = \\frac12\\]Next, we look at the chance that we don't get an even on the first spinner, but get an even on the second spinner (we don't do the probability of even on the second spinner multiplied by one because we would be double counting both spinners are even). \\[\\frac12 \\cdot \\frac13 = \\frac16\\]Add these two together to get the total probability, and we get \\[\\frac12 + \\frac16 = \\frac46 = \\boxed{\\textbf{(D)}\\ \\frac23}\\]</p><p>~ligonmathkid2</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent spinners and finding probability of even product"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_22",
+      "question": "<p>At a party there are only single women and married men with their wives. The probability that a randomly selected woman is single is $\\frac25$. What fraction of the people in the room are married men?</p>",
+      "solutions": [
+        "<p>Assume arbitrarily (and WLOG) there are $5$ women in the room, of which $5 \\cdot \\frac25 =  2$ are single and $5-2=3$ are married. Each married woman came with her husband, so there are $3$ married men in the room as well for a total of $5+3=8$ people. The fraction of the people that are married men is $\\boxed{\\textbf{(B)}\\ \\frac38}$.</p>",
+        "<p>Let single women be $S$, married wives to be $W$, and men to be $M$. As such, the number of men is equal to married woman since each husband has his own wife or $W=M$. We are asked to find the probability of men in the total group or $\\frac{M}{S+W+M}$. </p><p>We are also given that out of all the women, 2/5 are single or $\\frac{S}{S+W}=\\frac{2}{5}$. Rewrite this as $S=\\frac{2}{5}(S+W)$, $S=\\frac{2S}{5}+\\frac{2W}{5}$, isolating $S$ gives us $\\frac{3S}{5}=\\frac{2W}{5}$ or $S=\\frac{2M}{3}$ (because $W=M$).</p><p>Now, substituting gives us $\\frac{M}{\\frac{2M}{3}+M+M}=\\frac{M}{\\frac{2M}{3}+\\frac{6M}{3}}=\\frac{M}{\\frac{8M}{3}}=\\boxed{\\textbf{(B)}\\ \\frac38}$~RandomMathGuy500</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving single women and married men, finding fraction of married men"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_23",
+      "question": "<p>Tess runs counterclockwise around rectangular block $JKLM$. She lives at corner $J$. Which graph could represent her straight-line distance from home?</p><p>[asy] unitsize(5mm); pair J=(-3,2); pair K=(-3,-2); pair L=(3,-2); pair M=(3,2);  draw(J--K--L--M--cycle); label(\"$J$\",J,NW); label(\"$K$\",K,SW); label(\"$L$\",L,SE); label(\"$M$\",M,NE); [/asy]</p><p>$\\textbf{(C)}$[asy] size(80);defaultpen(linewidth(0.8)); //C draw((16,0)--origin--(0,16)); draw(origin--(2.7,8)--(3,9)^^(11,9)--(14,0)); draw(Arc((4,9), 1, 0, 180)); draw(Arc((10,9), 1, 0, 180)); draw(Arc((7,9), 2, 180,360)); label(\"time\", (8,0), S); label(rotate(90)*\"distance\", (0,8), W); [/asy]</p><p>$\\textbf{(D)}$[asy] size(80);defaultpen(linewidth(0.8)); //D draw((16,0)--origin--(0,16)); draw(origin--(2,6)--(7,14)--(10,12)--(14,0)); label(\"time\", (8,0), S); label(rotate(90)*\"distance\", (0,8), W); [/asy]</p><p>$\\textbf{(E)}$[asy] size(80);defaultpen(linewidth(0.8)); //E draw((16,0)--origin--(0,16)); draw(origin--(3,6)--(7,6)--(10,12)--(14,12)); label(\"time\", (8,0), S); label(rotate(90)*\"distance\", (0,8), W); [/asy]</p>",
+      "solutions": [
+        "<p>For her distance to be represented as a constant horizontal line, Tess would have to be running in a circular shape with her home as the center. Since she is running around a rectangle, this is not possible, ruling out $B$ and $E$ with straight lines. Because $JL$ is the diagonal of the rectangle, and $L$ is at the middle distance around the perimeter, her maximum distance should be in the middle of her journey. The maximum in $A$ is at the end, and $C$ has two maximums, ruling both out. Thus the answer is $\\boxed{\\textbf{(D)}}$.</p>",
+        "<p>Even though Solution 1 may find an answer, it is never proven that $D$ actually describes the distance to Tess' home.</p><p>It may be easier to compare the distance traveled by Tess rather than the time spent, if we suppose that Tess moves at constant speed then the graphs distance-time and distance-position are equivalent.</p><p>Let $x$ be the linear distance walked by Tess, and $d$ her distance from home $J$. We will divide this problem into four parts (sections $JK$, $KL$, $LM$ and $MJ$).</p><p>[asy] unitsize(5mm); pair J=(-3,2); pair K=(-3,-2); pair L=(3,-2); pair M=(3,2);  draw(J--K--L--M--cycle); label(\"$J$\",J,NW); label(\"$K$\",K,SW); label(\"$L$\",L,SE); label(\"$M$\",M,NE); [/asy]</p><p>Section $JK$: At any point of the segment $JK$, the distance of Tess from home is described by the function $d_{JK}(x)=x_J$ where $x_J$ is the linear distance traveled by Tess from point $J$.</p><p>Section $KL$: From $K$ to $L$, the distance from home is described by a right triangle, where $d$ is the hypotenuse. In this situation the distance follows the function $d_{KL}(x)=\\sqrt{JK^2+x_K^2}$, which is a curve (this was obtained by applying the Pythagorean Theorem).</p><p>Section $LM$: Following an analogue reasoning to Section $KL$, the distance function in this case results $d_{LM}(x)=\\sqrt{MJ^2+(LM-x_L)^2}$ which is also a curve.</p><p>Section $MJ$: Analogue to Section $JK$, we obtain a linear function $d_{MJ}(x)=MJ-x_M$</p><p>None of the shown answers in the multiple choice describe the real distance between Tess and home along the path.</p><p>The real graph should have a shape of the following kind:</p><p>[asy] size(80);defaultpen(linewidth(0.8)); //D draw((16,0)--origin--(0,16)); draw(origin--(3.2,10.3)^^(10,12.2)--(14,0)); draw(Arc((26.7,1.9), 25, 145, 160)); draw(Arc((12,18), 6, 198, 250)); label(\"time\", (8,0), S); label(rotate(90)*\"distance\", (0,8), W); [/asy]</p><p>Which is slightly different from the expected solution $D$.</p><p>~ FaC7oR</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem analyzing distance from home as function of position around rectangle"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_24",
+      "question": "<p>In the figure, $ABCD$ is a rectangle and $EFGH$ is a parallelogram. Using the measurements given in the figure, what is the length $d$ of the segment that is perpendicular to $\\overline{HE}$ and $\\overline{FG}$?</p><p>[asy] unitsize(3mm); defaultpen(linewidth(.8pt)+fontsize(10pt));  pair D=(0,0), C=(10,0), B=(10,8), A=(0,8); pair E=(4,8), F=(10,3), G=(6,0), H=(0,5);  draw(A--B--C--D--cycle); draw(E--F--G--H--cycle);  label(\"$A$\",A,NW); label(\"$B$\",B,NE); label(\"$C$\",C,SE); label(\"$D$\",D,SW);  label(\"$E$\",E,N); label(\"$F$\",(10.8,3)); label(\"$G$\",G,S); label(\"$H$\",H,W);  label(\"$4$\",A--E,N); label(\"$6$\",B--E,N); label(\"$5$\",(10.8,5.5)); label(\"$3$\",(10.8,1.5)); label(\"$4$\",G--C,S); label(\"$6$\",G--D,S); label(\"$5$\",D--H,W); label(\"$3$\",A--H,W);  draw((3,7.25)--(7.56,1.17)); label(\"$d$\",(3,7.25)--(7.56,1.17), NE);  [/asy]</p>",
+      "solutions": [
+        "<p>The area of the parallelogram can be found in two ways. The first is by taking rectangle $ABCD$ and subtracting the areas of the triangles cut out to create parallelogram $EFGH$. This is \\[(4+6)(5+3) - 2 \\cdot \\frac12 \\cdot 6 \\cdot 5 - 2 \\cdot \\frac12 \\cdot 3 \\cdot 4 = 80 - 30 - 12 = 38\\]The second way is by multiplying the base of the parallelogram such as $\\overline{FG}$ with its altitude $d$, which is perpendicular to both bases. $\\triangle FGC$ is a $3-4-5$ triangle so $\\overline{FG} = 5$. Set these two representations of the area together.\\[5d = 38 \\rightarrow d = \\boxed{\\textbf{(C)}\\ 7.6}\\]\u00a0:) </p><p>~Ak~Smiley face by Shreyansh Medatati</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem finding height of parallelogram using area calculations and right triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_8_25",
+      "question": "<p>Two $4 \\times 4$ squares intersect at right angles, bisecting their intersecting sides, as shown. The circle's diameter is the segment between the two points of intersection. What is the area of the shaded region created by removing the circle from the squares?</p><p>[asy] unitsize(6mm); draw(unitcircle); filldraw((0,1)--(1,2)--(3,0)--(1,-2)--(0,-1)--(-1,-2)--(-3,0)--(-1,2)--cycle,lightgray,black); filldraw(unitcircle,white,black); [/asy]</p>",
+      "solutions": [
+        "<p>If the circle was shaded in, the intersection of the two squares would be a smaller square with half the sidelength, $2$. The area of this region would be the two larger squares minus the area of the intersection, the smaller square. This is $4^2 + 4^2 - 2^2 = 28$.</p><p>The diagonal of this smaller square created by connecting the two points of intersection of the squares is the diameter of the circle. This value can be found with Pythagorean or a $45^\\circ - 45^\\circ - 90^\\circ$ circle to be $2\\sqrt{2}$. The radius is half the diameter, $\\sqrt{2}$. The area of the circle is $\\pi r^2 = \\pi (\\sqrt{2})^2 = 2\\pi$.</p><p>The area of the shaded region is the area of the two squares minus the area of the circle which is $\\boxed{\\textbf{(D)}\\ 28-2\\pi}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving intersecting squares, circle area, and finding shaded region area"
+        }
+      ]
+    }
+  ]
+}

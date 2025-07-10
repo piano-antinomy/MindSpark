@@ -1,0 +1,429 @@
+{
+  "competition_info": {
+    "name": "2022_AMC_8",
+    "group": "AMC_8",
+    "year": 2022,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2022_8_1",
+      "question": "<p>The Math Team designed a logo shaped like a multiplication symbol, shown below on a grid of 1-inch squares. What is the area of the logo in square inches?</p><p>[asy] defaultpen(linewidth(0.5)); size(5cm); defaultpen(fontsize(14pt)); label(\"$\\textbf{Math}$\", (2.1,3.7)--(3.9,3.7)); label(\"$\\textbf{Team}$\", (2.1,3)--(3.9,3)); filldraw((1,2)--(2,1)--(3,2)--(4,1)--(5,2)--(4,3)--(5,4)--(4,5)--(3,4)--(2,5)--(1,4)--(2,3)--(1,2)--cycle, mediumgray*0.5 + lightgray*0.5);  draw((0,0)--(6,0), gray); draw((0,1)--(6,1), gray); draw((0,2)--(6,2), gray); draw((0,3)--(6,3), gray); draw((0,4)--(6,4), gray); draw((0,5)--(6,5), gray); draw((0,6)--(6,6), gray);  draw((0,0)--(0,6), gray); draw((1,0)--(1,6), gray); draw((2,0)--(2,6), gray); draw((3,0)--(3,6), gray); draw((4,0)--(4,6), gray); draw((5,0)--(5,6), gray); draw((6,0)--(6,6), gray); [/asy]</p>",
+      "solutions": [
+        "<p>We can see that there are 4 whole squares, since the area of each square will be 1, 4 * 1 = 4. Next, there are 12 half squares, and 2 half squares are 1 whole square, so 12/2 = 6 whole squares. The area of this will be 6 * 1 = 6. Finally, we can add the 2 numbers. 4 + 6 = $\\boxed{\\textbf{(A)} ~10}$.</p><p>~~Brainiacs77~~</p>",
+        "<p>Draw the following four lines as shown:[asy] usepackage(\"mathptmx\"); defaultpen(linewidth(0.5)); size(5cm); defaultpen(fontsize(14pt)); label(\"$\\textbf{Math}$\", (2.1,3.7)--(3.9,3.7)); label(\"$\\textbf{Team}$\", (2.1,3)--(3.9,3)); filldraw((1,2)--(2,1)--(3,2)--(4,1)--(5,2)--(4,3)--(5,4)--(4,5)--(3,4)--(2,5)--(1,4)--(2,3)--(1,2)--cycle, mediumgray*0.5 + lightgray*0.5);  draw((0,0)--(6,0), gray); draw((0,1)--(6,1), gray); draw((0,2)--(6,2), gray); draw((0,3)--(6,3), gray); draw((0,4)--(6,4), gray); draw((0,5)--(6,5), gray); draw((0,6)--(6,6), gray);  draw((0,0)--(0,6), gray); draw((1,0)--(1,6), gray); draw((2,0)--(2,6), gray); draw((3,0)--(3,6), gray); draw((4,0)--(4,6), gray); draw((5,0)--(5,6), gray); draw((6,0)--(6,6), gray);  draw((3,4)--(4,3), red); draw((4,3)--(3,2), red); draw((3,2)--(2,3), red); draw((2,3)--(3,4), red); [/asy]</p><p>We see these lines split the figure into five squares with side length $\\sqrt2$. Thus, the area is $5\\cdot\\left(\\sqrt2\\right)^2=5\\cdot 2 = \\boxed{\\textbf{(A) } 10}$.</p><p>~pog ~wamofan</p>",
+        "<p>There are $5$ lattice points in the interior of the logo and $12$ lattice points on the boundary of the logo. Because of Pick's Theorem, the area of the logo is $5+\\frac{12}{2}-1=\\boxed{\\textbf{(A) } 10}$.</p><p>~MathFun1000</p>",
+        "<p>Notice that the area of the figure is equal to the area of the $4 \\times 4$ square subtracted by the $12$ triangles that are half the area of each square, which is $1$. The total area of the triangles not in the figure is $12 \\cdot \\frac{1}{2} = 6$, so the answer is $16-6 = \\boxed{\\textbf{(A) } 10}$.</p><p>~hh99754539</p>",
+        "<p>Draw the following four lines as shown:</p><p>[asy] usepackage(\"mathptmx\"); defaultpen(linewidth(0.5)); size(5cm); defaultpen(fontsize(14pt)); label(\"$\\textbf{Math}$\", (2.1,3.7)--(3.9,3.7)); label(\"$\\textbf{Team}$\", (2.1,3)--(3.9,3)); filldraw((1,2)--(2,1)--(3,2)--(4,1)--(5,2)--(4,3)--(5,4)--(4,5)--(3,4)--(2,5)--(1,4)--(2,3)--(1,2)--cycle, mediumgray*0.5 + lightgray*0.5);  draw((0,0)--(6,0), gray); draw((0,1)--(6,1), gray); draw((0,2)--(6,2), gray); draw((0,3)--(6,3), gray); draw((0,4)--(6,4), gray); draw((0,5)--(6,5), gray); draw((0,6)--(6,6), gray);  draw((0,0)--(0,6), gray); draw((1,0)--(1,6), gray); draw((2,0)--(2,6), gray); draw((3,0)--(3,6), gray); draw((4,0)--(4,6), gray); draw((5,0)--(5,6), gray); draw((6,0)--(6,6), gray);  draw((2,4)--(4,4), red); draw((4,4)--(4,2), red); draw((4,2)--(2,2), red); draw((2,2)--(2,4), red); [/asy]</p><p>The area of the big square is $4$, and the area of each triangle is $0.5$. There are $12$ of these triangles, so the total area of all the triangles is $0.5\\cdot12=6$. Therefore, the area of the entire figure is $4+6=\\boxed{\\textbf{(A) } 10}$. </p><p>~RocketScientist</p>",
+        "<p>The coordinates are $(1,2), (2,1), (3,2), (4,1), (5,2), (4,3), (5,4), (4,5), (3,4), (2,5), (1,4), (2,3)$Use the <a href=\"/wiki/index.php/Shoelace_Theorem\" title=\"Shoelace Theorem\">Shoelace Theorem</a> to get $\\boxed{\\textbf{(A)} ~10}$.</p>",
+        "<p>If the triangles are rearranged such that the gaps are filled, there would be a $4$ by $2$ rectangle, and two $1$ by $1$ squares are present. Thus, the answer is $\\boxed{\\textbf{(A)} ~10}$. </p><p>~peelybonehead</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2022 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_2",
+      "question": "<p>Consider these two operations:\\begin{align*} a \\, \\blacklozenge \\, b &= a^2 - b^2\\\\ a \\, \\bigstar \\, b &= (a - b)^2 \\end{align*}What is the output of $(5 \\, \\blacklozenge \\, 3) \\, \\bigstar \\, 6?$</p>",
+      "solutions": [
+        "<p>We can find a general solution to any $((a \\, \\blacklozenge \\, b) \\, \\bigstar \\, c)$.\\[((a \\, \\blacklozenge \\, b) \\, \\bigstar \\, c)\\]\\[=((a^2-b^2) \\, \\bigstar \\, c)\\]\\[=(a^2-b^2-c)^2\\]\\[=a^4+b^4-(a^2)(b^2)-2(a^2)(c)-(b^2)(a^2)+2(b^2)(c)+c^2\\]\\[=5^4+3^4-(5^2)(3^2)-2(5^2)(6)-(3^2)(5^2)+2(3^2)(6)+6^2\\]\\[=625+81-225-300-225+108+36\\]\\[=\\boxed{\\textbf{(D) } 100}\\]</p><p>~megaboy6679</p><p>~algebraic_algorithmic \"This is very time wasting\"</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2022 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_3",
+      "question": "<p>When three positive integers $a$, $b$, and $c$ are multiplied together, their product is $100$. Suppose $a < b < c$. In how many ways can the numbers be chosen?</p>",
+      "solutions": [
+        "<p>The positive divisors of $100$ are \\[1,2,4,5,10,20,25,50,100.\\]It is clear that $10\\leq c\\leq50,$ so we apply casework to $c:$</p><ul><li>If $c=10,$ then $(a,b,c)=(2,5,10).$</li></ul><ul><li>If $c=20,$ then $(a,b,c)=(1,5,20).$</li></ul><ul><li>If $c=25,$ then $(a,b,c)=(1,4,25).$</li></ul><ul><li>If $c=50,$ then $(a,b,c)=(1,2,50).$</li></ul><p>Together, the numbers $a,b,$ and $c$ can be chosen in $\\boxed{\\textbf{(E) } 4}$ ways.</p><p>~MRENTHUSIASM</p>",
+        "<p>The positive divisors of $100$ are \\[1,2,4,5,10,20,25,50,100.\\]We apply casework to $a$:</p><p>If $a=1$, then there are $3$ cases:</p><ul><li>$b=2,c=50$</li></ul><ul><li>$b=4,c=25$</li></ul><ul><li>$b=5,c=20$</li></ul><p>If $a=2$, then there is only $1$ case:</p><ul><li>$b=5,c=10$</li></ul><p>In total, there are $3+1=\\boxed{\\textbf{(E) } 4}$ ways to choose distinct positive integer values of $a,b,c$.</p><p>~MathFun1000</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2022 AMC 8 - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_4",
+      "question": "<p>The letter <b>M</b> in the figure below is first reflected over the line $q$ and then reflected over the line $p$. What is the resulting image?</p><p>[asy] // pog diagram usepackage(\"newtxtext\"); size(3cm); draw((-1,0)--(1,0)); draw((0,-1)--(0,1)); label(\"$\\textbf{\\textsf{M}}$\",(0.25,0.6)); draw((-0.8,-0.8)--(0.8,0.8),linewidth(1.1)); label(\"$p$\", (-1,0),NE); label(\"$q$\", (-0.75,-0.75), N*1.5); [/asy]</p>",
+      "solutions": [
+        "<p>When <b>M</b> is first reflected over the line $q,$ we obtain the following diagram:[asy] /* Made by MRENTHUSIASM */ usepackage(\"newtxtext\"); size(3cm); draw((-1,0)--(1,0)); draw((0,-1)--(0,1)); label(rotate(270)*\"$\\textbf{\\textsf{M}}$\",(0.6,0.25)); draw((-0.8,-0.8)--(0.8,0.8),linewidth(1.1));  [/asy]When <b>M</b> is then reflected over the line $p,$ we obtain the following diagram:[asy] /* Made by MRENTHUSIASM */ usepackage(\"newtxtext\"); size(3cm); draw((-1,0)--(1,0)); draw((0,-1)--(0,1)); label(rotate(270)*\"$\\textbf{\\textsf{M}}$\",(0.6,-0.25)); draw((-0.8,-0.8)--(0.8,0.8),linewidth(1.1));  [/asy]Therefore, the answer is $\\boxed{\\textbf{(E)}}.$</p><p>~MRENTHUSIASM</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2022 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_5",
+      "question": "<p>Anna and Bella are celebrating their birthdays together. Five years ago, when Bella turned $6$ years old, she received a newborn kitten as a birthday present. Today the sum of the ages of the two children and the kitten is $30$ years. How many years older than Bella is Anna?</p>",
+      "solutions": [
+        "<p>Five years ago, Bella was $6$ years old, and the kitten was $0$ years old.</p><p>Today, Bella is $11$ years old, and the kitten is $5$ years old. It follows that Anna is $30-11-5=14$ years old.</p><p>Therefore, Anna is $14-11=\\boxed{\\textbf{(C) } 3}$ years older than Bella.</p><p>~MRENTHUSIASM</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2022 AMC 8 - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_6",
+      "question": "<p>Three positive integers are equally spaced on a number line. The middle number is $15,$ and the largest number is $4$ times the smallest number. What is the smallest of these three numbers? </p>",
+      "solutions": [
+        "<p>Let the smallest number be $x.$ It follows that the largest number is $4x.$</p><p>Since $x,15,$ and $4x$ are equally spaced on a number line, we have\\begin{align*} 4x-15 &= 15-x \\\\ 5x &= 30 \\\\ x &= \\boxed{\\textbf{(C) } 6}. \\end{align*}~MRENTHUSIASM</p>",
+        "<p>Let the common difference of the arithmetic sequence be $d$. Consequently, the smallest number is $15-d$ and the largest number is $15+d$. As the largest number is $4$ times the smallest number, $15+d=60-4d\\implies d=9$. Finally, we find that the smallest number is $15-9=\\boxed{\\textbf{(C) } 6}$.</p><p>~MathFun1000</p>",
+        "<p>Let the smallest number be $x$. Because $x$ and $4x$ are equally spaced from $15$, $15$ must be the average. By adding $x$ and $4x$ and dividing by $2$, we get that the mean is also $2.5x$. We get that $2.5x=15$, and solving gets $x=\\boxed{\\textbf{(C) } 6}$.</p><p>~DrDominic</p>",
+        "<p>Since the problem is giving us the options, we can try all of them. The differences MUST be equal because the numbers have to be evenly spaced on the number line. We see that 4 cannot work because 15 - 4 = 11, and 4 * 4 = 16. 16 - 15 is not 11, so this option does not work. Next, we can try 5. We see that this also does not work because 15 - 5 = 10, and 5 * 4 = 20. 20 - 15 = 5, and this is not 10. We can then try 6 to see that it does work. 15 - 6 = 9, and 6 * 4 = 24. 24 - 15 = 9. The differences are equivalent, so we can see that 6 indeed does work. Therefore, the answer is $\\boxed{\\textbf{(C)} ~6}$.</p><p>~~Brainiacs77~~</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2022 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_7",
+      "question": "<p>When the World Wide Web first became popular in the $1990$s, download speeds reached a maximum of about $56$ kilobits per second. Approximately how many minutes would the download of a $4.2$-megabyte song have taken at that speed? (Note that there are $8000$ kilobits in a megabyte.)</p>",
+      "solutions": [
+        "<p>Notice that the number of kilobits in this song is $4.2 \\cdot 8000 = 8 \\cdot 7 \\cdot 6 \\cdot 100.$</p><p>We must divide this by $56$ in order to find out how many seconds this song would take to download: $\\frac{\\cancel{8}\\cdot\\cancel{7}\\cdot6\\cdot100}{\\cancel{56}} = 600.$</p><p>Finally, we divide this number by $60$ because this is the number of <i><b>seconds</b></i> to get the answer $\\frac{600}{60}=\\boxed{\\textbf{(B) } 10}.$</p><p>~wamofan</p>",
+        "<p>We seek a value of $x$ that makes the following equation true, since every other quantity equals $1$.</p><p>\\[\\frac{x\\ \\text{min}}{4.2\\ \\text{mb}} \\cdot \\frac{56\\ \\text{kb}}{1\\ \\text{sec}} \\cdot \\frac{1\\ \\text{mb}}{8000\\ \\text{kb}} \\cdot \\frac{60\\ \\text{sec}}{1\\ \\text{min}} = 1.\\]Solving yields $x=\\boxed{\\textbf{(B) } 10}$.</p><p>-Benedict T (countmath1)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2022 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_8",
+      "question": "<p>What is the value of \\[\\frac{1}{3}\\cdot\\frac{2}{4}\\cdot\\frac{3}{5}\\cdots\\frac{18}{20}\\cdot\\frac{19}{21}\\cdot\\frac{20}{22}?\\]</p>",
+      "solutions": [
+        "<p>Note that common factors (from $3$ to $20,$ inclusive) of the numerator and the denominator cancel. Therefore, the original expression becomes \\[\\frac{1}{\\cancel{3}}\\cdot\\frac{2}{\\cancel{4}}\\cdot\\frac{\\cancel{3}}{\\cancel{5}}\\cdots\\frac{\\cancel{18}}{\\cancel{20}}\\cdot\\frac{\\cancel{19}}{21}\\cdot\\frac{\\cancel{20}}{22}=\\frac{1\\cdot2}{21\\cdot22}=\\frac{1}{21\\cdot11}=\\boxed{\\textbf{(B) } \\frac{1}{231}}.\\]</p><p>~MRENTHUSIASM</p>",
+        "<p>The original expression becomes \\[\\frac{20!}{22!/2!} = \\frac{20! \\cdot 2!}{22!} = \\frac{20! \\cdot 2}{20! \\cdot 21 \\cdot 22} = \\frac{2}{21 \\cdot 22} = \\frac{1}{21 \\cdot 11} = \\boxed{\\textbf{(B) } \\frac{1}{231}}.\\]~hh99754539</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2022 AMC 8 - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_9",
+      "question": "<p>A cup of boiling water ($212^{\\circ}\\text{F}$) is placed to cool in a room whose temperature remains constant at $68^{\\circ}\\text{F}$. Suppose the difference between the water temperature and the room temperature is halved every $5$ minutes. What is the water temperature, in degrees Fahrenheit, after $15$ minutes?</p>",
+      "solutions": [
+        "<p>Initially, the difference between the water temperature and the room temperature is $212-68=144$ degrees Fahrenheit.</p><p>After $5$ minutes, the difference between the temperatures is $144\\div2=72$ degrees Fahrenheit.</p><p>After $10$ minutes, the difference between the temperatures is $72\\div2=36$ degrees Fahrenheit.</p><p>After $15$ minutes, the difference between the temperatures is $36\\div2=18$ degrees Fahrenheit. At this point, the water temperature is $68+18=\\boxed{\\textbf{(B) } 86}$ degrees Fahrenheit.</p><p><u><b>Remark</b></u></p><p>Alternatively, we can condense the solution above into the following equation: \\[68+(212-68)\\cdot\\left(\\frac12\\right)^{\\tfrac{15}{5}}=86.\\]~MRENTHUSIASM ~MathFun1000</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2022 AMC 8 - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_10",
+      "question": "<p>One sunny day, Ling decided to take a hike in the mountains. She left her house at $8 \\, \\textsc{am}$, drove at a constant speed of $45$ miles per hour, and arrived at the hiking trail at $10 \\, \\textsc{am}$. After hiking for $3$ hours, Ling drove home at a constant speed of $60$ miles per hour. Which of the following graphs best illustrates the distance between Ling\u2019s car and her house over the course of her trip?</p>",
+      "solutions": [
+        "<p>Note that:</p><ul style=\"list-style-type:square;\"><li><b>At $\\boldsymbol{8 \\, \\footnotesize\\textbf{AM},}$ Ling's car was $\\boldsymbol{0}$ miles from her house.</b></li><p class=\"mw-empty-elt\"></p><li>From $8 \\, \\textsc{am}$ to $10 \\, \\textsc{am},$ Ling drove to the hiking trail at a constant speed of $45$ miles per hour. <p><b>It follows that at $\\boldsymbol{10 \\, \\footnotesize\\textbf{AM},}$ Ling's car was $\\boldsymbol{45\\cdot2=90}$ miles from her house.</b></p></li><p class=\"mw-empty-elt\"></p><li>From $10 \\, \\textsc{am}$ to $1 \\, \\textsc{pm},$ Ling did not move her car. <p><b>It follows that at $\\boldsymbol{1 \\, \\footnotesize\\textbf{PM},}$ Ling's car was still $\\boldsymbol{90}$ miles from her house.</b></p></li><p class=\"mw-empty-elt\"></p><li>From $1 \\, \\textsc{pm},$ Ling drove home at a constant speed of $60$ miles per hour. So, she arrived home $90\\div60=1.5$ hour later. <p><b>It follows that at $\\boldsymbol{2:30 \\, \\footnotesize\\textbf{PM},}$ Ling's car was $\\boldsymbol{0}$ miles from her house.</b></p></li><p class=\"mw-empty-elt\"></p></ul><p>Therefore, the answer is $\\boxed{\\textbf{(E)}}.$</p><p>~MRENTHUSIASM</p>",
+        "<p>Ling's trip took $2$ hours, thus she traveled for $2 \\times 45=90$ miles. Choices $\\textbf{(B)}$, $\\textbf{(C)}$, and $\\textbf{(D)}$ are eliminated. Ling drove $45$ miles per hour (mph) to the mountains, and $60$ mph back to her house, so the rightmost slope must be steeper than the leftmost one. Choice $\\textbf {(A)}$ is eliminated.This leaves us with $\\boxed{\\textbf{(E)}}$.</p>",
+        "<p>Using the $\\text{speed} = \\frac{\\text{distance}}{\\text{time}}$ formula, and plugging in the values $45$ mph and $2$ hrs, we get that the distance from Ling's house to the mountains is $90$ miles. That means the first slope ends at $90,$ so choices $\\textbf{(B)}, \\textbf{(C)},$ and $\\textbf{(D)}$ are eliminated.</p><p>Furthermore, if the distance is $90$ miles, and Ling is returning home at $60$ mph, it must have taken her $1.5$ hours. Adding $1.5$ and $3$ (how long she hiked for) to her arrival time, $10$ AM, we see she must have come back home at $2:30$ PM. Choice $\\textbf{(A)}$ is eliminated, so the only valid choice left is choice $\\boxed{\\textbf{(E)}}.$</p><p>~ProProtractor</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2022 AMC 8 - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_11",
+      "question": "<p>Henry the donkey has a very long piece of pasta. He takes a number of bites of pasta, each time eating $3$ inches of pasta from the middle of one piece. In the end, he has $10$ pieces of pasta whose total length is $17$ inches. How long, in inches, was the piece of pasta he started with?</p>",
+      "solutions": [
+        "<p>Let's say that the first strand of pasta he had is x. The first time he takes a bite of this strand will make it 2 pieces. This is x - 3. The second time he takes the bites of EACH strand will become (x - 3) * 3(2). The 2 is for the two bites he took, 1 for each strand. This equation is showing that for every bite that he is taking, he is taking off 3 inches. This is being showed in the 3(2). He took 2 bites, each taking off 3 inches. Now, the problem is stating that their are 10 pieces of pasta and the TOTAL length is 17 inches. We have to plug in the total number of bites to the equation (x - 3) * 3( ). To find this out, we can see that for the number of strands there are, he took 1 less bite than that number. For example, if there are 2 pieces, he took 1 bite to get those. Since there are 10 pieces, he took 9 bites. The equation then becomes, (x - 3) * 3(9) = 17. To solve this, x = 44. Therefore, the answer is $\\boxed{\\textbf{(D) } 44}$.</p><p>~~Brainiacs77~~</p>",
+        "<p>If there are $10$ pieces of pasta, Henry took $10-1=9$ bites. Each of these $9$ bites took $3$ inches of pasta out, so all his bites in total took away $9\\cdot 3 = 27$ inches of pasta. Thus, the original piece of pasta was $27+17=\\boxed{\\textbf{(D) } 44}$ inches long.</p><p>~wamofan</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2022 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_12",
+      "question": "<p>The arrows on the two spinners shown below are spun. Let the number $N$ equal $10$ times the number on Spinner $\\text{A}$, added to the number on Spinner $\\text{B}$. What is the probability that $N$ is a perfect square number?[asy] //diagram by pog size(6cm); usepackage(\"mathptmx\"); filldraw(arc((0,0), r=4, angle1=0, angle2=90)--(0,0)--cycle,mediumgray*0.5+gray*0.5); filldraw(arc((0,0), r=4, angle1=90, angle2=180)--(0,0)--cycle,lightgray); filldraw(arc((0,0), r=4, angle1=180, angle2=270)--(0,0)--cycle,mediumgray); filldraw(arc((0,0), r=4, angle1=270, angle2=360)--(0,0)--cycle,lightgray*0.5+mediumgray*0.5); label(\"$5$\", (-1.5,1.7)); label(\"$6$\", (1.5,1.7)); label(\"$7$\", (1.5,-1.7)); label(\"$8$\", (-1.5,-1.7)); label(\"Spinner A\", (0, -5.5)); filldraw(arc((12,0), r=4, angle1=0, angle2=90)--(12,0)--cycle,mediumgray*0.5+gray*0.5); filldraw(arc((12,0), r=4, angle1=90, angle2=180)--(12,0)--cycle,lightgray); filldraw(arc((12,0), r=4, angle1=180, angle2=270)--(12,0)--cycle,mediumgray); filldraw(arc((12,0), r=4, angle1=270, angle2=360)--(12,0)--cycle,lightgray*0.5+mediumgray*0.5); label(\"$1$\", (10.5,1.7)); label(\"$2$\", (13.5,1.7)); label(\"$3$\", (13.5,-1.7)); label(\"$4$\", (10.5,-1.7)); label(\"Spinner B\", (12, -5.5)); [/asy]</p>",
+      "solutions": [
+        "<p>First, we calculate that there are a total of $4\\cdot4=16$ possibilities. Now, we list all of two-digit perfect squares. $64$ and $81$ are the only ones that can be made using the spinner. Consequently, there is a $\\frac{2}{16}=\\boxed{\\textbf{(B) }\\dfrac{1}{8}}$ probability that the number formed by the two spinners is a perfect square.</p><p>~MathFun1000</p>",
+        "<p>There are $4 \\cdot 4 = 16$ total possibilities of $N$. We know $N=10A+B$, which $A$ is a number from spinner $A$, and $B$ is a number from spinner $B$. Also, notice that there are no perfect squares in the $50$s or $70$s, so only $4-2=2$ values of N work, namely $64$ and $81$. Hence, $\\frac{2}{16}=\\boxed{\\textbf{(B) }\\dfrac{1}{8}}$.</p><p>~MrThinker</p>",
+        "<p>Just try them! </p><ul><li>If we spin a 5 on the first spinner, there are no solutions.</li><li>If we spin a 6 on the first spinner, there is one solution (64).</li><li>If we spin a 7 on the first spinner, there are no solutions.</li><li>If we spin an 8 on the first spinner, there is one solution (81).</li></ul><p>Therefore, there are 2 solutions and $4 \\cdot 4 = 16$ total possibilities, so \\[\\frac{2}{16} = \\boxed{\\textbf{(B) }\\dfrac{1}{8}}\\]</p><p>~ligonmathkid2</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2022 AMC 8 - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_13",
+      "question": "<p>How many positive integers can fill the blank in the sentence below?</p><p>\u201cOne positive integer is _____ more than twice another, and the sum of the two numbers is $28$.\u201d</p>",
+      "solutions": [
+        "<p>Let $m$ and $n$ be positive integers such that $m>n$ and $m+n=28.$ It follows that $m=2n+d$ for some positive integer $d.$ We wish to find the number of possible values for $d.$</p><p>By substitution, we have $(2n+d)+n=28,$ from which $d=28-3n.$ Note that $n=1,2,3,\\ldots,9$ each generate a positive integer for $d,$ so there are $\\boxed{\\textbf{(D) } 9}$ possible values for $d.$</p><p>~MRENTHUSIASM</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2022 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_14",
+      "question": "<p>In how many ways can the letters in $\\textbf{BEEKEEPER}$ be rearranged so that two or more $\\textbf{E}$s do not appear together?</p>",
+      "solutions": [
+        "<p>All valid arrangements of the letters must be of the form \\[\\textbf{E\\underline{\\hspace{3mm}}E\\underline{\\hspace{3mm}}E\\underline{\\hspace{3mm}}E\\underline{\\hspace{3mm}}E}.\\]The problem is equivalent to counting the arrangements of $\\textbf{B},\\textbf{K},\\textbf{P},$ and $\\textbf{R}$ into the four blanks, in which there are $4!=\\boxed{\\textbf{(D) } 24}$ ways.</p><p>~MRENTHUSIASM</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2022 AMC 8 - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_15",
+      "question": "<p>Laszlo went online to shop for black pepper and found thirty different black pepper options varying in weight and price, shown in the scatter plot below. In ounces, what is the weight of the pepper that offers the lowest price per ounce?</p><p>[asy] //diagram by pog size(5.5cm); usepackage(\"mathptmx\"); defaultpen(mediumgray*0.5+gray*0.5+linewidth(0.63)); add(grid(6,6)); label(scale(0.7)*\"$1$\", (1,-0.3), black); label(scale(0.7)*\"$2$\", (2,-0.3), black); label(scale(0.7)*\"$3$\", (3,-0.3), black); label(scale(0.7)*\"$4$\", (4,-0.3), black); label(scale(0.7)*\"$5$\", (5,-0.3), black); label(scale(0.7)*\"$1$\", (-0.3,1), black); label(scale(0.7)*\"$2$\", (-0.3,2), black); label(scale(0.7)*\"$3$\", (-0.3,3), black); label(scale(0.7)*\"$4$\", (-0.3,4), black); label(scale(0.7)*\"$5$\", (-0.3,5), black); label(scale(0.8)*rotate(90)*\"Price (dollars)\", (-1,3.2), black); label(scale(0.8)*\"Weight (ounces)\", (3.2,-1), black); dot((1,1.2),black); dot((1,1.7),black); dot((1,2),black); dot((1,2.8),black);  dot((1.5,2.1),black); dot((1.5,3),black); dot((1.5,3.3),black); dot((1.5,3.75),black);  dot((2,2),black); dot((2,2.9),black); dot((2,3),black); dot((2,4),black); dot((2,4.35),black); dot((2,4.8),black);  dot((2.5,2.7),black); dot((2.5,3.7),black); dot((2.5,4.2),black); dot((2.5,4.4),black);  dot((3,2.5),black); dot((3,3.4),black); dot((3,4.2),black);  dot((3.5,3.8),black); dot((3.5,4.5),black); dot((3.5,4.8),black);  dot((4,3.9),black); dot((4,5.1),black);  dot((4.5,4.75),black); dot((4.5,5),black);  dot((5,4.5),black); dot((5,5),black); [/asy]</p>",
+      "solutions": [
+        "<p>[asy] //diagram by pog size(5.5cm); usepackage(\"mathptmx\"); defaultpen(mediumgray*0.5+gray*0.5+linewidth(0.63)); add(grid(6,6)); label(scale(0.7)*\"$1$\", (1,-0.3), black); label(scale(0.7)*\"$2$\", (2,-0.3), black); label(scale(0.7)*\"$3$\", (3,-0.3), black); label(scale(0.7)*\"$4$\", (4,-0.3), black); label(scale(0.7)*\"$5$\", (5,-0.3), black); label(scale(0.7)*\"$1$\", (-0.3,1), black); label(scale(0.7)*\"$2$\", (-0.3,2), black); label(scale(0.7)*\"$3$\", (-0.3,3), black); label(scale(0.7)*\"$4$\", (-0.3,4), black); label(scale(0.7)*\"$5$\", (-0.3,5), black); label(scale(0.8)*rotate(90)*\"Price (dollars)\", (-1,3.2), black); label(scale(0.8)*\"Weight (ounces)\", (3.2,-1), black); draw((0,0)--(6,5),red);  dot((1,1.2),black); dot((1,1.7),black); dot((1,2),black); dot((1,2.8),black);  dot((1.5,2.1),black); dot((1.5,3),black); dot((1.5,3.3),black); dot((1.5,3.75),black);  dot((2,2),black); dot((2,2.9),black); dot((2,3),black); dot((2,4),black); dot((2,4.35),black); dot((2,4.8),black);  dot((2.5,2.7),black); dot((2.5,3.7),black); dot((2.5,4.2),black); dot((2.5,4.4),black);  dot((3,2.5),blue); dot((3,3.4),black); dot((3,4.2),black);  dot((3.5,3.8),black); dot((3.5,4.5),black); dot((3.5,4.8),black);  dot((4,3.9),black); dot((4,5.1),black);  dot((4.5,4.75),black); dot((4.5,5),black);  dot((5,4.5),black); dot((5,5),black); [/asy]</p><p>We are looking for a black point, that when connected to the origin, yields the lowest slope. The slope represents the price per ounce. We can visually find that the point with the lowest slope is the blue point. Furthermore, it is the only one with a price per ounce significantly less than $1$. Finally, we see that the blue point is in the category with a weight of $\\boxed{\\textbf{(C) } 3}$ ounces.</p><p>~MathFun1000</p>",
+        "<p>By the answer choices, we can disregard the points that do not have integer weights. As a result, we obtain the following diagram:</p><p>[asy] //diagram by pog size(5.5cm); usepackage(\"mathptmx\"); defaultpen(mediumgray*0.5+gray*0.5+linewidth(0.63)); add(grid(6,6)); label(scale(0.7)*\"$1$\", (1,-0.3), black); label(scale(0.7)*\"$2$\", (2,-0.3), black); label(scale(0.7)*\"$3$\", (3,-0.3), black); label(scale(0.7)*\"$4$\", (4,-0.3), black); label(scale(0.7)*\"$5$\", (5,-0.3), black); label(scale(0.7)*\"$1$\", (-0.3,1), black); label(scale(0.7)*\"$2$\", (-0.3,2), black); label(scale(0.7)*\"$3$\", (-0.3,3), black); label(scale(0.7)*\"$4$\", (-0.3,4), black); label(scale(0.7)*\"$5$\", (-0.3,5), black); label(scale(0.8)*rotate(90)*\"Price (dollars)\", (-1,3.2), black); label(scale(0.8)*\"Weight (ounces)\", (3.2,-1), black); dot((1,1.2),black); dot((1,1.7),black); dot((1,2),black); dot((1,2.8),black);  dot((2,2),black); dot((2,2.9),black); dot((2,3),black); dot((2,4),black); dot((2,4.35),black); dot((2,4.8),black);  dot((3,2.5),blue); dot((3,3.4),black); dot((3,4.2),black);  dot((4,3.9),black); dot((4,5.1),black);  dot((5,4.5),black); dot((5,5),black); [/asy]</p><p>We then proceed in the same way that we had done in Solution 1. Following the steps, we figure out the blue dot that yields the lowest slope, along with passing the origin. We then can look at the x-axis(in this situation, the weight) and figure out it has $\\boxed{\\textbf{(C) } 3}$ ounces.</p><p>~DairyQueenXD (edited by HW73)</p>",
+        "<p>We can find the lowest point in each line ($1$, $2$, $3$, $4$, or $5$) and find the price per pound. (Note that we don't need to find the points higher than the points below since we are finding the lowest price per pound.)</p><p>[asy] //diagram by pog size(5.5cm); usepackage(\"mathptmx\"); defaultpen(mediumgray*0.5+gray*0.5+linewidth(0.63)); add(grid(6,6)); label(scale(0.7)*\"$1$\", (1,-0.3), black); label(scale(0.7)*\"$2$\", (2,-0.3), black); label(scale(0.7)*\"$3$\", (3,-0.3), black); label(scale(0.7)*\"$4$\", (4,-0.3), black); label(scale(0.7)*\"$5$\", (5,-0.3), black); label(scale(0.7)*\"$1$\", (-0.3,1), black); label(scale(0.7)*\"$2$\", (-0.3,2), black); label(scale(0.7)*\"$3$\", (-0.3,3), black); label(scale(0.7)*\"$4$\", (-0.3,4), black); label(scale(0.7)*\"$5$\", (-0.3,5), black); label(scale(0.8)*rotate(90)*\"Price (dollars)\", (-1,3.2), black); label(scale(0.8)*\"Weight (ounces)\", (3.2,-1), black); dot((1,1.2),red); dot((1,1.7),black); dot((1,2),black); dot((1,2.8),black);  dot((2,2),green); dot((2,2.9),black); dot((2,3),black); dot((2,4),black); dot((2,4.35),black); dot((2,4.8),black);  dot((3,2.5),blue); dot((3,3.4),black); dot((3,4.2),black);  dot((4,3.9),orange); dot((4,5.1),black);  dot((5,4.5),purple); dot((5,5),black); [/asy]</p><p>The red dot has a price per pound of something that is larger than $1$. The green dot has a price per pound of $1$. The blue dot has a price per pound of something like $\\frac{2.5}{3}$. The orange dot has a price per pound that is less than $1$, but is very close to it. The purple dot has a price per pound of something like $\\frac{4.5}{5}$. We see that choices $\\textbf{(A)}$, $\\textbf{(B)}$,and $\\textbf{(D)}$ are eliminated. Also, $\\frac{4.5}{5} > \\frac{2.5}{3}$ thus the answer is $\\boxed{\\textbf{(C) } 3}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2022 AMC 8 - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_16",
+      "question": "<p>Four numbers are written in a row. The average of the first two is $21,$ the average of the middle two is $26,$ and the average of the last two is $30.$ What is the average of the first and last of the numbers?</p>",
+      "solutions": [
+        "<p>Note that the sum of the first two numbers is $21\\cdot2=42,$ the sum of the middle two numbers is $26\\cdot2=52,$ and the sum of the last two numbers is $30\\cdot2=60.$</p><p>It follows that the sum of the four numbers is $42+60=102,$ so the sum of the first and last numbers is $102-52=50.$ Therefore, the average of the first and last numbers is $50\\div2=\\boxed{\\textbf{(B) } 25}.$</p><p>~MRENTHUSIASM</p>",
+        "<p>Let $a,b,c,$ and $d$ be the four numbers in that order. We are given that\\begin{align*} \\frac{a+b}{2} &= 21, &(1) \\\\ \\frac{b+c}{2} &= 26, &(2) \\\\ \\frac{c+d}{2} &= 30, &(3) \\end{align*}and we wish to find $\\frac{a+d}{2}.$</p><p>We add $(1)$ and $(3),$ then subtract $(2)$ from the result: \\[\\frac{a+d}{2}=21+30-26=\\boxed{\\textbf{(B) } 25}.\\]~MRENTHUSIASM</p>",
+        "<p>We can just assume some of the numbers. For example, let the first two numbers both be $21.$ It follows that the third number is $31,$ and the fourth number is $29.$ Therefore, the average of the first and last numbers is $\\dfrac{21+29}2=\\dfrac{50}2=\\boxed{\\textbf{(B) } 25}.$</p><p>We can check this with other sequences, such as $20,22,30,30,$ where the average of the first and last numbers is still $25.$</p><p>~wuwang2002</p>",
+        "<p>Let $a,b,c,$ and $d$ be the four numbers in that order. We are given that\\begin{align*} \\frac{a+b}{2} &= 21, &(1) \\\\ \\frac{b+c}{2} &= 26, &(2) \\\\ \\frac{c+d}{2} &= 30, &(3) \\end{align*}and we wish to find $\\frac{a+d}{2}.$</p><p>If we subtract $(2)$ from $(3)$, we get \\[\\frac{c+d}{2}-\\frac{b+c}{2}=\\frac{d-b}{2}=4.\\]So if we multiply by $2$ then we get $d=b+8.$ Looking at our question: \\[\\frac{a+d}{2}=\\frac{a+b+8}{2}=\\frac{a+b}{2}+\\frac{8}{2}=21+4=\\boxed{\\textbf{(B) } 25}.\\]</p><p>~funnyarmadillo58_aops</p>",
+        "<p>Since we are given the averages of each addition we can multiply each by 2 to get their sums. Giving each number a variable in increasing order we get A+B=42, B+C=52, and C+D=60. By subtracting the first from the second we get C-A=10 and by moving the A over we get C=A+10. Plugging this into the third equation we get A+D+10=60 and then A+D=50. Then dividing by two we get the average which is $\\boxed{\\textbf{(B) } 25}.$ (similar to solution 4)</p><p>~evolution49</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2022 AMC 8 - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_17",
+      "question": "<p>If $n$ is an even positive integer, the $\\emph{double factorial}$ notation $n!!$ represents the product of all the even integers from $2$ to $n$. For example, $8!! = 2 \\cdot 4 \\cdot 6 \\cdot 8$. What is the units digit of the following sum? \\[2!! + 4!! + 6!! + \\cdots + 2018!! + 2020!! + 2022!!\\]</p>",
+      "solutions": [
+        "<p>Notice that once $n>8,$ the units digit of $n!!$ will be $0$ because there will be a factor of $10.$ Thus, we only need to calculate the units digit of \\[2!!+4!!+6!!+8!! = 2+8+48+48\\cdot8.\\] We only care about units digits, so we have $2+8+8+8\\cdot8,$ which has the same units digit as $2+8+8+4.$ The answer is $\\boxed{\\textbf{(B) } 2}.$</p><p>~wamofan</p>",
+        "<p>We can see that after $8!!$ in the sequence, the units digit is always $0$ (every value after $8!!$ is a multiple of $10$). Therefore, our answer is the sum of the units digits of $2!!, 4!!, 6!!,$ and $8!!$ respectively. This sum is equal to $2 + 8 + 8 + 4$, or $\\boxed{\\textbf{(B) } 2}.$</p><p>~Irfans123</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2022 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_18",
+      "question": "<p>The midpoints of the four sides of a rectangle are $(-3,0), (2,0), (5,4),$ and $(0,4).$ What is thearea of the rectangle? </p>",
+      "solutions": [
+        "<p>The midpoints of the four sides of every rectangle are the vertices of a rhombus whose area is half the area of the rectangle: Note that the diagonals of the rhombus have the same lengths as the sides of the rectangle.</p><p>Let $A=(-3,0), B=(2,0), C=(5,4),$ and $D=(0,4).$ Note that $A,B,C,$ and $D$ are the vertices of a rhombus whose diagonals have lengths $AC=4\\sqrt{5}$ and $BD=2\\sqrt{5}.$ It follows that the dimensions of the rectangle are $4\\sqrt{5}$ and $2\\sqrt{5},$ so the area of the rectangle is $4\\sqrt{5}\\cdot2\\sqrt{5}=\\boxed{\\textbf{(C) } 40}.$</p><p>~MRENTHUSIASM</p>",
+        "<p>If a rectangle has area $K,$ then the area of the quadrilateral formed by its midpoints is $\\frac{K}{2}.$</p><p>Define points $A,B,C,$ and $D$ as Solution 1 does. Since $A,B,C,$ and $D$ are the midpoints of the rectangle, the rectangle's area is $2[ABCD].$ Now, note that $ABCD$ is a parallelogram since $AB=CD$ and $\\overline{AB}\\parallel\\overline{CD}.$ As the parallelogram's height from $D$ to $\\overline{AB}$ is $4$ and $AB=5,$ its area is $4\\cdot5=20.$ Therefore, the area of the rectangle is $20\\cdot2=\\boxed{\\textbf{(C) } 40}.$</p><p>~Fruitz</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2022 AMC 8 - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_19",
+      "question": "<p>Mr. Ramos gave a test to his class of $20$ students. The dot plot below shows the distribution of test scores.[asy] //diagram by pog . give me 1,000,000,000 dollars for this diagram size(5cm); defaultpen(0.7); dot((0.5,1)); dot((0.5,1.5)); dot((1.5,1)); dot((1.5,1.5)); dot((2.5,1)); dot((2.5,1.5)); dot((2.5,2)); dot((2.5,2.5)); dot((3.5,1)); dot((3.5,1.5)); dot((3.5,2)); dot((3.5,2.5)); dot((3.5,3)); dot((4.5,1)); dot((4.5,1.5)); dot((5.5,1)); dot((5.5,1.5)); dot((5.5,2)); dot((6.5,1)); dot((7.5,1)); draw((0,0.5)--(8,0.5),linewidth(0.7)); defaultpen(fontsize(10.5pt)); label(\"$65$\", (0.5,-0.1)); label(\"$70$\", (1.5,-0.1)); label(\"$75$\", (2.5,-0.1)); label(\"$80$\", (3.5,-0.1)); label(\"$85$\", (4.5,-0.1)); label(\"$90$\", (5.5,-0.1)); label(\"$95$\", (6.5,-0.1)); label(\"$100$\", (7.5,-0.1)); [/asy]</p><p>Later Mr. Ramos discovered that there was a scoring error on one of the questions. He regraded the tests, awarding some of the students $5$ extra points, which increased the median test score to $85$. What is the minimum number of students who received extra points?</p><p>(Note that the <i>median</i> test score equals the average of the $2$ scores in the middle if the $20$ test scores are arranged in increasing order.)</p>",
+      "solutions": [
+        "<p>We notice that $13$ students have scores under $85$ currently and only $5$ have scores over $85$. We find the median of these two numbers, getting:</p><p>\\[13-5=8\\]\\[\\frac{8}{2}=4\\]\\[13-4=9\\]</p><p>Thus, we realize that $4$ students must have their score increased by $5$.</p><p>So, the correct answer is $\\boxed{\\textbf{(C)}4}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2022 AMC 8 - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_20",
+      "question": "<p>The grid below is to be filled with integers in such a way that the sum of the numbers in each row and the sum of the numbers in each column are the same. Four numbers are missing. The number $x$ in the lower left corner is larger than the other three missing numbers. What is the smallest possible value of $x$?[asy] unitsize(0.5cm); draw((3,3)--(-3,3)); draw((3,1)--(-3,1)); draw((3,-3)--(-3,-3)); draw((3,-1)--(-3,-1)); draw((3,3)--(3,-3)); draw((1,3)--(1,-3)); draw((-3,3)--(-3,-3)); draw((-1,3)--(-1,-3)); label((-2,2),\"$-2$\"); label((0,2),\"$9$\"); label((2,2),\"$5$\"); label((2,0),\"$-1$\"); label((2,-2),\"$8$\"); label((-2,-2),\"$x$\"); [/asy]</p>",
+      "solutions": [
+        "<p>The sum of the numbers in each row is $12$. Consider the second row. In order for the sum of the numbers in this row to equal $12$, the two shaded numbers must add up to $13$:[asy] unitsize(0.5cm); fill((-3,1)--(1,1)--(1,-1)--(-3,-1)--cycle,mediumgray); draw((3,3)--(-3,3)); draw((3,1)--(-3,1)); draw((3,-3)--(-3,-3)); draw((3,-1)--(-3,-1)); draw((3,3)--(3,-3)); draw((1,3)--(1,-3)); draw((-3,3)--(-3,-3)); draw((-1,3)--(-1,-3)); label((-2,2),\"$-2$\"); label((0,2),\"$9$\"); label((2,2),\"$5$\"); label((2,0),\"$-1$\"); label((2,-2),\"$8$\"); label((-2,-2),\"$x$\"); [/asy]If two numbers add up to $13$, one of them must be at least $7$: If both shaded numbers are no more than $6$, their sum can be at most $12$. Therefore, for $x$ to be larger than the three missing numbers, $x$ must be at least $8$. We can construct a working scenario where $x=8$:[asy] unitsize(0.5cm); draw((3,3)--(-3,3)); draw((3,1)--(-3,1)); draw((3,-3)--(-3,-3)); draw((3,-1)--(-3,-1)); draw((3,3)--(3,-3)); draw((1,3)--(1,-3)); draw((-3,3)--(-3,-3)); draw((-1,3)--(-1,-3)); label((-2,2),\"$-2$\"); label((0,2),\"$9$\"); label((2,2),\"$5$\"); label((2,0),\"$-1$\"); label((2,-2),\"$8$\"); label((-2,-2),\"$8$\"); label((0,-2),\"$-4$\"); label((-2,0),\"$6$\"); label((0,0),\"$7$\"); [/asy]So, our answer is $\\boxed{\\textbf{(D) } 8}$.</p><p>~ihatemath123</p>",
+        "<p>The sum of the numbers in each row is $-2+9+5=12,$ and the sum of the numbers in each column is $5+(-1)+8=12.$</p><p>Let $y$ be the number in the lower middle. It follows that $x+y+8=12,$ or $x+y=4.$</p><p>We express the other two missing numbers in terms of $x$ and $y,$ as shown below:[asy] unitsize(0.5cm); draw((3,3)--(-3,3)); draw((3,1)--(-3,1)); draw((3,-3)--(-3,-3)); draw((3,-1)--(-3,-1)); draw((3,3)--(3,-3)); draw((1,3)--(1,-3)); draw((-3,3)--(-3,-3)); draw((-1,3)--(-1,-3)); label((-2,2),\"$-2$\"); label((0,2),\"$9$\"); label((2,2),\"$5$\"); label((2,0),\"$-1$\"); label((2,-2),\"$8$\"); label((-2,-2),\"$x$\"); label((0,-2),\"$y$\",red+fontsize(11)); label((-2,0),\"$y{+}10$\",red+fontsize(11)); label((0,0),\"$x{-}1$\",red+fontsize(11));  [/asy]We have $x>x-1, x>y+10,$ and $x>y.$ Note that the first inequality is true for all values of $x.$ We only need to solve the second inequality so that the third inequality is true for all values of $x.$ By substitution, we get $x>(4-x)+10,$ from which $x>7.$</p><p>Therefore, the smallest possible value of $x$ is $\\boxed{\\textbf{(D) } 8}.$</p><p>~MRENTHUSIASM</p>",
+        "<p>This is based on the Solution 2 above and it is perhaps a little simpler than that.</p><p>Let $y$ be the number in the lower middle. Applying summation to first two columns yields the following.</p><p>[asy] unitsize(0.5cm); draw((3,3)--(-3,3)); draw((3,1)--(-3,1)); draw((3,-3)--(-3,-3)); draw((3,-1)--(-3,-1)); draw((3,3)--(3,-3)); draw((1,3)--(1,-3)); draw((-3,3)--(-3,-3)); draw((-1,3)--(-1,-3)); label((-2,2),\"$-2$\"); label((0,2),\"$9$\"); label((2,2),\"$5$\"); label((2,0),\"$-1$\"); label((2,-2),\"$8$\"); label((-2,-2),\"$x$\"); label((0,-2),\"$y$\",red+fontsize(11)); label((-2,0),\"$14{-}x$\",red+fontsize(11)); label((0,0),\"$3{-}y$\",red+fontsize(11));  [/asy]</p><p>Since $x$ is greater than the other three, we have $x>14-x,$ or $x>7.$</p><p>Therefore, the smallest possible value of $x$ is $\\boxed{\\textbf{(D) } 8}.$</p><p>~vetaltekdi6</p>",
+        "<p>Note that the sum of the rows and columns must be $8+5-1=12$. We proceed to test the answer choices.</p><p>Testing $\\textbf{(A)}$, when $x = -1$, the number above $x$ must be $15$, which contradicts the precondition that the numbers surrounding $x$ is less than $x$.</p><p>Testing $\\textbf{(B)}$, the number above $x$ is $9$, which does not work.</p><p>Testing $\\textbf{(C)}$, the number above $x$ is $8$, which does not work.</p><p>Testing $\\textbf{(D)}$, the number above $x$ is $6$, which <i>does</i> work. Hence, the answer is $\\boxed{\\textbf{(D) }8}$.</p><p>We do not need to test $\\textbf{(E)}$, because the problem asks for the <b>smallest</b> value of $x$.</p><p>~MrThinker</p>",
+        "<p>The sum of the numbers in each column and row should be $5+(-1)+8=12$. If we look at the $1^{\\text{st}}$ column, the gray squares (shown below) sum to $12-(-2)=14$.</p><p>[asy] draw((3,3)--(-3,3)); draw((3,1)--(-3,1)); draw((3,-3)--(-3,-3)); draw((3,-1)--(-3,-1)); draw((3,3)--(3,-3)); draw((1,3)--(1,-3)); draw((-3,3)--(-3,-3)); draw((-1,3)--(-1,-3)); label((-2,2),\"$-2$\");    label((0,2),\"$9$\"); label((2,2),\"$5$\"); label((2,0),\"$-1$\"); label((2,-2),\"$8$\"); label((-2,-2),\"$x$\"); filldraw((-3,-3)--(-1,-3)--(-1,-1)--(-3,-1)--cycle, lightgray, black+linewidth(1)); filldraw((-1,-1)--(-3,-1)--(-3,1)--(-1,1)--cycle, lightgray, black+linewidth(1)); label(scale(1)*\"All credits for original unedited asymptote for the problem go to whoever made the asymptote in the 'Problem' section.\", (-0,-5), S); [/asy]</p><p><b>If</b> square $x$ has to be <b>greater than or equal to</b> the three blank squares, then the least $x$ can be is half the sum of the value of the gray squares, which is $14\\div2=7$. But square $x$ has to be <b>greater than</b> and <i><b>not</b></i> <b>greater than or equal to</b> the three blank squares, so the least $x$ can be is $7+1=8$. Testing for the other rows and columns (it might be smaller than the other two squares!), we find that the smallest $x$ can be is indeed $8$; the other two squares are less than $8$. Therefore, the answer is $\\boxed{\\text{(D) }8}$.</p><p>~ JoyfulSapling</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2022 AMC 8 - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_21",
+      "question": "<p>Steph scored $15$ baskets out of $20$ attempts in the first half of a game, and $10$ baskets out of $10$ attempts in the second half. Candace took $12$ attempts in the first half and $18$ attempts in the second. In each half, Steph scored a higher percentage of baskets than Candace. Surprisingly they ended with the same overall percentage of baskets scored. How many more baskets did Candace score in the second half than in the first? </p>",
+      "solutions": [
+        "<p>Let $x$ be the number of shots that Candace made in the first half, and let $y$ be the number of shots Candace made in the second half. Since Candace and Steph took the same number of attempts, with an equal percentage of baskets scored, we have $x+y=10+15=25.$ In addition, we have the following inequalities: \\[\\frac{x}{12}<\\frac{15}{20} \\implies x<9,\\] and \\[\\frac{y}{18}<\\frac{10}{10} \\implies y<18.\\] Pairing this up with $x+y=25$ we see the <i><b>only</b></i> possible solution is $(x,y)=(8,17),$ for an answer of $17-8 = \\boxed{\\textbf{(C) } 9}.$</p><p>~wamofan</p>",
+        "<p>Clearly, Steph made $15 + 10 = 25$ shots in total. Also, due to parity reasons, the difference between the amount of shots Candace made in the first and second half must be odd. Thus, we can just test 7, 9, and 11, and after doing so we find that the answer is $\\boxed{\\textbf{(C) } 9}.$</p>",
+        "<p>Steph made 75 percent of his shots in the first half. He makes all of his shots in the second half. The most baskets Candace could have made in the first half is 8 baskets. The most she could have made in the second half is 17 baskets. Steph makes 25 and misses 5 baskets and the only way for Candace to make 25 shots is to make 8 in the first half and 17 in the second. Thus, $17 - 8 = \\boxed{\\textbf{(C) } 9}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2022 AMC 8 - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_22",
+      "question": "<p>A bus takes $2$ minutes to drive from one stop to the next, and waits $1$ minute at each stop to let passengers board. Zia takes $5$ minutes to walk from one bus stop to the next. As Zia reaches a bus stop, if the bus is at the previous stop or has already left the previous stop, then she will wait for the bus. Otherwise she will start walking toward the next stop. Suppose the bus and Zia start at the same time toward the library, with the bus $3$ stops behind. After how many minutes will Zia board the bus?</p>",
+      "solutions": [
+        "<p>Initially, suppose that the bus is at Stop $0$ (starting point) and Zia is at Stop $3.$</p><p>We construct the following table of $5$-minute intervals:\\[\\begin{array}{c||c|c} & & \\\\ [-2.5ex] \\textbf{Time} & \\textbf{Bus's Location} & \\textbf{Zia's Location} \\\\ [0.5ex] \\hline & & \\\\ [-2ex] \\boldsymbol{5} \\ \\textbf{Minutes} & \\text{Stop} \\ 2 \\ \\text{(Waiting)} & \\text{Stop} \\ 4 \\\\ \\boldsymbol{10} \\ \\textbf{Minutes} & \\text{Midpoint of Stops} \\ 3 \\ \\text{and} \\ 4 & \\text{Stop} \\ 5 \\\\ \\boldsymbol{15} \\ \\textbf{Minutes} & \\text{Stop} \\ 5 \\ \\text{(Leaving)} & \\text{Stop} \\ 6 \\end{array}\\]Note that Zia will wait for the bus after $15$ minutes, and the bus will arrive $2$ minutes later.</p><p>Therefore, the answer is $15+2=\\boxed{\\textbf{(A) } 17}.$</p><p>~MRENTHUSIASM</p>",
+        "<p>Since Zia will wait for the bus if the bus is at the previous stop, we can create an equation to solve for when the bus is at the previous stop. The bus travels $\\frac{1}{3}$ of a stop per minute, and Zia travels $\\frac{1}{5}$ of a stop per minute. Now we create the equation, $\\frac{1}{3}m = \\frac{1}{5}m + 3 - 1$ (the $-1$ accounts for us wanting to find when the bus reaches the stop before Zia's). Solving, we find that $m=15.$ Now Zia has to wait $2$ minutes for the bus to reach her, so our answer is $15+2=\\boxed{\\textbf{(A) } 17}.$</p><p>~kn07</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2022 AMC 8 - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_23",
+      "question": "<p>A $\\triangle$ or $\\bigcirc$ is placed in each of the nine squares in a $3$-by-$3$ grid. Shown below is a sample configuration with three $\\triangle$s in a line.[asy] //diagram size(5cm); defaultpen(linewidth(1.5)); real r = 0.37; path equi = r * dir(-30) -- (r+0.03) * dir(90) -- r * dir(210) -- cycle; draw((0,0)--(0,3)--(3,3)--(3,0)--cycle); draw((0,1)--(3,1)--(3,2)--(0,2)--cycle); draw((1,0)--(1,3)--(2,3)--(2,0)--cycle); draw(circle((3/2,5/2),1/3)); draw(circle((5/2,1/2),1/3)); draw(circle((3/2,3/2),1/3)); draw(shift(0.5,0.38) * equi); draw(shift(1.5,0.38) * equi); draw(shift(0.5,1.38) * equi); draw(shift(2.5,1.38) * equi); draw(shift(0.5,2.38) * equi); draw(shift(2.5,2.38) * equi); [/asy]How many configurations will have three $\\triangle$s in a line and three $\\bigcirc$s in a line?</p>",
+      "solutions": [
+        "<p>Notice that diagonals and a vertical-horizontal pair can never work, so the only possibilities are if all lines are vertical or if all lines are horizontal. These are essentially the same, so we'll count up how many work with all lines of shapes vertical, and then multiply by 2 at the end.</p><p>We take casework:</p><p><b>Case 1: 3 lines</b>:In this case, the lines would need to be $2$ of one shape and $1$ of another, so there are $\\frac{3!}{2} = 3$ ways to arrange the lines and $2$ ways to pick which shape has only one line. In total, this is $3\\cdot 2 = 6.$</p><p><b>Case 2: 2 lines</b>:In this case, the lines would be one line of triangles, one line of circles, and the last one can be anything that includes both shapes. There are $3! = 6$ ways to arrange the lines and $2^3-2 = 6$ ways to choose the last line. (We subtract $2$ from the last line because one arrangement of the last line is all triangles and the other arrangement of the last line is all circles, which causes Case 2 to overlap with Case 1 and further complicating the solution.) In total, this is $6\\cdot 6 = 36.$</p><p>Finally, we add and multiply: $2(36+6)=2(42)=\\boxed{\\textbf{(D) }84}$.</p><p>~wamofan</p>",
+        "<p>We will only consider cases where the three identical symbols are the same column, but at the end we shall double our answer as the same holds true for rows. There are $3$ ways to choose a column with all $\\bigcirc$'s and $2$ ways to choose a column with all $\\triangle$'s. The third column can be filled in $2^3=8$ ways. Therefore, we have a total of $3\\cdot2\\cdot8=48$ cases. However, we overcounted the cases with $2$ complete columns of with one symbol and $1$ complete column with another symbol. This happens in $2\\cdot3=6$ cases. $48-6=42$. However, we have to remember to double our answer, giving us $\\boxed{\\textbf{(D) }84}$ ways to complete the grid.</p><p>~MathFun1000</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2022 AMC 8 - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_24",
+      "question": "<p>The figure below shows a polygon $ABCDEFGH$, consisting of rectangles and right triangles. When cut out and folded on the dotted lines, the polygon forms a triangular prism. Suppose that $AH = EF = 8$ and $GH = 14$. What is the volume of the prism?</p><p>[asy] usepackage(\"mathptmx\"); size(275); defaultpen(linewidth(0.8)); real r = 2, s = 2.5, theta = 14; pair G = (0,0), F = (r,0), C = (r,s), B = (0,s), M = (C+F)/2, I = M + s/2 * dir(-theta); pair N = (B+G)/2, J = N + s/2 * dir(180+theta); pair E = F + r * dir(- 45 - theta/2), D = I+E-F; pair H = J + r * dir(135 + theta/2), A = B+H-J; draw(A--B--C--I--D--E--F--G--J--H--cycle^^rightanglemark(F,I,C)^^rightanglemark(G,J,B)); draw(J--B--G^^C--F--I,linetype (\"4 4\")); dot(\"$A$\",A,N); dot(\"$B$\",B,1.2*N); dot(\"$C$\",C,N); dot(\"$D$\",D,dir(0)); dot(\"$E$\",E,S); dot(\"$F$\",F,1.5*dir(-100)); dot(\"$G$\",G,S); dot(\"$H$\",H,W); dot(\"$I$\",I,NE); dot(\"$J$\",J,1.5*S); [/asy]</p>",
+      "solutions": [
+        "<p>While imagining the folding, $\\overline{AB}$ goes on $\\overline{BC},$ $\\overline{AH}$ goes on $\\overline{CI},$ and $\\overline{EF}$ goes on $\\overline{FG}.$ So, $BJ=CI=8$ and $FG=BC=8.$ Also, $\\overline{HJ}$ becomes an edge parallel to $\\overline{FG},$ so that means $HJ=8.$</p><p>Since $GH=14,$ then $JG=14-8=6.$ So, the area of $\\triangle BJG$ is $\\frac{8\\cdot6}{2}=24.$ If we let $\\triangle BJG$ be the base, then the height is $FG=8.$ So, the volume is $24\\cdot8=\\boxed{\\textbf{(C)} ~192}.$</p><p>~aops-g5-gethsemanea2</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2022 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2022_8_25",
+      "question": "<p>A cricket randomly hops between $4$ leaves, on each turn hopping to one of the other $3$ leaves with equal probability. After $4$ hops what is the probability that the cricket has returned to the leaf where it started?</p>",
+      "solutions": [
+        "<p>Let $A$ denote the leaf where the cricket starts and $B$ denote one of the other $3$ leaves. Note that:</p><ul><li>If the cricket is at $A,$ then the probability that it hops to $B$ next is $1.$</li></ul><ul><li>If the cricket is at $B,$ then the probability that it hops to $A$ next is $\\frac13.$</li></ul><ul><li>If the cricket is at $B,$ then the probability that it hops to $B$ next is $\\frac23.$</li></ul><p>We apply casework to the possible paths of the cricket:</p><p>Together, the probability that the cricket returns to $A$ after $4$ hops is $\\frac19+\\frac{4}{27}=\\boxed{\\textbf{(E) }\\frac{7}{27}}.$</p><p>~MRENTHUSIASM</p>",
+        "<p>We can label the leaves as shown below:</p><p>Carefully counting cases, we see that there are $7$ ways for the cricket to return to leaf $A$ after four hops if its first hop was to leaf $B$:</p><p>By symmetry, we know that there are $7$ ways if the cricket's first hop was to leaf $C$, and there are $7$ ways if the cricket's first hop was to leaf $D$. So, there are $21$ ways in total for the cricket to return to leaf $A$ after four hops.</p><p>Since there are $3^4 = 81$ possible ways altogether for the cricket to hop to any other leaf four times, the answer is $\\frac{21}{81} = \\boxed{\\textbf{(E) }\\frac{7}{27}}$.</p><p>~mahaler</p>",
+        "<p>There are always three possible leaves to jump to every time the cricket decides to jump, so there is a total number of $3^4$ routes. Let $A$ denote the leaf cricket starts at, and $B, C, D$ be the other leaves. If we want the cricket to move to leaf $A$ for its last jump, the cricket cannot jump to leaf $A$ for its third jump. Also, considering that the cricket starts at leaf $A$, he cannot jump to leaf $A$ for its first jump. Note that there are $3\\cdot2=6$ paths if the cricket moves to leaf $A$ for its third jump. Therefore, we can conclude that the total number of possible paths for the cricket to return to leaf $A$ after four jumps is $3^3 - 6 = 21$, so the answer is $\\frac{21}{3^4} = \\frac{21}{81}=\\boxed{\\textbf{(E) }\\frac{7}{27}}$.</p><p>~<a href=\"/wiki/index.php/User:Bloggish\" title=\"User:Bloggish\">Bloggish</a></p>",
+        "<p>Denote $P_n$ to be the probability that the cricket would return back to the first point after $n$ hops. Then, we get the recursive formula \\[P_n = \\frac13(1-P_{n-1})\\] because if the leaf is not on the target leaf, then there is a $\\frac13$ probability that it will make it back.</p><p>With this formula and the fact that $P_1=0$ (After one hop, the cricket can never be back to the target leaf.), we have \\[P_2 = \\frac13, P_3 = \\frac29, P_4 = \\frac7{27},\\] so our answer is $\\boxed{\\textbf{(E) }\\frac{7}{27}}$.</p><p>~wamofan</p>",
+        "<p>Let $A$ denote the leaf cricket starts at, and $B, C, D$ be the other leaves, similar to Solution 2.</p><p>Let $A(n)$ be the probability the cricket lands on $A$ after $n$ hops, $B(n)$ be the probability the cricket lands on $B$ after crawling $n$ hops, etc.</p><p>Note that $A(1)=0$ and $B(1)=C(1)=D(1)=\\frac13.$ For $n\\geq2,$ the probability that the cricket land on each leaf after $n$ hops is $\\frac13$ the sum of the probability the cricket land on other leaves after $n-1$ hops. So, we have\\begin{align*} A(n) &= \\frac13 \\cdot [B(n-1) + C(n-1) + D(n-1)], \\\\ B(n) &= \\frac13 \\cdot [A(n-1) + C(n-1) + D(n-1)], \\\\ C(n) &= \\frac13 \\cdot [A(n-1) + B(n-1) + D(n-1)], \\\\ D(n) &= \\frac13 \\cdot [A(n-1) + B(n-1) + C(n-1)]. \\end{align*}It follows that $A(n) = B(n-1) = C(n-1) = D(n-1).$</p><p>We construct the following table:\\[\\begin{array}{c|cccc}  &  &  &  & \\\\ [-2ex] n & A(n) & B(n) & C(n) & D(n) \\\\ [1ex] \\hline  &  &  &  & \\\\ [-1ex] 1 & 0 & \\frac13 & \\frac13 & \\frac13 \\\\  &  &  &  & \\\\ 2 & \\frac13 & \\frac29 & \\frac29 & \\frac29 \\\\  &  &  &  & \\\\ 3 & \\frac29 & \\frac{7}{27} & \\frac{7}{27} & \\frac{7}{27} \\\\  &  &  &  & \\\\ 4 & \\frac{7}{27} & \\frac{20}{81} & \\frac{20}{81} & \\frac{20}{81} \\\\ [1ex] \\end{array}\\]Therefore, the answer is $A(4)=\\boxed{\\textbf{(E) }\\frac{7}{27}}$.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>",
+        "<p>Assign the leaves to $0, 1, 2,$ and $3$ modulo $4,$ and let $0$ be the starting leaf. We then use generating functions with relation to the change of leaves. For example, from $3$ to $1$ would be a change of $2,$ and from $1$ to $2$ would be a change of $1.$ This generating function is equal to $(x+x^2+x^3)^4.$ It is clear that we want the coefficients in the form of $x^{4n},$ where $n$ is a positive integer. One application of roots of unity filter gives us a successful case count of $\\frac{81+1+1+1}{4} = 21.$</p><p>Therefore, the answer is $\\frac{21}{3^4}=\\boxed{\\textbf{(E) }\\frac{7}{27}}.$</p><p>~sigma</p>",
+        "<p>Let the leaves be $(0,0), (0,1), (1,0),$ and $(1,1)$ on the coordinate plane, with the cricket starting at $(0,0)$. Then we write a generating function. We denote $x$ a change in the x-value of the cricket, and similarly for $y$. Then our generating function is $(x+y+xy)^4,$ and we wish to compute the number of terms in which the exponents of both x and y are even. To do this, we first square to get $(x^2 + y^2 + x^2y^2 + 2xy + 2x^2y + 2xy^2)^2$. Note that every term squared will give even powers for x and y, so that gives us $3 + 4\\cdot3 = 15.$ Then every combination of $x^2, y^2,$ and $x^2y^2$ will also give us even powers for x and y, so that yields $6$ more terms, for a total of $21.$ Now in total there $3^4 = 81$ possible sequences, so $21/81$ gives us the answer of $\\boxed{\\textbf{(E) }\\frac{7}{27}}.$</p><p>~littlefox_amc</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2022 AMC 8 - geometry problem involving area"
+        }
+      ]
+    }
+  ]
+}

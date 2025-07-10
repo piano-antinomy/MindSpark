@@ -1,0 +1,440 @@
+{
+  "competition_info": {
+    "name": "2011_AMC_10A",
+    "group": "AMC_10",
+    "year": 2011,
+    "is_AJHSME": false,
+    "level": "10",
+    "suffix": "A",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2011_10a_1",
+      "question": "<p>A cell phone plan costs $20$ dollars each month, plus $5$ cents per text message sent, plus $10$ cents for each minute used over $30$ hours. In January Michelle sent $100$ text messages and talked for $30.5$ hours. How much did she have to pay?</p>",
+      "solutions": [
+        "<p>The base price of Michelle's cell phone plan is $20$ dollars. If she sent $100$ text messages and it costs $5$ cents per text, then she must have spent $500$ cents for texting, or $5$ dollars. She talked for $30.5$ hours, but $30.5-30$ will give us the amount of time exceeded past 30 hours.$30.5-30=.5$ hours $=30$ minutes.Since the price for phone calls is $10$ cents per minute, the additional amount Michelle has to pay for phone calls is $30*10=300$ cents, or $3$ dollars.Adding $20+5+3$ dollars $\\boxed{$28 \\textbf{ (D)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2011 AMC 10A - algebra problem involving basic arithmetic operations and word problem solving. Students need to understand algebra concepts deeply, work with basic_operations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of basic_operations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply basic_operations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_2",
+      "question": "<p>A small bottle of shampoo can hold $35$ milliliters of shampoo, whereas a large bottle can hold $500$ milliliters of shampoo. Jasmine wants to buy the minimum number of small bottles necessary to completely fill a large bottle. How many bottles must she buy?</p>",
+      "solutions": [
+        "<p>To find how many small bottles we need, we can simply divide $500$ by $35$. This simplifies to $\\frac{100}{7}=14 \\frac{2}{7}.$ Since the answer must be an integer greater than $14$, we have to round up to $15$ bottles, or $\\boxed{\\textbf{E}}$</p>",
+        "<p>We double $35$ to get $70.$ We see that $70\\cdot7=490,$ which is very close to $500.$ Thus, $2\\cdot7+1=\\boxed{\\text{(E)} 15}$ bottles are enough. ~Technodoggo</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2011 AMC 10A - algebra problem involving percentage calculations and proportional reasoning. Students need to understand algebra concepts deeply, work with percentages principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of percentages, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply percentages concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_3",
+      "question": "<p>Suppose [$a$ $b$] denotes the average of $a$ and $b$, and {$a$ $b$ $c$} denotes the average of $a$, $b$, and $c$. What is $\\{\\{\\text{1 1 0}\\} \\text{ [0 1] } 0\\}?$</p>",
+      "solutions": [
+        "<p>Average $1$, $1$, and $0$ to get $\\frac23$. Average $0$, and $1$, to get $\\frac12$. Average $\\frac23$, $\\frac12$, and $0$. to get $\\boxed{\\textbf{(D)}\\ \\frac7{18}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2011 AMC 10A - algebra problem involving area calculations of geometric shapes. Students need to understand algebra concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_4",
+      "question": "<p>Let X and Y be the following sums of arithmetic sequences: </p><p>\\begin{eqnarray*}X &=& 10+12+14+\\cdots+100,\\\\ Y &=& 12+14+16+\\cdots+102.\\end{eqnarray*}</p><p>What is the value of $Y - X?$</p>",
+      "solutions": [
+        "<p>We see that both sequences have equal numbers of terms, so reformat the sequence to look like: </p><p>\\begin{align*} Y = \\ &12 + 14 + \\cdots + 100 + 102\\\\ X = 10 \\ + \\ &12 +  14 + \\cdots + 100\\\\ \\end{align*}From here it is obvious that $Y - X = 102 - 10 = \\boxed{92 \\ \\mathbf{(A)}}$.</p><p>Another way to see this is to let the sum $12+14+16+...+100=x.$ So, the sequences become\\begin{align*} X = 10+x \\\\ Y= x+102 \\\\ \\end{align*}</p><p>Like before, the difference between the two sequences is $Y-X=102-12=92.$</p>",
+        "<p>We see that every number in Y's sequence is two more than every corresponding number in X's sequence. Since there are 46 numbers in each sequence, the difference must be$46\\cdot 2=\\boxed{92}$</p>",
+        "<p>\\begin{align*} X&=10+12+14+\\cdots +100 \\\\ Y&=X-10+102 = X+92 \\\\  Y-X &= (X+92)-X \\\\      &= \\boxed{92} \\quad \\quad \\textbf{(A)}\\\\ \\end{align*}</p><p><br/>- $\\text{herobrine-india}$</p>",
+        "<p>In an actual contest, this would probably take too much time but is nevertheless a solution.The general formula for computing sums of any arithmetic sequence where $x$ is the number of terms, $f$ is the first term and $l$ is the last term is $\\frac{(f+l)x}{2}$. If one uses that formula for both sequences, they will get $2530$ as the sum for $X$ and $2622$ as the sum for $Y$.Subtracting $X$ from $Y$, one will get the answer $\\boxed{92 \\text{\\textbf{ (A)}}}$.- danfan</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2011 AMC 10A - algebra problem involving basic arithmetic operations and problem translation. Students need to understand algebra concepts deeply, work with basic_operations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of basic_operations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply basic_operations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_5",
+      "question": "<p>At an elementary school, the students in third grade, fourth grade, and fifth grade run an average of $12$, $15$, and $10$ minutes per day, respectively. There are twice as many third graders as fourth graders, and twice as many fourth graders as fifth graders. What is the average number of minutes run per day by these students?</p>",
+      "solutions": [
+        "<p>Let us say that there are $f$ fifth graders. According to the given information, there must be $2f$ fourth graders and $4f$ third graders. The average time run by each student is equal to the total amount of time run divided by the number of students. This gives us $\\frac{12\\cdot 4f + 15\\cdot 2f + 10\\cdot f}{4f + 2f + f} = \\frac{88f}{7f} = \\frac{88}{7} \\Rightarrow \\boxed{C}$</p><p><br/></p><p>If you want to simplify the problem even more, just imagine/assume that only $1$ fifth grader existed. Then you can simply get rid of the variables.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2011 AMC 10A - algebra problem involving counting principles and systematic arrangements. Students need to understand algebra concepts deeply, work with counting principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of counting, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply counting concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_6",
+      "question": "<p>Set $A$ has $20$ elements, and set $B$ has $15$ elements. What is the smallest possible number of elements in $A \\cup B$?</p>",
+      "solutions": [
+        "<p>$A \\cup B$ will be smallest if $B$ is completely contained in $A$, in which case all the elements in $B$ would be counted for in $A$. So the total would be the number of elements in $A$, which is $\\boxed{20 \\ \\mathbf{(C)}}$.</p>",
+        "<p>Assume WLOG that $A={1, 2, 3, 4, \\cdots , 20}$, and $B={6, 7, 8, 9, 10, \\cdots , 20}$. Then, all the integers $6$ through $20$ would be redundant in $A \\cup B$, so $A \\cup B = 1, 2, 3, 4, \\cdots, 20 \\implies \\boxed{\\textbf{(C) }20}$.</p><p>~MrThinker</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2011 AMC 10A - algebra problem involving basic arithmetic operations and algebraic reasoning. Students need to understand algebra concepts deeply, work with basic_operations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of basic_operations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply basic_operations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_7",
+      "question": "<p>Which of the following equations does NOT have a solution?</p><p>$\\text{(A)}\\:(x+7)^2=0$</p><p>$\\text{(B)}\\:|-3x|+5=0$</p><p>$\\text{(C)}\\:\\sqrt{-x}-2=0$</p><p>$\\text{(D)}\\:\\sqrt{x}-8=0$</p>",
+      "solutions": [
+        "<p>$|-3x|+5=0$ has no solution because absolute values only output nonnegative numbers.</p><p>Further:$(x+7)^2 = 0$ is true for $x = -7$</p><p>$\\sqrt{-x}-2=0$ is true for $x = -4$</p><p>$\\sqrt{x}-8=0$ is true for $x = 64$</p><p>$|-3x|-4=0$ is true for $x = \\frac{4}{3}, -\\frac{4}{3}$</p><p>Therefore, the answer is $\\boxed{\\mathrm{(B)}}$.</p>",
+        "<p>Instead of solving, we can just categorize and solve.</p><p>Section 1:This contains A,C,D as they are all squares or square roots.From skimming, we can get an answer as maybe C</p><p>Section 2:This contains B and EFrom skimming we can get we can get answer as maybe B</p><p>Now we can analyze and we see $-x$ can become $x$ if $x=-y$ and absolute value inequalities cannot be negative, so the answer is $\\boxed{\\mathrm{(B)}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2011 AMC 10A - geometry problem involving area calculations and geometric formulas. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_8",
+      "question": "<p>Last summer 30% of the birds living on Town Lake were geese, 25% were swans, 10% were herons, and 35% were ducks. What percent of the birds that were not swans were geese?</p>",
+      "solutions": [
+        "<p>75% of the total birds were not swans. Out of that 75%, there was $30\\% / 75\\% = \\boxed{40\\%\\text{\\textbf{ (C)}}}$ of the birds that were not swans that were geese.</p><p>WLOG, suppose there were 100 birds in total living on Town Lake, then 30 were geese, 25 were swans, 10 were herons, and 35 were ducks. $100-25 = 75$ of the birds are not swans and 30 of these are geese, so the answer is $\\frac{30}{75} \\times 100 = \\boxed{40 \\%(C)}$.</p>",
+        "<p>75% of the total birds were not swans. Out of that 75%, there was $30\\% / 75\\% = \\boxed{40\\%\\text{\\textbf{ (C)}}}$ of the birds that were not swans that were geese.</p>",
+        "<p>WLOG, suppose there were 100 birds in total living on Town Lake, then 30 were geese, 25 were swans, 10 were herons, and 35 were ducks. $100-25 = 75$ of the birds are not swans and 30 of these are geese, so the answer is $\\frac{30}{75} \\times 100 = \\boxed{40 \\%(C)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2011 AMC 10A - number_theory problem involving divisibility rules and number properties. Students need to understand number_theory concepts deeply, work with divisibility principles systematically, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills, understanding of divisibility, and mathematical thinking abilities. Students must demonstrate proficiency in number_theory techniques and be able to apply divisibility concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_9",
+      "question": "<p>A rectangular region is bounded by the graphs of the equations $y=a, y=-b, x=-c,$ and $x=d$, where $a,b,c,$ and $d$ are all positive numbers. Which of the following represents the area of this region?</p>",
+      "solutions": [
+        "<p>We have a rectangle of side lengths $a-(-b)=a+b$ and $d-(-c)=c+d.$ Thus the area of this rectangle is $(a + b)(c + d) = \\boxed{\\textbf{(A)}\\ ac + ad + bc + bd}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2011 AMC 10A - geometry problem involving triangle geometry and geometric relationships. Students need to understand geometry concepts deeply, work with triangles principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of triangles, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply triangles concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_10",
+      "question": "<p>A majority of the $30$ students in Ms. Demeanor's class bought pencils at the school bookstore. Each of these students bought the same number of pencils, and this number was greater than $1$. The cost of a pencil in cents was greater than the number of pencils each student bought, and the total cost of all the pencils was $$17.71$. What was the cost of a pencil in cents?</p>",
+      "solutions": [
+        "<p>The total cost of the pencils can be found by $(\\text{students}\\cdot\\text{pencils purchased by each}\\cdot\\text{price of each pencil})$.</p><p>Since $1771$ is the product of three sets of values, we can begin with prime factorization, since it gives some insight into the values: $7, 11, 23$. Since $(C)$ has none of these factors, it can be eliminated immediately, leaving $(A)$, $(B)$, $(D)$, and $(E)$.</p><p>Beginning with $(A) 7$, we see that the number of pencils purchased by each student must be either $11$ or $23$. However, the problem states that the price of each pencil must exceed the number of pencils purchased, so we can eliminate this.</p><p>Continuing with $(B) 11$, we can conclude that the only case that fulfills the restrictions is that there are $23$ students who each purchased $7$ such pencils, so the answer is $\\boxed{B}$. We can apply the same logic to $(E)$ as we applied to $(A)$ if one wants to make doubly sure.</p><p>~PerseverePlayer (minor edits, changed some grammar, E can't be eliminated at first, fixed that)</p>",
+        "<p>We know the total cost of the pencils can be found by $(\\text{students}\\cdot\\text{pencils purchased by each}\\cdot\\text{price of each pencil})$.</p><p>Using prime factorization like in the solution above, we see that there is only one combination of three whole numbers whose product is equal to $1771$: $7, 11, 23$ (without using $1$). So we know that $7, 11$, and $23$ must be the number of students, the number of pencils purchased by each student and the price of each pencil in cents.</p><p>We know that $23$ must be the number of students, as it is the only number that makes up the majority of 30.</p><p>We pick the greater of the remaining numbers for the price of each pencil in cents, which is $11$.</p><p>Therefore, our answer is $\\boxed{B}$.</p><p>-JinhoK</p>",
+        "<p>We let $s$ be the number of students that bought pencils at the bookstore, $c$ be the cost of each pencil in cents, and $n$ the number of pencils each student bought. Thus, we are looking for $c.$ Since a majority of the students in the class bought pencils at the bookstore, $s>\\dfrac{30}2=15.$ (s>15) We also know that $n>1$ and $c>n>1.$ Finally, $s\\cdot c\\cdot n=1771.$ We can factor $1771$ as $7\\cdot11\\cdot23.$ Since $n>15$ and $c>n>1,$ none of them can be $1,$ and therefore $c,n,$ and $s$ are $7,11,$ and $23$ in some order. We know that $n>15,$ so $n$ must be $23.$ $c>n,$ so $c=11$ and $n=7.$ Thus, $c=\\boxed{\\text{(B)}~11}$ cents.~Technodoggo</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2011 AMC 10A - algebra problem involving rate relationships and speed calculations. Students need to understand algebra concepts deeply, work with rates principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of rates, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply rates concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_11",
+      "question": "<p>Square $EFGH$ has one vertex on each side of square $ABCD$. Point $E$ is on $AB$ with $AE=7\\cdot EB$. What is the ratio of the area of $EFGH$ to the area of $ABCD$?</p>",
+      "solutions": [
+        "<p>Let $8s$ be the length of the sides of square $ABCD$, then the length of one of the sides of square $EFGH$ is $\\sqrt{(7s)^2+s^2}=\\sqrt{50s^2}$, and hence the ratio in the areas is $\\frac{\\sqrt{50s^2}^2}{(8s)^2}=\\frac{50}{64} = \\boxed{\\frac{25}{32} \\ \\mathbf{(B)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2011 AMC 10A - algebra problem involving percentage calculations and proportional reasoning. Students need to understand algebra concepts deeply, work with percentages principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of percentages, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply percentages concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_12",
+      "question": "<p>The players on a basketball team made some three-point shots, some two-point shots, and some one-point free throws. They scored as many points with two-point shots as with three-point shots. Their number of successful free throws was one more than their number of successful two-point shots. The team's total score was $61$ points. How many free throws did they make?</p>",
+      "solutions": [
+        "<p>For the points made from two-point shots and from three-point shots to be equal, the numbers of made shots are in a $3:2$ ratio. Therefore, assume they made $3x$ and $2x$ two- and three- point shots, respectively, and thus $3x+1$ free throws. The total number of points is \\[2 \\times (3x) + 3 \\times (2x) + 1 \\times (3x+1) = 15x+1\\]</p><p>Set that equal to $61$, we get $x = 4$, and therefore the number of free throws they made $3 \\times 4 + 1 = 13 \\Rightarrow \\boxed{A}$</p>",
+        "<p>Let $x$ be the number of free throws. Then the number of points scored by two-pointers is $2(x-1)$ and the same goes for three-pointers because they scored the same number of points with twos and threes. Thus, our equation is $x+4(x-1) = 61 \\Rightarrow x=13$, giving us $\\boxed{(A)}$ for an answer.</p>",
+        "<p>We let $a$ be the number of $2$-point shots, $b$ be the number of $3$-point shots, and $x$ be the number of free throws. We are looking for $x.$ We know that $2a=3b$, and that $x=a+1$. Also, $2a+3b+1x=61$. We can see</p><p>\\begin{align*} a&=x-1 \\\\ 2a &= 2x-2 \\\\ 3a &= 2x-2. \\\\ \\end{align*}</p><p>Plugging this into $2a+3b+1x=61$, we see</p><p>\\begin{align*} 2x-2+2x-2+x &= 61 \\\\ 5x-4 &= 61 \\\\ 5x &= 65 \\\\ x &= \\boxed{\\textbf{(A) }13}. \\end{align*}</p><p>~Technodoggo</p><p>~MrThinker</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2011 AMC 10A - algebra problem involving arithmetic sequence patterns and mathematical sequences. Students need to understand algebra concepts deeply, work with arithmetic_sequences principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of arithmetic_sequences, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply arithmetic_sequences concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_13",
+      "question": "<p>How many even integers are there between $200$ and $700$ whose digits are all different and come from the set $\\left\\{1,2,5,7,8,9\\right\\}$?</p>",
+      "solutions": [
+        "<p>We split up into cases of the hundreds digits being $2$ or $5$. If the hundred digits is $2$, then the units digits must be $8$ in order for the number to be even and then there are $4$ remaining choices ($1,5,7,9$) for the tens digit, giving $1 \\times 1 \\times 4=4$ possibilities. Similarly, there are $1 \\times 2 \\times 4=8$ possibilities for the $5$ case, giving a total of $\\boxed{4+8=12 \\ \\mathbf{(A)}}$ possibilities.</p>",
+        "<p>We see that the last digit of the $3$-digit number must be even to have an even number. Therefore, the last digit must either be $2$ or $8$. </p><p>Case $1$-the last digit is $2$. We must have the hundreds digit to be $5$ and the tens digit to be any $1$ of ${1,7,8,9}$, thus obtaining $4$ numbers total.</p><p>Case $2$-the last digit is $8$. We now can have $2$ or $5$ to be the hundreds digit, and any choice still gives us $4$ choices for the tens digit. Therefore, we have $2 \\cdot 4=8$ numbers. </p><p>Adding up our cases, we have $4+8=\\boxed{\\text{(A)}12}$ numbers.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2011 AMC 10A - geometry problem involving complex area calculations and geometric analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_14",
+      "question": "<p>A pair of standard $6$-sided dice is rolled once. The sum of the numbers rolled determines the diameter of a circle. What is the probability that the numerical value of the area of the circle is less than the numerical value of the circle's circumference?</p>",
+      "solutions": [
+        "<p>For the circumference to be greater than the area, we must have $\\pi d > \\pi \\left( \\frac{d}{2} \\right) ^2$, or $d<4$. Now since $d$ is determined by a sum of two dice, the only possibilities for $d$ are thus $2$ and $3$. In order for two dice to sum to $2$, they must both show a value of $1$. The probability of this happening is $\\frac{1}{6} \\times \\frac{1}{6} = \\frac{1}{36}$. In order for two dice to sum to $3$, one must show a $1$ and the other must show a $2$. Since this can happen in two ways, the probability of this event occurring is $2 \\times \\frac{1}{6} \\times \\frac{1}{6} = \\frac{2}{36}$. The sum of these two probabilities now gives the final answer: $\\frac{1}{36} + \\frac{2}{36} = \\frac{3}{36} = \\frac{1}{12} \\rightarrow \\boxed{\\textbf{B}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2011 AMC 10A - geometry problem involving circle geometry and circular measurements. Students need to understand geometry concepts deeply, work with circles principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of circles, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply circles concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_15",
+      "question": "<p>Roy bought a new battery-gasoline hybrid car. On a trip the car ran exclusively on its battery for the first $40$ miles, then ran exclusively on gasoline for the rest of the trip, using gasoline at a rate of $0.02$ gallons per mile. On the whole trip he averaged $55$ miles per gallon. How long was the trip in miles?</p>",
+      "solutions": [
+        "<p>We know that $\\frac{\\text{total miles}}{\\text{total gas}}=55$. Let $x$ be the distance in miles the car traveled during the time it ran on gasoline, then the amount of gas used is $0.02x$. The total distance traveled is $40+x$, so we get $\\frac{40+x}{0.02x}=55$. Solving this equation, we get $x=400$, so the total distance is $400 + 40 = \\boxed{440 \\ \\mathbf{(C)}}$.</p>",
+        "<p>Let $d$ be the length of the trip in miles. Roy used no gasoline for the 40 first miles, then used 0.02 gallons of gasoline per mile on the remaining $d - 40$ miles, for a total of $0.02 (d - 40)$ gallons. Hence, his average mileage was\\[\\frac{d}{0.02 (d - 40)} = 55.\\]Multiplying both sides by $0.02 (d - 40)$, we get\\[d = 55 \\cdot 0.02 \\cdot (d - 40) = 1.1d - 44.\\]Then $0.1d = 44$, so $d = \\boxed{440}$. The answer is $(C)$.</p><p><br/></p>",
+        "<p>Since Roy had 0 gasoline usage during the first 40 miles, and we know his usage is 0.02 gallons per mile after that, we can look at all 5 individual answers and simply run them through.</p><p>If Roy drove (A) 140 miles would mean he spent 140 - 40 = 100 miles on gasoline, so he used 100 * 0.02 = 2 gallons. $2/140$ = 70 miles per gallon which does not equal 55, so (A) is incorrect. Similarly, (B) 240 gives:240 - 40 = 200 miles on gasoline, 200 * 0.02 gallons = 4 gallons, $4/240$ = 60 m/g which does not equal 55.</p><p>Plugging in (C) 440, we get:440 - 40 = 400, 400 * 0.02 = 8, $8/440$ = 55 miles per gallon, so answer choice $\\boxed{440 \\ \\mathbf{(C)}}$ is correct.</p><p>\"And we're done.\"</p><ul><li>Richard Rusczyk outro*</li></ul><p>~@BeepTheSheep954</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2011 AMC 10A - combinatorics problem involving counting principles and combinatorial reasoning. Students need to understand combinatorics concepts deeply, work with counting principles systematically, and apply mathematical reasoning to solve this problem. This tests combinatorics problem-solving skills, understanding of counting, and mathematical thinking abilities. Students must demonstrate proficiency in combinatorics techniques and be able to apply counting concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_16",
+      "question": "<p>Which of the following is equal to $\\sqrt{9-6\\sqrt{2}}+\\sqrt{9+6\\sqrt{2}}$?</p>",
+      "solutions": [
+        "<p>We find the answer by squaring, then square rooting the expression.</p><p>\\begin{align*} &\\sqrt{9-6\\sqrt{2}}+\\sqrt{9+6\\sqrt{2}}\\\\\\\\ = \\ &\\sqrt{\\left(\\sqrt{9-6\\sqrt{2}}+\\sqrt{9+6\\sqrt{2}}\\right)^2}\\\\\\\\ = \\ &\\sqrt{9-6\\sqrt{2}+2\\sqrt{(9-6\\sqrt{2})(9+6\\sqrt{2})}+9+6\\sqrt{2}}\\\\\\\\ = \\ &\\sqrt{18+2\\sqrt{(9-6\\sqrt{2})(9+6\\sqrt{2})}}\\\\\\\\ = \\ &\\sqrt{18+2\\sqrt{9^2-(6\\sqrt{2})^2}}\\\\\\\\ = \\ &\\sqrt{18+2\\sqrt{81-72}}\\\\\\\\ = \\ &\\sqrt{18+2\\sqrt{9}}\\\\\\\\ = \\ &\\sqrt{18+6}\\\\\\\\= \\ &\\sqrt{24}\\\\\\\\ = \\ &\\boxed{2\\sqrt{6} \\ \\mathbf{(B)}}. \\end{align*}</p>",
+        "<p>We can change the insides of the square root into a perfect square and then simplify. </p><p>\\[\\sqrt{9-6\\sqrt{2}}+\\sqrt{9+6\\sqrt{2}}\\]\\[= \\sqrt{6-6\\sqrt{2}+3}+\\sqrt{6+6\\sqrt{2}+3}\\]\\[= \\sqrt{\\left(\\sqrt{6}-\\sqrt{3}\\right)^2}+\\sqrt{\\left(\\sqrt{6}+\\sqrt{3}\\right)^2}\\]\\[= \\sqrt{6}-\\sqrt{3}+\\sqrt{6}+\\sqrt{3}\\]\\[= \\boxed{B) 2\\sqrt{6}}\\]</p>",
+        "<p>Square roots remind us of squares. So lets try to make $9 - 6\\sqrt{2} = (a-b)^2$. Doing a little experimentation we find that \\[9 - 6\\sqrt{2} = (\\sqrt{6} - \\sqrt{3})^2.\\] Similarly since $9 + 6\\sqrt{2} = (a+b)^2$ we know that \\[9 + 6\\sqrt{2} = (\\sqrt{6} + \\sqrt{3})^2.\\]</p><p>We want to find $\\sqrt{9-6\\sqrt{2}}+\\sqrt{9+6\\sqrt{2}}$. Using what we found above we know \\[\\sqrt{9 -6\\sqrt{2}}+\\sqrt{9+6\\sqrt{2}} = (\\sqrt{6} - \\sqrt{3}) + (\\sqrt{6} + \\sqrt{3}) = 2\\sqrt{6}.\\] This is nothing but $\\boxed{B) 2\\sqrt{6}}$.</p><p>~coolmath_2018</p><p>Note: This is basically just Solution 2 except you \"do a little experimentation\"</p><p><br/></p>",
+        "<p>\\[x=\\sqrt{9-6\\sqrt{2}}+\\sqrt{9+6\\sqrt{2}}\\]\\[x^{2}=9-6\\sqrt{2}+9+6\\sqrt{2}+2\\sqrt{\\left(9-6\\sqrt{2}\\right)\\left(9+6\\sqrt{2}\\right)}\\]\\[x^{2}=18+2\\sqrt{81-72}\\]\\[x^{2}=18+2\\sqrt{9}\\]\\[x^{2}=18+6\\]\\[x^{2}=24\\]\\[x=\\pm\\sqrt{24}\\]\\[x=\\pm2\\sqrt{6}\\]\\[\\boxed{\\textbf{(B) } 2\\sqrt{6}}\\]</p><p>~JH. L</p>",
+        "<p>First, factor $\\sqrt3$ out of the whole expression: $\\sqrt3\\left(\\sqrt{3-2\\sqrt2}+\\sqrt{3+2\\sqrt2}\\right)$ Let $\\sqrt{3-2\\sqrt{2}}=a+b\\sqrt2.$ We square both sides, leaving us with $3-2\\sqrt{2}=a^2+2ab\\sqrt2+2b^2.$ We equate coefficients, and we see that $3=a^2+2b^2$ and $-2=2ab\\implies ab=-1.$ We can see a pair of values that works easily, $(a,b)=(1,-1)$ or $(a,b)=(-1,1).$ A quick sign check tells us that the valid solution is $(-1,1).$ Similarly, for $\\sqrt{3+2\\sqrt{2}},$ we get $1+\\sqrt2.$ When we add these two, we get $2\\sqrt2,$ and multiplying by $\\sqrt3,$ we get $\\boxed{\\text{(B)}~2\\sqrt6}.$</p><p>We can quickly check our answer by estimating $\\sqrt2=1.41$ and $\\sqrt3=1.73$: $\\sqrt3\\left(\\sqrt{3-2\\sqrt2}+\\sqrt{3+2\\sqrt2}\\right)$ becomes $\\sqrt3\\left(\\sqrt{3-2\\cdot1.41}+\\sqrt{3+2\\cdot1.41}\\right)=\\sqrt3\\left(\\sqrt{3-2.82}+\\sqrt{3+2.82}\\right)=\\sqrt3\\left(\\sqrt{0.18}+\\sqrt{5.82}\\right)\\approx\\sqrt3\\left(\\dfrac{3\\sqrt2}{10}+2.4\\right)\\approx1.73\\left(\\dfrac{3\\cdot1.41}{10}+2.4\\right)=1.73\\left(0.423+2.4\\right)=1.73\\left(2.823\\right)\\approx1.7\\cdot2.8\\approx4.76.$ This should be our approximate answer. We got $2\\sqrt6=2\\sqrt2\\cdot\\sqrt3\\approx2\\cdot1.41\\cdot1.73=2.82\\cdot1.73\\approx2.8\\cdot1.7=4.76$ - the same thing. ~Technodoggo</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2011 AMC 10A - algebra problem involving systems of equations with multiple variables and algebraic manipulation. Students need to understand algebra concepts deeply, work with systems_of_equations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of systems_of_equations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply systems_of_equations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_17",
+      "question": "<p>In the eight term sequence $A$, $B$, $C$, $D$, $E$, $F$, $G$, $H$, the value of $C$ is $5$ and the sum of any three consecutive terms is $30$. What is $A+H$?</p>",
+      "solutions": [
+        "<p>Let $A=x$. Then from $A+B+C=30$, we find that $B=25-x$. From $B+C+D=30$, we then get that $D=x$. Continuing this pattern, we find $E=25-x$, $F=5$, $G=x$, and finally $H=25-x$. So $A+H=x+25-x=25 \\rightarrow \\boxed{\\textbf{C}}$</p><p><br/></p>",
+        "<p>Given that the sum of 3 consecutive terms is 30, we have$(A+B+C)+(C+D+E)+(F+G+H)=90$ and $(B+C+D)+(E+F+G)=60$</p><p>It follows that $A+B+C+D+E+F+G+H=85$ because $C=5$.</p><p>Subtracting, we have that $A+H=25\\rightarrow \\boxed{\\textbf{C}}$.</p><p><br/></p>",
+        "<p>From the given information, we can deduce the following equations:</p><p>$A+B=25, B+D=25, D+E=25, D+E+F=30, E+F+G =30$, and $F+G+H=30$.</p><p>We can then cleverly manipulate the equations above by adding and subtracting them to be left with the answer.</p><p>$(A+B)-(B+D)=25-25 \\implies (A-D)=0$</p><p>$(A-D)+(D+E)=0+25 \\implies (A+E)=25$</p><p>$(A+E)-(E+F+G)=25-30 \\implies (A-F-G)=-5$ (Notice how we don't use $D+E+F=30$)</p><p>$(A-F-G)+(F+G+H)=-5+30 \\implies (A+H)=25$</p><p>Therefore, we have $A+H=25 \\rightarrow \\boxed{\\textbf{C}}$</p><p>~JinhoK</p>",
+        "<p>Since all of the answer choices are constants, it shouldn't matter what we pick $A$ and $B$ to be, so let $A = 20$ and $B = 5$. Then $D = 30 - B -C = 20$, $E = 30 - D - C = 5$, $F = 30 - D - E =5$, and so on until we get $H = 5$. Thus $A + H = \\boxed{\\mathbf{(C)}25}$</p>",
+        "<p>Notice that the period of the sequence is $3$ as given. (If this isn't clear we can show an example: $A+B+C=B+C=D$ $\\Leftrightarrow$ $A=D$). Then $A=D$ and $H=B$, so $A+H=D+B=D+B+C-C=30-5=\\boxed{\\textbf{(C)}\\;25}$.</p><p>~eevee9406</p>",
+        "<p>Since the period of the sequence is $3$ \\[A=D=G, B=E=H, C=F\\]$A+B+C=30$ because any three consecutive terms sum to $30$.Since $C=5$ \\[A+B=25\\]Since $B=H$ \\[A+B=A+H=\\fbox{(C) 25}\\]</p><p>~sid2012 <a class=\"external autonumber\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Sid2012\" rel=\"nofollow\">[1]</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2011 AMC 10A - geometry problem involving complex area calculations and geometric analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_18",
+      "question": "<p>Circles $A, B,$ and $C$ each has radius 1. Circles $A$ and $B$ share one point of tangency. Circle $C$ has a point of tangency with the midpoint of $\\overline{AB}.$ What is the area inside circle $C$ but outside circle $A$ and circle $B?$</p>",
+      "solutions": [
+        "<p>[asy] unitsize(1.1cm); defaultpen(linewidth(.8pt)); dotfactor=4;  pair A=(0,0), B=(2,0), C=(1,-1); pair M=(1,0); pair D=(2,-1); dot (A); dot (B); dot (C); dot (D); dot (M);  draw(Circle(A,1)); draw(Circle(B,1)); draw(Circle(C,1));  draw(A--B); draw(M--D); draw(D--B);  label(\"$A$\",A,W); label(\"$B$\",B,E); label(\"$C$\",C,W); label(\"$M$\",M,NE); label(\"$D$\",D,SE); [/asy]</p><p>The requested area is the area of $C$ minus the area shared between circles $A$, $B$ and $C$.</p><p>Let $M$ be the midpoint of $\\overline{AB}$ and $D$ be the other intersection of circles $C$ and $B$.</p><p>The area shared between $C$, $A$ and $B$ is $4$ of the regions between arc $\\widehat {MD}$ and line $\\overline{MD}$, which is (considering the arc on circle $B$) a quarter of the circle $B$ minus $\\triangle MDB$:</p><p>$\\frac{\\pi r^2}{4}-\\frac{bh}{2}$</p><p>$b = h = r = 1$</p><p>(We can assume this because $\\angle DBM$ is 90 degrees, since $CDBM$ is a square, due to the application of the tangent chord theorem at point $M$)</p><p>So the area of the small region is</p><p>$\\frac{\\pi}{4}-\\frac{1}{2}$</p><p>The requested area is area of circle $C$ minus 4 of this area:</p><p>$\\pi 1^2 - 4\\left(\\frac{\\pi}{4}-\\frac{1}{2}\\right) = \\pi - \\pi + 2 = 2$</p><p>$\\boxed{\\textbf{C}}$.</p>",
+        "<p>[asy] unitsize(1.1cm); defaultpen(linewidth(.8pt)); dotfactor=4;  pair A=(0,0), B=(2,0), C=(1,1); pair D=(2,1); pair E=(0,1); pair F = (1, 2); pair M = (1, 0); dot (A); dot (B); dot (C); dot (D); dot (E); dot (F); dot (M);  draw(Circle(A,1)); draw(Circle(B,1)); draw(Circle(C,1));  draw (D--F--E--M--D);  label(\"$A$\",A,W); label(\"$B$\",B,E); label(\"$C$\",C,W); label(\"$M$\",M,NE); label(\"$D$\",D,E); label(\"$E$\",E,W); label(\"$F$\",F,N); [/asy]</p><p>We can move the area above the part of the circle above the segment $EF$ down, and similarly for the other side. Then, we have a square, whose diagonal is $2$, so the area is then just $\\left(\\frac{2}{\\sqrt{2}}\\right)^2 = \\boxed{\\textbf{2 = C}}$.</p><p>~ Minor Edits, Challengees24</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2011 AMC 10A - logic problem involving logical reasoning and truth value analysis. Students need to understand logic concepts deeply, work with deductive_reasoning principles systematically, and apply mathematical reasoning to solve this problem. This tests logic problem-solving skills, understanding of deductive_reasoning, and mathematical thinking abilities. Students must demonstrate proficiency in logic techniques and be able to apply deductive_reasoning concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_19",
+      "question": "<p>In 1991 the population of a town was a perfect square. Ten years later, after an increase of 150 people, the population was 9 more than a perfect square. Now, in 2011, with an increase of another 150 people, the population is once again a perfect square. Which of the following is closest to the percent growth of the town's population during this twenty-year period?</p>",
+      "solutions": [
+        "<p>Let the population of the town in $1991$ be $p^2$. Let the population in $2001$ be $q^2+9$. It follows that $p^2+150=q^2+9$. Rearrange this equation to get $141=q^2-p^2=(q-p)(q+p)$. Since $q$ and $p$ are both positive integers with $q>p$, $(q-p)$ and $(q+p)$ also must be, and thus, they are both factors of $141$. We have two choices for pairs of factors of $141$: $1$ and $141$, and $3$ and $47$. Assuming the former pair, since $(q-p)$ must be less than $(q+p)$, $q-p=1$ and $q+p=141$. Solve to get $p=70, q=71$. Since $p^2+300$ is not a perfect square, this is not the correct pair. Solve for the other pair to get $p=22, q=25$. This time, $p^2+300=22^2+300=784=28^2$. This is the correct pair. Now, we find the percent increase from $22^2=484$ to $28^2=784$. Since the increase is $300$, the percent increase is $\\frac{300}{484}\\times100\\%\\approx\\boxed{\\textbf{(E)}\\ 62\\%}$.</p>",
+        "<p>Proceed through the difference of squares for $p$ and $q$:$141=q^2-p^2=(q-p)(q+p)$</p><p>However, instead of testing both pairs of factors we take a more certain approach. Here $r^2$ is the population of the town in 2011.$r^2-p^2=300$$(r-p)(r+p)=300$Test through pairs of $r$ and $p$ that makes sure $p=22$ or $p=70$. Then go through the same routine as demonstrated above to finish this problem. </p><p>Note that this approach might take more testing if one is not familiar with finding factors.</p>",
+        "<p>Since all the answer choices are around $50\\%$, we know the town's starting population must be around $600$. We list perfect squares from $400$ to $1000$.\\[441, 484, 529,576,625,676,729,784,841,900,961\\]We see that $484$ and $784$ differ by $300$, and we can confirm that $484$ is the correct starting number by noting that $484+150=634=25^2+9$. Thus, the answer is $784/484-1\\approx \\boxed{\\textbf{(E) } 62\\%}$.</p>",
+        "<p>Let the population of the town in 1991 be $a^2$ and the population in 2011 be $b^2$. We know that $a^2+150+150=b^2 \\implies a^2-b^2=-300 \\implies b^2-a^2=300 \\implies (b-a)(b+a)=300$. Note that $b-a$ must be even. Testing, we see that $a=22$ and $b=28$ works, as $484+150-9=625=25^2$, so $\\frac{784-484}{484} \\approx \\boxed{\\textbf{(E) } 62\\%}$.</p><p>~MrThinker</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2011 AMC 10A - number_theory problem involving least common multiple and advanced number theory. Students need to understand number_theory concepts deeply, work with lcm principles systematically, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills, understanding of lcm, and mathematical thinking abilities. Students must demonstrate proficiency in number_theory techniques and be able to apply lcm concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_20",
+      "question": "<p>Two points on the circumference of a circle of radius $r$ are selected independently and at random. From each point a chord of length $r$ is drawn in a clockwise direction. What is the probability that the two chords intersect?</p>",
+      "solutions": [
+        "<p>Fix a point $A$ from which we draw a clockwise chord. In order for the clockwise chord from another point $B$ to intersect that of point $A$, $A$ and $B$ must be no more than $r$ units apart. By drawing the circle, we quickly see that $B$ can be on $\\frac{120}{360}=\\boxed{\\frac{1}{3}  \\ \\textbf{(D)}}$ of the perimeter of the circle. (Imagine a regular hexagon inscribed in the circle)</p>",
+        "<p>Do what Solution 1 did until the guessing part. We then realize that the chords and radii make an equilateral triangle of length $r$. Therefore the arc degree is $60.$ The other arc degree is also $60.$ Therefore the sum is $120.$ Continue as follows.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2011 AMC 10A - algebra problem involving fraction operations and proportional relationships. Students need to understand algebra concepts deeply, work with fractions principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of fractions, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply fractions concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_21",
+      "question": "<p>Two counterfeit coins of equal weight are mixed with $8$ identical genuine coins. The weight of each of the counterfeit coins is different from the weight of each of the genuine coins. A pair of coins is selected at random without replacement from the $10$ coins. A second pair is selected at random without replacement from the remaining $8$ coins. The combined weight of the first pair is equal to the combined weight of the second pair. What is the probability that all $4$ selected coins are genuine?</p>",
+      "solutions": [
+        "<p>If we pick $4$ indistinguishable real coins from the set of $8$ real coins, there are $\\binom{8}{4}$ ways to pick the coins. If we then place the coins in four distinguishable slots on the scale, there are $4!$ ways to arrange them, giving $4!\\cdot \\binom{8}{4}$ ways to choose and place $8$ real coins. This gives $1680$ desirable combinations.</p><p>If we pick $2$ real coins and $2$ fake coins, there are $\\binom{8}{2}\\binom{2}{2}$ ways to choose the coins. There are $4$ choices for the first slot on the left side of the scale. Whichever type of coin is placed in that first slot, there are $2$ choices for the second slot on the left side of the scale, since it must be of the opposite type of coin. There are $2$ choices for the first slot on the right side of the scale and only $1$ choice for the last slot on the right side.</p><p>Thus, there are $4\\cdot 2\\cdot 2\\cdot 1 = 16$ ways to arrange the coins, and $\\binom{8}{2}\\binom{2}{2} = 28$ sets of possible coins, for a total of $16\\cdot 28 = 448$ combinations that are legal, yet undesirable.</p><p>The overall probability is thus $\\frac{1680}{1680 + 448} = \\boxed{\\frac{15}{19} \\ \\mathbf{(D)}}$.</p><p>Note that in this solution, all four slots on the scale are deemed to be distinguishable. In essence, this \"overcounts\" all numbers by a factor of $8$, since you can switch the coins on the left side, you can switch the coins on the right side, or you can switch sides of the scale. But since all numbers are increased 8-fold, it will cancel out when calculating the probability.</p>",
+        "<p>Place the two coins from the first pair in a line followed by the two coins from the second pair followed by the six left-over coins. We can do that in $\\binom{10}{2} = 45$ different ways.</p><p>We need to exclude those cases where the weight shows a difference. There are two cases where a pair has both counterfeit coins and there are $4\\cdot6$ cases where one counterfeit coin is chosen and one is in the left-over. That leaves $45-2-24=19$ cases.</p><p>Of these, $\\binom{6}{2}=15$ cases has both counterfeit coins in the left-over. The probability of having chosen four genuine coins therefore is $\\boxed{\\frac{15}{19} \\ \\mathbf{(D)}}$.</p>",
+        "<p>WLOG, allow for all the coins to be distinguishable.We split this up into cases. Case $1$ being the weight of $2$ genuine coins together and Case $2$ being the weight of $1$ genuine coin and $1$ counterfeit coin.</p><p>Case $1$: All Genuine coins chosen.This happens in $\\frac{\\binom{8}{2}\\cdot\\binom{6}{2}}{2}=210$ ways</p><p>Case $2$: Genuine coin and Counterfeit coin both chosen.This happens in $8\\cdot7=56$ ways.</p><p>Hence, the answer is $\\boxed{\\frac{15}{19} \\ \\mathbf{(D)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2011 AMC 10A - probability problem involving independent probability events and compound probability calculations. Students need to understand probability concepts deeply, work with independent_events principles systematically, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills, understanding of independent_events, and mathematical thinking abilities. Students must demonstrate proficiency in probability techniques and be able to apply independent_events concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_22",
+      "question": "<p>Each vertex of convex pentagon $ABCDE$ is to be assigned a color. There are $6$ colors to choose from, and the ends of each diagonal must have different colors. How many different colorings are possible?</p>",
+      "solutions": [
+        "<p>Let vertex $A$ be any vertex, then vertex $B$ be one of the diagonal vertices to $A$, $C$ be one of the diagonal vertices to $B$, and so on. We consider cases for this problem.</p><p>In the case that $C$ has the same color as $A$, $D$ has a different color from $A$ and so $E$ has a different color from $A$ and $D$. In this case, $A$ has $6$ choices, $B$ has $5$ choices (any color but the color of $A$), $C$ has $1$ choice, $D$ has $5$ choices, and $E$ has $4$ choices, resulting in a possible of $6 \\cdot 5 \\cdot 1 \\cdot 5 \\cdot 4 = 600$ combinations.</p><p>In the case that $C$ has a different color from $A$ and $D$ has a different color from $A$, $A$ has $6$ choices, $B$ has $5$ choices, $C$ has $4$ choices (since $A$ and $B$ necessarily have different colors), $D$ has $4$ choices, and $E$ has $4$ choices, resulting in a possible of $6 \\cdot 5 \\cdot 4 \\cdot 4 \\cdot 4 = 1920$ combinations.</p><p>In the case that $C$ has a different color from $A$ and $D$ has the same color as $A$, $A$ has $6$ choices, $B$ has $5$ choices, $C$ has $4$ choices, $D$ has $1$ choice, and $E$ has $5$ choices, resulting in a possible of $6 \\cdot 5 \\cdot 4 \\cdot 1 \\cdot 5 = 600$ combinations.</p><p>Adding all those combinations up, we get $600+1920+600=\\boxed{3120 \\ \\mathbf{(C)}}$.</p>",
+        "<p>First, notice that there can be $3$ cases. One with all vertices painted different colors, one with one pair of adjacent vertices painted the same color and the final one with two pairs of adjacent vertices painted two different colors.</p><p>Case $1$: There are $6!$ ways of assigning each vertex a different color. $6! = 720$</p><p>Case $2$: There are $\\frac {6!}{2!} * 5$ ways. After picking four colors, we can rotate our pentagon in $5$ ways to get different outcomes. $\\frac {6!}{2} * 5 = 1800$</p><p>Case $3$: There are $\\frac {\\frac {6!}{3!} * 10}{2!}$ ways of arranging the final case. We can pick $3$ colors for our pentagon. There are $5$ spots for the first pair of colors. Then, there are $2$ possible ways we can put the final pair in the last $3$ spaces. But because the two pairs are indistinguishable, we divide by $2!$. $\\frac {\\frac {6!}{3!} * 10}{2!} = 600$</p><p>Adding all the possibilities up, we get $720+1800+600=\\boxed{3120 \\ \\mathbf{(C)}}$</p><p>~ZericHang</p>",
+        "<p>There are $6$ ways to assign a color to $A$. WLOG, give vertex $A$ a color; we can multiply by $6$ at the end. Since vertices $A$ and $C$ cannot have the same color, there are $5$ ways to assign colors to vertex $C$. Using this same logic, there are $5$ ways to assign a color to vertices $E$, $B$, and $D$, giving a total of $5^4=625$ ways. However, vertex $D$ cannot be the same color as vertex $A$. To use complementary counting, we need to find the amount of ways for $D$ and $A$ to have the same color. Notice that this is equivalent to the amount of ways to arrange colors among the vertices of a square. Using the same logic as above, there are $5^3=125$ ways, except we must subtract the number of ways for a triangle. Each time, there is $1$ less vertex, so $5$ times less ways to color. This process stops when there are only $2$ vertices left; in this case there are simply $5$ ways to color this figure. So in conclusion, there are $6(5^4-(5^3-(5^2-(5))))=6(5^4-5^3+5^2-5)=\\boxed{3120 \\ \\mathbf{(C)}}$ ways.</p>",
+        "<p>This problem is a direct application of the chromatic polynomial of a graph, represented by $P_k(G)$, which returns a polynomial representing the number of ways to color a graph $G$ with $k$ colors such that no two adjacent vertices share the same color. In other words, it gives us a polynomial in terms of $k$ where we can plug in $k=6$ to get our answer.  </p><p>Well, if we want to find $P_k$ for a graph $G$, we should probably first draw the graph, right? We can first draw five vertices (without any edges) in the shape of a pentagon. After connecting the diagonals, we get a star. We attempt to shift the vertices around to simplify the graph, which we quickly realize is isomorphic (can be turned into) the five-cycle, or the pentagon.  </p><p>Finding $P_k$ on a graph with a cycle of length at most 3 is straightforward -- we first pick a vertex v. It has 0 colored (visited) neighbors, so we can color it in k ways. We then move on to the vertices adjacent to v, etc, and at the end we multiply all these together. For example, the chromatic polynomial of a triangle is $k(k-1)(k-2)$. However, cycles with length > 3 introduce ambiguity, and thus the above technique fails. Thus, we need to use the recursive formula $P_k(G) = P_k(G-e)-P_k(G*e)$, where $G-e$ represents removing e and $G*e$ represents contracting e, or collapsing the two endpoints of e into one. When we hit a graph where the longest cycle has length 3, we can use the first technique to quickly find $P_k$. </p><p>After about four iterations of the algorithm, we get that the chromatic polynomial is $k(k-1)^4 - k(k-1)^3 + k(k-1)(k-2)$. Plugging in 6 gives us $\\boxed{3120 \\ \\mathbf{(C)}}$. </p><p>~Helloworld1</p>",
+        "<p>In pentagon $ABCDE$, fix any vertex $A$. Now draw diagonal $AC$. There are six choices for vertex $A$ and $5$ choices for vertex $C$</p><p>Now draw diagonal $CE$. Since $E$ cannot be the same color as vertex $C$, we have $5$ choices for $E$. Again, we have five choices for vertex $D$ (draw diagonal $AD$).</p><p>Thus there are $6 \\cdot 5$ choices for vertices $A$ and $C$ and $5 \\cdot 5$ combinations for $D$ and $E$. </p><p>To determine the final count, we consider two cases for the final $25$ combinations of $D$ and $E$, which uniquely determines $B$. Then, we multiply by $30$ since the choices of $A$ and $C$ are independent from these two cases.</p><p>Case $1$: $D$ and $E$ are the same color. There are $4$ possible pairs (This is because $D$ and $E$ are not chosen from the same 5 colors. $D$ cannot be $A$ as they are on a diagonal, but $E$ can be. ~ primegn), and thus we have $5$ choices for $B$. There are $20$ cases here.</p><p>Case $2$: $D$ and $E$ are different. There are $25-4 = 21$ possible combinations and we have $4$ choices for $B$ (not the color of $D$ nor $E$). In this case we have $21 \\cdot 4 = 84$ cases.</p><p>Our final count is $30(84+20) = \\boxed{3120}$, which is answer $\\boxed{\\textbf{(C)}}$.</p><p>~FIREDRAGONMATH16</p>",
+        "<p>WLOG, draw $ABCDE$ such that point $A$ is at the top, and write the letters in counterclockwise order. WLOG, fill in $A$ first. There are $6$ ways to do so. From here we proceed with casework on the color of $B$:</p><ul><li>Case 1: $B$ is the same color as $A$</li></ul><ul><li>Case 2: $B$ and $A$ are different colors</li></ul><ul><li>Case 2.1: $C$ and $B$ are the same color</li></ul><ul><li>Case 2.2: $C$ and $B$ are different colors</li></ul><p>Summing up the cases, $600+600+1920=3120 \\Longrightarrow \\boxed{\\textbf{(C) } 3120}$.</p><p>~JH. L</p>",
+        "<p>Notice that a minimum of, $3$ and a maximum of $5$ colours can be used.</p><ul><li>Case $1$: $5$ colours used.</li></ul><p>This is straight forward and there are $6P5 = 720$ ways.</p><ul><li>Case $2$: $4$ colours used.</li></ul><p>If $x$ and $y$ have same colours, they have to be adjacent. Let $x$ be directly right of $y$. $4$ consecutive points from $x$ clockwise have different colours. They can be coloured in $6P4=360$ ways. And $x$ can be chosen in $5$ ways, bringing the total to $360 \\times 5=1800$.</p><ul><li>Case $3$: $3$ colours used.</li></ul><p>Note that $3$ points can't have the same colour as at least $1$ of the lines joining them will be a diagonal. Then the arrangement is $2-2-1$. The point with distinct colour can be chosen in $5$ ways and can be coloured in $6$ ways. The next two points clockwise can be coloured in $5$ ways and the next two in $4$ ways. The total is $5 \\times 6 \\times 5 \\times 4=600$.</p><p>Finally, adding all cases, the answer is $600+1800+720=3120 \\Longrightarrow \\boxed{\\textbf{(C) } 3120}$.</p><p>~IamBATMAN1313</p>",
+        "<p>Name the pentagon $ADBEC$. Then $A,B;$ $B,C;$ $C,D;$ $D,E$ and $E,A$ have to be of different colours.</p><p>$A$ can be coloured in $6$ ways, $B$ in $5$ ways (Without the one used for $A$), $C$ in $5$ ways (Without the one used for $B$), $D$ in $5$ ways (Without the one used for $C$).</p><p>Now we find the expected value of how many ways can $E$ be coloured. </p><p>If $A$ and $C$ are of the same colour, $A$ and $D$ are always different. This happens $\\frac{1}{5}$ times and leaves $4$ options for $E$.</p><p>If $A$ and $C$ are of different colours $\\left(\\frac{4}{5} \\ \\text{of the time} \\right)$ then there is a $\\frac{1}{5}$ chance that $A$ and $D$ are of same colour and $\\frac{4}{5}$ chance that they are different. The first one leaves $5$ ways to colour $E$ and the second one leaves $4$. </p><p>Calculating all these, we find the expected value for the number of ways $E$ can be coloured is $\\frac{1}{5} \\times 4 + \\frac{4}{5} \\left( \\frac{1}{5} \\times 5 + \\frac{4}{5} \\times 4 \\right) = 4.16$</p><p>Therefore total number or ways $= 6 \\times 5 \\times 5 \\times 5 \\times 4.16 = \\boxed{\\textbf{(C) } 3120}$.</p><p>~IamBATMAN1313</p>",
+        "<p>First, we know that there are $6$ ways to assign a color to vertex $A$. Then, there are $6$ ways to assign a color to vertex $B$, because it doesn't depend on vertex $A$. There are also $5$ ways to assign a color to vertex $C$, because it can't be the same color as vertex $A$. Notice that both vertices $E$ and $D$ have 5 or 4 choices, depending on whether $A$ , $B$, and $C$ are the same color. This means that the we know that the amount of choices must be bigger than $6 \\times 6 \\times 5 \\times 4 \\times 4 = 2880$, which eliminates options $A$ and $B$. </p><p>Then, notice that the amount of choices must be smaller than $6 \\times 6 \\times 5 \\times 4.5 \\times 4.5 = 3645$, because the expected amount of choices $E$ and $D$ have are less than 4.5. (There is a greater probability that $A$, $B$, and $B$, $C$ are both different). This eliminates option $E$, which leaves us with options $C$ and $D$. </p><p>We know that the amount of choices must be a multiple of $6$, so $D$ is eliminated, leaving us with option $\\boxed{\\textbf{(C) } 3120}$</p><p>~Jonathanzhou18</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2011 AMC 10A - probability problem involving conditional probability and advanced probability reasoning. Students need to understand probability concepts deeply, work with conditional_probability principles systematically, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills, understanding of conditional_probability, and mathematical thinking abilities. Students must demonstrate proficiency in probability techniques and be able to apply conditional_probability concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_23",
+      "question": "<p>Seven students count from 1 to 1000 as follows:</p><p>Alice says all the numbers, except she skips the middle number in each consecutive group of three numbers. That is, Alice says 1, 3, 4, 6, 7, 9, . . ., 997, 999, 1000.</p><p>Barbara says all of the numbers that Alice doesn't say, except she also skips the middle number in each consecutive group of three numbers.</p><p>Candice says all of the numbers that neither Alice nor Barbara says, except she also skips the middle number in each consecutive group of three numbers.</p><p>Debbie, Eliza, and Fatima say all of the numbers that none of the students with the first names beginning before theirs in the alphabet say, except each also skips the middle number in each of her consecutive groups of three numbers.</p><p>Finally, George says the only number that no one else says.</p><p>What number does George say?</p>",
+      "solutions": [
+        "<p>First look at the numbers Alice says. $1, 3, 4, 6, 7, 9 \\cdots$ skipping every number that is congruent to $2 \\pmod 3$. Thus, Barbara says those numbers EXCEPT every second - being $2 + 3^1 \\equiv 5 \\pmod{3^2=9}$. So Barbara skips every number congruent to $5 \\pmod 9$. We continue and see: </p><p>Alice skips $2 \\pmod 3$, Barbara skips $5 \\pmod 9$, Candice skips $14 \\pmod {27}$, Debbie skips $41 \\pmod {81}$, Eliza skips $122 \\pmod {243}$, and Fatima skips $365 \\pmod {729}$.</p><p>Since the only number congruent to $365 \\pmod {729}$ and less than $1,000$ is $365$, the correct answer is $\\boxed{365\\ \\mathbf{(C)}}$.</p>",
+        "<p>After Alice says all her numbers, the numbers not mentioned yet are \\[\\text{Alice: } 2,5,8,11,14,17,\\cdots,998.\\]After Barbara says all her numbers, the numbers that haven't been said yet are \\[\\text{Barbara: } 5,14,23,32,41,50,\\cdots,995.\\]After Candice, the list is \\[\\text{Candice: } 14,41,68,\\cdots,986.\\]Notice how each list is an arithmetic sequence where the common differene is thrice the common ratio of the previous list and the first term is the second term of the previous list. Now that the pattern is clear, we construct the rest of the lists: \\[\\text{Debbie: } 41,122,203,\\cdots,959\\]\\[\\text{Eliza: } 122,365,608,878\\]\\[\\text{Fatima: } 365\\]</p><p>Thus, George says $\\boxed{\\textbf{(C) } 365}$.</p>",
+        "<p>Notice that Alice has skipped the numbers $3n-1$ for $n=1,2,3,...,333$.Namely, \\[3\\cdot1-1,3\\cdot2-1,3\\cdot3-1,...,3\\cdot333-1\\]Thus the numbers that Barbara skips are \\[3\\cdot2-1,3\\cdot5-1,3\\cdot8-1,...\\]or in a more general expression, $3(3n-1)-1$ for $n=1,2,3,...$.Namely, \\[3\\cdot(3\\cdot1-1)-1,3\\cdot(3\\cdot2-1)-1,3\\cdot(3\\cdot3-1)-1,...\\]Repeating the pattern until George, we have the first number he says,\\[3(3(3(3(3(3\\cdot1-1)-1)-1)-1)-1)-1= \\boxed{\\textbf{(C) } 365}\\]In addition, note that the second number George says exceeds $1000$.</p>",
+        "<p>Similar to Solution 1 we find that the only number that George can say must leave a remainder of $2$ when divided by $3$, and that it must also leave a remainder of $5$ when divided by $9$. Since we as human beings are usually lazy, and that MAA provides answer choices, we check all the possible numbers and find that our answer is $\\boxed{\\textbf{(C) } 365}$.</p>",
+        "<p>Every integer from 1 to 1000 can be written in the form $t_n+1$ in base 10, where $t_n$ is a trinary integer with no more than 7 significant digits. The important insight is that person $1\\le{k}\\le6$ will not say $n$ if and only if the $k$th digit from the right of $t_n$ is 1. Therefore, the last 6 digits of $t_n$ must be 1, as the first 6 people never said the number. The only options for $t_n$ are thus $2111111$, $1111111$, and $0111111$. But, since George only said one number, the first two must have been too big for it to be $\\le1000$. Our answer is therefore $111111_3+1=\\frac{3^6-1}{3-1}+1=364+1=\\boxed{\\textbf{(C) } 365}$</p>",
+        "<p>We see that Alice excludes the middle numbers in $1,2,3,4,5,6,7,8,9,\\cdots.$ She excludes $2\\mod3.$ Barbara excludes the middle numbers in $2,5,8,11,14,17,20,\\cdots.$ She excludes $5\\mod9.$ Let each mod be $a\\mod b.$ We notice that, each time, $b$ triples, and $a=\\dfrac{b+1}2.$ We can guess that $729$ is about the right size for $b$ ($b$ must be an exponent of $3$); any larger, and $a$ wouldn't be less than $1000.$ (We could also count: abcdef is $6$ times, so $3^6$)Thus, $a=\\dfrac{729+1}2=365$~Technodoggo</p>",
+        "<p>We work backwards to find the placement of George's number in every person's set as a function of the place in the next person's set. Let George's number be the item number $x$ in his set (obviously $1$). Then Fatima places sets of three around every number in George's set and subtracts one to find the item number of George's number in her set (now $3\\cdot 1-1=2$). This process repeats five more times for a total of six times.</p><p>We apply the function $f(x)=3x-1$ six times to attain the sequence of numbers $1,2,5,14,41,122,\\boxed{\\textbf{(C)}\\;365}$.</p><p>~eevee9406</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2011 AMC 10A - geometry problem involving distance calculations and coordinate geometry applications. Students need to understand geometry concepts deeply, work with distance principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of distance, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply distance concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_24",
+      "question": "<p>Two distinct regular tetrahedra have all their vertices among the vertices of the same unit cube. What is the volume of the region formed by the intersection of the tetrahedra?</p>",
+      "solutions": [
+        "<p><a class=\"image\" href=\"/wiki/index.php/File:CubeAndStel.gif\">CubeAndStel.gif</a></p><p>A regular unit tetrahedron can be split into eight tetrahedra that have lengths of $\\frac{1}{2}$. The volume of a regular tetrahedron can be found using the formula for the area of a pyramid: $\\frac{1}{3} \\cdot B \\cdot H$where $B$ is the area of the base and $H$ is the height.</p><p>For a tetrahedron of side length 1, its base area is $\\frac{\\sqrt{3}}{4}$, and its height can be found using the Pythagorean Theorem. Its height is $\\sqrt{1^2-\\left(\\frac{\\sqrt3}{3}\\right)^2}=\\frac{\\sqrt2}{\\sqrt3}$. Its volume is $\\frac13\\times\\frac{\\sqrt{3}}{4}\\times\\frac{\\sqrt2}{\\sqrt3}=\\frac{\\sqrt{2}}{12}$.</p><p>The tetrahedron actually has side length $\\sqrt2$, so the actual volume is $\\frac{\\sqrt{2}}{12}\\times\\sqrt2^3=\\frac13$.</p><p>On the eight small tetrahedra, the four tetrahedra on the corners of the large tetrahedra are not inside the other large tetrahedra. Thus, $\\frac{4}{8}=\\frac{1}{2}$ of the large tetrahedra will not be inside the other large tetrahedra.</p><p>The intersection of the two tetrahedra is thus $\\frac12\\times\\frac13=\\frac{1}{6}=\\boxed{\\text{(D)}}$.</p>",
+        "<p>The intersection of the two tetrahedra is an octahedron that has points touching the center of each face of the original cube. We can split the octahedron into two square pyramids, and from there we can find the volume of each pyramid. The sides of the square face of the pyramid will have lengths of $\\frac{\\sqrt2}{2}$, so the volume of both pyramids (the whole octahedra) will be $\\left (\\frac{\\sqrt2}{2}\\right )^2\\times2\\times\\frac{1}{2}\\times\\frac{1}{3}=1/6=\\boxed{\\text{(D)}}$.</p>",
+        "<p>Notice that the intersection of the tetrahedra is one of the larger tetrahedra with the four smaller tetrahedra on its points cut off. Using the tetrahedron volume formula ($\\frac{\\text{x}^3}{6\\sqrt2}$, where $\\text{x}$ is the length of a side), and using $\\sqrt2$ and $\\frac{\\sqrt2}{2}$ as the side lengths, you get the volume of the intersection as $\\frac{1}{3}-4\\times\\frac{1}{24}=\\frac{1}{3}-\\frac{1}{6}=\\frac{1}{6}=\\boxed{\\text{(D)}}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2011 AMC 10A - geometry problem involving complex area calculations and geometric analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2011_10a_25",
+      "question": "<p>Let $R$ be a unit square region and $n \\geq 4$ an integer. A point $X$ in the interior of $R$ is called <i>n-ray</i> partitional if there are $n$ rays emanating from $X$ that divide $R$ into $n$ triangles of equal area. How many points are $100$-ray partitional but not $60$-ray partitional?</p>",
+      "solutions": [
+        "<p>There must be four rays emanating from $X$ that intersect the four corners of the square region. Depending on the location of $X$, the number of rays distributed among these four triangular sectors will vary. We start by finding the corner-most point that is $100$-ray partitional (let this point be the bottom-left-most point). </p><p>We first draw the four rays that intersect the vertices. At this point, the triangular sectors with bases as the sides of the square that the point is closest to both do not have rays dividing their areas. Therefore, their heights are equivalent since their areas are equal. The remaining $96$ rays are divided among the other two triangular sectors, each sector with $48$ rays, thus dividing these two sectors into $49$ triangles of equal areas. </p><p>Let the distance from this corner point to the closest side be $a$ and the side of the square be $s$. From this, we get the equation $\\frac{a\\times s}{2}=\\frac{(s-a)\\times s}{2}\\times\\frac1{49}$. Solve for $a$ to get $a=\\frac s{50}$. Therefore, point $X$ is $\\frac1{50}$ of the side length away from the two sides it is closest to. By moving $X$ $\\frac s{50}$ to the right, we also move one ray from the right sector to the left sector, which determines another $100$-ray partitional point. We can continue moving $X$ right and up to derive the set of points that are $100$-ray partitional. </p><p>In the end, we get a square grid of points each $\\frac s{50}$ apart from one another. Since this grid ranges from a distance of $\\frac s{50}$ from one side to $\\frac{49s}{50}$ from the same side, we have a $49\\times49$ grid, a total of $2401$ $100$-ray partitional points. To find the overlap from the $60$-ray partitional, we must find the distance from the corner-most $60$-ray partitional point to the sides closest to it. Since the $100$-ray partitional points form a $49\\times49$ grid, each point $\\frac s{50}$ apart from each other, we can deduce that the $60$-ray partitional points form a $29\\times29$ grid, each point $\\frac s{30}$ apart from each other. To find the overlap points, we must find the common divisors of $30$ and $50$ which are $1, 2, 5,$ and $10$. Therefore, the overlapping points will form grids with points $s$, $\\frac s{2}$, $\\frac s{5}$, and $\\frac s{10}$ away from each other respectively. Since the grid with points $\\frac s{10}$ away from each other includes the other points, we can disregard the other grids. The total overlapping set of points is a $9\\times9$ grid, which has $81$ points. Subtract $81$ from $2401$ to get $2401-81=\\boxed{\\textbf{(C)}\\ 2320}$.</p>",
+        "<p>Position the square region $R$ so that the bottom-left corner of the square is at the origin. Then define $s$ to be the sidelength of $R$ and $X$ to be the point $(rs, qs)$, where $0<r,q<1$. </p><p><br/>There must be four rays emanating from $X$ that intersect the four corners of $R$. The areas of the four triangles formed by these rays are then $A_1=\\frac{qs\\times s}{2}$, $A_2=\\frac{(s-rs)\\times s}{2}$, $A_3=\\frac{(s-qs)\\times s}{2}$, and $A_4=\\frac{rs\\times s}{2}$. </p><p><br/>If a point is $n$-ray partitional, then there exist positive integers $a, b, c, d$ such that $a+b+c+d=n$ and $\\frac{A_1}{a}=\\frac{A_2}{b}=\\frac{A_3}{c}=\\frac{A_4}{d}$. Substituting in our formulas for $A_1$, $A_2$, $A_3$, and $A_4$ and canceling equal terms, we get \\[\\frac{q}{a}=\\frac{1-r}{b}=\\frac{1-q}{c}=\\frac{r}{d}.\\]</p><p><br/>Taking $\\frac{q}{a}=\\frac{1-q}{c}$ and solving for $q$, we get $q=\\frac{a}{a+c}$, and taking $\\frac{1-r}{b}=\\frac{r}{d}$ and solving for $r$, we get $r=\\frac{d}{b+d}$. Finally, from $\\frac{q}{a}=\\frac{r}{d}$, we have $qd=ar$ $\\Leftrightarrow$ $\\frac{ad}{a+c}=\\frac{ad}{b+d}$ $\\Leftrightarrow$ $a+c=b+d$. </p><p><br/>So for a point $X$ to be $100$-ray partitional, $a+b+c+d=100$, so $a+c=b+d=50$. $X$ must then be of the form $\\left(\\frac{d}{50}s, \\frac{a}{50}s\\right)$. Since $X$ is in the interior of $R$, $a$ and $d$ can be any positive integer from $1$ to $49$ (with $b$ and $c$ just equaling $50-d$ and $50-a$, respectively). Thus, there are $49\\times 49=2401$ points that are $100$-ray partitional.</p><p><br/>However, the problem asks for points that are not only $100$-ray partitional but also not $60$-ray partitional. Points that are $60$-ray partitional are of the form $\\left(\\frac{m}{30}s, \\frac{n}{30}s\\right)$, where $m$ and $n$ are also positive integers. We count the number of points $\\left(\\frac{d}{50}s, \\frac{a}{50}s\\right)$ that can also be written in this form. For a given $d$, $\\frac{d}{50}=\\frac{m}{30}$ if and only if $m=\\frac{3}{5}d$, and likewise with $a$ and $n$. We can then see that a point is both $100$-ray partitional and $60$-ray partitional if and only if $a$ and $d$ are both divisible by $5$. There are $9$ integers between $1$ and $49$ that are divisible by $5$, so out of our $2401$ points that are $100$-ray partitional, $9\\times 9=81$ are also $60$-ray partitional.</p><p><br/>Our answer then is just $2401-81=\\boxed{\\textbf{(C)}\\ 2320}$.</p>",
+        "<p>For the sake of simplicity, let $R$ be a $60 \\times 60$ square and set the bottom-left point as the origin. Then, $R$ has vertices: \\[(0,0), (60,0), (60,60), (0,60).\\]</p><p>Now, let a point in the square have coordinates $(x, y).$</p><p>In order for the point to be $100-$ ray partitional, we must be able to make $100$ triangles with area $60^2/100 = 36.$ For it to not be $60$-ray partitional, we cannot make $60$ triangles with area $60^2/60 = 60.$</p><p>When we draw such a triangle, it's base will always be on one of the sides of the square. If it is on the bottom side, then the height must be $y$. So, the base of each triangle must be $\\frac{72}{y}.$ So, there will be $\\frac{60}{\\frac{72}{y}} = \\frac{60y}{72}$ total triangles on that side.</p><p>If the triangle is on the right side of the square, then the height has to be $60 - x.$ So, the base will be $\\frac{72}{60-x}$ and there will be $\\frac{60 (60-x)}{72}$ triangles.</p><p>If the triangle is on the top, the height will be $60-y$, the base will be $\\frac{72}{60-y}$ and there will be $\\frac{60 (60-y)}{72}$ triangles along this side.</p><p>The triangles on the left will have height $x$, base $\\frac{72}{x}$ and $\\frac{60x}{72}$ such triangles must exist. </p><p>Simplifying, we get $\\frac{5y}{6}, \\frac{5 (60-x)}{6}, \\frac{5(60-y)}{6}, \\frac{5x}{6}$ triangles on the respective sides of the square. </p><p>All of these numbers must be integers. Let $x = 60a$ and $y = 60b$ where $0 < a, b < 1.$</p><p><br/>Then, the amounts become: \\[50a, 50b,  50 - 50a, 50 - 50b.\\]</p><p>As long as $50a$ and $50b$ are integers, $50 - 50a$ and $50 - 50b$ will also be integers. </p><p>For this to happen, $a$ and $b$ must be of the form $\\frac{x}{50}$ where $1 \\le x \\le 49.$ So, we have a total of $49^2 = 2401$ points that are $100$-ray partitional. </p><p>Now, we must calculate the number of $100$- ray partitional points that are also $60$-ray partitional. </p><p>Using a method similar to before, if a point is $60$-ray partitional, then we must be able to make $30a, 30b, 30 - 30a, 30 -30b$ triangles on the different sides. </p><p>So, $30a$ and $30b$ must be integers. This means $a$ and $b$ have to be of the form $\\frac{y}{30}$ where $0<y<30.$</p><p>If a point is both $100$-ray partitional and $60$-ray partitional, then it can be written as \\[\\frac{x}{50} =  \\frac{y}{30}\\]. Note that whenever $x$ is divisible by $5$, a $y$ will always exist to satisfy the above equation.</p><p>So, $x$ has to be in the range $(0, 50)$ and must be divisible by $5$. There are $9$ possibilities, namely $5, 10, 15, 20, 25, 30, 35, 40, 45.$</p><p>The $x$-coordinate of the point and the $y$-coordinate of the point can each use any of these $9$ possibilities, giving $9^2 = 81$ numbers that are both $100$-ray partitional and $60$-ray partitional.</p><p>Overall, we are left with $2401 - 81 = \\boxed{2320}$ solutions.</p>",
+        "<p>If $X$ is $100-ray$ partitional, and there are $n$ triangles on a side, then the total area of those $n$ triangles will be $\\frac{n}{100}$. Since the side has length $1$, then the length of the altitude from $X$ to that side will be $\\frac{n}{50}$.</p><p><br/>There will be 1 unique way to split this side into bases of triangles with height $\\frac{n}{50}$, and also 1 unique split into triangles on the opposite side. Since $n$ can range from $[1,49]$, there will be $49$ different distances from $1$ side, and $49$ different distances from an adjacent side, for a total of $49\\cdot 49 = 2401$ $100-ray$ partitional points. </p><p><br/>Similarly, for a point to be $60-ray$ partitional, the distance from the sides should be of the form $\\frac{k}{30}$. For this point to also be $100-ray$ partitional, it must also be of the form $\\frac{z}{50}$. Clearly, the only possible values of $k$ are $(3,6,9,12,15,18,21,24,27)$ for a total of 9 ways, so there are $9\\cdot 9 = 81$ points that are $60-ray$ partitional and $100-ray$ partitional.</p><p><br/>Subtracting $81$ from $2401$, we get $\\boxed{\\textbf{(C) } 2320}$. </p><p>-skibbysiggy</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2011 AMC 10A - geometry problem involving area calculations and geometric relationship analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    }
+  ]
+}

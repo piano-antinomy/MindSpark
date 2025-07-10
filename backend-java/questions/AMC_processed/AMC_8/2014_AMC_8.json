@@ -1,0 +1,407 @@
+{
+  "competition_info": {
+    "name": "2014_AMC_8",
+    "group": "AMC_8",
+    "year": 2014,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2014_8_1",
+      "question": "<p>Harry and Terry are each told to calculate $8-(2+5)$. Harry gets the correct answer. Terry ignores the parentheses and calculates $8-2+5$. If Harry's answer is $H$ and Terry's answer is $T$, what is $H-T$?</p>",
+      "solutions": [
+        "<p>We have $H=8-7=1$ and $T=8-2+5=11$. Clearly $1-11=-10$, so our answer is $\\boxed{\\textbf{(A)}-10}$.</p><p><br/></p><p><br/></p>",
+        "<p>We use PEMDAS, 8-(2+5) is the same as 8-7 which is 1, 8-2+5 is the same as 6+5 because 8-2 comes first, and the sum is 11. H-T is 1-11 which is $\\boxed{\\textbf{(A)}-10}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2014 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_2",
+      "question": "<p>Paul owes Paula $35$ cents and has a pocket full of $5$-cent coins, $10$-cent coins, and $25$-cent coins that he can use to pay her. What is the difference between the largest and the smallest number of coins he can use to pay her?</p>",
+      "solutions": [
+        "<p>The fewest amount of coins that can be used is $2$ (a quarter and a dime). The greatest amount is $7$, if he only uses nickels. Therefore we have $7-2=\\boxed{\\textbf{(E)}~5}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2014 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_3",
+      "question": "<p>Isabella had a week to read a book for a school assignment. She read an average of $36$ pages per day for the first three days and an average of $44$ pages per day for the next three days. She then finished the book by reading $10$ pages on the last day. How many pages were in the book?</p>",
+      "solutions": [
+        "<p>Isabella read $3\\cdot 36+3\\cdot 44$ pages in the first 6 days. Although this can be calculated directly, it is simpler to calculate it as $3\\cdot (36+44)=3\\cdot 80$, which gives that she read $240$ pages. On her last day, she read $10$ more pages for a total of $240+10=\\boxed{\\textbf{(B)}~250}$ pages.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2014 AMC 8 - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_4",
+      "question": "<p>The sum of two prime numbers is $85$. What is the product of these two prime numbers?</p>",
+      "solutions": [
+        "<p>Since the two prime numbers sum to an odd number, one of them must be even. The only even prime number is $2$. The other prime number is $85-2=83$, and the product of these two numbers is $83\\cdot2=\\boxed{\\textbf{(E)}~166}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2014 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_5",
+      "question": "<p>Margie's car can go $32$ miles on a gallon of gas, and gas currently costs $$4$ per gallon. How many miles can Margie drive on $\\textdollar 20$ worth of gas?</p>",
+      "solutions": [
+        "<p>Margie can afford $20/4=5$ gallons of gas. She can go $32\\cdot5=\\boxed{\\textbf{(C)}~160}$ miles on this amount of gas.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2014 AMC 8 - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_6",
+      "question": "<p>Six rectangles each with a common base width of $2$ have lengths of $1, 4, 9, 16, 25$, and $36$. What is the sum of the areas of the six rectangles?</p>",
+      "solutions": [
+        "<p>The sum of the areas is equal to $2\\cdot1+2\\cdot4+2\\cdot9+2\\cdot16+2\\cdot25+2\\cdot36$. This is equal to $2(1+4+9+16+25+36)$, which is equal to $2\\cdot91$. This is equal to our final answer of $\\boxed{\\textbf{(D)}~182}$.</p><p><br/></p>",
+        "<p>we can just multiply the common width 2 by each of the lengths 1 by 1, the sum would be 182. This is slow and grouping the lengths is easier to. The answer is still $\\boxed{\\textbf{(D)}~182}$.</p>",
+        "<p>The formula for a consecutive perfect squared sum is $S = \\frac{n(n+1)(2n+1)}{6}$, where $n$ is the number of terms from 1.</p><p>Multiplying by the constant length 2 for area gives $S = \\frac{n(n+1)(2n+1)}{3}$.</p><p>Plugging in $n = 6$ gives $\\boxed{\\textbf{(D)}~182}$.</p><p>~PeterDoesPhysics</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2014 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_7",
+      "question": "<p>There are four more girls than boys in Ms. Raub's class of $28$ students. What is the ratio of number of girls to the number of boys in her class?</p>",
+      "solutions": [
+        "<p>Let $g$ being the number of girls in the class. The number of boys in the class is equal to $g-4$. Since the total number of students is equal to $28$, we get $g+g-4=28$. Solving this equation, we get $g=16$. There are $16-4=12$ boys in our class, and our answer is $16:12=\\boxed{\\textbf{(B)}~4:3}$.</p>",
+        "<p>To make the amount of boys and girls equal, 28 - 4 = 24. 24/2 = 12. The girls would need to be 12 + the 4 that we subtracted = 16. The boys would be 12. The ratio of girls to boys would be 16\u00a0: 12, but simplified would be 4\u00a0: 3. Thus, the answer is 4\u00a0: 3.</p><p>~MiracleMaths</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2014 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_8",
+      "question": "<p>Eleven members of the Middle School Math Club each paid the same amount for a guest speaker to talk about problem solving at their math club meeting. They paid their guest speaker $\\textdollar\\underline{1} \\underline{A} \\underline{2}$. What is the missing digit $A$ of this $3$-digit number?</p>",
+      "solutions": [
+        "<p>Since all the eleven members paid the same amount, that means that the total must be divisible by $11$. We can do some trial-and-error to get $A=3$, so our answer is $\\boxed{\\textbf{(D)}~3}$~SparklyFlowers</p>",
+        "<p>We know that a number is divisible by $11$ if the odd digits added together minus the even digits added together (or vice versa) is a multiple of $11$. Thus, we have $1+2-A$ = a multiple of $11$. The only multiple that works here is $0$, as $11 \\cdot 0 = 0$. Thus, $A = \\boxed{\\textbf{(D)}~3}$~fn106068</p>",
+        "<p>If you know your multiplication tables up to $12*12$, you know that the out of the choices provided, the only number with $1A2$ that is divisible by $11$ is $132$ or $12*11$. So the answer is $\\boxed{\\textbf{(D)}~3}$. ~Jupiter10</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2014 AMC 8 - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_9",
+      "question": "<p>In $\\bigtriangleup ABC$, $D$ is a point on side $\\overline{AC}$ such that $BD=DC$ and $\\angle BCD$ measures $70^\\circ$. What is the degree measure of $\\angle ADB$?</p><p>[asy] size(300); defaultpen(linewidth(0.8)); pair A=(-1,0),C=(1,0),B=dir(40),D=origin; draw(A--B--C--A); draw(D--B); dot(\"$A$\", A, SW); dot(\"$B$\", B, NE); dot(\"$C$\", C, SE); dot(\"$D$\", D, S); label(\"$70^\\circ$\",C,2*dir(180-35));[/asy]</p>",
+      "solutions": [
+        "<p>Using angle chasing is a good way to solve this problem. $BD = DC$, so $\\angle DBC = \\angle DCB = 70$, because it is an isosceles triangle. Then $\\angle CDB = 180-(70+70) = 40$. Since $\\angle ADB$ and $\\angle BDC$ are supplementary, $\\angle ADB = 180 - 40 = \\boxed{\\textbf{(D)}~140}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2014 AMC 8 - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_10",
+      "question": "<p>The first AMC $8$ was given in $1985$ and it has been given annually since that time. Samantha turned $12$ years old the year that she took the seventh AMC $8$. In what year was Samantha born?</p>",
+      "solutions": [
+        "<p>The seventh AMC 8 would have been given in $1991$. If Samantha was 12 then, that means she was born 12 years ago, so she was born in $1991-12=1979$.</p><p>Our answer is $\\boxed{(\\text{A})1979}$corrections made by DrDominic</p>",
+        "<p>Since she was 12 when she took the seventh AMC 8, she should be $12-6=6$ years old when the first AMC 8 occurred. Therefore, she was born or was 'age 0' in $1985-6=\\boxed{\\left(\\text{A}\\right)1979}$~SweetMango77corrections made by DrDominic</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2014 AMC 8 - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_11",
+      "question": "<p>Jack wants to bike from his house to Jill's house, which is located three blocks east and two blocks north of Jack's house. After biking each block, Jack can continue either east or north, but he needs to avoid a dangerous intersection one block east and one block north of his house. In how many ways can he reach Jill's house by biking a total of five blocks?</p>",
+      "solutions": [
+        "<p>We can apply complementary counting and count the paths that DO go through the blocked intersection, which is $\\dbinom{2}{1}\\dbinom{3}{1}=6$. There are a total of $\\dbinom{5}{2}=10$ paths, so there are $10-6=4$ paths possible. $\\boxed{(\\text{A})4}$ is the correct answer.</p>",
+        "<p>We can make a diagram of the roads available to Jack.[asy] size(50); defaultpen(linewidth(0.8)); pair A=(0,2),B=origin,C=(2,0),D=(2,2),E=(2,1),F=(3,2),G=(3,1),H=(3,0); draw(A--B--H--F--A); draw(D--C); draw(E--G); [/asy]Then, we can simply list the possible routes.[asy] size(50); defaultpen(linewidth(0.8)); pair A=(0,2),B=origin,C=(2,0),D=(2,2),E=(2,1),F=(3,2),G=(3,1),H=(3,0); draw(B--H--F); draw(D--C,dotted); draw(E--G,dotted); draw(F--A--B,dotted); [/asy][asy] size(50); defaultpen(linewidth(0.8)); pair A=(0,2),B=origin,C=(2,0),D=(2,2),E=(2,1),F=(3,2),G=(3,1),H=(3,0); draw(B--C--E--G--F); draw(B--A--F,dotted); draw(D--E,dotted); draw(C--H--G,dotted); [/asy][asy] size(50); defaultpen(linewidth(0.8)); pair A=(0,2),B=origin,C=(2,0),D=(2,2),E=(2,1),F=(3,2),G=(3,1),H=(3,0); draw(B--C--D--F); draw(B--A--D,dotted); draw(E--G,dotted); draw(F--H--C,dotted); [/asy][asy] size(50); defaultpen(linewidth(0.8)); pair A=(0,2),B=origin,C=(2,0),D=(2,2),E=(2,1),F=(3,2),G=(3,1),H=(3,0); draw(B--A--F); draw(B--H--F,dotted); draw(D--C,dotted); draw(E--G,dotted); [/asy]There are 4 possible routes, so our answer is $\\boxed{A}$.</p><p><br/></p><p>Note: This is not recommended in more complicated problems (e.g. Jill's house is 1000 blocks east and 400 blocks north of Jack's house).</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2014 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_12",
+      "question": "<p>A magazine printed photos of three celebrities along with three photos of the celebrities as babies. The baby pictures did not identify the celebrities. Readers were asked to match each celebrity with the correct baby pictures. What is the probability that a reader guessing at random will match all three correctly? </p>",
+      "solutions": [
+        "<p>Let's call the celebrities A, B, and C. There is a $\\frac{1}{3}$ chance that celebrity A's picture will be selected, and a $\\frac{1}{3}$ chance that his baby picture will be selected. That means there are two celebrities left. There is now a $\\frac{1}{2}$ chance that celebrity B's picture will be selected, and another $\\frac{1}{2}$ chance that his baby picture will be selected. This leaves a $\\frac{1}{1}$ chance for the last celebrity, so the total probability is $\\frac{1}{3}\\cdot \\frac{1}{3}\\cdot \\frac{1}{2}\\cdot \\frac{1}{2}=\\frac{1}{36}$. However, the order of the celebrities doesn't matter, so the final probability will be $3!\\cdot \\frac{1}{36}=\\boxed{\\text{(B) }\\dfrac{1}{6}}.$</p>",
+        "<p>There is a $\\frac{1}{3}$ chance that the reader will choose the correct baby picture for the first person. Next, the second person gives a $\\frac{1}{2}$ chance, and the last person leaves only 1 choice. Thus, the probability is $\\dfrac{1}{3\\cdot 2}=\\boxed{\\text{(B) }\\dfrac{1}{6}}.$</p>",
+        "<p>There are $3!$ ways assign the pictures to each of the celebrities. There is one favorable outcome where all of them are matched correctly, so the answer is $\\boxed{\\textbf{(B)}~\\frac{1}{6}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2014 AMC 8 - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_13",
+      "question": "<p>If $n$ and $m$ are integers and $n^2+m^2$ is even, which of the following is impossible?</p>",
+      "solutions": [
+        "<p>Since $n^2+m^2$ is even, either both $n^2$ and $m^2$ are even, or they are both odd. Therefore, $n$ and $m$ are either both even or both odd, since the square of an even number is even and the square of an odd number is odd. As a result, $n+m$ must be even. The answer, then, is $n^2+m^2$ $\\boxed{(\\text{D})}$ is odd.</p><p><br/></p>",
+        "<p>We can assign values of n and m as 1,3. Then 1^2$+ 3^2$ is 10. We can also assign values of n and m to be even, like 2 and 4. After calculating, we can determine that $n^2$ + $m^2$ could be odd or even. Then, we can conclude that n+m is not odd. Hence our answer choice is $\\boxed{(\\text{D})}$-TheNerdWhoIsNerdy.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2014 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_14",
+      "question": "<p>Rectangle $ABCD$ and right triangle $DCE$ have the same area. They are joined to form a trapezoid, as shown. What is $DE$?</p><p>[asy] size(250); defaultpen(linewidth(0.8)); pair A=(0,5),B=origin,C=(6,0),D=(6,5),E=(18,0); draw(A--B--E--D--cycle^^C--D); draw(rightanglemark(D,C,E,30)); label(\"$A$\",A,NW); label(\"$B$\",B,SW); label(\"$C$\",C,S); label(\"$D$\",D,N); label(\"$E$\",E,S); label(\"$5$\",A/2,W); label(\"$6$\",(A+D)/2,N); [/asy]</p>",
+      "solutions": [
+        "<p>The area of $\\bigtriangleup CDE$ is $\\frac{DC\\cdot CE}{2}$. The area of $ABCD$ is $AB\\cdot AD=5\\cdot 6=30$, which also must be equal to the area of $\\bigtriangleup CDE$, which, since $DC=5$, must in turn equal $\\frac{5\\cdot CE}{2}$. Through transitivity, then, $\\frac{5\\cdot CE}{2}=30$, and $CE=12$. Then, using the Pythagorean Theorem, you should be able to figure out that $\\bigtriangleup CDE$ is a $5-12-13$ triangle, so $DE=\\boxed{13}$ , or $\\boxed{(B)}$.</p>",
+        "<p>The area of the rectangle is $5\\times6=30.$ Since the parallel line pairs are identical, $DC=5$. Let $CE$ be $x$. $\\dfrac{5x}{2}=30$ is the area of the right triangle. Solving for $x$, we get $x=12.$ According to the Pythagorean Theorem, we have a $5-12-13$ triangle. So, the hypotenuse $DE$ has to be $\\boxed{(B)}$.</p>",
+        "<p>This problem can be solved with the Pythagorean Theorem ($a^2 + b^2 = c^2$). We know $AB = DC$, so $DC = 5$. $CE$ is twice the length of $AD$, so $CE = 12$. $5^2 + 12^2 = c^2$. $5^2 = 25$. $12^2 = 144$. $25 + 144 = 169$. $169$ has a square root of $13$, so the hypotenuse or $DE$ is $13$. The answer is $\\boxed{(B)}$.</p><p>\u2014\u2014MiracleMaths</p><p>Note: Another way to find out that CE is 12 is by using logic. Since DC = 5, we can reason that the triangle is a 5 - 12 - 13 triangle, because the only Pythagorean Triple with 5 as a leg(not hypotenuse, as that would be the case for a 3 - 4 - 5 right triangle), is 5 - 12 - 13. We know DE is the hypotenuse, so it can\u2019t be 12, which means CE has to be 12, which, in turn, means that DE has to be: 13 $\\boxed{(B)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2014 AMC 8 - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_15",
+      "question": "<p>The circumference of the circle with center $O$ is divided into $12$ equal arcs, marked the letters $A$ through $L$ as seen below. What is the number of degrees in the sum of the angles $x$ and $y$?</p><p>[asy] size(230); defaultpen(linewidth(0.65)); pair O=origin; pair[] circum = new pair[12]; string[] let = {\"$A$\",\"$B$\",\"$C$\",\"$D$\",\"$E$\",\"$F$\",\"$G$\",\"$H$\",\"$I$\",\"$J$\",\"$K$\",\"$L$\"}; draw(unitcircle); for(int i=0;i<=11;i=i+1) { circum[i]=dir(120-30*i); dot(circum[i],linewidth(2.5)); label(let[i],circum[i],2*dir(circum[i])); } draw(O--circum[4]--circum[0]--circum[6]--circum[8]--cycle); label(\"$x$\",circum[0],2.75*(dir(circum[0]--circum[4])+dir(circum[0]--circum[6]))); label(\"$y$\",circum[6],1.75*(dir(circum[6]--circum[0])+dir(circum[6]--circum[8]))); label(\"$O$\",O,dir(60)); [/asy]</p>",
+      "solutions": [
+        "<p>The measure of an inscribed angle is half the measure of its corresponding central angle. Since each unit arc is $\\frac{1}{12}$ of the circle's circumference, each unit central angle measures $\\frac{360}{12}^{\\circ}=30^{\\circ}$. From this, $\\angle EOG = 60^{\\circ}$, so $x = 30^{\\circ}$. Also, $\\angle AOI = 120^{\\circ}$, so $y = 60^{\\circ}$. The number of degrees in the sum of both angles is $30 + 60 = \\boxed{(C)\\ 90}.$</p>",
+        "<p>Since $\\triangle AOE$ is isosceles and $\\angle AOE = \\frac{4}{12} \\cdot 360^{\\circ} = 120^{\\circ}$, $x = 30^{\\circ}$. Since $\\triangle GOI$ is isosceles and $\\angle GOI = \\frac{2}{12} \\cdot 360^{\\circ} = 60^{\\circ}$, $x = 60^{\\circ}$. The number of degrees in the sum of both angles is $30+60 = \\boxed{(C)\\ 90}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2014 AMC 8 - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_16",
+      "question": "<p>The \"Middle School Eight\" basketball conference has $8$ teams. Every season, each team plays every other conference team twice (home and away), and each team also plays $4$ games against non-conference opponents. What is the total number of games in a season involving the \"Middle School Eight\" teams?</p>",
+      "solutions": [
+        "<p>Within the conference, there are 8 teams, so there are $\\dbinom{8}{2}=28$ pairings of teams, and each pair must play two games, for a total of $28\\cdot 2=56$ games within the conference.</p><p>Each team also plays 4 games outside the conference, and there are 8 teams, so there are a total of $4\\cdot 8 =32$ games outside the conference.</p><p>Therefore, the total number of games is $56 + 32 = \\boxed{\\text{(B) }88}$.</p>",
+        "<p>We can also figure out the number of games the 8 teams play within the conference with the formula n(n - 1)/2, which is used for these kind of match questions, where Team A playing Team B is the same as Team B playing Team A. In this formula, n is the number of teams. So we will do (8 X 7 / 2) X 2, as each team plays the other team twice. The 2s cancel out, to yield 8 X 7, which is 56 games. Then, we can just proceed as above to find the number of games the 8 teams play against 4 teams outside the conference, which is 8 X 4 = 32. Summing these values up yields 88, which is answer choice B.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2014 AMC 8 - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_17",
+      "question": "<p>George walks $1$ mile to school. He leaves home at the same time each day, walks at a steady speed of $3$ miles per hour, and arrives just as school begins. Today he was distracted by the pleasant weather and walked the first $\\frac{1}{2}$ mile at a speed of only $2$ miles per hour. At how many miles per hour must George run the last $\\frac{1}{2}$ mile in order to arrive just as school begins today?</p>",
+      "solutions": [
+        "<p>Note that on a normal day, it takes him $1/3$ hour to get to school. However, today it took $\\frac{1/2 \\text{ mile}}{2 \\text{ mph}}=1/4$ hour to walk the first $1/2$ mile. That means that he has $1/3 -1/4 = 1/12$ hours left to get to school, and $1/2$ mile left to go. Therefore, his speed must be $\\frac{1/2 \\text{ mile}}{1/12 \\text { hour}}=\\boxed{6 \\text{ mph}}$, so $\\boxed{\\text{(B) }6}$ is the answer.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2014 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_18",
+      "question": "<p>Four children were born at City Hospital yesterday. Assume each child is equally likely to be a boy or a girl. Which of the following outcomes is most likely?</p>",
+      "solutions": [
+        "<p>We'll just start by breaking cases down. The probability of A occurring is $\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{16}$. The probability of B occurring is $\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{16}$.</p><p>The probability of C occurring is $\\dbinom{4}{2}\\cdot \\left(\\frac{1}{2}\\right)^4 = \\frac{3}{8}$, because we need to choose 2 of the 4 slots to be girls. </p><p>For D, there are two possible cases, 3 girls and 1 boy or 3 boys and 1 girl. The probability of the first case is $\\dbinom{4}{1}\\cdot\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{4}$ because we need to choose 1 of the 4 slots to be a boy. However, the second case has the same probability because we are choosing 1 of the 4 children to be a girl, so the total probability is $\\frac{1}{4} \\cdot 2 = \\frac{1}{2}$.</p><p><br/>So out of the four fractions, D is the largest. So our answer is $\\boxed{\\text{(D) 3 are of one gender and 1 is of the other gender}}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2014 AMC 8 - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_19",
+      "question": "<p>A cube with $3$-inch edges is to be constructed from $27$ smaller cubes with $1$-inch edges. Twenty-one of the cubes are colored red and $6$ are colored white. If the $3$-inch cube is constructed to have the smallest possible white surface area showing, what fraction of the surface area is white?</p>",
+      "solutions": [
+        "<p>For the least possible surface area that is white, we should have 1 cube in the center, and the other 5 with only 1 face exposed. This gives 5 square inches of white, surface area. Since the cube has a surface area of 54 square inches, our answer is $\\boxed{\\textbf{(A) }\\frac{5}{54}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2014 AMC 8 - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_20",
+      "question": "<p>Rectangle $ABCD$ has sides $CD=3$ and $DA=5$. A circle of radius $1$ is centered at $A$, a circle of radius $2$ is centered at $B$, and a circle of radius $3$ is centered at $C$. Which of the following is closest to the area of the region inside the rectangle but outside all three circles?</p><p>[asy] draw((0,0)--(5,0)--(5,3)--(0,3)--(0,0)); draw(Circle((0,0),1)); draw(Circle((0,3),2)); draw(Circle((5,3),3)); label(\"A\",(0.2,0),W); label(\"B\",(0.2,2.8),NW); label(\"C\",(4.8,2.8),NE); label(\"D\",(5,0),SE); label(\"5\",(2.5,0),N); label(\"3\",(5,1.5),E); [/asy]</p>",
+      "solutions": [
+        "<p>The area in the rectangle but outside the circles is the area of the rectangle minus the area of all three of the quarter circles in the rectangle.</p><p>The area of the rectangle is $3\\cdot5 =15$. The area of all 3 quarter circles is $\\frac{\\pi}{4}+\\frac{\\pi(2)^2}{4}+\\frac{\\pi(3)^2}{4} = \\frac{14\\pi}{4} = \\frac{7\\pi}{2}$. Therefore the area in the rectangle but outside the circles is $15-\\frac{7\\pi}{2}$. $\\pi$ is approximately $\\dfrac{22}{7},$ and substituting that in will give $15-11=\\boxed{\\text{(B) }4.0}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2014 AMC 8 - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_21",
+      "question": "<p>The $7$-digit numbers $\\underline{7} \\underline{4} \\underline{A} \\underline{5} \\underline{2} \\underline{B} \\underline{1}$ and $\\underline{3} \\underline{2} \\underline{6} \\underline{A} \\underline{B} \\underline{4} \\underline{C}$ are each multiples of $3$. Which of the following could be the value of $C$?</p>",
+      "solutions": [
+        "<p>Since both numbers are divisible by 3, the sum of their digits has to be divisible by three. $7 + 4 + 5 + 2 + 1 = 19$. To be a multiple of $3$, $A + B$ has to be either $2$ or $5$ or $8$... and so on. We add up the numerical digits in the second number; $3 + 2 + 6 + 4 = 15$. We then add two of the selected values, $5$ to $15$, to get $20$. We then see that C = $1, 4$ or $7, 10$... and so on, otherwise the number will not be divisible by three. We then add $8$ to $15$, to get $23$, which shows us that C = $1$ or $4$ or $7$... and so on. To be a multiple of three, we select a few of the common numbers we got from both these equations, which could be $1, 4,$ and $7$. However, in the answer choices, there is no $7$ or $4$ or anything greater than $7$, but there is a $1$, so $\\boxed{\\textbf{(A) }1}$ is our answer. Also, you could just look up the answer. It\u2019s much easier and totally isn\u2019t wrong in any way.\u00a0:)</p>",
+        "<p>If $n$ is divisible by $3$, the sum of it's digits should also be divisible by $3$. This means that $19+A+B (\\mod 3) \\equiv 0$ or $A+B+1 (\\mod 3) \\equiv 0$. For equation $2$, $15+A+B+C (\\mod 3) \\equiv 0$ or $A+B+C (\\mod 3) \\equiv 0$. Logically, you can see the correlation between our first and second equations so we can make the assumption, $C =\\boxed{\\textbf{(A) }1}$~RandomMathGuy500</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2014 AMC 8 - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_22",
+      "question": "<p>A $2$-digit number is such that the product of the digits plus the sum of the digits is equal to the number. What is the units digit of the number?</p>",
+      "solutions": [
+        "<p>We can think of the number as $10a+b$, where a is the tens digit and b is the unit digit. Since the number is equal to the product of the digits ($ab$) plus the sum of the digits ($a+b$), we can say that $10a+b=ab+a+b$. We can simplify this to $10a=ab+a$, which factors to $(10)a=(b+1)a$. Dividing by $a$, we have that $b+1=10$. Therefore, the units digit, $b$, is $\\boxed{\\textbf{(E) }9}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2014 AMC 8 - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_23",
+      "question": "<p>Three members of the Euclid Middle School girls' softball team had the following conversation.</p><p>Ashley: I just realized that our uniform numbers are all $2$-digit primes.</p><p>Bethany\u00a0: And the sum of your two uniform numbers is the date of my birthday earlier this month.</p><p>Caitlin: That's funny. The sum of your two uniform numbers is the date of my birthday later this month.</p><p>Ashley: And the sum of your two uniform numbers is today's date.</p><p>What number does Caitlin wear?</p>",
+      "solutions": [
+        "<p>The maximum amount of days any given month can have is $31$, and the smallest two-digit primes are $11, 13,$ and $17$. There are a few different sums that can be deduced from the following numbers, which are $24, 30,$ and $28$, all of which represent the three days. Therefore, since Bethany says that the other two people's uniform numbers are earlier, so that means Caitlin and Ashley's numbers must add up to $24$. Similarly, Caitlin says that the other two people's uniform numbers are later, so the sum must add up to $30$. This leaves $28$ as today's date. From this, Caitlin was referring to the uniform wearers $13$ and $17$, telling us that her number is $11$, giving our solution as $\\boxed{(A) 11}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2014 AMC 8 - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_24",
+      "question": "<p>One day the Beverage Barn sold $252$ cans of soda to $100$ customers, and every customer bought at least one can of soda. What is the maximum possible median number of cans of soda bought per customer on that day?</p>",
+      "solutions": [
+        "<p>In order to maximize the median, we need to make the first half of the numbers as small as possible. Since there are $100$ people, the median will be the average of the $50\\text{th}$ and $51\\text{st}$ largest amount of cans per person. To minimize the first $49$, they would each have one can. Subtracting these $49$ cans from the $252$ cans gives us $203$ cans left to divide among $51$ people. Taking $\\frac{203}{51}$ gives us $3$ and a remainder of $50$. Seeing this, the largest number of cans the $50$th person could have is $3$, which leaves $4$ to the rest of the people. The average of $3$ and $4$ is $3.5$. Thus our answer is $\\boxed{\\text{(C) }3.5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2014 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2014_8_25",
+      "question": "<p>A straight one-mile stretch of highway, 40 feet wide, is closed. Robert rides his bike on a path composed of semicircles as shown. If he rides at 5 miles per hour, how many hours will it take to cover the one-mile stretch?[asy]size(10cm); pathpen=black; pointpen=black; D(arc((-2,0),1,300,360)); D(arc((0,0),1,0,180)); D(arc((2,0),1,180,360)); D(arc((4,0),1,0,180)); D(arc((6,0),1,180,240)); D((-1.5,-1)--(5.5,-1));[/asy]Note: 1 mile = 5280 feet</p>",
+      "solutions": [
+        "<p>There are two possible interpretations of the problem: that the road as a whole is $40$ feet wide, or that each lane is $40$ feet wide. Both interpretations will arrive at the same result. However, let us stick with the first interpretation for simplicity. Each lane must then be $20$ feet wide, so Robert must be riding his bike in semicircles with radius $20$ feet and diameter $40$ feet. Since the road is $5280$ feet long, over the whole mile, Robert rides $\\frac{5280}{40} =132$ semicircles in total. Were the semicircles full circles, their circumference would be $2\\pi\\cdot 20=40\\pi$ feet; as it is, the circumference of each is half that, or $20\\pi$ feet. Therefore, over the stretch of highway, Robert rides a total of $132\\cdot 20\\pi =2640\\pi$ feet, equivalent to $\\frac{\\pi}{2}$ miles. Robert rides at 5 miles per hour, so divide the $\\frac{\\pi}{2}$ miles by $5$ mph (because $t = \\frac{d}{r}$ and time = distance/rate) to arrive at $\\boxed{\\textbf{(B) }\\frac{\\pi}{10}}$ hours.</p>",
+        "<p>There are two possible interpretations of the problem: that the road as a whole is $40$ feet wide, or that each lane is $40$ feet wide. Both interpretations will arrive at the same result. However, let us stick with the first interpretation for simplicity. Each lane must then be $20$ feet wide, so Robert must be riding his bike in semicircles with radius $20$ feet and diameter $40$ feet. Since the road is $5280$ feet long, over the whole mile, Robert rides $\\frac{5280}{40} =132$ semicircles in total. Were the semicircles full circles, their circumference would be $2\\pi\\cdot 20=40\\pi$ feet; as it is, the circumference of each is half that, or $20\\pi$ feet. Therefore, over the stretch of highway, Robert rides a total of $132\\cdot 20\\pi =2640\\pi$ feet, equivalent to $\\frac{\\pi}{2}$ miles. Robert rides at 5 miles per hour, so divide the $\\frac{\\pi}{2}$ miles by $5$ mph (because $t = \\frac{d}{r}$ and time = distance/rate) to arrive at $\\boxed{\\textbf{(B) }\\frac{\\pi}{10}}$ hours.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2014 AMC 8 - geometry problem involving area"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "competition_info": {
+    "name": "2018_AMC_8",
+    "group": "AMC_8",
+    "year": 2018,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2018_8_1",
+      "question": "<p>An amusement park has a collection of scale models, with a ratio of $1: 20$, of buildings and other sights from around the country. The height of the United States Capitol is $289$ feet. What is the height in feet of its duplicate to the nearest whole number?</p>",
+      "solutions": [
+        "<p>You can see that since the ratio of real building's heights to the model building's height is $1:20$. We also know that the U.S Capitol is $289$ feet in real life, so to find the height of the model, we divide by 20. That gives us $14.45$ which rounds to 14. Therefore, to the nearest whole number, the duplicate is $\\boxed{\\textbf{(A) }14}$. </p><p>~avamarora, Nivaar..</p>",
+        "<p>We can compute $\\frac{289}{20}$ and round our answer to get $\\boxed{\\textbf{(A) }14}$.It is basically Solution 1 without the ratio calculation. However, Solution 1 is referring further to the problem.</p>",
+        "<p>We know that $20 \\cdot 14 = 280 ,$ and that $20 \\cdot 15 = 300 .$ These are the multiples of $20$ around $289 ,$ and the closest one of those is $280.$ Therefore, the answer is $\\dfrac {280} {20} = \\boxed{\\textbf{(A) }14} .$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2018 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_2",
+      "question": "<p>What is the value of the product</p><p>\\[\\left(1+\\frac{1}{1}\\right)\\cdot\\left(1+\\frac{1}{2}\\right)\\cdot\\left(1+\\frac{1}{3}\\right)\\cdot\\left(1+\\frac{1}{4}\\right)\\cdot\\left(1+\\frac{1}{5}\\right)\\cdot\\left(1+\\frac{1}{6}\\right)?\\]</p>",
+      "solutions": [
+        "<p>By adding up the numbers in each of the $6$ parentheses, we get: </p><p>$\\frac{2}{1} \\cdot \\frac{3}{2} \\cdot \\frac{4}{3} \\cdot \\frac{5}{4} \\cdot \\frac{6}{5} \\cdot \\frac{7}{6}$.</p><p>Using telescoping, most of the terms cancel out diagonally. We are left with $\\frac{7}{1}$ which is equivalent to $7$. Thus, the answer would be $\\boxed{\\textbf{(D) }7}$.</p><p>Also, you can also make the fractions $\\frac{7!}{6!}$, which also yields $\\boxed{\\textbf{(D)}7}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2018 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_3",
+      "question": "<p>Students Arn, Bob, Cyd, Dan, Eve, and Fon are arranged in that order in a circle. They start counting: Arn first, then Bob, and so forth. When the number contains a 7 as a digit (such as 47) or is a multiple of 7 that person leaves the circle and the counting continues. Who is the last one present in the circle?</p>",
+      "solutions": [
+        "<p>The five numbers which cause people to leave the circle are $7, 14, 17, 21,$ and $27.$</p><p>The most straightforward way to do this would be to draw out the circle with the people, and cross off people as you count.</p><p>Assuming the six people start with $1$, Arn counts $7$ so he leaves first. Then, Cyd counts $14$ as there are $7$ numbers to be counted from this point. Then, Fon, Bob, and Eve, count, $17,$ $21,$ and $27$, respectively, so the last one standing is Dan. Hence, the answer would be $\\boxed{\\textbf{(D) }\\text{Dan}}$.</p><p>~Nivaar</p>",
+        "<p>Assign each person a position: Arn is in position $1$, Bob in $2$, etc. Note that if there are $n$ people standing in a circle, a person will say a number that is congruent to their position modulo $n$. It follows that if there are $k$ numbers to be said (with someone leaving on the $kth$), the person that leaves will stand in position $k\\pmod{n}.$</p><p>The five numbers which cause people to leave the circle are $7, 14, 17, 21,$ and $27.$ Since there are initially $6$ people in the circle, so the person who leaves stands in position $7\\equiv 1\\pmod 6$, or position $1$. </p><p>Arn now leaves, and because Bob is the next person to say a number, we reassign the positions such that Bob is in position $1$, Cyd in $2$, and Fon in $5$. There are $7$ more numbers to be said, and someone leaves on the $7th$. It follows that the person who leaves stands in position $7\\equiv 2\\pmod 5$.</p><p>Cyd leaves the circle, and $4$ people remain, namely Bob, Dan, Eve, and Fon. Assign the position numbers such that Dan has $1$, Eve $2$, etc. There are $3$ more numbers to be said, and someone leaves on the $3rd$. The person standing in position $3$ (Fon) now leaves. </p><p>There are two people left, Eve and Dan, with Dan in position $1$ now. There are $6$ more numbers to be said, and Eve is standing in position $6\\equiv 0\\pmod 2$, so she leaves. </p><p>The last person standing is $\\boxed{\\textbf{(D) }\\text{Dan}}$.</p><p>-Benedict T (countmath1)Why? Why would you do this?</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2018 AMC 8 - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_4",
+      "question": "<p>The twelve-sided figure shown has been drawn on $1 \\text{ cm}\\times 1 \\text{ cm}$ graph paper. What is the area of the figure in $\\text{cm}^2$?</p><p>[asy] unitsize(8mm); for (int i=0; i<7; ++i) {   draw((i,0)--(i,7),gray);   draw((0,i+1)--(7,i+1),gray); } draw((1,3)--(2,4)--(2,5)--(3,6)--(4,5)--(5,5)--(6,4)--(5,3)--(5,2)--(4,1)--(3,2)--(2,2)--cycle,black+2bp); [/asy]</p>",
+      "solutions": [
+        "<p>We count $3 \\cdot 3=9$ unit squares in the middle, and $8$ small triangles, which gives 4 rectangles each with an area of $1$. Thus, the answer is $9+4=\\boxed{\\textbf{(C) } 13}$.</p>",
+        "<p>We can see here that there are $9$ total squares in the middle. We also see that the triangles that make the corners of the shape have an area half the squares' area. Then, we can easily find that each corner has an area of one square and there are $4$ corners so we add that to the original 9 squares to get $9+4=\\boxed{\\textbf{(C) } 13}$. That is how I did it. </p>",
+        "<p>We can apply Pick's Theorem here. There are $8$ lattice points, and $12$ lattice points on the boundary. Then,</p><p>\\[8 + 12 \\div 2 - 1 = \\boxed {\\textbf{(C) }13}.\\]</p>",
+        "<p>Use the <a href=\"/wiki/index.php/Shoelace_Theorem\" title=\"Shoelace Theorem\">Shoelace Theorem</a> and get $\\boxed{\\textbf{(C) } 13}$.</p><p>~SaxStreak</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2018 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_5",
+      "question": "<p>What is the value of $1+3+5+\\cdots+2017+2019-2-4-6-\\cdots-2016-2018$?</p>",
+      "solutions": [
+        "<p>Rearranging the terms, we get $(1-2)+(3-4)+(5-6)+...(2017-2018)+2019$, and our answer is $-1009+2019=\\boxed{\\textbf{(E) }1010}$.</p><p>If you were stuck on this problem, refer to AOPS arithmetic lessons.</p><p>~Nivaar</p>",
+        "<p>We can see that the last numbers of each of the sets (even numbers and odd numbers) have a difference of two. So, do the second last ones and so on. Now, all we need to find is the number of integers in any of the sets (I chose even) to get $\\boxed{\\textbf{(E) }1010}$. </p><p>~avamarora</p>",
+        "<p>It is similar to the Solution 1: Rearranging the terms, we get $1+(3-2)+(5-4)+(6-5)...(2017-2016)+(2019-2018)$, and our answer is $1+1009=\\boxed{\\textbf{(E) }1010}$.</p><p>~LarryFlora</p>",
+        "<p>Note that the sum of consecutive odd numbers can be expressed as a square, namely $1+3+5+7+...+2017+2019 = 1010^2$. We can modify the negative numbers in the same way by adding 1 to each negative term, factoring a negative sign, and accounting for the extra 1's by subtracting 1009. We then have $1010^2-1009^2-1009$. Using difference of squares, we obtain $(1010+1009)(1010-1009)-1009 = 2019-1009 = \\boxed{1010}$.</p><p>~SigmaPiE</p>",
+        "<p>The sum of odd numbers can be represented as the number of consecutive odds starting from one, squared. Since 2019 is (2019+1)/2, there are 1010 odd numbers. Therefore, the sum of the odd numbers is\\[1010^2 \\quad \\text{or} \\quad 1010 \\times 1010.\\]</p><p>The sum of even numbers up to 2018 is calculated by noting that there are 2018/2 = 1009 even numbers. Using the formula for the sum of the first n even numbers, n(n+1), we get\\[1009 \\times (1009+1) \\quad \\text{or} \\quad 1009 \\times 1010.\\]</p><p>The difference between these two sums is\\[1010 \\times 1010 - 1009 \\times 1010 = 1010.\\]</p><p>Thus, the correct answer is $-1009+2019=\\boxed{\\textbf{(E) }1010}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2018 AMC 8 - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_6",
+      "question": "<p>On a trip to the beach, Anh traveled 50 miles on the highway and 10 miles on a coastal access road. He drove three times as fast on the highway as on the coastal road. If Anh spent 30 minutes driving on the coastal road, how many minutes did his entire trip take?</p>",
+      "solutions": [
+        "<p>Since Anh spends half an hour to drive 10 miles on the coastal road, his speed is [mathjax]r=\\dfrac dt=\\dfrac{10}{0.5}=20[/mathjax] mph. His speed on the highway then is [mathjax]60[/mathjax] mph. He drives [mathjax]50[/mathjax] miles, so he drives for [mathjax]\\dfrac{5}{6}[/mathjax] hours, which is equal to [mathjax]50[/mathjax] minutes (Note that [mathjax]60[/mathjax] miles per hour is the same as [mathjax]1[/mathjax] mile per minute). The total amount of minutes spent on his trip is [mathjax]30+50\\implies \\boxed{\\textbf{(C) }80}[/mathjax].</p>",
+        "<p>Since Anh drives [mathjax]3[/mathjax] times as fast on the highway, it takes him [mathjax]\\dfrac{1}{3}[/mathjax] of the time to drive [mathjax]10[/mathjax] miles on the highway than on the coastal road. [mathjax]\\dfrac{1}{3}[/mathjax] of [mathjax]30[/mathjax] is [mathjax]10[/mathjax], and since he drives [mathjax]50[/mathjax] miles on the highway, we multiply [mathjax]10[/mathjax] by [mathjax]5[/mathjax] to get [mathjax]50[/mathjax]. This means it took him [mathjax]50[/mathjax] minutes to drive on the highway, and if we add the [mathjax]30[/mathjax] minutes it took for him to drive on the coastal road, we would get [mathjax]\\boxed{\\textbf{(C) }80}[/mathjax].</p><p>-UnstoppableGoddess(helped by qkddud)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2018 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_7",
+      "question": "<p>The $5$-digit number $\\underline{2}$ $\\underline{0}$ $\\underline{1}$ $\\underline{8}$ $\\underline{U}$ is divisible by $9$. What is the remainder when this number is divided by $8$?</p>",
+      "solutions": [
+        "<p>We use the property that the digits of a number must sum to a multiple of $9$ if it are divisible by $9$. This means $2+0+1+8+U$ must be divisible by $9$. The only possible value for $U$ then must be $7$. Since we are looking for the remainder when divided by $8$, we can ignore the thousands. The remainder when $187$ is divided by $8$ is $\\boxed{\\textbf{(B) }3}$.</p><p>If you got stuck on this problem, refer to AOPS Number Theory. You're smart.</p><p>-InterstellerApex, Nivaar</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2018 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_8",
+      "question": "<p>Mr. Garcia asked the members of his health class how many days last week they exercised for at least 30 minutes. The results are summarized in the following bar graph, where the heights of the bars represent the number of students.</p><p>[asy] size(8cm); void drawbar(real x, real h) {   fill((x-0.15,0.5)--(x+0.15,0.5)--(x+0.15,h)--(x-0.15,h)--cycle,gray); } draw((0.5,0.5)--(7.5,0.5)--(7.5,5)--(0.5,5)--cycle); for (real i=1; i<5; i=i+0.5) {   draw((0.5,i)--(7.5,i),gray); } drawbar(1.0,1.0); drawbar(2.0,2.0); drawbar(3.0,1.5); drawbar(4.0,3.5); drawbar(5.0,4.5); drawbar(6.0,2.0); drawbar(7.0,1.5); for (int i=1; i<8; ++i) {   label(\"$\"+string(i)+\"$\",(i,0.25)); } for (int i=1; i<9; ++i) {   label(\"$\"+string(i)+\"$\",(0.5,0.5*(i+1)),W); } label(\"Number of Days of Exercise\",(4,-0.1)); label(rotate(90)*\"Number of Students\",(-0.1,2.75)); [/asy]What was the mean number of days of exercise last week, rounded to the nearest hundredth, reported by the students in Mr. Garcia's class?</p>",
+      "solutions": [
+        "<p>The mean, or average number of days is the total number of days divided by the total number of students. The total number of days is $1\\cdot 1+2\\cdot 3+3\\cdot 2+4\\cdot 6+5\\cdot 8+6\\cdot 3+7\\cdot 2=109$. The total number of students is $1+3+2+6+8+3+2=25$. Hence, $\\frac{109}{25}=\\boxed{\\textbf{(C) } 4.36}$.</p><p>This problem is a good example of times when the problem statement may give information that may seem important to solving the problem, but turns out it's just there to mess around with you.</p><p>~Nivaar</p><p>In my opinion, I think that it's not a good example of that.</p><p>~SuperVince1</p><p>I don't think it is a good example either.</p><p>~Mr_Frog</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2018 AMC 8 - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_9",
+      "question": "<p>Monica is tiling the floor of her 12-foot by 16-foot living room. She plans to place one-foot by one-foot square tiles to form a border along the edges of the room and to fill in the rest of the floor with two-foot by two-foot square tiles. How many tiles will she use?</p>",
+      "solutions": [
+        "<p>She will place $(12\\cdot2)+(14\\cdot2)=52$ tiles around the border. For the inner part of the room, we have $10\\cdot14=140$ square feet. Each tile takes up $4$ square feet, so he will use $\\frac{140}{4}=35$ tiles for the inner part of the room. Thus, the answer is $52+35= \\boxed{\\textbf{(B) }87}$.</p>",
+        "<p>The area around the border: $(12 \\cdot 2) + (14 \\cdot 2) = 52$. The area of tiles around the border: $1 \\cdot 1 = 1$. Therefore, $\\frac{52}{1} = 52$ is the number of tiles around the border.</p><p>The inner part will have $(12 - 2)(16 - 2) = 140$. The area of those tiles are $2 \\cdot 2 = 4$. $\\frac{140}{4} = 35$ is the amount of tiles for the inner part. So, $52 + 35 = \\boxed{87}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2018 AMC 8 - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_10",
+      "question": "<p>The harmonic mean of a set of non-zero numbers is the reciprocal of the average of the reciprocals of the numbers. What is the harmonic mean of 1, 2, and 4?</p>",
+      "solutions": [
+        "<p>The sum of the reciprocals is $\\frac{1}{1} + \\frac{1}{2} + \\frac{1}{4}= \\frac{7}{4}$. Their average is $\\frac{7}{12}$. Taking the reciprocal of this gives $\\boxed{\\textbf{(C) }\\frac{12}{7}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2018 AMC 8 - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_11",
+      "question": "<p>Abby, Bridget, and four of their classmates will be seated in two rows of three for a group picture, as shown. \\begin{eqnarray*} \\text{X}&\\quad\\text{X}\\quad&\\text{X} \\\\ \\text{X}&\\quad\\text{X}\\quad&\\text{X}  \\end{eqnarray*}If the seating positions are assigned randomly, what is the probability that Abby and Bridget are adjacent to each other in the same row or the same column?</p>",
+      "solutions": [
+        "<p>There are a total of $6\u00a0!$ ways to arrange the kids.</p><p>Abby and Bridget can sit in 3 ways if they are adjacent in the same column:\\begin{eqnarray*} \\text{A}&\\quad\\text{X}\\quad&\\text{X} \\\\ \\text{B}&\\quad\\text{X}\\quad&\\text{X}  \\end{eqnarray*}</p><p><br/>\\begin{eqnarray*} \\text{X}&\\quad\\text{A}\\quad&\\text{X} \\\\ \\text{X}&\\quad\\text{B}\\quad&\\text{X}  \\end{eqnarray*}</p><p><br/>\\begin{eqnarray*} \\text{X}&\\quad\\text{X}\\quad&\\text{A} \\\\ \\text{X}&\\quad\\text{X}\\quad&\\text{B}  \\end{eqnarray*}</p><p><br/>For each of these seat positions, Abby and Bridget can switch seats, and the other 4 people can be arranged in $4!$ ways which results in a total of $3 \\times 2 \\times 4!$ ways to arrange them. </p><p><br/>By the same logic, there are 4 ways for Abby and Bridget to be placed if they are adjacent in the same row: they can swap seats, and the other $4$ people can be arranged in $4!$ ways for a total of $4 \\times 2 \\times 4!$ ways to arrange them.</p><p><br/>We sum the 2 possibilities up to get $\\frac{(3\\cdot2)\\cdot4!+(4\\cdot2)\\cdot4!}{6!} = \\frac{14\\cdot4!}{6!}=\\boxed{\\frac{7}{15}}$ or $\\textbf{(C)}$.</p><p>If you got stuck on this problem, refer to AOPS Probability and Combinations.</p><p>~Nivaar</p>",
+        "<p>We can ignore other students, and treat Abby and Bridget as indistinguishable (since we only care about adjacency, not their order). Thus, the total number of ways is $n(S) = _{6}C_{2} = 15$ .In one row, they can be adjacent 2 ways: $2 \\cdot 2 rows = 4$. In one column, they can only be adjacent 1 way: $1 \\cdot 3 cols = 3$. Add these cases $4+3=7$, and therefore, P(Abby and Bridget sitting adjacent) is $\\boxed{\\textbf{(C) }\\frac{7}{15}}$.</p>",
+        "<p>We can split the seating into two separate cases: if Abby is sitting on the corners, and if Abby isn't. If Abby is sitting in the corners, there is a $\\frac{2}{5}$ chance Bridget is sitting next to Abby, so there is a $\\frac{2}{5} \\cdot \\frac{4}{6} = \\frac{4}{15}$ chance for the first case. Meanwhile, if Abby is sitting in the middle row, there is a $\\frac{3}{5}$ chance Bridget is sitting next to Abby, so there is a $\\frac{3}{5} \\cdot \\frac{2}{6} = \\frac{1}{5}$ chance for the second case. Therefore, P(Abby and Bridget are sitting adjacent to each other) is $\\frac{4}{15} + \\frac{1}{5} = \\boxed{\\frac{7}{15}}$ , or $\\boxed{\\textbf{C}}$. ~strongstephen</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2018 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_12",
+      "question": "<p>The clock in Sri's car, which is not accurate, gains time at a constant rate. One day as he begins shopping, he notes that his car clock and his watch (which is accurate) both say 12:00 noon. When he is done shopping, his watch says 12:30 and his car clock says 12:35. Later that day, Sri loses his watch. He looks at his car clock and it says 7:00. What is the actual time?</p>",
+      "solutions": [
+        "<p>We see that every $35$ minutes the clock passes, the watch passes $30$ minutes. That means that the clock is $\\frac{7}{6}$ as fast the watch, so we can set up proportions. $\\dfrac{\\text{car clock}}{\\text{watch}}=\\dfrac{7}{6}=\\dfrac{7 \\text{ hours}}{x \\text{ hours}}$. Cross-multiplying we get $x=6$. Now, this is obviously redundant, because we could just eyeball it to see that the watch would have passed $6$ hours. But this method is better when the numbers are a bit more complex, which makes it both easier and reliable. Either way, our answer is $\\boxed{\\textbf{(B) }6:00}$.</p><p>--BakedPotato66--Rishi09</p>",
+        "<p>The ratio of the car clock to the watch clock is a ratio of 35:30 or 7:6 due to the clock being ahead by 5 minutes after 30 minutes has passed. This means that when the car clock passes $7$ hours, the watch has passed $6$ hours, meaning that the time would be $\\boxed{\\textbf{(B) }6:00}$. </p><p>~edited by SHREYU.MEDATATI</p>",
+        "<p>From 12:00 pm (noon) to 7:00 pm, the car clock has passed 12 35-minute cycles (12 X 35 = 420) because 7 hours = 420 minutes. So, 12 30-minute cycles (12 X 30 = 360) for the watch time are 360 minutes, which is 6 hours. Therefore, 6 hours added to 12:00 pm (noon) makes the answer $\\boxed{\\textbf{(B) }6:00}$.</p><p>~SaxStreak</p>",
+        "<p>7 hours have passed since 12:00 pm and 7 hours = 420 minutes because there are 60 minutes in an hour. Because every 35 minutes, the clock is ahead by 5 minutes, you need to divide 420 by 35 to find out how many times it happens. 420 divided by 35 is 12. Then you would multiply 12 by 5 because the clock is ahead by 5 minutes. 12 times 5 is 60, so that means that the clock is ahead by 60 minutes. In order to find the watch's time, you must find what was 60 minutes earlier than 7:00 which is $\\boxed{\\textbf{(B) }6:00}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2018 AMC 8 - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_13",
+      "question": "<p>Laila took five math tests, each worth a maximum of 100 points. Laila's score on each test was an integer between 0 and 100, inclusive. Laila received the same score on the first four tests, and she received a higher score on the last test. Her average score on the five tests was 82. How many values are possible for Laila's score on the last test?</p>",
+      "solutions": [
+        "<p>Say Laila gets a value of $x$ on her first 4 tests, and a value of $y$ on her last test. Thus, $4x+y=82 \\cdot 5=410$. </p><p>Because $x$ and $y$ are different, $x$ must be less than $82$ and $y$ must be greater than $82$. When $x$ decreases by $1$, $y$ must increase by $4$ to keep the total constant. </p><p>The greatest value for $y$ is $98$ (as $y=100$ would make $x$ non-integer). In the range $83\\le y\\le 98$, only $4$ values for $y$ result in integer values for $x$: 86, 90, 94 and 98. Thus, the answer is $\\boxed{\\textbf{(A) }4}$.</p>",
+        "<p>The average score is $82$ which leads us to suppose that Laila got all $82$ points for the tests. We know that Laila got the same points in the first four tests and they are all lower than the last test. Let the first four tests be $81$ points, then the last test must be $86$ points to keep the average fixed. Continue to decrement the first four tests to identify other possible combinations. The possible points for the fifth test are $86$, $90$, $94$, $98$. The answer is $\\boxed{\\textbf{(A) }4}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2018 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_14",
+      "question": "<p>Let $N$ be the greatest five-digit number whose digits have a product of $120$. What is the sum of the digits of $N$?</p>",
+      "solutions": [
+        "<p>If we start off with the first digit, we know that it can't be $9$ since $9$ is not a factor of $120$. We go down to the digit $8$, which does work since it is a factor of $120$. Now, we have to know what digits will take up the remaining four spots. To find this result, just divide $\\frac{120}{8}=15$. The next place can be $5$, as it is the largest factor, aside from $15$. Consequently, our next three values will be $3,1$ and $1$ if we use the same logic. Therefore, our five-digit number is $85311$, so the sum is $8+5+3+1+1=18\\implies \\boxed{\\textbf{(D) }18}$.</p>",
+        "<p>$120$ is $5!$, so we have $(5)(4)(3)(2)(1) = 120$. (Alternatively, you could identify the prime factors $(5)(3)(2)(2)(2) = 120$.) Now look for the largest digit you can create by combining these factors. </p><p>$8=4 \\cdot 2$</p><p>Use this largest digit for the ten-thousands place: $8$_ , _ _ _</p><p>Next you use the $5$ and the $3$ for the next places: $85,3$ _ _ (You can't use $3 \\cdot 2=6$ because the $2$ was used to make $8$.) </p><p>Fill the remaining places with 1: $85,311$</p><p>$= (5)(8)(3)(1)(1) =120$</p><p>$8+5+3+1+1=\\boxed{\\textbf{(D) }18}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2018 AMC 8 - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_15",
+      "question": "<p>In the diagram below, a diameter of each of the two smaller circles is a radius of the larger circle. If the two smaller circles have a combined area of $1$ square unit, then what is the area of the shaded region, in square units?</p><p>[asy] size(4cm); filldraw(scale(2)*unitcircle,gray,black); filldraw(shift(-1,0)*unitcircle,white,black); filldraw(shift(1,0)*unitcircle,white,black); [/asy]</p><p><br/></p>",
+      "solutions": [
+        "<p>Let the radius of the large circle be $R$. Then, the radius of the smaller circles are $\\frac R2$. The areas of the circles are directly proportional to the square of the radii, so the ratio of the area of the small circle to the large one is $\\frac 14$ ($\\frac {R^2}{4}$ is $\\frac 14$ of $R^2$.) This means the combined area of the 2 smaller circles is half of the larger circle, and therefore the shaded region is equal to the combined area of the 2 smaller circles, which is $\\boxed{\\textbf{(D) } 1}$.</p>",
+        "<p>Let the radius of the two smaller circles be $r$. It follows that the area of one of the smaller circles is ${\\pi}r^2$. Thus, the area of the two inner circles combined would evaluate to $2{\\pi}r^2$ which is $1$. Since the radius of the bigger circle is two times that of the smaller circles (the diameter), the radius of the larger circle in terms of $r$ would be $2r$. The area of the larger circle would come to $(2r)^2{\\pi} = 4{\\pi}r^2$. </p><p>Subtracting the area of the smaller circles from that of the larger circle (since that would be the shaded region), we have \\[4{\\pi}r^2 - 2{\\pi}r^2 = 2{\\pi}r^2 = 1.\\]</p><p>Therefore, the area of the shaded region is $\\boxed{\\textbf{(D) } 1}$.</p>",
+        "<p>The area of a small circle is $\\frac{1}{2}= \\pi r^2$. Solving, we get $r = \\sqrt{\\frac{1}{2\\pi}}$.</p><p>The radius of the large circle is $R=2r$. The area of the large circle is ${\\pi}R^2={\\pi}(2r)^2=4{\\pi}r^2=4{\\pi}\\frac{1}{2\\pi}=2$.</p><p>Subtract the area of the small circles from the area of the large circle to get the area of the shaded region: $2-1=$ $\\boxed{\\textbf{(D) } 1}$.</p>",
+        "<p>To get the area of the small circles, we can get the equation $\\frac{1}{2}= \\pi r^2$. Solving for $r$, we get $r = \\sqrt{\\frac{1}{2\\pi}}$. Then, we can get the radius of the big circle by doubling the small circle's radius, and that gives$2\\sqrt{\\frac{1}{2\\pi}}$. Because the area of a circle is $\\pi r^2$, you'll have to square the answer and multiple it by $\\pi$. After you square it, you'll get $4 \\cdot \\frac{1}{2\\pi}$, which equals to $\\frac{4}{2\\pi}$. Since the area of a circle is $\\pi r^2$, we get $\\pi \\cdot \\frac{4}{2\\pi}$, and that equals $\\frac{4\\pi}{2\\pi}$, which equals 2. Since each of the circles' area is $\\frac{1}{2}$, the combined area of the small circles is $1$. Since $2-1=1$, the area of the shaded region is $\\boxed{\\textbf{(D) } 1}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2018 AMC 8 - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_16",
+      "question": "<p>Professor Chang has nine different language books lined up on a bookshelf: two Arabic, three German, and four Spanish. How many ways are there to arrange the nine books on the shelf keeping the Arabic books together and keeping the Spanish books together?</p>",
+      "solutions": [
+        "<p>To solve this, treat the two Arabic books as one unit and the four Spanish books as another unit. Along with the three German books, you now have five units to arrange.</p><p>You can arrange these five units in $5!$ ways. Within the Arabic block, the two books can be arranged in $2!$ ways, and within the Spanish block, the four books can be arranged in $4!$ ways.</p><p>Multiplying all these possibilities gives the total number of arrangements which is $\\boxed{\\textbf{(C) }5760}.$ ways to arrange the nine books while keeping the Arabic and Spanish books together.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2018 AMC 8 - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_17",
+      "question": "<p>Bella begins to walk from her house toward her friend Ella's house. At the same time, Ella begins to ride her bicycle toward Bella's house. They each maintain a constant speed, and Ella rides $5$ times as fast as Bella walks. The distance between their houses is $2$ miles, which is $10,560$ feet, and Bella covers $2 \\tfrac{1}{2}$ feet with each step. How many steps will Bella take by the time she meets Ella?</p>",
+      "solutions": [
+        "<p>Every 10 feet Bella goes, Ella goes 50 feet, which means a total of 60 feet. They need to travel that 60 feet $10560\\div60=176$ times to travel the entire 2 miles. Since Bella goes 10 feet 176 times, this means that she travels a total of 1760 feet. And since she walks 2.5 feet each step, $1760\\div2.5=\\boxed{\\textbf{(A) }704}$</p>",
+        "<p>We know that Bella goes 2.5 feet per step and since Ella rides 5 times faster than Bella she must go 12.5 feet on her bike for every step of Bella's. For Bella, it takes 4,224 steps, and for Ella, it takes 1/5th those steps since Ella goes 5 times faster than Bella, taking her 844.8 steps. The number of steps where they meet therefore must be less than 844.8. The only answer choice less than it is $\\boxed{\\textbf{(A) }704}$.</p>",
+        "<p>We can turn $2 \\tfrac{1}{2}$ into an improper fraction. It will then become $\\frac{5}{2}$. Since Ella bikes 5 times faster, we multiply $\\frac{5}{2}\\cdot 5=\\frac{25}{2}$. Then we add $\\frac{5}{2}+\\frac{25}{2}$ to find the distance they walk and bike together for each step of Bella's: $\\frac{30}{2} = 15$. This means that they travel 15 ft. of distance for each step that Bella takes. Divide 10,560 by 15 to find that Bella takes $\\boxed{\\textbf{(A) }704}$ steps.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2018 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_18",
+      "question": "<p>How many positive factors does $23,232$ have?</p>",
+      "solutions": [
+        "<p>We can first find the prime factorization of $23,232$, which is $2^6\\cdot3^1\\cdot11^2$. Now, we add one to our powers and multiply. Therefore, the answer is $(6+1)\\cdot(1+1)\\cdot(2+1)=7\\cdot2\\cdot3=\\boxed{\\textbf{(E) }42}$</p><p>Note:23232 is a large number, so we can look for shortcuts to factor it. One way to factor it quickly is to use 3 and 11 divisibility rules to observe that $23232 = 3 \\cdot 7744 = 3 \\cdot 11 \\cdot 704 = 3 \\cdot 11^2 \\cdot 64 = 3^1  \\cdot 11^2  \\cdot  2^6$.</p><p>Another way is to spot the \"32\" and compute that $23232 = 32\\cdot(101 + 10000/16) = 32\\cdot (101+ 5^4) = 32\\cdot 726 = 32 \\cdot 11 \\cdot 66$.</p><p>A third way to factor it is to observe $23232 = 24000 - 768$. Factoring out the 3 gives us $3(8000 - 256)$. Since $8000 = 2^6 \\cdot 5^3$ and $256 = 2^8$, we have $2^6 \\cdot 3 (5^3 - 2^2) = 2^6 \\cdot 3 (125-4) = 2^6 \\cdot 3 \\cdot 121 = 2^6 \\cdot 3 \\cdot 11^2$.</p>",
+        "<p>Observe that $69696$ = $264^2$, so this is $\\frac{1}{3}$ of $264^2$ which is $88 \\cdot 264 = 11^2 \\cdot 8^2 \\cdot 3 = 11^2 \\cdot 2^6 \\cdot 3$, which has $3 \\cdot 7 \\cdot 2 = 42$ factors. The answer is $\\boxed{\\textbf{(E) }42}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2018 AMC 8 - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_19",
+      "question": "<p>In a sign pyramid a cell gets a \"+\" if the two cells below it have the same sign, and it gets a \"-\" if the two cells below it have different signs. The diagram below illustrates a sign pyramid with four levels. How many possible ways are there to fill the four cells in the bottom row to produce a \"+\" at the top of the pyramid?</p><p>[asy] unitsize(2cm); path box = (-0.5,-0.2)--(-0.5,0.2)--(0.5,0.2)--(0.5,-0.2)--cycle; draw(box); label(\"$+$\",(0,0)); draw(shift(1,0)*box); label(\"$-$\",(1,0)); draw(shift(2,0)*box); label(\"$+$\",(2,0)); draw(shift(3,0)*box); label(\"$-$\",(3,0)); draw(shift(0.5,0.4)*box); label(\"$-$\",(0.5,0.4)); draw(shift(1.5,0.4)*box); label(\"$-$\",(1.5,0.4)); draw(shift(2.5,0.4)*box); label(\"$-$\",(2.5,0.4)); draw(shift(1,0.8)*box); label(\"$+$\",(1,0.8)); draw(shift(2,0.8)*box); label(\"$+$\",(2,0.8)); draw(shift(1.5,1.2)*box); label(\"$+$\",(1.5,1.2)); [/asy]</p>",
+      "solutions": [
+        "<p>You could just make out all of the patterns that make the top positive. In this case, you would have the following patterns: </p><p>+\u2212\u2212+, \u2212++\u2212, \u2212\u2212\u2212\u2212, ++++, \u2212+\u2212+, +\u2212+\u2212, ++\u2212\u2212, \u2212\u2212++. There are 8 patterns and so the answer is $\\boxed{\\textbf{(C) } 8}$.</p><p>-NinjaBoi2000</p>",
+        "<p>The top box is fixed by the problem. </p><p>Choose the left 3 bottom-row boxes freely. There are $2^3=8$ ways.</p><p>Then the left 2 boxes on the row above are determined.</p><p>Then the left 1 box on the row above that is determined</p><p>Then the right 1 box on that row is determined.</p><p>Then the right 1 box on the row below is determined.</p><p>Then the right 1 box on the bottom row is determined, completing the diagram.</p><p>So the answer is $\\boxed{\\textbf{(C) } 8}$.</p><p><br/>~BraveCobra22aops</p>",
+        "<p>Let the plus sign represent 1 and the negative sign represent -1. </p><p>The four numbers on the bottom are $a$, $b$, $c$, and $d$, which are either 1 or -1.</p><p>[asy] unitsize(2cm); path box = (-0.5,-0.2)--(-0.5,0.2)--(0.5,0.2)--(0.5,-0.2)--cycle; draw(box); label(\"$a$\",(0,0)); draw(shift(1,0)*box); label(\"$b$\",(1,0)); draw(shift(2,0)*box); label(\"$c$\",(2,0)); draw(shift(3,0)*box); label(\"$d$\",(3,0)); draw(shift(0.5,0.4)*box); label(\"$ab$\",(0.5,0.4)); draw(shift(1.5,0.4)*box); label(\"$bc$\",(1.5,0.4)); draw(shift(2.5,0.4)*box); label(\"$cd$\",(2.5,0.4)); draw(shift(1,0.8)*box); label(\"$ab^2c$\",(1,0.8)); draw(shift(2,0.8)*box); label(\"$bc^2d$\",(2,0.8)); draw(shift(1.5,1.2)*box); label(\"$ab^3c^3d$\",(1.5,1.2)); [/asy]</p><p>Which means $ab^3c^3d$ = 1. Since $b$ and $c$ are either 1 or -1, $b^3 = b$ and $c^3 = c$. This shows that $abcd$ = 1. </p><p>Therefore either $a$, $b$, $c$, and $d$ are all positive or negative, or 2 are positive and 2 are negative.</p><p>There are 2 ways where $a$, $b$, $c$, and $d$ are 1 (1, 1, 1, 1) and (-1, -1, -1, -1)</p><p>There are 6 ways where 2 variables are positive and 2 are negative: (1, 1, -1, -1), (1, -1, 1, -1), (-1, 1, 1, -1), (-1, -1, 1, 1), (-1, 1, -1, 1), and (-1, -1, 1, 1).</p><p>So the answer is $\\boxed{\\textbf{(C) } 8}$.</p><p>Note: This result can also be achieved by realizing that there are $4! / 2! 2! = 6$ ways to arrange $2$ negatives and $2$ positives and $1$ way each to arrange four of one sign.</p><p>~atharvd</p><p>~cxsmi (Note)</p>",
+        "<p>The pyramid is built on the basic 3 blocks pattern: one above and two below. The basic pattern have four possible symbols and half of them have a $+$ on the above, half of them have a $-$ above. So, For the lowest layer with $4$ blocks, there are $2^4=16$ possible combination and half of them will lead a $+$ (or $-$) on the top. The answer is $16/2=\\boxed{\\textbf{(C) } 8}$.</p><p>If you notice this rule, you can give the answer whatever how many layers you have. The answer will be $2^{n-1}$ for the layer with $n$ blocks.</p>",
+        "<p>We can use casework to solve this problem.The only way for the top cell to have a $+$ in it is if the third row of the pyramid (the one with $2$ cells) is either $--$ or $++$. First, let's pretend that the third row of the pyramid is $++$. The only way for that to happen is if the second row (the one with $3$ cells) is --- or $+++$. Now, let's pretend that the second is $+++$. That would have $2$ possibilities for the first row (the one with $4$ cells), $++++$ and $----$. Next, let's pretend that the second row is ---. That makes two more possibilities for the first row, $-+-+$ and $+-+-$. Now, let's pretend that the 3rd row is $--$, which means that the second row is either $-+-$ or $+-+$. You will soon find that $-+-$ find $2$ possibilities for the first row, $-++-$ or $-++-$, and $2$ possibilities for $+-+$, $--++$ and $++--$.Together, we find that the answer is $2+2+2+2=\\boxed{\\textbf{(C) } 8}$.</p>",
+        "<p>There are two choices for the uppermost: $+$ or $-$. There are 16 cases in total ($2^4$). Half of 16 is 8. The answer is $\\boxed{\\textbf{(C) } 8}$.</p><p>(Note: this is not recommended for solving, just an idea after solving.)</p><p>~nolypoly11</p>",
+        "<p>If you pick the signs for two boxes at random, there is equal probability that the one above them will be either a $+$ or a $-$. There are 16($2^4$) cases possible for the bottom four, so half of that, $\\boxed{\\textbf{(C) } 8}$, is the answer.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2018 AMC 8 - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_20",
+      "question": "<p>In $\\triangle ABC,$ a point $E$ is on $\\overline{AB}$ with $AE=1$ and $EB=2.$ Point $D$ is on $\\overline{AC}$ so that $\\overline{DE} \\parallel \\overline{BC}$ and point $F$ is on $\\overline{BC}$ so that $\\overline{EF} \\parallel \\overline{AC}.$ What is the ratio of the area of $CDEF$ to the area of $\\triangle ABC?$</p><p>[asy] size(7cm); pair A,B,C,DD,EE,FF; A = (0,0); B = (3,0); C = (0.5,2.5); EE = (1,0); DD = intersectionpoint(A--C,EE--EE+(C-B)); FF = intersectionpoint(B--C,EE--EE+(C-A)); draw(A--B--C--A--DD--EE--FF,black+1bp); label(\"$A$\",A,S); label(\"$B$\",B,S); label(\"$C$\",C,N); label(\"$D$\",DD,W); label(\"$E$\",EE,S); label(\"$F$\",FF,NE); label(\"$1$\",(A+EE)/2,S); label(\"$2$\",(EE+B)/2,S); [/asy]</p>",
+      "solutions": [
+        "<p>By similar triangles, we have $[ADE] = \\frac{1}{9}[ABC]$. Similarly, we see that [mathjax][BEF] = \\dfrac{4}{9}[ABC][/mathjax]. Using this information, we get \\[[ACFE] = \\frac{5}{9}[ABC].\\] Then, since $[ADE] = \\frac{1}{9}[ABC]$, it follows that the [mathjax][CDEF] = \\dfrac{4}{9}[ABC][/mathjax]. Thus, the answer would be $\\boxed{\\textbf{(A) } \\frac{4}{9}}$.</p><p>Sidenote: [mathjax][ABC][/mathjax] denotes the area of triangle [mathjax]ABC[/mathjax]. Similarly, [mathjax][ABCD][/mathjax] denotes the area of figure [mathjax]ABCD[/mathjax].</p>",
+        "<p>Let $a = DE$ and $b =$ the height of $\\triangle ABC$. We can extend $\\triangle ABC$ to form a parallelogram, which would equal $3a \\cdot 3b$. The smaller parallelogram is $a$ times $2b$. The smaller parallelogram is $\\frac{2}{9}$ of the larger parallelogram, so the answer would be $\\frac{2}{9} \\cdot 2$, since the triangle is $\\frac{1}{2}$ of the parallelogram, so the answer is $\\boxed{\\textbf{(A) } \\frac{4}{9}}$.</p><p>By babyzombievillager with credits to many others who helped with the solution\u00a0:D</p>",
+        "<p>$\\triangle{ADE} \\sim \\triangle{ABC} \\sim \\triangle{EFB}$. We can substitute $\\overline{DA}$ as $\\frac{1}{3}x$ and $\\overline{CD}$ as $\\frac{2}{3}x$, where $x$ is $\\overline{AC}$. Side $\\overline{CB}$ having, distance $y$, has $2$ parts also. And, $\\overline{CF}$ and $\\overline{FB}$ are $\\frac{1}{3}y$ and $\\frac{2}{3}y$ respectfully. You can consider the height of $\\triangle{ADE}$ and $\\triangle{EFB}$ as $z$ and $2z$ respectfully. The area of $\\triangle{ADE}$ is $\\frac{1\\cdot z}{2}=0.5z$ because the area formula for a triangle is $\\frac{1}{2}bh$ or $\\frac{bh}{2}$. The area of $\\triangle{EFB}$ will be $\\frac{2\\cdot 2z}{2}=2z$. So, the area of $\\triangle{ABC}$ will be $\\frac{3\\cdot (2z+z)}{2}=\\frac{3\\cdot 3z}{2}=\\frac{9z}{2}=4.5z$. The area of parallelogram $CDEF$ will be $4.5z-(0.5z+2z)=4.5z-2.5z=2z$. Parallelogram $CDEF$ to $\\triangle{ABC}= \\frac{2z}{4.5z}=\\frac{2}{4.5}=\\frac{4}{9}$. The answer is $\\boxed{\\textbf{(A) } \\frac{4}{9}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2018 AMC 8 - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_21",
+      "question": "<p>How many positive three-digit integers have a remainder of 2 when divided by 6, a remainder of 5 when divided by 9, and a remainder of 7 when divided by 11?</p>",
+      "solutions": [
+        "<p>Looking at the values, we notice that $11-7=4$, $9-5=4$ and $6-2=4$. This means we are looking for a value that is four less than a multiple of $11$, $9$, and $6$. The least common multiple of these numbers is $11\\cdot3^{2}\\cdot2=198$, so the numbers that fulfill this can be written as $198k-4$, where $k$ is a positive integer. This value is only a three-digit integer when $k$ is $1, 2, 3, 4$ or $5$, which gives $194, 392, 590, 788,$ and $986$ respectively. Thus, we have $5$ values, so our answer is $\\boxed{\\textbf{(E) }5}$.</p>",
+        "<p>Let us create the equations: $6x+2 = 9y+5 = 11z+7$, and we know $100 \\leq 11z+7 <1000$, it gives us $9 \\leq z \\leq 90$, which is the range of the value of z. Because of $6x+2=11z+7$, then $6x=11z+5=6z+5(z+1)$, so $(z+1)$ must be a multiple of 6. Because of $9y+5=11z+7$, then $9y=11z+2=9z+2(z+1)$, so $(z+1)$ must also be a multiple of $9$. Hence, the value of $(z+1)$ must be a common multiple of $6$ and $9$, which means multiples of $18 (LCM \\text{ of }\\ 6, 9)$. So, let's say $z+1 = 18p$; then, $9 \\leq z = 18p-1 \\leq 90$, so $1 \\leq p \\leq 91/18\\ or \\ 1 \\leq p \\leq 5$. Thus, the answer is $\\boxed{\\textbf{(E) }5}$.</p><p>~LarryFlora</p>",
+        "<p>By the <a href=\"/wiki/index.php/Chinese_Remainder_Theorem\" title=\"Chinese Remainder Theorem\">Chinese Remainder Theorem</a>, we have that all solutions are in the form $x=198k+194$ where $k\\in \\mathbb{Z}.$ Counting the number of values, we get $\\boxed{\\textbf{(E) }5}.$</p><p>~mathboy282</p>",
+        "<p>We can use modular arithmetic. Set up the equations: $x \\equiv 2 \\mod 6,$ $x \\equiv 5 \\mod 9,$ and $x \\equiv 7 \\mod 11.$ These equations can also be written as $x+4 \\equiv 0 \\mod 6,$ $x+4 \\equiv 0 \\mod 9,$ and $x+4 \\equiv 0 \\mod 11.$ Since $x+4$ is congruent to numbers $6, 9,$ and $11,$ then it must also be congruent to their LCM. Thus, $x+4 \\equiv 0 \\mod 198,$ since 198 is the LCM of $6, 9,$ and $11.$ Since these numbers have to be three digits, they can only be $194, 392, 590, 788,$ and $986.$ This gives us the answer of $\\boxed{\\textbf{(E) }5}.$</p><p>~ethancui0529</p>",
+        "<p>Let $N$ be the three digit positive integer. $N = 6a + 2 = 9b + 5 = 11c + 7$. Then, we add four to all sides and write $N + 4 = 6(a+1) = 9(b+1) = 11(c+1)$. Now, we know that $N + 4$ is divisible by 6, 9, and 11. The LCM of 6, 9, and 11 is equal to 198, so $N = 198k - 4$. From this, we can figure out that $N$ can be 5 different three digit numbers -- $194, 392, 590, 788,$ and $986$. $\\therefore$, the answer is $\\boxed{\\textbf{(E) }5}.$</p><p>~DY</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2018 AMC 8 - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_22",
+      "question": "<p>Point $E$ is the midpoint of side $\\overline{CD}$ in square $ABCD,$ and $\\overline{BE}$ meets diagonal $\\overline{AC}$ at $F.$ The area of quadrilateral $AFED$ is $45.$ What is the area of $ABCD?$</p><p>[asy] size(5cm); draw((0,0)--(6,0)--(6,6)--(0,6)--cycle); draw((0,6)--(6,0)); draw((3,0)--(6,6)); label(\"$A$\",(0,6),NW); label(\"$B$\",(6,6),NE); label(\"$C$\",(6,0),SE); label(\"$D$\",(0,0),SW); label(\"$E$\",(3,0),S); label(\"$F$\",(4,2),E); [/asy]</p>",
+      "solutions": [
+        "<p>We can use analytic geometry for this problem.</p><p>Let us start by giving $D$ the coordinate $(0,0)$, $A$ the coordinate $(0,1)$, and so forth. $\\overline{AC}$ and $\\overline{EB}$ can be represented by the equations $y=-x+1$ and $y=2x-1$, respectively. Solving for their intersection gives point $F$ coordinates $\\left(\\frac{2}{3},\\frac{1}{3}\\right)$. </p><p>Now, we can see that $\\triangle$$EFC$\u2019s area is simply $\\frac{\\frac{1}{2}\\cdot\\frac{1}{3}}{2}$ or $\\frac{1}{12}$. This means that pentagon $ABCEF$\u2019s area is $\\frac{1}{2}+\\frac{1}{12}=\\frac{7}{12}$ of the entire square, and it follows that quadrilateral $AFED$\u2019s area is $\\frac{5}{12}$ of the square. </p><p>The area of the square is then $\\frac{45}{\\frac{5}{12}}=9\\cdot12=\\boxed{\\textbf{(B) } 108}$.</p>",
+        "<p>$\\triangle ABC$ has half the area of the square.$\\triangle FEC$ has base equal to half the square side length, and by AA Similarity with $\\triangle FBA$, it has $\\frac{1}{1+2}= \\frac{1}{3}$ the height, so has $\\dfrac1{12}$th of the area of square($\\dfrac1{2}$*$\\dfrac1{2}$*$\\dfrac1{3}$). Thus, the area of the quadrilateral is $1-\\frac{1}{2}-\\frac{1}{12}=\\frac{5}{12}$ of the area of the square. The area of the square is then $45\\cdot\\dfrac{12}{5}=\\boxed{\\textbf{(B) } 108}$.</p><p>~minor edit by abirgh</p>",
+        "<p>Extend $\\overline{AD}$ and $\\overline{BE}$ to meet at $X$. Drop an altitude from $F$ to $\\overline{CE}$ and call it $h$. Also, call $\\overline{CE}$ $x$. As stated before, we have $\\triangle ABF \\sim \\triangle CEF$, so the ratio of their heights is in a $1:2$ ratio, making the altitude from $F$ to $\\overline{AB}$ $2h$. Note that this means that the side of the square is $3h$. In addition, $\\triangle XDE \\sim \\triangle XAB$ by AA Similarity in a $1:2$ ratio. This means that the square's side length is $2x$, making $3h=2x$.</p><p>Now, note that $[ADEF]=[XAB]-[XDE]-[ABF]$. We have $[\\triangle XAB]=(4x)(2x)/2=4x^2,$ $[\\triangle XDE]=(x)(2x)/2=x^2,$ and $[\\triangle ABF]=(2x)(2h)/2=(2x)(4x/3)/2=4x^2/3.$ Subtracting makes $[ADEF]=4x^2-x^2-4x^2/3=5x^2/3.$ We are given that $[ADEF]=45,$ so $5x^2/3=45 \\Rightarrow x^2=27.$ Therefore, $x= 3 \\sqrt{3},$ so our answer is $(2x)^2=4x^2=4(27)=\\boxed{\\textbf{(B) }108}.$</p><p>~ moony_eyed</p><p>~ Minor Edits by WrenMath</p>",
+        "<p>Solution with Cartesian and Barycentric Coordinates:</p><p>We start with the following:</p><p>Claim: Given a square $ABCD$, let $E$ be the midpoint of $\\overline{DC}$ and let $BE\\cap AC = F$. Then $\\frac {AF}{FC}=2$.</p><p>Proof: We use Cartesian coordinates. Let $D$ be the origin, $A=(0,1),C=(0,1),B=(1,1)$. We have that $\\overline{AC}$ and $\\overline{EB}$ are governed by the equations $y=-x+1$ and $y=2x-1$, respectively. Solving, $F=\\left(\\frac{2}{3},\\frac{1}{3}\\right)$. The result follows. $\\square$</p><p>Now, we apply Barycentric Coordinates w.r.t. $\\triangle ACD$. We let $A=(1,0,0),D=(0,1,0),C=(0,0,1)$. Then $E=(0,\\tfrac 12,\\tfrac 12),F=(\\tfrac 13,0,\\tfrac 23)$. </p><p>In the barycentric coordinate system, the area formula is $[XYZ]=\\begin{vmatrix} x_{1} &y_{1}  &z_{1} \\\\ x_{2} &y_{2}  &z_{2} \\\\   x_{3}& y_{3} & z_{3} \\end{vmatrix}\\cdot [ABC]$ where $\\triangle XYZ$ is a random triangle and $\\triangle ABC$ is the reference triangle. Using this, we find that\\[\\frac{[FEC]}{[ACD]}=\\begin{vmatrix} 0&0&1\\\\ 0&\\tfrac 12&\\tfrac 12\\\\ \\tfrac 13&0&\\tfrac 23 \\end{vmatrix}=\\frac16.\\] Let $[FEC]=x$ so that $[ACD]=45+x$. Then, we have $\\frac{x}{x+45}=\\frac 16 \\Rightarrow x=9$, so the answer is $2(45+9)=\\boxed{108}$.</p><p>Note: Please do not learn Barycentric Coordinates for the AMC 8.</p>",
+        "<p>$\\triangle ABF \\sim \\triangle FEC$, and the bases $AB$ and $EC$ are in the ratio $2:1$, so $\\frac{[\\triangle ABF]}{[\\triangle FEC]}=\\left(\\frac{2}{1}\\right)^2=\\frac{4}{1}$, and $[\\triangle ABF]=4\\cdot[\\triangle FEC]$</p><p>It is obvious that $[AFED]+[\\triangle FEC]=45+[\\triangle FEC]=\\frac{1}{2}\\cdot[ABCD]$</p><p>and $[AFED]+[\\triangle ABF]=45+4\\cdot[\\triangle FEC]=\\frac{3}{4}\\cdot[ABCD]$</p><p>Solving the two equations we get $[ABCD]=\\boxed{\\textbf{(B)}108}$</p><p>- bbidev</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2018 AMC 8 - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_23",
+      "question": "<p>From a regular octagon, a triangle is formed by connecting three randomly chosen vertices of the octagon. What is the probability that at least one of the sides of the triangle is also a side of the octagon?</p><p>[asy] size(3cm); pair A[]; for (int i=0; i<9; ++i) {   A[i] = rotate(22.5+45*i)*(1,0); } filldraw(A[0]--A[1]--A[2]--A[3]--A[4]--A[5]--A[6]--A[7]--cycle,gray,black); for (int i=0; i<8; ++i) { dot(A[i]); } [/asy]</p>",
+      "solutions": [
+        "<p>We begin by finding the total number of triangles that can be formed from the 8 vertices of a regular octagon. This is simply \\[\\binom{8}{3} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56.\\] So there are <b>56</b> possible triangles.</p><p>We want the probability that a randomly chosen triangle has at least one side that is also a side of the octagon.</p><p>We consider two cases:</p><p><b>Case 1: The triangle shares two sides with the octagon.</b> This happens when the triangle is formed by three consecutive vertices of the octagon. There are 8 such sets of consecutive vertices, so there are <b>8</b> such triangles.</p><p><b>Case 2: The triangle shares exactly one side with the octagon.</b> Each side of the octagon can be used in such a triangle. For a fixed side (say $AB$), the third vertex must not be adjacent to either $A$ or $B$ (to avoid forming a triangle with two octagon sides). There are 4 such choices for the third vertex, giving 4 triangles per side. With 8 sides, the total is \\[8 \\times 4 = 32\\] triangles in this case.</p><p>Adding both cases, the number of triangles that share at least one side with the octagon is \\[8 + 32 = 40.\\]</p><p>Thus, the desired probability is \\[\\frac{40}{56} = \\boxed{\\text{(D) } \\frac{5}{7}}.\\]</p><p>Instead of counting the desired cases directly, we count the number of triangles that do <b>not</b> share any side with the octagon.</p><p>Label the vertices of the octagon as $A, B, C, D, E, F, G, H$ in order. Consider triangle $\\triangle ADF$. This triangle does not include any side of the octagon, since $AD$, $DF$, and $FA$ are all chords that skip at least one vertex.</p><p>In general, a triangle with no side on the octagon must consist of three non-consecutive vertices, with none of the triangle\u2019s sides being edges of the polygon.</p><p>By examining all such configurations, we find there are <b>16</b> triangles with no sides on the octagon (this count can be verified through casework or geometric symmetry).</p><p>Therefore, the number of triangles that <b>do</b> share at least one side with the octagon is \\[56 - 16 = 40,\\] and the desired probability is again \\[\\frac{40}{56} = \\boxed{\\text{(D) } \\frac{5}{7}}.\\]</p><p>Method 1 is more straightforward to explain and typically easier to compute quickly, especially with a diagram. Method 2 is a bit more abstract but can be faster if you recognize the complementary counting strategy. Both approaches lead to the same answer.</p><p>~ <a href=\"/wiki/index.php/User:Aoum\" title=\"User:Aoum\">aoum</a></p>",
+        "<p>Firstly, we calculate the amount of all possible triangles. It is $C_8^3=56$. Then, we consider how many triangles have at least a edge which is also the edge of octagon. </p><p>If the triangle shares only one edge with the octagon, fix an edge, we can choose $4$ different vertices for the triangle. Thus, there are $8\\times 4=32$ possible triangles. If the triangle shares its two edges with the octagon, obviously, there are only $8$ possible triangles. $\\frac{32+8}{56}=\\boxed{\\textbf{(D)}\\frac{5}{7}}$.</p>",
+        "<p>We split into two cases:</p><p>Case 1: Exactly one side is chosen. There are 4 lines that each contain 1 side of the octagon, and there are 8 points on the octagon. Thus, the total number of such lines is:\\begin{align}8 \\cdot 4 &amp;= 32.\\end{align}</p><p>Case 2: Exactly two sides are chosen. The number of ways to choose 2 points on the octagon is:\\begin{align}\\binom{8}{1} &amp;= 8.\\end{align}</p><p>Adding the results from both cases, the total is:\\begin{align}32 + 8 &amp;= \\boxed{40}.\\end{align}</p><p>This is the numerator. To find the denominator we do $C_8^3=56$. Thus, our final answer is ${40/56= \\boxed{\\textbf{(D)}\\frac{5}{7}}}$. </p><p>-jb2015007</p><p>-FrankensteinQuixoteCabin</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2018 AMC 8 - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_24",
+      "question": "<p>In the cube $ABCDEFGH$ with opposite vertices $C$ and $E,$ $J$ and $I$ are the midpoints of segments $\\overline{FB}$ and $\\overline{HD},$ respectively. Let $R$ be the ratio of the area of the cross-section $EJCI$ to the area of one of the faces of the cube. What is $R^2?$</p><p>[asy] size(6cm); pair A,B,C,D,EE,F,G,H,I,J; C = (0,0); B = (-1,1); D = (2,0.5); A = B+D; G = (0,2); F = B+G; H = G+D; EE = G+B+D; I = (D+H)/2; J = (B+F)/2; filldraw(C--I--EE--J--cycle,lightgray,black); draw(C--D--H--EE--F--B--cycle);  draw(G--F--G--C--G--H); draw(A--B,dashed); draw(A--EE,dashed); draw(A--D,dashed); dot(A); dot(B); dot(C); dot(D); dot(EE); dot(F); dot(G); dot(H); dot(I); dot(J); label(\"$A$\",A,E); label(\"$B$\",B,W); label(\"$C$\",C,S); label(\"$D$\",D,E); label(\"$E$\",EE,N); label(\"$F$\",F,W); label(\"$G$\",G,N); label(\"$H$\",H,E); label(\"$I$\",I,E); label(\"$J$\",J,W); [/asy]</p>",
+      "solutions": [
+        "<p>Note that $EJCI$ is a rhombus by symmetry.Let the side length of the cube be $s$. By the Pythagorean theorem, $EC= s\\sqrt 3$ and $JI= s\\sqrt 2$. Since the area of a rhombus is half the product of its diagonals, the area of the cross section is $\\frac{s^2\\sqrt 6}{2}$. This gives $R = \\frac{\\sqrt 6}2$. Thus, $R^2 = \\boxed{\\textbf{(C) } \\frac{3}{2}}$.</p>",
+        "<p>This time, instead of using a variable like we did in Solution 1, $s$, for the side length as in the above solution, choose an easy value for $s$ such as $2$. In the above solution, $s^2$ cancels out in the end, so ultimately the answers are equivalent. ~Technodoggo</p>",
+        "<p>If the edges of the cube have same lengths $a$, $A$ is the origin, $\\vec{AD }$ is the positive $x$ direction, $\\vec{AE}$ is the positive $y$ direction, and $\\vec{AB }$ is the positive $z$ direction. Therefore, we have $E(0,a,0), I(a,\\frac{a}{2},0), C(a,0,a),$ and $J(0,\\frac{a}{2},a)$. Hence, we can figure out that:</p><p>\\[|EC|=\\sqrt{a^2 + a^2 + a^2}=\\sqrt{3}a\\]</p><p>\\[|IJ|=\\sqrt{a^2 + 0 + a^2}=\\sqrt{2}a\\]</p><p>Note that $EJCI$ is a rhombus, so $R=\\frac{\\sqrt{6}a^2}{2a^2}=\\frac{\\sqrt{6}}{2}$. Finally, we can see that the answer is $R^2=\\frac{6}{4}=\\boxed{\\textbf{(C) } \\frac{3}{2}}$</p><p>~<a href=\"/wiki/index.php/User:Bloggish\" title=\"User:Bloggish\">Bloggish</a></p>",
+        "<p>We can solve this with 3D Cartesian coordinates. Assume WLOG that the sides of the square are of length $2$. Let $C$ be the origin and let $\\vec{CD}$ be the positive $x$ direction, $\\vec{CG}$ be the positive $y$ direction, and $\\vec{CB}$ be the positive $z$ direction. We find that $I=(2,1,0),J=(0,1,2),E=(2,2,2)$. </p><p>Notice that $CI=CJ=EI=EJ=\\sqrt{5}$ so $EJCI$ is a rhombus. Furthermore, by the distance formula, $IJ=\\sqrt8$. </p><p>By the Law of Cosines on $\\triangle JCI$ we have $\\cos \\angle JCI=\\frac{\\sqrt5^2+ \\sqrt5^2-\\sqrt8^2}{2\\cdot \\sqrt5\\cdot \\sqrt5}=\\frac 15$. By the Law of Cosines on $\\triangle JEI$ we have $\\cos \\angle JEI=\\frac{\\sqrt5^2+ \\sqrt5^2-\\sqrt8^2}{2\\cdot \\sqrt5\\cdot \\sqrt5}=\\frac 15$.</p><p>Bretschneider's formula states given a quadrilateral $ABCD$ with sides $a,b,c,d$ then \\[[ABCD]=\\sqrt{(s-a)(s-b)(s-c)(s-d)-abcd\\cos^2\\left({\\frac{B+D}{2}}\\right)}\\]where $s=\\frac{a+b+c+d}2$. Using this formula, we find that\\[[EJCI]=\\sqrt{(2\\sqrt5-\\sqrt5)(2\\sqrt5-\\sqrt5)(2\\sqrt5-\\sqrt5)(2\\sqrt5-\\sqrt5)-\\sqrt 5^4(\\tfrac 15)^2}=2\\sqrt{6}.\\]</p><p>Using Bretschneider's formula again, we can find that $[ABCD]=\\sqrt{(4-2)(4-2)(4-2)(4-2)-2^4\\cdot \\cos \\left(\\frac{90^\\circ+90^\\circ}2\\right)}=\\sqrt{16}=4$. </p><p>The answer is thus $\\left(\\frac{2\\sqrt6}{4}\\right)^2=\\frac 32$ so we circle answer choice $\\boxed{\\textbf{(C) } \\frac{3}{2}}$</p><p>~franzliszt</p>",
+        "<p>We will use the following</p><p>Theorem: Suppose we have a quadrilateral with edges of length $a,b,c,d$ (in that order) and diagonals of length $p, q$. Bretschneider's formula states that the area $[ABCD]=\\frac{1}{4} \\cdot \\sqrt{4p^2q^2-(b^2+d^2-a^2-c^2)^2}$.</p><p>Proof: Here is one of my favorite proofs of this with vector geometry. </p><p>Suppose a quadrilateral has sides $\\vec{a}, \\vec{b}, \\vec{c}, \\vec{d}$ such that $\\vec{a} + \\vec{b} + \\vec{c} + \\vec{d} = \\vec{0}$ and that the diagonals of the quadrilateral are $\\vec{p} = \\vec{b} + \\vec{c} = -\\vec{a} - \\vec{d}$ and $\\vec{q} = \\vec{a} + \\vec{b} = -\\vec{c} - \\vec{d}$. The area of any such quadrilateral is $\\frac{1}{2} |\\vec{p} \\times \\vec{q}|$.</p><p><br/>$K = \\frac{1}{2} |\\vec{p} \\times \\vec{q}|$</p><p>Lagrange's Identity states that $|\\vec{a}|^2|\\vec{b}|^2-(\\vec{a}\\cdot\\vec{b})^2=|\\vec{a}\\times\\vec{b}|^2 \\implies \\sqrt{|\\vec{a}|^2|\\vec{b}|^2-(\\vec{a}\\cdot\\vec{b})^2}=|\\vec{a}\\times\\vec{b}|$. Therefore:</p><p>$K = \\frac{1}{2} \\sqrt{|\\vec{p}|^2|\\vec{q}|^2 - (\\vec{p} \\cdot \\vec{q})^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - (2 \\vec{p} \\cdot \\vec{q})^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - [2 (\\vec{b} + \\vec{c}) \\cdot (\\vec{a} + \\vec{b})]^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - [2 \\vec{b} \\cdot (\\vec{a} + \\vec{b}) + 2 \\vec{c} \\cdot (\\vec{a} + \\vec{b})]^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - [-2 \\vec{b} \\cdot (\\vec{c} + \\vec{d}) + 2 \\vec{c} \\cdot (\\vec{a} + \\vec{b})]^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - [-2 \\vec{b} \\cdot \\vec{c} - 2 \\vec{b} \\cdot \\vec{d} + 2 \\vec{a} \\cdot \\vec{c} + 2 \\vec{b} \\cdot \\vec{c}]^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - [2 \\vec{a} \\cdot \\vec{c} - 2 \\vec{b} \\cdot \\vec{d}]^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - ([(\\vec{a} + \\vec{c})\\cdot(\\vec{a} + \\vec{c}) - \\vec{a}\\cdot\\vec{a} - \\vec{c}\\cdot\\vec{c}] - [(\\vec{b} + \\vec{d})\\cdot(\\vec{b} + \\vec{d}) - \\vec{b}\\cdot\\vec{b} - \\vec{d}\\cdot\\vec{d}])^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - [|\\vec{b}|^2 + |\\vec{d}|^2 - |\\vec{a}|^2 - |\\vec{c}|^2 + (\\vec{a} + \\vec{c})\\cdot(\\vec{a} + \\vec{c}) - (\\vec{b} + \\vec{d})\\cdot(\\vec{b} + \\vec{d})]^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - [|\\vec{b}|^2 + |\\vec{d}|^2 - |\\vec{a}|^2 - |\\vec{c}|^2 + |\\vec{a} + \\vec{c}|^2 - |\\vec{b} + \\vec{d}|^2]^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - [|\\vec{b}|^2 + |\\vec{d}|^2 - |\\vec{a}|^2 - |\\vec{c}|^2 + |\\vec{a} + \\vec{c}|^2 - |-(\\vec{a} + \\vec{c})|^2]^2}$</p><p>$= \\frac{1}{4} \\sqrt{4 |\\vec{p}|^2|\\vec{q}|^2 - [|\\vec{b}|^2 + |\\vec{d}|^2 - |\\vec{a}|^2 - |\\vec{c}|^2]^2}$</p><p>Then, if $a, b, c, d$ represent $|\\vec{a}|, |\\vec{b}|, |\\vec{c}|, |\\vec{d}|$ (and are thus the side lengths) while $p, q$ represent $|\\vec{p}|, |\\vec{q}|$ (and are thus the diagonal lengths), the area of a quadrilateral is:</p><p>\\[K = \\frac{1}{4} \\sqrt{4p^2q^2 - (b^2 + d^2 - a^2 - c^2)^2}\\] $\\square$</p><p>Back to the problem. We use vectors. WLOG suppose the cube has sides of length $2$. Let $C$ be the origin and let $\\vec{CD}$ be the $x$ direction, $\\vec{CG}$ be the $y$ direction, and $\\vec{CB}$ be the $z$ direction. </p><p>Then, $\\vec{CI}=\\vec{JE}=\\begin{pmatrix} 2\\\\1\\\\0\\end{pmatrix}$ and $\\vec{CJ}=\\vec{IE}=\\begin{pmatrix} 0\\\\1\\\\2\\end{pmatrix}$. Let $\\angle JCI=\\theta$. Dot product gives $\\cos \\theta=\\left(\\frac{\\begin{pmatrix} 2\\\\1\\\\0\\end{pmatrix} \\cdot \\begin{pmatrix} 0\\\\1\\\\2\\end{pmatrix}}{|\\begin{pmatrix} 2\\\\1\\\\0\\end{pmatrix}||\\begin{pmatrix} 0\\\\1\\\\2\\end{pmatrix}|}\\right)=\\frac 15.$</p><p>Hence, $\\vec {IJ}=\\sqrt{|\\vec{CI}|+|\\vec{CJ}|-2\\cdot \\vec{CI}\\cdot \\vec{CJ}\\cos \\theta}=\\sqrt{|\\begin{pmatrix} 2\\\\1\\\\0\\end{pmatrix}|+|\\begin{pmatrix} 0\\\\1\\\\2\\end{pmatrix}|-2\\cdot \\begin{pmatrix} 2\\\\1\\\\0\\end{pmatrix} \\cdot\\begin{pmatrix} 0\\\\1\\\\2\\end{pmatrix} \\cdot \\frac 15} \\iff |\\vec{IJ}|=2\\sqrt2$.</p><p>Now, notice that $\\vec{CE}=\\vec{CI}+\\vec{CJ}=\\begin{pmatrix} 2\\\\1\\\\0\\end{pmatrix}+\\begin{pmatrix} 0\\\\1\\\\2\\end{pmatrix}=\\begin{pmatrix} 2\\\\2\\\\2\\end{pmatrix}$ so $|\\vec{CE}|=|\\begin{pmatrix} 2\\\\2\\\\2\\end{pmatrix}|=2\\sqrt3$.</p><p>Using Bretschneider's formula, we obtain $[EJCI]=\\frac{1}{4} \\cdot \\sqrt{4|\\vec{IJ}|^2|\\vec{CE}|^2-(|\\vec{CJ}|^2+|\\vec{IE}|^2-|\\vec{JE}|^2-|\\vec{CI}|^2)^2}=\\frac 14\\sqrt{4\\cdot (2\\sqrt2)^2\\cdot (2\\sqrt3)^2-(5^2+5^2-5^2-5^2)^2}=2\\sqrt6$.</p><p>Using Bretschneider's formula again, we can find that $[ABCD]=\\sqrt{(4-2)(4-2)(4-2)(4-2)-2^4\\cdot \\cos \\left(\\frac{90^\\circ+90^\\circ}2\\right)}=\\sqrt{16}=4$.</p><p>Hence, the answer is $\\left(\\frac{2\\sqrt6}{4}\\right)^2=\\frac 32$ so we circle answer choice $C$.</p><p>~franzliszt</p>",
+        "<p>We can simply plug in values and find \\( R \\) to eliminate the variables and avoid the complicated algebra. Let\u2019s assume the side length of the cube is \\( 4 \\). The given figure is a rhombus because all its sides are equal, but the angles are not \\( 90^\\circ \\). To find the area of the rhombus, we need to calculate the lengths of the two diagonals.</p><p>The formula for the space diagonal of a cube is \\( \\sqrt{3}s \\), so \\( \\overline{CE} = 4\\sqrt{3} \\). By symmetry, \\( \\overline{IJ} = \\overline{BD} = 4\\sqrt{2} \\). Now, we can find the area of the rhombus using the formula for the area of a rhombus, which is the product of the diagonals divided by 2:</p><p>\\begin{align*}\\text{Area} &amp;= \\frac{4\\sqrt{3} \\cdot 4\\sqrt{2}}{2} \\\\&amp;= 8\\sqrt{6}.\\end{align*}</p><p>Next, the area of one of the cube\u2019s faces is simply \\( 4^2 = 16 \\). So, \\( R \\) is:</p><p>${\\left(\\frac{8\\sqrt6}{16}\\right)^2}$= ${\\boxed{\\textbf{(C)}\\frac{3}{2}}}$.</p><p><br/>-jb2015007</p><p>(Minor edits by FrankensteinQuixoteCabin)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2018 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2018_8_25",
+      "question": "<p>How many perfect cubes lie between $2^8+1$ and $2^{18}+1$, inclusive?</p>",
+      "solutions": [
+        "<p>We compute $2^8+1=257$. We're all familiar with what $6^3$ is, namely $216$, which is too small. The smallest cube greater than it is $7^3=343$. $2^{18}+1$ is too large to calculate, but we notice that $2^{18}=(2^6)^3=64^3$, which therefore will clearly be the largest cube less than $2^{18}+1$. So, the required number of cubes is $64-7+1= \\boxed{\\textbf{(E) }58}$.</p>",
+        "<p>First, $2^8+1=257$. Then, $2^{18}+1=262145$. Now, we can see how many perfect cubes are between these two parameters. By guessing and checking, we find that it starts from $7$ and ends with $64$. Now, by counting how many numbers are between these, we find the answer to be $\\boxed{\\textbf{(E) }58}$.</p>",
+        "<p>First, we realize that question writers like to trick us. We know that most people will be calculating the lowest and highest number whose cubes are within the range. The answer will be the highest number $-$ the lowest number $+ 1$. People will forget the $+1$ so the only possibilities are C and E. We can clearly see that C is too small so our answer is $\\boxed{\\textbf{(E) }58}$.</p>",
+        "<p>There is not so much guessing and checking after we find that it starts from $7$ because $7^3=343$, which is over $2^8+1=257$. We can start guessing with the 10, answer C, as it is the middle value. Adding 10 to 7 gives us 17 and $17^3 = 4,913$, which is a bit low. So, we move \"up\" to 57, answer D. Adding 57 to 7 gives us 64 and $64^3 = 262,144$, which is perfect for the $2^{18}+1=262,145$. But we are not done. Since it is inclusive, we must add 1 to this solution, which give us $\\boxed{\\textbf{(E) }58}$.</p>",
+        "<p>We can immediately evaluate $2^8+1$ which gives us $257$ and the smallest perfect cube greater than that is $343 = 7^3$, and you also immediately notice that $2^{18} = (2^6)^3 = 64^3$. Now, all we have to do is count the cubes, which equals:\\begin{align}64-7+1 &amp;= \\boxed{\\textbf{(E) }58}\\end{align}</p><p>-jb2015007</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2018 AMC 8 - geometry problem involving area"
+        }
+      ]
+    }
+  ]
+}

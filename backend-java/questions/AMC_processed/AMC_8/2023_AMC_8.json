@@ -1,0 +1,420 @@
+{
+  "competition_info": {
+    "name": "2023_AMC_8",
+    "group": "AMC_8",
+    "year": 2023,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2023_8_1",
+      "question": "<p>What is the value of $(8 \\times 4 + 2) - (8 + 4 \\times 2)$?</p>",
+      "solutions": [
+        "<p>By the <a href=\"/wiki/index.php/Order_of_operations\" title=\"Order of operations\">order of operations</a>, we have \\[(8 \\times 4 + 2) - (8 + 4 \\times 2) = (32+2) - (8+8) = 34 - 16 = \\boxed{\\textbf{(D)}\\ 18}.\\]~apex304, TaeKim, MRENTHUSIASM</p>",
+        "<p>We can simplify the expression above in another way: \\[(8 \\times 4 + 2) - (8 + 4 \\times 2)=8\\times4+2-8-4\\times2=32+2-8-8=34-16=\\boxed{\\textbf{(D)}\\ 18}.\\]</p><p>~MathFun1000</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2023 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_2",
+      "question": "<p>A square piece of paper is folded twice into four equal quarters, as shown below, then cut along the dashed line. When unfolded, the paper will match which of the following figures?[asy]  //Restored original diagram. Alter it if you would like, but it was made by TheMathGuyd, // Diagram by TheMathGuyd. I even put the lined texture\u00a0:) // Thank you Kante314 for inspiring thicker arrows. They do look much better size(0,3cm); path sq = (-0.5,-0.5)--(0.5,-0.5)--(0.5,0.5)--(-0.5,0.5)--cycle; path rh = (-0.125,-0.125)--(0.5,-0.5)--(0.5,0.5)--(-0.125,0.875)--cycle; path sqA = (-0.5,-0.5)--(-0.25,-0.5)--(0,-0.25)--(0.25,-0.5)--(0.5,-0.5)--(0.5,-0.25)--(0.25,0)--(0.5,0.25)--(0.5,0.5)--(0.25,0.5)--(0,0.25)--(-0.25,0.5)--(-0.5,0.5)--(-0.5,0.25)--(-0.25,0)--(-0.5,-0.25)--cycle; path sqB = (-0.5,-0.5)--(-0.25,-0.5)--(0,-0.25)--(0.25,-0.5)--(0.5,-0.5)--(0.5,0.5)--(0.25,0.5)--(0,0.25)--(-0.25,0.5)--(-0.5,0.5)--cycle; path sqC = (-0.25,-0.25)--(0.25,-0.25)--(0.25,0.25)--(-0.25,0.25)--cycle; path trD = (-0.25,0)--(0.25,0)--(0,0.25)--cycle; path sqE = (-0.25,0)--(0,-0.25)--(0.25,0)--(0,0.25)--cycle; filldraw(sq,mediumgrey,black); draw((0.75,0)--(1.25,0),currentpen+1,Arrow(size=6)); //folding path sqside = (-0.5,-0.5)--(0.5,-0.5); path rhside = (-0.125,-0.125)--(0.5,-0.5); transform fld = shift((1.75,0))*scale(0.5); draw(fld*sq,black); int i; for(i=0; i<10; i=i+1) {   draw(shift(0,0.05*i)*fld*sqside,deepblue); } path rhedge = (-0.125,-0.125)--(-0.125,0.8)--(-0.2,0.85)--cycle; filldraw(fld*rhedge,grey); path sqedge = (-0.5,-0.5)--(-0.5,0.4475)--(-0.575,0.45)--cycle; filldraw(fld*sqedge,grey); filldraw(fld*rh,white,black); int i; for(i=0; i<10; i=i+1) {   draw(shift(0,0.05*i)*fld*rhside,deepblue); } draw((2.25,0)--(2.75,0),currentpen+1,Arrow(size=6)); //cutting transform cut = shift((3.25,0))*scale(0.5); draw(shift((-0.01,+0.01))*cut*sq); draw(cut*sq); filldraw(shift((0.01,-0.01))*cut*sq,white,black); int j; for(j=0; j<10; j=j+1) { draw(shift(0,0.05*j)*cut*sqside,deepblue); } draw(shift((0.01,-0.01))*cut*(0,-0.5)--shift((0.01,-0.01))*cut*(0.5,0),dashed); //Answers Below, but already Separated //filldraw(sqA,grey,black); //filldraw(sqB,grey,black); //filldraw(sq,grey,black); //filldraw(sqC,white,black); //filldraw(sq,grey,black); //filldraw(trD,white,black); //filldraw(sq,grey,black); //filldraw(sqE,white,black); [/asy]</p>",
+      "solutions": [
+        "<p>Notice that when we unfold the paper along the vertical fold line, we get the following shape:</p><p><br/>[asy]  size(90); path sq = (-0.5,0)--(0.5,0)--(0.5,0.5)--(-0.5,0.5)--cycle; path trE = (-0.25,0)--(0.25,0)--(0,0.25)--cycle;  real sh = 1.5; filldraw(shift((sh,-sh))*sq,mediumgrey,black); filldraw(shift((sh,-sh))*trE,white,black);  size(90); path sq = (-0.5,-0.5)--(0.5,-0.5)--(0.5,0.5)--(-0.5,0.5)--cycle; path sqE = (-0.25,0)--(0,-0.25)--(0.25,0)--(0,0.25)--cycle;  real sh = 1.5; filldraw(shift((sh,-sh))*sq,mediumgrey,black); filldraw(shift((sh,-sh))*sqE,white,black); [/asy]</p><p>Therefore the answer is $\\boxed{\\textbf{(E)}}$.</p><p>~MrThinker</p>",
+        "<p>When you fold the paper in that specific way, it shows the top left square. That means that any cut you make on that folded part will look like that on that top left square. Since it is folded into four parts, the cut will reflect on all of the other 3 parts. Since there is a cut diagonally on the bottom right of that square, that will reflect on the other squares, making the shape of $\\boxed{\\textbf{(E)}}$ [asy]  size(90); path sq = (-0.5,0)--(0.5,0)--(0.5,0.5)--(-0.5,0.5)--cycle; path trE = (-0.25,0)--(0.25,0)--(0,0.25)--cycle;  real sh = 1.5; filldraw(shift((sh,-sh))*sq,mediumgrey,black); filldraw(shift((sh,-sh))*trE,white,black);  size(90); path sq = (-0.5,-0.5)--(0.5,-0.5)--(0.5,0.5)--(-0.5,0.5)--cycle; path sqE = (-0.25,0)--(0,-0.25)--(0.25,0)--(0,0.25)--cycle;  real sh = 1.5; filldraw(shift((sh,-sh))*sq,mediumgrey,black); filldraw(shift((sh,-sh))*sqE,white,black); [/asy]</p><p>~AliceDubbleYou</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2023 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_3",
+      "question": "<p><i>Wind chill</i> is a measure of how cold people feel when exposed to wind outside. A good estimate for wind chill can be found using this calculation\\[(\\text{wind chill}) = (\\text{air temperature}) - 0.7 \\times (\\text{wind speed}),\\]where temperature is measured in degrees Fahrenheit $(^{\\circ}\\text{F})$ and the wind speed is measured in miles per hour (mph). Suppose the air temperature is $36^{\\circ}\\text{F}$ and the wind speed is $18$ mph. Which of the following is closest to the approximate wind chill?</p>",
+      "solutions": [
+        "<p>By substitution, we have\\begin{align*} (\\text{wind chill}) &= 36 - 0.7 \\times 18 \\\\ &= 36 - 12.6 \\\\ &= 23.4 \\\\ &\\approx \\boxed{\\textbf{(B)}\\ 23}. \\end{align*}~apex304, SohumUttamchandani, wuwang2002, TaeKim, Cxrupptedpat, MRENTHUSIASM</p>",
+        "<p>0.7 is equivalent to 7/10. 7/10 times 18 is 126/10, which is 12.6. Since the air temperature is 36 degrees Fahrenheit, 36 - 12.6 is 23.4, which is the closest to $\\boxed{\\textbf{(B)}\\ 23}$.</p><p>~AliceDubbleYou</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2023 AMC 8 - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_4",
+      "question": "<p>The numbers from $1$ to $49$ are arranged in a spiral pattern on a square grid, beginning at the center. The first few numbers have been entered into the grid below. Consider the four numbers that will appear in the shaded squares, on the same diagonal as the number $7.$ How many of these four numbers are prime?[asy] /* Made by MRENTHUSIASM */ size(175);  void ds(pair p) { \tfilldraw((0.5,0.5)+p--(-0.5,0.5)+p--(-0.5,-0.5)+p--(0.5,-0.5)+p--cycle,mediumgrey); }  ds((0.5,4.5)); ds((1.5,3.5)); ds((3.5,1.5)); ds((4.5,0.5));  add(grid(7,7,grey+linewidth(1.25)));  int adj = 1; int curUp = 2; int curLeft = 4; int curDown = 6;  label(\"$1$\",(3.5,3.5));  for (int len = 3; len<=3; len+=2) { \tfor (int i=1; i<=len-1; ++i)     \t\t{ \t\t\tlabel(\"$\"+string(curUp)+\"$\",(3.5+adj,3.5-adj+i));     \t\tlabel(\"$\"+string(curLeft)+\"$\",(3.5+adj-i,3.5+adj));      \t\tlabel(\"$\"+string(curDown)+\"$\",(3.5-adj,3.5+adj-i));     \t\t++curDown;     \t\t++curLeft;     \t\t++curUp; \t\t} \t++adj;     curUp = len^2 + 1;     curLeft = len^2 + len + 2;     curDown = len^2 + 2*len + 3; }  draw((4,4)--(3,4)--(3,3)--(5,3)--(5,5)--(2,5)--(2,2)--(6,2)--(6,6)--(1,6)--(1,1)--(7,1)--(7,7)--(0,7)--(0,0)--(7,0),linewidth(2)); [/asy]</p>",
+      "solutions": [
+        "<p>We fill out the grid, as shown below:[asy] /* Made by MRENTHUSIASM */ size(175);  void ds(pair p) { \tfilldraw((0.5,0.5)+p--(-0.5,0.5)+p--(-0.5,-0.5)+p--(0.5,-0.5)+p--cycle,mediumgrey); }  ds((0.5,4.5)); ds((1.5,3.5)); ds((3.5,1.5)); ds((4.5,0.5));  add(grid(7,7,grey+linewidth(1.25)));  int adj = 1; int curUp = 2; int curLeft = 4; int curDown = 6; int curRight = 8;  label(\"$1$\",(3.5,3.5));  for (int len = 3; len<=7; len+=2) { \tfor (int i=1; i<=len-1; ++i)     \t\t{ \t\t\tlabel(\"$\"+string(curUp)+\"$\",(3.5+adj,3.5-adj+i));     \t\tlabel(\"$\"+string(curLeft)+\"$\",(3.5+adj-i,3.5+adj));      \t\tlabel(\"$\"+string(curDown)+\"$\",(3.5-adj,3.5+adj-i));     \t\tlabel(\"$\"+string(curRight)+\"$\",(3.5-adj+i,3.5-adj));     \t\t++curDown;     \t\t++curLeft;     \t\t++curUp;     \t\t++curRight; \t\t} \t++adj;     curUp = len^2 + 1;     curLeft = len^2 + len + 2;     curDown = len^2 + 2*len + 3;     curRight = len^2 + 3*len + 4; }  draw((4,4)--(3,4)--(3,3)--(5,3)--(5,5)--(2,5)--(2,2)--(6,2)--(6,6)--(1,6)--(1,1)--(7,1)--(7,7)--(0,7)--(0,0)--(7,0),linewidth(2)); [/asy]From the four numbers that appear in the shaded squares, $\\boxed{\\textbf{(D)}\\ 3}$ of them are prime: $19,23,$ and $47.$</p><p>~MathFun1000, MRENTHUSIASM</p>",
+        "<p>Note that given time constraint, it's better to only count from perfect squares (in pink), as shown below:[asy] /* Grid Made by MRENTHUSIASM */ /* Squares pattern solution input by TheMathGuyd */ size(175);  void ds(pair p) { \tfilldraw((0.5,0.5)+p--(-0.5,0.5)+p--(-0.5,-0.5)+p--(0.5,-0.5)+p--cycle,mediumgrey); }  void ps(pair p) { \tfilldraw((0.5,0.5)+p--(-0.5,0.5)+p--(-0.5,-0.5)+p--(0.5,-0.5)+p--cycle,pink+opacity(0.3)); } real ts = 0.5;  ds((0.5,4.5));label(\"$39$\",(0.5,4.5)); ds((1.5,3.5));label(\"$19$\",(1.5,3.5)); ds((3.5,1.5));label(\"$23$\",(3.5,1.5)); ds((4.5,0.5));label(\"$47$\",(4.5,0.5));  ps((3.5,3.5));label(\"$1$\",(3.5,3.5)); ps((4.5,2.5));label(\"$9$\",(4.5,2.5)); ps((5.5,1.5));label(\"$25$\",(5.5,1.5)); ps((6.5,0.5));label(\"$49$\",(6.5,0.5)); ps((3.5,4.5));label(\"$4$\",(3.5,4.5)); ps((2.5,5.5));label(\"$16$\",(2.5,5.5)); ps((1.5,6.5));label(\"$36$\",(1.5,6.5)); label(scale(ts)*\"$\\leftarrow$\",(1,6),NE); label(scale(ts)*\"$+1$\",(1,6),NW); label(scale(ts)*\"$\\downarrow$\",(1,6),SW); label(scale(ts)*\"$+2$\",(1,5),NW); label(scale(ts)*\"$\\downarrow$\",(1,5),SW); label(scale(ts)*\"$+3$\",(1,4),NW); label(scale(ts)*\"$+1$\",(2,5),NW); label(scale(ts)*\"$\\downarrow$\",(2,5),SW); label(scale(ts)*\"$+2$\",(2,4),NW); label(scale(ts)*\"$\\downarrow$\",(2,4),SW); label(scale(ts)*\"$+3$\",(2,3),NW);  label(scale(ts)*\"$\\leftarrow$\",(5,1),NE); label(scale(ts)*\"$-1$\",(5,1),NW); label(scale(ts)*\"$\\leftarrow$\",(4,1),NE); label(scale(ts)*\"$-2$\",(4,1),NW); label(scale(ts)*\"$\\leftarrow$\",(6,0),NE); label(scale(ts)*\"$-1$\",(6,0),NW); label(scale(ts)*\"$\\leftarrow$\",(5,0),NE); label(scale(ts)*\"$-2$\",(5,0),NW);  add(grid(7,7,grey+linewidth(1.25))); //USES OLYMPIAD.ASY  draw((4,4)--(3,4)--(3,3)--(5,3)--(5,5)--(2,5)--(2,2)--(6,2)--(6,6)--(1,6)--(1,1)--(7,1)--(7,7)--(0,7)--(0,0)--(7,0),linewidth(2)); [/asy]From the four numbers that appear in the shaded squares, $\\boxed{\\textbf{(D)}\\ 3}$ of them are prime: $19,23,$ and $47.$</p><p>~TheMathGuyd</p>",
+        "<p>Since the last shaded square is very close to the final number, which is 49, we can easily subtract two instead of having to count all the way there. Then, we can count (:P).</p><p>~AliceDubbleYou</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2023 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_5",
+      "question": "<p>A lake contains $250$ trout, along with a variety of other fish. When a marine biologist catches and releases a sample of $180$ fish from the lake, $30$ are identified as trout. Assume that the ratio of trout to the total number of fish is the same in both the sample and the lake. How many fish are there in the lake?</p>",
+      "solutions": [
+        "<p>Note that \\[\\frac{\\text{number of trout}}{\\text{total number of fish}} = \\frac{30}{180} = \\frac16.\\] So, the total number of fish is $6$ times the number of trout. Since the lake contains $250$ trout, there are $250\\cdot6=\\boxed{\\textbf{(B)}\\ 1500}$ fish in the lake.</p><p>~apex304, SohumUttamchandani, wuwang2002, TaeKim, Cxrupptedpat, MRENTHUSIASM</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2023 AMC 8 - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_6",
+      "question": "<p>The digits $2,0,2,$ and $3$ are placed in the expression below, one digit per box. What is the maximum possible value of the expression?</p><p>[asy] // Diagram by TheMathGuyd. I can compress this later size(5cm); real w=2.2; pair O,I,J; O=(0,0);I=(1,0);J=(0,1); path bsqb = O--I; path bsqr = I--I+J; path bsqt = I+J--J; path bsql = J--O; path lsqb = shift((1.2,0.75))*scale(0.5)*bsqb; path lsqr = shift((1.2,0.75))*scale(0.5)*bsqr; path lsqt = shift((1.2,0.75))*scale(0.5)*bsqt; path lsql = shift((1.2,0.75))*scale(0.5)*bsql; draw(bsqb,dashed); draw(bsqr,dashed); draw(bsqt,dashed); draw(bsql,dashed); draw(lsqb,dashed); draw(lsqr,dashed); draw(lsqt,dashed); draw(lsql,dashed); label(scale(3)*\"$\\times$\",(w,1/3)); draw(shift(1.3w,0)*bsqb,dashed); draw(shift(1.3w,0)*bsqr,dashed); draw(shift(1.3w,0)*bsqt,dashed); draw(shift(1.3w,0)*bsql,dashed); draw(shift(1.3w,0)*lsqb,dashed); draw(shift(1.3w,0)*lsqr,dashed); draw(shift(1.3w,0)*lsqt,dashed); draw(shift(1.3w,0)*lsql,dashed); [/asy]</p>",
+      "solutions": [
+        "<p>First, let us consider the case where $0$ is a base: This would result in the entire expression being $0.$ Contrastingly, if $0$ is an exponent, we will get a value greater than $0.$ $3^2\\times2^0=9$ is greater than $2^3\\times2^0=8$ and $2^2\\times3^0=4.$ Therefore, the answer is $\\boxed{\\textbf{(C) }9}.$</p>",
+        "<p>The maximum possible value of using the digits $2,0,2,$ and $3$: We can maximize our value by keeping the $3$ and $2$ together in one power (the biggest with the biggest and the smallest with the smallest). This shows $3^{2}\\times2^{0}=9\\times1=9.$ (We don't want $0^{2}$ because that is $0$.) It is going to be $\\boxed{\\textbf{(C)}\\ 9}.$</p>",
+        "<p>Trying all $12$ distinct orderings, we see that the only possible values are $0,4,8,$ and $9,$ the greatest of which is $\\boxed{\\textbf{(C)}\\ 9}.$</p><p>~A_MatheMagician</p>",
+        "<p>There are two 2\u2019s and one 3. To make use of them all, use 2 and 3 as the bases and 2 and 0 as the exponents.</p><p>~spacepandamath13 .</p>",
+        "<p>If 0 is a base, then the whole expression becomes 0. Therefore, 0 must be an exponent. But since $2^0$=$3^0$=$1$, we do not want to waste our 3 on the 0. We will have a 3 and a 2 left, and since $3^2$ is greater than $2^3$, we get $3^2\\cdot2^0$=$9$.</p><p>~DrDominic</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2023 AMC 8 - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_7",
+      "question": "<p>A rectangle, with sides parallel to the $x$-axis and $y$-axis, has opposite vertices located at $(15, 3)$ and $(16, 5)$. A line is drawn through points $A(0, 0)$ and $B(3, 1)$. Another line is drawn through points $C(0, 10)$ and $D(2, 9)$. How many points on the rectangle lie on at least one of the two lines?[asy] usepackage(\"mathptmx\"); size(9cm); draw((0,-.5)--(0,11),EndArrow(size=.15cm)); draw((1,0)--(1,11),mediumgray); draw((2,0)--(2,11),mediumgray); draw((3,0)--(3,11),mediumgray); draw((4,0)--(4,11),mediumgray); draw((5,0)--(5,11),mediumgray); draw((6,0)--(6,11),mediumgray); draw((7,0)--(7,11),mediumgray); draw((8,0)--(8,11),mediumgray); draw((9,0)--(9,11),mediumgray); draw((10,0)--(10,11),mediumgray); draw((11,0)--(11,11),mediumgray); draw((12,0)--(12,11),mediumgray); draw((13,0)--(13,11),mediumgray); draw((14,0)--(14,11),mediumgray); draw((15,0)--(15,11),mediumgray); draw((16,0)--(16,11),mediumgray);  draw((-.5,0)--(17,0),EndArrow(size=.15cm)); draw((0,1)--(17,1),mediumgray); draw((0,2)--(17,2),mediumgray); draw((0,3)--(17,3),mediumgray); draw((0,4)--(17,4),mediumgray); draw((0,5)--(17,5),mediumgray); draw((0,6)--(17,6),mediumgray); draw((0,7)--(17,7),mediumgray); draw((0,8)--(17,8),mediumgray); draw((0,9)--(17,9),mediumgray); draw((0,10)--(17,10),mediumgray);  draw((-.13,1)--(.13,1)); draw((-.13,2)--(.13,2)); draw((-.13,3)--(.13,3)); draw((-.13,4)--(.13,4)); draw((-.13,5)--(.13,5)); draw((-.13,6)--(.13,6)); draw((-.13,7)--(.13,7)); draw((-.13,8)--(.13,8)); draw((-.13,9)--(.13,9)); draw((-.13,10)--(.13,10));  draw((1,-.13)--(1,.13)); draw((2,-.13)--(2,.13)); draw((3,-.13)--(3,.13)); draw((4,-.13)--(4,.13)); draw((5,-.13)--(5,.13)); draw((6,-.13)--(6,.13)); draw((7,-.13)--(7,.13)); draw((8,-.13)--(8,.13)); draw((9,-.13)--(9,.13)); draw((10,-.13)--(10,.13)); draw((11,-.13)--(11,.13)); draw((12,-.13)--(12,.13)); draw((13,-.13)--(13,.13)); draw((14,-.13)--(14,.13)); draw((15,-.13)--(15,.13)); draw((16,-.13)--(16,.13));  label(scale(.7)*\"$1$\", (1,-.13), S); label(scale(.7)*\"$2$\", (2,-.13), S); label(scale(.7)*\"$3$\", (3,-.13), S); label(scale(.7)*\"$4$\", (4,-.13), S); label(scale(.7)*\"$5$\", (5,-.13), S); label(scale(.7)*\"$6$\", (6,-.13), S); label(scale(.7)*\"$7$\", (7,-.13), S); label(scale(.7)*\"$8$\", (8,-.13), S); label(scale(.7)*\"$9$\", (9,-.13), S); label(scale(.7)*\"$10$\", (10,-.13), S); label(scale(.7)*\"$11$\", (11,-.13), S); label(scale(.7)*\"$12$\", (12,-.13), S); label(scale(.7)*\"$13$\", (13,-.13), S); label(scale(.7)*\"$14$\", (14,-.13), S); label(scale(.7)*\"$15$\", (15,-.13), S); label(scale(.7)*\"$16$\", (16,-.13), S);  label(scale(.7)*\"$1$\", (-.13,1), W); label(scale(.7)*\"$2$\", (-.13,2), W); label(scale(.7)*\"$3$\", (-.13,3), W); label(scale(.7)*\"$4$\", (-.13,4), W); label(scale(.7)*\"$5$\", (-.13,5), W); label(scale(.7)*\"$6$\", (-.13,6), W); label(scale(.7)*\"$7$\", (-.13,7), W); label(scale(.7)*\"$8$\", (-.13,8), W); label(scale(.7)*\"$9$\", (-.13,9), W); label(scale(.7)*\"$10$\", (-.13,10), W);   dot((0,0),linewidth(4)); label(scale(.75)*\"$A$\", (0,0), NE); dot((3,1),linewidth(4)); label(scale(.75)*\"$B$\", (3,1), NE);  dot((0,10),linewidth(4)); label(scale(.75)*\"$C$\", (0,10), NE); dot((2,9),linewidth(4)); label(scale(.75)*\"$D$\", (2,9), NE);  draw((15,3)--(16,3)--(16,5)--(15,5)--cycle,linewidth(1.125)); dot((15,3),linewidth(4)); dot((16,3),linewidth(4)); dot((16,5),linewidth(4)); dot((15,5),linewidth(4)); [/asy]</p>",
+      "solutions": [
+        "<p>If we extend the lines, we have the following diagram:[asy] usepackage(\"mathptmx\"); size(9cm); draw((0,-.5)--(0,11),EndArrow(size=.15cm)); draw((1,0)--(1,11),mediumgray); draw((2,0)--(2,11),mediumgray); draw((3,0)--(3,11),mediumgray); draw((4,0)--(4,11),mediumgray); draw((5,0)--(5,11),mediumgray); draw((6,0)--(6,11),mediumgray); draw((7,0)--(7,11),mediumgray); draw((8,0)--(8,11),mediumgray); draw((9,0)--(9,11),mediumgray); draw((10,0)--(10,11),mediumgray); draw((11,0)--(11,11),mediumgray); draw((12,0)--(12,11),mediumgray); draw((13,0)--(13,11),mediumgray); draw((14,0)--(14,11),mediumgray); draw((15,0)--(15,11),mediumgray); draw((16,0)--(16,11),mediumgray);  draw((-.5,0)--(17,0),EndArrow(size=.15cm)); draw((0,1)--(17,1),mediumgray); draw((0,2)--(17,2),mediumgray); draw((0,3)--(17,3),mediumgray); draw((0,4)--(17,4),mediumgray); draw((0,5)--(17,5),mediumgray); draw((0,6)--(17,6),mediumgray); draw((0,7)--(17,7),mediumgray); draw((0,8)--(17,8),mediumgray); draw((0,9)--(17,9),mediumgray); draw((0,10)--(17,10),mediumgray);  draw((-.13,1)--(.13,1)); draw((-.13,2)--(.13,2)); draw((-.13,3)--(.13,3)); draw((-.13,4)--(.13,4)); draw((-.13,5)--(.13,5)); draw((-.13,6)--(.13,6)); draw((-.13,7)--(.13,7)); draw((-.13,8)--(.13,8)); draw((-.13,9)--(.13,9)); draw((-.13,10)--(.13,10));  draw((1,-.13)--(1,.13)); draw((2,-.13)--(2,.13)); draw((3,-.13)--(3,.13)); draw((4,-.13)--(4,.13)); draw((5,-.13)--(5,.13)); draw((6,-.13)--(6,.13)); draw((7,-.13)--(7,.13)); draw((8,-.13)--(8,.13)); draw((9,-.13)--(9,.13)); draw((10,-.13)--(10,.13)); draw((11,-.13)--(11,.13)); draw((12,-.13)--(12,.13)); draw((13,-.13)--(13,.13)); draw((14,-.13)--(14,.13)); draw((15,-.13)--(15,.13)); draw((16,-.13)--(16,.13));  label(scale(.7)*\"$1$\", (1,-.13), S); label(scale(.7)*\"$2$\", (2,-.13), S); label(scale(.7)*\"$3$\", (3,-.13), S); label(scale(.7)*\"$4$\", (4,-.13), S); label(scale(.7)*\"$5$\", (5,-.13), S); label(scale(.7)*\"$6$\", (6,-.13), S); label(scale(.7)*\"$7$\", (7,-.13), S); label(scale(.7)*\"$8$\", (8,-.13), S); label(scale(.7)*\"$9$\", (9,-.13), S); label(scale(.7)*\"$10$\", (10,-.13), S); label(scale(.7)*\"$11$\", (11,-.13), S); label(scale(.7)*\"$12$\", (12,-.13), S); label(scale(.7)*\"$13$\", (13,-.13), S); label(scale(.7)*\"$14$\", (14,-.13), S); label(scale(.7)*\"$15$\", (15,-.13), S); label(scale(.7)*\"$16$\", (16,-.13), S);  label(scale(.7)*\"$1$\", (-.13,1), W); label(scale(.7)*\"$2$\", (-.13,2), W); label(scale(.7)*\"$3$\", (-.13,3), W); label(scale(.7)*\"$4$\", (-.13,4), W); label(scale(.7)*\"$5$\", (-.13,5), W); label(scale(.7)*\"$6$\", (-.13,6), W); label(scale(.7)*\"$7$\", (-.13,7), W); label(scale(.7)*\"$8$\", (-.13,8), W); label(scale(.7)*\"$9$\", (-.13,9), W); label(scale(.7)*\"$10$\", (-.13,10), W);  draw((0,10)--(17,1.5),blue); draw((0,0)--(17,17/3),blue);  dot((0,0),linewidth(4)); label(scale(.75)*\"$A$\", (0,0), NE); dot((3,1),linewidth(4)); label(scale(.75)*\"$B$\", (3,1), NE);  dot((0,10),linewidth(4)); label(scale(.75)*\"$C$\", (0,10), NE); dot((2,9),linewidth(4)); label(scale(.75)*\"$D$\", (2,9), NE);  draw((15,3)--(16,3)--(16,5)--(15,5)--cycle,linewidth(1.125)); dot((15,3),linewidth(4)); dot((16,3),linewidth(4)); dot((16,5),linewidth(4)); dot((15,5),linewidth(4)); [/asy]Therefore, we see that the answer is $\\boxed{\\textbf{(B)}\\ 1}.$</p><p>~MrThinker</p>",
+        "<p>Note that the $y$-intercepts of line $AB$ and line $CD$ are $0$ and $10$. If the analytic expression for line $AB$ is $y=k_{1}x$, and the analytic expression for line $CD$ is $y=k_{2}x+10$, we have equations: $3k_{1} = 1$ and $2k_{2} + 10 = 9$. Solving these equations, we can find out that $k_{1} = \\frac{1}{3}$ and $k_{2} = -\\frac{1}{2}$. Therefore, we can determine that the expression for line $AB$ is $y=\\frac{1}{3}x$ and the expression for line $CD$ is $y=-\\frac{1}{2}x + 10$. When $x=15$, the coordinates that line $AB$ and line $CD$ pass through are $(15, 5)$ and $\\left(15, \\frac{5}{2}\\right)$, and $(15, 5)$ lies perfectly on one vertex of the rectangle while the $y$ coordinate of $\\left(15, \\frac{5}{2}\\right)$ is out of the range $3 \\leq y \\leq 5$ (lower than the bottom left corner of the rectangle $(15, 3)$). Considering that the $y$ value of the line $CD$ will only decrease, and the $y$ value of the line $AB$ will only increase, there will not be another point on the rectangle that lies on either of the two lines. Thus, we can conclude that the answer is $\\boxed{\\textbf{(B)}\\ 1}.$</p><p>~<a href=\"/wiki/index.php/User:Bloggish\" title=\"User:Bloggish\">Bloggish</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2023 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_8",
+      "question": "<p>Lola, Lolo, Tiya, and Tiyo participated in a ping pong tournament. Each player competed against each of the other three players exactly twice. Shown below are the win-loss records for the players. The numbers $1$ and $0$ represent a win or loss, respectively. For example, Lola won five matches and lost the fourth match. What was Tiyo\u2019s win-loss record?</p>",
+      "solutions": [
+        "<p>We can calculate the total number of wins ($1$'s) by seeing how many matches were players, which is $12$ matches played. Then, we can calculate the # of wins already on the table, which is $5 + 3 + 2 = 10$, so there are $12 - 10 = 2$ wins left in the mystery player. Now, we will make the key observation that there is only $2$ wins ($1$'s) per column as there are $2$ winners and $2$ losers in each round. Strategically looking through the columns counting the $1$'s and putting our own $2$ $1$'s when the column isn't already full yields $\\boxed{\\textbf{(A)}\\ \\texttt{000101}}$.</p><p>~SohumUttamchandani -edits apex304, lpieleanu</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2023 AMC 8 - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_9",
+      "question": "<p>Malaika is skiing on a mountain. The graph below shows her elevation, in meters, above the base of the mountain as she skis along a trail. In total, how many seconds does she spend at an elevation between $4$ and $7$ meters?[asy] // Diagram by TheMathGuyd. Found cubic, so graph is perfect. import graph; size(8cm); int i; for(i=1; i<9; i=i+1) { draw((-0.2,2i-1)--(16.2,2i-1), mediumgrey); draw((2i-1,-0.2)--(2i-1,16.2), mediumgrey); draw((-0.2,2i)--(16.2,2i), grey); draw((2i,-0.2)--(2i,16.2), grey); } Label f;  f.p=fontsize(6);  xaxis(-0.5,17.8,Ticks(f, 2.0),Arrow());  yaxis(-0.5,17.8,Ticks(f, 2.0),Arrow());  real f(real x)  {  return -0.03125 x^(3) + 0.75x^(2) - 5.125 x + 14.5;  }  draw(graph(f,0,15.225),currentpen+1); real dpt=2; real ts=0.75; transform st=scale(ts); label(rotate(90)*st*\"Elevation (meters)\",(-dpt,8)); label(st*\"Time (seconds)\",(8,-dpt)); [/asy]</p>",
+      "solutions": [
+        "<p>We mark the time intervals in which Malaika's elevation is between $4$ and $7$ meters in red, as shown below:[asy] // Diagram by TheMathGuyd. Found cubic, so graph is perfect. import graph; size(8cm); int i; for(i=1; i<9; i=i+1) { draw((-0.2,2i-1)--(16.2,2i-1), mediumgrey); draw((2i-1,-0.2)--(2i-1,16.2), mediumgrey); draw((-0.2,2i)--(16.2,2i), grey); draw((2i,-0.2)--(2i,16.2), grey); } Label f;  f.p=fontsize(6);  xaxis(-0.5,17.8,Ticks(f, 2.0),Arrow());  yaxis(-0.5,17.8,Ticks(f, 2.0),Arrow());  real f(real x)  {  return -0.03125 x^(3) + 0.75x^(2) - 5.125 x + 14.5;  }  draw(graph(f,0,15.225),currentpen+1); draw(graph(f,2,4)^^graph(f,6,10)^^graph(f,12,14),red+currentpen+2); real dpt=2; real ts=0.75; transform st=scale(ts); label(rotate(90)*st*\"Elevation (meters)\",(-dpt,8)); label(st*\"Time (seconds)\",(8,-dpt)); [/asy]The requested time intervals are:</p><ul><li>from the $2$nd to the $4$th seconds</li></ul><ul><li>from the $6$th to the $10$th seconds</li></ul><ul><li>from the $12$th to the $14$th seconds</li></ul><p>In total, Malaika spends $(4-2) + (10-6) + (14-12) = \\boxed{\\textbf{(B)}\\ 8}$ seconds at such elevation.</p><p>~apex304, MRENTHUSIASM</p>",
+        "<p>Notice that the entire section between the $2$ second mark and the $14$ second mark is between the $4$ and $7$ feet elevation level except the $2$ seconds where she skis just under the $4$ feet mark and when she skis just above the $7$ feet mark, making the answer $14-2-2-2=\\boxed{\\textbf{(B)}\\ 8}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2023 AMC 8 - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_10",
+      "question": "<p>Harold made a plum pie to take on a picnic. He was able to eat only $\\frac{1}{4}$ of the pie, and he left the rest for his friends. A moose came by and ate $\\frac{1}{3}$ of what Harold left behind. After that, a porcupine ate $\\frac{1}{3}$ of what the moose left behind. How much of the original pie still remained after the porcupine left?</p>",
+      "solutions": [
+        "<p>Note that:</p><ul><li>Harold ate $\\frac14$ of the pie. After that, $1-\\frac14=\\frac34$ of the pie was left behind.</li></ul><ul><li>The moose ate $\\frac13\\cdot\\frac34 = \\frac14$ of the pie. After that, $\\frac34 - \\frac14 = \\frac12$ of the pie was left behind.</li></ul><ul><li>The porcupine ate $\\frac13\\cdot\\frac12 = \\frac16$ of the pie. After that, $\\frac12 - \\frac16 = \\boxed{\\textbf{(D)}\\ \\frac{1}{3}}$ of the pie was left behind.</li></ul><p>More simply, we can condense the solution above into the following equation: \\[\\left(1-\\frac14\\right)\\left(1-\\frac13\\right)\\left(1-\\frac13\\right) = \\frac34\\cdot\\frac23\\cdot\\frac23 = \\frac13.\\]</p><p>~apex304, SohumUttamchandani, wuwang2002, TaeKim, Cxrupptedpat, MRENTHUSIASM</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2023 AMC 8 - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_11",
+      "question": "<p>NASA\u2019s Perseverance Rover was launched on July $30,$ $2020.$ After traveling $292{,}526{,}838$ miles, it landed on Mars in Jezero Crater about $6.5$ months later. Which of the following is closest to the Rover\u2019s average interplanetary speed in miles per hour?</p>",
+      "solutions": [
+        "<p>Note that $6.5$ months is approximately $6.5\\cdot30\\cdot24$ hours. Therefore, the speed (in miles per hour) is \\[\\frac{292{,}526{,}838}{6.5\\cdot30\\cdot24} \\approx \\frac{300{,}000{,}000}{6.5\\cdot30\\cdot24} = \\frac{10{,}000{,}000}{6.5\\cdot24} \\approx \\frac{10{,}000{,}000}{6.4\\cdot25} = \\frac{10{,}000{,}000}{160} = 62500 \\approx \\boxed{\\textbf{(C)}\\ 60{,}000}.\\]As the answer choices are far apart from each other, we can ensure that the approximation is correct.</p><p>~apex304, SohumUttamchandani, MRENTHUSIASM</p>",
+        "<p>Note that $292{,}526{,}838 \\approx 300{,}000{,}000$ miles. We also know that $6.5$ months is approximately $6.5\\cdot30\\cdot24$ hours. Now, we can calculate the speed in miles per hour, which we find is about\\[\\dfrac{300{,}000{,}000}{6.5\\cdot30\\cdot24}=\\dfrac{10{,}000{,}000}{6.5\\cdot24}=\\dfrac{10{,}000{,}000}{13\\cdot12}=\\dfrac{10{,}000{,}000}{156}\\approx\\dfrac{10{,}000{,}000}{150}\\approx\\dfrac{200{,}000}{3}\\approx\\boxed{\\textbf{(C)}\\ 60{,}000}.\\]~MathFun1000</p>",
+        "<p>The rover traveled about $292{,}526{,}838 \\approx 300{,}000{,}000$ miles. $6.5$ months is about $6\\cdot 30 + 15 = 180 + 15 = 195 \\approx 200$ days. $200$ days is about $200\\cdot 24 \\approx 200\\cdot 25 = 5{,}000$ hours. $\\frac{300{,}000{,}000}{5{,}000} = \\boxed{\\textbf{(C)}\\ 60{,}000}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2023 AMC 8 - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_12",
+      "question": "<p>The figure below shows a large white circle with a number of smaller white and shaded circles in itsinterior. What fraction of the interior of the large white circle is shaded?</p><p>[asy] // Diagram by TheMathGuyd size(6cm); draw(circle((3,3),3)); filldraw(circle((2,3),2),lightgrey); filldraw(circle((3,3),1),white); filldraw(circle((1,3),1),white); filldraw(circle((5.5,3),0.5),lightgrey); filldraw(circle((4.5,4.5),0.5),lightgrey); filldraw(circle((4.5,1.5),0.5),lightgrey); int i, j; for(i=0; i<7; i=i+1) { draw((0,i)--(6,i), dashed+grey); draw((i,0)--(i,6), dashed+grey); } [/asy]</p>",
+      "solutions": [
+        "<p>First, the total area of the radius $3$ circle is simply just $9\\cdot \\pi$ when using our area of a circle formula. </p><p>Now from here, we have to find our shaded area. This can be done by adding the areas of the $\\frac{1}{2}$-radius circles and add; then, take the area of the $1$ radius circles and subtract that from the area of the $2$ radius circle to get our resulting complex shape area. Adding these up, we will get $3\\cdot \\frac{1}{4} \\pi + 4 \\pi -\\pi - \\pi = \\frac{3}{4} \\pi + 2 \\pi = \\frac{11\\cdot \\pi}{4}$.</p><p>So, our answer is $\\frac {\\frac{11}{4} \\pi}{9 \\pi} = \\boxed{\\textbf{(B)}\\ \\frac{11}{36}}$.</p><p>~apex304Minor edits by ~NXC</p><p>Minor edits by ~Shriyans Chowdhury</p>",
+        "<p>Pretend each circle is a square. The large shaded circle is a square with area $16~\\text{units}^2$, and the two white circles inside it each have areas of $4~\\text{units}^2$, which adds up to $8~\\text{units}^2$. The three small shaded circles become three squares with area $1~\\text{units}^2$, and add up to $3~\\text{units}^2$. Adding the areas of the shaded circles (19) and subtracting the areas of the white circles (8), we get $11~\\text{units}^2$. Since the largest white circle in which all these other circles are becomes a square that has area $36~\\text{units}^2$, our answer is $\\boxed{\\textbf{(B)}\\ \\dfrac{11}{36}}$.</p><p>-clareguLaTeX (edits -apex304, CoOlPoTaToEs, KGINSPECTORBOI, SlimeKnight, rickastleylover99)</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2023 AMC 8 - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_13",
+      "question": "<p>Along the route of a bicycle race, $7$ water stations are evenly spaced between the start and finish lines,as shown in the figure below. There are also $2$ repair stations evenly spaced between the start andfinish lines. The $3$rd water station is located $2$ miles after the $1$st repair station. How long is the racein miles?[asy] // Credits given to Themathguyd\u200e and Kante314 usepackage(\"mathptmx\"); size(10cm); filldraw((11,4.5)--(171,4.5)--(171,17.5)--(11,17.5)--cycle,mediumgray*0.4 + lightgray*0.6); draw((11,11)--(171,11),linetype(\"2 2\")+white+linewidth(1.2)); draw((0,0)--(11,0)--(11,22)--(0,22)--cycle); draw((171,0)--(182,0)--(182,22)--(171,22)--cycle);  draw((31,4.5)--(31,0)); draw((51,4.5)--(51,0)); draw((151,4.5)--(151,0));  label(scale(.85)*rotate(45)*\"Water 1\", (23,-13.5)); label(scale(.85)*rotate(45)*\"Water 2\", (43,-13.5)); label(scale(.85)*rotate(45)*\"Water 7\", (143,-13.5));  filldraw(circle((103,-13.5),.2)); filldraw(circle((98,-13.5),.2)); filldraw(circle((93,-13.5),.2)); filldraw(circle((88,-13.5),.2)); filldraw(circle((83,-13.5),.2));  label(scale(.85)*rotate(90)*\"Start\", (5.5,11)); label(scale(.85)*rotate(270)*\"Finish\", (176.5,11)); [/asy]</p>",
+      "solutions": [
+        "<p>Suppose that the race is $d$ miles long. The water stations are located at \\[\\frac{d}{8}, \\frac{2d}{8}, \\ldots, \\frac{7d}{8}\\] miles from the start, and the repair stations are located at \\[\\frac{d}{3}, \\frac{2d}{3}\\] miles from the start.</p><p>We are given that $\\frac{3d}{8}=\\frac{d}{3}+2,$ from which \\begin{align*} \\frac{9d}{24}&=\\frac{8d}{24}+2 \\\\ \\frac{d}{24}&=2 \\\\ d&=\\boxed{\\textbf{(D)}\\ 48}. \\end{align*}~apex304, SohumUttamchandani, wuwang2002, TaeKim, Cxrupptedpat, MRENTHUSIASM</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2023 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_14",
+      "question": "<p>Nicolas is planning to send a package to his friend Anton, who is a stamp collector. To pay for the postage, Nicolas would like to cover the package with a large number of stamps. Suppose he has a collection of $5$-cent, $10$-cent, and $25$-cent stamps, with exactly $20$ of each type. What is the greatest number of stamps Nicolas can use to make exactly $$7.10$ in postage?(Note: The amount $$7.10$ corresponds to $7$ dollars and $10$ cents. One dollar is worth $100$ cents.)</p>",
+      "solutions": [
+        "<p>Let's use the most stamps to make $7.10.$ We have $20$ of each stamp, $5$-cent (nickels), $10$-cent (dimes), and $25$-cent (quarters).</p><p>If we want the highest number of stamps, we must have the highest number of the smaller value stamps (like the coins above). We can use $20$ nickels and $20$ dimes to bring our total cost to $7.10 - 3.00 = 4.10$. However, when we try to use quarters, the $25$ cents don\u2019t fit evenly, so we have to give back $15$ cents to make the quarter amount $4.25$. The most efficient way to do this is to give back a $10$-cent (dime) stamp and a $5$-cent (nickel) stamp to have $38$ stamps used so far. Now, we just use $\\frac{425}{25} = 17$ quarters to get a grand total of $38 + 17 = \\boxed{\\textbf{(E)}\\ 55}$.</p><p>~apex304, SohumUttamchandani, wuwang2002, TaeKim, Cxrupptedpat, InterstellerApex, mahika99</p>",
+        "<p>The value of his entire stamp collection is $8$ dollars. To make $$7.10$ with stamps, he should remove $90$ cents worth of stamps with as few stamps as possible. To do this, he should start by removing as many $25$ cent stamps as possible as they have the greatest denomination. He can remove at most $3$ of these stamps. He still has to remove $90-25\\cdot3=15$ cents worth of stamps. This can be done with one $5$ and $10$ cent stamp. In total, he has $20\\cdot3=60$ stamps in his entire collection. As a result, the maximum number of stamps he can use is $20\\cdot3-5=\\boxed{\\textbf{(E)}\\ 55}$.</p><p>~pianoboy</p><p>~MathFun1000 (Rewrote for clarity and formatting)</p><p>~vadava_lx (minor edits)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2023 AMC 8 - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_15",
+      "question": "<p>Viswam walks half a mile to get to school each day. His route consists of $10$ city blocks of equal length and he takes $1$ minute to walk each block. Today, after walking $5$ blocks, Viswam discovers he has to make a detour, walking $3$ blocks of equal length instead of $1$ block to reach the next corner. From the time he starts his detour, at what speed, in mph, must he walk, in order to get to school at his usual time?[asy] // Diagram by TheMathGuyd size(13cm); // this is an important stickman to the left of the origin pair C=midpoint((-0.5,0.5)--(-0.6,0.05)); draw((-0.5,0.5)--(-0.6,0.05)); // Head to butt draw((-0.64,0.16)--(-0.7,0.2)--C--(-0.47,0.2)--(-0.4,0.22)); // LH-C-RH draw((-0.6,0.05)--(-0.55,-0.1)--(-0.57,-0.25)); draw((-0.6,0.05)--(-0.68,-0.12)--(-0.8,-0.20));  filldraw(circle((-0.5,0.5),0.1),white,black);  int i; real d,s; // gap and side d=0.2; s=1-2*d; for(i=0; i<10; i=i+1) {   //dot((i,0), red); //marks to start   filldraw((i+d,d)--(i+1-d,d)--(i+1-d,1-d)--(i+d,1-d)--cycle, lightgrey, black);   filldraw(conj((i+d,d))--conj((i+1-d,d))--conj((i+1-d,1-d))--conj((i+d,1-d))--cycle,lightgrey,black); }  fill((5+d,-d/2)--(6-d,-d/2)--(6-d,d/2)--(5+d,d/2)--cycle,lightred);  draw((0,0)--(5,0)--(5,1)--(6,1)--(6,0)--(10.1,0),deepblue+linewidth(1.25)); //Who even noticed label(\"School\", (10,0),E, Draw()); [/asy]</p>",
+      "solutions": [
+        "<p>Note that Viswam walks at a constant speed of $60$ blocks per hour as he takes $1$ minute to walk each block. After walking $5$ blocks, he has taken $5$ minutes and has $5$ minutes remaining to walk $7$ blocks. Therefore, he must walk at a speed of $7 \\cdot 60 \\div 5 = 84$ blocks per hour to get to school on time, from the time he starts his detour. Since he normally walks $\\frac{1}{2}$ mile, which is equal to $10$ blocks, $1$ mile is equal to $20$ blocks. Therefore, he must walk at $84 \\div 20 = 4.2$ mph from the time he starts his detour to get to school on time, so the answer is $\\boxed{\\textbf{(B)}\\ 4.2}$.</p><p>~pianoboy (Edits by <a href=\"/wiki/index.php/User:ILoveMath31415926535\" title=\"User:ILoveMath31415926535\">ILoveMath31415926535</a>, apex304 and MrThinker)</p>",
+        "<p>Viswam walks $10$ blocks, or half a mile, in $10$ minutes. Therefore, he walks at a rate of $3$ mph. When he takes his detour, he must travel $7$ blocks instead of $5$. Our final equation is $\\frac{7}{5} \\times 3 = \\frac{21}{5} = \\boxed{\\textbf{(B)}\\ 4.2}$.</p><p>-<a href=\"/wiki/index.php/User:ILoveMath31415926535\" title=\"User:ILoveMath31415926535\">ILoveMath31415926535</a></p><p>Note: In the second half of his journey, he is travelling 7/5 as far as he originally expected to, so he needs to travel at 7/5 the speed to get there on time.</p><p>\u2014<a href=\"/wiki/index.php/User:Wescarroll\" title=\"User:Wescarroll\">wescarroll</a></p>",
+        "<p>When calculating the speed of his normal route, we get:</p><p>$\\frac{0.5 \\mathrm{miles}}{10 \\mathrm{minutes}}= \\frac{3 \\mathrm{miles}}{60 \\mathrm{minutes}}$</p><p>Keep in mind that his route is $10$ blocks long. Since we count $7$ blocks when the detour starts, than this would mean that he has $\\frac{7}{10}$ miles left to walk, considering the normal amount of blocks that he usually walks. Multiplying by $6$ to get the rate, we get, $\\frac{42}{10}=4.2$</p><p>Therefore, the answer is $\\boxed{\\textbf{(B)}\\ 4.2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2023 AMC 8 - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_16",
+      "question": "<p>The letters $\\text{P}, \\text{Q},$ and $\\text{R}$ are entered into a $20\\times20$ table according to the pattern shown below. How many $\\text{P}$s, $\\text{Q}$s, and $\\text{R}$s will appear in the completed table? [asy] /* Made by MRENTHUSIASM, Edited by Kante314 */ usepackage(\"mathdots\"); size(5cm); draw((0,0)--(6,0),linewidth(1.5)+mediumgray); draw((0,1)--(6,1),linewidth(1.5)+mediumgray); draw((0,2)--(6,2),linewidth(1.5)+mediumgray); draw((0,3)--(6,3),linewidth(1.5)+mediumgray); draw((0,4)--(6,4),linewidth(1.5)+mediumgray); draw((0,5)--(6,5),linewidth(1.5)+mediumgray);  draw((0,0)--(0,6),linewidth(1.5)+mediumgray); draw((1,0)--(1,6),linewidth(1.5)+mediumgray); draw((2,0)--(2,6),linewidth(1.5)+mediumgray); draw((3,0)--(3,6),linewidth(1.5)+mediumgray); draw((4,0)--(4,6),linewidth(1.5)+mediumgray); draw((5,0)--(5,6),linewidth(1.5)+mediumgray);  label(scale(.9)*\"\\textsf{P}\", (.5,.5)); label(scale(.9)*\"\\textsf{Q}\", (.5,1.5)); label(scale(.9)*\"\\textsf{R}\", (.5,2.5)); label(scale(.9)*\"\\textsf{P}\", (.5,3.5)); label(scale(.9)*\"\\textsf{Q}\", (.5,4.5)); label(\"$\\vdots$\", (.5,5.6));  label(scale(.9)*\"\\textsf{Q}\", (1.5,.5)); label(scale(.9)*\"\\textsf{R}\", (1.5,1.5)); label(scale(.9)*\"\\textsf{P}\", (1.5,2.5)); label(scale(.9)*\"\\textsf{Q}\", (1.5,3.5)); label(scale(.9)*\"\\textsf{R}\", (1.5,4.5)); label(\"$\\vdots$\", (1.5,5.6));  label(scale(.9)*\"\\textsf{R}\", (2.5,.5)); label(scale(.9)*\"\\textsf{P}\", (2.5,1.5)); label(scale(.9)*\"\\textsf{Q}\", (2.5,2.5)); label(scale(.9)*\"\\textsf{R}\", (2.5,3.5)); label(scale(.9)*\"\\textsf{P}\", (2.5,4.5)); label(\"$\\vdots$\", (2.5,5.6));  label(scale(.9)*\"\\textsf{P}\", (3.5,.5)); label(scale(.9)*\"\\textsf{Q}\", (3.5,1.5)); label(scale(.9)*\"\\textsf{R}\", (3.5,2.5)); label(scale(.9)*\"\\textsf{P}\", (3.5,3.5)); label(scale(.9)*\"\\textsf{Q}\", (3.5,4.5)); label(\"$\\vdots$\", (3.5,5.6));  label(scale(.9)*\"\\textsf{Q}\", (4.5,.5)); label(scale(.9)*\"\\textsf{R}\", (4.5,1.5)); label(scale(.9)*\"\\textsf{P}\", (4.5,2.5)); label(scale(.9)*\"\\textsf{Q}\", (4.5,3.5)); label(scale(.9)*\"\\textsf{R}\", (4.5,4.5)); label(\"$\\vdots$\", (4.5,5.6));  label(scale(.9)*\"$\\dots$\", (5.5,.5)); label(scale(.9)*\"$\\dots$\", (5.5,1.5)); label(scale(.9)*\"$\\dots$\", (5.5,2.5)); label(scale(.9)*\"$\\dots$\", (5.5,3.5)); label(scale(.9)*\"$\\dots$\", (5.5,4.5)); label(scale(.9)*\"$\\iddots$\", (5.5,5.6)); [/asy]$\\textbf{(A)}~132\\text{ Ps, }134\\text{ Qs, }134\\text{ Rs}$</p><p>$\\textbf{(B)}~133\\text{ Ps, }133\\text{ Qs, }134\\text{ Rs}$</p><p>$\\textbf{(C)}~133\\text{ Ps, }134\\text{ Qs, }133\\text{ Rs}$</p><p>$\\textbf{(D)}~134\\text{ Ps, }132\\text{ Qs, }134\\text{ Rs}$</p>",
+      "solutions": [
+        "<p>Since $20\\equiv2\\pmod3$ and $\\text{Q}$ is in the 2nd diagonal, it is also in the 20th diagonal, and so we find that there are $2(2 + 5 + 8 + 11 + 14 + 17) + 20 = 134 \\text{Qs}$. Since all the $\\text{P}$'s and $\\text{R}$'s are symmetric, the answer is $\\boxed{\\textbf{(C)}~133\\text{ Ps, }134\\text{ Qs, }133\\text{ Rs}}.$</p><p>~<a href=\"/wiki/index.php/User:ILoveMath31415926535\" title=\"User:ILoveMath31415926535\">ILoveMath31415926535</a></p>",
+        "<p>Notice that rows $x$ and $x+3$ are the same, for any $1 \\leq x \\leq 17.$ Additionally, rows $1, 2,$ and $3$ collectively contain the same number of $\\text{P}$s, $\\text{Q}$s, and $\\text{R}$s, because the letters are just substituted for one another. Therefore, the number of $\\text{P}$s, $\\text{Q}$s, and $\\text{R}$s in the first $18$ rows is $120$. The first row has $7$ $\\text{P}$s, $7$ $\\text{Q}$s, and $6$ $\\text{R}$s, and the second row has $6$ $\\text{P}$s, $7$ $\\text{Q}$s, and $7$ $\\text{R}$s. Adding these up, we obtain $\\boxed{\\textbf{(C)}~133\\text{ Ps, }134\\text{ Qs, }133\\text{ Rs}}$.</p><p>~mathboy100</p>",
+        "<p>This solution refers to the full diagram in Solution 4.</p><p>Note the $\\text{Q}$ diagonals are symmetric. The $\\text{R}$ and $\\text{P}$ diagonals are not symmetric, but are reflections of each other about the $\\text{Q}$ diagonals: </p><ul><li>The upper $\\text{Q}$ diagonal of length $2$ is surrounded by a $\\text{P}$ diagonal of length $3$ and an $\\text{R}$ diagonal of length $1.$</li></ul><ul><li>The lower $\\text{Q}$ diagonal of length $2$ is surrounded by a $\\text{P}$ diagonal of length $1$ and an $\\text{R}$ diagonal of length $3.$</li></ul><p>When looking at a pair of $Q$ diagonals of the same length $x,$ there is a total of $2x$ $\\text{R}$s and $\\text{P}$s next to these $2$ diagonals.</p><p>The main diagonal of $20$ $\\text{Q}$s has $19$ $\\text{P}$s and $19$ $\\text{R}$s next to it. Thus, the total is $x+1$ $\\text{Q}$s, $x$ $\\text{P}$s, $x$ $\\text{R}$s. Therefore, the answer is $\\boxed{\\textbf{(C)}~133\\text{ Ps, }134\\text{ Qs, }133\\text{ Rs}}.$</p><p>~ERMSCoach</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2023 AMC 8 - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_17",
+      "question": "<p>A <i>regular octahedron</i> has eight equilateral triangle faces with four faces meeting at each vertex. Jun will make the regular octahedron shown on the right by folding the piece of paper shown on the left. Which numbered face will end up to the right of $Q$?</p><p>[asy] // Diagram by TheMathGuyd import graph; // The Solid // To save processing time, do not use three (dimensions) // Project (roughly) to two size(15cm); pair Fr, Lf, Rt, Tp, Bt, Bk; Lf=(0,0); Rt=(12,1); Fr=(7,-1); Bk=(5,2); Tp=(6,6.7); Bt=(6,-5.2); draw(Lf--Fr--Rt); draw(Lf--Tp--Rt); draw(Lf--Bt--Rt); draw(Tp--Fr--Bt); draw(Lf--Bk--Rt,dashed); draw(Tp--Bk--Bt,dashed); label(rotate(-8.13010235)*slant(0.1)*\"$Q$\", (4.2,1.6)); label(rotate(21.8014095)*slant(-0.2)*\"$?$\", (8.5,2.05)); pair g = (-8,0); // Define Gap transform real a = 8; draw(g+(-a/2,1)--g+(a/2,1), Arrow()); // Make arrow // Time for the NET pair DA,DB,DC,CD,O; DA = (4*sqrt(3),0); DB = (2*sqrt(3),6); DC = (DA+DB)/3; CD = conj(DC); O=(0,0); transform trf=shift(3g+(0,3)); path NET = O--(-2*DA)--(-2DB)--(-DB)--(2DA-DB)--DB--O--DA--(DA-DB)--O--(-DB)--(-DA)--(-DA-DB)--(-DB); draw(trf*NET); label(\"$7$\",trf*DC); label(\"$Q$\",trf*DC+DA-DB); label(\"$5$\",trf*DC-DB); label(\"$3$\",trf*DC-DA-DB); label(\"$6$\",trf*CD); label(\"$4$\",trf*CD-DA); label(\"$2$\",trf*CD-DA-DB); label(\"$1$\",trf*CD-2DA); [/asy]</p>",
+      "solutions": [
+        "<p>We color face $6$ red and face $5$ yellow. Note that from the octahedron, face $5$ and face $?$ do not share anything in common. From the net, face $5$ shares at least one vertex with all other faces except face $1,$ which is shown in green: [asy] /* Diagram by TheMathGuyd Edited by MRENTHUSIASM */ import graph; // The Solid // To save processing time, do not use three (dimensions) // Project (roughly) to two size(15cm); pair Fr, Lf, Rt, Tp, Bt, Bk; Lf=(0,0); Rt=(12,1); Fr=(7,-1); Bk=(5,2); Tp=(6,6.7); Bt=(6,-5.2); fill(Tp--Bk--Lf--cycle,red); fill(Bt--Bk--Lf--cycle,yellow); fill(Fr--Rt--Tp--cycle,green); draw(Lf--Fr--Rt); draw(Lf--Tp--Rt); draw(Lf--Bt--Rt); draw(Tp--Fr--Bt); draw(Lf--Bk--Rt,dashed); draw(Tp--Bk--Bt,dashed); label(rotate(-8.13010235)*slant(0.1)*\"$Q$\", (4.2,1.6)); label(rotate(21.8014095)*slant(-0.2)*\"$?$\", (8.5,2.05)); pair g = (-8,0); // Define Gap transform real a = 8; draw(g+(-a/2,1)--g+(a/2,1), Arrow()); // Make arrow // Time for the NET pair DA,DB,DC,CD,O; DA = (4*sqrt(3),0); DB = (2*sqrt(3),6); DC = (DA+DB)/3; CD = conj(DC); O=(0,0); transform trf=shift(3g+(0,3)); path NET = O--(-2*DA)--(-2DB)--(-DB)--(2DA-DB)--DB--O--DA--(DA-DB)--O--(-DB)--(-DA)--(-DA-DB)--(-DB); fill(trf*((DA-DB)--O--DA--cycle),red); fill(trf*((DA-DB)--O--(-DB)--cycle),yellow); fill(trf*((-2*DA)--(-DA-DB)--(-DA)--cycle),green); draw(trf*NET); label(\"$7$\",trf*DC); label(\"$Q$\",trf*DC+DA-DB); label(\"$5$\",trf*DC-DB); label(\"$3$\",trf*DC-DA-DB); label(\"$6$\",trf*CD); label(\"$4$\",trf*CD-DA); label(\"$2$\",trf*CD-DA-DB); label(\"$1$\",trf*CD-2DA); [/asy]Therefore, the answer is $\\boxed{\\textbf{(A)}\\ 1}.$</p><p>~UnknownMonkey, apex304, MRENTHUSIASM</p>",
+        "<p>We label the octohedron going triangle by triangle until we reach the $?$ triangle. The triangle to the left of the $Q$ should be labeled with a $6$. Underneath triangle $6$ is triangle $5$. The triangle to the right of triangle $5$ is triangle $4$ and further to the right is triangle $3$. Finally, the side of triangle $3$ under triangle $Q$ is $2$, so the triangle to the right of $Q$ is $\\boxed{\\textbf{(A)}\\ 1}$. </p><p>~hdanger</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2023 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_18",
+      "question": "<p>Greta Grasshopper sits on a long line of lily pads in a pond. From any lily pad, Greta can jump $5$ pads to the right or $3$ pads to the left. What is the fewest number of jumps Greta must make to reach the lily pad located $2023$ pads to the right of her starting position?</p>",
+      "solutions": [
+        "<p>We have $2$ directions going $5$ right or $3$ left. We can assign a variable to each of these directions. We can call going right $1$ direction $\\text{X}$ and we can call going $1$ left $\\text{Y}$. We can build an equation of $5\\text{X}-3\\text{Y}=2023$, where we have to limit the number of moves we do. We can do this by making more of our moves the $5$ move turn than the $3$ move turn. The first obvious step is to go some amount of moves in the right direction then subtract off in the left direction to land on $2023$. The least amount of $3$\u2019s added to $2023$ to make a multiple of $5$ is $4$ as $2023 + 4(3) = 2035$. So now, we have solved the problem as we just go $\\frac{2035}{5} = 407$ hops right, and just do 4 more hops left. Yielding $407 + 4 = \\boxed{\\textbf{(D)}\\ 411}$ as our answer.</p><p>~apex304, SohumUttamchandani, wuwang2002, TaeKim, Cxrupptedpat</p>",
+        "<p>Notice that $2023 \\equiv 3\\pmod{5}$, and jumping to the left increases the value of Greta's position $\\pmod{5}$ by $2$. Therefore, the number of jumps to the left must be $4 \\pmod{5}$. As the number of jumps to the left increases, so does the number of jumps to the right, we must minimize both, which occurs when we jump $4$ to the left and $407$ to the right. The answer is $\\boxed{\\textbf{(D)}\\ 411}$.</p><p>~TRALALA</p>",
+        "<p>$5y - 2023$ must be divisible by 3. The smallest value of $y$ that will achieve this is $407$, which lands it at $2035$. After that, it takes $4$ jumps back, making a total of $\\boxed{\\textbf{(D)}\\ 411}$.</p><p>~e___</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2023 AMC 8 - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_19",
+      "question": "<p>An equilateral triangle is placed inside a larger equilateral triangle so that the region between them can be divided into three congruent trapezoids, as shown below. The side length of the inner triangle is $\\frac23$ the side length of the larger triangle. What is the ratio of the area of one trapezoid to the area of the inner triangle?</p><p>[asy] // Diagram by TheMathGuyd  pair A,B,C; A=(0,1); B=(sqrt(3)/2,-1/2); C=-conj(B); fill(2B--3B--3C--2C--cycle,grey); dot(3A); dot(3B); dot(3C); dot(2A); dot(2B); dot(2C); draw(2A--2B--2C--cycle); draw(3A--3B--3C--cycle); draw(2A--3A); draw(2B--3B); draw(2C--3C); [/asy]</p>",
+      "solutions": [
+        "<p>All equilateral triangles are similar. For the outer equilateral triangle to the inner equilateral triangle, since their side-length ratio is $\\frac32,$ their area ratio is $\\left(\\frac32\\right)^2=\\frac94.$ It follows that the area ratio of three trapezoids to the inner equilateral triangle is $\\frac94-1=\\frac54,$ so the area ratio of one trapezoid to the inner equilateral triangle is \\[\\frac54\\cdot\\frac13=\\frac{5}{12}=\\boxed{\\textbf{(C) } 5\u00a0: 12}.\\] ~apex304, SohumUttamchandani, wuwang2002, TaeKim, Cxrupptedpat, MRENTHUSIASM</p>",
+        "<p>Subtracting the larger equilateral triangle from the smaller one yields the sum of the three trapezoids. Since the ratio of the side lengths of the larger to the smaller one is $3:2$, we can set the side lengths as $3$ and $2$, respectively. So, the sum of the trapezoids is $\\frac{9\\sqrt{3}}{4}-\\frac{4\\sqrt{3}}{4}=\\frac{5}{4}\\sqrt{3}$. We are also told that the three trapezoids are congruent, thus the area of each of them is $\\frac{1}{3} \\cdot \\frac{5}{4}\\sqrt{3}=\\frac{5}{12}\\sqrt{3}$. Hence, the ratio is $\\frac{\\frac{5}{12}\\sqrt{3}}{\\sqrt{3}}=\\frac{5}{12}=\\boxed{\\textbf{(C) } 5\u00a0: 12}$.</p><p>~MrThinker</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2023 AMC 8 - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_20",
+      "question": "<p>Two integers are inserted into the list $3, 3, 8, 11, 28$ to double its range. The mode and median remain unchanged. What is the maximum possible sum of the two additional numbers?</p>",
+      "solutions": [
+        "<p>To double the range, we must find the current range, which is $28 - 3 = 25$, to then double to: $2(25) = 50$. Since we do not want to change the median, we need to get a value less than $8$ (as $8$ would change the mode) for the smaller, making $53$ fixed for the larger. Anything less than $3$ is not beneficial to the optimization because you want to get the largest range without changing the mode. So, taking our optimal values of $7$ and $53$, we have an answer of $7 + 53 = \\boxed{\\textbf{(D)}\\ 60}$.</p><p>~apex304, SohumUttamchandani, wuwang2002, TaeKim, CrystalFlower, CHECKMATE2021</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2023 AMC 8 - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_21",
+      "question": "<p>Alina writes the numbers $1, 2, \\dots , 9$ on separate cards, one number per card. She wishes to divide the cards into $3$ groups of $3$ cards so that the sum of the numbers in each group will be the same. In how many ways can this be done?</p>",
+      "solutions": [
+        "<p>First, we need to find the sum of each group when split. This is the total sum of all the elements divided by the # of groups. $1 + 2 \\cdots + 9 = \\frac{9(10)}{2} = 45$. Then, dividing by $3$, we have $\\frac{45}{3} = 15$, so each group of $3$ must have a sum of 15. To make the counting easier, we will just see the possible groups 9 can be with. The possible groups 9 can be with 2 distinct numbers are $(9, 2, 4)$ and $(9, 1, 5)$. Going down both of these avenues, we will repeat the same process for $8$ using the remaining elements in the list. Where there is only 1 set of elements getting the sum of $7$, $8$ needs in both cases. After $8$ is decided, the remaining 3 elements are forced in a group, yielding us an answer of $\\boxed{\\textbf{(C)}\\ 2}$ as our sets are $(9, 1, 5) (8, 3, 4) (7, 2, 6)$ and $(9, 2, 4) (8, 1, 6) (7, 3 ,5)$.</p><p>~CHECKMATE2021, apex304, SohumUttamchandani, wuwang2002, TaeKim, Cxrupptedpat</p>",
+        "<p>The group with $5$ must have the two other numbers adding up to $10$, since the sum of all the numbers is $(1 + 2 \\cdots + 9) = \\frac{9(10)}{2} = 45$. The sum of the numbers in each group must therefore be $\\frac{45}{3}=15$. We can have $(1, 5, 9)$, $(2, 5, 8)$, $(3, 5, 7)$, or $(4, 5, 6)$. With the first group, we have $(2, 3, 4, 6, 7, 8)$ left over. The only way to form a group of $3$ numbers that add up to $15$ is with $(3, 4, 8)$ or $(2, 6, 7)$. One of the possible arrangements is therefore $(1, 5, 9) (3, 4, 8) (2, 6, 7)$. Then, with the second group, we have $(1, 3, 4, 6, 7, 9)$ left over. With these numbers, there is no way to form a group of $3$ numbers adding to $15$. Similarly, with the third group there is $(1, 2, 4, 6, 8, 9)$ left over and we can make a group of $3$ numbers adding to $15$ with $(1, 6, 8)$ or $(2, 4, 9)$. Another arrangement is $(3, 5, 7) (1, 6, 8) (2, 4, 9)$. Finally, the last group has $(1, 2, 3, 7, 8, 9)$ left over. There is no way to make a group of $3$ numbers adding to $15$ with this, so the arrangements are $(1, 5, 9) (3, 4, 8) (2, 6, 7)$ and $(3, 5, 7) (1, 6, 8) (2, 4, 9)$. So\uff0cthere are $\\boxed{\\textbf{(C)}\\ 2}$ sets that can be formed.</p><p>~Turtwig113</p>",
+        "<p>The sum of the numbers across all equally valued sets is $(1 + 2 \\cdots + 9) = \\frac{9(10)}{2} = 45$. The value of the numbers in each set would be $\\frac{45}{3} = \\textbf{15}$. We know that the numbers $9$, $8$, and $7$ must belong in different sets, as putting any $2$ numbers in $1$ set will either pass or match the limit of $15$ per set, and we would then still need to add $1$ more number after that. Note that these numbers must be distinct, as Alina only has $1$ of each number, and order does not matter in the sets. Starting with the set that includes the number $9$, the next two numbers must add up to $6$, and there are $\\textbf{2}$ ways of doing this $(2,4) (1,5)$. Note we cannot use any number past $6$, as those numbers must be used in the other sets. The next set, which includes the number $8$, must have two numbers that add up to $7$, and there are $\\textbf{3}$ ways to do this $(2,5) (1,6) (3,4)$. The final set, which includes the number $7$, must have $2$ numbers that sum up to $8$, and there are $\\textbf{2}$ ways to do this $(2,6) (3,5)$. Now we have found the number of ways in which each set sums up to $15$. To find the number of ways in which all three sets sum up to $15$ concurrently, we must take the minimum of $2$, $3$, and $2$, which gives us an answer of $\\boxed{\\textbf{(C)}\\ 2}$ triplets of sets with 3 values, in which each set sum to the same amount. </p><p>~Fernat123</p>",
+        "<p>Note that each group of numbers should sum to $\\frac{1+2+3+4+5+6+7+8+9}{3} = 15.$ Thus, this is equivalent to asking, \u201cHow many ways can you fill in a three by three magic square with the integers $1$ through $9$?\u201d since we can take the three rows of the magic square as our three groups. If you have closely studied magic squares, you might know that in a three by three magic square that is to be filled in with the integers $1$ through $9$, the center of the square would be $5$ (the average of the numbers), and the numbers in the corners should be even(*). The such pairs (disregarding order) are $(2,8)$ and $(4,6).$ Let\u2019s fix the position of $2$ to be the top left corner. This would make $8$ in the bottom right corner. We can have either $4$ or $6$ to be in the top right corner, for a total of $\\boxed{\\textbf{(C)}\\ 2}$ such groups of three. (The groups are $(8,3,4) (1,5,7) (6,9,2)$ and $(8,1,6) (3,5,7) (4,9,2).$)Note that if we had instead fixed the position of $4$, $6$, or $8$, they would correspond to one of the two cases, just in a different configuration.</p><p><br/>(*)We can prove this using proof by contradiction. Label the nine small squares within the magic square from $a$ to $i$ from left to right, top to bottom. Firstly, we know that $a+i$ and $c+g$ sum to $10$ since the center square is $5$. Thus, $a$ and $i$ must have the same parity, and so must $c$ and $g$. Suppose that $a$ and $c$ have different parity. Since $a+b+c=15$, $b$ must be even. By a similar argument, $h$ must also be even, and so must $d$ and $f$. Our initial assumption is that one of $a$ and $c$ is odd and the other is even; however, we end up with six even numbers needed to fill in the square, but there are only four even integers from $1$ to $9$. Now suppose that all of $a, c, g,$ and $i$ are odd. This would make each of $b, d, f,$ and $h$ odd, but clearly we do not have enough odd numbers to make all nine numbers odd. Thus, each corner square must be even.</p><p>~ Brian__Liu</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2023 AMC 8 - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_22",
+      "question": "<p>In a sequence of positive integers, each term after the second is the product of the previous two terms. The sixth term is $4000$. What is the first term?</p>",
+      "solutions": [
+        "<p>In this solution, we will use trial and error to solve.$4000$ can be expressed as $200 \\times 20$. We divide $200$ by $20$ and get $10$, divide $20$ by $10$ and get $2$, and divide $10$ by $2$ to get $\\boxed{\\textbf{(D)}\\ 5}$. No one said that they have to be in ascending order!</p><p>Solution by <a href=\"/wiki/index.php/User:ILoveMath31415926535\" title=\"User:ILoveMath31415926535\">ILoveMath31415926535</a> and clarification edits by apex304</p><p><br/></p>",
+        "<p>Consider the first term is $a$ and the second term is $b$. Then, the following term will be $ab$, $ab^2$, $a^2b^3$ and $a^3b^5$. Notice that $4000=2^5\\times 5^3$, then we obtain $a=\\boxed{\\textbf{(D)}\\ 5}$ and $b=2$.</p><p>Solution by Slimeknight</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2023 AMC 8 - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_23",
+      "question": "<p>Each square in a $3 \\times 3$ grid is randomly filled with one of the $4$ gray and white tiles shown below on the right. [asy] size(5.663333333cm); draw((0,0)--(3,0)--(3,3)--(0,3)--cycle,gray); draw((1,0)--(1,3)--(2,3)--(2,0),gray); draw((0,1)--(3,1)--(3,2)--(0,2),gray);  fill((6,.33)--(7,.33)--(7,1.33)--cycle,mediumgray); draw((6,.33)--(7,.33)--(7,1.33)--(6,1.33)--cycle,gray); fill((6,1.67)--(7,2.67)--(6,2.67)--cycle,mediumgray); draw((6,1.67)--(7,1.67)--(7,2.67)--(6,2.67)--cycle,gray); fill((7.33,.33)--(8.33,.33)--(7.33,1.33)--cycle,mediumgray); draw((7.33,.33)--(8.33,.33)--(8.33,1.33)--(7.33,1.33)--cycle,gray); fill((8.33,1.67)--(8.33,2.67)--(7.33,2.67)--cycle,mediumgray); draw((7.33,1.67)--(8.33,1.67)--(8.33,2.67)--(7.33,2.67)--cycle,gray); [/asy]What is the probability that the tiling will contain a large gray diamond in one of the smaller $2 \\times 2$ grids? Below is an example of such tiling. [asy] size(2cm);  fill((1,0)--(0,1)--(0,2)--(1,1)--cycle,mediumgray); fill((2,0)--(3,1)--(2,2)--(1,1)--cycle,mediumgray); fill((1,2)--(1,3)--(0,3)--cycle,mediumgray); fill((1,2)--(2,2)--(2,3)--cycle,mediumgray); fill((3,2)--(3,3)--(2,3)--cycle,mediumgray);  draw((0,0)--(3,0)--(3,3)--(0,3)--cycle,gray); draw((1,0)--(1,3)--(2,3)--(2,0),gray); draw((0,1)--(3,1)--(3,2)--(0,2),gray); [/asy]</p>",
+      "solutions": [
+        "<p>There are $4$ cases that the tiling will contain a large gray diamond in one of the smaller $2 \\times 2$ grids, as shown below:[asy] size(375);  fill((1,1)--(2,2)--(1,3)--(0,2)--cycle,mediumgray); draw((0,0)--(3,0)--(3,3)--(0,3)--cycle,gray); draw((1,0)--(1,3)--(2,3)--(2,0),gray); draw((0,1)--(3,1)--(3,2)--(0,2),gray);  fill(shift(7,0)*((1,1)--(2,2)--(1,3)--(0,2)--cycle),mediumgray); draw(shift(6,0)*((0,0)--(3,0)--(3,3)--(0,3)--cycle),gray); draw(shift(6,0)*((1,0)--(1,3)--(2,3)--(2,0)),gray); draw(shift(6,0)*((0,1)--(3,1)--(3,2)--(0,2)),gray);  fill(shift(12,-1)*((1,1)--(2,2)--(1,3)--(0,2)--cycle),mediumgray); draw(shift(12,0)*((0,0)--(3,0)--(3,3)--(0,3)--cycle),gray); draw(shift(12,0)*((1,0)--(1,3)--(2,3)--(2,0)),gray); draw(shift(12,0)*((0,1)--(3,1)--(3,2)--(0,2)),gray);  fill(shift(19,-1)*((1,1)--(2,2)--(1,3)--(0,2)--cycle),mediumgray); draw(shift(18,0)*((0,0)--(3,0)--(3,3)--(0,3)--cycle),gray); draw(shift(18,0)*((1,0)--(1,3)--(2,3)--(2,0)),gray); draw(shift(18,0)*((0,1)--(3,1)--(3,2)--(0,2)),gray); [/asy]There are $4^5$ ways to decide the $5$ white squares for each case, and the cases do not have any overlap.</p><p>So, the requested probability is \\[\\frac{4\\cdot4^5}{4^9} = \\frac{4^6}{4^9} = \\frac{1}{4^3} = \\boxed{\\textbf{(C) } \\frac{1}{64}}.\\]~apex304, TaeKim, MRENTHUSIASM</p>",
+        "<p>Note that the middle tile can be any of the four tiles. The gray part of the middle tile points towards one of the corners, and for the gray diamond to appear the three adjacent tiles must all be perfect. Thus, the solution is $\\frac14 \\cdot \\frac14 \\cdot \\frac14 = \\boxed{\\textbf{(C) } \\frac{1}{64}}$.</p><p>~aayr</p>",
+        "<p>Note that each tile must be in its precise place. Because of that, each diamond has a $\\left(\\frac14\\right)^4$ chance of appearing. And since there are 4 placements, our solution is$\\frac{1}{4^4} \\cdot 4 = \\boxed{\\textbf{(C) } \\frac{1}{64}}$.</p><p>~ligonmathkid2</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2023 AMC 8 - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_24",
+      "question": "<p>Isosceles $\\triangle ABC$ has equal side lengths $AB$ and $BC$. In the figure below, segments are drawn parallel to $\\overline{AC}$ so that the shaded portions of $\\triangle ABC$ have the same area. The heights of the two unshaded portions are 11 and 5 units, respectively. What is the height of $h$ of $\\triangle ABC$? (Diagram not drawn to scale.)</p><p>[asy] //Diagram by TheMathGuyd size(12cm); real h = 2.5; // height real g=4; //c2c space real s = 0.65; //Xcord of Hline real adj = 0.08; //adjust line diffs pair A,B,C; B=(0,h); C=(1,0); A=-conj(C); pair PONE=(s,h*(1-s)); //Endpoint of Hline ONE pair PTWO=(s+adj,h*(1-s-adj)); //Endpoint of Hline ONE path LONE=PONE--(-conj(PONE)); //Hline ONE path LTWO=PTWO--(-conj(PTWO)); path T=A--B--C--cycle; //Triangle   fill (shift(g,0)*(LTWO--B--cycle),mediumgrey); fill (LONE--A--C--cycle,mediumgrey);  draw(LONE); draw(T); label(\"$A$\",A,SW); label(\"$B$\",B,N); label(\"$C$\",C,SE);  draw(shift(g,0)*LTWO); draw(shift(g,0)*T); label(\"$A$\",shift(g,0)*A,SW); label(\"$B$\",shift(g,0)*B,N); label(\"$C$\",shift(g,0)*C,SE);  draw(B--shift(g,0)*B,dashed); draw(C--shift(g,0)*A,dashed); draw((g/2,0)--(g/2,h),dashed); draw((0,h*(1-s))--B,dashed); draw((g,h*(1-s-adj))--(g,0),dashed); label(\"$5$\", midpoint((g,h*(1-s-adj))--(g,0)),UnFill); label(\"$h$\", midpoint((g/2,0)--(g/2,h)),UnFill); label(\"$11$\", midpoint((0,h*(1-s))--B),UnFill); [/asy]</p>",
+      "solutions": [
+        "<p>First, we notice that the smaller isosceles triangles are similar to the larger isosceles triangles. We can find that the area of the gray area in the first triangle is $[ABC]\\cdot\\left(1-\\left(\\tfrac{11}{h}\\right)^2\\right)$. Similarly, we can find that the area of the gray part in the second triangle is $[ABC]\\cdot\\left(\\tfrac{h-5}{h}\\right)^2$. These areas are equal, so $1-\\left(\\frac{11}{h}\\right)^2=\\left(\\frac{h-5}{h}\\right)^2$. Simplifying yields $10h=146$ so $h=\\boxed{\\textbf{(A) }14.6}$.</p><p>~MathFun1000 (~edits apex304)</p>",
+        "<p>We can call the length of AC as $x$. Therefore, the length of the base of the triangle with height $11$ is $11/h = a/x$. Therefore, the base of the smaller triangle is $11x/h$. We find that the area of the trapezoid is $(hx)/2 - 11^2x/2h$. </p><p>Using similar triangles once again, we find that the base of the shaded triangle is $(h-5)/h = b/x$. Therefore, the area is $(h-5)(hx-5x)/2h$. </p><p>Since the areas are the same, we find that $(hx)/2 - 121x/2h = (h-5)(hx-5x)/2h$. Multiplying each side by $2h$, we get $h^2x - 121x = h^2x - 5hx - 5hx + 25x$. Therefore, we can subtract $25x + h^2x$ from both sides, and get $-146x = -10hx$. Finally, we divide both sides by $-x$ and get $10h = 146$. $h$ is $\\boxed{\\textbf{(A)}14.6}$.</p><p>Solution by CHECKMATE2021 (edits by Someone)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2023 AMC 8 - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2023_8_25",
+      "question": "<p>Fifteen integers $a_1, a_2, a_3, \\dots, a_{15}$ are arranged in order on a number line. The integers are equally spaced and have the property that\\[1 \\le a_1 \\le 10, \\thickspace 13 \\le a_2 \\le 20, \\thickspace \\text{ and } \\thickspace 241 \\le a_{15}\\le 250.\\]What is the sum of digits of $a_{14}?$</p>",
+      "solutions": [
+        "<p>We can find the possible values of the common difference by finding the numbers which satisfy the conditions. To do this, we find the minimum of the last two: $241-20=221$, and the maximum\u2013$250-13=237$. There is a difference of $13$ between them, so only $17$ and $18$ work, as $17\\cdot13=221$, so $17$ satisfies $221\\leq 13x\\leq237$. The number $18$ is similarly found. $19$, however, is too much.</p><p>Now, we check with the first and last equations using the same method. We know $241-10\\leq 14x\\leq250-1$. Therefore, $231\\leq 14x\\leq249$. We test both values we just got, and we can realize that $18$ is too large to satisfy this inequality. On the other hand, we can now find that the difference will be $17$, which satisfies this inequality.</p><p>The last step is to find the first term. We know that the first term can only be from $1$ to $3$ since any larger value would render the second inequality invalid. Testing these three, we find that only $a_1=3$ will satisfy all the inequalities. Therefore, $a_{14}=13\\cdot17+3=224$. The sum of the digits is therefore $\\boxed{\\textbf{(A)}\\ 8}$.</p><p>~apex304, SohumUttamchandani, wuwang2002, TaeKim, Cxrupptedpat</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2023 AMC 8 - geometry problem involving area"
+        }
+      ]
+    }
+  ]
+}

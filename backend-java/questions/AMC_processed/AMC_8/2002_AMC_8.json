@@ -1,0 +1,406 @@
+{
+  "competition_info": {
+    "name": "2002_AMC_8",
+    "group": "AMC_8",
+    "year": 2002,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2002_8_1",
+      "question": "<p>A <a href=\"/wiki/index.php/Circle\" title=\"Circle\">circle</a> and two distinct <a href=\"/wiki/index.php/Line\" title=\"Line\">lines</a> are drawn on a sheet of paper. What is the largest possible number of points of intersection of these figures?</p>",
+      "solutions": [
+        "<p>The two <a href=\"/wiki/index.php/Line\" title=\"Line\">lines</a> can both <a href=\"/wiki/index.php/Intersection\" title=\"Intersection\">intersect</a> the <a href=\"/wiki/index.php/Circle\" title=\"Circle\">circle</a> twice, and can intersect each other once, so $2+2+1= \\boxed {\\text {(D)}\\ 5}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving intersection points between a circle and two lines, counting maximum possible intersections"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_2",
+      "question": "<p>How many different combinations of $5 bills and $2 bills can be used to make a total of $17? Order does not matter in this problem.</p>",
+      "solutions": [
+        "<p><a class=\"external free\" href=\"https://youtu.be/Zhsb5lv6jCI?t=701\" rel=\"nofollow\">https://youtu.be/Zhsb5lv6jCI?t=701</a></p>",
+        "<p>You cannot use more than 4 $<dollar>5$ bills, but if you use 3 $<dollar>5$ bills, you can add another $<dollar>2$ bill to make a combination. You cannot use 2 $<dollar>5$ bills since you have an odd number of dollars that need to be paid with $<dollar>2$ bills. You can also use 1 $<dollar>5$ bill and 6 $<dollar>2$ bills to make another combination. There are no other possibilities, as making $<dollar>17$ with 0 $<dollar>5$ bills is impossible, so the answer is $\\boxed {\\text {(A)}\\ 2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "general",
+          "confidence": 0.9,
+          "reasoning": "Counting problem involving finding combinations of $5 and $2 bills that sum to $17"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_3",
+      "question": "<p>What is the smallest possible average of four distinct positive even integers?</p>",
+      "solutions": [
+        "<p>In order to get the smallest possible average, we want the 4 even numbers to be as small as possible. The first 4 positive even numbers are 2, 4, 6, and 8. Their average is $\\frac{2+4+6+8}{4}=\\frac{20}{4}=\\boxed{\\text{(C)}\\ 5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.9,
+          "reasoning": "Average calculation problem involving finding the smallest possible average of four distinct positive even integers"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_4",
+      "question": "<p>The year 2002 is a palindrome (a number that reads the same from left to right as it does from right to left). What is the product of the digits of the next year after 2002 that is a palindrome?</p>",
+      "solutions": [
+        "<p>The palindrome right after 2002 is 2112. The product of the digits of 2112 is $\\boxed{\\text{(B)}\\ 4}$.</p>",
+        "<p>The palindrome formula is to add 110 to the number in order to get the next palindrome, a palindrome needs to be in the form as ABBA . We can use this in this case to get 2112. 2*1*1*2=4. Therefore, the answer is $\\boxed{\\text{(B)}\\ 4}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "general",
+          "confidence": 0.9,
+          "reasoning": "Number properties problem involving palindromes and finding the product of digits"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_5",
+      "question": "<p>Carlos Montado was born on Saturday, November 9, 2002. On what day of the week will Carlos be 706 days old? </p>",
+      "solutions": [
+        "<p>Days of the week have a cycle that repeats every $7$ days. Thus, after $100$ cycles, or $700$ days, it will be Saturday again. Six more days will make it $\\text{Friday} \\rightarrow \\boxed{C}$</p>",
+        "<p>Building off of solution 1, we can make things simpler by fast-forwarding $101$ cycles ($707$ days) instead of $100$ cycles. Day $707$ would be a Saturday again, and one day before then (Day $706$) would be a Friday. Therefore the answer is $\\boxed{(C)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "modular_arithmetic",
+          "confidence": 0.95,
+          "reasoning": "Modular arithmetic problem involving days of the week and calculating what day it will be after 706 days"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_6",
+      "question": "<p>A birdbath is designed to overflow so that it will be self-cleaning. Water flows in at the rate of 20 milliliters per minute and drains at the rate of 18 milliliters per minute. Which one of these graphs shows the volume of water in the birdbath during the filling time and continuing into the overflow time?[asy] size(450); defaultpen(linewidth(0.8)); path[] p={origin--(8,8)--(14,8), (0,10)--(4,10)--(14,0), origin--(14,14), (0,14)--(14,14), origin--(7,7)--(14,0)}; int i; for(i=0; i<5; i=i+1) { draw(shift(21i,0)*((0,16)--origin--(14,0))); draw(shift(21i,0)*(p[i])); label(\"Time\", (7+21i,0), S); label(rotate(90)*\"Volume\", (21i,8), W); }  label(\"$A$\", (0*21 + 7,-5), S); label(\"$B$\", (1*21 + 7,-5), S); label(\"$C$\", (2*21 + 7,-5), S); label(\"$D$\", (3*21 + 7,-5), S); label(\"$E$\", (4*21 + 7,-5), S); [/asy]</p>",
+      "solutions": [
+        "<p>The change in the water volume has a net gain of $20-18=2$ millimeters per minute. The birdbath's volume increases at a constant rate until it reaches its maximum and starts overflowing to keep a constant volume. This is best represented by graph $\\boxed{\\text{(A)}\\ A}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions",
+          "confidence": 0.9,
+          "reasoning": "Function problem involving rate of change - water flowing in at 20 ml/min and draining at 18 ml/min, requiring graph interpretation"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_7",
+      "question": "<p>The students in Mrs. Sawyer's class were asked to do a taste test of five kinds of candy. Each student chose one kind of candy. A bar graph of their preferences is shown. What percent of her class chose candy E?</p><p>[asy] real[] r={6, 8, 4, 2, 5}; int i; for(i=0; i<5; i=i+1) { filldraw((4i,0)--(4i+3,0)--(4i+3,2r[i])--(4i,2r[i])--cycle, black, black); } draw(origin--(19,0)--(19,16)--(0,16)--cycle, linewidth(0.9)); for(i=1; i<8; i=i+1) { draw((0,2i)--(19,2i)); } label(\"$0$\", (0,2*0), W); label(\"$1$\", (0,2*1), W); label(\"$2$\", (0,2*2), W); label(\"$3$\", (0,2*3), W); label(\"$4$\", (0,2*4), W); label(\"$5$\", (0,2*5), W); label(\"$6$\", (0,2*6), W); label(\"$7$\", (0,2*7), W); label(\"$8$\", (0,2*8), W); label(\"$A$\", (0*4+1.5, 0), S); label(\"$B$\", (1*4+1.5, 0), S); label(\"$C$\", (2*4+1.5, 0), S); label(\"$D$\", (3*4+1.5, 0), S); label(\"$E$\", (4*4+1.5, 0), S); label(\"SWEET TOOTH\", (9.5,18), N); label(\"Kinds of candy\", (9.5,-2), S); label(rotate(90)*\"Number of students\", (-2,8), W);[/asy]</p>",
+      "solutions": [
+        "<p>From the bar graph, we can see that $5$ students chose candy E. There are $6+8+4+2+5=25$ total students in Mrs. Sawyers class. The percent that chose E is $\\frac{5}{25} \\cdot 100 = \\boxed{\\text{(E)}\\ 20}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "statistics",
+          "sub_category": "data_analysis",
+          "confidence": 0.95,
+          "reasoning": "Data analysis problem involving bar graph interpretation and calculating percentages from given data"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_8",
+      "question": "<p>Problems 8,9 and 10 use the data found in the accompanying paragraph and table:</p><p>[asy] /* AMC8 2002 #8, 9, 10 Problem */ size(3inch, 1.5inch); for ( int y = 0; y &lt;= 5; ++y ) { draw((0,y)--(18,y)); } draw((0,0)--(0,5)); draw((6,0)--(6,5)); draw((9,0)--(9,5)); draw((12,0)--(12,5)); draw((15,0)--(15,5)); draw((18,0)--(18,5)); draw(scale(0.8)*\"50s\", (7.5,4.5)); draw(scale(0.8)*\"4\", (7.5,3.5)); draw(scale(0.8)*\"8\", (7.5,2.5)); draw(scale(0.8)*\"6\", (7.5,1.5)); draw(scale(0.8)*\"3\", (7.5,0.5)); draw(scale(0.8)*\"60s\", (10.5,4.5)); draw(scale(0.8)*\"7\", (10.5,3.5)); draw(scale(0.8)*\"4\", (10.5,2.5)); draw(scale(0.8)*\"4\", (10.5,1.5)); draw(scale(0.8)*\"9\", (10.5,0.5)); draw(scale(0.8)*\"70s\", (13.5,4.5)); draw(scale(0.8)*\"12\", (13.5,3.5)); draw(scale(0.8)*\"12\", (13.5,2.5)); draw(scale(0.8)*\"6\", (13.5,1.5)); draw(scale(0.8)*\"13\", (13.5,0.5)); draw(scale(0.8)*\"80s\", (16.5,4.5)); draw(scale(0.8)*\"8\", (16.5,3.5)); draw(scale(0.8)*\"15\", (16.5,2.5)); draw(scale(0.8)*\"10\", (16.5,1.5)); draw(scale(0.8)*\"9\", (16.5,0.5)); label(scale(0.8)*\"Country\", (3,4.5)); label(scale(0.8)*\"Brazil\", (3,3.5)); label(scale(0.8)*\"France\", (3,2.5)); label(scale(0.8)*\"Peru\", (3,1.5)); label(scale(0.8)*\"Spain\", (3,0.5)); label(scale(0.9)*\"Juan's Stamp Collection\", (9,0), S); label(scale(0.9)*\"Number of Stamps by Decade\", (9,5), N);[/asy]</p><p>How many of his European stamps were issued in the '80s? </p>",
+      "solutions": [
+        "<p>France and Spain are European countries. The number of '80s stamps from France is $15$ and the number of '80s stamps from Spain is $9$. The total number of stamps is $15+9=\\boxed{\\text{(D)}\\ 24}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "statistics",
+          "sub_category": "data_analysis",
+          "confidence": 0.9,
+          "reasoning": "Data analysis problem involving table interpretation and counting stamps from European countries in the 80s"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_9",
+      "question": "<p>Problems 8,9 and 10 use the data found in the accompanying paragraph and table:</p><p>[asy] /* AMC8 2002 #8, 9, 10 Problem */ size(3inch, 1.5inch); for ( int y = 0; y &lt;= 5; ++y ) { draw((0,y)--(18,y)); } draw((0,0)--(0,5)); draw((6,0)--(6,5)); draw((9,0)--(9,5)); draw((12,0)--(12,5)); draw((15,0)--(15,5)); draw((18,0)--(18,5)); draw(scale(0.8)*\"50s\", (7.5,4.5)); draw(scale(0.8)*\"4\", (7.5,3.5)); draw(scale(0.8)*\"8\", (7.5,2.5)); draw(scale(0.8)*\"6\", (7.5,1.5)); draw(scale(0.8)*\"3\", (7.5,0.5)); draw(scale(0.8)*\"60s\", (10.5,4.5)); draw(scale(0.8)*\"7\", (10.5,3.5)); draw(scale(0.8)*\"4\", (10.5,2.5)); draw(scale(0.8)*\"4\", (10.5,1.5)); draw(scale(0.8)*\"9\", (10.5,0.5)); draw(scale(0.8)*\"70s\", (13.5,4.5)); draw(scale(0.8)*\"12\", (13.5,3.5)); draw(scale(0.8)*\"12\", (13.5,2.5)); draw(scale(0.8)*\"6\", (13.5,1.5)); draw(scale(0.8)*\"13\", (13.5,0.5)); draw(scale(0.8)*\"80s\", (16.5,4.5)); draw(scale(0.8)*\"8\", (16.5,3.5)); draw(scale(0.8)*\"15\", (16.5,2.5)); draw(scale(0.8)*\"10\", (16.5,1.5)); draw(scale(0.8)*\"9\", (16.5,0.5)); label(scale(0.8)*\"Country\", (3,4.5)); label(scale(0.8)*\"Brazil\", (3,3.5)); label(scale(0.8)*\"France\", (3,2.5)); label(scale(0.8)*\"Peru\", (3,1.5)); label(scale(0.8)*\"Spain\", (3,0.5)); label(scale(0.9)*\"Juan's Stamp Collection\", (9,0), S); label(scale(0.9)*\"Number of Stamps by Decade\", (9,5), N);[/asy]</p><p>In dollars and cents, how much did his South American stamps issued before the \u201970s cost him?</p>",
+      "solutions": [
+        "<p>Brazil 50s and 60s total 11 stamps with each 6 cents, Peru 50s and 60s total 10 stamps with each 4 cents. So total $11*0.06+10*0.04 = \\boxed{\\text{(B)}\\ $1.06}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "statistics",
+          "sub_category": "data_analysis",
+          "confidence": 0.9,
+          "reasoning": "Data analysis problem involving table interpretation and calculating costs of stamps from South American countries"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_10",
+      "question": "<p>Problems 8,9 and 10 use the data found in the accompanying paragraph and table:</p><p>[asy] /* AMC8 2002 #8, 9, 10 Problem */ size(3inch, 1.5inch); for ( int y = 0; y &lt;= 5; ++y ) { draw((0,y)--(18,y)); } draw((0,0)--(0,5)); draw((6,0)--(6,5)); draw((9,0)--(9,5)); draw((12,0)--(12,5)); draw((15,0)--(15,5)); draw((18,0)--(18,5)); draw(scale(0.8)*\"50s\", (7.5,4.5)); draw(scale(0.8)*\"4\", (7.5,3.5)); draw(scale(0.8)*\"8\", (7.5,2.5)); draw(scale(0.8)*\"6\", (7.5,1.5)); draw(scale(0.8)*\"3\", (7.5,0.5)); draw(scale(0.8)*\"60s\", (10.5,4.5)); draw(scale(0.8)*\"7\", (10.5,3.5)); draw(scale(0.8)*\"4\", (10.5,2.5)); draw(scale(0.8)*\"4\", (10.5,1.5)); draw(scale(0.8)*\"9\", (10.5,0.5)); draw(scale(0.8)*\"70s\", (13.5,4.5)); draw(scale(0.8)*\"12\", (13.5,3.5)); draw(scale(0.8)*\"12\", (13.5,2.5)); draw(scale(0.8)*\"6\", (13.5,1.5)); draw(scale(0.8)*\"13\", (13.5,0.5)); draw(scale(0.8)*\"80s\", (16.5,4.5)); draw(scale(0.8)*\"8\", (16.5,3.5)); draw(scale(0.8)*\"15\", (16.5,2.5)); draw(scale(0.8)*\"10\", (16.5,1.5)); draw(scale(0.8)*\"9\", (16.5,0.5)); label(scale(0.8)*\"Country\", (3,4.5)); label(scale(0.8)*\"Brazil\", (3,3.5)); label(scale(0.8)*\"France\", (3,2.5)); label(scale(0.8)*\"Peru\", (3,1.5)); label(scale(0.8)*\"Spain\", (3,0.5)); label(scale(0.9)*\"Juan's Stamp Collection\", (9,0), S); label(scale(0.9)*\"Number of Stamps by Decade\", (9,5), N);[/asy]</p><p>The average price of his '70s stamps is closest to</p>",
+      "solutions": [
+        "<p>The price of all the stamps in the '70s together over the total number of stamps is equal to the average price.</p><p>\\[\\frac{(12)(0.06)+(12)(0.06)+(6)(0.04)+(13)(0.05)}{12+12+6+13}\\\\ = \\frac{0.72+0.72+0.24+0.65}{43}\\\\ = \\frac{2.33}{43} \\approx \\boxed{\\text{(E)}\\ 5.5\\ \\text{cents}}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "statistics",
+          "sub_category": "data_analysis",
+          "confidence": 0.9,
+          "reasoning": "Data analysis problem involving table interpretation and calculating weighted average price of stamps from the 70s"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_11",
+      "question": "<p>A sequence of squares is made of identical square tiles. The edge of each square is one tile length longer than the edge of the previous square. The first three squares are shown. How many more tiles does the seventh square require than the sixth?</p><p>[asy] path p=origin--(1,0)--(1,1)--(0,1)--cycle; draw(p); draw(shift(3,0)*p); draw(shift(3,1)*p); draw(shift(4,0)*p); draw(shift(4,1)*p); draw(shift(7,0)*p); draw(shift(7,1)*p); draw(shift(7,2)*p); draw(shift(8,0)*p); draw(shift(8,1)*p); draw(shift(8,2)*p); draw(shift(9,0)*p); draw(shift(9,1)*p); draw(shift(9,2)*p);[/asy]</p>",
+      "solutions": [
+        "<p>The first square has a sidelength of $1$, the second square $2$, and so on. The seventh square has $7$ and is made of $7^2=49$ unit tiles. The sixth square has $6$ and is made of $6^2=36$ unit tiles. The seventh square has $49-36=\\boxed{\\text{(C)}\\ 13}$ more tiles than the sixth square.</p>",
+        "<p>The edge of each square is one tile length longer than the edge of the previous square, which means that each square has $2*$ edge length $- 1$ more tiles than the previous square, because each square is just one edge added on the top and on the right to the previous square, with one overlapping tile. Then the seventh square has $2*7-1=13$ more tiles than the sixth square, which is $\\boxed{\\text{(C)}\\ 13}$.</p>",
+        "<p>We see a pattern of 1, 4, and 9, all of which are the squares of 1, 2,and 3 respectively. So, the 6th and 7th squares will also follow the same pattern. Via the difference of squares, we see that $7^2 - 6^2$. Now we can see that the seventh square has $(7-6)(7+6) =$ $\\boxed{\\text{(C)}\\ 13}$ more tiles than the sixth square.</p><p>~ AkCANdo</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences",
+          "confidence": 0.95,
+          "reasoning": "Sequence problem involving squares with increasing side lengths, finding the difference in number of tiles between consecutive squares"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_12",
+      "question": "<p>A board game spinner is divided into three regions labeled $A$, $B$ and $C$. The probability of the arrow stopping on region $A$ is $\\frac{1}{3}$ and on region $B$ is $\\frac{1}{2}$. The probability of the arrow stopping on region $C$ is:</p>",
+      "solutions": [
+        "<p>Since the arrow must land in one of the three regions, the sum of the probabilities must be 1. Thus the answer is $1-\\frac{1}{2}-\\frac{1}{3}=\\boxed{\\text{(B)}\\ \\frac16}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "general",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving spinner regions where probabilities must sum to 1"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_13",
+      "question": "<p>For his birthday, Bert gets a box that holds 125 jellybeans when filled to capacity. A few weeks later, Carrie gets a larger box full of jellybeans. Her box is twice as high, twice as wide and twice as long as Bert's. Approximately, how many jellybeans did Carrie get? </p>",
+      "solutions": [
+        "<p>Since the volume ratio is equal to the sides ratio cubed, then the ratio of the larger box's volume to the smaller one is 2 cubed.</p><p>$2^3=8$</p><p>Now multiply 125 (the number of jellybeans that Bert's box can hold) by 8.</p><p>$8\\cdot125= \\boxed{\\text{(E)}\\ 1000}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry",
+          "confidence": 0.95,
+          "reasoning": "Volume scaling problem involving boxes where dimensions are doubled, requiring understanding that volume scales as the cube of linear dimensions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_14",
+      "question": "<p>A merchant offers a large group of items at $30\\%$ off. Later, the merchant takes $20\\%$ off these sale prices. The total discount is</p>",
+      "solutions": [
+        "<p>Let's assume that each item is $100$ dollars. First we take off $30\\%$ off of $100$ dollars. $100\\cdot0.7=70$</p><p>Next, we take off the extra $20\\%$ as asked by the problem. $70\\cdot0.80=56$</p><p>So the final price of an item is $56. We have to do $100-56$ because $56$ was the final price and we wanted the discount. So the final answer is $44\\%$, which is answer choice $\\boxed{(B) 44 \\%}$.</p>",
+        "<p>Let $x$ be the price of an item on sale. When the item is $30\\%$ off, its new price is \\[(1-0.3)x=0.7x.\\]When $20\\%$ is taken off of that price, the item's final sales price is \\[(1-0.2)\\cdot0.7x=0.8\\cdot0.7x=0.56x=(1-0.44)x.\\]Therefore, the item was $44\\%$ off, so the answer is $\\boxed{(B)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.9,
+          "reasoning": "Triangle area problem using the formula area = (base \u00d7 height) / 2"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_15",
+      "question": "<p>Which of the following polygons has the largest area?</p><p>[asy] size(330); int i,j,k; for(i=0;i<5; i=i+1) { for(j=0;j<5;j=j+1) { for(k=0;k<5;k=k+1) { dot((6i+j, k)); }}} draw((0,0)--(4,0)--(3,1)--(3,3)--(2,3)--(2,1)--(1,1)--cycle); draw(shift(6,0)*((0,0)--(4,0)--(4,1)--(3,1)--(3,2)--(2,1)--(1,1)--(0,2)--cycle)); draw(shift(12,0)*((0,1)--(1,0)--(3,2)--(3,3)--(1,1)--(1,3)--(0,4)--cycle)); draw(shift(18,0)*((0,1)--(2,1)--(3,0)--(3,3)--(2,2)--(1,3)--(1,2)--(0,2)--cycle)); draw(shift(24,0)*((1,0)--(2,1)--(2,3)--(3,2)--(3,4)--(0,4)--(1,3)--cycle)); label(\"$A$\", (0*6+2, 0), S); label(\"$B$\", (1*6+2, 0), S); label(\"$C$\", (2*6+2, 0), S); label(\"$D$\", (3*6+2, 0), S); label(\"$E$\", (4*6+2, 0), S);[/asy]</p>",
+      "solutions": [
+        "<p>Each polygon can be partitioned into unit squares and right triangles with sidelength $1$. Count the number of boxes enclosed by each polygon, with the unit square being $1$, and the triangle being $.5$. A has 5, B has 5, C has 5, D has 4.5, and E has 5.5. Therefore, the polygon with the largest area is $\\boxed{\\textbf{(E)}\\ \\text{E}}$.</p>",
+        "<p>Pick's Theorem:</p><p>$A = I + \\frac{1}{2}B - 1$</p><p>where $I$ is the number of lattice points in the interior and $B$ being the number of lattice points on the boundary.</p><p>Ok, so we want to find the polygon with the largest area, first notice that not a single polygon has a lattice point in the interior. Now look at the formula:</p><p>$A = \\frac{1}{2}B - 1$</p><p>So now just look at the polygon with the most lattice points on the boundary, and that is figure $\\text{E}$, with 13 lattice points on the boundary. So the polygon with the largest area is $\\boxed{\\textbf{(E)}\\ \\text{E}}$.</p><p>~blankbox</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Divisibility problem requiring understanding of when a number is divisible by its units digit"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_16",
+      "question": "<p>Right isosceles triangles are constructed on the sides of a 3-4-5 right triangle, as shown. A capital letter represents the area of each triangle. Which one of the following is true?</p><p>[asy] /* AMC8 2002 #16 Problem */ draw((0,0)--(4,0)--(4,3)--cycle); draw((4,3)--(-4,4)--(0,0)); draw((-0.15,0.1)--(0,0.25)--(.15,0.1)); draw((0,0)--(4,-4)--(4,0)); draw((4,0.2)--(3.8,0.2)--(3.8,-0.2)--(4,-0.2)); draw((4,0)--(7,3)--(4,3)); draw((4,2.8)--(4.2,2.8)--(4.2,3)); label(scale(0.8)*\"$Z$\", (0, 3), S); label(scale(0.8)*\"$Y$\", (3,-2)); label(scale(0.8)*\"$X$\", (5.5, 2.5)); label(scale(0.8)*\"$W$\", (2.6,1)); label(scale(0.65)*\"5\", (2,2)); label(scale(0.65)*\"4\", (2.3,-0.4)); label(scale(0.65)*\"3\", (4.3,1.5));[/asy]</p>",
+      "solutions": [
+        "<p>The area of a right triangle can be found by using the legs of triangle as the base and height. In the three isosceles triangles, the length of their second leg is the same as the side that is connected to the $3-4-5$ triangle. </p><p>\\begin{align*} W&=(3)(4)/2 = 6\\\\ X&=(3)(3)/2=4.5\\\\ Y&=(4)(4)/2 = 8\\\\ Z&=(5)(5)/2 = 12.5 \\end{align*}</p><p>Plugging into the answer choices, the only that works is $\\boxed{\\textbf{(E)}\\ X+Y=Z}$.</p>",
+        "<p>Looking at the diagram, we notice that three right isosceles triangles on one right triangle reminds us of the Pythagorean theorem, since each right isosceles triangle is actually half of a square. Each square's area represents a side length squared, so the squares on the legs of the right triangle adds to the square on the hypotenuse. This gives $2X+2Y=2Z$. Then, dividing by 2 we get $X+Y=Z$, which is one of the answer choices. Since there can only be one correct answer, and there is already one, we see that the answer must be $\\boxed{\\textbf{(E)}\\ X+Y=Z}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.9,
+          "reasoning": "Triangle angle problem involving angle bisectors and understanding that angles in a triangle sum to 180\u00b0"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_17",
+      "question": "<p>In a mathematics contest with ten problems, a student gains 5 points for a correct answer and loses 2 points for an incorrect answer. If Olivia answered every problem and her score was 29, how many correct answers did she have?</p>",
+      "solutions": [
+        "<p>We can try to guess and check to find the answer. If she got five right, her score would be $(5*5)-(5*2)=15$. If she got six right her score would be $(6*5)-(2*4)=22$. That's close, but it's still not right! If she got 7 right, her score would be $(7*5)-(2*3)=29$. Thus, our answer is $\\boxed{\\text{(C)}\\ 7}$. ~avamarora</p>",
+        "<p>We can start with the full score, 50, and subtract not only 2 points for each incorrect answer but also the 5 points we gave her credit for. This expression is equivalent to her score, 29. Let $x$ be the number of questions she answers correctly. Then, we will represent the number incorrect by $10-x$.</p><p>\\begin{align*} 50-7(10-x)&=29\\\\ 50-70+7x&=29\\\\ 7x&=49\\\\ x&=\\boxed{\\text{(C)}\\ 7} \\end{align*}</p>",
+        "<p>Suppose she got $x$ questions right. Then she got $10 - x$ questions wrong. Since she gains 5 points for a correct answer and loses 2 for an incorrect one, we can solve $5x - 2(10 - x) = 29$ to get that $x = \\boxed{\\text{(C)}\\ 7}$.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a></p>",
+        "<p>We see that Olivia's score is odd. Since subtracting multiples of $2$ (even numbers) does not change a number's parity (odd or even), Olivia's score from only her correct answers must be odd. Then, we test odd multiples of $5$ greater than $29$ to see which one works. The smallest odd multiple of $5$ greater than $29$ is $35$, meaning $7$ answers were correct and the remaining $3$ answers were wrong. We see that the final score is\\[7(5)-3(2)=35-6=29,\\]which is the score Olivia got. Thus, the answer is $\\boxed{(C) 7}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.85,
+          "reasoning": "Word problem involving averages and understanding how to find missing values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_18",
+      "question": "<p>Gage skated $1$ hr $15$ min each day for $5$ days and $1$ hr $30$ min each day for $3$ days. How long would he have to skate the ninth day in order to average $85$ minutes of skating each day for the entire time?</p>",
+      "solutions": [
+        "<p>Converting into minutes and adding, we get that she skated $75*5+90*3+x = 375+270+x = 645+x$ minutes total, where $x$ is the amount she skated on day $9$. Dividing by $9$ to get the average, we get $\\frac{645+x}{9}=85$. Solving for $x$, \\[645+x=765\\] \\[x=120\\] Now we convert back into hours and minutes to get $\\boxed{\\text{(E)}\\ 2\\ \\text{hr}}$.</p>",
+        "<p>For the first five days, each day you are $10$ minutes short of $85$ minutes. And for the next three days, you are $5$ minutes above $85$ minutes. So in total you are missing $3*5-5*10$, which equals to negative $35$. So on the ninth day, to have an average of $85$ minutes, Gage need to skate for $85+35$ minutes, which is $120$ minutes, or $\\boxed{\\text{(E)}\\ 2\\ \\text{hr}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.9,
+          "reasoning": "Area calculation involving rectangles and understanding how to find area of complex shapes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_19",
+      "question": "<p>How many whole numbers between 99 and 999 contain exactly one 0?</p>",
+      "solutions": [
+        "<p>Numbers with exactly one zero have the form $\\overline{a0b}$ or $\\overline{ab0}$, where the $a,b \\neq 0$. There are $(9\\cdot1\\cdot9)+(9\\cdot9\\cdot1) = 81+81 = \\boxed{162}$ such numbers, hence our answer is $\\fbox{D}$.</p>",
+        "<p>(Whole numbers between 99 and 999)-(Whole numbers which do not contain exactly one 0)= (How many whole numbers between 99 and 999 contain exactly one 0).</p><p>$1)$ How many whole numbers are between 99 and 999, $999-99=900$, so there are 900 numbers between 99 and 999.</p><p>$2a)$ How many whole numbers in this range do not contain the digit $0$, there are $10-1=9$ possible digits for each digit in this three digit number, $9^3=729$. So there are $729$ numbers in this range which do not contain the digit $0$.</p><p>$2b)$ How many whole numbers in this range contain the digit $0$ 2 times, there are $10-1=9$ possible digits for the first digit and the other two digits have to be the digit $0$. So there are $9$ of these numbers. </p><p>So there are $900-(729+9)$ whole numbers between 99 and 999 that contain exactly one 0.</p><p>Simplifying the expression we get that there are $162$ whole numbers between 99 and 999 that contain exactly one 0. So the answer is $\\fbox{D}$.</p><p>~blankbox</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.9,
+          "reasoning": "Number properties problem involving understanding of factors and counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_20",
+      "question": "<p>The area of triangle $XYZ$ is 8 square inches. Points $A$ and $B$ are midpoints of congruent segments $\\overline{XY}$ and $\\overline{XZ}$. Altitude $\\overline{XC}$ bisects $\\overline{YZ}$. The area (in square inches) of the shaded region is</p><p>[asy] /* AMC8 2002 #20 Problem */ draw((0,0)--(10,0)--(5,4)--cycle); draw((2.5,2)--(7.5,2)); draw((5,4)--(5,0)); fill((0,0)--(2.5,2)--(5,2)--(5,0)--cycle, mediumgrey); label(scale(0.8)*\"$X$\", (5,4), N); label(scale(0.8)*\"$Y$\", (0,0), W); label(scale(0.8)*\"$Z$\", (10,0), E); label(scale(0.8)*\"$A$\", (2.5,2.2), W); label(scale(0.8)*\"$B$\", (7.5,2.2), E); label(scale(0.8)*\"$C$\", (5,0), S); fill((0,-.8)--(1,-.8)--(1,-.95)--cycle, white);[/asy]</p>",
+      "solutions": [
+        "<p>We know the area of triangle $XYZ$ is $8$ square inches. The area of a triangle can also be represented as $\\frac{bh}{2}$ or in this problem $\\frac{XC\\cdot YZ}{2}$. By solving, we have \\[\\frac{XC\\cdot YZ}{2} = 8,\\] \\[XC\\cdot YZ = 16.\\]</p><p>With SAS congruence, triangles $XCY$ and $XCZ$ are congruent. Hence, triangle $XCY = \\frac{8}{2} = 4$. (Let's say point $D$ is the intersection between line segments $XC$ and $AB$.) We can find the area of the trapezoid $ADCY$ by subtracting the area of triangle $XAD$ from $4$. </p><p>We find the area of triangle $XAD$ by the $\\frac{bh}{2}$ formula- $\\frac{XD\\cdot AD}{2} = \\frac{\\frac{XC}{2}\\cdot AD}{2}$. $AD$ is $\\frac{1}{4}$ of $YZ$ from solution 1. The area of $XAD$ is \\[\\frac{\\frac{XC}{2}\\cdot \\frac{YZ}{4}}{2} = \\frac{16}{16} = 1\\].</p><p>Therefore, the area of the shaded area- trapezoid $ADCY$ has area $4-1 = \\boxed{\\text{(D)}\\ 3}$. </p><p><br/>- sarah07</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Complex triangle angle problem involving angle bisectors, straight angles, and triangle angle sums"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_21",
+      "question": "<p>Harold tosses a coin four times. The probability that he gets at least as many heads as tails is</p>",
+      "solutions": [
+        "<p>Case 1: There are two heads and two tails. There are $\\binom{4}{2} = 6$ ways to choose which two tosses are heads, and the other two must be tails.</p><p>Case 2: There are three heads, one tail. There are $\\binom{4}{1} = 4$ ways to choose which of the four tosses is a tail.</p><p>Case 3: There are four heads and no tails. This can only happen $1$ way.</p><p>There are a total of $2^4=16$ possible configurations, giving a probability of $\\frac{6+4+1}{16} = \\boxed{\\text{(E)}\\ \\frac{11}{16}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.85,
+          "reasoning": "Word problem involving averages and understanding how to find the common element in overlapping sets"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_22",
+      "question": "<p>Six cubes, each an inch on an edge, are fastened together, as shown. Find the total surface area in square inches. Include the top, bottom, and sides.</p><p>[asy] /* AMC8 2002 #22 Problem */ draw((0,0)--(0,1)--(1,1)--(1,0)--cycle); draw((0,1)--(0.5,1.5)--(1.5,1.5)--(1,1)); draw((1,0)--(1.5,0.5)--(1.5,1.5)); draw((0.5,1.5)--(1,2)--(1.5,2)); draw((1.5,1.5)--(1.5,3.5)--(2,4)--(3,4)--(2.5,3.5)--(2.5,0.5)--(1.5,.5)); draw((1.5,3.5)--(2.5,3.5)); draw((1.5,1.5)--(3.5,1.5)--(3.5,2.5)--(1.5,2.5)); draw((3,4)--(3,3)--(2.5,2.5)); draw((3,3)--(4,3)--(4,2)--(3.5,1.5)); draw((4,3)--(3.5,2.5)); draw((2.5,.5)--(3,1)--(3,1.5));[/asy]</p>",
+      "solutions": [
+        "<p>Count the number of sides that are not exposed, where a cube is connected to another cube and subtract it from the total number of faces. There are $5$ places with two adjacent cubes, covering $10$ sides, and $(6)(6)=36$ faces. The exposed surface area is $36-10 = \\boxed{\\text{(C)}\\ 26}$.</p>",
+        "<p>We can count the number of showing faces from each side. One thing that we notice is that the front face has the same number of squares as the back face, the side faces have the same surface area, etc. Therefore, we are looking for $2($front surface area $+$ side surface area $+$ top surface area$)$. We find that this is $2(5 + 4 + 4) = 2 * 13 = \\boxed{\\text{(C)}\\ 26}$.</p><p>Solution by <a href=\"/wiki/index.php/User:ILoveMath31415926535\" title=\"User:ILoveMath31415926535\">ILoveMath31415926535</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.9,
+          "reasoning": "Area calculation involving rectangles and triangles, understanding how midpoints affect triangle areas"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_23",
+      "question": "<p>A corner of a tiled floor is shown. If the entire floor is tiled in this way and each of the four corners looks like this one, then what fraction of the tiled floor is made of darker tiles?</p><p>[asy] /* AMC8 2002 #23 Problem */ fill((0,2)--(1,3)--(2,3)--(2,4)--(3,5)--(4,4)--(4,3)--(5,3)--(6,2)--(5,1)--(4,1)--(4,0)--(2,0)--(2,1)--(1,1)--cycle, mediumgrey); fill((7,1)--(6,2)--(7,3)--(8,3)--(8,4)--(9,5)--(10,4)--(7,0)--cycle, mediumgrey); fill((3,5)--(2,6)--(2,7)--(1,7)--(0,8)--(1,9)--(2,9)--(2,10)--(3,11)--(4,10)--(4,9)--(5,9)--(6,8)--(5,7)--(4,7)--(4,6)--cycle, mediumgrey); fill((6,8)--(7,9)--(8,9)--(8,10)--(9,11)--(10,10)--(10,9)--(11,9)--(11,7)--(10,7)--(10,6)--(9,5)--(8,6)--(8,7)--(7,7)--cycle, mediumgrey); draw((0,0)--(0,11)--(11,11)); for ( int x = 1; x &lt; 11; ++x ) { draw((x,11)--(x,0), linetype(\"4 4\")); } for ( int y = 1; y &lt; 11; ++y ) { draw((0,y)--(11,y), linetype(\"4 4\")); } clip((0,0)--(0,11)--(11,11)--(11,5)--(4,1)--cycle);[/asy]</p>",
+      "solutions": [
+        "<p>The same pattern is repeated for every $6 \\times 6$ tile. Looking closer, there is also symmetry of the top $3 \\times 3$ square, so the fraction of the entire floor in dark tiles is the same as the fraction in the square. Counting the tiles, there are $4$ dark tiles, and $9$ total tiles, giving a fraction of $\\boxed{\\text{(B)}\\ \\frac49}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.9,
+          "reasoning": "Number properties problem involving understanding of factors and counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_24",
+      "question": "<p>Miki has a dozen oranges of the same size and a dozen pears of the same size. Miki uses her juicer to extract 8 ounces of pear juice from 3 pears and 8 ounces of orange juice from 2 oranges. She makes a pear-orange juice blend from an equal number of pears and oranges. What percent of the blend is pear juice?</p>",
+      "solutions": [
+        "<p>A pear gives $8/3$ ounces of juice per pear. An orange gives $8/2=4$ ounces of juice per orange. If the pear-orange juice blend used one pear and one orange each, the percentage of pear juice would be</p><p>\\[\\frac{8/3}{8/3+4} \\times 100 = \\frac{8}{8+12} \\times 100  = \\boxed{\\text{(B)}\\ 40}\\]</p>",
+        "<p>Since it doesn't matter how many pears and oranges there are, you can make the number of them whatever you like. In this case, we could use $6$, because it's the LCM of $2$ and $3$. Then for the $6$ pears, there are $6/3*8=16$ ounces of pear juice. For the 6 oranges, there are $6/2*8=24$ ounces of orange juice. Since we are looking for the percent of pear juice, we need to do $16/(16+24)=16/40$. Simplifying, we get $2/5$. Hence the answer is $\\boxed{\\text{(B)}\\ 40}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Triangle angle problem involving angle bisectors and understanding that angles in a triangle sum to 180\u00b0"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_8_25",
+      "question": "<p>Loki, Moe, Nick and Ott are good friends. Ott had no money, but the others did. Moe gave Ott one-fifth of his money, Loki gave Ott one-fourth of his money and Nick gave Ott one-third of his money. Each gave Ott the same amount of money. What fractional part of the group's money does Ott now have?</p>",
+      "solutions": [
+        "<p>Since Ott gets equal amounts of money from each friend, we can say that he gets $x$ dollars from each friend. This means that Moe has $5x$ dollars, Loki has $4x$ dollars, and Nick has $3x$ dollars. The total amount is $12x$ dollars, and since Ott gets $3x$ dollars total, $\\frac{3x}{12x}= \\frac{3}{12} = \\boxed{\\text{(B)}\\ \\frac14}$.</p>",
+        "<p>We can assign any natural number to the price that Ott's friends gave him. For this example, we will use 5.</p><p>Moe gave Ott a fifth of his money, and also five dollars. So in total Moe has 25 dollars.</p><p>Loki gave Ott a fourth of his money, and also five dollars. So in total Loki has 20 dollars.</p><p>Nick gave Ott a third of his money, and also five dollars. So in total Nick has 15 dollars.</p><p>$5\\cdot3=15$ which is the total money the group gave Ott.</p><p>$25+20+15=60$ is the group's balance. Therefore, the fraction of the group's money that Ott now has is $\\frac{15}{60} = \\boxed{\\text{(B)}\\ \\frac14}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.9,
+          "reasoning": "Area calculation involving complex geometric shapes and understanding of area relationships"
+        }
+      ]
+    }
+  ]
+}

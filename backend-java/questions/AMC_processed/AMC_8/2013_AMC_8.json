@@ -1,0 +1,411 @@
+{
+  "competition_info": {
+    "name": "2013_AMC_8",
+    "group": "AMC_8",
+    "year": 2013,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2013_8_1",
+      "question": "<p>Danica wants to arrange her model cars in rows with exactly 6 cars in each row. She now has 23 model cars. What is the smallest number of additional cars she must buy in order to be able to arrange all her cars this way?</p>",
+      "solutions": [
+        "<p>The least multiple of 6 greater than 23 is 24. So she will need to add $24-23=\\boxed{\\textbf{(A)}\\ 1}$ more model car.~avamarora</p>",
+        "<p>6 x 4 = 24, which is 1 more than 23. So, the answer is $\\boxed{\\textbf{(A)}\\ 1}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple arithmetic word problem involving basic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_2",
+      "question": "<p>A sign at the fish market says, \"50$\\%$ off, today only: half-pound packages for just $3 per package.\" What is the regular price for a full pound of fish, in dollars?</p>",
+      "solutions": [
+        "<p>50% off the price of half a pound of fish is $3, so 100%, the regular price, of a half pound of fish is $6. If half a pound of fish costs $6, then a whole pound of fish is $\\boxed{\\textbf{(D)}\\ 12}$ dollars.</p>",
+        "<p>Suppose a full pound at normal price costs $x$ dollars. Then, with the 50% off deal, the full pound would cost $x/2$ dollars. A half pound of this would cost $x/4$ dollars (including the 50% off). 50% off half a pound is 3, so we form the equation $x/4=3\\Rightarrow x=\\boxed{\\textbf{(D)}\\ 12}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating discounts and savings"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_3",
+      "question": "<p>What is the value of $4 \\cdot (-1+2-3+4-5+6-7+\\cdots+1000)$?</p>",
+      "solutions": [
+        "<p>We group the addends inside the parentheses two at a time: \\begin{align*} -1 + 2 - 3 + 4 - 5 + 6 - 7 + \\ldots + 1000 &= (-1 + 2) + (-3 + 4) + (-5 + 6) + \\ldots + (-999 + 1000) \\\\ &= \\underbrace{1+1+1+\\ldots + 1}_{\\text{500 1's}} \\\\ &= 500. \\end{align*}Then the desired answer is $4 \\times 500 = \\boxed{\\textbf{(E)}\\ 2000}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving finding area of geometric shapes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_4",
+      "question": "<p>Eight friends ate at a restaurant and agreed to share the bill equally. Because Judi forgot her money, each of her seven friends paid an extra $2.50 to cover her portion of the total bill. What was the total bill?</p>",
+      "solutions": [
+        "<p>Since Judi's 7 friends had to pay $2.50 extra each to cover the total amount that Judi should have paid, we multiply $2.50\\cdot7=17.50$ is the bill Judi would have paid if she had money. Hence, to calculate the total amount, we multiply $17.50\\cdot8=\\boxed{\\textbf{(C) } 140}$ to find the total the 8 friends paid.</p>",
+        "<p>Let $m$ be the total bill the 8 friends split up; each person was supposed to pay $$\\frac{m}{8}$. Since Judi forgot her money, we have to add $$\\frac{m}{8}+2.50$ to get the amount of money each of the $7$ friends have to pay. After multipling by 7, we have $7(\\frac{m}{8}+2.50)=\\frac{7m}{8} + 17.5$. This is equal to $m$ because both sides represent the total bill. Solving for $m$:\\[\\frac{7m}{8} + 17.5=m\\]\\[\\frac{m}{8}=17.5\\]\\[m=\\boxed{\\textbf{(C) } 140}.\\]</p><p>~BananaBall00 ~joyoforigami (TOGFA mathematics) edits by ~megaboy6679</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_5",
+      "question": "<p>Hammie is in $6^\\text{th}$ grade and weighs 106 pounds. His quadruplet sisters are tiny babies and weigh 5, 5, 6, and 8 pounds. Which is greater, the average (mean) weight of these five children or the median weight, and by how many pounds?</p>",
+      "solutions": [
+        "<p>Listing the elements from least to greatest, we have $(5, 5, 6, 8, 106)$, we see that the median weight is 6 pounds.The average weight of the five kids is $\\frac{5+5+6+8+106}{5} = \\frac{130}{5} = 26$.</p><p>Hence,\\[26-6=\\boxed{\\textbf{(E)}\\ \\text{average, by 20}}.\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_6",
+      "question": "<p>The number in each box below is the product of the numbers in the two boxes that touch it in the row above. For example, $30 = 6\\times5$. What is the missing number in the top row?</p><p>[asy] unitsize(0.8cm); draw((-1,0)--(1,0)--(1,-2)--(-1,-2)--cycle); draw((-2,0)--(0,0)--(0,2)--(-2,2)--cycle); draw((0,0)--(2,0)--(2,2)--(0,2)--cycle); draw((-3,2)--(-1,2)--(-1,4)--(-3,4)--cycle); draw((-1,2)--(1,2)--(1,4)--(-1,4)--cycle); draw((1,2)--(1,4)--(3,4)--(3,2)--cycle); label(\"600\",(0,-1)); label(\"30\",(-1,1)); label(\"6\",(-2,3)); label(\"5\",(0,3)); [/asy]</p>",
+      "solutions": [
+        "<p>Let the value in the empty box in the middle row be $x$, and the value in the empty box in the top row be $y$. $y$ is the answer we're looking for.</p><p>[asy] unitsize(0.8cm); draw((-1,0)--(1,0)--(1,-2)--(-1,-2)--cycle); draw((-2,0)--(0,0)--(0,2)--(-2,2)--cycle); draw((0,0)--(2,0)--(2,2)--(0,2)--cycle); draw((-3,2)--(-1,2)--(-1,4)--(-3,4)--cycle); draw((-1,2)--(1,2)--(1,4)--(-1,4)--cycle); draw((1,2)--(1,4)--(3,4)--(3,2)--cycle); label(\"600\",(0,-1)); label(\"30\",(-1,1)); label(\"6\",(-2,3)); label(\"5\",(0,3)); label(\"$x$\",(1,1)); label(\"$y$\",(2,3)); [/asy]</p><p>From the diagram, $600 = 30x$, making $x = 20$.</p><p>[asy] unitsize(0.8cm); draw((-1,0)--(1,0)--(1,-2)--(-1,-2)--cycle); draw((-2,0)--(0,0)--(0,2)--(-2,2)--cycle); draw((0,0)--(2,0)--(2,2)--(0,2)--cycle); draw((-3,2)--(-1,2)--(-1,4)--(-3,4)--cycle); draw((-1,2)--(1,2)--(1,4)--(-1,4)--cycle); draw((1,2)--(1,4)--(3,4)--(3,2)--cycle); label(\"600\",(0,-1)); label(\"30\",(-1,1)); label(\"6\",(-2,3)); label(\"5\",(0,3)); label(\"20\",(1,1)); label(\"$y$\",(2,3)); [/asy]</p><p>It follows that $20 = 5y$, so $y = \\boxed{\\textbf{(C)}\\ 4}$.</p>",
+        "<p>Another way to do this problem is to realize what makes up the bottommost number. This method doesn't work quite as well for this problem, but in a larger tree, it might be faster. Again, let the value in the empty box in the middle row be $x$, and the value in the empty box in the top row be $y$. $y$ is the answer we're looking for.</p><p>[asy] unitsize(0.8cm); draw((-1,0)--(1,0)--(1,-2)--(-1,-2)--cycle); draw((-2,0)--(0,0)--(0,2)--(-2,2)--cycle); draw((0,0)--(2,0)--(2,2)--(0,2)--cycle); draw((-3,2)--(-1,2)--(-1,4)--(-3,4)--cycle); draw((-1,2)--(1,2)--(1,4)--(-1,4)--cycle); draw((1,2)--(1,4)--(3,4)--(3,2)--cycle); label(\"600\",(0,-1)); label(\"30\",(-1,1)); label(\"6\",(-2,3)); label(\"5\",(0,3)); label(\"$x$\",(1,1)); label(\"$y$\",(2,3)); [/asy]</p><p>We can write some equations:</p><p>$600 = 30x\\\\ 30 = 6\\cdot 5\\\\ x = 5y$</p><p>Now we can substitute into the first equation using the two others:</p><p>$600 = (6\\cdot5)(5y)\\\\ 600= 6\\cdot5\\cdot5\\cdot y\\\\ 600=6\\cdot25\\cdot y\\\\ 600 = 150y\\\\ \\boxed{\\textbf{(C)}\\ 4} = y$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_7",
+      "question": "<p>Trey and his mom stopped at a railroad crossing to let a train pass. As the train began to pass, Trey counted 6 cars in the first 10 seconds. It took the train 2 minutes and 45 seconds to clear the crossing at a constant speed. Which of the following was the most likely number of cars in the train?</p>",
+      "solutions": [
+        "<p>Clearly, for every $5$ seconds, $3$ cars pass. It's more convenient to have everything in seconds: $2$ minutes and $45$ seconds$=2\\cdot60 + 45 = 165$ seconds. We then set up a ratio: \\[\\frac{3}{5}=\\frac{x}{165}\\]\\[3(165)=5x\\]\\[x=3(33)=99\\approx\\boxed{\\textbf{(C)}\\ 100}.\\]</p><p>~megaboy6679 ~MiracleMaths</p>",
+        "<p>$2$ minutes and $45$ seconds is equal to $120+45=165\\text{ seconds}$.</p><p>Since $6$ cars pass at around $10$ seconds, there are about $\\left \\lfloor{\\dfrac{165}{10}}\\right \\rfloor =16$ groups of $6$ cars. There are about $16\\cdot6=96\\text{ cars}$, so the closest answer choice is $\\boxed{\\textbf{(C)}\\ 100}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_8",
+      "question": "<p>A fair coin is tossed 3 times. What is the probability of at least two consecutive heads?</p>",
+      "solutions": [
+        "<p>There are $2^3 = 8$ ways to flip the coins, in order.There are two ways to get exactly two consecutive heads: HHT and THH.There is only one way to get three consecutive heads: HHH.Therefore, the probability of flipping at least two consecutive heads is $\\boxed{\\textbf{(C)}\\frac{3}{8}}$.</p>",
+        "<p>Let's use <a href=\"/wiki/index.php/Complementary_counting\" title=\"Complementary counting\">complementary counting</a>. To start with, the unfavorable outcomes (in this case, not getting 2 consecutive heads) are: TTT, HTH, and THT. The probability of these three outcomes is $\\frac{1}{8}$, $\\frac{1}{4}$, and $\\frac{1}{4}$, respectively. So the rest is exactly the probability of flipping at least two consecutive heads: $1-\\frac{1}{8}-\\frac{1}{4}-\\frac{1}{4}=\\frac{3}{8}$. It is the answer $\\boxed{\\textbf{(C)}\\frac{3}{8}}$.</p><p>~LarryFlora</p>",
+        "<p>We can list out all the ways to flip a coin three times: HHH,HHT,HTH,THH,HTT,THT,TTH,TTT. Out of them, only HHH,HHT,THH, have at least two consecutive heads. Since there are three ways to flip at least two consecutive heads, and eight total choices, the answer is $\\boxed{\\textbf{(C)}\\frac{3}{8}}$.</p><p>~andliu766</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving divisibility and number properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_9",
+      "question": "<p>The Incredible Hulk can double the distance he jumps with each succeeding jump. If his first jump is 1 meter, the second jump is 2 meters, the third jump is 4 meters, and so on, then on which jump will he first be able to jump more than 1 kilometer (1,000 meters)?</p>",
+      "solutions": [
+        "<p>This is a geometric sequence in which the common ratio is 2. To find the jump that would be over a 1000 meters, we note that $2^{10}=1024$.</p><p>However, because the first term is $2^0=1$ and not $2^1=2$, the solution to the problem is $10-0+1=\\boxed{\\textbf{(C)}\\ 11^{\\text{th}}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Triangle geometry problem involving angles and side lengths"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_10",
+      "question": "<p>What is the ratio of the least common multiple of 180 and 594 to the greatest common factor of 180 and 594?</p>",
+      "solutions": [
+        "<p>To find either the LCM or the GCF of two numbers, always prime factorize first.</p><p>The prime factorization of $180 = 3^2 \\times  5 \\times 2^2$.</p><p>The prime factorization of $594 = 3^3 \\times  11 \\times 2$.</p><p>Then, to find the LCM, we have to find the greatest power of all the numbers there are; if one number is one but not the other, use it (this is $3^3, 5, 11, 2^2$). Multiply all of these to get 5940. </p><p>For the GCF of 180 and 594, use the least power of all of the numbers that are in both factorizations and multiply. $3^2 \\times 2$ = 18.</p><p>Thus the answer = $\\frac{5940}{18}$ = $\\boxed{\\textbf{(C)}\\ 330}$.</p>",
+        "<p>We start off with a similar approach as the original solution. From the prime factorizations, the GCF is $18$.</p><p>It is a well known fact that $\\gcd(m,n)\\times \\operatorname{lcm}(m,n)=|mn|$. So we have, $18\\times \\operatorname{lcm} (180,594)=594\\times 180$.</p><p>Dividing by $18$ yields $\\operatorname{lcm} (180,594)=594\\times 10=5940$.</p><p>Therefore, $\\frac{\\operatorname{lcm} (180,594)}{\\operatorname{gcf}(180,594)}=\\frac{5940}{18}=\\boxed{\\textbf{(C)}\\ 330}$.</p>",
+        "<p>From Solution 1, the prime factorization of $180 = 2^2 \\cdot 3^2 \\cdot 5$.The prime factorization of $594 = 2 \\cdot 3^3 \\cdot 11$.Hence, $\\operatorname{lcm} (180,594) = 2^2 \\cdot 3^3 \\cdot 5 \\cdot 11$, and $\\operatorname{gcf} (180,594) = 2 \\cdot 3^2$.Therefore, $\\frac{\\operatorname{lcm} (180,594)}{\\operatorname{gcf} (180,594)} = \\frac{2^2 \\cdot 3^3 \\cdot 5 \\cdot 11}{2 \\cdot 3^2} = 2 \\cdot 3 \\cdot 5 \\cdot 11 = 330 \\Longrightarrow \\boxed{\\textbf{(C)}\\ 330}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate word problem involving time, distance, and speed relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_11",
+      "question": "<p>Ted's grandfather used his treadmill on 3 days this week. He went 2 miles each day. On Monday he jogged at a speed of 5 miles per hour. He walked at the rate of 3 miles per hour on Wednesday and at 4 miles per hour on Friday. If Grandfather had always walked at 4 miles per hour, he would have spent less time on the treadmill. How many minutes less?</p>",
+      "solutions": [
+        "<p>We use that fact that $d=rt$. Let d= distance, r= rate or speed, and t=time. In this case, let $x$ represent the time.</p><p>On Monday, he was at a rate of $5 \\text{ m.p.h}$. So, $5x = 2 \\text{ miles}\\implies x = \\frac{2}{5} \\text { hours}$. </p><p>For Wednesday, he walked at a rate of $3 \\text{ m.p.h}$. Therefore, $3x = 2 \\text{ miles}\\implies x = \\frac{2}{3}  \\text { hours}$. </p><p>On Friday, he walked at a rate of $4 \\text{ m.p.h}$. So, $4x = 2 \\text{ miles}\\implies x=\\frac{2}{4}=\\frac{1}{2}  \\text {hours}$. </p><p>Adding up the hours yields $\\frac{2}{5}  \\text { hours}$ + $\\frac{2}{3}  \\text { hours}$ + $\\frac{1}{2}  \\text { hours}$ = $\\frac{47}{30}  \\text { hours}$.</p><p>We now find the amount of time Grandfather would have taken if he walked at $4 \\text{ m.p.h}$ per day. Set up the equation, $4x = 2 \\text{ miles} \\times  3 \\text{ days}\\implies x = \\frac{3}{2}  \\text { hours}$.</p><p>To find the amount of time saved, subtract the two amounts: $\\frac{47}{30}  \\text { hours}$ - $\\frac{3}{2}  \\text { hours}$ = $\\frac{1}{15}  \\text { hours}$. To convert this to minutes, we multiply by $60$.</p><p>Thus, the solution to this problem is $\\dfrac{1}{15}\\times 60=\\boxed{\\textbf{(D)}\\ 4}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating percentages and changes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_12",
+      "question": "<p>At the 2013 Winnebago County Fair a vendor is offering a \"fair special\" on sandals. If you buy one pair of sandals at the regular price of $50, you get a second pair at a 40% discount, and a third pair at half the regular price. Javier took advantage of the \"fair special\" to buy three pairs of sandals. What percentage of the $150 regular price did he save?</p>",
+      "solutions": [
+        "<p>First, find the amount of money one will pay for three sandals without the discount. We have $\\textdollar 50\\times 3 \\text{ sandals} = \\textdollar 150$.</p><p>Then, find the amount of money using the discount: $50 + 0.6 \\times 50 + \\frac{1}{2} \\times 50 = \\textdollar 105$.</p><p>Finding the percentage yields $\\frac{105}{150} = 70 \\%$.</p><p>To find the percent saved, we have $100 \\% -70 \\%= \\boxed{\\textbf{(B)}\\ 30 \\%}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Arithmetic sequence problem involving finding terms in a sequence"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_13",
+      "question": "<p>When Clara totaled her scores, she inadvertently reversed the units digit and the tens digit of one score. By which of the following might her incorrect sum have differed from the correct one?</p>",
+      "solutions": [
+        "<p>We can simply test out numbers to see which one works. We can see that Clara\u2019s score can\u2019t be a multiple of ten because the reverse of the score is a one digit number, to small for the answer choices. After testing multiples, the answer should be $\\boxed{\\textbf{(A)}\\ 45}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_14",
+      "question": "<p>Abe holds 1 green and 1 red jelly bean in his hand. Bob holds 1 green, 1 yellow, and 2 red jelly beans in his hand. Each randomly picks a jelly bean to show the other. What is the probability that the colors match?</p>",
+      "solutions": [
+        "<p>The favorable responses are either they both show a green bean or they both show a red bean. The probability that both show a green bean is $\\frac{1}{2}\\cdot\\frac{1}{4}=\\frac{1}{8}$. The probability that both show a red bean is $\\frac{1}{2}\\cdot\\frac{2}{4}=\\frac{1}{4}$. Therefore the probability is $\\frac{1}{4}+\\frac{1}{8}=\\boxed{\\textbf{(C)}\\ \\frac{3}{8}}$</p>",
+        "<p>We can list out all the combinations and we get this: $GG, GY, GR_1, GR_2, RG, RY, RR_1, RR_2$. There is a total of 8 combinations and 3 that are the same. Hence, we yield the answer $\\boxed{\\textbf{C}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Circle geometry problem involving area and circumference"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_15",
+      "question": "<p>If $3^p + 3^4 = 90$, $2^r + 44 = 76$, and $5^3 + 6^s = 1421$, what is the product of $p$, $r$, and $s$?</p>",
+      "solutions": [
+        "<p>First, we're going to solve for $p$. Start with $3^p+3^4=90$. Then, change $3^4$ to $81$. Subtract $81$ from both sides to get $3^p=9$ and see that $p$ is $2$. Now, solve for $r$. Since $2^r+44=76$, $2^r$ must equal $32$, so $r=5$. Now, solve for $s$. $5^3+6^s=1421$ can be simplified to $125+6^s=1421$ which simplifies further to $6^s=1296$. Therefore, $s=4$. $prs$ equals $2*5*4$ which equals $40$. So, the answer is $\\boxed{\\textbf{(B)}\\ 40}$.</p><p>First, we solve for $s$. As Solution 1 perfectly states, $5^3+6^s=1421$ can be simplified to $125+6^s=1421$ which simplifies further to $6^s=1296$. Therefore, $s=4$. We know that you cannot take a root of any of the numbers raised to $p$, $r$, or $s$ and get a rational answer, and none of the answer choices are irrational, so that rules out the possibility that $p$, $r$, or $s$ is a fraction. The only answer choice that is divisible by $4$ is $\\boxed{\\textbf{(B)}\\ 40}$.</p>",
+        "<p>First, we're going to solve for $p$. Start with $3^p+3^4=90$. Then, change $3^4$ to $81$. Subtract $81$ from both sides to get $3^p=9$ and see that $p$ is $2$. Now, solve for $r$. Since $2^r+44=76$, $2^r$ must equal $32$, so $r=5$. Now, solve for $s$. $5^3+6^s=1421$ can be simplified to $125+6^s=1421$ which simplifies further to $6^s=1296$. Therefore, $s=4$. $prs$ equals $2*5*4$ which equals $40$. So, the answer is $\\boxed{\\textbf{(B)}\\ 40}$.</p>",
+        "<p>First, we solve for $s$. As Solution 1 perfectly states, $5^3+6^s=1421$ can be simplified to $125+6^s=1421$ which simplifies further to $6^s=1296$. Therefore, $s=4$. We know that you cannot take a root of any of the numbers raised to $p$, $r$, or $s$ and get a rational answer, and none of the answer choices are irrational, so that rules out the possibility that $p$, $r$, or $s$ is a fraction. The only answer choice that is divisible by $4$ is $\\boxed{\\textbf{(B)}\\ 40}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_16",
+      "question": "<p>A number of students from Fibonacci Middle School are taking part in a community service project. The ratio of $8^\\text{th}$-graders to $6^\\text{th}$-graders is $5:3$, and the the ratio of $8^\\text{th}$-graders to $7^\\text{th}$-graders is $8:5$. What is the smallest number of students that could be participating in the project?</p>",
+      "solutions": [
+        "<p>We multiply the first ratio by 8 on both sides, and the second ratio by 5 to get the same number for 8th graders, in order that we can put the two ratios together:</p><p>$5:3 = 5(8):3(8) = 40:24$</p><p>$8:5 = 8(5):5(5) = 40:25$</p><p>Therefore, the ratio of 8th graders to 7th graders to 6th graders is $40:25:24$. Since the ratio is in lowest terms, the smallest number of students participating in the project is $40+25+24 = \\boxed{\\textbf{(E)}\\ 89}$.</p>",
+        "<p>The number of 8th graders has to be a multiple of 8 and 5, so assume it is 40 (the smallest possibility). Then there are $40*\\frac{3}{5}=24$ 6th graders and $40*\\frac{5}{8}=25$ 7th graders. The numbers of students is $40+24+25=\\boxed{\\textbf{(E)}\\ 89}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "System of equations problem involving multiple variables"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_17",
+      "question": "<p>The sum of six consecutive positive integers is 2013. What is the largest of these six integers?</p>",
+      "solutions": [
+        "<p>The arithmetic mean of these numbers is $\\frac{\\frac{2013}{3}}{2}=\\frac{671}{2}=335.5$. Therefore the numbers are $333$, $334$, $335$, $336$, $337$, $338$, so the answer is $\\boxed{\\textbf{(B)}\\ 338}$.</p>",
+        "<p>Let the $4^{\\text{th}}$ number be $x$. Then our desired number is $x+2$. </p><p>Our integers are $x-3,x-2,x-1,x,x+1,x+2$, so we have that $6x-3 = 2013 \\implies x = \\frac{2016}{6} = 336 \\implies x+2 = \\boxed{\\textbf{(B)}\\ 338}$.</p>",
+        "<p>Let the first term be $x$. Our integers are $x,x+1,x+2,x+3,x+4,x+5$. We have, $6x+15=2013\\implies x=333\\implies x+5=\\boxed{\\textbf{(B)}\\ 338}$.</p>",
+        "<p>Since there are $6$ numbers, we divide $2013$ by $6$ to find the mean of the numbers. $\\frac{2013}{6} = 335 \\frac{1}{2}$.Then, $335 \\frac{1}{2} + \\frac{1}{2} = 336$ (the fourth number). Fifth: $337$; Sixth: $\\boxed {338}$.</p>",
+        "<p>Let the $6th$ number be $x$. Then our list is: $x-6+x-5+x-4+x-3+x-x-1=2013$. Simplifying this gets you $6x-21=2013\\implies 6x=2034$, which means that $x = \\boxed{\\textbf{(B)}338}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_18",
+      "question": "<p>Isabella uses one-foot cubical blocks to build a rectangular fort that is $12$ feet long, $10$ feet wide, and $5$ feet high. The floor and the four walls are all one foot thick. How many blocks does the fort contain?</p><p>[asy]import three; currentprojection=orthographic(-8,15,15); triple A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P; A = (0,0,0); B = (0,10,0); C = (12,10,0); D = (12,0,0); E = (0,0,5); F = (0,10,5); G = (12,10,5); H = (12,0,5); I = (1,1,1); J = (1,9,1); K = (11,9,1); L = (11,1,1); M = (1,1,5); N = (1,9,5); O = (11,9,5); P = (11,1,5); //outside box far draw(surface(A--B--C--D--cycle),white,nolight); draw(A--B--C--D--cycle); draw(surface(E--A--D--H--cycle),white,nolight); draw(E--A--D--H--cycle); draw(surface(D--C--G--H--cycle),white,nolight); draw(D--C--G--H--cycle); //inside box far draw(surface(I--J--K--L--cycle),white,nolight); draw(I--J--K--L--cycle); draw(surface(I--L--P--M--cycle),white,nolight); draw(I--L--P--M--cycle); draw(surface(L--K--O--P--cycle),white,nolight); draw(L--K--O--P--cycle); //inside box near draw(surface(I--J--N--M--cycle),white,nolight); draw(I--J--N--M--cycle); draw(surface(J--K--O--N--cycle),white,nolight); draw(J--K--O--N--cycle); //outside box near draw(surface(A--B--F--E--cycle),white,nolight); draw(A--B--F--E--cycle); draw(surface(B--C--G--F--cycle),white,nolight); draw(B--C--G--F--cycle); //top draw(surface(E--H--P--M--cycle),white,nolight); draw(surface(E--M--N--F--cycle),white,nolight); draw(surface(F--N--O--G--cycle),white,nolight); draw(surface(O--G--H--P--cycle),white,nolight); draw(M--N--O--P--cycle); draw(E--F--G--H--cycle);  label(\"10\",(A--B),SE); label(\"12\",(C--B),SW); label(\"5\",(F--B),W);[/asy]</p>",
+      "solutions": [
+        "<p>There are $10 \\cdot 12 = 120$ cubes on the base of the box. Then, for each of the 4 layers above the bottom (as since each cube is 1 foot by 1 foot by 1 foot and the box is 5 feet tall, there are 4 feet left), there are $9 + 11 + 9 + 11 = 40$ cubes. Hence, the answer is $120 + 4 \\cdot 40 = \\boxed{\\textbf{(B)}\\ 280}$.</p>",
+        "<p>We can just calculate the volume of the prism that was cut out of the original $12\\times 10\\times 5$ box. Each interior side of the fort will be $2$ feet shorter than each side of the outside. Since the floor is $1$ foot, the height will be $4$ feet. So the volume of the interior box is $10\\times 8\\times 4=320\\text{ ft}^3$.</p><p>The volume of the original box is $12\\times 10\\times 5=600\\text{ ft}^3$. Therefore, the number of blocks contained in the fort is $600-320=\\boxed{\\textbf{(B)}\\ 280}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving multiple statements and determining truth values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_19",
+      "question": "<p>Bridget, Cassie, and Hannah are discussing the results of their last math test. Hannah shows Bridget and Cassie her test, but Bridget and Cassie don't show theirs to anyone. Cassie says, 'I didn't get the lowest score in our class,' and Bridget adds, 'I didn't get the highest score.' What is the ranking of the three girls from highest to lowest?</p>",
+      "solutions": [
+        "<p>If Hannah did better than Cassie, there would be no way she could know for sure that she didn't get the lowest score in the class. Therefore, Hannah did worse than Cassie. Similarly, if Hannah did worse than Bridget, there is no way Bridget could have known that she didn't get the highest in the class. Therefore, Hannah did better than Bridget, so our order is $\\boxed{\\textbf{(D) Cassie, Hannah, Bridget}}$</p><p><br/></p><p>Note: It could be said that Cassie did better than Hannah, and Bridget knew this, and she had the same score as Hannah, so Bridget didn't get the highest score. This may be a reason that MAA didn't put this answer choice in.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_20",
+      "question": "<p>A $1\\times 2$ rectangle is inscribed in a semicircle with the longer side on the diameter. What is the area of the semicircle?</p>",
+      "solutions": [
+        "<p>[asy]  /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki, go to User:Azjps/geogebra */ import graph; usepackage(\"amsmath\"); real labelscalefactor = 0.5; /* changes label-to-point distance */ pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ real xmin = 2.392515856236789, xmax = 4.844947145877386, ymin = 6.070697674418619, ymax = 8.062241014799170;  /* image dimensions */ pen zzttqq = rgb(0.6000000000000006,0.2000000000000002,0.000000000000000);   draw((3.119707204019531,7.403678646934482)--(4.119707204019532,7.403678646934476)--(4.119707204019532,6.903678646934476)--(3.119707204019531,6.903678646934476)--cycle, zzttqq);   /* draw figures */ draw((2.912600422832983,6.903678646934476)--(4.326813985206080,6.903678646934476));  draw(shift((3.619707204019532,6.903678646934476))*xscale(0.7071067811865487)*yscale(0.7071067811865487)*arc((0,0),1,0.000000000000000,180.0000000000000));  draw((3.619707204019532,6.903678646934476)--(4.119707204019532,6.903678646934476));  draw((3.619707204019532,6.903678646934476)--(3.119707204019531,6.903678646934476));  draw((3.119707204019531,7.403678646934482)--(4.119707204019532,7.403678646934476), zzttqq);  draw((4.119707204019532,7.403678646934476)--(4.119707204019532,6.903678646934476), zzttqq);  draw((4.119707204019532,6.903678646934476)--(3.119707204019531,6.903678646934476), zzttqq);  draw((3.119707204019531,6.903678646934476)--(3.119707204019531,7.403678646934482), zzttqq);  label(\"$1$\",(3.847061310782247,6.924820295983102),SE*labelscalefactor);  label(\"$1$\",(4.155729386892184,7.208118393234687),SE*labelscalefactor);  draw((3.619707204019532,6.903678646934476)--(4.119707204019532,7.403678646934476));  label(\"$\\sqrt{2}$\",(3.711754756871041,7.288456659619466),SE*labelscalefactor);  label(\"$2$\",(3.563763213530660,7.563298097251601),SE*labelscalefactor);   /* dots and labels */ dot((2.912600422832983,6.903678646934476));  dot((4.326813985206080,6.903678646934476));  dot((3.619707204019532,6.903678646934476));  dot((4.119707204019532,6.903678646934476),blue);  dot((3.619707204019532,6.903678646934476));  dot((3.119707204019531,6.903678646934476),blue);  dot((3.119707204019531,7.403678646934482),blue);  dot((4.119707204019532,7.403678646934476),blue);  clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);[/asy]</p><p>A semicircle has symmetry, so the center is exactly at the midpoint of the 2 side on the rectangle, making the radius, by the Pythagorean Theorem, $\\sqrt{1^2+1^2}=\\sqrt{2}$. The area is $\\frac{2\\pi}{2}=\\boxed{\\textbf{(C)}\\ \\pi}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving ratios and proportions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_21",
+      "question": "<p>Samantha lives 2 blocks west and 1 block south of the southwest corner of City Park. Her school is 2 blocks east and 2 blocks north of the northeast corner of City Park. On school days she bikes on streets to the southwest corner of City Park, then takes a diagonal path through the park to the northeast corner, and then bikes on streets to school. If her route is as short as possible, how many different routes can she take?</p>",
+      "solutions": [
+        "<p>[asy] unitsize(8mm); for(int i=0; i<=8; ++i) { draw((0,i)--(8,i)); draw((i,0)--(i,8)); } fill((2,1)--(6,1)--(6,6)--(2,6)--cycle); for(int j=0; j<= 38; ++j) { draw((0,0)--(2,0)--(2,1)--(0,1)--(0,0), black+linewidth(3)); draw((6,6)--(6,8)--(8,8)--(8,6)--(6,6), black+linewidth(3)); }[/asy]</p><p>Using <a class=\"mw-redirect\" href=\"/wiki/index.php/Combinations\" title=\"Combinations\">combinations</a>, we get that the number of ways to get from Samantha's house to City Park is $\\binom31 = \\dfrac{3!}{1!2!} = 3$, and the number of ways to get from City Park to school is $\\binom42= \\dfrac{4!}{2!2!} = \\dfrac{4\\cdot 3}{2} = 6$. Since there's one way to go through City Park (just walking straight through), the number of different ways to go from Samantha's house to City Park to school $3\\cdot 6 = \\boxed{\\textbf{(E)}\\ 18}$.</p><p>~Note by Theraccoon: The person who posted this did not include their name.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent events and calculating probabilities"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_22",
+      "question": "<p>Toothpicks are used to make a grid that is $60$ toothpicks long and $32$ toothpicks wide. How many toothpicks are used altogether?</p><p>[asy] picture corner; draw(corner,(5,0)--(35,0)); draw(corner,(0,-5)--(0,-35)); for (int i=0; i<3; ++i){for (int j=0; j>-2; --j){if ((i-j)<3){add(corner,(50i,50j));}}} draw((5,-100)--(45,-100)); draw((155,0)--(185,0),dotted+linewidth(2)); draw((105,-50)--(135,-50),dotted+linewidth(2)); draw((100,-55)--(100,-85),dotted+linewidth(2)); draw((55,-100)--(85,-100),dotted+linewidth(2)); draw((50,-105)--(50,-135),dotted+linewidth(2)); draw((0,-105)--(0,-135),dotted+linewidth(2));[/asy]</p>",
+      "solutions": [
+        "<p>There are $61$ vertical columns with a length of $32$ toothpicks, and there are $33$ horizontal rows with a length of $60$ toothpicks, because $32$ and $60$ are the number of intervals. You can verify this by trying a smaller case, i.e. a $3 \\times 4$ grid of toothpicks, with $3 \\times 3$ and $2  \\times 4$.</p><p>Thus, our answer is $61\\cdot 32 + 33 \\cdot 60 = \\boxed{\\textbf{(E)}\\ 3932}$.</p><p>~Note by Theraccoon: The person who posted this answer did not include their name. Minor edit by ~NXC</p>",
+        "<p>With a quick mental calculation, 60 * 30 yields 1800, which is roughly where 4 of our 5 answer choices lie in. However, we can tell that each square would require at least 2 toothpicks that uniquely belong to itself, so the answer would be $60\\cdot 30 \\cdot 2$ which would be roughly $\\boxed{\\textbf{(E)}\\ 3932}$.</p><p>-superplayer24</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving conditional probability and ratios"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_23",
+      "question": "<p>Angle $ABC$ of $\\triangle ABC$ is a right angle. The sides of $\\triangle ABC$ are the diameters of semicircles as shown. The area of the semicircle on $\\overline{AB}$ equals $8\\pi$, and the arc of the semicircle on $\\overline{AC}$ has length $8.5\\pi$. What is the radius of the semicircle on $\\overline{BC}$?[asy] import graph; pair A,B,C; A=(0,8); B=(0,0); C=(15,0); draw((0,8)..(-4,4)..(0,0)--(0,8)); draw((0,0)..(7.5,-7.5)..(15,0)--(0,0)); real theta = aTan(8/15); draw(arc((15/2,4),17/2,-theta,180-theta)); draw((0,8)--(15,0)); dot(A); dot(C); label(\"$A$\", A, NW); label(\"$B$\", B, SW); label(\"$C$\", C, SE);[/asy]</p>",
+      "solutions": [
+        "<p>If the semicircle on $\\overline{AB}$ were a full circle, the area would be $16\\pi$. </p><p>$\\pi r^2=16 \\pi \\Rightarrow r^2=16 \\Rightarrow r=+4$, therefore the diameter of the first circle is $8$. </p><p>The arc of the largest semicircle is $8.5 \\pi$, so if it were a full circle, the circumference would be $17 \\pi$. So the $\\text{diameter}=17$.</p><p><br/></p><p>By the Pythagorean theorem, the other side has length $15$, so the radius is $\\boxed{\\textbf{(B)}\\ 7.5}$</p><p>~Edited by Theraccoon to correct typos.</p>",
+        "<p>We go as in Solution 1, finding the diameter of the circle on $\\overline{AC}$ and $\\overline{AB}$. Then, an extended version of the theorem says that the sum of the semicircles on the left is equal to the biggest one, so the area of the largest is $\\frac{289\\pi}{8}$, and the middle one is $\\frac{289\\pi}{8}-\\frac{64\\pi}{8}=\\frac{225\\pi}{8}$, so the radius is $\\frac{15}{2}=\\boxed{\\textbf{(B)}\\ 7.5}$.</p><p>~Note by Theraccoon: The person who posted this did not include their name.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving distance and position relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_24",
+      "question": "<p>Squares $ABCD$, $EFGH$, and $GHIJ$ are equal in area. Points $C$ and $D$ are the midpoints of sides $IH$ and $HE$, respectively. What is the ratio of the area of the shaded pentagon $AJICB$ to the sum of the areas of the three squares?</p><p>[asy] pair A,B,C,D,E,F,G,H,I,J;  A = (0.5,2); B = (1.5,2); C = (1.5,1); D = (0.5,1); E = (0,1); F = (0,0); G = (1,0); H = (1,1); I = (2,1); J = (2,0);  draw(A--B);  draw(C--B);  draw(D--A);   draw(F--E);  draw(I--J);  draw(J--F);  draw(G--H);  draw(A--J);  filldraw(A--B--C--I--J--cycle,grey); draw(E--I); dot(\"$A$\", A, NW); dot(\"$B$\", B, NE); dot(\"$C$\", C, NE); dot(\"$D$\", D, NW); dot(\"$E$\", E, NW); dot(\"$F$\", F, SW); dot(\"$G$\", G, S); dot(\"$H$\", H, N); dot(\"$I$\", I, NE); dot(\"$J$\", J, SE); [/asy]</p>",
+      "solutions": [
+        "<p>We notice that ABCX is a trapezoid with the bases AB and CX. Assuming AB is 1, we find that CX is 0.25 since it is half of CH which is 0.5. Using the area of the trapezoid formula, we calculate the area of ABCX to be 0.625 and XCIJ to be 0.375. The combined areas equal 1. Therefore, the ratio of the area of the hexagon to the three squares is 1:3 because the area of the three squares is 3. The answer is $\\boxed{\\textbf{(C)}\\ \\frac {1}{3}}$-~TheNerdwhoIsNerdy. (I don't know if this is correct, pls check).</p>",
+        "<p>Extend line AD such that it intersects line FG. Call the intersection K. If we assign an arbitrary value to the side lengths of the squares, such as 2, the base of the now formed triangle AJK would have a length of 3, while the height would be 4. The area of triangle AJK would then be 6, and the rectangle EDKF would have an area of 2. 6 + 2 = 8, and since all of the squares' areas add up to a total of 12 (if each has side length 2), we obtain (12 - 8)/12 for the shaded part of the diagram which yields 4/12 = $\\boxed{\\textbf{(C)}\\ \\frac {1}{3}}$</p><p>~ martianrunner</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_8_25",
+      "question": "<p>A ball with diameter 4 inches starts at point A to roll along the track shown. The track is comprised of 3 semicircular arcs whose radii are $R_1 = 100$ inches, $R_2 = 60$ inches, and $R_3 = 80$ inches, respectively. The ball always remains in contact with the track and does not slip. What is the distance the center of the ball travels over the course from A to B?</p><p>[asy] pair A,B; size(8cm); A=(0,0); B=(480,0); draw((0,0)--(480,0),linetype(\"3 4\")); filldraw(circle((8,0),8),black); draw((0,0)..(100,-100)..(200,0)); draw((200,0)..(260,60)..(320,0)); draw((320,0)..(400,-80)..(480,0)); draw((100,0)--(150,-50sqrt(3)),Arrow(size=4)); draw((260,0)--(290,30sqrt(3)),Arrow(size=4)); draw((400,0)--(440,-40sqrt(3)),Arrow(size=4)); label(\"$A$\", A, SW); label(\"$B$\", B, SE); label(\"$R_1$\", (100,-40), W); label(\"$R_2$\", (260,40), SW); label(\"$R_3$\", (400,-40), W);[/asy]</p>",
+      "solutions": [
+        "<p>The total length of all of the arcs is $100\\pi +80\\pi +60\\pi=240\\pi$. Since we want the path from the center, the actual distance will be subtracted by $2\\pi$ because it's already half the circumference through semicircle A, which needs to go half the circumference extra through semicircle B, and it's already half the circumference through semicircle C, and the circumference is $4\\pi$ Therefore, the answer is $240\\pi-2\\pi=\\boxed{\\textbf{(A)}\\ 238\\pi}$.</p><p>~<a href=\"/wiki/index.php/User:PowerQualimit\" title=\"User:PowerQualimit\">PowerQualimit</a></p><p>Video Solution:<a class=\"external free\" href=\"https://www.youtube.com/watch?v=zZGuBFyiQrk\" rel=\"nofollow\">https://www.youtube.com/watch?v=zZGuBFyiQrk</a> by WhyMath</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving area calculations and geometric relationships"
+        }
+      ]
+    }
+  ]
+}

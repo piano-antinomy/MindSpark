@@ -1,0 +1,401 @@
+{
+  "competition_info": {
+    "name": "2006_AMC_8",
+    "group": "AMC_8",
+    "year": 2006,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2006_8_1",
+      "question": "<p>Mindy made three purchases for $\\textdollar 1.98$ dollars, $\\textdollar 5.04$ dollars, and $\\textdollar 9.89$ dollars. What was her total, to the nearest dollar? </p>",
+      "solutions": [
+        "<p>The three prices round to $\\textdollar 2$, $\\textdollar 5$, and $\\textdollar 10$, which have a sum of $\\boxed{\\textbf{(D)}\\ 17}$.</p><p>We know that there will not be a rounding error, as the total amount rounded is clearly less than $\\textdollar 0.50$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple arithmetic word problem involving multiplication and division"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_2",
+      "question": "<p>On the AMC 8 contest Billy answers 13 questions correctly, answers 7 questions incorrectly and doesn't answer the last 5. What is his score?</p>",
+      "solutions": [
+        "<p>As the AMC 8 only rewards 1 point for each correct answer, everything is irrelevant except the number Billy answered correctly, $\\boxed{\\textbf{(C)}\\ 13}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating discount and final price"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_3",
+      "question": "<p>Elisa swims laps in the pool. When she first started, she completed 10 laps in 25 minutes. Now, she can finish 12 laps in 24 minutes. By how many minutes has she improved her lap time?</p>",
+      "solutions": [
+        "<p>When Elisa started, she finished a lap in $\\frac{25}{10}=2.5$ minutes. Now, she finishes a lap is $\\frac{24}{12}= 2$ minutes. The difference is $2.5-2=\\boxed{\\textbf{(A)}\\ \\frac{1}{2}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving finding area of shaded region in geometric figure"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_4",
+      "question": "<p>Initially, a spinner points west. Chenille moves it clockwise $2 \\dfrac{1}{4}$ revolutions and then counterclockwise $3 \\dfrac{3}{4}$ revolutions. In what direction does the spinner point after the two moves?</p><p>[asy]size(96); draw(circle((0,0),1),linewidth(1)); draw((0,0.75)--(0,1.25),linewidth(1)); draw((0,-0.75)--(0,-1.25),linewidth(1)); draw((0.75,0)--(1.25,0),linewidth(1)); draw((-0.75,0)--(-1.25,0),linewidth(1)); label(\"$N$\",(0,1.25), N); label(\"$W$\",(-1.25,0), W); label(\"$E$\",(1.25,0), E); label(\"$S$\",(0,-1.25), S); draw((0,0)--(-0.5,0),EndArrow);[/asy]</p>",
+      "solutions": [
+        "<p>If the spinner goes clockwise $2 \\dfrac{1}{4}$ revolutions and then counterclockwise $3 \\dfrac{3}{4}$ revolutions, it ultimately goes counterclockwise $1 \\dfrac{1}{2}$ which brings the spinner pointing $\\boxed{\\textbf{(B)}\\ \\text{east}}$.</p>",
+        "<p>Note that full revolutions do not matter, so this is equivalent to going clockwise $\\dfrac{1}{4}$ revolutions and then counterclockwise $\\dfrac{3}{4}$ revolutions, making it ultimately go counterclockwise $\\dfrac{1}{2}$, having the spinner point $\\boxed{\\textbf{(B)}\\ \\text{east}}$.</p><p>~JeffersonJ</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_5",
+      "question": "<p>Points $A, B, C$ and $D$ are midpoints of the sides of the larger square. If the larger square has area 60, what is the area of the smaller square?</p><p>[asy]size(100); draw((0,0)--(2,0)--(2,2)--(0,2)--cycle,linewidth(1)); draw((0,1)--(1,2)--(2,1)--(1,0)--cycle); label(\"$A$\", (1,2), N); label(\"$B$\", (2,1), E); label(\"$C$\", (1,0), S); label(\"$D$\", (0,1), W);[/asy]</p>",
+      "solutions": [
+        "<p>Drawing segments $AC$ and $BD$, the number of triangles outside square $ABCD$ is the same as the number of triangles inside the square. Thus areas must be equal so the area of $ABCD$ is half the area of the larger square which is $\\frac{60}{2}=\\boxed{\\textbf{(D)}\\ 30 }$.</p><p>If the side length of the larger square is $x$, the side length of the smaller square is $\\frac{\\sqrt{2} \\cdot x}{2}$. Therefore the area of the smaller square is $\\frac{x^2}{2}$, half of the larger square's area, $x^2$. </p><p>Thus, the area of the smaller square in the picture is $\\frac{60}{2}=\\boxed{\\textbf{(D)}\\ 30 }$.</p><p>The smaller square forms four congruent isosceles right triangles whose legs measure half of the larger square's side length. Since the larger square has an area of $60$, its sides measure $\\sqrt{60}=2\\sqrt{15}$. Therefore, the legs of the right triangles measure $\\sqrt{15}$. Now we can use the Pythagorean Theorem to find the length of the hypotenuses, or the smaller square's sides. We have\\[\\sqrt{{\\sqrt{15}}^2+{\\sqrt{15}}^2}=\\sqrt{15+15}=\\sqrt{30}.\\]Squaring this, the area of the smaller square is $\\boxed{\\textbf{(D)}\\ 30 }$.</p>",
+        "<p>Drawing segments $AC$ and $BD$, the number of triangles outside square $ABCD$ is the same as the number of triangles inside the square. Thus areas must be equal so the area of $ABCD$ is half the area of the larger square which is $\\frac{60}{2}=\\boxed{\\textbf{(D)}\\ 30 }$.</p>",
+        "<p>If the side length of the larger square is $x$, the side length of the smaller square is $\\frac{\\sqrt{2} \\cdot x}{2}$. Therefore the area of the smaller square is $\\frac{x^2}{2}$, half of the larger square's area, $x^2$. </p><p>Thus, the area of the smaller square in the picture is $\\frac{60}{2}=\\boxed{\\textbf{(D)}\\ 30 }$.</p>",
+        "<p>The smaller square forms four congruent isosceles right triangles whose legs measure half of the larger square's side length. Since the larger square has an area of $60$, its sides measure $\\sqrt{60}=2\\sqrt{15}$. Therefore, the legs of the right triangles measure $\\sqrt{15}$. Now we can use the Pythagorean Theorem to find the length of the hypotenuses, or the smaller square's sides. We have\\[\\sqrt{{\\sqrt{15}}^2+{\\sqrt{15}}^2}=\\sqrt{15+15}=\\sqrt{30}.\\]Squaring this, the area of the smaller square is $\\boxed{\\textbf{(D)}\\ 30 }$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different ways to arrange or select items"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_6",
+      "question": "<p>The letter T is formed by placing two $2 \\times 4$ inch rectangles next to each other, as shown. What is the perimeter of the T, in inches? </p><p>[asy] size(150); draw((0,6)--(4,6)--(4,4)--(3,4)--(3,0)--(1,0)--(1,4)--(0,4)--cycle, linewidth(1));[/asy]</p>",
+      "solutions": [
+        "<p>If the two rectangles were seperate, the perimeter would be $2(2(2+4)=24$. It easy to see that their connection erases 2 from each of the rectangles, so the final perimeter is $24-2 \\times 2 = \\boxed{\\textbf{(C)}\\ 20}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_7",
+      "question": "<p>Circle $X$ has a radius of $\\pi$. Circle $Y$ has a circumference of $8 \\pi$. Circle $Z$ has an area of $9 \\pi$. List the circles in order from smallest to the largest radius. </p>",
+      "solutions": [
+        "<p>Using the formulas of circles, $C=2 \\pi r$ and $A= \\pi r^2$, we find that circle $Y$ has a radius of $4$ and circle $Z$ has a radius of $3$. Also, circle X has a radius of $\\pi$. Thus, the order from smallest to largest radius is $\\boxed{\\textbf{(B)}\\ Z, X, Y}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_8",
+      "question": "<p>The table shows some of the results of a survey by radiostation KACL. What percentage of the males surveyed listen to the station?</p><p>$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males &\u00a0? & 26 &\u00a0?\\\\ \\hline Females & 58 &\u00a0? & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$</p>",
+      "solutions": [
+        "<p>Filling out the chart, it becomes</p><p>$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males & 78 & 26 & 104\\\\ \\hline Females & 58 & 38 & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$</p><p>Thus, the percentage of males surveyed that listen to the station is $100 \\cdot \\frac{78}{104} \\%= \\boxed{\\textbf{(E)}\\ 75 \\%}$.</p>",
+        "<p>Instead of filling out the entire chart, you can find the number of male listeners which is 200 - 96 = 104. Since we know the fraction of males that don't listen to the station is $\\frac{26}{104}$, we know that the percent of males that DO listen is much larger than 50%, so the only answer is $\\boxed{\\textbf{(E)}\\ 75 \\%}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving divisibility and number properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_9",
+      "question": "<p>What is the product of $\\frac{3}{2}\\times\\frac{4}{3}\\times\\frac{5}{4}\\times\\cdots\\times\\frac{2006}{2005}$\u00a0?</p>",
+      "solutions": [
+        "<p>The numerator in each fraction cancels out with the denominator of the next fraction. There are only two numbers that didn't cancel: $\\frac{2006}{2}=\\boxed{\\textbf{(C)}\\ 1003}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Triangle geometry problem involving angles and side lengths"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_10",
+      "question": "<p>Jorge's teacher asks him to plot all the ordered pairs $(w. l)$ of positive integers for which $w$ is the width and $l$ is the length of a rectangle with area 12. What should his graph look like?</p><p>$\\textbf{(C)}$ [asy] size(75); draw((0,-1)--(0,13)); draw((-1,0)--(13,0)); dot((1,11)); dot((3,9)); dot((5,7)); dot((7,5)); dot((9,3)); dot((11,1)); label(\"$l$\", (0,6), W); label(\"$w$\", (6,0), S);[/asy]</p><p>$\\textbf{(D)}$ [asy] size(75); draw((0,-1)--(0,13)); draw((-1,0)--(13,0)); dot((1,6)); dot((3,6)); dot((5,6)); dot((7,6)); dot((9,6)); dot((11,6)); label(\"$l$\", (0,6), W); label(\"$w$\", (6,0), S);[/asy]</p><p>$\\textbf{(E)}$ [asy] size(75); draw((0,-1)--(0,13)); draw((-1,0)--(13,0)); dot((6,1)); dot((6,3)); dot((6,5)); dot((6,7)); dot((6,9)); dot((6,11)); label(\"$l$\", (0,6), W); label(\"$w$\", (6,0), S);[/asy]</p>",
+      "solutions": [
+        "<p>The length of the rectangle will relate invertly to the width, specifically using the theorem $l=\\frac{12}{w}$. The only graph that could represent a inverted relationship is $\\boxed{\\textbf{(A)}}$. (The rest are linear graphs that represent direct relationships, therefore they are incorrect.)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate word problem involving time, distance, and speed relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_11",
+      "question": "<p>How many two-digit numbers have digits whose sum is a perfect square? </p>",
+      "solutions": [
+        "<p>There is $1$ integer whose digits sum to $1$: $10$.</p><p>There are $4$ integers whose digits sum to $4$: $13, 22, 31, \\text{and } 40$.</p><p>There are $9$ integers whose digits sum to $9$: $18, 27, 36, 45, 54, 63, 72, 81, \\text{and } 90$.</p><p>There are $3$ integers whose digits sum to $16$: $79, 88, \\text{and } 97$.</p><p>Two digits cannot sum to $25$ or any greater square since the greatest sum of digits of a two-digit number is $9 + 9 = 18$.</p><p>Thus, the answer is $1 + 4 + 9 + 3 = \\boxed{\\textbf{(C)} 17}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating percentages and changes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_12",
+      "question": "<p>Antonette gets $70 \\%$ on a 10-problem test, $80 \\%$ on a 20-problem test and $90 \\%$ on a 30-problem test. If the three tests are combined into one 60-problem test, which percent is closest to her overall score? </p>",
+      "solutions": [
+        "<p>$70 \\% \\cdot 10=7$</p><p>$80 \\% \\cdot 20=16$</p><p>$90 \\% \\cdot 30=27$</p><p>Adding them up gets $7+16+27=50$. The overall percentage correct would be $\\frac{50}{60}=\\frac{5}{6}=5 \\cdot 16.\\overline{6}=83.\\overline{3} \\approx \\boxed{\\textbf{(D)}\\ 83}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Arithmetic sequence problem involving finding terms in a sequence"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_13",
+      "question": "<p>Cassie leaves Escanaba at 8:30 AM heading for Marquette on her bike. She bikes at a uniform rate of 12 miles per hour. Brian leaves Marquette at 9:00 AM heading for Escanaba on his bike. He bikes at a uniform rate of 16 miles per hour. They both bike on the same 62-mile route between Escanaba and Marquette. At what time in the morning do they meet? </p>",
+      "solutions": [
+        "<p>If Cassie leaves $\\frac{1}{2}$ an hour earlier then Brian, when Brian starts, the distance between them will be $62-\\frac{12}{2}=56$. Every hour, they will get $12+16=28$ miles closer. $\\frac{56}{28}=2$, so 2 hours from $9:00$ AM is when they meet, which is $\\boxed{\\textbf{(D)}\\ 11: 00}$.</p>",
+        "<p>Let $x$ be the # of hours after Cassie leaves, when both of them meet. In that $x$ hours, Cassie will travel $12x$ miles. But, Brian will travel $16(x-1/2)$ miles as he starts $1/2$ hours after Cassie. These two distances sum to the total distance of $62$ miles as they meet here, yielding the equation, $12x+16(x-1/2)=62$. After distribution $16$ we get $12x+16x-8=62$. After combining like terms and adding $8$ to both sides we get $28x=70$, and $x=5/2$. So they meet $5/2$ hours after 8:30 a.m. which is $\\boxed{\\textbf{(D)}\\ 11: 00}$.</p><p>- LearnForEver</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_14",
+      "question": "<p>Problems 14, 15 and 16 involve Mrs. Reed's English assignment. </p><p>A Novel Assignment </p><p>The students in Mrs. Reed's English class are reading the same $760$-page novel. Three friends, Alice, Bob and Chandra, are in the class. Alice reads a page in 20 seconds, Bob reads a page in $45$ seconds and Chandra reads a page in $30$ seconds. </p><p>If Bob and Chandra both read the whole book, Bob will spend how many more seconds reading than Chandra? </p>",
+      "solutions": [
+        "<p>The information is the same for Problems 14,15, and 16. Therefore, we shall only use the information we need. All we need for this problem is that there's 760 pages, Bob reads a page in 45 seconds and Chandra reads a page in 30 seconds. A lot of people will find how long it takes Bob to read the book, how long it takes Chandra to read the book, and then find the seconds. However, if we just set up the expression, we can find an easier way.</p><p>$760\\cdot45 - 760\\cdot30 = 760(45-30) = 760(15) = \\boxed{\\textbf{(B)}11,400}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Circle geometry problem involving area and circumference"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_15",
+      "question": "<p>Problems 14, 15 and 16 involve Mrs. Reed's English assignment. </p><p>A Novel Assignment </p><p>The students in Mrs. Reed's English class are reading the same 760-page novel. Three friends, Alice, Bob and Chandra, are in the class. Alice reads a page in 20 seconds, Bob reads a page in 45 seconds and Chandra reads a page in 30 seconds. </p><p>Chandra and Bob, who each have a copy of the book, decide that they can save time by \"team reading\" the novel. In this scheme, Chandra will read from page 1 to a certain page and Bob will read from the next page through page 760, finishing the book. When they are through they will tell each other about the part they read. What is the last page that Chandra should read so that she and Bob spend the same amount of time reading the novel?</p>",
+      "solutions": [
+        "<p>Same as the previous problem, we only use the information we need. Note that it's not just Chandra reads half of it and Bob reads the rest since they have different reading rates. In this case, we set up an equation and solve.</p><p>Let $x$ be the number of pages that Chandra reads.</p><p>$30x = 45(760-x)$ Distribute the $45$</p><p>$30x = 45(760) - 45x$ Add $45x$ to both sides</p><p>$75x = 45(760)$ Divide both sides by $15$ to make it easier to solve</p><p>$5x = 3(760)$ Divide both sides by $5$</p><p>$x = 3(152) = \\boxed{\\textbf{(C)} 456}$</p>",
+        "<p>Chandra and Bob read at a rate of $30:45$ seconds per page, respectively. Simplifying that gets us Bob reads $2$ pages for every $3$ pages that Chandra reads. Therefore Chandra should read $\\frac{3}{2+3}=\\frac{3}{5}$ of the book. $\\frac{3}{5}\\cdot760$=$\\boxed{\\textbf{(C)} 456}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_16",
+      "question": "<p>Problems 14, 15 and 16 involve Mrs. Reed's English assignment. </p><p>A Novel Assignment </p><p>The students in Mrs. Reed's English class are reading the same 760-page novel. Three friends, Alice, Bob and Chandra, are in the class. Alice reads a page in 20 seconds, Bob reads a page in 45 seconds and Chandra reads a page in 30 seconds. </p><p>Before Chandra and Bob start reading, Alice says she would like to team read with them. If they divide the book into three sections so that each reads for the same length of time, how many seconds will each have to read? </p>",
+      "solutions": [
+        "<p>The amount of pages Bob, Chandra, and Alice will read is in the ratio 4:6:9. Therefore, Bob, Chandra, and Alice read 160, 240, and 360 pages respectively. They would also be reading for the same amount of time because the ratio of the pages read was based on the time it takes each of them to read a page. Therefore, the amount of seconds each person reads is simply $160 \\cdot 45 = \\boxed{\\textbf{(E)}\\ 7200}$.</p>",
+        "<p>We can solve this using equations. Let Bob read $x$ pages and Chandra read $y$ pages. Then Alice would read $760-x-y$ pages. Then we can set up the equations using the time it takes them to read a page: $45x=30y=20(760-x-y)$. Since we only have two variables, we only need two equations. Let's use $45x=30y$ and $45x=20(760-x-y)$. We can simplify $45x=30y$ down to $3x=2y$ and $45x=20(760-x-y)$ down to $9x=4(760-x-y)$. We can then solve the equations accordingly: </p><p>\\[9x=3040-4x-4y\\]\\[13x=3040-4y\\]</p><p>From the equation $3x=2y$, we know that $4y=6x$.</p><p>\\[13x=3040-6x\\]\\[19x=3040\\]\\[x=160\\]</p><p>Now that we know $x$, we can multiply it by $45$ (Bob's speed) to get the answer: $160\\times45$=$\\boxed{\\textbf{(E)}\\ 7200}$</p><p>~Trex226</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "System of equations problem involving multiple variables"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_17",
+      "question": "<p>Jeff rotates spinners $P$, $Q$ and $R$ and adds the resulting numbers. What is the probability that his sum is an odd number? </p><p>[asy] size(200); path circle=circle((0,0),2); path r=(0,0)--(0,2); draw(circle,linewidth(1)); draw(shift(5,0)*circle,linewidth(1)); draw(shift(10,0)*circle,linewidth(1)); draw(r,linewidth(1)); draw(rotate(120)*r,linewidth(1)); draw(rotate(240)*r,linewidth(1)); draw(shift(5,0)*r,linewidth(1)); draw(shift(5,0)*rotate(90)*r,linewidth(1)); draw(shift(5,0)*rotate(180)*r,linewidth(1)); draw(shift(5,0)*rotate(270)*r,linewidth(1)); draw(shift(10,0)*r,linewidth(1)); draw(shift(10,0)*rotate(60)*r,linewidth(1)); draw(shift(10,0)*rotate(120)*r,linewidth(1)); draw(shift(10,0)*rotate(180)*r,linewidth(1)); draw(shift(10,0)*rotate(240)*r,linewidth(1)); draw(shift(10,0)*rotate(300)*r,linewidth(1)); label(\"$P$\", (-2,2)); label(\"$Q$\", shift(5,0)*(-2,2)); label(\"$R$\", shift(10,0)*(-2,2)); label(\"$1$\", (-1,sqrt(2)/2)); label(\"$2$\", (1,sqrt(2)/2)); label(\"$3$\", (0,-1)); label(\"$2$\", shift(5,0)*(-sqrt(2)/2,sqrt(2)/2)); label(\"$4$\", shift(5,0)*(sqrt(2)/2,sqrt(2)/2)); label(\"$6$\", shift(5,0)*(sqrt(2)/2,-sqrt(2)/2)); label(\"$8$\", shift(5,0)*(-sqrt(2)/2,-sqrt(2)/2)); label(\"$1$\", shift(10,0)*(-0.5,1)); label(\"$3$\", shift(10,0)*(0.5,1)); label(\"$5$\", shift(10,0)*(1,0)); label(\"$7$\", shift(10,0)*(0.5,-1)); label(\"$9$\", shift(10,0)*(-0.5,-1)); label(\"$11$\", shift(10,0)*(-1,0)); [/asy]</p>",
+      "solutions": [
+        "<p>In order for Jeff to have an odd number sum, the numbers must either be Odd + Odd + Odd or Even + Even + Odd. We easily notice that we cannot obtain Odd + Odd + Odd because spinner $Q$ contains only even numbers. Therefore we must work with Even + Even + Odd and spinner $Q$ will give us one of our even numbers. We also see that spinner $R$ only contains odd, so spinner $R$ must give us our odd number. We still need one even number from spinner $P$. There is only 1 even number: $2$. Since spinning the required numbers are automatic on the other spinners, we only have to find the probability of spinning a $2$ in spinner $P$, which is clearly $\\boxed{\\textbf{(B)}\\ \\frac{1}{3}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_18",
+      "question": "<p>A cube with 3-inch edges is made using 27 cubes with 1-inch edges. Nineteen of the smaller cubes are white and eight are black. If the eight black cubes are placed at the corners of the larger cube, what fraction of the surface area of the larger cube is white? </p>",
+      "solutions": [
+        "<p>The surface area of the cube is $6(3)(3)=54$. Each of the eight black cubes has 3 faces on the outside, making $3(8)=24$ black faces. Therefore there are $54-24=30$ white faces. To find the ratio, we evaluate $\\frac{30}{54}= \\boxed{\\textbf{(D)}\\ \\frac{5}{9}}$.</p><p><br/></p>",
+        "<p>We can notice that each face is the same, so each face is $\\boxed{\\textbf{(D)}\\ \\frac{5}{9}}$ white.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving multiple statements and determining truth values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_19",
+      "question": "<p>Triangle $ABC$ is an isosceles triangle with $\\overline{AB}=\\overline{BC}$. Point $D$ is the midpoint of both $\\overline{BC}$ and $\\overline{AE}$, and $\\overline{CE}$ is 11 units long. Triangle $ABD$ is congruent to triangle $ECD$. What is the length of $\\overline{BD}$? </p><p>[asy] size(100); draw((0,0)--(2,4)--(4,0)--(6,4)--cycle--(4,0),linewidth(1)); label(\"$A$\", (0,0), SW); label(\"$B$\", (2,4), N); label(\"$C$\", (4,0), SE); label(\"$D$\", shift(0.2,0.1)*intersectionpoint((0,0)--(6,4),(2,4)--(4,0)), N); label(\"$E$\", (6,4), NE);[/asy]</p>",
+      "solutions": [
+        "<p>Since triangle $ABD$ is congruent to triangle $ECD$ and $\\overline{CE} =11$, $\\overline{AB}=11$. Since $\\overline{AB}=\\overline{BC}$, $\\overline{BC}=11$. Because point $D$ is the midpoint of $\\overline{BC}$, $\\overline{BD}=\\frac{\\overline{BC}}{2}=\\frac{11}{2}=\\boxed{\\textbf{(D)}\\ 5.5}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_20",
+      "question": "<p>A singles tournament had six players. Each player played every other player only once, with no ties. If Helen won 4 games, Ines won 3 games, Janet won 2 games, Kendra won 2 games and Lara won 2 games, how many games did Monica win?</p>",
+      "solutions": [
+        "<p>Since there are 6 players, a total of $\\frac{6(6-1)}{2}=15$ games are played. So far, $4+3+2+2+2=13$ games finished (one person won from each game), so Monica needs to win $15-13 = \\boxed{\\textbf{(C)}\\ 2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving ratios and proportions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_21",
+      "question": "<p>An aquarium has a rectangular base that measures $100$ cm by $40$ cm and has a height of $50$ cm. The aquarium is filled with water to a depth of $37$ cm. A rock with volume $1000\\text{cm}^3$ is then placed in the aquarium and completely submerged. By how many centimeters does the water level rise? </p>",
+      "solutions": [
+        "<p>The water level will rise $1$cm for every $100 \\cdot 40 = 4000\\text{cm}^2$. Since $1000$ is $\\frac{1}{4}$ of $4000$, the water will rise $\\frac{1}{4}\\cdot1 = \\boxed{\\textbf{(A)}\\ 0.25}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent events and calculating probabilities"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_22",
+      "question": "<p>Three different one-digit positive integers are placed in the bottom row of cells. Numbers in adjacent cells are added and the sum is placed in the cell above them. In the second row, continue the same process to obtain a number in the top cell. What is the difference between the largest and smallest numbers possible in the top cell?</p><p>[asy] path cell=((0,0)--(1,0)--(1,1)--(0,1)--cycle); path sw=((0,0)--(1,sqrt(3))); path se=((5,0)--(4,sqrt(3))); draw(cell, linewidth(1)); draw(shift(2,0)*cell, linewidth(1)); draw(shift(4,0)*cell, linewidth(1)); draw(shift(1,3)*cell, linewidth(1)); draw(shift(3,3)*cell, linewidth(1)); draw(shift(2,6)*cell, linewidth(1)); draw(shift(0.45,1.125)*sw, EndArrow); draw(shift(2.45,1.125)*sw, EndArrow); draw(shift(1.45,4.125)*sw, EndArrow); draw(shift(-0.45,1.125)*se, EndArrow); draw(shift(-2.45,1.125)*se, EndArrow); draw(shift(-1.45,4.125)*se, EndArrow); label(\"$+$\", (1.5,1.5)); label(\"$+$\", (3.5,1.5)); label(\"$+$\", (2.5,4.5));[/asy]</p>",
+      "solutions": [
+        "<p>If the lower cells contain $A, B$ and $C$, then the second row will contain$A + B$ and $B + C$, and the top cell will contain $A + 2B + C$. To obtain thesmallest sum, place $1$ in the center cell and $2$ and $3$ in the outer ones. The topnumber will be $7$. For the largest sum, place $9$ in the center cell and $7$ and $8$ inthe outer ones. This top number will be $33$. The difference is $33 - 7 = \\boxed{\\textbf{(D)}\\ 26 }$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving conditional probability and ratios"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_23",
+      "question": "<p>A box contains gold coins. If the coins are equally divided among six people, four coins are left over. If the coins are equally divided among five people, three coins are left over. If the box holds the smallest number of coins that meets these two conditions, how many coins are left when equally divided among seven people? </p>",
+      "solutions": [
+        "<p>The counting numbers that leave a remainder of $4$ when divided by $6$ are$4, 10, 16, 22, 28, 34, \\cdots$ The counting numbers that leave a remainder of $3$ whendivided by $5$ are $3,8,13,18,23,28,33, \\cdots$ So $28$ is the smallest possible numberof coins that meets both conditions. Because 28 is divisible by 7, there are $\\boxed{\\textbf{(A)}\\ 0}$ coins leftwhen they are divided among seven people.</p><p>If there were two more coins in the box, the number of coins would be divisibleby both $6$ and $5$. The smallest number that is divisible by $6$ and $5$ is $30$, so thesmallest possible number of coins in the box is $28$ and the remainder when divided by $7$ is $\\boxed{\\textbf{(A)}\\ 0}$.</p>",
+        "<p>The counting numbers that leave a remainder of $4$ when divided by $6$ are$4, 10, 16, 22, 28, 34, \\cdots$ The counting numbers that leave a remainder of $3$ whendivided by $5$ are $3,8,13,18,23,28,33, \\cdots$ So $28$ is the smallest possible numberof coins that meets both conditions. Because 28 is divisible by 7, there are $\\boxed{\\textbf{(A)}\\ 0}$ coins leftwhen they are divided among seven people.</p>",
+        "<p>If there were two more coins in the box, the number of coins would be divisibleby both $6$ and $5$. The smallest number that is divisible by $6$ and $5$ is $30$, so thesmallest possible number of coins in the box is $28$ and the remainder when divided by $7$ is $\\boxed{\\textbf{(A)}\\ 0}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving distance and position relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_24",
+      "question": "<p>In the multiplication problem below $A$, $B$, $C$, $D$ are different digits. What is $A+B$? </p><p>\\[\\begin{array}{cccc}& A & B & A\\\\ \\times & & C & D\\\\ \\hline C & D & C & D\\\\ \\end{array}\\]</p>",
+      "solutions": [
+        "<p>$CDCD = CD \\cdot 101$, so $ABA = 101$. Therefore, $A = 1$ and $B = 0$, so $A+B=1+0=\\boxed{\\textbf{(A)}\\ 1}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_8_25",
+      "question": "<p>Barry wrote 6 different numbers, one on each side of 3 cards, and laid the cards on a table, as shown. The sums of the two numbers on each of the three cards are equal. The three numbers on the hidden sides are prime numbers. What is the average of the hidden prime numbers? </p><p>[asy] path card=((0,0)--(0,3)--(2,3)--(2,0)--cycle); draw(card, linewidth(1)); draw(shift(2.5,0)*card, linewidth(1)); draw(shift(5,0)*card, linewidth(1)); label(\"$44$\", (1,1.5)); label(\"$59$\", shift(2.5,0)*(1,1.5)); label(\"$38$\", shift(5,0)*(1,1.5));[/asy]</p>",
+      "solutions": [
+        "<p>Notice that 44 and 38 are both even, while 59 is odd. If any odd prime is added to 59, an even number will be obtained. However, the only way to obtain this even number(common sum) would be to add another even number to 44, and a different one to 38. Since there is only one even prime (2), the middle card's hidden number cannot be an odd prime, and so must be even. Therefore, the middle card's hidden number must be 2, so the constant sum is $59+2=61$. Thus, the first card's hidden number is $61-44=17$, and the last card's hidden number is $61-38=23$. </p><p>Since the sum of the hidden primes is $2+17+23=42$, the average of the primes is $\\dfrac{42}{3}=\\boxed{\\textbf{(B)} 14}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving area calculations and geometric relationships"
+        }
+      ]
+    }
+  ]
+}

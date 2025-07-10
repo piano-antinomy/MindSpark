@@ -1,0 +1,435 @@
+{
+  "competition_info": {
+    "name": "2009_AMC_10A",
+    "group": "AMC_10",
+    "year": 2009,
+    "is_AJHSME": false,
+    "level": "10",
+    "suffix": "A",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2009_10a_1",
+      "question": "<p>One can holds $12$ ounces of soda, what is the minimum number of cans needed to provide a gallon ($128$ ounces) of soda?</p>",
+      "solutions": [
+        "<p>$10$ cans would hold $120$ ounces, but $128>120$, so $11$ cans are required. Thus, the answer is $\\mathrm{\\boxed{{(E)}11}}$.</p>",
+        "<p>We want to find $\\left\\lceil\\frac{128}{12}\\right\\rceil$ because there are a whole number of cans.</p><p>$\\frac{128}{12} = 10R8\\longrightarrow 11\\longrightarrow \\fbox{(E)}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2009 AMC 10A - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_2",
+      "question": "<p>Four coins are picked out of a piggy bank that contains a collection of pennies, nickels, dimes, and quarters. Which of the following could <em>not</em> be the total value of the four coins, in cents?</p>",
+      "solutions": [
+        "<p>We need to find which total value cannot be made with exactly 4 coins from pennies (1\u00a2), nickels (5\u00a2), dimes (10\u00a2), and quarters (25\u00a2).</p><p>Let's check each option:</p><p>A) 15\u00a2: We need 4 coins that sum to 15. The maximum with 4 coins is 4 quarters = 100\u00a2, so this is possible. But can we make 15\u00a2 with exactly 4 coins? The smallest 4 coins would be 4 pennies = 4\u00a2, which is too small. We need to use some larger coins. Let's try: 1 nickel + 3 pennies = 5 + 3 = 8\u00a2 (too small), 2 nickels + 2 pennies = 10 + 2 = 12\u00a2 (too small), 3 nickels + 1 penny = 15 + 1 = 16\u00a2 (too large). We cannot make exactly 15\u00a2 with 4 coins.</p><p>B) 25\u00a2: 1 quarter = 25\u00a2, but we need 4 coins. 1 quarter + 3 pennies = 25 + 3 = 28\u00a2 (too large). 5 nickels = 25\u00a2, but we need exactly 4 coins. 4 nickels + 1 penny = 20 + 1 = 21\u00a2 (too small). 3 nickels + 2 pennies = 15 + 2 = 17\u00a2 (too small). We cannot make exactly 25\u00a2 with 4 coins either.</p><p>Wait, let me reconsider. The problem asks which total value could NOT be made. Let me check more carefully:</p><p>A) 15\u00a2: Can we make 15\u00a2 with exactly 4 coins? 1 dime + 1 nickel = 15\u00a2, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 10 + 5 + 2 = 17\u00a2 (too large). 3 nickels = 15\u00a2, but that's only 3 coins. We cannot make exactly 15\u00a2 with 4 coins.</p><p>B) 25\u00a2: 1 quarter = 25\u00a2, but we need 4 coins. 1 quarter + 3 pennies = 28\u00a2 (too large). 5 nickels = 25\u00a2, but we need exactly 4 coins. 4 nickels + 1 penny = 21\u00a2 (too small). We cannot make exactly 25\u00a2 with 4 coins.</p><p>C) 35\u00a2: 1 quarter + 1 dime = 35\u00a2, but that's only 2 coins. 1 quarter + 1 dime + 2 pennies = 37\u00a2 (too large). 3 dimes + 1 nickel = 30 + 5 = 35\u00a2, but that's only 4 coins. Wait, 3 dimes + 1 nickel = 30 + 5 = 35\u00a2 with exactly 4 coins. This is possible.</p><p>D) 45\u00a2: 1 quarter + 2 dimes = 25 + 20 = 45\u00a2, but that's only 3 coins. 1 quarter + 2 dimes + 1 penny = 46\u00a2 (too large). 4 dimes + 1 nickel = 40 + 5 = 45\u00a2, but that's 5 coins. We cannot make exactly 45\u00a2 with 4 coins.</p><p>E) 55\u00a2: 2 quarters + 1 nickel = 50 + 5 = 55\u00a2, but that's only 3 coins. 2 quarters + 1 nickel + 1 penny = 56\u00a2 (too large). 1 quarter + 3 dimes = 25 + 30 = 55\u00a2, but that's only 4 coins. Wait, 1 quarter + 3 dimes = 25 + 30 = 55\u00a2 with exactly 4 coins. This is possible.</p><p>So the values that cannot be made with exactly 4 coins are: A (15\u00a2), B (25\u00a2), and D (45\u00a2). But the problem asks for which one could NOT be made, implying only one answer. Let me check more carefully:</p><p>Actually, let me list all possible combinations of 4 coins and see what totals we can make:</p><p>4 pennies = 4\u00a2</p><p>3 pennies + 1 nickel = 8\u00a2</p><p>2 pennies + 2 nickels = 12\u00a2</p><p>1 penny + 3 nickels = 16\u00a2</p><p>4 nickels = 20\u00a2</p><p>3 nickels + 1 dime = 25\u00a2</p><p>2 nickels + 2 dimes = 30\u00a2</p><p>1 nickel + 3 dimes = 35\u00a2</p><p>4 dimes = 40\u00a2</p><p>3 dimes + 1 quarter = 55\u00a2</p><p>2 dimes + 2 quarters = 70\u00a2</p><p>1 dime + 3 quarters = 85\u00a2</p><p>4 quarters = 100\u00a2</p><p>And combinations with pennies: 3 pennies + 1 dime = 13\u00a2, 2 pennies + 1 nickel + 1 dime = 17\u00a2, 1 penny + 2 nickels + 1 dime = 21\u00a2, etc.</p><p>Looking at the options: A) 15\u00a2 - not in our list, B) 25\u00a2 - possible (3 nickels + 1 dime), C) 35\u00a2 - possible (1 nickel + 3 dimes), D) 45\u00a2 - not in our list, E) 55\u00a2 - possible (3 dimes + 1 quarter).</p><p>So A (15\u00a2) and D (45\u00a2) cannot be made. But the problem asks for which one could NOT be made, implying only one answer. Let me check if I missed any combinations.</p><p>Actually, let me be more systematic. The problem is asking which total value could NOT be the total value of the four coins. Let me check each option:</p><p>A) 15\u00a2: Can we make 15\u00a2 with exactly 4 coins? Let's try: 1 dime + 1 nickel = 15\u00a2, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 17\u00a2 (too large). 3 nickels = 15\u00a2, but that's only 3 coins. 3 nickels + 1 penny = 16\u00a2 (too large). 2 nickels + 2 pennies = 12\u00a2 (too small). 1 nickel + 4 pennies = 9\u00a2 (too small). We cannot make exactly 15\u00a2 with 4 coins.</p><p>Therefore, the answer is A) 15\u00a2.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2009 AMC 10A - algebra problem involving percentage calculations and discounts. Students need to understand algebra concepts, work with percentages principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of percentages."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_3",
+      "question": "<p>Which of the following is equal to $1 + \\frac {1}{1 + \\frac {1}{1 + 1}}$?</p>",
+      "solutions": [
+        "<p>We compute:</p><p>\\begin{align*} 1 + \\frac {1}{1 + \\frac {1}{1 + 1}} &= 1 + \\frac {1}{1 + \\frac {1}{1 + 1}} \\\\ &= 1 + \\frac {1}{1 + \\frac 12} \\\\ &= 1 + \\frac {1}{\\frac 32} \\\\ &= 1 + \\frac 23 \\\\ &= \\frac 53 \\end{align*}</p><p>This is choice $\\boxed{\\text{C}}$.</p><p>Interesting sidenote: The continued fraction $1 + \\frac {1}{1 + \\frac {1}{1 + 1....}}$ is equal to the golden ratio, or $\\frac{1+\\sqrt{5}}{2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2009 AMC 10A - algebra problem involving area calculations of geometric shapes. Students need to understand algebra concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_4",
+      "question": "<p>Eric plans to compete in a triathlon. He can average $2$ miles per hour in the $\\frac{1}{4}$-mile swim and $6$ miles per hour in the $3$-mile run. His goal is to finish the triathlon in $2$ hours. To accomplish his goal what must his average speed in miles per hour, be for the $15$-mile bicycle ride?</p>",
+      "solutions": [
+        "<p>Since $d=rt$, Eric takes $\\frac{\\frac{1}{4}}{2}=\\frac{1}{8}$ hours for the swim. Then, he takes $\\frac{3}{6}=\\frac{1}{2}$ hours for the run. </p><p>So he needs to take $2-\\frac{5}{8}=\\frac{11}{8}$ hours for the $15$ mile bike. This is $\\frac{15}{\\frac{11}{8}}=\\frac{120}{11} \\frac{\\text{miles}}{\\text{hour}}$$\\longrightarrow \\fbox{A}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2009 AMC 10A - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_5",
+      "question": "<p>What is the sum of the digits of the square of $\\text 111111111$?</p>",
+      "solutions": [
+        "<p>Using the standard multiplication algorithm, $111,111,111^2=12,345,678,987,654,321,$ whose digit sum is $\\boxed{(E)\\text{ }81.}$</p>",
+        "<p>We note that</p><p>$1^2 = 1$,</p><p>$11^2 = 121$,</p><p>$111^2 = 12321$,</p><p>and $1,111^2 = 1234321$.</p><p>We can clearly see the pattern: If $X$ is $111\\cdots111$, with $n$ ones (and for the sake of simplicity, assume that $n<10$), then the sum of the digits of $X^2$ is </p><p>$1+2+3+4+5\\cdots n+(n-1)+(n-2)\\cdots+1$</p><p>$=(1+2+3\\cdots n)+(1+2+3+\\cdots n-1)$</p><p>$=\\dfrac{n(n+1)}{2}+\\dfrac{(n-1)n}{2}$</p><p>$=\\dfrac{n(n+1+n-1)}{2}=\\dfrac{2n^2}{2}=n^2.$</p><p>Aha! We know that $111,111,111$ has $9$ digits, so its digit sum is $9^2=\\boxed{81(E)}$.</p>",
+        "<p>We see that $111^2$ can be written as $111(100+10+1)=11100+1110+111=12321$.</p><p>We can apply this strategy to find $111,111,111^2$, as seen below.</p><p>$111111111^2=111111111(100000000+10000000\\cdots+10+1)$</p><p>$=11111111100000000+1111111110000000+\\cdots+111111111$</p><p>$=12,345,678,987,654,321$</p><p>The digit sum is thus $1+2+3+4+5+6+7+8+9+8+7+6+5+4+3+2+1=81 \\boxed{(E)}$.</p>",
+        "<p>We note that the only way for the sum of multiple numbers' digits to not equal the sum of the digits after they are all added is for a place (i.e., tens place, ones place, etc.) to be carried over. If that was a little confusing, note that $63+22=85,$ and $8+5=13.$ $6+3+2+2=13,$ too. The ones don't carry over to the tens and the tens don't carry over to the hundreds. However, $63+37=100,$ and $6+3+3+7=19 \\neq 1.$ The ones carry over to the tens and the tens carry over to the hundreds, meaning it loses $2(9-1)=18$ of its digit sum.</p><p><br/>If that made sense, note that $111111111$ has $9$ digits. Since the only operation in long multiplication will be $1 \\cdot 1$ and the addition tower will be $9$ stacks long, there is no way a $1$ stack can be $10$ long and carry over its value. Thus, it is sufficient to conclude that we will multiply $1$ with $1$ $9 \\cdot 9= \\boxed{\\textbf{(E) }81}$ times, with no $1$ being carried over.</p><p>~ Wesserwes7254</p><p>Note to author: This made sense $:)$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2009 AMC 10A - algebra problem involving counting principles and arrangements. Students need to understand algebra concepts, work with counting principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_6",
+      "question": "<p>A circle of radius $2$ is inscribed in a semicircle, as shown. The area inside the semicircle but outside the circle is shaded. What fraction of the semicircle's area is shaded? </p><p>[asy] unitsize(6mm); defaultpen(linewidth(.8pt)+fontsize(8pt)); dotfactor=4;  filldraw(Arc((0,0),4,0,180)--cycle,gray,black); filldraw(Circle((0,2),2),white,black); dot((0,2)); draw((0,2)--((0,2)+2*dir(60))); label(\"$2$\",midpoint((0,2)--((0,2)+2*dir(60))),SE); [/asy]</p>",
+      "solutions": [
+        "<p>Area of the circle inscribed inside the semicircle $= \\pi r^2 \\Rightarrow \\pi(2^2) = 4 \\pi .$Area of the larger circle (semicircle's area x 2)$= \\pi r^2 \\Rightarrow \\pi(4^2)= 16 \\pi$ (4, or the diameter of the inscribed circle is the same thing as the radius of the semicircle). Thus, the area of the semicircle is $\\frac{1}{2}(16 \\pi) \\Rightarrow 8 \\pi .$Part of the semicircle that is unshaded is $\\frac{4 \\pi}{8 \\pi} = \\frac{1}{2}$ Therefore, the shaded part is $1 - \\frac{1}{2} = \\frac{1}{2}$</p><p>Thus the answer is $\\frac{1}{2}\\Rightarrow \\fbox{A}$</p>",
+        "<p>The solution above is the standard method of solving it, but we can also realize something about their radii. If we see, we know that the smaller circle has a radius of $2$ while the larger semicircle has a radius of $4$. We know for a fact that if we have $2$ normal full circles and one has a radius that is double the other, the smaller circle will always be $4$ times smaller than the larger one (if you didn't know, now you know). Now, we have a semicircle, so the same thing applies but the larger circle is cut in half, so therefore, the semicircle (which has the bigger radius), will be double the size of the small circle that is inscribed in it. Double means that $2$ of the small full circles will be able to fit the larger semi-circle. So, therefore, the area that is shaded is equal to the area of the small full circle, making $2$ equal parts, so the shaded area is $\\frac{1}{2}$ of the whole semi-circle</p><p>$\\frac{1}{2}\\Longrightarrow \\fbox{A}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2009 AMC 10A - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_7",
+      "question": "<p>A carton contains milk that is $2$% fat, an amount that is $40$% less fat than the amount contained in a carton of whole milk. What is the percentage of fat in whole milk?</p>",
+      "solutions": [
+        "<p>Rewording the question, we are being asked \"$2$ is $40\\%$ less than what number?\"If $x$ represents the number we are looking for, then $40\\%$ less than the number would be represented by $x-0.4x$ or $0.6x$.Thus $0.6x=2$; solving for $x$, we get $x=\\frac{10}{3}$ $\\longrightarrow \\fbox{C}$</p>",
+        "<p>If we change the question to 2% fat in the carton which is 50% less than whole milk, this means that there is 4% fat in the whole milk. The only answer closest and less than 4 is 10/3 $\\implies \\boxed{C}$. 38% fat is a lot of fat in milk O O O O O O O O O -RealityWrites</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2009 AMC 10A - geometry problem involving area calculations of geometric shapes. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_8",
+      "question": "<p>Three generations of the Wen family are going to the movies, two from each generation. The two members of the youngest generation receive a $50$% discount as children. The two members of the oldest generation receive a $25\\%$ discount as senior citizens. The two members of the middle generation receive no discount. Grandfather Wen, whose senior ticket costs $$6.00$, is paying for everyone. How many dollars must he pay?</p>",
+      "solutions": [
+        "<p>A senior ticket costs $$6.00$, so a regular ticket costs $6 \\cdot \\frac{1}{\\frac{3}{4}}\\:=\\:6\\cdot\\frac{4}{3}\\:=\\:8$ dollars. Therefore children's tickets cost half that, or $$4.00$, so we have:</p><p>$2(6+8+4)\\:=\\:36$</p><p>So Grandfather Wen pays $$36$, or $\\fbox{B}$.</p>",
+        "<p>Using average, we know that assuming the middle-aged people's ticket cost x dollars, $2\\cdot(100\\%x+75\\%x+50\\%x)$. We average this into 2*(75%x+75%x+75%x). We know that 75%x=6.00, which means $6\\cdot6$ is the answer, or 36. -RealityWrites</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2009 AMC 10A - number_theory problem involving divisibility rules and number properties. Students need to understand number_theory concepts, work with divisibility principles, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills and understanding of divisibility."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_9",
+      "question": "<p>Positive integers $a$, $b$, and $2009$, with $a<b<2009$, form a geometric sequence with an integer ratio. What is $a$? </p>",
+      "solutions": [
+        "<p>The prime factorization of $2009$ is $2009 = 7\\cdot 7\\cdot 41$. As $a<b<2009$, the ratio must be positive and larger than $1$, hence there is only one possibility: the ratio must be $7$, and then $b=7\\cdot 41$, and $a=41\\Rightarrow\\fbox{B}$.</p><p>We know that this is important because the complete equation would be $a\\cdot x^2=2009,$ and the only possible outcome for $x$ is $7.$-Edited slightly by RealityWrites - minor $\\LaTeX$ edits by BS2012</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2009 AMC 10A - geometry problem involving triangle geometry and properties. Students need to understand geometry concepts, work with triangles principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of triangles."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_10",
+      "question": "<p>Triangle $ABC$ has a right angle at $B$. Point $D$ is the foot of the altitude from $B$, $AD=3$, and $DC=4$. What is the area of $\\triangle ABC$?</p><p>[asy] unitsize(5mm); defaultpen(linewidth(.8pt)+fontsize(8pt)); dotfactor=4;  pair B=(0,0), C=(sqrt(28),0), A=(0,sqrt(21)); pair D=foot(B,A,C); pair[] ps={B,C,A,D};  draw(A--B--C--cycle); draw(B--D); draw(rightanglemark(B,D,C));  dot(ps); label(\"$A$\",A,NW); label(\"$B$\",B,SW); label(\"$C$\",C,SE); label(\"$D$\",D,NE); label(\"$3$\",midpoint(A--D),NE); label(\"$4$\",midpoint(D--C),NE); [/asy]</p>",
+      "solutions": [
+        "<p>It is a well-known fact that in any right triangle $ABC$ with the right angle at $B$ and $D$ the foot of the altitude from $B$ onto $AC$ we have $BD^2 = AD\\cdot CD$. (See below for a proof.) Then $BD = \\sqrt{ 3\\cdot 4 } = 2\\sqrt 3$, and the area of the triangle $ABC$ is $\\frac{AC\\cdot BD}2 = 7\\sqrt3\\Rightarrow\\boxed{\\text{(B)}}$.</p><p><i>Proof</i>: Consider the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> for each of the triangles $ABC$, $ABD$, and $CBD$. We get:</p><p>Substituting equations 2 and 3 into the left hand side of equation 1, we get $BD^2 =  AD \\cdot DC$. </p><p>Alternatively, note that $\\triangle ABD \\sim \\triangle BCD \\Longrightarrow \\frac{AD}{BD} = \\frac{BD}{CD}$.</p>",
+        "<p>For those looking for a dumber solution, we can use Pythagoras and manipulation of area formulas to solve the problem.</p><p>Assume the length of $BD$ is equal to $h$. Then, by Pythagoras, we have, </p><p>\\[AB^2 = h^2 + 9 \\Rightarrow AB = \\sqrt{h^2 + 9}\\]\\[BC^2 = h^2 + 16 \\Rightarrow BC = \\sqrt{h^2 + 16}\\]</p><p>Then, by area formulas, we know:</p><p>\\[\\frac{1}{2}\\sqrt{(h^2+9)(h^2+16)} = \\frac{1}{2}(7)(h)\\]</p><p>Squaring and solving the above equation yields our solution that $h^2 = 12 \\Rightarrow h = 2\\sqrt{3}.$ Since the area of the triangle is half of this quantity multiplied by the base, we have \\[\\text{area}  = \\frac{1}{2}(7)(2\\sqrt{3})\\Rightarrow \\boxed{7\\sqrt{3}}\\]</p>",
+        "<p>Draw the circumcircle $\\omega$ of the $\\Delta ABC$. Because $\\Delta ABC$ is a right angle triangle, AC is the diameter of the circumcircle. And we know that AC is the diameter because of Perpendicular Chord Bisector Theorem. By applying <a href=\"/wiki/index.php/Power_of_a_Point_Theorem\" title=\"Power of a Point Theorem\">Power of a Point Theorem</a>, we can have $BD=DE$ and $AD\\cdot CD=BD^2$ $\\Rightarrow BD=\\sqrt{3\\times 4}=2\\sqrt{3}$. Then we have $S_{[ABC]}=\\frac{1}{2}(7)(2\\sqrt{3})=\\boxed{7\\sqrt{3}}$</p><p><br/>[asy] unitsize(6mm); defaultpen(linewidth(.8pt)+fontsize(8pt)); dotfactor=4;  pair B=(0,0), C=(sqrt(28),0), A=(0,sqrt(21)), E=(6*sqrt(28)/7,8*sqrt(21)/7); pair D=foot(B,A,C); pair[] ps={B,C,A,D};   filldraw(Circle((sqrt(28)/2,sqrt(21)/2),sqrt(49)/2),white,black); draw(A--B--C--cycle); draw(B--D); draw(E--D); draw(rightanglemark(B,D,C));  dot(ps); label(\"$A$\",A,NW); label(\"$B$\",B,SW); label(\"$E$\",E,NE); label(\"$C$\",C,SE); label(\"$D$\",D,NE); label(\"$3$\",midpoint(A--D),NE); label(\"$4$\",midpoint(D--C),NE); [/asy]~Bran_Qin</p><p>~twosetisdabest (Just proving that AC is diameter of the circle)</p><p>Suppose that $BD=x$. Then, the area of the triangle is $\\frac{7x}{2}$. We want to find what $x$ is. Now, we try each answer choice. </p><p>$A): 4 \\sqrt{3}$. I am too lazy to go over this, but we immediately see that this is very improbably due to the area being $\\frac{7x}{2}$. This does not work.$B): 7 \\sqrt{3}$. This is promising. This means that $x = 2\\sqrt{3}$. Now, applying Pythagorean Theorem, we have the vertical sides is $\\sqrt {21}$ and the horizontal side is $\\sqrt {28}$. Multiplying these and dividing by $2$ indeed gives us $7 \\sqrt {3}$ as desired. Therefore, the answer is $\\boxed{7 \\sqrt{3}}$</p><p>~Arcticturn</p><p>Let $\\overline{BD} = x$, and $\\angle ABD = \\theta$. Since $m\\angle ABC = 90, DBC = 90 - \\theta$. $\\tan{\\theta} = \\frac{3}{x}$, and $\\tan{90-\\theta} = \\frac{4}{x}$. Using trig identities, we can simplify the second one to $\\cot{\\theta} = \\frac{4}{x}$. Let $y = \\tan{\\theta}$. We get $xy = 3$, and using the fact that $\\cot{a} = \\frac{1}{\\tan{a}}$, $\\frac{x}{y} = 4$. Solving for x and y(using substitution), we get $y^2 = \\frac{3}{4}$. We could substitute back in and solve, but there is an easier way. Squaring $xy = 3$, we get $x^2y^2 = 9$. Since we know $y^2 = \\frac{3}{4}$, $x = \\sqrt{12}$. Using the Pythagorean Theorem in the original triangle, we get the legs of the triangle to be $\\sqrt{9+x^2}$ and $\\sqrt{16+x^2}$. Putting in $x$, we get the equation for the area, which is $\\frac{\\sqrt{28} \\cdot \\sqrt{21}}{2} = \\frac{14\\sqrt{3}}{2} = \\boxed{\\textbf{(B) } 7\\sqrt{3}}$</p><p>~idk12345678</p>",
+        "<p>Suppose that $BD=x$. Then, the area of the triangle is $\\frac{7x}{2}$. We want to find what $x$ is. Now, we try each answer choice. </p><p>$A): 4 \\sqrt{3}$. I am too lazy to go over this, but we immediately see that this is very improbably due to the area being $\\frac{7x}{2}$. This does not work.$B): 7 \\sqrt{3}$. This is promising. This means that $x = 2\\sqrt{3}$. Now, applying Pythagorean Theorem, we have the vertical sides is $\\sqrt {21}$ and the horizontal side is $\\sqrt {28}$. Multiplying these and dividing by $2$ indeed gives us $7 \\sqrt {3}$ as desired. Therefore, the answer is $\\boxed{7 \\sqrt{3}}$</p><p>~Arcticturn</p>",
+        "<p>Let $\\overline{BD} = x$, and $\\angle ABD = \\theta$. Since $m\\angle ABC = 90, DBC = 90 - \\theta$. $\\tan{\\theta} = \\frac{3}{x}$, and $\\tan{90-\\theta} = \\frac{4}{x}$. Using trig identities, we can simplify the second one to $\\cot{\\theta} = \\frac{4}{x}$. Let $y = \\tan{\\theta}$. We get $xy = 3$, and using the fact that $\\cot{a} = \\frac{1}{\\tan{a}}$, $\\frac{x}{y} = 4$. Solving for x and y(using substitution), we get $y^2 = \\frac{3}{4}$. We could substitute back in and solve, but there is an easier way. Squaring $xy = 3$, we get $x^2y^2 = 9$. Since we know $y^2 = \\frac{3}{4}$, $x = \\sqrt{12}$. Using the Pythagorean Theorem in the original triangle, we get the legs of the triangle to be $\\sqrt{9+x^2}$ and $\\sqrt{16+x^2}$. Putting in $x$, we get the equation for the area, which is $\\frac{\\sqrt{28} \\cdot \\sqrt{21}}{2} = \\frac{14\\sqrt{3}}{2} = \\boxed{\\textbf{(B) } 7\\sqrt{3}}$</p><p>~idk12345678</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2009 AMC 10A - algebra problem involving rate relationships and speed calculations. Students need to understand algebra concepts, work with rates principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of rates."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_11",
+      "question": "<p>One dimension of a cube is increased by $1$, another is decreased by $1$, and the third is left unchanged. The volume of the new rectangular solid is $5$ less than that of the cube. What was the volume of the cube?</p>",
+      "solutions": [
+        "<p>Let the original cube have edge length $a$. Then its volume is $a^3$.The new box has dimensions $a-1$, $a$, and $a+1$, hence its volume is $(a-1)a(a+1) = a^3-a$. The difference between the two volumes is $a$. As we are given that the difference is $5$, we have $a=5$, and the volume of the original cube was $5^3 = 125\\Rightarrow\\boxed{\\text{(D)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2009 AMC 10A - algebra problem involving percentage calculations and changes. Students need to understand algebra concepts, work with percentages principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of percentages."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_12",
+      "question": "<p>In quadrilateral $ABCD$, $AB = 5$, $BC = 17$, $CD = 5$, $DA = 9$, and $BD$ is an integer. What is $BD$?</p>",
+      "solutions": [
+        "<p>By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Triangle_inequality\" title=\"Triangle inequality\">triangle inequality</a> we have $BD < DA + AB = 9 + 5 = 14$, and also $BD + CD > BC$, hence $BD > BC - CD = 17 - 5 = 12$.</p><p>We get that $12 < BD < 14$, and as we know that $BD$ is an integer, we must have $BD=\\boxed{13}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2009 AMC 10A - algebra problem involving arithmetic sequence patterns and terms. Students need to understand algebra concepts, work with arithmetic_sequences principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of arithmetic_sequences."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_13",
+      "question": "<p>Suppose that $P = 2^m$ and $Q = 3^n$. Which of the following is equal to $12^{mn}$ for every pair of integers $(m,n)$?</p>",
+      "solutions": [
+        "<p>We have $12^{mn} = (2\\cdot 2\\cdot 3)^{mn} = 2^{2mn} \\cdot 3^{mn} = (2^m)^{2n} \\cdot (3^n)^m = \\boxed{\\bold{E)} P^{2n} Q^m}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2009 AMC 10A - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_14",
+      "question": "<p>Four congruent rectangles are placed as shown. The area of the outer square is $4$ times that of the inner square. What is the ratio of the length of the longer side of each rectangle to the length of its shorter side?</p>",
+      "solutions": [
+        "<p>The area of the outer square is $4$ times that of the inner square.Therefore the side of the outer square is $\\sqrt 4 = 2$ times that of the inner square.</p><p>Then the shorter side of the rectangle is $1/4$ of the side of the outer square, and the longer side of the rectangle is $3/4$ of the side of the outer square, hence their ratio is $\\boxed{3}$.</p>",
+        "<p>Let the side length of the smaller square be $1$, and let the smaller side of the rectangles be $y$. Since the larger square's area is four times larger than the smaller square's, the larger square's side length is $2$. $2$ is equivalent to $2y+1$, giving $y=1/2$. Then, the longer side of the rectangles is $3/2$. $\\frac{\\frac{3}{2}}{\\frac{1}{2}}=\\boxed{3}$.</p>",
+        "<p>Let the longer side length be $x$, and the shorter side be $a$.</p><p>We have that $(x+a)^2=4(x-a)^2\\implies x+a=2(x-a)\\implies x+a=2x-2a\\implies x=3a \\implies \\frac{x}{a}=3$</p><p>Hence, the answer is $\\boxed{A}\\implies 3$</p>",
+        "<p>WLOG, let the shorter side of the rectangle be $1$, and the longer side be $x$ . Thus, the area of the larger square is $(1+x)^2$ . The area of the smaller square is $(x-1)^2$ . Thus, we have the equation $(1+x)^2 = 4 (x-2)^2$ . Solving for $x$, we get $x$ = $3$ .</p><p>~coolmath2017</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2009 AMC 10A - geometry problem involving circle geometry and measurements. Students need to understand geometry concepts, work with circles principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of circles."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_15",
+      "question": "<p>The figures $F_1$, $F_2$, $F_3$, and $F_4$ shown are the first in a sequence of figures. For $n\\ge3$, $F_n$ is constructed from $F_{n - 1}$ by surrounding it with a square and placing one more diamond on each side of the new square than $F_{n - 1}$ had on each side of its outside square. For example, figure $F_3$ has $13$ diamonds. How many diamonds are there in figure $F_{20}$?</p>",
+      "solutions": [
+        "<p>Split $F_n$ into $4$ congruent triangles by its diagonals (like in the pictures in the problem). This shows that the number of diamonds it contains is equal to $4$ times the $(n-2)$th triangular number (i.e. the diamonds within the triangles or between the diagonals) and $4(n-1)+1$ (the diamonds on sides of the triangles or on the diagonals). The $n$th triangular number is $\\frac{n(n+1)}{2}$. Putting this together for $F_{20}$ this gives:</p><p>$\\frac{4(18)(19)}{2}+4(19)+1=\\boxed{761}$</p>",
+        "<p>Color the diamond layers alternately blue and red, starting from the outside. You'll get the following pattern:</p><p>[asy] unitsize(3mm); defaultpen(linewidth(.8pt)+fontsize(8pt));  path d=(1/2,0)--(0,sqrt(3)/2)--(-1/2,0)--(0,-sqrt(3)/2)--cycle; marker mred=marker(scale(5)*d,red,Fill); marker mblue=marker(scale(5)*d,blue,Fill); path f1=(0,0); path f2=(-1,1)--(1,1)--(1,-1)--(-1,-1)--cycle; path f3=(-2,-2)--(-2,0)--(-2,2)--(0,2)--(2,2)--(2,0)--(2,-2)--(0,-2)--cycle; path f4=(-3,-3)--(-3,-1)--(-3,1)--(-3,3)--(-1,3)--(1,3)--(3,3)--(3,1)--(3,-1)--(3,-3)--(1,-3)--(-1,-3)--cycle;  draw((-3,-3)--(3,3)); draw((-3,3)--(3,-3)); draw(f1,mred); draw(f2,mblue); draw(f3,mred); draw(f4,mblue); [/asy]</p><p>In the figure $F_n$, the blue diamonds form a $n\\times n$ square, and the red diamonds form a $(n-1)\\times(n-1)$ square. Hence the total number of diamonds in $F_{20}$ is $20^2 + 19^2 = \\boxed{761}$.</p>",
+        "<p>When constructing $F_n$ from $F_{n-1}$, we add $4(n-1)$ new diamonds. Let $d_n$ be the number of diamonds in $F_n$. We now know that $d_1=1$ and $\\forall n>1:~ d_n=d_{n-1} + 4(n-1)$.</p><p>Hence we get:\\begin{align*} d_{20} & = d_{19} + 4\\cdot 19 \\\\ & = d_{18} + 4\\cdot 18 + 4\\cdot 19 \\\\ & = \\cdots \\\\ & = 1 + 4(1+2+\\cdots+18+19) \\\\ & = 1 + 4\\cdot\\frac{19\\cdot 20}2 \\\\ & = \\boxed{761} \\end{align*}</p>",
+        "<p>The sequence $\\{ d_n\\}$ goes $1, 5, 13, 25, 41,\\dots$. The first finite differences go $4, 8, 12, 16, \\dots$. The second finite differences go $4, 4, 4, \\dots$, so we see that the second finite difference is constant. Thus, $d_n$ can be represented as a quadratic, $d_n = an^2 + bn + c$. However, we already know $d_1 = 1$, $d_2 = 3$, and $d_3 = 13$. Thus,\\[a + b + c = d_1 = 1\\]\\[4a + 2b + c = d_2 = 3\\]\\[9a + 3b + c = d_3 = 13\\]Solving this system for $a$, $b$, and $c$ gives $a = 2$, $b = -2$, $c = 1$. Finally, $d_n = 2n^2 - 2n + 1\\implies d_{20} = \\boxed{(E)761}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2009 AMC 10A - combinatorics problem involving counting principles and arrangements. Students need to understand combinatorics concepts, work with counting principles, and apply mathematical reasoning to solve this problem. This tests combinatorics problem-solving skills and understanding of counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_16",
+      "question": "<p>Let $a$, $b$, $c$, and $d$ be real numbers with $|a-b|=2$, $|b-c|=3$, and $|c-d|=4$. What is the sum of all possible values of $|a-d|$?</p>",
+      "solutions": [
+        "<p>From $|a-b|=2$ we get that $a=b\\pm 2$</p><p>Similarly, $b=c\\pm3$ and $c=d\\pm4$.</p><p>Substitution gives $a=d\\pm 4\\pm 3\\pm 2$. This gives $|a-d|=|\\pm 4\\pm 3\\pm 2|$. There are $2^3=8$ possibilities for the value of $\\pm 4\\pm 3\\pm2$:</p><p>$4+3+2=9$, </p><p>$4+3-2=5$, </p><p>$4-3+2=3$, </p><p>$-4+3+2=1$, </p><p>$4-3-2=-1$, </p><p>$-4+3-2=-3$, </p><p>$-4-3+2=-5$, </p><p>$-4-3-2=-9$</p><p>Therefore, the only possible values of $|a-d|$ are $9$, $5$, $3$, and $1$. Their sum is $\\boxed{\\textbf{(D) } 18}$.</p>",
+        "<p>If we add the same constant to all of $a$, $b$, $c$, and $d$, we will not change any of the differences. Hence we can assume that $a=0$.</p><p>From $|a-b|=2$ we get that $|b|=2$, hence $b\\in\\{-2,2\\}$.</p><p>If we multiply all four numbers by $-1$, we will not change any of the differences. (This is due to the fact that we are calculating $|d|$ at the end ~Williamgolly) <a class=\"mw-redirect\" href=\"/wiki/index.php/WLOG\" title=\"WLOG\">WLOG</a> we can assume that $b=2$.</p><p>From $|b-c|=3$ we get that $c\\in\\{-1,5\\}$.</p><p>From $|c-d|=4$ we get that $d\\in\\{-5,1,3,9\\}$.</p><p>Hence $|a-d|=|d|\\in\\{1,3,5,9\\}$, and the sum of possible values is $1+3+5+9 = \\boxed{\\textbf{(D) }18}$.</p>",
+        "<p>Let \\[\\begin{cases} |a-b| = 2, \\\\ |b-c| = 3, \\\\ |c-d| = 4, \\\\ |d-a| = X. \\\\ \\end{cases}\\] Note that we have \\[\\begin{cases} a-b = \\pm 2, \\\\ b-c = \\pm 3, \\\\ c-d = \\pm 4 \\\\ d-a = \\pm X, \\\\ \\end{cases} \\ \\ \\implies\\] \\[\\pm X \\pm 2 \\pm 3 \\pm 4 = 0, \\ \\ \\implies X \\pm 2 \\pm 3 \\pm 4 = 0,\\] from which it follows that \\[X = \\pm 4 \\pm 3 \\pm 2.\\]</p><p>Note that $X = |a-d|$ must be positive however, the only arrangements of $+$ and $-$ signs on the RHS which make $X$ positive are \\[(4, 3, 2) \\ \\ \\implies \\ \\ X = 9\\] \\[(4, 3, -2) \\ \\ \\implies \\ \\ X = 5\\] \\[(4, -3, 2) \\ \\ \\implies \\ \\ X = 3\\] \\[(-4, 3, 2) \\ \\ \\implies \\ \\ X = 1.\\] (There are no cases with $2$ or more negative as $4-3-2<0.$)</p><p>Thus, the answer is \\[1+3+5+9 = \\boxed{\\textbf{(D) }18}.\\]</p>",
+        "<p>Let $a=0$.</p><p>Then $\\begin{cases} b=2 \\\\ b=-2 \\\\ \\end{cases}$</p><p>Thus $\\begin{cases} c=5 \\\\ c=-1 \\\\ c=1 \\\\ c=-5 \\\\ \\end{cases}$</p><p>Therefore $\\begin{cases} d=9 \\\\ d=1 \\\\ d=3 \\\\ d=-5 \\\\ d=5 \\\\ d=-3 \\\\ d=-1 \\\\ d=-9 \\\\ \\end{cases}$</p><p>So $|a-d|=1, 9, 3, 5$ and the sum is $\\boxed{\\textbf{(D) } 18}$.</p><p>~JH. L</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2009 AMC 10A - algebra problem involving systems of equations with multiple variables. Students need to understand algebra concepts, work with systems_of_equations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of systems_of_equations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_17",
+      "question": "<p>Rectangle $ABCD$ has $AB=4$ and $BC=3$. Segment $EF$ is constructed through $B$ so that $EF$ is perpendicular to $DB$, and $A$ and $C$ lie on $DE$ and $DF$, respectively. What is $EF$?</p>",
+      "solutions": [
+        "<p>The situation is shown in the picture below.</p><p>[asy] unitsize(0.6cm); defaultpen(0.8); pair A=(0,0), B=(4,0), C=(4,3), D=(0,3); pair EF=rotate(90)*(D-B); pair E=intersectionpoint( (0,-100)--(0,100), (B-100*EF)--(B+100*EF) ); pair F=intersectionpoint( (-100,3)--(100,3), (B-100*EF)--(B+100*EF) ); draw(A--B--C--D--cycle); draw(B--D, dashed); draw(E--F); draw(A--E, dashed); draw(C--F, dashed); label(\"$A$\",A,W); label(\"$B$\",B,SE); label(\"$C$\",C,N); label(\"$D$\",D,NW); label(\"$E$\",E,SW); label(\"$F$\",F,NE); label(\"$3$\",A--D,W); label(\"$4$\",C--D,N); [/asy]</p><p>From the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> we have $BD=5$.</p><p>Triangle $EAB$ is similar to $BAD$, as they have the same angles. Segment $BA$ is perpendicular to $DA$, meaning that angle $DAB$ and $BAE$ are right angles and congruent. Also, angle $DBE$ is a right angle. Because it is a rectangle, angle $BDC$ is congruent to $DBA$ and angle $ADC$ is also a right angle. By the transitive property:</p><p>$mADB + mBDC = mDBA + mABE$</p><p>$mBDC = mDBA$</p><p>$mADB + mBDC = mBDC + mABE$</p><p>$mADB = mABE$</p><p>Next, because every triangle has a degree measure of $180$, angle $BEA$ and angle $DBA$ are similar. </p><p><br/>Hence $BE/AB = DB/AD$, and therefore $BE = AB\\cdot DB/AD = 20/3$.</p><p>Also triangle $CBF$ is similar to $ABD$. Hence $BF/BC = DB/AB$, and therefore $BF=BC\\cdot DB / AB = 15/4$.</p><p>We then have $EF = EB+BF = \\frac{20}3 + \\frac{15}4 = \\frac{80 + 45}{12} = \\boxed{\\frac{125}{12}}$.</p><p>Since $BD$ is the altitude from $D$ to $EF$, we can use the equation $BD^2 = EB\\cdot BF$. </p><p>Looking at the angles, we see that triangle $BDE$ is similar to $DCB$. Because of this, $\\frac{AB}{CB} = \\frac{EB}{DB}$. From the given information and the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a>, $AB=4$, $CB=3$, and $DB=5$. Solving gives $EB=20/3$. </p><p>We can use the above formula to solve for $BF$. $BD^2 = 20/3\\cdot BF$. Solve to obtain $BF=15/4$. </p><p>We now know $EB$ and $BF$. $EF = EB+BF = \\frac{20}3 + \\frac{15}4 = \\frac{80 + 45}{12} = \\boxed{\\frac{125}{12}}$.</p><p>To keep things simple, we will use coordinates in only the first quadrant. The picture will look like the diagram above reflected over the $x$-axis.It is also worth noting the $F$ will lie on the $x$ axis and $E$ on the $y$. Let $D$ be the origin, $A(3,0)$, $C(4,0)$, and $B(4,3)$. We can express segment $DB$ as the line $y=\\frac{3x}{4}$. Since $EF$ is perpendicular to $DB$, and we know that $(4,3)$ lies on it, we can use this information to find that segment $EF$is on the line $y=\\frac{-4x}{3}+\\frac{25}{3}$. Since $E$ and $F$ are on the $y$ and $x$ axis, respectively, we plug in $0$ for $x$and $y$, we find that point $E$ is at $(0,\\frac{25}{3})$, and point $F$ is at $(\\frac{25}{4},0)$. Applying the distance formula,we obtain that $EF$= $\\boxed{\\frac{125}{12}}$.</p>",
+        "<p>The situation is shown in the picture below.</p><p>[asy] unitsize(0.6cm); defaultpen(0.8); pair A=(0,0), B=(4,0), C=(4,3), D=(0,3); pair EF=rotate(90)*(D-B); pair E=intersectionpoint( (0,-100)--(0,100), (B-100*EF)--(B+100*EF) ); pair F=intersectionpoint( (-100,3)--(100,3), (B-100*EF)--(B+100*EF) ); draw(A--B--C--D--cycle); draw(B--D, dashed); draw(E--F); draw(A--E, dashed); draw(C--F, dashed); label(\"$A$\",A,W); label(\"$B$\",B,SE); label(\"$C$\",C,N); label(\"$D$\",D,NW); label(\"$E$\",E,SW); label(\"$F$\",F,NE); label(\"$3$\",A--D,W); label(\"$4$\",C--D,N); [/asy]</p><p>From the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> we have $BD=5$.</p><p>Triangle $EAB$ is similar to $BAD$, as they have the same angles. Segment $BA$ is perpendicular to $DA$, meaning that angle $DAB$ and $BAE$ are right angles and congruent. Also, angle $DBE$ is a right angle. Because it is a rectangle, angle $BDC$ is congruent to $DBA$ and angle $ADC$ is also a right angle. By the transitive property:</p><p>$mADB + mBDC = mDBA + mABE$</p><p>$mBDC = mDBA$</p><p>$mADB + mBDC = mBDC + mABE$</p><p>$mADB = mABE$</p><p>Next, because every triangle has a degree measure of $180$, angle $BEA$ and angle $DBA$ are similar. </p><p><br/>Hence $BE/AB = DB/AD$, and therefore $BE = AB\\cdot DB/AD = 20/3$.</p><p>Also triangle $CBF$ is similar to $ABD$. Hence $BF/BC = DB/AB$, and therefore $BF=BC\\cdot DB / AB = 15/4$.</p><p>We then have $EF = EB+BF = \\frac{20}3 + \\frac{15}4 = \\frac{80 + 45}{12} = \\boxed{\\frac{125}{12}}$.</p>",
+        "<p>Since $BD$ is the altitude from $D$ to $EF$, we can use the equation $BD^2 = EB\\cdot BF$. </p><p>Looking at the angles, we see that triangle $BDE$ is similar to $DCB$. Because of this, $\\frac{AB}{CB} = \\frac{EB}{DB}$. From the given information and the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a>, $AB=4$, $CB=3$, and $DB=5$. Solving gives $EB=20/3$. </p><p>We can use the above formula to solve for $BF$. $BD^2 = 20/3\\cdot BF$. Solve to obtain $BF=15/4$. </p><p>We now know $EB$ and $BF$. $EF = EB+BF = \\frac{20}3 + \\frac{15}4 = \\frac{80 + 45}{12} = \\boxed{\\frac{125}{12}}$.</p>",
+        "<p>To keep things simple, we will use coordinates in only the first quadrant. The picture will look like the diagram above reflected over the $x$-axis.It is also worth noting the $F$ will lie on the $x$ axis and $E$ on the $y$. Let $D$ be the origin, $A(3,0)$, $C(4,0)$, and $B(4,3)$. We can express segment $DB$ as the line $y=\\frac{3x}{4}$. Since $EF$ is perpendicular to $DB$, and we know that $(4,3)$ lies on it, we can use this information to find that segment $EF$is on the line $y=\\frac{-4x}{3}+\\frac{25}{3}$. Since $E$ and $F$ are on the $y$ and $x$ axis, respectively, we plug in $0$ for $x$and $y$, we find that point $E$ is at $(0,\\frac{25}{3})$, and point $F$ is at $(\\frac{25}{4},0)$. Applying the distance formula,we obtain that $EF$= $\\boxed{\\frac{125}{12}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2009 AMC 10A - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_18",
+      "question": "<p>At Jefferson Summer Camp, $60\\%$ of the children play soccer, $30\\%$ of the children swim, and $40\\%$ of the soccer players swim. To the nearest whole percent, what percent of the non-swimmers play soccer? </p>",
+      "solutions": [
+        "<p>Out of the soccer players, $40\\%$ swim. As the soccer players are $60\\%$ of the whole, the swimming soccer players are $0.4 \\cdot 0.6 = 0.24 = 24\\%$ of all children.</p><p>The non-swimming soccer players then form $60\\% - 24\\% = 36\\%$ of all the children.</p><p>Out of all the children, $30\\%$ swim. We know that $24\\%$ of all the children swim and play soccer, hence $30\\%-24\\% = 6\\%$ of all the children swim and don't play soccer.</p><p>Finally, we know that $70\\%$ of all the children are non-swimmers. And as $36\\%$ of all the children do not swim but play soccer, $70\\% - 36\\% = 34\\%$ of all the children do not engage in any activity.</p><p>A quick summary of what we found out:</p><ul><li>$24\\%$: swimming yes, soccer yes</li><li>$36\\%$: swimming no, soccer yes</li><li>$6\\%$: swimming yes, soccer no</li><li>$34\\%$: swimming no, soccer no</li></ul><p>Now we can compute the answer. Out of all children, $70\\%$ are non-swimmers, and again out of all children $36\\%$ are non-swimmers that play soccer. Hence the percent of non-swimmers that play soccer is $\\frac{36}{70} \\approx 51\\% \\Rightarrow \\boxed{D}$.</p><p>Let us set the total number of children as $100$. So $60$ children play soccer, $30$ swim, and $0.4\\times60=24$ play soccer and swim. </p><p>Thus, $60-24=36$ children only play soccer.</p><p>So our numerator is $36$.</p><p>Our denominator is simply $100-\\text{Swimmers}=100-30=70$</p><p>And so we get $\\frac{36}{70}$ which is roughly $51.4\\% \\Rightarrow \\boxed{\\text{D}}$</p>",
+        "<p>Out of the soccer players, $40\\%$ swim. As the soccer players are $60\\%$ of the whole, the swimming soccer players are $0.4 \\cdot 0.6 = 0.24 = 24\\%$ of all children.</p><p>The non-swimming soccer players then form $60\\% - 24\\% = 36\\%$ of all the children.</p><p>Out of all the children, $30\\%$ swim. We know that $24\\%$ of all the children swim and play soccer, hence $30\\%-24\\% = 6\\%$ of all the children swim and don't play soccer.</p><p>Finally, we know that $70\\%$ of all the children are non-swimmers. And as $36\\%$ of all the children do not swim but play soccer, $70\\% - 36\\% = 34\\%$ of all the children do not engage in any activity.</p><p>A quick summary of what we found out:</p><ul><li>$24\\%$: swimming yes, soccer yes</li><li>$36\\%$: swimming no, soccer yes</li><li>$6\\%$: swimming yes, soccer no</li><li>$34\\%$: swimming no, soccer no</li></ul><p>Now we can compute the answer. Out of all children, $70\\%$ are non-swimmers, and again out of all children $36\\%$ are non-swimmers that play soccer. Hence the percent of non-swimmers that play soccer is $\\frac{36}{70} \\approx 51\\% \\Rightarrow \\boxed{D}$.</p>",
+        "<p>Let us set the total number of children as $100$. So $60$ children play soccer, $30$ swim, and $0.4\\times60=24$ play soccer and swim. </p><p>Thus, $60-24=36$ children only play soccer.</p><p>So our numerator is $36$.</p><p>Our denominator is simply $100-\\text{Swimmers}=100-30=70$</p><p>And so we get $\\frac{36}{70}$ which is roughly $51.4\\% \\Rightarrow \\boxed{\\text{D}}$</p>",
+        "<p>WLOG, let the total number of students be $100$. Draw a venn diagram with 2 circles encompassing these 4 regions: </p><p><br/>Non-soccer players, non-swimmers: 34 people</p><p>Soccer players, non-swimmers: 36 people</p><p>Soccer players, swimmers: 24 people</p><p>Non-soccer players, swimmers: 6 people. </p><p><br/>Hence the answer is $\\frac{36}{70}=\\frac{18}{35}$. We know this is a little bit larger than $\\frac 12$ because $\\frac{17.5}{35}=\\frac 12$. $\\boxed{\\textbf{(D) } 51\\%}$</p><p>~BakedPotato66</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2009 AMC 10A - logic problem involving logical reasoning and truth values. Students need to understand logic concepts, work with deductive_reasoning principles, and apply mathematical reasoning to solve this problem. This tests logic problem-solving skills and understanding of deductive_reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_19",
+      "question": "<p>Circle $A$ has radius $100$. Circle $B$ has an integer radius $r<100$ and remains internally tangent to circle $A$ as it rolls once around the circumference of circle $A$. The two circles have the same points of tangency at the beginning and end of circle $B$'s trip. How many possible values can $r$ have?</p>",
+      "solutions": [
+        "<p>The circumference of circle $A$ is $200\\pi$, and the circumference of circle $B$ with radius $r$ is $2r\\pi$. Since circle $B$ makes a complete revolution and <i>ends up on the same point</i>, the circumference of $A$ must be a multiple of the circumference of $B$, therefore the quotient must be an integer.</p><p>Thus, $\\frac{200\\pi}{2\\pi \\cdot r} = \\frac{100}{r}$.</p><p>Therefore $r$ must then be a factor of $100$, excluding $100$ because the problem says that $r<100$. $100\\: =\\: 2^2\\; \\cdot \\; 5^2$. Therefore $100$ has $(2+1)\\; \\cdot \\; (2+1)\\;$ factors*. But you need to subtract $1$ from $9$, in order to exclude $100$. Therefore the answer is $\\boxed{8}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2009 AMC 10A - number_theory problem involving least common multiple and number theory. Students need to understand number_theory concepts, work with lcm principles, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills and understanding of lcm."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_20",
+      "question": "<p>Andrea and Lauren are $20$ kilometers apart. They bike toward one another with Andrea traveling three times as fast as Lauren, and the distance between them decreasing at a rate of $1$ kilometer per minute. After $5$ minutes, Andrea stops biking because of a flat tire and waits for Lauren. After how many minutes from the time they started to bike does Lauren reach Andrea?</p>",
+      "solutions": [
+        "<p>Let their speeds in kilometers per hour be $v_A$ and $v_L$. We know that $v_A=3v_L$ and that $v_A+v_L=60$. (The second equation follows from the fact that $1\\mathrm km/min = 60\\mathrm km/h$.) This solves to $v_A=45$ and $v_L=15$. </p><p>As the distance decreases at a rate of $1$ kilometer per minute, after $5$ minutes the distance between them will be $20-5=15$ kilometers.</p><p>From this point on, only Lauren will be riding her bike. As there are $15$ kilometers remaining and $v_L=15$, she will need exactly an hour to get to Andrea. Therefore the total time in minutes is $5+60 = \\boxed{65}$.</p>",
+        "<p>Because the speed of Andrea is 3 times as fast as Lauren and the distance between them is decreasing at a rate of 1 kilometer per minute, Andrea's speed is $\\frac{3}{4} \\textbf{km/min}$, and Lauren's $\\frac{1}{4} \\textbf{km/min}$. Therefore, after 5 minutes, Andrea will have biked $\\frac{3}{4} \\cdot 5 = \\frac{15}{4}km$.</p><p>In all, Lauren will have to bike $20 - \\frac{15}{4} = \\frac{80}{4} - \\frac{15}{4} = \\frac{65}{4}km$. Because her speed is $\\frac{1}{4} \\textbf{km/min}$, the time elapsed will be $\\frac{\\frac{65}{4}}{\\frac{1}{4}} = \\boxed{\\textbf{D) 65}}$</p>",
+        "<p>Since the distance between them decreases at a rate of $1$ kilometer per minute when they are both biking, their combined speed is $1$ kilometer per minute. Andrea travels three times as fast as Lauren, so they travel at speeds of $\\frac{3}{4}$ kilometers per minute and $\\frac{1}{4}$ kilometers per minute, respectively. </p><p>After $5$ minutes, the distance between them will have decreased by $5$ kilometers, so they will be $20-5 = 15$ kilometers apart when Andrea stops. Then, Lauren will take $\\frac{15}{\\frac{1}{4}} = 15*4=60$ more minutes to reach Andrea. </p><p>They started to bike $5$ minutes before Andrea stopped, so the total time Lauren passed from the time they started biking to the time Lauren reached Andrea is $60+5=65$ minutes. Hence, the answer is $\\boxed{\\textbf{(B) } 65}$. ~azc1027</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2009 AMC 10A - algebra problem involving fraction operations and ratios. Students need to understand algebra concepts, work with fractions principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of fractions."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_21",
+      "question": "<p>Many Gothic cathedrals have windows with portions containing a ring of congruent circles that are circumscribed by a larger circle, In the figure shown, the number of smaller circles is four. What is the ratio of the sum of the areas of the four smaller circles to the area of the larger circle? </p><p>[asy] unitsize(6mm); defaultpen(linewidth(.8pt));  draw(Circle((0,0),1+sqrt(2))); draw(Circle((sqrt(2),0),1)); draw(Circle((0,sqrt(2)),1)); draw(Circle((-sqrt(2),0),1)); draw(Circle((0,-sqrt(2)),1)); [/asy]</p>",
+      "solutions": [
+        "<p>Draw some of the radii of the small circles as in the picture below.</p><p>[asy] unitsize(12mm); defaultpen(linewidth(.8pt));  draw(Circle((0,0),1+sqrt(2))); draw(Circle((sqrt(2),0),1)); draw(Circle((0,sqrt(2)),1)); draw(Circle((-sqrt(2),0),1)); draw(Circle((0,-sqrt(2)),1)); draw( (sqrt(2),0) -- (0,sqrt(2)) -- (-sqrt(2),0) -- (0,-sqrt(2)) -- cycle ); draw( (0,sqrt(2)) -- (0,1+sqrt(2)) ); draw( (0,-sqrt(2)) -- (0,-1-sqrt(2)) ); draw( (0,sqrt(2)) -- (0,-sqrt(2)), dashed ); [/asy]</p><p>Out of symmetry, the quadrilateral in the center must be a square. Its side is $2r$, and therefore its diagonal is $2r\\sqrt{2}$. We can now compute the length of the vertical diameter of the large circle as $2r + 2r\\sqrt{2}$. Hence $2R=2r + 2r\\sqrt{2}$, and thus $R=r+r\\sqrt{2}=r(1+\\sqrt{2})$.</p><p>Then the area of the large circle is $L = \\pi R^2 = \\pi r^2 (1+\\sqrt 2)^2 = \\pi r^2 (3+2\\sqrt 2)$.The area of four small circles is $S = 4\\pi r^2$. Hence their ratio is:</p><p>\\begin{align*} \\frac SL  & = \\frac{4\\pi r^2}{\\pi r^2 (3+2\\sqrt 2)} \\\\ & = \\frac 4{3+2\\sqrt 2} \\\\ & = \\frac 4{3+2\\sqrt 2} \\cdot \\frac{3-2\\sqrt 2}{3 - 2\\sqrt 2} \\\\ & = \\frac{4(3 - 2\\sqrt 2)}{3^2 - (2\\sqrt 2)^2} \\\\ & = \\frac{4(3 - 2\\sqrt 2)}1 \\\\ & = \\boxed{4(3 - 2\\sqrt 2)} \\end{align*}</p>",
+        "<p>Draw the center of the large circle, and connect it with two adjacent centers of the smaller circles. Draw the line between the centers. Then, let the line connecting the center of the smaller circle to the center of the larger circle be $x.$</p><p>By the Pythagorean Theorem, we have that \\[x^2 + x^2 = (1+1)^2\\]</p><p>Simplifying, we have \\begin{align*} x &= \\sqrt{\\frac{(1+1)^2}{2}} \\\\ &= \\sqrt{\\frac{4}{2}} \\\\ &= \\sqrt{2} \\end{align*}</p><p>Thus, the radius is \\[1 + x = 1 + \\sqrt{2}\\]</p><p>The answer we desire is \\[\\frac{4 \\cdot \\left(\\pi \\cdot 1^2 \\right)}{\\pi \\cdot (1+\\sqrt{2})^2}\\]</p><p>Simplifying, we have that \\begin{align*} \\frac{4 \\cdot \\left(\\pi \\cdot 1^2 \\right)}{\\pi \\cdot (1+\\sqrt{2})^2} &= \\frac{4 \\cdot \\pi}{\\pi \\cdot (1 + \\sqrt{2})^2} \\\\ &= \\frac{\\pi \\cdot 4}{\\pi \\cdot (1+\\sqrt{2})^2} \\\\ &= \\frac{4}{(1+\\sqrt{2})^2} \\\\ &= \\frac{4}{1^2 + 2 \\cdot 1 \\cdot \\sqrt{2} + (\\sqrt{2})^2} \\\\ &= \\frac{4}{1 + 2 \\sqrt{2} + 2} \\\\ &= \\frac{4}{3 + 2 \\sqrt{2}} \\\\ &= \\frac{4 (3 - 2\\sqrt{2})}{(3 + 2 \\sqrt{2})(3 - 2\\sqrt{2})} \\\\ &= \\frac{4 (3 - 2\\sqrt{2})}{3^2 - (2\\sqrt{2})^2} \\\\ &= \\frac{4 (3 - 2\\sqrt{2})}{9 - 8} \\\\ &= \\frac{4 (3 - 2\\sqrt{2})}{1} \\\\ &= \\boxed{\\textbf{(C) } 4 (3 - 2\\sqrt{2})} \\end{align*}</p><p>~mathboy282</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2009 AMC 10A - probability problem involving independent probability events and calculations. Students need to understand probability concepts, work with independent_events principles, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills and understanding of independent_events."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_22",
+      "question": "<p>Two cubical dice each have removable numbers $1$ through $6$. The twelve numbers on the two dice are removed, put into a bag, then drawn one at a time and randomly reattached to the faces of the cubes, one number to each face. The dice are then rolled and the numbers on the two top faces are added. What is the probability that the sum is $7$?</p>",
+      "solutions": [
+        "<p>At the moment when the numbers are in the bag, imagine that each of them has a different color. Clearly the situation is symmetric at this moment. Hence after we draw them, attach them and throw the dice, the probability of getting some pair of colors is the same for any two colors.</p><p>There are ${12 \\choose 2} = 66$ ways to pick two of the colors. We now have to count the ways where the two chosen numbers will have a sum of $7$. </p><p>A sum of $7$ can be obtained as $1+6$, $2+5$, or $3+4$. Each number in the bag has two different colors, hence each of these three options corresponds to four pairs of colors. </p><p>Out of the $66$ pairs of colors we can get when throwing the dice, $3\\cdot 4=12$ will give us the sum $7$. Hence the probability that this will happen is $\\frac{12}{66} = \\boxed{\\textbf{(D) }\\frac 2{11}}$.</p>",
+        "<p>Ignoring the numbers that do not affect the probability of the desired outcome (the ones that are not on top of the dice), say that the number on top of the first die is $n$. For the sum of the $2$ numbers to be $7$, the second die must have the number $7-n$ on top. There are $11$ remaining numbers that could be on top of the second die, $2$ of which are $7-n$ (since $n\\ne7-n$ in all cases and since there are 2 faces for each number 1-6).</p><p>Thus, the probability of the sum of the $2$ numbers being $7$ is $\\frac{2}{11}$, so the answer is $\\mathrm{(D)}$.</p>",
+        "<p>Taking out the rolling dice part, we see that we're just taking two numbers out of a bag. There are ${12 \\choose 2}=66$ ways to pick two, and there are 12 ways to pick one, and 2 ways to pick the other. (After you pick one, the other one you pick is fixed). Now say you pick n. The other number you pick has to be 7-n. But if you picked 7-n first and n second, that would be the same thing. So we need to divide by 2. </p><p>This gives $\\frac{\\frac{12 \\cdot 2}{2}}{66}=\\boxed{\\frac{2}{11}}$ or $\\mathrm{(D)}$.</p>",
+        "<p>Let first case(Two Same Numbers on One Die) = $A$</p><p>Let second case(No Two Same Numbers on One Die) = $B$</p><p>Note that the possible combinations of two numbers summing to 7 are $(1,6), (2,5), (3,4), (4,3), (5,2),$ and $(6,1)$ .</p><p>The second case($B$) thus has $\\frac{6}{36}=\\frac{1}{6}$ chance. The other case has another probability of some number. </p><p>The sum is $\\frac{1}{6}+A$ so the answer must be greater than $\\frac{1}{6}$, which are choices D and E.</p><p>Note that there are $\\binom{12}{2}=66$ cases for a number without restrictions.</p><p>Use answer choices to note that $\\frac{1}{6}+\\frac{1}{66}=\\frac{2}{11}.$(Answer choice D)</p><p>Also use it to note that $\\frac{1}{6}+\\frac{1}{30}=\\frac{1}{5}.$(Answer Choice E)</p><p>Answer choice D makes more sense , so the answer is $\\boxed{\\mathrm{D}}.$</p><p>Also, if you had some time, you would note that only 1 of the 66 total combinations fit the first case, so $\\boxed{\\mathrm{D}}$ is your answer.</p><p>~mathboy282 (Yes I know this is a bad solution but if you had little time left on the test this would be a good educated guess.)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2009 AMC 10A - probability problem involving conditional probability and probability ratios. Students need to understand probability concepts, work with conditional_probability principles, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills and understanding of conditional_probability."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_23",
+      "question": "<p>Convex quadrilateral $ABCD$ has $AB = 9$ and $CD = 12$. Diagonals $AC$ and $BD$ intersect at $E$, $AC = 14$, and $\\triangle AED$ and $\\triangle BEC$ have equal areas. What is $AE$?</p>",
+      "solutions": [
+        "<p>Let $[ABC]$ denote the area of triangle $ABC$. $[AED] = [BEC]$, so $[ABD] = [AED] + [AEB] = [BEC] + [AEB] = [ABC]$. Since triangles $ABD$ and $ABC$ share a base, they also have the same height and thus $\\overline{AB}||\\overline{CD}$ and $\\triangle{AEB}\\sim\\triangle{CED}$ with a ratio of $3: 4$. $AE = \\frac {3}{7}\\times AC$, so $AE = \\frac {3}{7}\\times 14 = 6\\ \\boxed{\\textbf{(E)}}$.</p>",
+        "<p>Using the sine area formula AREA= absinc/2 on triangles $AED$ and $BEC$, as $\\angle AED = \\angle BEC$, we see that </p><p>Since $\\angle AEB = \\angle DEC$, triangles $AEB$ and $DEC$ are similar. Their ratio is $\\frac {AB}{CD} = \\frac {3}{4}$. Since $AE + EC = 14$, we must have $EC = 8$, so $AE = 6\\ \\textbf{(E)}$.</p>",
+        "<p>The easiest way for the areas of the triangles to be equal would be if they were congruent <a class=\"external autonumber\" href=\"https://artofproblemsolving.com/wiki/index.php/Constraints_Strategy\" rel=\"nofollow\">[1]</a>. A way for that to work would be if $ABCD$ were simply an isosceles trapezoid! Since $AC = 14$ and $AE:EC = 3:4$ (look at the side lengths and you'll know why!), $\\boxed{AE = 6}$</p>",
+        "<p>Using the fact that $[AED] = [BEC]$ and the fact that $\\triangle AEB \\sim \\triangle EDC$ (which should be trivial given the two equal triangles) we have that</p><p>\\[\\frac{AE}{DC} = \\frac{BE}{EC} = \\frac{9}{12}\\]</p><p>We know that $DC=EC,$ so we have</p><p>\\[\\frac{AE}{EC} = \\frac{BE}{EC} = \\frac{3}{4}\\]</p><p>Thus </p><p>\\[\\frac{AE}{EC} = \\frac{3}{4}\\]</p><p>But $EC = 14 - AE$ so we have</p><p>\\[\\frac{AE}{14 - AE} = \\frac{3}{4}\\]</p><p>Simplifying gives $AE = \\boxed{6}.$</p><p>~mathboy282</p><p>The two triangles that are equal in area imply that $AB$ is parallel to $DC$ which implies that $\\angle{EAB} = \\angle{CDE}$ and $\\angle{EBA} = \\angle{DCE}.$ Furthermore, since $\\angle{AEB} = \\angle{DEC}$ (vertical angles). By AAA similarity, $\\triangle AEB \\sim \\triangle EDC.$</p><p>~mathboy282</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2009 AMC 10A - geometry problem involving distance calculations and coordinate geometry. Students need to understand geometry concepts, work with distance principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of distance."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_24",
+      "question": "<p>Three distinct vertices of a cube are chosen at random. What is the probability that the plane determined by these three vertices contains points inside the cube?</p>",
+      "solutions": [
+        "<p>First of all, number of planes determined by any three vertices of a cube is $20$ ($6$ surface, $6$ opposing parallel edges, $8$ points cut by three remote vertices). Among these $20$ planes only $6$ surfaces will not cut into the cube.Secondly, to choose three vertices randomly, the four vertices planes each will be chosen $4$ times, while the three vertices planes each will be chosen once.To conclude, the probability of a cutting in plane is $\\frac {(6\\cdot 4+8\\cdot 1)}{(12\\cdot 4+8\\cdot 1)} = \\frac {32}{56}$ = $\\boxed {\\textbf{(C)}}$.</p><p>-Vader10,Oct.6 2020</p><p>We will try to use symmetry as much as possible.</p><p>Pick the first vertex $A$, its choice clearly does not influence anything.</p><p>Pick the second vertex $B$. With probability $3/7$ vertices $A$ and $B$ have a common edge, with probability $3/7$ they are in opposite corners of the same face, and with probability $1/7$ they are in opposite corners of the cube. We will handle each of the cases separately.</p><p>In the first case, there are $2$ faces that contain the edge $AB$. In each of these faces there are $2$ other vertices. If one of these $4$ vertices is the third vertex $C$, the entire triangle $ABC$ will be on a face. On the other hand, if $C$ is one of the two remaining vertices, the triangle will contain points inside the cube. Hence in this case the probability of choosing a good $C$ is $2/6 = 1/3$.</p><p>In the second case, the triangle $ABC$ will not intersect the cube if point $C$ is one of the two points on the side that contains $AB$. Hence the probability of $ABC$ intersecting the inside of the cube is $2/3$.</p><p>In the third case, already the diagonal $AB$ contains points inside the cube, hence this case will be good regardless of the choice of $C$.</p><p>Summing up all cases, the resulting probability is:\\[\\frac 37\\cdot\\frac 13 + \\frac 37\\cdot \\frac 23 + \\frac 17\\cdot 1 = \\boxed{\\frac 47}\\]</p><p>This problem can be approached the same way, by picking vertices, but with a much faster and kind of cheap solution: Pick any vertex A and a face it touches. For vertex B, out of the $7$ remaining vertices, $4$ of them aren't on the same face as the one chosen for vertex A, so vertex C can be placed anywhere and the plane will no matter what be in the cube. Therefore, the probability of choosing a valid vertex B is $4/7$.</p><p>There are $\\binom{8}{3}=56$ ways to pick three vertices from eight total vertices; this is our denominator. In order to have three points inside the cube, they cannot be on the surface. Thus, we can use complementary probability.</p><p>There are $\\binom{4}{3}=4$ ways to choose three points from the vertices of a single face. Since there are six faces, $4 \\times 6 = 24$.</p><p>Thus, the probability of what we don't want is $\\frac{24}{56} = \\frac{3}{7}$. Using complementary probability, </p><p>\\[1- \\frac 37 = \\boxed{\\frac 47}\\]</p><p>Since Solution 4 above describes the complementary case that doesn't fit the requirement, there'll be the direct way. Now we conduct meticulous classification for all the cases (Split the cases based on the relative positions of the three vertices.).</p><p>Case $1$ <b>Same plane</b>: As described in Solution 4, the 3 vertices are in the same plane. There're 24 of them.</p><p>Case $2$ <b>Two of them are adjacent</b>: We first pick two adjacent vertices. They have $12$ cases. Then the remaining vertex can only be located on the cubic opposite side of the two selected vertices, which has $2$ cases. So there're $12 \\cdot 2=24$ of them.</p><p>Case $3$ <b>None of them are adjacent</b>: In this scenario, the three vertices will have one vertex surrounded. That very vertex might be any one of the 8 vertices on the cube, which leads to $8$ cases.</p><p>As there're $\\binom{8}{3}=56$ overall cases and only cases 2 and 3 meet the enquirement, due to the classical probabilities, the probability is $\\frac{24+8}{56} = \\boxed{\\frac{4}{7}}$</p><p>~Complemented by a mystery eastern egg (wtng)</p><p>This problem is fairly simple. Start with $2$ points WLOG. </p><p>Case $1$: You pick 2 points that are diagonally across from each other but still on the same face. This happens with probability $\\frac {3}{7}$. We notice that $4$ out of the $6$ possible outcomes include a point inside the cube. Therefore, the probability of this happening is $\\frac {2}{7}$.</p><p>Case $2$: You pick 2 points that a directly across from each other. This happens with probability $\\frac {3}{7}$. We notice that $2$ out of the $6$ possible outcomes include a point inside the cube. Therefore, the probability of this happening is $\\frac {1}{7}$.</p><p>Case $3$: You pick 2 points that is a space diagonal of the cube. This happens with probability $\\frac {1}{7}$. Clearly, all of the points contain a point inside the cube, so our probability is $\\frac {1}{7}$. </p><p>Adding these probabilities gives us $\\boxed {\\frac {4}{7}}$</p><p>~Arcticturn</p>",
+        "<p>First of all, number of planes determined by any three vertices of a cube is $20$ ($6$ surface, $6$ opposing parallel edges, $8$ points cut by three remote vertices). Among these $20$ planes only $6$ surfaces will not cut into the cube.Secondly, to choose three vertices randomly, the four vertices planes each will be chosen $4$ times, while the three vertices planes each will be chosen once.To conclude, the probability of a cutting in plane is $\\frac {(6\\cdot 4+8\\cdot 1)}{(12\\cdot 4+8\\cdot 1)} = \\frac {32}{56}$ = $\\boxed {\\textbf{(C)}}$.</p><p>-Vader10,Oct.6 2020</p>",
+        "<p>We will try to use symmetry as much as possible.</p><p>Pick the first vertex $A$, its choice clearly does not influence anything.</p><p>Pick the second vertex $B$. With probability $3/7$ vertices $A$ and $B$ have a common edge, with probability $3/7$ they are in opposite corners of the same face, and with probability $1/7$ they are in opposite corners of the cube. We will handle each of the cases separately.</p><p>In the first case, there are $2$ faces that contain the edge $AB$. In each of these faces there are $2$ other vertices. If one of these $4$ vertices is the third vertex $C$, the entire triangle $ABC$ will be on a face. On the other hand, if $C$ is one of the two remaining vertices, the triangle will contain points inside the cube. Hence in this case the probability of choosing a good $C$ is $2/6 = 1/3$.</p><p>In the second case, the triangle $ABC$ will not intersect the cube if point $C$ is one of the two points on the side that contains $AB$. Hence the probability of $ABC$ intersecting the inside of the cube is $2/3$.</p><p>In the third case, already the diagonal $AB$ contains points inside the cube, hence this case will be good regardless of the choice of $C$.</p><p>Summing up all cases, the resulting probability is:\\[\\frac 37\\cdot\\frac 13 + \\frac 37\\cdot \\frac 23 + \\frac 17\\cdot 1 = \\boxed{\\frac 47}\\]</p>",
+        "<p>This problem can be approached the same way, by picking vertices, but with a much faster and kind of cheap solution: Pick any vertex A and a face it touches. For vertex B, out of the $7$ remaining vertices, $4$ of them aren't on the same face as the one chosen for vertex A, so vertex C can be placed anywhere and the plane will no matter what be in the cube. Therefore, the probability of choosing a valid vertex B is $4/7$.</p>",
+        "<p>There are $\\binom{8}{3}=56$ ways to pick three vertices from eight total vertices; this is our denominator. In order to have three points inside the cube, they cannot be on the surface. Thus, we can use complementary probability.</p><p>There are $\\binom{4}{3}=4$ ways to choose three points from the vertices of a single face. Since there are six faces, $4 \\times 6 = 24$.</p><p>Thus, the probability of what we don't want is $\\frac{24}{56} = \\frac{3}{7}$. Using complementary probability, </p><p>\\[1- \\frac 37 = \\boxed{\\frac 47}\\]</p><p>Since Solution 4 above describes the complementary case that doesn't fit the requirement, there'll be the direct way. Now we conduct meticulous classification for all the cases (Split the cases based on the relative positions of the three vertices.).</p><p>Case $1$ <b>Same plane</b>: As described in Solution 4, the 3 vertices are in the same plane. There're 24 of them.</p><p>Case $2$ <b>Two of them are adjacent</b>: We first pick two adjacent vertices. They have $12$ cases. Then the remaining vertex can only be located on the cubic opposite side of the two selected vertices, which has $2$ cases. So there're $12 \\cdot 2=24$ of them.</p><p>Case $3$ <b>None of them are adjacent</b>: In this scenario, the three vertices will have one vertex surrounded. That very vertex might be any one of the 8 vertices on the cube, which leads to $8$ cases.</p><p>As there're $\\binom{8}{3}=56$ overall cases and only cases 2 and 3 meet the enquirement, due to the classical probabilities, the probability is $\\frac{24+8}{56} = \\boxed{\\frac{4}{7}}$</p><p>~Complemented by a mystery eastern egg (wtng)</p>",
+        "<p>This problem is fairly simple. Start with $2$ points WLOG. </p><p>Case $1$: You pick 2 points that are diagonally across from each other but still on the same face. This happens with probability $\\frac {3}{7}$. We notice that $4$ out of the $6$ possible outcomes include a point inside the cube. Therefore, the probability of this happening is $\\frac {2}{7}$.</p><p>Case $2$: You pick 2 points that a directly across from each other. This happens with probability $\\frac {3}{7}$. We notice that $2$ out of the $6$ possible outcomes include a point inside the cube. Therefore, the probability of this happening is $\\frac {1}{7}$.</p><p>Case $3$: You pick 2 points that is a space diagonal of the cube. This happens with probability $\\frac {1}{7}$. Clearly, all of the points contain a point inside the cube, so our probability is $\\frac {1}{7}$. </p><p>Adding these probabilities gives us $\\boxed {\\frac {4}{7}}$</p><p>~Arcticturn</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2009 AMC 10A - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_10a_25",
+      "question": "<p>For $k > 0$, let $I_k = 10\\ldots 064$, where there are $k$ zeros between the $1$ and the $6$. Let $N(k)$ be the number of factors of $2$ in the prime factorization of $I_k$. What is the maximum value of $N(k)$?</p>",
+      "solutions": [
+        "<p>The number $I_k$ can be written as $10^{k+2} + 64 = 5^{k+2}\\cdot 2^{k+2} + 2^6$.</p><p>For $k\\in\\{1,2,3\\}$ we have $I_k = 2^{k+2} \\left( 5^{k+2} + 2^{4-k} \\right)$. The first value in the parentheses is odd, the second one is even, hence their sum is odd and we have $N(k)=k+2\\leq 5$.</p><p>For $k>4$ we have $I_k=2^6 \\left( 5^{k+2}\\cdot 2^{k-4} + 1 \\right)$. For $k>4$ the value in the parentheses is odd, hence $N(k)=6$.</p><p>This leaves the case $k=4$. We have $I_4 = 2^6 \\left( 5^6 + 1 \\right)$. The value $5^6 + 1$ is obviously even. And as $5\\equiv 1 \\pmod 4$, we have $5^6 \\equiv 1 \\pmod 4$, and therefore $5^6 + 1 \\equiv 2 \\pmod 4$. Hence the largest power of $2$ that divides $5^6+1$ is $2^1$, and this gives us the desired maximum of the function $N$: $N(4) = \\boxed{7}$.</p>",
+        "<p>Notice that $2$ is a prime factor of an integer $n$ if and only if $n$ is even. Therefore, given any sufficiently high positive integral value of $k$, dividing $I_k$ by $2^6$ yields a terminal digit of zero, and dividing by 2 again leaves us with $2^7 \\cdot a = I_k$ where $a$ is an odd integer.Observe then that $\\boxed{\\textbf{(B)}7}$ must be the maximum value for $N(k)$ because whatever value we choose for $k$, $N(k)$ must be less than or equal to $7$.</p><p>\"Isn't this solution incomplete because we need to show that $N(k) = 7$ can be reached?\"</p><p>An example of 7 being reached is 1000064. 1000064 divided by $2^7=128$ is 7813.</p><p>In fact, 1000064 is the ONLY $N(k)$ that satisfies $7$. All others are 6 or lower, because if there are more zeroes, to be divisible by 128 ($2^7$), the last 7 digits must be divisible by 128, but 64 isn't. Meanwhile, if there are less zeroes, we can test by division that they do not work.</p>",
+        "<p>As in the first solution, the number $I_k$ can be written as $10^{k+2} + 64 = 5^{k+2} 2^{k+2} + 2^6$. Factor $2^6$ out of the expression to get $I_k = 2^6(1+2^{k-4}5^{k+2})$.</p><p>You can now easily see that $I_k$ is divisible by at least 6 factors of two, from $2^6$. Any other factors of two will come from the expression $(1+2^{k-4}5^{k+2})$. </p><p>Make the substitution: $x=k-4$.You now have $(1+2^{x}5^{x+6}) = (1+10^x 5^6)$</p><p>$5^6=15625$, so the expression becomes $(1+15625\\cdot10^x)$ This is valid when $x>-4$. </p><p>Obviously, if $x$ is negative, the expression will be fractional and not contain any extra factors of two.</p><p>If $x>0$, the value $15625\\cdot10^x$ will end in a zero. When 1 is added to the expression, the expression will end in 1. Since numbers divisible by 2 end in 0,2,4,6, or 8, the expression is not divisible by 2 and will not contribute to the total.</p><p>If $x=0$, the expression evaluates to $15626$. Dividing out twos, you find that this value is only divisible by one factor of 2.</p><p>The six factors of two from earlier add to this factor of two to give $\\textbf{(B)}\\ 7\\qquad$</p><p>Solution written by coolak</p><p><br/></p>",
+        "<p>Similar to the other solutions, notice that $I_k$ can be written as $10^{k+2}+64 \\Rightarrow 2^{k+2}5^{k+2}+2^6$. Factoring out $2^6$ we see that</p><p>$I_k = 2^6(2^{k-4}5^{k+2}+1)$</p><p>Notice that for $k < 4$, $2^{k-4}$ will not be an integer, and will \"steal\" some $2$'s from the $2^6$. We don't want this to happen, since we want to maximize the exponent of $2$. We start by considering $k = 4$. Then</p><p>$I_k = 2^6(*5^6+1) \\Rightarrow 2^6(5^6+1)$</p><p>$5^6$ is an odd number; more specifically, it ends in $25$ (all powers of $5$ after $5^1$ end in $25$). Therefore the value in the parentheses will be some large number that ends in $26$. Considering the rules of divisibility, we find that $5^6+1$ is even, so it is divisible by $2$. Now our exponent of $2$ is at $7$. But the divisibility rule for $4$ is the last $2$ digits of the number must be divisible by $4$. We know the last digits: $26$, which is not divisible by $4$. Therefore $5^6 + 1$ is divisible by $2$, but not $4$. Testing more values of $k$, we find that for $k \\ge 5$, the last digit becomes $1$, which means it is not even divisible by $2$. Therefore the highest possible exponent of $2$ that we can reach is $7 \\Rightarrow \\boxed{\\text{B}}$.</p>",
+        "<p>Let $m=k+2$. $v_2(10^m+2^6)=6$ if $m>6$ and $v_2(10^m+2^6)=m$ if $m<6$. However, if $m=6$, then $v_2(10^6+2^6)=v_2(2^6(5^6+1))=6+v_2(5^6+1)$. By LTE, $v_2(5^6-1)=v_2(5-1)+v_2(5+1)+v_2(6)-1=2+1+1-1=3$. Since $v_2(5^6-1)=3$, $v_2(5^6+1)$ must equal $1$. So, the answer is $6+1=7 \\Rightarrow \\boxed{\\text{B}}$</p>",
+        "<p>Note that if $k<5$, then $I_k$ is not divisible by $64=2^6$. However, if $k=5$, then $1000064$ is divisible by $64$. So, we can write $I_k$ for $k=5$ as $I_5=64(1+15625)=2^6(1+15625)$. For $k=5$, we see that $I_5=2^6(1+15625)=2^6(15626)$, which is divisible by $2^7$, because there is already a $2^6$ and the $15626$ only adds one more factor of $2$ (the last two digits of $15626$, $26$, are not divisible by $4$). For $k>5$ or $k\\geq6$, there are $(k-5)$ zeroes trailing behind $15625$, giving $I_k=2^6(1+156250...0)$. $156250...0$ is clearly even if there is at least one zero. Then, adding the extra $1$ to the even $156250...0$ gives $156250...01$, which is odd. Thus, for $k>5$, $I_k=2^6(156250...01)$, which is only divisible by $2^6$. Therefore, the maximum value of $N(k)$ is $\\boxed{\\textbf{(B)} 7}$ when $k=5$.</p><p>Written by ChristianZhang</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2009 AMC 10A - geometry problem involving area calculations and geometric relationships. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "competition_info": {
+    "name": "2010_AMC_8",
+    "group": "AMC_8",
+    "year": 2010,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2010_8_1",
+      "question": "<p>At Euclid Middle School the mathematics teachers are Mrs. Germain, Mr. Newton, and Mrs. Young. There are $11$ students in Mrs. Germain's class, $8$ students in Mr. Newton's class, and $9$ students in Mrs. Young's class taking the AMC $8$ this year. How many mathematics students at Euclid Middle School are taking the contest? </p>",
+      "solutions": [
+        "<p>Given that these are the only math teachers at Euclid Middle School and we are told how many from each class are taking the AMC 8, we simply add the three numbers to find the total. $11+8+9=\\boxed{\\textbf{(C)}\\ 28}$</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple arithmetic word problem involving basic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_2",
+      "question": "<p>If $a @ b = \\frac{a\\times b}{a+b}$ for $a,b$ positive integers, then what is $5 @10$? </p>",
+      "solutions": [
+        "<p>Substitute $a=5$ and $b=10$ into the expression for $a @ b$ to get:</p><p>$5 @ 10 = \\frac{5\\times 10}{5+10} = \\frac{50}{15} = \\frac{10}{3}$</p><p>Thus, answer choice $\\boxed{\\textbf{(D)}\\ \\frac{10}{3}}$ is correct.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating discounts and savings"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_3",
+      "question": "<p>The graph shows the price of five gallons of gasoline during the first ten months of the year. By what percent is the highest price more than the lowest price?</p><p>[asy] import graph; size(16.38cm); real lsf=2; pathpen=linewidth(0.7); pointpen=black; pen fp = fontsize(10); pointfontpen=fp; real xmin=-1.33,xmax=11.05,ymin=-9.01,ymax=-0.44; pen ycycyc=rgb(0.55,0.55,0.55); pair A=(1,-6), B=(1,-2), D=(1,-5.8), E=(1,-5.6), F=(1,-5.4), G=(1,-5.2), H=(1,-5), J=(1,-4.8), K=(1,-4.6), L=(1,-4.4), M=(1,-4.2), N=(1,-4), P=(1,-3.8), Q=(1,-3.6), R=(1,-3.4), S=(1,-3.2), T=(1,-3), U=(1,-2.8), V=(1,-2.6), W=(1,-2.4), Z=(1,-2.2), E_1=(1.4,-2.6), F_1=(1.8,-2.6), O_1=(14,-6), P_1=(14,-5), Q_1=(14,-4), R_1=(14,-3), S_1=(14,-2), C_1=(1.4,-6), D_1=(1.8,-6), G_1=(2.4,-6), H_1=(2.8,-6), I_1=(3.4,-6), J_1=(3.8,-6), K_1=(4.4,-6), L_1=(4.8,-6), M_1=(5.4,-6), N_1=(5.8,-6), T_1=(6.4,-6), U_1=(6.8,-6), V_1=(7.4,-6), W_1=(7.8,-6), Z_1=(8.4,-6), A_2=(8.8,-6), B_2=(9.4,-6), C_2=(9.8,-6), D_2=(10.4,-6), E_2=(10.8,-6), L_2=(2.4,-3.2), M_2=(2.8,-3.2), N_2=(3.4,-4), O_2=(3.8,-4), P_2=(4.4,-3.6), Q_2=(4.8,-3.6), R_2=(5.4,-3.6), S_2=(5.8,-3.6), T_2=(6.4,-3.4), U_2=(6.8,-3.4), V_2=(7.4,-3.8), W_2=(7.8,-3.8), Z_2=(8.4,-2.8), A_3=(8.8,-2.8), B_3=(9.4,-3.2), C_3=(9.8,-3.2), D_3=(10.4,-3.8), E_3=(10.8,-3.8); filldraw(C_1--E_1--F_1--D_1--cycle,ycycyc); filldraw(G_1--L_2--M_2--H_1--cycle,ycycyc); filldraw(I_1--N_2--O_2--J_1--cycle,ycycyc); filldraw(K_1--P_2--Q_2--L_1--cycle,ycycyc); filldraw(M_1--R_2--S_2--N_1--cycle,ycycyc); filldraw(T_1--T_2--U_2--U_1--cycle,ycycyc); filldraw(V_1--V_2--W_2--W_1--cycle,ycycyc); filldraw(Z_1--Z_2--A_3--A_2--cycle,ycycyc); filldraw(B_2--B_3--C_3--C_2--cycle,ycycyc); filldraw(D_2--D_3--E_3--E_2--cycle,ycycyc); D(B--A,linewidth(0.4)); D(H--(8,-5),linewidth(0.4)); D(N--(8,-4),linewidth(0.4)); D(T--(8,-3),linewidth(0.4)); D(B--(8,-2),linewidth(0.4)); D(B--S_1); D(T--R_1); D(N--Q_1); D(H--P_1); D(A--O_1); D(C_1--E_1); D(E_1--F_1); D(F_1--D_1); D(D_1--C_1); D(G_1--L_2); D(L_2--M_2); D(M_2--H_1); D(H_1--G_1); D(I_1--N_2); D(N_2--O_2); D(O_2--J_1); D(J_1--I_1); D(K_1--P_2); D(P_2--Q_2); D(Q_2--L_1); D(L_1--K_1); D(M_1--R_2); D(R_2--S_2); D(S_2--N_1); D(N_1--M_1); D(T_1--T_2); D(T_2--U_2); D(U_2--U_1); D(U_1--T_1); D(V_1--V_2); D(V_2--W_2); D(W_2--W_1); D(W_1--V_1); D(Z_1--Z_2); D(Z_2--A_3); D(A_3--A_2); D(A_2--Z_1); D(B_2--B_3); D(B_3--C_3); D(C_3--C_2); D(C_2--B_2); D(D_2--D_3); D(D_3--E_3); D(E_3--E_2); D(E_2--D_2); label(\"0\",(0.88,-5.91),SE*lsf,fp); label(\" 5\",(0.3,-4.84),SE*lsf,fp); label(\" 10\",(0.2,-3.84),SE*lsf,fp); label(\" 15\",(0.2,-2.85),SE*lsf,fp); label(\" 20\",(0.2,-1.85),SE*lsf,fp); label(\"$\\mathrm{Price}$\",(0.16,-3.45),SE*lsf,fp); label(\"$1$\",(1.54,-5.97),SE*lsf,fp); label(\"$2$\",(2.53,-5.95),SE*lsf,fp); label(\"$3$\",(3.53,-5.94),SE*lsf,fp); label(\"$4$\",(4.55,-5.94),SE*lsf,fp); label(\"$5$\",(5.49,-5.95),SE*lsf,fp); label(\"$6$\",(6.53,-5.95),SE*lsf,fp); label(\"$7$\",(7.55,-5.95),SE*lsf,fp); label(\"$8$\",(8.52,-5.95),SE*lsf,fp); label(\"$9$\",(9.57,-5.97),SE*lsf,fp); label(\"$10$\",(10.56,-5.94),SE*lsf,fp); label(\"Month\",(7.14,-6.43),SE*lsf,fp); D(A,linewidth(1pt)); D(B,linewidth(1pt)); D(D,linewidth(1pt)); D(E,linewidth(1pt)); D(F,linewidth(1pt)); D(G,linewidth(1pt)); D(H,linewidth(1pt)); D(J,linewidth(1pt)); D(K,linewidth(1pt)); D(L,linewidth(1pt)); D(M,linewidth(1pt)); D(N,linewidth(1pt)); D(P,linewidth(1pt)); D(Q,linewidth(1pt)); D(R,linewidth(1pt)); D(S,linewidth(1pt)); D(T,linewidth(1pt)); D(U,linewidth(1pt)); D(V,linewidth(1pt)); D(W,linewidth(1pt)); D(Z,linewidth(1pt)); D(E_1,linewidth(1pt)); D(F_1,linewidth(1pt)); D(O_1,linewidth(1pt)); D(P_1,linewidth(1pt)); D(Q_1,linewidth(1pt)); D(R_1,linewidth(1pt)); D(S_1,linewidth(1pt)); D(C_1,linewidth(1pt)); D(D_1,linewidth(1pt)); D(G_1,linewidth(1pt)); D(H_1,linewidth(1pt)); D(I_1,linewidth(1pt)); D(J_1,linewidth(1pt)); D(K_1,linewidth(1pt)); D(L_1,linewidth(1pt)); D(M_1,linewidth(1pt)); D(N_1,linewidth(1pt)); D(T_1,linewidth(1pt)); D(U_1,linewidth(1pt)); D(V_1,linewidth(1pt)); D(W_1,linewidth(1pt)); D(Z_1,linewidth(1pt)); D(A_2,linewidth(1pt)); D(B_2,linewidth(1pt)); D(C_2,linewidth(1pt)); D(D_2,linewidth(1pt)); D(E_2,linewidth(1pt)); D(L_2,linewidth(1pt)); D(M_2,linewidth(1pt)); D(N_2,linewidth(1pt)); D(O_2,linewidth(1pt)); D(P_2,linewidth(1pt)); D(Q_2,linewidth(1pt)); D(R_2,linewidth(1pt)); D(S_2,linewidth(1pt)); D(T_2,linewidth(1pt)); D(U_2,linewidth(1pt)); D(V_2,linewidth(1pt)); D(W_2,linewidth(1pt)); D(Z_2,linewidth(1pt)); D(A_3,linewidth(1pt)); D(B_3,linewidth(1pt)); D(C_3,linewidth(1pt)); D(D_3,linewidth(1pt)); D(E_3,linewidth(1pt)); clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);[/asy]</p>",
+      "solutions": [
+        "<p>The highest price was in Month 1, which was $17. The lowest price was in Month 3, which was $10. 17 is $\\frac{17}{10}\\cdot100=170\\%$ of 10, and is $170-100=70\\%$ more than 10.Therefore, the answer is $\\boxed{\\textbf{(C)}\\  70}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving finding area of geometric shapes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_4",
+      "question": "<p>What is the sum of the mean, median, and mode of the numbers $2,3,0,3,1,4,0,3$? </p>",
+      "solutions": [
+        "<p>Putting the numbers in numerical order we get the list $0,0,1,2,3,3,3,4.$The mode is $3.$ The median is $\\frac{2+3}{2}=2.5.$ The average is $\\frac{0+0+1+2+3+3+3+4}{8}=\\frac{16}{8}=2.$ The sum of all three is $3+2.5+2=\\boxed{\\textbf{(C)}\\ 7.5}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_5",
+      "question": "<p>Alice needs to replace a light bulb located $10$ centimeters below the ceiling in her kitchen. The ceiling is $2.4$ meters above the floor. Alice is $1.5$ meters tall and can reach $46$ centimeters above the top of her head. Standing on a stool, she can just reach the light bulb. What is the height of the stool, in centimeters?</p>",
+      "solutions": [
+        "<p>Convert everything to the same unit. Since the answer is in centimeters, change meters to centimeters by moving the decimal place two places to the right.</p><p>The ceiling is $240$ centimeters above the floor. The combined height of Alice and the light bulb when she reaches for it is $10+150+46=206$ centimeters. That means the stool's height needs to be $240-206=\\boxed{\\textbf{(B)}\\ 34}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_6",
+      "question": "<p>Which of the following figures has the greatest number of lines of symmetry?</p><p>$\\textbf{(C)}\\ \\text{non-square rectangle}$</p><p>$\\textbf{(D)}\\ \\text{isosceles trapezoid}$</p><p>$\\textbf{(E)}\\ \\text{square}$</p>",
+      "solutions": [
+        "<p>An equilateral triangle has $3$ lines of symmetry.A non-square rhombus has $2$ lines of symmetry.A non-square rectangle has $2$ lines of symmetry.An isosceles trapezoid has $1$ line of symmetry.A square has $4$ lines of symmetry.</p><p><br/>Therefore, the answer is $\\boxed{ \\textbf{(E)}\\ \\text{square} }$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_7",
+      "question": "<p>Using only pennies, nickels, dimes, and quarters, what is the smallest number of coins Freddie would need so he could pay any amount of money less than a dollar?</p>",
+      "solutions": [
+        "<p>You need $2$ dimes, $1$ nickel, and $4$ pennies for the first $25$ cents. From $26$ cents to $50$ cents, you only need to add $1$ quarter. From $51$ cents to $75$ cents, you also only need to add $1$ quarter. The same for $76$ cents to $99$ cents. Notice that instead of $100$, it is $99$. We are left with $3$ quarters, $1$ nickel, $2$ dimes, and $4$ pennies. Thus, the correct answer is $3+2+1+4=\\boxed{\\textbf{(B)}\\ 10}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_8",
+      "question": "<p>As Emily is riding her bicycle on a long straight road, she spots Emerson skating in the same direction $1/2$ mile in front of her. After she passes him, she can see him in her rear mirror until he is $1/2$ mile behind her. Emily rides at a constant rate of $12$ miles per hour, and Emerson skates at a constant rate of $8$ miles per hour. For how many minutes can Emily see Emerson? </p>",
+      "solutions": [
+        "<p>Because they are both moving in the same direction, Emily is riding relative to Emerson $12-8=4$ mph. Now we can look at it as if Emerson is not moving at all [on his skateboard] and Emily is riding at $4$ mph. It takes her</p><p>\\[\\frac12 \\ \\text{mile} \\cdot \\frac{1\\ \\text{hour}}{4\\ \\text{miles}} = \\frac18\\ \\text{hour}\\]</p><p>to ride the $1/2$ mile to reach him, and then the same amount of time to be $1/2$ mile ahead of him. This totals to</p><p>\\[2 \\cdot \\frac18 \\ \\text{hour} \\cdot \\frac{60\\ \\text{minutes}}{1\\ \\text{hour}} = \\boxed{\\textbf{(D)}\\ 15}\\ \\text{minutes}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving divisibility and number properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_9",
+      "question": "<p>Ryan got $80\\%$ of the problems correct on a $25$-problem test, $90\\%$ on a $40$-problem test, and $70\\%$ on a $10$-problem test. What percent of all the problems did Ryan answer correctly? </p>",
+      "solutions": [
+        "<p>Ryan answered $(0.8)(25)=20$ problems correct on the first test, $(0.9)(40)=36$ on the second, and $(0.7)(10)=7$ on the third. This amounts to a total of $20+36+7=63$ problems correct. The total number of problems is $25+40+10=75.$ Therefore, the percentage is $\\dfrac{63}{75} = 84\\% \\rightarrow \\boxed{\\textbf{(D)}\\ 84}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Triangle geometry problem involving angles and side lengths"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_10",
+      "question": "<p>Six pepperoni circles will exactly fit across the diameter of a $12$-inch pizza when placed. If a total of $24$ circles of pepperoni are placed on this pizza without overlap, what fraction of the pizza is covered by pepperoni?</p>",
+      "solutions": [
+        "<p>The pepperoni circles' diameter is $2$, since $\\dfrac{12}{6} = 2$. From that we see that the area of the $24$ circles of pepperoni is $\\left ( \\frac{2}{2} \\right )^2 (24\\pi) = 24\\pi$. The large pizza's area is $6^2\\pi$. Therefore, the ratio is $\\frac{24\\pi}{36\\pi} = \\boxed{\\textbf{(B) }\\frac{2}{3}}$</p><p><br/></p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate word problem involving time, distance, and speed relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_11",
+      "question": "<p>The top of one tree is $16$ feet higher than the top of another tree. The heights of the two trees are in the ratio $3:4$. In feet, how tall is the taller tree? </p>",
+      "solutions": [
+        "<p>Let the height of the taller tree be $h$ and let the height of the smaller tree be $h-16$. Since the ratio of the smaller tree to the larger tree is $\\frac{3}{4}$, we have $\\frac{h-16}{h}=\\frac{3}{4}$. Solving for $h$ gives us $h=64 \\Rightarrow \\boxed{\\textbf{(B)}\\ 64}$</p>",
+        "<p>To answer this problem, you have to make it so that we have the same proportion as 3:4, but the difference between them is 16. Since the two numbers in the ratio are consecutive (difference of 1), if we multiply both of them by 16, we would get a difference of 16 between them. So, it would be 48:64 and since we need to find the height of the taller tree, we get $h=64 \\Rightarrow \\boxed{\\textbf{(B)}\\ 64}$</p>",
+        "<p>$s + 16 = t$</p><p>$3t = 4s$</p><p>Solving by substitution,$\\frac{3}{4}t + 16 = t$</p><p>$16 = \\frac{1}{4}t$</p><p>$t=\\boxed{\\textbf{(B)}\\ 64}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating percentages and changes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_12",
+      "question": "<p>Of the $500$ balls in a large bag, $80\\%$ are red and the rest are blue. How many of the red balls must be removed so that $75\\%$ of the remaining balls are red?</p>",
+      "solutions": [
+        "<p>Since 80 percent of the 500 balls are red, there are 400 red balls. Therefore, there must be 100 blue balls. For the 100 blue balls to be 25% or $\\dfrac{1}{4}$ of the bag, there must be 400 balls in the bag so 100 red balls must be removed. The answer is $\\boxed{\\textbf{(D)}\\ 100}$.</p>",
+        "<p>We could also set up a proportion. Since we know there are 400 red balls, we let the amount of red balls removed be $x$, so $\\frac{400-x}{500-x}=\\frac{3}{4}$. Cross-multiplying gives us $1600-4x=1500-3x \\implies x=100$, so our answer is $\\boxed{\\textbf{(D)}\\ 100}$.</p>",
+        "<p>Before any balls are taken out of the bag, there are 400 red balls. Let the number of red balls we take out of the bag be $x$. Since we want the number of red ball to be 75% of the remaining balls, we can set up the equation: $0.75(500\u2013x)=400\u2013x$.In words, 75% of the total remaining balls are equal to the remaining red balls. Solving we get $x=100$, so our answer is $\\boxed{\\textbf{(D)}\\ 100}$.~J.L.L</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Arithmetic sequence problem involving finding terms in a sequence"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_13",
+      "question": "<p>The lengths of the sides of a triangle in inches are three consecutive integers. The length of the shortest side is $30\\%$ of the perimeter. What is the length of the longest side?</p>",
+      "solutions": [
+        "<p>Let $n$, $n+1$, and $n+2$ be the lengths of the sides of the triangle. Then the perimeter of the triangle is $n + (n+1) + (n+2) = 3n+3$. Using the fact that the length of the smallest side is $30\\%$ of the perimeter, it follows that:</p><p>$n = 0.3(3n+3) \\Rightarrow n = 0.9n+0.9 \\Rightarrow 0.1n = 0.9 \\Rightarrow n=9$. The longest side is then $n+2 = 11$. Thus, answer choice $\\boxed{\\textbf{(E)}\\ 11}$ is correct.</p>",
+        "<p>Since the length of the shortest side is a whole number and is equal to $\\frac{3}{10}$ of the perimeter, it follows that the perimeter must be a multiple of $10$. Adding the two previous integers to each answer choice, we see that $11+10+9=30$. Thus, answer choice $\\boxed{\\textbf{(E)}\\ 11}$ is correct.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_14",
+      "question": "<p>What is the sum of the prime factors of $2010$?</p>",
+      "solutions": [
+        "<p>First, we must find the prime factorization of $2010$. $2010=2\\cdot 3 \\cdot 5 \\cdot 67$. We add the factors up to get $\\boxed{\\textbf{(C)}\\ 77}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Circle geometry problem involving area and circumference"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_15",
+      "question": "<p>A jar contains $5$ different colors of gumdrops. $30\\%$ are blue, $20\\%$ are brown, $15\\%$ are red, $10\\%$ are yellow, and other $30$ gumdrops are green. If half of the blue gumdrops are replaced with brown gumdrops, how many gumdrops will be brown?</p>",
+      "solutions": [
+        "<p>We do $100-30-20-15-10$ to find the percent of gumdrops that are green. We find that $25\\%$ of the gumdrops are green. That means there are $120$ gumdrops. If we replace half of the blue gumdrops with brown gumdrops, then $15\\%$ of the jar's gumdrops are brown. $\\dfrac{35}{100} \\cdot 120=42 \\Rightarrow \\boxed{\\textbf{(C)}\\ 42}$</p>",
+        "<p>We first calculate the percentage of gumdrops that are green. Subtracting all the other percentages from \\(100\\%\\), we have:$100-30-20-15-10$ = $25\\%$.</p><p>Thus, $25\\%$ of the gumdrops are green.</p><p>Next, we set up a proportion: \\(\\frac{30}{25\\%} = \\frac{x}{30\\%}\\) to find the number of blue gumdrops. Cross-multiplying, we solve for \\(x\\): 36</p><p>So there are 36 blue gumdrops.</p><p>We divide the number of blue gumdrops by 2 to get 18</p><p><br/>Now, we calculate the number of brown marbles using the proportion:</p><p>\\(\\frac{30}{25\\%} = \\frac{y}{20\\%}\\),</p><p>where \\(y\\) is the number of brown marbles. Solving, we find y = 24.</p><p>Adding these together gives:</p><p>24 + 18 = 42.</p><p>Thus, the answer is $\\boxed{\\textbf{(C)}\\ 42}$</p><p>~ algebraic_algorithmic</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_16",
+      "question": "<p>A square and a circle have the same area. What is the ratio of the side length of the square to the radius of the circle?</p>",
+      "solutions": [
+        "<p>Let the side length of the square be $s$, and let the radius of the circle be $r$. Thus we have $s^2=r^2\\pi$. Dividing each side by $r^2$, we get $\\frac{s^2}{r^2}=\\pi$. Since $\\left(\\frac{s}{r}\\right)^2=\\frac{s^2}{r^2}$, we have $\\frac{s}{r}=\\sqrt{\\pi}\\Rightarrow \\boxed{\\textbf{(B)}\\ \\sqrt{\\pi}}$</p>",
+        "<p>Let the area of both the circle and square be $\\pi$. We know that the radius of a circle with area $\\pi$ is 1 and the side length of the square is $\\sqrt{\\pi}$. Now we can calculate the ratio $\\frac{\\sqrt{\\pi}}{1} \\Rightarrow \\boxed{\\textbf{(B)}\\ \\sqrt{\\pi}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "System of equations problem involving multiple variables"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_17",
+      "question": "<p>The diagram shows an octagon consisting of $10$ unit squares. The portion below $\\overline{PQ}$ is a unit square and a triangle with base $5$. If $\\overline{PQ}$ bisects the area of the octagon, what is the ratio $\\dfrac{XQ}{QY}$?</p><p>[asy] import graph; size(300);  real lsf = 0.5;  pen dp = linewidth(0.7) + fontsize(10);  defaultpen(dp);  pen ds = black;  pen xdxdff = rgb(0.49,0.49,1); draw((0,0)--(6,0),linewidth(1.2pt));  draw((0,0)--(0,1),linewidth(1.2pt));  draw((0,1)--(1,1),linewidth(1.2pt));  draw((1,1)--(1,2),linewidth(1.2pt));  draw((1,2)--(5,2),linewidth(1.2pt));  draw((5,2)--(5,1),linewidth(1.2pt));  draw((5,1)--(6,1),linewidth(1.2pt));  draw((6,1)--(6,0),linewidth(1.2pt));  draw((1,1)--(5,1),linewidth(1.2pt)); draw((1,1)--(1,0),linewidth(1.2pt));  draw((2,2)--(2,0),linewidth(1.2pt));  draw((3,2)--(3,0),linewidth(1.2pt));  draw((4,2)--(4,0),linewidth(1.2pt));  draw((5,1)--(5,0),linewidth(1.2pt)); draw((0,0)--(5,1.5),linewidth(1.2pt)); dot((0,0),ds); label(\"$P$\", (-0.23,-0.26),NE*lsf);  dot((0,1),ds);  dot((1,1),ds);  dot((1,2),ds);  dot((5,2),ds);  label(\"$X$\", (5.14,2.02),NE*lsf); dot((5,1),ds);  label(\"$Y$\", (5.12,1.14),NE*lsf); dot((6,1),ds);  dot((6,0),ds); dot((1,0),ds); dot((2,0),ds); dot((3,0),ds);  dot((4,0),ds); dot((5,0),ds); dot((2,2),ds); dot((3,2),ds);  dot((4,2),ds); dot((5,1.5),ds);  label(\"$Q$\", (5.14,1.51),NE*lsf);  clip((-4.19,-5.52)--(-4.19,6.5)--(10.08,6.5)--(10.08,-5.52)--cycle); [/asy]</p>",
+      "solutions": [
+        "<p>We see that half the area of the octagon is $5$. We see that the triangle area is $5-1 = 4$. That means that $\\frac{5h}{2} = 4 \\rightarrow h=\\frac{8}{5}$.\\[\\text{QY}=\\frac{8}{5} - 1 = \\frac{3}{5}\\]Meaning, $\\frac{\\frac{2}{5}}{\\frac{3}{5}} = \\boxed{\\textbf{(D) }\\frac{2}{3}}$</p>",
+        "<p>Like stated in solution 1, we know that half the area of the octagon is $5$.</p><p>After moving the square from the bottom right to the top left, the area of the resulting trapezoid is $5+1=6$. </p><p>$5(XQ+2)/2=6$. Solving for $XQ$, we get $XQ=2/5$. </p><p>Subtracting $2/5$ from $1$, we get $QY=3/5$.</p><p>Therefore, the answer comes out to $\\boxed{\\textbf{(D) }\\frac{2}{3}}$</p><p>~kempwood</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_18",
+      "question": "<p>A decorative window is made up of a rectangle with semicircles at either end. The ratio of $AD$ to $AB$ is $3:2$. And $AB$ is 30 inches. What is the ratio of the area of the rectangle to the combined area of the semicircles?</p><p>[asy] import graph; size(5cm); real lsf=0; pen dps=linewidth(0.7)+fontsize(8); defaultpen(dps); pen ds=black; real xmin=-4.27,xmax=14.73,ymin=-3.22,ymax=6.8; draw((0,4)--(0,0)); draw((0,0)--(2.5,0)); draw((2.5,0)--(2.5,4)); draw((2.5,4)--(0,4)); draw(shift((1.25,4))*xscale(1.25)*yscale(1.25)*arc((0,0),1,0,180)); draw(shift((1.25,0))*xscale(1.25)*yscale(1.25)*arc((0,0),1,-180,0)); dot((0,0),ds); label(\"$A$\",(-0.26,-0.23),NE*lsf); dot((2.5,0),ds); label(\"$B$\",(2.61,-0.26),NE*lsf); dot((0,4),ds); label(\"$D$\",(-0.26,4.02),NE*lsf); dot((2.5,4),ds); label(\"$C$\",(2.64,3.98),NE*lsf); clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);[/asy]</p>",
+      "solutions": [
+        "<p>We can set a proportion:</p><p>\\[\\dfrac{AD}{AB}=\\dfrac{3}{2}\\]</p><p>We substitute $AB$ with 30 and solve for $AD$.</p><p>\\[\\dfrac{AD}{30}=\\dfrac{3}{2}\\]</p><p>\\[AD=45\\]</p><p>We calculate the combined area of semicircle by putting together semicircle $AB$ and $CD$ to get a circle with radius $15$. Thus, the area is $225\\pi$. The area of the rectangle is $30\\cdot 45=1350$. We calculate the ratio:</p><p>\\[\\dfrac{1350}{225\\pi}=\\dfrac{6}{\\pi}\\Rightarrow\\boxed{\\textbf{(C)}\\ 6:\\pi}\\]</p>",
+        "<p>We can solve this without the measurement of $30$ inches. Let the constant of proportionality between the sides of the rectangle be $k$. $\\frac{A_{rect}}{A_{circle}}=\\frac{3k*2k}{\\pi(\\frac{2k}{2})^2}=\\frac{6k^2}{\\pi k^2}=\\frac{6}{\\pi}\\Rightarrow\\boxed{\\textbf{(C)}\\ 6:\\pi}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving multiple statements and determining truth values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_19",
+      "question": "<p>The two circles pictured have the same center $C$. Chord $\\overline{AD}$ is tangent to the inner circle at $B$, $AC$ is $10$, and chord $\\overline{AD}$ has length $16$. What is the area between the two circles?</p><p>[asy] unitsize(45); import graph; size(300); real lsf = 0.5; pen dp = linewidth(0.7) + fontsize(10); defaultpen(dp); pen ds = black; pen xdxdff = rgb(0.49,0.49,1); draw((2,0.15)--(1.85,0.15)--(1.85,0)--(2,0)--cycle); draw(circle((2,1),2.24)); draw(circle((2,1),1)); draw((0,0)--(4,0)); draw((0,0)--(2,1)); draw((2,1)--(2,0)); draw((2,1)--(4,0)); dot((0,0),ds); label(\"$A$\", (-0.19,-0.23),NE*lsf); dot((2,0),ds); label(\"$B$\", (1.97,-0.31),NE*lsf); dot((2,1),ds); label(\"$C$\", (1.96,1.09),NE*lsf); dot((4,0),ds); label(\"$D$\", (4.07,-0.24),NE*lsf); clip((-3.1,-7.72)--(-3.1,4.77)--(11.74,4.77)--(11.74,-7.72)--cycle); [/asy]</p>",
+      "solutions": [
+        "<p>Since $\\triangle ACD$ is isosceles, $CB$ bisects $AD$. Thus $AB=BD=8$. From the Pythagorean Theorem, $CB=6$. Thus the area between the two circles is$100\\pi - 36\\pi=64\\pi$ $\\boxed{\\textbf{(C)}\\ 64\\pi}$</p><p>Note: The length $AC$ is necessary information, as this tells us the radius of the larger circle. The area of the annulus is $\\pi(AC^2-BC^2)=\\pi AB^2=64\\pi$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_20",
+      "question": "<p>In a room, $2/5$ of the people are wearing gloves, and $3/4$ of the people are wearing hats. What is the minimum number of people in the room wearing both a hat and a glove? </p>",
+      "solutions": [
+        "<p>Let $x$ be the number of people wearing both a hat and a glove. Since the number of people wearing a hat or a glove must be whole numbers, the number of people in the room must be a multiple of 4 and 5. Since we are trying to find the minimum $x$, we must use the <i>least</i> common multiple. $lcm(4,5) = 20$. Thus, we can say that there are $20$ people in the room, all of which are wearing at least a hat or a glove. (Any people wearing neither item would unnecessarily increase the number of people in the room.)</p><p>It follows that there are $\\frac{2}{5}\\cdot 20 = 8$ people wearing gloves and $\\frac{3}{4}\\cdot 20 = 15$ people wearing hats. Then by applying the Principle of Inclusion and Exclusion (PIE), the total number of people in the room wearing either a hat or a glove or both is $8+15-x = 23-x$, where $x$ is the number wearing both. Since everyone in the room is wearing at least one item (see above), $23-x = 20$, and so $x=\\boxed{\\textbf{(A)}\\ 3}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving ratios and proportions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_21",
+      "question": "<p>Hui is an avid reader. She bought a copy of the best seller <i>Math is Beautiful</i>. On the first day, Hui read $1/5$ of the pages plus $12$ more, and on the second day she read $1/4$ of the remaining pages plus $15$ pages. On the third day she read $1/3$ of the remaining pages plus $18$ pages. She then realized that there were only $62$ pages left to read, which she read the next day. How many pages are in this book? </p>",
+      "solutions": [
+        "<p>Let $x$ be the number of pages in the book. After the first day, Hui had $\\frac{4x}{5}-12$ pages left to read. After the second, she had $\\left(\\frac{3}{4}\\right)\\left(\\frac{4x}{5}-12\\right)-15 = \\frac{3x}{5}-24$ left. After the third, she had $\\left(\\frac{2}{3}\\right)\\left(\\frac{3x}{5}-24\\right)-18=\\frac{2x}{5}-34$ left. This is equivalent to $62.$</p><p>\\begin{align*} \\frac{2x}{5}-34&=62\\\\ 2x - 170 &= 310\\\\ 2x &= 480\\\\ x &= \\boxed{\\textbf{(C)}\\ 240} \\end{align*}</p><p><br/></p>",
+        "<p>On the last day Hui read $62$ pages. Working backwards, she read $18$ pages more ($80$ total). $80$ is $\\frac{2}{3}$ of the remaining pages, so the third morning Hui had $120$ pages to read. Add back the $15$ and you find $135$ must be $\\frac{3}{4}$ of the remaining pages, so there were $180$ pages on the second morning. Add $12$ more, then $192$ is $\\frac{4}{5}$ of the total book, which must be $\\boxed{\\textbf{(C)}\\ 240}$ pages long.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent events and calculating probabilities"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_22",
+      "question": "<p>The hundreds digit of a three-digit number is $2$ more than the units digit. The digits of the three-digit number are reversed, and the result is subtracted from the original three-digit number. What is the units digit of the result?</p>",
+      "solutions": [
+        "<p>Let the hundreds, tens, and units digits of the original three-digit number be $a$, $b$, and $c$, respectively. We are given that $a=c+2$. The original three-digit number is equal to $100a+10b+c = 100(c+2)+10b+c = 101c+10b+200$. The hundreds, tens, and units digits of the reversed three-digit number are $c$, $b$, and $a$, respectively. This number is equal to $100c+10b+a = 100c+10b+(c+2) = 101c+10b+2$. Subtracting this expression from the expression for the original number, we get $(101c+10b+200) - (101c+10b+2) = 198$. Thus, the units digit in the final result is $\\boxed{\\textbf{(E)}\\ 8}$</p>",
+        "<p>The result must hold for any three-digit number with hundreds digit being $2$ more than the units digit. $301$ is such a number. Evaluating, we get $301-103=198$. Thus, the units digit in the final result is $\\boxed{\\textbf{(E)}\\ 8}$</p>",
+        "<p>Set the units digit of the original number as $x$. Thus, its hundreds digit is $x+2$. After the digits are reversed, the hundreds digit of the original number will be the units digit of the new number. Since $x-(x+2) = -2$, we can do regrouping and \"borrow\" $1$ from the tens digit and bring it to the units digit as a $10$. Therefore, the units digit will end up as $-2 + 10 = \\boxed{\\textbf{(E)}\\ 8}$</p><p>~<a href=\"/wiki/index.php/User:Bloggish\" title=\"User:Bloggish\">Bloggish</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving conditional probability and ratios"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_23",
+      "question": "<p>Semicircles $POQ$ and $ROS$ pass through the center $O$. What is the ratio of the combined areas of the two semicircles to the area of circle $O$? </p><p>[asy] import graph; size(7.5cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-6.27,xmax=10.01,ymin=-5.65,ymax=10.98; draw(circle((0,0),2)); draw((-3,0)--(3,0),EndArrow(6)); draw((0,-3)--(0,3),EndArrow(6)); draw(shift((0.01,1.42))*xscale(1.41)*yscale(1.41)*arc((0,0),1,179.76,359.76)); draw(shift((-0.01,-1.42))*xscale(1.41)*yscale(1.41)*arc((0,0),1,-0.38,179.62)); draw((-1.4,1.43)--(1.41,1.41)); draw((-1.42,-1.41)--(1.4,-1.42)); label(\"$ P(-1,1) $\",(-2.57,2.17),SE*lsf); label(\"$ Q(1,1) $\",(1.55,2.21),SE*lsf); label(\"$ R(-1,-1) $\",(-2.72,-1.45),SE*lsf); label(\"$S(1,-1)$\",(1.59,-1.49),SE*lsf);  dot((0,0),ds); label(\"$O$\",(-0.24,-0.35),NE*lsf); dot((1.41,1.41),ds); dot((-1.4,1.43),ds); dot((1.4,-1.42),ds); dot((-1.42,-1.41),ds);  clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);[/asy]</p>",
+      "solutions": [
+        "<p>By the Pythagorean Theorem, the radius of the larger circle turns out to be $\\sqrt{1^2 + 1^2} = \\sqrt{2}$. Therefore, the area of the larger circle is $(\\sqrt{2})^2\\pi = 2\\pi$. Using the coordinate plane given, we find that the radius of each of the two semicircles to be 1. So, the area of the two semicircles is $1^2\\pi=\\pi$. Finally, the ratio of the combined areas of the two semicircles to the area of circle $O$ is $\\boxed{\\textbf{(B)}\\ \\frac{1}{2}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving distance and position relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_24",
+      "question": "<p>What is the correct ordering of the three numbers, $10^8$, $5^{12}$, and $2^{24}$?</p>",
+      "solutions": [
+        "<p>Since all of the exponents are multiples of four, we can simplify the problem by taking the fourth root of each number. Evaluating we get $10^2=100$, $5^3=125$, and $2^6=64$. Since $64<100<125$, it follows that $\\boxed{\\textbf{(A)}\\ 2^{24}<10^8<5^{12}}$ is the correct answer.</p>",
+        "<p>First, let us make all exponents equal to 8. Then, it will be easy to order the numbers without doing any computations.$10^8$ is as fine as it is.We can rewrite $2^{24}$ as $(2^3)^8=8^8$.Then we can rewrite $5^{12}$ as $(5^{\\frac{3}{2}})^8=(\\sqrt{125})^8)$.We take the eighth root of all of these to get ${10, 8, \\sqrt{125}}$.Obviously, $8<10<\\sqrt{125}$, so the answer is $\\boxed{\\textbf{(A)}\\ 2^{24}<10^8<5^{12}}$.Solution by Math</p>",
+        "<p>We know that $10^{8}=({5}\\cdot{2})^{8}=5^{8}\\cdot2^{8}$. We also know that $5^{12}=5^{(8+4)}=5^{8}\\cdot5^{4}$. If we remove the common factor of $5^{8}$ from both expressions, we are left with $2^{8}$, which equals 256, and $5^{4}$, which equals 625. So we know that $5^{12}$ is bigger than $10^{8}$. Now we need to figure out which is bigger, $10^{8}$ or $2^{24}$. To do this, we rewrite $2^{24}$ as $(2^{3})^{8}=(8)^{8}$, which is clearly less than $10^{8}$. Therefore, $\\boxed{\\textbf{(A)}\\ 2^{24}<10^8<5^{12}}$ is the correct answer.</p><p>By naman14</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2010_8_25",
+      "question": "<p>Everyday at school, Jo climbs a flight of $6$ stairs. Jo can take the stairs $1$, $2$, or $3$ at a time. For example, Jo could climb $3$, then $1$, then $2$. In how many ways can Jo climb the stairs?</p>",
+      "solutions": [
+        "<p>A dynamics programming approach is quick and easy. The number of ways to climb one stair is $1$. There are $2$ ways to climb two stairs: $1$,$1$ or $2$. For 3 stairs, there are $4$ ways: ($1$,$1$,$1$)($1$,$2$)($2$,$1$)($3$)</p><p>For four stairs, consider what step they came from to land on the fourth stair. They could have hopped straight from the 1st, done a double from #2, or used a single step from #3. The ways to get to each of these steps are $1+2+4=7$ ways to get to step 4. The pattern can then be extended:$4$ steps: $1+2+4=7$ ways.$5$ steps: $2+4+7=13$ ways.$6$ steps: $4+7+13=24$ ways.</p><p>Thus, there are $\\boxed{\\textbf{(E) } 24}$ ways to get to step $6.$</p><p><br/></p>",
+        "<p>We first start by doing some simple casework to try and find the number of ways we can get to the 1st, 2nd, and 3rd Stairs. The number of ways to climb one stair is $1$. There are $2$ ways to climb two stairs: $1$,$1$ or $2$. For 3 stairs, there are $4$ ways: ($1$,$1$,$1$)($1$,$2$)($2$,$1$)($3$)</p><p>Next we must try to generalize a recursive function to find the number of ways to climb the stairs. We start out with $f(n)$, which denotes the number of ways to climb the stairs. Then we must realize, To reach the nth stair, Jeff must take a 1 step from the $f(n-1)$th stair, a double step from the $f(n-2)$th stair, or a triple step from the $f(n-3)$th stair. Therefore, the number of ways of reaching the nth step is the number of ways of reaching the $f(n-1)$th plus the number of ways of reaching the $f(n-2)$th plus the number of ways of reaching the $f(n-3)$th.stair. So we have our generalized recursive function: \\[f(n)=f(n-1)+f(n-2)+f(n-3)\\]</p><p>Now that we have the function and a few of the values we can try to find $f(6)$</p><p>\\[f(1)=1\\]\\[f(2)=2\\]\\[f(3)=f(3-1)+f(3-2)+f(3-3)=f(2)+f(1)+f(0)=2+1+1=4\\]\\[f(4)=f(4-1)+f(4-2)+f(4-3)=f(3)+f(2)+f(1)=4+2+1=7\\]\\[f(5)=f(5-1)+f(5-2)+f(5-3)=f(4)+f(3)+f(2)=7+4+2=13\\]\\[f(6)=f(6-1)+f(6-2)+f(6-3)=f(5)+f(4)+f(3)=13+7+4=24\\]</p><p>Thus there are 24 ways to get to the 6th stair so the answer is $\\boxed{\\textbf{(E) } 24}$</p><p>~ algebraic_algorithmic</p><p><br/></p><p><a class=\"external free\" href=\"https://youtu.be/5UojVH4Cqqs?t=4560\" rel=\"nofollow\">https://youtu.be/5UojVH4Cqqs?t=4560</a></p><p>~ pi_is_3.14</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving area calculations and geometric relationships"
+        }
+      ]
+    }
+  ]
+}

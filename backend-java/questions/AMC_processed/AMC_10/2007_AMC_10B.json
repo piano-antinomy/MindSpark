@@ -1,0 +1,422 @@
+{
+  "competition_info": {
+    "name": "2007_AMC_10B",
+    "group": "AMC_10",
+    "year": 2007,
+    "is_AJHSME": false,
+    "level": "10",
+    "suffix": "B",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2007_10b_1",
+      "question": "<p>Isabella's house has $3$ bedrooms. Each bedroom is $12$ feet long, $10$ feet wide, and $8$ feet high. Isabella must paint the walls of all the bedrooms. Doorways and windows, which will not be painted, occupy $60$ square feet in each bedroom. How many square feet of walls must be painted? </p>",
+      "solutions": [
+        "<p>There are four walls in each bedroom (she can't paint floors or ceilings). Therefore, we calculate the number of square feet of walls there is in one bedroom:\\[2\\cdot(12\\cdot8+10\\cdot8)-60=2\\cdot176-60=292\\]We have three bedrooms, so she must paint $292\\cdot3=\\boxed{\\textbf{(E) }876}$ square feet of walls.</p><p>~MathFun1000</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2007 AMC 10B - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_2",
+      "question": "<p>Define the operation $\\star$ by $a \\star b = (a+b)b.$ What is $(3 \\star 5) - (5 \\star 3)?$</p>",
+      "solutions": [
+        "<p>Substitute and simplify.\\[(3+5)5 - (5+3)3 = (3+5)2 = 8\\cdot2 = \\boxed{\\textbf{(E) }16}\\]</p>",
+        "<p>Note that$(a \\star b) - (b \\star a) = (a+b)b - (b+a)a= (a+b)(b-a)= b^2 - a^2$. We can substitute $a=3$ and $b=5$ to get $5^2 - 3^2 = \\boxed{\\textbf{(E) }16}$.</p><p>~MathFun1000 (Minor Edits)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2007 AMC 10B - algebra problem involving percentage calculations and discounts. Students need to understand algebra concepts, work with percentages principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of percentages."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_3",
+      "question": "<p>A college student drove his compact car $120$ miles home for the weekend and averaged $30$ miles per gallon. On the return trip the student drove his parents' SUV and averaged only $20$ miles per gallon. What was the average gas mileage, in miles per gallon, for the round trip?</p>",
+      "solutions": [
+        "<p>The trip was $240$ miles long and took $\\dfrac{120}{30}+\\dfrac{120}{20}=4+6=10$ gallons. Therefore, the average mileage was $\\dfrac{240}{10}= \\boxed{\\textbf{(B) }24}$</p>",
+        "<p>Alternatively, we can use the harmonic mean to get $\\frac{2}{\\frac{1}{20} + \\frac{1}{30}} = \\frac{2}{\\frac{1}{12}} = \\boxed{\\textbf{(B) }24}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2007 AMC 10B - algebra problem involving area calculations of geometric shapes. Students need to understand algebra concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_4",
+      "question": "<p>The point $O$ is the center of the circle circumscribed about $\\triangle ABC,$ with $\\angle BOC=120^\\circ$ and $\\angle AOB=140^\\circ,$ as shown. What is the degree measure of $\\angle ABC?$</p>",
+      "solutions": [
+        "<p>Because all the <a href=\"/wiki/index.php/Central_angle\" title=\"Central angle\">central angles</a> of a circle add up to $360^\\circ,$</p><p>\\begin{align*} \\angle BOC + \\angle AOB + \\angle AOC &= 360\\\\ 120 + 140 + \\angle AOC &= 360\\\\ \\angle AOC &= 100. \\end{align*}</p><p>Therefore, the measure of $\\text{arc}AC$ is also $100^\\circ.$ Since the measure of an <a href=\"/wiki/index.php/Inscribed_angle\" title=\"Inscribed angle\">inscribed angle</a> is equal to half the measure of the arc it intercepts, $\\angle ABC = \\boxed{\\textbf{(D)} 50}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2007 AMC 10B - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_5",
+      "question": "<p>In a certain land, all Arogs are Brafs, all Crups are Brafs, all Dramps are Arogs, and all Crups are Dramps. Which of the following statements is implied by these facts?</p>",
+      "solutions": [
+        "<p>It may be easier to visualize this by drawing some sort of diagram. From the first statement, you can draw an Arog circle inside of the Braf circle, since all Arogs are Brafs, but not all Brafs are Arogs. Ignore the second statement for now, and draw a Dramp circle in the Arog circle and a Crup circle in the Dramp circle. You can see the second statement is already true because all Crups are Arogs. As you can see, the only statement that is true is $\\boxed{\\mathrm{(D)}}$</p>",
+        "<p>Let's replace the terms with some more familiar terms. Let \"Arogs\" be math problems, \"Brafs\" be problems, \"Crups\" be 2007 AMC 10 problems, and \"Dramps\" be AMC 10 problems. All the statements then hold. Let us now analyze the claims individually.</p><p>$\\textbf{(A)}$ All AMC 10 problems are problems and 2007 AMC 10 problems. This statement is false.</p><p>$\\textbf{(B)}$ All problems are 2007 AMC 10 problems and AMC 10 problems. This statement is false.</p><p>$\\textbf{(C)}$ All math problems are 2007 AMC 10 problems and AMC 10 problems. This statement is false.</p><p>$\\textbf{(D)}$ All 2007 AMC 10 problems are math problems and problems. This statement is true.</p><p>$\\textbf{(E)}$ All math problems are AMC 10 problems and some math problems may not be 2007 AMC 10 problems. This statement is false.</p><p>Our answer is $\\boxed{\\textbf{(D)}~\\text{All Crups are Arogs and are Brafs.}}$</p><p>~ cxsmi</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2007 AMC 10B - algebra problem involving counting principles and arrangements. Students need to understand algebra concepts, work with counting principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_6",
+      "question": "<p>The $2007 \\text{ AMC }10$ will be scored by awarding $6$ points for each correct response, $0$ points for each incorrect response, and $1.5$ points for each problem left unanswered. After looking over the $25$ problems, Sarah has decided to attempt the first $22$ and leave only the last $3$ unanswered. How many of the first $22$ problems must she solve correctly in order to score at least $100$ points?</p>",
+      "solutions": [
+        "<p>Sarah is leaving $3$ questions unanswered, guaranteeing her $3 \\times 1.5 = 4.5$ points. She will either get $6$ points or $0$ points for the rest of the questions. Let $x$ be the number of questions Sarah answers correctly.\\begin{align*} 6x+4.5 &\\ge 100\\\\ 6x &\\ge 95.5\\\\ x &\\ge 15.92 \\end{align*}The number of questions she answers correctly has to be a whole number, so round up to get $\\boxed{\\textbf{(D) }16}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2007 AMC 10B - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_7",
+      "question": "<p>All sides of the convex pentagon $ABCDE$ are of equal length, and $\\angle A= \\angle B = 90^\\circ.$ What is the degree measure of $\\angle E?$</p>",
+      "solutions": [
+        "<p>$AB = EC$ because they are opposite sides of a square. Also, $ED = DC = AB$ because all sides of the convex pentagon are of equal length. Since $ABCE$ is a square and $\\triangle CED$ is an equilateral triangle, $\\angle AEC = 90$ and $\\angle CED = 60.$ Use angle addition:\\[\\angle E = \\angle AEC + \\angle CED = 90 + 60 = \\boxed{\\textbf{(E)} 150}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2007 AMC 10B - geometry problem involving area calculations of geometric shapes. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_8",
+      "question": "<p>On the trip home from the meeting where this AMC10 was constructed, the Contest Chair noted that his airport parking receipt had digits of the form $bbcac,$ where $0 \\le a < b < c \\le 9,$ and $b$ was the average of $a$ and $c.$ How many different five-digit numbers satisfy all these properties?</p>",
+      "solutions": [
+        "<p>Case $1$: The numbers are separated by $1$.</p><p>We this case with $a=0, b=1,$ and $c=2$. Following this logic, the last set we can get is $a=7, b=8,$ and $c=9$. We have $8$ sets of numbers in this case.</p><p><br/>Case $2$: The numbers are separated by $2$.</p><p>This case starts with $a=0, b=2,$ and $c=4$. It ends with $a=5, b=7,$ and $c=9$. There are $6$ sets of numbers in this case.</p><p><br/>Case $3$: The numbers start with $a=0, b=3,$ and $c=6$. It ends with $a=3, b=6,$ and $c=9$. This case has $4$ sets of numbers.</p><p>It's pretty clear that there's a pattern: $8$ sets, $6$ sets, $4$ sets. The amount of sets per case decreases by $2$, so it's obvious Case $4$ has $2$ sets. The total amount of possible five-digit numbers is $8+6+4+2=\\boxed{\\textbf{(D)}\\ 20}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2007 AMC 10B - number_theory problem involving divisibility rules and number properties. Students need to understand number_theory concepts, work with divisibility principles, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills and understanding of divisibility."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_9",
+      "question": "<p>A cryptographic code is designed as follows. The first time a letter appears in a given message it is replaced by the letter that is $1$ place to its right in the alphabet (asumming that the letter $A$ is one place to the right of the letter $Z$). The second time this same letter appears in the given message, it is replaced by the letter that is $1+2$ places to the right, the third time it is replaced by the letter that is $1+2+3$ places to the right, and so on. For example, with this code the word \"banana\" becomes \"cbodqg\". What letter will replace the last letter $s$ in the message\\[\\text{\"Lee's sis is a Mississippi miss, Chriss!\"?}\\]</p>",
+      "solutions": [
+        "<p>Since the letter that will replace the last $s$ does not depend on any letter except the other $s$'s, you can disregard anything else. There are $12$ $s$'s, so the last $s$ will be replaced by the letter $1+2+3+\\cdots+12$ places to the right of $s$.\\[1+2+3+\\cdots+12=12 \\times \\frac{1+12}{2} = 78\\]Every $26$ places, you will end up with the same letter so you can just take the remainder of $78$ when you divide by $26,$ which is $0.$ Therefore, the letter that will replace the last $s$ is $\\boxed{\\textbf{(D) } s}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2007 AMC 10B - geometry problem involving triangle geometry and properties. Students need to understand geometry concepts, work with triangles principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of triangles."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_10",
+      "question": "<p>Two points $B$ and $C$ are in a plane. Let $S$ be the set of all points $A$ in the plane for which $\\triangle ABC$ has area $1.$ Which of the following describes $S?$</p>",
+      "solutions": [
+        "<p>Let $h$ be the length of the altitude of $\\triangle ABC.$ Since segment $BC$ is the base of the triangle and cannot change, the area of the triangle is $\\frac{1}{2}(BC)(h)=1$ and $h=\\frac{2}{BC}.$ Thus $S$ consists of two lines parallel to $BC$ and is $\\frac{2}{BC}$ units away from it. $\\longrightarrow \\boxed{\\mathrm{(A) \\ } \\text{two parallel lines}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2007 AMC 10B - algebra problem involving rate relationships and speed calculations. Students need to understand algebra concepts, work with rates principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of rates."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_11",
+      "question": "<p>A circle passes through the three vertices of an isosceles triangle that has two sides of length $3$ and a base of length $2$. What is the area of this circle?</p>",
+      "solutions": [
+        "<p>Let $\\triangle ABC$ have vertex $A$ and center $O$, with foot of altitude from $A$ intersecting $BC$ at $D$. </p><p>Then by the Pythagorean Theorem (with radius $r$ and height $OD = h$) on $\\triangle OBD$ and $\\triangle ABD$\\begin{align*} h^2 + 1 & = r^2 \\\\ (h + r)^2 + 1 & = 9 \\end{align*}</p><p>Substituting and solving gives $r = \\frac {9}{4\\sqrt {2}}$. Then the area of the circle is $r^2 \\pi = \\left(\\frac {9}{4\\sqrt {2}}\\right)^2 \\pi = \\boxed{\\mathrm{(C) \\ } \\frac {81}{32} \\pi}$.</p><p>By $A = \\frac {1}{2}Bh = \\frac {abc}{4R}$ (or we could use $s = 4$ and <a class=\"mw-redirect\" href=\"/wiki/index.php/Heron%27s_formula\" title=\"Heron's formula\">Heron's formula</a>),\\[R = \\frac {abc}{2Bh} = \\frac {3 \\cdot 3 \\cdot 2}{2(2)(2\\sqrt {2})} = \\frac {9}{4\\sqrt {2}}\\]and the answer is $R^2 \\pi = \\boxed{\\mathrm{(C) \\ } \\frac {81}{32} \\pi}$</p><p>Alternatively, by the Extended <a href=\"/wiki/index.php/Law_of_Sines\" title=\"Law of Sines\">Law of Sines</a>,\\[2R = \\frac {AC}{\\sin \\angle ABC} = \\frac {3}{\\frac {2\\sqrt {2}}{3}} \\Longrightarrow R = \\frac {9}{4\\sqrt {2}}\\]Answer follows as above.</p><p>Extend segment $AD$ to $R$ on Circle $O$.</p><p>By the Pythagorean Theorem \\[AD^2 = 3^2 - 1^2\\] \\[AD = 2\\sqrt{2}\\]</p><p>$\\triangle ADC$ is similar to $\\triangle ACR$, so \\[\\frac {2\\sqrt{2}}{3} = \\frac {3}{2r}\\] which gives us \\[2r = \\frac {9}{2\\sqrt{2}} = \\frac {9\\sqrt{2}}{4}\\] therefore \\[r = \\frac {9\\sqrt{2}}{8}\\]</p><p>The area of the circle is therefore $\\pi r^2 = \\left(\\frac {9\\sqrt{2}}{8}\\right)^2 \\pi = \\boxed{\\mathrm{(C) \\ } \\frac {81}{32} \\pi}$</p><p>First, we extend $AD$ to intersect the circle at $E.$</p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, we know that \\[1^2+AD^2=3^2\\implies AD=2\\sqrt{2}.\\]We also know that, from the <a href=\"/wiki/index.php/Power_of_a_Point_Theorem\" title=\"Power of a Point Theorem\">Power of a Point Theorem</a>, \\[AD\\cdot DE=BD\\cdot DC.\\] We can substitute the values we know to get\\[2\\sqrt{2}\\cdot DE=1\\]We can simplify this to get that \\[DE=\\dfrac{2\\sqrt{2}}{8}.\\]We add $AD$ and $DE$ together to get the length of the diameter, and then we can find the area.\\[AE=AD+DE=2\\sqrt{2}+\\dfrac{2\\sqrt{2}}{8}=\\dfrac{9\\sqrt{2}}{4}.\\]Therefore, the radius is $\\dfrac{9\\sqrt{2}}{8}$, so the area is \\[\\left(\\dfrac{9\\sqrt{2}}{8}\\right)^2\\pi=\\boxed{(\\text{C})\\dfrac{81}{32}\\pi.}\\]</p><p>Another possible solution is to plot the circle and triangle on a graph with the circle having center $(0,0)$. Let the radius of the circle = $r$. Let the distance between the origin and the base of triangle = $a$.\\[1 + a^2 = r^2\\]\\[r + a = 2\\sqrt{2}\\]\\[a = 2\\sqrt{2} - r\\]\\[9 - 4r\\sqrt{2} = 0\\]\\[r = \\frac{9\\sqrt{2}}{8}\\]\\[\\pi r^2 = \\boxed{(\\text{C})\\frac{81}{32}\\pi}\\]</p><p>We can also use LOC to solve this problem. If O is the center of the circle, angle $OBC$ is double angle $BAC$. From law of cosines, we have that $\\cos(\\angle BAC) = \\frac{7}{9}$. We now apply law of cosines on triangle $OBC$ to get that $4 = r^2+r^2-2r^2\\cos(2 \\angle BAC)$ but we know that $2 \\cos (\\angle BAC) = 2 \\cdot (\\frac{7}{9})^2 - 1 = \\frac{17}{81}$. Plugging this in and simplifying, we get $r = \\frac{9}{8} \\cdot \\sqrt{2}$ and thus the area of the circle is equal to $\\frac{81}{32} \\pi$.</p>",
+        "<p>Let $\\triangle ABC$ have vertex $A$ and center $O$, with foot of altitude from $A$ intersecting $BC$ at $D$. </p><p>Then by the Pythagorean Theorem (with radius $r$ and height $OD = h$) on $\\triangle OBD$ and $\\triangle ABD$\\begin{align*} h^2 + 1 & = r^2 \\\\ (h + r)^2 + 1 & = 9 \\end{align*}</p><p>Substituting and solving gives $r = \\frac {9}{4\\sqrt {2}}$. Then the area of the circle is $r^2 \\pi = \\left(\\frac {9}{4\\sqrt {2}}\\right)^2 \\pi = \\boxed{\\mathrm{(C) \\ } \\frac {81}{32} \\pi}$.</p>",
+        "<p>By $A = \\frac {1}{2}Bh = \\frac {abc}{4R}$ (or we could use $s = 4$ and <a class=\"mw-redirect\" href=\"/wiki/index.php/Heron%27s_formula\" title=\"Heron's formula\">Heron's formula</a>),\\[R = \\frac {abc}{2Bh} = \\frac {3 \\cdot 3 \\cdot 2}{2(2)(2\\sqrt {2})} = \\frac {9}{4\\sqrt {2}}\\]and the answer is $R^2 \\pi = \\boxed{\\mathrm{(C) \\ } \\frac {81}{32} \\pi}$</p><p>Alternatively, by the Extended <a href=\"/wiki/index.php/Law_of_Sines\" title=\"Law of Sines\">Law of Sines</a>,\\[2R = \\frac {AC}{\\sin \\angle ABC} = \\frac {3}{\\frac {2\\sqrt {2}}{3}} \\Longrightarrow R = \\frac {9}{4\\sqrt {2}}\\]Answer follows as above.</p>",
+        "<p>Extend segment $AD$ to $R$ on Circle $O$.</p><p>By the Pythagorean Theorem \\[AD^2 = 3^2 - 1^2\\] \\[AD = 2\\sqrt{2}\\]</p><p>$\\triangle ADC$ is similar to $\\triangle ACR$, so \\[\\frac {2\\sqrt{2}}{3} = \\frac {3}{2r}\\] which gives us \\[2r = \\frac {9}{2\\sqrt{2}} = \\frac {9\\sqrt{2}}{4}\\] therefore \\[r = \\frac {9\\sqrt{2}}{8}\\]</p><p>The area of the circle is therefore $\\pi r^2 = \\left(\\frac {9\\sqrt{2}}{8}\\right)^2 \\pi = \\boxed{\\mathrm{(C) \\ } \\frac {81}{32} \\pi}$</p>",
+        "<p>First, we extend $AD$ to intersect the circle at $E.$</p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, we know that \\[1^2+AD^2=3^2\\implies AD=2\\sqrt{2}.\\]We also know that, from the <a href=\"/wiki/index.php/Power_of_a_Point_Theorem\" title=\"Power of a Point Theorem\">Power of a Point Theorem</a>, \\[AD\\cdot DE=BD\\cdot DC.\\] We can substitute the values we know to get\\[2\\sqrt{2}\\cdot DE=1\\]We can simplify this to get that \\[DE=\\dfrac{2\\sqrt{2}}{8}.\\]We add $AD$ and $DE$ together to get the length of the diameter, and then we can find the area.\\[AE=AD+DE=2\\sqrt{2}+\\dfrac{2\\sqrt{2}}{8}=\\dfrac{9\\sqrt{2}}{4}.\\]Therefore, the radius is $\\dfrac{9\\sqrt{2}}{8}$, so the area is \\[\\left(\\dfrac{9\\sqrt{2}}{8}\\right)^2\\pi=\\boxed{(\\text{C})\\dfrac{81}{32}\\pi.}\\]</p>",
+        "<p>Another possible solution is to plot the circle and triangle on a graph with the circle having center $(0,0)$. Let the radius of the circle = $r$. Let the distance between the origin and the base of triangle = $a$.\\[1 + a^2 = r^2\\]\\[r + a = 2\\sqrt{2}\\]\\[a = 2\\sqrt{2} - r\\]\\[9 - 4r\\sqrt{2} = 0\\]\\[r = \\frac{9\\sqrt{2}}{8}\\]\\[\\pi r^2 = \\boxed{(\\text{C})\\frac{81}{32}\\pi}\\]</p>",
+        "<p>We can also use LOC to solve this problem. If O is the center of the circle, angle $OBC$ is double angle $BAC$. From law of cosines, we have that $\\cos(\\angle BAC) = \\frac{7}{9}$. We now apply law of cosines on triangle $OBC$ to get that $4 = r^2+r^2-2r^2\\cos(2 \\angle BAC)$ but we know that $2 \\cos (\\angle BAC) = 2 \\cdot (\\frac{7}{9})^2 - 1 = \\frac{17}{81}$. Plugging this in and simplifying, we get $r = \\frac{9}{8} \\cdot \\sqrt{2}$ and thus the area of the circle is equal to $\\frac{81}{32} \\pi$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2007 AMC 10B - algebra problem involving percentage calculations and changes. Students need to understand algebra concepts, work with percentages principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of percentages."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_12",
+      "question": "<p>Tom's age is $T$ years, which is also the sum of the ages of his three children. His age $N$ years ago was twice the sum of their ages then. What is $T/N$?</p>",
+      "solutions": [
+        "<p>Tom's age $N$ years ago was $T-N$. The sum of the ages of his three children $N$ years ago was $T-3N,$ since there are three children. If his age $N$ years ago was twice the sum of the children's ages then,\\begin{align*}T-N&=2(T-3N)\\\\ T-N&=2T-6N\\\\ T&=5N\\\\ T/N&=\\boxed{\\mathrm{(D) \\ } 5}\\end{align*}Note that actual values were not found.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2007 AMC 10B - algebra problem involving arithmetic sequence patterns and terms. Students need to understand algebra concepts, work with arithmetic_sequences principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of arithmetic_sequences."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_13",
+      "question": "<p>Two circles of radius $2$ are centered at $(2,0)$ and at $(0,2).$ What is the area of the intersection of the interiors of the two circles?</p>",
+      "solutions": [
+        "<p>You can find the area of half the intersection by subtracting the isosceles triangle in the sector from the whole sector. This sector is one-fourth of the area of the circle with radius $2,$ and the isosceles triangle is a right triangle. Therefore, the area of half the intersection is\\[\\frac{1}{4} 4\\pi - \\frac{1}{2}(2)(2) = \\pi - 2\\]That means the area of the whole intersection is $\\boxed{\\mathrm{(D) \\ } 2(\\pi-2)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2007 AMC 10B - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_14",
+      "question": "<p>Some boys and girls are having a car wash to raise money for a class trip to China. Initially $40\\%$ of the group are girls. Shortly thereafter two girls leave and two boys arrive, and then $30\\%$ of the group are girls. How many girls were initially in the group?</p>",
+      "solutions": [
+        "<p>If we let $p$ be the number of people initially in the group, then $0.4p$ is the number of girls. If two girls leave and two boys arrive, the number of people in the group is still $p$, but the number of girls is $0.4p-2$. Since only $30\\%$ of the group are girls,\\begin{align*} \\frac{0.4p-2}{p}&=\\frac{3}{10}\\\\ 4p-20&=3p\\\\ p&=20\\end{align*}The number of girls initially in the group is $0.4p=0.4(20)=\\boxed{\\mathrm{(C) \\ } 8}$</p>",
+        "<p>There are the same number of total people before and after, but the number of girls has dropped by two or $10\\%$ of the total. $\\frac{2}{0.1}=20$, and $40\\%\\cdot20=8$, so the answer is $\\mathrm{(C)}$.</p>",
+        "<p>Let $x$ be the number of people initially in the group and $g$ the number of girls. $\\frac{2}{5}x = g$, so $x = \\frac{5}{2}g$. Also, the problem states $\\frac{3}{10}x = g-2$. Substituting $x$ in terms of $g$ into the second equation yields that $g = \\boxed{ 8\\ \\mathrm{(C)}}$.</p><p>~mobius247</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2007 AMC 10B - geometry problem involving circle geometry and measurements. Students need to understand geometry concepts, work with circles principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of circles."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_15",
+      "question": "<p>The angles of quadrilateral $ABCD$ satisfy $\\angle A=2 \\angle B=3 \\angle C=4 \\angle D.$ What is the degree measure of $\\angle A,$ rounded to the nearest whole number?</p>",
+      "solutions": [
+        "<p>The sum of the interior angles of any quadrilateral is $360^\\circ.$\\begin{align*} 360 &= \\angle A + \\angle B + \\angle C + \\angle D\\\\ &= \\angle A + \\frac{1}{2}A + \\frac{1}{3}A + \\frac{1}{4}A\\\\ &= \\frac{12}{12}A + \\frac{6}{12}A + \\frac{4}{12}A + \\frac{3}{12}A\\\\ &= \\frac{25}{12}A \\end{align*}\\[\\angle A = 360 \\cdot \\frac{12}{25} = 172.8 \\approx \\boxed{\\mathrm{(D) \\ } 173}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2007 AMC 10B - combinatorics problem involving counting principles and arrangements. Students need to understand combinatorics concepts, work with counting principles, and apply mathematical reasoning to solve this problem. This tests combinatorics problem-solving skills and understanding of counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_16",
+      "question": "<p>A teacher gave a test to a class in which $10\\%$ of the students are juniors and $90\\%$ are seniors. The average score on the test was $84.$ The juniors all received the same score, and the average score of the seniors was $83.$ What score did each of the juniors receive on the test?</p>",
+      "solutions": [
+        "<p>We can assume there are $10$ people in the class. Then there will be $1$ junior and $9$ seniors. The sum of everyone's scores is $10 \\cdot 84 = 840$. Since the average score of the seniors was $83$, the sum of all the senior's scores is $9 \\cdot 83 = 747$. The only score that has not been added to that is the junior's score, which is $840 - 747 = \\boxed{\\textbf{(C) } 93}$</p>",
+        "<p>Let the average score of the juniors be $j$. The problem states the average score of the seniors is $83$. The equation for the average score of the class (juniors and seniors combined) is $\\frac{j}{10} + \\frac{83 \\cdot 9}{10} = 84$. Simplifying this equation yields $j = \\boxed{\\textbf{(C) } 93}$</p><p>~mobius247</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2007 AMC 10B - algebra problem involving systems of equations with multiple variables. Students need to understand algebra concepts, work with systems_of_equations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of systems_of_equations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_17",
+      "question": "<p>Point $P$ is inside equilateral $\\triangle ABC$. Points $Q$, $R$, and $S$ are the feet of the perpendiculars from $P$ to $\\overline{AB}$, $\\overline{BC}$, and $\\overline{CA}$, respectively. Given that $PQ=1$, $PR=2$, and $PS=3$, what is $AB$?</p>",
+      "solutions": [
+        "<p>Drawing $\\overline{PA}$, $\\overline{PB}$, and $\\overline{PC}$, $\\triangle ABC$ is split into three smaller triangles. The altitudes of these triangles are given in the problem as $PQ$, $PR$, and $PS$.</p><p>Summing the areas of each of these triangles and equating it to the area of the entire triangle, we get:</p><p>\\[\\frac{s}{2} + \\frac{2s}{2} + \\frac{3s}{2} = \\frac{s^2\\sqrt{3}}{4}\\]where $s$ is the length of a side of the equilateral triangle</p><p>\\[s = \\boxed{\\mathrm{(D) \\ } 4\\sqrt{3}}\\]</p><ul><li>Note - This is called <a class=\"mw-redirect\" href=\"/wiki/index.php/Viviani%27s_Theorem\" title=\"Viviani's Theorem\">Viviani's Theorem</a>.</li></ul>",
+        "<p>The 60 degree angles suggest constructing 30-60-90 triangles. As such, let the foot of the altitude from $Q$ to $\\overline{BC}$ be $D$. Also, since $\\angle{PQD}=60$, let the foot of the altitude from $P$ to $\\overline{QD}$ be $E$. Since $\\triangle{QEP}$ is 30-60-90, and $PQ=1$, $QE=\\frac{1}{2}$. Also, since $PR=2$, $DE=2$. Thus, $QD=\\frac{5}{2}$. Once again, since $\\triangle{QBD}$ is 30-60-90, $QB=\\frac{5\\sqrt{3}}{3}$. Similar reasoning to $\\overline{AQ}$ and summing the segments yields $\\boxed{(D) 4\\sqrt{3}}$</p>",
+        "<p>According to Viviani's Theorem, in an equilateral triangle, the sum of the perpendicular distances from a point inside the triangle will equal the altitude of the triangle. Thus, the height of the triangle is 6. </p><p>Then we start to form a 30-60-90 triangle. By that, we divide $6/\\sqrt{3} = 2\\sqrt{3}$ then multiply 2, and we get an answer of $\\boxed{(D) 4\\sqrt{3}}$</p><p>~ghfhgvghj10</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2007 AMC 10B - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_18",
+      "question": "<p>A circle of radius $1$ is surrounded by $4$ circles of radius $r$ as shown. What is $r$?</p>",
+      "solutions": [
+        "<p>You can express the line connecting the centers of an outer circle and the inner circle in two different ways. You can add the radius of both circles to get $r+1.$ You can also add the radius of two outer circles and use a $45-45-90$ triangle to get $\\frac{2r}{\\sqrt{2}} = r\\sqrt{2}.$ Since both expressions represent the same length, you can set them equal to each other.\\begin{align*} r+1&=r\\sqrt{2}\\\\ 1&=r(\\sqrt{2}-1)\\end{align*}\\[r = \\frac{1}{\\sqrt{2}-1} = \\frac{1(\\sqrt{2}+1)}{(\\sqrt{2}-1)(\\sqrt{2}+1)} = \\frac{\\sqrt{2}+1}{2-1} = \\boxed{\\mathrm{(B) \\ } 1 + \\sqrt{2}}\\]</p>",
+        "<p>You can solve this problem by setting up a simple equation with the Pythagorean Theorem. The hypotenuse would be a segment that includes the radius of two circles on opposite corners and the diameter of the middle circle. This results in a segment of length $2r+2$. The two legs are each the length between the centers of two large, adjacent circles, thus they are each equal to $2r$. Using the Pythagorean Theorem:\\begin{align*} (2r+2)^2 = 2(2r)^2\\\\ 4r^2+8r+4=8r^2\\\\ r^2+2r+1=2r^2\\\\ r^2-2r-1=0\\\\ r=\\frac{2+\\sqrt{4-(-4)}}{2}=\\frac{2+2\\sqrt{2}}{2}=\\boxed{\\mathrm{(B) \\ } 1 + \\sqrt{2}} \\end{align*}</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2007 AMC 10B - logic problem involving logical reasoning and truth values. Students need to understand logic concepts, work with deductive_reasoning principles, and apply mathematical reasoning to solve this problem. This tests logic problem-solving skills and understanding of deductive_reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_19",
+      "question": "<p>The wheel shown is spun twice, and the randomly determined numbers opposite the pointer are recorded. The first number is divided by $4,$ and the second number is divided by $5.$ The first remainder designates a column, and the second remainder designates a row on the checkerboard shown. What is the probability that the pair of numbers designates a shaded square?</p>",
+      "solutions": [
+        "<p>When dividing each number on the wheel by $4,$ the remainders are $1, 1, 2, 2, 3,$ and $3.$ Each column on the checkerboard is equally likely to be chosen.</p><p>When dividing each number on the wheel by $5,$ the remainders are $1, 1, 2, 2, 3,$ and $4.$</p><p>The probability that a shaded square in the $1$st or $3$rd row of the $1$st or $3$rd column is chosen is\\[\\frac{2}{3} \\times \\frac{3}{6} = \\frac{1}{3}\\]</p><p>The probability that a shaded square in the $2$nd or $4$th row of the $2$nd column is chosen is\\[\\frac{1}{3} \\times \\frac{3}{6} = \\frac{1}{6}\\]</p><p>Add those two together to get\\[\\frac{1}{3} + \\frac{1}{6} = \\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\boxed{\\textbf{(C)} \\frac{1}{2}}\\]</p><p>Alternatively, we may analyze this problem a little further. </p><p>First, we isolate the case where the rows are numbered 1 or 2. Notice that as listed before, the probability for picking a shaded square here is \\[\\frac{1}{2}\\] because the column/row probabilities are the same, with the same number of shaded and non-shaded squares</p><p><br/>Next we isolate the rows numbered 3 or 4. Note that the probability of picking the rows is same, because of our list up above. The columns, of course, still have the same probability. Because the number of shaded and non-shaded squares are equal, we have \\[\\frac{1}{2}\\]Combining these we have a general probability of \\[\\boxed{\\textbf{(C)} \\frac{1}{2}}\\]</p>",
+        "<p>When dividing each number on the wheel by $4,$ the remainders are $1, 1, 2, 2, 3,$ and $3.$ Each column on the checkerboard is equally likely to be chosen.</p><p>When dividing each number on the wheel by $5,$ the remainders are $1, 1, 2, 2, 3,$ and $4.$</p><p>The probability that a shaded square in the $1$st or $3$rd row of the $1$st or $3$rd column is chosen is\\[\\frac{2}{3} \\times \\frac{3}{6} = \\frac{1}{3}\\]</p><p>The probability that a shaded square in the $2$nd or $4$th row of the $2$nd column is chosen is\\[\\frac{1}{3} \\times \\frac{3}{6} = \\frac{1}{6}\\]</p><p>Add those two together to get\\[\\frac{1}{3} + \\frac{1}{6} = \\frac{2}{6} + \\frac{1}{6} = \\frac{3}{6} = \\boxed{\\textbf{(C)} \\frac{1}{2}}\\]</p>",
+        "<p>Alternatively, we may analyze this problem a little further. </p><p>First, we isolate the case where the rows are numbered 1 or 2. Notice that as listed before, the probability for picking a shaded square here is \\[\\frac{1}{2}\\] because the column/row probabilities are the same, with the same number of shaded and non-shaded squares</p><p><br/>Next we isolate the rows numbered 3 or 4. Note that the probability of picking the rows is same, because of our list up above. The columns, of course, still have the same probability. Because the number of shaded and non-shaded squares are equal, we have \\[\\frac{1}{2}\\]Combining these we have a general probability of \\[\\boxed{\\textbf{(C)} \\frac{1}{2}}\\]</p>",
+        "<p>Similarly to Solution 1, we create two lists, one for $mod$ $4$ and one for $mod$ $5$\u00a0: ($1, 2, 3, 2, 3, 1$) and ($1, 2, 3, 1, 2, 4$). Next, we make a list of the coordinates we want for the shaded boxes. ($1,1$), ($1,3$), ($2,2$), ($3,1$), ($3,3$), ($2,4$). For each coordinate pair, we find the probability for it to occur. In order, we get $\\frac{1}{9}, \\frac{1}{18}, \\frac{1}{9}, \\frac{1}{9}, \\frac{1}{18}, \\frac{1}{18}$. Sum these to get the answer of $\\boxed{\\textbf{(C)} \\frac{1}{2}}$</p><p>~Dynosol</p>",
+        "<p>We take everything modulo $4$ first. We get $1$ mod $4$, $2$ mod $4$, $3$ mod $4$, twice. Therefore, the probability of any given column is equal. We take everything modulo $5$ now. We have $1, 2, 3, 1, 2, 4$ mod $5$. $1$ and $2$ are different colored squares, and $3$ and $4$ are also different colored squares. Therefore, every single one of them has the same probability. </p><p>Therefore, our probability for a white square or a shaded square is equal, and therefore, the probability the square is shaded $\\boxed {(C)\\frac {1}{2}}$</p><p>~Arcticturn</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2007 AMC 10B - number_theory problem involving least common multiple and number theory. Students need to understand number_theory concepts, work with lcm principles, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills and understanding of lcm."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_20",
+      "question": "<p>A set of $25$ square blocks is arranged into a $5 \\times 5$ square. How many different combinations of $3$ blocks can be selected from that set so that no two are in the same row or column?</p>",
+      "solutions": [
+        "<p>There are $25$ ways to choose the first square. The four remaining squares in its row and column and the square you chose exclude nine squares from being chosen next time.</p><p>There are $16$ remaining blocks to be chosen for the second square. The three remaining spaces in its row and column and the square you chose must be excluded from being chosen next time.</p><p>Finally, the last square has $9$ remaining choices.</p><p>The number of ways to choose $3$ squares is $25 \\cdot 16 \\cdot 9,$ but the order in which you chose the squares does not matter as the blocks are indistinguishable, so we divide by $3!$.</p><p>\\[\\frac{25 \\cdot 16 \\cdot 9}{3 \\cdot 2 \\cdot 1} = 25 \\cdot 8 \\cdot 3 = 100 \\cdot 6 = \\boxed{\\mathrm{(C) \\ } 600}\\]</p>",
+        "<p>Once we choose our three squares, we will have occupied three separate columns $(A, B, C)$ and three separate rows. There are ${5 \\choose 3} \\times {5 \\choose 3}$ ways to choose these rows and columns. </p><p>There are $3$ ways to assign the square in column $A$ to a row, $2$ ways to assign the square in column $B$ to one of the remaining two rows, and poor square in column $C$ doesn't get to choose. $:($</p><p>In total, we have \\[{5 \\choose 3} \\times {5 \\choose 3} \\times 3!\\] which totals out to $\\boxed{\\mathrm{(C) \\ } 600}$.</p><p>~HappyHuman</p>",
+        "<p>We know that there are $\\binom{25}{3}=2300$ ways to choose three blocks. However, the restriction clearly limits the number of ways we can choose our blocks. Hence, only $\\text{(A)}$, $\\text{(B)}$, or $\\text{(C)}$ could be the correct answer. Clearly, there are more than $125$ ways, thus yielding $\\boxed{\\text{(C)} 600}$ ways.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2007 AMC 10B - algebra problem involving fraction operations and ratios. Students need to understand algebra concepts, work with fractions principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of fractions."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_21",
+      "question": "<p>Right $\\triangle ABC$ has $AB=3, BC=4,$ and $AC=5.$ Square $XYZW$ is inscribed in $\\triangle ABC$ with $X$ and $Y$ on $\\overline{AC}, W$ on $\\overline{AB},$ and $Z$ on $\\overline{BC}.$ What is the side length of the square?</p>",
+      "solutions": [
+        "<p>There are lots of similar triangles in the diagram, but we will only use $\\triangle WBZ \\sim \\triangle ABC.$ If $h$ is the altitude from $B$ to $AC$ and $s$ is the sidelength of the square, then $h-s$ is the altitude from $B$ to $WZ.$ By similar triangles,\\begin{align*} \\frac{h-s}{h}&=\\frac{s}{5}\\\\ 5(h-s)&=hs\\\\ 5h-5s&=hs\\\\ 5h&=s(h+5)\\\\ s&=\\frac{5h}{h+5} \\end{align*}</p><p>Find the length of the altitude of $\\triangle ABC.$ Since it is a right triangle, the area of $\\triangle ABC$ is $\\frac{1}{2}(3)(4) = 6.$</p><p>The area can also be expressed as $\\frac{1}{2}(5)(h),$ so $\\frac{5}{2}h=6 \\longrightarrow h=2.4.$</p><p>Substitute back into $s.$</p><p>\\[s=\\frac{5h}{h+5} = \\frac{12}{7.4} = \\boxed{\\mathrm{(B) \\ } \\frac{60}{37}}\\]</p>",
+        "<p>Let $l$ be the side length of the inscribed square. Note that $\\triangle ZYC \\sim \\triangle WBZ \\sim \\triangle ABC$.</p><p>Then we can setup the following ratios:</p><p>\\[\\frac{CZ}{l} = \\frac{5}{3} \\rightarrow CZ = \\frac{5}{3}l\\]\\[\\frac{ZB}{l} = \\frac{4}{5} \\rightarrow ZB = \\frac{4}{5}l\\]</p><p>But then $\\frac{5}{3}l+\\frac{4}{5}l = CZ+ZB = CB = 4 \\longrightarrow \\frac{37}{15}l=4 \\longrightarrow l = \\frac{60}{37} \\Longrightarrow \\boxed{\\mathrm{(B)}\\frac{60}{37}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2007 AMC 10B - probability problem involving independent probability events and calculations. Students need to understand probability concepts, work with independent_events principles, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills and understanding of independent_events."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_22",
+      "question": "<p>A player chooses one of the numbers $1$ through $4$. After the choice has been made, two regular four-sided (tetrahedral) dice are rolled, with the sides of the dice numbered $1$ through $4.$ If the number chosen appears on the bottom of exactly one die after it has been rolled, then the player wins $1$ dollar. If the number chosen appears on the bottom of both of the dice, then the player wins $2$ dollars. If the number chosen does not appear on the bottom of either of the dice, the player loses $1$ dollar. What is the expected return to the player, in dollars, for one roll of the dice?</p>",
+      "solutions": [
+        "<p>There are $2 \\cdot 3 \\cdot 1 = 6$ ways for your number to show up once, $1 \\cdot 1 = 1$ way for your number to show up twice, and $3 \\cdot 3 = 9$ ways for your number to not show up at all. Think of this as a set of sixteen numbers with six $1$'s, one $2$, and nine $-1$'s. The average of this set is the expected return to the player.\\[\\frac{6(1)+1(2)-9(1)}{16} = \\frac{6+2-9}{16} = \\boxed{\\mathrm{(B) \\ } -\\frac{1}{16}}\\]</p>",
+        "<p>We approach this through casework. We have a $\\frac{1}{4} \\cdot \\frac{3}{4} \\cdot 2$ chance of earning $1$ dollar. We have a $\\frac{1}{4} \\cdot \\frac{1}{4}$ chance of earning $2$ dollars, and a $\\frac{3}{4} \\cdot \\frac{3}{4}$ chance of losing $1$ dollar. Thus, our final answer is $\\frac{3}{8} \\cdot 1 + \\frac{1}{16} \\cdot 2 + \\frac{9}{16} \\cdot -1 = \\boxed{\\mathrm{(B) \\ } -\\frac{1}{16}}$ -SuperJJ</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2007 AMC 10B - probability problem involving conditional probability and probability ratios. Students need to understand probability concepts, work with conditional_probability principles, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills and understanding of conditional_probability."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_23",
+      "question": "<p>A pyramid with a square base is cut by a plane that is parallel to its base and $2$ units from the base. The surface area of the smaller pyramid that is cut from the top is half the surface area of the original pyramid. What is the altitude of the original pyramid?</p>",
+      "solutions": [
+        "<p>Since the two pyramids are similar, the ratio of the altitudes is the square root of the ratio of the surface areas.</p><p>If $a$ is the altitude of the larger pyramid, then $a-2$ is the altitude of the smaller pyramid.</p><p>\\[\\frac{a}{a-2}=\\sqrt{\\frac21}=\\frac{\\sqrt{2}}{1} \\longrightarrow a= a\\sqrt{2} - 2\\sqrt{2} \\longrightarrow a\\sqrt{2}-a=2\\sqrt{2}\\]\\[a=\\frac{2\\sqrt{2}}{\\sqrt{2}-1} = \\frac{4+2\\sqrt{2}}{2-1} = \\boxed{\\textbf{(E) \\ } 4+2\\sqrt{2}}.\\]</p>",
+        "<p>Instead of actually solving this problem, we can play with the answers. The ratios of the altitudes squared is the ratio of the surface areas, so the answer choice has to be larger than $4$ because an original height of $4$ would give the ratio $1:4$ for the surface area and only choice $E$ is larger than $4$, so the answer is $E$.</p>",
+        "<p>Like in Solution 1, we used the fact that the ratio of surface area is the ratio of side lengths <i>squared</i>. However, with this, we can go two ways. </p><p>1. (Solution 1) The ratio of the surface area of the large pyramid to the surface area of the small pyramid is $\\frac 21$, so the ratio of their altitudes is $\\sqrt{\\frac21}=\\frac{\\sqrt{2}}{1}=\\sqrt2$. </p><p>2. (Another way) The ratio of the surface area of the small pyramid to the surface area of the large pyramid is $\\frac 12$, so the ratio of their altitudes is $\\sqrt{\\frac12}=\\frac{1}{\\sqrt2}=\\frac{\\sqrt2}{2}$. </p><p><br/>Then, we can set up variables based on these ratios and solve for the variable, hence getting the altitude of the large triangle, or $\\boxed{\\textbf{(E)}~4+2\\sqrt 2}.$</p><p>~BakedPotato66</p>",
+        "<p>The ratio of the surface area of the smaller pyramid to the surface area of the larger pyramid is the same as the ratio of the area of the square face of the smaller pyramid to that of the larger pyramid. We take the cross-section through the apex of the larger pyramid, revealing a triangle with a line segment parallel to its base passing through it. Suppose the triangle has height $h$ (the original pyramid has altitude $h$) and base $s$ (the original pyramid's square base has side length $s$). Suppose further that the length of the line segment going through the triangle is $s_2$ (the smaller pyramid's square base has side length $s_2$). By similar triangles, we have the ratio $\\frac{s}{h} = \\frac{s_2}{h-2} \\implies  s_2 = \\frac{s(h-2)}{h}$. Then we have $s_2^2 = \\frac{1}{2}s^2 \\implies (\\frac{s(h-2)}{h})^2 = \\frac{1}{2}s^2 \\implies (h-2)^2 = \\frac{1}{2}h^2$. Solving this equation, we get the solutions $h = 4 + 2\\sqrt{2}$ and $h = 4 - 2\\sqrt{2}$. However, with the second solution, the smaller pyramid would have a height that is two less than this, which would result in a negative number ($2 - 2\\sqrt{2}$). Thus, we discard the second solution, and our only solution is $\\boxed{\\textbf{(E)}~4 + 2\\sqrt{2}}$.</p><p>~ <a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2007 AMC 10B - geometry problem involving distance calculations and coordinate geometry. Students need to understand geometry concepts, work with distance principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of distance."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_24",
+      "question": "<p>Let $n$ denote the smallest positive integer that is divisible by both $4$ and $9,$ and whose base-$10$ representation consists of only $4$'s and $9$'s, with at least one of each. What are the last four digits of $n?$</p>",
+      "solutions": [
+        "<p>For a number to be divisible by $4,$ the last two digits have to be divisible by $4.$ That means the last two digits of this integer must be $4.$</p><p>For a number to be divisible by $9,$ the sum of all the digits must be divisible by $9.$ The only way to make this happen is with nine $4$'s. However, we also need one $9.$</p><p>The smallest integer that meets all these conditions is $4444444944$. The last four digits are $\\boxed{\\mathrm{(C) \\ } 4944}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2007 AMC 10B - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2007_10b_25",
+      "question": "<p>How many pairs of positive integers $(a,b)$ are there such that $a$ and $b$ have no common factors greater than $1$ and:</p><p>\\[\\frac{a}{b} + \\frac{14b}{9a}\\]</p><p>is an integer?</p>",
+      "solutions": [
+        "<p>Combining the fraction, $\\frac{9a^2 + 14b^2}{9ab}$ must be an integer.</p><p>Since the denominator contains a factor of $9$, $9 | 9a^2 + 14b^2 \\quad\\Longrightarrow\\quad 9 | b^2 \\quad\\Longrightarrow\\quad 3 | b$</p><p>Since $b = 3n$ for some positive integer $n$, we can rewrite the fraction (divide by $9$ on both numerator and denominator) as $\\frac{a^2 + 14n^2}{3an}$</p><p>Since the denominator now contains a factor of $n$, we get $n | a^2 + 14n^2 \\quad\\Longrightarrow\\quad n | a^2$.</p><p>But since $1=\\gcd(a,b)=\\gcd(a,3n)=\\gcd(a,n)$, we must have $n=1$, and thus $b=3$.</p><p>For $b=3$ the original fraction simplifies to $\\frac{a^2 + 14}{3a}$.</p><p>For that to be an integer, $a$ must be a factor of $14$, and therefore we must have $a\\in\\{1,2,7,14\\}$. Each of these values does indeed yield an integer.</p><p>Thus there are four solutions: $(1,3)$, $(2,3)$, $(7,3)$, $(14,3)$ and the answer is $\\mathrm{(A)}$</p><p>-Or we can see that the smallest choice is $4$, and just go with it after getting $a\\in\\{1,2,7,14\\}.$</p>",
+        "<p>Let's assume that $\\frac{a}{b} + \\frac{14b}{9a} = m$. We get</p><p>$9a^2 - 9mab + 14b^2 = 0$</p><p>Factoring this, we get $4$ equations:</p><p>$(3a-2b)(3a-7b) = 0$</p><p>$(3a-b)(3a-14b) = 0$</p><p>$(a-2b)(9a-7b) = 0$</p><p>$(a-b)(9a-14b) = 0$</p><p>(It's all negative, because if we had positive signs, $a$ would be the opposite sign of $b$)</p><p>Now we look at these, and see that:</p><p>$3a=2b$, $3a=7b$</p><p>$3a=b$, $3a=14b$</p><p>$a=2b$, $9a=7b$</p><p>$a=b$, $9a=14b$</p><p>This gives us $8$ solutions, but we note that the middle term must be divisible by $-9$.</p><p>For example, in the case </p><p>$(a-2b)(9a-7b)$, the middle term is $-25ab$, which is not equal to $-9m$ for any integer $m$.</p><p>Apply similar reasoning to the fourth equation. This eliminates four solutions out of the above eight listed, giving us $4$ solutions total $\\mathrm {(A)}$</p>",
+        "<p>Let $u = \\frac{a}{b}$. Then the given equation becomes $u + \\frac{14}{9u} = \\frac{9u^2 + 14}{9u}$.</p><p>Let's set this equal to some value, $k \\Rightarrow \\frac{9u^2 + 14}{9u} = k$.</p><p>Clearing the denominator and simplifying, we get a quadratic in terms of $u$:</p><p>$9u^2 - 9ku + 14 = 0 \\Rightarrow u = \\frac{9k \\pm \\sqrt{(9k)^2 - 504}}{18}$</p><p>Since $a$ and $b$ are integers, $u$ is a rational number. This means that $\\sqrt{(9k)^2 - 504}$ is an integer.</p><p>Let $\\sqrt{(9k)^2 - 504} = x$. Squaring and rearranging yields:</p><p>$(9k)^2 - x^2 = 504$</p><p>$(9k+x)(9k-x) = 504$.</p><p>In order for both $x$ and $a$ to be an integer, $9k + x$ and $9k - x$ must both be odd or even. (This is easily proven using modular arithmetic.) In the case of this problem, both must be even. Let $9k + x = 2m$ and $9k - x = 2n$.</p><p>Then:</p><p>$2m \\cdot 2n = 504$</p><p>$mn = 126$.</p><p>Factoring $126$, we get $6$ pairs of numbers: $(1,126), (2,63), (3,42), (6,21), (7,18),$ and $(9,14)$.</p><p>Looking back at our equations for $m$ and $n$, we can solve for $k = \\frac{2m + 2n}{18} = \\frac{m+n}{9}$. Since $k$ is an integer, there are only $2$ pairs of $(m,n)$ that work: $(3,42)$ and $(6,21)$. This means that there are $2$ values of $k$ such that $u$ is an integer. But looking back at $u$ in terms of $k$, we have $\\pm$, meaning that there are $2$ values of $u$ for every $k$. Thus, the answer is $2 \\cdot 2 = 4 \\Rightarrow \\mathrm{(A)}$.</p>",
+        "<p>Rewriting the expression over a common denominator yields $\\frac{9a^2 + 14b^2}{9ab}$. This expression must be equal to some integer $m$.</p><p>Thus, $\\frac{9a^2 + 14b^2}{9ab} = m \\rightarrow 9a^2 + 14b^2 = 9abm$. Taking this $\\pmod{a}$ yields $14b^2 \\equiv 0\\pmod{a}$. Since $\\gcd(a,b)=1$, $14 \\equiv 0\\pmod{a}$. This implies that $a|14$ so $a = 1, 2, 7, 14$.</p><p>We can then take $9a^2 + 14b^2 = 9abm \\pmod{b}$ to get that $9 \\equiv 0 \\pmod{b}$. Thus $b = 1, 3, 9$.</p><p>However, taking $9a^2 + 14b^2 = 9abm \\pmod{3}$, $b^2 \\equiv 0\\pmod{3}$ so $b$ cannot equal 1.</p><p>Also, note that if $b = 9$, $\\frac{a}{b}+\\frac{14b}{9a} = \\frac{a}{9}+\\frac{14}{a}$. Since $a|14$, $\\frac{14}{a}$ will be an integer, but $\\frac{a}{9}$ will not be an integer since none of the possible values of $a$ are multiples of 9. Thus, $b$ cannot equal 9.</p><p>Thus, the only possible values of $b$ is 3, and $a$ can be 1, 2, 7, or 14. This yields 4 possible solutions, so the answer is $\\mathrm{(A)}$.</p>",
+        "<p>Rewriting $\\frac{a}{b} + \\frac{14b}{9a}$ over a common denominator gives $\\frac{9a^2 + 14b^2}{9ab}.$</p><p>Thus, we have $9 \\mid 9a^2 + 14b^2 \\Rightarrow  3 \\mid b.$</p><p>Next, we have $ab \\mid 9a^2+14b^2 \\Rightarrow  ab \\mid 14b^2 \\Rightarrow a \\mid 14b.$</p><p>Thus, $a \\in (1,2,7,14).$</p><p>Next, we have $b \\mid 9a^2 + 14b^2 \\Rightarrow b \\mid 9a^2 \\Rightarrow b \\mid 9.$</p><p>Thus, $b \\in (1,3,9).$</p><p>Now, we simply do casework on $b.$</p><p>Plugging in $b = 1,3$ and $9$ gives that there are $4$ total solutions for $(a,b).$</p><p>~coolmath2017</p>",
+        "<p>Let $\\frac{a}{b} = r.$ So $r + \\frac{14}{9r}=I$, where I is an integer. Algebraic manipulations yield: $r^2-Ir+\\frac{14}{9}=0$. The discriminant of this must be the square of a rational number, call this R. So $I^2-\\frac{56}{9}=R^2 \\longrightarrow I^2-R^2=(I-R)(I+R)=\\frac{56}{9}$. I is $\\frac{1}{2}$ the sum of $I-R$ and $I+R$. To have an integer sum, $I-R$ and $I+R$ must have the same denominator, namely 3. We proceed with casework.</p><p>Case 1. $I+R=56/3$, $I-R=1/3$. This yields $I=19/2$, which is not an integer. This case produces 0 solutions.</p><p>Case 2.$I+R=28/3$, $I-R=2/3$. This yields $I=5$. Substituting into our original equation yields: $r^2-5r+\\frac{14}{9}=0$. Factoring gives: $r=\\frac{1}{3}$, $r=\\frac{14}{3}$. This case produces 2 solutions, namely (1,3) and (14,3).</p><p>Case 3. $I+R=14/3$, $I-R=4/3$. This yields $I=3$. Substituting into our original equation yields: $r^2-3r+\\frac{14}{9}=0$. Factoring gives: $r=\\frac{2}{3}$, $r=\\frac{7}{3}$. This case produces 2 solutions, namely (2,3) and (7,3).</p><p>Case 4. $I+R=8/3$, $I-R=7/3$. This yields $I=5/2$, which is not an integer. This case produces 0 solutions.</p><p>Altogether, we have 4 solutions, so our answer is $\\boxed{(A)}$.</p><p>~Math4Life2020</p>",
+        "<p>Let $\\frac{a}{b} = x$ and $\\frac{14b}{9a} = y.$ Then for rational numbers $x,y$ we have $xy = \\frac{14}{9}$ and $x+y \\in \\mathbb{Z}.$ One can prove that $x$ and $y$ must both have the same denominator in order for their sum to be an integer. This denominator is $3$ meaning $b=3$ and $a$ is any factor of $14.$ This yields $\\boxed{(A) 4}$ solutions. ~ab2024</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2007 AMC 10B - geometry problem involving area calculations and geometric relationships. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "competition_info": {
+    "name": "2003_AMC_8",
+    "group": "AMC_8",
+    "year": 2003,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2003_8_1",
+      "question": "<p>Jamie counted the number of edges of a cube, Jimmy counted the numbers of corners, and Judy counted the number of faces. They then added the three numbers. What was the resulting sum?</p>",
+      "solutions": [
+        "<p>On a cube, there are $12$ edges, $8$ corners, and $6$ faces. Adding them up gets $12+8+6= \\boxed{\\mathrm{(E)}\\ 26}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polyhedra",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving counting edges, corners, and faces of a cube - fundamental 3D geometry concepts"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_2",
+      "question": "<p>Which of the following numbers has the smallest prime factor?</p>",
+      "solutions": [
+        "<p>The smallest prime factor is $2$, and since $58$ is the only multiple of $2$, the answer is $\\boxed{\\mathrm{(C)}\\ 58}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "prime_factorization",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem requiring identification of smallest prime factors of given numbers"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_3",
+      "question": "<p>A burger at Ricky C's weighs $120$ grams, of which $30$ grams are filler. What percent of the burger is not filler?</p>",
+      "solutions": [
+        "<p>There are $30$ grams of filler, so there are $120-30= 90$ grams that aren't filler. $\\frac{90}{120}=\\frac{3}{4}=\\boxed{\\mathrm{(D)}\\ 75\\%}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving finding what percent of a total is not filler"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_4",
+      "question": "<p>A group of children riding on bicycles and tricycles rode past Billy Bob's house. Billy Bob counted $7$ children and $19$ wheels. How many tricycles were there?</p>",
+      "solutions": [
+        "<p>If all the children were riding bicycles, there would be $2 \\times 7=14$ wheels. Each tricycle adds an extra wheel and $19-14=5$ extra wheels are needed, so there are $\\boxed{\\mathrm{(C)}\\ 5}$ tricycles.</p><p>Setting up an equation, we have $a+b=7$ children and $3a+2b=19$. Solving for the variables, we get, $a=\\boxed{\\mathrm{(C)}\\ 5}$ tricycles.</p><p>~AllezW</p>",
+        "<p>If all the children were riding bicycles, there would be $2 \\times 7=14$ wheels. Each tricycle adds an extra wheel and $19-14=5$ extra wheels are needed, so there are $\\boxed{\\mathrm{(C)}\\ 5}$ tricycles.</p>",
+        "<p>Setting up an equation, we have $a+b=7$ children and $3a+2b=19$. Solving for the variables, we get, $a=\\boxed{\\mathrm{(C)}\\ 5}$ tricycles.</p><p>~AllezW</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Word problem requiring setting up and solving a system of equations (bicycles vs tricycles)"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_5",
+      "question": "<p>If $20\\%$ of a number is $12$, what is $30\\%$ of the same number? </p>",
+      "solutions": [
+        "<p>$20\\%$ of a number is equal to $\\frac{1}{5}$ of that number. Let $n$=the number</p><p>$\\frac{1}{5}n = 12$ Multiply both sides by 5</p><p>$n = 60$</p><p>$30\\%$ of $n$ is equal to $\\frac{3}{10}n = \\frac{3}{10}\\cdot60 = 3\\cdot6 = \\boxed{\\textbf{(B)}18}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage problem requiring finding a number given one percentage and then finding another percentage of that number"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_6",
+      "question": "<p>Given the areas of the three squares in the figure, what is the area of the interior triangle?</p><p>[asy] draw((0,0)--(-5,12)--(7,17)--(12,5)--(17,5)--(17,0)--(12,0)--(12,-12)--(0,-12)--(0,0)--(12,5)--(12,0)--cycle,linewidth(1)); label(\"$25$\",(14.5,1),N); label(\"$144$\",(6,-7.5),N); label(\"$169$\",(3.5,7),N); [/asy]</p>",
+      "solutions": [
+        "<p>The sides of the squares are $5, 12$ and $13$ for the square with area $25, 144$ and $169$, respectively. The legs of the interior triangle are $5$ and $12$, so the area is $\\frac{5 \\times 12}{2}=\\boxed{\\mathrm{(B)}\\ 30}$</p><p>(note: the ab/2 area method only works because the converse Pythagorean theorem holds for the triple [$5$, $12$, $13$]. Therefore, we can find the solution this way because we know the triangle is right ~megaboy6679)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving Pythagorean triples and finding area of a right triangle using given square areas"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_7",
+      "question": "<p>Blake and Jenny each took four $100$-point tests. Blake averaged $78$ on the four tests. Jenny scored $10$ points higher than Blake on the first test, $10$ points lower than him on the second test, and $20$ points higher on both the third and fourth tests. What is the difference between Jenny's average and Blake's average on these four tests?</p>",
+      "solutions": [
+        "<p>Blake scored a total of $4 \\times 78=312$ points. Jenny scored $10-10+20+20=40$ points higher than Blake, so her average is $\\frac{312+40}{4}=88$. the difference is $88-78=\\boxed{\\mathrm{(A)}\\ 10}$.</p><p>The total point difference between Blake's and Jenny's scores is $10-10+20+20=40$. The average of it is $\\frac{40}{4}=\\boxed{\\mathrm{(A)}\\ 10}$.</p>",
+        "<p>Blake scored a total of $4 \\times 78=312$ points. Jenny scored $10-10+20+20=40$ points higher than Blake, so her average is $\\frac{312+40}{4}=88$. the difference is $88-78=\\boxed{\\mathrm{(A)}\\ 10}$.</p>",
+        "<p>The total point difference between Blake's and Jenny's scores is $10-10+20+20=40$. The average of it is $\\frac{40}{4}=\\boxed{\\mathrm{(A)}\\ 10}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "statistics",
+          "sub_category": "averages",
+          "confidence": 0.95,
+          "reasoning": "Statistics problem involving calculating averages and finding differences between test scores"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_8",
+      "question": "<p>Problems 8, 9 and 10 use the data found in the accompanying paragraph and figures</p><p>Four friends, Art, Roger, Paul and Trisha, bake cookies, and all cookies have the same thickness. The shapes of the cookies differ, as shown.</p><p>$\\circ$ Art's cookies are trapezoids. [asy] size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(5,0)--(5,3)--(2,3)--cycle); draw(rightanglemark((5,3), (5,0), origin)); label(\"5 in\", (2.5,0), S); label(\"3 in\", (5,1.5), E); label(\"3 in\", (3.5,3), N); [/asy]</p><p>$\\circ$ Roger's cookies are rectangles.[asy] size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(4,0)--(4,2)--(0,2)--cycle); draw(rightanglemark((4,2), (4,0), origin)); draw(rightanglemark((0,2), origin, (4,0))); label(\"4 in\", (2,0), S); label(\"2 in\", (4,1), E); [/asy]</p><p>$\\circ$ Paul's cookies are parallelograms.[asy] size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(3,0)--(2.5,2)--(-0.5,2)--cycle); draw((2.5,2)--(2.5,0), dashed); draw(rightanglemark((2.5,2),(2.5,0), origin)); label(\"3 in\", (1.5,0), S); label(\"2 in\", (2.5,1), W); [/asy]</p><p>$\\circ$ Trisha's cookies are triangles.[asy] size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(3,0)--(3,4)--cycle); draw(rightanglemark((3,4),(3,0), origin)); label(\"3 in\", (1.5,0), S); label(\"4 in\", (3,2), E); [/asy]</p><p>Each friend uses the same amount of dough, and Art makes exactly 12 cookies. Who gets the fewest cookies from one batch of cookie dough?</p>",
+      "solutions": [
+        "<p>Out of all the cookies, Art's has an area of $12 \\text{ in}^2$, which was the greatest area out of all the cookies' areas. Roger's cookie had an area of $8 \\text{ in} ^2$, and both Paul and Trisha's cookies had an area of $6 \\text{ in}^2$. This means $\\boxed{\\textbf{(A)}\\ \\text{Art}}$ makes the fewest cookies, since his cookie area is the greatest. The answer is not that there is a tie between Paul and Trisha because they can make the most cookies with a given amount of cookie dough, not the least.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem comparing areas of different shapes (trapezoids, rectangles, parallelograms, triangles) to determine which makes fewest cookies"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_9",
+      "question": "<p>Problems 8, 9 and 10 use the data found in the accompanying paragraph and figures</p><p>Four friends, Art, Roger, Paul and Trisha, bake cookies, and all cookies have the same thickness. The shapes of the cookies differ, as shown.</p><p>$\\circ$ Art's cookies are trapezoids: [asy]size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(5,0)--(5,3)--(2,3)--cycle); draw(rightanglemark((5,3), (5,0), origin)); label(\"5 in\", (2.5,0), S); label(\"3 in\", (5,1.5), E); label(\"3 in\", (3.5,3), N);[/asy]</p><p>$\\circ$ Roger's cookies are rectangles: [asy]size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(4,0)--(4,2)--(0,2)--cycle); draw(rightanglemark((4,2), (4,0), origin)); draw(rightanglemark((0,2), origin, (4,0))); label(\"4 in\", (2,0), S); label(\"2 in\", (4,1), E);[/asy]</p><p>$\\circ$ Paul's cookies are parallelograms: [asy]size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(3,0)--(2.5,2)--(-0.5,2)--cycle); draw((2.5,2)--(2.5,0), dashed); draw(rightanglemark((2.5,2),(2.5,0), origin)); label(\"3 in\", (1.5,0), S); label(\"2 in\", (2.5,1), W);[/asy]</p><p>$\\circ$ Trisha's cookies are triangles: [asy]size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(3,0)--(3,4)--cycle); draw(rightanglemark((3,4),(3,0), origin)); label(\"3 in\", (1.5,0), S); label(\"4 in\", (3,2), E);[/asy]</p><p>Each friend uses the same amount of dough, and Art makes exactly $12$ cookies. Art's cookies sell for $60$ cents each. To earn the same amount from a single batch, how much should one of Roger's cookies cost in cents?</p>",
+      "solutions": [
+        "<p>The area of one of Art's cookies is $3 \\cdot 3 + \\frac{2 \\cdot 3}{2}=9+3=12$. As he has $12$ cookies in a batch, the amount of dough each person used is $12 \\cdot 12=144$. Roger's cookies have an area of $\\frac{144}{2 \\cdot 4}=\\frac{144}{8}= 18$ cookies in a batch. In total, the amount of money Art will earn is $12 \\cdot 60=720$. Thus, the amount Roger would need to charge per cookie is $\\frac{720}{18}=\\boxed{\\textbf{(C)}\\ 40}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving area calculations and proportional reasoning to determine cookie pricing"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_10",
+      "question": "<p>Problems 8, 9 and 10 use the data found in the accompanying paragraph and figures</p><p>Four friends, Art, Roger, Paul and Trisha, bake cookies, and all cookies have the same thickness. The shapes of the cookies differ, as shown.</p><p>$\\circ$ Art's cookies are trapezoids: [asy]size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(5,0)--(5,3)--(2,3)--cycle); draw(rightanglemark((5,3), (5,0), origin)); label(\"5 in\", (2.5,0), S); label(\"3 in\", (5,1.5), E); label(\"3 in\", (3.5,3), N);[/asy]</p><p>$\\circ$ Roger's cookies are rectangles: [asy]size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(4,0)--(4,2)--(0,2)--cycle); draw(rightanglemark((4,2), (4,0), origin)); draw(rightanglemark((0,2), origin, (4,0))); label(\"4 in\", (2,0), S); label(\"2 in\", (4,1), E);[/asy]</p><p>$\\circ$ Paul's cookies are parallelograms: [asy]size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(3,0)--(2.5,2)--(-0.5,2)--cycle); draw((2.5,2)--(2.5,0), dashed); draw(rightanglemark((2.5,2),(2.5,0), origin)); label(\"3 in\", (1.5,0), S); label(\"2 in\", (2.5,1), W);[/asy]</p><p>$\\circ$ Trisha's cookies are triangles: [asy]size(80);defaultpen(linewidth(0.8));defaultpen(fontsize(8)); draw(origin--(3,0)--(3,4)--cycle); draw(rightanglemark((3,4),(3,0), origin)); label(\"3 in\", (1.5,0), S); label(\"4 in\", (3,2), E);[/asy]</p><p>How many cookies will be in one batch of Trisha's cookies?</p>",
+      "solutions": [
+        "<p>Art's cookies have areas of $3 \\cdot 3 + \\frac{2 \\cdot 3}{2}=9+3=12$. There are 12 cookies in one of Art's batches so everyone used $12 \\cdot 12=144 \\text{ in}^2$ of dough. Trisha's cookies have an area of $\\frac{3 \\cdot 4}{2}=6$ so she has $\\frac{144}{6}=\\boxed{\\textbf{(E)}\\ 24}$ cookies per batch.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem calculating how many cookies can be made given area constraints and proportional reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_11",
+      "question": "<p>Business is a little slow at Lou's Fine Shoes, so Lou decides to have asale. On Friday, Lou increases all of Thursday's prices by $10$ percent. Over theweekend, Lou advertises the sale: \"Ten percent off the listed price. Salestarts Monday.\" How much does a pair of shoes cost on Monday thatcost $40$ dollars on Thursday?</p>",
+      "solutions": [
+        "<p>On Friday, the shoes would cost $40 \\cdot 1.1= 44$ dollars. Then on Monday, the shoes would cost $44- \\frac{44}{10}=44-4.4=\\boxed{\\textbf{(B)}\\ 39.60}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage problem involving price increases and decreases to find final cost"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_12",
+      "question": "<p>When a fair six-sided dice is tossed on a table top, the bottom face cannot be seen. What is the probability that the product of the faces that can be seen is divisible by $6$?</p>",
+      "solutions": [
+        "<p>We have six cases: each different case, every one where a different number cannot be seen. The rolls that omit numbers one through five are all something times six: an example would be where the number you cannot see is one, so the product should be 2 x 3 x 4 x 5 x 6, and so product should be divisible by six. The roll that omits six on the other hand is 1 x 2 x 3 x 4 x 5, which has 2 x 3, also equal to six. We can see that all of them have a factor of 6 and therefore are divisible by six, so the solution should be $\\textbf{(E)}\\ 1$.</p><p>These problems are copyrighted \u00a9 by the <a class=\"external text\" href=\"https://www.maa.org\" rel=\"nofollow\">Mathematical Association of America</a>, as part of the <a class=\"external text\" href=\"https://maa.org/student-programs/amc/\" rel=\"nofollow\">American Mathematics Competitions</a>. <a class=\"image\" href=\"/wiki/index.php/File:AMC_logo.png\">AMC logo.png</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving dice and determining divisibility of products of visible faces"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_13",
+      "question": "<p>Fourteen white cubes are put together to form the figure on the right. The complete surface of the figure, including the bottom, is painted red. The figure is then separated into individual cubes. How many of the individual cubes have exactly four red faces</p><p>[asy] import three; defaultpen(linewidth(0.8)); real r=0.5; currentprojection=orthographic(3/4,8/15,7/15); draw(unitcube, white, thick(), nolight); draw(shift(1,0,0)*unitcube, white, thick(), nolight); draw(shift(2,0,0)*unitcube, white, thick(), nolight); draw(shift(0,0,1)*unitcube, white, thick(), nolight); draw(shift(2,0,1)*unitcube, white, thick(), nolight); draw(shift(0,1,0)*unitcube, white, thick(), nolight); draw(shift(2,1,0)*unitcube, white, thick(), nolight); draw(shift(0,2,0)*unitcube, white, thick(), nolight); draw(shift(2,2,0)*unitcube, white, thick(), nolight); draw(shift(0,3,0)*unitcube, white, thick(), nolight); draw(shift(0,3,1)*unitcube, white, thick(), nolight); draw(shift(1,3,0)*unitcube, white, thick(), nolight); draw(shift(2,3,0)*unitcube, white, thick(), nolight); draw(shift(2,3,1)*unitcube, white, thick(), nolight); [/asy]</p>",
+      "solutions": [
+        "<p>This is the number cubes that are adjacent to another cube on exactly two sides. The bottom corner cubes are connected on three sides, and the top corner cubes are connected on one. The number we are looking for is the number of middle cubes, which is $\\boxed{\\textbf{(B)}\\ 6}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polyhedra",
+          "confidence": 0.95,
+          "reasoning": "3D geometry problem involving counting faces of cubes after painting and separating a composite figure"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_14",
+      "question": "<p>In this addition problem, each letter stands for a different digit.</p><p>$\\setlength{\\tabcolsep}{0.5mm}\\begin{array}{cccc}&T & W & O\\\\ +&T & W & O\\\\ \\hline F& O & U & R\\end{array}$</p><p>If T = 7 and the letter O represents an even number, what is the only possible value for W?</p>",
+      "solutions": [
+        "<p>Since both T's are 7, then O has to equal 4, because 7 + 7 = 14. Then, F has to equal 1. To get R, we do 4 + 4 (since O = 4) to get R = 8. The value for W then has to be a number less than 5, otherwise it will change the value of O, and can't be a number that has already been used, like 4 or 1. The only other possibilities are 2 and 3. 2 doesn't work because it makes U = 4, which is what O already equals. So, the only possible value of W is 3 $\\boxed{\\text{D}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "cryptarithmetic",
+          "confidence": 0.95,
+          "reasoning": "Cryptarithmetic problem involving letter substitution and logical deduction to find digit values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_15",
+      "question": "<p>A figure is constructed from unit cubes. Each cube shares at least one face with another cube. What is the minimum number of cubes needed to build a figure with the front and side views shown?</p><p>[asy] defaultpen(linewidth(0.8)); path p=unitsquare; draw(p^^shift(0,1)*p^^shift(1,0)*p); draw(shift(4,0)*p^^shift(5,0)*p^^shift(5,1)*p); label(\"FRONT\", (1,0), S); label(\"SIDE\", (5,0), S); [/asy]</p>",
+      "solutions": [
+        "<p>In order to minimize the amount of cubes needed, we must match up as many squares of our given figures with each other to make different sides of the same cube. One example of the solution with $\\boxed{\\textbf{(B)}\\ 4}$ cubes. Notice the corner cube cannot be removed for a figure of 3 cubes because at least one face of a cube must be touching another face.</p><p>[asy] import three; defaultpen(linewidth(0.8)); real r=0.5; currentprojection=orthographic(3/4,8/15,7/15); draw(unitcube, white, thick(), nolight); draw(shift(1,-1,0)*unitcube, white, thick(), nolight); draw(shift(1,0,0)*unitcube, white, thick(), nolight); draw(shift(1,0,1)*unitcube, white, thick(), nolight);[/asy]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polyhedra",
+          "confidence": 0.95,
+          "reasoning": "3D geometry problem requiring visualization of minimum cubes needed to create given front and side views"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_16",
+      "question": "<p>Ali, Bonnie, Carlo, and Dianna are going to drive together to a nearby theme park. The car they are using has $4$ seats: $1$ Driver seat, $1$ front passenger seat, and $2$ back passenger seats. Bonnie and Carlo are the only ones who know how to drive the car. How many possible seating arrangements are there?</p>",
+      "solutions": [
+        "<p>There are only $2$ people who can go in the driver's seat--Bonnie and Carlo. Any of the $3$ remaining people can go in the front passenger seat. There are $2$ people who can go in the first back passenger seat, and the remaining person must go in the last seat. Thus, there are $2\\cdot3\\cdot2$ or $12$ ways. The answer is then $\\boxed{\\textbf{(D)}\\ 12}$.</p>",
+        "<p>If there weren't any extra requirements, there would be 24 combinations. However, there are only 2, which is half of 4, ways to put the people for the first seat by restriction. Therefore, half of 24 is $\\boxed{\\textbf{(D)}\\ 12}$.</p><p>Solution by <a href=\"/wiki/index.php/User:ILoveMath31415926535\" title=\"User:ILoveMath31415926535\">ILoveMath31415926535</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Combinatorics problem involving counting possible seating arrangements with constraints on who can drive"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_17",
+      "question": "<p>The six children listed below are from two families of three siblings each. Each child has blue or brown eyes and black or blond hair. Children from the same family have at least one of these characteristics in common. Which two children are Jim's siblings?</p><p>\\[\\begin{array}{c|c|c}\\text{Child}&\\text{Eye Color}&\\text{Hair Color}\\\\ \\hline\\text{Benjamin}&\\text{Blue}&\\text{Black}\\\\ \\hline\\text{Jim}&\\text{Brown}&\\text{Blonde}\\\\ \\hline\\text{Nadeen}&\\text{Brown}&\\text{Black}\\\\ \\hline\\text{Austin}&\\text{Blue}&\\text{Blonde}\\\\ \\hline\\text{Tevyn}&\\text{Blue}&\\text{Black}\\\\ \\hline\\text{Sue}&\\text{Blue}&\\text{Blonde}\\\\ \\hline\\end{array}\\]</p><p>$\\textbf{(E)}\\ \\text{Austin and Sue}$</p>",
+      "solutions": [
+        "<p>Jim has brown eyes and blonde hair. If you look for anybody who has brown eyes <b>or</b> blonde hair, you find that Nadeen, Austin, and Sue are Jim's possible siblings. However, the children have at least one common characteristics. Since Austin and Sue both have blonde hair, Nadeen is ruled out and therefore $\\boxed{\\textbf{(E)}\\ \\text{Austin and Sue}}$ are his siblings. You can also see that in the hair color column, there are three black haired people and three blond haired people. Since Jim has blond hair, all his siblings must be the other two with blond hair.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem requiring deductive reasoning to determine family relationships based on shared characteristics"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_18",
+      "question": "<p>Each of the twenty dots on the graph below represents one of Sarah's classmates. Classmates who are friends are connected with a line segment. For her birthday party, Sarah is inviting only the following: all of her friends and all of those classmates who are friends with at least one of her friends. How many classmates will not be invited to Sarah's party?[asy]/* AMC8 2003 #18 Problem */ pair a=(102,256), b=(68,131), c=(162,101), d=(134,150); pair e=(269,105), f=(359,104), g=(303,12), h=(579,211); pair i=(534, 342), j=(442,432), k=(374,484), l=(278,501); pair m=(282,411), n=(147,451), o=(103,437), p=(31,373); pair q=(419,175), r=(462,209), s=(477,288), t=(443,358); pair oval=(282,303); draw(l--m--n--cycle); draw(p--oval); draw(o--oval); draw(b--d--oval); draw(c--d--e--oval); draw(e--f--g--h--i--j--oval); draw(k--oval); draw(q--oval); draw(s--oval); draw(r--s--t--oval); dot(a); dot(b); dot(c); dot(d); dot(e); dot(f); dot(g); dot(h); dot(i); dot(j); dot(k); dot(l); dot(m); dot(n); dot(o); dot(p); dot(q); dot(r); dot(s); dot(t); filldraw(yscale(.5)*Circle((282,606),80),white,black); label(scale(0.75)*\"Sarah\", oval);[/asy]</p>",
+      "solutions": [
+        "<p>There are $3$ people who are friends with only each other who won't be invited, plus $1$ person who has no friends, and $2$ people who are friends of friends of friends who won\u2019t be invited. So the answer is $\\boxed{\\textbf{(D)}\\ 6}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "graph_theory",
+          "sub_category": "connectivity",
+          "confidence": 0.95,
+          "reasoning": "Graph theory problem involving friendship connections and determining who gets invited to a party based on connectivity"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_19",
+      "question": "<p>How many integers between 1000 and 2000 have all three of the numbers 15, 20, and 25 as factors?</p>",
+      "solutions": [
+        "<p>Find the least common multiple of $15, 20, 25$ by turning the numbers into their prime factorization. \\[15 = 3 * 5, 20 = 2^2 * 5, 25 = 5^2\\] Gather all necessary multiples $3, 2^2, 5^2$ when multiplied gets $300$. The multiples of $300 - 300, 600, 900, 1200, 1500, 1800, 2100$. The number of multiples between 1000 and 2000 is $\\boxed{\\textbf{(C)}\\ 3}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving finding least common multiple and counting multiples in a range"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_20",
+      "question": "<p>What is the measure of the acute angle formed by the hands of the clock at 4:20 PM?</p>",
+      "solutions": [
+        "<p>Imagine the clock as a circle. The minute hand will be at the 4 at 20 minutes past the hour. The central angle formed between $4$ and $5$ is $30$ degrees (since it is 1/12 of a full circle, 360). By $4:20$, the hour hand would have moved $\\frac{1}{3}$ way from 4 to 5 since $\\frac{20}{60}$ is reducible to $\\frac{1}{3}$. One third of the way from 4 to 5 is one third of 30 degrees, which is 10 degrees past the 4. Recall that the minute hand is at the 4, so the angle between them is $\\boxed{(D)  10}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "angles",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving clock angles and calculating the measure of the acute angle between clock hands"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_21",
+      "question": "<p>The area of trapezoid $ABCD$ is $164\\text{ cm}^2$. The altitude is 8 cm, $AB$ is 10 cm, and $CD$ is 17 cm. What is $BC$, in centimeters?</p><p>[asy]/* AMC8 2003 #21 Problem */ size(4inch,2inch); draw((0,0)--(31,0)--(16,8)--(6,8)--cycle); draw((11,8)--(11,0), linetype(\"8 4\")); draw((11,1)--(12,1)--(12,0)); label(\"$A$\", (0,0), SW); label(\"$D$\", (31,0), SE); label(\"$B$\", (6,8), NW); label(\"$C$\", (16,8), NE); label(\"10\", (3,5), W); label(\"8\", (11,4), E); label(\"17\", (22.5,5), E);[/asy]</p>",
+      "solutions": [
+        "<p>Using the formula for the area of a trapezoid, we have $164=8(\\frac{BC+AD}{2})$. Thus $BC+AD=41$. Drop perpendiculars from $B$ to $AD$ and from $C$ to $AD$ and let them hit $AD$ at $E$ and $F$ respectively. Note that each of these perpendiculars has length $8$. From the Pythagorean Theorem, $AE=6$ and $DF=15$ thus $AD=BC+21$. Substituting back into our original equation we have $BC+BC+21=41$ thus $BC=\\boxed{\\text{(B)}\\ 10}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "trapezoids",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving trapezoid area, Pythagorean theorem, and solving for missing side length"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_22",
+      "question": "<p>The following figures are composed of squares and circles. Which figure has a shaded region with largest area?</p><p>[asy]/* AMC8 2003 #22 Problem */ size(3inch, 2inch); unitsize(1cm); pen outline = black+linewidth(1); filldraw((0,0)--(2,0)--(2,2)--(0,2)--cycle, mediumgrey, outline); filldraw(shift(3,0)*((0,0)--(2,0)--(2,2)--(0,2)--cycle), mediumgrey, outline); filldraw(Circle((7,1), 1), mediumgrey, black+linewidth(1)); filldraw(Circle((1,1), 1), white, outline); filldraw(Circle((3.5,.5), .5), white, outline); filldraw(Circle((4.5,.5), .5), white, outline); filldraw(Circle((3.5,1.5), .5), white, outline); filldraw(Circle((4.5,1.5), .5), white, outline); filldraw((6.3,.3)--(7.7,.3)--(7.7,1.7)--(6.3,1.7)--cycle, white, outline); label(\"A\", (1, 2), N); label(\"B\", (4, 2), N); label(\"C\", (7, 2), N); draw((0,-.5)--(.5,-.5), BeginArrow); draw((1.5, -.5)--(2, -.5), EndArrow); label(\"2 cm\", (1, -.5));  draw((3,-.5)--(3.5,-.5), BeginArrow); draw((4.5, -.5)--(5, -.5), EndArrow); label(\"2 cm\", (4, -.5));  draw((6,-.5)--(6.5,-.5), BeginArrow); draw((7.5, -.5)--(8, -.5), EndArrow); label(\"2 cm\", (7, -.5));  draw((6,1)--(6,-.5), linetype(\"4 4\")); draw((8,1)--(8,-.5), linetype(\"4 4\"));[/asy]</p>",
+      "solutions": [
+        "<p>First we have to find the area of the shaded region in each of the figures. In figure $\\textbf{A}$ the area of the shaded region is the area of the circle subtracted from the area of the square. That is $2^2-1^2 \\pi=4-\\pi$. In figure $\\textbf{B}$ the area of the shaded region is the sum of the areas of the 4 circles subtracted from the area of the square. That is $2^2-4 \\left( \\left(  \\frac{1}{2} \\right)^2 \\pi \\right)=4-4 \\left(\\frac{\\pi}{4} \\right)=4-\\pi$. In figure $\\textbf{C}$ the area of the shaded region is the area of the square subtracted from the area of the circle. The diameter of the circle and the diagonal of the square are equal to 2. We can easily find the area of the square using the area formula $\\frac{d_1 d_2}{2}$. So the area of the shaded region is $1^2 \\pi-\\frac{2\\cdot{2}}{2}=\\pi-2$. Clearly the largest area that we found among the three shaded regions is $\\pi-2$. Thus the answer is $\\boxed{C}$.</p><ul><li>Note - If you don't know the diagonal formula, you can also find the length of the square using the Pythagorean Theorem (set up an equation and solve for $x$), which is $\\sqrt{2}$, and get that the area is $2$, and continute as shown in the solution.</li></ul>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem comparing areas of shaded regions in different figures (squares with circles)"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_23",
+      "question": "<p>In the pattern below, the cat moves clockwise through the four squares, and the mouse moves counterclockwise through the eight exterior segments of the four squares.</p>",
+      "solutions": [
+        "<p>Break this problem into two parts: where the cat will be after the $247^{\\text{th}}$ move, and where the mouse will be.</p><p>The cat has four possible positions in 1 cycle which are repeated every four moves. $247$ has a remainder of $3$ when divided by $4$. This corresponds to the position the cat has after the 3rd move, which is the bottom right corner.</p><p>Similarly, the mouse has eight possible positions in 1 cycle that repeat every eight moves. $247$ has a remainder of $7$ when divided by $8$. This corresponds to the position the mouse has after the 7th move which is bottom left corner. </p><p>The only arrangement with the mouse in that position and the cat in the bottom right square is $\\boxed{\\textbf{(A)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "patterns",
+          "confidence": 0.95,
+          "reasoning": "Combinatorics problem involving periodic patterns and determining positions after many moves"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_24",
+      "question": "<p>A ship travels from point $A$ to point $B$ along a semicircular path, centered at Island $X$. Then it travels along a straight path from $B$ to $C$. Which of these graphs best shows the ship's distance from Island $X$ as it moves along its course?</p>",
+      "solutions": [
+        "<p>The distance from Island $\\text{X}$ to any point on the semicircle will always be constant. On the graph, this will represent a straight line. The distance between Island $\\text{X}$ and line $\\text{BC}$ will not be constant though. We can easily prove that the distance between $\\text{X}$ and line $\\text{BC}$ will represent a curve. As the ship travels from $B$ to $C$, the distance between the ship and Island $X$ will first decrease until it reaches the point $Y$ so that $\\overline{XY}$ is perpendicular to $\\overline{BC}$, and then increase afterwards. Hence the answer choice that fits them all is $\\boxed{\\text{(B)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving distance from a point as an object moves along a path, requiring graph interpretation"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_8_25",
+      "question": "<p>In the figure, the area of square $WXYZ$ is $25 \\text{ cm}^2$. The four smaller squares have sides 1 cm long, either parallel to or coinciding with the sides of the large square. In $\\triangle ABC$, $AB = AC$, and when $\\triangle ABC$ is folded over side $\\overline{BC}$, point $A$ coincides with $O$, the center of square $WXYZ$. What is the area of $\\triangle ABC$, in square centimeters?</p><p>[asy] defaultpen(fontsize(8)); size(225); pair Z=origin, W=(0,10), X=(10,10), Y=(10,0), O=(5,5), B=(-4,8), C=(-4,2), A=(-13,5); draw((-4,0)--Y--X--(-4,10)--cycle); draw((0,-2)--(0,12)--(-2,12)--(-2,8)--B--A--C--(-2,2)--(-2,-2)--cycle); dot(O); label(\"$A$\", A, NW); label(\"$O$\", O, NE); label(\"$B$\", B, SW); label(\"$C$\", C, NW); label(\"$W$\",W , NE); label(\"$X$\", X, N); label(\"$Y$\", Y, S); label(\"$Z$\", Z, SE); [/asy]</p>",
+      "solutions": [
+        "<p>We see that $XY = 5$, the vertical distance between $B$ and $X$ is $1$, and the vertical distance between $C$ and $Y$ is $1$. Therefore, $BC = 5 - 1 - 1 = 3$. We are given that the length of the altitude of $\\triangle ABC$ is equal to the distance between $\\overline{BC}$ and $O$, which is $1 + 1 + \\frac{5}{2} = \\frac{9}{2}$. So the area of $\\triangle ABC$ is $\\frac{1}{2}\\left(3\\cdot \\frac{9}{2}\\right)$, which is $\\boxed{\\textbf{(C)} \\ \\frac{27}{4}}$.</p><p>~sidkris</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Complex geometry problem involving triangle area, folding, and coordinate geometry concepts"
+        }
+      ]
+    }
+  ]
+}

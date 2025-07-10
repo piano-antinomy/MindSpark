@@ -1,0 +1,402 @@
+{
+  "competition_info": {
+    "name": "2009_AMC_8",
+    "group": "AMC_8",
+    "year": 2009,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2009_8_1",
+      "question": "<p>Bridget bought a bag of apples at the grocery store. She gave half of the apples to Ann. Then she gave Cassie 3 apples, keeping 4 apples for herself. How many apples did Bridget buy? </p>",
+      "solutions": [
+        "<p>If we set up an equation, we find out $x=(3+4)\\cdot 2$ because 3 apples were left after giving half, then four away. We can simplify the equations to $x=7\\cdot 2=14.$The answer is $\\text{(E) } 14.$</p><p>~John0412</p>",
+        "<p>You can work backwards and add 3 apples that she gave to Cassie to the 4 she currently has, which results in 7, and then multiply by 2 since she gave half the apples to Ann, resulting in $\\qquad\\textbf{(E)}\\ 14$. ~Anabel.disher</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple arithmetic word problem involving basic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_2",
+      "question": "<p>On average, for every 4 sports cars sold at the local dealership, 7 sedans are sold. The dealership predicts that it will sell 28 sports cars next month. How many sedans does it expect to sell? </p>",
+      "solutions": [
+        "<p>This means the ratio is $4:7$. If the ratio now is $28:x$, then that means $x= \\boxed{\\textbf{(D) }49}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating discounts and savings"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_3",
+      "question": "<p>The graph shows the constant rate at which Suzanna rides her bike. If she rides a total of a half an hour at the same speed, how many miles would she have ridden?</p><p>[asy] import graph; /* this is a label */ Label f;  f.p=fontsize(0); xaxis(-0.9,20,Ticks(f, 5.0, 5.0));  yaxis(-0.9,20, Ticks(f, 22.0,5.0)); // real f(real x)  {  return x; }  draw(graph(f,-1,22),black+linewidth(1)); label(\"1\", (-1,5), black);  label(\"2\", (-1, 10), black); label(\"3\", (-1, 15), black); label(\"4\", (-1, 20), black); dot((5,5), black+linewidth(5)); dot((10,10), black+linewidth(5)); dot((15, 15), black+linewidth(5)); dot((20,20), black+linewidth(5)); label(\"MINUTES\", (11,-5), S); label(rotate(90)*\"MILES\", (-5,11), W);[/asy]</p>",
+      "solutions": [
+        "<p>Suzanna's speed is $\\frac{1}{5}$. This means she runs $\\frac{1}{5} \\cdot 30 = \\boxed{ \\textbf{(C) }6 }$</p>",
+        "<p>From the graph, we can see that every $5$ minutes Suzanna goes, her distance increases by $1$. Since half an hour is $10$ minutes away, she would go $2$ more miles. $4+2$ is $6$, so the answer is $\\boxed{ \\textbf{(C) }6 }$</p><p>~Trex226</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving finding area of geometric shapes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_4",
+      "question": "<p>The five pieces shown below can be arranged to form four of the five figures shown in the choices. Which figure <b>cannot</b> be formed?[asy] defaultpen(linewidth(0.6)); size(80); real r=0.5, s=1.5; path p=origin--(1,0)--(1,1)--(0,1)--cycle; draw(p); draw(shift(s,r)*p); draw(shift(s,-r)*p); draw(shift(2s,2r)*p); draw(shift(2s,0)*p); draw(shift(2s,-2r)*p); draw(shift(3s,3r)*p); draw(shift(3s,-3r)*p); draw(shift(3s,r)*p); draw(shift(3s,-r)*p); draw(shift(4s,-4r)*p); draw(shift(4s,-2r)*p); draw(shift(4s,0)*p); draw(shift(4s,2r)*p); draw(shift(4s,4r)*p); [/asy]</p>",
+      "solutions": [
+        "<p>The answer is $\\boxed{\\textbf{(B)}}$ because the longest piece cannot fit into the figure.</p><p>Note that the five pieces can be arranged to form the figures in $\\textbf{(A)},\\textbf{(C)},\\textbf{(D)},$ and $\\textbf{(E)},$ as shown below:</p><p>[asy] defaultpen(linewidth(0.6)); size(80); real r=0.5, s=1.5; path p=origin--(1,0)--(1,1)--(0,1)--cycle; fill(p,red); fill(shift(s,r)*p,yellow); fill(shift(s,-r)*p,yellow); fill(shift(2s,2r)*p,green); fill(shift(2s,0)*p,green); fill(shift(2s,-2r)*p,green); fill(shift(3s,3r)*p,cyan); fill(shift(3s,-3r)*p,cyan); fill(shift(3s,r)*p,cyan); fill(shift(3s,-r)*p,cyan); fill(shift(4s,-4r)*p,pink); fill(shift(4s,-2r)*p,pink); fill(shift(4s,0)*p,pink); fill(shift(4s,2r)*p,pink); fill(shift(4s,4r)*p,pink); draw(p); draw(shift(s,r)*p); draw(shift(s,-r)*p); draw(shift(2s,2r)*p); draw(shift(2s,0)*p); draw(shift(2s,-2r)*p); draw(shift(3s,3r)*p); draw(shift(3s,-3r)*p); draw(shift(3s,r)*p); draw(shift(3s,-r)*p); draw(shift(4s,-4r)*p); draw(shift(4s,-2r)*p); draw(shift(4s,0)*p); draw(shift(4s,2r)*p); draw(shift(4s,4r)*p); [/asy]</p><p>[asy] size(350); defaultpen(linewidth(0.6)); path p=origin--(1,0)--(1,1)--(0,1)--cycle; pair[] a={(0,0), (0,1), (0,2), (0,3), (0,4), (1,0), (1,1), (1,2), (2,0), (2,1), (3,0), (3,1), (3,2), (3,3), (3,4)}; pair[] b={(5,3), (5,4), (6,2), (6,3), (6,4), (7,1), (7,2), (7,3), (7,4), (8,0), (8,1), (8,2), (9,0), (9,1), (9,2)}; pair[] c={(11,0), (11,1), (11,2), (11,3), (11,4), (12,1), (12,2), (12,3), (12,4), (13,2), (13,3), (13,4), (14,3), (14,4), (15,4)}; pair[] d={(17,0), (17,1), (17,2), (17,3), (17,4), (18,0), (18,1), (18,2), (18,3), (18,4), (19,0), (19,1), (19,2), (19,3), (19,4)}; pair[] e={(21,4), (22,1), (22,2), (22,3), (22,4), (23,0), (23,1), (23,2), (23,3), (23,4), (24,1), (24,2), (24,3), (24,4), (25,4)};  fill((0,0)--(0,5)--(1,5)--(1,0)--cycle,pink); fill((1,0)--(1,3)--(2,3)--(2,0)--cycle,green); fill((2,0)--(2,2)--(3,2)--(3,0)--cycle,yellow); fill((3,4)--(3,5)--(4,5)--(4,4)--cycle,red); fill((3,0)--(3,4)--(4,4)--(4,0)--cycle,cyan);  fill((11,0)--(11,5)--(12,5)--(12,0)--cycle,pink); fill((12,1)--(12,5)--(13,5)--(13,1)--cycle,cyan); fill((13,2)--(13,5)--(14,5)--(14,2)--cycle,green); fill((14,3)--(14,5)--(15,5)--(15,3)--cycle,yellow); fill((15,4)--(15,5)--(16,5)--(16,4)--cycle,red);  fill((17,0)--(17,5)--(18,5)--(18,0)--cycle,pink); fill((18,0)--(18,4)--(19,4)--(19,0)--cycle,cyan); fill((18,4)--(18,5)--(19,5)--(19,4)--cycle,red); fill((19,0)--(19,3)--(20,3)--(20,0)--cycle,green); fill((19,3)--(19,5)--(20,5)--(20,3)--cycle,yellow);  fill((21,4)--(21,5)--(22,5)--(22,4)--cycle,red); fill((22,1)--(22,5)--(23,5)--(23,1)--cycle,cyan); fill((23,0)--(23,5)--(24,5)--(24,0)--cycle,pink); fill((24,1)--(24,4)--(25,4)--(25,1)--cycle,green); fill((24,4)--(24,5)--(26,5)--(26,4)--cycle,yellow);  int i; for(int i=0; i<15; i=i+1) { draw(shift(a[i])*p); draw(shift(b[i])*p); draw(shift(c[i])*p); draw(shift(d[i])*p); draw(shift(e[i])*p); } [/asy]\\[\\textbf{(A)}\\qquad\\qquad\\qquad\\textbf{(B)}\\quad\\qquad\\qquad\\textbf{(C)}\\qquad\\qquad\\qquad\\textbf{(D)}\\quad\\qquad\\qquad\\textbf{(E)}\\]~Basketball8 ~MRENTHUSIASM</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_5",
+      "question": "<p>A sequence of numbers starts with $1$, $2$, and $3$. The fourth number of the sequence is the sum of the previous three numbers in the sequence: $1+2+3=6$. In the same way, every number after the fourth is the sum of the previous three numbers. What is the eighth number in the sequence? </p>",
+      "solutions": [
+        "<p>List them out, adding the three previous numbers to get the next number,</p><p>\\[1,2,3,6,11,20,37,\\boxed{\\textbf{(D)}\\ 68}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_6",
+      "question": "<p>Steve's empty swimming pool will hold $24,000$ gallons of water when full. It will be filled by $4$ hoses, each of which supplies $2.5$ gallons of water per minute. How many hours will it take to fill Steve's pool?</p>",
+      "solutions": [
+        "<p>Each of the four hoses hose fills $24,000/4 = 6,000$ gallons of water. At the rate it goes at it will take $6,000/2.5 = 2400$ minutes, or $\\boxed{\\textbf{(A)}\\ 40}$ hours.</p>",
+        "<p>If all four hoses fill $2.5$ gallons a minute, every minute $10$ gallons would be added. Since every hour has $60$ minutes, $600$ gallons of water would be added every hour. $24000/600=\\boxed{\\textbf{(A)}\\ 40}$ hours.</p><p>~Trex226</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_7",
+      "question": "<p>The triangular plot of ACD lies between Aspen Road, Brown Road and a railroad. Main Street runs east and west, and the railroad runs north and south. The numbers in the diagram indicate distances in miles. The width of the railroad track can be ignored. How many square miles are in the plot of land ACD?</p><p>[asy] size(250); defaultpen(linewidth(0.55)); pair A=(-6,0), B=origin, C=(0,6), D=(0,12); pair ac=C+2.828*dir(45), ca=A+2.828*dir(225), ad=D+2.828*dir(A--D), da=A+2.828*dir(D--A), ab=(2.828,0), ba=(-6-2.828, 0);  fill(A--C--D--cycle, gray); draw(ba--ab); draw(ac--ca); draw(ad--da); draw((0,-1)--(0,15)); draw((1/3, -1)--(1/3, 15)); int i; for(i=1; i<15; i=i+1) { draw((-1/10, i)--(13/30, i)); }  label(\"$A$\", A, SE); label(\"$B$\", B, SE); label(\"$C$\", C, SE); label(\"$D$\", D, SE); label(\"$3$\", (1/3,3), E); label(\"$3$\", (1/3,9), E); label(\"$3$\", (-3,0), S); label(\"Main\", (-3,0), N); label(rotate(45)*\"Aspen\", A--C, SE); label(rotate(63.43494882)*\"Brown\", A--D, NW); [/asy]</p>",
+      "solutions": [
+        "<p>The area of a triangle is $\\frac12 bh$. If we let $CD$ be the base of the triangle, then the height is $AB$, and the area is $\\frac12 \\cdot 3 \\cdot 3 = \\boxed{\\textbf{(C)}\\ 4.5}$.</p>",
+        "<p>We can see that there is a big triangle encasing $ACD$. The area of that triangle is $\\frac12 \\cdot 3 \\cdot 6 = 9$. We can easily see that triangle $ABC$ is $\\frac12 \\cdot 3 \\cdot 3$, which is $4.5$. $9-4.5$ is $4.5$, so the answer is $\\boxed{\\textbf{(C)}\\ 4.5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_8",
+      "question": "<p>The length of a rectangle is increased by $10\\%$ percent and the width is decreased by $10\\%$ percent. What percent of the old area is the new area?</p>",
+      "solutions": [
+        "<p>In a rectangle with dimensions $10 \\times 10$, the new rectangle would have dimensions $11 \\times 9$. The ratio of the new area to the old area is $99/100 = \\boxed{\\textbf{(B)}\\ 99}$.</p><p>If you take the length as $x$ and the width as $y$ thenA(OLD)= $xy$A(NEW)= $1.1x\\times.9y$ = $.99xy$$0.99/1=99\\%$</p>",
+        "<p>If you take the length as $x$ and the width as $y$ thenA(OLD)= $xy$A(NEW)= $1.1x\\times.9y$ = $.99xy$$0.99/1=99\\%$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving divisibility and number properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_9",
+      "question": "<p>Construct a square on one side of an equilateral triangle. On one non-adjacent side of the square, construct a regular pentagon, as shown. On a non-adjacent side of the pentagon, construct a hexagon. Continue to construct regular polygons in the same way, until you construct an octagon. How many sides does the resulting polygon have?</p><p>[asy] defaultpen(linewidth(0.6)); pair O=origin, A=(0,1), B=A+1*dir(60), C=(1,1), D=(1,0), E=D+1*dir(-72), F=E+1*dir(-144), G=O+1*dir(-108); draw(O--A--B--C--D--E--F--G--cycle); draw(O--D, dashed); draw(A--C, dashed);[/asy]</p>",
+      "solutions": [
+        "<p>Of the six shapes used to create the polygon, the triangle and octagon are adjacent to the others on one side, and the others are adjacent on two sides. In the triangle and octagon $3+8-2(1)=9$ sides are on the outside of the final polygon. In the other shapes $4+5+6+7-4(2) = 14$ sides are on the outside. The resulting polygon has $9+14 = \\boxed{\\textbf{(B)}\\ 23}$ sides.</p>",
+        "<p>We can quickly see a pattern if we draw out the other shapes. Every shape will have two of its sides taken out except the triangle and octagon. We can then make the expression $2+2+3+4+5+7$ which is $\\boxed{\\textbf{(B)}\\ 23}$</p><p>~Trex226</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Triangle geometry problem involving angles and side lengths"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_10",
+      "question": "<p>On a checkerboard composed of 64 unit squares, what is the probability that a randomly chosen unit square does <b>not</b> touch the outer edge of the board?</p><p>[asy] unitsize(10); draw((0,0)--(8,0)--(8,8)--(0,8)--cycle); draw((1,8)--(1,0)); draw((7,8)--(7,0)); draw((6,8)--(6,0)); draw((5,8)--(5,0)); draw((4,8)--(4,0)); draw((3,8)--(3,0)); draw((2,8)--(2,0)); draw((0,1)--(8,1)); draw((0,2)--(8,2)); draw((0,3)--(8,3)); draw((0,4)--(8,4)); draw((0,5)--(8,5)); draw((0,6)--(8,6)); draw((0,7)--(8,7)); fill((0,0)--(1,0)--(1,1)--(0,1)--cycle,black); fill((2,0)--(3,0)--(3,1)--(2,1)--cycle,black); fill((4,0)--(5,0)--(5,1)--(4,1)--cycle,black); fill((6,0)--(7,0)--(7,1)--(6,1)--cycle,black); fill((0,2)--(1,2)--(1,3)--(0,3)--cycle,black); fill((2,2)--(3,2)--(3,3)--(2,3)--cycle,black); fill((4,2)--(5,2)--(5,3)--(4,3)--cycle,black); fill((6,2)--(7,2)--(7,3)--(6,3)--cycle,black); fill((0,4)--(1,4)--(1,5)--(0,5)--cycle,black); fill((2,4)--(3,4)--(3,5)--(2,5)--cycle,black); fill((4,4)--(5,4)--(5,5)--(4,5)--cycle,black); fill((6,4)--(7,4)--(7,5)--(6,5)--cycle,black); fill((0,6)--(1,6)--(1,7)--(0,7)--cycle,black); fill((2,6)--(3,6)--(3,7)--(2,7)--cycle,black); fill((4,6)--(5,6)--(5,7)--(4,7)--cycle,black); fill((6,6)--(7,6)--(7,7)--(6,7)--cycle,black); fill((1,1)--(2,1)--(2,2)--(1,2)--cycle,black); fill((3,1)--(4,1)--(4,2)--(3,2)--cycle,black); fill((5,1)--(6,1)--(6,2)--(5,2)--cycle,black); fill((7,1)--(8,1)--(8,2)--(7,2)--cycle,black); fill((1,3)--(2,3)--(2,4)--(1,4)--cycle,black); fill((3,3)--(4,3)--(4,4)--(3,4)--cycle,black); fill((5,3)--(6,3)--(6,4)--(5,4)--cycle,black); fill((7,3)--(8,3)--(8,4)--(7,4)--cycle,black); fill((1,5)--(2,5)--(2,6)--(1,6)--cycle,black); fill((3,5)--(4,5)--(4,6)--(3,6)--cycle,black); fill((5,5)--(6,5)--(6,6)--(5,6)--cycle,black); fill((7,5)--(8,5)--(8,6)--(7,6)--cycle,black); fill((1,7)--(2,7)--(2,8)--(1,8)--cycle,black); fill((3,7)--(4,7)--(4,8)--(3,8)--cycle,black); fill((5,7)--(6,7)--(6,8)--(5,8)--cycle,black); fill((7,7)--(8,7)--(8,8)--(7,8)--cycle,black);[/asy]</p>",
+      "solutions": [
+        "<p>There are $8^2=64$ total squares. There are $(8-1)(4)=28$ unit squares on the perimeter and therefore $64-28=36$ NOT on the perimeter. The probability of choosing one of those squares is $\\frac{36}{64} = \\boxed{\\textbf{(D)}\\ \\frac{9}{16}}$.</p>",
+        "<p>The squares that don't touch the border are in a 6 by 6 square. Therefore, the number of squares that don't touch the border is $6*6=36$. There are 64 choices total. Therefore, the answer is $36/64$, which simplifies to $\\boxed{\\textbf{(D)}\\ \\frac{9}{16}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate word problem involving time, distance, and speed relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_11",
+      "question": "<p>The Amaco Middle School bookstore sells pencils costing a whole number of cents. Some seventh graders each bought a pencil, paying a total of $1.43$ dollars. Some of the $30$ sixth graders each bought a pencil, and they paid a total of $1.95$ dollars. How many more sixth graders than seventh graders bought a pencil?</p>",
+      "solutions": [
+        "<p>Because the pencil costs a whole number of cents, the cost must be a factor of both $143$ and $195$. They can be factored into $11\\cdot13$ and $3\\cdot5\\cdot13$. The common factor cannot be $1$ or there would have to be more than $30$ sixth graders, so the pencil costs $13$ cents. The difference in costs that the sixth and seventh graders paid is $195-143=52$ cents, which is equal to $52/13 = \\boxed{\\textbf{(D)}\\ 4}$ sixth graders.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating percentages and changes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_12",
+      "question": "<p>The two spinners shown are spun once and each lands on one of the numbered sectors. What is the probability that the sum of the numbers in the two sectors is prime? </p><p>[asy] unitsize(30);  draw(unitcircle); draw((0,0)--(0,-1)); draw((0,0)--(cos(pi/6),sin(pi/6))); draw((0,0)--(-cos(pi/6),sin(pi/6))); label(\"$1$\",(0,.5)); label(\"$3$\",((cos(pi/6))/2,(-sin(pi/6))/2)); label(\"$5$\",(-(cos(pi/6))/2,(-sin(pi/6))/2));[/asy][asy] unitsize(30);  draw(unitcircle); draw((0,0)--(0,-1)); draw((0,0)--(cos(pi/6),sin(pi/6))); draw((0,0)--(-cos(pi/6),sin(pi/6))); label(\"$2$\",(0,.5)); label(\"$4$\",((cos(pi/6))/2,(-sin(pi/6))/2)); label(\"$6$\",(-(cos(pi/6))/2,(-sin(pi/6))/2));[/asy]</p>",
+      "solutions": [
+        "<p>The possible sums are\\[\\begin{tabular}{c|ccc} & 1 & 3 & 5 \\\\ \\hline 2 & 3 & 5 & 7 \\\\ 4 & 5 & 7 & 9 \\\\ 6 & 7 & 9 & 11 \\end{tabular}\\]</p><p>Only $9$ is not prime, so there are $7$ prime numbers and $9$ total numbers for a probability of $\\boxed{\\textbf{(D)}\\ \\frac79}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Arithmetic sequence problem involving finding terms in a sequence"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_13",
+      "question": "<p>A three-digit integer contains one of each of the digits $1$, $3$, and $5$. What is the probability that the integer is divisible by $5$?</p>",
+      "solutions": [
+        "<p>The three digit numbers are $135,153,351,315,513,531$. The numbers that end in $5$ are divisible are $5$, and the probability of choosing those numbers is $\\boxed{\\textbf{(B)}\\ \\frac13}$.</p>",
+        "<p>The number is divisible by 5 if and only if the number ends in $5$ (also $0$, but that case can be ignored, as none of the digits are $0$)If we randomly arrange the three digits, the probability of the last digit being $5$ is $\\boxed{\\textbf{(B)}\\ \\frac13}$.</p><p>Note: The last sentence is true because there are $3$ randomly-arrangeable numbers)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_14",
+      "question": "<p>Austin and Temple are $50$ miles apart along Interstate 35. Bonnie drove from Austin to her daughter's house in Temple, averaging $60$ miles per hour. Leaving the car with her daughter, Bonnie rode a bus back to Austin along the same route and averaged $40$ miles per hour on the return trip. What was the average speed for the round trip, in miles per hour?</p>",
+      "solutions": [
+        "<p>The way to Temple took $\\frac{50}{60}=\\frac56$ hours, and the way back took $\\frac{50}{40}=\\frac54$ for a total of $\\frac56 + \\frac54 = \\frac{25}{12}$ hours. The trip is $50\\cdot2=100$ miles. The average speed is $\\frac{100}{25/12} = \\boxed{\\textbf{(B)}\\ 48}$ miles per hour.</p>",
+        "<p>We calculate the harmonic mean of Austin and Temple. Plugging in, we have: $\\frac{2ab}{a+b} = \\frac{2 \\cdot 60 \\cdot 40}{60 + 40} = \\frac{4800}{100} = \\boxed{\\textbf{(B)}\\ 48}$ miles per hour.</p>",
+        "<p>The 50 miles part of this question is redundant. We find that the average speed is skewed towards the lower speed, since you spend more time in the lower speed. So, we take the LCM of 40 and 60, getting 120. So, we do (40 + 40 + 40 + 60 + 60)/5, calculation the ratio of the parts and taking the mean. Solving, we get 240/5 = $\\boxed{\\textbf{(B)}\\   48 } \\qquad$-themathgood</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Circle geometry problem involving area and circumference"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_15",
+      "question": "<p>A recipe that makes $5$ servings of hot chocolate requires $2$ squares of chocolate, $\\frac{1}{4}$ cup sugar, $1$ cup water and $4$ cups milk. Jordan has $5$ squares of chocolate, $2$ cups of sugar, lots of water, and $7$ cups of milk. If he maintains the same ratio of ingredients, what is the greatest number of servings of hot chocolate he can make?</p>",
+      "solutions": [
+        "<p>Assuming excesses of the other ingredients, the chocolate can make $\\frac52 \\cdot 5=12.5$ servings, the sugar can make $\\frac{2}{1/4} \\cdot 5 = 40$ servings, the water can make unlimited servings, and the milk can make $\\frac74 \\cdot 5 = 8.75$ servings. Limited by the amount of milk, Jordan can make at most $\\boxed{\\textbf{(D)}\\ 8 \\frac34}$ servings.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_16",
+      "question": "<p>How many $3$-digit positive integers have digits whose product equals $24$?</p>",
+      "solutions": [
+        "<p>With the digits listed from least to greatest, the $3$-digit integers are $138,146,226,234$. $226$ can be arranged in $\\frac{3!}{2!} = 3$ ways, and the other three can be arranged in $3!=6$ ways. There are $3+6(3) = \\boxed{\\textbf{(D)}\\ 21}$ $3$-digit positive integers.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "System of equations problem involving multiple variables"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_17",
+      "question": "<p>The positive integers $x$ and $y$ are the two smallest positive integers for which the product of $360$ and $x$ is a square and the product of $360$ and $y$ is a cube. What is the sum of $x$ and $y$?</p>",
+      "solutions": [],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_18",
+      "question": "<p>The diagram represents a $7$-foot-by-$7$-foot floor that is tiled with $1$-square-foot black tiles and white tiles. Notice that the corners have white tiles. If a $15$-foot-by-$15$-foot floor is to be tiled in the same manner, how many white tiles will be needed?</p><p>[asy]unitsize(10); draw((0,0)--(7,0)--(7,7)--(0,7)--cycle); draw((1,7)--(1,0)); draw((6,7)--(6,0)); draw((5,7)--(5,0)); draw((4,7)--(4,0)); draw((3,7)--(3,0)); draw((2,7)--(2,0)); draw((0,1)--(7,1)); draw((0,2)--(7,2)); draw((0,3)--(7,3)); draw((0,4)--(7,4)); draw((0,5)--(7,5)); draw((0,6)--(7,6)); fill((1,0)--(2,0)--(2,7)--(1,7)--cycle,black); fill((3,0)--(4,0)--(4,7)--(3,7)--cycle,black); fill((5,0)--(6,0)--(6,7)--(5,7)--cycle,black); fill((0,5)--(0,6)--(7,6)--(7,5)--cycle,black); fill((0,3)--(0,4)--(7,4)--(7,3)--cycle,black); fill((0,1)--(0,2)--(7,2)--(7,1)--cycle,black);[/asy]</p>",
+      "solutions": [
+        "<p>In a $1$-foot-by-$1$-foot floor, there is $1$ white tile. In a $3$-by-$3$, there are $4$. Continuing on, you can deduce the $n^{th}$ positive odd integer floor has $n^2$ white tiles. $15$ is the $8^{th}$ odd integer, so there are $\\boxed{\\textbf{(C)}\\ 64}$ white tiles.</p>",
+        "<p>After testing a couple of cases, we find that the number of white squares is $(s/2)^2$, where s is the side length of the square and $s/2$ is rounded up to the next whole number. Therefore, $15/2$ rounded up is 8, so $8^2=64$, or $\\framebox{(C) 64}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving multiple statements and determining truth values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_19",
+      "question": "<p>Two angles of an isosceles triangle measure $70^\\circ$ and $x^\\circ$. What is the sum of the three possible values of $x$?</p>",
+      "solutions": [
+        "<p>There are 3 cases: where $x^\\circ$ is a base angle with the $70^\\circ$ as the other angle, where $x^\\circ$ is a base angle with $70^\\circ$ as the vertex angle, and where $x^\\circ$ is the vertex angle with $70^\\circ$ as a base angle.</p><p>Case 1: $x^\\circ$ is a base angle with $70^\\circ$ as the other angle:Here, $x=70$, since base angles are congruent.</p><p>Case 2: $x^\\circ$ is a base angle with $70^\\circ$ as the vertex angle:Here, the 2 base angles are both $x^\\circ$, so we can use the equation $2x+70=180$, which simplifies to $x=55$.</p><p>Case 3: $x^\\circ$ is the vertex angle with $70^\\circ$ as a base angle:Here, both base angles are $70^\\circ$, since base angles are congruent. Thus, we can use the equation $x+140=180$, which simplifies to $x=40$.</p><p>Adding up all the cases, we get $70+55+40=165$, so the answer is $\\boxed{\\textbf{(D)}\\    165}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_20",
+      "question": "<p>How many non-congruent triangles have vertices at three of the eight points in the array shown below?</p><p>[asy]dot((0,0)); dot((.5,.5)); dot((.5,0)); dot((.0,.5)); dot((1,0)); dot((1,.5)); dot((1.5,0)); dot((1.5,.5));[/asy]</p>",
+      "solutions": [
+        "<p>Assume the base of the triangle is on the bottom four points because a congruent triangle can be made by reflecting the base on the top four points. For a triangle with a base of length $1$, there are $3$ triangles. For a triangle with a base of length $2$, there are $3$ triangles. For length $3$, there are $2$. In total, the number of non-congruent triangles is $3+3+2=\\boxed{\\textbf{(D)}\\ 8}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving ratios and proportions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_21",
+      "question": "<p>Andy and Bethany have a rectangular array of numbers with $40$ rows and $75$ columns. Andy adds the numbers in each row. The average of his $40$ sums is $A$. Bethany adds the numbers in each column. The average of her $75$ sums is $B$. What is the value of $\\frac{A}{B}$?</p>",
+      "solutions": [
+        "<p>Note that $40A=75B=\\text{sum of the numbers in the array}$. This means that $\\frac{A}{B}=\\boxed{\\text{(D) } \\frac{15}{8}}$ using basic algebraic manipulation.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent events and calculating probabilities"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_22",
+      "question": "<p>How many whole numbers between 1 and 1000 do <b>not</b> contain the digit 1?</p>",
+      "solutions": [
+        "<p>Note that this is the same as finding how many numbers with up to three digits do not contain 1.</p><p>Since there are 10 total possible digits, and only one of them is not allowed (1), each place value has its choice of 9 digits, for a total of $9*9*9=729$ such numbers. However, we overcounted by one; 0 is not between 1 and 1000, so there are $\\boxed{\\textbf{(D)}\\ 728}$ numbers.</p><p><br/>Note: As stated above, 020 is equivalent to 20, but 000 is not between 1 and 1000.</p>",
+        "<p>We consider the 3 cases, where the number is 1,2 or 3 digits.</p><p>Case 1 : The number has a $1$ digit. Well, 1-9 all work except for $1$, so $9-1=8$ numbers, for numbers that are 1 digit.</p><p>Case 2 : The number is has $2$ digits. Consider the two digit number. Since the tens digit can't be 0 or 1, we have 8 choices for the tens digit. For the ones digit, we have 9, since the ones digit can't be a 1. This gives us a total of $8*9=72$ two-digit numbers.</p><p>Case 3 : The number has $3$ digits. Using similar logic to Case 2, we have 8*9*9 choices for the third number.</p><p>We add the cases up getting $648+72+8$ which gives us $\\framebox{(D) 728}$ numbers total.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving conditional probability and ratios"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_23",
+      "question": "<p>On the last day of school, Mrs. Wonderful gave jelly beans to her class. She gave each boy as many jelly beans as there were boys in the class. She gave each girl as many jelly beans as there were girls in the class. She brought $400$ jelly beans, and when she finished, she had six jelly beans left. There were two more boys than girls in her class. How many students were in her class?</p>",
+      "solutions": [
+        "<p>If there are $x$ girls, then there are $x+2$ boys. She gave each girl $x$ jellybeans and each boy $x+2$ jellybeans, for a total of $x^2 + (x+2)^2$ jellybeans. She gave away $400-6=394$ jellybeans.</p><p>\\begin{align*} x^2+(x+2)^2 &= 394\\\\ x^2+x^2+4x+4 &= 394\\\\ 2x^2 + 4x &= 390\\\\ x^2 + 2x &= 195\\\\ \\end{align*}</p><p>From here, we can see that $x = 13$ as $13^2 + 26 = 195$, so there are $13$ girls, $13+2=15$ boys, and $13+15=\\boxed{\\textbf{(B)}\\ 28}$ students.</p><p><br/>Note by FrankensteinQuixoteCabin: The user who made this solution did not mention their name.</p>",
+        "<p>We can use the answer choices to our advantage; we can take the number of girls as $x$, and the number of boys as $x+2$. If we test out $(A)$, $x$ is 12, and $x+2$ is 14. $400-6=394$ jellybeans were given out, but $12^2+14^2$ is not equal to $394$. Thus, $(A)$ is not the answer. Next, we try $(B)$. $x$ is 13, $x+2$ is 15. We see that $13^2+15^2=394$, so there are $13+15=\\boxed{\\textbf{(B)}\\ 28}$ students.</p><p>~FrankensteinQuixoteCabin</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving distance and position relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_24",
+      "question": "<p>The letters $A$, $B$, $C$ and $D$ represent digits. If $\\begin{tabular}{ccc}&A&B\\\\ +&C&A\\\\ \\hline &D&A\\end{tabular}$and $\\begin{tabular}{ccc}&A&B\\\\ -&C&A\\\\ \\hline &&A\\end{tabular}$,what digit does $D$ represent?</p>",
+      "solutions": [
+        "<p>Because $B+A=A$, $B$ must be $0$.Next, because $B-A=A\\implies0-A=A,$ we get $A=5$ as the \"0\" mentioned above is actually 10 in this case. </p><p>Now we can rewrite $\\begin{tabular}{ccc}&A&0\\\\ +&C&A\\\\ \\hline &D&A\\end{tabular}$ as $\\begin{tabular}{ccc}&5&0\\\\ +&C&5\\\\ \\hline &D&5\\end{tabular}$. Therefore, $D=5+C.$</p><p>Finally, $A-1-C=0\\implies{A=C+1}\\implies{C=4}$, So we have $D=5+C\\implies{D=5+4}=\\boxed{\\textbf{(E)}\\ 9 }$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2009_8_25",
+      "question": "<p>A one-cubic-foot cube is cut into four pieces by three cuts parallel to the top face of the cube. The first cut is $\\frac{1}{2}$ foot from the top face. The second cut is $\\frac{1}{3}$ foot below the first cut, and the third cut is $\\frac{1}{17}$ foot below the second cut. From the top to the bottom the pieces are labeled A, B, C, and D. The pieces are then glued together end to end as shown in the second diagram. What is the total surface area of this solid in square feet?[asy] import three; real d=11/102; defaultpen(fontsize(8)); defaultpen(linewidth(0.8)); currentprojection=orthographic(1,8/15,7/15); draw(unitcube, white, thick(), nolight); void f(real x) { draw((0,1,x)--(1,1,x)--(1,0,x)); } f(d); f(1/6); f(1/2); label(\"A\", (1,0,3/4), W); label(\"B\", (1,0,1/3), W); label(\"C\", (1,0,1/6-d/4), W); label(\"D\", (1,0,d/2), W); label(\"1/2\", (1,1,3/4), E); label(\"1/3\", (1,1,1/3), E); label(\"1/17\", (0,1,1/6-d/4), E);[/asy]</p><p>[asy] import three; real d=11/102; defaultpen(fontsize(8)); defaultpen(linewidth(0.8)); currentprojection=orthographic(2,8/15,7/15); int t=0; void f(real x) { path3 r=(t,1,x)--(t+1,1,x)--(t+1,1,0)--(t,1,0)--cycle; path3 f=(t+1,1,x)--(t+1,1,0)--(t+1,0,0)--(t+1,0,x)--cycle; path3 u=(t,1,x)--(t+1,1,x)--(t+1,0,x)--(t,0,x)--cycle; draw(surface(r), white, nolight); draw(surface(f), white, nolight); draw(surface(u), white, nolight); draw((t,1,x)--(t+1,1,x)--(t+1,1,0)--(t,1,0)--(t,1,x)--(t,0,x)--(t+1,0,x)--(t+1,1,x)--(t+1,1,0)--(t+1,0,0)--(t+1,0,x)); t=t+1; } f(d); f(1/2); f(1/3); f(1/17); label(\"D\", (1/2, 1, 0), SE); label(\"A\", (1+1/2, 1, 0), SE); label(\"B\", (2+1/2, 1, 0), SE); label(\"C\", (3+1/2, 1, 0), SE);[/asy]</p>",
+      "solutions": [
+        "<p>The areas of the tops of $A$, $B$, $C$, and $D$ in the figure formed has sum $1+1+1+1 = 4$ as do the bottoms. Thus, the total so far is $8$. Now, one of the sides has an area of one, since it combines all of the heights of $A$, $B$, $C$, and $D$, which is $1$. The other side is also the same. Thus the total area now is $10$. From the front, the surface area is half, because if you looked at it straight from the front it would look exactly like a side of $A$, with a surface area of half. From the back, it is the same thing. Thus, the total surface area is $10+\\frac{1}{2}+\\frac{1}{2}= 11$, or $\\boxed{\\textbf{(E)}\\:11 }$.</p>",
+        "<p>The top parts and the bottom parts sum to 8. The sides add on another 2. Therefore, the only logical answer would be $\\boxed{\\textbf{(E)}\\:11 }$ since it is the only answer greater than 10.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving area calculations and geometric relationships"
+        }
+      ]
+    }
+  ]
+}
