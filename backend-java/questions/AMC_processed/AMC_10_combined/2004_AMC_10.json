@@ -1,0 +1,832 @@
+{
+  "year": "2004",
+  "competition": "AMC_10",
+  "problems": [
+    {
+      "id": "amc_2004_10a_1",
+      "question": "<p>You and five friends need to raise $1500$ dollars in donations for a charity, dividing the fundraising equally. How many dollars will each of you need to raise?</p>",
+      "solutions": [
+        "<p>There are $6$ people to split the $1500$ dollars among, so each person must raise $\\frac{1500}6=250$ dollars. $\\Rightarrow\\boxed{\\mathrm{(A)}\\ 250}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2004 AMC 10A - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_2",
+      "question": "<p>For any three real numbers $a$, $b$, and $c$, with $b\\neq c$, the operation $\\otimes$ is defined by:\\[\\otimes(a,b,c)=\\frac{a}{b-c}\\]What is $\\otimes(\\otimes(1,2,3),\\otimes(2,3,1),\\otimes(3,1,2))$?</p>",
+      "solutions": [
+        "<p>$\\otimes \\left(\\frac{1}{2-3},\\frac{2}{3-1},\\frac{3}{1-2}\\right)=\\otimes(-1,1,-3)=\\frac{-1}{1+3}=-\\frac{1}{4}\\Longrightarrow\\boxed{\\mathrm{(B)}\\ -\\frac{1}{4}}$</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2004 AMC 10A - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_3",
+      "question": "<p>Alicia earns 20 dollars per hour, of which $1.45\\%$ is deducted to pay local taxes. How many cents per hour of Alicia's wages are used to pay local taxes?</p>",
+      "solutions": [
+        "<p>$20$ dollars is the same as $2000$ cents, and $1.45\\%$ of $2000$ is $0.0145\\times2000=29$ cents. $\\Rightarrow\\boxed{\\mathrm{(E)}\\ 29}$.</p><p>Since there can't be decimal values of cents, the answer must be $\\Rightarrow\\boxed{\\mathrm{(E)}\\ 29}$. </p><p>~MathKatana</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2004 AMC 10A - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_4",
+      "question": "<p>What is the value of $x$ if $|x-1|=|x-2|$?</p>",
+      "solutions": [
+        "<p>$|x-1|$ is the distance between $x$ and $1$; $|x-2|$ is the distance between $x$ and $2$.</p><p>Therefore, the given equation says $x$ is equidistant from $1$ and $2$, so $x=\\frac{1+2}2=\\frac{3}{2}\\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{3}{2}}$.</p><p>Alternatively, we can solve by casework (a method which should work for any similar problem involving <a href=\"/wiki/index.php/Absolute_value\" title=\"Absolute value\">absolute values</a> of <a href=\"/wiki/index.php/Real_number\" title=\"Real number\">real numbers</a>). If $x \\leq 1$, then $|x - 1| = 1-x$ and $|x - 2| = 2 - x$, so we must solve $1 - x = 2 - x$, which has no solutions. Similarly, if $x \\geq 2$, then $|x - 1| = x - 1$ and $|x - 2| = x - 2$, so we must solve $x - 1 = x- 2$, which also has no solutions. Finally, if $1 \\leq x \\leq 2$, then $|x - 1| = x - 1$ and $|x - 2| = 2-x$, so we must solve $x - 1 = 2 - x$, which has the unique solution $x = \\frac32$.</p><p>We know that either $x-1=x-2$ or $x-1=-(x-2)$. The first equation simplifies to $-1=-2$, which is false, so $x-1=-(x-2)$. Solving, we get $x=\\frac{3}{2}\\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{3}{2}}$.</p>",
+        "<p>$|x-1|$ is the distance between $x$ and $1$; $|x-2|$ is the distance between $x$ and $2$.</p><p>Therefore, the given equation says $x$ is equidistant from $1$ and $2$, so $x=\\frac{1+2}2=\\frac{3}{2}\\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{3}{2}}$.</p><p>Alternatively, we can solve by casework (a method which should work for any similar problem involving <a href=\"/wiki/index.php/Absolute_value\" title=\"Absolute value\">absolute values</a> of <a href=\"/wiki/index.php/Real_number\" title=\"Real number\">real numbers</a>). If $x \\leq 1$, then $|x - 1| = 1-x$ and $|x - 2| = 2 - x$, so we must solve $1 - x = 2 - x$, which has no solutions. Similarly, if $x \\geq 2$, then $|x - 1| = x - 1$ and $|x - 2| = x - 2$, so we must solve $x - 1 = x- 2$, which also has no solutions. Finally, if $1 \\leq x \\leq 2$, then $|x - 1| = x - 1$ and $|x - 2| = 2-x$, so we must solve $x - 1 = 2 - x$, which has the unique solution $x = \\frac32$.</p>",
+        "<p>We know that either $x-1=x-2$ or $x-1=-(x-2)$. The first equation simplifies to $-1=-2$, which is false, so $x-1=-(x-2)$. Solving, we get $x=\\frac{3}{2}\\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{3}{2}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2004 AMC 10A - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_5",
+      "question": "<p>A set of three points is randomly chosen from the grid shown. Each three point set has the same probability of being chosen. What is the probability that the points lie on the same straight line?</p>",
+      "solutions": [
+        "<p>There are $\\binom{9}{3}$ ways to choose three points out of the 9 there. There are 8 combinations of dots such that they lie in a straight line: three vertical, three horizontal, and the diagonals.</p><p>$\\dfrac{8}{\\binom{9}{3}}=\\dfrac{8}{84}=\\dfrac{2}{21} \\Rightarrow\\boxed{\\mathrm{(C)}\\ \\frac{2}{21}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2004 AMC 10A - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_6",
+      "question": "<p>Bertha has 6 daughters and no sons. Some of her daughters have 6 daughters, and the rest have none. Bertha has a total of 30 daughters and granddaughters, and no great-granddaughters. How many of Bertha's daughters and grand-daughters have no daughters?</p>",
+      "solutions": [
+        "<p>Since Bertha has $6$ daughters, she has $30-6=24$ granddaughters, of which none have daughters. Of Bertha's daughters, $\\frac{24}6=4$ have daughters, so $6-4=2$ do not have daughters. Therefore, of Bertha's daughters and granddaughters, $24+2=26$ do not have daughters. $\\boxed{\\mathrm{(E)}\\ 26}$</p><p>Bertha has $30 - 6 = 24$ granddaughters, none of whom have any daughters. The granddaughters are the children of $24/6 = 4$ of Bertha's daughters, so the number of women having no daughters is $30 - 4 = \\boxed{26}$.</p><p>Draw a tree diagram and see that the answer can be found in the sum of $6+6$ granddaughters, $5+5$ daughters, and $4$ more daughters. Adding them together gives the answer of $\\boxed{\\mathrm{(E)}\\ 26}$.</p>",
+        "<p>Since Bertha has $6$ daughters, she has $30-6=24$ granddaughters, of which none have daughters. Of Bertha's daughters, $\\frac{24}6=4$ have daughters, so $6-4=2$ do not have daughters. Therefore, of Bertha's daughters and granddaughters, $24+2=26$ do not have daughters. $\\boxed{\\mathrm{(E)}\\ 26}$</p>",
+        "<p>Bertha has $30 - 6 = 24$ granddaughters, none of whom have any daughters. The granddaughters are the children of $24/6 = 4$ of Bertha's daughters, so the number of women having no daughters is $30 - 4 = \\boxed{26}$.</p>",
+        "<p>Draw a tree diagram and see that the answer can be found in the sum of $6+6$ granddaughters, $5+5$ daughters, and $4$ more daughters. Adding them together gives the answer of $\\boxed{\\mathrm{(E)}\\ 26}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2004 AMC 10A - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_7",
+      "question": "<p>A grocer stacks oranges in a pyramid-like stack whose rectangular base is $5$ oranges by $8$ oranges. Each orange above the first level rests in a pocket formed by four oranges below. The stack is completed by a single row of oranges. How many oranges are in the stack?</p>",
+      "solutions": [
+        "<p>There are $5\\times8=40$ oranges on the $1^{\\text{st}}$ layer of the stack. The $2^{\\text{nd}}$ layer that is added on top of the first will be a layer of $4\\times7=28$ oranges. When the third layer is added on top of the $2^{\\text{nd}}$, it will be a layer of $3\\times6=18$ oranges, etc.</p><p>Therefore, there are $5\\times8+4\\times7+3\\times6+2\\times5+1\\times4=40+28+18+10+4=100$ oranges in the stack. $\\boxed{\\mathrm{(C)}\\ 100}$</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2004 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_8",
+      "question": "<p>A game is played with tokens according to the following rule. In each round, the player with the most tokens gives one token to each of the other players and also places one token in the discard pile. The game ends when some player runs out of tokens. Players $A$, $B$, and $C$ start with $15$, $14$, and $13$ tokens, respectively. How many rounds will there be in the game?</p>",
+      "solutions": [
+        "<p>We look at a set of three rounds, where the players begin with $x+1$, $x$, and $x-1$ tokens.After three rounds, there will be a net loss of $1$ token per player (they receive two tokens and lose three). Therefore, after $36$ rounds -- or $12$ three-round sets, $A,B$ and $C$ will have $3$, $2$, and $1$ tokens, respectively. After $1$ more round, player $A$ will give away $3$ tokens, leaving them empty-handed, and thus the game will end. We then have there are $36+1=\\boxed{\\mathrm{(B)}\\ 37}$ rounds until the game ends.</p><p>Let's bash a few rounds. The amounts are for players $1,2,$ and $3$, respectively.</p><p>First round: $15,14,13$ (given)Second round: $12,15,14$Third round: $13,12,15$Fourth round: $14,13,12$</p><p>We see that after $3$ rounds are played, we have the exact same scenario as the first round but with one token less per player. So, the sequence $1,4,7,10...$ where each of the next members are $3$ greater than the previous one corresponds with the sequence $15,14,13,12...$ where the first sequence represents the round and the second sequence represents the number of tokens player $1$ has. But we note that once player $1$ reaches $3$ coins, the game will end on his next turn as he must give away all his coins. Therefore, we want the $15-3+1=13$th number in the sequence $1,4,7,10...$ which is $\\boxed{\\mathrm{(B)}\\ 37}$.</p><p>Solution by franzliszt</p><p>Looking at a set of five rounds, you'll see $A$ has $4$ fewer tokens than in the beginning. Looking at four more rounds, you'll notice $A$ has the same amount of tokens, namely $11$, compared to round five. If you keep doing this process, you'll see a pattern: Every four rounds, the amount of tokens $A$ has either decreased by $4$ or stayed the same compared to the previous four rounds. For example, in round nine, $A$ had $11$ tokens, in round $13$, $A$ had $11$ tokens, and in round $17$, $A$ had $7$ tokens, etc. Using this weird pattern, you can find out that in round $37$, $A$ should have $3$ tokens, but since they would have given them away in that round, the game would end on $\\boxed{\\mathrm{(B)}\\ 37}$.</p><p>This strategy is a very slow one, requiring you to list out about $25$ rounds.</p>",
+        "<p>We look at a set of three rounds, where the players begin with $x+1$, $x$, and $x-1$ tokens.After three rounds, there will be a net loss of $1$ token per player (they receive two tokens and lose three). Therefore, after $36$ rounds -- or $12$ three-round sets, $A,B$ and $C$ will have $3$, $2$, and $1$ tokens, respectively. After $1$ more round, player $A$ will give away $3$ tokens, leaving them empty-handed, and thus the game will end. We then have there are $36+1=\\boxed{\\mathrm{(B)}\\ 37}$ rounds until the game ends.</p>",
+        "<p>Let's bash a few rounds. The amounts are for players $1,2,$ and $3$, respectively.</p><p>First round: $15,14,13$ (given)Second round: $12,15,14$Third round: $13,12,15$Fourth round: $14,13,12$</p><p>We see that after $3$ rounds are played, we have the exact same scenario as the first round but with one token less per player. So, the sequence $1,4,7,10...$ where each of the next members are $3$ greater than the previous one corresponds with the sequence $15,14,13,12...$ where the first sequence represents the round and the second sequence represents the number of tokens player $1$ has. But we note that once player $1$ reaches $3$ coins, the game will end on his next turn as he must give away all his coins. Therefore, we want the $15-3+1=13$th number in the sequence $1,4,7,10...$ which is $\\boxed{\\mathrm{(B)}\\ 37}$.</p><p>Solution by franzliszt</p>",
+        "<p>Looking at a set of five rounds, you'll see $A$ has $4$ fewer tokens than in the beginning. Looking at four more rounds, you'll notice $A$ has the same amount of tokens, namely $11$, compared to round five. If you keep doing this process, you'll see a pattern: Every four rounds, the amount of tokens $A$ has either decreased by $4$ or stayed the same compared to the previous four rounds. For example, in round nine, $A$ had $11$ tokens, in round $13$, $A$ had $11$ tokens, and in round $17$, $A$ had $7$ tokens, etc. Using this weird pattern, you can find out that in round $37$, $A$ should have $3$ tokens, but since they would have given them away in that round, the game would end on $\\boxed{\\mathrm{(B)}\\ 37}$.</p><p>This strategy is a very slow one, requiring you to list out about $25$ rounds.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2004 AMC 10A - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_9",
+      "question": "<p>In the overlapping <a href=\"/wiki/index.php/Triangle\" title=\"Triangle\">triangles</a> $\\triangle{ABC}$ and $\\triangle{ABE}$ sharing common <a href=\"/wiki/index.php/Edge\" title=\"Edge\"> side</a> $AB$, $\\angle{EAB}$ and $\\angle{ABC}$ are <a href=\"/wiki/index.php/Right_angle\" title=\"Right angle\">right angles</a>, $AB=4$, $BC=6$, $AE=8$, and $\\overline{AC}$ and $\\overline{BE}$ intersect at $D$. What is the difference between the areas of $\\triangle{ADE}$ and $\\triangle{BDC}$? </p><p>[asy] size(150); defaultpen(linewidth(0.4)); //Variable Declarations pair A, B, C, D, E;  //Variable Definitions A=(0, 0); B=(4, 0); C=(4, 6); E=(0, 8); D=extension(A,C,B,E);  //Initial Diagram draw(A--B--C--A--E--B); label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C$\",C,NE); label(\"$D$\",D,3N); label(\"$E$\",E,NW);  //Side labels label(\"$4$\",A--B,S); label(\"$8$\",A--E,W); label(\"$6$\",B--C,ENE); [/asy]</p>",
+      "solutions": [
+        "<p>Looking, we see that the area of $[\\triangle EBA]$ is 16 and the area of $[\\triangle ABC]$ is 12. Set the area of $[\\triangle ADB]$ to be x. We want to find $[\\triangle ADE]$ - $[\\triangle CDB]$. So, that would be $[\\triangle EBA]-[\\triangle ADB]=16-x$ and $[\\triangle ABC]-[\\triangle ADB]=12-x$. Therefore, $[\\triangle ADE]-[\\triangle DBC]=(16-x)-(12-x)=16-x-12+x= \\boxed{\\mathrm{(B)}\\ 4}$</p><p>~ MathKatana</p><p>Since $AE \\perp AB$ and $BC \\perp AB$, $AE \\parallel BC$. By alternate interior angles and $AA\\sim$, we find that $\\triangle ADE \\sim \\triangle CDB$, with side length ratio $\\frac{4}{3}$. Their heights also have the same ratio, and since the two heights add up to $4$, we have that $h_{ADE} = 4 \\cdot \\frac{4}{7} = \\frac{16}{7}$ and $h_{CDB} = 3 \\cdot \\frac 47 = \\frac {12}7$. Subtracting the areas, $\\frac{1}{2} \\cdot 8 \\cdot \\frac {16}7 - \\frac 12 \\cdot 6 \\cdot \\frac{12}7 = 4$ $\\Rightarrow$ $\\boxed{\\mathrm{(B)}\\ 4}$.</p><p>Let $[X]$ represent the area of figure $X$. Note that $[\\triangle BEA]=[\\triangle ABD]+[\\triangle ADE]$ and $[\\triangle BCA]=[\\triangle ABD]+[\\triangle BDC]$.</p><p>$[\\triangle ADE]-[\\triangle BDC]=[\\triangle BEA]-[\\triangle BCA]=\\frac{1}{2}\\times8\\times4-\\frac{1}{2}\\times6\\times4= 16-12=4\\Rightarrow\\boxed{\\mathrm{(B)}\\ 4}$</p><p>Put figure $ABCDE$ on a graph. $\\overline{AC}$ goes from (0, 0) to (4, 6) and $\\overline{BE}$ goes from (4, 0) to (0, 8). $\\overline{AC}$ is on line $y = 1.5x$. $\\overline{BE}$ is on line $y = -2x + 8$. Finding intersection between these points,</p><p>$1.5x = -2x + 8$. </p><p>$3.5x = 8$</p><p>$x = 8 \\times \\frac{2}{7}$</p><p>$= \\frac{16}{7}$</p><p>This gives us the x-coordinate of D. So, $\\frac{16}{7}$ is the height of $\\triangle ADE$, then area of $\\triangle ADE$ is $\\frac{16}{7} \\times 8 \\times \\frac{1}{2}$$= \\frac{64}{7}$</p><p>Now, the height of $\\triangle BDC$ is $4-\\frac{16}{7} = \\frac{12}{7}$And the area of $\\triangle BDC$ is $6 \\times \\frac{12}{7} \\times \\frac{1}{2} = \\frac{36}{7}$</p><p>This gives us $\\frac{64}{7} - \\frac{36}{7} = 4$</p><p>Therefore, the difference is $4$</p><p>We want to figure out $[\\triangle ADE] - [\\triangle BDC]$.Notice that $\\triangle ABC$ and $\\triangle BAE$ \"intersect\" and form $\\triangle ADB$.</p><p>This means that $[\\triangle BAE] - [\\triangle ABC)] = [\\triangle ADE] - [\\triangle BDC]$ because $[\\triangle ADB]$ cancels out, which can be seen easily in the diagram.</p><p>$[\\triangle BAE] = 0.5 \\cdot 4 \\cdot 8 = 16$</p><p>$[\\triangle ABC] = 0.5 \\cdot 4 \\cdot 16 = 12$</p><p>$[\\triangle BDC] - [\\triangle ADE] = 16 - 12 =\\boxed{\\mathrm{(B)}\\ 4}$</p>",
+        "<p>Looking, we see that the area of $[\\triangle EBA]$ is 16 and the area of $[\\triangle ABC]$ is 12. Set the area of $[\\triangle ADB]$ to be x. We want to find $[\\triangle ADE]$ - $[\\triangle CDB]$. So, that would be $[\\triangle EBA]-[\\triangle ADB]=16-x$ and $[\\triangle ABC]-[\\triangle ADB]=12-x$. Therefore, $[\\triangle ADE]-[\\triangle DBC]=(16-x)-(12-x)=16-x-12+x= \\boxed{\\mathrm{(B)}\\ 4}$</p><p>~ MathKatana</p>",
+        "<p>Since $AE \\perp AB$ and $BC \\perp AB$, $AE \\parallel BC$. By alternate interior angles and $AA\\sim$, we find that $\\triangle ADE \\sim \\triangle CDB$, with side length ratio $\\frac{4}{3}$. Their heights also have the same ratio, and since the two heights add up to $4$, we have that $h_{ADE} = 4 \\cdot \\frac{4}{7} = \\frac{16}{7}$ and $h_{CDB} = 3 \\cdot \\frac 47 = \\frac {12}7$. Subtracting the areas, $\\frac{1}{2} \\cdot 8 \\cdot \\frac {16}7 - \\frac 12 \\cdot 6 \\cdot \\frac{12}7 = 4$ $\\Rightarrow$ $\\boxed{\\mathrm{(B)}\\ 4}$.</p>",
+        "<p>Let $[X]$ represent the area of figure $X$. Note that $[\\triangle BEA]=[\\triangle ABD]+[\\triangle ADE]$ and $[\\triangle BCA]=[\\triangle ABD]+[\\triangle BDC]$.</p><p>$[\\triangle ADE]-[\\triangle BDC]=[\\triangle BEA]-[\\triangle BCA]=\\frac{1}{2}\\times8\\times4-\\frac{1}{2}\\times6\\times4= 16-12=4\\Rightarrow\\boxed{\\mathrm{(B)}\\ 4}$</p>",
+        "<p>Put figure $ABCDE$ on a graph. $\\overline{AC}$ goes from (0, 0) to (4, 6) and $\\overline{BE}$ goes from (4, 0) to (0, 8). $\\overline{AC}$ is on line $y = 1.5x$. $\\overline{BE}$ is on line $y = -2x + 8$. Finding intersection between these points,</p><p>$1.5x = -2x + 8$. </p><p>$3.5x = 8$</p><p>$x = 8 \\times \\frac{2}{7}$</p><p>$= \\frac{16}{7}$</p><p>This gives us the x-coordinate of D. So, $\\frac{16}{7}$ is the height of $\\triangle ADE$, then area of $\\triangle ADE$ is $\\frac{16}{7} \\times 8 \\times \\frac{1}{2}$$= \\frac{64}{7}$</p><p>Now, the height of $\\triangle BDC$ is $4-\\frac{16}{7} = \\frac{12}{7}$And the area of $\\triangle BDC$ is $6 \\times \\frac{12}{7} \\times \\frac{1}{2} = \\frac{36}{7}$</p><p>This gives us $\\frac{64}{7} - \\frac{36}{7} = 4$</p><p>Therefore, the difference is $4$</p>",
+        "<p>We want to figure out $[\\triangle ADE] - [\\triangle BDC]$.Notice that $\\triangle ABC$ and $\\triangle BAE$ \"intersect\" and form $\\triangle ADB$.</p><p>This means that $[\\triangle BAE] - [\\triangle ABC)] = [\\triangle ADE] - [\\triangle BDC]$ because $[\\triangle ADB]$ cancels out, which can be seen easily in the diagram.</p><p>$[\\triangle BAE] = 0.5 \\cdot 4 \\cdot 8 = 16$</p><p>$[\\triangle ABC] = 0.5 \\cdot 4 \\cdot 16 = 12$</p><p>$[\\triangle BDC] - [\\triangle ADE] = 16 - 12 =\\boxed{\\mathrm{(B)}\\ 4}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2004 AMC 10A - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_10",
+      "question": "<p>Coin $A$ is flipped three times and coin $B$ is flipped four times. What is the probability that the number of heads obtained from flipping the two fair coins is the same?</p>",
+      "solutions": [
+        "<p>There are $4$ ways that the same number of heads will be obtained; $0$, $1$, $2$, or $3$ heads.</p><p>The probability of both getting $0$ heads is $\\left(\\frac12\\right)^3{3\\choose0}\\left(\\frac12\\right)^4{4\\choose0}=\\frac1{128}$</p><p>The probability of both getting $1$ head is$\\left(\\frac12\\right)^3{3\\choose1}\\left(\\frac12\\right)^4{4\\choose1}=\\frac{12}{128}$</p><p>The probability of both getting $2$ heads is$\\left(\\frac12\\right)^3{3\\choose2}\\left(\\frac12\\right)^4{4\\choose2}=\\frac{18}{128}$</p><p>The probability of both getting $3$ heads is$\\left(\\frac12\\right)^3{3\\choose3}\\left(\\frac12\\right)^4{4\\choose3}=\\frac{4}{128}$</p><p>Therefore, the probabiliy of flipping the same number of heads is:$\\frac{1+12+18+4}{128}=\\frac{35}{128}\\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{35}{128}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2004 AMC 10A - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_11",
+      "question": "<p>A company sells peanut butter in cylindrical jars. Marketing research suggests that using wider jars will increase sales. If the <a href=\"/wiki/index.php/Diameter\" title=\"Diameter\">diameter</a> of the jars is increased by $25\\%$ without altering the <a href=\"/wiki/index.php/Volume\" title=\"Volume\">volume</a>, by what percent must the height be decreased?</p>",
+      "solutions": [
+        "<p>When the diameter is increased by $25\\%$, it is increased by $\\dfrac{5}{4}$, so the area of the base is increased by $\\left(\\dfrac54\\right)^2=\\dfrac{25}{16}$.</p><p>To keep the volume the same, the height must be $\\dfrac{1}{\\frac{25}{16}}=\\dfrac{16}{25}$ of the original height, which is a $36\\%$ reduction. $\\boxed{\\mathrm{(C)}\\ 36}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2004 AMC 10A - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_12",
+      "question": "<p>Henry's Hamburger Haven offers its hamburgers with the following condiments: ketchup, mustard, mayonnaise, tomato, lettuce, pickles, cheese, and onions. A customer can choose one, two,or three meat patties and any collection of condiments. How many different kinds of hamburgers can be ordered?</p>",
+      "solutions": [
+        "<p>Think of the condiments as a set with 8 elements. There are $8$ total condiments to choose from. Therefore, there are $2^8=256$ ways to order the condiments. (You have two choices for each condiment- one choice is to include that condiment, and the other choice is to not include that condiment.) There are also $3$ choices for the meat, making a total of $256\\times3=768$ possible hamburgers. $\\boxed{\\mathrm{(C)}\\ 768}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2004 AMC 10A - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_13",
+      "question": "<p>At a party, each man danced with exactly three women and each woman danced with exactly two men. Twelve men attended the party. How many women attended the party?</p>",
+      "solutions": [
+        "<p>If each man danced with $3$ women, then there will be a total of $3\\times12=36$ pairs of men and women. However, each woman only danced with $2$ men, so there must have been $\\frac{36}2 \\Longrightarrow \\boxed{\\mathrm{(D)}\\ 18}$ women.</p>",
+        "<p>Consider drawing out a diagram. Let a circle represent a man, and let a shaded circle represent a woman. </p><p>Then, we know that for every 2 men, there will be 3 woman using our diagram. Therefore, the ratio between the number of men and women is 2:3.</p><p>Hence, we know that:</p><p>$\\frac{2}{3} = \\frac{12}{x} \\implies x = 18 \\implies \\boxed{D}.$</p><p>~yk2007</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2004 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_14",
+      "question": "<p>The average value of all the pennies, nickels, dimes, and quarters in Paula's purse is $20$ cents. If she had one more quarter, the average value would be $21$ cents. How many dimes does she have in her purse?</p>",
+      "solutions": [
+        "<p>Let the total value, in cents, of the coins Paula has originally be $v$, and the number of coins she has be $n$. Then $\\frac{v}{n}=20\\Longrightarrow v=20n$ and $\\frac{v+25}{n+1}=21$. Substituting yields: $20n+25=21(n+1),$ so $n=4$, $v = 80.$ Then, we see that the only way Paula can satisfy this rule is if she had $3$ quarters and $1$ nickel in her purse. Thus, she has $\\boxed{\\mathrm{(A)}\\ 0}$ dimes.</p><p>If the new coin was worth $20$ cents, adding it would not change the mean. The additional $5$ cents raise the mean by $1$, thus the new number of coins must be $5$. Therefore there were $4$ coins worth a total of $4\\times20=80$ cents. As in the previous solution, we conclude that the only way to get $80$ cents using $4$ coins is $25+25+25+5$. Thus, having three quarters, one nickel, and no dimes $\\boxed{\\mathrm{(A)}\\ 0}.$</p>",
+        "<p>Let the total value, in cents, of the coins Paula has originally be $v$, and the number of coins she has be $n$. Then $\\frac{v}{n}=20\\Longrightarrow v=20n$ and $\\frac{v+25}{n+1}=21$. Substituting yields: $20n+25=21(n+1),$ so $n=4$, $v = 80.$ Then, we see that the only way Paula can satisfy this rule is if she had $3$ quarters and $1$ nickel in her purse. Thus, she has $\\boxed{\\mathrm{(A)}\\ 0}$ dimes.</p>",
+        "<p>If the new coin was worth $20$ cents, adding it would not change the mean. The additional $5$ cents raise the mean by $1$, thus the new number of coins must be $5$. Therefore there were $4$ coins worth a total of $4\\times20=80$ cents. As in the previous solution, we conclude that the only way to get $80$ cents using $4$ coins is $25+25+25+5$. Thus, having three quarters, one nickel, and no dimes $\\boxed{\\mathrm{(A)}\\ 0}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2004 AMC 10A - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_15",
+      "question": "<p>Given that $-4\\leq x\\leq-2$ and $2\\leq y\\leq4$, what is the largest possible value of $\\frac{x+y}{x}$?</p>",
+      "solutions": [
+        "<p>Rewrite $\\frac{(x+y)}x$ as $\\frac{x}x+\\frac{y}x=1+\\frac{y}x$.</p><p>We also know that $\\frac{y}x<0$ because $x$ and $y$ are of opposite sign.</p><p>Therefore, $1+\\frac{y}x$ is maximized when $|\\frac{y}x|$ is minimized, which occurs when $|x|$ is the largest and $|y|$ is the smallest.</p><p>This occurs at $(-4,2)$, so $\\frac{x+y}x=1-\\frac12=\\frac12\\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{1}{2}}$.</p><p><br/></p>",
+        "<p>If the answer choice is valid, then it must satisfy $\\frac{(x+y)}x$. We use answer choices from greatest to least since the question asks for the greatest value.</p><p>Answer choice $\\text{(E)}$. We see that if $\\frac{(x+y)}x = 1$ then</p><p>$x+y=x$ and $y=0$. However, $0$ is not in the domain of $y$, so $\\text{(E)}$ is incorrect. </p><p>Answer choice $\\text{(D)}$, however, we can find a value that satisfies $\\frac{x+y}{x}=\\frac{1}{2}$ which simplifies to $x+2y=0$, such as $(-4,2)$. </p><p>Therefore, $\\boxed{\\text{(D)}}$ is the greatest.</p><p><br/></p>",
+        "<p>As $-4\\leq x\\leq-2$, we know that the denominator of our given fraction is negative. So to achieve the greatest value possible, our numerator, or $x+y$ must also be as small as possible.</p><p>So we pick our smallest value for $y$, which is $2$.</p><p>Now if we if set our value of $x$ to its lowest, our expression becomes $\\frac{(-2+2)}{-2} = \\frac{0}{2}$ As we decrease our $x$ value, we see that our numerator decrease from $0$ and our denominator decrease from $-2$ at the same rate. So decreasing our $x$ value decreases the overwhelming gap between our denominator and numerator, which gives us an overall bigger number.</p><p>So we also pick the smallest value for $x$, which is $-4$. We know have $\\frac{(-4+2)}{-4} = \\frac{-2}{-4} = \\frac{1}{2}$. </p><p>Therefore, $\\boxed{\\text{(D)}}$ is our greatest possible value.</p><p>-JinhoK</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2004 AMC 10A - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_16",
+      "question": "<p>The $5\\times 5$ grid shown contains a collection of squares with sizes from $1\\times 1$ to $5\\times 5$. How many of these squares contain the black center square?</p><p>[asy] for (int i=0; i<5; ++i) {  for (int j=0; j<5; ++j) {    draw((-2.5+i, -2.5+j)--(-1.5+i, -2.5+j) -- (-1.5+i, -1.5+j) -- (-2.5+i, -1.5+j)--cycle);  }  fill((-0.5,-0.5)--(-0.5, 0.5)--(0.5,0.5) -- (0.5,-0.5)--cycle, black); } [/asy]</p>",
+      "solutions": [
+        "<p>Since there are five types of squares: $1 \\times 1, 2 \\times 2, 3 \\times 3, 4 \\times 4,$ and $5 \\times 5.$ We must find how many of each square contain the black shaded square in the center. </p><p>If we list them, we get that </p><ul><li>There is $1$ of all $1\\times 1$ squares, containing the black square</li><li>There are $4$ of all $2\\times 2$ squares, containing the black square</li><li>There are $9$ of all $3\\times 3$ squares, containing the black square</li><li>There are $4$ of all $4\\times 4$ squares, containing the black square</li><li>There is $1$ of all $5\\times 5$ squares, containing the black square</li></ul><p>Thus, the answer is $1+4+9+4+1=19\\Rightarrow\\boxed{\\mathrm{(D)}\\ 19}$.</p><p>We use complementary counting. There are only $2\\times2$ and $1\\times1$ squares that do not contain the black square. Counting, there are $12$-$2\\times2$ squares, and $25-1 = 24$ $1\\times1$ squares that do not contain the black square. That gives $12+24=36$ squares that don't contain it. There are a total of $25+16+9+4+1 = 55$ squares possible $(25$ - $1\\times1$ squares $16$ - $2\\times2$ squares $9$ - $3\\times3$ squares $4$ - $4\\times4$ squares and $1$ - $5\\times5$ square), therefore there are $55-36 = 19$ squares that contain the black square, which is $\\boxed{\\mathrm{(D)}\\ 19}$.</p>",
+        "<p>Since there are five types of squares: $1 \\times 1, 2 \\times 2, 3 \\times 3, 4 \\times 4,$ and $5 \\times 5.$ We must find how many of each square contain the black shaded square in the center. </p><p>If we list them, we get that </p><ul><li>There is $1$ of all $1\\times 1$ squares, containing the black square</li><li>There are $4$ of all $2\\times 2$ squares, containing the black square</li><li>There are $9$ of all $3\\times 3$ squares, containing the black square</li><li>There are $4$ of all $4\\times 4$ squares, containing the black square</li><li>There is $1$ of all $5\\times 5$ squares, containing the black square</li></ul><p>Thus, the answer is $1+4+9+4+1=19\\Rightarrow\\boxed{\\mathrm{(D)}\\ 19}$.</p>",
+        "<p>We use complementary counting. There are only $2\\times2$ and $1\\times1$ squares that do not contain the black square. Counting, there are $12$-$2\\times2$ squares, and $25-1 = 24$ $1\\times1$ squares that do not contain the black square. That gives $12+24=36$ squares that don't contain it. There are a total of $25+16+9+4+1 = 55$ squares possible $(25$ - $1\\times1$ squares $16$ - $2\\times2$ squares $9$ - $3\\times3$ squares $4$ - $4\\times4$ squares and $1$ - $5\\times5$ square), therefore there are $55-36 = 19$ squares that contain the black square, which is $\\boxed{\\mathrm{(D)}\\ 19}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2004 AMC 10A - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_17",
+      "question": "<p>Brenda and Sally run in opposite directions on a circular track, starting at <a href=\"/wiki/index.php/Diameter\" title=\"Diameter\">diametrically</a> opposite points. They first meet after Brenda has run 100 meters. They next meet after Sally has run 150 meters past their first meeting point. Each girl runs at a constant speed. What is the length of the track in meters?</p>",
+      "solutions": [
+        "<p>Call the length of the race track $x$. When they meet at the first meeting point, Brenda has run $100$ meters, while Sally has run $\\frac{x}{2} - 100$ meters. By the second meeting point, Sally has run $150$ meters, while Brenda has run $x - 150$ meters. Since they run at a constant speed, we can set up a <a href=\"/wiki/index.php/Proportion\" title=\"Proportion\">proportion</a>: $\\frac{100}{x- 150} = \\frac{\\frac{x}{2} - 100}{150}$. Cross-multiplying, we get that $x = 350\\Longrightarrow\\boxed{\\mathrm{(C)}\\ 350}$.</p>",
+        "<p>Call the length of the race track $x$. When they meet at the first meeting point, Brenda has run $100$ meters, while Sally has run $\\frac{x}{2} - 100$ meters. By the second meeting point, Sally has run $150$ meters, while Brenda has run $x - 150$ meters. Since they run at a constant speed, we can set up a <a href=\"/wiki/index.php/Proportion\" title=\"Proportion\">proportion</a>: $\\frac{100}{x- 150} = \\frac{\\frac{x}{2} - 100}{150}$. Cross-multiplying, we get that $x = 350\\Longrightarrow\\boxed{\\mathrm{(C)}\\ 350}$.</p>",
+        "<p>The total distance the girls run between the start and the first meeting is one half of the track length. The total distance they run between the two meetings is the track length. As the girls run at constant speeds, the interval between the meetings is twice as long as the interval between the start and the first meeting. Thus between the meetings Brenda will run $2\\times100=200$ meters. Therefore the length of the track is $150 + 200 = 350$ meters $\\Rightarrow\\boxed{\\mathrm{(C)}\\ 350}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2004 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_18",
+      "question": "<p>A <a href=\"/wiki/index.php/Sequence\" title=\"Sequence\">sequence</a> of three real numbers forms an <a class=\"mw-redirect\" href=\"/wiki/index.php/Arithmetic_progression\" title=\"Arithmetic progression\">arithmetic progression</a> with a first term of $9$. If $2$ is added to the second term and $20$ is added to the third term, the three resulting numbers form a <a class=\"mw-redirect\" href=\"/wiki/index.php/Geometric_progression\" title=\"Geometric progression\">geometric progression</a>. What is the smallest possible value for the third term in the geometric progression?</p>",
+      "solutions": [
+        "<p>Let $d$ be the common difference. Then $9$, $9+d+2=11+d$, $9+2d+20=29+2d$ are the terms of the geometric progression. Since the middle term is the <a href=\"/wiki/index.php/Geometric_mean\" title=\"Geometric mean\">geometric mean</a> of the other two terms, $(11+d)^2 = 9(2d+29)$ $\\Longrightarrow d^2 + 4d - 140$ $= (d+14)(d-10) = 0$. The smallest possible value occurs when $d = -14$, and the third term is $2(-14) + 29 = 1\\Rightarrow\\boxed{\\mathrm{(A)}\\ 1}$.</p>",
+        "<p>Let $d$ be the common difference and $r$ be the common ratio. Then the arithmetic sequence is $9$, $9+d$, and $9+2d$. The geometric sequence (when expressed in terms of $d$) has the terms $9$, $11+d$, and $29+2d$. Thus, we get the following equations:</p><p>$9r=11+d\\Rightarrow d=9r-11$</p><p>$9r^2=29+2d$</p><p>Plugging in the first equation into the second, our equation becomes $9r^2=29+18r-22\\Longrightarrow9r^2-18r-7=0$. By the quadratic formula, $r$ can either be $-\\frac{1}{3}$ or $\\frac{7}{3}$. If $r$ is $-\\frac{1}{3}$, the third term (of the geometric sequence) would be $1$, and if $r$ is $\\frac{7}{3}$, the third term would be $49$. Clearly the minimum possible value for the third term of the geometric sequence is $\\boxed{\\mathrm{(A)}\\ 1}$.</p>",
+        "<p>Let the three numbers be, in increasing order, $9,y,z$</p><p>Hence, we have that $9-y=y-z\\implies 9+z=2y$.</p><p>Also, from the second part of information given, we get that</p><p>$\\frac{9}{y+2}=\\frac{y+2}{z+20}\\implies 9(z+20)=(y+2)^2\\implies y=3(\\sqrt{z+20})-2$</p><p>Plugging back in...</p><p>$9+z=6(\\sqrt{z+20})-4\\implies (9+z)^2=36(z+20)$</p><p>Simplifying, we get that $z^2-10z-551=0$</p><p>Applying the quadratic formula, we get that $z=\\frac{10\\pm \\sqrt{2304}}{2}\\implies \\frac{10\\pm48}{2}$</p><p>Obviously, in order to minimize the value of $z$, we have to subtract. Hence, $z=-19$</p><p>However, the problem asks for the minimum value of the third term in a geometric progression.</p><p>Hence, the answer is $-19+20=\\boxed{1} \\implies \\boxed{A}$</p>",
+        "<p>Let the arithmetic sequence be $9,9+x,9+2x$ and let the geometric sequence be $9,11+x,29+2x$. Now, we just try all the solutions. If the last term is $1$, then $x=-14$. This gives the geometric sequence $9,-3,1$ which indeed works. The answer is $\\boxed{1} \\implies \\boxed{A}$</p><p>Solution by franzliszt</p>",
+        "<p>The terms of the arithmetic progression are 9, $9+d$, and $9+2d$ for some real number $d$. The terms of the geometric progression are 9, $11+d$, and $29+2d$. Therefore$(11+d)^{2} = 9(29+2d) \\quad\\text{so}\\quad d^{2}+4d-140 = 0.$Thus $d=10$ or $d=-14$. The corresponding geometric progressions are $9, 21, 49$ and $9, -3, 1,$ so the smallest possible value for the third term of the geometric progression is $\\boxed{1} \\implies \\boxed{A}$.</p><p>List out the first few terms arithmetic progressions and their corresponding geometric progressions. List both the positive and negative. Then you will find that the answer is $\\boxed{A}$.</p>",
+        "<p>List out the first few terms arithmetic progressions and their corresponding geometric progressions. List both the positive and negative. Then you will find that the answer is $\\boxed{A}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2004 AMC 10A - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_19",
+      "question": "<p>A white cylindrical silo has a diameter of 30 feet and a height of 80 feet. A red stripe with a horizontal width of 3 feet is painted on the silo, as shown, making two complete revolutions around it. What is the area of the stripe in square feet?</p><p>[asy]  size(250);defaultpen(linewidth(0.8)); draw(ellipse(origin, 3, 1)); fill((3,0)--(3,2)--(-3,2)--(-3,0)--cycle, white); draw((3,0)--(3,16)^^(-3,0)--(-3,16)); draw((0, 15)--(3, 12)^^(0, 16)--(3, 13)); filldraw(ellipse((0, 16), 3, 1), white, black); draw((-3,11)--(3, 5)^^(-3,10)--(3, 4)); draw((-3,2)--(0,-1)^^(-3,1)--(-1,-0.89)); draw((0,-1)--(0,15), dashed); draw((3,-2)--(3,-4)^^(-3,-2)--(-3,-4)); draw((-7,0)--(-5,0)^^(-7,16)--(-5,16)); draw((3,-3)--(-3,-3), Arrows(6)); draw((-6,0)--(-6,16), Arrows(6)); draw((-2,9)--(-1,9), Arrows(3)); label(\"$3$\", (-1.375,9.05), dir(260), fontsize(7)); label(\"$A$\", (0,15), N); label(\"$B$\", (0,-1), NE); label(\"$30$\", (0, -3), S); label(\"$80$\", (-6, 8), W);[/asy]</p>",
+      "solutions": [
+        "<p>The cylinder can be \"unwrapped\" into a rectangle, and we see that there are two stripes which is a parallelogram with base $3$ and height $40$, each. Thus, we get $3\\times40\\times2=240\\Rightarrow\\boxed{\\mathrm{(C)}\\ 240}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2004 AMC 10A - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_20",
+      "question": "<p>Points $E$ and $F$ are located on square $ABCD$ so that $\\triangle BEF$ is equilateral. What is the ratio of the area of $\\triangle DEF$ to that of $\\triangle ABE$?</p>",
+      "solutions": [
+        "<p>Since triangle $BEF$ is equilateral, $EA=FC$, and $EAB$ and $FCB$ are $HL$ congruent. Thus, triangle $DEF$ is an isosceles right triangle. So we let $DE=x$. Thus $EF=EB=FB=x\\sqrt{2}$. If we go angle chasing, we find out that $\\angle AEB=75^{\\circ}$, thus $\\angle ABE=15^{\\circ}$. $\\frac{AE}{EB}=\\sin{15^{\\circ}}=\\frac{\\sqrt{6}-\\sqrt{2}}{4}$. Thus $\\frac{AE}{x\\sqrt{2}}=\\frac{\\sqrt{6}-\\sqrt{2}}{4}$, or $AE=\\frac{x(\\sqrt{3}-1)}{2}$. Thus $AB=\\frac{x(\\sqrt{3}+1)}{2}$, and $[ABE]=\\frac{x^2}{4}$, and $[DEF]=\\frac{x^2}{2}$. Thus the ratio of the areas is $\\boxed{\\mathrm{(D)}\\ 2}$</p><p>z</p>",
+        "<p>WLOG, let the side length of $ABCD$ be 1. Let $DE = x$. It suffices that $AE = 1 - x$. Then triangles $ABE$ and $CBF$ are congruent by HL, so $CF = AE$ and $DE = DF$. We find that $BE = EF = x \\sqrt{2}$, and so, by the Pythagorean Theorem, we have$(1 - x)^2 + 1 = 2x^2.$ This yields $x^2 + 2x = 2$, so $x^2 = 2 - 2x$. Thus, the desired ratio of areas is\\[\\dfrac{\\dfrac{x^2}{2}}{\\dfrac{1-x}{2}} = \\dfrac{x^2}{1 - x} = \\boxed{\\text{(D) }2}.\\]</p>",
+        "<p>Assume $AB=1$. Then, $FC$ is $x$ and $ED$ is $1-x$. We see that using $HL$, $FCB$ is congruent to EAB. Using Pythagoras of triangles $FCB$ and $FDE$ we get $2{(1-x)}^2=x^2+1$. Expanding, we get $2x^2-4x+2=x^2+1$. Simplifying gives $x^2-4x+1=0$ solving using completing the square (or other methods) gives 2 answers: $2-\\sqrt{3}$ and $2+\\sqrt{3}$. Because $x < 1$, $x=2-\\sqrt{3}$. Using the areas, the answer is $\\boxed{\\text{(D) }2}$</p>",
+        "<p>First, since $\\bigtriangleup BEF$ is equilateral and $ABCD$ is a square, by the Hypothenuse Leg Theorem, $\\bigtriangleup ABE$ is congruent to $\\bigtriangleup CBF$. Then, assume length $AB = BC = x$ and length $DE = DF = y$, then $AE = FC = x - y$. $\\bigtriangleup BEF$ is equilateral, so $EF = EB$ and $EB^2 = EF^2$, it is given that $ABCD$ is a square and $\\bigtriangleup DEF$ and $\\bigtriangleup ABE$ are right triangles. Then we use the Pythagorean theorem to prove that $AB^2 + AE^2 = EB^2$ and since we know that $EB^2 = EF^2$ and $EF^2 = DE^2 + DF^2$, which means $AB^2 + AE^2 = DE^2 + DF^2$. Now we plug in the variables and the equation becomes $x^2 + (x-y)^2 = 2y^2$, expand and simplify and you get $2x^2 - 2xy = y^2$. We want the ratio of area of $\\bigtriangleup DEF$ to $\\bigtriangleup ABE$. Expressed in our variables, the ratio of the area is $\\frac{y^2}{x^2 - xy}$ and we know $2x^2 - 2xy = y^2$, so the ratio must be $2$. So, the answer is $\\boxed{\\text{(D) }2}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2004 AMC 10A - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_21",
+      "question": "<p>Two distinct lines pass through the center of three concentric circles of radii 3, 2, and 1. The area of the shaded region in the diagram is $\\frac{8}{13}$ of the area of the unshaded region. What is the radian measure of the acute angle formed by the two lines? (Note: $\\pi$ radian is $180$ degree.)</p>",
+      "solutions": [
+        "<p>Let the area of the shaded region be $S$, the area of the unshaded region be $U$, and the acute angle that is formed by the two lines be $\\theta$. We can set up two equations between $S$ and $U$:</p><p>$S+U=9\\pi$</p><p>$S=\\dfrac{8}{13}U$</p><p>Thus $\\dfrac{21}{13}U=9\\pi$, and $U=\\dfrac{39\\pi}{7}$, and thus $S=\\dfrac{8}{13}\\cdot \\dfrac{39\\pi}{7}=\\dfrac{24\\pi}{7}$.</p><p>Now we can make a formula for the area of the shaded region in terms of $\\theta$:</p><p>$\\dfrac{2\\theta}{2\\pi} \\cdot \\pi +\\dfrac{2(\\pi-\\theta)}{2\\pi} \\cdot (4\\pi-\\pi)+\\dfrac{2\\theta}{2\\pi}(9\\pi-4\\pi)=\\theta +3\\pi-3\\theta+5\\theta=3\\theta+3\\pi=\\dfrac{24\\pi}{7}$</p><p>Thus $3\\theta=\\dfrac{3\\pi}{7}\\Rightarrow \\theta=\\dfrac{\\pi}{7}\\Rightarrow\\boxed{\\mathrm{(B)}\\ \\frac{\\pi}{7}}$</p>",
+        "<p>As mentioned in Solution #1, we can make an equation for the area of the shaded region in terms of $\\theta$.</p><p>$\\implies\\dfrac{2\\theta}{2\\pi} \\cdot \\pi +\\dfrac{2(\\pi-\\theta)}{2\\pi} \\cdot (4\\pi-\\pi)+\\dfrac{2\\theta}{2\\pi}(9\\pi-4\\pi)=\\theta +3\\pi-3\\theta+5\\theta=3\\theta+3\\pi$.</p><p>So, the shaded region is $3\\theta+3\\pi$. This means that the unshaded region is $9\\pi-(3\\theta+3\\pi)$.</p><p>Also, the shaded region is $\\frac{8}{13}$ of the unshaded region. Hence, we can now make an equation and solve for $\\theta$.</p><p><br/>$3\\theta+3\\pi=\\frac{8}{13}(9\\pi-(3\\theta+3\\pi)\\implies 39\\theta+39\\pi=8(6\\pi-3\\theta)\\implies 39\\theta+39\\pi=48\\pi-24\\theta$.</p><p>Simplifying, we get $63\\theta=9\\pi\\implies \\theta=\\boxed{\\mathrm{(B)}\\ \\frac{\\pi}{7}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2004 AMC 10A - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_22",
+      "question": "<p><a href=\"/wiki/index.php/Square\" title=\"Square\">Square</a> $ABCD$ has side length $2$. A <a href=\"/wiki/index.php/Semicircle\" title=\"Semicircle\">semicircle</a> with <a href=\"/wiki/index.php/Diameter\" title=\"Diameter\">diameter</a> $\\overline{AB}$ is constructed inside the square, and the <a href=\"/wiki/index.php/Tangent_(geometry)\" title=\"Tangent (geometry)\">tangent</a> to the semicircle from $C$ intersects side $\\overline{AD}$ at $E$. What is the length of $\\overline{CE}$?</p><p>[asy] size(100); defaultpen(fontsize(10)); pair A=(0,0), B=(2,0), C=(2,2), D=(0,2), E=(0,1/2); draw(A--B--C--D--cycle);draw(C--E); draw(Arc((1,0),1,0,180)); label(\"$A$\",A,(-1,-1)); label(\"$B$\",B,( 1,-1)); label(\"$C$\",C,( 1, 1)); label(\"$D$\",D,(-1, 1)); label(\"$E$\",E,(-1, 0)); [/asy]</p>",
+      "solutions": [
+        "<p>[asy] size(150); defaultpen(fontsize(10)); pair A=(0,0), B=(2,0), C=(2,2), D=(0,2), E=(0,1/2), F=E+(C-E)/abs(C-E)/2; draw(A--B--C--D--cycle);draw(C--E); draw(Arc((1,0),1,0,180));draw((A+B)/2--F); label(\"$A$\",A,(-1,-1)); label(\"$B$\",B,( 1,-1)); label(\"$C$\",C,( 1, 1)); label(\"$D$\",D,(-1, 1)); label(\"$E$\",E,(-1, 0)); label(\"$F$\",F,( 0, 1)); label(\"$x$\",(A+E)/2,(-1, 0)); label(\"$x$\",(E+F)/2,( 0, 1)); label(\"$2$\",(F+C)/2,( 0, 1)); label(\"$2$\",(D+C)/2,( 0, 1)); label(\"$2$\",(B+C)/2,( 1, 0)); label(\"$2-x$\",(D+E)/2,(-1, 0)); [/asy]Let the point of tangency be $F$. By the <a href=\"/wiki/index.php/Two_Tangent_Theorem\" title=\"Two Tangent Theorem\">Two Tangent Theorem</a> $BC = FC = 2$ and $AE = EF = x$. Thus $DE = 2-x$. The <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> on $\\triangle CDE$ yields</p><p>\\begin{align*} DE^2 + CD^2 &= CE^2\\\\ (2-x)^2 + 2^2 &= (2+x)^2\\\\ x^2 - 4x + 8 &= x^2 + 4x + 4\\\\ x &= \\frac{1}{2}\\end{align*}</p><p>Hence $CE = FC + x = \\frac{5}{2} \\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{5}{2}}$.</p><p>Call the point of tangency point $F$ and the midpoint of $AB$ as $G$. $CF=2$ by Tangent Theorem. Notice that $\\angle EGF=\\frac{180-2\\cdot\\angle CGF}{2}=90-\\angle CGF$. Thus, $\\angle EGF=\\angle FCG$ and $\\tan EGF=\\tan FCG=\\frac{1}{2}$. Solving $EF=\\frac{1}{2}$. Adding, the answer is $\\frac{5}{2}$.</p><p><a class=\"image\" href=\"/wiki/index.php/File:2004_AMC12A-18.png\">2004 AMC12A-18.png</a></p><p>Clearly, $EA = EF = BG$. Thus, the sides of <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right triangle</a> $CDE$ are in arithmetic progression. Thus it is <a class=\"mw-redirect\" href=\"/wiki/index.php/Similar_triangles\" title=\"Similar triangles\">similar</a> to the triangle $3 - 4 - 5$ and since $DC = 2$, $CE = \\frac{5}{2} \\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{5}{2}}$.</p><p>[asy] size(150); defaultpen(fontsize(10)); pair A=(0,0), B=(2,0), C=(2,2), D=(0,2), E=(0,1/2), F=E+(C-E)/abs(C-E)/2, G=(1,0); draw(A--B--C--D--cycle);draw(C--E); draw(Arc((1,0),1,0,180));draw((A+B)/2--F); label(\"$A$\",A,(-1,-1)); label(\"$B$\",B,( 1,-1)); label(\"$C$\",C,( 1, 1)); label(\"$D$\",D,(-1, 1)); label(\"$E$\",E,(-1, 0)); label(\"$F$\",F,( 0, 1)); label(\"$x$\",(A+E)/2,(-1, 0)); label(\"$x$\",(E+F)/2,( 0, 1)); label(\"$2$\",(F+C)/2,( 0, 1)); label(\"$2$\",(D+C)/2,( 0, 1)); label(\"$2$\",(B+C)/2,( 1, 0)); label(\"$2-x$\",(D+E)/2,(-1, 0)); label(\"$G$\",G,(0,-1)); dot(G); draw(G--C); label(\"$\\sqrt{5}$\",(G+C)/2,(-1,0)); [/asy]</p><p>Let us call the midpoint of side $AB$, point $G$. Since the semicircle has radius 1, we can do the Pythagorean theorem on sides $GB, BC, GC$. We get $GC=\\sqrt{5}$. We then know that $CF=2$ by Pythagorean theorem. Then by connecting $EG$, we get similar triangles $EFG$ and $GFC$. Solving the ratios, we get $x=\\frac{1}{2}$, so the answer is $\\frac{5}{2} \\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{5}{2}}$.</p><p><br/>Alternatively, we could apply the Pythagorean theorem on triangle $CDE$ to get the equation \\[(2-x)^2+2^2=(x+2)^2\\] which would give us that $x=\\frac{1}{2}.$ Adding up $CF$ and $EF,$ we get $2+\\frac{1}{2}=\\boxed{\\mathrm{(D)}\\ \\frac{5}{2}}$ again. Note that we know $DE=2-x$ because $\\triangle EFG\\cong \\triangle EAG$ by $\\text{HL.}$</p><p>~Alternate solution by Tinsel</p><p>Using the diagram as drawn in Solution 4, let the total area of square $ABCD$ be divided into the triangles $DCE$, $EAG$, $CGB$, and $EGC$. Let x be the length of AE. Thus, the area of each triangle can be determined as follows: </p><p>\\[DCE = \\frac{DC\\cdot{DE}}{2} = \\frac{2\\cdot(2-x)}{2} = 2-x\\]</p><p>\\[EAG= \\frac{AE\\cdot{AG}}{2} = \\frac{1\\cdot{x}}{2} = \\frac{x}{2}\\]</p><p>\\[CGB = \\frac{GB\\cdot{CB}}{2} = \\frac{1\\cdot(2)}{2} = 1\\]</p><p>\\[EGC= \\frac{EG\\cdot{GC}}{2} = \\frac{\\sqrt{5x^2 + 5}}{2}\\] (the length of CE is calculated with the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, lines GE and CE are perpendicular by definition of tangent)</p><p>Adding up the areas and equating to the area of the total square \\[(2 \\cdot 2=4)\\], we get</p><p>\\[x = \\frac{1}{2}\\]</p><p>So, \\[CE = 2 + \\frac{1}{2} = 5/2\\].</p><p>~Typo Fix by doulai1</p><p><a class=\"external free\" href=\"https://youtu.be/pM0zICtH6Lg\" rel=\"nofollow\">https://youtu.be/pM0zICtH6Lg</a></p><p>Education, the Study of Everything</p>",
+        "<p>[asy] size(150); defaultpen(fontsize(10)); pair A=(0,0), B=(2,0), C=(2,2), D=(0,2), E=(0,1/2), F=E+(C-E)/abs(C-E)/2; draw(A--B--C--D--cycle);draw(C--E); draw(Arc((1,0),1,0,180));draw((A+B)/2--F); label(\"$A$\",A,(-1,-1)); label(\"$B$\",B,( 1,-1)); label(\"$C$\",C,( 1, 1)); label(\"$D$\",D,(-1, 1)); label(\"$E$\",E,(-1, 0)); label(\"$F$\",F,( 0, 1)); label(\"$x$\",(A+E)/2,(-1, 0)); label(\"$x$\",(E+F)/2,( 0, 1)); label(\"$2$\",(F+C)/2,( 0, 1)); label(\"$2$\",(D+C)/2,( 0, 1)); label(\"$2$\",(B+C)/2,( 1, 0)); label(\"$2-x$\",(D+E)/2,(-1, 0)); [/asy]Let the point of tangency be $F$. By the <a href=\"/wiki/index.php/Two_Tangent_Theorem\" title=\"Two Tangent Theorem\">Two Tangent Theorem</a> $BC = FC = 2$ and $AE = EF = x$. Thus $DE = 2-x$. The <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> on $\\triangle CDE$ yields</p><p>\\begin{align*} DE^2 + CD^2 &= CE^2\\\\ (2-x)^2 + 2^2 &= (2+x)^2\\\\ x^2 - 4x + 8 &= x^2 + 4x + 4\\\\ x &= \\frac{1}{2}\\end{align*}</p><p>Hence $CE = FC + x = \\frac{5}{2} \\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{5}{2}}$.</p>",
+        "<p>Call the point of tangency point $F$ and the midpoint of $AB$ as $G$. $CF=2$ by Tangent Theorem. Notice that $\\angle EGF=\\frac{180-2\\cdot\\angle CGF}{2}=90-\\angle CGF$. Thus, $\\angle EGF=\\angle FCG$ and $\\tan EGF=\\tan FCG=\\frac{1}{2}$. Solving $EF=\\frac{1}{2}$. Adding, the answer is $\\frac{5}{2}$.</p>",
+        "<p><a class=\"image\" href=\"/wiki/index.php/File:2004_AMC12A-18.png\">2004 AMC12A-18.png</a></p><p>Clearly, $EA = EF = BG$. Thus, the sides of <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right triangle</a> $CDE$ are in arithmetic progression. Thus it is <a class=\"mw-redirect\" href=\"/wiki/index.php/Similar_triangles\" title=\"Similar triangles\">similar</a> to the triangle $3 - 4 - 5$ and since $DC = 2$, $CE = \\frac{5}{2} \\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{5}{2}}$.</p>",
+        "<p>[asy] size(150); defaultpen(fontsize(10)); pair A=(0,0), B=(2,0), C=(2,2), D=(0,2), E=(0,1/2), F=E+(C-E)/abs(C-E)/2, G=(1,0); draw(A--B--C--D--cycle);draw(C--E); draw(Arc((1,0),1,0,180));draw((A+B)/2--F); label(\"$A$\",A,(-1,-1)); label(\"$B$\",B,( 1,-1)); label(\"$C$\",C,( 1, 1)); label(\"$D$\",D,(-1, 1)); label(\"$E$\",E,(-1, 0)); label(\"$F$\",F,( 0, 1)); label(\"$x$\",(A+E)/2,(-1, 0)); label(\"$x$\",(E+F)/2,( 0, 1)); label(\"$2$\",(F+C)/2,( 0, 1)); label(\"$2$\",(D+C)/2,( 0, 1)); label(\"$2$\",(B+C)/2,( 1, 0)); label(\"$2-x$\",(D+E)/2,(-1, 0)); label(\"$G$\",G,(0,-1)); dot(G); draw(G--C); label(\"$\\sqrt{5}$\",(G+C)/2,(-1,0)); [/asy]</p><p>Let us call the midpoint of side $AB$, point $G$. Since the semicircle has radius 1, we can do the Pythagorean theorem on sides $GB, BC, GC$. We get $GC=\\sqrt{5}$. We then know that $CF=2$ by Pythagorean theorem. Then by connecting $EG$, we get similar triangles $EFG$ and $GFC$. Solving the ratios, we get $x=\\frac{1}{2}$, so the answer is $\\frac{5}{2} \\Rightarrow\\boxed{\\mathrm{(D)}\\ \\frac{5}{2}}$.</p><p><br/>Alternatively, we could apply the Pythagorean theorem on triangle $CDE$ to get the equation \\[(2-x)^2+2^2=(x+2)^2\\] which would give us that $x=\\frac{1}{2}.$ Adding up $CF$ and $EF,$ we get $2+\\frac{1}{2}=\\boxed{\\mathrm{(D)}\\ \\frac{5}{2}}$ again. Note that we know $DE=2-x$ because $\\triangle EFG\\cong \\triangle EAG$ by $\\text{HL.}$</p><p>~Alternate solution by Tinsel</p>",
+        "<p>Using the diagram as drawn in Solution 4, let the total area of square $ABCD$ be divided into the triangles $DCE$, $EAG$, $CGB$, and $EGC$. Let x be the length of AE. Thus, the area of each triangle can be determined as follows: </p><p>\\[DCE = \\frac{DC\\cdot{DE}}{2} = \\frac{2\\cdot(2-x)}{2} = 2-x\\]</p><p>\\[EAG= \\frac{AE\\cdot{AG}}{2} = \\frac{1\\cdot{x}}{2} = \\frac{x}{2}\\]</p><p>\\[CGB = \\frac{GB\\cdot{CB}}{2} = \\frac{1\\cdot(2)}{2} = 1\\]</p><p>\\[EGC= \\frac{EG\\cdot{GC}}{2} = \\frac{\\sqrt{5x^2 + 5}}{2}\\] (the length of CE is calculated with the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, lines GE and CE are perpendicular by definition of tangent)</p><p>Adding up the areas and equating to the area of the total square \\[(2 \\cdot 2=4)\\], we get</p><p>\\[x = \\frac{1}{2}\\]</p><p>So, \\[CE = 2 + \\frac{1}{2} = 5/2\\].</p><p>~Typo Fix by doulai1</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2004 AMC 10A - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_23",
+      "question": "<p>Circles $A, B$ and $C$ are externally tangent to each other, and internally tangent to circle $D$. Circles $B$ and $C$ are congruent. Circle $A$ has radius $1$ and passes through the center of $D$. What is the radius of circle $B$?</p>",
+      "solutions": [
+        "<p>[asy] import graph; size(400); defaultpen(fontsize(10)); pair OA=(-1,0),OB=(2/3,8/9),OC=(2/3,-8/9),OD=(0,0),E=(2/3,0); real t = 2.5; pair OA1=(-2+2*t,0),OB1=(4/3+2*t,16/9),OC1=(4/3+2*t,-16/9),OD1=(0+2*t,0),E1=(4/3+2*t,0); draw(Circle(OD,2)); draw(Circle(OA,1)); draw(Circle(OB,8/9)); draw(Circle(OC,8/9)); draw(OA--OB--OC--cycle); draw(OD--OB--OB+(OB-OD)*4/5); draw(OA--E); label(\"$O_{A}$\",OA,(-1,0)); label(\"$O_{B}$\",OB,(-1,1)); label(\"$O_{C}$\",OC,(-1,-1)); label(\"$O_{D}$\",OD,(-1,-1)); label(\"$E$\",E,(0.5,-1)); label(\"$r$\",OB+(OB-OD)*2/5,(-0.5,1)); label(\"$r$\",(1*OA+3*OB)/4,(-0.5,1)); dot(OA^^OB^^OC^^OD^^E); draw(OA1--OB1--OC1--cycle); draw(OD1--OB1); draw(OA1--E1); label(\"$O_{A}$\",OA1,(-1,0)); label(\"$O_{B}$\",OB1,(1,1)); label(\"$O_{C}$\",OC1,(1,-1)); label(\"$O_{D}$\",OD1,(0,-1)); label(\"$E$\",E1,(1,0)); label(\"$1+r$\",(OA1+OB1)/2,(-0.5,1)); label(\"$r$\",(E1+OB1)/2,(1,0)); label(\"$r$\",(E1+OC1)/2,(1,0)); label(\"$2-r$\",(OB1+OD1)/2,(-1,0)); label(\"$1$\",(OA1+OD1)/2,(0,-1)); label(\"$x$\",(E1+OD1)/2,(0,-1)); dot(OA1^^OB1^^OC1^^OD1^^E1); [/asy]</p><p>Let $O_{i}$ be the center of circle $i$ for all $i \\in \\{A,B,C,D\\}$ and let $E$ be the tangent point of $B,C$. Since the radius of $D$ is the diameter of $A$, the radius of $D$ is $2$. </p><p><br/>Let the radius of $B,C$ be $r$ and let $O_{D}E = x$. If we connect $O_{A},O_{B},O_{C}$, we get an <a href=\"/wiki/index.php/Isosceles_triangle\" title=\"Isosceles triangle\">isosceles triangle</a> with lengths $1 + r, 2r$. </p><p>Then right triangle $O_{D}O_{B}O_{E}$ has legs $r, x$ and <a href=\"/wiki/index.php/Hypotenuse\" title=\"Hypotenuse\">hypotenuse</a> $2-r$. Solving for $x$, we get $x^2 = (2-r)^2 - r^2 \\Longrightarrow x = \\sqrt{4-4r}$. </p><p>Also, right triangle $O_{A}O_{B}O_{E}$ has legs $r, 1+x$, and hypotenuse $1+r$. Solving, </p><p>\\begin{eqnarray*} r^2 + (1+\\sqrt{4-4r})^2 &=& (1+r)^2\\\\ 1+4-4r+2\\sqrt{4-4r}&=& 2r + 1\\\\ 1-r &=& \\left(\\frac{6r-4}{4}\\right)^2\\\\ \\frac{9}{4}r^2-2r&=& 0\\\\ r &=& \\frac 89  \\end{eqnarray*}</p><p>So the answer is $\\boxed{\\mathrm{(D)}\\ \\frac{8}{9}}$.</p>",
+        "<p>Note that $BD= 2-r$ since $D$ is the center of the larger circle of radius $2$. Using the Pythagorean Theorem on $\\triangle BDE$,</p><p>\\begin{align*} r^2 + h^2 &= (2-r)^2 \\\\ r^2 + h^2 &= 4 - 4r + r^2 \\\\ h^2 &= 4 - 4r \\\\ h &= 2\\sqrt{1-r} \\end{align*}</p><p>Now using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> on $\\triangle BAE$,</p><p>\\begin{align*} r^2 + (h+1)^2 &= (r+1)^2 \\\\ r^2 + h^2 + 2h + 1 &= r^2 + 2r + 1 \\\\ h^2 + 2h &= 2r \\end{align*}</p><p>Substituting $h$,</p><p>\\begin{align*} (4-4r) + 4\\sqrt{1-r} &= 2r \\\\ 4\\sqrt{1-r} &= 6r - 4 \\\\ 16-16r &= 36r^2 - 48r + 16 \\\\ 0 &= 36r^2 - 32r \\\\ r &= \\frac{32}{36} = \\frac{8}{9} \\Longrightarrow \\qquad \\textbf{(D)} \\end{align*}</p>",
+        "<p>We can apply <a href=\"/wiki/index.php/Descartes%27_Circle_Formula\" title=\"Descartes' Circle Formula\">Descartes' Circle Formula</a>.</p><p>The four circles have curvatures $-\\frac{1}{2}, 1, \\frac{1}{r}$, and $\\frac{1}{r}$.</p><p>We have $2((-\\frac{1}{2})^2+1^2+\\frac {1}{r^2}+\\frac{1}{r^2})=(-\\frac{1}{2}+1+\\frac{1}{r}+\\frac{1}{r})^2$</p><p>Simplifying, we get $\\frac{10}{4}+\\frac{4}{r^2}=\\frac{1}{4}+\\frac{2}{r}+\\frac{4}{r^2}$</p><p>$\\frac{2}{r}=\\frac{9}{4}$</p><p>$r=\\frac{8}{9} \\Longrightarrow \\qquad \\textbf{(D)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2004 AMC 10A - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_24",
+      "question": "<p>Let $f$ be a function with the following properties:</p><p>(i) $f(1) = 1$, and</p><p>(ii) $f(2n) = n \\cdot f(n)$ for any positive integer $n$.</p><p>What is the value of $f(2^{100})$?</p>",
+      "solutions": [
+        "<p>From (ii), note that\\begin{alignat*}{8} f(2) &= 1\\cdot f(1) &&= 1, \\\\  f\\left(2^2\\right) &= 2\\cdot f(2)  &&= 2, \\\\  f\\left(2^3\\right) &= 2^2\\cdot f\\left(2^2\\right) &&= 2^{2+1}, \\\\ f\\left(2^4\\right) &= 2^3\\cdot f\\left(2^3\\right) &&= 2^{3+2+1}, \\end{alignat*}and so on.</p><p>In general, we have \\[f\\left(2^n\\right)=2^{(n-1)+(n-2)+(n-3)+\\cdots+3+2+1}\\] for any positive integer $n.$</p><p>Therefore, the answer is\\begin{align*} f\\left(2^{100}\\right)&=2^{99+98+97+\\cdots+3+2+1} \\\\ &=2^{99\\cdot100/2} \\\\ &= \\boxed{\\textbf {(D)}\\ 2^{4950}}. \\end{align*}~MRENTHUSIASM</p>",
+        "<p>Applying (ii) repeatedly, we have\\begin{align*} f\\left(2^{100}\\right) &= 2^{99} \\cdot f\\left(2^{99}\\right) \\\\ &= 2^{99} \\cdot 2^{98} \\cdot f\\left(2^{98}\\right) \\\\ &= 2^{99} \\cdot 2^{98} \\cdot 2^{97} \\cdot f\\left(2^{97}\\right) \\\\ &= \\cdots \\\\ &= 2^{99} \\cdot 2^{98} \\cdot 2^{97} \\cdots 2^{3} \\cdot 2^{2} \\cdot 2^{1} \\cdot 1 \\cdot f(1) \\\\ &= 2^{99} \\cdot 2^{98} \\cdot 2^{97} \\cdots 2^{3} \\cdot 2^{2} \\cdot 2^{1} \\cdot 1 \\cdot 1 \\\\ &=2^{99 + 98 + 97 + \\cdots + 3 + 2 + 1} \\\\ &=2^{99\\cdot100/2} \\\\ &= \\boxed{\\textbf {(D)}\\ 2^{4950}}. \\end{align*}~Azjps (Fundamental Logic)</p><p>~MRENTHUSIASM (Reconstruction)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2004 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10a_25",
+      "question": "<p>Three mutually tangent spheres of radius $1$ rest on a horizontal plane. A sphere of radius $2$ rests on them. What is the distance from the plane to the top of the larger sphere?</p>",
+      "solutions": [
+        "<p>The height from the center of the bottom <a href=\"/wiki/index.php/Sphere\" title=\"Sphere\">sphere</a> to the <a href=\"/wiki/index.php/Plane\" title=\"Plane\">plane</a> is $1$, and from the center of the top sphere to the tip is $2$. </p><p><a class=\"image\" href=\"/wiki/index.php/File:2004_AMC12A-22a.png\">2004 AMC12A-22a.png</a></p><p>We now need the <a class=\"new\" href=\"/wiki/index.php?title=Vertical&amp;action=edit&amp;redlink=1\" title=\"Vertical (page does not exist)\">vertical</a> <a href=\"/wiki/index.php/Height\" title=\"Height\">height</a> of the <a class=\"new\" href=\"/wiki/index.php?title=Centers&amp;action=edit&amp;redlink=1\" title=\"Centers (page does not exist)\">centers</a>. If we connect centers, we get a <a class=\"new\" href=\"/wiki/index.php?title=Rectangular&amp;action=edit&amp;redlink=1\" title=\"Rectangular (page does not exist)\">rectangular</a> <a href=\"/wiki/index.php/Pyramid\" title=\"Pyramid\">pyramid</a> with an <a href=\"/wiki/index.php/Equilateral_triangle\" title=\"Equilateral triangle\">equilateral triangle</a> <a href=\"/wiki/index.php/Base\" title=\"Base\">base</a>. The distance from the vertex of the equilateral triangle to its <a href=\"/wiki/index.php/Centroid\" title=\"Centroid\">centroid</a> can be found by $30\\text-60\\text-90 \\triangle$s to be $\\frac{2\\sqrt{3}}{3}$.</p><p><a class=\"image\" href=\"/wiki/index.php/File:2004_AMC12A-22b.png\">2004 AMC12A-22b.png</a></p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, we have $\\left(\\frac{2}{\\sqrt{3}}\\right)^2 + h^2 = 3^2 \\Longrightarrow h = \\frac{\\sqrt{69}}{3}$. Adding the heights up, we get $\\frac{\\sqrt{69}}{3} + 1 + 2 \\Rightarrow  3+\\frac{\\sqrt{69}}{3}$, or $\\boxed{B}$</p>",
+        "<p>Connect the centers of the spheres. Note that the resulting prism is a tetrahedron with base lengths of 2 and side lengths of 3. Drop a height from the top of the tetrahedron to the centroid of its equilateral triangle base. Using the Pythagorean Theorem, it is easy to see that the circumradius of the base is $\\dfrac { 2 \\sqrt {3 } } {3}$. We can use PT again to find the height of the tetrahedron given its base's circumradius and it's leg lengths. Finally, we add the distance from the top of the tetrahedron to the top of the sphere of radius 2 and the distance from the bottom of the ground to get an answer of $\\boxed{3 + \\dfrac{\\sqrt{69}}{3}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2004 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_1",
+      "question": "<p>Each row of the Misty Moon Amphitheater has $33$ seats. Rows $12$ through $22$ are reserved for a youth club. How many seats are reserved for this club?</p>",
+      "solutions": [
+        "<p>There are $22-12+1=11$ rows of $33$ seats, giving $11\\times 33=\\boxed{\\mathrm{(C)}\\ 363}$ seats.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2004 AMC 10B - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_2",
+      "question": "<p>How many two-digit positive integers have at least one $7$ as a digit?</p>",
+      "solutions": [
+        "<p>Ten numbers $(70,71,\\dots,79)$ have $7$ as the tens digit. Nine numbers $(17,27,\\dots,97)$ have it as the ones digit. Number $77$ is in both sets.</p><p>Thus the result is $10+9-1=18 \\Rightarrow$ $\\boxed{\\mathrm{(B)}\\ 18}$.</p>",
+        "<p>We use complementary counting. The complement of having at least one $7$ as a digit is having no $7$s as a digit.</p><p>We have $9$ digits to choose from for the first digit and $10$ digits for the second. This gives a total of $9 \\times 10 = 90$ two-digit numbers.</p><p>But since we cannot have $7$ as a digit, we have $8$ first digits and $9$ second digits to choose from.</p><p>Thus there are $8 \\times 9 = 72$ two-digit numbers without a $7$ as a digit.</p><p>$90$ (The total number of two-digit numbers) $-  72$ (The number of two-digit numbers without a $7$) $= 18 \\Rightarrow$ $\\boxed{\\mathrm{(B)}\\ 18}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2004 AMC 10B - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_3",
+      "question": "<p>At each basketball practice last week, Jenny made twice as many free throws as she made at the previous practice. At her fifth practice she made $48$ free throws. How many free throws did she make at the first practice?</p>",
+      "solutions": [
+        "<p>At the fourth practice she made $48/2=24$ throws, at the third one it was $24/2=12$, then we get $12/2=6$ throws for the second practice, and finally $6/2=3\\Rightarrow\\boxed{\\mathrm{(A)}\\ 3}$ throws at the first one.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2004 AMC 10B - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_4",
+      "question": "<p>A standard six-sided die is rolled, and $P$ is the product of the five numbers that are visible. What is the largest number that is certain to divide $P$?</p>",
+      "solutions": [
+        "<p>The product of all six numbers is $6!=720$. The products of numbers that can be visible are $720/1$, $720/2$, ..., $720/6$.The answer to this problem is their greatest common divisor -- which is $720/L$, where $L$ is the least common multiple of $\\{1,2,3,4,5,6\\}$.Clearly $L=60$ and the answer is $720/60=\\boxed{\\mathrm{(B)}\\ 12}$.</p>",
+        "<p>Clearly, $P$ cannot have a prime factor other than $2$, $3$ and $5$.</p><p>We can not guarantee that the product will be divisible by $5$, as the number $5$ can end on the bottom.</p><p>We can guarantee that the product will be divisible by $3$ (one of $3$ and $6$ will always be visible), but not by $3^2$.</p><p>Finally, there are three even numbers, hence two of them are always visible and thus the product is divisible by $2^2$. This is the most we can guarantee, as when the $4$ is on the bottom side, the two visible even numbers are $2$ and $6$, and their product is not divisible by $2^3$.</p>",
+        "<p>The product P can be one of the following six numbers excluding the number that is hidden under, so we have:\\begin{align*}2 \\cdot 3 \\cdot 4 \\cdot 5 \\cdot 6 = 2^4 \\cdot 3^2 \\cdot 5 \\\\1 \\cdot 3 \\cdot 4 \\cdot 5 \\cdot 6 = 2^3 \\cdot 3^2 \\cdot 5 \\\\1 \\cdot 2 \\cdot 4 \\cdot 5 \\cdot 6 = 2^4 \\cdot 3 \\cdot 5 \\\\1 \\cdot 2 \\cdot 3 \\cdot 5 \\cdot 6 = 2^2 \\cdot 3^2 \\cdot 5 \\\\1 \\cdot 2 \\cdot 3 \\cdot 4 \\cdot 6 = 2^4 \\cdot 3^2 \\\\1 \\cdot 2 \\cdot 3 \\cdot 4 \\cdot 5 = 2^3 \\cdot 3 \\cdot 5\\end{align*}</p><p>The largest number that is certain to divide product P is basically GCD of all the above 6 products which is $2^2 \\cdot 3$.</p><p>Hence $P=3\\cdot2^2=\\boxed{\\mathrm{(B)}\\ 12}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2004 AMC 10B - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_5",
+      "question": "<p>In the expression $c\\cdot a^b-d$, the values of $a$, $b$, $c$, and $d$ are $0$, $1$, $2$, and $3$, although not necessarily in that order. What is the maximum possible value of the result?</p>",
+      "solutions": [
+        "<p>If $a=0$ or $c=0$, the expression evaluates to $-d<0$. <br/>If $b=0$, the expression evaluates to $c-d\\leq 2$. <br/>Case $d=0$ remains.In that case, we want to maximize $c\\cdot a^b$ where $\\{a,b,c\\}=\\{1,2,3\\}$. Trying out the six possibilities we get that the greatest is $(a,b,c)=(3,2,1)$, where $c\\cdot a^b=1\\cdot 3^2=\\boxed{\\mathrm{(D)}\\ 9}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2004 AMC 10B - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_6",
+      "question": "<p>Which of the following numbers is a perfect square?</p>",
+      "solutions": [
+        "<p>Using the fact that $n! = n\\cdot (n-1)!$, we can write:</p><p>\\begin{align} A&=98! \\cdot (99\\cdot 98!) = 99 \\cdot (98!)^2 = 11\\cdot3^2\\cdot(98!)^2 \\\\ B&=100 \\cdot 99 \\cdot (98!)^2 = 11\\cdot10^2\\cdot3^2\\cdot( 98!)^2 \\\\ C&=100\\cdot (99!)^2 = 10^2\\cdot (99!)^2\\\\ D&=101\\cdot 100\\cdot (99!)^2 = 101 \\cdot 10^2 \\cdot (99!)^2\\\\ E& =101\\cdot (100!)^2 \\end{align}</p><p>We see that $\\boxed{\\mathrm{(C) \\ } 99! \\cdot 100!}$ is a square, and because $11$, and $101$ are primes, none of the other four choices are squares.</p><p><br/></p>",
+        "<p>Notice that $99! \\cdot 99!$ is a perfect square (obviously). Also, $100 = 10^2$. Thus, \\[(99!)^2 \\cdot 10^2 = 99! \\cdot 100!\\] is a perfect square, so the answer is $\\boxed{\\mathrm{(C) \\ } 99! \\cdot 100!}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2004 AMC 10B - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_7",
+      "question": "<p>On a trip from the United States to Canada, Isabella took $d$ U.S. dollars. At the border she exchanged them all, receiving $10$ Canadian dollars for every $7$ U.S. dollars. After spending $60$ Canadian dollars, she had $d$ Canadian dollars left. What is the sum of the digits of $d$? </p>",
+      "solutions": [
+        "<p>Isabella had $60+d$ Canadian dollars. Setting up an equation we get $d=\\frac{7}{10}\\cdot(60+d)$, which solves to $d=140$, and the sum of digits of $d$ is $\\boxed{\\mathrm{(A)}\\ 5}$.</p>",
+        "<p>Each time Isabella exchanges $7$ U.S. dollars, she gets $7$ Canadian dollars and $3$ Canadian dollars extra. Isabella received a total of $60$ Canadian dollars extra, therefore she exchanged $7$ U.S. dollars $\\frac{60}{3}=20$ times. Thus $d=7\\cdot20=140$, and the sum of the digits is $\\boxed{\\mathrm{(A)}\\ 5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2004 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_8",
+      "question": "<p>Minneapolis-St. Paul International Airport is $8$ miles southwest of downtown St. Paul and $10$ miles southeast of downtown Minneapolis. Which of the following is closest to the number of miles between downtown St. Paul and downtown Minneapolis? </p>",
+      "solutions": [
+        "<p>The directions \"southwest\" and \"southeast\" are orthogonal. Thus the described situation is a right triangle with legs $8$ miles and $10$ miles long. The hypotenuse length is $\\sqrt{8^2 + 10^2}\\approx12.8$, and thus the answer is $\\boxed{\\mathrm{(A)}\\ 13}$.</p><p>Without a calculator one can note that $8^2+10^2=164<169=13^2\\Rightarrow\\boxed{\\mathrm{(A)}\\ 13}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2004 AMC 10B - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_9",
+      "question": "<p>A square has sides of length $10$, and a circle centered at one of its vertices has radius $10$. What is the area of the union of the regions enclosed by the square and the circle?</p>",
+      "solutions": [
+        "<p>The area of the circle is $S_{\\bigcirc}=100\\pi$; the area of the square is $S_{\\square}=100$.</p><p>Exactly $\\frac{1}{4}$ of the circle lies inside the square. Thus the total area is $\\dfrac34 S_{\\bigcirc}+S_{\\square}=\\boxed{\\mathrm{(B)\\ }100+75\\pi}$.</p><p>[asy] Draw(Circle((0,0),10)); Draw((0,0)--(10,0)--(10,10)--(0,10)--(0,0)); label(\"$10$\",(5,0),S); label(\"$10$\",(0,5),W); dot((0,0)); [/asy]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2004 AMC 10B - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_10",
+      "question": "<p>A grocer makes a display of cans in which the top row has one can and each lower row has two more cans than the row above it. If the display contains $100$ cans, how many rows does it contain?</p>",
+      "solutions": [
+        "<p>The sum of the first $n$ odd numbers is $n^2$. As in our case $n^2=100$, we have $n=\\boxed{\\mathrm{(D)\\ }10}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2004 AMC 10B - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_11",
+      "question": "<p>Two eight-sided dice each have faces numbered $1$ through $8$. When the dice are rolled, each face has an equal probability of appearing on the top. What is the probability that the product of the two top numbers is greater than their sum?</p>",
+      "solutions": [
+        "<p>We have $1\\times n = n < 1 + n$, hence if at least one of the numbers is $1$, the sum is larger. There $15$ such possibilities.</p><p>We have $2\\times 2 = 2+2$.</p><p>For $n>2$ we already have $2\\times n = n + n > 2 + n$, hence all other cases are good.</p><p>Out of the $8\\times 8$ possible cases, we find that in $15+1=16$ the sum is greater than or equal to the product, hence in $64-16=48$ cases the sum is smaller, satisfying the condition. Therefore the answer is $\\frac{48}{64}=\\boxed{\\mathrm{(C)\\ }\\frac{3}{4}}$.</p>",
+        "<p>Let the two rolls be $m$, and $n$. </p><p>From the restriction: $mn > m + n$</p><p>$mn - m - n > 0$</p><p>$mn - m - n + 1 > 1$</p><p>$(m-1)(n-1) > 1$</p><p>Since $m-1$ and $n-1$ are non-negative integers between $1$ and $8$, either $(m-1)(n-1) = 0$, $(m-1)(n-1) = 1$, or $(m-1)(n-1) > 1$</p><p>$(m-1)(n-1) = 0$ if and only if $m=1$ or $n=1$. </p><p>There are $8$ ordered pairs $(m,n)$ with $m=1$, $8$ ordered pairs with $n=1$, and $1$ ordered pair with $m=1$ and $n=1$. So, there are $8+8-1 = 15$ ordered pairs $(m,n)$ such that $(m-1)(n-1) = 0$. </p><p>$(m-1)(n-1) = 1$ if and only if $m-1=1$ and $n-1=1$ or equivalently $m=2$ and $n=2$. This gives $1$ ordered pair $(m,n) = (2,2)$. </p><p>So, there are a total of $15+1=16$ ordered pairs $(m,n)$ with $(m-1)(n-1) < 1$. </p><p>Since there are a total of $8\\cdot8 = 64$ ordered pairs $(m,n)$, there are $64-16 = 48$ ordered pairs $(m,n)$ with $(m-1)(n-1) > 1$. </p><p>Thus, the desired probability is $\\frac{48}{64}=\\boxed{\\mathrm{(C)\\ }\\frac{3}{4}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2004 AMC 10B - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_12",
+      "question": "<p>An annulus is the region between two concentric circles. The concentric circles in the figure have radii $b$ and $c$, with $b>c$. Let $OX$ be a radius of the larger circle, let $XZ$ be tangent to the smaller circle at $Z$, and let $OY$ be the radius of the larger circle that contains $Z$. Let $a=XZ$, $d=YZ$, and $e=XY$. What is the area of the annulus? </p><p>[asy] unitsize(1.5cm); defaultpen(0.8); real r1=1.5, r2=2.5; pair O=(0,0); path inner=Circle(O,r1), outer=Circle(O,r2); pair Y=(0,r2), Z=(0,r1), X=intersectionpoint( Z--(Z+(10,0)), outer ); filldraw(outer,lightgray,black); filldraw(inner,white,black); draw(X--O--Y); draw(Y--X--Z); label(\"$O$\",O,SW); label(\"$X$\",X,E); label(\"$Y$\",Y,N); label(\"$Z$\",Z,SW); label(\"$a$\",X--Z,N); label(\"$b$\",0.25*X,SE); label(\"$c$\",O--Z,E); label(\"$d$\",Y--Z,W); label(\"$e$\",Y*0.65 + X*0.35,SW); defaultpen(0.5); dot(O); dot(X); dot(Z); dot(Y); [/asy]</p>",
+      "solutions": [
+        "<p>The area of the large circle is $\\pi b^2$, the area of the small one is $\\pi c^2$, hence the shaded area is $\\pi(b^2-c^2)$.</p><p>From the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> for the right triangle $OXZ$ we have $a^2 + c^2 = b^2$, hence $b^2-c^2=a^2$ and thus the shaded area is $\\boxed{\\mathrm{(A)\\ }\\pi a^2}$.</p>",
+        "<p>Set $c=0,$ then the shaded area is just the area of a circle with radius $a,$ which is $\\boxed{\\mathrm{(A)\\ }\\pi a^2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2004 AMC 10B - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_13",
+      "question": "<p>In the United States, coins have the following thicknesses: penny, $1.55$ mm; nickel, $1.95$ mm; dime, $1.35$ mm; quarter, $1.75$ mm. If a stack of these coins is exactly $14$ mm high, how many coins are in the stack?</p>",
+      "solutions": [
+        "<p>All numbers in this solution will be in hundredths of a millimeter.</p><p>The thinnest coin is the dime, with thickness $135$. A stack of $n$ dimes has height $135n$.</p><p>The other three coin types have thicknesses $135+20$, $135+40$, and $135+60$. By replacing some of the dimes in our stack by other, thicker coins, we can clearly create exactly all heights in the set $\\{135n, 135n+20, 135n+40, \\dots, 195n\\}$.</p><p>If we take an odd $n$, then all the possible heights will be odd, and thus none of them will be $1400$. Hence $n$ is even.</p><p>If $n<8$ the stack will be too low and if $n>10$ it will be too high. Thus we are left with cases $n=8$ and $n=10$.</p><p>If $n=10$ the possible stack heights are $1350,1370,1390,\\dots$, with the remaining ones exceeding $1400$.</p><p>Therefore there are $\\boxed{\\mathrm{(B)\\ }8}$ coins in the stack.</p><p>Using the above observation we can easily construct such a stack. A stack of $8$ dimes would have height $8\\cdot 135=1080$, thus we need to add $320$.This can be done for example by replacing five dimes by nickels (for $+60\\cdot 5 = +300$), and one dime by a penny (for $+20$).</p>",
+        "<p>Let $p,n,d$, and $q$ be the number of pennies, nickels, dimes, and quarters used in the stack. </p><p>From the conditions above, we get the following equation:</p><p>\\[155p+195n+135d+175q=1400.\\]</p><p>Then we divide each side by five to get</p><p>\\[31p+39n+27d+35q=280.\\]</p><p>Writing both sides in terms of mod 4, we have $-p-n-d-q \\equiv 0  \\pmod 4$. </p><p>This means that the sum $p+n+d+q$ is divisible by 4. Therefore, the answer must be $\\boxed{(B)\\,\\, 8}.$</p>",
+        "<p>We notice that the thickness of 4 quarters is 7 mm. 7 is half of 14, so we multiply the 4 quarters by two and get $\\boxed{(B)\\,\\, 8}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2004 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_14",
+      "question": "<p>A bag initially contains red marbles and blue marbles only, with more blue than red. Red marbles are added to the bag until only $\\frac{1}{3}$ of the marbles in the bag are blue. Then yellow marbles are added to the bag until only $\\frac{1}{5}$ of the marbles in the bag are blue. Finally, the number of blue marbles in the bag is doubled. What fraction of the marbles now in the bag are blue?</p>",
+      "solutions": [
+        "<p>We can ignore most of the problem statement. The only important information is that immediately before the last step blue marbles formed $\\frac{1}{5}$ of the marbles in the bag. This means that there were $x$ blue and $4x$ other marbles, for some $x$. When we double the number of blue marbles, there will be $2x$ blue and $4x$ other marbles, hence blue marbles now form $\\boxed{\\mathrm{(C)\\ }\\frac{1}{3}}$ of all marbles in the bag.</p>",
+        "<p>Assume that there are $2$ blue marbles and $1$ red marble. You don't have to add any red marbles to make the quantity $\\frac{1}{3}$. Then, to make the blue marbles $\\frac{1}{5}$, add $7$ yellow marbles. Doubling the blue marbles makes $4$ blue marbles out of $12$ total marbles, or $\\boxed{\\mathrm{(C)\\ }\\frac{1}{3}}$ of all marbles in the bag.</p>",
+        "<p>If there are initially $B$ blue marbles in the bag, after red marbles are added, then the total number of marbles in the bag must be $3B$. Then after the yellow marbles are added, the number of marbles in the bag must be $5B$. Finally, adding $B$ blue marbles to the bag gives $2B$ blue marbles out of $6B$ total marbles. Thus $\\boxed{1/3}$ of the marbles are blue.</p>",
+        "<p>Just before the number of blue marbles is doubled, the ratio of blue marbles to non-blue marbles is 1 to 4. Doubling the number of blue marbles makes the ratio 2 to 4, so $\\dfrac{2}{2+4} = \\boxed{1/3}$ of the marbles are blue.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2004 AMC 10B - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_15",
+      "question": "<p>Patty has $20$ coins consisting of nickels and dimes. If her nickels were dimes and her dimes were nickels, she would have $70$ cents more. How much are her coins worth?</p>",
+      "solutions": [
+        "<p>She has $n$ nickels and $d=20-n$ dimes. Their total cost is $5n+10d=5n+10(20-n)=200-5n$ cents. If the dimes were nickels and vice versa, she would have $10n+5d=10n+5(20-n)=100+5n$ cents. This value should be $70$ cents more than the previous one. We get $200-5n+70=100+5n$, which solves to $n=17$. Her coins are worth $200-5n=\\boxed{\\mathrm{(A)\\ }\\textdollar1.15}$.</p>",
+        "<p>Changing a nickel into a dime increases the sum by $5$ cents, and changing a dime into a nickel decreases it by the same amount. As the sum increased by $70$ cents, there are $70/5=14$ more nickels than dimes. As the total count is $20$, this means that there are $17$ nickels and $3$ dimes, which is equal to $\\boxed{\\mathrm{(A)\\ }\\textdollar1.15}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2004 AMC 10B - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_16",
+      "question": "<p>Three circles of radius $1$ are externally tangent to each other and internally tangent to a larger circle. What is the radius of the large circle?</p>",
+      "solutions": [
+        "<p>The situation is shown in the picture below. The radius we seek is $SD = AD + AS$. Clearly $AD=1$. The point $S$ is the center of the equilateral triangle $ABC$, thus $AS$ is $2/3$ of the altitude of this triangle. We get that $AS = \\frac23 \\cdot \\sqrt 3$. Therefore the radius we seek is$1 + \\frac23 \\cdot \\sqrt 3 = \\boxed{\\mathrm{(D)\\ }\\frac{3+2\\sqrt{3}}3}$.</p><p><br/>[asy] unitsize(2cm); pair A=(0,0), B=dir(0)*2, C=dir(60)*2; draw(circle(A,1)); draw(circle(B,1)); draw(circle(C,1)); dot(A); dot(B); dot(C); draw(A--B--C--cycle);  pair D=A+dir(210), E=B+dir(-30), F=C+dir(90); draw(circumcircle(D,E,F)); dot(D); dot(E); dot(F);  pair S=(A+B+C)/3; dot(S);  draw(S--D); draw(S--E); draw(S--F);  label(\"$S$\",S,S); label(\"$A$\",A,SE); label(\"$D$\",D,SW); label(\"$B$\",B,NE); label(\"$C$\",C,ENE); [/asy]</p>",
+        "<p>Using <a href=\"/wiki/index.php/Descartes%27_Circle_Formula\" title=\"Descartes' Circle Formula\">Descartes' Circle Formula</a>, we can assign curvatures to all the circles: $1$, $1$, $1$, and $-\\frac{1}{r}$ (b/c the bigger circle is externally tangent to all the other circles, the radius of the bigger circle is negative). Then, we can solve:</p><p>$2(1^2+1^2+1^2+(-\\frac{1}{r})^2) = (1+1+1-\\frac{1}{r})^2$</p><p>$r = \\boxed{\\mathrm{(D)\\ }\\frac{3+2\\sqrt{3}}3}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2004 AMC 10B - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_17",
+      "question": "<p>The two digits in Jack's age are the same as the digits in Bill's age, but in reverse order. In five years Jack will be twice as old as Bill will be then. What is the difference in their current ages?</p>",
+      "solutions": [
+        "<p>If Jack's current age is $\\overline{ab}=10a+b$, then Bill's current age is $\\overline{ba}=10b+a$.</p><p>In five years, Jack's age will be $10a+b+5$ and Bill's age will be $10b+a+5$. </p><p>We are given that $10a+b+5=2(10b+a+5)$. </p><p><br/>Thus $8a=19b+5 \\Rightarrow a=\\dfrac{19b+5}{8}$. </p><p>For $b=1$ we get $a=3$. For $b=2$ and $b=3$ the value $\\frac{19b+5}8$ is not an integer, and for $b\\geq 4$, $a$ is more than $9$. Thus the only solution is $(a,b)=(3,1)$, and the difference in ages is $31-13=\\boxed{\\mathrm{(B)\\ }18}$.</p>",
+        "<p>Age difference does not change in time. Thus in five years Bill's age will be equal to their age difference.</p><p>The age difference is $(10a+b)-(10b+a)=9(a-b)$, hence it is a multiple of $9$. Thus Bill's current age modulo $9$ must be $4$.</p><p>Thus Bill's age is in the set $\\{13,22,31,40,49,58,67,76,85,94\\}$.</p><p>As Jack is older, we only need to consider the cases where the tens digit of Bill's age is smaller than the ones digit. This leaves us with the options $\\{13,49,58,67\\}$. </p><p>Checking each of them, we see that only $13$ works, and gives the solution $31-13=\\boxed{\\mathrm{(B)\\ }18}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2004 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_18",
+      "question": "<p>In the right triangle $\\triangle ACE$, we have $AC=12$, $CE=16$, and $EA=20$. Points $B$, $D$, and $F$ are located on $AC$, $CE$, and $EA$, respectively, so that $AB=3$, $CD=4$, and $EF=5$. What is the ratio of the area of $\\triangle DBF$ to that of $\\triangle ACE$?</p><p>[asy] unitsize(0.5cm); defaultpen(0.8); pair C=(0,0), A=(0,12), E=(20,0); draw(A--C--E--cycle); pair B=A + 3*(C-A)/length(C-A); pair D=C + 4*(E-C)/length(E-C); pair F=E + 5*(A-E)/length(A-E); draw(B--D--F--cycle); label(\"$A$\",A,N); label(\"$B$\",B,W); label(\"$C$\",C,SW); label(\"$D$\",D,S); label(\"$E$\",E,SE); label(\"$F$\",F,NE); label(\"$3$\",A--B,W); label(\"$9$\",C--B,W); label(\"$4$\",C--D,S); label(\"$12$\",D--E,S); label(\"$5$\",E--F,NE); label(\"$15$\",F--A,NE); [/asy]</p>",
+      "solutions": [
+        "<p>Let $x = [DBF]$. Because $\\triangle ACE$ is divided into four triangles, $[ACE] = [BCD] + [ABF] + [DEF] + x$.</p><p>Because of $SAS$ triangle area, $\\frac12 \\cdot 12 \\cdot 16 = \\frac12 \\cdot 9 \\cdot 4 + \\frac12 \\cdot 3 \\cdot 15 \\cdot \\sin(\\angle A) + \\frac12 \\cdot 5 \\cdot 12 \\cdot \\sin(\\angle E) + x$.</p><p>$\\sin(\\angle A) = \\frac{16}{20}$ and $\\sin(\\angle E) = \\frac{12}{20}$, so $96 = 18 + 18 + 18 + x$.</p><p>$x = 42$, so $\\frac{[DBF]}{[ACE]} = \\frac{42}{96} = \\boxed{\\textbf{(E)}\\frac 7{16}}$.</p>",
+        "<p>First of all, note that $\\frac{AB}{AC} = \\frac{CD}{CE} = \\frac{EF}{EA} = \\frac 14$, and therefore$\\frac{BC}{AC} = \\frac{DE}{CE} = \\frac{FA}{EA} = \\frac 34$.</p><p>Draw the height from $F$ onto $AB$ as in the picture below:</p><p>[asy] unitsize(0.5cm); defaultpen(0.8); pair C=(0,0), A=(0,12), E=(20,0); draw(A--C--E--cycle); pair B=A + 3*(C-A)/length(C-A); pair D=C + 4*(E-C)/length(E-C); pair F=E + 5*(A-E)/length(A-E); draw(B--D--F--cycle); label(\"$A$\",A,N); label(\"$B$\",B,W); label(\"$C$\",C,SW); label(\"$D$\",D,S); label(\"$E$\",E,SE); label(\"$F$\",F,NE); label(\"$3$\",A--B,W); label(\"$9$\",0.5*C + 0.5*B,4*W); label(\"$4$\",C--D,S); label(\"$12$\",D--E,S); label(\"$5$\",E--F,NE); label(\"$15$\",F--A,NE);  pair G = intersectionpoint(F -- (F-(100,0)), A--C); draw(F--G, dashed); label(\"$G$\",G,W); [/asy]</p><p>Now consider the area of $\\triangle ABF$. Clearly the triangles $\\triangle AFG$ and $\\triangle AEC$ are similar, as they have all angles equal. Their ratio is $\\frac {AF}{AE} = \\frac 34$, hence $FG = \\frac 34 \\cdot CE$. Now the area $S_{ABF}$ of $\\triangle ABF$ can be computed as $S_{ABF} = \\frac 12 \\cdot AB \\cdot FG$ = $\\frac 12 \\cdot \\left( \\frac 14 \\cdot AC \\right) \\cdot \\left( \\frac 34 \\cdot EC \\right) = \\frac 14 \\cdot \\frac 34 \\cdot S_{ACE}$.</p><p>Similarly we can find that $S_{BCD} = S_{DEF} = \\frac 3{16}\\cdot S_{ACE}$ as well. </p><p>Hence $S_{BDF} = S_{ACE} - 3\\cdot\\left( \\frac 3{16} \\cdot S_{ACE} \\right) = \\frac 7{16} \\cdot S_{ACE}$, and the answer is $\\frac{S_{BDF}}{S_{ACE}} = \\boxed{\\frac 7{16}}$.</p>",
+        "<p>We will put triangle ACE on a xy-coordinate plane with C being the origin. The area of triangle ACE is 96. To find the area of triangle DBF, let D be (4, 0), let B be (0, 9), and let F be (12, 3). You can then use the shoelace theorem to find the area of DBF, which is 42. $\\frac {42}{96} = \\boxed{\\frac 7{16}}$</p><p><br/></p>",
+        "<p>You can also place a point $X$ on $CE$ such that $CX$ is $12$, creating trapezoid $CBFX$. Then, you can find the area of the trapezoid, subtract the area of the two right triangles $DFX$ and $BCD$, divide by the area of $ABC$, and get the ratio of $7/16$.</p>",
+        "<p>It is well known that for when two triangles share an angle, the two sides around the shared angle is proportional to the areas of each of the two triangles. </p><p>We can find all the ratios of the triangles except for $\\triangle{BDF}$ and then subtract from $1.$</p><p>In this case, we have $\\triangle{ABF}$ sharing $\\angle{A}$ with $\\triangle{ACE}$.</p><p>Therefore, we have $\\frac{[ABF]}{[ACE]}=\\frac{AB}{AC} \\cdot \\frac{AF}{AE} = \\frac{3}{12} \\cdot \\frac{15}{20} = \\frac{3}{16}.$</p><p>Also note that $\\triangle{EFD}$ shares $\\angle{E}$ with $\\triangle{EAC}$.</p><p>Therefore, we have $\\frac{[EFD]}{[EAC]}=\\frac{ED}{EC} \\cdot \\frac{EF}{EA} = \\frac{12}{16} \\cdot \\frac{5}{20} = \\frac{3}{16}.$</p><p>Lastly, note that $\\triangle{CDB}$ shares $\\angle{C}$ with $\\triangle{CAE}$.</p><p>Therefore, we have $\\frac{[CDB]}{[CAE]}=\\frac{CD}{CE} \\cdot \\frac{CB}{CA} = \\frac{9}{12} \\cdot \\frac{4}{16} = \\frac{3}{16}.$</p><p>Thus, the ratio of $\\triangle{DBF}$ to $\\triangle{ACE}$ is $1- \\left( \\frac{3}{16}+\\frac{3}{16}+\\frac{3}{16} \\right)=1-\\frac{9}{16}=\\boxed{\\textbf{(E)} \\frac {7}{16}}$</p><p>~mathboy282</p>",
+        "<p>We know that $\\frac{CB}{BA}=\\frac{AF}{FE}=\\frac{ED}{DC}=3$, so by the <a href=\"/wiki/index.php/The_Devil%27s_Triangle\" title=\"The Devil's Triangle\">The Devil's Triangle</a> we have $\\frac{[DBF]}{[ACE]}=\\frac{3^2-3+1}{(3+1)^2}=\\boxed{\\frac7{16}}$.</p><p>~jasperE3</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2004 AMC 10B - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_19",
+      "question": "<p>In the sequence $2001$, $2002$, $2003$, $\\ldots$ , each term after the third is found by subtracting the previous term from the sum of the two terms that precede that term. For example, the fourth term is $2001 + 2002 - 2003 = 2000$. What is the$2004^\\textrm{th}$ term in this sequence?</p>",
+      "solutions": [
+        "<p>We already know that $a_1=2001$, $a_2=2002$, $a_3=2003$, and $a_4=2000$. Let's compute the next few terms to get the idea how the sequence behaves. We get $a_5 = 2002+2003-2000 = 2005$, $a_6=2003+2000-2005=1998$, $a_7=2000+2005-1998=2007$, and so on.</p><p>We can now discover the following pattern: $a_{2k+1} = 2001+2k$ and $a_{2k}=2004-2k$. This is easily proved by induction. It follows that $a_{2004}=a_{2\\cdot 1002} = 2004 - 2\\cdot 1002 = \\boxed{0}$.</p>",
+        "<p>Subtract 2000 from each of the terms so the sequence turns into 1, 2, 3, 0, 5, -2, 7, -4, 9, -6... (1+2-3=0, 2+3-0=5, 3+0-5=-2, 0+5-(-2)=7, 5+(-2)-7=-4, etc.). Quickly notice that after taking away 1 and 2, the 2nd term is 0, the 4th term is -2, the 6th term is -4, the 8th term is -6, etc. Thus, in the sequence without 1 and 2, the (2n)th term has a value of -2(n-1). Therefore, to find the 2004th term in the original sequence, we take away the first 2 values to form the new sequence so the value of the 2004th term in the original sequence is the 2002nd term in the new sequence. 2002 is 2 times 1001. Thus, the value is -2(1001-1)= -2000. BUT, REMEMBER THAT AT THE START WE TOOK AWAY 2000 FROM EACH TERM. ADD -2000 TO 2000 TO GET $\\boxed{0}$. LOLOL</p>",
+        "<p>Note that the recurrence $a_n+a_{n+1}-a_{n+2}~=~a_{n+3}$ can be rewritten as $a_n+a_{n+1} ~=~ a_{n+2}+a_{n+3}$. </p><p>Hence we get that $a_1+a_2 ~=~ a_3+a_4 ~=~ a_5+a_6 ~= \\cdots$ and also$a_2+a_3 ~=~ a_4+a_5 ~=~ a_6+a_7 ~= \\cdots$</p><p>From the values given in the problem statement we see that $a_3=a_1+2$. </p><p>From $a_1+a_2 = a_3+a_4$ we get that $a_4=a_2-2$.</p><p>From $a_2+a_3 = a_4+a_5$ we get that $a_5=a_3+2$.</p><p>Following this pattern, we get $a_{2004} = a_{2002} - 2 = a_{2000} - 4 = \\cdots = a_2 - 2002 = \\boxed{0}$.</p>",
+        "<p>Our recurrence is $a_n+a_{n+1}-a_{n+2}~=~a_{n+3}$, so we get $r^3+r^2-r-1 = 1$, so $(r-1)(r+1)^2 = 1$, so our formula for the recurrence is $a_n = A + (B + Cn)(-1)^n$.</p><p>Substituting our starting values gives us $a_n = 2002 + (2 - n)(-1)^n$.</p><p>So, $a_{2004} = 2002 - 2002 = 0.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2004 AMC 10B - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_20",
+      "question": "<p>In $\\triangle ABC$ points $D$ and $E$ lie on $BC$ and $AC$, respectively. If $AD$ and $BE$ intersect at $T$ so that $\\frac{AT}{DT}=3$ and $\\frac{BT}{ET}=4$, what is $\\frac{CD}{BD}$?</p><p><br/></p><p><br/>[asy] unitsize(1.5 cm);  pair A, B, C, D, E, F, T;  A = (0,0); B = (3,3); C = (4.5,0); D = (2*C + B)/3; E = (5*C + 2*A)/7; T = extension(A,D,B,E); F = extension(D, D + A - C, B, E);  draw(A--B--C--cycle); draw(A--D); draw(B--E);   label(\"$A$\", A, SW); label(\"$B$\", B, N); label(\"$C$\", C, SE); label(\"$D$\", D, NE); label(\"$E$\", E, S); label(\"$T$\", T, SE);  [/asy]</p>",
+      "solutions": [
+        "<p>We use the square bracket notation $[\\cdot]$ to denote area.</p><p>WLOG, we can assume $[\\triangle BTD] = 1$. Then $[\\triangle BTA] = 3$, and $[\\triangle ATE] = 3/4$. We have $CD/BD = [\\triangle  ACD]/[\\triangle ABD]$, so we need to find the area of quadrilateral $TDCE$.</p><p>Draw the line segment $TC$ to form the two triangles $\\triangle TDC$ and $\\triangle TEC$. Let $x = [\\triangle TDC]$, and $y = [\\triangle TEC]$. By considering triangles $\\triangle BTC$ and $\\triangle ETC$, we obtain $(1+x)/4=y$, and by considering triangles $\\triangle ATC$ and $\\triangle DTC$, we obtain $\\dfrac{\\frac{3}{4} +y}{3}=x$. Solving, we get $x=4/11$, $y=15/44$, so the area of quadrilateral $TDEC$ is $x+y=31/44$.</p><p>Therefore $\\frac{CD}{BD}=\\frac{\\frac{3}{4}+\\frac{31}{44}}{3+1}=\\boxed{\\textbf{(D)} \\frac{4}{11}}$</p>",
+        "<p>We observe that $\\frac{BC}{CD} = \\frac{[BAE]}{[DAE]}$. The proof is that if $B_H$ and $D_H$ are the feet of the altitudes from $B$ and $D$, respectively, to $AC$, then both sides of that equation are equal to $\\frac{BB_H}{DD_H}$.</p><p>From there, we can easily finish:\\[\\frac{BC}{CD} = \\frac{[BAE]}{[DAE]} = \\frac{[BAT]\\cdot\\frac{5}{4}}{[EAT]\\cdot \\frac{4}{3}} = 4\\cdot\\frac{5}{4}\\cdot\\frac{3}{4} = \\frac{15}{4}\\]and thus $\\frac{CD}{BD} = \\boxed{\\textbf{(D)}\\frac 4{11}}$.</p>",
+        "<p>The presence of only ratios in the problem essentially cries out for mass points.</p><p>As per the problem, we assign a mass of $1$ to point $A$, and a mass of $3$ to $D$. Then, to balance $A$ and $D$ on $T$, $T$ has a mass of $4$.</p><p>Now, were we to assign a mass of $1$ to $B$ and a mass of $4$ to $E$, we'd have $5T$. Scaling this down by $4/5$ (to get $4T$, which puts $B$ and $E$ in terms of the masses of $A$ and $D$), we assign a mass of $\\frac{4}{5}$ to $B$ and a mass of $\\frac{16}{5}$ to $E$.</p><p>Now, to balance $A$ and $C$ on $E$, we must give $C$ a mass of $\\frac{16}{5}-1=\\frac{11}{5}$.</p><p>Finally, the ratio of $CD$ to $BD$ is given by the ratio of the mass of $B$ to the mass of $C$, which is $\\frac{4}{5}\\cdot\\frac{5}{11}=\\boxed{\\textbf{(D)}\\ \\frac{4}{11}}$.</p>",
+        "<p>Affine transformations preserve ratios of distances, and for any pair of triangles, there is an affine transformation that maps the first one onto the second one. This is why the answer is the same for any $\\triangle ABC$, and we just need to compute it for any single triangle.</p><p>We can choose the points $A=(-3,0)$, $B=(0,4)$, and $D=(1,0)$. This way we will have $T=(0,0)$, and $E=(0,-1)$. The situation is shown in the picture below:</p><p>[asy] unitsize(1cm); defaultpen(0.8); pair A=(-3,0), B=(0,4), C=(15/11,-16/11), D=(1,0), E=(0,-1); draw(A--B--C--cycle); draw(A--D); draw(B--E); pair T=intersectionpoint(A--D,B--E); label(\"$A$\",A,SW); label(\"$B$\",B,N); label(\"$C$\",C,SE); label(\"$D$\",D,NE); label(\"$E$\",E,S); label(\"$T$\",T,NW); label(\"$3$\",A--T,N); label(\"$4$\",B--T,W); label(\"$1$\",D--T,N); label(\"$1$\",E--T,W);  [/asy]</p><p>The point $C$ is the intersection of the lines $BD$ and $AE$. The points on the first line have the form $(t,4-4t)$, the points on the second line have the form $(t,-1-t/3)$. Solving for $t$ we get $t=15/11$, hence $C=(15/11,-16/11)$.</p><p>The ratio $CD/BD$ can now be computed simply by observing the $x$ coordinates of $B$, $C$, and $D$:</p><p>\\[\\frac{CD}{BD} = \\frac{15/11 - 1}{1 - 0} = \\boxed{\\textbf{(D)}\\frac 4{11}}\\]</p>",
+        "<p>By Menelaus on triangle $BDT$, we have that \\begin{align*}1&=\\dfrac{DA}{TA}\\cdot\\dfrac{TE}{BE}\\cdot\\dfrac{BC}{DC} \\\\ &= \\dfrac43 \\cdot \\dfrac 15 \\cdot \\dfrac {BC}{DC},\\end{align*}giving $\\dfrac{BC}{DC} = \\dfrac{15}{4}$. Therefore, $\\dfrac{CD}{BD} = \\boxed{\\textbf{(D)}\\dfrac{4}{11}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2004 AMC 10B - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_21",
+      "question": "<p>Let $1$; $4$; $7$; $\\ldots$ and $9$; $16$; $23$; $\\ldots$ be two arithmetic progressions. The set $S$ is the union of the first $2004$ terms of each sequence. How many distinct numbers are in $S$?</p>",
+      "solutions": [
+        "<p>The terms in the first sequence are defined by $n \\equiv 1 \\pmod3$, while the terms in the second sequence are defined by $n \\equiv 2 \\pmod 7.$ We seek to find the solutions to this system of modular congruences.</p><p>Letting $n = 3a + 1 = 7b + 2$ for nonnegative integers $a,b$ we solve the congruence \\begin{align*} 3a+1 &amp;\\equiv 7b+2 \\pmod 3, \\\\ 1 &amp;\\equiv b + 2 \\pmod 3, \\\\ b &amp;\\equiv 2 \\pmod 3.\\end{align*}</p><p>For nonnegative integer $c,$ we have that $b = 3c+2$. Substituting back into our original equation, we have $n = 21c + 16,$ or $n \\equiv 16 \\pmod {21}.$</p><p>Now we have to find the largest term in the smaller sequence (first sequence), which is $2003 \\cdot 3 + 1 = 6010.$ Dividing $\\frac{6010}{21}$ gives that there are $286$ terms in common between the sequences.</p><p>By PIE, the answer is just $2004 + 2004 - 286 = \\boxed{(A) 3722}.$</p>",
+        "<p>The two sets of terms are $A=\\{ 3k+1\u00a0: 0\\leq k < 2004 \\}$ and $B=\\{ 7l+9\u00a0: 0\\leq l<2004\\}$. </p><p>Now $S=A\\cup B$. We can compute $|S|=|A\\cup B|=|A|+|B|-|A\\cap B|=4008-|A\\cap B|$. We will now find $|A\\cap B|$. </p><p>Consider the numbers in $B$. We want to find out how many of them lie in $A$. In other words, we need to find out the number of valid values of $l$ for which $7l+9\\in A$.</p><p>The fact \"$7l+9\\in A$\" can be rewritten as \"$1\\leq 7l+9 \\leq 3\\cdot 2003 + 1$, and $7l+9\\equiv 1\\pmod 3$\".</p><p>The first condition gives $0\\leq l\\leq 857$, the second one gives $l\\equiv 1\\pmod 3$.</p><p>Thus the good values of $l$ are $\\{1,4,7,\\dots,856\\}$, and their count is $858/3 = 286$.</p><p>Therefore $|A\\cap B|=286$, and thus $|S|=4008-|A\\cap B|=\\boxed{(A) 3722}$.</p>",
+        "<p>We can start by finding the first non-distinct term from both sequences. We find that that number is $16$. Now, to find every </p><p>other non-distinct terms, we can just keep adding $21$. We know that the last terms of both sequences are $1+3\\cdot 2003$ and </p><p>$9+7\\cdot 2003$. Clearly, $1+3\\cdot 2003$ is smaller and that is the last possible common term of both sequences. Now, we can </p><p>create the inequality $16+21k \\leq 1+3\\cdot 2003$. Using the inequality, we find that there are $286$ common terms. There are 4008 </p><p>terms in total. $4008-286=\\boxed{(A) 3722}$</p><p>~kempwood</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2004 AMC 10B - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_22",
+      "question": "<p>A triangle with sides of 5, 12, and 13 has both an inscribed and a circumscribed circle. What is the distance between the centers of those circles?</p>",
+      "solutions": [
+        "<p>[asy] import geometry;  unitsize(0.6 cm);  pair A, B, C, D, E, F, I, O;  A = (5^2/13,5*12/13); B = (0,0); C = (13,0); I = incenter(A,B,C); D = (I + reflect(B,C)*(I))/2; E = (I + reflect(C,A)*(I))/2; F = (I + reflect(A,B)*(I))/2; O = (B + C)/2;  draw(A--B--C--cycle); draw(incircle(A,B,C)); draw(I--D); draw(I--E); draw(I--F); draw(I--O);  label(\"$A$\", A, N); label(\"$B$\", B, SW); label(\"$C$\", C, SE); dot(\"$D$\", D, S); dot(\"$E$\", E, NE); dot(\"$F$\", F, NW); dot(\"$I$\", I, N); dot(\"$O$\", O, S); [/asy]This is a right triangle. Pick a coordinate system so that the right angle is at $(0,0)$ and the other two vertices are at $(12,0)$ and $(0,5)$.</p><p>As this is a right triangle, the center of the circumcircle is in the middle of the hypotenuse, at $(6,2.5)$.</p><p>The radius $r$ of the inscribed circle can be computed using the well-known identity $\\frac{rP}2=S$, where $S$ is the area of the triangle and $P$ its perimeter. In our case, $S=\\frac{5\\cdot 12}{2}=30$ and $P=5+12+13=30$. Thus, $r=2$. As the inscribed circle touches both legs, its center must be at $(r,r)=(2,2)$.</p><p>The distance of these two points is then $\\sqrt{ (6-2)^2 + (2.5-2)^2 } = \\sqrt{16.25} = \\sqrt{\\frac{65}4} = \\boxed{\\frac{\\sqrt{65}}2}$.</p>",
+        "<p>We directly apply Euler\u2019s Theorem, which states that if the circumcenter is $O$ and the incenter $I$, and the inradius is $r$ and the circumradius is $R$, then \\[OI^2=R(R-2r)\\]</p><p>We can see that this is a right triangle, and hence has area $30$. We then find the inradius with the formula $A=rs$, where $s$ denotes semiperimeter. We easily see that $s=15$, so $r=2$. </p><p>We now find the circumradius with the formula $A=\\frac{abc}{4R}$. Solving for $R$ gives $R=\\frac{13}{2}$. Additionally, we may notice that the side lengths $(5, 12, 13)$ are in a Pythagorean triple, and therefore the triangle is right for a circumradius of $\\frac{13}{2}$. </p><p>Substituting all of this back into our formula gives:\\[OI^2= \\frac{65}{4}\\]So, $OI=\\frac{\\sqrt{65}}{2}\\implies \\boxed{D}$</p>",
+        "<p>[asy] size(15cm); draw((0,0)--(0,5), linewidth(2));  draw((0,0)--(12,0), linewidth(2));  draw((12,0)--(0,5), linewidth(2));  draw((2,0)--(2,2), linewidth(2));  draw((2,2)--(2.770565628817799,3.8455976546592505), linewidth(2));  draw((2,2)--(6.023716614191289,2.4901180774202962), linewidth(2));  draw((2,2)--(0,5), linewidth(2));  draw((2,2)--(12,0), linewidth(2));  draw((0,2)--(2,2), linewidth(2));  label(\"$A$\", (0.14164244785738467,0.25966489738837517), NE);  label(\"$B$\", (0.14164244785738467,5.311734560831129), NE);  label(\"$C$\", (12.120449134133493,0.3232129434694161), NE);  label(\"$D$\", (0.14164244785738467,2.324976395022205), NE);  label(\"$E$\", (2.111631876369636,0.3232129434694161), NE);  label(\"$F$\", (2.9059824523826405,4.167869731372392), NE);  label(\"$G$\", (6.146932802515699,2.801586740630012), NE);  label(\"$I$\", (2.1, 2.1), NE); [/asy]Construct $\\triangle{ABC}$ such that $AB=5$, $AC=12$, and $BC=13$. Since this is a pythagorean triple, $\\angle{A}=90$. By a property of circumcircles and right triangles, the circumcenter, $G$, lies on the midpoint of $\\overline{BC}$, so $BG=\\frac{13}{2}$. Turning to the incircle, we find that the inradius is $2$, using the formula $A=rs$, where $A$ is the area of the triangle, $r$ is the inradius, and $s$ is the semiperimeter. We then denote the incenter $I$, along with the points of tangency $D$, $E$, and $F$. Because $\\angle{IDA}=\\angle{IEA}=90$ by a property of tangency, $\\angle{EID}=90$, and so $IDAE$ is a square. Then, since $IE=2$, $AD=2$. As $AB=5$, $BD=3$, and because $\\triangle{BID}\\cong\\triangle{BIF}$ by HL, $BD=BF=3$. Therefore, $FG=\\frac{7}{2}$. Because $IF=2$, pythagorean theorem gives $IG=\\boxed{\\frac{\\sqrt{65}}{2}}$</p><p><br/></p>",
+        "<p>Like Solution 1, this is a right triangle, so use a coordinate system and put the right angle at $(0,0)$ and the other two vertices at $(12,0)$ and $(0,5)$. Call point A $(0,5)$, B $(0,0)$ , and C $(12,0)$. Then you need to find the center of the circumscribed and inscribed circles, or circumcenter and incenter of the triangle. Find the center of the circumcenter using the other methods above, which will be at $(6,2.5)$. In order to find the incenter, you will use the fact that it is the point where the three bisectors of the interior angles of the triangle intersect. From point B, the bisector is 45 degrees, so the slope is $y=x$. From point A, draw the angle bisector through the line $(0,0)$ and $(12,0)$ and call it point D. Now you need to find $BD$. Replacing $BD$ with $x$ and $DC$ with $y$ and using the angle bisector theorem $\\frac{x}{y} = \\frac{AB}{AC} = \\frac{5}{13}$, so $y=\\frac{13}{5}x$. Substituting $x+y=12$, we get $x+\\frac{13}{5}x = \\frac{18}{5}x = 12$, so $x = \\frac{60}{18} = \\frac{10}{3}$. With this information, point D is $(\\frac{10}{3}, 0)$, and the slope of $BD$ is $\\frac{rise}{run} = \\frac{-5}{\\frac{10}{3}} = -\\frac{3}{2}$. This means the equation for $BD$ is $y=-\\frac{3}{2}x+5$. Find the intersection point of $y=\\frac{-3}{2}x+5$ and $y=x$ with substitution, which will be $(2,2)$. Using the distance formula, find the distance between $(2,2)$ and $(6,2.5)$ which will be $\\sqrt{16.25}$, and with some manipulation, $\\frac{\\sqrt{16.25}\\cdot\\sqrt{4}}{\\sqrt{4}} = \\frac{\\sqrt{65}}{2}\\implies \\boxed{D}$.</p><ul><li>Someone please draw a diagram and try to make it cleaner to read.</li></ul>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2004 AMC 10B - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_23",
+      "question": "<p>Each face of a cube is painted either red or blue, each with probability 1/2. The color of each face is determined independently. What is the probability that the painted cube can be placed on a horizontal surface so that the four vertical faces are all the same color?</p>",
+      "solutions": [
+        "<p>Label the six sides of the cube by numbers $1$ to $6$ as on a classic dice. Then the \"four vertical faces\" can be: $\\{1,2,5,6\\}$, $\\{1,3,4,6\\}$, or $\\{2,3,4,5\\}$.</p><p>Let $A$ be the set of colorings where $1,2,5,6$ are all of the same color, similarly let $B$ and $C$ be the sets of good colorings for the other two sets of faces.</p><p>There are $2^6=64$ possible colorings, and there are $|A\\cup B\\cup C|$ good colorings. Thus the result is $\\frac{|A\\cup B\\cup C|}{64}$. We need to compute $|A\\cup B\\cup C|$. </p><p>Using the <a href=\"/wiki/index.php/Principle_of_Inclusion-Exclusion\" title=\"Principle of Inclusion-Exclusion\">Principle of Inclusion-Exclusion</a> we can write\\[|A\\cup B\\cup C| = |A|+|B|+|C| - |A\\cap B| - |A\\cap C| - |B\\cap C| + |A\\cap B\\cap C|\\]</p><p>Clearly $|A|=|B|=|C|=2^3=8$, as we have two possibilities for the common color of the four vertical faces, and two possibilities for each of the horizontal faces.</p><p>What is $A\\cap B$? The faces $1,2,5,6$ must have the same color, and at the same time faces $1,3,4,6$ must have the same color. It turns out that $A\\cap B=A\\cap C=B\\cap C= A\\cap B\\cap C =$ the set containing just the two cubes where all six faces have the same color.</p><p>Therefore$|A\\cup B\\cup C| = 8+8+8-2-2-2+2 = 20$, and the result is $\\frac{20}{64}=\\boxed{\\frac{5}{16}}$.</p>",
+        "<p>Suppose we break the situation into cases that contain four vertical faces of the same color:</p><p>I. Two opposite sides of same color:There are 3 ways to choose the two sides, and then two colors possible, so $3 \\cdot 2=6$.</p><p>II. One face different from all the others:There are 6 ways to choose this face, and 2 colors, so $6 \\cdot 2=12$.</p><p>III. All faces are the same:There are 2 colors, and so two ways for all faces to be the same. </p><p>Adding them up, we have a total of $20$ ways to have four vertical faces the same color. There are $2^6$ ways to color the cube, so the answer is $\\frac{20}{64}=\\boxed{\\frac{5}{16}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2004 AMC 10B - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_24",
+      "question": "<p>In triangle $ABC$ we have $AB=7$, $AC=8$, $BC=9$. Point $D$ is on the circumscribed circle of the triangle so that $AD$ bisects angle $BAC$. What is the value of $\\frac{AD}{CD}$? </p>",
+      "solutions": [
+        "<p>Set $\\overline{BD}$'s length as $x$. $\\overline{CD}$'s length must also be $x$ since $\\angle BAD$ and $\\angle DAC$ intercept arcs of equal length (because $\\angle BAD=\\angle DAC$). Using <a class=\"mw-redirect\" href=\"/wiki/index.php/Ptolemy%27s_Theorem\" title=\"Ptolemy's Theorem\">Ptolemy's Theorem</a>, $7x+8x=9(AD)$. The ratio is $\\frac{5}{3}\\implies\\boxed{\\text{(B)}}$</p>",
+        "<p>[asy] import graph; import geometry; import markers;  unitsize(0.5 cm);  pair A, B, C, D, E, I;  A = (11/3,8*sqrt(5)/3); B = (0,0); C = (9,0); I = incenter(A,B,C); D = intersectionpoint(I--(I + 2*(I - A)), circumcircle(A,B,C)); E = extension(A,D,B,C);  draw(A--B--C--cycle); draw(circumcircle(A,B,C)); draw(D--A); draw(D--B); draw(D--C);  label(\"$A$\", A, N); label(\"$B$\", B, SW); label(\"$C$\", C, SE); label(\"$D$\", D, S); label(\"$E$\", E, NE);  markangle(radius = 20,B, A, C, marker(markinterval(2,stickframe(1,2mm),true))); markangle(radius = 20,B, C, D, marker(markinterval(1,stickframe(1,2mm),true))); markangle(radius = 20,D, B, C, marker(markinterval(1,stickframe(1,2mm),true))); markangle(radius = 20,C, B, A, marker(markinterval(1,stickframe(2,2mm),true))); markangle(radius = 20,C, D, A, marker(markinterval(1,stickframe(2,2mm),true))); [/asy]Let $E = \\overline{BC}\\cap \\overline{AD}$. Observe that $\\angle ABC \\cong \\angle ADC$ because they both subtend arc $\\overarc{AC}.$</p><p>Furthermore, $\\angle BAE \\cong \\angle EAC$ because $\\overline{AE}$ is an angle bisector, so $\\triangle ABE \\sim \\triangle ADC$ by $\\text{AA}$ similarity. Then $\\dfrac{AD}{AB} = \\dfrac{CD}{BE}$. By the <a href=\"/wiki/index.php/Angle_Bisector_Theorem\" title=\"Angle Bisector Theorem\">Angle Bisector Theorem</a>, $\\dfrac{7}{BE} = \\dfrac{8}{CE}$, so $\\dfrac{7}{BE} = \\dfrac{8}{9-BE}$. This in turn gives $BE = \\frac{21}{5}$. Plugging this into the similarity proportion gives: $\\dfrac{AD}{7} = \\dfrac{CD}{\\tfrac{21}{5}} \\implies \\dfrac{AD}{CD} = {\\dfrac{5}{3}} = \\boxed{\\text{(B)}}$.</p>",
+        "<p>Similar to solution 2, let $E$ be the intersection of diagonals $AD$ and $BC$. We know that $\\overline{AD}$ bisects $\\angle BAC$, so $\\angle BAD = \\angle CAD$. Additionally, $\\angle BAD$ and $\\angle BCD$ subtend the same arc, giving $\\angle BAD = \\angle BCD$. Similarly, $\\angle CAD = \\angle CBD$ and $\\angle ABC = \\angle ADC$.</p><p>These angle relationships tell us that $\\triangle ABE\\sim \\triangle ADC$ by AA Similarity, so $AD/CD = AB/BE$. By the angle bisector theorem, $AB/BE = AC/CE$. Hence,\\[\\frac{AB}{BE} = \\frac{AC}{CE} = \\frac{AB + AC}{BE + CE} = \\frac{AB + AC}{BC} = \\frac{7 + 8}{9} = \\frac{15}{9} = \\boxed{\\frac{5}{3}}.\\]</p><p>--vaporwave</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2004 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2004_10b_25",
+      "question": "<p>A circle of radius $1$ is internally tangent to two circles of radius $2$ at points $A$ and $B$, where $AB$ is a diameter of the smaller circle. What is the area of the region, shaded in the picture, that is outside the smaller circle and inside each of the two larger circles? </p><p>$\\mathrm{(A) \\ } \\frac{5}{3} \\pi - 3\\sqrt 2 \\qquad  \\mathrm{(B) \\ } \\frac{5}{3} \\pi - 2\\sqrt 3 \\qquad  \\mathrm{(C) \\ } \\frac{8}{3} \\pi - 3\\sqrt 3 \\qquad  \\mathrm{(D) \\ } \\frac{8}{3} \\pi - 3\\sqrt 2 \\qquad  \\mathrm{(E) \\ } \\frac{8}{3} \\pi - 2\\sqrt 3$</p>",
+      "solutions": [
+        "<p>The area of the small circle is $\\pi$. We can add it to the shaded region, compute the area of the new region, and then subtract the area of the small circle from the result.</p><p>Let $C$ and $D$ be the intersections of the two large circles. Connect them to $A$ and $B$ to get the picture below:</p><p>[asy] unitsize(1.5cm); defaultpen(0.8);  pair O=(0,0), A=(0,1), B=(0,-1); path bigc1 = Circle(A,2), bigc2 = Circle(B,2), smallc = Circle(O,1);  pair[] P = intersectionpoints(bigc1, bigc2); filldraw( arc(A,P[0],P[1])--arc(B,P[1],P[0])--cycle, lightgray, black ); draw(bigc1); draw(bigc2);  dot(A); dot(B); label(\"$A$\",A,N); label(\"$B$\",B,S); /* dot(O);  unfill(smallc); draw(smallc);  draw( O--dir(30) ); draw( A--(A+2*dir(30)) ); draw( B--(B+2*dir(210)) );  label(\"$1$\", O--dir(30), N ); label(\"$2$\", A--(A+2*dir(30)), N ); label(\"$2$\", B--(B+2*dir(210)), S ); */  label(\"$C$\",P[0],W); label(\"$D$\",P[1],E); draw( P[0]--A--P[1] ); draw( P[0]--B--P[1] ); draw( A--B ); [/asy]</p><p>We can see that the triangles $\\triangle ABC$ and $\\triangle ABD$ are both equilateral with side $2$.</p><p>Take a look at the lower circle. The angle $ABC$ is $60^\\circ$, thus sector $ABC$ is $1/6$ of the circle. The same is true for sector $ABD$ of the lower circle, and sectors $CAB$ and $BAD$ of the upper circle. </p><p>If we now sum the areas of these four sectors, we will almost get the area of the new shaded region - except that each of the two equilateral triangles will be counted twice. The area of an equilateral triangle given its side, $s,$ is $\\frac{\\sqrt3}4s^2.$</p><p>Therefore, the area of the new shaded region is $4\\cdot \\left( \\frac 16 \\cdot \\pi\\cdot 2^2 \\right) - 2 \\cdot \\left( 4 \\cdot \\frac{\\sqrt3}4 \\right) = \\frac 83 \\pi - 2\\sqrt 3$. Lastly, we must subtract the area of the circle that we added earlier, $\\pi$, and we get</p><p>$\\left( \\frac 83 \\pi - 2\\sqrt 3 \\right) - \\pi = \\boxed{\\mathrm{(B)\\ } \\frac 53 \\pi - 2\\sqrt 3 }$.</p>",
+        "<p>Notice that answer choices (C), (D), and (E) are exactly $\\pi$ more than answer choices (A), (B). This suggests that answer choices (C), (D), and (E) are meant to trick you into forgetting to subtract the circle with radius $1$ (area $\\pi$) From this, (A) or (B) are probably the answer choices (since you do need to subtract $\\pi$ at the end!) Since the angle measures of the sectors are $120^{\\circ},$ and we are working with the areas of some equilateral triangles, it only makes sense for the answer to have a $\\sqrt 3$ and not a $\\sqrt 2$ in them (There's no $45^{\\circ}$ angle either). So, our answer is $\\boxed{\\mathrm{(B)\\ } \\frac 53 \\pi - 2\\sqrt 3 }$.</p><p>~lpieleanu (minor editing and extra details)</p><p><a class=\"external free\" href=\"https://www.youtube.com/watch?v=ajApE9bdUJQ\" rel=\"nofollow\">https://www.youtube.com/watch?v=ajApE9bdUJQ</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2004 AMC 10B - geometry problem involving area"
+        }
+      ]
+    }
+  ]
+}

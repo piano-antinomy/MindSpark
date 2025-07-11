@@ -1,0 +1,820 @@
+{
+  "year": "2005",
+  "competition": "AMC_10",
+  "problems": [
+    {
+      "id": "amc_2005_10a_1",
+      "question": "<p>While eating out, Mike and Joe each tipped their server $2$ dollars. Mike tipped $10\\%$ of his bill and Joe tipped $20\\%$ of his bill. What was the difference, in dollars between their bills? </p>",
+      "solutions": [
+        "<p>Let $m$ be Mike's bill and $j$ be Joe's bill. </p><p>$\\frac{10}{100}m=2$</p><p>$m=20$</p><p>$\\frac{20}{100}j=2$</p><p>$j=10$</p><p>So the desired difference is $m-j=20-10=10 \\Rightarrow \\boxed{\\textbf{(D) }10}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2005 AMC 10A - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_2",
+      "question": "<p>For each pair of real numbers $a \\neq b$, define the <a href=\"/wiki/index.php/Operation\" title=\"Operation\">operation</a> $\\star$ as</p><p>$(a \\star b) = \\frac{a+b}{a-b}$.</p><p>What is the value of $((1 \\star 2) \\star 3)$?</p>",
+      "solutions": [
+        "<p>$((1 \\star 2) \\star 3) = \\left(\\left(\\frac{1+2}{1-2}\\right) \\star 3\\right) = (-3 \\star 3) = \\frac{-3+3}{-3-3} = 0 \\Longrightarrow \\boxed{\\textbf{(C) }0}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2005 AMC 10A - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_3",
+      "question": "<p>The equations $2x + 7 = 3$ and $bx - 10 = - 2$ have the same solution. What is the value of $b$?</p>",
+      "solutions": [
+        "<p>$2x + 7 = 3 \\Longrightarrow x = -2, \\quad -2b - 10 = -2 \\Longrightarrow -2b = 8 \\Longrightarrow b = \\boxed{\\textbf{(B)}-4}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2005 AMC 10A - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_4",
+      "question": "<p>A rectangle with a <a href=\"/wiki/index.php/Diagonal\" title=\"Diagonal\">diagonal</a> of length $x$ is twice as long as it is wide. What is the area of the rectangle? </p>",
+      "solutions": [
+        "<p>Let's set our length to $2$ and our width to $1$.</p><p>We have our area as $2*1 = 2$ and our diagonal: $x$ as $\\sqrt{1^2+2^2} = \\sqrt{5}$ (Pythagoras Theorem)</p><p>Now we can plug this value into the answer choices and test which one will give our desired area of $2$.</p><ul><li>All of the answer choices have our $x$ value squared, so keep in mind that $\\sqrt{5}^2 = 5$</li></ul><p>Through testing, we see that ${2/5}*\\sqrt{5}^2 = 2$</p><p>So our correct answer choice is $\\boxed{\\textbf{(B) }\\frac{2}{5}x^2}$</p><p>-JinhoK</p>",
+        "<p>Call the length $2l$ and the width $l$.</p><p>The area of the rectangle is $2l*l = 2l^2$</p><p>$x$ is the hypotenuse of the right triangle with $2l$ and $l$ as legs. By the Pythagorean theorem, $(2l)^2+l^2 = x^2$</p><p>$4l^2 + l^2 = x^2$$,$ $5l^2 = x^2$$,$ and $l^2 = \\frac{x^2}{5}$.</p><p>Therefore, the area is $\\boxed{\\textbf{(B) }\\frac{2}{5}x^2}$</p><p>-mobius247</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2005 AMC 10A - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_5",
+      "question": "<p>A store normally sells windows at $$100$ each. This week the store is offering one free window for each purchase of four. Dave needs seven windows and Doug needs eight windows. How many dollars will they save if they purchase the windows together rather than separately?</p>",
+      "solutions": [
+        "<p>The store's offer means that every $5$th window is free. </p><p>Dave would get $\\left\\lfloor\\frac{7}{5}\\right\\rfloor=1$ free window.</p><p>Doug would get $\\left\\lfloor\\frac{8}{5}\\right\\rfloor=1$ free window. </p><p>This is a total of $2$ free windows. </p><p>Together, they would get $\\left\\lfloor\\frac{8+7}{5}\\right\\rfloor = \\left\\lfloor\\frac{15}{5}\\right\\rfloor=3$ free windows. </p><p>So they get $3-2=1$ additional window if they purchase the windows together. </p><p>Therefore they save $1\\cdot100= \\boxed{\\textbf{(A) }100}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2005 AMC 10A - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_6",
+      "question": "<p>The average (mean) of $20$ numbers is $30$, and the average of $30$ other numbers is $20$. What is the average of all $50$ numbers?</p>",
+      "solutions": [
+        "<p>Since the <a href=\"/wiki/index.php/Arithmetic_mean\" title=\"Arithmetic mean\">average</a> of the first $20$ numbers is $30$, their sum is $20\\cdot30=600$. </p><p>Since the average of $30$ other numbers is $20$, their sum is $30\\cdot20=600$. </p><p>So the sum of all $50$ numbers is $600+600=1200$</p><p>Therefore, the average of all $50$ numbers is $\\frac{1200}{50}=\\boxed{\\textbf{(B) }24}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2005 AMC 10A - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_7",
+      "question": "<p>Josh and Mike live $13$ miles apart. Yesterday Josh started to ride his bicycle toward Mike's house. A little later Mike started to ride his bicycle toward Josh's house. When they met, Josh had ridden for twice the length of time as Mike and at four-fifths of Mike's rate. How many miles had Mike ridden when they met? </p>",
+      "solutions": [
+        "<p>Let $m$ be the distance in miles that Mike rode. </p><p>Since Josh rode for twice the length of time as Mike and at four-fifths of Mike's rate, he rode $2\\cdot\\frac{4}{5}\\cdot m = \\frac{8}{5}m$ miles. </p><p>Since their combined distance was $13$ miles, </p><p>$\\frac{8}{5}m + m = 13$</p><p>$\\frac{13}{5}m = 13$</p><p>$m = \\boxed{\\textbf{(B) }5}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2005 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_8",
+      "question": "<p>In the figure, the length of side $AB$ of square $ABCD$ is $\\sqrt{50}$ and $BE=1$. What is the area of the inner square $EFGH$?</p><p><a class=\"image\" href=\"/wiki/index.php/File:AMC102005Aq.png\">AMC102005Aq.png</a></p>",
+      "solutions": [
+        "<p>We see that side $BE$, which we know is $1$, is also the shorter leg of one of the four right triangles (which are congruent, I won\u2019t prove this). So, $AH = 1$. Then $HB = HE + BE = HE + 1$, and $HE$ is one of the sides of the square whose area we want to find. So:</p><p>\\[1^2 + (HE+1)^2=\\sqrt{50}^2\\]</p><p>\\[1 + (HE+1)^2=50\\]</p><p>\\[(HE+1)^2=49\\]</p><p>\\[HE+1=7\\]</p><p>\\[HE=6\\] So, the area of the square is $6^2=\\boxed{\\textbf{(C) }36}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2005 AMC 10A - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_9",
+      "question": "<p>Three tiles are marked $X$ and two other tiles are marked $O$. The five tiles are randomly arranged in a row. What is the probability that the arrangement reads $XOXOX$?</p>",
+      "solutions": [
+        "<p>There are $\\frac{5!}{2!3!}=10$ distinct arrangements of three $X$'s and two $O$'s. </p><p>There is only $1$ distinct arrangement that reads $XOXOX$.</p><p>Therefore the desired <a href=\"/wiki/index.php/Probability\" title=\"Probability\">probability</a> is $\\boxed{\\textbf{(B) }\\frac{1}{10}}$</p>",
+        "<p>Imagine you need to fit the two Os into the gaps between the three Xs.</p><p>The gaps between the Xs are: _X_X_X_, a total of 4.</p><p>You need to fit two Os in the gaps. There are two possible outcomes:</p><p>1. The two Os are put into different gaps, in this case the number of arrangements is 4 x 3 / 2 = 6</p><p>2. The two Os are put into the same gap, in this case there will be an extra 4.</p><p>Therefore the probability of arrangements that reads XOXOX is 1 / (4 + 6) = 1 / 10</p><p>~Dew grass meadow</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2005 AMC 10A - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_10",
+      "question": "<p>There are two values of $a$ for which the equation $4x^2 + ax + 8x + 9 = 0$ has only one solution for $x$. What is the sum of those values of $a$?</p>",
+      "solutions": [
+        "<p>A <a href=\"/wiki/index.php/Quadratic_equation\" title=\"Quadratic equation\">quadratic equation</a> has exactly one <a class=\"mw-redirect\" href=\"/wiki/index.php/Root\" title=\"Root\">root</a> if and only if it is a <a href=\"/wiki/index.php/Perfect_square\" title=\"Perfect square\">perfect square</a>. So set</p><p>$4x^2 + ax + 8x + 9 = (mx + n)^2$</p><p>$4x^2 + ax + 8x + 9 = m^2x^2 + 2mnx + n^2$</p><p>Two <a href=\"/wiki/index.php/Polynomial\" title=\"Polynomial\">polynomials</a> are equal only if their <a href=\"/wiki/index.php/Coefficient\" title=\"Coefficient\">coefficients</a> are equal, so we must have</p><p>$m^2 = 4, n^2 = 9$</p><p>$m = \\pm 2, n = \\pm 3$</p><p>$a + 8= 2mn = \\pm 2\\cdot 2\\cdot 3 = \\pm 12$</p><p>$a = 4$ or $a = -20$.</p><p>So the desired sum is $(4)+(-20)=\\boxed{\\textbf{(A)}-16}$</p><p><br/></p><p>Alternatively, note that whatever the two values of $a$ are, they must lead to equations of the form $px^2 + qx + r =0$ and $px^2 - qx + r = 0$. So the two choices of $a$ must make $a_1 + 8 = q$ and $a_2 + 8 = -q$ so $a_1 + a_2 + 16 = 0$ and $a_1 + a_2 =\\boxed{\\textbf{(A)}-16}$</p>",
+        "<p>Since this quadratic must have a double root, the discriminant of the quadratic formula for this quadratic must be 0. Therefore, we must have \\[(a+8)^2 - 4(4)(9) = 0 \\implies a^2 + 16a - 80.\\] We can use the quadratic formula to solve for its roots (we can ignore the expression in the radical sign as it will cancel out due to the $\\pm$ sign when added). So we must have \\[\\frac{-16 + \\sqrt{\\text{something}}}{2} + \\frac{-16 - \\sqrt{\\text{something}}}{2}.\\]$\\frac{-32}{2} = \\boxed{\\textbf{(A)}-16}$Note: you can also use Vieta's Formulae</p>",
+        "<p>There is only one positive value for $k$ such that the quadratic equation would have only one solution.$k-8$ and $-k-8$ are the values of $a$. $-8-8=-16$, so the answer is $\\boxed{\\textbf{(A)} -16}$</p><p>Another way of thinking of this is letting the two values of k be $a$ and $a_0$. Since this is obviously a square of a binomial, $k+8 = m$ or $-m$ for some $m$. Thus, we can say that $a + 8 = m$ and $a_0 + 8 = -m$. Combining these gives us $a_0 + a + 16 = 0$, so $a_0 + a = 16$. Our answer is $\\boxed{\\textbf{(A)} -16}$.</p><p>~Extremelysupercooldude (Second solution)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2005 AMC 10A - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_11",
+      "question": "<p>A wooden cube $n$ units on a side is painted red on all six faces and then cut into $n^3$ unit cubes. Exactly one-fourth of the total number of faces of the unit cubes are red. What is $n$?</p>",
+      "solutions": [
+        "<p>Since there are $n^2$ little <a href=\"/wiki/index.php/Face\" title=\"Face\">faces</a> on each face of the big wooden <a href=\"/wiki/index.php/Cube_(geometry)\" title=\"Cube (geometry)\"> cube</a>, there are $6n^2$ little faces painted red. </p><p>Since each unit cube has $6$ faces, there are $6n^3$ little faces total. </p><p>Since one-fourth of the little faces are painted red, </p><p>$\\frac{6n^2}{6n^3}=\\frac{1}{4}$</p><p>$\\frac{1}{n}=\\frac{1}{4}$</p><p>$n=\\boxed{\\textbf{(B) }4}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2005 AMC 10A - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_12",
+      "question": "<p>The figure shown is called a <i>trefoil</i> and is constructed by drawing circular sectors about the sides of the congruent equilateral triangles. What is the area of a trefoil whose horizontal base has length $2$?</p><p>[asy] unitsize(1.5cm); defaultpen(linewidth(.8pt)+fontsize(12pt));  pair O=(0,0), A=dir(0), B=dir(60), C=dir(120), D=dir(180); pair E=B+C;  draw(D--E--B--O--C--B--A,linetype(\"4 4\")); draw(Arc(O,1,0,60),linewidth(1.2pt)); draw(Arc(O,1,120,180),linewidth(1.2pt)); draw(Arc(C,1,0,60),linewidth(1.2pt)); draw(Arc(B,1,120,180),linewidth(1.2pt)); draw(A--D,linewidth(1.2pt)); draw(O--dir(40),EndArrow(HookHead,4)); draw(O--dir(140),EndArrow(HookHead,4)); draw(C--C+dir(40),EndArrow(HookHead,4)); draw(B--B+dir(140),EndArrow(HookHead,4));  label(\"2\",O,S); draw((0.1,-0.12)--(1,-0.12),EndArrow(HookHead,4),EndBar); draw((-0.1,-0.12)--(-1,-0.12),EndArrow(HookHead,4),EndBar); [/asy]</p>",
+      "solutions": [
+        "<p>The area of the <i>trefoil</i> is equal to the area of the big equilateral triangle plus the area of four $60^\\circ$ sectors with a radius of $\\frac{2}{2}=1$ minus the area of a small equilateral triangle. </p><p>This is equivalent to the area of four $60^\\circ$ sectors with a radius of $1$. </p><p>So the answer is $4\\cdot\\frac{60}{360}\\cdot\\pi\\cdot1^2 = \\frac{4}{6}\\cdot\\pi = \\boxed{\\textbf{(B) }\\frac{2}{3}\\pi}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2005 AMC 10A - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_13",
+      "question": "<p>How many positive integers $n$ satisfy the following condition:</p><p>$(130n)^{50} > n^{100} > 2^{200}\\\u00a0?$</p>",
+      "solutions": [
+        "<p>We're given $(130n)^{50} > n^{100} > 2^{200}$, so</p><p>$\\sqrt[50]{(130n)^{50}} > \\sqrt[50]{n^{100}} > \\sqrt[50]{2^{200}}$ (because all terms are positive) and thus</p><p>$130n > n^2 > 2^4$</p><p>$130n > n^2 > 16$</p><p>Solving each part separately: </p><p>$n^2 > 16 \\Longrightarrow n > 4$</p><p>$130n > n^2 \\Longrightarrow 130 > n$</p><p>So $4 < n < 130$. </p><p>Therefore the answer is the number of <a href=\"/wiki/index.php/Positive_integer\" title=\"Positive integer\">positive integers</a> over the interval $(4,130)$ which is $129-5+1 = \\boxed{\\textbf{(E) }125}$</p><p><br/></p>",
+        "<p>We're given $\\left(130n\\right)^{50}>n^{100}>2^{200}$.</p><p>Alternatively to solution 1, first deal with the first half: $\\left(130n\\right)^{50}>\\left(n^{2}\\right)^{50}$. Because the exponents are equal, we can ignore them and solve for $n$: $130n>n^{2}$, or $n<130$.</p><p>The second half: $n^{100}>2^{200}$, or $n^{100}>4^{100}$, which means $n>4$.</p><p>Therefore $4<n<130$ and $n=\\left\\{5,\\ 6,\\ 7,\\ \\cdots ,\\ 128,\\ 129\\right\\}$ which contains the same number of elements as $\\left\\{1,\\ 2,\\ 3,\\ \\cdots ,\\ 124,\\ 125\\right\\}$ which clearly contains $125$ values or choice $\\boxed{\\textbf{(E) } 125}$.</p><p>~JH. L</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2005 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_14",
+      "question": "<p>How many three-digit numbers satisfy the property that the middle digit is the average of the first and the last digits? </p>",
+      "solutions": [
+        "<p>If the middle digit is the average of the first and last digits, twice the middle digit must be equal to the sum of the first and last digits. </p><p>Doing some <a href=\"/wiki/index.php/Casework\" title=\"Casework\">casework</a>: </p><p>If the middle digit is $1$, possible numbers range from $111$ to $210$. So there are $2$ numbers in this case. </p><p>If the middle digit is $2$, possible numbers range from $123$ to $420$. So there are $4$ numbers in this case. </p><p>If the middle digit is $3$, possible numbers range from $135$ to $630$. So there are $6$ numbers in this case. </p><p>If the middle digit is $4$, possible numbers range from $147$ to $840$. So there are $8$ numbers in this case. </p><p>If the middle digit is $5$, possible numbers range from $159$ to $951$. So there are $9$ numbers in this case. </p><p>If the middle digit is $6$, possible numbers range from $369$ to $963$. So there are $7$ numbers in this case. </p><p>If the middle digit is $7$, possible numbers range from $579$ to $975$. So there are $5$ numbers in this case. </p><p>If the middle digit is $8$, possible numbers range from $789$ to $987$. So there are $3$ numbers in this case. </p><p>If the middle digit is $9$, the only possible number is $999$. So there is $1$ number in this case. </p><p>So the total number of three-digit numbers that satisfy the property is $2+4+6+8+9+7+5+3+1=\\boxed{\\textbf{(E) }45}$</p>",
+        "<p>Alternatively, we could note that the middle digit is uniquely defined by the first and third digits since it is half of their sum. This also means that the sum of the first and third digits must be even. Since even numbers are formed either by adding two odd numbers or two even numbers, we can split our problem into $2$ cases:</p><p>If both the first digit and the last digit are odd, then we have $1, 3, 5, 7,$ or $9$ as choices for each of these digits, and there are $5\\cdot5=25$ numbers in this case.</p><p>If both the first and last digits are even, then we have $2, 4, 6, 8$ as our choices for the first digit and $0, 2, 4, 6, 8$ for the third digit. There are $4\\cdot5=20$ numbers here.</p><p>The total number, then, is $20+25=\\boxed{\\textbf{(E) }45}$</p>",
+        "<p>As we noted in Solution 2, we note that the sum of the first and third digits has to be even. The first digit can have $9$ possibilities $(1-9)$, and the third digit can have $10$ possibilities $(0-9)$. This means there can be $9\\cdot10=90$ possible two-digit numbers in which the first digit and the third digit are digits. Exactly half of these would have their sum be divisible by $2$ (since $90$ is even), so our answer is $\\frac{90}{2}=\\boxed{\\textbf{(E) }45}$</p><p>- <a href=\"/wiki/index.php/User:Sweetmango77\" title=\"User:Sweetmango77\">SweetMango77</a></p>",
+        "<p>If our first digit is odd, the last digit also has to be odd for there to be a whole number middle digit that is the average of the first and the last digits.</p><p>If our first digit is even, the last digit has to be even, or $0$ for there to be a whole number middle digit that is the average of the first and the last digits.</p><p>As there are $5$ different possible values for each starting digit of our number, we can multiply that by the number of possible first digits $(1-9)$ to achieve our desired solution. $5 \\cdot 9 = \\boxed{\\textbf{(E) }45}$</p><p>-JinhoK</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2005 AMC 10A - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_15",
+      "question": "<p>How many positive cubes divide $3! \\cdot 5! \\cdot 7!$\u00a0?</p>",
+      "solutions": [
+        "<p>$3! \\cdot 5! \\cdot 7! = (3\\cdot2\\cdot1) \\cdot (5\\cdot4\\cdot3\\cdot2\\cdot1) \\cdot (7\\cdot6\\cdot5\\cdot4\\cdot3\\cdot2\\cdot1) = 2^{8}\\cdot3^{4}\\cdot5^{2}\\cdot7^{1}$</p><p>Therefore, a <a href=\"/wiki/index.php/Perfect_cube\" title=\"Perfect cube\">perfect cube</a> that divides $3! \\cdot 5! \\cdot 7!$ must be in the form $2^{a}\\cdot3^{b}\\cdot5^{c}\\cdot7^{d}$ where $a$, $b$, $c$, and $d$ are <a class=\"mw-redirect\" href=\"/wiki/index.php/Nonnegative\" title=\"Nonnegative\">nonnegative</a> <a href=\"/wiki/index.php/Multiple\" title=\"Multiple\">multiples</a> of $3$ that are less than or equal to $8, 5, 2$ and $1,$ respectively. </p><p>So: </p><p>$a\\in\\{0,3,6\\}$ ($3$ possibilities)</p><p>$b\\in\\{0,3\\}$ ($2$ possibilities)</p><p>$c\\in\\{0\\}$ ($1$ possibility)</p><p>$d\\in\\{0\\}$($1$ possibility)</p><p>So the number of perfect cubes that divide $3! \\cdot 5! \\cdot 7!$ is $3\\cdot2\\cdot1\\cdot1 = \\boxed{\\textbf{(E) }6}$</p>",
+        "<p>$3! \\cdot 5! \\cdot 7! = (3\\cdot2\\cdot1) \\cdot (5\\cdot4\\cdot3\\cdot2\\cdot1) \\cdot (7\\cdot6\\cdot5\\cdot4\\cdot3\\cdot2\\cdot1)$</p><p>In the expression, we notice that there are 3 $3's$, 3 $2's$, and 3 $1's$. This gives us our first 3 cubes: $3^3$, $2^3$, and $1^3$. </p><p>However, we can also multiply smaller numbers in the expression to make bigger expressions. For example, $(2 \\cdot 2) \\cdot 4 \\cdot 4=4 \\cdot 4 \\cdot 4 = 4^3$ (one 2 comes from the $3!$, and the other from the $5!$). Using this method, we find:</p><p>$(3 \\cdot 2) \\cdot (3 \\cdot 2) \\cdot 6 = 6^3$</p><p>and</p><p>$(3 \\cdot 4) \\cdot (3 \\cdot 4) \\cdot (2 \\cdot 6) = 12^3$</p><p>So, we have 6 cubes total: $1^3 ,2^3, 3^3, 4^3, 6^3,$ and $12^3$ for a total of $\\boxed{\\textbf{(E) }6}$ cubes</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2005 AMC 10A - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_16",
+      "question": "<p>The sum of the digits of a two-digit number is subtracted from the number. The units digit of the result is $6$. How many two-digit numbers have this property? </p>",
+      "solutions": [
+        "<p>Let the number be $10a+b$ where $a$ and $b$ are the tens and units digits of the number. </p><p>So $(10a+b)-(a+b)=9a$ must have a units digit of $6$</p><p>This is only possible if $9a=36$, so $a=4$ is the only way this can be true. </p><p>So the numbers that have this property are $40, 41, 42, 43, 44, 45, 46, 47, 48, 49$. </p><p>Therefore the answer is $\\boxed{\\textbf{(D) }10}$</p>",
+        "<p>Let a two-digit number equal $10a+b$, where $a$ and $b$ are the tens and units digits of the number.</p><p>From the problem, we have $10a+b-(a+b)=9a$</p><p>Now let $9a=10x+y$, where $x$ and $y$ are the tens and units digits of the number. Then it must be that $y=6$ as stated in the problem.</p><p>Note that $10a$ ends in $0$, but $9a$ ends in $6$, so $a=4$. We need not to care about $b$, since it cancels out in the calculation.</p><p>So the answer is $\\boxed{\\textbf{(D) }10}$, since there are $10$ numbers that have $a=4$.</p><p>~BurpSuite</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2005 AMC 10A - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_17",
+      "question": "<p>In the five-sided star shown, the letters $A, B, C, D,$ and $E$ are replaced by the numbers $3, 5, 6, 7,$ and $9$, although not necessarily in this order. The sums of the numbers at the ends of the line segments $AB$, $BC$, $CD$, $DE$, and $EA$ form an arithmetic sequence, although not necessarily in that order. What is the middle term of the arithmetic sequence? </p><p><a class=\"image\" href=\"/wiki/index.php/File:2005amc10a17.gif\">2005amc10a17.gif</a></p>",
+      "solutions": [
+        "<p>(meta-solving; answer choices imply solution exists)</p><p>Each corner $(A,B,C,D,E)$ goes to two sides/numbers. ($A$ goes to $AE$ and $AB$, $D$ goes to $DC$ and $DE$). The sum of every term is equal to $2(3+5+6+7+9)=60$</p><p>Since the middle term in an arithmetic sequence is the average of all the terms in the sequence, the middle number is $\\frac{60}{5}=\\boxed{\\textbf{(D) }12}$</p>",
+        "<p>We know that the smallest number in the arithmetic sequence must be $\\geq 3 + 5 = 8$, and the largest number must be $\\leq 7 + 9 = 16$. </p><p>Since there are $5$ terms in this sequence, the common difference $d \\leq (16 - 8)/(5-1) = 2$.</p><p>Since $d$ is an integer (difference of sums of integers), and since exactly 2 of the sums must be odd, $d$ must be odd. Therefore, $d=1$.</p><p>The middle term must have the majority parity, so it must be even. The 2 terms adjacent to the middle are odd, $6+a$ and $6+b$. $a-b = 2d = 2$. $a$ and $b$ can't be the smallest (or largest) 2 odd numbers, because that would make it impossible to construct the smallest (or largest) sum from one of the remaining two numbers and one of the odd numbers. Therefore, $\\{a,b\\} = \\{5,7\\}$. The middle sum must then be $(6+5) + 1 = (6+7)-1 = \\boxed{12}$. The remaining edges are $\\{9,3\\}$ (because $\\{5,7\\}$ can't be an edge, as that would make a triangle with 6), $\\{3,7\\}$, and $\\{5,9\\}$.</p><p>~oinava</p>",
+        "<p>We notice that the average of $3,5,6,7$ and $9$ is $6$. Now all we have to do is plug $6$ into each value. This results in all the terms being $12$ and since the term we are looking for is the middle term, we know that our answer is $12$, $\\boxed{D}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2005 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_18",
+      "question": "<p>Team A and team B play a series. The first team to win three games wins the series. Before each game, each team is equally likely to win each game, there are no ties, and the outcomes of the individual games are independent. If it turns out that team B won the second game and team A won the series, what is the conditional probability that team B won the first game? </p>",
+      "solutions": [
+        "<p>There are at most $5$ games played. </p><p>If team $B$ won the first two games, team $A$ would need to win the next three games. So the only possible order of wins is $BBAAA$. </p><p>If team $A$ won the first game, and team $B$ won the second game, the possible order of wins are: $ABBAA, ABABA,$ and $ABAAX$, where $X$ denotes that the $5$th game wasn't played. </p><p>There is $1$ possibility where team $B$ wins the first game and $4$ total possibilities when team $A$ wins the series and team $B$ wins the second game. Note that the fourth possibility $(ABAAX)$ occurs twice as often as the others because it is dependent on the outcome of $4$ games instead of $5$, so we put $1$ over $5$ total possibilities. The desired probability is then $\\boxed{\\textbf{(A) }\\frac{1}{5}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2005 AMC 10A - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_19",
+      "question": "<p>Three one-inch squares are placed with their bases on a line. The center square is lifted out and rotated 45 degrees, as shown. Then it is centered and lowered into its original location until it touches both of the adjoining squares. How many inches is the point $B$ from the line on which the bases of the original squares were placed?</p><p>[asy] unitsize(1inch); defaultpen(linewidth(.8pt)+fontsize(8pt)); draw((0,0)--((1/3) + 3*(1/2),0)); fill(((1/6) + (1/2),0)--((1/6) + (1/2),(1/2))--((1/6) + 1,(1/2))--((1/6) + 1,0)--cycle, rgb(.7,.7,.7)); draw(((1/6),0)--((1/6) + (1/2),0)--((1/6) + (1/2),(1/2))--((1/6),(1/2))--cycle); draw(((1/6) + (1/2),0)--((1/6) + (1/2),(1/2))--((1/6) + 1,(1/2))--((1/6) + 1,0)--cycle); draw(((1/6) + 1,0)--((1/6) + 1,(1/2))--((1/6) + (3/2),(1/2))--((1/6) + (3/2),0)--cycle); draw((2,0)--(2 + (1/3) + (3/2),0)); draw(((2/3) + (3/2),0)--((2/3) + 2,0)--((2/3) + 2,(1/2))--((2/3) + (3/2),(1/2))--cycle); draw(((2/3) + (5/2),0)--((2/3) + (5/2),(1/2))--((2/3) + 3,(1/2))--((2/3) + 3,0)--cycle); label(\"$B$\",((1/6) + (1/2),(1/2)),NW); label(\"$B$\",((2/3) + 2 + (1/4),(29/30)),NNE); draw(((1/6) + (1/2),(1/2)+0.05)..(1,.8)..((2/3) + 2 + (1/4)-.05,(29/30)),EndArrow(HookHead,3)); fill(((2/3) + 2 + (1/4),(1/4))--((2/3) + (5/2) + (1/10),(1/2) + (1/9))--((2/3) + 2 + (1/4),(29/30))--((2/3) + 2 - (1/10),(1/2) + (1/9))--cycle, rgb(.7,.7,.7)); draw(((2/3) + 2 + (1/4),(1/4))--((2/3) + (5/2) + (1/10),(1/2) + (1/9))--((2/3) + 2 + (1/4),(29/30))--((2/3) + 2 - (1/10),(1/2) + (1/9))--cycle);[/asy]</p>",
+      "solutions": [
+        "<p>Consider the rotated middle square shown in the figure. It will drop until length $DE$ is 1 inch. Then, because $DEC$ is a $45^{\\circ}-45^{\\circ}-90^{\\circ}$ triangle, $EC=\\frac{\\sqrt{2}}{2}$, and $FC=\\frac{1}{2}$. We know that $BC=\\sqrt{2}$, so the distance from $B$ to the line is </p><p>$BC-FC+1=\\sqrt{2}-\\frac{1}{2}+1=\\boxed{\\textbf{(D) }\\sqrt{2}+\\dfrac{1}{2}}$.</p><p><a class=\"image\" href=\"/wiki/index.php/File:AMC10200519Sol.png\">AMC10200519Sol.png</a></p><p><br/></p><p>(Refer to Diagram Above)</p><p>After deducing that $BC=\\sqrt{2}$, we can compute the length from $C$ to the baseline by subtracting $FC$ ($1/2$) from the side length of the square(s) ($1$), giving $\\frac{1}{2}$. </p><p>Adding these up, we see that our answer is $\\boxed{\\textbf{(D) }\\sqrt{2}+\\dfrac{1}{2}}$.</p><p>- sdk652</p><p>Also, you can compute the distance from B (the top) to the bottom</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2005 AMC 10A - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_20",
+      "question": "<p>An equilangular octagon has four sides of length $1$ and four sides of length $\\frac{\\sqrt{2}}{2}$, arranged so that no two consecutive sides have the same length. What is the area of the octagon?</p>",
+      "solutions": [
+        "<p>The area of the octagon can be divided up into $5$ squares with side $\\frac{\\sqrt2}2$ and $4$ right triangles, which are half the area of each of the squares.</p><p>Therefore, the area of the octagon is equal to the area of $5+4\\left(\\frac12\\right)=7$ squares.</p><p>The area of each square is $\\left(\\frac{\\sqrt2}2\\right)^2=\\frac12$, so the area of $7$ squares is $\\boxed{\\textbf{(A) }\\frac72}$.</p><p>[asy] pair A=(0.5, 0), B=(0, 0.5), C=(0, 1.5), D=(0.5, 2), E=(1.5, 2), F=(2, 1.5), G=(2, 0.5), H=(1.5, 0); draw(A--B); draw(B--C); draw(C--D); draw(D--E);draw(E--F);draw(F--G); draw(G--H);  draw(H--A);draw(A--F, blue);draw(E--B,blue);draw(C--H, blue); draw(D--G,blue);dot(A);dot(B);dot(C);dot(D);dot(E);dot(F);dot(G);dot(H); [/asy]</p>",
+        "<p>Using the diagram from above, we can extend the sides of length $1$ to form four right triangles and the octagon, all inside a square. If you wanted, you could also extend the sides of length $\\frac{\\sqrt{2}}{2}$ and get the same answer, but that would make things slightly harder. The right triangles are $45-45-90$ triangles with hypotenuse $\\frac{\\sqrt{2}}{2}$, so the side length is $\\frac{1}{2}$. Thus, the area of the larger square is $2 \\cdot 2 = 4$, and the area of the four right triangles combined is $\\frac{1}{2}$, so the area of the octagon is $4-\\frac{1}{2}=\\boxed{\\textbf{(A) }\\frac{7}{2}}$</p><p>edited by mobius247</p>",
+        "<p>Refer to the following diagram:</p><p><a class=\"image\" href=\"/wiki/index.php/File:AMC10_2005A_P20.png\">AMC10 2005A P20.png</a></p><p>(Picture made on Geogebra)</p><p><br/>Note that each square has area $\\frac14$, and each triangle has area $\\frac18$. The total area is $12\\cdot\\frac14+4\\cdot\\frac18=\\frac72 \\Longrightarrow \\boxed{\\textbf{(A) } \\frac72}$.</p><p><br/>Remark: This solution requires careful drawing, and also realising that connecting lines leads to squares and isosceles right triangles (notice the $\\sqrt{2}$ and realise that it is the hypotenuse of a $45-45-90$ triangle with side length ratios $1:1:\\sqrt{2}$.).</p><p><br/>~JH. L</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2005 AMC 10A - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_21",
+      "question": "<p>For how many positive integers $n$ does $1+2+...+n$ evenly divide from $6n$? </p>",
+      "solutions": [
+        "<p>If $1+2+...+n$ evenly <a class=\"mw-redirect\" href=\"/wiki/index.php/Divide\" title=\"Divide\">divides</a> $6n$, then $\\frac{6n}{1+2+...+n}$ is an <a href=\"/wiki/index.php/Integer\" title=\"Integer\">integer</a>. </p><p>Since $1+2+...+n = \\frac{n(n+1)}{2}$ we may substitute the <a class=\"mw-redirect\" href=\"/wiki/index.php/RHS\" title=\"RHS\">RHS</a> in the above <a href=\"/wiki/index.php/Fraction\" title=\"Fraction\">fraction</a>. So the problem asks us for how many <a href=\"/wiki/index.php/Positive_integer\" title=\"Positive integer\">positive integers</a> $n$ is $\\frac{6n}{\\frac{n(n+1)}{2}}=\\frac{12}{n+1}$ an integer, or equivalently when $k(n+1) = 12$ for a positive integer $k$. </p><p>$\\frac{12}{n+1}$ is an integer when $n+1$ is a <a href=\"/wiki/index.php/Divisor\" title=\"Divisor\">factor</a> of $12$. </p><p>The factors of $12$ are $1, 2, 3, 4, 6,$ and $12$, so the possible values of $n$ are $0, 1, 2, 3, 5,$ and $11$.</p><p>But since $0$ isn't a positive integer, only $1, 2, 3, 5,$ and $11$ are the possible values of $n$. Therefore the number of possible values of $n$ is $\\boxed{\\textbf{(B) }5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2005 AMC 10A - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_22",
+      "question": "<p>Let $S$ be the <a href=\"/wiki/index.php/Set\" title=\"Set\">set</a> of the $2005$ smallest positive multiples of $4$, and let $T$ be the set of the $2005$ smallest positive multiples of $6$. How many elements are common to $S$ and $T$?</p>",
+      "solutions": [
+        "<p>Since the <a href=\"/wiki/index.php/Least_common_multiple\" title=\"Least common multiple\">least common multiple</a> $\\mathrm{lcm}(4,6)=12$, the <a href=\"/wiki/index.php/Element\" title=\"Element\">elements</a> that are common to $S$ and $T$ must be <a href=\"/wiki/index.php/Multiple\" title=\"Multiple\">multiples</a> of $12$. </p><p>Since $4\\cdot2005=8020$ and $6\\cdot2005=12030$, several multiples of $12$ that are in $T$ won't be in $S$, but all multiples of $12$ that are in $S$ will be in $T$. So we just need to find the number of multiples of $12$ that are in $S$. </p><p>Since $4\\cdot3=12$, every $3$rd element of $S$ will be a multiple of $12$.</p><p>Therefore the answer is $\\left \\lfloor\\frac{2005}{3} \\right \\rfloor=\\boxed{\\textbf{(D) }  668}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2005 AMC 10A - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_23",
+      "question": "<p>Let $AB$ be a diameter of a circle and let $C$ be a point on $AB$ with $2\\cdot AC=BC$. Let $D$ and $E$ be points on the circle such that $DC \\perp AB$ and $DE$ is a second diameter. What is the ratio of the area of $\\triangle DCE$ to the area of $\\triangle ABD$?</p><p>[asy] unitsize(2.5cm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=3; pair O=(0,0), C=(-1/3,0), B=(1,0), A=(-1,0); pair D=dir(aCos(C.x)), E=(-D.x,-D.y); draw(A--B--D--cycle); draw(D--E--C); draw(unitcircle,white); drawline(D,C); dot(O); clip(unitcircle); draw(unitcircle); label(\"$E$\",E,SSE); label(\"$B$\",B,E); label(\"$A$\",A,W); label(\"$D$\",D,NNW); label(\"$C$\",C,SW); draw(rightanglemark(D,C,B,2));[/asy]</p>",
+      "solutions": [
+        "<p><a class=\"image\" href=\"/wiki/index.php/File:Circlenc1.png\">Circlenc1.png</a></p><p>WLOG, let us assume that the diameter is of length $1$. </p><p>The length of $AC$ is $\\frac{1}{3}$ and $CO$ is $\\frac{1}{2}-\\frac{1}{3} = \\frac{1}{6}$. </p><p>$OD$ is the radius of the circle, which is $\\frac{1}{2}$, so using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> the height $CD$ of $\\triangle DCO$ is $\\sqrt{\\left(\\frac{1}{2}\\right)^2-\\left(\\frac{1}{6}\\right)^2} = \\frac{\\sqrt{2}}{3}$. This is also the height of the $\\triangle ABD$.</p><p>The area of $\\triangle DCO$ is $\\frac{1}{2}\\cdot\\frac{1}{6}\\cdot\\frac{\\sqrt{2}}{3}$ = $\\frac{\\sqrt{2}}{36}$.</p><p>The height of $\\triangle DCE$ can be found using the area of $\\triangle DCO$ and $DO$ as base.</p><p>Hence, the height of $\\triangle DCE$ is $\\dfrac{\\dfrac{\\sqrt{2}}{36}}{\\dfrac{1}{2}\\cdot\\dfrac{1}{2}}$ = $\\dfrac{\\sqrt{2}}{9}$. </p><p>The diameter is the base for both the triangles $\\triangle DCE$ and $\\triangle ABD$,</p><p>Hence, the ratio of the area of $\\triangle DCE$ to the area of $\\triangle ABD$ is$\\dfrac{\\dfrac{\\sqrt{2}}{9}}{\\dfrac{\\sqrt{2}}{3}}$ = $\\boxed{\\textbf{(C) }\\frac{1}{3}}$</p>",
+        "<p>Since $\\triangle DCE$ and $\\triangle ABD$ share a base, the ratio of their areas is the ratio of their altitudes. Draw the altitude from $C$ to $DE$. </p><p>[asy] import graph; import olympiad; pair O,A,B,C,D,E,F; O=(0,0);A=(15,0);B=(-15,0);C=(5,0);D=(5,14.142135623730950488016887242097);E=(-5,-14.142135623730950488016887242097);F=(0.5555555555555555,1.5713484026367722764463208046774); draw(Circle((0,0),15));  draw(A--B);draw(D--E);draw(C--D);draw(C--E);draw(C--F);draw(A--D);draw(D--B); label(\"A\",A,NE);label(\"B\",B,W);label(\"C\",C,SE);label(\"D\",D,NE);label(\"E\",E,SW);label(\"O\",O,SW);label(\"F\",F,NW); markscalefactor=0.2; draw(anglemark(C,F,D),blue);draw(anglemark(D,C,B),blue); [/asy]$OD=r, OC=\\frac{1}{3}r$.</p><p>Since $m\\angle DCO=m\\angle DFC=90^\\circ$, then $\\triangle DCO\\sim \\triangle DFC$. So the ratio of the two altitudes is $\\frac{CF}{DC}=\\frac{OC}{DO}=\\boxed{\\textbf{(C) }\\frac{1}{3}}$</p>",
+        "<p>Let the center of the circle be point $O$;Without loss of generality, assume $AC=2$, so $CB=4$ and the diameter and radius are $6$ and $3$, respectively. Therefore, $CO=1$, and $DO=3$.The area of $\\triangle DCE$ can be expressed as $\\frac{1}{2}(CD)(6)\\text{sin }(CDE).$ $\\frac{1}{2}(CD)(6)$ happens to be the area of $\\triangle ABD$. Furthermore, $\\text{sin } CDE = \\frac{CO}{DO},$ or $\\frac{1}{3}.$ Therefore, the ratio is $\\boxed{\\textbf{(C) }\\frac{1}{3}}.$</p>",
+        "<p>[asy] unitsize(2.5cm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=3; pair O=(0,0), C=(-1/3.0), B=(1,0), A=(-1,0); pair D=dir(aCos(C.x)), E=(-D.x,-D.y); draw(A--B--D--cycle); draw(D--E--C); draw(unitcircle,white); drawline(D,C); dot(O); clip(unitcircle); draw(unitcircle); label(\"$E$\",E,SSE); label(\"$B$\",B,E); label(\"$A$\",A,W); label(\"$D$\",D,NNW); label(\"$C$\",C,SW); draw(rightanglemark(D,C,B,2)); [/asy]</p><p><br/></p><p>Let the point G be the reflection of point $D$ across $\\overline{AB}$. (Point G is on the circle).</p><p><br/>Let $AC=x$, then $BC=2x$. The diameter is $3x$. To find $DC$, there are two ways (presented here):</p><p>1. Since $\\overline{AB}$ is the diameter, $CD=CG$. Using power of points,\\[AC\\cdot BC=x\\cdot2x=2x^{2}=CD^{2} \\longrightarrow CD=x\\sqrt{2}\\]2. Use the geometric mean theorem,\\[AC\\cdot BC=x\\cdot2x=2x^{2}=CD^{2} \\longrightarrow CD=x\\sqrt{2}\\](These are the same equations but obtained through different formulae)</p><p><br/>Therefore $DG=2x\\sqrt{2}$. Since $\\overline{DE}$ is a diameter, $\\triangle DGE$ is right. By the Pythagorean theorem,\\[DE^{2}=GD^{2}+GE^{2} \\longrightarrow \\left(3x\\right)^{2}=\\left(2x\\sqrt{2}\\right)^{2}+GE^{2}\\]\\[9x^{2}=8x^{2}+GE^{2} \\longrightarrow GE^{2}=x^{2} \\longrightarrow GE=x\\]</p><p><br/>As established before, $\\angle DGE$ is right (if you are unsure, look up \"inscribed angle theorem\", this is a special case of the theorem where the central angle measures $180^{\\circ}$) so $GE=x$ is the altitude of $\\triangle DCE$, and $DC=x\\sqrt{2}$ is the base. Therefore \\[\\left[DCE\\right]=\\frac{1}{2}\\cdot DC\\cdot GE=\\frac{1}{2}\\cdot x\\sqrt{2}\\cdot x=\\frac{x^{2}\\sqrt{2}}{2}\\]</p><p><br/>$AB=3x$ is the base of $\\triangle ABD$ and $CD=x\\sqrt{2}$ is the height.\\[\\left[ABD\\right]=\\frac{1}{2}\\cdot3x\\cdot x\\sqrt{2}=\\frac{3x^{2}\\sqrt{2}}{2}\\]</p><p><br/>The required ratio is \\[\\frac{\\left[DCE\\right]}{\\left[ABD\\right]}=\\frac{\\frac{x^{2}\\sqrt{2}}{2}}{\\frac{3x^{2}\\sqrt{2}}{2}}=\\frac{x^{2}\\sqrt{2}}{2}\\cdot\\frac{2}{3x^{2}\\sqrt{2}}=\\frac{x^{2}\\sqrt{2}}{3x^{2}\\sqrt{2}}=\\frac{1}{3}\\]The answer is $\\boxed{\\textbf{(C) } \\frac{1}{3}}$.</p><p><br/></p><p>~JH. L</p>",
+        "<p>Assume the diameter is $3$.</p><p>$AC = 1$</p><p>Get the height $CD = \\sqrt{(AC)(BC)} = \\sqrt2$ via power of a point.</p><p>$CO = AO - AC = 1/2$.</p><p>By altitude of right triangle $\\triangle CDO$: Altitude from $C$ to $DE$ is same as altitude from $C$ to $DO$ is $\\frac{(CO)(CD)}{DO} = \\frac{(1/2)(\\sqrt2)}{\\frac 3 2}$.</p><p>$\\triangle DCE$ and $\\triangle ABD$ have the same (diameter) hypotenuse length, so their area ratio is their altitude ratio is$\\frac {\\frac{ (1/2)(\\sqrt2) } {\\frac 3 2}} {\\sqrt2} = \\boxed{1/3}$.</p><p>~oinava</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2005 AMC 10A - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_24",
+      "question": "<p>For each positive integer $n > 1$, let $P(n)$ denote the greatest prime factor of $n$. For how many positive integers $n$ is it true that both $P(n) = \\sqrt{n}$ and $P(n+48) = \\sqrt{n+48}$?</p>",
+      "solutions": [
+        "<p>If $P(n) = \\sqrt{n}$, then $n = p_{1}^{2}$, where $p_{1}$ is a <a href=\"/wiki/index.php/Prime_number\" title=\"Prime number\">prime number</a>.</p><p>If $P(n+48) = \\sqrt{n+48}$, then $n + 48$ is a square, but we know that n is $p_{1}^{2}$.</p><p><br/>This means we just have to check for squares of primes, add $48$ and look whether the root is a prime number.We can easily see that the difference between two consecutive square after $576$ is greater than or equal to $49$,Hence we have to consider only the prime numbers till $23$.</p><p>Squaring prime numbers below $23$ including $23$ we get the following list.</p><p>$4 , 9 , 25 , 49 , 121, 169 , 289 , 361 , 529$</p><p>But adding $48$ to a number ending with $9$ will result in a number ending with $7$, but we know that a perfect square does not end in $7$, so we can eliminate those cases to get the new list.</p><p>$4 , 25 , 121 , 361$</p><p>Adding $48$, we get $121$ as the only possible solution.Hence the answer is $\\boxed{\\textbf{(B) }1}$.</p><p>edited by mobius247</p>",
+        "<p>If $P(n) = \\sqrt{n}$, then $n = p_{1}^{2}$, where $p_{1}$ is a <a href=\"/wiki/index.php/Prime_number\" title=\"Prime number\">prime number</a>. </p><p>If $P(n+48) = \\sqrt{n+48}$, then $n+48 = p_{2}^{2}$, where $p_{2}$ is a different prime number. </p><p>So: </p><p>$p_{2}^{2} = n+48$</p><p>$p_{1}^{2} = n$</p><p>$p_{2}^{2} - p_{1}^{2} = 48$</p><p>$(p_{2}+p_{1})(p_{2}-p_{1})=48$</p><p>Since $p_{1} > 0$\u00a0: $(p_{2}+p_{1}) > (p_{2}-p_{1})$. </p><p>Looking at pairs of <a href=\"/wiki/index.php/Divisor\" title=\"Divisor\">divisors</a> of $48$, we have several possibilities to solve for $p_{1}$ and $p_{2}$:</p><p>(Note: you can skip several cases below by observing that $p_1+p_2$ and $p_1-p_{2}$ must be even, and $p_1+p_2  \\neq  p_1-p_2 \\pmod 4$.)</p><p>$(p_{2}+p_{1}) = 48$</p><p>$(p_{2}-p_{1}) = 1$ (impossible)</p><p>$p_{1} = \\frac{47}{2}$</p><p>$p_{2} = \\frac{49}{2}$</p><p><br/>$(p_{2}+p_{1}) = 24$</p><p>$(p_{2}-p_{1}) = 2$</p><p>$p_{1} = 11$</p><p>$p_{2} = 13$ (Valid!)</p><p><br/>$(p_{2}+p_{1}) = 16$</p><p>$(p_{2}-p_{1}) = 3$ (impossible)</p><p>$p_{1} = \\frac{13}{2}$</p><p>$p_{2} = \\frac{19}{2}$</p><p><br/>$(p_{2}+p_{1}) = 12$</p><p>$(p_{2}-p_{1}) = 4$ (impossible)</p><p>$p_{1} = 4$</p><p>$p_{2} = 8$</p><p><br/>$(p_{2}+p_{1}) = 8$</p><p>$(p_{2}-p_{1}) = 6$</p><p>$p_{1} = 1$ (not prime)</p><p>$p_{2} = 7$</p><p><br/>The only solution $(p_{1} , p_{2})$ where both numbers are primes is $(11,13)$. </p><p>Therefore the number of <a href=\"/wiki/index.php/Positive_integer\" title=\"Positive integer\">positive integers</a> $n$ that satisfy both statements is $\\boxed{\\textbf{(B) }1}.$</p>",
+        "<p>For the statement to be true, we must have both $n$ and $n + 48$ be squares of primes. Support we have the number $x^2$, where $x$ is a positive integer. Then the next perfect square, $(x+1)^2$, is $(x+1)^2 - x^2 = 2x+1$ greater than $x^2$. The next perfect square after that will be $(x+2)^2 = 4x + 4$ greater than $x^2$. In general, the prime $(x+n)^2$ will be $nx + n^2$ greater than $x^2$. However, we must have that $nx + n^2 = 48$. $n$ can take on any value between $1$ and $6$ (if $n$ is equal to $7$, we have $14x + 49$, where $x$ would have to be negative for the difference to be $48$). However, we can eliminate all the cases where $n$ is odd, because we would then have a number of the form $even + odd$, which is odd because $x$ can take only integral values. As such, we consider $n = 2$, $n = 4$, and $n = 6$. If $n = 2$, then $4x + 4 = 48 \\implies x = 11$. Then our squares are $11^2$ and $13^2$, both of which are squares of primes. If $n = 4$, then $8x + 16 = 48 \\implies x = 4$. However, $4$ isn't prime, so we discard this case. Finally, if $n = 6$, then $12x + 36 = 48 \\implies x = 1$. Again, $1$ isn't prime, so we discard this case as well. Thus, we only have $\\boxed{\\textbf{(B)}~1}$ valid case.</p><p>~ <a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a></p>",
+        "<p>We know that since it asks for $\\sqrt{n}$, we know that $n$ must be a perfect square. Plus, we need $n$ to be a perfect square of a prime since otherwise $P(n)$ won't be equal to the $\\sqrt{n}$. We can apply the same logic to $\\sqrt{n+48}$, and since we also the difference between two consecutive squares is an odd number, we must have an even number of consecutive odd numbers to sum up to $48$ since it is even. Thus, this leads us to three cases, since if we split 48 into even more consecutive odd numbers we will go into the negatives:</p><p>$n + 48 = n + 23 + 25$</p><p>$n + 48 = n + 9 + 11 + 13 + 15$</p><p>$n + 48 = n + 3 + 5 + 7 + 9 + 11 + 13$</p><p>We know that an odd number, $n$, is equal to the difference of squares between $n/2 - 0.5$ and $n/2 + 0.5$. This means we can test these cases and find $n$ using the least odd number in each case. By looking at the first one, we see that $23/2 - 0.5 = 11$, and squaring it into $121$ and setting it to $n$, we realize this works for the first part where $P(n)$ is equal to the $\\sqrt{n}$. Now, if we add $48$ we get $169$, which works for the second part. If we do this for the second case, $9/2 - 0.5 = 4$, and square it and set it as $n$, we realize that since $\\sqrt{n}$ must be prime and $4$ is composite, so this can't work. Finally for the last case, we do $3/2 - 0.5 = 1$, and since $1^2 = 1$, this case doesn't work since $n$ must be greater than $1$. Thus, our only valid case is the first one and our answer is $\\boxed{\\textbf{(B)}~1}$.</p><p>~ neeyakkid23</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2005 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10a_25",
+      "question": "<p>In $ABC$ we have $AB = 25$, $BC = 39$, and $AC=42$. Points $D$ and $E$ are on $AB$ and $AC$ respectively, with $AD = 19$ and $AE = 14$. What is the <a href=\"/wiki/index.php/Ratio\" title=\"Ratio\">ratio</a> of the area of triangle $ADE$ to the area of the <a href=\"/wiki/index.php/Quadrilateral\" title=\"Quadrilateral\">quadrilateral</a> $BCED$?</p>",
+      "solutions": [
+        "<p>We have\\[\\frac{[ADE]}{[ABC]} = \\frac{AD}{AB} \\cdot \\frac{AE}{AC} = \\frac{19}{25} \\cdot \\frac{14}{42} = \\frac{19}{75}.\\]</p><p>(Area of a triangle is base times height, so the area ratio of triangles, that have a common vertex (height) and bases on a common line, is the base length ratio. This is applied twice, using different pairs of bases, and corresponding altitudes for height.).</p><p>[asy] unitsize(0.15 cm);  pair A, B, C, D, E;  A = (191/39,28*sqrt(1166)/39); B = (0,0); C = (39,0); D = (6*A + 19*B)/25; E = (28*A + 14*C)/42;  draw(A--B--C--cycle); draw(D--E);  label(\"$A$\", A, N); label(\"$B$\", B, SW); label(\"$C$\", C, SE); label(\"$D$\", D, W); label(\"$E$\", E, NE); label(\"$19$\", (A + D)/2, W); label(\"$6$\", (B + D)/2, W); label(\"$14$\", (A + E)/2, NE); label(\"$28$\", (C + E)/2, NE); [/asy]</p><p>$[BCED] = [ABC] - [ADE]$, so\\begin{align*} \\frac{[ADE]}{[BCED]} &= \\frac{[ADE]}{[ABC] - [ADE]} \\\\ &= \\frac{1}{\\frac{ABC}{ADE} - 1} \\\\ &= \\frac{1}{\\frac{75}{19} - 1} \\\\ &= \\boxed{\\textbf{(D) }\\frac{19}{56}}. \\end{align*}</p><p><br/></p><p>Note: If it is hard to understand why \\[\\frac{[ADE]}{[ABC]} = \\frac{AD}{AB} \\cdot \\frac{AE}{AC}\\], you can use the fact that the area of a triangle equals $\\frac{1}{2} \\cdot ab \\cdot \\sin(C)$. If angle $DAE = Z$, we have that \\[\\frac{[ADE]}{[ABC]} = \\frac{\\frac{1}{2} \\cdot 19 \\cdot 14 \\cdot \\sin(Z)}{\\frac{1}{2} \\cdot 25 \\cdot 42 \\cdot \\sin(Z)} = \\frac{19 \\cdot 14}{25 \\cdot 42} = \\frac{ab}{cd}\\].</p>",
+        "<p>[asy] unitsize(0.15 cm);  pair A, B, C, D, E;  A = (191/39,28*sqrt(1166)/39); B = (0,0); C = (39,0); D = (6*A + 19*B)/25; E = (28*A + 14*C)/42;  draw(A--B--C--cycle); draw(D--E);  label(\"$A$\", A, N); label(\"$B$\", B, SW); label(\"$C$\", C, SE); label(\"$D$\", D, W); label(\"$E$\", E, NE); label(\"$19$\", (A + D)/2, W); label(\"$6$\", (B + D)/2, W); label(\"$14$\", (A + E)/2, NE); label(\"$28$\", (C + E)/2, NE); [/asy]</p><p><br/>We can let $[ADE]=x$. Since $EC=2 \\cdot EA$, $[DEC]=2x$. So, $[ADC]=3x$. This means that $[BDC]=\\frac{6}{19}\\cdot3x=\\frac{18x}{19}$. Thus, $\\frac{[ADE]}{[BCED]} = \\frac{x}{\\frac{18x}{19}+2x}= \\boxed{\\textbf{(D) }\\frac{19}{56}}.$</p><p>-Conantwiz2023</p>",
+        "<p>The <a href=\"/wiki/index.php/Area\" title=\"Area\">area</a> of a <a href=\"/wiki/index.php/Triangle\" title=\"Triangle\">triangle</a> is $\\frac{1}{2} bc\\sin A$. </p><p>Using this formula:</p><p>$[ADE]=\\frac{1}{2}\\cdot19\\cdot14\\cdot\\sin A = 133\\sin A$</p><p>$[ABC]=\\frac{1}{2}\\cdot25\\cdot42\\cdot\\sin A = 525\\sin A$</p><p>Since the area of $BCED$ is equal to the area of $ABC$ minus the area of $ADE$, </p><p>$[BCED] = 525\\sin A - 133\\sin A = 392\\sin A$.</p><p>Therefore, the desired ratio is $\\frac{133\\sin A}{392\\sin A}=\\boxed{\\textbf{(D) }\\frac{19}{56}}$</p><p><br/>Note: $BC=39$ was not used in this solution.</p>",
+        "<p>Let $F$ be on $AC$ such that $DE\\parallel BF$ then we have\\[\\frac{[ADE]}{[ABF]}=\\left(\\frac{AD}{AB}\\right)^2=\\left(\\frac{19}{25}\\right)^2=\\frac{361}{625}\\]\\[\\frac{[ADE]}{[DEFB]}=\\frac{361}{625-361}=\\frac{361}{364}\\]Since $\\bigtriangleup ADE\\sim\\bigtriangleup ABF$ we have \\[\\frac{AD}{AE}=\\frac{DB}{EF}\\Longrightarrow EF=\\frac{84}{19}\\]Thus $FC=EC-EF=\\frac{448}{19}$ and \\[\\frac{[ABF]}{[BFC]}=\\frac{AF}{FC}=\\frac{350}{448}\\]\\[\\frac{[ADE]}{[BFC]}=\\left(\\frac{[ADE]}{[ABF]}\\right)\\left(\\frac{[ABF]}{[BFC]}\\right)=\\left(\\frac{361}{625}\\right)\\left(\\frac{350}{448}\\right)=\\frac{126350}{280000}\\]Finally, after some calculations,\\[\\frac{[ADE]}{[DECB]}=\\frac{[ADE]}{[BFC]+[DECB]}=\\boxed{\\textbf{(D) \\ } \\frac{19}{56}}\\].</p><p>~ Nafer</p><p>~ LaTeX changes by tkfun</p><p><br/></p>",
+        "<p>Let the area of triangle ABC be denoted by [ABC] and the area of quadrilateral ABCD be denoted by [ABCD].</p><p>\\[\\text{Diagram:}\\][asy] unitsize(0.15 cm);  pair A, B, C, D, E;  A = (191/39,28*sqrt(1166)/39); B = (0,0); C = (39,0); D = (6*A + 19*B)/25; E = (28*A + 14*C)/42;  draw(A--B--C--cycle); draw(D--E);  label(\"$A$\", A, N); label(\"$B$\", B, SW); label(\"$C$\", C, SE); label(\"$D$\", D, W); label(\"$E$\", E, NE); label(\"$19$\", (A + D)/2, W); label(\"$6$\", (B + D)/2, W); label(\"$14$\", (A + E)/2, NE); label(\"$28$\", (C + E)/2, NE); [/asy]</p><p>Let the area of $\\triangle ABC$ be $x$. $\\triangle ABE$ and $\\triangle BEC$ share a height, and the ratio of their bases are $1:2$, so the area of $\\triangle ABE$ is $\\frac{x}{3}$.</p><p>Similarly, $\\triangle AED$ and $\\triangle DEB$ share a height, and the ratio of their bases is $19:6$, so the ratio of $\\frac{[AED]}{[AEB]}=\\frac{19}{25}$. Therefore, \\[[AED]=\\frac{19}{25}\\cdot\\left[AEB\\right]=\\frac{19}{25}\\cdot\\frac{1}{3}\\cdot\\left[ABC\\right]=\\frac{19}{25}\\cdot\\frac{1}{3}\\cdot x=\\frac{19}{75}x\\]\\[[DECB]=[ABC]-[AED]=x-\\frac{19}{75}x=\\frac{56}{75}x\\]The ratio $\\frac{[AED]}{[DECB]}=\\frac{\\frac{19}{75}}{\\frac{56}{75}}=\\frac{19}{56}$ which is answer choice $\\boxed{\\textbf{(D) } \\frac{19}{56}}$.</p><p><br/>~JH. L</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2005 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_1",
+      "question": "<p>A scout troop buys $1000$ candy bars at a price of five for $2$ dollars. They sell all the candy bars at the price of two for $1$ dollar. What was their profit, in dollars?</p>",
+      "solutions": [
+        "<p>\\begin{align*} \\mbox{Expenses} &= 1000 \\cdot \\frac25 = 400 \\\\ \\mbox{Revenue}  &= 1000 \\cdot \\frac12 = 500 \\\\ \\mbox{Profit}   &= \\mbox{Revenue} - \\mbox{Expenses} = 500-400 = \\boxed{\\textbf{(A) }100}. \\end{align*}Note: Revenue is a gain.</p>",
+        "<p>Note that the troop buys $10$ candy bars at a price of $4$ dollars and sells $10$ bars at a price of $5$ dollars. So the troop gains $1$ dollar for every $10$ bars. So therefore we divide $1000 \\div 10 = 100$. So our answer is $\\boxed{\\textbf{(A) }100}$.~HyperVoid</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2005 AMC 10B - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_2",
+      "question": "<p>A positive number $x$ has the property that $x\\%$ of $x$ is $4$. What is $x$?</p>",
+      "solutions": [
+        "<p>Since $x\\%$ means $0.01x$, the statement \"$x\\% \\text{ of } x \\text{ is 4}$\" can be rewritten as \"$0.01x \\cdot x = 4$\":</p><p>$0.01x \\cdot x=4 \\Rightarrow x^2 = 400 \\Rightarrow x = \\boxed{\\textbf{(D) }20}.$</p><p>Try the answer choices one by one. Upon examination, it is quite obvious that the answer is $\\boxed{\\textbf{(D) }20}.$ Very fast.</p><p><br/>Solution by franzliszt</p>",
+        "<p>Since $x\\%$ means $0.01x$, the statement \"$x\\% \\text{ of } x \\text{ is 4}$\" can be rewritten as \"$0.01x \\cdot x = 4$\":</p><p>$0.01x \\cdot x=4 \\Rightarrow x^2 = 400 \\Rightarrow x = \\boxed{\\textbf{(D) }20}.$</p>",
+        "<p>Try the answer choices one by one. Upon examination, it is quite obvious that the answer is $\\boxed{\\textbf{(D) }20}.$ Very fast.</p><p><br/>Solution by franzliszt</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2005 AMC 10B - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_3",
+      "question": "<p>A gallon of paint is used to paint a room. One third of the paint is used on the first day. On the second day, one third of the remaining paint is used. What fraction of the original amount of paint is available to use on the third day?</p>",
+      "solutions": [
+        "<p>After the first day, there is $1-\\left(\\dfrac{1}{3}\\cdot1\\right)=\\frac{2}{3}$ gallons left. After the second day, there is a total of $\\dfrac{2}{3}-\\left(\\dfrac{1}{3}\\times\\dfrac{2}{3}\\right)=\\dfrac{2}{3}-\\dfrac{2}{9}=\\dfrac{4}{9}$. Therefore, the fraction of the original amount of paint that is left is $\\dfrac{\\dfrac{4}{9}}{1}=\\boxed{\\textbf{(D) }\\frac{4}{9}}$.</p><p>Another way to do this is just to simply find the gain everyday and subtract from the remaining you had before.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2005 AMC 10B - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_4",
+      "question": "<p>For real numbers $a$ and $b$, define $a \\diamond b = \\sqrt{a^2 + b^2}$. What is the value of</p><p>$(5 \\diamond 12) \\diamond ((-12) \\diamond (-5))$?</p>",
+      "solutions": [
+        "<p>\\begin{align*} (5 \\diamond 12) \\diamond ((-12) \\diamond (-5))&=(\\sqrt{5^2+12^2}) \\diamond (\\sqrt{(-12)^2+(-5)^2})\\\\ &=(\\sqrt{169})\\diamond(\\sqrt{169})\\\\ &=13\\diamond13\\\\  &=\\sqrt{13^2+13^2}\\\\  &=\\sqrt{338}\\\\  &=\\boxed{\\mathrm{(D)\\,13\\sqrt{2}}}\\\\ \\end{align*}Note that the negative signs did not matter and any number squared times two is that number times the square root of 2.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2005 AMC 10B - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_5",
+      "question": "<p>Brianna is using part of the money she earned on her weekend job to buy several equally-priced CDs. She used one fifth of her money to buy one third of the CDs. What fraction of her money will she have left after she buys all the CDs? </p>",
+      "solutions": [
+        "<p>Let $m =$ Brianna's money. We have $\\frac15 m = \\frac13 (\\mbox{CDs}) \\Rightarrow \\frac35 m = (\\mbox{CDs})$. Thus, the money left over is $m-\\frac35m = \\frac25m$, so the answer is $\\boxed{\\textbf{(C) }\\frac{2}{5}}$.</p><p>This was just a simple manipulation of the equation. No solving was needed!</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2005 AMC 10B - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_6",
+      "question": "<p>At the beginning of the school year, Lisa's goal was to earn an $A$ on at least $80\\%$ of her $50$ quizzes for the year. She earned an $A$ on $22$ of the first $30$ quizzes. If she is to achieve her goal, on at most how many of the remaining quizzes can she earn a grade lower than an $A$?</p>",
+      "solutions": [
+        "<p>Lisa's goal was to get an $A$ on $80\\% \\cdot 50 = 40$ quizzes. She already has $A$'s on $22$ quizzes, so she needs to get $A$'s on $40-22=18$ more. There are $50-30=20$ quizzes left, so she can afford to get less than an $A$ on $20-18=\\boxed{\\textbf{(B) }2}$ of them.</p><p>Here, only the $A$'s matter... No complicated stuff!</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2005 AMC 10B - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_7",
+      "question": "<p>A circle is inscribed in a square, then a square is inscribed in this circle, and finally, a circle is inscribed in this square. What is the ratio of the area of the smallest circle to the area of the largest square?</p>",
+      "solutions": [
+        "<p>Let the side of the largest square be $x$. It follows that the diameter of the inscribed circle is also $x$. Therefore, the square's diagonal inscribed in the circle is $x$. The side length of the smaller square is $\\dfrac{x}{\\sqrt{2}}=\\dfrac{x\\sqrt{2}}{2}$. Similarly, the diameter of the smaller inscribed circle is $\\dfrac{x\\sqrt{2}}{2}$. Hence, its radius is $\\dfrac{x\\sqrt{2}}{4}$. The area of this circle is $\\left(\\dfrac{x\\sqrt{2}}{4}\\right)^2\\pi=\\dfrac{2\\pi x^2}{16}=\\dfrac{x^2\\pi}{8}$, and the area of the largest square is $x^2$. The ratio of the areas is $\\dfrac{\\dfrac{x^2\\pi}{8}}{x^2}=\\frac{\\cancel{x^2}\\pi}{8}\\cdot\\frac{1}{\\cancel{x^2}}=\\boxed{\\textbf{(B) }\\frac{\\pi}{8}}$.</p>",
+        "<p>Let the radius of the smallest circle be $r$. Then the side length of the smaller square is $2r$. The radius of the larger circle is half the length of the diagonal of the smaller square, so it is $\\sqrt{2}r$. Hence the largest square has sides of length $2\\sqrt{2}r$. The ratio of the area of the smallest circle to the area of the largest square is therefore $\\frac{\\pi r^2}{\\left(2\\sqrt{2}r\\right)^2} =\\boxed{\\textbf{(B) }\\frac{\\pi}{8}}.$</p><p>[asy] draw(Circle((0,0),10),linewidth(0.7)); draw(Circle((0,0),14.1),linewidth(0.7)); draw((0,14.1)--(14.1,0)--(0,-14.1)--(-14.1,0)--cycle,linewidth(0.7)); draw((-14.1,14.1)--(14.1,14.1)--(14.1,-14.1)--(-14.1,-14.1)--cycle,linewidth(0.7)); draw((0,0)--(-14.1,0),linewidth(0.7)); draw((-7.1,7.1)--(0,0),linewidth(0.7)); label(\"$\\sqrt{2}r$\",(-6,0),S); label(\"$r$\",(-3.5,3.5),NE); label(\"$2r$\",(-7.1,7.1),W); label(\"$2\\sqrt{2}r$\",(0,14.1),N); [/asy]Tip: When facing a geometry problem, it is very helpful to draw a diagram.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2005 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_8",
+      "question": "<p>An $8$-foot by $10$-foot bathroom floor is tiled with square tiles of size $1$ foot by $1$ foot. Each tile has a pattern consisting of four white quarter circles of radius $1/2$ foot centered at each corner of the tile. The remaining portion of the tile is shaded. How many square feet of the floor are shaded?</p><p>[asy] unitsize(2cm); defaultpen(linewidth(.8pt)); fill(unitsquare,gray); filldraw(Arc((0,0),.5,0,90)--(0,0)--cycle,white,black); filldraw(Arc((1,0),.5,90,180)--(1,0)--cycle,white,black); filldraw(Arc((1,1),.5,180,270)--(1,1)--cycle,white,black); filldraw(Arc((0,1),.5,270,360)--(0,1)--cycle,white,black); [/asy]</p>",
+      "solutions": [
+        "<p>There are $80$ tiles. Each tile has $[\\mbox{square} - 4 \\cdot (\\mbox{quarter circle})]$ shaded. Thus:</p><p>\\begin{align*} \\mbox{shaded area} &= 80 \\left( 1 - 4 \\cdot \\dfrac{1}{4} \\cdot \\pi \\cdot \\left(\\dfrac{1}{2}\\right)^2\\right) \\\\ &= 80\\left(1-\\dfrac{1}{4}\\pi\\right) \\\\ &= \\boxed{\\textbf{(A) }80-20\\pi}. \\end{align*}4 quarters of a circle is a circle so that may save you 0.5 seconds (very much lots)\u00a0:)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2005 AMC 10B - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_9",
+      "question": "<p>One fair die has faces $1, 1, 2, 2, 3, 3$ and another has faces $4, 4, 5, 5, 6, 6.$ The dice are rolled and the numbers on the top faces are added. What is the probability that the sum will be odd?</p>",
+      "solutions": [
+        "<p>In order to obtain an odd sum, exactly one out of the two dice must have an odd number. We can easily find the total probability using casework.</p><p><b>Case 1</b>: The first die is odd and the second die is even.</p><p>The probability of this happening is $\\dfrac{4}{6}\\times\\dfrac{4}{6}=\\dfrac{16}{36}=\\dfrac{4}{9}$</p><p><b>Case 2</b>: The first die is even and the second die is odd.</p><p>The probability of this happening is $\\dfrac{2}{6}\\times\\dfrac{2}{6}=\\dfrac{4}{36}=\\dfrac{1}{9}$</p><p>Adding these two probabilities will give us our final answer. $\\dfrac{4}{9}+\\dfrac{1}{9}=\\boxed{\\textbf{(D) }\\dfrac{5}{9}}$</p><p>If you run out of time, you can see it is obviously greater than $\\frac{1}{2}$ so it narrows guesses.</p>",
+        "<p>We see can see that there are $2$ ways to get an even number, and other ways get us an odd. Therefore, if we subtract the $P(\\text{even})$, we will get $P(\\text{odd})$. We can get an even either by getting $2$ evens or $2$ odds. Both cases give $\\frac{2}{9}$, so $P(\\text{odd})$ is $1-2 \\cdot \\frac{2}{9}=\\boxed{\\textbf{(D) }\\frac{5}{9}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2005 AMC 10B - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_10",
+      "question": "<p>In $\\triangle ABC$, we have $AC=BC=7$ and $AB=2$. Suppose that $D$ is a point on line $AB$ such that $B$ lies between $A$ and $D$ and $CD=8$. What is $BD$?</p>",
+      "solutions": [
+        "<p>Draw height $CH$ (Perpendicular line from point C to line AD). We have that $BH=1$. By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, $CH=\\sqrt{48}$. Since $CD=8$, $HD=\\sqrt{8^2-48}=\\sqrt{16}=4$, and $BD=HD-1$, so $BD=\\boxed{\\textbf{(A) }3}$.</p><p>After drawing out a diagram, let $\\angle{ABC}=\\theta$. By the Law of Cosines, $7^2=2^2+7^2-2(7)(2)\\cos{\\theta} \\rightarrow 0=4-28\\cos{\\theta} \\rightarrow \\cos{\\theta}=\\frac{1}{7}$. In $\\triangle CBD$, we have $\\angle{CBD}=(180-\\theta)$, and using the identity $\\cos(180-\\theta)=-\\cos{\\theta}$ and Law of Cosines one more time: $8^2=7^2+x^2-2(7)(x)\\left( \\frac{-1}{7} \\right) \\rightarrow 64=49+x^2+2x \\rightarrow x^2+2x-15=0$. The only positive value for $x$ is $3$, which gives the length of $\\overline{BD}$. Thus the answer is $\\boxed{\\textbf{(A) }3}$.</p><p>~Bowser498</p>",
+        "<p>Draw height $CH$ (Perpendicular line from point C to line AD). We have that $BH=1$. By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, $CH=\\sqrt{48}$. Since $CD=8$, $HD=\\sqrt{8^2-48}=\\sqrt{16}=4$, and $BD=HD-1$, so $BD=\\boxed{\\textbf{(A) }3}$.</p>",
+        "<p>After drawing out a diagram, let $\\angle{ABC}=\\theta$. By the Law of Cosines, $7^2=2^2+7^2-2(7)(2)\\cos{\\theta} \\rightarrow 0=4-28\\cos{\\theta} \\rightarrow \\cos{\\theta}=\\frac{1}{7}$. In $\\triangle CBD$, we have $\\angle{CBD}=(180-\\theta)$, and using the identity $\\cos(180-\\theta)=-\\cos{\\theta}$ and Law of Cosines one more time: $8^2=7^2+x^2-2(7)(x)\\left( \\frac{-1}{7} \\right) \\rightarrow 64=49+x^2+2x \\rightarrow x^2+2x-15=0$. The only positive value for $x$ is $3$, which gives the length of $\\overline{BD}$. Thus the answer is $\\boxed{\\textbf{(A) }3}$.</p><p>~Bowser498</p>",
+        "<p>Let $BD=k$. Then, by <a href=\"/wiki/index.php/Stewart%27s_Theorem\" title=\"Stewart's Theorem\">Stewart's Theorem</a>, </p><p>$2k(2+k)+7^2(2+k)=7^2k+8^2\\cdot 2 \\implies k^2+2k-15=0 \\implies k=\\boxed{\\textbf{(A) }3}$</p><p>~apsid</p><p>~edited by always90degrees (tiny fix, sign error)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2005 AMC 10B - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_11",
+      "question": "<p>The first term of a sequence is $2005$. Each succeeding term is the sum of the cubes of the digits of the previous term. What is the ${2005}^{\\text{th}}$ term of the sequence?</p>",
+      "solutions": [
+        "<p>Performing this operation several times yields the results of $133$ for the second term, $55$ for the third term, and $250$ for the fourth term. The sum of the cubes of the digits of $250$ equal $133$, a complete cycle. The cycle is, excluding the first term, the $2^{\\text{nd}}$, $3^{\\text{rd}}$, and $4^{\\text{th}}$ terms will equal $133$, $55$, and $250$, following the fourth term. Any term number that is equivalent to $1\\ (\\text{mod}\\ 3)$ will produce a result of $250$. It just so happens that $2005\\equiv 1\\ (\\text{mod}\\ 3)$, which leads us to the answer of $\\boxed{\\textbf{(E) } 250}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2005 AMC 10B - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_12",
+      "question": "<p>Twelve fair dice are rolled. What is the probability that the product of the numbers on the top faces is prime?</p>",
+      "solutions": [
+        "<p>In order for the product of the numbers to be prime, $11$ of the dice have to be a $1$, and the other die has to be a prime number. There are $3$ prime numbers ($2$, $3$, and $5$), and there is only one $1$, and there are $\\dbinom{12}{1}$ ways to choose which die will have the prime number, so the probability is $\\dfrac{3}{6}\\times\\left(\\dfrac{1}{6}\\right)^{11}\\times\\dbinom{12}{1} = \\dfrac{1}{2}\\times\\left(\\dfrac{1}{6}\\right)^{11}\\times12=\\left(\\dfrac{1}{6}\\right)^{11}\\times6=\\boxed{\\textbf{(E) }\\left(\\dfrac{1}{6}\\right)^{10}}$.</p>",
+        "<p>There are three cases where the product of the numbers is prime. One die will show $2$, $3$, or $5$ and each of the other $11$ dice will show a $1$. For each of these three cases, the number of ways to order the numbers is $\\dbinom{12}{1}$ = $12$ . There are $6$ possible numbers for each of the $12$ dice, so the total number of permutations is $6^{12}$. The probability the product is prime is therefore $\\frac{3\\cdot 12}{6^{12}} = \\frac{1}{6^{10}} =\\boxed{\\textbf{(E) }\\left(\\dfrac{1}{6}\\right)^{10}}$.</p><p>~mobius247</p>",
+        "<p>The only way to get a product of that is a prime number is to roll all ones except for such prime, e.g: $11$ ones and $1$ two. So we seek the probability of rolling $11$ ones and $1$ prime number. The probability of rolling $11$ ones is $\\frac{1}{6^{11}}$ and the probability of rolling a prime is $\\frac{1}{2}$, giving us a probability of $\\frac{1}{6^{11}}\\cdot\\frac{1}{2}$ of this outcome occuring. However, there are $\\frac{12!}{11!\\cdot{1!}}=12$ ways to arrange the ones and the prime. Multiplying the previous probability by $12$ gives us $\\frac{1}{6^{11}}\\cdot\\frac{1}{2}\\cdot{6}=\\frac{1}{6^{10}}=\\boxed{\\textbf{(E) }\\left(\\dfrac{1}{6}\\right)^{10}}.$</p><p>-Benedict T (countmath1)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2005 AMC 10B - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_13",
+      "question": "<p>How many numbers between $1$ and $2005$ are integer multiples of $3$ or $4$ but not $12$?</p>",
+      "solutions": [
+        "<p>To find the multiples of $3$ or $4$ but not $12$, you need to find the number of multiples of $3$ and $4$, and then subtract twice the number of multiples of $12$, because you overcount and do not want to include them. The multiples of $3$ are $\\frac{2005}{3} = 668\\text{ }R1.$ The multiples of $4$ are $\\frac{2005}{4} = 501 \\text{ }R1$. The multiples of $12$ are $\\frac{2005}{12} = 167\\text{ }R1.$ So, the answer is $668+501-167-167 = \\boxed{\\textbf{(C) } 835}$</p>",
+        "<p>From $1$-$12$, the multiples of $3$ or $4$ but not $12$ are $3, 4, 6, 8,$and $9$, a total of five numbers. Since $\\frac{5}{12}$ of positive integers are multiples of $3$ or $4$ but not $12$ from $1$-$12$, the answer is approximately $\\frac{5}{12} \\cdot 2005$ = $\\boxed{\\textbf{(C) }835}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2005 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_14",
+      "question": "<p>Equilateral $\\triangle ABC$ has side length $2$, $M$ is the midpoint of $\\overline{AC}$, and $C$ is the midpoint of $\\overline{BD}$. What is the area of $\\triangle CDM$?[asy]defaultpen(linewidth(.8pt)+fontsize(8pt));  pair B = (0,0); pair A = 2*dir(60); pair C = (2,0); pair D = (4,0); pair M = midpoint(A--C);  label(\"$A$\",A,NW);label(\"$B$\",B,SW);label(\"$C$\",C, SE);label(\"$M$\",M,NE);label(\"$D$\",D,SE);  draw(A--B--C--cycle); draw(C--D--M--cycle);[/asy]</p>",
+      "solutions": [
+        "<p>The area of a triangle can be given by $\\frac12 ab \\sin C$. $MC=1$ because it is the midpoint of a side, and $CD=2$ because it is the same length as $BC$. Each angle of an equilateral triangle is $60^\\circ$ so $\\angle MCD = 120^\\circ$. The area is $\\frac12 (1)(2) \\sin  120^\\circ = \\boxed{\\textbf{(C)}\\ \\frac{\\sqrt{3}}{2}}$.Note: Even if you don't know the value of $\\sin 120^\\circ$, you can use the fact that $\\sin x = \\sin (180^\\circ - x)$, so $\\sin 120^\\circ = \\sin 60^\\circ$.You can easily calculate $\\sin 60^\\circ$ to be $\\frac{\\sqrt3}{2}$ using equilateral triangles.</p><p>~Minor Edits by doulai1</p><p>In order to calculate the area of $\\triangle CDM$, we can use the formula $A=\\dfrac{1}{2}bh$, where $\\overline{CD}$ is the base. We already know that $\\overline{CD}=2$, so the formula becomes $A=h$. We can drop verticals down from $A$ and $M$ to points $E$ and $F$, respectively. We can see that $\\triangle AEC \\sim \\triangle MFC$. Now, we establish the relationship that $\\dfrac{AE}{MF}=\\dfrac{AC}{MC}$. We are given that $\\overline{AC}=2$, and $M$ is the midpoint of $\\overline{AC}$, so $\\overline{MC}=1$. Because $\\triangle AEB$ is a $30-60-90$ triangle and the ratio of the sides opposite the angles are $1-\\sqrt{3}-2$ $\\overline{AE}$ is $\\sqrt{3}$. Plugging those numbers in, we have $\\dfrac{\\sqrt{3}}{MF}=\\dfrac{2}{1}$. Cross-multiplying, we see that $2\\times\\overline{MF}=\\sqrt{3}\\times1\\implies \\overline{MF}=\\dfrac{\\sqrt{3}}{2}$ Since $\\overline{MF}$ is the height $\\triangle CDM$, the area is $\\boxed{\\textbf{(C) }\\frac{\\sqrt{3}}{2}}$.</p><p>Draw a line from $M$ to the midpoint of $\\overline{BC}$. Call the midpoint of $\\overline{BC}$ $P$. This is an equilateral triangle, since the two segments $\\overline{PC}$ and $\\overline{MC}$ are identical, and $\\angle C$ is $60^{\\circ}$. Using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, point $M$ to $\\overline{BC}$ is $\\dfrac{\\sqrt{3}}{2}$. Also, the length of $\\overline{CD}$ is 2, since $C$ is the midpoint of $\\overline{BD}$. So, our final equation is $\\frac{\\sqrt{3}}{2}\\times2\\over2$, which just leaves us with $\\boxed{\\textbf{(C) }\\dfrac{\\sqrt{3}}{2}}$.</p><p>Drop a vertical down from $M$ to $BC$. Let us call the point of intersection $X$ and the midpoint of $BC$, $Y$. We can observe that $\\triangle AYC$ and $\\bigtriangleup MXC$ are similar. By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a>, $AY$ is $\\sqrt3$.</p><p>Since $AC:MC=2:1,$ we find $MX=\\frac{\\sqrt3}{2}.$ Because $C$ is the midpoint of $BD,$ and $BC=2,$ $CD=2.$ Using the area formula, $\\frac{CD*MX}{2}=\\boxed{\\textbf{(C) }\\dfrac{\\sqrt{3}}{2}}.$</p><p>~ sdk652</p><p>Think of $\\triangle ABC$ and $\\triangle MCD$ being independent. Now to find area's we just solve for ratios between the triangles that we can plug in the value of $2$ (for a side of $\\triangle ABC$) for. Looking at the information, we see that $C$ is the midpoint of $\\overline{BD}$, and this means that it bisects $\\overline{BD}$ which results in $BC=CD$. Now for the height, we can see that $M$ is the midpoint of $\\overline{AC}$ which means that $AM=CM$, and in turn means that the height of $\\triangle MCD$ is half of that of $\\triangle ABC$, and now plugging the ratios of the bases being the same while the height is half of the other triangle, we end up with the area of $\\triangle MCD$ being half of that of $\\triangle ABC$. Now all that's left is to find the area of $\\triangle ABC$, and for that, we plug in $2$ which leads us to the answer of $3$, but since we need to divide by two, our final answer is $\\boxed{\\textbf{(C) }\\dfrac{\\sqrt{3}}{2}}.$</p><p>~$\\LaTeX$ help by vadava_lx</p>",
+        "<p>The area of a triangle can be given by $\\frac12 ab \\sin C$. $MC=1$ because it is the midpoint of a side, and $CD=2$ because it is the same length as $BC$. Each angle of an equilateral triangle is $60^\\circ$ so $\\angle MCD = 120^\\circ$. The area is $\\frac12 (1)(2) \\sin  120^\\circ = \\boxed{\\textbf{(C)}\\ \\frac{\\sqrt{3}}{2}}$.Note: Even if you don't know the value of $\\sin 120^\\circ$, you can use the fact that $\\sin x = \\sin (180^\\circ - x)$, so $\\sin 120^\\circ = \\sin 60^\\circ$.You can easily calculate $\\sin 60^\\circ$ to be $\\frac{\\sqrt3}{2}$ using equilateral triangles.</p><p>~Minor Edits by doulai1</p>",
+        "<p>In order to calculate the area of $\\triangle CDM$, we can use the formula $A=\\dfrac{1}{2}bh$, where $\\overline{CD}$ is the base. We already know that $\\overline{CD}=2$, so the formula becomes $A=h$. We can drop verticals down from $A$ and $M$ to points $E$ and $F$, respectively. We can see that $\\triangle AEC \\sim \\triangle MFC$. Now, we establish the relationship that $\\dfrac{AE}{MF}=\\dfrac{AC}{MC}$. We are given that $\\overline{AC}=2$, and $M$ is the midpoint of $\\overline{AC}$, so $\\overline{MC}=1$. Because $\\triangle AEB$ is a $30-60-90$ triangle and the ratio of the sides opposite the angles are $1-\\sqrt{3}-2$ $\\overline{AE}$ is $\\sqrt{3}$. Plugging those numbers in, we have $\\dfrac{\\sqrt{3}}{MF}=\\dfrac{2}{1}$. Cross-multiplying, we see that $2\\times\\overline{MF}=\\sqrt{3}\\times1\\implies \\overline{MF}=\\dfrac{\\sqrt{3}}{2}$ Since $\\overline{MF}$ is the height $\\triangle CDM$, the area is $\\boxed{\\textbf{(C) }\\frac{\\sqrt{3}}{2}}$.</p>",
+        "<p>Draw a line from $M$ to the midpoint of $\\overline{BC}$. Call the midpoint of $\\overline{BC}$ $P$. This is an equilateral triangle, since the two segments $\\overline{PC}$ and $\\overline{MC}$ are identical, and $\\angle C$ is $60^{\\circ}$. Using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, point $M$ to $\\overline{BC}$ is $\\dfrac{\\sqrt{3}}{2}$. Also, the length of $\\overline{CD}$ is 2, since $C$ is the midpoint of $\\overline{BD}$. So, our final equation is $\\frac{\\sqrt{3}}{2}\\times2\\over2$, which just leaves us with $\\boxed{\\textbf{(C) }\\dfrac{\\sqrt{3}}{2}}$.</p>",
+        "<p>Drop a vertical down from $M$ to $BC$. Let us call the point of intersection $X$ and the midpoint of $BC$, $Y$. We can observe that $\\triangle AYC$ and $\\bigtriangleup MXC$ are similar. By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a>, $AY$ is $\\sqrt3$.</p><p>Since $AC:MC=2:1,$ we find $MX=\\frac{\\sqrt3}{2}.$ Because $C$ is the midpoint of $BD,$ and $BC=2,$ $CD=2.$ Using the area formula, $\\frac{CD*MX}{2}=\\boxed{\\textbf{(C) }\\dfrac{\\sqrt{3}}{2}}.$</p><p>~ sdk652</p>",
+        "<p>Think of $\\triangle ABC$ and $\\triangle MCD$ being independent. Now to find area's we just solve for ratios between the triangles that we can plug in the value of $2$ (for a side of $\\triangle ABC$) for. Looking at the information, we see that $C$ is the midpoint of $\\overline{BD}$, and this means that it bisects $\\overline{BD}$ which results in $BC=CD$. Now for the height, we can see that $M$ is the midpoint of $\\overline{AC}$ which means that $AM=CM$, and in turn means that the height of $\\triangle MCD$ is half of that of $\\triangle ABC$, and now plugging the ratios of the bases being the same while the height is half of the other triangle, we end up with the area of $\\triangle MCD$ being half of that of $\\triangle ABC$. Now all that's left is to find the area of $\\triangle ABC$, and for that, we plug in $2$ which leads us to the answer of $3$, but since we need to divide by two, our final answer is $\\boxed{\\textbf{(C) }\\dfrac{\\sqrt{3}}{2}}.$</p><p>~$\\LaTeX$ help by vadava_lx</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2005 AMC 10B - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_15",
+      "question": "<p>An envelope contains eight bills: $2$ ones, $2$ fives, $2$ tens, and $2$ twenties. Two bills are drawn at random without replacement. What is the probability that their sum is $$20$ or more?</p>",
+      "solutions": [
+        "<p>The only way to get a total of $$20$ or more is if you pick a twenty and another bill, or if you pick both tens. There are a total of $\\dbinom{8}{2}=\\dfrac{8\\times7}{2\\times1}=28$ ways to choose $2$ bills out of $8$. There are $12$ ways to choose a twenty and some other non-twenty bill. There is $1$ way to choose both twenties, and also $1$ way to choose both tens. Adding these up, we find that there are a total of $14$ ways to attain a sum of $20$ or greater, so there is a total probability of $\\dfrac{14}{28}=\\boxed{\\textbf{(D) }\\frac{1}{2}}$.</p>",
+        "<p>Another way to do this problem is to use <a href=\"/wiki/index.php/Complementary_counting\" title=\"Complementary counting\">complementary counting</a>, i.e. how many ways that the sum is less than $20$. Now, you do not have to consider the $2$ twenties, so you have $6$ bills left. $\\dbinom{6}{2} = \\dfrac{6\\times5}{2\\times1} = 15$ ways. However, you counted the case when you have $2$ tens, so you need to subtract 1, and you get $14$. Finding the ways to get $20$ or higher, you subtract $14$ from $28$ and get $14$. So the answer is $\\dfrac{14}{28} = \\boxed{\\textbf{(D) }\\dfrac{1}{2}}$</p>",
+        "<p>There are two cases that work, namely getting at least $1$ twenty, or getting $2$ tens.</p><p>Case $1$: $P(\\text{Get at least one twenty}) = 1-P(\\text{Do not get a single twenty})=1- \\frac{\\binom{6}{2}}{\\binom{8}{2}}=\\frac{28-15}{28}=\\frac{13}{28}$</p><p>Case $2$\u00a0: $P(\\text{Get two tens}) = \\frac{1}{\\binom{8}{2}} = \\frac{1}{28}$</p><p>Summing up our cases, we have $\\frac{13}{28}+\\frac{1}{28}=\\frac{14}{28}=\\boxed{\\textbf{(D) } \\dfrac{1}{2}}$</p>",
+        "<p>Note that if a twenty is drawn, anything else that is drawn will create a total greater than $20$; The probability of a twenty being drawn first is $\\frac{1}{4}.$ The same could be said for drawing anything, and then drawing a twenty. However, we can only draw something that isn't a twenty first (since we've already accounted for the probability of drawing two twenties). </p><p>The probability of drawing a non-twenty first, then a twenty second is $\\frac{3}{4}\\cdot\\frac{2}{7}=\\frac{3}{14}.$ Finally, we can draw two tens. The probability of this occuring is $\\frac{1}{4}\\cdot\\frac{1}{7}=\\frac{1}{28}.$</p><p>Adding these three probabilities gives us $\\frac{1}{4}+\\frac{3}{14}+\\frac{1}{28}=\\boxed{\\textbf{(D) } \\dfrac{1}{2}}$</p><p>-Benedict T (countmath1) (edited by AMC_8)</p>",
+        "<p>We see that there are $2$ of each bill. We can simplify the question to only drawing $1$ bill out of $4$, and trying to draw $$ 10$. (Originally you need to draw $$ 20$, but the bill is halved, so you need to draw only $$ 10$.) We see that we have $1$ of each bill $$1$, $$5$, $$10$, and $$20$.Thus, we can easily see the solution is $\\boxed{(D) \\frac{1}{2}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2005 AMC 10B - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_16",
+      "question": "<p>The <a href=\"/wiki/index.php/Quadratic_equation\" title=\"Quadratic equation\">quadratic equation</a> $x^2+mx+n$ has roots twice those of $x^2+px+m$, and none of $m,n,$ and $p$ is zero. What is the value of $n/p$?</p>",
+      "solutions": [
+        "<p>Let $x^2 + px + m = 0$ have roots $a$ and $b$. Then </p><p>\\[x^2 + px + m = (x-a)(x-b) = x^2 - (a+b)x + ab,\\]</p><p>so $p = -(a+b)$ and $m = ab$. Also, $x^2 + mx + n = 0$ has roots $2a$ and $2b$, so</p><p>\\[x^2 + mx + n = (x-2a)(x-2b) = x^2 - 2(a+b)x + 4ab,\\]</p><p>and $m = -2(a+b)$ and $n = 4ab$. Thus $\\frac{n}{p} = \\frac{4ab}{-(a+b)} = \\frac{4m}{\\frac{m}{2}} = \\boxed{\\textbf{(D) }8}$. </p><p>To test that this actually works, consider the quadratics $x^2 + 8x + 16 = 0,\\ x^2 + 16x + 64 = 0$.</p><p>If the roots of $x^2 + mx + n = 0$ are $2a$ and $2b$ and the roots of $x^2 + px + m = 0$ are $a$ and $b$, then using Vieta's formulas,\\[2a + 2b = -m\\]\\[a + b = -p\\]\\[2a(2b) = n\\]\\[a(b) = m\\]Therefore, substituting the second equation into the first equation gives \\[m = 2(p)\\]and substituting the fourth equation into the third equation gives\\[n = 4(m)\\]Therefore, $n = 8p$, so $\\frac{n}{p}= \\boxed{\\textbf{(D) }8}$</p>",
+        "<p>Let $x^2 + px + m = 0$ have roots $a$ and $b$. Then </p><p>\\[x^2 + px + m = (x-a)(x-b) = x^2 - (a+b)x + ab,\\]</p><p>so $p = -(a+b)$ and $m = ab$. Also, $x^2 + mx + n = 0$ has roots $2a$ and $2b$, so</p><p>\\[x^2 + mx + n = (x-2a)(x-2b) = x^2 - 2(a+b)x + 4ab,\\]</p><p>and $m = -2(a+b)$ and $n = 4ab$. Thus $\\frac{n}{p} = \\frac{4ab}{-(a+b)} = \\frac{4m}{\\frac{m}{2}} = \\boxed{\\textbf{(D) }8}$. </p><p>To test that this actually works, consider the quadratics $x^2 + 8x + 16 = 0,\\ x^2 + 16x + 64 = 0$.</p>",
+        "<p>If the roots of $x^2 + mx + n = 0$ are $2a$ and $2b$ and the roots of $x^2 + px + m = 0$ are $a$ and $b$, then using Vieta's formulas,\\[2a + 2b = -m\\]\\[a + b = -p\\]\\[2a(2b) = n\\]\\[a(b) = m\\]Therefore, substituting the second equation into the first equation gives \\[m = 2(p)\\]and substituting the fourth equation into the third equation gives\\[n = 4(m)\\]Therefore, $n = 8p$, so $\\frac{n}{p}= \\boxed{\\textbf{(D) }8}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2005 AMC 10B - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_17",
+      "question": "<p>Suppose that $4^a = 5$, $5^b = 6$, $6^c = 7$, and $7^d = 8$. What is $a \\cdot b\\cdot c \\cdot d$?</p>",
+      "solutions": [
+        "<p>\\begin{align*} 8&=7^d \\\\ 8&=\\left(6^c\\right)^d\\\\ 8&=\\left(\\left(5^b\\right)^c\\right)^d\\\\ 8&=\\left(\\left(\\left(4^a\\right)^b\\right)^c\\right)^d\\\\ 8&=4^{a\\cdot b\\cdot c\\cdot d}\\\\ 2^3&=2^{2\\cdot a\\cdot b\\cdot c\\cdot d}\\\\ 3&=2\\cdot a\\cdot b\\cdot c\\cdot d\\\\ a\\cdot b\\cdot c\\cdot d&=\\boxed{\\textbf{(B) }\\dfrac{3}{2}}\\\\ \\end{align*}</p>",
+        "<p>We can write $a$ as $\\log_4 5$, $b$ as $\\log_5 6$, $c$ as $\\log_6 7$, and $d$ as $\\log_7 8$. </p><p>We know that $\\log_b a$ can be rewritten as $\\frac{\\log a}{\\log b}$, so we have:\\begin{align*} a\\cdot b \\cdot c \\cdot d &= \\frac{\\cancel{\\log5}}{\\log4}\\cdot\\frac{\\cancel{\\log6}}{\\cancel{\\log5}}\\cdot\\frac{\\cancel{\\log7}}{\\cancel{\\log6}}\\cdot\\frac{\\log8}{\\cancel{\\log7}} \\\\ a\\cdot b \\cdot c \\cdot d &= \\frac{\\log8}{\\log4} \\\\ a\\cdot b \\cdot c \\cdot d &= \\frac{3\\cancel{\\log2}}{2\\cancel{\\log2}} \\\\ a\\cdot b \\cdot c \\cdot d &= \\boxed{\\textbf{(B) }\\frac{3}{2}} \\\\ \\end{align*}</p>",
+        "<p>As in Solution 2, we can write $a$ as $\\log_4 5$, $b$ as $\\log_56$, $c$ as $\\log_67$, and $d$ as $\\log_78$. $a\\cdot b\\cdot c\\cdot d$ is equivalent to $(\\log_4 5)\\cdot (\\log_5 6)\\cdot (\\log_6 7)\\cdot (\\log_7 8)$. By the logarithm chain rule, this is equivalent to $\\log_4 8$, which evaluates to $\\boxed{\\textbf{(B) }\\frac{3}{2}}$.</p><p>~solver1104</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2005 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_18",
+      "question": "<p>All of David's telephone numbers have the form $555-abc-defg$, where $a$, $b$, $c$, $d$, $e$, $f$, and $g$ are distinct digits and in increasing order, and none is either $0$ or $1$. How many different telephone numbers can David have?</p>",
+      "solutions": [
+        "<p>The only digits available to use in the phone number are $2$, $3$, $4$, $5$, $6$, $7$, $8$, and $9$. There are only $7$ spots left among the $8$ numbers, so we need to find the number of ways to choose $7$ numbers from $8$. The answer is then $\\dbinom{8}{7}=\\dfrac{8!}{7!\\,(8-7)!}=\\boxed{\\textbf{(D) } 8}$</p><p>Alternatively, we could just choose $1$ out of the $8$ numbers not to be used. There are obviously $\\boxed{8}$ ways to do so.</p><p>Note: for each combination of 7 numbers, exactly 1 is in increasing order -Williamgolly</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2005 AMC 10B - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_19",
+      "question": "<p>On a certain math exam, $10\\%$ of the students got $70$ points, $25\\%$ got $80$ points, $20\\%$ got $85$ points, $15\\%$ got $90$ points, and the rest got $95$ points. What is the difference between the <a href=\"/wiki/index.php/Mean\" title=\"Mean\">mean</a> and the <a href=\"/wiki/index.php/Median\" title=\"Median\">median</a> score on this exam?</p>",
+      "solutions": [
+        "<p>To begin, we see that the remaining $30\\%$ of the students got $95$ points. Assume that there are $20$ students; we see that $2$ students got $70$ points, $5$ students got $80$ points, $4$ students got $85$ points, $3$ students got $90$ points, and $6$ students got $95$ points. The median is $85$, since the $10^{\\text{th}}$ and $11^{\\text{th}}$ terms are both $85$. The mean is $\\dfrac{70\\,(2)+80\\,(5)+85\\,(4)+90\\,(3)+95\\,(6)}{20}=\\dfrac{1720}{20}=86$. The difference between the mean and median, therefore, is $\\boxed{\\textbf{(B)}\\ 1}$.</p>",
+        "<p>The remaining $30\\%$ of the students got $95$ points.The mean is equal to $10\\%\\cdot70 + 25\\%\\cdot80 + 20\\%\\cdot85 + 15\\%\\cdot90 + 30\\%\\cdot95 = 86$.The score greater than or equal to $50\\%$ of other scores is the median. Since $35\\%$ scored $80$ or lower and the next $20\\%$ scored $85$, the median is $85$. The difference between the mean and the median is $\\boxed{\\textbf{(B)}\\ 1}$.</p><p>~mobius247</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2005 AMC 10B - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_20",
+      "question": "<p>What is the average (mean) of all 5-digit numbers that can be formed by using each of the digits 1, 3, 5, 7, and 8 exactly once?</p>",
+      "solutions": [
+        "<p>The average of all valid numbers is simply the expected value of a randomly chosen valid number. In other words, it is $E[\\text{ten thousands digit}]\\cdot 10^4+E[\\text{thousands digit}]\\cdot 10^3+\\cdots+E[\\text{ones digit}]\\cdot 1$. However, every digit is equally likely to be chosen for every place, so we can simplify this to $\\frac{1+3+5+7+8}{5}\\cdot(10^4+10^3+10^2+10^1+1)$ $=4.8\\cdot11111 = \\boxed{(C) 53332.8}$.</p>",
+        "<p>We first look at how many times each number will appear in each slot. If we fix a number in a slot, then there are $4! = 24$ ways to arrange the other numbers, so each number appears in each spot $24$ times. Therefore, the sum of all such numbers is $24 \\times (1+3+5+7+8) \\times (11111) = 24 \\times 24 \\times 11111 = 6399936.$ Since there are $5! = 120$ such numbers, we divide $6399936 \\div 120$ to get $\\boxed{\\textbf{(C) }53332.8}$</p>",
+        "<p>We can first solve for the mean for the digits $1, 3, 5, 7,$and $9$ since each is $2$ away from each other. The mean of the numbers than can be solved using these digits is $55555$. The total amount of numbers that can be formed using these digits is $5! =120$. The sum of these numbers is $55555(120) = 6666600$. Now we can find out the total value that was gained by replacing the $8$ with a $9$. We can start how be calculating the gain when the $8$ was in the ones digit. Since there are $4! = 24$ numbers with the $8$ in the ones digit and $1$ was gain from each of them, $24$ is the number gained. Then, we repeat this with the tens, hundreds, thousands, and ten thousands place, leading to a total of $24+240+2400+24000+240000=266664$ as the total amount that was gained. Subtract this amount from the sum of the digits using the $9$ instead of the $8$ to get $6666600-266664=6399936$. Finally, we divide this by $120$ to get the average. $\\frac{6399936}{120}= \\boxed{\\textbf{(C) }53332.8}$</p>",
+        "<p>The average value of the digits is $(1 + 3 + 5 + 7 + 8)/5 = 4.8$.Values occur in every place so $4.8 * 11111 = \\boxed{\\textbf{(C) }53332.8}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2005 AMC 10B - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_21",
+      "question": "<p>Forty slips are placed into a hat, each bearing a number $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$, $9$, or $10$, with each number entered on four slips. Four slips are drawn from the hat at random and without replacement. Let $p$ be the probability that all four slips bear the same number. Let $q$ be the probability that two of the slips bear a number $a$ and the other two bear a number $b \\neq a$. What is the value of $q/p$?</p>",
+      "solutions": [
+        "<p>There are $10$ ways to determine which number to pick. There are $4!$ ways to then draw those four slips with that number, and $40 \\cdot 39 \\cdot 38 \\cdot 37$ total ways to draw four slips. Thus $p = \\frac{10\\cdot 4!}{40 \\cdot 39 \\cdot 38 \\cdot 37}$. </p><p>There are ${10 \\choose 2} = 45$ ways to determine which two numbers to pick for the second probability. There are ${4 \\choose 2} = 6$ ways to arrange the order which we draw the non-equal slips, and in each order there are $4 \\times 3 \\times 4 \\times 3$ ways to pick the slips, so $q = \\frac{45 \\cdot 6 \\cdot 4^2 \\cdot 3^2}{40 \\cdot 39 \\cdot 38 \\cdot 37}$. </p><p>Hence, the answer is $\\frac{q}{p} = \\frac{45 \\cdot 6 \\cdot 4^2 \\cdot 3^2}{10\\cdot 4!} = \\boxed{\\textbf{(A) }162}$.</p>",
+        "<p>For probability $p$, there are $\\binom{10}{1}=10$ ways to choose the number you want to show up $4$ times.</p><p>Hence, the probability is $\\frac{10}{\\binom{40}{4}}$.</p><p>For probability $q$, there are $\\binom{10}{2}=45$ ways to choose the $2$ numbers you want to show up twice. There are $\\binom{4}{2}\\cdot\\binom{4}{2}$ ways to pick which slips you want out of the $4$ of each.</p><p>Hence, the probability is $\\frac{45\\cdot6\\cdot6}{\\binom{40}{4}}$</p><p>Hence, $\\frac{q}{p}=\\frac{45\\cdot6\\cdot6}{10}=9\\cdot6\\cdot3=\\boxed{\\textbf{(A) }162}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2005 AMC 10B - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_22",
+      "question": "<p>For how many positive integers $n$ less than or equal to $24$ is $n!$ evenly divisible by $1 + 2 + \\cdots + n?$</p>",
+      "solutions": [
+        "<p>Since $1 + 2 + \\cdots + n = \\frac{n(n+1)}{2}$, the condition is equivalent to having an integer value for $\\frac{n!} {\\frac{n(n+1)}{2}}$. This reduces, when $n\\ge 1$, to having an integer value for $\\frac{2(n-1)!}{n+1}$. This fraction is an integer unless $n+1$ is an odd prime. There are $8$ odd primes less than or equal to $24$, so there </p><p>are $24 - 8 =  \\boxed{\\textbf{(C) }16}$ numbers less than or equal to $24$ that satisfy the condition.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2005 AMC 10B - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_23",
+      "question": "<p>In trapezoid $ABCD$ we have $\\overline{AB}$ parallel to $\\overline{DC}$, $E$ as the midpoint of $\\overline{BC}$, and $F$ as the midpoint of $\\overline{DA}$. The area of $ABEF$ is twice the area of $FECD$. What is $AB/DC$?</p>",
+      "solutions": [
+        "<p>Since the heights of both trapezoids are equal, and the area of $ABEF$ is twice the area of $FECD$, </p><p>$\\frac{AB+EF}{2}=2\\left(\\frac{DC+EF}{2}\\right)$.</p><p>$\\frac{AB+EF}{2}=DC+EF$, so</p><p>$AB+EF=2DC+2EF$.</p><p>$EF$ is exactly halfway between $AB$ and $DC$, so $EF=\\frac{AB+DC}{2}$. </p><p>$AB+\\frac{AB+DC}{2}=2DC+AB+DC$, so</p><p>$\\frac{3}{2}AB+\\frac{1}{2}DC=3DC+AB$, and </p><p>$\\frac{1}{2}AB=\\frac{5}{2}DC$.</p><p>$\\frac{AB}{DC} = \\boxed{\\textbf{(C) }5}$.</p>",
+        "<p>Mark $DC=z$, $AB=x$, and $FE=y.$Note that the heights of trapezoids $ABEF$ &amp; $FECD$ are the same. Mark the height to be $h$.</p><p>Then, we have that $\\tfrac{x+y}{2}\\cdot h=2(\\tfrac{y+z}{2} \\cdot h)$.</p><p>From this, we get that $x=2z+y$.</p><p>We also get that $\\tfrac{x+z}{2} \\cdot 2h= 3(\\tfrac{y+z}{2} \\cdot h)$.</p><p>Simplifying, we get that $2x=z+3y$</p><p>Notice that we want $\\tfrac{AB}{DC}=\\tfrac{x}{z}$.</p><p>Dividing the first equation by $z$, we get that $\\tfrac{x}{z}=2+\\tfrac{y}{z}\\implies 3(\\tfrac{x}{z})=6+3(\\tfrac{y}{z})$.</p><p>Dividing the second equation by $z$, we get that $2(\\tfrac{x}{z})=1+3(\\tfrac{y}{z})$.</p><p>Now, when we subtract the top equation from the bottom, we get that $\\tfrac{x}{z}=\\boxed{\\textbf{(C) }5}$</p>",
+        "<p>Since the bases of the trapezoids along with the height are the same, the only thing that matters is the second base. Denote the length of the bigger trapezoid $x$. The area of the smaller trapezoid is $A$ = $h \\cdot \\frac {b_1 + b_2}{2}$. The area of the larger trapezoid is $A$ = $h \\cdot \\frac {b_1 + x}{2}$. Since this problem asks for proportions, assume that $b_1 = 1$ and $b_2 = 2$. </p><p>The smaller trapezoid has area $h$ while the larger trapezoid must have area $5h$. We have the equation $\\frac {x}{2} = 5$. $x$ = 10, and our answer is $\\boxed{\\textbf{(C) }5}$</p><p>~Arcticturn</p>",
+        "<p>By setting the area of $ABEF$ equal to $2$ times the area of $DCEF$, you get that $AB + FE = 2(DC + FE)$. Thus, $AB = 2DC + FE$. Note that $FE = DC + \\frac{AB-DC}{2}$. From this, we get $AB = 2DC + DC + AB/2 - DC/2$. Simplifying, $AB/DC$ equals $\\boxed{\\textbf{(C) }5}$</p><p>~unhappyfarmer</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2005 AMC 10B - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_24",
+      "question": "<p>Let $x$ and $y$ be two-digit integers such that $y$ is obtained by reversing the digitsof $x$. The integers $x$ and $y$ satisfy $x^2 - y^2 = m^2$ for some positive integer $m$.What is $x + y + m$?</p>",
+      "solutions": [
+        "<p>Let $x = 10a+b, y = 10b+a$. The given conditions imply $x>y$, which implies $a>b$, and they also imply that both $a$ and $b$ are nonzero. </p><p>Then, $x^2 - y^2 = (x-y)(x+y) = (9a - 9b)(11a + 11b) = 99(a-b)(a+b) = m^2$. </p><p>Since this must be a perfect square, all the exponents in its prime factorization must be even. $99$ factorizes into $3^2 \\cdot 11$, so $11|(a-b)(a+b)$. However, the maximum value of $a-b$ is $9-1=8$, so $11|a+b$. The maximum value of $a+b$ is $9+8=17$, so $a+b=11$. </p><p>Then, we have $33^2(a-b) = m^2$, so $a-b$ is a perfect square, but the only perfect squares that are within our bound on $a-b$ are $1$ and $4$. We know $a+b=11$, and, for $a-b=1$, adding equations to eliminate $b$ gives us $2a=12 \\Longrightarrow a=6, b=5$. Testing $a-b=4$ gives us $2a=15 \\Longrightarrow a=\\frac{15}{2}, b=\\frac{7}{2}$, which is impossible, as $a$ and $b$ must be digits. Therefore, $(a,b) = (6,5)$, and $x+y+m=\\boxed{\\textbf{(E) }154}$.</p>",
+        "<p>The first steps are the same as Solution 1. Let $x = 10a+b, y = 10b+a$, where we know that a and b are digits (whole numbers less than $10$). </p><p>Like Solution 1, we end up getting $(9a - 9b)(11a + 11b) = 99(a-b)(a+b) = m^2$. This is where the solution diverges. </p><p>We know that the left side of the equation is a perfect square because $m$ is an integer. If we factor $99$ into its prime factors, we get $3^2\\cdot 11$. In order to get a perfect square on the left side, $(a-b)(a+b)$ must make both prime exponents even. Because the a and b are digits, a simple guess would be that $(a+b)$ (the bigger number) equals $11$ while $(a-b)$ is a factor of nine (1 or 9). The correct guesses are $a = 6, b = 5$ causing $x = 65, y = 56,$ and $m = 33$. The sum of the numbers is $\\boxed{\\textbf{(E) }154}$</p>",
+        "<p>Once again, the solution is quite similar as the above solutions. Since $x$ and $y$ are two digit integers, we can write $x = 10a+b, y = 10b+a$ and because $x^2 - y^2 = (x-y)(x+y)$, substituting and factoring, we get $99(a+b)(a-b) = m^2$. </p><p>Therefore, $(a+b)(a-b) = \\frac{m^2}{99}$ and $\\frac{m^2}{99}$ must be an integer. A quick strategy is to find the smallest such integer $m$ such that $\\frac{m^2}{99}$ is an integer. We notice that 99 has a prime factorization of $3^2 \\cdot 11.$</p><p>Let $m^2 = n.$ Since we need a perfect square and 3 is already squared, we just need to square 11. So $3^2 \\cdot 11^2$ gives us 1089 as $n$ and $m = \\sqrt{1089} = 33.$ We now get the equation $(x-y)(x+y) = 33^2$, which we can also write as   $(x-y)(x+y) = 11^2 \\cdot 3^2$.</p><p>A very simple guess assumes that $x-y=3^2$ and $x+y=11^2$ since $x$ and $y$ are positive. Finally, we come to the conclusion that $x=65$ and $y=56$, so $x+y+m$ $=$ $\\boxed{\\textbf{(E) }154}$.</p><p>Note that all of the solutions used $a+b$ or $a-b$ as part of their solution.</p>",
+        "<p>Continue the same as Solution $3$ until we get $33$. Knowing that $33^2 = 1089$, we have narrowed down our Pythagorean triples. We know that the $2$ other squares should be larger than $33^2$, so we can start testing. </p><p>If we start testing the $40$s, it is fruitless since the closest to $33^2$ would be $33 - 45 - 54$ which is not a Pythagorean triple. We can start by testing out the $50$s, and it turns our that $33 - 56 - 65$ is a Pythagorean triple. Therefore, our answer is $33+56+65$ = $\\boxed{\\textbf{(E) }154}$.</p><p>~Arcticturn</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2005 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2005_10b_25",
+      "question": "<p>A <a href=\"/wiki/index.php/Subset\" title=\"Subset\">subset</a> $B$ of the set of integers from $1$ to $100$, inclusive, has the property that no two elements of $B$ sum to $125$. What is the maximum possible number of elements in $B$?</p>",
+      "solutions": [
+        "<p>The question asks for the maximum possible number of elements. The integers from $1$ to $24$ can be included because you cannot make $125$ with integers from $1$ to $24$ without the other number being greater than $100$. The integers from $25$ to $100$ are left. They can be paired so the sum is $125$: $25+100$, $26+99$, $27+98$, $\\ldots$, $62+63$. That is $38$ pairs, and at most one number from each pair can be included in the set. The total is $24 + 38 = \\boxed{\\textbf{(C)}\\ 62}$.</p><p>Also, it is possible to see that since the numbers $1$ to $24$ are in the set there are only the numbers $25$ to $100$ to consider. As $62+63$ gives $125$, the numbers $25$ to $62$ can be put in subset $B$ without having two numbers add up to $125$. In this way, subset $B$ will have the numbers $1$ to $62$, and so the answer is $\\boxed{\\textbf{(C)}\\ 62}$.</p><p>Since there are $38$ numbers that sum to $125$, there are $100-38=62$ numbers not summing to $125.$~mathboy282</p>",
+        "<p>Since there are $38$ numbers that sum to $125$, there are $100-38=62$ numbers not summing to $125.$~mathboy282</p>",
+        "<p>\"Cut\" $125$ into half. The maximum integer value in the smaller half is $62$. Thus the answer is $\\boxed{\\textbf{(C)}\\ 62}$.</p>",
+        "<p>The maximum possible number of elements includes the smallest numbers. So, subset $B = \\{1,2,3....n-1,n\\}$ where n is the maximum number of elements in subset $B$. So, we have to find two consecutive numbers, $n$ and $n+1$, whose sum is $125$. Setting up our equation, we have $n+(n+1) = 2n+1 = 125$. When we solve for $n$, we get $n =\\boxed{\\textbf{(C)}\\ 62}$.</p><p>~GentleTiger</p>",
+        "<p>We can put all odd numbers into subset B, or we can put all even numbers into subset B, so now there are 50 numbers in the set. I will use all even numbers in this solution. Now, we need to add other odd(or even!) numbers possible in this subset, which is all odd(or even) numbers that can be added so that the sum with 100(or 99) plus the biggest possible odd number(or even) to get 123. This will get us the numbers 1,3,5...21,23(or numbers 2,4,6...22,24), which gives us 12 more numbers, and adding that to the 50 original numbers, we get $B =\\boxed{\\textbf{(C)}\\ 62}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2005 AMC 10B - geometry problem involving area"
+        }
+      ]
+    }
+  ]
+}

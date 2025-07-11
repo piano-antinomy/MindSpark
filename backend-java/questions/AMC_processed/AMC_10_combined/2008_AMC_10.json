@@ -1,0 +1,829 @@
+{
+  "year": "2008",
+  "competition": "AMC_10",
+  "problems": [
+    {
+      "id": "amc_2008_10a_1",
+      "question": "<p>A bakery owner turns on his doughnut machine at $\\text{8:30}\\ {\\small\\text{AM}}$. At $\\text{11:10}\\ {\\small\\text{AM}}$ the machine has completed one third of the day's job. At what time will the doughnut machine complete the job?</p>",
+      "solutions": [
+        "<p>The machine completes one-third of the job in $\\text{11:10}-\\text{8:30}=\\text{2:40}$ hours. Thus, the entire job is completed in $3\\cdot(\\text{2:40})=\\text{8:00}$ hours.</p><p>Since the machine was started at $\\text{8:30 AM}$, the job will be finished $8$ hours later, at $\\text{4:30 PM}$. The answer is $\\mathrm{(D)}$.</p><p>Note: $\\text{2:40}$ means $2$ hours and $40$ minutes. $3$ multiplied by this time interval is $8$ hours.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2008 AMC 10A - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_2",
+      "question": "<p>A square is drawn inside a rectangle. The ratio of the width of the rectangle to a side of the square is $2:1$. The ratio of the rectangle's length to its width is $2:1$. What percent of the rectangle's area is inside the square?</p>",
+      "solutions": [
+        "<p>Since they are asking for the \"ratio\" of two things, we can say that the side of the square is anything that we want. So if we say that it is $1$, then the width of the rectangle is $2$, and the length is $4$, thus making the total area of the rectangle $8$. The area of the square is just $1$. So the percent of the rectangle's area inside the square is $\\frac{1}{8} \\times 100 = 12.5 \\longrightarrow \\fbox{A}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2008 AMC 10A - algebra problem involving percentage calculations and discounts. Students need to understand algebra concepts, work with percentages principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of percentages."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_3",
+      "question": "<p>For the positive integer $n$, let $\\langle n\\rangle$ denote the sum of all the positive divisors of $n$ with the exception of $n$ itself. For example, $\\langle 4\\rangle=1+2=3$ and $\\langle 12 \\rangle =1+2+3+4+6=16$. What is $\\langle\\langle\\langle 6\\rangle\\rangle\\rangle$?</p>",
+      "solutions": [
+        "<p>$\\langle\\langle\\langle 6\\rangle\\rangle\\rangle= \\langle\\langle 6\\rangle\\rangle = \\langle 6\\rangle=\\ 6\\quad\\Longrightarrow\\quad\\mathrm{(A)}$</p>",
+        "<p>Since $6$ is a perfect number, any such operation where $n=6$ will yield $6$ as the answer. </p><p>Note: A perfect number is defined as a number that equals the sum of its positive divisors excluding itself.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2008 AMC 10A - algebra problem involving area calculations of geometric shapes. Students need to understand algebra concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_4",
+      "question": "<p>Suppose that $\\tfrac{2}{3}$ of $10$ bananas are worth as much as $8$ oranges. How many oranges are worth as much as $\\tfrac{1}{2}$ of $5$ bananas?</p>",
+      "solutions": [
+        "<p>If $\\frac{2}{3}\\cdot10\\ \\text{bananas}=8\\ \\text{oranges}$, then $\\frac{1}{2}\\cdot5\\ \\text{bananas}=\\left(\\frac{1}{2}\\cdot 5\\ \\text{bananas}\\right)\\cdot\\left(\\frac{8\\ \\text{oranges}}{\\frac{2}{3}\\cdot10\\ \\text{bananas}}\\right)=3\\ \\text{oranges}\\Longrightarrow\\mathrm{(C)}$. </p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2008 AMC 10A - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_5",
+      "question": "<p>Which of the following is equal to the <a class=\"mw-redirect\" href=\"/wiki/index.php/Product\" title=\"Product\">product</a>\\[\\frac{8}{4}\\cdot\\frac{12}{8}\\cdot\\frac{16}{12}\\cdot\\cdots\\cdot\\frac{4n+4}{4n}\\cdot\\cdots\\cdot\\frac{2008}{2004}?\\]</p>",
+      "solutions": [
+        "<p>$\\frac {8}{4}\\cdot\\frac {12}{8}\\cdot\\frac {16}{12}\\cdots\\frac {4n + 4}{4n}\\cdots\\frac {2008}{2004} = \\frac {1}{4}\\cdot\\left(\\frac {8}{8}\\cdot\\frac {12}{12}\\cdots\\frac {4n}{4n}\\cdots\\frac {2004}{2004}\\right)\\cdot 2008 = \\frac{2008}{4} =$ $502 \\Rightarrow B$. </p>",
+        "<p>Notice that everything cancels out except for $2008$ in the numerator and $4$ in the denominator.</p><p>Thus, the product is $\\frac{2008}{4}=502$, and the answer is $\\textbf{(B)}$. </p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2008 AMC 10A - algebra problem involving counting principles and arrangements. Students need to understand algebra concepts, work with counting principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_6",
+      "question": "<p>A triathlete competes in a triathlon in which the swimming, biking, and running segments are all of the same length. The triathlete swims at a rate of 3 kilometers per hour, bikes at a rate of 20 kilometers per hour, and runs at a rate of 10 kilometers per hour. Which of the following is closest to the triathlete's average speed, in kilometers per hour, for the entire race?</p>",
+      "solutions": [
+        "<p>Let $d$ be the length of one segment of the race.</p><p>Average speed is total distance divided by total time. The total distance is $3d$, and the total time is $\\frac{d}{3}+\\frac{d}{20}+\\frac{d}{10}=\\frac{29d}{60}$.</p><p>Thus, the average speed is $3d\\div\\left(\\frac{29d}{60}\\right)=\\frac{180}{29}$. This is closest to $6$, so the answer is $\\mathrm{(D)}$.</p>",
+        "<p>Since the three segments are all the same length, the triathlete's average speed is the <a href=\"/wiki/index.php/Harmonic_mean\" title=\"Harmonic mean\">harmonic mean</a> of the three given rates. Therefore, the average speed is \\[\\frac{3}{\\frac{1}{3}+\\frac{1}{20}+\\frac{1}{10}}=\\frac{3}{\\frac{29}{60}}=\\frac{180}{29}\\approx6\\Rightarrow\\boxed{\\mathrm{(D)}\\ 6}\\].</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2008 AMC 10A - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_7",
+      "question": "<p>The fraction</p><p>\\[\\frac{\\left(3^{2008}\\right)^2-\\left(3^{2006}\\right)^2}{\\left(3^{2007}\\right)^2-\\left(3^{2005}\\right)^2}\\]simplifies to which of the following?</p>",
+      "solutions": [
+        "<p>Simplifying, we get \\[\\frac{3^{4016}-3^{4012}}{3^{4014}-3^{4010}}.\\] Factoring out $3^{4012}$ in the numerator and factoring out $3^{4010}$ in the denominator gives us \\[\\frac{(3^4-1)(3^{4012})}{(3^4-1)(3^{4010})}.\\] Canceling out $3^4-1$ gives us $\\frac{3^{4012}}{3^{4010}}=\\frac{3^2}{3^0}=9\\ \\mathrm{(E)}.$</p>",
+        "<p>Using Difference of Squares, $\\frac{(3^{2008})^{2}-(3^{2006})^{2}}{(3^{2007})^{2}-(3^{2005}){^2}}$ becomes</p><p>$\\frac{(3^{2008}+3^{2006})(3^{2008}-3^{2006})}{(3^{2007}+3^{2005})(3^{2007}-3^{2005})}$</p><p><br/>$= \\frac{3^{2006}(9+1) \\cdot 3^{2006}(9-1)}{3^{2005}(9+1) \\cdot 3^{2005}(9-1)}$</p><p>$= \\boxed{\\text{(E)}9}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2008 AMC 10A - geometry problem involving area calculations of geometric shapes. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_8",
+      "question": "<p>Heather compares the price of a new computer at two different stores. Store $A$ offers $15\\%$ off the sticker price followed by a $$90$ rebate, and store $B$ offers $25\\%$ off the same sticker price with no rebate. Heather saves $$15$ by buying the computer at store $A$ instead of store $B$. What is the sticker price of the computer, in dollars?</p>",
+      "solutions": [
+        "<p>Let the sticker price be $x$.</p><p>The price of the computer is $0.85x-90$ at store $A$ and $0.75x$ at store $B$.</p><p>Heather saves $$15$ at store $A$, so $0.85x-90+15=0.75x$.</p><p>Solving, we find $x=750$, and thus the answer is $\\mathrm{(A)}$.</p><p>The $$ 90$ at store $A$ is $$ 15$ greater than the additional $25\\%-15\\% = 10\\%$ off at store $B$.</p><p>Thus the $10\\%$ off is equal to $$ 90$ $-$ $$ 15$ $=$ $$ 75$, and therefore the sticker price is $$ 750$.</p>",
+        "<p>Let the sticker price be $x$.</p><p>The price of the computer is $0.85x-90$ at store $A$ and $0.75x$ at store $B$.</p><p>Heather saves $$15$ at store $A$, so $0.85x-90+15=0.75x$.</p><p>Solving, we find $x=750$, and thus the answer is $\\mathrm{(A)}$.</p>",
+        "<p>The $$ 90$ at store $A$ is $$ 15$ greater than the additional $25\\%-15\\% = 10\\%$ off at store $B$.</p><p>Thus the $10\\%$ off is equal to $$ 90$ $-$ $$ 15$ $=$ $$ 75$, and therefore the sticker price is $$ 750$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2008 AMC 10A - number_theory problem involving divisibility rules and number properties. Students need to understand number_theory concepts, work with divisibility principles, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills and understanding of divisibility."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_9",
+      "question": "<p>Suppose that\\[\\frac{2x}{3}-\\frac{x}{6}\\]is an integer. Which of the following statements must be true about $x$?</p>",
+      "solutions": [
+        "<p>\\[\\frac{2x}{3}-\\frac{x}{6}\\quad\\Longrightarrow\\quad\\frac{4x}{6}-\\frac{x}{6}\\quad\\Longrightarrow\\quad\\frac{3x}{6}\\quad\\Longrightarrow\\quad\\frac{x}{2}\\]For $\\frac{x}{2}$ to be an integer, $x$ must be even, but not necessarily divisible by $3$. Thus, the answer is $\\mathrm{(B)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2008 AMC 10A - geometry problem involving triangle geometry and properties. Students need to understand geometry concepts, work with triangles principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of triangles."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_10",
+      "question": "<p>Each of the sides of a square $S_1$ with area $16$ is bisected, and a smaller square $S_2$ is constructed using the bisection points as vertices. The same process is carried out on $S_2$ to construct an even smaller square $S_3$. What is the area of $S_3$?</p>",
+      "solutions": [
+        "<p>Since the area of the large square is $16$, the side length equals $4$. If all sides are bisected, the resulting square has side length $2\\sqrt{2}$, thus making the area $8$. If we repeat this process again, we notice that the area is just half that of the previous square, so the area of $S_{3} = 4 \\longrightarrow \\fbox{E}$</p>",
+        "<p>Since the length ratio is $\\frac{1}{\\sqrt{2}}$, then the area ratio is $\\frac{1}{2}$ (since the area ratio between two similar 2-dimensional objects is equal to the side ratio of those objects squared). This means that $S_2 = 8$ and $S_3 = \\boxed{\\textbf{(E) }4}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2008 AMC 10A - algebra problem involving rate relationships and speed calculations. Students need to understand algebra concepts, work with rates principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of rates."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_11",
+      "question": "<p>While Steve and LeRoy are fishing 1 mile from shore, their boat springs a leak, and water comes in at a constant rate of 10 gallons per minute. The boat will sink if it takes in more than 30 gallons of water. Steve starts rowing towards the shore at a constant rate of 4 miles per hour while LeRoy bails water out of the boat. What is the slowest rate, in gallons per minute, at which LeRoy can bail if they are to reach the shore without sinking?</p>",
+      "solutions": [
+        "<p>It will take $\\frac{1}{4}$ of an hour or $15$ minutes to get to shore.</p><p>Since only $30$ gallons of water can enter the boat, only $\\frac{30}{15}=2$ net gallons can enter the boat per minute.</p><p>Since $10$ gallons of water enter the boat each minute, LeRoy must bail $10-2=8$ gallons per minute $\\Rightarrow\\mathrm{(D)}$.</p><p><br/></p>",
+        "<p>We set up the following equation, where $x$ is the answer:</p><p>$\\frac{30}{10-x} = 15 \\Rightarrow\\mathrm{x=8}$, so the answer is $(D)$.</p>",
+        "<p>Let $r$ be the slowest rate LeRoy can bail out water. It will take them $15$ minutes to get to shore. As stated in solution 1, the number of gallons that enter the boat can be at most $2$ for the boat to stay afloat. Water enters at a rate of $10$ gallons per minute. </p><p>Therefore:</p><p>$2 \\geq 10-r$</p><p>$r \\geq 8$</p><p>The minimum possible value for $r$ is $8\\ \\mathrm{(D)}$.</p><p>~mobius247</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2008 AMC 10A - algebra problem involving percentage calculations and changes. Students need to understand algebra concepts, work with percentages principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of percentages."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_12",
+      "question": "<p>In a collection of red, blue, and green marbles, there are $25\\%$ more red marbles than blue marbles, and there are $60\\%$ more green marbles than red marbles. Suppose that there are $r$ red marbles. What is the total number of marbles in the collection?</p>",
+      "solutions": [
+        "<p>The number of blue marbles is $\\frac{4}{5}r$, the number of green marbles is $\\frac{8}{5}r$, and the number of red marbles is $r$.</p><p>Thus, the total number of marbles is $\\frac{4}{5}r+\\frac{8}{5}r+r=3.4r$, and the answer is $\\mathrm{(C)}$.</p>",
+        "<p>Let the number of red marbles be 100. You have $b = 80,$ and $g = 160.$</p><p>The answer is $\\frac{100+80+160}{100} = \\boxed{3.4}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2008 AMC 10A - algebra problem involving arithmetic sequence patterns and terms. Students need to understand algebra concepts, work with arithmetic_sequences principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of arithmetic_sequences."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_13",
+      "question": "<p>Doug can paint a room in $5$ hours. Dave can paint the same room in $7$ hours. Doug and Dave paint the room together and take a one-hour break for lunch. Let $t$ be the total time, in hours, required for them to complete the job working together, including lunch. Which of the following equations is satisfied by $t$?</p>",
+      "solutions": [
+        "<p>Doug can paint $\\frac{1}{5}$ of a room per hour, Dave can paint $\\frac{1}{7}$ of a room per hour, and the time they spend working together is $t-1$.</p><p>Since rate multiplied by time gives output, $\\left(\\frac{1}{5}+\\frac{1}{7}\\right)\\left(t-1\\right)=1 \\Rightarrow \\mathrm{(D)}$</p><p>If one person does a job in $a$ hours and another person does a job in $b$ hours, the time it takes to do the job together is $\\frac{ab}{a+b}$ hours.</p><p>Since Doug paints a room in 5 hours and Dave paints a room in 7 hours, they both paint in $\\frac{5\\times7}{5+7} = \\frac{35}{12}$ hours. They also take 1 hour for lunch, so the total time $t = \\frac{35}{12} + 1$ hours.</p><p>Looking at the answer choices, $(D)$ is the only one satisfied by $t = \\frac{35}{12} + 1$.</p>",
+        "<p>Doug can paint $\\frac{1}{5}$ of a room per hour, Dave can paint $\\frac{1}{7}$ of a room per hour, and the time they spend working together is $t-1$.</p><p>Since rate multiplied by time gives output, $\\left(\\frac{1}{5}+\\frac{1}{7}\\right)\\left(t-1\\right)=1 \\Rightarrow \\mathrm{(D)}$</p>",
+        "<p>If one person does a job in $a$ hours and another person does a job in $b$ hours, the time it takes to do the job together is $\\frac{ab}{a+b}$ hours.</p><p>Since Doug paints a room in 5 hours and Dave paints a room in 7 hours, they both paint in $\\frac{5\\times7}{5+7} = \\frac{35}{12}$ hours. They also take 1 hour for lunch, so the total time $t = \\frac{35}{12} + 1$ hours.</p><p>Looking at the answer choices, $(D)$ is the only one satisfied by $t = \\frac{35}{12} + 1$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2008 AMC 10A - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_14",
+      "question": "<p>Older television screens have an aspect ratio of $4: 3$. That is, the ratio of the width to the height is $4: 3$. The aspect ratio of many movies is not $4: 3$, so they are sometimes shown on a television screen by \"letterboxing\" - darkening strips of equal height at the top and bottom of the screen, as shown. Suppose a movie has an aspect ratio of $2: 1$ and is shown on an older television screen with a $27$-inch diagonal. What is the height, in inches, of each darkened strip?</p><p>[asy] unitsize(1mm); filldraw((0,0)--(21.6,0)--(21.6,2.7)--(0,2.7)--cycle,grey,black); filldraw((0,13.5)--(21.6,13.5)--(21.6,16.2)--(0,16.2)--cycle,grey,black); draw((0,0)--(21.6,0)--(21.6,16.2)--(0,16.2)--cycle); [/asy]</p>",
+      "solutions": [
+        "<p>Let the width and height of the screen be $4x$ and $3x$ respectively, and let the width and height of the movie be $2y$ and $y$ respectively. </p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, the diagonal is $\\sqrt{(3x)^2+(4x)^2}=5x = 27$. So $x=\\frac{27}{5}$. </p><p>Since the movie and the screen have the same width, $2y=4x\\Rightarrow y=2x$. </p><p>Thus, the height of each strip is $\\frac{3x-y}{2}=\\frac{3x-2x}{2}=\\frac{x}{2}=\\frac{27}{10}=2.7\\Longrightarrow\\mathrm{(D)}$. </p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2008 AMC 10A - geometry problem involving circle geometry and measurements. Students need to understand geometry concepts, work with circles principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of circles."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_15",
+      "question": "<p>Yesterday Han drove 1 hour longer than Ian at an average speed 5 miles per hour faster than Ian. Jan drove 2 hours longer than Ian at an average speed 10 miles per hour faster than Ian. Han drove 70 miles more than Ian. How many more miles did Jan drive than Ian?</p>",
+      "solutions": [
+        "<p>Set the time Ian traveled as $I$, and set Han's speed as $H$. Therefore, Jan's speed is $H+5.$</p><p>We get the following equation for how much Han is ahead of Ian:$H+5I = 70.$</p><p>The expression for how much Jan is ahead of Ian is:$2(H+5)+10I.$</p><p>This simplifies to: $2H+10+10I.$</p><p>However, this is just $2(H+5I)+10.$</p><p>Substitute, from the first equation, $H+5I$ as $70.$</p><p>Therefore, the answer is $140 + 10$, which is $150$, or $\\boxed{\\mathrm{(D)}}$</p>",
+        "<p>We let Ian's speed and time equal $I_s$ and $I_t$, respectively. Similarly, let Han's and Jan's speed and time be $H_s$, $H_t$, $J_s$, $J_t$. The problem gives us 5 <a href=\"/wiki/index.php/Equation\" title=\"Equation\">equations</a>:</p><p>\\begin{align} H_s&=I_s+5 \\\\ H_t&=I_t+1 \\\\ J_s&=I_s+10 \\\\ J_t&=I_t+2 \\\\ H_s \\cdot H_t & =I_s \\cdot I_t+70 \\end{align}</p><p>Substituting equations $(1)$ and $(2)$ into $(5)$ gives:</p><p>\\[(I_s+5)(I_t+1)=I_s I_t+70 \\Longrightarrow I_s I_t+I_s+5I_t+5=I_s I_t+70 \\Longrightarrow I_s+5I_t=65 \\quad (*)\\]</p><p>We are asked the difference between Jan's and Ian's distances, or</p><p>\\[J_s J_t-I_s I_t=x,\\]</p><p>Where $x$ is the difference between Jan's and Ian's distances and the answer to the problem. Substituting $(3)$ and $(4)$ equations into this equation gives:</p><p>\\[(I_s+10)(I_t+2)-I_s I_t=x \\Longrightarrow I_s I_t+2I_s+10I_t+20-I_s I_t=x \\Longrightarrow\\]</p><p>\\[2I_s+10I_t+20=x \\Longrightarrow 2(I_s+5I_t)+20=x\\]</p><p>Substituting $(*)$ into this equation gives:</p><p>\\[2(65)+20=x \\Longrightarrow 130+20=x \\Longrightarrow 150=x\\]</p><p>Therefore, the answer is $150$ miles or $\\boxed{\\mathrm{(D)}}$.</p>",
+        "<p>Let Ian drive $D$ miles, at a speed of $R$, for some time $T$ (in hours). Hence, we have $D=RT$. We can find a similar equation for Han, who drove $D + 70$ miles, at a rate of $R+5$, for $T+1$ hours, giving us $D + 70 = (R + 5)(T + 1)$. We can do the same for Jan, giving us $D + x = (R + 10)(T + 2)$, where $x$ is how much further Jan traveled than Ian. We now have three equations:\\[D= RT\\]\\[D + 70 = (R+5)(T+1) = RT + R + 5T + 5\\]\\[D + x = (R + 10)(T + 2) = RT + 10 T + 2R + 20.\\]Substituting $RT$ for $D$ in the second and third equations and cancelling gives us:\\[70 = 5T + R + 5 \\Longrightarrow 5T + R = 65\\]\\[x = 10T + 2R + 20  \\Longrightarrow x = 2(5T + R ) + 20  \\Longrightarrow x= 2(65) + 20 = 150.\\]Since $x = 150$, our answer is $\\boxed{\\mathrm{(D)}}$.</p>",
+        "<p>Let Ian drive $d$ miles, $t$ hours, and at speed $s$.</p><p>Ian's Equation: $d=s \\cdot t.$</p><p>Han drove 70 more miles, traveled 5 miles per hour faster and traveled 1 more hour than Ian.</p><p>Han's Equation: $d+70=(s+5) \\cdot (t+1).$</p><p>Let Jan have driven $m$ miles. Jan also has driven 10 miles per hour faster and traveled 2 more hours than Ian.</p><p>Jan's Equation: $m=(s+10) \\cdot (t+2).$</p><p>Let's group the equations together:</p><p>$(1) \\phantom{a} d=s \\cdot t$</p><p>$(2) \\phantom{a} d+70=(s+5) \\cdot (t+1)$</p><p>$(3) \\phantom{a} m=(s+10) \\cdot (t+2)$</p><p>Let's see what we want to find: We want to find $n$. The equation is $m=d+n$ where $n$ is the number of more miles traveled by Jan than Ian.</p><p>Onto the calculating part.</p><p>Expanding the second equation, we get</p><p>$d+70=st+5t+s+5.$</p><p>Note that $st=d$ by the first equation, so substituting we get</p><p>$d+70=d+5t+s+5.$</p><p>Simplifying gets us </p><p>$(4) \\phantom{a} s+5t=65.$</p><p>(Note for the above process: You could have substituted $d$ with $st$ but that would lead you to the same result since $d-d=st-st=0.$)</p><p>Let's look at the third equation. Expanding, we get</p><p>$m=st+10t+2s+20.$</p><p>Since we want $n$ we want the equation $m=d+n$. We write the expanded third equation into this form since $st=d.$</p><p>$(5) \\phantom{a} m=d+(10t+2s+20)$.</p><p>Let's take a closer look at the $n$ section of the equation:</p><p>$(6) \\phantom{a} n=10t+2s+20$</p><p>This looks very similar to equation 4, if you multiply equation 4 by $2$ you get</p><p>$(7) \\phantom{a} 10t+2s=130$.</p><p>Plugging equation 7 into equation 6 we have</p><p>$n=(10t+2s)+20 \\Rightarrow n=130+20$</p><p>Calculating gets us</p><p>$(8) \\phantom{a} n=150.$</p><p>Substituting equation 8 into equation 5 gets us</p><p>$m=d+n \\Rightarrow m=d+150.$</p><p>The $n$ term is $150$ which is what we want to find so the answer is $\\boxed{\\mathrm{(D) 150}}.$</p><p>~mathboy282</p>",
+        "<p>Since Han drove for $1$ hour and drove $70$ miles more than Ian during that hour, we know that Ian's speed is $65$ miles per hour since Han drove $5$ mph faster than him. Now Jan went $10$ mph faster than Ian for $2$ hours, so we can tell that she drove $75 \\cdot 2$ miles more than Ian, therefore the answer is $\\boxed{\\mathrm{(D) 150}}.$</p><p>~Dynosol</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2008 AMC 10A - combinatorics problem involving counting principles and arrangements. Students need to understand combinatorics concepts, work with counting principles, and apply mathematical reasoning to solve this problem. This tests combinatorics problem-solving skills and understanding of counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_16",
+      "question": "<p>Points $A$ and $B$ lie on a <a href=\"/wiki/index.php/Circle\" title=\"Circle\">circle</a> centered at $O$, and $\\angle AOB = 60^\\circ$. A second circle is internally <a href=\"/wiki/index.php/Tangent\" title=\"Tangent\">tangent</a> to the first and tangent to both $\\overline{OA}$ and $\\overline{OB}$. What is the ratio of the area of the smaller circle to that of the larger circle?</p>",
+      "solutions": [
+        "<p>[asy]size(200); defaultpen(fontsize(10)); pair O=(0,0), A=(3,0), B=(3/2,3/2*3^.5), C=(3^.5,1), D=(3^.5,0), F=(1.5*3^.5,1.5), G=(2*3^.5,2); picture p = new picture;  draw(p,Circle(O,0.2)); clip(p,O--C--A--cycle); add(p); draw(Circle(O,3)); dot(A); dot(B); dot(C); dot(O); draw(A--O--B); draw(O--C--D); draw(C--F); draw(D-(0.2,0)--D-(0.2,-0.2)--D-(0,-0.2)); draw(Circle(C,1)); label(\"\\(30^{\\circ}\\)\",(0.65,0.15),O); label(\"\\(r\\)\",(C+D)/2,E); label(\"\\(2r\\)\",(O+C)/2,NNE); label(\"\\(O\\)\",O,SW); label(\"\\(r\\)\",(C+F)/2,SE); label(\"\\(R\\)\",(O+A)/2-(0,0.3),S); label(\"\\(P\\)\",C,NW); label(\"\\(A\\)\",(3,0), A); label(\"\\(B\\)\",(3/2,3/2*3^.5), B); label(\"\\(C\\)\",(1.5*3^.5,1.5), G); label(\"\\(Q\\)\",D,SE);[/asy]Let $P$ be the center of the small circle with radius $r$, and let $Q$ be the point where the small circle is <a href=\"/wiki/index.php/Tangent\" title=\"Tangent\">tangent</a> to $OA$. Also, let $C$ be the point where the small circle is tangent to the big circle with radius $R$.</p><p>Then $PQO$ is a right triangle. Angle $POQ$ is $30$ degrees because line $OP$ bisects angle $AOB$ (this can be proved by dropping a perpendicular line from $P$ to line $OB$, letting their intersection be point $S$, and proving triangles $PQO$ and $PSO$ congruent), meaning that $PQO$ is a $30-60-90$ triangle. Therefore, $OP=2PQ$.</p><p>Since $OP=OC-PC=OC-r=R-r$, we have $R-r=2PQ$, or $R-r=2r$, or $\\frac{1}{3}=\\frac{r}{R}$.</p><p>Ratio of areas of circles is ratio of radii squared, so the answer is $\\left(\\frac{1}{3}\\right)^2 = \\frac{1}{9} \\Rightarrow \\boxed{B}$</p>",
+        "<p>Like in Solution 1, let $P$ be the center of the small circle with radius $r$, and let $Q$ be the point where the small circle is <a href=\"/wiki/index.php/Tangent\" title=\"Tangent\">tangent</a> to $OA$.</p><p>Let $N$ be the tangency point of the two circles. As shown in Solution 1, $POQ = 30$ degrees, so angle $NOA$ is also $30$ degrees. Let the line tangent to the two circles at $N$ intersect $OA$ and $OB$ at points $C$ and $D$, respectively. Since line $CD$ is tangent to circles $O$ and $P$, it must be perpendicular to $ON$, meaning that angle $ONC$ must be $90$ degrees. Because angle $NOA$ is $30$ degrees, angle $DCO$ is $180-30-90 = 60$ degrees. Angle $DOC$ is also $60$ degrees, so triangle $DOC$ is equilateral.</p><p>Note that an equilateral triangle's incenter is also its centroid. This means the center of the inscribed circle is also the centroid. From properties of median lengths, the radius of the large circle is 3 times the radius of the small circle. </p><p>Then the ratio of areas will be $\\frac{1}{3}$ squared, or $\\frac{1}{9}\\Rightarrow \\boxed{\\text{B}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2008 AMC 10A - algebra problem involving systems of equations with multiple variables. Students need to understand algebra concepts, work with systems_of_equations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of systems_of_equations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_17",
+      "question": "<p>An <a href=\"/wiki/index.php/Equilateral_triangle\" title=\"Equilateral triangle\">equilateral triangle</a> has side length $6$. What is the <a href=\"/wiki/index.php/Area\" title=\"Area\">area</a> of the region containing all points that are outside the triangle but not more than $3$ units from a point of the triangle?</p>",
+      "solutions": [
+        "<p>The region described contains three rectangles of dimensions $3 \\times 6$, and three $120^{\\circ}$ degree arcs of circles of <a href=\"/wiki/index.php/Radius\" title=\"Radius\">radius</a> $3$. Thus the answer is \\[3(3 \\times 6) + 3 \\left( \\frac{120^{\\circ}}{360^{\\circ}} \\times 3^2 \\pi\\right) = 54 + 9\\pi \\Longrightarrow \\mathrm{(B)}.\\]</p>",
+        "<p>After a quick sketch of the problem, one can deduce that there are $3$ rectangles in the figure, each with side length $6$ and width $3$. Therefore, the combined areas of the rectangles is $54$. The other three regions are circle-shaped areas, probably expressed in some form of $\\pi$. Answer choices $\\mathrm{(A)}$, $\\mathrm{(D)}$, $\\mathrm{(E)}$ are impossible because they either lack an integer or $\\pi$ in the answer, and $\\mathrm{(C)}$ is impossible since $18\\sqrt{3}$ clearly does not belong to the rectangle or the circular areas. We can conclude that the only choice left is $\\boxed{\\mathrm{(B)}}$. </p><p>Solution by Airplane50</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2008 AMC 10A - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_18",
+      "question": "<p>A <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right triangle</a> has <a href=\"/wiki/index.php/Perimeter\" title=\"Perimeter\">perimeter</a> $32$ and area $20$. What is the length of its <a href=\"/wiki/index.php/Hypotenuse\" title=\"Hypotenuse\">hypotenuse</a>?</p>",
+      "solutions": [
+        "<p>Let the legs of the triangle have lengths $a,b$. Then, by the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, the length of the hypotenuse is $\\sqrt{a^2+b^2}$, and the area of the triangle is $\\frac 12 ab$. So we have the two equations</p><p>Re-arranging the first equation and squaring, </p><p>From $(2)$ we have $2ab = 80$, so</p><p>The length of the hypotenuse is $p - a - b = 32 - \\frac{69}{4} = \\frac{59}{4}\\boxed{\\ \\mathrm{(B)}}$.</p><p>From the formula $A = rs$, where $A$ is the area of a triangle, $r$ is its <a href=\"/wiki/index.php/Inradius\" title=\"Inradius\">inradius</a>, and $s$ is the <a href=\"/wiki/index.php/Semiperimeter\" title=\"Semiperimeter\">semiperimeter</a>, we can find that $r = \\frac{20}{32/2} = \\frac{5}{4}$. In a right triangle, $r = s - h$, where $h$ is the hypotenuse, so $h = 16 - \\frac{5}{4} = \\frac{59}{4}$ $\\mathrm{(B)}$.</p><p><b>Note:</b> If the reader is unfamiliar with the inradius being equal to the semiperimeter minus the hypotenuse for a right triangle, it should not be too difficult to prove the relationship for themselves.~mobius247</p><p><b>Why $r=s-h$.</b> Draw a right triangle and inscribe a circle. Connect the center of the circle with tangency points; there are 3, one from each side of the triangle. Now, connect the center with each vertice and you will see 3 pairs of congruent triangles by HL (Hypotenuse-Leg Congruence). From these congruent triangles, mark equal lengths and you will find that $r=s-h$. </p><p>~BakedPotato66</p><p>From the problem, we know that </p><p>Subtracting $c$ from both sides of the first equation and squaring both sides, we get</p><p>Now we substitute in $a^2 + b^2 = c^2$ as well as $2ab = 80$ into the equation to get</p><p>Further simplification yields the result of $\\frac{59}{4} \\rightarrow \\mathrm{(B)}$.</p><p>Let $a$ and $b$ be the legs of the triangle and $c$ the hypotenuse.</p><p>Since the area is 20, we have $\\frac{1}{2}ab = 20 => ab=40$.</p><p>Since the perimeter is 32, we have $a + b + c = 32$.</p><p>The Pythagorean Theorem gives $c^2 = a^2 + b^2$. </p><p>This gives us three equations with three variables:</p><p>Rewrite equation 3 as $c^2 = (a+b)^2 - 2ab$.Substitute in equations 1 and 2 to get $c^2 = (32-c)^2 - 80$.</p><p>The answer is choice $(B)$.</p><p>Let $a$, $b$, and $c$ be the sides of the triangle with $c$ as the hypotenuse.</p><p>We know that $a + b + c =32$.</p><p>According to the Pythagorean Theorem, we have $a^2 + b^2 = c^2$.</p><p>We also know that $ab = 40$, since the area of the triangle is $20$.</p><p>We substitute $2ab$ into $a^2 + b^2 = c^2$ to get $(a+b)^2 = c^2 + 80$.</p><p>Moving the $c^2$ to the left, we again rewrite to get $(a+b+c)(a+b-c) = 80$.</p><p>We substitute our value of $32$ for $a+b+c$ twice into our equation and subtract to get $a + b = \\frac{69}{4}$.</p><p>Finally, subtracting this from our original value of $32$, we get $\\frac{59}{4}$, or $B$.</p><p>Let the legs be $a, b$. Then the hypotenuse is $\\sqrt{a^2 + b^2}.$</p><p>We know that $ab = 40$ and $a + b + \\sqrt{a^2 + b^2} = 32$.</p><p>The first equation gives \\[b = \\frac{40}{a}\\] and we can plug this into the second equation, yielding: \\[a + \\frac{40}{a} + \\sqrt{ a^2 + \\frac{1600}{a^2}} = 32.\\]</p><p>Letting $X = a + \\frac{40}{a}$, the equation becomes: \\[X + \\sqrt{X^2 - 80} = 32.\\]</p><p>We can bring the $X$ to the right side and square which yields: \\[X^2 - 80 = (X - 32)^2 = X^2 - 64X + 1024.\\]</p><p>So, \\[-80 = -64X + 1024 \\rightarrow X = \\frac{69}{4}.\\]</p><p>Now, we know that $a + \\frac{40}{a} = \\frac{69}{4}.$</p><p>Multiplying both sides by $4a$ gives: \\[4a^2 - 69a + 160.\\]</p><p>It can be observed that the roots of this equation are $a$ and $b$. We want the hypotenuse which is $\\sqrt{a^2 + b^2} = \\sqrt{ (a+b)^2 - 2ab}.$</p><p>We can now apply Vieta's Formula which gives: \\[c = \\sqrt{ \\left( \\frac{69}{4} \\right)^2 - 80} = \\boxed{ \\frac{59}{4}}.\\]</p><p>~conantwiz2023</p><p>Let the sides be $a, b, c$ where $a$ and $b$ are the legs and $c$ is the hypotenuse.</p><p>Since the perimeter is 32, we have</p><p>$(1) \\phantom{a} a+b+c=32$.</p><p>Since the area is 20 and the legs are $a$ and $b$, we have that</p><p>$(2) \\phantom{a} \\frac{a \\cdot b}{2}=20$.</p><p>By the Pythagorean Theorem, we have that</p><p>$(3) \\phantom{a} a^2+b^2=c^2$.</p><p>Since we want $c$, we will equations $1, 2, 3$ be in the form of $c.$</p><p>Equation 1 can be turned into</p><p>$(4) \\phantom{a} a+b=32-c$.</p><p>Equation 2 can be simplified into</p><p>$(5) \\phantom{a} ab=40.$</p><p>Equation 3 is already simplified.</p><p>Onto the calculating process.</p><p>Squaring the 1st equation we have</p><p>$(a+b+c)^2=32^2.$</p><p>Expanding and grouping, we have</p><p>$(a^2+b^2+c^2)+2(ab+ac+bc)=32^2.$</p><p>By equation 3 and substituting we get</p><p>$2(c^2+ab+ac+bc)=32^2.$</p><p>By equation 5 and substituting we get</p><p>$2(c^2+40+ac+bc)=32^2.$</p><p>Note that we can factor $c$ out in the inner expression, and we get</p><p>$2(c^2+40+c(a+b))=32^2.$</p><p>By equation 4 and substituting, we have</p><p>$2(c^2+40+c(32-c))=32^2.$</p><p>Expanding, we have</p><p>$2(c^2+40+32c-c^2)=32^2.$</p><p>Simplifying, we have</p><p>$2(40+32c)=32^2.$</p><p>Expanding again, we get</p><p>$80+64c=32^2.$</p><p>Dividing both sides by $16$ gets us</p><p>$4c+5=64$</p><p>Calculating gets us</p><p>$c=\\boxed{\\mathrm{(B) \\frac{59}{4}}}$.</p><p>~mathboy282</p><p>This solution is very similar to Solution 1, except instead of subtracting $a+b$ from both sides in the first part, we subtract $\\sqrt{a^2+b^2}$ from both sides, which gets us:</p><p>\\begin{align*} a+b&=32-\\sqrt{a^2+b^2}\\\\ (a+b)^2&=(32-\\sqrt{a^2+b^2})^2\\\\ a^2+2ab+b^2&=32^2-2\\cdot32\\cdot\\sqrt{a^2+b^2}+a^2+b^2\\\\ 2ab&=32^2-2\\cdot32\\cdot\\sqrt{a^2+b^2}.\\\\ \\end{align*}</p><p>We know that \\[\\frac{1}{2}ab=20\\]so \\[ab=40.\\]</p><p>We can then substitute $40$ for $ab$ to get us:</p><p>\\begin{align*} 80&=32^2-2\\cdot32\\cdot\\sqrt{a^2+b^2}\\\\ 2\\cdot32\\cdot\\sqrt{a^2+b^2}&=32^2-80\\\\ 64\\cdot\\sqrt{a^2+b^2}&=32^2-80\\\\ \\sqrt{a^2+b^2}&=\\frac{32^2-80}{64}\\\\ \\end{align*}</p><p>We know that $\\sqrt{a^2+b^2}$ is the hypotenuse, so we only have to solve the right-hand side now.</p><p>\\begin{align*} \\sqrt{a^2+b^2}&=\\frac{32^2-80}{64}\\\\ &=\\frac{32^2}{64}-\\frac{80}{64}\\\\ &=\\frac{32\\cdot32}{32\\cdot2}-\\frac{32\\cdot\\frac{5}{2}}{32\\cdot2}\\\\ &=\\frac{32}{2}-\\frac{\\frac{5}{2}}{2}\\\\ &=16-\\frac{5}{4}\\\\ &=\\frac{64}{4}-\\frac{5}{4}\\\\ &=\\boxed{\\mathrm{(B)} \\frac{59}{4}}\\\\ \\end{align*}</p><p>~zlrara01</p>",
+        "<p>Let the legs of the triangle have lengths $a,b$. Then, by the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, the length of the hypotenuse is $\\sqrt{a^2+b^2}$, and the area of the triangle is $\\frac 12 ab$. So we have the two equations</p><p>Re-arranging the first equation and squaring, </p><p>From $(2)$ we have $2ab = 80$, so</p><p>The length of the hypotenuse is $p - a - b = 32 - \\frac{69}{4} = \\frac{59}{4}\\boxed{\\ \\mathrm{(B)}}$.</p>",
+        "<p>From the formula $A = rs$, where $A$ is the area of a triangle, $r$ is its <a href=\"/wiki/index.php/Inradius\" title=\"Inradius\">inradius</a>, and $s$ is the <a href=\"/wiki/index.php/Semiperimeter\" title=\"Semiperimeter\">semiperimeter</a>, we can find that $r = \\frac{20}{32/2} = \\frac{5}{4}$. In a right triangle, $r = s - h$, where $h$ is the hypotenuse, so $h = 16 - \\frac{5}{4} = \\frac{59}{4}$ $\\mathrm{(B)}$.</p><p><b>Note:</b> If the reader is unfamiliar with the inradius being equal to the semiperimeter minus the hypotenuse for a right triangle, it should not be too difficult to prove the relationship for themselves.~mobius247</p><p><b>Why $r=s-h$.</b> Draw a right triangle and inscribe a circle. Connect the center of the circle with tangency points; there are 3, one from each side of the triangle. Now, connect the center with each vertice and you will see 3 pairs of congruent triangles by HL (Hypotenuse-Leg Congruence). From these congruent triangles, mark equal lengths and you will find that $r=s-h$. </p><p>~BakedPotato66</p>",
+        "<p>From the problem, we know that </p><p>Subtracting $c$ from both sides of the first equation and squaring both sides, we get</p><p>Now we substitute in $a^2 + b^2 = c^2$ as well as $2ab = 80$ into the equation to get</p><p>Further simplification yields the result of $\\frac{59}{4} \\rightarrow \\mathrm{(B)}$.</p>",
+        "<p>Let $a$ and $b$ be the legs of the triangle and $c$ the hypotenuse.</p><p>Since the area is 20, we have $\\frac{1}{2}ab = 20 => ab=40$.</p><p>Since the perimeter is 32, we have $a + b + c = 32$.</p><p>The Pythagorean Theorem gives $c^2 = a^2 + b^2$. </p><p>This gives us three equations with three variables:</p><p>Rewrite equation 3 as $c^2 = (a+b)^2 - 2ab$.Substitute in equations 1 and 2 to get $c^2 = (32-c)^2 - 80$.</p><p>The answer is choice $(B)$.</p>",
+        "<p>Let $a$, $b$, and $c$ be the sides of the triangle with $c$ as the hypotenuse.</p><p>We know that $a + b + c =32$.</p><p>According to the Pythagorean Theorem, we have $a^2 + b^2 = c^2$.</p><p>We also know that $ab = 40$, since the area of the triangle is $20$.</p><p>We substitute $2ab$ into $a^2 + b^2 = c^2$ to get $(a+b)^2 = c^2 + 80$.</p><p>Moving the $c^2$ to the left, we again rewrite to get $(a+b+c)(a+b-c) = 80$.</p><p>We substitute our value of $32$ for $a+b+c$ twice into our equation and subtract to get $a + b = \\frac{69}{4}$.</p><p>Finally, subtracting this from our original value of $32$, we get $\\frac{59}{4}$, or $B$.</p>",
+        "<p>Let the legs be $a, b$. Then the hypotenuse is $\\sqrt{a^2 + b^2}.$</p><p>We know that $ab = 40$ and $a + b + \\sqrt{a^2 + b^2} = 32$.</p><p>The first equation gives \\[b = \\frac{40}{a}\\] and we can plug this into the second equation, yielding: \\[a + \\frac{40}{a} + \\sqrt{ a^2 + \\frac{1600}{a^2}} = 32.\\]</p><p>Letting $X = a + \\frac{40}{a}$, the equation becomes: \\[X + \\sqrt{X^2 - 80} = 32.\\]</p><p>We can bring the $X$ to the right side and square which yields: \\[X^2 - 80 = (X - 32)^2 = X^2 - 64X + 1024.\\]</p><p>So, \\[-80 = -64X + 1024 \\rightarrow X = \\frac{69}{4}.\\]</p><p>Now, we know that $a + \\frac{40}{a} = \\frac{69}{4}.$</p><p>Multiplying both sides by $4a$ gives: \\[4a^2 - 69a + 160.\\]</p><p>It can be observed that the roots of this equation are $a$ and $b$. We want the hypotenuse which is $\\sqrt{a^2 + b^2} = \\sqrt{ (a+b)^2 - 2ab}.$</p><p>We can now apply Vieta's Formula which gives: \\[c = \\sqrt{ \\left( \\frac{69}{4} \\right)^2 - 80} = \\boxed{ \\frac{59}{4}}.\\]</p><p>~conantwiz2023</p>",
+        "<p>Let the sides be $a, b, c$ where $a$ and $b$ are the legs and $c$ is the hypotenuse.</p><p>Since the perimeter is 32, we have</p><p>$(1) \\phantom{a} a+b+c=32$.</p><p>Since the area is 20 and the legs are $a$ and $b$, we have that</p><p>$(2) \\phantom{a} \\frac{a \\cdot b}{2}=20$.</p><p>By the Pythagorean Theorem, we have that</p><p>$(3) \\phantom{a} a^2+b^2=c^2$.</p><p>Since we want $c$, we will equations $1, 2, 3$ be in the form of $c.$</p><p>Equation 1 can be turned into</p><p>$(4) \\phantom{a} a+b=32-c$.</p><p>Equation 2 can be simplified into</p><p>$(5) \\phantom{a} ab=40.$</p><p>Equation 3 is already simplified.</p><p>Onto the calculating process.</p><p>Squaring the 1st equation we have</p><p>$(a+b+c)^2=32^2.$</p><p>Expanding and grouping, we have</p><p>$(a^2+b^2+c^2)+2(ab+ac+bc)=32^2.$</p><p>By equation 3 and substituting we get</p><p>$2(c^2+ab+ac+bc)=32^2.$</p><p>By equation 5 and substituting we get</p><p>$2(c^2+40+ac+bc)=32^2.$</p><p>Note that we can factor $c$ out in the inner expression, and we get</p><p>$2(c^2+40+c(a+b))=32^2.$</p><p>By equation 4 and substituting, we have</p><p>$2(c^2+40+c(32-c))=32^2.$</p><p>Expanding, we have</p><p>$2(c^2+40+32c-c^2)=32^2.$</p><p>Simplifying, we have</p><p>$2(40+32c)=32^2.$</p><p>Expanding again, we get</p><p>$80+64c=32^2.$</p><p>Dividing both sides by $16$ gets us</p><p>$4c+5=64$</p><p>Calculating gets us</p><p>$c=\\boxed{\\mathrm{(B) \\frac{59}{4}}}$.</p><p>~mathboy282</p>",
+        "<p>This solution is very similar to Solution 1, except instead of subtracting $a+b$ from both sides in the first part, we subtract $\\sqrt{a^2+b^2}$ from both sides, which gets us:</p><p>\\begin{align*} a+b&=32-\\sqrt{a^2+b^2}\\\\ (a+b)^2&=(32-\\sqrt{a^2+b^2})^2\\\\ a^2+2ab+b^2&=32^2-2\\cdot32\\cdot\\sqrt{a^2+b^2}+a^2+b^2\\\\ 2ab&=32^2-2\\cdot32\\cdot\\sqrt{a^2+b^2}.\\\\ \\end{align*}</p><p>We know that \\[\\frac{1}{2}ab=20\\]so \\[ab=40.\\]</p><p>We can then substitute $40$ for $ab$ to get us:</p><p>\\begin{align*} 80&=32^2-2\\cdot32\\cdot\\sqrt{a^2+b^2}\\\\ 2\\cdot32\\cdot\\sqrt{a^2+b^2}&=32^2-80\\\\ 64\\cdot\\sqrt{a^2+b^2}&=32^2-80\\\\ \\sqrt{a^2+b^2}&=\\frac{32^2-80}{64}\\\\ \\end{align*}</p><p>We know that $\\sqrt{a^2+b^2}$ is the hypotenuse, so we only have to solve the right-hand side now.</p><p>\\begin{align*} \\sqrt{a^2+b^2}&=\\frac{32^2-80}{64}\\\\ &=\\frac{32^2}{64}-\\frac{80}{64}\\\\ &=\\frac{32\\cdot32}{32\\cdot2}-\\frac{32\\cdot\\frac{5}{2}}{32\\cdot2}\\\\ &=\\frac{32}{2}-\\frac{\\frac{5}{2}}{2}\\\\ &=16-\\frac{5}{4}\\\\ &=\\frac{64}{4}-\\frac{5}{4}\\\\ &=\\boxed{\\mathrm{(B)} \\frac{59}{4}}\\\\ \\end{align*}</p><p>~zlrara01</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2008 AMC 10A - logic problem involving logical reasoning and truth values. Students need to understand logic concepts, work with deductive_reasoning principles, and apply mathematical reasoning to solve this problem. This tests logic problem-solving skills and understanding of deductive_reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_19",
+      "question": "<p><a href=\"/wiki/index.php/Rectangle\" title=\"Rectangle\">Rectangle</a> $PQRS$ lies in a plane with $PQ=RS=2$ and $QR=SP=6$. The rectangle is rotated $90^\\circ$ clockwise about $R$, then rotated $90^\\circ$ clockwise about the point $S$ moved to after the first rotation. What is the length of the path traveled by point $P$?</p>",
+      "solutions": [
+        "<p>We let $P'Q'R'S'$ be the rectangle after the first rotation, and $P''Q''R''S''$ be the rectangle after the second rotation. Point $P$ pivots about $R$ in an <a href=\"/wiki/index.php/Arc\" title=\"Arc\">arc</a> of a circle of radius $\\sqrt{2^2+6^2} = 2\\sqrt{10}$, and since $\\angle PRS,\\, \\angle P'RQ'$ are complementary, it follows that the arc has a degree measure of $90^{\\circ}$ and length $\\frac14$ of the <a href=\"/wiki/index.php/Circumference\" title=\"Circumference\">circumference</a>. Thus, $P$ travels $\\frac 14 \\left(4\\sqrt{10}\\right)\\pi = \\sqrt{10}\\pi$ in the first rotation.</p><p>Similarly, in the second rotation, $P$ travels in a $90^{\\circ}$ arc about $S'$, with the radius being $6$. It travels $\\frac 14(12)\\pi = 3\\pi$. Therefore, the total distance it travels is $\\left(3+\\sqrt{10}\\right)\\pi\\ \\mathrm{(C)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2008 AMC 10A - number_theory problem involving least common multiple and number theory. Students need to understand number_theory concepts, work with lcm principles, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills and understanding of lcm."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_20",
+      "question": "<p><a href=\"/wiki/index.php/Trapezoid\" title=\"Trapezoid\">Trapezoid</a> $ABCD$ has bases $\\overline{AB}$ and $\\overline{CD}$ and diagonals intersecting at $K.$ Suppose that $AB = 9$, $DC = 12$, and the area of $\\triangle AKD$ is $24.$ What is the area of trapezoid $ABCD$?</p>",
+      "solutions": [
+        "<p>Since $\\overline{AB} \\parallel \\overline{DC}$ it follows that $\\triangle ABK \\sim \\triangle CDK$. Thus $\\frac{KA}{KC} = \\frac{KB}{KD} = \\frac{AB}{DC} = \\frac{3}{4}$. </p><p>We now introduce the concept of <a href=\"/wiki/index.php/Area_ratios\" title=\"Area ratios\">area ratios</a>: given two triangles that share the same height, the ratio of the areas is equal to the ratio of their bases. Since $\\triangle AKB, \\triangle AKD$ share a common <a href=\"/wiki/index.php/Altitude\" title=\"Altitude\">altitude</a> to $\\overline{BD}$, it follows that (we let $[\\triangle \\ldots]$ denote the area of the triangle) $\\frac{[\\triangle AKB]}{[\\triangle AKD]} = \\frac{KB}{KD} = \\frac{3}{4}$, so $[\\triangle AKB] = \\frac{3}{4}(24) = 18$. Similarly, we find $[\\triangle DKC] = \\frac{4}{3}(24) = 32$ and $[\\triangle BKC] = 24$.</p><p>Therefore, the area of $ABCD = [AKD] + [AKB] + [BKC] + [CKD] = 24 + 18 + 24 + 32 = 98\\ \\mathrm{(D)}$.</p>",
+        "<p>We may consider that trapezoid to be right, as there is nothing specifying its angles.Consider D and A right. Let the length of DA be h. Now we let A be (0,0) and we compute the x-coordinate of K from lines AC and DB. $y=\\frac{h}{9}x$ for line DB, $y=-\\frac{h}{12}x+h$ for line AC. Solving for K, $\\frac{h}{9}x=-\\frac{h}{12}x+h$ simplifying, $(\\frac{1}{9}+\\frac{1}{12})x=1$, $x=\\frac{72}{14}=\\frac{36}{7}$. Using the fact that $\\frac{1}{2}*h*x=24$, we solve for h. $\\frac{1}{2}*\\frac{36}{7}*h=24, h=\\frac{7}{18}*24=\\frac{7*4}{3}$. Applying trapezoid area formula: $\\frac{7*4}{3}*\\frac{9+12}{2}=7*7*2=98$. Thus, the area is 98 and the answer is $\\mathrm{(D)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2008 AMC 10A - algebra problem involving fraction operations and ratios. Students need to understand algebra concepts, work with fractions principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of fractions."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_21",
+      "question": "<p>A <a href=\"/wiki/index.php/Cube\" title=\"Cube\">cube</a> with side length $1$ is sliced by a plane that passes through two diagonally opposite vertices $A$ and $C$ and the <a href=\"/wiki/index.php/Midpoint\" title=\"Midpoint\">midpoints</a> $B$ and $D$ of two opposite edges not containing $A$ or $C$, as shown. What is the area of <a href=\"/wiki/index.php/Quadrilateral\" title=\"Quadrilateral\">quadrilateral</a> $ABCD$?</p><p>[asy] import three; unitsize(3cm); defaultpen(fontsize(8)+linewidth(0.7)); currentprojection=obliqueX;  draw((0.5,0,0)--(0,0,0)--(0,0,1)--(0,0,0)--(0,1,0),linetype(\"4 4\")); draw((0.5,0,1)--(0,0,1)--(0,1,1)--(0.5,1,1)--(0.5,0,1)--(0.5,0,0)--(0.5,1,0)--(0.5,1,1)); draw((0.5,1,0)--(0,1,0)--(0,1,1)); dot((0.5,0,0)); label(\"$A$\",(0.5,0,0),WSW); dot((0,1,1)); label(\"$C$\",(0,1,1),NE); dot((0.5,1,0.5)); label(\"$D$\",(0.5,1,0.5),ESE); dot((0,0,0.5)); label(\"$B$\",(0,0,0.5),NW);[/asy]</p>",
+      "solutions": [
+        "<p>Since $AB = AD = CB = CD = \\sqrt{\\left(\\frac{1}{2}\\right)^2+1^2}$, it follows that $ABCD$ is a <a href=\"/wiki/index.php/Rhombus\" title=\"Rhombus\">rhombus</a>. The area of the rhombus can be computed by the formula $A = \\frac 12 d_1d_2$, where $d_1,\\,d_2$ are the diagonals of the rhombus (or of a <a href=\"/wiki/index.php/Kite\" title=\"Kite\">kite</a> in general). $BD$ has the same length as a face diagonal, or $\\sqrt{1^2 + 1^2} = \\sqrt{2}$. $AC$ is a space diagonal, with length $\\sqrt{1^2+1^2+1^2} = \\sqrt{3}$. Thus $A = \\frac 12 \\times \\sqrt{2} \\times \\sqrt{3} = \\frac{\\sqrt{6}}{2}\\ \\mathrm{(A)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2008 AMC 10A - probability problem involving independent probability events and calculations. Students need to understand probability concepts, work with independent_events principles, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills and understanding of independent_events."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_22",
+      "question": "<p>Jacob uses the following procedure to write down a sequence of numbers. First he chooses the first term to be 6. To generate each succeeding term, he flips a fair coin. If it comes up heads, he doubles the previous term and subtracts 1. If it comes up tails, he takes half of the previous term and subtracts 1. What is the probability that the fourth term in Jacob's sequence is an <a href=\"/wiki/index.php/Integer\" title=\"Integer\">integer</a>?</p>",
+      "solutions": [
+        "<p>We construct a tree showing all possible outcomes that Jacob may get after $3$ flips; we can do this because there are only $8$ possibilities:\\[6\\quad\\begin{cases}  \\ \\text{H}: 11 &\\quad  \\begin{cases}  \\ \\text{H}: 21 &\\quad \\begin{cases} \\ \\text{H}: \\boxed{41}\\\\ \\ \\text{T}: 9.5 \\end{cases}\\\\  \\ \\text{T}: 4.5 &\\quad \\begin{cases} \\ \\text{H}: \\boxed{8}\\\\ \\ \\text{T}: 1.25 \\end{cases}  \\end{cases}\\\\  \\ \\text{T}: 2 &\\quad  \\begin{cases}  \\ \\text{H}: 3 &\\qquad\\! \\begin{cases} \\ \\text{H}: \\boxed{5}\\\\ \\ \\text{T}: 0.5 \\end{cases}\\\\  \\ \\text{T}: 0 &\\qquad\\! \\begin{cases} \\ \\text{H}: \\boxed{-1}\\\\ \\ \\text{T}: \\boxed{-1} \\end{cases} \\end{cases} \\end{cases}\\]There is a $\\frac{5}{8}$ chance that the fourth term in Jacob's sequence is an integer, so the answer is $\\mathrm{(D)}$.</p>",
+        "<p>We can see that as long as the last flip is heads, it will be an integer, so there is a $\\dfrac{1}{2}$ chance of this happening.</p><p>Doing a little casework, we see that the only possibility when the last flip is tails is when the third flip brings it to 0. There is a $\\dfrac{1}{8}$ chance of this happening.</p><p>Therefore, there is a $\\dfrac{1}{2}+\\dfrac{1}{8}=\\boxed{(D)\\dfrac{5}{8}}$ possibility of ending with an integer.</p><p>~nezha33</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2008 AMC 10A - probability problem involving conditional probability and probability ratios. Students need to understand probability concepts, work with conditional_probability principles, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills and understanding of conditional_probability."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_23",
+      "question": "<p>Two subsets of the set $S=\\lbrace a,b,c,d,e\\rbrace$ are to be chosen so that their union is $S$ and their intersection contains exactly two elements. In how many ways can this be done, assuming that the order in which the subsets are chosen does not matter?</p>",
+      "solutions": [
+        "<p>First, choose the two letters to be repeated in each set. $\\dbinom{5}{2}=10$. Now we have three remaining elements that we wish to place into two separate subsets. There are $2^3 = 8$ ways to do so because each of the three remaining letters can be placed either into the first or second subset. Both of those subsets contain the two chosen elements, so their intersection is the two chosen elements). Unfortunately, we have over-counted (Take for example $S_{1} = \\{a,b,c,d \\}$ and $S_{2} = \\{a,b,e \\}$). Notice how $S_{1}$ and $S_{2}$ are interchangeable. Division by two will fix this problem. Thus we have:</p><p>$\\dfrac{10 \\times 8}{2} = 40 \\implies \\boxed{\\text{B}}$</p><p>Another way of looking at this problem is to break it down into cases.</p><p>First, our two subsets can have 2 and 5 elements. The 5-element subset (aka the set) will contain the 2-element subset. There are $\\dbinom{5}{2}=10$ ways to choose the 2-element subset. Thus, there are $10$ ways to create these sets.</p><p><br/>Second, the subsets can have 3 and 4 elements. $3+4=7$ non-distinct elements. $7-5=2$ elements in the intersection. There are $\\dbinom{5}{3}=10$ ways to choose the 3-element subset. For the 4-element subset, two of the elements must be the remaining elements (not in the 3-element subset). The other two have to be a subset of the 3-element subset. There are $\\dbinom{3}{2}=3$ ways to choose these two elements, which means there are 3 ways to choose the 4-element subset. Therefore, there are $10\\cdot3=30$ ways to choose these sets.</p><p><br/>This leads us to the answer:</p><p>$10+30=40 \\implies \\boxed{\\textbf{(B) 40}}$</p><p>We label the subsets subset 1 and subset 2. Suppose the first subset has $k$ elements where $k<5.$ The second element has $5-k$ elements which the first subset does not contain (in order for the union to be the whole set). Additionally, the second set has 2 elements in common with the first subset. Therefore the number of ways to choose these sets is $\\binom{5}{k} \\cdot \\binom{k}{2}.$ Computing for $k<5$ we have $10+30+30+10=80.$ Divide by 2 as order does not matter to get $40.$</p><p>There are $\\dbinom{5}{2}=10$ ways to choose the 2 shared elements. We now must place the 3 remaining elements into the subsets. Using stars and bars, we can notate this as: $I I I X \\rightarrow \\dbinom{4}{3}=4$. Thus, $4*10=\\boxed{\\textbf{(B) 40}}$</p><p>Note from harryhero:</p><p>This actually doesn't work for higher cases. In the 6-case, for example, we obtain an incorrect answer of $50$ using this method when it should be $80.$ This occurs due to the lack of order for the three elements - for example, having a, b on one side and d on another is different from b, c on one side and e on another, but we've counted both cases equally in the stars-and-bars method.</p>",
+        "<p>First, choose the two letters to be repeated in each set. $\\dbinom{5}{2}=10$. Now we have three remaining elements that we wish to place into two separate subsets. There are $2^3 = 8$ ways to do so because each of the three remaining letters can be placed either into the first or second subset. Both of those subsets contain the two chosen elements, so their intersection is the two chosen elements). Unfortunately, we have over-counted (Take for example $S_{1} = \\{a,b,c,d \\}$ and $S_{2} = \\{a,b,e \\}$). Notice how $S_{1}$ and $S_{2}$ are interchangeable. Division by two will fix this problem. Thus we have:</p><p>$\\dfrac{10 \\times 8}{2} = 40 \\implies \\boxed{\\text{B}}$</p>",
+        "<p>Another way of looking at this problem is to break it down into cases.</p><p>First, our two subsets can have 2 and 5 elements. The 5-element subset (aka the set) will contain the 2-element subset. There are $\\dbinom{5}{2}=10$ ways to choose the 2-element subset. Thus, there are $10$ ways to create these sets.</p><p><br/>Second, the subsets can have 3 and 4 elements. $3+4=7$ non-distinct elements. $7-5=2$ elements in the intersection. There are $\\dbinom{5}{3}=10$ ways to choose the 3-element subset. For the 4-element subset, two of the elements must be the remaining elements (not in the 3-element subset). The other two have to be a subset of the 3-element subset. There are $\\dbinom{3}{2}=3$ ways to choose these two elements, which means there are 3 ways to choose the 4-element subset. Therefore, there are $10\\cdot3=30$ ways to choose these sets.</p><p><br/>This leads us to the answer:</p><p>$10+30=40 \\implies \\boxed{\\textbf{(B) 40}}$</p>",
+        "<p>We label the subsets subset 1 and subset 2. Suppose the first subset has $k$ elements where $k<5.$ The second element has $5-k$ elements which the first subset does not contain (in order for the union to be the whole set). Additionally, the second set has 2 elements in common with the first subset. Therefore the number of ways to choose these sets is $\\binom{5}{k} \\cdot \\binom{k}{2}.$ Computing for $k<5$ we have $10+30+30+10=80.$ Divide by 2 as order does not matter to get $40.$</p>",
+        "<p>There are $\\dbinom{5}{2}=10$ ways to choose the 2 shared elements. We now must place the 3 remaining elements into the subsets. Using stars and bars, we can notate this as: $I I I X \\rightarrow \\dbinom{4}{3}=4$. Thus, $4*10=\\boxed{\\textbf{(B) 40}}$</p><p>Note from harryhero:</p><p>This actually doesn't work for higher cases. In the 6-case, for example, we obtain an incorrect answer of $50$ using this method when it should be $80.$ This occurs due to the lack of order for the three elements - for example, having a, b on one side and d on another is different from b, c on one side and e on another, but we've counted both cases equally in the stars-and-bars method.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2008 AMC 10A - geometry problem involving distance calculations and coordinate geometry. Students need to understand geometry concepts, work with distance principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of distance."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_24",
+      "question": "<p>Let $k={2008}^{2}+{2}^{2008}$. What is the units digit of $k^2+2^k$?</p>",
+      "solutions": [
+        "<p>$k \\equiv 2008^2 + 2^{2008} \\equiv 8^2 + 2^4 \\equiv 4+6 \\equiv 0 \\pmod{10}$. </p><p>So, $k^2 \\equiv 0 \\pmod{10}$. Since $k = 2008^2+2^{2008}$  is a multiple of four and the units digit of powers of two repeat in cycles of four, $2^k \\equiv 2^4 \\equiv 6 \\pmod{10}$. </p><p>Therefore, $k^2+2^k \\equiv 0+6 \\equiv 6 \\pmod{10}$. So the units digit is $6 \\Rightarrow \\boxed{D}$.</p><p>Another way to get $k \\equiv 0 \\pmod{10}$ is to find the cycles of the last digit.</p><p>For $2008^2$, we need only be concerned with the last digit $8$ since the other digits do not affect the last digit. Since $8^{2} = 64$, the last digit of $2008^2$ is $4$.</p><p>For $2^{2008}$, note that the last digit cycles through the pattern ${2, 4, 8, 6}$. (You can try to see this by calculating the first powers of $2$.)</p><p>Since $2008$ is a multiple of $4$, the last digit of $2^{2008}$ is evidently $6.$</p><p>Continue as follows.</p><p>~mathboy282</p><p>Mathboy282,That is actually what solution 1 is explaining in the first sentence but I think yours is a more detailed and easier to comprehend explanation.</p><p>@graceandmymommath, I will offer my own solution below. Thanks for the comment.</p>",
+        "<p>I am going to share another approach to this problem.</p><p>A units digit $k$ for an integer $n$ implies $n \\equiv k \\pmod{10}$</p><p>Let us take this step by step. First, we consider $k^2.$</p><p>Note that $k^2 = \\left(2008^2 + 2^{2008}\\right)^2 = 2008^4 + 2 \\cdot 2008^2 \\cdot 2^{5016}.$ Now we calculate $k^2 \\pmod{10}$</p><p>Before continuing, though, we must take note of the following:</p><p>\\begin{align*} 2^1 &\\equiv 2 \\pmod {10} \\\\ 2^2 &\\equiv 4 \\pmod {10} \\\\ 2^3 &\\equiv 8 \\pmod {10} \\\\ 2^4 &\\equiv 6 \\pmod {10} \\end{align*}</p><p>Now, we continue with the calculation.</p><p>\\begin{align*} 2008^4 + 2 \\cdot 2008^2 \\cdot 2^{5016} &\\equiv 8^4 + 2 \\cdot 8^2 \\cdot 2^{2008} + 2^{5016} \\pmod{10} \\\\ &\\equiv 8^4 + 2^1 \\cdot 2^6 \\cdot 2^{2008} + 2^{5016} \\pmod{10} \\\\ &\\equiv 8^4 + 2^{1+6+2008} + 2^{5016} \\pmod{10} \\\\ &\\equiv 6 + 2^{2015} + 6 \\pmod{10} \\\\ &\\equiv 6 + 2^{3} + 6 \\pmod{10} \\\\ &\\equiv 6 + 8 + 6 \\pmod{10} \\\\ &\\equiv 20 \\pmod{10} \\\\ &\\equiv 0 \\pmod{10} \\\\ \\end{align*}</p><p>We do the same with $2^k.$ However, we just need to find $k \\pmod 4$ in order to do this calculation since we have the table of $2^k \\pmod 10.$</p><p>\\begin{align*} 2008^2 + 2^{2008} &\\equiv 8^2 \\pmod{4} \\\\ &\\equiv 64 \\pmod 4\\\\ &\\equiv 0 \\pmod 4 \\end{align*}</p><p>This implies that \\begin{align*} 2^k &\\equiv 2^{4} \\pmod{10} \\\\ &\\equiv 6 \\pmod{10} \\end{align*}</p><p>Thus, \\begin{align*} k^2 + 2^k &\\equiv 6+0 \\pmod{10}\\\\ &\\equiv \\boxed{\\textbf{(D) }6} \\pmod{10} \\end{align*}</p><p>~mathboy282</p><p><br/></p>",
+        "<p>By unit digit arithmetic, the unit digit of $k^2+2^k$ need to be either $4$ or $6.$ Hence, we can guess one of them for a $50$% of getting it right.This should only take 20 seconds or less. ~peelybonehead</p><p>Note: this solution is not recommended and is only advised when you have &lt;5 minutes left.</p>",
+        "<p>Video: <a class=\"external free\" href=\"https://youtu.be/Ib-onAecb1I\" rel=\"nofollow\">https://youtu.be/Ib-onAecb1I</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2008 AMC 10A - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10a_25",
+      "question": "<p>A round table has radius $4$. Six rectangular place mats are placed on the table. Each place mat has width $1$ and length $x$ as shown. They are positioned so that each mat has two corners on the edge of the table, these two corners being end points of the same side of length $x$. Further, the mats are positioned so that the inner corners each touch an inner corner of an adjacent mat. What is $x$?</p><p>[asy]unitsize(4mm); defaultpen(linewidth(.8)+fontsize(8)); draw(Circle((0,0),4)); path mat=(-2.687,-1.5513)--(-2.687,1.5513)--(-3.687,1.5513)--(-3.687,-1.5513)--cycle; draw(mat); draw(rotate(60)*mat); draw(rotate(120)*mat); draw(rotate(180)*mat); draw(rotate(240)*mat); draw(rotate(300)*mat); label(\"\\(x\\)\",(-1.55,2.1),E); label(\"\\(1\\)\",(-0.5,3.8),S);[/asy]</p>",
+      "solutions": [
+        "<p>Let one of the mats be $ABCD$, and the center be $O$ as shown: </p><p>[asy]unitsize(8mm); defaultpen(linewidth(.8)+fontsize(8)); draw(Circle((0,0),4)); path mat=(-2.687,-1.5513)--(-2.687,1.5513)--(-3.687,1.5513)--(-3.687,-1.5513)--cycle; draw(mat); draw(rotate(60)*mat); draw(rotate(120)*mat); draw(rotate(180)*mat); draw(rotate(240)*mat); draw(rotate(300)*mat); label(\"\\(x\\)\",(-1.55,2.1),E); label(\"\\(x\\)\",(0.03,1.5),E); label(\"\\(A\\)\",(-3.6,2.5513),E); label(\"\\(B\\)\",(-3.15,1.35),E); label(\"\\(C\\)\",(0.05,3.20),E); label(\"\\(D\\)\",(-0.75,4.15),E); label(\"\\(O\\)\",(0.00,-0.10),E); label(\"\\(1\\)\",(-0.1,3.8),S); label(\"\\(4\\)\",(-0.4,2.2),S); draw((0,0)--(0,3.103)); draw((0,0)--(-2.687,1.5513)); draw((0,0)--(-0.5,3.9686));[/asy]</p><p>Since there are $6$ mats, $\\Delta BOC$ is <a href=\"/wiki/index.php/Equilateral\" title=\"Equilateral\">equilateral</a> (the hexagon with side length $x$ is regular). So, $BC=CO=x$. Also, $\\angle OCD = \\angle OCB + \\angle BCD = 60^\\circ+90^\\circ=150^\\circ$. </p><p>By the <a href=\"/wiki/index.php/Law_of_Cosines\" title=\"Law of Cosines\">Law of Cosines</a>: $4^2=1^2+x^2-2\\cdot1\\cdot x \\cdot \\cos(150^\\circ) \\Rightarrow x^2 + x\\sqrt{3} - 15 = 0 \\Rightarrow x = \\frac{-\\sqrt{3}\\pm 3\\sqrt{7}}{2}$. </p><p>Since $x$ must be positive, $x = \\frac{3\\sqrt{7}-\\sqrt{3}}{2} \\Rightarrow (C)$.</p>",
+        "<p>Draw $OD$ and $OC$ as in the diagram. Draw the altitude from $O$ to $DC$ and call the intersection $E$.</p><p><br/>[asy]unitsize(8mm); defaultpen(linewidth(.8)+fontsize(8)); draw(Circle((0,0),4)); path mat=((-2.687,-1.5513)--(-2.687,1.5513)--(-3.687,1.5513)--(-3.687,-1.5513)--cycle); draw(mat); draw(rotate(60)*mat); draw(rotate(120)*mat); draw(rotate(180)*mat); draw(rotate(240)*mat); draw(rotate(300)*mat); pair D = rotate(300)*(-3.687,1.5513); pair C = rotate(300)*(-2.687,1.5513); pair EE = foot((0.00,0.00),D,C); draw(D--EE--(0,0)); label(\"\\(x\\)\",(-1.55,2.1),E); label(\"\\(x\\)\",(0.03,1.5),E); label(\"\\(A\\)\",(-3.6,2.5513),E); label(\"\\(B\\)\",(-3.15,1.35),E); label(\"\\(C\\)\",(0.05,3.20),E); label(\"\\(D\\)\",(-0.75,4.15),E); label(\"\\(O\\)\",(0.00,-0.10),E); label(\"\\(1\\)\",(-0.1,3.8),S); label(\"\\(4\\)\",(-0.4,2.2),S); draw((0,0)--(0,3.103)); draw((0,0)--(-2.687,1.5513)); draw((0,0)--(-0.5,3.9686)); label(\"\\(E\\)\", EE,SE); [/asy]</p><p>As proved in the first solution, $\\angle OCD = 150^\\circ$. That makes $\\Delta OCE$ a $30-60-90$ triangle, so $OE = \\frac{x}{2}$ and $CE= \\frac{x\\sqrt 3}{2}$</p><p>Since $\\Delta ODE$ is a right triangle, $\\left({\\frac{x}{2}}\\right)^2 + \\left({\\frac{x\\sqrt 3}{2} +1}\\right)^2 = 4^2 \\Rightarrow  x^2+x\\sqrt3-15 = 0$</p><p>Solving for $x$ gives $x =\\frac{3\\sqrt{7}-\\sqrt{3}}{2}\\Rightarrow (C)$</p>",
+        "<p>[asy]unitsize(8mm); defaultpen(linewidth(.8)+fontsize(8)); draw(Circle((0,0),4)); path mat=(-2.687,-1.5513)--(-2.687,1.5513)--(-3.687,1.5513)--(-3.687,-1.5513)--cycle; draw(mat); draw(rotate(60)*mat); draw(rotate(120)*mat); draw(rotate(180)*mat); draw(rotate(240)*mat); draw(rotate(300)*mat); label(\"\\(x\\)\",(-1.55,2.1),E); label(\"\\(x\\)\",(0.03,1.5),E); label(\"\\(A\\)\",(-3.6,2.5513),E); label(\"\\(B\\)\",(-3.15,1.35),E); label(\"\\(C\\)\",(0.05,3.20),E); label(\"\\(D\\)\",(-0.75,4.15),E); label(\"\\(E\\)\",(0,4.17)); label(\"\\(F\\)\",(0.75,4.15),W); label(\"\\(O\\)\",(0.00,-0.10),E); label(\"\\(1\\)\",(-0.1,3.8),S); label(\"\\(4\\)\",(-0.4,2.2),S); draw((0,0)--(0,3.103)); draw((0,0)--(-2.687,1.5513)); draw((0,0)--(-0.5,3.9686)); draw((0,0)--(-0.5,3.9686));[/asy]</p><p>By symmetry, $E$ is the midpoint of $DF$ and $OE$ is an extension of $OC$. Thus $\\angle OED = 90^\\circ$. Since $OD = 4$ and $DE = \\frac{1}{2}$, $OE = \\sqrt{16-\\frac{1}{4}} = \\frac{\\sqrt{63}}{2} = \\frac{3\\sqrt{7}}{2}$. Since $\\triangle CED$ is $30-60-90$, $CE = \\frac{\\sqrt{3}}{2}$ (this can also be deduced from Pythagoras on $\\triangle CED$).</p><p>Thus $OC = \\frac{3\\sqrt{7}-\\sqrt{3}}{2}$. As previous solutions noted, $\\triangle BOC$ is equilateral, and thus the desired length is $x = OC \\implies (C)$.</p>",
+        "<p>[asy]unitsize(8mm); defaultpen(linewidth(.8)+fontsize(8)); draw(Circle((0,0),4)); path mat=(-2.687,-1.5513)--(-2.687,1.5513)--(-3.687,1.5513)--(-3.687,-1.5513)--cycle; draw(mat); draw(rotate(60)*mat); draw(rotate(120)*mat); draw(rotate(180)*mat); draw(rotate(240)*mat); draw(rotate(300)*mat); label(\"\\(x\\)\",(-1.95,3),E); label(\"\\(A\\)\",(-3.6,2.5513),E); label(\"\\(C\\)\",(0.05,3.20),E); label(\"\\(E\\)\",(0.40,-3.60),E); label(\"\\(B\\)\",(-0.75,4.15),E); label(\"\\(D\\)\",(-2.62,1.5),E); label(\"\\(F\\)\",(-2.64,-1.43),E); label(\"\\(G\\)\",(-0.2,-2.8),E); label(\"\\( \\sqrt{3}x\\)\",(-1.5,-0.5),E); label(\"\\(M\\)\",(-2,-0.9),E); label(\"\\(O\\)\",(0.00,-0.10),E); label(\"\\(1\\)\",(-2.7,2.3),S); label(\"\\(1\\)\",(0.1,-3.4),S); label(\"\\(8\\)\",(-0.3,0),S); draw((0,-3.103)--(-2.687,1.5513)); draw((0.5,-3.9686)--(-0.5,3.9686));[/asy]</p><p>Looking at the diagram above, we know that $BE$ is a diameter of circle $O$ due to symmetry. Due to <a href=\"/wiki/index.php/Thales%27_theorem\" title=\"Thales' theorem\">Thales' theorem</a>, triangle $ABE$ is a right triangle with $A = 90 ^\\circ$. $AE$ lies on $AD$ and $GE$ because $BAD$ is also a right angle. To find the length of $DG$, notice that if we draw a line from $F$ to $M$, the midpoint of line $DG$, it creates two $30$ - $60$ - $90$ triangles. Therefore, $MD = MG = \\frac{\\sqrt{3}x}{2} \\Rightarrow DG = \\sqrt{3}x$. $AE = 2 + \\sqrt{3}x$</p><p>Applying the Pythagorean theorem to triangle $ABE$, we get \\[(2+\\sqrt{3}x)^2 + x^2 = 8^2 \\Rightarrow 4 + 3x^2 + 4\\sqrt{3}x + x^2 = 64 \\Rightarrow x^2 + \\sqrt{3}x - 15 = 0\\] Using the quadratic formula to solve, we get \\[x = \\frac{-\\sqrt{3} \\pm \\sqrt{3 -4(1)(-15)}}{2} = \\frac{\\pm 3\\sqrt{7} - \\sqrt{3}}{2}\\] $x$ must be positive, therefore \\[x = \\frac{3\\sqrt{7} - \\sqrt{3}}{2} \\Rightarrow (C)\\]</p><p>~Zeric Hang</p>",
+        "<p>[asy]unitsize(8mm); defaultpen(linewidth(.8)+fontsize(8)); draw(Circle((0,0),4)); path mat=(-2.687,-1.5513)--(-2.687,1.5513)--(-3.687,1.5513)--(-3.687,-1.5513)--cycle; draw(mat); draw(rotate(60)*mat); draw(rotate(120)*mat); draw(rotate(180)*mat); draw(rotate(240)*mat); draw(rotate(300)*mat); label(\"\\(x\\)\",(-1.55,2.1),E); label(\"\\(1\\)\",(-0.5,3.8),S);[/asy]</p><p>We will let $O(0,0)$ be the origin. This way the coordinates of $C$ will be $(0,y)$. By $30-60-90$, the coordinates of $D$ will be $\\left(-\\frac{1}{2}, y + \\frac{\\sqrt{3}}{2}\\right)$. The distance any point with coordinates $(x, y)$ is from the origin is $\\sqrt{x^2 + y^2}$. Therefore, the distance $D$ is from the origin is $4$ and $\\frac{1}{4} + x^2 + x\\sqrt{3} + \\frac{3}{4} = x^2 + x\\sqrt{3} + 1 = 16$. We get the quadratic equation mentioned in solution 2. Using the quadratic formula, we get that $x = \\frac{3\\sqrt{7}-\\sqrt{3}}{2} \\Rightarrow (C)$</p><p>Note: Since $C$ and $D$ are not labeled in the diagram, refer to solution 1 for the location of points $C$ and $D$.</p>",
+        "<p>[asy]unitsize(8mm); defaultpen(linewidth(.8)+fontsize(8)); draw(Circle((0,0),4)); path mat=(-2.687,-1.5513)--(-2.687,1.5513)--(-3.687,1.5513)--(-3.687,-1.5513)--cycle; draw(mat); draw(rotate(60)*mat); draw(rotate(120)*mat); draw(rotate(180)*mat); draw(rotate(240)*mat); draw(rotate(300)*mat); label(\"\\(x\\)\",(-1.55,2.1),E); label(\"\\(A\\)\",(-3.6,2.5513),E); label(\"\\(B\\)\",(-3.15,1.35),E); label(\"\\(C\\)\",(0.05,3.20),E); label(\"\\(D\\)\",(-0.75,4.15),E); label(\"\\(E\\)\",(0.3,4.15),E); label(\"\\(F\\)\",(-3.4,1.89),E); draw((0.5,3.9686)--(-3.13,2.45)); draw((0.5,3.9686)--(-2.95,2));[/asy]</p><p>Notice that $\\overarc{AE}$ is $\\frac16$ the circumference of the circle. Therefore, $\\overline{AE}$ is the side length of an inscribed hexagon with side length $4$. $\\triangle AFE$ is a right triangle with $\\overline{AF}=\\frac12$. The length of $\\overline{EF}=x+\\frac{\\sqrt{3}}{2}$. Using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, we get</p><p><br/>$4^2 = \\left(\\frac{1}{2}\\right)^2 + \\left(x+\\frac{\\sqrt{3}}{2}\\right)^2$</p><p><br/>Solving for $x$, we get $x = \\frac{3\\sqrt{7}-\\sqrt{3}}{2}\\ \\boxed{\\text{C}}$</p>",
+        "<p>The smallest distance between the intersection between two adjacent placemats and the circle is a bit less than $1$. Thus, the answer will be a bit more than $4-1=3.$ Going up, we guess that the next one up is the answer, $\\frac{3\\sqrt{7}-\\sqrt{3}}{2},$ which is about $3.1$. The next one up after that is $2\\sqrt{3},$ which is about $3.5$ and seems too big. So we circle $\\boxed{\\text{(C) }\\frac{3\\sqrt{7}-\\sqrt{3}}{2}}$ and are happy we just cheesed the $AMC$ $10$ $2008$ problem $25.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2008 AMC 10A - geometry problem involving area calculations and geometric relationships. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_1",
+      "question": "<p>A basketball player made 5 baskets during a game. Each basket was worth either 2 or 3 points. How many different numbers could represent the total points scored by the player?</p>",
+      "solutions": [
+        "<p>The number of points could have been 10, 11, 12, 13, 14, or 15. This is because the minimum is 2*5=10 and the maximum is 3*5=15. The numbers between 10 and 15 are possible as well. Thus, the answer is $\\boxed{\\mathrm{(E)}\\ 6}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2008 AMC 10B - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_2",
+      "question": "<p>A $4\\times 4$ block of calendar dates is shown. First, the order of the numbers in the second and the fourth rows are reversed. Then, the numbers on each diagonal are added. What will be the positive difference between the two diagonal sums?</p><p>$\\begin{tabular}[t]{|c|c|c|c|} \\multicolumn{4}{c}{}\\\\\\hline 1&2&3&4\\\\\\hline 8&9&10&11\\\\\\hline 15&16&17&18\\\\\\hline 22&23&24&25\\\\\\hline \\end{tabular}$</p>",
+      "solutions": [
+        "<p>After reversing the numbers on the second and fourth rows, the block will look like this: </p><p>$\\begin{tabular}[t]{|c|c|c|c|} \\multicolumn{4}{c}{}\\\\\\hline 1&2&3&4\\\\\\hline 11&10&9&8\\\\\\hline 15&16&17&18\\\\\\hline 25&24&23&22\\\\\\hline \\end{tabular}$</p><p>The positive difference between the two diagonal sums is then $(4+9+16+25)-(1+10+17+22)=3-1-1+3=\\boxed{\\textbf{(B) } 4}$.</p>",
+        "<p>Notice that at baseline the diagonals sum to the same number ($52$). Therefore we need only compute the effect of the swap. The positive difference between $9$ and $10$ is $1$ and the positive difference between $22$ and $25$ is $3$. Adding gives $1+3=\\boxed{\\textbf{(B) } 4}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2008 AMC 10B - algebra problem involving percentage calculations and discounts. Students need to understand algebra concepts, work with percentages principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of percentages."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_3",
+      "question": "<p>Assume that $x$ is a <a class=\"mw-redirect\" href=\"/wiki/index.php/Positive\" title=\"Positive\">positive</a> <a href=\"/wiki/index.php/Real_number\" title=\"Real number\">real number</a>. Which is equivalent to $\\sqrt[3]{x\\sqrt{x}}$?</p>",
+      "solutions": [
+        "<p>$\\sqrt[3]{x\\sqrt{x}}=\\sqrt[3]{\\sqrt{x^3}}=\\sqrt[6]{x^3}=x^{3/6}=x^{1/2}\\ \\boxed{(D)}$</p>",
+        "<p>Let x = 64. Using substitution, $\\sqrt[3]{64\\sqrt{64}} = \\sqrt[3]{64 \\cdot 8} = \\sqrt[3]{512} = 8 = \\sqrt{64} = 64^\\frac{1}{2} = x^\\frac{1}{2}$, so the answer is $\\boxed{\\textbf{(D)}\\ x^\\frac{1}{2}}$</p><p>~idk12345678</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2008 AMC 10B - algebra problem involving area calculations of geometric shapes. Students need to understand algebra concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_4",
+      "question": "<p>A semipro baseball league has teams with 21 players each. League rules state that a player must be paid at least $15,000 and that the total of all players' salaries for each team cannot exceed $700,000. What is the maximum possible salary, in dollars, for a single player?</p>",
+      "solutions": [
+        "<p>The maximum salary for a single player occurs when the other 20 players receive the minimum salary. The total of all players' salaries is 700000. The answer is $700000-15000*20=400000\\Rightarrow \\boxed{\\mathrm{(C)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2008 AMC 10B - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_5",
+      "question": "<p>For <a href=\"/wiki/index.php/Real_number\" title=\"Real number\">real numbers</a> $a$ and $b$, define $a * b=(a-b)^2$. What is $(x-y)^2*(y-x)^2$?</p>",
+      "solutions": [
+        "<p>Since $(-a)^2 = a^2$, it follows that $(x-y)^2 = (y-x)^2$, and \\[(x-y)^2 * (y-x)^2 = [(x-y)^2 - (y-x)^2]^2 = [(x-y)^2 - (x-y)^2]^2 = 0\\ \\mathrm{(A)}.\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2008 AMC 10B - algebra problem involving counting principles and arrangements. Students need to understand algebra concepts, work with counting principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_6",
+      "question": "<p>Points $B$ and $C$ lie on $\\overline{AD}$. The length of $\\overline{AB}$ is $4$ times the length of $\\overline{BD}$, and the length of $\\overline{AC}$ is $9$ times the length of $\\overline{CD}$. The length of $\\overline{BC}$ is what fraction of the length of $\\overline{AD}$?</p>",
+      "solutions": [
+        "<p>Let $CD = 1$. Then $AB = 4(BC + 1)$ and $AB + BC = 9\\cdot1$. From this system of equations, we obtain $BC = 1$. Adding $CD$ to both sides of the second equation, we obtain $AD = AB + BC + CD = 9 + 1 = 10$. Thus, $\\frac{BC}{AD} = \\frac{1}{10} \\implies\\text{(C)}$</p>",
+        "<p>Let $x = BD$ and $y = CD$. Therefore, $AB = 4x$ and $AC = 9y$, as shown in the diagram(the labels on the bottom are for that line segment while the labels on the top are from one point to the left to one point to the right). </p><p>From this, we can see that $AD = 10y = 5x$, and since $BC = BD - CD = x-y$. Now, our ratio is $\\frac{x-y}{AD}$. We can split this into 2 fractions: $\\frac{x}{AD} - \\frac{y}{AD} = \\frac{x}{5x} - \\frac{y}{10y} = \\frac{1}{5} - \\frac{1}{10} =  \\boxed{\\textbf{(C)}\\ \\frac{1}{10}}$</p><p>~idk12345678</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2008 AMC 10B - algebra problem involving basic arithmetic operations. Students need to understand algebra concepts, work with basic_operations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of basic_operations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_7",
+      "question": "<p>An equilateral triangle of side length $10$ is completely filled in by non-overlapping equilateral triangles of side length $1$. How many small triangles are required?</p>",
+      "solutions": [
+        "<p>The area of the large triangle is $\\frac{10^2\\sqrt3}{4}$, while the area of each small triangle is $\\frac{1^2\\sqrt3}{4}$. Dividing these two quantities results in $100$, therefore $\\boxed{100} \\mathrm{(C)}$ small triangles can fill the large one without overlap.</p>",
+        "<p>[asy] unitsize(0.5cm); defaultpen(0.8); for (int i=0; i<10; ++i) { draw( (i*dir(60)) -- ( (10,0) + (i*dir(120)) ) ); } for (int i=0; i<10; ++i) { draw( (i*dir(0)) -- ( 10*dir(60) + (i*dir(-60)) ) ); } for (int i=0; i<10; ++i) { draw( ((10-i)*dir(60)) -- ((10-i)*dir(0)) ); } [/asy]</p><p>The number of triangles is $1+3+\\dots+19 = \\boxed{100}$.</p><p>Also, another way to do it is to notice that as you go row by row (from the bottom), the number of triangles decrease by 2 from 19, so we have:$19+17+15...+3+1 = \\frac{19+1}{2}\\cdot 10 = \\boxed{100}$</p><p>A fourth solution is to notice that the small triangles are similar to the large triangle as they are both equilateral. Therefore, the ratio of their areas is the square of the ratio of their side lengths. Hence the ratio of their areas is $(1/10)^2=1/100$, so the answer is $\\boxed{100}$.</p>",
+        "<p>The side length of the large equilateral triangle is $10$. The number of equilateral triangles with side length $1$ that can fill it is $10^2$. This is equal to the sum of the first $10$ odd integers. The sum of the first $n$ odd integers is $n^2$. In general, an equilateral triangle with side length $n$ can be filled by $n^2$ triangles. The answer is $100\\ \\mathrm{(C)}$.</p><p>~mobius247</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2008 AMC 10B - geometry problem involving area calculations of geometric shapes. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_8",
+      "question": "<p>A class collects 50 dollars to buy flowers for a classmate who is in the hospital. Roses cost 3 dollars each, and carnations cost 2 dollars each. No other flowers are to be used. How many different bouquets could be purchased for exactly 50 dollars?</p>",
+      "solutions": [
+        "<p>The cost of a rose is odd, hence we need an even number of roses. Let there be $2r$ roses for some $r\\geq 0$. Then we have $50-3\\cdot 2r = 50-6r$ dollars left. We can always reach the sum exactly $50$ by buying $(50-6r)/2 = 25-3r$ carnations. Of course, the number of roses must be such that the number of carnations is non-negative. We get the inequality $25-3r \\geq 0$ which solves to $r\\leq 8 \\frac13$. $r$ must be an integer, so there are $\\boxed{9 \\text{ (C)}}$ possible values of $r$, and each gives us one solution.</p>",
+        "<p>Let $x$ and $y$ be the number of roses and carnations bought. The equation should be $3x+2y = 50$. Since $50$ is an even number, the product of $3x$ must be even and smaller than $50$. You can try nonnegative even integers for $x$ and you will end up with the numbers $0$, $2$, $4$, $6$, $8$, $10$, $12$, $14$, and $16$. There are $9$ numbers in total, so the answer is $\\boxed{9 \\text{ (C)}}$.</p>",
+        "<p>Let $r$ represent the number of roses, and let $c$ represent the number of carnations. Then, we get the linear Diophantine equation,$3r+2c=50$.Using the Euclidean algorithm, we get the initial solutions to be $r_0=50$ and $c_0=-50$, meaning the complete solution will be,$r=50+\\frac{2}{\\gcd(2,3)}$ $k=50+2k$, $c=-50-\\frac{3}{\\gcd(2,3)}k=-50-3k$</p><p>The solution range for which both $r$ and $c$ are positive is $17$ $\\leq k$ $\\leq$ $25$. There are $\\boxed{9 \\text{ (C)}}$ possible values for $k$.</p><p>These problems are copyrighted \u00a9 by the <a class=\"external text\" href=\"https://www.maa.org\" rel=\"nofollow\">Mathematical Association of America</a>, as part of the <a class=\"external text\" href=\"https://maa.org/student-programs/amc/\" rel=\"nofollow\">American Mathematics Competitions</a>. <a class=\"image\" href=\"/wiki/index.php/File:AMC_logo.png\">AMC logo.png</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2008 AMC 10B - number_theory problem involving divisibility rules and number properties. Students need to understand number_theory concepts, work with divisibility principles, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills and understanding of divisibility."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_9",
+      "question": "<p>A quadratic equation $ax^2 - 2ax + b = 0$ has two real solutions. What is the average of these two solutions?</p>",
+      "solutions": [
+        "<p>Dividing both sides by $a$, we get $x^2 - 2x + b/a = 0$. By Vieta's formulas, the sum of the roots is $2$, therefore their average is $1\\Rightarrow \\boxed{A}$.</p>",
+        "<p>We know that for an equation $ax^2 + bx + c = 0$, the sum of the roots is $\\frac{-b}{a}$. This means that the sum of the roots for $ax^2 - 2ax + b = 0$ is $\\frac{2a}{a}=2$. The average is the sum of the two roots divided by two, so the average is $\\frac22 = 1 \\Rightarrow \\boxed{A}$.</p>",
+        "<p>Using the quadratic formula(assuming $a=1$),we get $x = \\frac{2 \\pm \\sqrt{4-4b}}{2}$. Let $y = \\sqrt{4-4b}$. Simplifying, we get $1 \\pm \\frac{y}{2}$. That means the sum of the solutions is $(1+\\frac{y}{2}) + (1-\\frac{y}{2}) = 2$, so the average is $2/2 = \\boxed{\\textbf{(A) } 1}$.</p><p>~idk12345678</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2008 AMC 10B - geometry problem involving triangle geometry and properties. Students need to understand geometry concepts, work with triangles principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of triangles."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_10",
+      "question": "<p>Points $A$ and $B$ are on a circle of radius $5$ and $AB=6$. Point $C$ is the <a href=\"/wiki/index.php/Midpoint\" title=\"Midpoint\">midpoint</a> of the minor arc $AB$. What is the length of the line segment $AC$?</p>",
+      "solutions": [
+        "<p>Let the center of the circle be $O$, and let $D$ be the intersection of $\\overline{AB}$ and $\\overline{OC}$ (then $D$ is the midpoint of $\\overline{AB}$). $OA=OB=5$, since they are both radii of the circle.</p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, $OD = \\sqrt{OA^2 - DA^2} = 4$, and by subtraction, $CD=OC - OD = 1$.</p><p>Using the Pythagorean Theorem again, $AC= \\sqrt{AD^2 + CD^2} = \\sqrt{3^2+1^2}=\\sqrt{10} \\Longrightarrow \\textbf{(A)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2008 AMC 10B - algebra problem involving rate relationships and speed calculations. Students need to understand algebra concepts, work with rates principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of rates."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_11",
+      "question": "<p>Suppose that $(u_n)$ is a <a href=\"/wiki/index.php/Sequence\" title=\"Sequence\">sequence</a> of real numbers satifying $u_{n+2}=2u_{n+1}+u_n$,</p><p>and that $u_3=9$ and $u_6=128$. What is $u_5$?</p>",
+      "solutions": [
+        "<p>If we plug in $n=4$, we get </p><p>By plugging in $n=3$, we get </p><p>This is a system of two equations with two unknowns. Multiplying the second equation by 2 and substituting into the first equation gives $128=5u_4+18 \\Longrightarrow u_4=22$, therefore $u_5=\\frac{128-22}{2}=53 \\longrightarrow \\textbf{\\boxed{(B)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2008 AMC 10B - algebra problem involving percentage calculations and changes. Students need to understand algebra concepts, work with percentages principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of percentages."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_12",
+      "question": "<p>Postman Pete has a pedometer to count his steps. The pedometer records up to 99999 steps, then flips over to 00000 on the next step. Pete plans to determine his mileage for a year. On January 1 Pete sets the pedometer to 00000. During the year, the pedometer flips from 99999 to 00000 forty-four times. On December 31 the pedometer reads 50000. Pete takes 1800 steps per mile. Which of the following is closest to the number of miles Pete walked during the year?</p>",
+      "solutions": [
+        "<p>Every time the pedometer flips from $99999$ to</p><p>$00000$ Pete has walked $100000$ steps.</p><p>So, if the pedometer flipped $44$ times</p><p>Pete walked $44*100000+50000=4450000$ steps.</p><p>Dividing by $1800$ steps per mile gives $2472.\\overline{2}$</p><p>This is closest to answer $\\boxed{A}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2008 AMC 10B - algebra problem involving arithmetic sequence patterns and terms. Students need to understand algebra concepts, work with arithmetic_sequences principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of arithmetic_sequences."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_13",
+      "question": "<p>For each positive integer $n$, the mean of the first $n$ terms of a sequence is $n$. What is the $2008^{\\text{th}}$ term of the sequence?</p>",
+      "solutions": [
+        "<p>Since the mean of the first $n$ terms is $n$, the sum of the first $n$ terms is $n^2$. Thus, the sum of the first $2007$ terms is $2007^2$ and the sum of the first $2008$ terms is $2008^2$. Hence, the $2008^{\\text{th}}$ term of the sequence is $2008^2-2007^2=(2008+2007)(2008-2007)=4015\\Rightarrow \\boxed{\\textbf{(B) 4015}}$</p><p>Note that $n^2$ is the sum of the first n odd integers.</p><p><br/></p>",
+        "<p>Let $a_1, a_2, a_3, \\cdots, a_n$ be the terms of the sequence. We know $\\frac{a_1 + a_2 + a_3 + \\cdots + a_n}{n} = n$, so we must have $a_1 + a_2 + a_3 + \\cdots + a_n = n^2$. The sum of consecutive odd numbers down to $1$ is a perfect square, if you don't believe me, try drawing squares with the sum, so $a_1 = 1, a_2 = 3, a_3 = 5, \\cdots , a_n = 2(n-1) + 1$, so the answer is $a_{2008} = 2(2007) + 1 = \\boxed{\\textbf{(B) 4015}}$.</p>",
+        "<p>Let the mean be $\\frac{(a)+(a+d)+(a+2d)+...+(a+(n-1)) \\cdot d)}{n}$$=\\frac{n \\cdot a}{n} + \\frac{(1+2+3+...+(n-1)) \\cdot d}{n}$$=a + \\frac{n \\cdot (n-1) \\cdot d}{2n}$$=a+ \\frac{(n-1) \\cdot d}{2}$</p><p>Note that this is also equal to n</p><p>$a+ \\frac{(n-1) \\cdot d}{2}=n$$\\therefore 2a+ (n-1) \\cdot d=2n$</p><p>1st term + nth term $=2n=2 \\cdot 2008=4016$Now note that, from previous solutions, the first term is 1, hence the 2008th term is $4016-1=\\boxed{\\textbf{(B) 4015}}$</p><p>~anshulb</p>",
+        "<p>From inspection, we see that the sum of the sequence is $n^2$. We also notice that $n^2$ is the sum of the first $n$ odd integers. Because $4015$ is the only odd integer, $\\boxed{\\textbf{(B) 4015}}$ is the answer.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2008 AMC 10B - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_14",
+      "question": "<p>Triangle $OAB$ has $O=(0,0)$, $B=(5,0)$, and $A$ in the first quadrant. In addition, $\\angle ABO=90^\\circ$ and $\\angle AOB=30^\\circ$. Suppose that $OA$ is rotated $90^\\circ$ counterclockwise about $O$. What are the coordinates of the image of $A$? </p>",
+      "solutions": [
+        "<p>Since $\\angle ABO=90^\\circ$, and $\\angle AOB=30^\\circ$, we know that this triangle is one of the <a class=\"mw-redirect\" href=\"/wiki/index.php/Special_Right_Triangles\" title=\"Special Right Triangles\">Special Right Triangles</a>.</p><p>We also know that $B$ is $(5,0)$, so $B$ lies on the x-axis. Therefore, $OB = 5$.</p><p>Then, since we know that this is a Special Right Triangle ($30$-$60$-$90$ triangle), we can use the proportion \\[\\frac{5}{\\sqrt 3}=\\frac{AB}{1}\\] to find $AB$.</p><p>We find that \\[AB=\\frac{5\\sqrt 3}{3}\\]</p><p>That means the coordinates of $A$ are $\\left(5,\\frac{5\\sqrt 3}3\\right)$.</p><p>Rotate this triangle $90^\\circ$ counterclockwise around $O$, and you will find that $A$ will end up in the second quadrant with the coordinates$\\left( -\\frac{5\\sqrt 3}3, 5\\right)$, or $\\boxed{(B)}$</p><p>Note: To better visualize this, one can sketch a diagram.</p>",
+        "<p>As $\\angle ABO=90^\\circ$ and $A$ is in the first quadrant, we know that the $x$ coordinate of $A$ is $5$. We now need to pick a positive $y$ coordinate for $A$ so that we'll have $\\angle AOB=30^\\circ$. </p><p>By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> we have $AO^2 = AB^2 + BO^2 = AB^2 + 25$. </p><p>By the definition of <a class=\"mw-redirect\" href=\"/wiki/index.php/Sine\" title=\"Sine\">sine</a>, we have $\\frac{AB}{AO} = \\sin AOB = \\sin 30^\\circ = \\frac 12$, hence $AO=2\\cdot AB$.</p><p>Substituting into the previous equation, we get $AB^2 = \\frac{25}3$, hence $AB=\\frac{5\\sqrt 3}3$.</p><p>This means that the coordinates of $A$ are $\\left(5,\\frac{5\\sqrt 3}3\\right)$. </p><p>After we rotate $OA$ $90^\\circ$ counterclockwise about $O$, it will be in the second quadrant and have the coordinates $\\boxed{ \\left( -\\frac{5\\sqrt 3}3, 5\\right) }$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2008 AMC 10B - geometry problem involving circle geometry and measurements. Students need to understand geometry concepts, work with circles principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of circles."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_15",
+      "question": "<p>How many right triangles have integer leg lengths $a$ and $b$ and a hypotenuse of length $b+1$, where $b<100$?</p>",
+      "solutions": [
+        "<p>By the Pythagorean theorem, $a^2+b^2=b^2+2b+1$</p><p>This means that $a^2=2b+1$.</p><p>We know that $a,b>0$ and that $b<100$.</p><p>We also know that $a^2$ is odd and thus $a$ is odd, since the right side of the equation is odd. $2b$ is even. $2b+1$ is odd.</p><p>So $a=1,3,5,7,9,11,13$, but if $a=1$, then $b=0$. Thus $a\\neq1.$</p><p>$a=3,5,7,9,11,13$</p><p>The answer is $\\boxed{A}$.</p><p><br/>~qkddud (edited by aopsthedude and bburubburu)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2008 AMC 10B - combinatorics problem involving counting principles and arrangements. Students need to understand combinatorics concepts, work with counting principles, and apply mathematical reasoning to solve this problem. This tests combinatorics problem-solving skills and understanding of counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_16",
+      "question": "<p>Two fair coins are to be tossed once. For each head that results, one fair die is to be rolled. What is the probability that the sum of the die rolls is odd? (Note that if no die is rolled, the sum is 0.)</p>",
+      "solutions": [
+        "<p>We consider 3 cases based on the outcome of the coin:</p><p>Case 1, 0 heads:The probability of this occurring on the coin flip is $\\frac{1} {4}$. The probability that 0 rolls of a die will result in an odd sum is $0$. </p><p>Case 2, 1 head:The probability of this case occurring is $\\frac{1} {2} \\cdot \\frac {1} {2} \\cdot 2 = \\frac {1} {2}.$ The probability that 1 die results in an odd number is $\\frac{1} {2}$.</p><p>Case 3, 2 heads:The probability of this occurring is $\\frac{1} {4}$. The probability that 2 dice result in an odd sum is $\\frac{1} {2}$, because regardless of what we throw on the first die, we have $\\frac{1} {2}$ probability that the second die will have the opposite parity.</p><p>Thus, the probability of having an odd sum rolled is $\\frac{1} {4} \\cdot 0 + \\frac{1} {2} \\cdot \\frac{1} {2} + \\frac{1} {4} \\cdot \\frac{1} {2}=\\frac{3} {8}\\Rightarrow \\boxed{A}$</p>",
+        "<p>We use complementary counting or subtracting $P(\\text{Even})$ from $1$. We use casework now.</p><p>Case $1$: $2$ Tails. $2$ tails occur with probability $\\frac{1}{4}$, but we will always get an even number, so the overall probability to get an even sum is $\\frac{1}{4}$.</p><p>Case $2$: $1$ Tail: This event occurs with probability $\\frac{1}{2}$ and the probability we get an even is $\\frac{1}{2}$, so the overall probability to get an even, in this case, is also $\\frac{1}{4}$.</p><p>We know $P\\text{(Even)}$ is greater than $\\frac{1}{2}$, so $P\\text{(Odd)}$ is less than $\\frac{1}{2}$.</p><p>Only $\\boxed{\\text{(A)}\\frac{3}{8}}$ is less than $\\frac{1}{2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2008 AMC 10B - algebra problem involving systems of equations with multiple variables. Students need to understand algebra concepts, work with systems_of_equations principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of systems_of_equations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_17",
+      "question": "<p>A poll shows that $70\\%$ of all voters approve of the mayor's work. On three separate occasions a pollster selects a voter at random. What is the probability that on exactly one of these three occasions the voter approves of the mayor's work?</p>",
+      "solutions": [
+        "<p>Letting Y stand for a voter who approved of the work, and N stand for a person who didn't approve of the work, the pollster could select responses in $3$ different ways: $\\text{YNN, NYN, and NNY}$. The probability of each of these is $(0.7)(0.3)^2=0.063$. Thus, the answer is $3\\cdot0.063=0.189$, or $\\boxed{B}$</p>",
+        "<p>In more concise terms, this problem is an extension of the binomial distribution. We find the number of ways only 1 person approves of the mayor multiplied by the probability 1 person approves and 2 people disapprove: ${3\\choose 1} \\cdot(0.7)^1\\cdot(1-0.7)^{(3-1)}=3\\cdot0.7\\cdot0.09=\\boxed{\\mathrm{(B)}\\ {{{0.189}}}}$</p>",
+        "<p>The probability of getting the first voter to approve is $\\frac{7}{10} * \\frac{3}{10} * \\frac{3}{10}$.</p><p>This first voter, using combinations, can be arranged in 3 choose 1 ways, which simplifies into 3 ways.</p><p>Multiplying $3$ by $\\frac{7}{10} * \\frac{3}{10} * \\frac{3}{10}$ gives (B).</p><p>~PeterDoesPhysics</p><p>PS: For a more challenging practice problem akin to this one, look to 2012 AMC 12A Problem 11.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2008 AMC 10B - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_18",
+      "question": "<p>Bricklayer Brenda takes $9$ hours to build a chimney alone, and bricklayer Brandon takes $10$ hours to build it alone. When they work together, they talk a lot, and their combined output decreases by $10$ bricks per hour. Working together, they build the chimney in $5$ hours. How many bricks are in the chimney?</p>",
+      "solutions": [
+        "<p>Let $x$ be the number of bricks in the chimney. The work done is the rate multiplied by the time. </p><p>Using $w = rt$, we get $x = \\left(\\frac{x}{9} + \\frac{x}{10} - 10\\right)\\cdot(5)$. Solving for $x$, we get $900$, or $\\boxed{B}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2008 AMC 10B - logic problem involving logical reasoning and truth values. Students need to understand logic concepts, work with deductive_reasoning principles, and apply mathematical reasoning to solve this problem. This tests logic problem-solving skills and understanding of deductive_reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_19",
+      "question": "<p>A cylindrical tank with radius $4$ feet and height $9$ feet is lying on its side. The tank is filled with water to a depth of $2$ feet. What is the volume of water, in cubic feet?</p>",
+      "solutions": [
+        "<p>Any vertical cross-section of the tank parallel with its base looks as follows:[asy] unitsize(0.8cm); defaultpen(0.8); pair s=(0,0), bottom=(0,-4), mid=(0,-2); pair x[]=intersectionpoints( (-10,-2)--(10,-2), circle(s,4) ); fill( arc(s,x[0],x[1]) -- cycle, lightgray ); draw( circle(s,4) ); dot(s); draw( s -- bottom ); label( \"$2$\", (mid+bottom)/2, E ); draw ( s -- x[0] -- x[1] -- s ); label( \"$4$\", (s+x[0])/2, NW ); label( \"$4$\", (s+x[1])/2, NE ); label( \"$A$\", s, N ); label( \"$B$\", x[0], W ); label( \"$C$\", x[1], E ); label( \"$D$\", mid, NW ); label( \"$E$\", bottom, S ); [/asy]</p><p>The volume of water can be computed as the height of the tank times the area of the shaded part.</p><p>Let $\\theta$ be the size of the smaller angle $DAC$. We then have $\\cos\\theta = \\frac{AD}{AC}=\\frac 12$, hence $\\theta=60^\\circ$.</p><p>The figure is symmetrical, so the angle $CAB$ has size $2\\cdot 60^\\circ = 120^\\circ$. Hence the shaded part consists of $\\frac{120^\\circ}{360^\\circ} = \\frac 13$ of the circle, minus the area of the triangle $ABC$.</p><p>Using the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> we can compute that $CD=\\sqrt{AC^2-AD^2}=\\sqrt{16-4}=2\\sqrt 3$. Thus $BC=4\\sqrt 3$, and the area of the triangle $ABC$ is $\\frac {2 \\cdot 4\\sqrt 3} 2 = 4\\sqrt 3$.</p><p>The area of the shaded part is then $\\frac{4^2\\pi}3 - 4\\sqrt 3$, and the volume of water is $9\\cdot\\left(\\frac{4^2\\pi}3 - 4\\sqrt 3\\right) = \\boxed{48\\pi - 36\\sqrt 3}$. The answer is $\\text{E}$.</p><p>Alternatively, we can solve for DC and see it is congruent to a 30 60 90 triangle by SSS ~Williamgolly</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2008 AMC 10B - number_theory problem involving least common multiple and number theory. Students need to understand number_theory concepts, work with lcm principles, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills and understanding of lcm."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_20",
+      "question": "<p>The faces of a cubical die are marked with the numbers $1$, $2$, $2$, $3$, $3$, and $4$. The faces of another die are marked with the numbers $1$, $3$, $4$, $5$, $6$, and $8$. What is the probability that the sum of the top two numbers will be $5$, $7$, or $9$?          </p>",
+      "solutions": [
+        "<p>One approach is to write a table of all $36$ possible outcomes, do the sums, and count good outcomes.</p><p>We see that out of $36$ possible outcomes, $4$ give the sum of $5$, $6$ the sum of $7$, and $4$ the sum of $9$, hence the resulting probability is $\\frac{4+6+4}{36}=\\frac{14}{36}=\\boxed{\\frac{7}{18}}$.</p>",
+        "<p>Each die is equally likely to roll odd or even, so the probability of an odd sum is $\\frac{1}{2}$.The possible odd sums are $3, 5, 7, 9, 11$.</p><p>So we can find the probability of rolling $3$ or $11$ instead and just subtract that from $\\frac{1}{2}$, which seems easier. </p><p>Without writing out a table, we can see that there are 2 ways to make $3$, and 2 ways to make $11$, for a probability of $\\frac{4}{36}$.</p><p>$\\frac{1}{2}-\\frac{4}{36}=\\frac{14}{36}=\\boxed{\\frac{7}{18}}$.</p>",
+        "<p>The outcome of the first dice can be $1$, $2$, $3$, or $4$. For each of these $4$ cases, we can find the possible outcomes for the second dice that makes the sum of the top two numbers $5$, $7$, or $9$, and then calculate the respective probabilities. </p><p><b>Case 1 - the first dice is 1:</b> the outcome of the second dice can be $4$, $6$, or $8$. There is a $\\frac{1}{6}$ probability of rolling a $1$ with the first dice and a $\\frac{1}{2}$ probability of rolling a $4$, $6$, or $8$ with the second dice. $\\frac{1}{6}*\\frac{1}{2} = \\frac{1}{12}.$</p><p><b>Case 2 - the first dice is 2:</b> the outcome of the second dice can be $3$ or $5$. There is a $\\frac{1}{3}$ probability of rolling a $2$ with the first dice and a $\\frac{1}{3}$ probability of rolling a $3$ or $5$ with the second dice. $\\frac{1}{3}*\\frac{1}{3} = \\frac{1}{9}.$</p><p><b>Case 3 - the first dice is 3:</b> the outcome of the second dice can be $4$ or $6$. There is a $\\frac{1}{3}$ probability of rolling a $3$ with the first dice and a $\\frac{1}{3}$ probability of rolling a $4$ or $6$ with the second dice. $\\frac{1}{3}*\\frac{1}{3} = \\frac{1}{9}.$</p><p><b>Case 4 - the first dice is 4:</b> the outcome of the second dice can be $1$, $3$, or $5$. There is a $\\frac{1}{6}$ probability of rolling a $4$ with the first dice and a $\\frac{1}{2}$ probability of rolling a $1$, $3$, or $5$ with the second dice. $\\frac{1}{6}*\\frac{1}{2} = \\frac{1}{12}.$</p><p>$\\frac{1}{12} + \\frac{1}{9} + \\frac{1}{9} + \\frac{1}{12} = \\frac{14}{36} = \\frac{7}{18}$, so the answer is $\\boxed{\\textbf{(B) } \\frac{7}{18}}$. ~azc1027</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2008 AMC 10B - algebra problem involving fraction operations and ratios. Students need to understand algebra concepts, work with fractions principles, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills and understanding of fractions."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_21",
+      "question": "<p>Ten chairs are evenly spaced around a round table and numbered clockwise from $1$ through $10$. Five married couples are to sit in the chairs with men and women alternating, and no one is to sit either next to or across from his/her spouse. How many seating arrangements are possible?</p>",
+      "solutions": [
+        "<p>For the first man, there are $10$ possible seats. For each subsequent man, there are $4$, $3$, $2$, or $1$ possible seats. After the men are seated, there are only two possible arrangements for the five women. The answer is $10\\cdot 4\\cdot 3\\cdot 2\\cdot 1\\cdot 2 = \\boxed{(\\text{C}) 480}$.</p>",
+        "<p>Label the seats ABCDEFGHIJ, where A is the top seat. The first man has $10$ possible seats. WLOG, assume he is in seat A in the diagram. Then, his wife can be in one of two seats, namely D or H. WLOG, assume she is in seat D. Now, in each structurally distinct solution we find, we know that there are $4! = 24$ ways to arrange the 4 other couples. Let there be x structurally distinct solutions under these conditions. We know the answer must be $10\\cdot 2\\cdot 24\\cdot x = 480x$ possible seating arrangements, and x is a nonnegative integer. There is only one answer that is a multiple of $480$. So, our answer is $\\boxed{(\\text{C}) 480}$.</p><p>~ Milk_123</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2008 AMC 10B - probability problem involving independent probability events and calculations. Students need to understand probability concepts, work with independent_events principles, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills and understanding of independent_events."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_22",
+      "question": "<p>Three red beads, two white beads, and one blue bead are placed in line in random order. What is the probability that no two neighboring beads are the same color?</p>",
+      "solutions": [
+        "<p>There are two ways to arrange the red beads, where $R$ represents a red bead and $-$ represents a blank space.</p><p>$1. R - R - R -$</p><p>$2. R - - R - R$</p><p>In the first, there are three ways to place a bead in the first free space, two for the second free space, and one for the third, so there are $6$ arrangements.In the second, a white bead must be placed in the third free space, so there are two possibilities for the third space, two for the second, and one for the first. That makes $4$ arrangements. There are $6+4=10$ arrangements in total. The two cases above can be reversed, so we double $10$ to get $20$ arrangements. Also, in each case, there are three ways to place the first red bead, two for the second, and one for the third, so we multiply by $6$ to get $20\\cdot 6 = 120$ arrangements. There are $6! = 720$ total arrangements so the answer is $120/720 = \\boxed{1/6}$.</p>",
+        "<p>If you list the cases for the red balls and blanks, these are four scenarios:</p><p>$1. R - - R - R$</p><p>$2. R - R - - R$</p><p>$3. R - R - R -$</p><p>$4. - R - R - R$</p><p>In cases 1 and 2, the white balls must go in the blank surrounded on either side by the red balls. Like this:$1. R - - R W R$$2. R W R - - R$However, now with only one white ball and one blue ball left, there are two ways to order them in both cases. So for a total of $2 + 2 = 4$ possibilities.</p><p>In the last two cases, the two white balls and the blue ball can go anywhere in those three blanks, because they are separated by a red ball. So there are $3$ ways for each case. This adds up to a total of $6$ possibilities for the last two cases.</p><p>Adding them up, we get $10$ total orderings.</p><p>There are $\\frac{6!}{3! * 2! * 1!} = 60$ total orderings.</p><p>So the answer is $\\frac{10}{60} = \\boxed{1/6}$.</p>",
+        "<p>There are 3 cases:</p><p>There is a block of $RWRWR$. The $B$ can go in any slot between two letters. 6 ways.</p><p>There is a $RBR$. Then, there is a $WRW$, and there are 2 orderings.</p><p>There is a $WBW$. Then, there is a $RWR$, and there are 2 orderings.</p><p>There are 60 ways total, and 10 valid ones, giving $\\boxed{\\frac{1}{6}}$ as the answer.</p>",
+        "<p>There are $\\frac{6!}{3!\\cdot2!\\cdot1!}=60$ total orderings.</p><p>Suppose we order the red and white beads first. If these two colors are ordered first, we must make sure that no neighboring beads are the same color, or only one pair of neighboring beads are the same color. There are five possible orderings:</p><p>$R\\ W R\\ W R$</p><p>$R\\ R\\ W R\\ W$</p><p>$W R\\ R\\ W R$</p><p>$R\\ W R\\ R\\ W$</p><p>$W R\\ W R\\ R$</p><p>For the first case, there are $6$ possible places we can put the blue bead. For the other 4 cases, there is only one place we can put the blue bead, which is between the pair of red beads. The desired probability is $\\frac{6+4(1)}{60}=\\frac{10}{60}=\\boxed{\\mathrm{(C) }\\frac16}$</p>",
+        "<p>Video: <a class=\"external free\" href=\"https://youtu.be/qnAAzoRANG4\" rel=\"nofollow\">https://youtu.be/qnAAzoRANG4</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2008 AMC 10B - probability problem involving conditional probability and probability ratios. Students need to understand probability concepts, work with conditional_probability principles, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills and understanding of conditional_probability."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_23",
+      "question": "<p>A rectangular floor measures $a$ by $b$ feet, where $a$ and $b$ are positive integers and $b > a$. An artist paints a rectangle on the floor with the sides of the rectangle parallel to the floor. The unpainted part of the floor forms a border of width $1$ foot around the painted rectangle and occupies half the area of the whole floor. How many possibilities are there for the ordered pair $(a,b)$?</p>",
+      "solutions": [
+        "<p>Because the unpainted part of the floor covers half the area, then the painted rectangle covers half the area as well. Since the border width is 1 foot, the dimensions of the rectangle are $a-2$ by $b-2$. With this information we can make the equation:</p><p>\\begin{eqnarray*} ab &=& 2\\left((a-2)(b-2)\\right) \\\\ ab &=& 2ab - 4a - 4b + 8 \\\\ ab - 4a - 4b + 8 &=& 0  \\end{eqnarray*}Applying <a href=\"/wiki/index.php/Simon%27s_Favorite_Factoring_Trick\" title=\"Simon's Favorite Factoring Trick\">Simon's Favorite Factoring Trick</a>, we get</p><p>\\begin{eqnarray*}ab - 4a - 4b + 16 &=& 8 \\\\ (a-4)(b-4) &=& 8 \\end{eqnarray*}</p><p>Since $b > a$, then we have the possibilities $(a-4) = 1$ and $(b-4) = 8$, or $(a-4) = 2$ and $(b-4) = 4$. This allows for 2 possibilities: $(5,12)$ or $(6,8)$ which gives us $\\boxed{\\textbf{(B)} \\: 2}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2008 AMC 10B - geometry problem involving distance calculations and coordinate geometry. Students need to understand geometry concepts, work with distance principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of distance."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_24",
+      "question": "<p>Quadrilateral $ABCD$ has $AB = BC = CD$, $m\\angle ABC = 70^\\circ$ and $m\\angle BCD = 170^\\circ$. What is the degree measure of $\\angle BAD$?</p>",
+      "solutions": [
+        "<ul><li>Note: This solution requires the use of cyclic quadrilateral properties but could be a bit time-consuming during the contest.</li></ul><p>To start off, draw a diagram like in solution two and label the points. Create lines $\\overline{AC}$ and $\\overline{BD}$. We can call their intersection point $Y$. Note that triangle $BCD$ is an isosceles triangle so angles $CDB$ and $CBD$ are each $5$ degrees. Since $AB$ equals $BC$, angle $BAC$ equals $55$ degrees, thus making angle $AYB$ equal to $60$ degrees. We can also find out that angle $CYB$ equals $120$ degrees. </p><p>Extend $\\overline{CD}$ and $\\overline{AB}$ and let their intersection be $E$. Since angle $BEC$ plus angle $CYB$ equals $180$ degrees, quadrilateral $YCEB$ is a cyclic quadrilateral. </p><p>Next, draw a line from point $Y$ to point $E$. Since angle $YBC$ and angle $YEC$ point to the same arc, angle $YEC$ is equal to $5$ degrees. Since $EYD$ is an isosceles triangle (based on angle properties) and $YAE$ is also an isosceles triangle, we can find that $YAD$ is also an isosceles triangle. Thus, each of the other angles is $\\frac{180-120}{2}=30$ degrees. Finally, we have angle $BAD$ equals $30+55=\\boxed{85}$ degrees.</p><p>~Minor edits by BakedPotato66</p>",
+        "<p>First, connect the diagonal $DB$, then, draw line $DE$ such that it is congruent to $DC$ and is parallel to $AB$. Because triangle $DCB$ is isosceles and angle $DCB$ is $170^\\circ$, the angles $CDB$ and $CBD$ are both $\\frac{180-170}{2} = 5^\\circ$. Because angle $ABC$ is $70^\\circ$, we get angle $ABD$ is $65^\\circ$. Next, noticing parallel lines $AB$ and $DE$ and transversal $DB$, we see that angle $BDE$ is also $65^\\circ$, and subtracting off angle $CDB$ gives that angle $EDC$ is $60^\\circ$.</p><p>Now, because we drew $ED = DC$, triangle $DEC$ is equilateral. We can also conclude that $EC=DC=CB$ meaning that triangle $ECB$ is isosceles, and angles $CBE$ and $CEB$ are equal.</p><p>Finally, we can set up our equation. Denote angle $BAD$ as $x^\\circ$. Then, because $ABED$ is a parallelogram, the angle $DEB$ is also $x^\\circ$. Then, $CEB$ is $(x-60)^\\circ$. Again because $ABED$ is a parallelogram, angle $ABE$ is $(180-x)^\\circ$. Subtracting angle $ABC$ gives that angle $CBE$ equals $(110-x)^\\circ$. Because angle $CBE$ equals angle $CEB$, we get \\[x-60=110-x\\], solving into $x=\\boxed{85^\\circ}$.</p><p><br/>[asy] unitsize(1cm); defaultpen(.8); real a=4; pair A=(0,0), B=a*dir(0), C=B+a*dir(110), D=C+a*dir(120), E=D+a*dir(0); draw(A--B--C--D--cycle); draw(E--C); draw(B--D); draw(B--E); draw(D--E); label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C$\",C,SE); label(\"$D$\",D,N); label(\"$E$\",E,NE); label(\"$60^\\circ$\",C + .75*dir(360-65-115-55-30)); label(\"$65^\\circ$\",B + .75*dir(180-32.5)); label(\"$x^\\circ$\",A + .5*dir(42.5)); label(\"$5^\\circ$\",D + 2.5*dir(360-60-2.5)); label(\"$60^\\circ$\",D + .75*dir(360-30)); label(\"$60^\\circ$\",E + .5*dir(360-150)); label(\"$5^\\circ$\",B + 2.5*dir(180-65-2.5)); [/asy]</p><p>Side note: this solution was inspired by some basic angle chasing and finding some 60 degree angles, which made me want to create equilateral triangles.</p><p>~Someonenumber011</p>",
+        "<p>[asy] unitsize(3 cm);  pair A, B, C, D;  A = (0,0); B = dir(85); C = B + dir(-25); D = C + dir(-35); draw(A--B--C--D--cycle); draw(A--C); draw(B--D); draw(((A + B)/2 + scale(0.02)*rotate(90)*(B - A))--((A + B)/2 + scale(0.02)*rotate(90)*(A - B))); draw(((B + C)/2 + scale(0.02)*rotate(90)*(C - B))--((B + C)/2 + scale(0.02)*rotate(90)*(B - C))); draw(((C + D)/2 + scale(0.02)*rotate(90)*(D - C))--((C + D)/2 + scale(0.02)*rotate(90)*(C - D))); dot(\"$A$\", A, SW); dot(\"$B$\", B, N); dot(\"$C$\", C, NE); dot(\"$D$\", D, SE); label(\"$I$\", 6/7*C); [/asy]</p><p>Let the unknown $\\angle BAD$ be $x$.</p><p>First, we draw diagonal $BD$ and $AC$.$I$ is the intersection of the two diagonals. The diagonals each form two isosceles triangles, $\\triangle BCD$ and $\\triangle ABC$. </p><p>Using this, we find: $\\angle DBC = \\angle CDB = 5^\\circ$ and $\\angle BAC = \\angle BCA = 55^\\circ$. Expanding on this, we can fill in a couple more angles. $\\angle ABD = 70^\\circ - 5^\\circ = 65^\\circ$, $\\angle ACD = 170^\\circ - 55^\\circ = 115^\\circ$, $\\angle BIA = \\angle CID = 180^\\circ - (65^\\circ + 55^\\circ) = 60^\\circ$, $\\angle BIC =   \\angle AID = 180^\\circ - 60^\\circ = 120^\\circ$.</p><p>We can rewrite $\\angle CAD$ and $\\angle BDA$ in terms of $x$. $\\angle CAD = x - 55^\\circ$ and $\\angle BDA = 180^\\circ - (120^\\circ + x - 55^\\circ) = 115^\\circ - x$.</p><p>Let us relabel $AB = BC = CD = a$ and $AD = b$.</p><p>By Rule of Sines on $\\triangle ACD$ and $\\triangle ABD$ respectively, $\\frac{\\sin(\\angle CAD)}{a} = \\frac{\\sin(\\angle ACD)}{b}$, and $\\frac{\\sin(\\angle ABD)}{b} = \\frac{\\sin(\\angle BDA)}{a}$</p><p>In a more convenient form, $\\frac{\\sin(x-55^\\circ)}{a} = \\frac{\\sin(115^\\circ)}{b} \\implies \\frac{a}{b} = \\frac{\\sin(x-55^\\circ)}{\\sin(115^\\circ)}$</p><p>and $\\frac{\\sin(65^\\circ)}{b} = \\frac{\\sin(115^\\circ-x)}{a} \\implies \\frac{a}{b} = \\frac{\\sin(115^\\circ-x)}{\\sin(65^\\circ)}$</p><p>$\\implies \\frac{\\sin(115^\\circ-x)}{\\sin(65^\\circ)} = \\frac{\\sin(x-55^\\circ)}{\\sin(115^\\circ)}$</p><p>Now, by identity $\\sin(\\theta) = \\sin(180^\\circ-\\theta)$, $\\sin(65^\\circ) = \\sin(115^\\circ)$</p><p>Therefore, $\\sin(115^\\circ-x) = \\sin(x-55^\\circ).$ This equation is only satisfied by option $\\boxed{\\text {(C) } 85^\\circ}$</p><p>Note: I'm pretty bad at Asymptote, if anyone could edit this and fill in the angles into the diagram, that would be pretty cool.</p><p>~Raghu9372</p>",
+        "<p>Using a protractor and rule, draw an accurate diagram (<a class=\"external text\" href=\"https://i.imgur.com/YIafDgs.jpg/img\" rel=\"nofollow\">Example Diagram</a>). $\\angle BAD$ looks slightly less than $90$ degrees. Therefore the answer is $\\boxed{\\textbf{(C) } 85}$ as $85$ is slightly less than $90$.</p><p><br/></p><p>~bobthegod78</p><p>~Reworded by <a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:South\" rel=\"nofollow\">South</a></p>",
+        "<p>place A at the origin of a coordinate system, with D on the x-axislet angle BAD be $\\theta$, and AB=BC=CD=1</p><p>The y value of from B-A is $\\sin\\theta$. The y value from C-B is $\\theta-(180^\\circ-70^\\circ)=\\theta-110^\\circ$. The y value from D-C is $\\theta-110^\\circ-(180^\\circ-170^\\circ)=\\theta-120^\\circ$</p><p>The angles for the vectors from B to C and C to D are angle_original-(180-angle_polygon) are because the external angle of the polygon is 180-external angle, which is subtracted from the angle since it heads that amount off from the original direction. </p><p>since D-C+C-B+B-A=D-A=0 (since A, D are both on x-axis and have the same y value of 0), then: \\[\\sin\\theta+\\sin(\\theta-110^\\circ)+\\sin(\\theta-120^\\circ)=0\\]</p><p>from here we expand out the trig expressions using sin addition and isolate $\\theta$</p><p>\\[\\sin\\theta+\\sin(\\theta-110^\\circ)+\\sin(\\theta-120^\\circ)=0\\]\\[\\sin\\theta+\\sin(\\theta)\\cos(110^\\circ)-\\cos(\\theta)\\sin(110^\\circ)   +   \\sin(\\theta)\\cos(120^\\circ)-\\cos(\\theta)\\sin(120^\\circ)=0\\]</p><p><br/></p><p>\\[1+\\cos(110^\\circ)-\\cot(\\theta)\\sin(110^\\circ)+\\cos(120^\\circ)-\\cot(\\theta)\\sin(120^\\circ)=0\\]\\[\\cot(\\theta)=\\frac{1+\\cos(110^\\circ)+\\cos(120^\\circ)}{\\sin(110^\\circ)+\\sin(120^\\circ)}\\]</p><p>At this point if you are a human calculator feel free to to solve, otherwise we want to try and evaluate the right hand side into some nice expression (ideally cot of an angle).</p><p>\\[\\cot(\\theta)=\\frac{1+\\cos(120^\\circ-10^\\circ)+\\cos(120^\\circ)}{\\sin(120^\\circ-10^\\circ)+\\sin(120^\\circ}\\]</p><p>\\[\\cot(\\theta)=\\frac{1+\\cos(120^\\circ)\\cos(10^\\circ)+\\sin(120^\\circ)\\sin(10^\\circ)+\\cos(120^\\circ)} {\\sin(120^\\circ)\\cos(10^\\circ)-\\cos(120^\\circ)\\sin(10^\\circ)+\\sin(120^\\circ}\\]</p><p>\\[\\cot(\\theta)=\\frac{1+\\frac{-1}{2}\\cos(10^\\circ)+\\frac{\\sqrt{3}}{2}\\sin(10^\\circ)+\\frac{-1}{2}} {\\frac{\\sqrt{3}}{2}\\cos(10^\\circ)-\\frac{-1}{2}\\sin(10^\\circ)+\\frac{\\sqrt{3}}{2}}\\]</p><p>\\[\\cot(\\theta)=\\frac{1-\\cos(10^\\circ)+\\sqrt{3}\\sin(10^\\circ)} {\\sqrt{3}\\cos(10^\\circ)+\\sin(10^\\circ)+\\sqrt{3}}\\]</p><p>since the expression still isn't simplified, notice that using the double angle identity on cosine can be used to cancel the 1, and $\\sqrt{3}$</p><p>Let: $\\cos(5^\\circ)=a$, $\\sin(5^\\circ)=b$</p><p>\\[\\cot(\\theta)=\\frac{1-(1-2b^2)+\\sqrt{3}\\cdot(2ab)} {\\sqrt{3}(2a^2-1)+2ab+\\sqrt{3}}\\]</p><p>\\[\\cot(\\theta)=\\frac{2b^2+2ab\\sqrt{3}} {2a^2\\sqrt{3}+2ab}\\]</p><p>\\[\\cot(\\theta)=\\frac{2b(b+a\\sqrt{3})} {2a(a\\sqrt{3}+b)}\\]</p><p>\\[\\cot(\\theta)=\\frac{b}{a}\\]</p><p>\\[\\cot(\\theta)=\\tan(5^\\circ)\\]</p><p>\\[\\cot(\\theta)=\\cot(85^\\circ)\\]</p><p>\\[\\theta=85^\\circ\\]~sahan</p>",
+        "<p>Obtain: $\\sin\\theta+\\sin(\\theta-110^\\circ)+\\sin(\\theta-120^\\circ)=0$ from solution 5We now guess $\\theta=85^\\circ$ and try to verify</p><p>\\[\\sin85^\\circ+\\sin-25^\\circ+\\sin-35^\\circ=0\\]\\[\\cos5^\\circ=\\sin25^\\circ+\\sin35^\\circ\\]\\[\\cos5^\\circ=\\sin(30^\\circ-5^\\circ)+\\sin(30^\\circ+5^\\circ)\\]\\[\\cos5^\\circ=2\\sin30^\\circ\\cos5^\\circ\\]\\[\\cos5^\\circ=\\cos5^\\circ\\]</p>",
+        "<p>Use equation from Solution 5: \\[\\sin\\theta+\\sin(\\theta-110^\\circ)+\\sin(\\theta-120^\\circ)=0\\]\\[\\sin\\theta+\\sin(\\theta-115^\\circ+5^\\circ)+\\sin(\\theta-115^\\circ-5^\\circ)=0\\]\\[\\sin\\theta+2\\sin(\\theta-115^\\circ)\\cos(5^\\circ)=0\\]\\[\\sin\\theta-2\\sin(\\theta+65^\\circ)\\cos(5^\\circ)=0\\]\\[\\sin\\theta=2\\sin(\\theta+65^\\circ)\\cos(5^\\circ)\\]</p><p>now guess $\\theta=85$ so that the cos(5) is dealt with (and then check it works)</p><p>If you refuse to guess work through the following algebra\u00a0:D </p><p>Let: $\\phi=\\theta+65^\\circ$</p><p>\\[\\sin(\\phi-65^\\circ)=2\\sin\\phi\\cos(5^\\circ)\\]\\[\\sin\\phi\\cos(65^\\circ)-\\cos\\phi\\sin(65^\\circ)=2\\sin\\phi\\cos(5^\\circ)\\]\\[\\cos(65^\\circ)-\\cot(\\phi)\\sin(65^\\circ)=2\\cos(5^\\circ)\\]\\[\\cot(\\phi)(\\sin(60^\\circ)\\cos(5^\\circ)+\\cos(60^\\circ)\\sin(5^\\circ))=(\\cos(60^\\circ)\\cos(5^\\circ)-\\sin(60^\\circ)\\sin(5^\\circ)) -2\\cos(5^\\circ)\\]\\[\\cot(\\phi)(\\frac{\\sqrt{3}}{2}\\cos(5^\\circ)+\\frac{1}{2}\\sin(5^\\circ))=(\\frac{1}{2}\\cos(5^\\circ)-\\frac{\\sqrt{3}}{2}\\sin(5^\\circ)) -2\\cos(5^\\circ)\\]\\[\\cot(\\phi)(\\frac{\\sqrt{3}}{2}\\cos(5^\\circ)+\\frac{1}{2}\\sin(5^\\circ))=(\\frac{-3}{2}\\cos(5^\\circ)-\\frac{\\sqrt{3}}{2}\\sin(5^\\circ))\\]\\[\\cot(\\phi)(\\frac{\\sqrt{3}}{2}\\cos(5^\\circ)+\\frac{1}{2}\\sin(5^\\circ))=-\\sqrt{3} (\\frac{\\sqrt{3}}{2}\\cos(5^\\circ)+\\frac{1}{2}\\sin(5^\\circ))\\]\\[\\cot(\\phi)=-\\sqrt3\\]</p><p>\\[\\phi=150^\\circ\\]</p><p><br/>\\[\\theta=150^\\circ-65^\\circ=85^\\circ\\]</p><p>\\[\\angle BAD = 85^\\circ\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2008 AMC 10B - geometry problem involving complex area calculations. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    },
+    {
+      "id": "amc_2008_10b_25",
+      "question": "<p>Michael walks at the rate of $5$ feet per second on a long straight path. Trash pails are located every $200$ feet along the path. A garbage truck traveling at $10$ feet per second in the same direction as Michael stops for $30$ seconds at each pail. As Michael passes a pail, he notices the truck ahead of him just leaving the next pail. How many times will Michael and the truck meet? </p>",
+      "solutions": [
+        "<p>Pick a coordinate system where Michael's starting pail is $0$ and the one where the truck starts is $200$.Let $M(t)$ and $T(t)$ be the coordinates of Michael and the truck after $t$ seconds.Let $D(t)=T(t)-M(t)$ be their (signed) distance after $t$ seconds.Meetings occur whenever $D(t)=0$.We have $D(0)=200$. </p><p>The truck always moves for $20$ seconds, then stands still for $30$. During the first $20$ seconds of the cycle the truck moves by $200$ feet and Michael by $100$, hence during the first $20$ seconds of the cycle $D(t)$ increases by $100$.During the remaining $30$ seconds $D(t)$ decreases by $150$.</p><p>From this observation it is obvious that after four full cycles, i.e. at $t=200$, we will have $D(t)=0$ for the first time.</p><p>During the fifth cycle, $D(t)$ will first grow from $0$ to $100$, then fall from $100$ to $-50$. Hence Michael overtakes the truck while it is standing at the pail. </p><p>During the sixth cycle, $D(t)$ will first grow from $-50$ to $50$, then fall from $50$ to $-100$. Hence the truck starts moving, overtakes Michael on their way to the next pail, and then Michael overtakes the truck while it is standing at the pail. </p><p>During the seventh cycle, $D(t)$ will first grow from $-100$ to $0$, then fall from $0$ to $-150$. Hence the truck meets Michael at the moment when it arrives to the next pail.</p><p>Obviously, from this point on $D(t)$ will always be negative, meaning that Michael is already too far ahead. Hence we found all $\\boxed{5 \\Longrightarrow B}$ meetings.</p><p>The movement of Michael and the truck is plotted below: Michael in blue, the truck in red.</p><p>[asy] import graph;  size(400,300,IgnoreAspect);  real[] xt = new real[21]; real[] yt = new real[21]; for (int i=0; i<11; ++i) xt[2*i]=50*i; for (int i=0; i<10; ++i) xt[2*i+1]=50*i+20; for (int i=0; i<11; ++i) yt[2*i]=200*(i+1); for (int i=0; i<10; ++i) yt[2*i+1]=200*(i+2);  real[] xm={0,500}; real[] ym={0,2500};  draw(graph(xt,yt),red); draw(graph(xm,ym),blue);  xaxis(\"$\\mathrm{time}$\",Bottom,LeftTicks); yaxis(\"$\\mathrm{position}$\",Left,LeftTicks); [/asy]</p>",
+        "<p>The truck takes $20$ seconds to go from one pail to the next and then stops for $30$ seconds at the new pail. Thus it sets off from a pail every 50 sec. Let $t$ denote the time elapsed and write $t=50k + \\Delta$, where $\\Delta \\in [0,50)$. In this time Michael has traveled $5t = 250k+5\\Delta$ feet. What about the truck? In the first $50k$ seconds the truck covers $k$ pails, i.e. $200k$ feet so it moves $200+200k$ feet from Michael's starting point. Then we have two cases: </p><p><b>(a)</b> if $\\Delta < 20$, then the truck travels an additional $10\\Delta$ feet. For them to intersect we must have $200+200k + 10\\Delta = 250k + 5\\Delta$. Solving, we get $\\Delta = 10k - 40$. Since $\\Delta$ must lie in the interval $[0,20)$ we get $k \\in \\{4, 5\\}$.</p><p><b>(b)</b> if $\\Delta \\in [20, 50)$, then the truck travels an additional $200$ feet. For them to intersect we must have $200+200k + 200 = 250k + 5\\Delta$. Solving, we get $\\Delta = 10(8-k)$. Since $\\Delta$ must lie in the interval $[20,50)$ we get $k \\in \\{4, 5, 6\\}$. </p><p>Thus Michael intersects with the truck $5$ times, which is option $\\boxed{\\textbf{(B)}}$.</p>",
+        "<p>We make a chart by seconds in increments of ten. </p><p>$\\begin{tabular}{c|c|c}Time (s) &Distance of Michael&Distance of Garbage\\\\ \\hline 0&0&200\\\\ 10&50&300\\\\ 20&100&400\\\\ 30&150&400\\\\ 40&200&400\\\\ 50&250&400\\\\ 60&300&500\\\\ 70&350&600\\\\ 80&400&600\\\\ 90&450&600\\\\ 100&500&600\\\\ 110&550&700\\\\ 120&600&800\\\\ 130&650&800\\\\ 140&700&800\\\\ 150&750&800\\\\ 160&800&900\\\\ 170&850&1000\\\\ 180&900&1000\\\\ 190&950&1000\\\\ 200&1000&1000\\\\ 210&1050&1100\\\\ 220&1100&1200\\\\ 230&1150&1200\\\\ 240&1200&1200\\\\ 250&1250&1200\\\\ 260&1300&1300\\\\ 270&1350&1400\\\\ 280&1400&1400\\\\ 290&1450&1400\\\\ 300&1500&1400\\\\ 310&1550&1500\\\\ 320&1600&1600\\\\ 330&1650&1600\\\\ 340&1700&1600\\\\ 350&1750&1600\\\\ 360&1800&1700\\\\ 370&1850&1800\\\\ 380&1900&1800\\\\ 390&1950&1800\\\\ 400&2000&1800\\\\ \\end{tabular}$</p><p><br/>Notice at 200, 240, 260, 280, and 320 seconds, Michael and the garbage truck meet. It is clear that they met at these times, and will meet no more. Thus the answer is $\\boxed{\\textbf{(B)}}$.</p><p><br/></p><p>~superagh</p><p><br/></p>",
+        "<p>This solution might be time consuming, but it is pretty rigorous. Also, throughout the solution refer to the graph in solution 1 to understand this one more. Lets first start off by defining the position function for Michael. We let $M(t) = 5t$, where $t$ is the amount of seconds passed. Now, lets define the position function of the truck as two independent functions. It is obvious, graphically, that the position function of the truck is a piecewise function alternating between linear lines and constant lines. Lets focus on the linear pieces of the truck's position function. Let the $kth$ linear part of the truck's position function be denoted as $L_k(t)$. Then through algebra, it is found that $L_k(t) = 10t +  500 - 300k$, ${50k - 50 <= t <= 50k - 30}$. Now, lets move on to the constant pieces, which is a lot easier in terms of algebra. Let the $ith$ constant part of the truck's position function be denoted as $C_i(t)$. Then, again, through algebra we obtain $C_i(t) = 200 * (i + 1)$, ${50i - 30 <= t <= 50i}$. Now, let me stress that $i$ and $k$ are disjoint, which is why I used different variable names. We are interested in where $C_i(t)$ and $L_k(t)$ intersect $M(t)$ or $5t$. $L_k(t)$ intersects $M$ at $(60k - 100, 300k - 500)$. However, the only $k$ values that actually work are $5 <= k <= 7$ because of the domain restrictions on $L_k(t)$. Similarly, we also see that for $C_i(t)$ it intersects at $(40i + 40, 200i + 200)$. The only $i$ values that work is $4 <= i <= 7$. However, some pair $(i, k)$ might yield the same exact intersection point. Checking this through simple algebra we see that $(4,5)$ and $(7,7)$ do indeed yield the same intersection point. Thus, our answer is $(7 - 5 + 1) + (7 - 4 + 1) - 2 = 7 - 2 = 5$ or $\\boxed{\\textbf{(B)}}$.</p><p>Note: This is probably not the best solution as it seems a lot more tedious, but it still works. I admit this solution isn't elegant at all.</p><p>~triggod</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2008 AMC 10B - geometry problem involving area calculations and geometric relationships. Students need to understand geometry concepts, work with area principles, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills and understanding of area."
+        }
+      ]
+    }
+  ]
+}

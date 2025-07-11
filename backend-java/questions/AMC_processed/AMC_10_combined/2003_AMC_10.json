@@ -1,0 +1,836 @@
+{
+  "year": "2003",
+  "competition": "AMC_10",
+  "problems": [
+    {
+      "id": "amc_2003_10a_1",
+      "question": "<p>What is the difference between the sum of the first $2003$ even counting numbers and the sum of the first $2003$ odd counting numbers? </p>",
+      "solutions": [
+        "<p>The first $2003$ even counting numbers are $2,4,6,...,4006$. </p><p>The first $2003$ odd counting numbers are $1,3,5,...,4005$. </p><p>Thus, the problem is asking for the value of $(2+4+6+...+4006)-(1+3+5+...+4005)$. </p><p>$(2+4+6+...+4006)-(1+3+5+...+4005) = (2-1)+(4-3)+(6-5)+...+(4006-4005)$</p><p>$= 1+1+1+...+1 = \\boxed{\\mathrm{(D)}\\ 2003}$</p>",
+        "<p>Using the sum of an <a class=\"mw-redirect\" href=\"/wiki/index.php/Arithmetic_progression\" title=\"Arithmetic progression\">arithmetic progression</a> formula, we can write this as $\\frac{2003}{2}(2 + 4006) - \\frac{2003}{2}(1 + 4005) = \\frac{2003}{2} \\cdot 2 = \\boxed{\\mathrm{(D)}\\ 2003}$.</p><p><br/></p>",
+        "<p>The formula for the sum of the first $n$ even numbers, is $S_E=n^{2}+n$, (E standing for even).</p><p>Sum of first $n$ odd numbers, is $S_O=n^{2}$, (O standing for odd).</p><p>Knowing this, plug $2003$ for $n$, </p><p>$S_E-S_O= (2003^{2}+2003)-(2003^{2})=2003 \\Rightarrow$ $\\boxed{\\mathrm{(D)}\\ 2003}$.</p>",
+        "<p>In the case that we don't know if $0$ is considered an even number, we note that it doesn't matter! The sum of odd numbers is $O=1+3+5+...+4005$. And the sum of even numbers is either $E_1=0+2+4...+4004$ or $E_2=2+4+6+...+4006$. When compared to the sum of odd numbers, we see that each of the $n$th term in the series of even numbers differ by $1$. For example, take series $O$ and $E_1$. The first terms are $1$ and $0$. Their difference is $|1-0|=1$. Similarly, take take series $O$ and $E_2$. The first terms are $1$ and $2$. Their difference is $|1-2|=1$. Since there are $2003$ terms in each set, the answer $\\boxed{\\mathrm{(D)}\\ 2003}$.</p>",
+        "<p>We can pair each term of the sums - the first even number with the first odd number, the second with the second, and so forth. Then, there are 2003 pairs with a difference of 1 in each pair - 2-1 is 1, 4-3 is 1, 6-5 is 1, and so on. Then, the solution is $1 \\cdot 2003$, and the answer is $\\boxed{\\text{(D) }2003}$.</p><p>&lt;3</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2003 AMC 10A - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_2",
+      "question": "<p>Members of the Rockham Soccer League buy socks and T-shirts. Socks cost $4 per pair and each T-shirt costs $5 more than a pair of socks. Each member needs one pair of socks and a shirt for home games and another pair of socks and a shirt for away games. If the total cost is $2366, how many members are in the League? </p>",
+      "solutions": [
+        "<p>Since T-shirts cost $5$ dollars more than a pair of socks, T-shirts cost $5+4=9$ dollars. </p><p>Since each member needs $2$ pairs of socks and $2$ T-shirts, the total cost for $1$ member is $2(4+9)=26$ dollars. </p><p>Since $2366$ dollars was the cost for the club, and $26$ was the cost per member, the number of members in the League is $2366\\div 26=\\boxed{\\mathrm{(B)}\\ 91}$. </p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2003 AMC 10A - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_3",
+      "question": "<p>A solid box is $15$ cm by $10$ cm by $8$ cm. A new solid is formed by removing a cube $3$ cm on a side from each corner of this box. What percent of the original volume is removed? </p>",
+      "solutions": [
+        "<p>The volume of the original box is $15\\cdot10\\cdot8=1200.$</p><p>The volume of each cube that is removed is $3\\cdot3\\cdot3=27.$</p><p>Since there are $8$ corners on the box, $8$ cubes are removed. </p><p>So the total volume removed is $8\\cdot27=216$. </p><p>Therefore, the desired percentage is $\\frac{216}{1200}\\cdot100 = \\boxed{\\mathrm{(D)}\\ 18\\%}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2003 AMC 10A - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_4",
+      "question": "<p>It takes Anna $30$ minutes to walk uphill $1$ km from her home to school, but it takes her only $10$ minutes to walk from school to her home along the same route. What is her average speed, in km/hr, for the round trip? </p>",
+      "solutions": [
+        "<p>Since she walked $1$ km to school and $1$ km back home, her total distance is $1+1=2$ km. </p><p>Since she spent $30$ minutes walking to school and $10$ minutes walking back home, her total time is $30+10=40$ minutes = $\\frac{40}{60}=\\frac{2}{3}$ hours. </p><p>Therefore her average speed in km/hr is $\\frac{2}{\\left(\\frac{2}{3}\\right)}=\\boxed{\\mathrm{(A)}\\ 3}$.</p>",
+        "<p>The average speed of two speeds that travel the same distance is the <a href=\"/wiki/index.php/Harmonic_mean\" title=\"Harmonic mean\">harmonic mean</a> of the speeds, or $\\dfrac{2}{\\left(\\dfrac{1}{x}+\\dfrac{1}{y}\\right)}=\\dfrac{2xy}{x+y}$ (for speeds $x$ and $y$). Mary's speed going to school is $2\\,\\text{km/hr}$, and her speed coming back is $6\\,\\text{km/hr}$. Plugging the numbers in, we get that the average speed is $\\dfrac{2\\times 6\\times 2}{6+2}=\\dfrac{24}{8}=\\boxed{\\mathrm{(A)}\\ 3}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2003 AMC 10A - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_5",
+      "question": "<p>Let $d$ and $e$ denote the solutions of $2x^{2}+3x-5=0$. What is the value of $(d-1)(e-1)$? </p>",
+      "solutions": [
+        "<p>Using factoring: </p><p>$2x^{2}+3x-5=0$</p><p>$(2x+5)(x-1)=0$</p><p>$x = -\\frac{5}{2}$ or $x=1$</p><p>So $d$ and $e$ are $-\\frac{5}{2}$ and $1$. </p><p>Therefore the answer is $\\left(-\\frac{5}{2}-1\\right)(1-1)=\\left(-\\frac{7}{2}\\right)(0)=\\boxed{\\mathrm{(B)}\\ 0}$</p><p>We can use the sum and product of a quadratic (a.k.a Vieta):</p><p>$(d-1)(e-1)=de-(d+e)+1 \\implies\\text{product}-\\text{sum}+1 \\implies \\dfrac{c}{a}-\\left(-\\dfrac{b}{a}\\right)+1 \\implies \\dfrac{b+c}{a}+1= \\dfrac{5}{-5}+1=\\boxed{\\mathrm{(B)}\\ 0}$</p><p><br/></p><p>By inspection, we quickly note that $x=1$ is a solution to the equation, therefore the answer is</p><p>$(d-1)(e-1)=(1-1)(e-1)=\\boxed{\\mathrm{(B)}\\ 0}$</p><p>The form $(d-1)(e-1)$ resembles the factored form for the quadratic, namely $(x-d)(x-e)$ based on the information given. Note putting in 1 for $x$ in the that quadratic immediately yields the desired expression. Thus, $2(1)^2+3(1)-5 = \\boxed{\\mathrm{(B)}\\ 0}$</p>",
+        "<p>Using factoring: </p><p>$2x^{2}+3x-5=0$</p><p>$(2x+5)(x-1)=0$</p><p>$x = -\\frac{5}{2}$ or $x=1$</p><p>So $d$ and $e$ are $-\\frac{5}{2}$ and $1$. </p><p>Therefore the answer is $\\left(-\\frac{5}{2}-1\\right)(1-1)=\\left(-\\frac{7}{2}\\right)(0)=\\boxed{\\mathrm{(B)}\\ 0}$</p>",
+        "<p>We can use the sum and product of a quadratic (a.k.a Vieta):</p><p>$(d-1)(e-1)=de-(d+e)+1 \\implies\\text{product}-\\text{sum}+1 \\implies \\dfrac{c}{a}-\\left(-\\dfrac{b}{a}\\right)+1 \\implies \\dfrac{b+c}{a}+1= \\dfrac{5}{-5}+1=\\boxed{\\mathrm{(B)}\\ 0}$</p><p><br/></p>",
+        "<p>By inspection, we quickly note that $x=1$ is a solution to the equation, therefore the answer is</p><p>$(d-1)(e-1)=(1-1)(e-1)=\\boxed{\\mathrm{(B)}\\ 0}$</p>",
+        "<p>The form $(d-1)(e-1)$ resembles the factored form for the quadratic, namely $(x-d)(x-e)$ based on the information given. Note putting in 1 for $x$ in the that quadratic immediately yields the desired expression. Thus, $2(1)^2+3(1)-5 = \\boxed{\\mathrm{(B)}\\ 0}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2003 AMC 10A - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_6",
+      "question": "<p>Define $x \\heartsuit y$ to be $|x-y|$ for all real numbers $x$ and $y$. Which of the following statements is not true? </p><p>$\\mathrm{(A) \\ } x \\heartsuit y = y \\heartsuit x$ for all $x$ and $y$</p><p>$\\mathrm{(B) \\ } 2(x \\heartsuit y) = (2x) \\heartsuit (2y)$ for all $x$ and $y$</p><p>$\\mathrm{(C) \\ } x \\heartsuit 0 = x$ for all $x$</p><p>$\\mathrm{(D) \\ } x \\heartsuit x = 0$ for all $x$</p>",
+      "solutions": [
+        "<p>We start by looking at the answers. Examining statement C, we notice:</p><p>$x \\heartsuit 0 = |x-0| = |x|$</p><p>$|x| \\neq x$ when $x<0$, but statement C says that it does for all $x$. </p><p>Therefore the statement that is not true is $\\boxed{\\mathrm{(C)}\\ x\\heartsuit 0=x\\ \\text{for all}\\ x}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2003 AMC 10A - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_7",
+      "question": "<p>How many non-<a class=\"mw-redirect\" href=\"/wiki/index.php/Congruent_(geometry)\" title=\"Congruent (geometry)\">congruent</a> <a href=\"/wiki/index.php/Triangle\" title=\"Triangle\">triangles</a> with <a href=\"/wiki/index.php/Perimeter\" title=\"Perimeter\">perimeter</a> $7$ have <a href=\"/wiki/index.php/Integer\" title=\"Integer\">integer</a> side lengths? </p>",
+      "solutions": [
+        "<p>By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Triangle_inequality\" title=\"Triangle inequality\">triangle inequality</a>, no side may have a length greater than the semiperimeter, which is $\\frac{1}{2}\\cdot7=3.5$. </p><p>Since all sides must be integers, the largest possible length of a side is $3$. Therefore, all such triangles must have all sides of length $1$, $2$, or $3$. Since $2+2+2=6<7$, at least one side must have a length of $3$. Thus, the remaining two sides have a combined length of $7-3=4$. So, the remaining sides must be either $3$ and $1$ or $2$ and $2$. Therefore, the number of triangles is $\\boxed{\\mathrm{(B)}\\ 2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2003 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_8",
+      "question": "<p>What is the probability that a randomly drawn positive factor of $60$ is less than $7$?</p>",
+      "solutions": [
+        "<p>For any positive integer $n$ which is not a perfect square, exactly half of its positive factors will be less than $\\sqrt{n}$, since each such factor can be paired with one that is larger than $\\sqrt{n}$. (By contrast, if $n$ is a perfect square, one of its factors will be exactly $\\sqrt{n}$, which would therefore have to be paired with itself.)</p><p>Since $60$ is indeed not a perfect square, it follows that half of its positive factors are less than $\\sqrt{60} \\approx 7.746$. This estimate clearly shows that there are not even any integers, let alone factors of $60$, between $7$ and $\\sqrt{60}$. Accordingly, exactly half of the positive factors of $60$ are in fact less than $7$, so the answer is precisely $\\boxed{\\mathrm{(E)}\\ \\frac{1}{2}}$.</p><p>Testing all positive integers less than $7$, we find that $1$, $2$, $3$, $4$, $5$, and $6$ all divide $60$. The prime factorization of $60$ is $2^2 \\cdot 3 \\cdot 5$, so using the standard <a href=\"/wiki/index.php/Divisor_function\" title=\"Divisor function\">formula for the number of divisors</a>, the total number of divisors of $60$ is $3 \\cdot 2 \\cdot 2 = 12$. Therefore, the required probability is $\\frac{6}{12} = \\boxed{\\mathrm{(E)}\\ \\frac{1}{2}}$.</p><p>Though this is not recommended for reasons of time, one can simply write out all the factors of $60$, eventually finding that \\[60 = 1 \\cdot 60 = 2 \\cdot 30 = 3 \\cdot 20 = 4 \\cdot 15 = 5 \\cdot 12 = 6 \\cdot 10.\\] Hence $60$ has $12$ factors, of which $6$ are less than $7$ (namely, $1$, $2$, $3$, $4$, $5$, and $6$), so the answer is $\\frac{6}{12} = \\boxed{\\mathrm{(E)}\\ \\frac{1}{2}}$.</p>",
+        "<p>For any positive integer $n$ which is not a perfect square, exactly half of its positive factors will be less than $\\sqrt{n}$, since each such factor can be paired with one that is larger than $\\sqrt{n}$. (By contrast, if $n$ is a perfect square, one of its factors will be exactly $\\sqrt{n}$, which would therefore have to be paired with itself.)</p><p>Since $60$ is indeed not a perfect square, it follows that half of its positive factors are less than $\\sqrt{60} \\approx 7.746$. This estimate clearly shows that there are not even any integers, let alone factors of $60$, between $7$ and $\\sqrt{60}$. Accordingly, exactly half of the positive factors of $60$ are in fact less than $7$, so the answer is precisely $\\boxed{\\mathrm{(E)}\\ \\frac{1}{2}}$.</p>",
+        "<p>Testing all positive integers less than $7$, we find that $1$, $2$, $3$, $4$, $5$, and $6$ all divide $60$. The prime factorization of $60$ is $2^2 \\cdot 3 \\cdot 5$, so using the standard <a href=\"/wiki/index.php/Divisor_function\" title=\"Divisor function\">formula for the number of divisors</a>, the total number of divisors of $60$ is $3 \\cdot 2 \\cdot 2 = 12$. Therefore, the required probability is $\\frac{6}{12} = \\boxed{\\mathrm{(E)}\\ \\frac{1}{2}}$.</p>",
+        "<p>Though this is not recommended for reasons of time, one can simply write out all the factors of $60$, eventually finding that \\[60 = 1 \\cdot 60 = 2 \\cdot 30 = 3 \\cdot 20 = 4 \\cdot 15 = 5 \\cdot 12 = 6 \\cdot 10.\\] Hence $60$ has $12$ factors, of which $6$ are less than $7$ (namely, $1$, $2$, $3$, $4$, $5$, and $6$), so the answer is $\\frac{6}{12} = \\boxed{\\mathrm{(E)}\\ \\frac{1}{2}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2003 AMC 10A - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_9",
+      "question": "<p>Simplify $\\sqrt[3]{x\\sqrt[3]{x\\sqrt[3]{x\\sqrt{x}}}}$.</p>",
+      "solutions": [
+        "<p>$\\sqrt[3]{x\\sqrt{x}}=\\sqrt[3]{(\\sqrt{x})^{2}\\cdot\\sqrt{x}}=\\sqrt[3]{(\\sqrt{x})^{3}}=\\sqrt{x}$. </p><p>Therefore: </p><p>$\\sqrt[3]{x\\sqrt[3]{x\\sqrt[3]{x\\sqrt{x}}}}=\\sqrt[3]{x\\sqrt[3]{x\\sqrt{x}}}=\\sqrt[3]{x\\sqrt{x}}= \\sqrt{x} \\Rightarrow \\boxed{\\mathrm{(A)}\\ \\sqrt{x}}$</p>",
+        "<p>We know that $\\sqrt[3]{x\\sqrt{x}} = \\sqrt[3]{x\\cdot(x^\\frac{1}{2})} = \\sqrt[3]{x^\\frac{3}{2}} = x^\\frac{1}{2}$ We plug this into $\\sqrt[3]{x\\sqrt[3]{x\\sqrt[3]{x\\sqrt{x}}}}$ and get $\\sqrt[3]{x\\sqrt[3]{x\\cdot(x^\\frac{1}{2})}}$. Again, we substitute and get $\\sqrt[3]{x\\cdot(x^\\frac{1}{2})}$. We substitute one more time and get $x^\\frac{1}{2} = \\boxed{(A) \\sqrt{x}}$.</p>",
+        "<p>WLOG, plug in some random square number like $9$ or $4$, and the output you get after simplifying the expression will always be the square root of the number, so the answer is just $\\boxed{(A) \\sqrt{x}}$.</p><p>~Darth_Cadet</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2003 AMC 10A - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_10",
+      "question": "<p>The <a href=\"/wiki/index.php/Polygon\" title=\"Polygon\">polygon</a> enclosed by the solid lines in the figure consists of 4 <a class=\"mw-redirect\" href=\"/wiki/index.php/Congruent\" title=\"Congruent\">congruent</a> <a href=\"/wiki/index.php/Square_(geometry)\" title=\"Square (geometry)\"> squares</a> joined <a href=\"/wiki/index.php/Edge\" title=\"Edge\">edge</a>-to-edge. One more congruent square is attached to an edge at one of the nine positions indicated. How many of the nine resulting polygons can be folded to form a <a href=\"/wiki/index.php/Cube_(geometry)\" title=\"Cube (geometry)\"> cube</a> with one face missing? </p><p><a class=\"image\" href=\"/wiki/index.php/File:2003amc10a10.gif\">2003amc10a10.gif</a></p>",
+      "solutions": [
+        "<p><a class=\"image\" href=\"/wiki/index.php/File:2003amc10a10solution.gif\">2003amc10a10solution.gif</a></p><p>Let the squares be labeled $A$, $B$, $C$, and $D$.</p><p>When the polygon is folded, the \"right\" edge of square $A$ becomes adjacent to the \"bottom edge\" of square $C$, and the \"bottom\" edge of square $A$ becomes adjacent to the \"bottom\" edge of square $D$. </p><p>So, any \"new\" square that is attatched to those edges will prevent the polygon from becoming a cube with one face missing. </p><p>Therefore, squares $1$, $2$, and $3$ will prevent the polygon from becoming a cube with one face missing.</p><p>Squares $4$, $5$, $6$, $7$, $8$, and $9$ will allow the polygon to become a cube with one face missing when folded. </p><p>Thus the answer is $\\boxed{\\mathrm{(E)}\\ 6}$.</p><p>Another way to think of it is that a cube missing one face has $5$ of its $6$ faces. Since the shape has $4$ faces already, we need another face. The only way to add another face is if the added square does not overlap any of the others. $1$,$2$, and $3$ overlap, while squares $4$ to $9$ do not. The answer is $\\boxed{\\mathrm{(E)}\\ 6}$</p><p>If you're good at visualizing, you can imagine each box and fold up the shape into a 3D shape. This solution is only recommended if you are either in a hurry or extremely skilled at visualizing. We find out that $4,5,6,7,8$ and $9$ work. Therefore, the answer is $\\boxed{\\mathrm{(E)}\\ 6}$. ~Sophia866</p>",
+        "<p><a class=\"image\" href=\"/wiki/index.php/File:2003amc10a10solution.gif\">2003amc10a10solution.gif</a></p><p>Let the squares be labeled $A$, $B$, $C$, and $D$.</p><p>When the polygon is folded, the \"right\" edge of square $A$ becomes adjacent to the \"bottom edge\" of square $C$, and the \"bottom\" edge of square $A$ becomes adjacent to the \"bottom\" edge of square $D$. </p><p>So, any \"new\" square that is attatched to those edges will prevent the polygon from becoming a cube with one face missing. </p><p>Therefore, squares $1$, $2$, and $3$ will prevent the polygon from becoming a cube with one face missing.</p><p>Squares $4$, $5$, $6$, $7$, $8$, and $9$ will allow the polygon to become a cube with one face missing when folded. </p><p>Thus the answer is $\\boxed{\\mathrm{(E)}\\ 6}$.</p>",
+        "<p>Another way to think of it is that a cube missing one face has $5$ of its $6$ faces. Since the shape has $4$ faces already, we need another face. The only way to add another face is if the added square does not overlap any of the others. $1$,$2$, and $3$ overlap, while squares $4$ to $9$ do not. The answer is $\\boxed{\\mathrm{(E)}\\ 6}$</p>",
+        "<p>If you're good at visualizing, you can imagine each box and fold up the shape into a 3D shape. This solution is only recommended if you are either in a hurry or extremely skilled at visualizing. We find out that $4,5,6,7,8$ and $9$ work. Therefore, the answer is $\\boxed{\\mathrm{(E)}\\ 6}$. ~Sophia866</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2003 AMC 10A - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_11",
+      "question": "<p>The sum of the two 5-digit numbers $AMC10$ and $AMC12$ is $123422$. What is $A+M+C$? </p>",
+      "solutions": [
+        "<p>$AMC10+AMC12=123422$</p><p>$AMC00+AMC00=123400$</p><p>$AMC+AMC=1234$</p><p>$2\\cdot AMC=1234$</p><p>$AMC=\\frac{1234}{2}=617$</p><p>Since $A$, $M$, and $C$ are digits, $A=6$, $M=1$, $C=7$. </p><p>Therefore, $A+M+C = 6+1+7 = \\boxed{\\mathrm{(E)}\\ 14}$.</p>",
+        "<p>We know that $AMC12$ is $2$ more than $AMC10$. We set up $AMC10=x$ and $AMC12=x+2$. We have $x+x+2=123422$. Solving for $x$, we get $x=61710$. Therefore, the sum $A+M+C= 6+1+7 = \\boxed{\\mathrm{(E)}\\ 14}$.</p>",
+        "<p>Consider the place values of the digits of $AMC10$ and $AMC12$. </p><p>When we add $AMC10$ and $AMC12$, $C + C$ must result in a units digit of $4$, meaning $C$ is either $2$ or $7$. Since $M$ is odd, this means a ten was carried over to the next place value from $C + C$, and thus $C = 7$ (as $7 + 7 = 14$ and the ten is carried over). Now, we know 3 is the units digit of $M + M + 1$, so $M$ is either $1$ or $6$. Again, we must look at the digit before $M$, or $A$. $A$ is even, so $M$ must be less than $5$, or else the ten would be carried over. Ergo, $M$ is $1$. Nothing is carried over, so we have $A + A = 12$, and $A = 6$. Therefore, the sum of $A$, $M$, and $C$ is $6 + 1 + 7 = \\boxed{\\mathrm{(E)}\\ 14}$.</p>",
+        "<p>Intuitively, adding $AMC10$ and $AMC12$ is the same as adding $AMC11$ to itself. We can divide $123422$ by $2$ to get $61711$. So, $A$ = $6$, $M$ = 1, and $C$ = $7$. Adding all those up yields $6 + 1 + 7 = \\boxed{\\mathrm{(E)}\\ 14}$ ~sdmd</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2003 AMC 10A - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_12",
+      "question": "<p>A point $(x,y)$ is randomly picked from inside the rectangle with vertices $(0,0)$, $(4,0)$, $(4,1)$, and $(0,1)$. What is the probability that $x<y$? </p>",
+      "solutions": [
+        "<p>The rectangle has a width of $4$ and a height of $1$. </p><p>The area of this rectangle is $4\\cdot1=4$. </p><p>The line $x=y$ intersects the rectangle at $(0,0)$ and $(1,1)$. </p><p>The area which $x<y$ is the right isosceles triangle with side length $1$ that has vertices at $(0,0)$, $(1,1)$, and $(0,1)$. </p><p>The area of this triangle is $\\frac{1}{2}\\cdot1^{2}=\\frac{1}{2}$</p><p>Therefore, the probability that $x<y$ is $\\frac{\\frac{1}{2}}{4}=\\frac{1}{8} \\Rightarrow \\boxed{\\mathrm{(A)}\\ \\frac{1}{8}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2003 AMC 10A - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_13",
+      "question": "<p>The sum of three numbers is $20$. The first is four times the sum of the other two. The second is seven times the third. What is the product of all three? </p>",
+      "solutions": [
+        "<p>Let the numbers be $x$, $y$, and $z$ in that order. The given tells us that </p><p>\\begin{eqnarray*}y&=&7z\\\\ x&=&4(y+z)=4(7z+z)=4(8z)=32z\\\\ x+y+z&=&32z+7z+z=40z=20\\\\ z&=&\\frac{20}{40}=\\frac{1}{2}\\\\ y&=&7z=7\\cdot\\frac{1}{2}=\\frac{7}{2}\\\\ x&=&32z=32\\cdot\\frac{1}{2}=16 \\end{eqnarray*}</p><p>Therefore, the product of all three numbers is $xyz=16\\cdot\\frac{7}{2}\\cdot\\frac{1}{2}=28 \\Rightarrow \\boxed{\\mathrm{(A)}\\ 28}$.</p><p>Alternatively, we can set up the system in <a href=\"/wiki/index.php/Equation\" title=\"Equation\">equation</a> form:</p><p>\\begin{eqnarray*}1x+1y+1z&=&20\\\\ 1x-4y-4z&=&0\\\\ 0x+1y-7z&=&0\\\\ \\end{eqnarray*}</p><p>Or, in <a href=\"/wiki/index.php/Matrix\" title=\"Matrix\">matrix</a> form$\\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & -4 & -4 \\\\ 0 & 1 & -7 \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\\\ z \\\\ \\end{bmatrix} =\\begin{bmatrix} 20 \\\\ 0 \\\\ 0 \\\\ \\end{bmatrix}$</p><p>To solve this matrix equation, we can rearrange it thus:</p><p>$\\begin{bmatrix} x \\\\ y \\\\ z \\\\ \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & -4 & -4 \\\\ 0 & 1 & -7 \\end{bmatrix} ^{-1} \\begin{bmatrix} 20 \\\\ 0 \\\\ 0 \\\\ \\end{bmatrix}$</p><p>Solving this matrix equation by using <a class=\"new\" href=\"/wiki/index.php?title=Inverse_matrices&amp;action=edit&amp;redlink=1\" title=\"Inverse matrices (page does not exist)\">inverse matrices</a> and <a class=\"new\" href=\"/wiki/index.php?title=Matrix_multiplication&amp;action=edit&amp;redlink=1\" title=\"Matrix multiplication (page does not exist)\">matrix multiplication</a> yields</p><p>$\\begin{bmatrix} x \\\\ y \\\\ z \\\\ \\end{bmatrix} = \\begin{bmatrix} \\frac{1}{2} \\\\ \\frac{7}{2} \\\\ 16 \\\\ \\end{bmatrix}$</p><p>Which means that $x = \\frac{1}{2}$, $y = \\frac{7}{2}$, and $z = 16$. Therefore, $xyz = \\frac{1}{2}\\cdot\\frac{7}{2}\\cdot16 = 28 \\Rightarrow \\boxed{\\mathrm{(A)}\\ 28}$</p><p>Let's denote the 3rd number as $x$, the 2nd as $7x$, and the 1st as $4(7x+x)$ according to the information given in the problem. We know that all three numbers add up to $20$, so $4(8x)+7x+x = 20$. Solving the equation we get $x = \\frac{1}{2}$. Then substitute this value of x to solve for the other two numbers. Lastly, we obtain $28$ as the product of all three numbers.</p>",
+        "<p>Let the numbers be $x$, $y$, and $z$ in that order. The given tells us that </p><p>\\begin{eqnarray*}y&=&7z\\\\ x&=&4(y+z)=4(7z+z)=4(8z)=32z\\\\ x+y+z&=&32z+7z+z=40z=20\\\\ z&=&\\frac{20}{40}=\\frac{1}{2}\\\\ y&=&7z=7\\cdot\\frac{1}{2}=\\frac{7}{2}\\\\ x&=&32z=32\\cdot\\frac{1}{2}=16 \\end{eqnarray*}</p><p>Therefore, the product of all three numbers is $xyz=16\\cdot\\frac{7}{2}\\cdot\\frac{1}{2}=28 \\Rightarrow \\boxed{\\mathrm{(A)}\\ 28}$.</p>",
+        "<p>Alternatively, we can set up the system in <a href=\"/wiki/index.php/Equation\" title=\"Equation\">equation</a> form:</p><p>\\begin{eqnarray*}1x+1y+1z&=&20\\\\ 1x-4y-4z&=&0\\\\ 0x+1y-7z&=&0\\\\ \\end{eqnarray*}</p><p>Or, in <a href=\"/wiki/index.php/Matrix\" title=\"Matrix\">matrix</a> form$\\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & -4 & -4 \\\\ 0 & 1 & -7 \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\\\ z \\\\ \\end{bmatrix} =\\begin{bmatrix} 20 \\\\ 0 \\\\ 0 \\\\ \\end{bmatrix}$</p><p>To solve this matrix equation, we can rearrange it thus:</p><p>$\\begin{bmatrix} x \\\\ y \\\\ z \\\\ \\end{bmatrix} = \\begin{bmatrix} 1 & 1 & 1 \\\\ 1 & -4 & -4 \\\\ 0 & 1 & -7 \\end{bmatrix} ^{-1} \\begin{bmatrix} 20 \\\\ 0 \\\\ 0 \\\\ \\end{bmatrix}$</p><p>Solving this matrix equation by using <a class=\"new\" href=\"/wiki/index.php?title=Inverse_matrices&amp;action=edit&amp;redlink=1\" title=\"Inverse matrices (page does not exist)\">inverse matrices</a> and <a class=\"new\" href=\"/wiki/index.php?title=Matrix_multiplication&amp;action=edit&amp;redlink=1\" title=\"Matrix multiplication (page does not exist)\">matrix multiplication</a> yields</p><p>$\\begin{bmatrix} x \\\\ y \\\\ z \\\\ \\end{bmatrix} = \\begin{bmatrix} \\frac{1}{2} \\\\ \\frac{7}{2} \\\\ 16 \\\\ \\end{bmatrix}$</p><p>Which means that $x = \\frac{1}{2}$, $y = \\frac{7}{2}$, and $z = 16$. Therefore, $xyz = \\frac{1}{2}\\cdot\\frac{7}{2}\\cdot16 = 28 \\Rightarrow \\boxed{\\mathrm{(A)}\\ 28}$</p>",
+        "<p>Let's denote the 3rd number as $x$, the 2nd as $7x$, and the 1st as $4(7x+x)$ according to the information given in the problem. We know that all three numbers add up to $20$, so $4(8x)+7x+x = 20$. Solving the equation we get $x = \\frac{1}{2}$. Then substitute this value of x to solve for the other two numbers. Lastly, we obtain $28$ as the product of all three numbers.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2003 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_14",
+      "question": "<p>Let $n$ be the largest integer that is the product of exactly 3 distinct prime numbers $d$, $e$, and $10d+e$, where $d$ and $e$ are single digits. What is the sum of the digits of $n$?</p>",
+      "solutions": [
+        "<p>Since we want $n$ to be as large as possible, we would like $d$ in $10d+e$ to be as large as possible. So, $d=7,$ the greatest single-digit prime. Then, $e$ cannot be $5$ because $10(7)+5 = 75,$ which is not prime. So $e = 3$. Therefore, $d \\cdot e \\cdot (10d+e) = 7 \\cdot 3 \\cdot 73 = 1533$.So, the sum of the digits of $n$ is $1+5+3+3=12 \\Rightarrow \\boxed{\\mathrm{(A)}\\ 12}$ ~ MathGenius_ (Edited by Sophia866)</p>",
+        "<p>Since $d$ is a single digit prime number, the set of possible values of $d$ is $\\{2,3,5,7\\}$. </p><p>Since $e$ is a single digit prime number and is the units digit of the prime number $10d+e$, the set of possible values of $e$ is $\\{3,7\\}$. </p><p>Using these values for $d$ and $e$, the set of possible values of $10d+e$ is $\\{23,27,33,37,53,57,73,77\\}$</p><p>Out of this set, the prime values are $\\{23,37,53,73\\}$</p><p>Therefore the possible values of $n$ are: </p><p>$2\\cdot3\\cdot23=138$</p><p>$3\\cdot7\\cdot37=777$</p><p>$5\\cdot3\\cdot53=795$</p><p>$7\\cdot3\\cdot73=1533$</p><p>The largest possible value of $n$ is $1533$. </p><p>So, the sum of the digits of $n$ is $1+5+3+3=12 \\Rightarrow \\boxed{\\mathrm{(A)}\\ 12}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2003 AMC 10A - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_15",
+      "question": "<p>What is the probability that an integer in the set $\\{1,2,3,...,100\\}$ is divisible by $2$ and not divisible by $3$? </p>",
+      "solutions": [
+        "<p>There are $100$ integers in the set. </p><p>Since every $2^{\\text{nd}}$ integer is divisible by $2$, there are $\\left\\lfloor\\frac{100}{2}\\right\\rfloor = 50$ integers divisible by $2$ in the set. </p><p>To be divisible by both $2$ and $3$, a number must be divisible by $\\operatorname{lcm}(2,3)=6$.</p><p>Since every $6^{\\text{th}}$ integer is divisible by $6$, there are $\\left\\lfloor\\frac{100}{6}\\right\\rfloor = 16$ integers divisible by both $2$ and $3$ in the set. </p><p>So there are $50-16=34$ integers in this set that are divisible by $2$ and not divisible by $3$. </p><p>Therefore, the desired probability is $\\frac{34}{100}=\\frac{17}{50}\\Rightarrow\\boxed{\\mathrm{(C)}\\ \\frac{17}{50}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2003 AMC 10A - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_16",
+      "question": "<p>What is the units digit of $13^{2003}$?</p>",
+      "solutions": [
+        "<p>$13^{2003}\\equiv 3^{2003}\\pmod{10}$</p><p>Since $3^4=81\\equiv1\\pmod{10}$: </p><p>$3^{2003}=(3^{4})^{500}\\cdot3^{3}\\equiv1^{500}\\cdot27\\equiv7\\pmod{10}$</p><p>Therefore, the units digit is $7 \\Rightarrow\\boxed{\\mathrm{(C)}\\ 7}$</p>",
+        "<p>Since we are looking for the units digit of $13^{2003}$, we only have to focus on the units digit of the base (13) as none of the other digits of the base affect the units digit of the resulting value.</p><p>By testing the first few values or through previous knowledge, you might see that the units digit of exponents with base 3 follow this pattern: \\[3^1=3\\]\\[3^2=9\\]\\[3^3=27\\]\\[3^4=81,\\]giving us the rotation $3-9-7-1.$</p><p>As this cycle resets every time the index increases by 4, we know that this cycle ends on 2000, and starts once again on 2001. As our expression is raised to the power of 2003, we know that the units digit of our expression must end with the third term of our pattern: $7$.</p><p>Therefore, the units digit of our expression is $7 \\Rightarrow\\boxed{\\mathrm{(C)}\\ 7}$</p><p>~ JinhoK</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2003 AMC 10A - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_17",
+      "question": "<p>The number of inches in the perimeter of an equilateral triangle equals the number of square inches in the area of its circumscribed circle. What is the radius, in inches, of the circle? </p>",
+      "solutions": [
+        "<p>Let $s$ be the length of a side of the equilateral triangle and let $r$ be the radius of the circle. </p><p>In a circle with a radius $r$, the side of an inscribed equilateral triangle is $r\\sqrt{3}$. </p><p>So $s=r\\sqrt{3}$. </p><p>The perimeter of the triangle is $3s=3r\\sqrt{3}$</p><p>The area of the circle is $\\pi r^{2}$</p><p>So: $\\pi r^{2} = 3r\\sqrt{3}$</p><p>$\\pi r=3\\sqrt{3}$</p><p>$r=\\frac{3\\sqrt{3}}{\\pi} \\Rightarrow\\boxed{\\mathrm{(B)}\\ \\frac{3\\sqrt{3}}{\\pi}}$</p>",
+        "<p>As in Solution $1$, let $s$ be the side length of the equilateral triangle and let $r$ be the radius of the circumcircle. Remembering that the formula for radius of a circumcircle is $\\frac{abc}{4A}$, where $a$, $b$, and $c$ are side lengths of the triangle, and $A$ is its area, we define each of the quantities in the formula. Since $a = b = c = s$ and, by the formula for the area of an equilateral triangle, $A = \\frac{s^2\\sqrt{3}}{4}$, the circumradius is $\\frac{s^3}{4\\frac{s^2\\sqrt{3}}{4}} = \\frac{s}{\\sqrt{3}}$. The area of the circumcircle is then $\\pi(\\frac{s}{\\sqrt{3}})^2 = \\frac{\\pi s^2}{3}$. Because this is equal to the perimeter of the triangle, we equate this to $3s$. Upon solving, we note that the nonzero value of $s$ is then $\\frac{9}{\\pi}$. We can now plug this back into the circumradius formula we found earlier to get that $r = \\frac{\\frac{9}{\\pi}}{\\sqrt{3}} = \\boxed{\\textbf{(B)} \\frac{3 \\sqrt{3}}{\\pi}}$.</p><p>~ <a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2003 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_18",
+      "question": "<p>What is the sum of the reciprocals of the roots of the equation $\\frac{2003}{2004}x+1+\\frac{1}{x}=0$?</p>",
+      "solutions": [
+        "<p>Multiplying both sides by $x$: </p><p>$\\frac{2003}{2004}x^{2}+1x+1=0$</p><p>Let the roots be $a$ and $b$. </p><p>The problem is asking for $\\frac{1}{a}+\\frac{1}{b}= \\frac{a+b}{ab}$</p><p>By <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\">Vieta's formulas</a>: </p><p>$a+b=(-1)^{1}\\frac{1}{\\frac{2003}{2004}}=-\\frac{2004}{2003}$</p><p>$ab=(-1)^{2}\\frac{1}{\\frac{2003}{2004}}=\\frac{2004}{2003}$</p><p>So the answer is $\\frac{a+b}{ab}=\\frac{-\\frac{2004}{2003}}{\\frac{2004}{2003}}=-1 \\Rightarrow\\boxed{\\mathrm{(B)}\\ -1}$.</p>",
+        "<p>Dividing both sides by $x$, </p><p>$\\frac{2003}{2004}+\\frac 1x+\\frac{1}{x^2}=0$, </p><p>we see by <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\">Vieta's formulas</a> that the sum of the roots is $-1  \\Rightarrow\\boxed{\\mathrm{(B)}\\ -1}$.</p>",
+        "<p>Re-stating and multiplying $\\frac{1}{x}$ by $\\frac{2004}{2004}$, we have $\\frac{2003x}{2004} + \\frac{2004}{2004x} + 1 = 0$.</p><p>Simplifying, we have $\\frac{2003}{2004}+\\frac{\\frac{2004}{x}}{2004}=-1.$</p><p>Putting this together, we have $\\frac{2003+\\frac{2004}{x}}{2004}=-1.$</p><p>Simplifying, we have $2004x + \\frac{2004}{x} = -2004.$</p><p>Multiplying both sides by $x,$ we have $2003x^2+2004=-2004x.$</p><p>Moving $-2004x$ to the left side, we have $2003x^2 + 2004x + 2004 = 0.$</p><p>Let's go back and see what we want.</p><p>We want the sum of the reciprocals of the roots, in which if the roots were to be called $r_1$ and $r_2,$ we would want $\\frac{1}{r_1}+\\frac{1}{r_2}=\\frac{r_1 + r_2}{r_1 \\cdot r_2}$.</p><p>We can use <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\">Vieta's formulas</a> to solve the sum of the roots and the product of the roots.</p><p>We have that the sum of the two roots is $\\frac{-b}{a}$ where the quadratic is $ax^2+bx+c=0.$</p><p>In this case, $a=2003$ and $b=2004$.</p><p>Therefore, $r_1+r_2=-\\frac{2004}{2003}.$</p><p>We have that the product of the two roots is $\\frac{c}{a}$ where the quadratic is $ax^2+bx+c=0.$</p><p>In this case, $c=2004$ and $a=2003.$</p><p>Therefore, $r_1 \\cdot r_2 = \\frac{2004}{2003}.$</p><p>Now that we have the sum and product of the roots, we can substitute back into the expression of what we want.</p><p>We have $\\frac{-\\frac{2004}{2003}}{\\frac{2004}{2003}}=-\\frac{2004}{2003} \\cdot \\frac{2003}{2004} = \\boxed{\\mathrm{(B)}\\ -1}.$</p><p>~mathboy282</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2003 AMC 10A - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_19",
+      "question": "<p>A <a href=\"/wiki/index.php/Semicircle\" title=\"Semicircle\">semicircle</a> of <a href=\"/wiki/index.php/Diameter\" title=\"Diameter\">diameter</a> $1$ sits at the top of a semicircle of diameter $2$, as shown. The shaded <a href=\"/wiki/index.php/Area\" title=\"Area\">area</a> inside the smaller semicircle and outside the larger semicircle is called a <i>lune</i>. Determine the area of this lune. </p><p>[asy] import graph; size(150); defaultpen(fontsize(8)); pair A=(-2,0), B=(2,0); filldraw(Arc((0,sqrt(3)),1,0,180)--cycle,mediumgray); filldraw(Arc((0,0),2,0,180)--cycle,white); draw(2*expi(2*pi/6)--2*expi(4*pi/6));  label(\"1\",(0,sqrt(3)),(0,-1)); label(\"2\",(0,0),(0,-1)); [/asy]</p>",
+      "solutions": [
+        "<p>[asy] import graph; size(150); defaultpen(fontsize(8)); pair A=(-2,0), B=(2,0); filldraw(Arc((0,sqrt(3)),1,0,180)--cycle,mediumgray); fill(Arc((0,0),2,0,180)--cycle,white); draw(Arc((0,0),2,0,180)--cycle); draw((0,0)--2*expi(2*pi/6)--2*expi(2*pi/6*2)--(0,0));  label(\"A\",(0,2),(0,4)); label(\"B\",(0,2),(0,-1)); label(\"C\",(0,sqrt(3)/2),(0,2)); label(\"1\",(-0.5,sqrt(3)/2),(-1,0)); label(\"1\",(0.5,sqrt(3)/2),(1,0)); [/asy]</p><p><br/>The shaded area $[A]$ is equal to the area of the smaller semicircle $[A+B]$ minus the area of a <a href=\"/wiki/index.php/Sector\" title=\"Sector\">sector</a> of the larger circle $[B+C]$ plus the area of a <a href=\"/wiki/index.php/Triangle\" title=\"Triangle\">triangle</a> formed by two <a href=\"/wiki/index.php/Radius\" title=\"Radius\"> radii</a> of the larger semicircle and the diameter of the smaller semicircle $[C]$.</p><p>The area of the smaller semicircle is $[A+B] = \\frac{1}{2}\\pi\\cdot\\left(\\frac{1}{2}\\right)^{2}=\\frac{1}{8}\\pi$. </p><p>Since the radius of the larger semicircle is equal to the diameter of the smaller half circle, the triangle is an equilateral triangle and the sector measures $60^\\circ$. </p><p>The area of the $60^\\circ$ sector of the larger semicircle is $[B+C] = \\frac{60}{360}\\pi\\cdot\\left(\\frac{2}{2}\\right)^{2}=\\frac{1}{6}\\pi$. </p><p>The area of the triangle is $[C] = \\frac{1^{2}\\sqrt{3}}{4}=\\frac{\\sqrt{3}}{4}$.</p><p>So the shaded area is $[A] = [A+B]-[B+C]+[C] = \\left(\\frac{1}{8}\\pi\\right)-\\left(\\frac{1}{6}\\pi\\right)+\\left(\\frac{\\sqrt{3}}{4}\\right)=\\boxed{\\mathrm{(C)}\\ \\frac{\\sqrt{3}}{4}-\\frac{1}{24}\\pi}$. We have thus solved the problem.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2003 AMC 10A - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_20",
+      "question": "<p>A base-10 three digit number $n$ is selected at random. Which of the following is closest to the probability that the base-9 representation and the base-11 representation of $n$ are both three-digit numerals? </p>",
+      "solutions": [
+        "<p>To be a three digit number in base-10: </p><p>$10^{2} \\leq n \\leq 10^{3}-1$</p><p>$100 \\leq n \\leq 999$</p><p>Thus there are $900$ three-digit numbers in base-10</p><p>To be a three-digit number in base-9: </p><p>$9^{2} \\leq n \\leq 9^{3}-1$</p><p>$81 \\leq n \\leq 728$</p><p>To be a three-digit number in base-11: </p><p>$11^{2} \\leq n \\leq 11^{3}-1$</p><p>$121 \\leq n \\leq 1330$</p><p>So, $121 \\leq n \\leq 728$</p><p>Thus, there are $608$ base-10 three-digit numbers that are three digit numbers in base-9 and base-11. </p><p>Therefore the desired probability is $\\frac{608}{900}\\approx 0.7 \\Rightarrow\\boxed{\\mathrm{(E)}\\ 0.7}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2003 AMC 10A - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_21",
+      "question": "<p>Pat is to select six cookies from a tray containing only chocolate chip, oatmeal, and peanut butter cookies. There are at least six of each of these three kinds of cookies on the tray. How many different assortments of six cookies can be selected? </p>",
+      "solutions": [
+        "<p>Let the ordered triplet $(x,y,z)$ represent the assortment of $x$ chocolate chip cookies, $y$ oatmeal cookies, and $z$ peanut butter cookies. </p><p>Using <a href=\"/wiki/index.php/Casework\" title=\"Casework\">casework</a>: </p><p>Pat selects $0$ chocolate chip cookies: </p><p>Pat needs to select $6-0=6$ more cookies that are either oatmeal or peanut butter. </p><p>The assortments are: $\\{(0,6,0); (0,5,1); (0,4,2); (0,3,3); (0,2,4); (0,1,5); (0,0,6)\\} \\rightarrow 7$ assortments. </p><p>Pat selects $1$ chocolate chip cookie: </p><p>Pat needs to select $6-1=5$ more cookies that are either oatmeal or peanut butter. </p><p>The assortments are: $\\{(1,5,0); (1,4,1); (1,3,2); (1,2,3); (1,1,4); (1,0,5) \\} \\rightarrow 6$ assortments. </p><p>Pat selects $2$ chocolate chip cookies: </p><p>Pat needs to select $6-2=4$ more cookies that are either oatmeal or peanut butter. </p><p>The assortments are: $\\{(2,4,0); (2,3,1); (2,2,2); (2,1,3); (2,0,4)\\} \\rightarrow 5$ assortments. </p><p>Pat selects $3$ chocolate chip cookies: </p><p>Pat needs to select $6-3=3$ more cookies that are either oatmeal or peanut butter. </p><p>The assortments are: $\\{(3,3,0); (3,2,1); (3,1,2); (3,0,3)\\} \\rightarrow 4$ assortments. </p><p>Pat selects $4$ chocolate chip cookies: </p><p>Pat needs to select $6-4=2$ more cookies that are either oatmeal or peanut butter. </p><p>The assortments are: $\\{(4,2,0); (4,1,1); (4,0,2)\\} \\rightarrow 3$ assortments. </p><p>Pat selects $5$ chocolate chip cookies: </p><p>Pat needs to select $6-5=1$ more cookies that are either oatmeal or peanut butter. </p><p>The assortments are: $\\{(5,1,0); (5,0,1)\\} \\rightarrow 2$ assortments. </p><p>Pat selects $6$ chocolate chip cookies: </p><p>Pat needs to select $6-6=0$ more cookies that are either oatmeal or peanut butter. </p><p>The only assortment is: $\\{(6,0,0)\\} \\rightarrow 1$ assortment. </p><p>The total number of assortments of cookies that can be collected is $7+6+5+4+3+2+1=28 \\Rightarrow\\boxed{\\mathrm{(D)}\\ 28}$</p><p>There is a much faster way to do casework.</p><p>Case 1: 1 type of cookie - 3 ways</p><p>Case 2: 2 types of cookies - 3 ways to choose the 2 types of cookies, and 5 ways to choose how of each there are1 and 52 and 43 and 34 and 25 and 1</p><p>$3*5=15$ cases for case 2</p><p>Case 3: 3 types of cookies - quick examination shows us that the only ways to use all three cookies are the following:4, 1, 1: this gives us 3!/2!*1! = 3 ways3, 2, 1: this gives us 3! = 6 ways2, 2, 2: this gives us 1 waytotal of 10 cases for this case10+15+3= $28$ total</p>",
+        "<p>It is given that it is possible to select at least 6 of each. Therefore, we can make a bijection to the number of ways to divide the six choices into three categories, since it is assumed that their order is unimportant. Using the ball and urns/sticks and stones/stars and bars formula, the number of ways to do this is $\\binom{6+3-1}{3-1}=\\binom{8}{2} = 28 \\Rightarrow\\boxed{\\mathrm{(D)}\\ 28}$</p>",
+        "<p>Suppose the six cookies to be chosen are the stars, as we attempt to implement stars and bars. We take two dividers, and place them between the cookies, such that the six cookies are split into 3 groups, where the groups are the number of chocolate chip, oatmeal, and peanut butter cookies, and each group can have 0. First, assume that the two dividers cannot go in between the same two cookies. By stars and bars, there are $\\dbinom{7}{2}$ ways to make the groups.</p><p>Finally, since the two dividers can be together, we must add those cases where the two dividers are in the same space between cookies. There are 7 spaces, and hence 7 cases.</p><p>Our final answer is $21+7=\\boxed{\\mathrm{(D)}\\ 28}$</p>",
+        "<p>The numbers of the three types of cookies must have a sum of six. Possible sets of whole numbers whose sum is six are \\[0,0,6;\\ 0,1,5;\\ 0,2,4;\\ 0,3,3;\\ 1,1,4;\\ 1,2,3;\\ \\ \\text{and}\\ 2,2,2.\\] Every ordering of each of these sets determines a different assortment of cookies. There are 3 orders for each of the sets \\[0,0,6;\\ 0,3,3;\\ \\text{and}\\ 1,1,4.\\] There are 6 orders for each of the sets \\[0,1,5;\\ 0,2,4;\\ \\text{and}\\ 1,2,3.\\] There is only one order for $2,2,2$. Therefore the total number of assortments of six cookies is $3\\cdot 3 + 3\\cdot 6 + 1 = 28$.</p>",
+        "<p>Also known as the <a href=\"/wiki/index.php/Ball-and-urn\" title=\"Ball-and-urn\">ball-and-urn</a> technique.Construct eight slots, six to place the cookies in and two to divide the cookies by type. Let the number of chocolate chip cookies be the number of slots to the left of the first divider, the number of oatmeal cookies be the number of slots between the two dividers, and the number of peanut butter cookies be the number of slots to the right of the second divider. For example, $111\\ | \\ 11\\ | \\ 1$ represents three chocolate chip cookies, two oatmeal cookies, and one peanut butter cookie. There are $\\binom{8}{2} = \\boxed{28}$ ways to place the two dividers, so there are 28 ways to select the six cookies.</p>",
+        "<p>(NOTE: Variation of other solutions)</p><p>Let $a, b,c$ be the number of cookies that we have for each type respectively. Hence:</p><p>$a + b + c = 6.$</p><p>Via stars and bars, the number of solutions is simply $\\tbinom{8}{2} = 28.$</p><p>~yk2007</p>",
+        "<p>This is simply a stars and bars situation, where we distribute 6 items among 3 people. </p><p>A quick formula for stars and bars problems is $\\tbinom{n+k-1}{k-1}$ where we use combinatrics to evaluate after.Using this, we get $\\tbinom{8}{2} = 28.$.</p><p>So, the answer is (D) 28.</p><p>~MathKatana</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2003 AMC 10A - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_22",
+      "question": "<p>In rectangle $ABCD$, we have $AB=8$, $BC=9$, $H$ is on $BC$ with $BH=6$, $E$ is on $AD$ with $DE=4$, line $EC$ intersects line $AH$ at $G$, and $F$ is on line $AD$ with $GF \\perp AF$. Find the length of $GF$. </p><p>[asy] unitsize(3mm); defaultpen(linewidth(.8pt)+fontsize(8pt)); pair D=(0,0), Ep=(4,0), A=(9,0), B=(9,8), H=(3,8), C=(0,8), G=(-6,20), F=(-6,0); draw(D--A--B--C--D--F--G--Ep); draw(A--G); label(\"$F$\",F,W); label(\"$G$\",G,W); label(\"$C$\",C,WSW); label(\"$H$\",H,NNE); label(\"$6$\",(6,8),N); label(\"$B$\",B,NE); label(\"$A$\",A,SW); label(\"$E$\",Ep,S); label(\"$4$\",(2,0),S); label(\"$D$\",D,S);[/asy]</p>",
+      "solutions": [
+        "<p>$\\angle GHC = \\angle AHB$ (Vertical angles are equal).</p><p>$\\angle F = \\angle B$ (Both are 90 degrees).</p><p>$\\angle BHA = \\angle HAD$ (Alt. Interior Angles are congruent).</p><p>Therefore $\\triangle GFA$ and $\\triangle ABH$ are similar.$\\triangle GCH$ and $\\triangle GEA$ are also similar.</p><p>$DA$ is 9, therefore $EA$ must equal 5. Similarly, $CH$ must equal 3. </p><p>Because $GCH$ and $GEA$ are similar, the ratio of $CH\\; =\\; 3$ and $EA\\; =\\; 5$, must also hold true for $GH$ and $HA$. $\\frac{GH}{GA} = \\frac{3}{5}$, so $HA$ is $\\frac{2}{5}$ of $GA$. By Pythagorean theorem, $(HA)^2\\;  =\\; (HB)^2\\; +\\; (BA)^2\\;...\\;HA=10$.</p><p>$HA\\: =\\: 10 =\\: \\frac{2}{5}*(GA)$. </p><p>$GA\\: =\\: 25.$</p><p>So $\\frac{GA}{HA}\\: =\\: \\frac{GF}{BA}$.</p><p>$\\frac{25}{10}\\: =\\: \\frac{GF}{8}$.</p><p>Therefore  $GF= \\boxed{\\mathrm{(B)}\\ 20}$.</p><p>Since $ABCD$ is a rectangle, $CD=AB=8$. </p><p>Since $ABCD$ is a rectangle and $GF \\perp AF$, $\\angle GFE = \\angle CDE = \\angle ABC = 90^\\circ$. </p><p>Since $ABCD$ is a rectangle, $AD || BC$. </p><p>So, $AH$ is a <a href=\"/wiki/index.php/Transversal\" title=\"Transversal\">transversal</a>, and $\\angle GAF = \\angle AHB$. </p><p>This is sufficient to prove that $GFE \\approx CDE$ and $GFA \\approx ABH$.</p><p>Using ratios: </p><p>$\\frac{GF}{FE}=\\frac{CD}{DE}$</p><p>$\\frac{GF}{FD+4}=\\frac{8}{4}=2$</p><p>$GF=2 \\cdot (FD+4)=2 \\cdot FD+8$</p><p>$\\frac{GF}{FA}=\\frac{AB}{BH}$</p><p>$\\frac{GF}{FD+9}=\\frac{8}{6}=\\frac{4}{3}$</p><p>$GF=\\frac{4}{3} \\cdot (FD+9)=\\frac{4}{3} \\cdot FD+12$</p><p>Since $GF$ can't have 2 different lengths, both expressions for $GF$ must be equal. </p><p>$2 \\cdot FD+8=\\frac{4}{3} \\cdot FD+12$</p><p>$\\frac{2}{3} \\cdot FD=4$</p><p>$FD=6$</p><p>$GF=2 \\cdot FD+8=2\\cdot6+8=\\boxed{\\mathrm{(B)}\\ 20}$</p><p>We extend $BC$ such that it intersects $GF$ at $X$. Since $ABCD$ is a rectangle, it follows that $CD=8$, therefore, $XF=8$. Let $GX=y$. From the similarity of triangles $GCH$ and $GEA$, we have the ratio $3:5$ (as $CH=9-6=3$, and $EA=9-4=5$). $GX$ and $GF$ are the altitudes of $GCH$ and $GEA$, respectively. Thus, $y:y+8 = 3:5$, from which we have $y=12$, thus $GF=y+8=12+8=\\boxed{\\mathrm{(B)}\\ 20}$</p><p>Since $GF\\perp AF$ and $AF\\perp CD,$ we have $GF\\parallel CD\\parallel AB.$ Thus, $\\triangle CDE\\sim GFE.$ Suppose $GF=x$ and $FD=y.$ Thus, we have $\\dfrac{x}{8}=\\dfrac{y+4}{4}.$ Additionally, now note that $\\triangle GAF\\sim AHB,$ which is pretty obvious from insight, but can be proven by AA with extending $BH$ to meet $GF.$ From this new pair of similar triangles, we have $\\dfrac{x}{8}=\\dfrac{y+9}{6}.$ Therefore, we have by combining those two equations, \\[\\dfrac{y+9}{6}=\\dfrac{y+4}{4}.\\] Solving, we have $y=6,$ and therefore $x=\\boxed{\\mathrm{(B)}\\ 20}$</p><p>Since there are only lines, you can resort to coordinate bashing. Let $FD=k$. Three lines, line $GF$, line $GE$, and line $GA$, intersect at $G$. Our goal is to find the y-coordinate of that intersection point. </p><p>Line $GF$ is $x=0$</p><p>Line $GE$ passes through $(k+4, 0)$ and $(k, 8)$. Therefore the slope is $-2$ and the line is $y-0=-2(x-k-4)$ which is $y=-2x+2k+8$</p><p>Line $GA$ passes through $(k+9, 0)$ and $(k+3, 8)$. Therefore the slope is $\\frac{-4}{3}$ and the line is$y-0=-\\frac{4}{3}(x-k-9)$ which simplifies to $y=-\\frac{4}{3}x+\\frac{4}{3}k+12$</p><p>We solve the system of equations with these three lines. First we plug in $x=0$</p><p>$y=2k+8$</p><p>$y=\\frac{4}{3}k+12$</p><p>Next, we solve for k. $k=6$ Therefore $y=20$. The y-coordinate of this intersection point is indeed our answer. $\\boxed{\\mathrm{(B)}\\ 20}$~superagh</p><p>Let $A$ be the origin of our coordinate system. Now line $GA$ has equation $-\\frac{4}{3}x$. We can use point-slope form to find the equation for line $GE$. First, we know that its slope is $-2$, and we know that it passes through $E=(-5,0)$, so line $GE$ has equation $-2(x+5)$. Solving for the intersection by letting $-\\frac{4}{3}x=-2(x+5)$, we get $x=-15$. Plugging this into our equation for line $GA$ gives us $G=(-15,20)$, so $GF= \\boxed{\\mathrm{(B)}\\ 20}$~chrisdiamond10</p><p>First, using given information, we can find the values of some line segments in the figure. We find that $HA = 10$ (through Pythagorean Theorem), $CH = 3$, and $EA = 5$. Let Line $FD = x$ and let Line $FG = y$. We find that $\\triangle FGE \\sim \\triangle CDE$ through some angle chasing (they both have a right angle, and they both share angle $\\angle CED$. Using this information, we can write the equation $\\frac{4}{8} = \\frac{4+x}{y}$. Through simplifying this equation, we get that $y=2x+8$. Let point $I$ be the point on line $FG$ so that lines $CI$ and $FG$ are perpendicular, and we get that $GI = 2x$ and $FI =8$. Doing some more angle chasing, we can find that $\\triangle GIH \\sim \\triangle GFA$, as they both share $\\angle FGH$ and they both have a right angle.</p><p>With this information, we can write the equation $\\frac{x+3}{y-8} = \\frac{x+9}{y}.$ Simplifying this equation we get the equation $-8x+6y-72 = 0$.Plugging in $y=2x+8$ for $6y$, we get $4x-24 = 0$, so $x=6$.Lastly, to find the value of y, which is the value of Line $FG$, our desired value, we plug in $6$ for $x$ in the equation $y=2x+8$, we get $2(6)+8$, which, finally, we get our $y$ value of $20$, so therefore, our answer is $GF= \\boxed{\\mathrm{(B)}\\ 20}$</p><p>~Darth_Cadet</p><p><br/></p><p>Draw a coordinate plane with the y-axis centered on $CD$ and the x-axis centered on $AD$. From there, call the line passing through $CE$ $a$ and the line passing through $HA$ $b$. From there, you can find that the equations for these lines are $y=-2x+8$ and $y=-4/3 x+12$ respectively. We need to find the length of $GF$, so we are finding the y-value of the point $G$. Solving for this point, we get $-4/3 x+12=-2x+8$;$2/3x=-4$;$x=-6$. Now, plugging in the values, we find that $y=-2(-6)+8=20$, so our answer is $GF= \\boxed{\\mathrm{(B)}\\ 20}$.</p><p>~iamcalifornia'sresidentidiot</p>",
+        "<p>$\\angle GHC = \\angle AHB$ (Vertical angles are equal).</p><p>$\\angle F = \\angle B$ (Both are 90 degrees).</p><p>$\\angle BHA = \\angle HAD$ (Alt. Interior Angles are congruent).</p><p>Therefore $\\triangle GFA$ and $\\triangle ABH$ are similar.$\\triangle GCH$ and $\\triangle GEA$ are also similar.</p><p>$DA$ is 9, therefore $EA$ must equal 5. Similarly, $CH$ must equal 3. </p><p>Because $GCH$ and $GEA$ are similar, the ratio of $CH\\; =\\; 3$ and $EA\\; =\\; 5$, must also hold true for $GH$ and $HA$. $\\frac{GH}{GA} = \\frac{3}{5}$, so $HA$ is $\\frac{2}{5}$ of $GA$. By Pythagorean theorem, $(HA)^2\\;  =\\; (HB)^2\\; +\\; (BA)^2\\;...\\;HA=10$.</p><p>$HA\\: =\\: 10 =\\: \\frac{2}{5}*(GA)$. </p><p>$GA\\: =\\: 25.$</p><p>So $\\frac{GA}{HA}\\: =\\: \\frac{GF}{BA}$.</p><p>$\\frac{25}{10}\\: =\\: \\frac{GF}{8}$.</p><p>Therefore  $GF= \\boxed{\\mathrm{(B)}\\ 20}$.</p>",
+        "<p>Since $ABCD$ is a rectangle, $CD=AB=8$. </p><p>Since $ABCD$ is a rectangle and $GF \\perp AF$, $\\angle GFE = \\angle CDE = \\angle ABC = 90^\\circ$. </p><p>Since $ABCD$ is a rectangle, $AD || BC$. </p><p>So, $AH$ is a <a href=\"/wiki/index.php/Transversal\" title=\"Transversal\">transversal</a>, and $\\angle GAF = \\angle AHB$. </p><p>This is sufficient to prove that $GFE \\approx CDE$ and $GFA \\approx ABH$.</p><p>Using ratios: </p><p>$\\frac{GF}{FE}=\\frac{CD}{DE}$</p><p>$\\frac{GF}{FD+4}=\\frac{8}{4}=2$</p><p>$GF=2 \\cdot (FD+4)=2 \\cdot FD+8$</p><p>$\\frac{GF}{FA}=\\frac{AB}{BH}$</p><p>$\\frac{GF}{FD+9}=\\frac{8}{6}=\\frac{4}{3}$</p><p>$GF=\\frac{4}{3} \\cdot (FD+9)=\\frac{4}{3} \\cdot FD+12$</p><p>Since $GF$ can't have 2 different lengths, both expressions for $GF$ must be equal. </p><p>$2 \\cdot FD+8=\\frac{4}{3} \\cdot FD+12$</p><p>$\\frac{2}{3} \\cdot FD=4$</p><p>$FD=6$</p><p>$GF=2 \\cdot FD+8=2\\cdot6+8=\\boxed{\\mathrm{(B)}\\ 20}$</p>",
+        "<p>We extend $BC$ such that it intersects $GF$ at $X$. Since $ABCD$ is a rectangle, it follows that $CD=8$, therefore, $XF=8$. Let $GX=y$. From the similarity of triangles $GCH$ and $GEA$, we have the ratio $3:5$ (as $CH=9-6=3$, and $EA=9-4=5$). $GX$ and $GF$ are the altitudes of $GCH$ and $GEA$, respectively. Thus, $y:y+8 = 3:5$, from which we have $y=12$, thus $GF=y+8=12+8=\\boxed{\\mathrm{(B)}\\ 20}$</p>",
+        "<p>Since $GF\\perp AF$ and $AF\\perp CD,$ we have $GF\\parallel CD\\parallel AB.$ Thus, $\\triangle CDE\\sim GFE.$ Suppose $GF=x$ and $FD=y.$ Thus, we have $\\dfrac{x}{8}=\\dfrac{y+4}{4}.$ Additionally, now note that $\\triangle GAF\\sim AHB,$ which is pretty obvious from insight, but can be proven by AA with extending $BH$ to meet $GF.$ From this new pair of similar triangles, we have $\\dfrac{x}{8}=\\dfrac{y+9}{6}.$ Therefore, we have by combining those two equations, \\[\\dfrac{y+9}{6}=\\dfrac{y+4}{4}.\\] Solving, we have $y=6,$ and therefore $x=\\boxed{\\mathrm{(B)}\\ 20}$</p>",
+        "<p>Since there are only lines, you can resort to coordinate bashing. Let $FD=k$. Three lines, line $GF$, line $GE$, and line $GA$, intersect at $G$. Our goal is to find the y-coordinate of that intersection point. </p><p>Line $GF$ is $x=0$</p><p>Line $GE$ passes through $(k+4, 0)$ and $(k, 8)$. Therefore the slope is $-2$ and the line is $y-0=-2(x-k-4)$ which is $y=-2x+2k+8$</p><p>Line $GA$ passes through $(k+9, 0)$ and $(k+3, 8)$. Therefore the slope is $\\frac{-4}{3}$ and the line is$y-0=-\\frac{4}{3}(x-k-9)$ which simplifies to $y=-\\frac{4}{3}x+\\frac{4}{3}k+12$</p><p>We solve the system of equations with these three lines. First we plug in $x=0$</p><p>$y=2k+8$</p><p>$y=\\frac{4}{3}k+12$</p><p>Next, we solve for k. $k=6$ Therefore $y=20$. The y-coordinate of this intersection point is indeed our answer. $\\boxed{\\mathrm{(B)}\\ 20}$~superagh</p>",
+        "<p>Let $A$ be the origin of our coordinate system. Now line $GA$ has equation $-\\frac{4}{3}x$. We can use point-slope form to find the equation for line $GE$. First, we know that its slope is $-2$, and we know that it passes through $E=(-5,0)$, so line $GE$ has equation $-2(x+5)$. Solving for the intersection by letting $-\\frac{4}{3}x=-2(x+5)$, we get $x=-15$. Plugging this into our equation for line $GA$ gives us $G=(-15,20)$, so $GF= \\boxed{\\mathrm{(B)}\\ 20}$~chrisdiamond10</p>",
+        "<p>First, using given information, we can find the values of some line segments in the figure. We find that $HA = 10$ (through Pythagorean Theorem), $CH = 3$, and $EA = 5$. Let Line $FD = x$ and let Line $FG = y$. We find that $\\triangle FGE \\sim \\triangle CDE$ through some angle chasing (they both have a right angle, and they both share angle $\\angle CED$. Using this information, we can write the equation $\\frac{4}{8} = \\frac{4+x}{y}$. Through simplifying this equation, we get that $y=2x+8$. Let point $I$ be the point on line $FG$ so that lines $CI$ and $FG$ are perpendicular, and we get that $GI = 2x$ and $FI =8$. Doing some more angle chasing, we can find that $\\triangle GIH \\sim \\triangle GFA$, as they both share $\\angle FGH$ and they both have a right angle.</p><p>With this information, we can write the equation $\\frac{x+3}{y-8} = \\frac{x+9}{y}.$ Simplifying this equation we get the equation $-8x+6y-72 = 0$.Plugging in $y=2x+8$ for $6y$, we get $4x-24 = 0$, so $x=6$.Lastly, to find the value of y, which is the value of Line $FG$, our desired value, we plug in $6$ for $x$ in the equation $y=2x+8$, we get $2(6)+8$, which, finally, we get our $y$ value of $20$, so therefore, our answer is $GF= \\boxed{\\mathrm{(B)}\\ 20}$</p><p>~Darth_Cadet</p><p><br/></p>",
+        "<p>Draw a coordinate plane with the y-axis centered on $CD$ and the x-axis centered on $AD$. From there, call the line passing through $CE$ $a$ and the line passing through $HA$ $b$. From there, you can find that the equations for these lines are $y=-2x+8$ and $y=-4/3 x+12$ respectively. We need to find the length of $GF$, so we are finding the y-value of the point $G$. Solving for this point, we get $-4/3 x+12=-2x+8$;$2/3x=-4$;$x=-6$. Now, plugging in the values, we find that $y=-2(-6)+8=20$, so our answer is $GF= \\boxed{\\mathrm{(B)}\\ 20}$.</p><p>~iamcalifornia'sresidentidiot</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2003 AMC 10A - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_23",
+      "question": "<p>A large <a href=\"/wiki/index.php/Equilateral_triangle\" title=\"Equilateral triangle\">equilateral triangle</a> is constructed by using toothpicks to create rows of small equilateral triangles. For example, in the figure, we have $3$ rows of small congruent equilateral triangles, with $5$ small triangles in the base row. How many toothpicks would be needed to construct a large equilateral triangle if the base row of the triangle consists of $2003$ small equilateral triangles? </p><p>[asy] unitsize(15mm); defaultpen(linewidth(.8pt)+fontsize(8pt)); pair Ap=(0,0), Bp=(1,0), Cp=(2,0), Dp=(3,0), Gp=dir(60); pair Fp=shift(Gp)*Bp, Ep=shift(Gp)*Cp; pair Hp=shift(Gp)*Gp, Ip=shift(Gp)*Fp; pair Jp=shift(Gp)*Hp; pair[] points={Ap,Bp,Cp,Dp,Ep,Fp,Gp,Hp,Ip,Jp}; draw(Ap--Dp--Jp--cycle); draw(Gp--Bp--Ip--Hp--Cp--Ep--cycle); for(pair p\u00a0: points) { fill(circle(p, 0.07),white); } pair[] Cn=new pair[5]; Cn[0]=centroid(Ap,Bp,Gp); Cn[1]=centroid(Gp,Bp,Fp); Cn[2]=centroid(Bp,Fp,Cp); Cn[3]=centroid(Cp,Fp,Ep); Cn[4]=centroid(Cp,Ep,Dp); label(\"$1$\",Cn[0]); label(\"$2$\",Cn[1]); label(\"$3$\",Cn[2]); label(\"$4$\",Cn[3]); label(\"$5$\",Cn[4]); for (pair p\u00a0: Cn) { draw(circle(p,0.1)); }[/asy]</p>",
+      "solutions": [
+        "<p>There are $1+3+5+...+2003=1002^{2}=1004004$ small equilateral triangles. </p><p>Each small equilateral triangle needs $3$ toothpicks to make it. </p><p>But, each toothpick that isn't one of the $1002\\cdot3=3006$ toothpicks on the outside of the large equilateral triangle is a side for $2$ small equilateral triangles. </p><p>So, the number of toothpicks on the inside of the large equilateral triangle is $\\frac{10040004\\cdot3-3006}{2}=1504503$.</p><p>Therefore the total number of toothpicks is $1504503+3006=\\boxed{\\mathrm{(C)}\\ 1,507,509}$. ~dolphin7</p>",
+        "<p>We just need to count upward facing triangles because if we exclude the downward-facing triangles, we won't be overcounting any toothpicks. The first row of triangles has $1$ upward-facing triangle, the second row has $2$ upward-facing triangles, the third row has $3$ upward-facing triangles, and so on having $n$ upward-facing triangles in the $n^\\text{th}$ row. The last row with $2003$ small triangles has $1002$ upward-facing triangles. By <a href=\"/wiki/index.php/Triangular_number\" title=\"Triangular number\">Gauss's formula</a>, the number of the upward-facing triangles in the entire triangle are now $\\frac{1002\\times1003}{2}$, meaning that the number of toothpicks are $\\frac{1002\\times1003}{2}\\times3$, or $\\boxed{\\mathrm{(C)}\\ 1,507,509}$.</p><p>~mathpro12345</p><p>You don't have to calculate the value of $\\frac{1002\\times1003}{2}\\times3$, and you can use units digits to find the answer easily. The units digit of $1002\\times1003$ is $6$, and has a unit digit of $3$ after being divided by $2$. Then this is multiplied by $3$, now the final number ending with a $9$. This leaves only one answer choice possible, which is $\\boxed{\\mathrm{(C)}\\ 1,507,509}$.</p>",
+        "<p>Test out some smaller cases first.</p><p>When there is just $1$ equilateral triangle in the base, you need $3$ toothpicks.When there are $3$ equilateral triangles in the base, you need $9$ toothpicks in all.When there are $5$ equilateral triangles in the base, you need $18$ toothpicks in all.When there are $7$ equilateral triangles in the base, you need $30$ toothpicks in all.</p><p>Taking the finite differences, we get $6, 9, 12.$ It forms a linear sequence. This means the original numbers $(3, 9, 18, 30)$ form a quadratic.</p><p>Let the quadratic be $y = ax^2 + bx + c$ where $y = 2 \\cdot \\text{(number of equilateral triangles in base)} - 1.$</p><p>Then, we have the following points: $(1, 3), (2, 9), (3, 18), (4, 30).$</p><p>We can plug these values into $y = ax^2 + bx + c$, giving: </p><p>\\[a + b + c = 3, 4a + b + c = 9, 9a + 3b + c = 18.\\]</p><p>Solving gives $a = b = 1.5, c = 0.$ So \\[y = 1.5x^2 + 1.5x.\\]</p><p>For our problem, we need $2003$ equilateral triangles in the base. For the quadratic, the corresponding $x$-value would be $\\frac{2003 + 1}{2} = 1002$. So our answer is simply: \\[1.5 \\cdot 1002^2 + 1.5 \\cdot 1002 = \\boxed{\\mathrm{(C)}\\ 1,507,509}.\\]</p>",
+        "<p>We can count the slanted toothpicks and the horizontal toothpicks separately. Since the bottom row has $2003$ triangles, there will be toothpicks between the triangles and on the edges, which makes $2004$ toothpicks on the bottom row. The row above it will have $2$ fewer triangles, so it will have $2$ fewer toothpicks. This continues all the way to the top. Therefore, the number of slanted toothpicks is \\[2004 + 2002 + 2000 + \\cdots + 4 + 2 = 1002^2 + 1002.\\]</p><p>The horizontal toothpicks are easier. For each row, we will only count the toothpicks on the bottom of the row to avoid overcounting. Since the bottom row has $2003$ toothpicks, there will be $1002$ toothpicks below the row and $1001$ toothpicks above the row (which is the bottom of the next row). This continues all the way to the top, so the number of horizontal toothpicks is \\[1002 + 1001 + 1000 + \\cdots + 2 + 1 = \\frac{(1002)(1003)}{2}.\\]</p><p>Adding these together, we get our answer of \\[1002^2 + 1002 + \\frac{(1002)(1003)}{2} = \\boxed{\\mathrm{(C)}\\ 1,507,509}.\\]</p><p>~jk11507</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2003 AMC 10A - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_24",
+      "question": "<p>Sally has five red cards numbered $1$ through $5$ and four blue cards numbered $3$ through $6$. She stacks the cards so that the colors alternate and so that the number on each red card divides evenly into the number on each neighboring blue card. What is the sum of the numbers on the middle three cards? </p>",
+      "solutions": [
+        "<p>Let $R_i$ and $B_j$ designate the red card numbered $i$ and the blue card numbered $j$, respectively. </p><p>$B_5$ is the only blue card that $R_5$ evenly divides, so $R_5$ must be at one end of the stack and $B_5$ must be the card next to it. </p><p>$R_1$ is the only other red card that evenly divides $B_5$, so $R_1$ must be the other card next to $B_5$. </p><p>$B_4$ is the only blue card that $R_4$ evenly divides, so $R_4$ must be at one end of the stack and $B_4$ must be the card next to it. </p><p>$R_2$ is the only other red card that evenly divides $B_4$, so $R_2$ must be the other card next to $B_4$. </p><p>$R_2$ doesn't evenly divide $B_3$, so $B_3$ must be next to $R_1$, $B_6$ must be next to $R_2$, and $R_3$ must be in the middle. </p><p>This yields the following arrangement from top to bottom: $\\{R_5,B_5,R_1,B_3,R_3,B_6,R_2,B_4,R_4\\}$</p><p>Therefore, the sum of the numbers on the middle three cards is $3+3+6=\\boxed{\\mathrm{(E)}\\ 12}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2003 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10a_25",
+      "question": "<p>Let $n$ be a $5$-digit number, and let $q$ and $r$ be the quotient and the remainder, respectively, when $n$ is divided by $100$. For how many values of $n$ is $q+r$ divisible by $11$? </p>",
+      "solutions": [
+        "<p>$11|(q+r)$ implies that $11|(99q+q+r)$ and therefore $11|(100q+r)$, so $11|n$. Then, $n$ can range from $10010$ to $99990$ for a total of $\\boxed{8181\\Rightarrow \\mathrm{(B)}}$ numbers.</p><p>When a $5$-digit number is divided by $100$, the first $3$ digits become the quotient, $q$, and the last $2$ digits become the remainder, $r$. </p><p>Therefore, $q$ can be any integer from $100$ to $999$ inclusive, and $r$ can be any integer from $0$ to $99$ inclusive. </p><p>For each of the $9\\cdot10\\cdot10=900$ possible values of $q$, there are at least $\\left\\lfloor \\frac{100}{11} \\right\\rfloor = 9$ possible values of $r$ such that $q+r \\equiv 0\\pmod{11}$. </p><p>Since there is $1$ \"extra\" possible value of $r$ that is congruent to $0\\pmod{11}$, each of the $\\left\\lfloor \\frac{900}{11} \\right\\rfloor = 81$ values of $q$ that are congruent to $0\\pmod{11}$ have $1$ more possible value of $r$ such that $q+r \\equiv 0\\pmod{11}$. Another way to think about it is the number of possible values of q when r, the remainder, is $0$. In this case, q itself has to be a multiple of $11$. $\\left\\lfloor \\frac{999}{11} = 90 \\right\\rfloor$. Then we'll need to subtract $9$ from $90$ since we only want multiples of $11$ greater than $100$ $(90-9=81)$</p><p>Therefore, the number of possible values of $n$ such that $q+r \\equiv 0\\pmod{11}$ is $900\\cdot9+81\\cdot1=8181 \\rightarrow B$.</p><p>Let $n$ equal $\\overline{abcde}$, where $a$ through $e$ are digits. Therefore,</p><p>$q=\\overline{abc}=100a+10b+c$</p><p>$r=\\overline{de}=10d+e$</p><p>We now take $q+r\\bmod{11}$:</p><p>$q+r=100a+10b+c+10d+e\\equiv a-b+c-d+e\\equiv 0\\bmod{11}$</p><p>The <a href=\"/wiki/index.php/Divisibility_rules#Divisibility_Rule_for_Divisibility_rules.23Divisibility_Rule_for_11\" title=\"Divisibility rules\">divisor trick for 11</a> is as follows:</p><p>\"Let $n=\\overline{a_1a_2a_3\\cdots a_x}$ be an $x$ digit integer. If $a_1-a_2+a_3-\\cdots +(-1)^{x-1} a_x$ is divisible by $11$, then $n$ is also divisible by $11$.\"</p><p>Therefore, the five-digit number $n$ is divisible by 11. The 5-digit multiples of 11 range from $910\\cdot 11$ to $9090\\cdot 11$. There are $8181\\Rightarrow \\mathrm{(B)}$ divisors of 11 between those inclusive.</p><p>Since $q$ is a quotient and $r$ is a remainder when $n$ is divided by $100$. So we have $n=100q+r$. Since we are counting choices where $q+r$ is divisible by $11$, we have $n=99q+q+r=99q+11k$ for some $k$. This means that $n$ is the sum of two multiples of $11$ and would thus itself be a multiple of $11$. Then we can count all the five-digit multiples of $11$ as in Solution 2. (This solution is essentially the same as Solution 3, but it does not necessarily involve mods and so could potentially be faster.)</p><p>Defining $q$ and $r$ in terms of floor functions and $n$ would yield: $q=\\left \\lfloor \\frac{n}{100} \\right \\rfloor$ and $r=n-100 \\left \\lfloor \\frac{n}{100} \\right \\rfloor$. Since $q+r \\equiv 0\\pmod{11}$, $\\left \\lfloor \\frac{n}{100} \\right \\rfloor + n-100 \\left \\lfloor \\frac{n}{100} \\right \\rfloor \\equiv 0\\pmod{11}$. Simplifying gets us $n-99 \\left \\lfloor \\frac{n}{100} \\right \\rfloor\\equiv 0\\pmod{11} \\rightarrow n \\equiv 0\\pmod{11}$ ($99 \\left \\lfloor \\frac{n}{100} \\right \\rfloor\\equiv 0\\pmod{11}$ is always true since floor function always yields an integer, and 99 is divisible by 11 w/o any remainder). After we come to this conclusion, it becomes easy to solve the rest of the problem ($\\left \\lfloor \\frac{n}{99999} \\right \\rfloor - \\left \\lfloor \\frac{n}{10000} \\right \\rfloor$). ~hw21</p>",
+        "<p>$11|(q+r)$ implies that $11|(99q+q+r)$ and therefore $11|(100q+r)$, so $11|n$. Then, $n$ can range from $10010$ to $99990$ for a total of $\\boxed{8181\\Rightarrow \\mathrm{(B)}}$ numbers.</p>",
+        "<p>When a $5$-digit number is divided by $100$, the first $3$ digits become the quotient, $q$, and the last $2$ digits become the remainder, $r$. </p><p>Therefore, $q$ can be any integer from $100$ to $999$ inclusive, and $r$ can be any integer from $0$ to $99$ inclusive. </p><p>For each of the $9\\cdot10\\cdot10=900$ possible values of $q$, there are at least $\\left\\lfloor \\frac{100}{11} \\right\\rfloor = 9$ possible values of $r$ such that $q+r \\equiv 0\\pmod{11}$. </p><p>Since there is $1$ \"extra\" possible value of $r$ that is congruent to $0\\pmod{11}$, each of the $\\left\\lfloor \\frac{900}{11} \\right\\rfloor = 81$ values of $q$ that are congruent to $0\\pmod{11}$ have $1$ more possible value of $r$ such that $q+r \\equiv 0\\pmod{11}$. Another way to think about it is the number of possible values of q when r, the remainder, is $0$. In this case, q itself has to be a multiple of $11$. $\\left\\lfloor \\frac{999}{11} = 90 \\right\\rfloor$. Then we'll need to subtract $9$ from $90$ since we only want multiples of $11$ greater than $100$ $(90-9=81)$</p><p>Therefore, the number of possible values of $n$ such that $q+r \\equiv 0\\pmod{11}$ is $900\\cdot9+81\\cdot1=8181 \\rightarrow B$.</p>",
+        "<p>Let $n$ equal $\\overline{abcde}$, where $a$ through $e$ are digits. Therefore,</p><p>$q=\\overline{abc}=100a+10b+c$</p><p>$r=\\overline{de}=10d+e$</p><p>We now take $q+r\\bmod{11}$:</p><p>$q+r=100a+10b+c+10d+e\\equiv a-b+c-d+e\\equiv 0\\bmod{11}$</p><p>The <a href=\"/wiki/index.php/Divisibility_rules#Divisibility_Rule_for_Divisibility_rules.23Divisibility_Rule_for_11\" title=\"Divisibility rules\">divisor trick for 11</a> is as follows:</p><p>\"Let $n=\\overline{a_1a_2a_3\\cdots a_x}$ be an $x$ digit integer. If $a_1-a_2+a_3-\\cdots +(-1)^{x-1} a_x$ is divisible by $11$, then $n$ is also divisible by $11$.\"</p><p>Therefore, the five-digit number $n$ is divisible by 11. The 5-digit multiples of 11 range from $910\\cdot 11$ to $9090\\cdot 11$. There are $8181\\Rightarrow \\mathrm{(B)}$ divisors of 11 between those inclusive.</p>",
+        "<p>Since $q$ is a quotient and $r$ is a remainder when $n$ is divided by $100$. So we have $n=100q+r$. Since we are counting choices where $q+r$ is divisible by $11$, we have $n=99q+q+r=99q+11k$ for some $k$. This means that $n$ is the sum of two multiples of $11$ and would thus itself be a multiple of $11$. Then we can count all the five-digit multiples of $11$ as in Solution 2. (This solution is essentially the same as Solution 3, but it does not necessarily involve mods and so could potentially be faster.)</p>",
+        "<p>Defining $q$ and $r$ in terms of floor functions and $n$ would yield: $q=\\left \\lfloor \\frac{n}{100} \\right \\rfloor$ and $r=n-100 \\left \\lfloor \\frac{n}{100} \\right \\rfloor$. Since $q+r \\equiv 0\\pmod{11}$, $\\left \\lfloor \\frac{n}{100} \\right \\rfloor + n-100 \\left \\lfloor \\frac{n}{100} \\right \\rfloor \\equiv 0\\pmod{11}$. Simplifying gets us $n-99 \\left \\lfloor \\frac{n}{100} \\right \\rfloor\\equiv 0\\pmod{11} \\rightarrow n \\equiv 0\\pmod{11}$ ($99 \\left \\lfloor \\frac{n}{100} \\right \\rfloor\\equiv 0\\pmod{11}$ is always true since floor function always yields an integer, and 99 is divisible by 11 w/o any remainder). After we come to this conclusion, it becomes easy to solve the rest of the problem ($\\left \\lfloor \\frac{n}{99999} \\right \\rfloor - \\left \\lfloor \\frac{n}{10000} \\right \\rfloor$). ~hw21</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2003 AMC 10A - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_1",
+      "question": "<p>Which of the following is the same as</p><p>\\[\\frac{2-4+6-8+10-12+14}{3-6+9-12+15-18+21}?\\]</p>",
+      "solutions": [
+        "<p>\\[\\frac{2-4+6-8+10-12+14}{3-6+9-12+15-18+21}=\\frac{2+(-4+6)+(-8+10)+(-12+14)}{3+(-6+9)+(-12+15)+(-18+21)}=\\frac{2\\cdot4}{3\\cdot4}=\\text {(C) } \\frac{2}{3}\\]</p>",
+        "<p>Each term in the numerator is $\\text {(C) } \\frac{2}{3}$ of a corresponding term in the denominator, so this must be the quotient.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2003 AMC 10B - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_2",
+      "question": "<p>Al gets the disease algebritis and must take one green pill and one pink pill each day for two weeks. A green pill costs $$$1$ more than a pink pill, and Al's pills cost a total of $\\textdollar 546$ for the two weeks. How much does one green pill cost?</p>",
+      "solutions": [
+        "<p>Because there are $14$ days in two weeks, Al spends $546/14 = 39$ dollars per day for the cost of a green pill and a pink pill. If the green pill costs $x$ dollars and the pink pill $x-1$ dollars, the sum of the two costs $2x-1$ should equal $39$ dollars. Then the cost of the green pill $x$ is $\\boxed{\\textbf{(D) }\\textdollar  20}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2003 AMC 10B - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_3",
+      "question": "<p>The sum of $5$ consecutive even integers is $4$ less than the sum of the first $8$ consecutive odd counting numbers. What is the smallest of the even integers?</p>",
+      "solutions": [
+        "<p>It is a well-known fact that the sum of the first $n$ odd numbers is $n^2$. This makes the sum of the first $8$ odd numbers equal to $64$.</p><p>Let $n$ be equal to the smallest of the $5$ even integers. Then $(n+2)$ is the next highest, $(n+4)$ even higher, and so on.</p><p>This sets up the equation $n+(n+2)+(n+4)+(n+6)+(n+8)+4=64$</p><p>Now we solve:</p><p>\\[5n+24=64\\]\\[5n=40\\]\\[n=8\\]</p><p>Thus, the smallest integer is $\\boxed{\\textbf{(B) } 8}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2003 AMC 10B - algebra problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_4",
+      "question": "<p>Rose fills each of the rectangular regions of her rectangular flower bed with a different type of flower. The lengths, in feet, of the rectangular regions in her flower bed are as shown in the figure. She plants one flower per square foot in each region. Asters cost $$$1$ each, begonias $$$1.50$ each, cannas $$$2$ each, dahlias $$$2.50$ each, and Easter lilies $$$3$ each. What is the least possible cost, in dollars, for her garden?</p><p>[asy] unitsize(5mm); defaultpen(linewidth(.8pt)+fontsize(8pt)); draw((6,0)--(0,0)--(0,1)--(6,1)); draw((0,1)--(0,6)--(4,6)--(4,1)); draw((4,6)--(11,6)--(11,3)--(4,3)); draw((11,3)--(11,0)--(6,0)--(6,3)); label(\"1\",(0,0.5),W); label(\"5\",(0,3.5),W); label(\"3\",(11,1.5),E); label(\"3\",(11,4.5),E); label(\"4\",(2,6),N); label(\"7\",(7.5,6),N); label(\"6\",(3,0),S); label(\"5\",(8.5,0),S);[/asy]</p>",
+      "solutions": [
+        "<p>The areas of the five regions from greatest to least are $21,20,15,6$ and $4$.</p><p>If we want to minimize the cost, we want to maximize the area of the cheapest flower and minimize the area of the most expensive flower. Doing this, the cost is $1\\cdot21+1.50\\cdot20+2\\cdot15+2.50\\cdot6+3\\cdot4$, which simplifies to $$$108$.Therefore the answer is $\\boxed{\\textbf{(A) } 108}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2003 AMC 10B - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_5",
+      "question": "<p>Moe uses a mower to cut his rectangular $90$-foot by $150$-foot lawn. The swath he cuts is $28$ inches wide, but he overlaps each cut by $4$ inches to make sure that no grass is missed. He walks at the rate of $5000$ feet per hour while pushing the mower. Which of the following is closest to the number of hours it will take Moe to mow the lawn?</p>",
+      "solutions": [
+        "<p>Since the swath Moe actually mows is $24$ inches, or $2$ feet wide, he mows $10000$ square feet in one hour. His lawn has an area of $13500$, so it will take Moe $1.35$ hours to finish mowing the lawn. Thus the answer is $\\boxed{\\textbf{(C) } 1.35}$.</p><p><br/></p>",
+        "<p>Let's assume that the swath moves back and forth; parallel to the $90$ feet side. Thus, the length of one strip is $90$ feet. Now we need to find out how many strips there are. In reality, the swath Moe mows is $24$ inches wide, which can be easily translated into $2$ feet. $\\frac{150}{2}$ is the number of strips Moe needs to mow, which is equal to $75$. Therefore, the total number of feet Moe mows is $75\\times90$. Since Moe's mowing rate is $5000$ feet per hour, $\\frac{75\\times90}{5000}$ is the number of hours it takes him to do his job. Using basic calculations, we compute the answer. $\\boxed{\\textbf{(C) } 1.35}$.</p><p>~sakshamsethi</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2003 AMC 10B - algebra problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_6",
+      "question": "<p>Many television screens are rectangles that are measured by the length of their diagonals. The ratio of the horizontal length to the height in a standard television screen is $4:3$. The horizontal length of a \"$27$-inch\" television screen is closest, in inches, to which of the following?</p>",
+      "solutions": [
+        "<p>If you divide the television screen into two right triangles, the legs are in the ratio of $4\u00a0: 3$, and we can let one leg be $4x$ and the other be $3x$. Then we can use the Pythagorean Theorem.</p><p>\\begin{align*}(4x)^2+(3x)^2&=27^2\\\\ 16x^2+9x^2&=729\\\\ 25x^2&=729\\\\ x^2&=\\frac{729}{25}\\\\ x&=\\frac{27}{5}\\\\ x&=5.4\\end{align*}</p><p>The horizontal length is $5.4\\times4=21.6$, which is closest to $\\boxed{\\textbf{(D) \\ } 21.5}$.</p>",
+        "<p>One can realize that the diagonal, vertical, and horizontal lengths all make up a $3,4,5$ triangle. Therefore, the horizontal length, being the $4$ in the $4\u00a0: 3$ ratio, is simply $\\frac{4}{5}$ times the hypotenuse. $\\frac{4}{5}\\cdot27=21.6 \\approx \\boxed{\\textbf{(D) } 21.5}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2003 AMC 10B - algebra problem involving basic_operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_7",
+      "question": "<p>The symbolism $\\lfloor x \\rfloor$ denotes the largest integer not exceeding $x$. For example, $\\lfloor 3 \\rfloor = 3,$ and $\\lfloor 9/2 \\rfloor = 4$. Compute\\[\\lfloor \\sqrt{1} \\rfloor + \\lfloor \\sqrt{2} \\rfloor + \\lfloor \\sqrt{3} \\rfloor + \\cdots + \\lfloor \\sqrt{16} \\rfloor.\\]</p>",
+      "solutions": [
+        "<p>The first three values in the sum are equal to $1,$ the next five equal to $2,$ the next seven equal to $3,$ and the last one equal to $4.$ For example, since $2^2=4$ any square root of a number less than $4$ must be less than $2.$ Sum them all together to get</p><p>\\[3\\cdot1 + 5\\cdot2 + 7\\cdot3 + 1\\cdot4 = 3+10+21+4 = \\boxed{\\textbf{(B) \\ } 38}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2003 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_8",
+      "question": "<p>The second and fourth terms of a geometric sequence are $2$ and $6$. Which of the following is a possible first term?</p>",
+      "solutions": [
+        "<p>Let the first term be $a$ and the common ratio be $r$. Therefore, </p><p>\\[ar=2\\ \\ (1) \\qquad \\text{and} \\qquad ar^3=6\\ \\ (2)\\]</p><p>Dividing $(2)$ by $(1)$ eliminates the $a$, yielding $r^2=3$, so $r=\\pm\\sqrt{3}$.</p><p>Now, since $ar=2$, $a=\\frac{2}{r}$, so $a=\\frac{2}{\\pm\\sqrt{3}}=\\pm\\frac{2\\sqrt{3}}{3}$.</p><p>We therefore see that $\\boxed{\\textbf{(B)}\\ -\\frac{2\\sqrt{3}}{3}}$ is a possible first term.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2003 AMC 10B - number_theory problem involving divisibility"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_9",
+      "question": "<p>Find the value of $x$ that satisfies the equation$25^{-2} = \\frac{5^{48/x}}{5^{26/x} \\cdot 25^{17/x}}.$</p>",
+      "solutions": [
+        "<p>Manipulate the powers of $5$ in order to get a clean expression.</p><p>\\[\\frac{5^{\\frac{48}{x}}}{5^{\\frac{26}{x}} \\cdot 25^{\\frac{17}{x}}} = \\frac{5^{\\frac{48}{x}}}{5^{\\frac{26}{x}} \\cdot 5^{\\frac{34}{x}}} = 5^{\\frac{48}{x}-(\\frac{26}{x}+\\frac{34}{x})} = 5^{-\\frac{12}{x}}\\]\\[25^{-2} = (5^2)^{-2} = 5^{-4}\\]\\[5^{-4} = 5^{-\\frac{12}{x}}\\]</p><p>If two numbers are equal, and their bases are equal, then their exponents are equal as well. Set the two exponents equal to each other.</p><p>\\begin{align*}-4&=\\frac{-12}{x}\\\\ -4x&=-12\\\\ x&=\\boxed{\\textbf{(B) \\ } 3}\\end{align*}</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2003 AMC 10B - geometry problem involving triangles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_10",
+      "question": "<p>Nebraska, the home of the AMC, changed its license plate scheme. Each old license plate consisted of a letter followed by four digits. Each new license plate consists of three letters followed by three digits. By how many times has the number of possible license plates increased?</p>",
+      "solutions": [
+        "<p>There are $26$ letters and $10$ digits. There were $26 \\cdot 10^4$ old license plates. There are $26^3 \\cdot 10^3$ new license plates. The number of license plates increased by</p><p>\\[\\frac{26^3 \\cdot 10^3}{26 \\cdot 10^4} = \\boxed{\\textbf{(C) \\ } \\frac{26^2}{10}}\\]</p><p>Note: Nebraska is not actually the home of the AMC, the AMC resides in Washington D.C., where its headquarters is located.</p><p>~Andrew_Lu, Mismatchedcubing</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2003 AMC 10B - algebra problem involving rates"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_11",
+      "question": "<p>A line with slope $3$ intersects a line with slope $5$ at point $(10,15)$. What is the distance between the $x$-intercepts of these two lines?</p>",
+      "solutions": [
+        "<p>Using the point-slope form, the equation of each line is</p><p>\\[y-15=3(x-10) \\longrightarrow y=3x-15\\]\\[y-15=5(x-10) \\longrightarrow y=5x-35\\]</p><p>Substitute in $y=0$ to find the $x$-intercepts.</p><p>\\[0=3x-15\\longrightarrow x=5\\]\\[0=5x-35\\longrightarrow x=7\\]The difference between them is $7-5=\\boxed{\\textbf{(A) \\ } 2}$.</p>",
+        "<p>The $x$-intercepts of a line is where the line's $y$-coordinate is $=0$. The slope is defined as $\\frac{\\text{change in } y\\text{-coordinate}}{\\text{change in } x\\text{-coordinate}}$. Therefore, the line with slope $3$ can be expressed as</p><p>\\[\\frac{\\text{change in }y\\text{-coordinate}}{\\text{change in }x\\text{-coordinate}}=3\\]</p><p>From $(10,15)$ to the $x$-intercept, the line must move $-15$ units to the $x$-axis. Therefore, \\[\\frac{\\text{change in }y\\text{-coordinate}}{\\text{change in }x\\text{-coordinate}}=\\frac{-15}{x_1}=3\\implies x_1=-5\\].</p><p>Therefore, the $x$-intercept of the line with slope $3$ is $(10-5,0)=(5,0)$.Note that some sources may state \"the $x$-intercept is $5$\" instead of \"the $x$-intercept is $(5,0)$.</p><p>If an idea functions great for one part of the problem but does not find the solution to the problem, we want to use the idea again. Using the idea for the line with slope $5$, we find\\[\\frac{\\text{change in }y\\text{-coordinate}}{\\text{change in }x\\text{-coordinate}}=\\frac{-15}{x_2}=5\\implies x_2=-3\\].Therefore, the $x$-intercept of the line with slope $5$ is $(10-3,0)=(7,0)$. The distance between $\\boxed{(5,0)--(7,0)=2\\implies A}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2003 AMC 10B - algebra problem involving percentages"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_12",
+      "question": "<p>Al, Betty, and Clare split $\\textdollar 1000$ among them to be invested in different ways. Each begins with a different amount. At the end of one year, they have a total of $\\textdollar 1500$ dollars. Betty and Clare have both doubled their money, whereas Al has managed to lose $\\textdollar100$ dollars. What was Al's original portion?</p>",
+      "solutions": [
+        "<p>For this problem, we will have to write a three-variable equation, but not necessarily solve it. Let $a, b,$ and $c$ represent the original portions of Al, Betty, and Clare, respectively. At the end of one year, they each have $a-100, 2b,$ and $2c$. From this, we can write two equations. </p><p>\\[a+b+c=1000 \\implies 2a+2b+2c=2000\\]\\[(a-100)+2b+2c=1500 \\implies a+2b+2c=1600\\]</p><p>Since all we need to find is $a,$ subtract the second equation from the first equation to get $a=400.$ Al's original portion was $\\boxed{\\textbf{(C)}\\ \\textdollar 400}$.</p>",
+        "<p>Suppose Betty and Clare $1000-x$ dollars and Al $x$ dollars originally. Then, $(x-100)+2(1000-x)=1500 \\implies x=400$, so Al's original portion was $\\boxed{\\textbf{(C)}\\ \\textdollar 400}$.</p><p>~Mathkiddie</p>",
+        "<p>If Al had not lost $\\textdollar 100$, the total amount would be $\\textdollar 1600$. So, Betty and Clare collectively gained $\\textdollar 600$ and as they have doubled their collective fortune,they must have $\\textdollar 600$ with them at the beginning. This leaves $\\boxed{\\textbf{(C)}\\ \\textdollar 400}$ for Al.~Anshulb</p>",
+        "<p>Let $a, b,$ and $c$ represent the original portions of Al, Betty, and Clare, respectively. We can write some equations:\\[a+b+c = 1000\\]\\[2b+2c+a-100 = 1500 \\Longrightarrow 2b+2c+a=1600\\]Subtracting the first equation from the second we get \\[b+c = 600\\]. So, \\[a = 1000-600 = \\boxed{\\textbf{(C)}\\ \\textdollar 400}\\]</p><p>-jb2015007</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2003 AMC 10B - algebra problem involving arithmetic_sequences"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_13",
+      "question": "<p>Let $\\clubsuit(x)$ denote the sum of the digits of the positive integer $x$. For example, $\\clubsuit(8)=8$ and $\\clubsuit(123)=1+2+3=6$. For how many two-digit values of $x$ is $\\clubsuit(\\clubsuit(x))=3$?</p>",
+      "solutions": [
+        "<p>Let $y=\\clubsuit (x)$. Since $x \\leq 99$, we have $y \\leq 18$. Thus if $\\clubsuit (y)=3$, then $y=3$ or $y=12$. The 3 values of $x$ for which $\\clubsuit (x)=3$ are 12, 21, and 30, and the 7 values of $x$ for which $\\clubsuit (x)=12$ are 39, 48, 57, 66, 75, 84, and 93. There are $\\boxed{E}$ = $\\boxed{10}$ values in all.</p><p>~Andrew_Lu/Mismatchedcubing</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2003 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_14",
+      "question": "<p>Given that $3^8\\cdot5^2=a^b,$ where both $a$ and $b$ are positive integers, find the smallest possible value for $a+b$.</p>",
+      "solutions": [
+        "<p>\\[3^8\\cdot5^2 = (3^4)^2\\cdot5^2 = (3^4\\cdot5)^2 = 405^2\\]</p><p>$405$ is not a perfect power, so the smallest possible value of $a+b$ is $405+2=\\boxed{\\textbf{(D)}\\ 407}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2003 AMC 10B - geometry problem involving circles"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_15",
+      "question": "<p>There are $100$ players in a single tennis tournament. The tournament is single elimination, meaning that a player who loses a match is eliminated. In the first round, the strongest $28$ players are given a bye, and the remaining $72$ players are paired off to play. After each round, the remaining players play in the next round. The match continues until only one player remains unbeaten. The total number of matches played is</p><p>$\\qquad\\textbf{(C) } \\text{divisible by 5}$</p><p>$\\qquad\\textbf{(D) } \\text{divisible by 7}$</p><p>$\\qquad\\textbf{(E) } \\text{divisible by 11}$</p>",
+      "solutions": [
+        "<p>Notice that $99$ players need to be eliminated for there to be declared a winner. Notice also that every match eliminates exactly one person. Therefore, $99$ matches are needed to eliminate $99$ people and therefore declare a winner. The rest of the information is irrelevant. Therefore, the total number of matches is $\\text{divisible by 11}, \\boxed{\\text{E}}$.</p><p>28 people receive byes, so in the first round there are $36$ matches played. In the second round there are $28 + 36 = 64$ people, so there are 32 matches. In the subsequent rounds, there are $16, 8, 4, 2, 1$ matches played, for a total of $36 + 32 + 16 + 8 + 4 + 2 + 1 = 99$ matches. Therefore, the answer is $\\rightarrow\\textbf{(E) }\\text{divisible by 11.}$</p>",
+        "<p>Notice that $99$ players need to be eliminated for there to be declared a winner. Notice also that every match eliminates exactly one person. Therefore, $99$ matches are needed to eliminate $99$ people and therefore declare a winner. The rest of the information is irrelevant. Therefore, the total number of matches is $\\text{divisible by 11}, \\boxed{\\text{E}}$.</p>",
+        "<p>28 people receive byes, so in the first round there are $36$ matches played. In the second round there are $28 + 36 = 64$ people, so there are 32 matches. In the subsequent rounds, there are $16, 8, 4, 2, 1$ matches played, for a total of $36 + 32 + 16 + 8 + 4 + 2 + 1 = 99$ matches. Therefore, the answer is $\\rightarrow\\textbf{(E) }\\text{divisible by 11.}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2003 AMC 10B - combinatorics problem involving counting"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_16",
+      "question": "<p>A restaurant offers three desserts, and exactly twice as many appetizers as main courses. A dinner consists of an appetizer, a main course, and a dessert. What is the least number of main courses that a restaurant should offer so that a customer could have a different dinner each night in the year $2003$?</p>",
+      "solutions": [
+        "<p>Let $m$ be the number of main courses the restaurant serves, so $2m$ is the number of appetizers. Then the number of dinner combinations is $2m\\times m\\times3=6m^2$. Since the customer wants to eat a different dinner in all $365$ days of $2003$, we must have</p><p>\\begin{align*} 6m^2 &\\geq 365\\\\ m^2 &\\geq 60.83\\ldots.\\end{align*}Also, year 2003 is not a leap year, because 2003 divided by 4 does not equal an integer.The smallest integer value that satisfies this is $\\boxed{\\textbf{(E)}\\ 8}$.</p>",
+        "<p>Let $m$ denote the number of main courses needed to meet the requirement. Then the number of dinners available is $3\\cdot m \\cdot 2m = 6m^2$. Thus $m^2$ must be at least $365/6 \\approx 61$. Since $7^2 = 49<61<64 = 8^2$, $\\boxed{8}$ main courses is enough, but 7 is not. The smallest integer value that satisfies this is $\\boxed{\\textbf{(E)}\\ 8}$.</p><p><br/></p>",
+        "<p>Let $x$ be the number of main courses and let $2x$ be the number of appetizers.Since there are 3 desserts, the number of possible dinner choices would be $2x \\cdot x \\cdot 3 = 6x^2$ for any number $x$. Since a year has $365$ days, we can assume that:\\begin{align*} 6x^2 \\ge 365 \\end{align*}\\begin{align*} x^2 \\ge 61 \\end{align*}\\begin{align*} x \\ge 7.8 \\end{align*}The least option that is greater than $7.8$ is $8$, so the answer is $\\boxed{\\textbf{(E)}\\ 8}$.</p><p>~ Alfi06</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2003 AMC 10B - algebra problem involving systems_of_equations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_17",
+      "question": "<p>An ice cream cone consists of a sphere of vanilla ice cream and a right circular cone that has the same diameter as the sphere. If the ice cream melts, it will exactly fill the cone. Assume that the melted ice cream occupies $75\\%$ of the volume of the frozen ice cream. What is the ratio of the cone's height to its radius? (Note: a cone with radius $r$ and height $h$ has volume $\\pi r^2 h / 3$ and a sphere with radius $r$ has volume $4 \\pi r^3 / 3$.)</p>",
+      "solutions": [
+        "<p>Let $r$ be the radius of both the cone and the sphere of ice cream, and let $h$ be the height of the cone. The cone can hold a maximum of $\\pi r^2h/3$ melted ice cream. The volume of the frozen ice cream is $4\\pi r^3/3.$ The volume of the melted ice cream is $75 \\%$ of that, which is $\\pi r^3.$ Since the melted ice cream fills the cone exactly,</p><p>\\begin{align*}\\pi r^3&=\\pi r^2h/3\\\\ r&=h/3\\\\ 3&=h/r\\end{align*}</p><p>Then the ratio of the cone's height to its radius is $h:r=\\boxed{\\textbf{(B)}\\ 3:1}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2003 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_18",
+      "question": "<p>What is the largest integer that is a divisor of</p><p>\\[(n+1)(n+3)(n+5)(n+7)(n+9)\\]</p><p>for all positive even integers $n$?</p>",
+      "solutions": [
+        "<p>For all consecutive odd integers, one of every five is a multiple of 5 and one of every three is a multiple of 3. The answer is $3 \\cdot 5 = 15$, so ${\\boxed{\\textbf{(D)15}}}$ is the correct answer.</p>",
+        "<p>We'll just test all the answer choices.</p><p>Note that for any 3 consecutive odd integers, there will be exactly one multiple of $3.$</p><p>Let's list all possibilities of 3 consecutive odd integers. (multiple of 3, not multiple of 3, not multiple of 3), (not multiple of 3, multiple of 3, not multiple of 3) and (not multiple of 3, not multiple of 3, multiple of 3)</p><p>To support this further, list the first few consecutive lists of 3 consecutive odd integers.</p><p>We have $(1, 3, 5), (3, 5, 7), (5, 7, 9), (7, 9, 11), (11, 13, 15), \\ldots$</p><p>So if the first two consecutive odd numbers aren't multiples of three, the last one must be a multiple of three.</p><p>Therefore for five consecutive odd integers, there must be at least one multiple of three.</p><p>In the same fashion as we did above, note that for any 5 consecutive integers, there will also be exactly one multiple of $5.$</p><p>Therefore, for any 5 consecutive odd integers, there must be exactly one multiple of five.</p><p>We can skip 7 since none of the answer choices are a multiple of 7.</p><p>Now we try $11.$ 11 doesn't work since as we see the first set of 5 consecutive odd integers doesn't fit, namely $(1, 3, 5, 7, 9).$</p><p>Since any 5 consecutive integers is divisible both by $3$ and $5$, it also must be divisible by ${\\boxed{\\textbf{(D)15}}}$ and no higher since we saw that $11$ does not work and that there is no answer choice that is multiple of $7$.</p><p>~mathboy282</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2003 AMC 10B - logic problem involving deductive_reasoning"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_19",
+      "question": "<p>Three semicircles of radius $1$ are constructed on diameter $\\overline{AB}$ of a semicircle of radius $2$. The centers of the small semicircles divide $\\overline{AB}$ into four line segments of equal length, as shown. What is the area of the shaded region that lies within the large semicircle but outside the smaller semicircles?</p><p>[asy] import graph; unitsize(14mm); defaultpen(linewidth(.8pt)+fontsize(8pt)); dashed=linetype(\"4 4\"); dotfactor=3; pair A=(-2,0), B=(2,0); fill(Arc((0,0),2,0,180)--cycle,mediumgray); fill(Arc((-1,0),1,0,180)--cycle,white); fill(Arc((0,0),1,0,180)--cycle,white); fill(Arc((1,0),1,0,180)--cycle,white); draw(Arc((-1,0),1,60,180)); draw(Arc((0,0),1,0,60),dashed); draw(Arc((0,0),1,60,120)); draw(Arc((0,0),1,120,180),dashed); draw(Arc((1,0),1,0,120)); draw(Arc((0,0),2,0,180)--cycle); dot((0,0)); dot((-1,0)); dot((1,0)); draw((-2,-0.1)--(-2,-0.3),gray); draw((-1,-0.1)--(-1,-0.3),gray); draw((1,-0.1)--(1,-0.3),gray); draw((2,-0.1)--(2,-0.3),gray); label(\"$A$\",A,W); label(\"$B$\",B,E); label(\"1\",(-1.5,-0.1),S); label(\"2\",(0,-0.1),S); label(\"1\",(1.5,-0.1),S);[/asy]</p>",
+      "solutions": [
+        "<p>[asy] import graph; unitsize(14mm); defaultpen(linewidth(.8pt)+fontsize(8pt)); dashed=linetype(\"4 4\"); dotfactor=3; pair A=(-2,0), B=(2,0); fill(Arc((0,0),2,0,180)--cycle,mediumgray); fill(Arc((-1,0),1,0,180)--cycle,white); fill(Arc((0,0),1,0,180)--cycle,white); fill(Arc((1,0),1,0,180)--cycle,white); draw(Arc((-1,0),1,60,180)); draw(Arc((0,0),1,0,60),dashed); draw(Arc((0,0),1,60,120)); draw(Arc((0,0),1,120,180),dashed); draw(Arc((1,0),1,0,120)); draw(Arc((0,0),2,0,180)--cycle); dot((0,0)); dot((-1,0)); dot((1,0)); draw((-2,-0.1)--(-2,-0.3),gray); draw((-1,-0.1)--(-1,-0.3),gray); draw((1,-0.1)--(1,-0.3),gray); draw((2,-0.1)--(2,-0.3),gray); label(\"$A$\",A,W); label(\"$B$\",B,E); label(\"1\",(-1.5,-0.1),S); label(\"2\",(0,-0.1),S); label(\"1\",(1.5,-0.1),S); draw((1,0)--(0.5,0.866)); draw((0,0)--(0.5,0.866)); draw((-1,0)--(-0.5,0.866)); draw((0,0)--(-0.5,0.866));[/asy]</p><p>By drawing four lines from the intersect of the semicircles to their centers, we have split the white region into $\\frac{5}{6}$ of a circle with radius $1$ and two equilateral triangles with side length $1$. This gives the area of the white region as $\\frac{5}{6}\\pi+\\frac{2\\cdot\\sqrt3}{4}=\\frac{5}{6}\\pi+\\frac{\\sqrt3}{2}$. The area of the shaded region is the area of the white region subtracted from the area of the large semicircle. This is equivalent to $2\\pi-\\left(\\frac{5}{6}\\pi+\\frac{\\sqrt3}{2}\\right)=\\frac{7}{6}\\pi-\\frac{\\sqrt3}{2}$.</p><p>Thus the answer is $\\boxed{\\textbf{(E)}\\ \\frac{7}{6}\\pi-\\frac{\\sqrt3}{2}}$.</p><p>The reason why it is $\\frac{5}{6}$ of a circle and why the triangles are equilateral are because, first, the radii are the same and they make up the equilateral triangles.</p><p>Secondly, the reason it is $\\frac{5}{6}$ of a circle is because the middle sector has a degree of $180-2 \\cdot 60 = 60$ and thus $\\frac{60}{360}=\\frac{1}{6}$ of a circle.</p><p>The other two have areas of $\\frac{180-60}{360}=\\frac{1}{3}$ of a triangle each.</p><p>Therefore, the total fraction of the circle(since they have the same radii) is $\\frac{1}{6} + 2 \\cdot \\frac{1}{3} = \\frac{1}{6} + \\frac{4}{6} = \\frac{5}{6}.$</p><p>~mathboy282</p>",
+        "<p>Answer choices A and B are impossible since the area is obviously not a circle of radius 1 minus a triangle.</p><p>Answer choices C and D are also impossible since they are adding but we are subtracting.</p><p>That leaves us with only answer choice $\\textbf{(E)}.$</p><p>~mathboy282</p>",
+        "<p>We can see that the area of the $3$ overlapped white semi circles is equal to\u00a0:</p><p>$2*\\frac{1}{2}\\pi+\\frac{1}{2}*\\frac{\\pi}{3}-2*\\frac{1}{2}\\left(\\frac{\\pi}{3} -\\ \\frac{\\sqrt{3}}{2}\\right)$</p><p>We get this because we think of the 2 overlapped circles on the side as 2 full semi circles then adding the area of the sector in between but subtracting the area segments of the 2 semi circles out (So that they don't overlap). Now by using the formulas:</p><p>Area of sector $=\\frac{1}{2}r^2*\\text{sin}\\theta$</p><p>Area of segment $=\\frac{1}{2}r^2\\left( \\theta -\\ \\text{sin}\\theta\\right)$</p><p>($\\theta$ is in radians)</p><p>and so we get\u00a0:</p><p>$=\\frac{5}{6}\\pi+\\frac{\\sqrt3}{2}$</p><p>then the solution is the same as in solution 1.</p><p>~Gamor</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2003 AMC 10B - number_theory problem involving lcm"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_20",
+      "question": "<p>In rectangle $ABCD, AB=5$ and $BC=3$. Points $F$ and $G$ are on $\\overline{CD}$ so that $DF=1$ and $GC=2$. Lines $AF$ and $BG$ intersect at $E$. Find the area of $\\triangle AEB$.</p>",
+      "solutions": [
+        "<p>$\\triangle EFG \\sim \\triangle EAB$ because $FG \\parallel AB.$ The ratio of $\\triangle EFG$ to $\\triangle EAB$ is $2:5$ since $AB=5$ and $FG=2$ from subtraction. If we let $h$ be the height of $\\triangle EAB,$</p><p>\\[\\frac{2}{5} = \\frac{h-3}{h}\\]\\[2h = 5h-15\\]\\[3h = 15\\]\\[h = 5\\]</p><p>The height is $5$ so the area of $\\triangle EAB$ is $\\frac{1}{2}(5)(5) = \\boxed{\\textbf{(D)}\\ \\frac{25}{2}}$.</p>",
+        "<p>We can look at this diagram as if it were a coordinate plane with point $A$ being $(0,0)$. This means that the equation of the line $AE$ is $y=3x$ and the equation of the line $EB$ is $y=\\frac{-3}{2}x+\\frac{15}{2}$. From this we can set of the follow equation to find the $x$ coordinate of point $E$:</p><p>\\[3x=\\frac{-3}{2}x+\\frac{15}{2}\\]\\[6x=-3x+15\\]\\[9x=15\\]\\[x=\\frac{5}{3}\\]</p><p>We can plug this into one of our original equations to find that the $y$ coordinate is $5$, meaning the area of $\\triangle EAB$ is $\\frac{1}{2}(5)(5) = \\boxed{\\textbf{(D)}\\ \\frac{25}{2}}$</p>",
+        "<p>At points $A$ and $B$, segment $AE$ is 5 units from segment $BE$. At points $F$ and $G$, the segments are 2 units from each other. This means that collectively, the two lines closed the distance between them by 3 units over a height of 3 units. Therefore, to close the next two units of distance, they will have to travel a height of 2 units.</p><p>Then calculate the area of trapezoid $FGBA$ and triangle $EGF$ separately and add them. The area of the trapezoid is $\\frac {2+5}{2}\\cdot 3 = \\frac {21}{2}$ and the area of the triangle is $\\frac{1}{2}\\cdot 2 \\cdot 2 = 2$. $\\frac{21}{2}+2=\\boxed{\\textbf{(D)}\\ \\frac{25}{2}}$</p>",
+        "<p>Since $\\Delta{ABE}\\sim{\\Delta{FGE}}$ then $[AFGB]\\sim{[FXYG]}$, where $X$ and $Y$ are ponts on $EF$ and $EG$ respectivley which make the areas similar. This process can be done over and over again multiple times by the ratio of $\\frac{FG}{AB}=\\frac{2}{5}$, or something like this\\[[AEB]=[AFGB]+[FXYZ]+...\\]\\[[AEB]=[AFGB]+\\frac{2}{5}[AFGB]+(\\frac{2}{5})^2[AFGB]+...\\]we have to find the ratio of the areas when the sides have shrunk by length $\\frac{2}{5}l$</p><p>[asy] unitsize(0.6 cm);  pair A, B, C, D, E, F, G;  A = (0,0); B = (5,0); C = (5,3); D = (0,3); F = (1,3); G = (3,3); E = extension(A,F,B,G);  draw(A--B--C--D--cycle); draw(A--E--B);  label(\"$A$\", A, SW); label(\"$B$\", B, SE); label(\"$C$\", C, NE); label(\"$D$\", D, NW); label(\"$E$\", E, N); label(\"$F$\", F, SE); label(\"$G$\", G, SW); label(\"$2/5$\", (D + F)/2, N); label(\"$4/5$\", (G + C)/2, N); label(\"$6/5$\", (B + C)/2, dir(0)); label(\"$6/5$\", (A + D)/2, W); label(\"$2$\", (A + B)/2, S); [/asy]</p><p>Let $[AFGB]'$ be the area of the shape whose length is $\\frac{2}{5}l$\\[[AFGB]'=[ADCB]-[ADF]-[BCG]\\]\\[[AFGB]'=12/5-6/25-12/25\\]\\[[AFGB]'=42/25\\]Now comparing the ratios of $[AFGB]'$ to $[AFGB]$ we get\\[\\frac{[AFGB]'}{[AFGB]}=\\frac{42}{25}/\\frac{21}{2}\\implies \\frac{[AFGB]'}{[AFGB]}=\\frac{4}{25}\\]By applying an infinite summation\\[[AEB]=\\sum_{n=0}^{\\infty} \\frac{21}{2}\\cdot{(\\frac{4}{25})^n}\\]\\[S=\\frac{a_1}{1-r}\\]\\[\\boxed{[AEB]=\\frac{25}{2}}\\]</p>",
+        "<p>Drop a perpendicular from $E$ to $AB$ and call the intersection point $X.$ $\\triangle EXA$ and $\\triangle DFA$ are similar and so are $\\triangle BCG$ and $\\triangle EXB$ (You can prove this with $AA$ by observing that $\\angle DFA$ is congruent to $\\angle EAB$ and so on). This means that $\\dfrac{AX}{BX}=\\dfrac{1}{2}$ so $AX=\\dfrac{5}{3}.$ $\\dfrac{EX}{AX}=3,$ which means that $EX=5.$ Then, $[AEB]=\\dfrac{5\\cdot 5}{2}=\\boxed{\\textbf{(D) } \\dfrac{25}{2}}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2003 AMC 10B - algebra problem involving fractions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_21",
+      "question": "<p>A bag contains two red beads and two green beads. You reach into the bag and pull out a bead, replacing it with a red bead regardless of the color you pulled out. What is the probability that all beads in the bag are red after three such replacements?</p>",
+      "solutions": [
+        "<p>We can divide the case of all beads in the bag being red after three replacements into three cases. </p><p>The first case is in which the two green beads are the first two beads to be chosen. The probability for this is\\[\\frac{2}{4} \\times \\frac{1}{4} \\times \\frac{4}{4} = \\frac{1}{8}\\]</p><p>The second case is in which the green beads are chosen first and third. The probability for this is\\[\\frac{2}{4} \\times \\frac{3}{4} \\times \\frac{1}{4} = \\frac{3}{32}\\]</p><p>The third case is in which the green beads are chosen second and third. The probability for this is\\[\\frac{2}{4} \\times \\frac{2}{4} \\times \\frac{1}{4} = \\frac{1}{16}\\]</p><p>Add all these cases together\\[\\frac{1}{8}+\\frac{3}{32}+\\frac{1}{16} = \\frac{4}{32}+\\frac{3}{32}+\\frac{2}{32} = \\boxed{\\textbf{(C) \\ } \\frac{9}{32}}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2003 AMC 10B - probability problem involving independent_events"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_22",
+      "question": "<p>A clock chimes once at $30$ minutes past each hour and chimes on the hour according to the hour. For example, at $1 \\text{PM}$ there is one chime and at noon and midnight there are twelve chimes. Starting at $11:15 \\text{AM}$ on $\\text{February 26, 2003},$ on what date will the $2003^{\\text{rd}}$ chime occur?</p>",
+      "solutions": [
+        "<p>First, find how many chimes will have already happened before midnight (the beginning of the day) of $\\text{February 27, 2003}.$ $13$ half-hours have passed, and the number of chimes according to the hour is $1+2+3+\\cdots+12.$ The total number of chimes is $13+78=91.$</p><p>Every day, there will be $24$ half-hours and $2(1+2+3+\\cdots+12)$ chimes according to the arrow, resulting in $24+156=180$ total chimes.</p><p>On $\\text{February 26},$ the number of chimes that still need to occur is $2003-91=1912.$ $1912 \\div 180=10 \\text{R}112.$ Rounding up, it is $11$ days past $\\text{February 26},$ which is $\\boxed{\\textbf{(B) \\ } \\text{March 9}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2003 AMC 10B - probability problem involving conditional_probability"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_23",
+      "question": "<p>A regular octagon $ABCDEFGH$ has an area of one square unit. What is the area of the rectangle $ABEF$?</p><p>[asy] unitsize(1cm); defaultpen(linewidth(.8pt)+fontsize(8pt)); pair C=dir(22.5), B=dir(67.5), A=dir(112.5), H=dir(157.5), G=dir(202.5), F=dir(247.5), E=dir(292.5), D=dir(337.5); draw(A--B--C--D--E--F--G--H--cycle); label(\"$A$\",A,NNW); label(\"$B$\",B,NNE); label(\"$C$\",C,ENE); label(\"$D$\",D,ESE); label(\"$E$\",E,SSE); label(\"$F$\",F,SSW); label(\"$G$\",G,WSW); label(\"$H$\",H,WNW);[/asy]</p>",
+      "solutions": [
+        "<p>Here is an easy way to look at this, where $p$ is the perimeter, and $a$ is the <a href=\"/wiki/index.php/Apothem\" title=\"Apothem\">apothem</a>:</p><p>Area of Octagon: $\\frac{ap}{2}=1$.</p><p>Area of Rectangle: $\\frac{p}{8}\\times 2a=\\dfrac{2ap}{8}=\\frac{ap}{4}$.</p><p>You can see from this that the octagon's area is twice as large as the rectangle's area is $\\boxed{\\textbf{(D)}\\ \\frac{1}{2}}$.</p>",
+        "<p>[asy] unitsize(1cm); defaultpen(linewidth(.8pt)+fontsize(8pt)); pair C=dir(22.5), B=dir(67.5), A=dir(112.5), H=dir(157.5), G=dir(202.5), F=dir(247.5), E=dir(292.5), D=dir(337.5); draw(A--B--C--D--E--F--G--H--cycle); label(\"$A$\",A,NNW); label(\"$B$\",B,NNE); label(\"$C$\",C,ENE); label(\"$D$\",D,ESE); label(\"$E$\",E,SSE); label(\"$F$\",F,SSW); label(\"$G$\",G,WSW); label(\"$H$\",H,WNW);  draw(A--E--F--B--C--G--H--D); draw(A--E--F--B--A,blue); draw(A--F--E--B--A,red); [/asy]</p><p>Here is a less complicated way than that of the user below. If you draw a line segment from each vertex to the center of the octagon and draw the rectangle ABEF (in red), you can see that $2$ of the triangles (in blue) share the same base and height with $\\dfrac{1}{2}$ the rectangle. Therefore, the rectangle's area is the same as $2\\cdot2$ of the $8$ triangles, and is $\\boxed{\\textbf{(D)}\\ \\frac{1}{2}}$ the area of the octagon.</p>",
+        "<p>[asy] unitsize(1cm); defaultpen(linewidth(.8pt)+fontsize(8pt)); pair C=dir(22.5), B=dir(67.5), A=dir(112.5), H=dir(157.5), G=dir(202.5), F=dir(247.5), E=dir(292.5), D=dir(337.5); draw(A--B--C--D--E--F--G--H--cycle); label(\"$A$\",A,NNW); label(\"$B$\",B,NNE); label(\"$C$\",C,ENE); label(\"$D$\",D,ESE); label(\"$E$\",E,SSE); label(\"$F$\",F,SSW); label(\"$G$\",G,WSW); label(\"$H$\",H,WNW);  draw(A--D--E--H--G--B--C--F); [/asy]Drawing lines $AD$, $BG$, $CF$, and $EH$, we can see that the octagon is comprised of $1$ square, $4$ rectangles, and $4$ triangles. The triangles each are $45-45-90$ triangles, and since their diagonal is length $x$, each of their sides is $\\frac{\\sqrt{2}}{2}x$. The area of the entire figure is, likewise, $x^2$ (the square)$+4x^2\\frac{\\sqrt{2}}{2}$ (the 4 rectangles)$+2\\cdot(\\frac{\\sqrt{2}}{2}x)^2$ (the triangles), which simplifies to $2x^2 + 2\\sqrt{2}x^2$. The area of $ABEF$ is just $x(x+\\frac{2\\sqrt{2}}{2}x)$, or $x^2$ + $x^2\\sqrt{2}$, which we can see is the area of $\\frac{ABCDEFGH}{2} =  \\boxed{\\textbf{(D)}\\ \\frac{1}{2}}$ the area of the octagon.</p>",
+        "<p>First, we are going to divide the diagram. Now we need to find the ratio of the area of the rectangle to the area of the trapezoid. </p><p>[asy] unitsize(1cm); defaultpen(linewidth(.8pt)+fontsize(8pt)); pair C=dir(22.5), B=dir(67.5), A=dir(112.5), H=dir(157.5), G=dir(202.5), F=dir(247.5), E=dir(292.5), D=dir(337.5); draw(A--B--C--D--E--F--G--H--cycle); label(\"$A$\",A,NNW); label(\"$B$\",B,NNE); label(\"$C$\",C,ENE); label(\"$D$\",D,ESE); label(\"$E$\",E,SSE); label(\"$F$\",F,SSW); label(\"$G$\",G,WSW); label(\"$H$\",H,WNW);draw(A--F);draw(B--E);draw(D--G);draw(C--H);[/asy]</p><p>The area of a trapezoid is $\\frac{b_1 + b_2}{2}h$Note that the trapezoid is made out of 2 45-45-90 triangles and a rectangle, and that $AH=FG=1$. By realizing that, the area of the trapezoid is $(\\frac{2+\\sqrt{2}}{2})(\\frac{\\sqrt{2}}{2}$). To make this product easier, note there is two trapezoids, so the new product is now this, $(\\frac{2+\\sqrt{2}}{2})(\\sqrt{2}) = \\sqrt{2} + 1$</p><p>Notice how the rectangle has side lengths $\\sqrt{2}+1$ and $1$, so it's area is also $\\sqrt{2}+1$.</p><p>The ratio of the area of rectangle $ABEF$ to the two trapezoids is $1:1$, meaning they share half the area of the octagon. Since the area of the octagon is 1, $\\therefore$ the area of the rectangle is $\\boxed{\\textbf{(D)}\\ \\frac{1}{2}}$.</p><p>~ghfhgvghj10</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2003 AMC 10B - geometry problem involving distance"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_24",
+      "question": "<p>The first four terms in an arithmetic sequence are $x+y$, $x-y$, $xy$, and $\\frac{x}{y}$, in that order. What is the fifth term? </p>",
+      "solutions": [
+        "<p>The difference between consecutive terms is $(x-y)-(x+y)=-2y.$ Therefore we can also express the third and fourth terms as $x-3y$ and $x-5y.$ Then we can set them equal to $xy$ and $\\frac{x}{y}$ because they are the same thing.</p><p>\\begin{align*} xy&=x-3y\\\\ xy-x&=-3y\\\\ x(y-1)&=-3y\\\\ x&=\\frac{-3y}{y-1} \\end{align*}</p><p>Substitute into our other equation.</p><p>\\[\\frac{x}{y}=x-5y\\]\\[\\frac{-3}{y-1}=\\frac{-3y}{y-1}-5y\\]\\[-3=-3y-5y(y-1)\\]\\[0=5y^2-2y-3\\]\\[0=(5y+3)(y-1)\\]\\[y=-\\frac35, 1\\]</p><p>But $y$ cannot be $1$ because then the first term would be $x+1$ and the second term $x-1$ while the last two terms would be equal to $x.$ Therefore $y=-\\frac35.$ Substituting the value for $y$ into any of the equations, we get $x=-\\frac98.$ Finally,</p><p>\\[\\frac{x}{y}-2y=\\frac{9\\cdot 5}{8\\cdot 3}+\\frac{6}{5}=\\boxed{\\textbf{(E)}\\ \\frac{123}{40}}\\]</p>",
+        "<p>Because this is an arithmetic sequence, we conclude from the first two terms that the common difference is $-2y$. Therefore, $xy = x-3y$ and $\\frac{x}{y}=x-5y$. If we multiply $xy$ and $\\frac{x}{y}$, we see: </p><p>$xy\\cdot\\frac{x}{y} = (x-3y)(x-5y) = x^2 - 8xy + 15y^2$</p><p>Because $xy\\cdot\\frac{x}{y}$, by basic multiplication, is $x^2$, we have </p><p>$x^2 = x^2 - 8xy + 15y^2$</p><p>$8xy = 15y^2$</p><p>$8x = 15y$</p><p>$x = \\frac{15y}{8}$</p><p>Now that we have $x$ in terms of $y$, we substitute in $\\frac{15y}{8}$ in for $x$ in $\\frac{x}{y}$ (the fourth term). This leaves us with $\\frac{\\frac{15y}{8}}{y} = \\frac{15}{8}$. </p><p>Recall that $\\frac{x}{y}$ can be written as $x - 5y$. Thus, $x - 5y = \\frac{15}{8}$. Substitute in $\\frac{15}{8}$ in for $x$, and we see:</p><p>$\\frac{15y}{8} - 5y = \\frac{15}{8}$</p><p>$15y - 40y = 15$</p><p>$y = \\frac{15}{-25} = \\frac{-3}{5}$</p><p>Aha! This means $2y$, the common difference, is $2\\cdot y = 2\\cdot \\frac{-3}{5} = \\frac{-6}{5}$. Now, all we need to do is find the fifth term, which is just $\\frac{x}{y}-2y$. We can substitute known values to solve: </p><p>$\\frac{x}{y}-2y = \\frac{15}{8} - \\frac{-6}{5} = \\frac{15}{8} + \\frac{6}{5} = \\frac{75 + 48}{40} = \\boxed{\\textbf{(E)}\\ \\frac{123}{40}}$.</p><p>~SXWang</p><p><br/></p>",
+        "<p>From the first two terms, we can figure out the common difference, $x-y-(x+y)=-2y$.This means that the third, fourth and fifth terms are $x-3y$, $x-5y$ and $x-7y$ respectively.</p><p>The third term is also equal to $xy$, so $xy=x-3y$, which can be rearranged to $xy+3y=x$.</p><p>Dividing by y, we have$x+3=\\frac{x}{y}$.</p><p>$\\frac{x}{y}$ happens to be the fourth term. Therefore,$\\frac{x}{y}=x-5y=x+3$.</p><p>$x-5y=x+3$</p><p>$-5y=3$</p><p>$y=-\\frac{3}{5}$</p><p>Now that we have $y$, we can substitute it into an equation above, like $\\frac{x}{y}=x+3$.</p><p>$\\frac{x}{\\frac{-3}{5}}=x+3$</p><p>$-\\frac{5x}{3}=x+3$</p><p>$-\\frac{5x+3x}{3}=3$</p><p>$-\\frac{8x}{3}=3$</p><p>$8x=-9$</p><p>$x=\\frac{-9}{8}$</p><p>As mentioned earlier, the fifth term we want in the end is equal to $x-7y$. Substitute some more and...</p><p>$\\frac{-9}{8}-7(\\frac{-3}{5})=\\frac{-9\\cdot5}{8\\cdot5}+\\frac{-3\\cdot-7\\cdot8}{5\\cdot8}=\\frac{-45}{40}+\\frac{168}{40}=\\boxed{\\textbf{(E)}\\ \\frac{123}{40}}$</p><p>(Alternatively, like the above solutions suggest, you could also use the admittedly easier $\\frac{x}{y}-2y$ as the final step.)</p><p>~ a seesaw named owlly81 ~</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2003 AMC 10B - geometry problem involving area"
+        }
+      ]
+    },
+    {
+      "id": "amc_2003_10b_25",
+      "question": "<p>How many distinct four-digit numbers are divisible by $3$ and have $23$ as their last two digits?</p>",
+      "solutions": [
+        "<p>To test if a number is divisible by three, you add up the digits of the number. If the sum is divisible by three, then the original number is a multiple of three. If the sum is too large, you can repeat the process until you can tell whether it is a multiple of three. This is the basis for the solution. Since the last two digits are $23$, the sum of the digits is $2+3 = 5$ (therefore it is not divisible by three). However certain numbers can be added to make the sum of the digits a multiple of three.</p><p>$5+1 = 6$,</p><p>$5+4 = 9$, and so on. </p><p>However since the largest four-digit number ending with $23$ is $9923$, the maximum sum is</p><p>$5+18 = 23$.</p><p>Using that process we can fairly quickly compile a list of the sum of the first two digits of the number. </p><p>\\[\\{1, 4, 7, 10, 13, 16\\}\\]</p><p>Now we find all the two-digit numbers that have any of the sums shown above. We can do this by listing all the two digit numbers $xy$ in separate cases.</p><p>\\[I. x+y = 1, \\{10\\} = 1\\]\\[II. x+y = 4, \\{13, 22, 31, 40\\} = 4\\]\\[III. x+y = 7, \\{16, 25, 34, 43, 52, 61, 70\\} = 7\\]\\[IV. x+y = 10, \\{19, 28, 37, 46, 55, 64, 73, 82, 91\\} = 9\\]\\[V. x+y = 13, \\{49, 58, 67, 76, 85, 94\\} = 6\\]\\[VI. x+y = 16, \\{79, 88, 97\\} = 3\\]</p><p>And finally, we add the number of elements in each set.</p><p>\\[1+4+7+9+6+3 = \\boxed{\\textbf{(B)}\\ 30}\\]</p><p>A number divisible by $3$ has all its digits add to a multiple of $3.$ The last two digits are $2$ and $3$ and add up to $5 \\equiv 2\\ (\\text{mod}\\ 3).$ Therefore the first two digits must add up to $1\\ (\\text{mod}\\ 3).$ $4$ digits (including $0$) are $0\\ (\\text{mod}\\ 3),$ $3$ are $1\\ (\\text{mod}\\ 3),$ and $3$ are $2\\ (\\text{mod}\\ 3).$ The following combinations are equivalent to $1\\ (\\text{mod}\\ 3)$:</p><p>\\[0\\ (\\text{mod}\\ 3)+1\\ (\\text{mod}\\ 3) \\equiv 1\\ (\\text{mod}\\ 3)+0\\ (\\text{mod}\\ 3) \\equiv 2\\ (\\text{mod}\\ 3) +2\\ (\\text{mod}\\ 3)\\]</p><p>Let the first term in each combination represent the thousands digit and the second term represent the hundreds digit. We can use this to find the total amount of four-digit numbers.</p><p>\\[3\\cdot3 + 3\\cdot4 + 3\\cdot3 = 9 + 12 + 9 = \\boxed{\\textbf{(B)}\\ 30}\\]</p><p>We have the following: $n \\equiv 0 \\pmod{3}$ and $n \\equiv 23\\pmod{100}$. Then $n = 3a = 100b+23$ for some integers $a$ and $b$. Taking mod 3 gives:$0 \\equiv b+2 \\pmod 3 \\implies b\\equiv 1\\pmod 3$ so $b=3c+1$ for some integer $c$. But $N = 100b+23 = 100(3c+1)+23$ so $n = 300c+123$. Bounding this gives us:$999 < 300c+123 < 10000$ so $876 < 300c < 9877$. Dividing by $300$ gives $2.92 < c < 32.9222$ so $3\\le c \\le 32$. This gives $32-3+1 = \\boxed{\\textbf{(B)} \\ 30 }$</p><p>The number is in the form $xy23$</p><p>Notice that the number is divisible by $3$ if the sum of the digits of $xy23$ is divisible by $3$</p><p>Our first number that is divisible by $3$ is $1023$, next is $1323$..Notice $xy$ goes from $10\\implies 97$</p><p>Hence, there are $\\frac{97-10}{3}+1=30$ distinct four digit numbers.</p><p>Following the form $xy23$ in Solution 4, notice that $x+y \\equiv 1 \\pmod 3$ to satisfy our condition. Choose a value of $x$ from 1 to 9. For $x=1, 4, 7$, there are exactly 4 values of $y: 0, 3, 6, 9$. For the remaining 6 digits, there are 3 choices for y. So our answer is $(3)(4)+(6)(3)=30$.</p><p>There are $9 \\cdot 10 = 90$ possible values for the first two digits. $\\frac{1}{3}$ of them yield a multiple of $3$, so the answer is $\\frac{90}{3} = \\boxed{\\textbf{(B)}\\ 30}$</p><p>(In more detail: There are 90 possible values for the first two digits. All numbers can be written as 0, 1, or 2 mod(3). 2+3= 5 = -1 mod(3), so the first two digits need to add to 1 mod(3) for all the digits to equal 0 mod(3) (a multiple of 3). Out of the 3 ways to pick 2 numbers in mod(3) (0+1, 0+2, and 1+2), only $\\frac{1}{3}$ of the ways (only 0+1) equals 1 mod(3). Thus, the answer is $\\frac{90}{3} = \\boxed{\\textbf{(B)}\\ 30}$.</p><p>Denote the four digit number by $ab23_{10}$. Then it is well known the sum of the digits of an integer $N$ determine whether or not they are divisible by $3$. Thus we want $a + b + 2 + 3 \\equiv 0 \\pmod 3$.</p><p>$\\underline{a = 1}: \\implies$ $b \\equiv 0 \\pmod 3 \\implies b = 0, 3, 6, 9$.</p><p>$\\underline{a = 2}: \\implies$ $b \\equiv 2 \\pmod 3 \\implies b = 2, 5, 8$.</p><p>$\\underline{a = 3}: \\implies$ $b \\equiv 1 \\pmod 3 \\implies b = 1, 4, 7$.</p><p><br/>Now we have that when $a = 4$ this is the same case as $a = 1$ as $4 \\equiv 1 \\pmod 3$. Hence if we count the above number of solutions and multiply by $3$ (as $1 \\leq a \\leq 9$), we are home free. There are $4 + 3 + 3 = 10$ solutions. Multiplying this by $3$ yields $\\boxed{30}$. $\\blacksquare$</p>",
+        "<p>To test if a number is divisible by three, you add up the digits of the number. If the sum is divisible by three, then the original number is a multiple of three. If the sum is too large, you can repeat the process until you can tell whether it is a multiple of three. This is the basis for the solution. Since the last two digits are $23$, the sum of the digits is $2+3 = 5$ (therefore it is not divisible by three). However certain numbers can be added to make the sum of the digits a multiple of three.</p><p>$5+1 = 6$,</p><p>$5+4 = 9$, and so on. </p><p>However since the largest four-digit number ending with $23$ is $9923$, the maximum sum is</p><p>$5+18 = 23$.</p><p>Using that process we can fairly quickly compile a list of the sum of the first two digits of the number. </p><p>\\[\\{1, 4, 7, 10, 13, 16\\}\\]</p><p>Now we find all the two-digit numbers that have any of the sums shown above. We can do this by listing all the two digit numbers $xy$ in separate cases.</p><p>\\[I. x+y = 1, \\{10\\} = 1\\]\\[II. x+y = 4, \\{13, 22, 31, 40\\} = 4\\]\\[III. x+y = 7, \\{16, 25, 34, 43, 52, 61, 70\\} = 7\\]\\[IV. x+y = 10, \\{19, 28, 37, 46, 55, 64, 73, 82, 91\\} = 9\\]\\[V. x+y = 13, \\{49, 58, 67, 76, 85, 94\\} = 6\\]\\[VI. x+y = 16, \\{79, 88, 97\\} = 3\\]</p><p>And finally, we add the number of elements in each set.</p><p>\\[1+4+7+9+6+3 = \\boxed{\\textbf{(B)}\\ 30}\\]</p>",
+        "<p>A number divisible by $3$ has all its digits add to a multiple of $3.$ The last two digits are $2$ and $3$ and add up to $5 \\equiv 2\\ (\\text{mod}\\ 3).$ Therefore the first two digits must add up to $1\\ (\\text{mod}\\ 3).$ $4$ digits (including $0$) are $0\\ (\\text{mod}\\ 3),$ $3$ are $1\\ (\\text{mod}\\ 3),$ and $3$ are $2\\ (\\text{mod}\\ 3).$ The following combinations are equivalent to $1\\ (\\text{mod}\\ 3)$:</p><p>\\[0\\ (\\text{mod}\\ 3)+1\\ (\\text{mod}\\ 3) \\equiv 1\\ (\\text{mod}\\ 3)+0\\ (\\text{mod}\\ 3) \\equiv 2\\ (\\text{mod}\\ 3) +2\\ (\\text{mod}\\ 3)\\]</p><p>Let the first term in each combination represent the thousands digit and the second term represent the hundreds digit. We can use this to find the total amount of four-digit numbers.</p><p>\\[3\\cdot3 + 3\\cdot4 + 3\\cdot3 = 9 + 12 + 9 = \\boxed{\\textbf{(B)}\\ 30}\\]</p>",
+        "<p>We have the following: $n \\equiv 0 \\pmod{3}$ and $n \\equiv 23\\pmod{100}$. Then $n = 3a = 100b+23$ for some integers $a$ and $b$. Taking mod 3 gives:$0 \\equiv b+2 \\pmod 3 \\implies b\\equiv 1\\pmod 3$ so $b=3c+1$ for some integer $c$. But $N = 100b+23 = 100(3c+1)+23$ so $n = 300c+123$. Bounding this gives us:$999 < 300c+123 < 10000$ so $876 < 300c < 9877$. Dividing by $300$ gives $2.92 < c < 32.9222$ so $3\\le c \\le 32$. This gives $32-3+1 = \\boxed{\\textbf{(B)} \\ 30 }$</p>",
+        "<p>The number is in the form $xy23$</p><p>Notice that the number is divisible by $3$ if the sum of the digits of $xy23$ is divisible by $3$</p><p>Our first number that is divisible by $3$ is $1023$, next is $1323$..Notice $xy$ goes from $10\\implies 97$</p><p>Hence, there are $\\frac{97-10}{3}+1=30$ distinct four digit numbers.</p>",
+        "<p>Following the form $xy23$ in Solution 4, notice that $x+y \\equiv 1 \\pmod 3$ to satisfy our condition. Choose a value of $x$ from 1 to 9. For $x=1, 4, 7$, there are exactly 4 values of $y: 0, 3, 6, 9$. For the remaining 6 digits, there are 3 choices for y. So our answer is $(3)(4)+(6)(3)=30$.</p>",
+        "<p>There are $9 \\cdot 10 = 90$ possible values for the first two digits. $\\frac{1}{3}$ of them yield a multiple of $3$, so the answer is $\\frac{90}{3} = \\boxed{\\textbf{(B)}\\ 30}$</p><p>(In more detail: There are 90 possible values for the first two digits. All numbers can be written as 0, 1, or 2 mod(3). 2+3= 5 = -1 mod(3), so the first two digits need to add to 1 mod(3) for all the digits to equal 0 mod(3) (a multiple of 3). Out of the 3 ways to pick 2 numbers in mod(3) (0+1, 0+2, and 1+2), only $\\frac{1}{3}$ of the ways (only 0+1) equals 1 mod(3). Thus, the answer is $\\frac{90}{3} = \\boxed{\\textbf{(B)}\\ 30}$.</p>",
+        "<p>Denote the four digit number by $ab23_{10}$. Then it is well known the sum of the digits of an integer $N$ determine whether or not they are divisible by $3$. Thus we want $a + b + 2 + 3 \\equiv 0 \\pmod 3$.</p><p>$\\underline{a = 1}: \\implies$ $b \\equiv 0 \\pmod 3 \\implies b = 0, 3, 6, 9$.</p><p>$\\underline{a = 2}: \\implies$ $b \\equiv 2 \\pmod 3 \\implies b = 2, 5, 8$.</p><p>$\\underline{a = 3}: \\implies$ $b \\equiv 1 \\pmod 3 \\implies b = 1, 4, 7$.</p><p><br/>Now we have that when $a = 4$ this is the same case as $a = 1$ as $4 \\equiv 1 \\pmod 3$. Hence if we count the above number of solutions and multiply by $3$ (as $1 \\leq a \\leq 9$), we are home free. There are $4 + 3 + 3 = 10$ solutions. Multiplying this by $3$ yields $\\boxed{30}$. $\\blacksquare$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2003 AMC 10B - geometry problem involving area"
+        }
+      ]
+    }
+  ]
+}

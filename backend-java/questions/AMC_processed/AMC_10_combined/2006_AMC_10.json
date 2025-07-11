@@ -1,0 +1,815 @@
+{
+  "year": "2006",
+  "competition": "AMC_10",
+  "problems": [
+    {
+      "id": "amc_2006_10a_1",
+      "question": "<p>Sandwiches at Joe's Fast Food cost $$3$ each and sodas cost $$2$ each. How many dollars will it cost to purchase $5$ sandwiches and $8$ sodas?</p>",
+      "solutions": [
+        "<p>The $5$ sandwiches cost $5\\cdot 3=15$ dollars. The $8$ sodas cost $8\\cdot 2=16$ dollars. In total, the purchase costs $15+16=\\boxed{\\textbf{(A) }31}$ dollars.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "This is a simple arithmetic word problem involving basic operations. The problem requires understanding of basic addition, subtraction, and division. Students need to calculate total costs, find differences, and perform basic arithmetic operations. This is a foundational algebra problem that tests basic computational skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_2",
+      "question": "<p>Define $x\\otimes y=x^3-y$. What is $h\\otimes (h\\otimes h)$?</p>",
+      "solutions": [
+        "<p>By the definition of $\\otimes$, we have $h\\otimes h=h^{3}-h$. </p><p>Then, $h\\otimes (h\\otimes h)=h\\otimes (h^{3}-h)=h^{3}-(h^{3}-h)=\\boxed{\\textbf{(C) }h}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "This is a percentage word problem involving calculating discounts, savings, and price changes. Students need to understand percentage relationships, calculate percentage increases/decreases, and apply percentage concepts to real-world scenarios. The problem tests understanding of proportional relationships and percentage calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_3",
+      "question": "<p>The ratio of Mary's age to Alice's age is $3:5$. Alice is $30$ years old. How old is Mary?</p>",
+      "solutions": [
+        "<p>Let $m$ be Mary's age. Then $\\frac{m}{30}=\\frac{3}{5}$. Solving for $m$, we obtain $m=\\boxed{\\textbf{(B) }18}.$</p>",
+        "<p>We can see this is a combined ratio of $8$, $(5+3)$. We can equalize by doing $30\\div5=6$, and $6\\cdot3=\\boxed{\\textbf{(B) }18}$. With the common ratio of $8$ and difference ratio of $6$, we see $6\\cdot8=30+18$. Therefore, we can see our answer is correct.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving finding area of geometric shapes. Students need to understand area formulas, calculate areas of different shapes, and possibly work with composite areas. The problem tests geometric reasoning and area calculation skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_4",
+      "question": "<p>A digital watch displays hours and minutes with AM and PM. What is the largest possible sum of the digits in the display?</p>",
+      "solutions": [
+        "<p>From the <a href=\"/wiki/index.php/Greedy_algorithm\" title=\"Greedy algorithm\">greedy algorithm</a>, we have $9$ in the hours section and $59$ in the minutes section. $9+5+9=\\boxed{\\textbf{(E) }23}$</p>",
+        "<p>With a matrix, we can see$\\begin{bmatrix} 1+2&9&6&3\\\\ 1+1&8&5&2\\\\ 1+0&7&4&1 \\end{bmatrix}$The largest single digit sum we can get is $9$.For the minutes digits, we can combine the largest $2$ digits, which are $9,5 \\Rightarrow 9+5=14$, and finally $14+9=\\boxed{\\textbf{(E) }23}$</p>",
+        "<p>We first note that since the watch displays time in AM and PM, the value for the hours section varies from $00-12$. Therefore, the maximum value of the digits for the hours is when the watch displays $09$, which gives us $0+9=9$.</p><p>Next, we look at the value of the minutes section, which varies from $00-59$. Let this value be a number $ab$. We quickly find that the maximum value for $a$ and $b$ is respectively $5$ and $9$.</p><p>Adding these up, we get $9+5+9=\\boxed{\\textbf{(E) }23}$.</p><p>~<a href=\"/wiki/index.php/User:Dairyqueenxd\" title=\"User:Dairyqueenxd\">Dairyqueenxd</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "This is a simple word problem involving basic arithmetic operations. Students need to perform basic calculations, understand word problem scenarios, and apply arithmetic operations to solve real-world problems. This tests foundational problem-solving skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_5",
+      "question": "<p>Doug and Dave shared a pizza with $8$ equally-sized slices. Doug wanted a plain pizza, but Dave wanted anchovies on half the pizza. The cost of a plain pizza was $8$ dollars, and there was an additional cost of $2$ dollars for putting anchovies on one half. Dave ate all the slices of anchovy pizza and one plain slice. Doug ate the remainder. Each paid for what he had eaten. How many more dollars did Dave pay than Doug?</p>",
+      "solutions": [
+        "<p>Dave and Doug paid $8+2=10$ dollars in total. Doug paid for three slices of plain pizza, which cost $\\frac{3}{8}\\cdot 8=3$. Dave paid $10-3=7$ dollars. Dave paid $7-3=\\boxed{\\textbf{(D) }4}$ more dollars than Doug.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "This is a counting problem involving different arrangements and combinations. Students need to understand counting principles, possibly use factorial notation, and calculate different possible arrangements. The problem tests combinatorial reasoning and systematic counting skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_6",
+      "question": "<p>What non-zero real value for $x$ satisfies $(7x)^{14}=(14x)^7$?</p>",
+      "solutions": [
+        "<p>Taking the seventh root of both sides, we get $(7x)^2=14x$.</p><p>Simplifying the LHS gives $49x^2=14x$. This means that $7x = 2$, or $x = 0$.</p><p>However, $x$ must be a non-zero value.</p><p>Thus, $x=\\boxed{\\textbf{(B) }\\frac{2}{7}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "This is a word problem involving basic arithmetic operations. Students need to understand the problem scenario, identify the relevant mathematical operations, and perform calculations to find the solution. This tests basic problem-solving and arithmetic skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_7",
+      "question": "<p>The $8\\times18$ <a href=\"/wiki/index.php/Rectangle\" title=\"Rectangle\">rectangle</a> $ABCD$ is cut into two congruent hexagons, as shown, in such a way that the two hexagons can be repositioned without overlap to form a square. What is $y$?</p><p>[asy] unitsize(3mm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=4; draw((0,4)--(18,4)--(18,-4)--(0,-4)--cycle); draw((6,4)--(6,0)--(12,0)--(12,-4)); label(\"$A$\",(0,4),NW); label(\"$B$\",(18,4),NE); label(\"$C$\",(18,-4),SE); label(\"$D$\",(0,-4),SW); label(\"$y$\",(3,4),S); label(\"$y$\",(15,-4),N); label(\"$18$\",(9,4),N); label(\"$18$\",(9,-4),S); label(\"$8$\",(0,0),W); label(\"$8$\",(18,0),E); dot((0,4)); dot((18,4)); dot((18,-4)); dot((0,-4));[/asy]</p>",
+      "solutions": [
+        "<p>Since the two <a href=\"/wiki/index.php/Hexagon\" title=\"Hexagon\">hexagons</a> are going to be repositioned to form a <a href=\"/wiki/index.php/Square_(geometry)\" title=\"Square (geometry)\"> square</a> without overlap, the <a href=\"/wiki/index.php/Area\" title=\"Area\">area</a> will remain the same. The rectangle's area is $18\\cdot8=144$. This means the square will have four sides of length 12. The only way to do this is shown below.<br/></p><p>[asy] size(175); pair A,B,C,D,E,F,G,H; A=(0,8); B=(12,12); C=(12,4); D=(0,0); E=(0,12); F=(12,0); G=(6,4); H=(6,8); draw(A--E--B--C--G--H--A--D--F--C); label(\"$A$\",A,W); label(\"$B$\",B,NE); label(\"$C$\",(12.6,4)); label(\"$D$\",D,SW); label(\"$12$\",E--B,N); label(\"$12$\",D--F,S);  label(\"$4$\",E--A,W); label(\"$4$\",(12.4,-1.75),E); label(\"$8$\",A--D,W); label(\"$8$\",(12.4,4),E); label(\"$y$\",A--H,S); label(\"$y$\",G--C,N); [/asy]</p><p>As you can see from the diagram, the <a href=\"/wiki/index.php/Line_segment\" title=\"Line segment\">line segment</a> denoted as $y$ is half the length of the side of the square, which leads to $y = \\frac{12}{2} = \\boxed{\\textbf{(A) }6}$.</p><p>As solution 1 says, the two hexagons are going to be repositioned to form a square without overlap. Thus we create this square out of the original rectangle.</p><p><br/>[asy] size(175); pair A,B,C,D,E,F,G,H; A=(0,8); B=(12,12); C=(12,4); D=(0,0); E=(0,12); F=(12,0); G=(6,4); H=(6,8); draw(A--E--B--C--G--H--A--D--F--C); label(\"$y$\",A--H,S); label(\"$y$\",G--C,N); [/asy]</p><p>As you can see from the diagram, the length $y$ fits into the previously blank side, so we know that it is equal to $y$.</p><p>[asy] unitsize(3mm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=4; draw((0,4)--(18,4)--(18,-4)--(0,-4)--cycle); draw((6,4)--(6,0)--(12,0)--(12,-4)); label(\"$y$\",(9,-2),NW); label(\"$A$\",(0,4),NW); label(\"$B$\",(18,4),NE); label(\"$C$\",(18,-4),SE); label(\"$D$\",(0,-4),SW); label(\"$y$\",(3,4),S); label(\"$y$\",(15,-4),N); label(\"$18$\",(9,4),N); label(\"$18$\",(9,-4),S); label(\"$8$\",(0,0),W); label(\"$8$\",(18,0),E); dot((0,4)); dot((18,4)); dot((18,-4)); dot((0,-4));[/asy]</p><p><br/>From there we can say $3y = 18$ so $y = \\frac{18}{3} = \\boxed{\\textbf{(A) }6}$.</p><p>~Ezraft</p>",
+        "<p>As solution 1 says, the two hexagons are going to be repositioned to form a square without overlap. Thus we create this square out of the original rectangle.</p><p><br/>[asy] size(175); pair A,B,C,D,E,F,G,H; A=(0,8); B=(12,12); C=(12,4); D=(0,0); E=(0,12); F=(12,0); G=(6,4); H=(6,8); draw(A--E--B--C--G--H--A--D--F--C); label(\"$y$\",A--H,S); label(\"$y$\",G--C,N); [/asy]</p><p>As you can see from the diagram, the length $y$ fits into the previously blank side, so we know that it is equal to $y$.</p><p>[asy] unitsize(3mm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=4; draw((0,4)--(18,4)--(18,-4)--(0,-4)--cycle); draw((6,4)--(6,0)--(12,0)--(12,-4)); label(\"$y$\",(9,-2),NW); label(\"$A$\",(0,4),NW); label(\"$B$\",(18,4),NE); label(\"$C$\",(18,-4),SE); label(\"$D$\",(0,-4),SW); label(\"$y$\",(3,4),S); label(\"$y$\",(15,-4),N); label(\"$18$\",(9,4),N); label(\"$18$\",(9,-4),S); label(\"$8$\",(0,0),W); label(\"$8$\",(18,0),E); dot((0,4)); dot((18,4)); dot((18,-4)); dot((0,-4));[/asy]</p><p><br/>From there we can say $3y = 18$ so $y = \\frac{18}{3} = \\boxed{\\textbf{(A) }6}$.</p><p>~Ezraft</p>",
+        "<p>Because the two hexagons are congruent, we know that the perpendicular line to $A$ is half of $BC$, or $4$. Next, we plug the answer choices in to see which one works. Trying $A$, we get the area of one hexagon is $72$ , as desired, so the answer is $\\boxed{\\textbf{(A) }6}$ .</p><p>~coolmath2017</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving geometric shapes and area calculations. Students need to understand area formulas, work with different geometric shapes, and calculate areas. The problem tests geometric reasoning and area calculation abilities."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_8",
+      "question": "<p>A <a href=\"/wiki/index.php/Parabola\" title=\"Parabola\">parabola</a> with equation $y=x^2+bx+c$ passes through the points $(2,3)$ and $(4,3)$. What is $c$?</p>",
+      "solutions": [
+        "<p>Substitute the points $(2,3)$ and $(4,3)$ into the given equation for $(x,y)$.</p><p>Then we get a system of two equations:</p><p>$3=4+2b+c$</p><p>$3=16+4b+c$</p><p>Subtracting the first equation from the second we have:</p><p>$0=12+2b$</p><p>$b=-6$</p><p>Then using $b=-6$ in the first equation:</p><p>$0=1+-12+c$</p><p>$c=\\boxed{\\textbf{(E) }11}$.</p><p>Alternatively, notice that since the equation is that of a conic parabola, the vertex is likely $(3,2)$. Thus, the form of the equation of the parabola is $y - 2 = (x - 3)^2$. Expanding this out, we find that $c=\\boxed{\\textbf{(E) }11}$.</p>",
+        "<p>Alternatively, notice that since the equation is that of a conic parabola, the vertex is likely $(3,2)$. Thus, the form of the equation of the parabola is $y - 2 = (x - 3)^2$. Expanding this out, we find that $c=\\boxed{\\textbf{(E) }11}$.</p>",
+        "<p>The points given have the same $y$-value, so the vertex lies on the line $x=\\frac{2+4}{2}=3$.</p><p>The $x$-coordinate of the vertex is also equal to $\\frac{-b}{2a}$, so set this equal to $3$ and solve for $b$, given that $a=1$:</p><p>$x=\\frac{-b}{2a}$</p><p>$3=\\frac{-b}{2}$</p><p>$6=-b$</p><p>$b=-6$</p><p>Now the equation is of the form $y=x^2-6x+c$. Now plug in the point $(2,3)$ and solve for $c$:</p><p>$y=x^2-6x+c$</p><p>$3=2^2-6(2)+c$</p><p>$3=4-12+c$</p><p>$3=-8+c$</p><p>$c=\\boxed{\\textbf{(E) }11}$.</p>",
+        "<p>Substituting y into the two equations, we get:</p><p>$3=x^2+bx+c$</p><p>Which can be written as:</p><p>$x^2+bx+c-3=0$</p><p>$4$ and $2$ are the solutions to the quadratic. Thus:</p><p>$c-3=4\\times2$</p><p>$c-3=8$</p><p>$c=\\boxed{\\textbf{(E) }11}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "This is a number theory problem involving divisibility and number properties. Students need to understand divisibility rules, work with factors and multiples, and apply number theory concepts. The problem tests understanding of number properties and divisibility."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_9",
+      "question": "<p>How many <a href=\"/wiki/index.php/Set\" title=\"Set\">sets</a> of two or more consecutive positive integers have a sum of $15$?</p>",
+      "solutions": [
+        "<p>Notice that if the consecutive positive integers have a sum of $15$, then their average (which could be a fraction) must be a divisor of $15$. If the number of integers in the list is odd, then the average must be either $1, 3,$ or $5$, and $1$ is clearly not possible. The other two possibilities both work:</p><ul><li>$1 + 2 + 3 + 4 + 5 = 15$</li><li>$4 + 5 + 6 = 15$</li></ul><p>If the number of integers in the list is even, then the average will have a $\\frac{1}{2}$. The only possibility is $\\frac{15}{2}$, from which we get:</p><ul><li>$15 = 7 + 8$</li></ul><p>Thus, the correct answer is $\\boxed{\\textbf{(C) }3}.$</p><p><br/>Question: (RealityWrites) Is it possible that the answer is $4$, because $0+1+2+3+4+5$ should technically count, right?</p><p>Answer: (IMGROOT2) It isn't possible because the question asks for positive integers, and this means that negative integers or zero aren't allowed.</p><p>Note to readers: make sure to always read the problem VERY carefully before attempting; it could mean the difference of making the cutoff.</p>",
+        "<p>Any set will form a arithmetic progression with the first term say $a$. Since the numbers are consecutive the common difference $d = 1$.</p><p>The sum of the AP has to be 15. So,</p><p>\\[S_n = \\frac{n}{2} \\cdot (2a + (n-1)d)\\]\\[S_n = \\frac{n}{2} \\cdot (2a + (n-1)1)\\]\\[15 = \\frac{n}{2} \\cdot (2a + n - 1)\\]\\[2an + n^2 - n = 30\\]\\[n^2 + n(2a - 1) - 30 = 0\\]</p><p>Now we need to find the number of possible sets of values of a, n which satisfy this equation. Now $a$ cannot be 15 as we need 2 terms. So a can only be less the 15.</p><p>Trying all the values of a from 1 to 14 we observe that $a = 4$, $a = 7$ and $a = 1$ provide the only real solutions to the above equation.The three possibilites of a and n are.</p><p>\\[(a,n) = (4,3),(7, 2),(1, 6)\\]</p><p>The above values are obtained by solving the following equations obtained by substituting the above mentioned values of a into $n^2 + n(2a - 1) - 30 = 0$,</p><p>\\[n^2 + 7n - 30 = 0\\]\\[n^2 + 13n - 30 = 0\\]\\[n^2 - n - 30 = 0\\]</p><p>Since there are 3 possibilities the answer is $\\boxed{\\textbf{(C) }3}.$</p>",
+        "<p>We want some consecutive numbers that add up. We can use casework to solve this. We know that any set of 6 consecutive, positive integers cannot be greater than 5. Therefore the max amount of elements is 5.</p><p>-We know that 15/5 = 3, so if we put 3 as our middle number and expand evenly, we get {1,2,3,4,5}</p><p>-By a bit of bashing we find that there are no solutions</p><p>-We know that 15/3 = 5, so if we put 5 as our middle number and expand evenly, we get {4,5,6}</p><p>-We'll say x is the lower number. Thus x + (x + 1) = 15. Solving for x, x = 7. Thus getting {7,8}</p><p>Adding up all the cases we get 1 + 0 + 1 + 1 = $\\boxed{\\textbf{(C) }3}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "This is a triangle geometry problem involving angles and side lengths. Students need to understand triangle properties, possibly use the Pythagorean theorem, and work with triangle relationships. The problem tests geometric reasoning and triangle properties."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_10",
+      "question": "<p>For how many real values of $x$ is $\\sqrt{120-\\sqrt{x}}$ an integer?</p>",
+      "solutions": [
+        "<p>For $\\sqrt{120-\\sqrt{x}}$ to be an integer, $120-\\sqrt{x}$ must be a perfect square. </p><p>Since $\\sqrt{x}$ can't be negative, $120-\\sqrt{x} \\leq 120$. </p><p>The perfect squares that are less than or equal to $120$ are $\\{0,1,4,9,16,25,36,49,64,81,100\\}$, so there are $11$ values for $120-\\sqrt{x}$. </p><p>Since every value of $120-\\sqrt{x}$ gives one and only one possible value for $x$, the number of values of $x$ is $\\boxed{\\textbf{(E) }11}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "This is a rate word problem involving time, distance, and speed relationships. Students need to understand rate relationships, work with units, and solve problems involving speed, time, and distance. The problem tests understanding of proportional relationships and rate calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_11",
+      "question": "<p>Which of the following describes the graph of the equation $(x+y)^2=x^2+y^2$?</p>",
+      "solutions": [
+        "<p>Expanding the left side, we have</p><p>$x^2+2xy+y^2=x^2+y^2\\Longrightarrow 2xy=0\\Longrightarrow xy=0\\Longrightarrow x = 0 \\textrm{ or } y = 0$</p><p>Thus there are two <a href=\"/wiki/index.php/Line\" title=\"Line\">lines</a> described in this graph, the horizontal line $y = 0$ and the vertical line $x=0$. Thus, our answer is $\\boxed{\\textbf{(C) }\\textrm{two\\,lines}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "This is a percentage word problem involving calculating percentages and changes. Students need to understand percentage relationships, calculate percentage increases/decreases, and apply percentage concepts. The problem tests proportional reasoning and percentage calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_12",
+      "question": "<p>Rolly wishes to secure his dog with an 8-foot rope to a <a href=\"/wiki/index.php/Square_(geometry)\" title=\"Square (geometry)\"> square</a> shed that is 16 feet on each side. His preliminary drawings are shown.</p><p>[asy] size(150); pathpen = linewidth(0.6); defaultpen(fontsize(10)); D((0,0)--(16,0)--(16,-16)--(0,-16)--cycle); D((16,-8)--(24,-8)); label('Dog', (24, -8), SE); MP('I', (8,-8), (0,0)); MP('8', (16,-4), W); MP('8', (16,-12),W); MP('8', (20,-8), N); label('Rope', (20,-8),S); D((0,-20)--(16,-20)--(16,-36)--(0,-36)--cycle); D((16,-24)--(24,-24)); MP(\"II\", (8,-28), (0,0)); MP('4', (16,-22), W); MP('8', (20,-24), N); label(\"Dog\",(24,-24),SE); label(\"Rope\", (20,-24), S); [/asy]</p><p>Which of these arrangements give the dog the greater <a href=\"/wiki/index.php/Area\" title=\"Area\">area</a> to roam, and by how many square feet?</p>",
+      "solutions": [
+        "<p>[asy] size(150); pathpen = linewidth(0.7); defaultpen(linewidth(0.7)+fontsize(10)); filldraw(arc((16,-8),8,-90,90)--cycle, rgb(0.9,0.9,0.6)); filldraw(arc((16,-26),8,-90,90)--cycle, rgb(0.9,0.9,0.6)); filldraw(arc((16,-22),4,90,180)--(16,-22)--cycle, rgb(0.9,0.9,0.6)); D((0,0)--(16,0)--(16,-16)--(0,-16)--cycle); D((16,-8)--(24,-8)); label('Dog', (24, -8), SE); MP('I', (8,-8), (0,0)); MP('8', (16,-4), W); MP('8', (16,-12),W); MP('8', (20,-8), N); label('Rope', (20,-8),S); pair sD = (0,-2); D(shift(sD)*((0,-20)--(16,-20)--(16,-36)--(0,-36)--cycle)); D(shift(sD)*((16,-24)--(24,-24))); MP(\"II\", (8,-28)+sD, (0,0)); MP('4', (16,-22)+sD, W); MP('8', (20,-24)+sD, N); label(\"Dog\",(24,-24)+sD,SE); label(\"Rope\", (20,-24)+sD, S); [/asy]Let us first examine the area of both possible arrangements. The rope outlines a circular boundary that the dog may dwell in. Arrangement $I$ allows the dog $\\frac12\\cdot(\\pi\\cdot8^2) = 32\\pi$ square feet of area. Arrangement $II$ allows $32\\pi$ square feet plus a little more on the top part of the fence. So we already know that Arrangement $II$ allows more freedom - only thing left is to find out how much. The extra area can be represented by a quarter of a circle with radius 4. So the extra area is $\\frac14\\cdot(\\pi\\cdot4^2) = 4\\pi$. Thus the answer is $\\boxed{\\textbf{(C) } II,\\,\\textrm{ by }\\,4\\pi}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "This is an arithmetic sequence problem involving finding terms in a sequence. Students need to understand arithmetic sequences, find common differences, and calculate specific terms. The problem tests understanding of sequence patterns and arithmetic progression."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_13",
+      "question": "<p>A player pays $\\textdollar 5$ to play a game. A die is rolled. If the number on the die is odd, the game is lost. If the number on the die is even, the die is rolled again. In this case the player wins if the second number matches the first and loses otherwise. How much should the player win if the game is fair? (In a fair game the probability of winning times the amount won is what the player should pay.)</p>",
+      "solutions": [
+        "<p>The probability of rolling an even number on the first turn is $\\frac{1}{2}$ and the probability of rolling the same number on the next turn is $\\frac{1}{6}$. The probability of winning is $\\frac{1}{2}\\cdot \\frac{1}{6} =\\frac{1}{12}$. If the game is to be fair, the amount paid, $5$ dollars, must be $\\frac{1}{12}$ the amount of the prize money, so the answer is$\\boxed{\\textbf{(D) } $60}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving complex geometric shapes and area calculations. Students need to work with composite shapes, understand area formulas, and calculate areas of complex figures. The problem tests advanced geometric reasoning and area calculation skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_14",
+      "question": "<p>A number of linked rings, each $1$ cm thick, are hanging on a peg. The top ring has an outside diameter of $20$ cm. The outside diameter of each of the outer rings is $1$ cm less than that of the ring above it. The bottom ring has an outside diameter of $3$ cm. What is the distance, in cm, from the top of the top ring to the bottom of the bottom ring?</p><p>[asy] size(7cm); pathpen = linewidth(0.7); D(CR((0,0),10)); D(CR((0,0),9.5)); D(CR((0,-18.5),9.5)); D(CR((0,-18.5),9)); MP(\"$\\vdots$\",(0,-31),(0,0)); D(CR((0,-39),3)); D(CR((0,-39),2.5)); D(CR((0,-43.5),2.5)); D(CR((0,-43.5),2)); D(CR((0,-47),2)); D(CR((0,-47),1.5)); D(CR((0,-49.5),1.5)); D(CR((0,-49.5),1.0));  D((12,-10)--(12,10)); MP('20',(12,0),E); D((12,-51)--(12,-48)); MP('3',(12,-49.5),E);[/asy]</p>",
+      "solutions": [
+        "<p>The inside diameters of the rings are the positive integers from $1$ to $18$. The total distance needed is the sum of these values plus $2$ for the top of the first ring and the bottom of the last ring. Using the formula for the sum of an <a class=\"mw-redirect\" href=\"/wiki/index.php/Arithmetic_series\" title=\"Arithmetic series\">arithmetic series</a>, the answer is $\\frac{18 \\cdot 19}{2} + 2 = \\boxed{\\textbf{(B) }173}$.</p>",
+        "<p>Alternatively, the sum of the consecutive integers from 3 to 20 is $\\frac{1}{2}(18)(3+20) = 207$. However, the 17 <a href=\"/wiki/index.php/Intersection\" title=\"Intersection\">intersections</a> between the rings must be subtracted, and we also get $207 - 2(17) = \\boxed{\\textbf{(B) }173}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "This is a circle geometry problem involving area and circumference. Students need to understand circle properties, work with radius and diameter, and calculate circle areas and circumferences. The problem tests understanding of circle geometry and circular measurements."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_15",
+      "question": "<p>Odell and Kershaw run for $30$ minutes on a <a href=\"/wiki/index.php/Circle\" title=\"Circle\">circular</a> track. Odell runs clockwise at $250 m/min$ and uses the inner lane with a radius of $50$ meters. Kershaw runs counterclockwise at $300 m/min$ and uses the outer lane with a radius of $60$ meters, starting on the same radial line as Odell. How many times after the start do they pass each other? </p>",
+      "solutions": [
+        "<p>Since $d = rt$, we note that Odell runs one lap in $\\frac{2 \\cdot 50\\pi}{250} = \\frac{2\\pi}{5}$ minutes, while Kershaw also runs one lap in $\\frac{2 \\cdot 60\\pi}{300} = \\frac{2\\pi}{5}$ minutes. They take the same amount of time to run a lap, and since they are running in opposite directions they will meet exactly twice per lap (once at the starting point, the other at the half-way point). Thus, there are $\\frac{30}{\\frac{2\\pi}{5}} \\approx 23.8$ laps run by both, or $\\lfloor 2\\cdot 23.8\\rfloor = 23 \\cdot 2 + 1 =\\boxed{\\textbf{(D) } 47}$ meeting points.</p>",
+        "<p>We first find the amount of minutes, $k$, until Odell and Kershaw's next meeting. Let $a$ be the angle in <a class=\"mw-redirect\" href=\"/wiki/index.php/Radians\" title=\"Radians\">radians</a> between their starting point and the point where they first meet, measured counterclockwise. </p><p>Since Kershaw has traveled $300k$ meters at this point and the circumference of his track is $120\\pi$, $a=\\frac{300k}{120\\pi}\\cdot 2\\pi$. Similarly, $2\\pi-a=\\frac{250k}{100\\pi}\\cdot{2\\pi}$ since Odell has traveled $250k$ meters in the opposite direction and the circumference of his track is $100\\pi$. </p><p>Solving for $a$ in the second equation, we get $a=2\\pi-\\frac{250k}{100\\pi}\\cdot 2\\pi$. Then, from the first equation, we have $\\frac{300k}{120\\pi}\\cdot 2\\pi=2\\pi-\\frac{250k}{100\\pi}\\cdot 2\\pi$. Solving for $k$, we get $k=\\frac{\\pi}{5}$. After $k$ minutes, they are back at the same position, except rotated, so they will meet again in $k$ minutes. So the total amount of meetings is $\\lfloor\\frac{30}{k}\\rfloor=\\lfloor\\frac{150}{\\pi}\\rfloor=\\boxed{\\textbf{(D) }47}$.</p><p>~apsid</p>",
+        "<p>Since Odell's rate is $5/6$ that of Kershaw, but Kershaw's lap distance is $6/5$ that of Odell, they each run a lap in the same time. Hence they pass twice each time they circle the track. Odell runs \\[(30 \\ \\text{min})\\left(250\\frac{\\text{m}}{\\text{min}}\\right)\\left(\\frac{1}{100\\pi}\\frac{\\text{laps}}{\\text{m}}\\right)= \\frac{75}{\\pi}\\,\\text{laps}\\approx 23.87\\ \\text{laps},\\] as does Kershaw. Because $23.5 < 23.87 < 24$, they pass each other $2(23.5)=\\boxed{47}$ times.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "This is a counting problem involving different arrangements and combinations. Students need to understand counting principles, possibly use factorial notation, and calculate different possible arrangements. The problem tests combinatorial reasoning and systematic counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_16",
+      "question": "<p>A circle of radius $1$ is <a href=\"/wiki/index.php/Tangent\" title=\"Tangent\">tangent</a> to a circle of radius $2$. The sides of $\\triangle ABC$ are tangent to the circles as shown, and the sides $\\overline{AB}$ and $\\overline{AC}$ are congruent. What is the area of $\\triangle ABC$?</p><p>[asy] size(200); pathpen = linewidth(0.7); pointpen = black; real t=2^0.5; D((0,0)--(4*t,0)--(2*t,8)--cycle); D(CR((2*t,2),2)); D(CR((2*t,5),1)); D('B', (0,0),SW); D('C',(4*t,0), SE); D('A', (2*t, 8), N); D((2*t,2)--(2*t,4)); D((2*t,5)--(2*t,6)); MP('2', (2*t,3), W); MP('1',(2*t, 5.5), W);[/asy]</p>",
+      "solutions": [
+        "<p>Let the centers of the smaller and larger circles be $O_1$ and $O_2$ , respectively.Let their tangent points to $\\triangle ABC$ be $D$ and $E$, respectively.We can then draw the following diagram:</p><p>[asy] size(200); pathpen = linewidth(0.7); pointpen = black; pointfontpen = fontsize(10); real t=2^0.5; D((0,0)--(4*t,0)--(2*t,8)--cycle);  D(CR(D((2*t,2)),2)); D(CR(D((2*t,5)),1)); D('B', (0,0),SW); D('C',(4*t,0), SE); D('A', (2*t, 8), N); pair A = foot((2*t,2),(2*t,8),(4*t,0)), B = foot((2*t,5),(2*t,8),(4*t,0)); D((2*t,0)--(2*t,8)); D((2*t,2)--D(A)); D((2*t,5)--D(B)); D(rightanglemark((2*t,2),A,(4*t,0))); D(rightanglemark((2*t,5),B,(4*t,0))); MP('2', (2*t,3), W); MP('1',(2*t, 5.5), W); MP(\"F\",(2*t,0)); MP(\"O_1\",(2*t,5),W); MP(\"O_2\",(2*t,2),W); MP(\"D\",B,NE); MP(\"E\",A,NE); [/asy]</p><p>We see that $\\triangle ADO_1 \\sim \\triangle AEO_2 \\sim \\triangle AFC$. Using the first pair of <a class=\"mw-redirect\" href=\"/wiki/index.php/Similar_triangles\" title=\"Similar triangles\">similar triangles</a>, we write the proportion:</p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, we have $AD = \\sqrt{3^2-1^2} = \\sqrt{8}$.</p><p>Now using $\\triangle ADO_1 \\sim \\triangle AFC$,</p><p>Hence, the area of the triangle is \\[\\frac{1}{2}\\cdot AF \\cdot BC = \\frac{1}{2}\\cdot AF \\cdot (2\\cdot CF) = AF \\cdot CF = 8\\left(2\\sqrt{2}\\right) = \\boxed{\\textbf{(D) } 16\\sqrt{2}}\\]</p>",
+        "<p>[asy] size(200); pathpen = linewidth(0.7); pointpen = black; pointfontpen = fontsize(10); real t=2^0.5; D((0,0)--(4*t,0)--(2*t,8)--cycle);  D(CR(D((2*t,2)),2)); D(CR(D((2*t,5)),1)); D('B', (0,0),SW); D('C',(4*t,0), SE); D('A', (2*t, 8), N); pair A = foot((2*t,2),(2*t,8),(4*t,0)), B = foot((2*t,5),(2*t,8),(4*t,0)); D((2*t,0)--(2*t,8)); D((2*t,2)--D(A)); D((2*t,5)--D(B)); D(rightanglemark((2*t,2),A,(4*t,0))); D(rightanglemark((2*t,5),B,(4*t,0))); MP('2', (2*t,3), W); MP('1',(2*t, 5.5), W); MP(\"F\",(2*t,0)); MP(\"O_1\",(2*t,5),W); MP(\"O_2\",(2*t,2),W); MP(\"D\",B,NE); MP(\"E\",A,NE); [/asy]</p><p>Since $\\triangle{A O_1 D} \\sim \\triangle{A O_2 E},$ we have that $\\frac{A O_1}{A O_2} = \\frac{O_1 D}{O_2 E} = \\frac{1}{2}$.</p><p>Since we know that $O_1 O_2 = 1 + 2 = 3,$ the total length of $A O_2 = 2 \\cdot 3 = 6.$</p><p>We also know that $O_2 F = 2$, so $A F = A O_2 + O_2 F = 6 + 2 = 8.$</p><p>Also, since $\\triangle{ABF} \\sim \\triangle{A E O_2},$ we have that $\\frac{AC}{A O_2} = \\frac{FC}{O_2 E}.$</p><p>Since we know that $A O_2 = 6$ and $O_2 E = 2,$ we have that $\\frac{AC}{6} = \\frac{FC}{2}.$</p><p>This equation simplified gets us $AC = 3 \\cdot FC.$</p><p>Let $FC = a$</p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> on $\\triangle{AFC},$ we have that $AF^2 + FC^2 = AC^2.$</p><p>We know that $AF = 8$, $FC = a$ and $AC = 3a$ so we have $8^2 + a^2 = (3a)^2.$</p><p>Simplifying, we have that $64 = 8a^2 \\Rightarrow a^2 = 8 \\Rightarrow a = \\sqrt{8} = 2 \\sqrt{2}.$</p><p>Recall that $FC=a$.</p><p>Therefore, $BC = 2 \\cdot FC = 2 \\cdot 2 \\sqrt{2} = 4 \\sqrt{2}.$</p><p>Since the height is $AF = 8,$ we have the area equal to $\\frac{4 \\sqrt{2} \\cdot 8}{2}=16\\sqrt{2}.$</p><p>Thus our answer is $\\boxed{\\textbf{(D) }16 \\sqrt{2}}$.</p><p>~mathboy282</p><p><br/>Alternatively, using the fact that Area = radius $\\cdot$ semiperimeter, and knowing that $AC = \\sqrt{FC^2 + 64}$, we can set up the equation \\[2FC + 2 \\sqrt{FC^2 + 64} = 8FC.\\] Grouping and getting rid of the square root gives us $FC^2 + 64 = 9FC^2$, meaning that $FC = 2 \\sqrt{2}$. Thus, the area of the triangle is $\\boxed{16 \\sqrt{2}, D}$ ~ booking(Please feel free to edit this, since this is my first time writing a solution!)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "This is a system of equations problem involving multiple variables. Students need to set up and solve systems of equations, possibly using substitution or elimination methods. The problem tests algebraic reasoning and equation-solving skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_17",
+      "question": "<p>In rectangle $ADEH$, points $B$ and $C$ trisect $\\overline{AD}$, and points $G$ and $F$ trisect $\\overline{HE}$. In addition, $AH=AC=2$, and $AD=3$. What is the area of quadrilateral $WXYZ$ shown in the figure? </p><p>[asy] size(7cm); pathpen = linewidth(0.7); pointpen = black; pointfontpen = fontsize(10); pair A,B,C,D,E,F,G,H,W,X,Y,Z; A=(0,2); B=(1,2); C=(2,2); D=(3,2); H=(0,0); G=(1,0); F=(2,0); E=(3,0); D('A',A, N); D('B',B,N); D('C',C,N); D('D',D,N); D('E',E,SE); D('F',F,SE); D('G',G,SW); D('H',H,SW); D(A--F); D(B--E); D(D--G); D(C--H); Z=IP(A--F, C--H); Y=IP(A--F, D--G); X=IP(B--E,D--G); W=IP(B--E,C--H); D('W',W,1.6*N); D('X',X,1.6*plain.E); D('Y',Y,1.6*S); D('Z',Z,1.6*plain.W); D(A--D--E--H--cycle); [/asy]</p>",
+      "solutions": [
+        "<p>By <a href=\"/wiki/index.php/Symmetry\" title=\"Symmetry\">symmetry</a>, $WXYZ$ is a square.</p><p>[asy] size(7cm); pathpen = linewidth(0.7); pointpen = black; pointfontpen = fontsize(10); pair A,B,C,D,E,F,G,H,W,X,Y,Z; A=(0,2); B=(1,2); C=(2,2); D=(3,2); H=(0,0); G=(1,0); F=(2,0); E=(3,0); D('A',A, N); D('B',B,N); D('C',C,N); D('D',D,N); D('E',E,SE); D('F',F,SE); D('G',G,SW); D('H',H,SW); D(A--F); D(B--E); D(D--G); D(C--H); Z=IP(A--F, C--H); Y=IP(A--F, D--G); X=IP(B--E,D--G); W=IP(B--E,C--H); D('W',W,1.6*N); D('X',X,1.6*plain.E); D('Y',Y,1.6*S); D('Z',Z,1.6*plain.W); MP(\"1\",(A+B)/2,2*N); MP(\"2\",(A+H)/2,plain.W); D(B--Z); MP(\"1\",(B+Z)/2,plain.W); MP(\"\\frac{\\sqrt{2}}{2}\",(W+Z)/2,plain.SE); D(A--D--E--H--cycle); [/asy]</p><p>Draw $\\overline{BZ}$. $BZ = \\frac 12AH = 1$, so $\\triangle BWZ$ is a $45-45-90 \\triangle$. Hence $WZ = \\frac{1}{\\sqrt{2}}$, and $[WXYZ] = \\left(\\frac{1}{\\sqrt{2}}\\right)^2 =\\boxed{\\textbf{(A) }\\frac 12}$.</p><p>There are many different similar ways to come to the same conclusion using different <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">45-45-90 triangles</a>.</p><p>[asy] size(7cm); pathpen = linewidth(0.7); pointpen = black; pointfontpen = fontsize(10); pair A,B,C,D,E,F,G,H,W,X,Y,Z; A=(0,2); B=(1,2); C=(2,2); D=(3,2); H=(0,0); G=(1,0); F=(2,0); E=(3,0); D('A',A, N); D('B',B,N); D('C',C,N); D('D',D,N); D('E',E,SE); D('F',F,SE); D('G',G,SW); D('H',H,SW); D(A--F); D(B--E); D(D--G); D(C--H); Z=IP(A--F, C--H); Y=IP(A--F, D--G); X=IP(B--E,D--G); W=IP(B--E,C--H); D('W',W,1.6*N); D('X',X,1.6*plain.E); D('Y',Y,1.6*S); D('Z',Z,1.6*plain.W); D(B--D((A+H)/2)--G);D(C--D((E+D)/2)--F); D(A--D--E--H--cycle); [/asy]</p><p>Drawing lines as shown above and piecing together the triangles, we see that $ABCD$ is made up of $12$ squares congruent to $WXYZ$. Hence $[WXYZ] = \\frac{2\\cdot 3}{12} =\\boxed{\\textbf{(A) }\\frac 12}$.</p><p>We see that if we draw a line to $BZ$ it is half the width of the rectangle so that length would be $1$, and the resulting triangle is a $45-45-90$ so using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> we can get that each side is $\\sqrt{\\frac{1^2}{2}}$ so the area of the middle square would be $(\\sqrt{\\frac{1^2}{2}})^2=(\\sqrt{\\frac{1}{2}})^2=\\boxed{\\textbf{(A) }\\frac{1}{2}}$ which is our answer.</p><p>Since $B$ and $C$ are trisection points and $AC = 2$, we see that $AD = 3$. Also, $AC = AH$, so triangle $ACH$ is a right isosceles triangle, i.e. $\\angle ACH = \\angle AHC = 45^\\circ$. By symmetry, triangles $AFH$, $DEG$, and $BED$ are also right isosceles triangles. Therefore, $\\angle WAD = \\angle WDA = 45^\\circ$, which means triangle $AWD$ is also a right isosceles triangle. Also, triangle $AXC$ is a right isosceles triangle.</p><p>Then $AW = AD/\\sqrt{2} = 3/\\sqrt{2}$, and $AX = AC/\\sqrt{2} = 2/\\sqrt{2}$. Hence, $XW = AW - AX = 3/\\sqrt{2} - 2/\\sqrt{2} = 1/\\sqrt{2}$.</p><p>By symmetry, quadrilateral $WXYZ$ is a square, so its area is\\[XW^2 = \\left( \\frac{1}{\\sqrt{2}} \\right)^2 = \\boxed{\\textbf{(A) }\\frac{1}{2}}.\\]</p><p>~made by AoPS (somewhere) -put here by qkddud~</p>",
+        "<p>[asy] size(7cm); pathpen = linewidth(0.7); pointpen = black; pointfontpen = fontsize(10); pair A,B,C,D,E,F,G,H,W,X,Y,Z; A=(0,2); B=(1,2); C=(2,2); D=(3,2); H=(0,0); G=(1,0); F=(2,0); E=(3,0); D('A',A, N); D('B',B,N); D('C',C,N); D('D',D,N); D('E',E,SE); D('F',F,SE); D('G',G,SW); D('H',H,SW); D(A--F); D(B--E); D(D--G); D(C--H); Z=IP(A--F, C--H); Y=IP(A--F, D--G); X=IP(B--E,D--G); W=IP(B--E,C--H); D('W',W,1.6*N); D('X',X,1.6*plain.E); D('Y',Y,1.6*S); D('Z',Z,1.6*plain.W); D(B--D((A+H)/2)--G);D(C--D((E+D)/2)--F); D(A--D--E--H--cycle); [/asy]</p><p>Drawing lines as shown above and piecing together the triangles, we see that $ABCD$ is made up of $12$ squares congruent to $WXYZ$. Hence $[WXYZ] = \\frac{2\\cdot 3}{12} =\\boxed{\\textbf{(A) }\\frac 12}$.</p>",
+        "<p>We see that if we draw a line to $BZ$ it is half the width of the rectangle so that length would be $1$, and the resulting triangle is a $45-45-90$ so using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> we can get that each side is $\\sqrt{\\frac{1^2}{2}}$ so the area of the middle square would be $(\\sqrt{\\frac{1^2}{2}})^2=(\\sqrt{\\frac{1}{2}})^2=\\boxed{\\textbf{(A) }\\frac{1}{2}}$ which is our answer.</p>",
+        "<p>Since $B$ and $C$ are trisection points and $AC = 2$, we see that $AD = 3$. Also, $AC = AH$, so triangle $ACH$ is a right isosceles triangle, i.e. $\\angle ACH = \\angle AHC = 45^\\circ$. By symmetry, triangles $AFH$, $DEG$, and $BED$ are also right isosceles triangles. Therefore, $\\angle WAD = \\angle WDA = 45^\\circ$, which means triangle $AWD$ is also a right isosceles triangle. Also, triangle $AXC$ is a right isosceles triangle.</p><p>Then $AW = AD/\\sqrt{2} = 3/\\sqrt{2}$, and $AX = AC/\\sqrt{2} = 2/\\sqrt{2}$. Hence, $XW = AW - AX = 3/\\sqrt{2} - 2/\\sqrt{2} = 1/\\sqrt{2}$.</p><p>By symmetry, quadrilateral $WXYZ$ is a square, so its area is\\[XW^2 = \\left( \\frac{1}{\\sqrt{2}} \\right)^2 = \\boxed{\\textbf{(A) }\\frac{1}{2}}.\\]</p><p>~made by AoPS (somewhere) -put here by qkddud~</p>",
+        "<p>[asy] size(7cm); pathpen = linewidth(0.7); pointpen = black; pointfontpen = fontsize(10); pair A,B,C,D,E,F,G,H,W,X,Y,Z; A=(0,2); B=(1,2); C=(2,2); D=(3,2); H=(0,0); G=(1,0); F=(2,0); E=(3,0); D('A',A, N); D('B',B,N); D('C',C,N); D('D',D,N); D('E',E,SE); D('F',F,SE); D('G',G,SW); D('H',H,SW); D(A--F); D(B--E); D(D--G); D(C--H); Z=IP(A--F, C--H); Y=IP(A--F, D--G); X=IP(B--E,D--G); W=IP(B--E,C--H); D('W',W,1.6*N); D('X',X,1.6*plain.E); D('Y',Y,1.6*S); D('Z',Z,1.6*plain.W); D(A--D--E--H--cycle); [/asy]</p><p><br/>By symmetry, quadrilateral $WXYZ$ is a square. </p><p>First step, proving that $\\triangle BXD \\sim \\triangle BWC$. </p><p>We can tell quadrilateral $CDGH$ is a parallelogram because $CD \\parallel GH$ and $CD \\cong GH$. </p><p>By knowing that, we can say that $CW \\parallel DX$. </p><p>Finally, we can now prove $\\triangle BXD \\sim \\triangle BWC$ by AA, with a ratio of 2:1.</p><p>Since $BD = DE = 2$ and $\\angle BDE = 90$. Then $\\triangle BDE$ is a 45-45-90 triangle. </p><p>This will make $\\angle DBE = 45$ making $\\triangle BXD$ and $\\triangle BWC$ a 45-45-90 triangle. </p><p>This will make, $BD = 2, BC=1, DX=BX=\\sqrt 2, BW=WX=\\frac{\\sqrt 2}{2}$. Since $WX$ is the length of the square, our answer will be $(\\frac{\\sqrt 2}{2})^2 = \\frac{2}{4} = \\boxed{\\textbf{(A) }\\frac{1}{2}}.$</p><p>~ghfhgvghj10</p>",
+        "<p>Since we know that quadrilateral $WXYZ$ is a square, we conclude that its area is a rational number because the side lengths may be irrational. Therefore, the answer is $\\boxed{\\textbf(A)}.$~elpianista227</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving complex geometric shapes and area calculations. Students need to work with composite shapes, understand area formulas, and calculate areas of complex figures. The problem tests advanced geometric reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_18",
+      "question": "<p>A license plate in a certain state consists of $4$ digits, not necessarily distinct, and $2$ letters, also not necessarily distinct. These six characters may appear in any order, except that the two letters must appear next to each other. How many distinct license plates are possible? </p>",
+      "solutions": [
+        "<p>There are $10\\cdot10\\cdot10\\cdot10 = 10^4$ ways to choose 4 digits.</p><p>There are $26 \\cdot 26 = 26^2$ ways to choose the 2 letters. </p><p>For the letters to be next to each other, they can be the 1st and 2nd, 2nd and 3rd, 3rd and 4th, 4th and 5th, or the 5th and 6th characters. So, there are $6 - 1 = 5$ choices for the position of the letters.</p><p>Therefore, the number of distinct license plates is $5\\times 10^4\\times 26^2 \\Longrightarrow \\boxed{\\mathrm{C}}$.</p>",
+        "<p>There are $10^4$ ways to choose the digits and $26^2$ ways to choose the 2 letters. However, since the letters are next to each other, the result must be $10^4\\cdot 26^2 \\cdot \\text{something}$. The only answer choice that matches this is $\\boxed{\\mathrm{C}}$.</p><p>~ Andrew2019</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "This is a logic problem involving multiple statements and determining truth values. Students need to use logical reasoning, analyze multiple conditions, and determine the validity of statements. The problem tests logical thinking and deductive reasoning skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_19",
+      "question": "<p>How many non-<a class=\"mw-redirect\" href=\"/wiki/index.php/Similar\" title=\"Similar\">similar</a> triangles have angles whose degree measures are distinct positive integers in <a class=\"mw-redirect\" href=\"/wiki/index.php/Arithmetic_progression\" title=\"Arithmetic progression\">arithmetic progression</a>? </p>",
+      "solutions": [
+        "<p>The sum of the angles of a triangle is $180$ degrees. For an arithmetic progression with an odd number of terms, the middle term is equal to the average of the sum of all of the terms, making it $\\frac{180}{3} = 60$ degrees. The minimum possible value for the smallest angle is $1$ and the highest possible is $59$ (since the numbers are distinct), so there are $\\boxed{\\textbf{(C) }59}$ possibilities.</p>",
+        "<p>Let the first angle be $x$, and the common difference be $d$. The arithmetic progression can now be expressed as $x + (x + d) + (x + 2d) = 180$. Simplifiying, $x + d = 60$. Now, using stars and bars, we have $\\binom{61}{1} = 61$. However, we must subtract the two cases in which either $x$ or $d$ equal $0$, so we have $61 - 2$ = $\\boxed{\\textbf{(C) }59}$.</p>",
+        "<p>Consider that we have $(a+n)+(a+n+1)+(a+n+2)=180 \\Longleftrightarrow 3a+3(n+1)=180 \\Longleftrightarrow a=59-n$, where $n \\geq 0$ and $n$ is an integer. Since $a \\neq 0$, $n=0,1,2,3,\\cdots, 58$ which is $\\boxed{\\textbf{(C) }59}$ solutions.</p><p>~~QuantumPsiInverted</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "This is a number theory problem involving least common multiple and remainder properties. Students need to understand LCM concepts, work with remainders, and apply number theory principles. The problem tests understanding of number theory and divisibility."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_20",
+      "question": "<p>Six distinct positive integers are randomly chosen between $1$ and $2006$, inclusive. What is the probability that some pair of these integers has a difference that is a multiple of $5$? </p>",
+      "solutions": [
+        "<p>For two numbers to have a difference that is a multiple of $5$, the numbers must be congruent $\\bmod{5}$ (their remainders after division by $5$ must be the same).</p><p>$0, 1, 2, 3, 4$ are the possible values of numbers in $\\bmod{5}$. Since there are only $5$ possible values in $\\bmod{5}$ and we are picking $6$ numbers, by the <a href=\"/wiki/index.php/Pigeonhole_Principle\" title=\"Pigeonhole Principle\">Pigeonhole Principle</a>, two of the numbers must be congruent $\\bmod{5}$. </p><p>Therefore the probability that some pair of the $6$ integers has a difference that is a multiple of $5$ is $\\boxed{\\textbf{(E) }1}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "This is a fraction word problem involving ratios and proportions. Students need to understand fraction operations, work with ratios, and solve problems involving proportional relationships. The problem tests understanding of fractions and proportional reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_21",
+      "question": "<p>How many four-digit positive integers have at least one digit that is a $2$ or a $3$?</p>",
+      "solutions": [
+        "<p>Since we are asked for the number of positive $4$-digit integers with at least $2$ or $3$ in it, we can find this by finding the total number of $4$-digit integers and subtracting off those which do not have any $2$s or $3$s as digits. </p><p>The total number of $4$-digit integers is $9 \\cdot 10 \\cdot 10 \\cdot 10 = 9000$, since we have $10$ choices for each digit except the first (which can't be $0$).</p><p>Similarly, the total number of $4$-digit integers without any $2$ or $3$ is $7 \\cdot 8 \\cdot 8 \\cdot 8 ={3584}$.</p><p>Therefore, the total number of positive $4$-digit integers that have at least one $2$ or $3$ is $9000-3584=\\boxed{\\textbf{(E) }5416}.$</p>",
+        "<p>We proceed to every case.</p><p>Case $1$: There is ONLY one $2$ or $3$. If the $2$ or $3$ is occupying the first digit, we have $512$ arrangements. If the $2$ or $3$ is not occupying the first digit, there are $7 \\cdot 8^2$ = $448$ arrangements. Therefore, we have $2(448 \\cdot 3 + 512) = 3712$ arrangements.</p><p>Case $2$\u00a0: There are two $2$s OR two $3$s. If the $2$ or $3$ is occupying the first digit, we have $64$ arrangements. If the $2$ or $3$ is not occupying the first digit, there are $56$ arrangements. There are $3$ ways for the $2$ or the $3$ to be occupying the first digit and $3$ ways for the first digit to be unoccupied. There are $2(3 \\cdot (56+64))$ = $720$ arrangements.</p><p>Case $3$\u00a0: There is ONLY one $2$ and one $3$. If the $2$ or the $3$ is occupying the first digit, we have $6$ types of arrangements of where the $2$ or $3$ is. We also have $64$ different arrangements for the non-$2$ or $3$ digits. We have $6 \\cdot 64$ = $384$ arrangements. If the $2$ or the $3$ isn't occupying the first digit, we have $6$ types of arrangements of where the $2$ or $3$ is. We also have $56$ different arrangements for the non-$2$ or $3$ digits. We have $6 \\cdot 56$ = $336$ arrangements for this case. We have $336 + 384$ = $720$ total arrangements for this case.</p><p>Notice that we already counted $3712 + 720 + 720 = 5152$ cases and we still have a lot of cases left over to count. This is already larger than the second largest answer choice, and therefore, our answer is $\\boxed{\\textbf{(E) }5416}$.</p><p>~Arcticturn</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "This is a probability problem involving independent events and calculating probabilities. Students need to understand probability concepts, work with independent events, and calculate compound probabilities. The problem tests understanding of probability theory and probability calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_22",
+      "question": "<p>Two farmers agree that pigs are worth $300$ dollars and that goats are worth $210$ dollars. When one farmer owes the other money, he pays the debt in pigs or goats, with \"change\" received in the form of goats or pigs as necessary. (For example, a $390$ dollar debt could be paid with two pigs, with one goat received in change.) What is the amount of the smallest positive debt that can be resolved in this way?</p>",
+      "solutions": [
+        "<p>The problem can be restated as an equation of the form $300p + 210g = x$, where $p$ is the number of pigs, $g$ is the number of goats, and $x$ is the positive debt. The problem asks us to find the lowest <i>x</i> possible. <i>$p$</i> and <i>$g$</i> must be integers, which makes the equation a <a href=\"/wiki/index.php/Diophantine_equation\" title=\"Diophantine equation\">Diophantine equation</a>. <a class=\"mw-redirect\" href=\"/wiki/index.php/Bezout%27s_Lemma\" title=\"Bezout's Lemma\">Bezout's Lemma</a> tells us that the smallest $c$ for the Diophantine equation $am + bn = c$ to have solutions is when $c$ is the GCD (<a href=\"/wiki/index.php/Greatest_common_divisor\" title=\"Greatest common divisor\">greatest common divisor</a>) of $a$ and $b$. Therefore, the answer is $gcd(300,210)=\\boxed{\\textbf{(C) }30}.$</p>",
+        "<p>Alternatively, note that $300p + 210g = 30(10p + 7g)$ is divisible by $30$ no matter what $p$ and $g$ are, so our answer must be divisible by $30$. Since we want the smallest integer, we can suppose that the answer is $30$ and go on from there. Note that three goats minus two pigs gives us $630 - 600 = 30$ exactly. Since our supposition can be achieved, the answer is $\\boxed{\\textbf{(C) }30}$.</p>",
+        "<p>Let us simplify this problem. Dividing by $30$, we get a pig to be: $\\frac{300}{30} =  10$, and a goat to be $\\frac{210}{30}= 7$. It becomes evident that if you exchange $5$ pigs for $7$ goats, we get the smallest positive difference - $5\\cdot 10 - 7\\cdot 7 = 50-49 = 1$, since we can't make a non-integer with a linear combination of integers. Since we originally divided by $30$, we need to multiply again, thus getting the answer $1\\cdot 30 = \\boxed{\\textbf{(C) }30}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "This is a probability word problem involving conditional probability and ratios. Students need to understand conditional probability, work with probability ratios, and apply probability concepts to word problems. The problem tests advanced probability reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_23",
+      "question": "<p>Circles with centers $A$ and $B$ have radius 3 and 8, respectively. A <a href=\"/wiki/index.php/Common_internal_tangent_line\" title=\"Common internal tangent line\"> common internal tangent</a> intersects the circles at $C$ and $D$, respectively. Lines $AB$ and $CD$ intersect at $E$, and $AE=5$. What is $CD$?</p><p>[asy] unitsize(2.5mm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=3;  pair A=(0,0), Ep=(5,0), B=(5+40/3,0); pair M=midpoint(A--Ep); pair C=intersectionpoints(Circle(M,2.5),Circle(A,3))[1]; pair D=B+8*dir(180+degrees(C));  dot(A); dot(C); dot(B); dot(D); draw(C--D); draw(A--B); draw(Circle(A,3)); draw(Circle(B,8));  label(\"$A$\",A,W); label(\"$B$\",B,E); label(\"$C$\",C,SE); label(\"$E$\",Ep,SSE); label(\"$D$\",D,NW); [/asy]</p>",
+      "solutions": [
+        "<p><a class=\"image\" href=\"/wiki/index.php/File:2006_AMC12A-16a.png\">2006 AMC12A-16a.png</a></p><p>$\\angle AED$ and $\\angle BEC$ are vertical angles so they are congruent, as are angles $\\angle ADE$ and $\\angle BCE$ (both are right angles because the radius and <a class=\"mw-redirect\" href=\"/wiki/index.php/Tangent_line\" title=\"Tangent line\">tangent line</a> at a point on a circle are always perpendicular). Thus, $\\triangle ACE \\sim \\triangle BDE$.By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, line segment $DE = 4$. The sides are proportional, so $\\frac{DE}{AD} = \\frac{CE}{BC} \\Rightarrow \\frac{4}{3} = \\frac{CE}{8}$. This makes $CE = \\frac{32}{3}$ and $CD = CE + DE = 4 + \\frac{32}{3} = \\boxed{\\textbf{(B) }\\frac{44}{3}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "This is a geometry problem involving distance and position relationships. Students need to understand distance concepts, work with coordinate geometry, and calculate distances between points. The problem tests geometric reasoning and distance calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_24",
+      "question": "<p>Centers of adjacent faces of a unit cube are joined to form a regular <a href=\"/wiki/index.php/Octahedron\" title=\"Octahedron\">octahedron</a>. What is the volume of this octahedron? </p>",
+      "solutions": [
+        "<p>We can break the octahedron into two <a href=\"/wiki/index.php/Square_pyramid\" title=\"Square pyramid\">square pyramids</a> by cutting it along a <a href=\"/wiki/index.php/Plane\" title=\"Plane\">plane</a> <a href=\"/wiki/index.php/Perpendicular\" title=\"Perpendicular\">perpendicular</a> to one of its internal diagonals.[asy] import three; real r = 1/2; triple A = (-0.5,1.5,0); size(400); currentprojection=orthographic(1,1/4,1/2); draw((0,0,0)--(1,0,0)--(1,1,0)--(0,1,0)--(0,0,0)^^(0,0,1)--(1,0,1)--(1,1,1)--(0,1,1)--(0,0,1)^^(0,0,0)--(0,0,1)^^(1,0,0)--(1,0,1)^^(0,1,0)--(0,1,1)^^(1,1,0)--(1,1,1),gray(0.8)); draw((0,r,r)--(r,1,r)--(1,r,r)--(r,0,r)--cycle^^(r,r,0)--(0,r,r)--(r,r,1)--(r,1,r)--(r,r,0)--(1,r,r)--(r,r,1)--(r,0,r)--(r,r,0)); draw((0,r,r)+A--(r,1,r)+A--(1,r,r)+A--(r,0,r)+A--cycle^^(0,r,r)+A--(r,r,1)+A--(1,r,r)+A^^(r,1,r)+A--(r,r,1)+A--(r,0,r)+A); [/asy]The cube has edges of length 1 so all edges of the regular octahedron have length $\\frac{\\sqrt{2}}{2}$. Then the square base of the <a href=\"/wiki/index.php/Pyramid\" title=\"Pyramid\">pyramid</a> has area $\\left(\\frac{1}{2}\\sqrt{2}\\right)^2 = \\frac{1}{2}$.We also know that the height of the pyramid is half the height of the cube, so it is $\\frac{1}{2}$. The volume of a pyramid with base area $B$ and height $h$ is $A=\\frac{1}{3}Bh$ so each of the pyramids has volume $\\frac{1}{3}\\left(\\frac{1}{2}\\right)\\left(\\frac{1}{2}\\right) = \\frac{1}{12}$. The whole octahedron is twice this volume, so $\\frac{1}{12} \\cdot 2 = \\boxed{\\textbf{(B) }\\frac{1}{6}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving complex geometric shapes and area calculations. Students need to work with composite shapes, understand area formulas, and calculate areas of complex figures. The problem tests advanced geometric reasoning and area calculation skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10a_25",
+      "question": "<p>A bug starts at one vertex of a cube and moves along the edges of the cube according to the following rule. At each vertex the bug will choose to travel along one of the three edges emanating from that vertex. Each edge has equal probability of being chosen, and all choices are independent. What is the probability that after seven moves the bug will have visited every vertex exactly once?</p>",
+      "solutions": [
+        "<p>Call this cube $ABCDEFGH$, with $A$ being the starting point.</p><p>Because in $7$ moves the bug has to visit the other vertices, the bug cannot revisit any vertex.</p><p>Therefore, starting at $A$, the bug has a $\\frac{3}{3}$ chance of finding a good path to the next vertex, and call it $B$.</p><p>Then, the bug has a $\\frac{2}{3}$ chance of reaching a new vertex next. Call this $C$. $A, B,$ and $C$ are always on the same plane.</p><p>Now, we split cases.</p><p>Case $1$: The bug goes to the vertex $E$ opposite $A$ on the space diagonal with probability $\\frac{1}{3}$.</p><p>Then, the bug has to visit $D$ on the plane of $ABC$ last, as there is no way in and out from $D$.</p><p>Therefore, there is only $1$ way out of $81$ to get to $D$ last.</p><p>Therefore, there is a $\\frac{1}{243} \\cdot \\frac{6}{9} = \\frac{6}{2187}$ chance of finding a good path in this case.</p><p>Case $2$: The bug goes to vertex $D$ on plane $ABC$ with a chance of $\\frac{1}{3}$.</p><p>The bug then has only $1$ way to go to a point $E$ on the opposite face, therefore having a $\\frac{1}{3}$ probability.</p><p>Then, the bug has a choice of two vertices on the face opposite to $ABCD$.</p><p>This results in a $\\frac{2}{3}$ probability of finding a good path to a point $F$.</p><p>Then, there is only $1$ way out of $9$ to visit both other vertices on that face in $2$ moves.</p><p>Multiply the probabilities for this case to get $\\frac{2}{243} \\cdot \\frac{6}{9} = \\frac{12}{2187}$.</p><p>Add the probabilities of these two cases together to get $\\frac{18}{2187} = \\boxed{\\textbf{(C) }\\frac{2}{243}}.$</p>",
+        "<p>[asy] import three; unitsize(1cm); size(50); currentprojection=orthographic(1/2,-1,1/2); /* three - currentprojection, orthographic */ draw((0,0,0)--(1,0,0)--(1,1,0)--(0,1,0)--cycle); draw((0,0,0)--(0,0,1)); draw((0,1,0)--(0,1,1)); draw((1,1,0)--(1,1,1)); draw((1,0,0)--(1,0,1)); draw((0,0,1)--(1,0,1)--(1,1,1)--(0,1,1)--cycle); [/asy]</p><p>Let us count the good paths. The bug starts at an arbitrary <a href=\"/wiki/index.php/Vertex\" title=\"Vertex\">vertex</a>, moves to a neighboring vertex ($3$ ways), and then to a new neighbor ($2$ more ways). So, without loss of generality, let the cube have vertices $ABCDEFGH$ such that $ABCD$ and $EFGH$ are two opposite faces with $A$ above $E$ and $B$ above $F$. The bug starts at $A$ and moves first to $B$, then to $C$.</p><p>From this point, there are two cases. </p><p>Case $1$: the bug moves to $D$. From $D$, there is only one good move available, to $H$. From $H$, there are two ways to finish the trip, either by going $H \\to G \\to F \\to E$ or $H \\to E \\to F \\to G$. So there are $2$ good paths in this case.</p><p>Case $2$: the bug moves to $G$.</p><p>Case $2a$: the bug moves $G \\to H$. In this case, there are $0$ good paths because it will not be possible to visit both $D$ and $E$ without double-visiting some vertex.</p><p>Case $2b$: the bug moves $G \\to F$. There is $1$ good path in this case, $F \\to E \\to H \\to D$.</p><p>2006 AMC 12A Problems/Problem 20 (section) this solution is extremely good and very hard to learn if you learn this solution you are officially a math god, for a total of $3\\cdot 3 \\cdot 2 = 18$ good paths. There were $3^7 = 2187$ possible paths the bug could have taken, so the probability of a random path is good is $\\frac{18}{2187} = \\boxed{\\textbf{(C) }\\frac2{243}}$.</p>",
+        "<p>As in Solution 1, the bug can move from its arbitrary starting vertex to a neighboring vertex in $3$ ways. After this, the bug can move to a new neighbor in $2$ ways (it cannot return to the first vertex). The total number of paths (as stated above) is $3^7$ or $2187$. Therefore, the probability of the bug following a good path is equal to $\\frac{6x}{2187}$ for some positive integer $x$. The only answer choice which can be expressed in this form is $\\boxed{\\textbf{(C) }\\frac2{243}}$.</p>",
+        "<p>Pick 1 vertex to start from. Notice that on all the odd moves the bug will move to 1 of 4 other vertices. Notice that on all even moves the bug must go to 1 of 3 other vertices (4 including the starting vertex). Thus, the bug will end on one of the odd vertices. There are 3 choices for the bug's first move from the starting vertex, and 2 choices for the bug's second move (it can't go back to the previous vertices). Then, notice that the bug has 3 choices of an odd vertex to end on not including the vertex the bug went to on move 1. Now pick 1 of the 3 ending vertices to end on. Notice that there are only 6 valid paths from start to finish (1 valid path after moves 1 and 2) to that point because all the moves are forced after the first 2 moves (try it out). Thus, there are $3 \\cdot 2 \\cdot 3 = 18$ valid paths the bug can take. There are $3^7 = 2187$total paths, so the answer is 18/2187 = $\\boxed{\\textbf{(C) }\\frac{2}{243}}$.</p>",
+        "<p>Let the cube have vertices $ABCDEFGH$ such that $ABCD$ and $EFGH$ are two opposite faces with $A$ above $E$ and $B$ above $F$. The bug starts at $A$ and every step has 3 choices so that there're $3^7 = 2187$ possible paths. We can split the case into odd and even steps. After an odd number of steps, the possible points that can be reached are $B$,$D$,$G$,$E$. Then, for even-numbered steps, the remaining points can be reached. Since he has taken seven steps, the end point must be one of the points in $B$,$D$,$G$,$E$. At this point, we classify and discuss the movement trajectory of the bug. </p><p>Case 1: It moves to another plane after completing one plane. If it starts on the upper plane, there are two possibilities for the first step, $B$ or $D$. The second and third steps are restricted to the upper plane, and the fourth step will move to the nearby point on another plane. These three steps have only one possibility each, so there is no need for classification. Then, when it reaches the lower plane, the fifth step has two possibilities, thus limiting the sixth and seventh steps as well. Proceeding in this way, the bug can also move from left to right or from front to back. Therefore, there are $2 \\cdot 2 \\cdot 3 = 12$ situations. </p><p>Case 2: Opposite to case 1, it can directly pass through to another point G on the other diagonal of the cube within the first three steps. There are three choices for the first step, two choices for the second step, and only one choice for the third step. Therefore, there are $3 \\cdot 2 = 6$ situations for the first three steps. The subsequent steps will be restricted to a single path (try it yourself). </p><p>In summary, there are 12 + 6 = 18 situations in total. Therefore, the final probability is 18/2187 = $\\boxed{\\textbf{(C) }\\frac2{243}}$.</p><p>~ A mystery eastern egg (wtng)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is a geometry problem involving area calculations and geometric relationships. Students need to understand area formulas, work with geometric relationships, and calculate areas. The problem tests geometric reasoning and area calculation abilities."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_1",
+      "question": "<p>What is $(-1)^{1} + (-1)^{2} + ... + (-1)^{2006}$\u00a0?</p>",
+      "solutions": [
+        "<p>Since $-1$ raised to an odd integer is $-1$ and $-1$ raised to an even integer exponent is $1$: </p><p>$(-1)^{1} + (-1)^{2} + ... + (-1)^{2006} = (-1) + (1) + ... + (-1)+(1) = \\boxed{\\textbf{(C) }0}.$</p>",
+        "<p>The Using the formula for the first $n$ terms of a geometric series, with $n = 2006$, $a = (-1)^{1} = -1$, and $r = -1$, the sum can also be obtained:</p><p>$\\frac{a(1-r^n)}{1-r} = \\frac{-1(1 - (-1)^{2006})}{1 + 1} = \\frac{-1(1 - 1)}{2} = \\frac{0}{2} = \\boxed{\\textbf{(C) }0}$</p><p>~anabel.disher</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "This is a simple arithmetic word problem involving basic operations. Students need to understand the problem scenario, identify the relevant mathematical operations, and perform basic calculations. This tests foundational problem-solving and arithmetic skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_2",
+      "question": "<p>For real numbers $x$ and $y$, define $x \\spadesuit y = (x+y)(x-y)$. What is $3 \\spadesuit (4 \\spadesuit 5)$?</p>",
+      "solutions": [
+        "<p>Since $x \\spadesuit y = (x+y)(x-y)$: </p><p>$3 \\spadesuit (4 \\spadesuit 5) = 3 \\spadesuit((4+5)(4-5)) =  3 \\spadesuit (-9) = (3+(-9))(3-(-9)) = \\boxed{\\textbf{(A)}-72}$</p>",
+        "<p>From <a href=\"/wiki/index.php/Difference_of_squares\" title=\"Difference of squares\">difference of squares</a>, we have $x \\spadesuit y = (x+y)(x-y) = x^2 - y^2$</p><p>So:</p><p>$3 \\spadesuit (4 \\spadesuit 5) = 3 \\spadesuit(4^2 - 5^2) = 3 \\spadesuit (16 - 25) = 3 \\spadesuit (-9)= (3^2) - (-9)^2 =  9 - 81 = \\boxed{\\textbf{(A)}-72}$</p><p>~anabel.disher</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "This is a percentage word problem involving calculating discounts and savings. Students need to understand percentage relationships, calculate percentage changes, and apply percentage concepts to real-world scenarios. This tests proportional reasoning and percentage calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_3",
+      "question": "<p>A football game was played between two teams, the Cougars and the Panthers. The two teams scored a total of $34$ points, and the Cougars won by a margin of $14$ points. How many points did the Panthers score? </p>",
+      "solutions": [
+        "<p>Let $x$ be the number of points scored by the Cougars, and $y$ be the number of points scored by the Panthers. The problem is asking for the value of $y$. \\begin{align*} x+y &= 34 \\\\ x-y &= 14 \\\\ 2x &= 48 \\\\ x &= 24 \\\\ \\end{align*}The answer is $\\boxed{\\textbf{(A) } 10}$</p>",
+        "<p>$c$ is the amount the Cougars scored and $p$ is the score for Panthers. Since the Cougars won by 14 points, $c = p + 14$. Using substitution, $2p + 14 = 34$,$2p = 20$, and then$p = 10$.</p><p>\\begin{align*} p &= \\boxed{\\textbf{(A) }10} \\\\ \\end{align*}</p><p>-- leafy</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving finding area of geometric shapes. Students need to understand area formulas, calculate areas of different shapes, and possibly work with composite areas. This tests geometric reasoning and area calculation skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_4",
+      "question": "<p>Circles of diameter $1$ inch and $3$ inches have the same center. The smaller circle is painted red, and the portion outside the smaller circle and inside the larger circle is painted blue. What is the ratio of the blue-painted area to the red-painted area? </p><p><a class=\"image\" href=\"/wiki/index.php/File:2006amc10b04.gif\">2006amc10b04.gif</a></p>",
+      "solutions": [
+        "<p>The area painted red is equal to the area of the smaller circle and the area painted blue is equal to the area of the larger circle minus the area of the smaller circle. </p><p>So we have:</p><p>\\begin{align*} A_{red}&=\\pi\\left(\\frac{1}{2}\\right)^2=\\frac{\\pi}{4}\\\\ A_{blue}&=\\pi\\left(\\frac{3}{2}\\right)^2-\\pi\\left(\\frac{1}{2}\\right)^2=2\\pi\\\\ \\end{align*}</p><p>So the desired ratio is: </p><p>$\\frac{A_{blue}}{A_{red}}=\\frac{2\\pi}{\\frac{\\pi}{4}}=2\\cancel{\\pi}\\cdot \\frac{4}{\\cancel{\\pi}}=\\boxed{\\textbf{(D) }8}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "This is a simple word problem involving basic arithmetic operations. Students need to perform basic calculations, understand word problem scenarios, and apply arithmetic operations to solve real-world problems. This tests foundational problem-solving skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_5",
+      "question": "<p>A $2 \\times 3$ rectangle and a $3 \\times 4$ rectangle are contained within a square without overlapping at any point, and the sides of the square are parallel to the sides of the two given rectangles. What is the smallest possible area of the square? </p>",
+      "solutions": [
+        "<p>By placing the $2 \\times 3$ rectangle adjacent to the $3 \\times 4$ rectangle with the 3 side of the $2 \\times 3$ rectangle next to the 4 side of the $3 \\times 4$ rectangle, we get a figure that can be completely enclosed in a square with a side length of 5. The area of this square is $5^2 = 25$.</p><p>Since placing the two rectangles inside a $4 \\times 4$ square must result in overlap, the smallest possible area of the square is $25$.</p><p>So the answer is $\\boxed{\\textbf{(B) }25}$.</p>",
+        "<p>The area of a $2\\times3$ rectangle and a $3\\times4$ rectangle combined is $18$, so a $4\\times4$ square is impossible without overlapping. Thus, the next smallest square is a $5\\times5$, which works, so the answer is $\\boxed{B)25}$.</p><p>Note: If you do this, always check to see if it fits, because this doesn't always work. For example, a $3\\times3$ and a $3\\times4$ doesn't fit into a $5\\times5$, even though their combined area is $21$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "This is a counting problem involving different arrangements and combinations. Students need to understand counting principles, possibly use factorial notation, and calculate different possible arrangements. This tests combinatorial reasoning and systematic counting skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_6",
+      "question": "<p>A region is bounded by semicircular arcs constructed on the side of a square whose sides measure $\\frac{2}{\\pi}$, as shown. What is the perimeter of this region?</p><p>[asy] size(90); defaultpen(linewidth(0.7)); filldraw((0,0)--(2,0)--(2,2)--(0,2)--cycle,gray(0.5)); filldraw(arc((1,0),1,180,0, CCW)--cycle,gray(0.7)); filldraw(arc((0,1),1,90,270)--cycle,gray(0.7)); filldraw(arc((1,2),1,0,180)--cycle,gray(0.7)); filldraw(arc((2,1),1,270,90, CCW)--cycle,gray(0.7)); [/asy]</p>",
+      "solutions": [
+        "<p>Since the side of the square is the diameter of the semicircle, the radius of the semicircle is $\\frac{1}{2}\\cdot\\frac{2}{\\pi}=\\frac{1}{\\pi}$.</p><p>Since the length of one of the semicircular <a href=\"/wiki/index.php/Arc\" title=\"Arc\">arcs</a> is half the circumference of the corresponding circle, the length of one arc is $\\frac{1}{2}\\cdot2\\cdot\\pi\\cdot\\frac{1}{\\pi}=1$. </p><p>Since the desired perimeter is made up of four of these arcs, the perimeter is $4\\cdot1=\\boxed{\\textbf{(D) }4}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "This is a word problem involving basic arithmetic operations. Students need to understand the problem scenario, identify the relevant mathematical operations, and perform calculations to find the solution. This tests basic problem-solving and arithmetic skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_7",
+      "question": "<p>Which of the following is equivalent to $\\sqrt{\\frac{x}{1-\\frac{x-1}{x}}}$ when $x < 0$? </p>",
+      "solutions": [
+        "<p>$\\sqrt{\\frac{x}{1-\\frac{x-1}{x}}} =  \\sqrt{\\frac{x}{\\frac{x}{x}-\\frac{x-1}{x}}} = \\sqrt{\\frac{x}{\\frac{x-(x-1)}{x}}} = \\sqrt{\\frac{x}{\\frac{1}{x}}} = \\sqrt{x^2} = |x|$</p><p>Since $x<0,|x|= \\boxed{\\textbf{(A)}-x}$</p>",
+        "<p>To confirm the answer, inputting a negative value into $x$ can help. For ease of computation, if $x=-3$, $\\sqrt{\\frac{-3}{1-\\frac{4}{3}}}=\\sqrt{\\frac{-3}{\\frac{-1}{3}}}=\\sqrt{9}=3$. As no other option choice fits, $\\boxed{\\textbf{(A)}-x}$ is the correct solution. Note that if $x=-1$ was chosen, C would have fit as well. Make sure to avoid making this mistake.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving geometric shapes and area calculations. Students need to understand area formulas, work with different geometric shapes, and calculate areas. This tests geometric reasoning and area calculation abilities."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_8",
+      "question": "<p>A square of area 40 is inscribed in a semicircle as shown. What is the area of the semicircle?</p><p>[asy] defaultpen(linewidth(0.8)); size(100); real r=sqrt(50), s=sqrt(10); draw(Arc(origin, r, 0, 180)); draw((r,0)--(-r,0), dashed); draw((-s,0)--(s,0)--(s,2*s)--(-s,2*s)--cycle); [/asy]</p>",
+      "solutions": [
+        "<p>Since the area of the square is $40$, the length of a side is $\\sqrt{40}=2\\sqrt{10}$. The distance between the center of the semicircle and one of the bottom vertices of the square is half the length of the side, which is $\\sqrt{10}$.</p><p>Using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> to find the radius $r$ of the semicircle, $r^2 = (2\\sqrt{10})^2 + (\\sqrt{10})^2 = 50$. So, the area of the semicircle is $\\frac{1}{2}\\cdot \\pi \\cdot 50 = \\boxed{\\textbf{(B) }25\\pi}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "This is a number theory problem involving divisibility and number properties. Students need to understand divisibility rules, work with factors and multiples, and apply number theory concepts. This tests understanding of number properties and divisibility."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_9",
+      "question": "<p>Francesca uses $100$ grams of lemon juice, $100$ grams of sugar, and $400$ grams of water to make lemonade. There are $25$ calories in $100$ grams of lemon juice and $386$ calories in $100$ grams of sugar. Water contains no calories. How many calories are in $200$ grams of her lemonade? </p>",
+      "solutions": [
+        "<p>The calorie to gram ratio of Francesca's lemonade is $\\frac{25+386+0}{100+100+400}=\\frac{411\\textrm{ calories}}{600\\textrm{ grams}}=\\frac{137\\textrm{ calories}}{200\\textrm{ grams}}$</p><p>So in $200\\textrm{ grams}$ of Francesca's lemonade there are $200\\textrm{ grams}\\cdot\\frac{137\\textrm{ calories}}{200\\textrm{ grams}}=\\boxed{\\textbf{(B) }137\\textrm{ calories}}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "This is a triangle geometry problem involving angles and side lengths. Students need to understand triangle properties, possibly use the Pythagorean theorem, and work with triangle relationships. This tests geometric reasoning and triangle properties."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_10",
+      "question": "<p>In a triangle with integer side lengths, one side is three times as long as a second side, and the length of the third side is $15$. What is the greatest possible perimeter of the triangle? </p>",
+      "solutions": [
+        "<p>Let $x$ be the length of the first side. </p><p>The lengths of the sides are: $x$, $3x$, and $15$. </p><p>By the <a href=\"/wiki/index.php/Triangle_Inequality\" title=\"Triangle Inequality\">Triangle Inequality</a>,</p><p>$3x < x + 15$</p><p>$2x < 15$</p><p>$x < \\frac{15}{2}$</p><p>The greatest integer satisfying this inequality is $7$.</p><p>So the greatest possible perimeter is $7 + 3\\cdot7 + 15 =\\boxed{\\textbf{(A) } 43}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "This is a rate word problem involving time, distance, and speed relationships. Students need to understand rate relationships, work with units, and solve problems involving speed, time, and distance. This tests understanding of proportional relationships and rate calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_11",
+      "question": "<p>What is the tens digit in the sum $7!+8!+9!+...+2006!$</p>",
+      "solutions": [
+        "<p>Since $10!$ is divisible by $100$, any <a href=\"/wiki/index.php/Factorial\" title=\"Factorial\">factorial</a> greater than $10!$ is also divisible by $100$. The last two <a href=\"/wiki/index.php/Digit\" title=\"Digit\">digits</a> of all factorials greater than $10!$ are $00$, so the last two digits of $10!+11!+...+2006!$ are $00$. (*)</p><p>So all that is needed is the tens digit of the sum $7!+8!+9!$</p><p>$7!+8!+9!=5040+40320+362880=408240$</p><p>So the tens digit is $\\boxed{\\textbf{(C) }4}$.</p><p>(*) A slightly faster method would be to take the $\\pmod {100}$ residue of $7! + 8! + 9!.$ Since $7! = 5040,$ we can rewrite the sum as \\[5040 + 8\\cdot 5040 + 72\\cdot 5040 \\equiv 40 + 8\\cdot 40 + 72\\cdot 40 = 40 + 320 + 2880 \\equiv 40 \\pmod{100}.\\] Since the last two digits of the sum is $40$, the tens digit is $\\boxed{\\textbf{(C) }4}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "This is a percentage word problem involving calculating percentages and changes. Students need to understand percentage relationships, calculate percentage increases/decreases, and apply percentage concepts. This tests proportional reasoning and percentage calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_12",
+      "question": "<p>The lines $x=\\frac{1}{4}y+a$ and $y=\\frac{1}{4}x+b$ intersect at the point $(1,2)$. What is $a+b$?</p>",
+      "solutions": [
+        "<p>Since $(1,2)$ is a solution to both equations, plugging in $x=1$ and $y=2$ will give the values of $a$ and $b$. </p><p>$1 = \\frac{1}{4} \\cdot 2 + a$</p><p>$a = \\frac{1}{2}$</p><p>$2 = \\frac{1}{4} \\cdot 1 + b$</p><p>$b = \\frac{7}{4}$</p><p>So $a+b = \\frac{1}{2} + \\frac{7}{4} = \\boxed{\\textbf{(E) }\\frac{9}{4}}$.</p>",
+        "<p>Substituting $x=1$ and $y=2$ into the equations gives $1=\\frac{2}{4}+a\\quad\\text{and}\\quad 2=\\frac{1}{4}+b.$ It follows that $a+b=\\left(1-\\frac{2}{4}\\right)+\\left(2-\\frac{1}{4}\\right)=3 - \\frac{3}{4}=\\boxed{\\frac{9}{4}}.$</p>",
+        "<p>Because $a=x- \\frac{y}{4}\\quad\\text{and}\\quad b=y-\\frac{x}{4} \\quad\\text{we have}\\quad a +b = \\frac{3}{4}(x+y).$ Since $x=1$ when $y=2$, this implies that $a+b = \\frac{3}{4}(1 + 2) = \\boxed{\\frac{9}{4}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "This is an arithmetic sequence problem involving finding terms in a sequence. Students need to understand arithmetic sequences, find common differences, and calculate specific terms. This tests understanding of sequence patterns and arithmetic progression."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_13",
+      "question": "<p>Joe and JoAnn each bought $12$ ounces of coffee in a $16$ ounce cup. Joe drank $2$ ounces of his coffee and then added $2$ ounces of cream. JoAnn added $2$ ounces of cream, stirred the coffee well, and then drank $2$ ounces. What is the resulting ratio of the amount of cream in Joe's coffee to that in JoAnn's coffee? </p>",
+      "solutions": [
+        "<p>After drinking and adding cream, Joe's cup has $2$ ounces of cream. </p><p>After adding cream to her cup, JoAnn's cup had $14$ ounces of liquid. By stirring and then drinking $2$ ounces out of the $14$ ounces of liquid, she drank $\\frac{2}{14}=\\frac{1}{7}$th of the cream. So there are $2\\cdot\\frac{6}{7}=\\frac{12}{7}$ ounces of cream left. </p><p>So the desired ratio is: $2 \\div \\frac{12}{7}= \\boxed{\\textbf{(E) }\\frac{7}{6}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving complex geometric shapes and area calculations. Students need to work with composite shapes, understand area formulas, and calculate areas of complex figures. This tests advanced geometric reasoning and area calculation skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_14",
+      "question": "<p>Let $a$ and $b$ be the roots of the equation $x^2-mx+2=0$. Suppose that $a+\\frac1b$ and $b+\\frac1a$ are the roots of the equation $x^2-px+q=0$. What is $q$?</p>",
+      "solutions": [
+        "<p>In a <a href=\"/wiki/index.php/Quadratic_equation\" title=\"Quadratic equation\">quadratic equation</a> of the form $x^2 + bx + c = 0$, the product of the <a class=\"mw-redirect\" href=\"/wiki/index.php/Root\" title=\"Root\">roots</a> is $c$ (<a href=\"/wiki/index.php/Vieta%27s_Formulas\" title=\"Vieta's Formulas\">Vieta's Formulas</a>).</p><p>Using this property, we have that $ab=2$ and</p><p>$q = (a+\\frac{1}{b})\\cdot(b+\\frac{1}{a}) = \\frac{ab+1}{b} \\cdot \\frac{ab+1}{a}  = \\frac{(ab+1)^2}{ab} = \\frac{(2+1)^2}{2} = \\boxed{\\textbf{(D) }\\frac{9}{2}}$.</p><ul><li>Notice the fact that we never actually found the roots.</li></ul>",
+        "<p>Assume <a href=\"/wiki/index.php/Without_loss_of_generality\" title=\"Without loss of generality\">without loss of generality</a> that $m=3$. We can factor the equation $x^2-3x+2=0$ into $(x-1)(x-2)=0$. Therefore, $a=1$ and $b=2$. Using these values, we find $a+\\frac1b=\\frac32$ and $b+\\frac1a=3$. By <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\">Vieta's formulas</a>, $q$ is the product of the roots of $x^2-px+q=0$, which are $a+\\frac1b$ and $b+\\frac1a$. Therefore, $q=\\left(a+\\frac1b\\right)\\left(b+\\frac1a\\right)=\\frac32\\cdot3=\\boxed{\\textbf{(D) }\\frac92}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "This is a circle geometry problem involving area and circumference. Students need to understand circle properties, work with radius and diameter, and calculate circle areas and circumferences. This tests understanding of circle geometry and circular measurements."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_15",
+      "question": "<p>Rhombus $ABCD$ is similar to rhombus $BFDE$. The area of rhombus $ABCD$ is $24$ and $\\angle BAD = 60^\\circ$. What is the area of rhombus $BFDE$? </p><p>[asy] defaultpen(linewidth(0.7)+fontsize(10)); size(120); pair A=origin, B=(2,0), C=(3, sqrt(3)), D=(1, sqrt(3)), E=(1, 1/sqrt(3)), F=(2, 2/sqrt(3)); pair point=(3/2, sqrt(3)/2); draw(B--C--D--A--B--F--D--E--B); label(\"$A$\", A, dir(point--A)); label(\"$B$\", B, dir(point--B)); label(\"$C$\", C, dir(point--C)); label(\"$D$\", D, dir(point--D)); label(\"$E$\", E, dir(point--E)); label(\"$F$\", F, dir(point--F)); [/asy]</p>",
+      "solutions": [
+        "<p>Using the property that opposite angles are equal in a <a href=\"/wiki/index.php/Rhombus\" title=\"Rhombus\">rhombus</a>, $\\angle DAB = \\angle DCB = 60 ^\\circ$ and $\\angle ADC = \\angle ABC = 120 ^\\circ$. It is easy to see that rhombus $ABCD$ is made up of <a href=\"/wiki/index.php/Equilateral_triangle\" title=\"Equilateral triangle\">equilateral triangles</a> $DAB$ and $DCB$. Let the lengths of the sides of rhombus $ABCD$ be $s$. </p><p>The longer <a href=\"/wiki/index.php/Diagonal\" title=\"Diagonal\">diagonal</a> of rhombus $BFDE$ is $BD$. Since $BD$ is a side of an equilateral triangle with a side length of $s$, $BD = s$. The longer diagonal of rhombus $ABCD$ is $AC$. Since $AC$ is twice the length of an altitude of of an equilateral triangle with a side length of $s$, $AC = 2 \\cdot \\frac{s\\sqrt{3}}{2} = s\\sqrt{3}$.</p><p>The ratio of the longer diagonal of rhombus $BFDE$ to rhombus $ABCD$ is $\\frac{s}{s\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$. Therefore, the ratio of the <a href=\"/wiki/index.php/Area\" title=\"Area\">area</a> of rhombus $BFDE$ to rhombus $ABCD$ is $\\left( \\frac{\\sqrt{3}}{3} \\right) ^2 = \\frac{1}{3}$.</p><p>Let $x$ be the area of rhombus $BFDE$. Then $\\frac{x}{24} = \\frac{1}{3}$, so $x = \\boxed{\\textbf{(C) }8}$.</p>",
+        "<p>Triangle DAB is equilateral so triangles $DEA$, $AEB$, $BED$, $BFD$, $BFC$ and $CFD$ are all congruent with angles $30^\\circ$, $30^\\circ$ and $120^\\circ$ from which it follows that rhombus $BFDE$ has one third the area of rhombus $ABCD$ i.e. $8 \\Longrightarrow \\boxed{\\textbf{(C) }8}$.Note: A quick way to visualize this method is to draw the line $DB$ and notice the two equilateral triangles $\\triangle ADB$ and $\\triangle DBC$.</p>",
+        "<p>We can extend line $DE$, meeting line $AB$ at $G$. Similarly, we can extend line $DF$ to meet line $BC$ at $H$. We can see with some simple math that triangle $ADG$ is a $30$-$60$-$90$ triangle, so we can call line $AG$ as $x$, line $DG$ as $x\\sqrt{3}$, and line $AD$ as $2x$ (because of the $30$-$60$-$90$ triangle side proportions). </p><p>We can also see that line $AD$ is a base of rhombus $ABCD$, and line $DH$ is a height. Since triangle $DHC$ is also a $30$-$60$-$90$ triangle, line $DH$ is also $x\\sqrt{3}$. Since the question told us that the area of rhombus $ABCD$ is $24$, we can make the following equation:</p><p>$2x \\cdot x\\sqrt{3} = 24$</p><p>Solving for x:</p><p>$2x^2\\sqrt{3} = 24$</p><p>$x^2\\sqrt{3} = 12$</p><p>$x^2 = \\frac{12}{\\sqrt{3}}$</p><p>$x^2 = 4\\sqrt{3}$</p><p>$x = 2\\sqrt{\\sqrt{3}}$</p><p><br/>Since the question is to find the area of rhombus $BFDE$, to find the answer, we can just multiply base $DE$ with the rhombus's height. We'll start by finding the height: instantly we can see that $GB$ is the height. Since all the sides of a rhombus are equal, and we found earlier that the side length is $2x$, if $AG$ is $x$, that means $GB$ is the same length as $AG$ - that is to say, </p><p>$GB = AG = 2\\sqrt{\\sqrt{3}}$</p><p><br/>Now to find the base. We can see that to find the base, we can simply just subtract the length of line $EG$ from the length of line $DG$. Since $DG$ is $x\\sqrt{3}$, and $x$ is $2\\sqrt{\\sqrt{3}}$, that makes</p><p>$DG = 2\\sqrt{\\sqrt{3}} \\cdot \\sqrt{3} = 2\\sqrt{3\\sqrt{3}}$</p><p><br/>Now to find $EG$: We can see with simple math that triangle $EGB$ is also a $30$-$60$-$90$ triangle, which means that $EG = \\frac{GB}{\\sqrt{3}}$. Previously, we found out that $GB$ is $2\\sqrt{\\sqrt{3}}$, so:</p><p>$EG = \\frac{2\\sqrt{\\sqrt{3}}}{\\sqrt{3}} = \\frac{2\\sqrt{3\\sqrt{3}}}{3}$</p><p><br/>Now we can find the base:</p><p>$DG - EG = 2\\sqrt{3\\sqrt{3}} - \\frac{2\\sqrt{3\\sqrt{3}}}{3} = \\frac{4\\sqrt{3\\sqrt{3}}}{3}$</p><p><br/>Multiplying the newly found base by the height we found earlier:</p><p>$\\frac{4\\sqrt{3\\sqrt{3}}}{3} \\cdot 2\\sqrt{\\sqrt{3}} = \\frac{8\\sqrt{9}}{3} = \\frac{24}{3} = \\boxed{\\textbf{(C) }8}$</p><p>~ilee0820</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "This is a counting problem involving different arrangements and combinations. Students need to understand counting principles, possibly use factorial notation, and calculate different possible arrangements. This tests combinatorial reasoning and systematic counting."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_16",
+      "question": "<p>Leap Day, February $29$, $2004$, occurred on a Sunday. On what day of the week will Leap Day, February $29$, $2020$, occur? </p>",
+      "solutions": [
+        "<p>There are $365$ days in a year, plus $1$ extra day if there is a Leap Day, which occurs on years that are multiples of $4$ (with a few exceptions that don't affect this problem). </p><p>Therefore, the number of days between Leap Day $2004$ and Leap Day $2020$ is: </p><p>$16 \\cdot 365 + 4 \\cdot 1 = 5844$</p><p>Since the days of the week repeat every $7$ days and $5844 \\equiv -1 \\bmod{7}$, the day of the week Leap Day $2020$ occurs is the day of the week the day before Leap Day $2004$ occurs, which is $\\boxed{\\textbf{(E) }\\textrm{Saturday}}$.</p>",
+        "<p>Since every non-leap year there is one day extra after the $52$ weeks, we can deduce that if we were to travel forward $x$ amount of non-leap years, then the answer would be \"Sunday + $x$\" days.</p><p>However, we also have leap-years in our pool of years traveled forward, and for every leap-year that passes, we have two extra days after the 52 weeks. So we would travel \"Sunday + $2x$\" days. </p><p>Mixing these two together, we get $4$ leap years $(2008, 2012, 2016, 2020)$, and $12$ non-leap years. We thus get $12 + 2\\cdot 4 = 20$ \"extra days\" after Sunday. Since seven days are in a week, we can get $20 \\bmod{7} \\equiv 6$, and six days after Sunday is $\\boxed{\\textbf{(E) }\\textrm{Saturday}}$.</p><ul><li>Note how we did not require any complex or time-consuming computation, and thus it will save crucial time, especially during a test like the AMC 10.</li></ul>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "This is a system of equations problem involving multiple variables. Students need to set up and solve systems of equations, possibly using substitution or elimination methods. This tests algebraic reasoning and equation-solving skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_17",
+      "question": "<p>Bob and Alice each have a bag that contains one ball of each of the colors blue, green, orange, red, and violet. Alice randomly selects one ball from her bag and puts it into Bob's bag. Bob then randomly selects one ball from his bag and puts it into Alice's bag. What is the probability that after this process the contents of the two bags are the same? </p>",
+      "solutions": [
+        "<p>Since there are the same amount of total balls in Alice's bag as in Bob's bag, and there is an equal chance of each ball being selected, the color of the ball that Alice puts in Bob's bag doesn't matter. <a href=\"/wiki/index.php/Without_loss_of_generality\" title=\"Without loss of generality\">Without loss of generality</a>, let the ball Alice puts in Bob's bag be red. </p><p>For both bags to have the same contents, Bob must select one of the $2$ red balls out of the $6$ balls in his bag. </p><p>So the desired probability is $\\frac{2}{6} = \\boxed{\\textbf{(D) }\\frac{1}{3}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving complex geometric shapes and area calculations. Students need to work with composite shapes, understand area formulas, and calculate areas of complex figures. This tests advanced geometric reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_18",
+      "question": "<p>Let $a_1 , a_2 , ...$ be a sequence for which $a_1=2$ , $a_2=3$, and $a_n=\\frac{a_{n-1}}{a_{n-2}}$ for each positive integer $n \\ge 3$. What is $a_{2006}$?</p>",
+      "solutions": [
+        "<p>Looking at the first few terms of the sequence:</p><p>$a_1=2 , a_2=3 , a_3=\\frac{3}{2}, a_4=\\frac{1}{2} , a_5=\\frac{1}{3} , a_6=\\frac{2}{3} , a_7=2 , a_8=3 , ....$</p><p>Clearly, the sequence repeats every 6 terms. </p><p>Since $2006 \\equiv 2\\bmod{6}$,</p><p>$a_{2006} = a_2 = \\boxed{\\textbf{(E) }3}$</p>",
+        "<p>$a_n = \\frac{a_{n-1}}{a_{n-2}} = \\frac{\\frac{a_{n-2}}{a_{n-3}}}{a_{n-2}} = \\frac{1}{a_{n-3}}$ , so $a_n = a_{n-6}$ and because $2006 = 2 + 334 \\times 6$ , so $a_{2006} = a_2 = \\boxed{\\textbf{(E) }3}$</p><p>~thatmathsguy</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "This is a logic problem involving multiple statements and determining truth values. Students need to use logical reasoning, analyze multiple conditions, and determine the validity of statements. This tests logical thinking and deductive reasoning skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_19",
+      "question": "<p>A circle of radius $2$ is centered at $O$. Square $OABC$ has side length $1$. Sides $AB$ and $CB$ are extended past $B$ to meet the circle at $D$ and $E$, respectively. What is the area of the shaded region in the figure, which is bounded by $BD$, $BE$, and the minor arc connecting $D$ and $E$?</p><p>[asy] defaultpen(linewidth(0.8)); pair O=origin, A=(1,0), C=(0,1), B=(1,1), D=(1, sqrt(3)), E=(sqrt(3), 1), point=B; fill(Arc(O, 2, 0, 90)--O--cycle, mediumgray); clip(B--Arc(O, 2, 30, 60)--cycle); draw(Circle(origin, 2)); draw((-2,0)--(2,0)^^(0,-2)--(0,2)); draw(A--D^^C--E); label(\"$A$\", A, dir(point--A)); label(\"$C$\", C, dir(point--C)); label(\"$O$\", O, dir(point--O)); label(\"$D$\", D, dir(point--D)); label(\"$E$\", E, dir(point--E)); label(\"$B$\", B, SW); [/asy]</p>",
+      "solutions": [
+        "<p>The shaded area is equivalent to the area of sector $DOE$ minus the area of triangle $DOE$ plus the area of triangle $DBE$. </p><p>Using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, $(DA)^2=(CE)^2=2^2-1^2=3$ so $DA=CE=\\sqrt{3}$.</p><p>Clearly, $DOA$ and $EOC$ are $30-60-90$ triangles with $\\angle EOC = \\angle DOA = 60^\\circ$. Since $OABC$ is a square, $\\angle COA = 90^\\circ$.</p><p>$\\angle DOE$ can be found by doing some subtraction of angles. </p><p>$\\angle COA - \\angle DOA = \\angle DOC = \\angle EOA$</p><p>$90^\\circ - 60^\\circ = \\angle EOA = 30^\\circ$</p><p>$\\angle DOA - \\angle EOA = \\angle DOE$</p><p>$60^\\circ - 30^\\circ = \\angle DOE = 30^\\circ$</p><p>So, the area of sector $DOE$ is $\\frac{30}{360} \\cdot \\pi \\cdot 2^2 = \\frac{\\pi}{3}$.</p><p>The area of triangle $DOE$ is $\\frac{1}{2}\\cdot 2 \\cdot 2 \\cdot \\sin 30^\\circ = 1$.</p><p>Since $AB=CB=1$ , $DB=EB=(\\sqrt{3}-1)$. So, the area of triangle $DBE$ is $\\frac{1}{2} \\cdot (\\sqrt{3}-1)^2 = 2-\\sqrt{3}$. Therefore, the shaded area is $(\\frac{\\pi}{3}) - (1) + (2-\\sqrt{3}) = \\boxed{\\textbf{(A) }\\frac{\\pi}{3} + 1 - \\sqrt{3}}$</p><p>OR</p><p>$\\triangle{ODA}$ has the same height as $\\triangle{OBD}$ which is $1.$</p><p>We already know that $BD = \\sqrt{3} - 1.$</p><p>Therefore the area of $\\triangle{OBD}$ is $(\\sqrt{3}-1) \\cdot 1 \\cdot \\frac{1}{2} = \\frac{\\sqrt{3}-1}{2}.$</p><p>Since $\\triangle{OBD} = \\triangle{OBE} = \\frac{\\sqrt{3}-1}{2}.$</p><p>Therefore the sum of the areas is $2 \\cdot \\frac{\\sqrt{3}-1}{2} = \\sqrt{3}-1.$</p><p>Then the area of the shaded area becomes $\\frac{\\pi}{3} - (\\sqrt{3} - 1) = \\boxed{\\textbf{(A) }\\frac{\\pi}{3} +1 - \\sqrt{3}}.$</p><p>~mathboy282</p>",
+        "<p>From the Pythagorean Theorem, we can see that $DA$ is $\\sqrt{3}$. Then, $DB = DA - BA = \\sqrt{3} - 1$. The area of the shaded element is the area of sector $DOE$ minus the areas of triangle $DBO$ and triangle $EBO$ combined. Below is an image to help.</p><p>[asy] defaultpen(linewidth(0.8)); pair O=origin, A=(1,0), C=(0,1), B=(1,1), D=(1, sqrt(3)), E=(sqrt(3), 1), point=B; fill(Arc(O, 2, 0, 90)--O--cycle, mediumgray); clip(B--Arc(O, 2, 30, 60)--cycle); draw(Circle(origin, 2)); draw((-2,0)--(2,0)^^(0,-2)--(0,2)); draw(A--D^^C--E^^D--O^^E--O^^B--O); label(\"$A$\", A, dir(point--A)); label(\"$C$\", C, dir(point--C)); label(\"$O$\", O, dir(point--O)); label(\"$D$\", D, dir(point--D)); label(\"$E$\", E, dir(point--E)); label(\"$B$\", (1.33,1.04), SW); [/asy]</p><p>Using the Base Altitude formula, where $DB$ and $BE$ are the bases and $OA$ and $CO$ are the altitudes, respectively, $[DBO] = [EBO] = \\frac{\\sqrt{3}-1}{2}$. The area of sector $DOE$ is $\\frac{1}{12}$ of circle $O$. The area of circle $O$ is $4\\pi$, and therefore we have the area of sector $DBE$ to be $\\boxed{\\textbf{(A) }\\frac{\\pi}{3} + 1 - \\sqrt{3}}$.</p>",
+        "<p>Like the first solutions, you find that the area of sector $DOE$ is $\\frac{\\pi}{3}$. We also know that the triangles will not be in terms of ${\\pi}$. Looking at the answers, choices $\\text{(A)}$ and $\\text{(E)}$ both contain $\\frac{\\pi}{3}$. However, based on the diagram, we observe that the answer must be less than $\\frac {\\pi}{3}$. Only $\\boxed{\\textbf{(A) }\\frac{\\pi}{3} + 1 - \\sqrt{3}}$ consists of a value less than $\\frac{\\pi}{3}$.</p>",
+        "<p>We calculate the shaded area by subtracting the unshaded area in the quarter circle from a quarter circle, which consists of two $30 ^{\\circ}$ sectors and two 30-60-90 triangles minus a square. The area of the shaded region is $\\frac {\\pi \\times 2^2}{4} - 2 ( \\frac {\\pi \\times 2^2}{12} + \\frac {\\sqrt 3}{2} - 1 ) = \\boxed{\\textbf{(A) }\\frac{\\pi}{3} + 1 - \\sqrt{3}}$</p><p>~thatmathsguy</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "This is a number theory problem involving least common multiple and remainder properties. Students need to understand LCM concepts, work with remainders, and apply number theory principles. This tests understanding of number theory and divisibility."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_20",
+      "question": "<p>In rectangle $ABCD$, we have $A=(6,-22)$, $B=(2006,178)$, $D=(8,y)$, for some integer $y$. What is the area of rectangle $ABCD$?</p>",
+      "solutions": [
+        "<p>Let the slope of $AB$ be $m_1$ and the slope of $AD$ be $m_2$.</p><p>$m_1 = \\frac{178-(-22)}{2006-6} = \\frac{1}{10}$</p><p>$m_2 = \\frac{y-(-22)}{8-6} = \\frac{y+22}{2}$</p><p>Since $AB$ and $AD$ form a right angle: </p><p>$m_2 = -\\frac{1}{m_1}$</p><p>$m_2 = -10$</p><p>$\\frac{y+22}{2} = -10$</p><p>$y = -42$</p><p>Using the <a href=\"/wiki/index.php/Distance_formula\" title=\"Distance formula\">distance formula</a>:</p><p>$AB = \\sqrt{ (2006-6)^2 + (178-(-22))^2 } = \\sqrt{ (2000)^2 + (200)^2 } = 200\\sqrt{101}$</p><p>$AD = \\sqrt{ (8-6)^2 + (-42-(-22))^2 } = \\sqrt{ (2)^2 + (-20)^2 } = 2\\sqrt{101}$</p><p>Therefore the area of rectangle $ABCD$ is $200\\sqrt{101}\\cdot2\\sqrt{101} = 40,400 \\Rightarrow E$</p><p>This solution is the same as Solution 1 up to the point where we find that $y=-42$.</p><p>We build right triangles so we can use the Pythagorean Theorem. The triangle with hypotenuse $AB$ has legs $200$ and $2000$, while the triangle with hypotenuse $AD$ has legs $2$ and $20$. Aha! The two triangles are similar by SAS, with one triangle having side lengths $100$ times the other!</p><p>Let $AD=x$. Then from our reasoning above, we have $AB=100x$. Finally, the area of the rectangle is $100x(x)=100x^2=100(20^2+2^2)=100(400+4)=100(404)=\\boxed{40400 \\text{  (E)}}$.</p><p>We do not need to solve for y. We form a right triangle with $AB$ as the hypotenuse and two adjacent sides lengths 200 and 2000, respectively. We form another right triangle with $AD$ as the hypotenuse and 2 is one of the lengths of the adjacent sides. Those two triangles are similar because $AD$ and $AB$ are perpendicular. $\\frac{AB}{AD} = \\frac{200}{2}$, so the area $AB \\cdot AD = \\frac {AB^2}{100} = \\frac {2000^2 + 200^2}{100} = \\boxed{40400 \\text{  (E)}}$</p><p>In order to find the area of rectangle $ABCD$, we need to find $AB$ first. Using the <a href=\"/wiki/index.php/Distance_formula\" title=\"Distance formula\">distance formula</a>, we can derive:</p><p>$AB = \\sqrt{(2006-6)^2 + (178-(-22))^2} = \\sqrt{(2000)^2 + (200)^2 } = 200\\sqrt{101}$</p><p>Now we can look at the answer choices. Because all of them are integers, then we know that $AD$ has to also contain $\\sqrt{101}$ to ensure that $AB*AD$ is an integer. Once you know that, you can guarantee that the answer must be a multiple of 101. (If you're wondering why there can't be a fraction like $1/101$, there can't because $y$ is an integer the number under the square root in $AD$, is an integer.) Having that information narrows down the answer choices to just $(B)$ $4040$, and $(E)$ $40400$.</p><p>Looking back at what we found for $AB$, which is $200\\sqrt{101}$, and what we know about $AD$, that it has to contain $\\sqrt{101}$. we know that the answer is at least $200\\sqrt{101}*\\sqrt{101}=20200$, which is already greater than answer choice $(B)$, which is $4040$. From this, we can conclude that the answer is $\\boxed{\\textbf{(E) }  40400}$</p><p>~ @flyingkinder123</p>",
+        "<p>Let the slope of $AB$ be $m_1$ and the slope of $AD$ be $m_2$.</p><p>$m_1 = \\frac{178-(-22)}{2006-6} = \\frac{1}{10}$</p><p>$m_2 = \\frac{y-(-22)}{8-6} = \\frac{y+22}{2}$</p><p>Since $AB$ and $AD$ form a right angle: </p><p>$m_2 = -\\frac{1}{m_1}$</p><p>$m_2 = -10$</p><p>$\\frac{y+22}{2} = -10$</p><p>$y = -42$</p><p>Using the <a href=\"/wiki/index.php/Distance_formula\" title=\"Distance formula\">distance formula</a>:</p><p>$AB = \\sqrt{ (2006-6)^2 + (178-(-22))^2 } = \\sqrt{ (2000)^2 + (200)^2 } = 200\\sqrt{101}$</p><p>$AD = \\sqrt{ (8-6)^2 + (-42-(-22))^2 } = \\sqrt{ (2)^2 + (-20)^2 } = 2\\sqrt{101}$</p><p>Therefore the area of rectangle $ABCD$ is $200\\sqrt{101}\\cdot2\\sqrt{101} = 40,400 \\Rightarrow E$</p>",
+        "<p>This solution is the same as Solution 1 up to the point where we find that $y=-42$.</p><p>We build right triangles so we can use the Pythagorean Theorem. The triangle with hypotenuse $AB$ has legs $200$ and $2000$, while the triangle with hypotenuse $AD$ has legs $2$ and $20$. Aha! The two triangles are similar by SAS, with one triangle having side lengths $100$ times the other!</p><p>Let $AD=x$. Then from our reasoning above, we have $AB=100x$. Finally, the area of the rectangle is $100x(x)=100x^2=100(20^2+2^2)=100(400+4)=100(404)=\\boxed{40400 \\text{  (E)}}$.</p>",
+        "<p>We do not need to solve for y. We form a right triangle with $AB$ as the hypotenuse and two adjacent sides lengths 200 and 2000, respectively. We form another right triangle with $AD$ as the hypotenuse and 2 is one of the lengths of the adjacent sides. Those two triangles are similar because $AD$ and $AB$ are perpendicular. $\\frac{AB}{AD} = \\frac{200}{2}$, so the area $AB \\cdot AD = \\frac {AB^2}{100} = \\frac {2000^2 + 200^2}{100} = \\boxed{40400 \\text{  (E)}}$</p>",
+        "<p>In order to find the area of rectangle $ABCD$, we need to find $AB$ first. Using the <a href=\"/wiki/index.php/Distance_formula\" title=\"Distance formula\">distance formula</a>, we can derive:</p><p>$AB = \\sqrt{(2006-6)^2 + (178-(-22))^2} = \\sqrt{(2000)^2 + (200)^2 } = 200\\sqrt{101}$</p><p>Now we can look at the answer choices. Because all of them are integers, then we know that $AD$ has to also contain $\\sqrt{101}$ to ensure that $AB*AD$ is an integer. Once you know that, you can guarantee that the answer must be a multiple of 101. (If you're wondering why there can't be a fraction like $1/101$, there can't because $y$ is an integer the number under the square root in $AD$, is an integer.) Having that information narrows down the answer choices to just $(B)$ $4040$, and $(E)$ $40400$.</p><p>Looking back at what we found for $AB$, which is $200\\sqrt{101}$, and what we know about $AD$, that it has to contain $\\sqrt{101}$. we know that the answer is at least $200\\sqrt{101}*\\sqrt{101}=20200$, which is already greater than answer choice $(B)$, which is $4040$. From this, we can conclude that the answer is $\\boxed{\\textbf{(E) }  40400}$</p><p>~ @flyingkinder123</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "This is a fraction word problem involving ratios and proportions. Students need to understand fraction operations, work with ratios, and solve problems involving proportional relationships. This tests understanding of fractions and proportional reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_21",
+      "question": "<p>For a particular peculiar pair of dice, the probabilities of rolling $1$, $2$, $3$, $4$, $5$, and $6$, on each die are in the ratio $1:2:3:4:5:6$. What is the probability of rolling a total of $7$ on the two dice? </p>",
+      "solutions": [
+        "<p>Let $x$ be the <a href=\"/wiki/index.php/Probability\" title=\"Probability\">probability</a> of rolling a $1$. The probabilities of rolling a $2$, $3$, $4$, $5$, and $6$ are $2x$, $3x$, $4x$, $5x$, and $6x$, respectively.</p><p>The sum of the probabilities of rolling each number must equal 1, so</p><p>$x+2x+3x+4x+5x+6x=1$</p><p>$21x=1$</p><p>$x=\\frac{1}{21}$</p><p>So the probabilities of rolling a $1$, $2$, $3$, $4$, $5$, and $6$ are respectively $\\frac{1}{21}, \\frac{2}{21}, \\frac{3}{21}, \\frac{4}{21}, \\frac{5}{21}$, and $\\frac{6}{21}$. </p><p>The possible combinations of two rolls that total $7$ are: $(1,6)\u00a0; (2,5)\u00a0; (3,4)\u00a0; (4,3)\u00a0; (5,2)\u00a0; (6,1)$</p><p>The probability P of rolling a total of $7$ on the two dice is equal to the sum of the probabilities of rolling each combination. </p><p>$P = \\frac{1}{21}\\cdot\\frac{6}{21}+\\frac{2}{21}\\cdot\\frac{5}{21}+\\frac{3}{21}\\cdot\\frac{4}{21}+\\frac{4}{21}\\cdot\\frac{3}{21}+\\frac{5}{21}\\cdot\\frac{2}{21}+\\frac{6}{21}\\cdot\\frac{1}{21}=\\frac{8}{63} \\Rightarrow C$</p>",
+        "<p>(Alcumus solution)On each die the probability of rolling $k$, for $1\\leq k\\leq 6$, is $\\frac{k}{1+2+3+4+5+6}=\\frac{k}{21}.$There are six ways of rolling a total of 7 on the two dice, represented by the ordered pairs $(1,6)$, $(2,5)$, $(3,4)$, $(4,3)$, $(5,2)$, and $(6,1)$. Thus the probability of rolling a total of 7 is $\\frac{1\\cdot6+2\\cdot5+3\\cdot4+4\\cdot3+5\\cdot2+6\\cdot1}{21^2}=\\frac{56}{21^2}=\\boxed{\\frac{8}{63}}.$</p>",
+        "<p>There are $6$ ways to get the sum of $7$ of the dice. Let's do case by case.</p><p>Case $1$ (Rolling a $1$ or a $6$): $\\frac {1}{21} \\cdot \\frac {6}{21} = \\frac {6}{441}$.</p><p>Case $2$ (Rolling a $2$ or a $5$): $\\frac {2}{21} \\cdot \\frac {5}{21} = \\frac {10}{441}$. </p><p>Case $3$ (Rolling a $3$ or a $4$): $\\frac {3}{21} \\cdot \\frac {4}{21} = \\frac {12}{441}$. </p><p>The rest of the cases are symmetric to these cases above. We have $2 \\cdot \\frac {28}{441}$. We have $\\frac {56}{441} = \\frac {8}{63}$. Therefore, our answer is $\\boxed {\\frac {8}{63}}$</p><p>~Arcticturn</p><p>~Minor Edits by L314159265358979323846264</p>",
+        "<p>Notice that the ways to obtain a 7 are (6,1), (5,2), (4,3). Then, because the cases are symmetrical with (3,4), (2,5) and (6,1), look through the answer choices. You see a 4/63 and an 8/63, so obviously MAA wants you to not count the other symmetrical cases, thus giving the answer (C).</p><p>~mathboy282</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "This is a probability problem involving independent events and calculating probabilities. Students need to understand probability concepts, work with independent events, and calculate compound probabilities. This tests understanding of probability theory and probability calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_22",
+      "question": "<p>Elmo makes $N$ sandwiches for a fundraiser. For each sandwich he uses $B$ globs of peanut butter at $4\\cent$ per glob and $J$ blobs of jam at $5\\cent$ per blob. The cost of the peanut butter and jam to make all the sandwiches is $$ 2.53$. Assume that $B$, $J$, and $N$ are positive integers with $N>1$. What is the cost of the jam Elmo uses to make the sandwiches?</p>",
+      "solutions": [
+        "<p>The peanut butter and jam for each sandwich costs $4B\\cent+5J\\cent$, so the peanut butter and jam for $N$ sandwiches costs $N(4B+5J)\\cent$. </p><p>Setting this equal to $253\\cent$:</p><p>$N(4B+5J)=253=11\\cdot23$</p><p>The only possible positive integer pairs $(N , 4B+5J)$ whose product is $253$ are: $(1,253)\u00a0; (11,23)\u00a0; (23,11)\u00a0; (253,1)$</p><p>The first pair violates $N>1$ and the third and fourth pairs have no positive integer solutions for $B$ and $J$. </p><p>So, $N=11$ and $4B+5J=23$.</p><p>The only integer solutions for $B$ and $J$ are $B=2$ and $J=3$.</p><p>Therefore, the cost of the jam Elmo uses to make the sandwiches is $3\\cdot5\\cdot11=165\\cent$ $=  $1.65 \\Rightarrow \\boxed{\\mathrm{D}}$</p>",
+        "<p>Note as above, you get the equation $N(0.04B+0.05J)=2.53$</p><p>Notice that we can multiply by $100$ on both sides to get whole numbers. Hence $\\implies N(4B+5J)=253$</p><p>Note that the prime factorization of $253=11\\cdot23$.</p><p>Hence, we want $4B+5J=23$ or $11$</p><p>Now, we have two cases to test.</p><p>Case 1: $4B+5J=23$</p><p>Notice that we want $B\\le5$ or $J\\le4$</p><p>Taking $\\pmod{5}\\implies 4B\\equiv3\\pmod{5}\\implies B=2$</p><p>Hence, $B=2,J=3$.</p><p>Hence, the price of the jam is $3\\cdot11\\cdot{0.05}\\implies 1.65 \\implies\\boxed{D}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "This is a probability word problem involving conditional probability and ratios. Students need to understand conditional probability, work with probability ratios, and apply probability concepts to word problems. This tests advanced probability reasoning."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_23",
+      "question": "<p>A triangle is partitioned into three triangles and a quadrilateral by drawing two lines from vertices to their opposite sides. The areas of the three triangles are 3, 7, and 7, as shown. What is the area of the shaded quadrilateral?</p><p>[asy] unitsize(1.5cm); defaultpen(.8);  pair A = (0,0), B = (3,0), C = (1.4, 2), D = B + 0.4*(C-B), Ep = A + 0.3*(C-A); pair F = intersectionpoint( A--D, B--Ep );  draw( A -- B -- C -- cycle ); draw( A -- D ); draw( B -- Ep ); filldraw( D -- F -- Ep -- C -- cycle, mediumgray, black );  label(\"$7$\",(1.25,0.2)); label(\"$7$\",(2.2,0.45)); label(\"$3$\",(0.45,0.35)); [/asy]</p>",
+      "solutions": [
+        "<p>Label the points in the figure as shown below, and draw the segment $CF$. This segment divides the quadrilateral into two triangles, let their areas be $x$ and $y$.</p><p>[asy] unitsize(2cm); defaultpen(.8);  pair A = (0,0), B = (3,0), C = (1.4, 2), D = B + 0.4*(C-B), Ep = A + 0.3*(C-A); pair F = intersectionpoint( A--D, B--Ep );  draw( A -- B -- C -- cycle ); draw( A -- D ); draw( B -- Ep ); filldraw( D -- F -- Ep -- C -- cycle, mediumgray, black );  label(\"$7$\",(1.45,0.15)); label(\"$7$\",(2.2,0.45)); label(\"$3$\",(0.45,0.35));  draw( C -- F, dashed );  label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C$\",C,N); label(\"$D$\",D,NE); label(\"$E$\",Ep,NW); label(\"$F$\",F,S);  label(\"$x$\",(1,1)); label(\"$y$\",(1.6,1)); [/asy]</p><p>Since <a href=\"/wiki/index.php/Triangle\" title=\"Triangle\">triangles</a> $AFB$ and $DFB$ share an <a href=\"/wiki/index.php/Altitude\" title=\"Altitude\">altitude</a> from $B$ and have equal area, their bases must be equal, hence $AF=DF$.</p><p>Since triangles $AFC$ and $DFC$ share an altitude from $C$ and their respective bases are equal, their areas must be equal, hence $x+3=y$. </p><p>Since triangles $EFA$ and $BFA$ share an altitude from $A$ and their respective areas are in the ratio $3:7$, their bases must be in the same ratio, hence $EF:FB = 3:7$.</p><p>Since triangles $EFC$ and $BFC$ share an altitude from $C$ and their respective bases are in the ratio $3:7$, their areas must be in the same ratio, hence $x:(y+7) = 3:7$, which gives us $7x = 3(y+7)$.</p><p>Substituting $y=x+3$ into the second equation we get $7x = 3(x+10)$, which solves to $x=\\frac{15}{2}$. Then $y=x+3 = \\frac{15}{2}+3 = \\frac{21}{2}$, and the total area of the quadrilateral is $x+y = \\frac{15}{2}+\\frac{21}{2} = \\boxed{\\textbf{(D) }18}$.</p>",
+        "<p>Connect points $E$ and $D$. Triangles $EFA$ and $FAB$ share an altitude and their areas are in the ratio $3:7$. Their bases, $EF$ and $FB$, must be in the same $3:7$ ratio. </p><p>Triangles $EFD$ and $FBD$ share an altitude and their bases are in a $3:7$ ratio. Therefore, their areas are in a $3:7$ ratio and the area of triangle $EFD$ is $3$.</p><p>Triangle $CED$ and $DEA$ share an altitude. Therefore, the ratio of their areas is equal to the ratio of bases $CE$ and $EA$. The ratio is $A:(3+3) \\Rightarrow A:6$ where $A$ is the area of triangle $CED$</p><p>Triangles $CEB$ and $EAB$ also share an altitude. The ratio of their areas is also equal to the ratio of bases $CE$ and $EA$. The ratio is $(A+3+7):(3+7) \\Rightarrow (A+10):10$</p><p>Because the two ratios are equal, we get the equation $\\frac{A}{6} = \\frac {A+10}{10} \\Rightarrow 10A = 6A+60 \\Rightarrow A = 15$. We add the area of triangle $EDF$ to get that the total area of the quadrilateral is $\\boxed{\\textbf{(D) }18}$.</p><p>~Zeric Hang</p>",
+        "<p>We use mass points (similar to above). Let the triangle be $ABC$ with cevians (lines to opposite side) from $B$ and $C$. Let the points opposite $B$ and $C$ be $D$ and $F$ respectively and the intersection as $P$. </p><p>Assign masses of 1 at $B$ and $D$ since $[BPC] = [DPC]$. Then the mass at $P$ is 2. To find masses at $F$ and $C$, we let the mass at $F$ be x and the mass at $C$ be y. Then $3x = 7y$ and $y = \\frac{3}{7}x$. Then $\\frac{10}{7}x = 2$ since we add the masses for the fulcrum mass, and $x = \\frac{7}{5}$ and $y = \\frac{3}{5}$. </p><p>To calculate the mass at a, it is merely $\\frac{7}{5} - 1 = \\frac{2}{5}$ which means $\\frac{[BCF]}{[ACF]} = \\frac{2}{5}$ or $[ACF] = 25$. It is easy to see the answer is $\\boxed{\\textbf{(D) }18}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "This is a geometry problem involving distance and position relationships. Students need to understand distance concepts, work with coordinate geometry, and calculate distances between points. This tests geometric reasoning and distance calculations."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_24",
+      "question": "<p><a href=\"/wiki/index.php/Circle\" title=\"Circle\">Circles</a> with centers $O$ and $P$ have radii $2$ and $4$, respectively, and are externally tangent. Points $A$ and $B$ on the circle with center $O$ and points $C$ and $D$ on the circle with center $P$ are such that $AD$ and $BC$ are common external tangents to the circles. What is the area of the <a href=\"/wiki/index.php/Concave\" title=\"Concave\">concave</a> <a href=\"/wiki/index.php/Hexagon\" title=\"Hexagon\">hexagon</a> $AOBCPD$?</p><p>[asy]size(200);defaultpen(linewidth(0.8)); pair X=(-6,0), O=origin, P=(6,0), B=tangent(X, O, 2, 1), A=tangent(X, O, 2, 2), C=tangent(X, P, 4, 1), D=tangent(X, P, 4, 2); pair top=X+15*dir(X--A), bottom=X+15*dir(X--B); draw(Circle(O, 2)^^Circle(P, 4)); draw(bottom--X--top); draw(A--O--B^^O--P^^D--P--C); pair point=X; label(\"$2$\", midpoint(O--A), dir(point--midpoint(O--A))); label(\"$4$\", midpoint(P--D), dir(point--midpoint(P--D))); label(\"$O$\", O, SE); label(\"$P$\", P, dir(point--P)); pair point=O; label(\"$A$\", A, dir(point--A)); label(\"$B$\", B, dir(point--B)); pair point=P; label(\"$C$\", C, dir(point--C)); label(\"$D$\", D, dir(point--D)); fill((-3,7)--(-3,-7)--(-7,-7)--(-7,7)--cycle, white);[/asy]</p>",
+      "solutions": [
+        "<p>When we see this problem, it practically screams similar triangles at us. Extend $OP$ to the left until it intersects lines $AD$ and $BC$ at point $E$. Triangles $EBO$ and $ECP$ are similar, and by symmetry, so are triangles $EAO$ and $EDP$. Then, the area of kite $EAOB$ is just $4 \\sqrt{2} \\times 2$ and the area of kite $EDPC$ is $8 \\sqrt{2} \\times 4$ (using our similarity ratios). The difference of these yields the area of hexagon $AOBCPD$ or $24\\sqrt{2} \\Longrightarrow \\boxed{\\mathrm{(B)}}$.</p><p>~icecreamrolls8</p>",
+        "<p>File is too big, so go to <a class=\"external free\" href=\"https://www.imgur.com/a/7aphGaa\" rel=\"nofollow\">https://www.imgur.com/a/7aphGaa</a></p><p>Sorry for the wrong point names, I didn't know how to change them.</p><p>Since a <a class=\"mw-redirect\" href=\"/wiki/index.php/Tangent_line\" title=\"Tangent line\">tangent line</a> is <a href=\"/wiki/index.php/Perpendicular\" title=\"Perpendicular\">perpendicular</a> to the <a href=\"/wiki/index.php/Radius\" title=\"Radius\">radius</a> containing the point of tangency, $\\angle OAD = \\angle PDA = 90^\\circ$.</p><p>Construct a perpendicular to $DP$ that goes through point $O$. Label the point of <a href=\"/wiki/index.php/Intersection\" title=\"Intersection\">intersection</a> $X$.</p><p>Clearly $OADX$ is a <a href=\"/wiki/index.php/Rectangle\" title=\"Rectangle\">rectangle</a>, so $DX=2$ and $PX=2$. By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, $OX = \\sqrt{6^2 - 2^2} = 4\\sqrt{2}$.</p><p>The area of $OADX$ is $2\\cdot4\\sqrt{2}=8\\sqrt{2}$. The area of $OXP$ is $\\frac{1}{2}\\cdot2\\cdot4\\sqrt{2}=4\\sqrt{2}$, so the area of quadrilateral $OADP$ is $8\\sqrt{2}+4\\sqrt{2}=12\\sqrt{2}$. Using similar steps, the area of quadrilateral $OBCP$ is also $12\\sqrt{2}$. Therefore, the area of hexagon $AOBCPD$ is $2\\cdot12\\sqrt{2}= 24\\sqrt{2} \\Longrightarrow \\boxed{\\mathrm{(B)}}$.</p><p><br/>Note: Quadrilaterals $OADP$ and $OBCP$ are congruent, so they have equal areas.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is an area problem involving complex geometric shapes and area calculations. Students need to work with composite shapes, understand area formulas, and calculate areas of complex figures. This tests advanced geometric reasoning and area calculation skills."
+        }
+      ]
+    },
+    {
+      "id": "amc_2006_10b_25",
+      "question": "<p>Mr. Jones has eight children of different ages. On a family trip his oldest child, who is 9, spots a license plate with a 4-digit number in which each of two digits appears two times. \"Look, daddy!\" she exclaims. \"That number is evenly divisible by the age of each of us kids!\" \"That's right,\" replies Mr. Jones, \"and the last two digits just happen to be my age.\" Which of the following is <b><i>not</i></b> the age of one of Mr. Jones's children? </p>",
+      "solutions": [
+        "<p>Let $S$ be the set of the ages of Mr. Jones' children (in other words $i \\in S$ if Mr. Jones has a child who is $i$ years old). Then $|S| = 8$ and $9 \\in S$. Let $m$ be the positive integer seen on the license plate. Since at least one of $4$ or $8$ is contained in $S$, we have $4 | m$.</p><p>We would like to prove that $5 \\not\\in S$, so for the sake of contradiction, let us suppose that $5 \\in S$. Then $5\\cdot 4 = 20 | m$ so the units digit of $m$ is $0$. Since the number has two distinct digits, each appearing twice, another digit of $m$ must be $0$. Since Mr. Jones can't be $00$ years old, the last two digits can't be $00$. Therefore $m$ must be of the form $d0d0$, where $d$ is a digit. Since $m$ is divisible by $9$, the sum of the digits of $m$ must be divisible by $9$ (see <a href=\"/wiki/index.php/Divisibility_rules/Rule_for_3_and_9_proof\" title=\"Divisibility rules/Rule for 3 and 9 proof\"> Divisibility rules for 9</a>). Hence $9 | 2d$ which implies $d = 9$. But $m = 9090$ is not divisible by $4$, contradiction. So $5 \\not\\in S$ and $5$ is not the age of one of Mr. Jones' kids. $\\boxed{ B }$</p><p>(We might like to check that there does, indeed, exist such a positive integer $m$. If $5$ is not an age of one of Mr. Jones' kids, then the license plate's number must be a multiple of $lcm(1,2,3,4,6,7,8,9) = 504$. Since $11\\cdot504 = 5544$ and $5544$ is the only $4$ digit multiple of $504$ that fits all the conditions of the license plate's number, the license plate's number is $5544$.)</p><p>Alternatively, we can see that if one of Mr. Jones' children is of the age 5, then the license plate will have to end in the digit $0$ . The license plate cannot end in the digit $5$ as $2$ is a factor of the number, so it must be even. This means that the license plate would have to have two $0$ digits, and would either be of the form $XX00$ or $X0X0$ (X being the other digit in the license plate) . The condition $XX00$ is impossible as Mr. Jones can't be $00$ years old. If we separate the second condition, $X0X0$ into its prime factors, we get $X\\cdot 10\\cdot 101$. $101$ is prime, and therefore can't account for allowing $X0X0$ being evenly divisible by the childrens' ages. The $10$ accounts for the 5 and one factor of 2. This leaves $X$, but no single digit number contains all the prime factors besides 5 and 2 of the childrens' ages, thus $5$ $\\boxed{ B }$ can't be one of the childrens' ages.</p><p>Another way to do the problem is by the process of elimination. The only possible correct choices are the highest powers of each prime, $2^3=8$, $3^2=9$, $5^1=5$, and $7^1=7$, since indivisibility by any powers lower than these means indivisibility by a higher power of the prime (for example, indivisibility by $2^2=4$ means indivisibility by $2^3=8)$. Since the number is divisible by $9$, it is not the answer, and the digits have to add up to $9$. Let $(a,b)$ be the digits: since $2\\cdot(a+b) | 9$, $(a+b)|9$. The only possible choices for $(a,b)$ are $(0,9)$, $(1,8)$, $(2,7)$, $(3,6)$, and $(4,5)$. The only number that works is $5544$, but it is not divisible by $5$. $\\boxed{ B }$</p><p>~edited by mobius247</p><p>Since 5 has the \"strictest\" divisibility rules of the single digit numbers, we check that case first. To be divisible by 9, the other repeating digit must be 4. Seeing that 5544 is the only arrangement of 2 4's and 2 5's that is divisible by the other single digit numbers and itself is not divisible by 5, the answer is $\\boxed {(B) 5}$.-liu4505~edited by mobius247</p>",
+        "<p>Let $S$ be the set of the ages of Mr. Jones' children (in other words $i \\in S$ if Mr. Jones has a child who is $i$ years old). Then $|S| = 8$ and $9 \\in S$. Let $m$ be the positive integer seen on the license plate. Since at least one of $4$ or $8$ is contained in $S$, we have $4 | m$.</p><p>We would like to prove that $5 \\not\\in S$, so for the sake of contradiction, let us suppose that $5 \\in S$. Then $5\\cdot 4 = 20 | m$ so the units digit of $m$ is $0$. Since the number has two distinct digits, each appearing twice, another digit of $m$ must be $0$. Since Mr. Jones can't be $00$ years old, the last two digits can't be $00$. Therefore $m$ must be of the form $d0d0$, where $d$ is a digit. Since $m$ is divisible by $9$, the sum of the digits of $m$ must be divisible by $9$ (see <a href=\"/wiki/index.php/Divisibility_rules/Rule_for_3_and_9_proof\" title=\"Divisibility rules/Rule for 3 and 9 proof\"> Divisibility rules for 9</a>). Hence $9 | 2d$ which implies $d = 9$. But $m = 9090$ is not divisible by $4$, contradiction. So $5 \\not\\in S$ and $5$ is not the age of one of Mr. Jones' kids. $\\boxed{ B }$</p><p>(We might like to check that there does, indeed, exist such a positive integer $m$. If $5$ is not an age of one of Mr. Jones' kids, then the license plate's number must be a multiple of $lcm(1,2,3,4,6,7,8,9) = 504$. Since $11\\cdot504 = 5544$ and $5544$ is the only $4$ digit multiple of $504$ that fits all the conditions of the license plate's number, the license plate's number is $5544$.)</p>",
+        "<p>Alternatively, we can see that if one of Mr. Jones' children is of the age 5, then the license plate will have to end in the digit $0$ . The license plate cannot end in the digit $5$ as $2$ is a factor of the number, so it must be even. This means that the license plate would have to have two $0$ digits, and would either be of the form $XX00$ or $X0X0$ (X being the other digit in the license plate) . The condition $XX00$ is impossible as Mr. Jones can't be $00$ years old. If we separate the second condition, $X0X0$ into its prime factors, we get $X\\cdot 10\\cdot 101$. $101$ is prime, and therefore can't account for allowing $X0X0$ being evenly divisible by the childrens' ages. The $10$ accounts for the 5 and one factor of 2. This leaves $X$, but no single digit number contains all the prime factors besides 5 and 2 of the childrens' ages, thus $5$ $\\boxed{ B }$ can't be one of the childrens' ages.</p>",
+        "<p>Another way to do the problem is by the process of elimination. The only possible correct choices are the highest powers of each prime, $2^3=8$, $3^2=9$, $5^1=5$, and $7^1=7$, since indivisibility by any powers lower than these means indivisibility by a higher power of the prime (for example, indivisibility by $2^2=4$ means indivisibility by $2^3=8)$. Since the number is divisible by $9$, it is not the answer, and the digits have to add up to $9$. Let $(a,b)$ be the digits: since $2\\cdot(a+b) | 9$, $(a+b)|9$. The only possible choices for $(a,b)$ are $(0,9)$, $(1,8)$, $(2,7)$, $(3,6)$, and $(4,5)$. The only number that works is $5544$, but it is not divisible by $5$. $\\boxed{ B }$</p><p>~edited by mobius247</p>",
+        "<p>Since 5 has the \"strictest\" divisibility rules of the single digit numbers, we check that case first. To be divisible by 9, the other repeating digit must be 4. Seeing that 5544 is the only arrangement of 2 4's and 2 5's that is divisible by the other single digit numbers and itself is not divisible by 5, the answer is $\\boxed {(B) 5}$.-liu4505~edited by mobius247</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "This is a geometry problem involving area calculations and geometric relationships. Students need to understand area formulas, work with geometric relationships, and calculate areas. This tests geometric reasoning and area calculation abilities."
+        }
+      ]
+    }
+  ]
+}

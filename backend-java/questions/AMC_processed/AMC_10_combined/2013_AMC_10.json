@@ -1,0 +1,830 @@
+{
+  "year": "2013",
+  "competition": "AMC_10",
+  "problems": [
+    {
+      "id": "amc_2013_10a_1",
+      "question": "<p>A taxi ride costs $$1.50$ plus $$0.25$ per mile traveled. How much does a $5$-mile taxi ride cost?</p>",
+      "solutions": [
+        "<p>There are five miles which need to be traveled. The cost of these five miles is $(0.25\\cdot5) = 1.25$.  Adding this to $1.50$, we get $\\boxed{\\textbf{(C) }2.75}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2013 AMC 10A - algebra problem involving basic arithmetic operations and word problem solving. Students need to understand algebra concepts deeply, work with basic_operations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of basic_operations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply basic_operations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_2",
+      "question": "<p>Alice is making a batch of cookies and needs $2\\frac{1}{2}$ cups of sugar. Unfortunately, her measuring cup holds only $\\frac{1}{4}$ cup of sugar. How many times must she fill that cup to get the correct amount of sugar?</p>",
+      "solutions": [
+        "<p>To get how many cups we need, we realize that we simply need to divide the number of cups needed by the number of cups collected in her measuring cup each time. Thus, we need to evaluate the fraction $\\frac{2\\frac{1}{2}}{\\frac{1}{4}}$. Simplifying, this is equal to $\\frac{5}{2}(4) = \\boxed{\\textbf{(B) }10}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2013 AMC 10A - algebra problem involving percentage calculations and proportional reasoning. Students need to understand algebra concepts deeply, work with percentages principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of percentages, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply percentages concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_3",
+      "question": "<p>Square $ABCD$ has side length $10$. Point $E$ is on $\\overline{BC}$, and the area of $\\bigtriangleup ABE$ is $40$. What is $BE$?</p><p>[asy] pair A,B,C,D,E; A=(0,0); B=(0,50); C=(50,50); D=(50,0); E = (40,50); draw(A--B); draw(B--E); draw(E--C); draw(C--D); draw(D--A); draw(A--E); dot(A); dot(B); dot(C); dot(D); dot(E); label(\"A\",A,SW); label(\"B\",B,NW); label(\"C\",C,NE); label(\"D\",D,SE); label(\"E\",E,N); [/asy]</p>",
+      "solutions": [
+        "<p>We are given that the area of $\\triangle ABE$ is $40$, and that $AB = 10$.</p><p>The area of a triangle is:</p><p>$A = \\frac{bh}{2}$</p><p>Using $AB$ as the height of $\\triangle ABE$,</p><p>$40 = \\frac{10b}{2}$</p><p>and solving for $b$,</p><p>$b = 8$, which is $\\boxed{\\textbf{(E)}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2013 AMC 10A - algebra problem involving area calculations of geometric shapes. Students need to understand algebra concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_4",
+      "question": "<p>A softball team played ten games, scoring $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$, $9$, and $10$ runs. They lost by one run in exactly five games. In each of their other games, they scored twice as many runs as their opponent. How many total runs did their opponents score?</p>",
+      "solutions": [
+        "<p>We know that, for the games where they scored an odd number of runs, they cannot have scored twice as many runs as their opponents, as odd numbers are not divisible by $2$. Thus, from this, we know that the five games where they lost by one run were when they scored $1$, $3$, $5$, $7$, and $9$ runs, and the others are where they scored twice as many runs. We can make the following chart:</p><p>$\\begin{tabular}{|l|l|} \\hline Them & Opponent \\\\ \\hline 1 & 2 \\\\ 2 & 1 \\\\ 3 & 4 \\\\ 4 & 2 \\\\ 5 & 6 \\\\ 6 & 3 \\\\ 7 & 8 \\\\ 8 & 4 \\\\ 9 & 10 \\\\ 10 & 5 \\\\ \\hline \\end{tabular}$</p><p>The sum of their opponent's scores is $2 + 1 + 4 + 2 + 6 + 3 + 8 + 4 + 10 + 5 = \\boxed{\\textbf{(C) }45}$</p>",
+        "<p>The team must've won the games with the even runs and lost the ones with the odd runs. The opponents will have an arithmetic sequence of runs, $1,2,3,4,5$ when the team has even runs. The opponents will have an arithmetic sequence of even runs, $2,4,6,8,10$, when the team has odd runs. The sum of their runs is $3\\cdot(1+2+3+4+5)=3\\cdot15=45=\\fbox{C}$~dragnin</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2013 AMC 10A - algebra problem involving basic arithmetic operations and problem translation. Students need to understand algebra concepts deeply, work with basic_operations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of basic_operations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply basic_operations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_5",
+      "question": "<p>Tom, Dorothy, and Sammy went on a vacation and agreed to split the costs evenly. During their trip Tom paid $105, Dorothy paid $125, and Sammy paid $175. In order to share costs equally, Tom gave Sammy $t$ dollars, and Dorothy gave Sammy $d$ dollars. What is $t-d$?</p>",
+      "solutions": [
+        "<p>The total amount paid is $105 + 125 + 175 = 405$. To get how much each should have paid, we do $405/3 = 135$.</p><p>Thus, we know that Tom needs to give Sammy 30 dollars, and Dorothy 10 dollars. This means that $t-d = 30 - 10 = \\boxed{\\textbf{(B) }20}$.</p>",
+        "<p>The difference in the money that Tom paid and Dorothy paid is $20$. In order for them both to have paid the same amount, Tom must pay $20$ more than Dorothy. The answer is $\\boxed{{(B)20}}$.</p>",
+        "<p>The meaning of sharing costs equally is meaning that, after the vacation, they are equally dividing the money in a way such that, each person would have the same amount left. As each person spends an amount of money, greater than 100, let it be that they all had $200$ dollars to spend. This means that after the vacation we want the amount of money, they currently have. After the trip, Tom would've $95$ dollars, Dorothy would've $75$ dollars, and Sammy had $25$ dollars. This gives us a total of $95+75+25=195$ dollars. </p><p>We want to equally split this money, as that is what happens after splitting the cost equally. This means that we want Dorothy, Tom, and Sammy to each have $65$ dollars. We know that Tom gave Sammy $t$ dollars meaning that we want to split this money first. As Tom gives money to no one else, we want him to reach $65$ dollars in this trade, meaning that as Tom has $95$ dollars and Sammy has $25$ dollars, we can do a trade of $30$ so $t=30$. After this trade, we get that Tom has $65$ dollars, Sammy has $55$ dollars, and Dorothy has $75$ dollars.</p><p>Next trade is where Dorothy gives $d$ dollars to Sammy. Dorothy has $75$ dollars and Sammy has $55$ dollars. As both of these don't have $65$ dollars and this is the last trade, we need to make sure both have $65$ dollars at the end. This is possible if $d=10$</p><p>We want to find $t-d=30-10=\\boxed{B) 20}$</p><p>~Batmanstark</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2013 AMC 10A - algebra problem involving counting principles and systematic arrangements. Students need to understand algebra concepts deeply, work with counting principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of counting, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply counting concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_6",
+      "question": "<p>Joey and his five brothers are ages $3$, $5$, $7$, $9$, $11$, and $13$. One afternoon two of his brothers whose ages sum to $16$ went to the movies, two brothers younger than $10$ went to play baseball, and Joey and the $5$-year-old stayed home. How old is Joey?</p>",
+      "solutions": [
+        "<p>Because the $5$-year-old stayed home, we know that the $11$-year-old did not go to the movies, as the $5$-year-old did not and $11+5=16$. Also, the $11$-year-old could not have gone to play baseball, as he is older than $10$. Thus, the $11$-year-old must have stayed home, so Joey is $\\boxed{\\textbf{(D) }11}$</p>",
+        "<p>There are only $4$ kids who are under $10$ but since the $5$-year old stayed home, the only possible ages who went to play baseball are the brothers who are $3,7,9$, either $13+3$ or $7+9$ is $16$ but since we need $2$ kids to go to baseball who are under $10$, $13,3$ must have been the pair to go to the movies and $9,7$ must have went to baseball, so only the $11$-year old is left, which is answer choice $\\boxed{\\textbf{(D) }11}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2013 AMC 10A - algebra problem involving basic arithmetic operations and algebraic reasoning. Students need to understand algebra concepts deeply, work with basic_operations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of basic_operations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply basic_operations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_7",
+      "question": "<p>A student must choose a program of four courses from a menu of courses consisting of English, Algebra, Geometry, History, Art, and Latin. This program must contain English and at least one mathematics course. In how many ways can this program be chosen?</p>",
+      "solutions": [
+        "<p>Let us split this up into two cases.</p><p>Case $1$: The student chooses both algebra and geometry.</p><p>This means that $3$ courses have already been chosen. We have $3$ more options for the last course, so there are $3$ possibilities here. </p><p>Case $2$: The student chooses one or the other. </p><p>Here, we simply count how many ways we can do one, multiply by $2$, and then add to the previous. </p><p>Assume the mathematics course is algebra. This means that we can choose $2$ of History, Art, and Latin, which is simply $\\dbinom{3}{2} = 3$. If it is geometry, we have another $3$ options, so we have a total of $6$ options if only one mathematics course is chosen.</p><p>Thus, overall, we can choose a program in $6 + 3 = \\boxed{\\textbf{(C) }9}$ ways</p><p>We can use complementary counting. Since there must be an English class, we will add that to our list of classes leaving $3$ remaining spots for rest of classes. We are also told that there needs to be at least one math class. This calls for complementary counting. The total number of ways of choosing $3$ classes out of the $5$ is $\\binom{5}3$. The total number of ways of choosing only non-mathematical classes is $\\binom{3}3$. Therefore the amount of ways you can pick classes with at least one math class is $\\binom{5}3-\\binom{3}3=10-1=\\boxed{\\textbf{(C) }9}$ ways.</p><p>Similar to Solution 1, note that for Case 1 of solution the answer is simply $\\binom{4}2$ and for the second case it is $\\binom{3}2$ hence $\\boxed{\\textbf{(C) }9}$ ways</p>",
+        "<p>Let us split this up into two cases.</p><p>Case $1$: The student chooses both algebra and geometry.</p><p>This means that $3$ courses have already been chosen. We have $3$ more options for the last course, so there are $3$ possibilities here. </p><p>Case $2$: The student chooses one or the other. </p><p>Here, we simply count how many ways we can do one, multiply by $2$, and then add to the previous. </p><p>Assume the mathematics course is algebra. This means that we can choose $2$ of History, Art, and Latin, which is simply $\\dbinom{3}{2} = 3$. If it is geometry, we have another $3$ options, so we have a total of $6$ options if only one mathematics course is chosen.</p><p>Thus, overall, we can choose a program in $6 + 3 = \\boxed{\\textbf{(C) }9}$ ways</p>",
+        "<p>We can use complementary counting. Since there must be an English class, we will add that to our list of classes leaving $3$ remaining spots for rest of classes. We are also told that there needs to be at least one math class. This calls for complementary counting. The total number of ways of choosing $3$ classes out of the $5$ is $\\binom{5}3$. The total number of ways of choosing only non-mathematical classes is $\\binom{3}3$. Therefore the amount of ways you can pick classes with at least one math class is $\\binom{5}3-\\binom{3}3=10-1=\\boxed{\\textbf{(C) }9}$ ways.</p>",
+        "<p>Similar to Solution 1, note that for Case 1 of solution the answer is simply $\\binom{4}2$ and for the second case it is $\\binom{3}2$ hence $\\boxed{\\textbf{(C) }9}$ ways</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2013 AMC 10A - geometry problem involving area calculations and geometric formulas. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_8",
+      "question": "<p>What is the value of \\[\\frac{2^{2014}+2^{2012}}{2^{2014}-2^{2012}}\u00a0?\\]</p>",
+      "solutions": [
+        "<p>Factoring out, we get: $\\frac{2^{2012}(2^2 + 1)}{2^{2012}(2^2-1)}$. </p><p>Cancelling out the $2^{2012}$ from the numerator and denominator, we see that it simplifies to $\\boxed{\\textbf{(C) }\\frac{5}{3}}$.</p>",
+        "<p>Let $x=2^{2012}$</p><p>Then the given expression is equal to $\\frac{4x+x}{4x-x}=\\frac{5x}{3x}=\\boxed{\\textbf{(C) }\\frac{5}{3}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2013 AMC 10A - number_theory problem involving divisibility rules and number properties. Students need to understand number_theory concepts deeply, work with divisibility principles systematically, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills, understanding of divisibility, and mathematical thinking abilities. Students must demonstrate proficiency in number_theory techniques and be able to apply divisibility concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_9",
+      "question": "<p>In a recent basketball game, Shenille attempted only three-point shots and two-point shots. She was successful on $20\\%$ of her three-point shots and $30\\%$ of her two-point shots. Shenille attempted $30$ shots. How many points did she score?</p>",
+      "solutions": [
+        "<p>Let the number of attempted three-point shots be $x$ and the number of attempted two-point shots be $y$. We know that $x+y=30$, and we need to evaluate $3(0.2x) + 2(0.3y)$, as we know that the three-point shots are worth $3$ points and that she made $20$% of them and that the two-point shots are worth $2$ and that she made $30$% of them.</p><p>Simplifying, we see that this is equal to $0.6x + 0.6y = 0.6(x+y)$. Plugging in $x+y=30$, we get $0.6(30) = \\boxed{\\textbf{(B) }18}$</p>",
+        "<p>The problem statement implies that it doesn't matter how many two-point shots or three-point shots are attempted. If we assume that Shenille only attempts three-pointers, then she makes $0.2 \\cdot 30 = 6$ shots, which are worth $6 \\cdot 3 = \\boxed{\\textbf{(B) }18}$ points. If we assume Shenille only attempts two-pointers, then she makes $0.3 \\cdot 30 = 9$ shots, which are worth $9 \\cdot 2 = 18$ points.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2013 AMC 10A - geometry problem involving triangle geometry and geometric relationships. Students need to understand geometry concepts deeply, work with triangles principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of triangles, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply triangles concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_10",
+      "question": "<p>A flower bouquet contains pink roses, red roses, pink carnations, and red carnations. One third of the pink flowers are roses, three fourths of the red flowers are carnations, and six tenths of the flowers are pink. What percent of the flowers are carnations?</p>",
+      "solutions": [
+        "<p>Let the total amount of flowers be $x$. Thus, the number of pink flowers is $0.6x$, and the number of red flowers is $0.4x$. The number of pink carnations is $\\frac{2}{3}(0.6x) = 0.4x$ and the number of red carnations is $\\frac{3}{4}(0.4x) = 0.3x$. Summing these, the total number of carnations is $0.4x+0.3x=0.7x$. Dividing, we see that $\\frac{0.7x}{x} = 0.7 = \\boxed{\\textbf{(E) }70\\%}$</p>",
+        "<p>We have $\\dfrac15$ for pink roses,$1-\\dfrac6{10}=\\dfrac4{10}=\\dfrac25$ red flowers, $\\dfrac6{10}-\\dfrac15=\\dfrac35-\\dfrac15=\\dfrac25$ pink carnations, $\\dfrac25\\cdot \\dfrac34=\\dfrac6{20}=\\dfrac3{10}$ red carnations we add them up to get $\\dfrac25+\\dfrac3{10}=\\dfrac7{10}=70\\%$ so our final answer is <b>70%</b> or $\\boxed{\\textbf{(E) }70\\%}$</p><p>~jimkey17 from web2.0calc.com, minor edit by flissyquokka17</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2013 AMC 10A - algebra problem involving rate relationships and speed calculations. Students need to understand algebra concepts deeply, work with rates principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of rates, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply rates concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_11",
+      "question": "<p>A student council must select a two-person welcoming committee and a three-person planning committee from among its members. There are exactly $10$ ways to select a two-person team for the welcoming committee. It is possible for students to serve on both committees. In how many different ways can a three-person planning committee be selected?</p>",
+      "solutions": [
+        "<p>Let the number of students on the council be $x$. To select a two-person committee, we can select a \"first person\" and a \"second person.\" There are $x$ choices to select a first person; subsequently, there are $x-1$ choices for the second person. This gives a preliminary count of $x(x-1)$ ways to choose a two-person committee. However, this accounts for the order of committees. To understand this, suppose that Alice and Bob are two students in the council. If we choose Alice and then Bob, that is the same as choosing Bob and then Alice and so latter and former arrangements would be considered the same. Therefore, we have to divide by $2$ to account for overcounting. Thus, there are $\\dfrac{x(x-1)} 2=10$ ways to choose the two-person committee. Solving this equation, we find that $5$ and $-4$ are integer solutions. $-4$ is a ridiculous situation, so there are $5$ people on the student council. The solution is $\\dbinom 5 3=10\\implies \\boxed{\\textbf{A}}$.</p>",
+        "<p>To choose $2$ people from $n$ total people and get $10$ as a result, we can establish the equation $\\binom{n}{2}=10$ which we can easily see $n=5$, so there are $5$ people. The question asks how many ways to choose $3$ people from the $5$, so there are $\\binom{5}{3}=\\boxed{\\textbf{(A)}10}$ ways.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2013 AMC 10A - algebra problem involving percentage calculations and proportional reasoning. Students need to understand algebra concepts deeply, work with percentages principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of percentages, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply percentages concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_12",
+      "question": "<p>In $\\triangle ABC$, $AB=AC=28$ and $BC=20$. Points $D,E,$ and $F$ are on sides $\\overline{AB}$, $\\overline{BC}$, and $\\overline{AC}$, respectively, such that $\\overline{DE}$ and $\\overline{EF}$ are parallel to $\\overline{AC}$ and $\\overline{AB}$, respectively. What is the perimeter of parallelogram $ADEF$?</p><p>[asy] size(180); pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); real r=5/7; pair A=(10,sqrt(28^2-100)),B=origin,C=(20,0),D=(A.x*r,A.y*r); pair bottom=(C.x+(D.x-A.x),C.y+(D.y-A.y)); pair E=extension(D,bottom,B,C); pair top=(E.x+D.x,E.y+D.y); pair F=extension(E,top,A,C); draw(A--B--C--cycle^^D--E--F); dot(A^^B^^C^^D^^E^^F); label(\"$A$\",A,NW); label(\"$B$\",B,SW); label(\"$C$\",C,SE); label(\"$D$\",D,W); label(\"$E$\",E,S); label(\"$F$\",F,dir(0)); [/asy]</p>",
+      "solutions": [
+        "<p>Note that because $\\overline{DE}$ and $\\overline{EF}$ are parallel to the sides of $\\triangle ABC$, the internal triangles $\\triangle BDE$ and $\\triangle EFC$ are similar to $\\triangle ABC$, and are therefore also isosceles triangles.</p><p>It follows that $BD = DE$. Thus, $AD + DE = AD + DB = AB = 28$.</p><p>The opposite sides of parallelograms are equal (you can prove this fact simply by drawing the diagonal of the parallelogram and proving that the two resulting triangles are congruent by SSS), so the perimeter is $2 \\times (AD + DE) = 56\\implies \\boxed{\\textbf{(C)}}$.</p>",
+        "<p>Drawing the diagram with a ruler and compass (and scaling back by x4), we can draw approximate parallel lines. This yields about 14, but we need to multiply by 4 to get 56, or $\\boxed{(C)}$.</p>",
+        "<p>Similar to Solution 1, we find that the internal triangles $\\triangle BDE$ and $\\triangle EFC$ are similar to $\\triangle ABC$, and are therefore also isosceles triangles and similar to each other. We know that the perimeter of $ADEF$ can be found by $2(l + w)$, and $DE$ will be the length and the width will be $EF$. These can be found by looking at the long sides of $\\triangle DBE$ and $\\triangle FEC$ respectively. We then find the ratio of long sides to the short side of $\\triangle ABC$ to be $7/5$ by $28/20$, which applies to the other triangles since they are similar. We set up an expression, calling $BE$ as $x$ and $EC$ as $20 - x$, and substitute it into the perimeter equation knowing our long sides from the ratio:</p><p>$2(7x/5 + 7/5(20-x))$</p><p>$2(7x/5 + 28 - 7x/5)$</p><p>$2(28)$</p><p>$56\\implies \\boxed{\\textbf{(C)}}$</p><p>~neeyakkid23</p>",
+        "<p>The problem implies that where you choose $D$, $E$, and $F$ are irrelevant. This means that to make it easier, choose it such that $D$, $E$, and $F$ are the midpoints of $\\overline{AB}$, $\\overline{BC}$, and $\\overline{AC}$ respectively. $28 \\div 2 = 14$, $14 \\times 4 = 56$, so $\\boxed{\\textbf{(C)}}$. </p><p>~yhbettysun</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2013 AMC 10A - algebra problem involving arithmetic sequence patterns and mathematical sequences. Students need to understand algebra concepts deeply, work with arithmetic_sequences principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of arithmetic_sequences, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply arithmetic_sequences concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_13",
+      "question": "<p>How many three-digit numbers are not divisible by $5$, have digits that sum to less than $20$, and have the first digit equal to the third digit?</p>",
+      "solutions": [
+        "<p>We use a casework approach to solve the problem. These three digit numbers are of the form $\\overline{xyx}$.($\\overline{abc}$ denotes the number $100a+10b+c$). We see that $x\\neq 0$ and $x\\neq 5$, as $x=0$ does not yield a three-digit integer and $x=5$ yields a number divisible by 5.</p><p>The second condition is that the sum $2x+y<20$. When $x$ is $1$, $2$, $3$, or $4$, $y$ can be any digit from $0$ to $9$, as $2x<10$. This yields $10(4) = 40$ numbers. </p><p>When $x=6$, we see that $12+y<20$ so $y<8$. This yields $8$ more numbers. </p><p>When $x=7$, $14+y<20$ so $y<6$. This yields $6$ more numbers. </p><p>When $x=8$, $16+y<20$ so $y<4$. This yields $4$ more numbers. </p><p>When $x=9$, $18+y<20$ so $y<2$. This yields $2$ more numbers. </p><p>Summing, we get $40 + 8 + 6 + 4 + 2 = \\boxed{\\textbf{(B) }60}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2013 AMC 10A - geometry problem involving complex area calculations and geometric analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_14",
+      "question": "<p>A solid cube of side length $1$ is removed from each corner of a solid cube of side length $3$. How many edges does the remaining solid have?</p>",
+      "solutions": [
+        "<p>We can use Euler's polyhedron formula that says that $F+V=E+2$. We know that there are originally $6$ faces on the cube, and each corner cube creates $3$ more. $6+8(3) = 30$. In addition, each cube creates $7$ new vertices while taking away the original $8$, yielding $8(7) = 56$ vertices. Thus $E+2=56+30$, so $E=\\boxed{\\textbf{(D) }84}$</p>",
+        "<p>The removal of each cube adds nine additional edges to the solid. Since a cube initially has $12$ edges and there are eight vertices, the number of edges will be $12 + 9 \\times 8 = \\boxed{\\textbf{(D) } 84}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2013 AMC 10A - geometry problem involving circle geometry and circular measurements. Students need to understand geometry concepts deeply, work with circles principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of circles, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply circles concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_15",
+      "question": "<p>Two sides of a triangle have lengths $10$ and $15$. The length of the altitude to the third side is the average of the lengths of the altitudes to the two given sides. How long is the third side?</p>",
+      "solutions": [
+        "<p>The shortest side length has the longest altitude perpendicular to it. The average of the two altitudes given will be between the lengths of the two altitudes,therefore the length of the side perpendicular to that altitude will be between $10$ and $15$. The only answer choice that meets this requirement is $\\boxed{\\textbf{(D) }12}$.<b></b></p>",
+        "<p><b></b>Let the height to the side of length $15$ be $h_{1}$, the height to the side of length 10 be $h_{2}$, the area be $A$, and the height to the unknown side be $h_{3}$.</p><p>Because the area of a triangle is $\\frac{bh}{2}$, we get that $15(h_{1}) = 2A$ and $10(h_{2}) = 2A$, so, setting them equal, $h_{2} = \\frac{3h_{1}}{2}$. From the problem, we know that $2h_{3} = h_{1} + h_{2}$. Substituting, we get that\\[h_{3} = 1.25h_{1}.\\] Thus, the side length is going to be $\\frac{2A}{1.25h_{1}} = \\frac{15}{\\frac{5}{4}} = \\boxed{\\textbf{(D) }12}$.</p>",
+        "<p>Let $x$ be the height of triangle when the base is $10$ and $y$ is the height of the triangles when the base is $15$. This means the height for when the triangles has the $3$rd side length, the height would be $\\dfrac{(x+y)}{2}$ giving us the following equation:</p><p>$\\dfrac{10x}{2}=\\dfrac{15y}{2}=\\dfrac{n(x+y)}{2}$For $n$, we can plug in the answer choices and check when the ratio of $\\dfrac{x}{y}$ for $\\dfrac{10x}{2}=\\dfrac{n(x+y)}{2}$ and $\\dfrac{15y}{2}=\\dfrac{n(x+y)}{2}$ is the same because we can observe that only for one value, the ratio remains constant. From brute force we get that $\\boxed{n=12}$ meaning that $12$ is the $3$rd base.~ Batmanstark</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2013 AMC 10A - combinatorics problem involving counting principles and combinatorial reasoning. Students need to understand combinatorics concepts deeply, work with counting principles systematically, and apply mathematical reasoning to solve this problem. This tests combinatorics problem-solving skills, understanding of counting, and mathematical thinking abilities. Students must demonstrate proficiency in combinatorics techniques and be able to apply counting concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_16",
+      "question": "<p>A triangle with vertices $(6, 5)$, $(8, -3)$, and $(9, 1)$ is reflected about the line $x=8$ to create a second triangle. What is the area of the union of the two triangles?</p>",
+      "solutions": [
+        "<p>Let $A$ be at $(6, 5)$, B be at $(8, -3)$, and $C$ be at $(9, 1)$. Reflecting over the line $x=8$, we see that $A' = D =  (10,5)$, $B' = B$ (as the x-coordinate of B is 8), and $C' = E =  (7, 1)$. Line $AB$ can be represented as $y=-4x+29$, so we see that $E$ is on line $AB$. </p><p>[asy] pair A = (6, 5), B = (8, -3), C = (9, 1), D = (10, 5), E = (7, 1), F = (8, 7/3); draw(A--B--C--cycle^^D--E--B--cycle); dot(A^^B^^C^^D^^E^^F); label(\"$A$\",A,NW); label(\"$B$\",B,S); label(\"$C$\",C,SE); label(\"$D$\",D,NE); label(\"$E$\",E,W); label(\"$F$\", F, N);   [/asy]</p><p><br/>We see that if we connect $A$ to $D$, we get a line of length $4$ (between $(6, 5)$ and $(10,5)$). The area of $\\triangle ABD$ is equal to $\\frac{bh}{2} = \\frac{4(8)}{2} = 16$.</p><p>Now, let the point of intersection between $AC$ and $DE$ be $F$. If we can just find the area of $\\triangle ADF$ and subtract it from $16$, we are done.</p><p>We realize that because the diagram is symmetric over $x = 8$, the intersection of lines $AC$ and $DE$ should intersect at an x-coordinate of $8$. We know that the slope of $DE$ is $\\frac{5-1}{10-7} = \\frac{4}{3}$. Thus, we can represent the line going through $E$ and $D$ as $y - 1=\\frac{4}{3}(x - 7)$. Plugging in $x = 8$, we find that the y-coordinate of F is $\\frac{7}{3}$. Thus, the height of $\\triangle ADF$ is $5 - \\frac{7}{3} = \\frac{8}{3}$. Using the formula for the area of a triangle, the area of $\\triangle ADF$ is $\\frac{16}{3}$. </p><p>To get our final answer, we must subtract this from $16$. $[ABD] - [ADF] = 16 - \\frac{16}{3} = \\boxed{\\textbf{(E) }\\frac{32}{3}}$</p>",
+        "<p>First, realize that $E$ is the midpoint of $AB$ and $C$ is the midpoint of $BD$. Connect $A$ to $D$ to form $\\triangle ABD$. Let the midpoint of $AD$ be $G$. Connect $B$ to $G$. $BG$ is a median of $\\triangle ABD$. </p><p><br/>Because $\\triangle ABD$ is isosceles, $BG$ is also an altitude of $\\triangle ABD$. We know the length of $AD$ and $BG$ from the given coordinates. The area of $\\triangle ABD$ is $\\frac{bh}{2} = \\frac{4(8)}{2} = 16$. </p><p><br/>Let the intesection of $AC$, $DE$ and $BG$ be $F$. $F$ is the centroid of $\\triangle ABD$. Therefore, it splits $BG$ into $BF={2 \\over 3}(BG)$ and $FG={1\\over 3}(BG)$. The area of quadrilateral $ABDF = 16\\cdot {2 \\over 3} = \\boxed{\\textbf{(E) }\\frac{32}{3}}$</p><p>~Zeric Hang</p>",
+        "<p>Since we have to find the area on a coordinate plane, we can use the <a href=\"/wiki/index.php/Shoelace_Theorem\" title=\"Shoelace Theorem\">Shoelace Theorem</a> to find the area of the intersection. When you reflect it, it makes a quadrilateral. </p><p>[asy] pair A = (6, 5), B = (8, -3), C = (9, 1), D = (10, 5), E = (7, 1), F = (8, 7/3); draw(A--B--C--cycle^^D--E--B--cycle); dot(A^^B^^C^^D^^E^^F); label(\"$A$\",A,NW); label(\"$B$\",B,S); label(\"$C$\",C,SE); label(\"$D$\",D,NE); label(\"$E$\",E,W); label(\"$F$\", F, N);   [/asy]</p><p>Since it is reflected around $x=8$, the point $(8,-3)$ remains the same on both. The top right corners are $(6,5)$, and its reflection $(10,5)$. Now to find the 4th point, point F, we can use the equation of the line DE($\\frac{4}{3}x - \\frac{25}{3}$, and substitute $x=8$, to get $\\frac{7}{3}$. Now we can use the theorem: $\\frac{1}{2}(((6*-3)+(10*5)+(8*5)+(\\frac{7}{3}*8))-((8*5)+(6*5)+(10*\\frac{7}{3}) + (8* -3))) = \\boxed{\\textbf{(E) }\\frac{32}{3}}$</p><p>~idk12345678</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2013 AMC 10A - algebra problem involving systems of equations with multiple variables and algebraic manipulation. Students need to understand algebra concepts deeply, work with systems_of_equations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of systems_of_equations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply systems_of_equations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_17",
+      "question": "<p>Daphne is visited periodically by her three best friends: Alice, Beatrix, and Claire. Alice visits every third day, Beatrix visits every fourth day, and Claire visits every fifth day. All three friends visited Daphne yesterday. How many days of the next $365$-day period will exactly two friends visit her?</p>",
+      "solutions": [
+        "<p>The $365$-day time period can be split up into $6$, $60$-day time periods, because after $60$ days, all three of them visit again (Least common multiple of $3$, $4$, and $5$).You can find how many times each pair of visitors can meet by finding the LCM of their visiting days and dividing that number by 60.Remember to subtract $1$, because you do not wish to count the $60$th day, when all three visit.</p><p>A and B visit $\\frac{60}{3 \\cdot 4}-1 = 4$ times.</p><p>A and C visit $\\frac{60}{3 \\cdot 5}-1 = 3$ times.</p><p>B and C visit $\\frac{60}{4 \\cdot 5}-1 = 2$ times.</p><p><br/>This is a total of $9$ visits per $60$ day period.Therefore, the total number of $2$-person visits is $9 \\cdot 6 = \\boxed{\\textbf{(B) }54}$.</p><ul><li>Note: We do not have to worry about the numbers over 360: ($361,362,363,364,365$) having 2 factors. This is because we can rewrite</li></ul><p>$(361,362,363,364,365) \\Rightarrow (361,362, 3\\cdot 121, 4 \\cdot 91, 5 \\cdot 73)$. We note that $121$ is not further divisible by 4 or 5, $91$ is not further divisible by 3 or 5, 73 is not further divisible by 3 or 4. Therefore, none of the numbers from $361-365$ have 2 factors of $3,4,$ or $5$, so we can conclude that the answer is indeed $\\boxed{54}$</p>",
+        "<p>From the information above, we get that$A=3x$$B=4x$$C=5x$</p><p>Now, we want the days in which exactly two of these people meet up</p><p>The three pairs are $(A,B)$, $(B,C)$, $(A,C)$.</p><p>Notice that we are trying to find the LCM of each pair.</p><p>Hence, $LCM(A,B)=12x$, $LCM(B,C)=20x$, $LCM(A,C)=15x$</p><p>Notice that we want to eliminate when all these friends meet up. By doing this, we will find the LCM of the three letters.</p><p>Hence, $LCM(A,B,C)=60x$</p><p>Now, we add all of the days up(including overcount).</p><p>We get $30+18+24=72$.Now, because $60(6)=360$, we have to subtract $6$ days from every pair.Hence, our answer is $72-18=\\boxed{54}\\implies\\boxed{B}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2013 AMC 10A - geometry problem involving complex area calculations and geometric analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_18",
+      "question": "<p>Let points $A = (0, 0)$, $B = (1, 2)$, $C=(3, 3)$, and $D = (4, 0)$. Quadrilateral $ABCD$ is cut into equal area pieces by a line passing through $A$. This line intersects $\\overline{CD}$ at point $\\left(\\frac{p}{q}, \\frac{r}{s}\\right)$, where these fractions are in lowest terms. What is $p+q+r+s$?</p>",
+      "solutions": [
+        "<p>First, we shall find the area of quadrilateral $ABCD$. This can be done in any of three ways:</p><p><a href=\"/wiki/index.php/Pick%27s_Theorem\" title=\"Pick's Theorem\">Pick's Theorem</a>: $[ABCD] = I + \\dfrac{B}{2} - 1 = 5 + \\dfrac{7}{2} - 1 = \\dfrac{15}{2}.$</p><p>Splitting: Drop perpendiculars from $B$ and $C$ to the x-axis to divide the quadrilateral into triangles and trapezoids, and so the area is $1 + 5 + \\dfrac{3}{2} = \\dfrac{15}{2}.$</p><p><a href=\"/wiki/index.php/Shoelace_Theorem\" title=\"Shoelace Theorem\">Shoelace Theorem</a>: The area is half of $|1 \\cdot 3 - 2 \\cdot 3 - 3 \\cdot 4| = 15$, or $\\dfrac{15}{2}$.</p><p>$[ABCD] = \\frac{15}{2}$. Therefore, each equal piece that the line separates $ABCD$ into must have an area of $\\frac{15}{4}$.</p><p>Call the point where the line through $A$ intersects $\\overline{CD}$ $E$. We know that $[ADE] = \\frac{15}{4} = \\frac{bh}{2}$. Furthermore, we know that $b = 4$, as $AD = 4$. Thus, solving for $h$, we find that $2h = \\frac{15}{4}$, so $h = \\frac{15}{8}$. This gives that the y coordinate of E is $\\frac{15}{8}$. </p><p>Line CD can be expressed as $y = -3x+12$, so the $x$ coordinate of E satisfies $\\frac{15}{8} = -3x + 12$. Solving for $x$, we find that $x = \\frac{27}{8}$.</p><p>From this, we know that $E = \\left(\\frac{27}{8}, \\frac{15}{8}\\right)$. $27 + 15 + 8 + 8 = \\boxed{\\textbf{(B) }58}$</p>",
+        "<p>Let the point where the altitude from $E$ to $\\overline{AD}$ be labeled $F$.Following the steps above, you can find that the height of $\\triangle ADE$ is $\\frac{15}{8}$, and from there split the base into two parts, $x$, and $4-x$, such that $x$ is the segment from the origin to the point $F$, and $4-x$ is the segment from point $F$ to point $D$. Then, by the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, $x=\\frac{27}{8}$, and the answer is $\\boxed{\\textbf{(B) }58}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2013 AMC 10A - logic problem involving logical reasoning and truth value analysis. Students need to understand logic concepts deeply, work with deductive_reasoning principles systematically, and apply mathematical reasoning to solve this problem. This tests logic problem-solving skills, understanding of deductive_reasoning, and mathematical thinking abilities. Students must demonstrate proficiency in logic techniques and be able to apply deductive_reasoning concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_19",
+      "question": "<p>In base $10$, the number $2013$ ends in the digit $3$. In base $9$, on the other hand, the same number is written as $(2676)_{9}$ and ends in the digit $6$. For how many positive integers $b$ does the base-$b$-representation of $2013$ end in the digit $3$?</p>",
+      "solutions": [
+        "<p>We want the integers $b$ such that $2013\\equiv 3\\pmod{b} \\Rightarrow b$ is a factor of $2010$. Since $2010=2 \\cdot 3 \\cdot 5 \\cdot 67$, it has $(1+1)(1+1)(1+1)(1+1)=16$ factors. Since $b$ cannot equal $1, 2,$ or $3$, as these cannot have the digit $3$ in their base representations, our answer is $16-3=\\boxed{\\textbf{(C) }13}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2013 AMC 10A - number_theory problem involving least common multiple and advanced number theory. Students need to understand number_theory concepts deeply, work with lcm principles systematically, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills, understanding of lcm, and mathematical thinking abilities. Students must demonstrate proficiency in number_theory techniques and be able to apply lcm concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_20",
+      "question": "<p>A unit square is rotated $45^\\circ$ about its center. What is the area of the region swept out by the interior of the square? </p>",
+      "solutions": [
+        "<p>First, we need to see what this looks like. Below is a diagram.</p><p>[asy] size(200); defaultpen(linewidth(0.8)); path square=shift((-.5,-.5))*unitsquare,square2=rotate(45)*square; fill(square^^square2,grey); for(int i=0;i<=3;i=i+1) { path arcrot=arc(origin,sqrt(2)/2,45+90*i,90*(i+1)); draw(arcrot); fill(arcrot--(0,0)--cycle,grey); draw(arc(origin,sqrt(2)/2+1/8,50+90*i,90*(i+1)-10),EndArrow); } draw(square^^square2);[/asy]</p><p>For this square with side length 1, the distance from center to vertex is $r = \\frac{\\sqrt{2}}{2}$, hence the area is composed of a semicircle of radius $r$, plus $4$ times a parallelogram (or a kite with diagonals of $(\\sqrt{2}-1)$ and $r \\text{ or} \\frac{\\sqrt{2}}{2}$) with height $\\frac{1}{2}$ and base $\\frac{\\sqrt{2}}{2(1+\\sqrt{2})}$. That is to say, the total area is $\\frac{1}{2} \\pi \\left(\\frac{\\sqrt{2}}{2}\\right)^2 + 4 \\frac{\\sqrt{2}}{4(1+\\sqrt{2})} = \\boxed{\\textbf{(C) } 2 - \\sqrt{2} + \\frac{\\pi}{4}}$.</p><p>[asy] size(150);defaultpen(linewidth(0.8)); path square=shift((-.5,-.5))*unitsquare,square2=rotate(45)*square;//fill(square^^square2,grey); for(int i=0;i<=3;i=i+1){path arcrot=arc(origin,sqrt(2)/2,45+90*i,90*(i+1));draw(arcrot); fill(arcrot--(0,0)--cycle,grey);} //draw(arc(origin,sqrt(2)/2+1/8,50+90*i,90*(i+1)-10),EndArrow);} draw(square^^square2); //draw((-.5,.5)--(.5,-.5)^^(0,sqrt(.5))--(0,-sqrt(.5)),dotted);draw((.5,.5)--(-.5,-.5),dotted); [/asy](To turn each dart-shaped piece into a parallelogram, cut along the dashed line and flip over one half.)[asy] size(150,Aspect);real r=sqrt(2);real b=2-2/r; draw((0,0)--(-1,1)--(b-1,1)--(0,r)--cycle);draw((0,1)--(b-1,1)--(b/2-1,1-b/2));draw((0,0)--(b-1,1),dashed); fill((2,0)--(b+1,1)--(b+2,0)--cycle,lightgray);draw((.5,.5)--(1,.5),EndArrow); draw((2,0)--(1,1)--(b+1,1)--(b+2,0)--(2,0)^^(b+1,1)--(b/2+1,1-b/2)^^(2,0)--(2+b/2,b/2)); draw((2,0)--(b+1,1),dashed); [/asy]Alternatively, you can move the dart-shaped piece to the other side and make a kite.[asy] size(75,Aspect);real r=sqrt(2);real b=2-2/r; draw((r-1,1)--(b-1,1)); draw((0,0)--(b-1,1)--(0,r)--(r-1,1)--cycle); draw((0,r)--(0,0),dashed); [/asy]</p>",
+        "<p>[asy] size(200); defaultpen(linewidth(0.8)); path square=shift((-.5,-.5))*unitsquare,square2=rotate(45)*square; for(int i=0;i<=6;i=i+1) { path arcrot=arc(origin,sqrt(2)/2,45+270*i,270*(i+1)); draw(arcrot); } draw(square^^square2);[/asy]</p><p><a class=\"image\" href=\"/wiki/index.php/File:AMC_10A_2013_20.jpg\">AMC 10A 2013 20.jpg</a></p><p>Let $O$ be the center of the square and $C$ be the intersection of $OB$ and $AD$. The desired area consists of the unit square, plus $4$ regions congruent to the region bounded by arc $AB$, $\\overline{AC}$, and $\\overline{BC}$, plus $4$ triangular regions congruent to right triangle $BCD$. The area of the region bounded by arc $AB$, $\\overline{AC}$, and $\\overline{BC}$ is $\\frac{\\text{Area of Circle}-\\text{Area of Square}}{8}$. Since the circle has radius $\\dfrac{1}{\\sqrt {2}}$, the area of the region is $\\dfrac{\\dfrac{\\pi}{2}-1}{8}$, so 4 times the area of that region is $\\dfrac{\\pi}{4}-\\dfrac{1}{2}$. Now we find the area of $\\triangle BCD$. $BC=BO-OC=\\dfrac{\\sqrt {2}}{2}-\\dfrac{1}{2}$. Since $\\triangle BCD$ is a $45-45-90$ right triangle, the area of $\\triangle BCD$ is $\\dfrac{BC^2}{2}=\\dfrac {\\left (\\dfrac {\\sqrt {2}}{2}-\\dfrac{1}{2} \\right)^2}{2}$, so $4$ times the area of $\\triangle BCD$ is $\\dfrac{3}{2}-\\sqrt {2}$. Finally, the area of the whole region is $1+ \\left(\\dfrac {3}{2}-\\sqrt {2} \\right) + \\left(\\dfrac{\\pi}{4}-\\dfrac{1}{2} \\right)=\\dfrac{\\pi}{4}+2-\\sqrt {2}$, which we can rewrite as $\\boxed{\\textbf{(C) }    2 - \\sqrt{2} + \\frac{\\pi}{4}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2013 AMC 10A - algebra problem involving fraction operations and proportional relationships. Students need to understand algebra concepts deeply, work with fractions principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of fractions, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply fractions concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_21",
+      "question": "<p>A group of $12$ pirates agree to divide a treasure chest of gold coins among themselves as follows. The $k^{\\text{th}}$ pirate to take a share takes $\\frac{k}{12}$ of the coins that remain in the chest. The number of coins initially in the chest is the smallest number for which this arrangement will allow each pirate to receive a positive whole number of coins. How many coins does the $12^{\\text{th}}$ pirate receive?</p>",
+      "solutions": [
+        "<p>Let $x$ be the number of coins. After the $k^{\\text{th}}$ pirate takes his share, $\\frac{12-k}{12}$ of the original amount is left. Thus, we know that</p><p>$x \\cdot \\frac{11}{12} \\cdot \\frac{10}{12} \\cdot \\frac{9}{12} \\cdot \\frac{8}{12} \\cdot \\frac{7}{12} \\cdot \\frac{6}{12} \\cdot \\frac{5}{12} \\cdot \\frac{4}{12} \\cdot \\frac{3}{12} \\cdot \\frac{2}{12} \\cdot \\frac{1}{12}$ must be an integer. Simplifying, we get</p><p><br/>$x \\cdot \\frac{11}{12} \\cdot \\frac{5}{6} \\cdot \\frac{1}{2}  \\cdot \\frac{7}{12} \\cdot \\frac{1}{2} \\cdot \\frac{5}{12} \\cdot \\frac{1}{3} \\cdot \\frac{1}{4} \\cdot \\frac{1}{6} \\cdot \\frac{1}{12}$. Now, the minimal $x$ is the denominator of this fraction multiplied out, obviously. We mentioned before that this product must be an integer. Specifically, it is an integer and it is the amount that the $12^{\\text{th}}$ pirate receives, as he receives $\\frac{12}{12} = 1 =$ all of what is remaining. </p><p>Thus, we know the denominator is canceled out, so the number of gold coins received is going to be the product of the numerators, $11 \\cdot 5 \\cdot 7 \\cdot 5 = \\boxed{\\textbf{(D) }1925}$.</p>",
+        "<p>Solution $1$ mentioned the expression $x \\cdot \\frac{11}{12} \\cdot \\frac{10}{12} \\cdot ... \\cdot \\frac{1}{12}$. Note that this is equivalent to $\\frac{x \\cdot 11!}{12^{11}}$. </p><p><br/>We can compute the amount of factors of $2$, $3$, $5$, etc. but this is not necessary. To minimize this expression, we must take out factors of $2$ and $3$, since $12^{11}=2^{22} \\cdot 3^{11}$. $11!$ has neither $22$ factors of $2$, nor $11$ factors of $3$. This means that if $11!$ contains $a$ factors of $2$, then $x$ will contain $22-a$ factors of $2$. This also holds for factors of $3$.</p><p><br/>Thus, once simplified, the expression will have no factors of $2$. It will also have no factors of $3$.</p><p><br/>Looking at the answer choices, there is only one answer which is not even, which is $\\boxed{\\textbf{(D) }1925}$.</p>",
+        "<p>We know that the 11th pirate takes $\\frac{11}{12}$ of what is left from the 10th pirate, so we have the 12th pirate taking \\[\\frac{12}{12}\\cdot(1-\\frac{11}{12})=1\\cdot\\frac{1}{12}\\] of what is left from the 10th pirate. Similarly, since the 10th pirate takes $\\frac{10}{12}$ of what is left from the 9th pirate, we have the 11th pirate taking \\[\\frac{11}{12}\\cdot(1-\\frac{10}{12})=\\frac{11}{12}\\cdot\\frac{2}{12}\\] of what is left from the 9th pirate. Thus, the 12th pirate takes \\[1\\cdot\\frac{1}{12}\\cdot\\frac{2}{12}\\] of what is left from the 9th pirate. Repeating the method, we can find that the 12th pirate takes \\[1\\cdot\\frac{1}{12}\\cdot\\frac{2}{12}\\cdot\\frac{3}{12}\\cdot...\\cdot\\frac{10}{12}\\cdot\\frac{11}{12}\\] of what is left from the 1st pirate, or \\[1\\cdot\\frac{1}{12}\\cdot\\frac{2}{12}\\cdot\\frac{3}{12}\\cdot...\\cdot\\frac{10}{12}\\cdot\\frac{11}{12}\\cdot\\frac{12}{12}\\] of the total amount of coins. </p><p>Now canceling out the denominator with the numerator as possible, we are left with $\\frac{1\\cdot5\\cdot7\\cdot5\\cdot11}{...}=\\frac{1925}{...}$ with some factors of 12 in the denominator. For this fraction to be an integer, the smallest possible number of coins is the same as the denominator, so the numerator is the number of coins taken by the 12th pirate, or $1925 \\,\\boxed{\\mathrm{\\textbf{(D)}}}$</p><p>~ Nafer</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2013 AMC 10A - probability problem involving independent probability events and compound probability calculations. Students need to understand probability concepts deeply, work with independent_events principles systematically, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills, understanding of independent_events, and mathematical thinking abilities. Students must demonstrate proficiency in probability techniques and be able to apply independent_events concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_22",
+      "question": "<p>Six spheres of radius $1$ are positioned so that their centers are at the vertices of a regular hexagon of side length $2$. The six spheres are internally tangent to a larger sphere whose center is the center of the hexagon. An eighth sphere is externally tangent to the six smaller spheres and internally tangent to the larger sphere. What is the radius of this eighth sphere?</p>",
+      "solutions": [
+        "<p>Set up an isosceles triangle between the center of the $8$th sphere and two opposite ends of the hexagon. Then set up another triangle between the point of tangency of the $7$th and $8$th spheres, and the points of tangency between the $7$th sphere and $2$ of the original spheres on opposite sides of the hexagon. Express each side length of the triangles in terms of $r$ (the radius of sphere $8$) and $h$ (the height of the first triangle). You can then use Pythagorean Theorem to set up two equations for the two triangles, and find the values of $h$ and $r$.</p><p>$(1+r)^2=2^2+h^2$</p><p>$(3\\sqrt{2})^2=3^2+(h+r)^2$</p><p>$r = \\boxed{\\textbf{(B) }\\frac{3}{2}}$</p>",
+        "<p>We have a regular hexagon with side length $2$ and six spheres on each vertex with radius $1$ that are internally tangent, therefore, drawing radii to the tangent points would create this regular hexagon.</p><p>Imagine a 2D overhead view. There is a larger sphere which the $6$ spheres are internally tangent to, with the center in the center of the hexagon. To find the radius of the larger sphere we must first, either by prior knowledge or by deducing from the angle sum that the hexagon can be split into $6$ equilateral triangles from its vertices, that the radius is two more than the small radius, or $3$. </p><p><br/>[asy] draw(circle((0.5,0.866025404),0.5)); draw(circle((-0.5,0.866025404),0.5)); draw(circle((1,0),0.5)); draw(circle((-1,0),0.5)); draw(circle((0.5,-0.866025404),0.5)); draw(circle((-0.5,-0.866025404),0.5)); draw(circle((0,0),1.5));  draw((-0.5,0.866025404)--(0.5,0.866025404)); draw((-1,0)--(1,0)); draw((-0.5,-0.866025404)--(0.5,-0.866025404));  draw((-1,0)--(-0.5,0.866025404)); draw((-0.5,-0.866025404)--(0.5,0.866025404)); draw((0.5,-0.866025404)--(1,0));  draw((0.5,0.866025404)--(1,0)); draw((-0.5,0.866025404)--(0.5,-0.866025404)); draw((-1,0)--(-0.5,-0.866025404)); [/asy]</p><p>diagram made by erics118</p><p><br/>Now imagine the figure in $3$ dimensions. The 8th sphere must be sitting atop of the $6$ spheres, which is the only possibility for it to be tangent to all the $6$ small spheres externally and the larger sphere internally. The ring of $6$ small spheres is symmetrical and the 8th sphere will be resting atop it with its center aligned with the diameter of the large sphere.</p><p>We can now create a right triangle with the legs being the line from a vertex of the hexagon to the center of the hexagon and the line from the center of the 7th sphere to the center of the 8th sphere. Let the radius of our 8th sphere be $r$. As previously mentioned, the distance from the center of the hexagon to one of its vertices is $2$. The distance between the centers will be $3-r$. The hypotenuse will be $r+1$. </p><p>We now have a right triangle. Applying the Pythagorean Theorem, $2^2+(3-r)^2=(1+r)^2$. Expanding and solving for $r$, we find $r=\\frac{12}{8}=\\boxed{\\textbf{(B)}\\frac{3}{2}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2013 AMC 10A - probability problem involving conditional probability and advanced probability reasoning. Students need to understand probability concepts deeply, work with conditional_probability principles systematically, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills, understanding of conditional_probability, and mathematical thinking abilities. Students must demonstrate proficiency in probability techniques and be able to apply conditional_probability concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_23",
+      "question": "<p>In $\\triangle ABC$, $AB = 86$, and $AC=97$. A circle with center $A$ and radius $AB$ intersects $\\overline{BC}$ at points $B$ and $X$. Moreover $\\overline{BX}$ and $\\overline{CX}$ have integer lengths. What is $BC$?</p>",
+      "solutions": [
+        "<p>Let $BX = q$, $CX = p$, and $AC$ meets the circle at $Y$ and $Z$, with $Y$ on $AC$. Then $AZ = AY = 86$. Using the Power of a Point (Secant-Secant Power Theorem), we get that $p(p+q) = 11(183) = 11 * 3 * 61$. We know that $p+q>p$, so $p$ is either $3$, $11$, or $33$. We also know that $p>11$ by the triangle inequality on $\\triangle ACX$. Thus, $p$ is $33$ so we get that $BC = p+q = \\boxed{\\textbf{(D) }61}$.</p>",
+        "<p>Let $CX=x, BX=y$. Let the circle intersect $AC$ at $D$ and the diameter including $AD$ intersect the circle again at $E$.Use power of a point on point C to the circle centered at A.</p><p>So $CX \\cdot CB=CD \\cdot CE \\Rightarrow x(x+y)=(97-86)(97+86) \\Rightarrow x(x+y)=3*11*61$.</p><p>Obviously $x+y>x$ so we have three solution pairs for $(x,x+y)=(1,2013),(3,671),(11,183),(33,61)$.By the Triangle Inequality, only$x+y=61$ yields a possible length of $BX+CX=BC$.</p><p>Therefore, the answer is $\\boxed{\\textbf{(D) }61}$.</p>",
+        "<p>[asy] unitsize(2); import olympiad; import graph;  pair A,B,C,D,E; A = (0,0); B = (70,51); C = (97,0); D = (82,29); E = (76,40);  draw(Circle((0,0),86.609)); draw(A--B--C--A); draw(A--B--E--A); draw(A--D); dot(A); dot(B,blue); dot(C); dot(D,blue); dot(E); label(\"A\",A,S); label(\"B\",B,NE); label(\"C\",C,S); label(\"D\",D,NE); label(\"E\",E,NE); label(\"86\",(A+B)/2,NW); label(\"86\",(A+D)/2,SE); label(\"97\",(A+C)/2,S); label(\"h\",(A+E)/2,N); label(\"k\",(E+D)/2,NE); label(\"k\",(B+E)/2,NE); label(\"m\",(C+D)/2,NE);   fill(anglemark(A,E,D,100),black); label(\"$90^\\circ$\",anglemark(A,E,D),3*S); [/asy]</p><p>We first draw the height of isosceles triangle $ABD$ and get two equations by the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>.First, $h^2 + k^2 = 86^2$. Second, $h^2 + (k + m)^2 = 97^2$.Subtracting these two equations, we get $2km + m^2 = 97^2 - 86^2 = (97 - 86)(97 + 86) = 2013$.We then add $k^2$ to both sides to get $k^2 + 2km + m^2 = 2013 + k^2$.We then complete the square to get $(k + m)^2 = 2013 + k^2$. Because $k$ and $m$ are both integers, we get that $2013 + k^2$ is a square number. Simple guess and check reveals that $k = 14$.Because $k$ equals $14$, therefore $m = 33$. We want $\\overline{BC} = 2k + m$, so we get that $\\overline{BC} = \\boxed{(D)~61}$.</p><p>$\\phantom{solution and diagram by bobjoe123}$</p>",
+        "<p>Let $E$ be the foot of the altitude from $A$ to $BX.$ Since $\\triangle ABX$ is isosceles $AX=AB=86,EB=EX,$ and the answer is $EC+EB=EC+EX.$ $(EC+EX)(EC-EX)=EC^2-EX^2=(97^2-AE^2)-(86^2-AE^2)=97^2-86^2=2013$ by the Pythagorean Theorem. Only $EC+EX=\\boxed{(D)~61}$ is a factor of $2013$ such that $97>EC+EX>EC-EX=\\frac{2013}{EC+EX}.$</p><p>~dolphin7</p>",
+        "<p>We can apply Stewarts to $\\triangle{ABC}$ with cevian $AX.$ If we let $BX = b$ and $CX = c,$ We can write the equation,\\[bc(b+c) + 86^2(b+c) = 97^2(b) + 86^2(c).\\]Now we do a clever set of changes to factor,\\[bc(b+c) = 97^2(b) + 86^2(c) - 86^2(b+c) = 97^2(b)+86^2(c-(b+c)).\\]\\[bc(b+c)=97^2(b)+86^2(-b) = b(97^2-86^2).\\]\\[c(b+c) = 97^2 - 86^2 = 11\\cdot 183 = 3 \\cdot 11 \\cdot 61.\\]Now we can just use the factors of $3 \\cdot 11 \\cdot 61$ to find what $c$ is and an allowed value of $b+c.$ Using triangle inequality we have \\[11 < BC = b+c < 183.\\] Therefore applying these restrictions the only value of $b+c$ that works is $\\boxed{61}$ with corresponding values of $c=33$ and $b = 28.$</p><p>~<a href=\"/wiki/index.php/User:Mathkiddus\" title=\"User:Mathkiddus\">mathkiddus</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2013 AMC 10A - geometry problem involving distance calculations and coordinate geometry applications. Students need to understand geometry concepts deeply, work with distance principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of distance, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply distance concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_24",
+      "question": "<p>Central High School is competing against Northern High School in a backgammon match. Each school has three players, and the contest rules require that each player play two games against each of the other school's players. The match takes place in six rounds, with three games played simultaneously in each round. In how many different ways can the match be scheduled?</p>",
+      "solutions": [
+        "<p>Let us label the players of the first team $A$, $B$, and $C$, and those of the second team, $X$, $Y$, and $Z$. </p><p>$\\textbf{1}$. One way of scheduling all six distinct rounds could be:</p><p>Round 1: $AX$ $BY$ $CZ$</p><p>Round 2: $AX$ $BZ$ $CY$</p><p>Round 3: $AY$ $BX$ $CZ$</p><p>Round 4: $AY$ $BZ$ $CX$</p><p>Round 5: $AZ$ $BX$ $CY$</p><p>Round 6: $AZ$ $BY$ $CX$</p><p><br/>The above mentioned schedule ensures that each player of one team plays twice with each player from another team. Now you can generate a completely new schedule by permutating those $6$ rounds and that can be done in $6!=720$ ways.</p><p>$\\textbf{2}$. One can also make the schedule in such a way that two rounds are repeated. </p><p>(a)</p><p>Round 1: $AX$ $BZ$ $CY$</p><p>Round 2: $AX$ $BZ$ $CY$</p><p>Round 3: $AY$ $BX$ $CZ$</p><p>Round 4: $AY$ $BX$ $CZ$</p><p>Round 5: $AZ$ $BY$ $CX$</p><p>Round 6: $AZ$ $BY$ $CX$</p><p>(b)</p><p>Round 1: $AX$ $BY$ $CZ$</p><p>Round 2: $AX$ $BY$ $CZ$</p><p>Round 3: $AY$ $BZ$ $CX$</p><p>Round 4: $AY$ $BZ$ $CX$</p><p>Round 5: $AZ$ $BX$ $CY$</p><p>Round 6: $AZ$ $BX$ $CY$</p><p>As mentioned earlier any permutation of (a) and (b) will also give us a new schedule. For both (a) and (b) the number of permutations are$\\frac{6!}{2!2!2!}$ = $90$</p><p><br/>So the total number of schedules is $720+90+90$ =$\\boxed{\\textbf{(E)} 900}$.</p>",
+        "<p>Label the players of the first team $A$, $B$, and $C$, and those of the second team, $X$, $Y$, and $Z$. We can start by assigning an opponent to person $A$ for all $6$ games. Since $A$ has to play each of $X$, $Y$, and $Z$ twice, there are $\\frac{6!}{2!2!2!} = 90$ ways to do this. We can assume that the opponents for $A$ in the $6$ rounds are $X$, $X$, $Y$, $Y$, $Z$, $Z$ and multiply by $90$ afterwards.</p><p><br/>Notice that for every valid assignment of the opponents of $A$ and $B$, there is only $1$ valid assignment of opponents for $C$. More specifically, the opponents for $C$ are the leftover opponents after the opponents for $A$ and $B$ are chosen in each round. Therefore, all we have to do is assign the opponents for $B$. This is the same as finding the number of permutations of $X$, $Y$, and $Z$ that do not have a $X$ in the first two spots, an $Y$ in the next two spots, and a $Z$ in the final two spots.</p><p><br/></p><p>We can use casework to find this by using the fact that after we put down the $X$'s and $Y$'s first there is $1$ way to put down the $Z$'s (the two remaining spots).</p><p>If $X$'s are put in the middle $2$ spots, then there is $1$ way to assign spots to $Y$, namely the last $2$ spots. (If one of the last two spots are left empty, there will have to be a $Z$ there, which which not valid).</p><p>If $X$'s are put in the last $2$ spots, then there is $1$ way to assign spots to $Y$.</p><p>Finally, if one $X$ was put in on of the middle two spots and one $X$ was put in one of the last two spots, there are $2\\cdot2$ ways to assign spots to $X$ and $2\\cdot1$ ways to assign spots to $Y$ (one of the first two spots and the remaining spot in the last $2$).</p><p>There are $1+1+2\\cdot2\\cdot2\\cdot1 = 10$ ways to assign opponents to $B$ and $90\\cdot10 = 900$ ways to order the games. $\\boxed{\\textbf{(E)} 900}$</p>",
+        "<p>We only need to worry about what the other member of the pair would be for our own competitors. If our competitors are $A,B,C$ and the others are $1,2,3$, then we only need to arrange the numbers $1,1,2,2,3,3$ such that we don't have the same number in the same spots. For our first row of numbers, or our first player, they can be arranged in any of \\[\\frac{6!}{2!2!2!}\\] ways as nothing has happened yet. This contributes $90$ to our final product. Once we determine our second row, or player, the third will immediately follow thus we only need to figure out the second one. WLOG, our first arrangement was $112233$. For our $1$'s, we can put them anywhere that is not in our first $2$ spots. If we put both of them in the same \"region\", like the $2$'s or the $3$'s, then it will give a different case than if they were in different regions. </p><p>Case 1\u00a0: They are in the same region</p><p>There are $2$ ways that the $1$'s can be in the same region. If, let's say its in the $2$'s region, we try placing the $2's$, we can only place them in the $3$ region in order to fit the $3$'s. Therefore, this entire case produces $2$ arrangements. \\\\</p><p>Case 2: They are in a different region </p><p>There are $4$ ways that the $1$'s can be in different regions. For the $2$'s and $3$'s, they will have to go in each other's region with $1$ and the other can be arranged in $2$ ways in the $1$ region giving a total of $8$ for this case.\\\\</p><p>Finally, $90(2+8) = 900$</p><p>~Vedoral</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2013 AMC 10A - geometry problem involving complex area calculations and geometric analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10a_25",
+      "question": "<p>All $20$ diagonals are drawn in a regular octagon. At how many distinct points in the interiorof the octagon (not on the boundary) do two or more diagonals intersect?</p>",
+      "solutions": [
+        "<p>If you draw a clear diagram like the one below, it is easy to see that there are $\\boxed{\\textbf{(A) }49}$ points.</p><p>[asy] size(14cm); pathpen = brown + 1.337; // Initialize octagon pair[] A; for (int i=0; i<8; ++i) { A[i] = dir(45*i); } D(CR( (0,0), 1)); // Draw diagonals // choose pen colors pen[] colors; colors[1] = orange + 1.337; colors[2] = purple; colors[3] = green; colors[4] = black; for (int d=1; d<=4; ++d) { pathpen = colors[d]; for (int j=0; j<8; ++j) { D(A[j]--A[(j+d)\u00a0% 8]); } } pathpen = blue + 2; // Draw all the intersections pointpen = red + 7; for (int x1=0; x1<8; ++x1) { for (int x2=x1+1; x2<8; ++x2) { for (int x3=x2+1; x3<8; ++x3) { for (int x4=x3+1; x4<8; ++x4) { D(IP(A[x1]--A[x2], A[x3]--A[x4])); D(IP(A[x1]--A[x3], A[x4]--A[x2])); D(IP(A[x1]--A[x4], A[x2]--A[x3])); } } } }[/asy]</p>",
+        "<p>Let the number of intersections be $x$. We know that $x\\le \\dbinom{8}{4} = 70$, as every $4$ vertices on the octagon forms a quadrilateral with intersecting diagonals which is an intersection point. However, four diagonals intersect in the center, so we need to subtract $\\dbinom{4}{2} -1 = 5$ from this count, $70-5 = 65$. Note that diagonals like $\\overline{AD}$, $\\overline{CG}$, and $\\overline{BE}$ all intersect at the same point. There are $8$ of this type with three diagonals intersecting at the same point, so we need to subtract $2$ of the $\\dbinom{3}{2}$ (one is kept as the actual intersection). In the end, we obtain $65 - 16 = \\boxed{\\textbf{(A) }49}$.</p>",
+        "<p>We know that the amount of intersection points is at most $\\dbinom{8}{4} = 70$, as in solution $2$. There's probably going to be more than $5$ intersections counted multiple times (to get $\\textbf{(B) }65$), leading us to the only reasonable answer, $\\boxed{\\textbf{(A) }49}$.-Lcz</p><p>Note: You can easily prove this by looking at the simple case of the diagonals intersecting in the middle of the octagon. $4$ major diagonals intersect here and only $1$ intersection point is counted so you can subtract $3$ from $70$. Then look to the middle area of the octagon. In this area, if we label the major diagonal as the one where there are $3$ points between the two points forming the diagonal, and the semi-minor diagonal the diagonal where there is one less point between the two diagonal forming points, there are $8$ intersection points of a major diagonal and $2$ semi-minor diagonals. This means that these eight points would be, not double-counted -which the calculation by Lcz accounts for- but triple-counted. Thus, taking away one for each of these points is more than enough to see the value of the answer has to be less than or equal to $59$. Choice A is the only answer that works.</p>",
+        "<p>Like solution one, we may draw. Except note that the octagon has eight regions, and each region has an equal number of points, so drawing only one of the eight regions and the intersection points suffices. One of the eight regions contains $8$ points (not including the octagon center). However each adjacent region share one side in common and that side contains $2$ intersection points, so in actuality there are $8 - 2 = 6$ points per region. We multiply this by $8$ to get $6\\cdot 8 = 48$ and add the one center point to get $48 + 1 = \\boxed{\\textbf{(A) }49}$.</p><p>~skyscraper</p>",
+        "<p>[asy] size(8cm); pathpen = black; // draw the circle pair[] A; for (int i=0; i<8; ++i) { A[i] = dir(45*i); } D(CR((0,0), 1)); // draw the octagon and diagonals // choose pen colors pen[] colors; colors[1] = yellow; colors[2] = purple; colors[3] = green; colors[4] = orange; for (int d=1; d<=4; ++d) { pathpen = colors[d]; for (int j=0; j<8; ++j) { D(A[j]--A[(j+d)\u00a0% 8]); } } // draw the 3 or more line intersections pointpen = red + 5; D(IP(A[0]--A[4], A[2]--A[6])); // center of the circle for (int x1=0; x1<8; ++x1) { for (int x2=0; x2<8; ++x2) { int y1 = (x1 + 4)%8; int y2 = (x2 + 3)%8; if (x1\u00a0!= x2 && y1\u00a0!= y2 && x1\u00a0!= y1 && x1\u00a0!= y2 && x2\u00a0!= y1 && x2\u00a0!= y2) D(IP(A[x1]--A[y1], A[x2]--A[y2])); } }  // draw the 2 line intersections pointpen = blue + 4; for (int x1 = 0; x1 < 8; ++x1) { int x2 = (x1 + 1)%8; D(IP(A[x1]--A[(x1+2)%8], A[x2]--A[(x2+2)%8])); D(IP(A[x1]--A[(x1+2)%8], A[x2]--A[(x2+3)%8])); D(IP(A[x1]--A[(x1+2)%8], A[x2]--A[(x2+4)%8])); D(IP(A[x1]--A[(x1+2)%8], A[x2]--A[(x2+5)%8])); D(IP(A[x1]--A[(x1+3)%8], A[x2]--A[(x2+5)%8])); } [/asy]</p><p>This problem is a counting problem of combinatoric geometry. There are 2 cases for the above diagram:</p><p>Case 1: Red Dots</p><p>The red dots are the intersection of 3 or more lines. It consists of 8 dots that make up an octagon and 1 dot in the center. Hence, there are $9$ red dots.</p><p>Case 2: Blue Dots</p><p>The blue dots are the intersection of 2 lines. Each vertex of the octagon has 2 purple lines, 2 green lines, and 1 orange line coming out of it. There are 5 dots of intersection on a purple line, 6 dots on a green line, and 5 dots on an orange line. There are $2 \\cdot 5+2 \\cdot 6+5=27$ dots that come out of 1 vertex, which includes 7 red dots already counted. So there are $27-7 = 20$ blue dots coming out of 1 vertex. There are 8 vertices, but each blue dot is the intersection of 2 lines, corresponding to $2 \\cdot 2 = 4$ vertices. So there are $\\frac{20 \\cdot 8}{4} = 40$ blue dots.</p><p>The number of intersection dots are the sum of the number of red and blue dots. Hence, the answer is $40 + 9 = \\boxed{\\textbf{(A) }49}$.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>",
+        "<p>Notice that there can be a maximum of 4 lines intersecting at any point inside the octagon. Now, let $P_2$ be the number of points where at least $2$ lines intersect, and define $P_3$ and $P_4$ similarly. By PIE, we have that the desired number of points is\\[P_2 - 2P_3 + 3P_4\\]We now separately count the $P_i's$. </p><p><br/>Case 1 (P_2):Notice that if we pick any $4$ points, there is exactly $1$ way $2$ lines can be drawn such that they intersect inside the convex hull of the $4$ points. Thus, $P_2 = {8 \\choose 4} = 70$.</p><p><br/>Case 2 (P_3):The only ways that $3$ diagonals concur is if they are all the longest (main) diagonals in the octagon, or one of them is a main diagonal and the other $2$ intersect on said diagonal. If they are all the main diagonals, there are $4$ ways. If only one of them is a main diagonal, then there are $4(2) = 8$ ways. In total, there are $8 + 4 = 12$ such points.</p><p><br/>Case 3 (P_4): The only way this can happen is if all $4$ diagonals intersect in the center (they are all main diagonals), giving $1$ way.</p><p><br/>Thus, in total we have\\[70 - 2(12) + 3 = \\boxed{\\textbf{(A)} 49}\\]such points.</p><p>~mathwiz_1207</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2013 AMC 10A - geometry problem involving area calculations and geometric relationship analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_1",
+      "question": "<p>What is $\\frac{2+4+6}{1+3+5} - \\frac{1+3+5}{2+4+6}$?</p>",
+      "solutions": [
+        "<p>This expression is equivalent to $\\frac{12}{9} - \\frac{9}{12} = \\frac{16}{12} - \\frac{9}{12} = \\boxed{\\textbf{(C) }\\frac{7}{12}}$</p><p>For the exact same problem but with answer choice D unsimplified, see <a class=\"external free\" href=\"http://artofproblemsolving.com/wiki/index.php/2011_AMC_10B_Problems/Problem_1\" rel=\"nofollow\">http://artofproblemsolving.com/wiki/index.php/2011_AMC_10B_Problems/Problem_1</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 1 from 2013 AMC 10B - algebra problem involving basic arithmetic operations and word problem solving. Students need to understand algebra concepts deeply, work with basic_operations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of basic_operations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply basic_operations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_2",
+      "question": "<p>Mr. Green measures his rectangular garden by walking two of the sides and finds that it is $15$ steps by $20$ steps. Each of Mr. Green's steps is $2$ feet long. Mr. Green expects a half a pound of potatoes per square foot from his garden. How many pounds of potatoes does Mr. Green expect from his garden?</p>",
+      "solutions": [
+        "<p>Since each step is $2$ feet, his garden is $30$ by $40$ feet. Thus, the area of $30(40) = 1200$ square feet. Since he is expecting $\\frac{1}{2}$ of a pound per square foot, the total amount of potatoes expected is $1200 \\times \\frac{1}{2} =  \\boxed{\\textbf{(A) }600}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 2 from 2013 AMC 10B - algebra problem involving percentage calculations and proportional reasoning. Students need to understand algebra concepts deeply, work with percentages principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of percentages, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply percentages concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_3",
+      "question": "<p>On a particular January day, the high temperature in Lincoln, Nebraska, was $16$ degrees higher than the low temperature, and the average of the high and low temperatures was $3$. In degrees, what was the low temperature in Lincoln that day?</p>",
+      "solutions": [
+        "<p>Let $L$ be the low temperature. The high temperature is $L+16$. The average is $\\frac{L+(L+16)}{2}=3$. Solving for $L$, we get $L=\\boxed{\\textbf{(C)} \\  -5}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 3 from 2013 AMC 10B - algebra problem involving area calculations of geometric shapes. Students need to understand algebra concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_4",
+      "question": "<p>When counting from $3$ to $201$, $53$ is the $51^{\\text{st}}$ number counted. When counting backwards from $201$ to $3$, $53$ is the $n^{\\text{th}}$ number counted. What is $n$?</p>",
+      "solutions": [
+        "<p>Note that $n$ is equal to the number of integers between $53$ and $201$, inclusive. Thus, $n=201-53+1=\\boxed{\\textbf{(D)}\\ 149}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 4 from 2013 AMC 10B - algebra problem involving basic arithmetic operations and problem translation. Students need to understand algebra concepts deeply, work with basic_operations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of basic_operations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply basic_operations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_5",
+      "question": "<p>Positive integers $a$ and $b$ are each less than $6$. What is the smallest possible value for $2 \\cdot a - a \\cdot b$?</p>",
+      "solutions": [
+        "<p>Factoring the equation gives $a(2 - b)$. From this we can see that to obtain the least possible value, $2 - b$ should be negative, and should be as small as possible. To do so, $b$ should be maximized. Because $2 - b$ is negative, we should maximize the positive value of $a$ as well. The maximum values of both $a$ and $b$ are $5$, so the answer is $5(2 - 5) = \\boxed{\\textbf{(B)}\\ -15}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 5 from 2013 AMC 10B - algebra problem involving counting principles and systematic arrangements. Students need to understand algebra concepts deeply, work with counting principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of counting, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply counting concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_6",
+      "question": "<p>The average age of $33$ fifth-graders is $11$. The average age of $55$ of their parents is $33$. What is the average age of all of these parents and fifth-graders?</p>",
+      "solutions": [
+        "<p>The sum of the ages of the fifth graders is $33 * 11$, while the sum of the ages of the parents is $55 * 33$. Therefore, the total sum of all their ages must be $2178$, and given $33 + 55 = 88$ people in total, their average age is $\\frac{2178}{88} = \\frac{99}{4} = \\boxed{\\textbf{(C)}\\ 24.75}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Problem 6 from 2013 AMC 10B - algebra problem involving basic arithmetic operations and algebraic reasoning. Students need to understand algebra concepts deeply, work with basic_operations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of basic_operations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply basic_operations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_7",
+      "question": "<p>Six points are equally spaced around a circle of radius 1. Three of these points are the vertices of a triangle that is neither equilateral nor isosceles. What is the area of this triangle?</p>",
+      "solutions": [
+        "<p>[asy] unitsize(72); draw((0,0)--(1/2,sqrt(3)/2)); draw((1/2,sqrt(3)/2)--(3/2,sqrt(3)/2)); draw((3/2,sqrt(3)/2)--(2,0)); draw((2,0)--(3/2,-sqrt(3)/2)); draw((3/2,-sqrt(3)/2)--(1/2,-sqrt(3)/2)); draw((1/2,-sqrt(3)/2)--(0,0)); draw((3/2,sqrt(3)/2)--(1/2,-sqrt(3)/2)); draw((3/2,sqrt(3)/2)--(3/2,-sqrt(3)/2)); label(\"2\",(3/2,sqrt(3)/2)--(1/2,-sqrt(3)/2),NW); label(\"$\\sqrt{3}$\",(3/2,sqrt(3)/2)--(3/2,-sqrt(3)/2),E); label(\"1\",(3/2,-sqrt(3)/2)--(1/2,-sqrt(3)/2),S); import olympiad; markscalefactor=0.01; draw(rightanglemark((3/2,sqrt(3)/2),(3/2,-sqrt(3)/2),(1/2,-sqrt(3)/2))); [/asy]</p><p>If there are no two points on the circle that are adjacent, then the triangle would be equilateral. If the three points are all adjacent, it would be isosceles. Thus, the only possibility is two adjacent points and one point two away. Because one of the sides of this triangle is the diameter, the opposite angle is a right angle. Also, because the two adjacent angles are one sixth of the circle apart, the angle opposite them is thirty degrees. This is a $30-60-90$ triangle. If the original six points are connected, a regular hexagon is created. This hexagon consists of six equilateral triangles, so the radius is equal to one of its side lengths. The radius is $1$, so the side opposite the thirty degree angle in the triangle is also $1$. From the properties of $30-60-90$ triangles, the area is $\\frac{1 \\cdot \\sqrt{3}}{2}=\\boxed{\\textbf{(B) } \\frac{\\sqrt3}{2}}$</p>",
+        "<p>As every point on the circle is evenly spaced, the length of each arc is $\\frac{\\pi}{3}$, because the circumference is $2\\pi$. Once we draw the triangle (as is explained in solution 1), we see that one angle in the triangle subtends one such arc. Thus, the measure of that angle is thirty degrees. Similarly, another angle in the triangle subtends an arc of twice the length, and thus equals 60 degrees. The last angle is equal to 90 degrees and the triangle is a $30-60-90$ triangle. We know that as the diameter, the length of the hypotenuse is 2, and thus, the other sides are 1 and $\\sqrt{3}$. We then find the area to be $\\boxed{\\textbf{(B) } \\frac{\\sqrt{3}}{2} }$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 7 from 2013 AMC 10B - geometry problem involving area calculations and geometric formulas. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_8",
+      "question": "<p>Ray's car averages $40$ miles per gallon of gasoline, and Tom's car averages $10$ miles per gallon of gasoline. Ray and Tom each drive the same number of miles. What is the cars' combined rate of miles per gallon of gasoline?<br/></p>",
+      "solutions": [
+        "<p>Let Ray and Tom drive 40 miles. Ray's car would require $\\frac{40}{40}=1$ gallon of gas and Tom's car would require $\\frac{40}{10}=4$ gallons of gas. They would have driven a total of $40+40=80$ miles, on $1+4=5$ gallons of gas, for a combined rate of $\\frac{80}{5}=$ $\\boxed{\\textbf{(B) }16}$</p>",
+        "<p>Taking the harmonic mean of the two rates, we get \\[\\left(\\frac{40^{-1} + 10^{-1}}{2}\\right)^{-1} = \\frac{2}{\\frac{1}{40}+\\frac{1}{10}} = \\frac{2}{\\frac{5}{40}} = \\frac{2}{\\frac{1}{8}} = \\boxed{\\textbf{(B) }16}.\\]</p><p>-Solution by Joeya</p>",
+        "<p>Let the number of miles that Ray and Tom each drive be denoted by $m$. Thus the number of gallons Ray's car uses can be represented by $\\frac{m}{40}$ and the number of gallons that Tom's car uses can likewise be expressed as $\\frac{m}{10}$. Thus the total amount of gallons used by both cars can be expressed as $\\frac{m}{40} + \\frac{m}{10} = \\frac{m}{8}$. The total distance that both drive is equal to $2m$ so the total miles per gallon can be expressed as $\\frac{2m}{\\frac{m}{8}} = \\boxed{\\textbf{(B) }16}$</p><p>~AnkitAMC</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Problem 8 from 2013 AMC 10B - number_theory problem involving divisibility rules and number properties. Students need to understand number_theory concepts deeply, work with divisibility principles systematically, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills, understanding of divisibility, and mathematical thinking abilities. Students must demonstrate proficiency in number_theory techniques and be able to apply divisibility concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_9",
+      "question": "<p>Three positive integers are each greater than $1$, have a product of $27000$, and are pairwise relatively prime. What is their sum?</p>",
+      "solutions": [
+        "<p>The prime factorization of $27000$ is $2^3*3^3*5^3$. These three factors are pairwise relatively prime, so the sum is $2^3+3^3+5^3=8+27+125=$ $\\boxed{\\textbf{(D) }160}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Problem 9 from 2013 AMC 10B - geometry problem involving triangle geometry and geometric relationships. Students need to understand geometry concepts deeply, work with triangles principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of triangles, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply triangles concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_10",
+      "question": "<p>A basketball team's players were successful on 50% of their two-point shots and 40% of their three-point shots, which resulted in 54 points. They attempted 50% more two-point shots than three-point shots. How many three-point shots did they attempt?</p>",
+      "solutions": [
+        "<p>Let $x$ be the number of two point shots attempted and $y$ the number of three point shots attempted. Because each two point shot is worth two points and the team made 50% and each three point shot is worth 3 points and the team made 40%, $0.5(2x)+0.4(3y)=54$ or $x+1.2y=54$. Because the team attempted 50% more two point shots then threes, $x=1.5y$. Substituting $1.5y$ for $x$ in the first equation gives $1.5y+1.2y=54$, which equals $2.7y=54$ so $y=$ $\\boxed{\\textbf{(C) }20}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Problem 10 from 2013 AMC 10B - algebra problem involving rate relationships and speed calculations. Students need to understand algebra concepts deeply, work with rates principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of rates, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply rates concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_11",
+      "question": "<p>Real numbers $x$ and $y$ satisfy the equation $x^2+y^2=10x-6y-34$. What is $x+y$?</p>",
+      "solutions": [
+        "<p>If we move every term dependent on $x$ or $y$ to the LHS, we get $x^2 - 10x + y^2 + 6y = -34$. Adding $34$ to both sides, we have $x^2 - 10x + y^2 + 6y + 34 = 0$. We can split the $34$ into $25$ and $9$ to get $(x - 5)^2 + (y + 3)^2 = 0$. Notice this is a circle with radius $0$, which only contains one point. So, the only point is $(5, -3)$, so the sum is $5 + (-3) = 2 \\implies \\boxed{\\textbf{(B)}}$. ~ asdf334</p>",
+        "<p>If we move every term including $x$ or $y$ to the LHS, we get \\[x^2 - 10x + y^2 + 6y = -34.\\] We can complete the square to find that this equation becomes \\[(x - 5)^2 + (y + 3)^2 = 0.\\] Since the square of any real number is nonnegative, we know that the sum is greater than or equal to $0$. Equality holds when the value inside the parhentheses is equal to $0$. We find that \\[(x,y) = (5,-3)\\] and the sum we are looking for is \\[5+(-3)=2 \\implies \\boxed{\\textbf{(B)}}.\\] - Honestly</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Problem 11 from 2013 AMC 10B - algebra problem involving percentage calculations and proportional reasoning. Students need to understand algebra concepts deeply, work with percentages principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of percentages, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply percentages concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_12",
+      "question": "<p>Let $S$ be the set of sides and diagonals of a regular pentagon. A pair of elements of $S$ are selected at random without replacement. What is the probability that the two chosen segments have the same length?</p>",
+      "solutions": [
+        "<p>In a regular pentagon, there are 5 sides with the same length and 5 diagonals with the same length. Picking an element at random will leave 4 elements with the same length as the element picked, with 9 total elements remaining. Therefore, the probability is $\\boxed{\\textbf{(B) }\\frac{4}{9}}$.</p><p>We can divide this problem into two cases.Case 1: Side;In this case, there is a $\\frac{5}{10}$ chance of picking a side, and a $\\frac{4}{9}$ chance of picking another side.Case 2: Diagonal;This case is similar to the first, for again, there is a $\\frac{5}{10}$ chance of picking a diagonal, and a $\\frac{4}{9}$ chance of picking another diagonal.</p><p>Summing these cases up gives us a probability of $\\boxed{\\textbf{(B) }\\frac{4}{9}}$.</p><p>One way to do this is to use combinations.We know that there are $\\binom{10}{2} = 45$ ways to select two segments. The ways in which you get 2 segments of the same length are if you choose two sides, or two diagonals. Thus, there are $2 \\times \\binom{5}{2}$ = 20 ways in which you end up with two segments of the same length. $\\frac{20}{45}$ is equivalent to $\\boxed{\\textbf{(B) }\\frac{4}{9}}$.</p><p>The problem is simply asking how many ways are there to choose two sides or two diagonals. Hence, the probability is \\[\\dfrac{\\binom{5}{2} + \\binom{5}{2}}{\\binom{10}{2}} = \\dfrac{10+10}{45} = \\dfrac{20}{45}=\\boxed{\\textbf{(B) }\\dfrac49}\\].</p><p>~MrThinker</p>",
+        "<p>In a regular pentagon, there are 5 sides with the same length and 5 diagonals with the same length. Picking an element at random will leave 4 elements with the same length as the element picked, with 9 total elements remaining. Therefore, the probability is $\\boxed{\\textbf{(B) }\\frac{4}{9}}$.</p>",
+        "<p>We can divide this problem into two cases.Case 1: Side;In this case, there is a $\\frac{5}{10}$ chance of picking a side, and a $\\frac{4}{9}$ chance of picking another side.Case 2: Diagonal;This case is similar to the first, for again, there is a $\\frac{5}{10}$ chance of picking a diagonal, and a $\\frac{4}{9}$ chance of picking another diagonal.</p><p>Summing these cases up gives us a probability of $\\boxed{\\textbf{(B) }\\frac{4}{9}}$.</p>",
+        "<p>One way to do this is to use combinations.We know that there are $\\binom{10}{2} = 45$ ways to select two segments. The ways in which you get 2 segments of the same length are if you choose two sides, or two diagonals. Thus, there are $2 \\times \\binom{5}{2}$ = 20 ways in which you end up with two segments of the same length. $\\frac{20}{45}$ is equivalent to $\\boxed{\\textbf{(B) }\\frac{4}{9}}$.</p>",
+        "<p>The problem is simply asking how many ways are there to choose two sides or two diagonals. Hence, the probability is \\[\\dfrac{\\binom{5}{2} + \\binom{5}{2}}{\\binom{10}{2}} = \\dfrac{10+10}{45} = \\dfrac{20}{45}=\\boxed{\\textbf{(B) }\\dfrac49}\\].</p><p>~MrThinker</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Problem 12 from 2013 AMC 10B - algebra problem involving arithmetic sequence patterns and mathematical sequences. Students need to understand algebra concepts deeply, work with arithmetic_sequences principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of arithmetic_sequences, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply arithmetic_sequences concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_13",
+      "question": "<p>Jo and Blair take turns counting from $1$ to one more than the last number said by the other person. Jo starts by saying $``1\"$, so Blair follows by saying $``1, 2\"$. Jo then says $``1, 2, 3\"$, and so on. What is the $53^{\\text{rd}}$ number said?<br/></p>",
+      "solutions": [
+        "<p>We notice that the number of numbers said is incremented by one each time; that is, Jo says one number, then Blair says two numbers, then Jo says three numbers, etc. Thus, after nine \"turns\", $1+2+3+4+5+6+7+8+9=45$ numbers have been said. In the tenth turn, the eighth number will be the 53rd number said, because $53-45=8$. Since we are starting from 1 every turn, the 53rd number said will be $\\boxed{\\textbf{(E) }8}$.</p>",
+        "<p>Let $T(n)$ denote the $n$th triangle number. Then, observe that the $T(n)$th number said is $n$. It follows that the $55$th number is $10$ (as $55 = T(10)$). Thus, the $53$rd number is $10 - 2 = 8$, which is answer choice $\\boxed{\\textbf{(E)}}$.</p><p>~Mathavi</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 13 from 2013 AMC 10B - geometry problem involving complex area calculations and geometric analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_14",
+      "question": "<p>Define $a\\clubsuit b=a^2b-ab^2$. Which of the following describes the set of points $(x, y)$ for which $x\\clubsuit y=y\\clubsuit x$?</p>",
+      "solutions": [
+        "<p>$x\\clubsuit y = x^2y-xy^2$ and $y\\clubsuit x = y^2x-yx^2$. Therefore, we have the equation $x^2y-xy^2 = y^2x-yx^2$ Factoring out a $-1$ gives $x^2y-xy^2 = -(x^2y-xy^2)$ Factoring both sides further, $xy(x-y) = -xy(x-y)$. It follows that if $x=0$, $y=0$, or $(x-y)=0$, both sides of the equation equal 0. By this, there are 3 lines ($x=0$, $y=0$, or $x=y$) so the answer is $\\boxed{\\textbf{(E)}\\text{ three lines}}$.</p>",
+        "<p>Following from the previous solution, $x^2y-xy^2 = y^2x-yx^2$. Then, $2x^2y-2xy^2=0$. Factoring, $2xy(x-y)=0$. Now, the solutions are obviously $x=0$, $y=0$, or $x=y$, which each correspond to a line. Thus, the answer is $\\boxed{\\textbf{(E)}\\text{ three lines}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Problem 14 from 2013 AMC 10B - geometry problem involving circle geometry and circular measurements. Students need to understand geometry concepts deeply, work with circles principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of circles, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply circles concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_15",
+      "question": "<p>A wire is cut into two pieces, one of length $a$ and the other of length $b$. The piece of length $a$ is bent to form an equilateral triangle, and the piece of length $b$ is bent to form a regular hexagon. The triangle and the hexagon have equal area. What is $\\frac{a}{b}$?</p>",
+      "solutions": [
+        "<p>Using the area formulas for an equilateral triangle $\\left(\\frac{{s}^{2}\\sqrt{3}}{4}\\right)$ and regular hexagon $\\left(\\frac{3{s}^{2}\\sqrt{3}}{2}\\right)$ with side length $s$, plugging $\\frac{a}{3}$ and $\\frac{b}{6}$ into each equation, we find that $\\frac{{a}^{2}\\sqrt{3}}{36}=\\frac{{b}^{2}\\sqrt{3}}{24}$. Simplifying this, we get $\\frac{a}{b}=\\boxed{\\textbf{(B)} \\frac{\\sqrt{6}}{2}}$</p>",
+        "<p>The regular hexagon can be broken into 6 small equilateral triangles, each of which is similar to the big equilateral triangle. The big triangle's area is 6 times the area of one of the little triangles. Therefore each side of the big triangle is $\\sqrt{6}$ times the side of the small triangle. The desired ratio is $\\frac{3\\sqrt{6}}{6}=\\frac{\\sqrt{6}}{2}\\Rightarrow(B).$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Problem 15 from 2013 AMC 10B - combinatorics problem involving counting principles and combinatorial reasoning. Students need to understand combinatorics concepts deeply, work with counting principles systematically, and apply mathematical reasoning to solve this problem. This tests combinatorics problem-solving skills, understanding of counting, and mathematical thinking abilities. Students must demonstrate proficiency in combinatorics techniques and be able to apply counting concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_16",
+      "question": "<p>In triangle $ABC$, medians $AD$ and $CE$ intersect at $P$, $PE=1.5$, $PD=2$, and $DE=2.5$. What is the area of $AEDC$?</p><p>[asy] unitsize(0.2cm); pair A,B,C,D,E,P; A=(0,0); B=(80,0); C=(20,40); D=(50,20); E=(40,0); P=(33.3,13.3); draw(A--B); draw(B--C); draw(A--C); draw(C--E); draw(A--D); draw(D--E); dot(A); dot(B); dot(C); dot(D); dot(E); dot(P); label(\"A\",A,SW); label(\"B\",B,SE); label(\"C\",C,N); label(\"D\",D,NE); label(\"E\",E,SSE); label(\"P\",P,SSW); [/asy]</p>",
+      "solutions": [
+        "<p>Let us use mass points:Assign $B$ mass $1$. Thus, because $E$ is the midpoint of $AB$, $A$ also has a mass of $1$. Similarly, $C$ has a mass of $1$. $D$ and $E$ each have a mass of $2$ because they are between $B$ and $C$ and $A$ and $B$ respectively. Note that the mass of $D$ is twice the mass of $A$, so $AP$ must be twice as long as $PD$. PD has length $2$, so $AP$ has length $4$ and $AD$ has length $6$. Similarly, $CP$ is twice $PE$ and $PE=1.5$, so $CP=3$ and $CE=4.5$. Now note that triangle $PED$ is a $3-4-5$ right triangle with the right angle $DPE$. Since the diagonals of quadrilaterals $AEDC$, $AD$ and $CE$, are perpendicular, the area of $AEDC$ is $\\frac{6 \\times 4.5}{2}=\\boxed{\\textbf{(B)} 13.5}$</p>",
+        "<p>Note that triangle $DPE$ is a right triangle, and that the four angles (angles $APC, CPD, DPE,$ and $EPA$) that have point $P$ are all right angles. Using the fact that the centroid ($P$) divides each median in a $2:1$ ratio, $AP=4$ and $CP=3$. Quadrilateral $AEDC$ is now just four right triangles. The area is $\\frac{4\\cdot 1.5+4\\cdot 3+3\\cdot 2+2\\cdot 1.5}{2}=\\boxed{\\textbf{(B)} 13.5}$</p>",
+        "<p>From the solution above, we can find that the lengths of the diagonals are $6$ and $4.5$. Now, since the diagonals of AEDC are perpendicular, we use the area formula to find that the total area is $\\frac{6\\times4.5}{2} = \\frac{27}{2} = 13.5 = \\boxed{\\textbf{(B)} 13.5}$</p>",
+        "<p>From the solutions above, we know that the sides CP and AP are 3 and 4 respectively because of the properties of medians that divide cevians into 1:2 ratios. We can then proceed to use the heron's formula on the middle triangle EPD and get the area of EPD as 3/2, (its simple computation really, nothing large). Then we can find the areas of the remaining triangles based on side and ratio length of the bases.</p>",
+        "<p>We know that $[AEDC]=\\frac{3}{4}[ABC]$, and $[ABC]=3[PAC]$ using median properties. So Now we try to find $[PAC]$. Since $\\triangle PAC\\sim \\triangle PDE$, then the side lengths of $\\triangle PAC$ are twice as long as $\\triangle PDE$ since $D$ and $E$ are midpoints. Therefore, $\\frac{[PAC]}{[PDE]}=2^2=4$. It suffices to compute $[PDE]$. Notice that $(1.5, 2, 2.5)$ is a Pythagorean Triple, so $[PDE]=\\frac{1.5\\times 2}{2}=1.5$. This implies $[PAC]=1.5\\cdot 4=6$, and then $[ABC]=3\\cdot 6=18$. Finally, $[AEDC]=\\frac{3}{4}\\times 18=\\boxed{13.5}$.</p><p>~CoolJupiter</p>",
+        "<p>As from Solution 4, we find the area of $\\triangle DPE$ to be $\\frac{3}{2}$. Because $DE = \\frac{5}{2}$, the altitude perpendicular to $DE = \\frac{6}{5}$. Also, because $DE || AC$, $\\triangle ABC$ is similar to $\\triangle{DBE}$ with side length ratio $2:1$, so $AC=5$ and the altitude perpendicular to $AC = \\frac{12}{5}$. The altitude of trapezoid $ACDE$ is then $\\frac{18}{5}$ and the bases are $\\frac{5}{2}$ and $5$. So, we use the formula for the area of a trapezoid to find the area of $ACDE = \\boxed{13.5}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "Problem 16 from 2013 AMC 10B - algebra problem involving systems of equations with multiple variables and algebraic manipulation. Students need to understand algebra concepts deeply, work with systems_of_equations principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of systems_of_equations, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply systems_of_equations concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_17",
+      "question": "<p>Alex has $75$ red tokens and $75$ blue tokens. There is a booth where Alex can give two red tokens and receive in return a silver token and a blue token and another booth where Alex can give three blue tokens and receive in return a silver token and a red token. Alex continues to exchange tokens until no more exchanges are possible. How many silver tokens will Alex have at the end?</p>",
+      "solutions": [
+        "<p>If Alex goes to the red booth 3 times, then goes to the blue booth once, Alex can exchange 6 red tokens for 4 silver tokens and one red token. Similarly, if Alex goes to the blue booth 2 times, then goes to the red booth once, Alex can exchange 6 blue tokens for 3 silver tokens and one blue token. Let's call the first combination Combo 1, and the second combination Combo 2.</p><p>In other words, Alex can exchange 5 red tokens for 4 silver tokens as long as he has at least 6 red tokens, and Alex can exchange 5 blue tokens for 3 silver tokens as long as he has at least 6 blue tokens. Hence after performing 14 Combo 1's and 14 Combo 2's, we end up with 5 red, 5 blue, and 98 silver tokens.</p><p>Finally, Alex can visit the blue booth once, then do Combo 1, then visit the blue booth once more to end up with 1 red token, 2 blue tokens, and $\\boxed{\\textbf{(E)}\\ 103}$ silver tokens, at which point it is clear he cannot use the booths anymore.</p>",
+        "<p>We can approach this problem by assuming he goes to the red booth first. You start with $75 \\text{R}$ and $75 \\text{B}$ and at the end of the first booth, you will have $1 \\text{R}$ and $112 \\text{B}$ and $37 \\text{S}$. We now move to the blue booth, and working through each booth until we have none left, we will end up with:$1 \\text{R}$, $2 \\text{B}$ and $103 \\text{S}$. So, the answer is $\\boxed{\\textbf{(E)}103}$</p>",
+        "<p>Let $x$ denote the number of visits to the first booth and $y$ denote the number of visits to the second booth. Then we can describe the quantities of his red and blue coins as follows:\\[R(x,y)=-2x+y+75\\]\\[B(x,y)=x-3y+75\\]There are no legal exchanges when he has fewer than $2$ red coins and fewer than $3$ blue coins, namely when he has a red coin and $2$ blue coins. We can then create a system of equations:\\[1=-2x+y+75\\]\\[2=x-3y+75\\]Solving yields $x=59$ and $y=44$. Since he gains one silver coin per visit to each booth, he has $x+y=44+59=\\boxed{\\textbf{(E)}103}$ silver coins in total.</p>",
+        "<p>Suppose we set the values of the coins: Red = 4, Blue = 3, Silver = 5. This way, whenever an exchange is made, Alex's total value in coins does not change. His total value at the beginning (and thus also at the end) is $3\\cdot 75+4\\cdot 75=525$, so his theoretical possible total (if everything works out perfectly) is 105.</p><p>Note that the maximum possible leftover red coins is 1, and the maximum possible leftover blue coins is 2, so the maximum leftover non-silver value is 10. This perfectly gives us 103 silver coins.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 17 from 2013 AMC 10B - geometry problem involving complex area calculations and geometric analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_18",
+      "question": "<p>The number $2013$ has the property that its units digit is the sum of its other digits, that is $2+0+1=3$. How many integers less than $2013$ but greater than $1000$ have this property?</p>",
+      "solutions": [
+        "<p>We take cases on the thousands digit, which must be either $1$ or $2$:If the number is of the form $\\overline{1bcd},$ where $b, c, d$ are digits, then we must have $d = 1 + b + c.$ Since $d \\le 9,$ we must have $b + c \\le 9 - 1 = 8.$ By casework on the value of $b$, we find that there are $1 + 2 + \\dots + 9 = 45$ possible pairs $(b, c)$, and each pair uniquely determines the value of $d$, so we get $45$ numbers with the given property.</p><p>If the number is of the form $\\overline{2bcd},$ then it must be one of the numbers $2000, 2001, \\dots, 2012.$ Checking all these numbers, we find that only $2002$ has the given property.Therefore, the number of numbers with the property is $45 + 1 = \\boxed{\\textbf{(D)}46}$ .</p>",
+        "<p>This solution picks up from finding that $b + c \\le 8$ in solution 1. Instead of using casework to find all possible pairs, $(b, c)$, let's introduce a dummy variable, $z$. Let us now have that $b + c + z = 8$, where $b, c, z$ are all nonnegative. </p><p>We may now use stars and bars to distribute units between $b, c$ and $z$. Any units that $z$ is given will essentially be discarded - this is how we get the 'less than' in the 'less than or equal to $8$' relation we found earlier.</p><p>Using two dividers, we find that the number of distributions is $\\binom{10}{2},$ which is $45$. We proceed from here as above.</p>",
+        "<p>Let's start with the case that starts with $200$. We have only one number, which is $2002$. If we look at the $1900s$, we have no solutions because $1+9 = 10$, and because we can only use digits from $1$ through $9$, it is impossible. If we looks at the $1800s$, we do have one solution, which is $1809$. If we look a the $1700s$, we have $2$ solutions, namely, $1708$ and $1719$. </p><p>We can see a pattern here. The pattern is every hundred you go down, you have $1$ more solution. Therefore, we have $1+0+1+2+3+4+5+6+7+8+9$ which is = $\\boxed{\\textbf{(D)}46}$ .</p><p>~Arcticturn</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Problem 18 from 2013 AMC 10B - logic problem involving logical reasoning and truth value analysis. Students need to understand logic concepts deeply, work with deductive_reasoning principles systematically, and apply mathematical reasoning to solve this problem. This tests logic problem-solving skills, understanding of deductive_reasoning, and mathematical thinking abilities. Students must demonstrate proficiency in logic techniques and be able to apply deductive_reasoning concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_19",
+      "question": "<p>The real numbers $c,b,a$ form an arithmetic sequence with $a \\geq b \\geq c \\geq 0$. The quadratic $ax^2+bx+c$ has exactly one root. What is this root?</p>",
+      "solutions": [
+        "<p>It is given that $ax^2+bx+c=0$ has 1 real root, so the discriminant is zero, or $b^2=4ac$. </p><p>Because a, b, c are in arithmetic progression, $b-a=c-b$, or $b=\\frac {a+c} {2}$.</p><p>We need to find the unique root, or $-\\frac {b} {2a}$ (discriminant is 0).</p><p>From $b^2=4ac$, we can get $-\\frac {b} {2a} =-\\frac {2c} {b}$.</p><p>Ignoring the negatives(for now), we have $\\frac {2c} {b} = \\frac {2c} {\\frac {a+c} {2}} = \\frac {4c} {a+c} = \\frac {1} {\\frac {1} {\\frac {4c} {a+c}}} = \\frac {1} {\\frac {a+c} {4c}} = \\frac {1} {\\frac {a} {4c} + \\frac {1} {4} }$.</p><p>Fortunately, finding $\\frac {a} {c}$ is not very hard.</p><p>Plug in $b=\\frac {a+c} {2}$ to $b^2=4ac$, we have $a^2+2ac+c^2=16ac$, or $a^2-14ac+c^2=0$, and dividing by $c^2$ gives $\\left( \\frac {a} {c} \\right) ^2-14 \\left( \\frac {a} {c} \\right) +1 = 0$, so $\\frac {a} {c} = \\frac {14 \\pm \\sqrt {192} } {2} = 7 \\pm 4 \\sqrt {3}$.</p><p>But $7-4\\sqrt {3} <1$, violating the assumption that $a \\ge c$.</p><p>Therefore, $\\frac {a} {c} = 7 +4\\sqrt {3}$.</p><p>Plugging this in, we have $\\frac {1} {\\frac {a} {4c} + \\frac {1} {4} } = \\frac {1} {2+ \\sqrt {3} } = 2- \\sqrt {3}$.</p><p>But we need the negative of this, so the answer is $\\boxed {\\textbf{(D)}}.$</p><p>Note that we can divide the polynomial by $a$ to make the leading coefficient 1 since dividing does not change the roots or the fact that the coefficients are in an arithmetic sequence. Also, we know that there is exactly one root so this equation must be of the form $(x-r)^2 = x^2 - 2rx + r^2$ where $1 \\ge -2r \\ge r^2 \\ge 0$.We now use the fact that the coefficients are in an arithmetic sequence. Note that in any arithmetic sequence, the average is equal to the median. Thus,$r^2 + 1 = -4r$ and $r = -2 \\pm \\sqrt{3}$. Since $1 \\ge r^2$, we easily see that $|r|$ has to be between 1 and 0. Thus, we can eliminate $-2 - \\sqrt{3}$ and are left with $\\boxed{\\textbf{(D)} -2 + \\sqrt{3}}$ as the answer.</p><p>Given that $ax^2+bx+c=0$ has only 1 real root, we know that the discriminant must equal 0, or that $b^2=4ac$. Because the discriminant equals 0, we have that the root of the quadratic is $r=\\frac {-b} {2a}$. We are also given that the coefficients of the quadratic are in arithmetic progression, where $a \\ge b \\ge c \\ge 0$. Letting the arbitrary difference equal variable $d$, we have that $a=b+d$ and that $c=b-d$. Plugging those two equations into $b^2=4ac$, we have $b^2=4(b^2-d^2)=4b^2-4d^2$ which yields $3b^2=4d^2$. Isolating $d$, we have $d=\\frac {b \\sqrt{3}} {2}$. Substituting that in for $d$ in $a=b+d$, we get $a=b+\\frac {b \\sqrt{3}} {2}=b(1+\\frac {\\sqrt{3}} {2})$. Once again, substituting that in for $a$ in $r=\\frac {-b} {2a}$, we have $r=\\frac {-b} {2b(1+\\frac {\\sqrt{3}} {2})}=\\frac {-1} {2+\\sqrt {3}}=-2+\\sqrt {3}$. The answer is: $\\boxed {\\textbf{(D)}}.$</p><p>We have $a-b=b-c$Hence $2b=a+c$.</p><p>And we have $b^2-4ac=0\\implies b^2=4ac$.Squaring the first expression, and dividing by 4, we get $b^2=\\frac{a^2+2ac+c^2}{4}$.</p><p>Setting the two equations equal, we have $4ac=\\frac{a^2+2ac+c^2}{4}$.</p><p>$\\implies 16ac=a^2+2ac+c^2\\implies 14ac=a^2+c^2\\implies a^2-14ac+c^2=0$.</p><p>Dividing by $c^2$, we get $(\\frac{a}{c})^2-14(\\frac{a}{c})+1=0$. </p><p>Setting $\\frac{a}{c}=x,$ we have $x^2-14x+1=0.$</p><p>Solving for $x$, we get $x=\\frac{a}{c}=7 \\pm 4\\sqrt3$ We know that $a \\ge c$, so $\\frac{a}{c}=7+4\\sqrt3$.</p><p>By Vieta's, we know that $\\frac{c}{a}=r^2$, where $r$ equals the double root of the quadratic.So, we get $\\frac{c}{a}=\\frac{1}{7 + 4\\sqrt3}$. After rationalizing the denominator, we get $\\frac{c}{a} = 7- 4\\sqrt 3$.</p><p>Hence, $r^2=7-4\\sqrt3$. Solving for $r$, we have $r$ equals $-2+\\sqrt3=\\boxed{D}$.</p><p>The unique root is $-\\frac {b} {2a}$ as discriminant has to be 0.</p><p>We have $a-b=b-c \\implies c=2b-a$.</p><p>Also discriminant $b^2-4ac=0 \\implies b^2=4ac$. Plug in $c=2b-a$ from above, we have $b^2=4a(2b-a) \\implies b^2-8ab+4a^2=0$. Divide both sides by $a^2$, we have $(\\frac{b}{a})^2-8(\\frac{b}{a})+4=0$.</p><p>Solve $\\frac{b}{a}$, we get $4\\pm2\\sqrt {3}$. Since $a \\ge b$, $\\frac{b}{a}=4-2\\sqrt {3}$. </p><p>Therefore the unique root $-\\frac{b}{2a} = -2+\\sqrt3=\\boxed{D}$.</p><p>We can just try out the answer choices! First, (C) clearly fails. Then, we try (B). It fails too. But $\\boxed{D}$ works.</p><ul><li>feel free to add details</li></ul><p>~Yrock</p>",
+        "<p>It is given that $ax^2+bx+c=0$ has 1 real root, so the discriminant is zero, or $b^2=4ac$. </p><p>Because a, b, c are in arithmetic progression, $b-a=c-b$, or $b=\\frac {a+c} {2}$.</p><p>We need to find the unique root, or $-\\frac {b} {2a}$ (discriminant is 0).</p><p>From $b^2=4ac$, we can get $-\\frac {b} {2a} =-\\frac {2c} {b}$.</p><p>Ignoring the negatives(for now), we have $\\frac {2c} {b} = \\frac {2c} {\\frac {a+c} {2}} = \\frac {4c} {a+c} = \\frac {1} {\\frac {1} {\\frac {4c} {a+c}}} = \\frac {1} {\\frac {a+c} {4c}} = \\frac {1} {\\frac {a} {4c} + \\frac {1} {4} }$.</p><p>Fortunately, finding $\\frac {a} {c}$ is not very hard.</p><p>Plug in $b=\\frac {a+c} {2}$ to $b^2=4ac$, we have $a^2+2ac+c^2=16ac$, or $a^2-14ac+c^2=0$, and dividing by $c^2$ gives $\\left( \\frac {a} {c} \\right) ^2-14 \\left( \\frac {a} {c} \\right) +1 = 0$, so $\\frac {a} {c} = \\frac {14 \\pm \\sqrt {192} } {2} = 7 \\pm 4 \\sqrt {3}$.</p><p>But $7-4\\sqrt {3} <1$, violating the assumption that $a \\ge c$.</p><p>Therefore, $\\frac {a} {c} = 7 +4\\sqrt {3}$.</p><p>Plugging this in, we have $\\frac {1} {\\frac {a} {4c} + \\frac {1} {4} } = \\frac {1} {2+ \\sqrt {3} } = 2- \\sqrt {3}$.</p><p>But we need the negative of this, so the answer is $\\boxed {\\textbf{(D)}}.$</p>",
+        "<p>Note that we can divide the polynomial by $a$ to make the leading coefficient 1 since dividing does not change the roots or the fact that the coefficients are in an arithmetic sequence. Also, we know that there is exactly one root so this equation must be of the form $(x-r)^2 = x^2 - 2rx + r^2$ where $1 \\ge -2r \\ge r^2 \\ge 0$.We now use the fact that the coefficients are in an arithmetic sequence. Note that in any arithmetic sequence, the average is equal to the median. Thus,$r^2 + 1 = -4r$ and $r = -2 \\pm \\sqrt{3}$. Since $1 \\ge r^2$, we easily see that $|r|$ has to be between 1 and 0. Thus, we can eliminate $-2 - \\sqrt{3}$ and are left with $\\boxed{\\textbf{(D)} -2 + \\sqrt{3}}$ as the answer.</p>",
+        "<p>Given that $ax^2+bx+c=0$ has only 1 real root, we know that the discriminant must equal 0, or that $b^2=4ac$. Because the discriminant equals 0, we have that the root of the quadratic is $r=\\frac {-b} {2a}$. We are also given that the coefficients of the quadratic are in arithmetic progression, where $a \\ge b \\ge c \\ge 0$. Letting the arbitrary difference equal variable $d$, we have that $a=b+d$ and that $c=b-d$. Plugging those two equations into $b^2=4ac$, we have $b^2=4(b^2-d^2)=4b^2-4d^2$ which yields $3b^2=4d^2$. Isolating $d$, we have $d=\\frac {b \\sqrt{3}} {2}$. Substituting that in for $d$ in $a=b+d$, we get $a=b+\\frac {b \\sqrt{3}} {2}=b(1+\\frac {\\sqrt{3}} {2})$. Once again, substituting that in for $a$ in $r=\\frac {-b} {2a}$, we have $r=\\frac {-b} {2b(1+\\frac {\\sqrt{3}} {2})}=\\frac {-1} {2+\\sqrt {3}}=-2+\\sqrt {3}$. The answer is: $\\boxed {\\textbf{(D)}}.$</p>",
+        "<p>We have $a-b=b-c$Hence $2b=a+c$.</p><p>And we have $b^2-4ac=0\\implies b^2=4ac$.Squaring the first expression, and dividing by 4, we get $b^2=\\frac{a^2+2ac+c^2}{4}$.</p><p>Setting the two equations equal, we have $4ac=\\frac{a^2+2ac+c^2}{4}$.</p><p>$\\implies 16ac=a^2+2ac+c^2\\implies 14ac=a^2+c^2\\implies a^2-14ac+c^2=0$.</p><p>Dividing by $c^2$, we get $(\\frac{a}{c})^2-14(\\frac{a}{c})+1=0$. </p><p>Setting $\\frac{a}{c}=x,$ we have $x^2-14x+1=0.$</p><p>Solving for $x$, we get $x=\\frac{a}{c}=7 \\pm 4\\sqrt3$ We know that $a \\ge c$, so $\\frac{a}{c}=7+4\\sqrt3$.</p><p>By Vieta's, we know that $\\frac{c}{a}=r^2$, where $r$ equals the double root of the quadratic.So, we get $\\frac{c}{a}=\\frac{1}{7 + 4\\sqrt3}$. After rationalizing the denominator, we get $\\frac{c}{a} = 7- 4\\sqrt 3$.</p><p>Hence, $r^2=7-4\\sqrt3$. Solving for $r$, we have $r$ equals $-2+\\sqrt3=\\boxed{D}$.</p>",
+        "<p>The unique root is $-\\frac {b} {2a}$ as discriminant has to be 0.</p><p>We have $a-b=b-c \\implies c=2b-a$.</p><p>Also discriminant $b^2-4ac=0 \\implies b^2=4ac$. Plug in $c=2b-a$ from above, we have $b^2=4a(2b-a) \\implies b^2-8ab+4a^2=0$. Divide both sides by $a^2$, we have $(\\frac{b}{a})^2-8(\\frac{b}{a})+4=0$.</p><p>Solve $\\frac{b}{a}$, we get $4\\pm2\\sqrt {3}$. Since $a \\ge b$, $\\frac{b}{a}=4-2\\sqrt {3}$. </p><p>Therefore the unique root $-\\frac{b}{2a} = -2+\\sqrt3=\\boxed{D}$.</p>",
+        "<p>We can just try out the answer choices! First, (C) clearly fails. Then, we try (B). It fails too. But $\\boxed{D}$ works.</p><ul><li>feel free to add details</li></ul><p>~Yrock</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Problem 19 from 2013 AMC 10B - number_theory problem involving least common multiple and advanced number theory. Students need to understand number_theory concepts deeply, work with lcm principles systematically, and apply mathematical reasoning to solve this problem. This tests number_theory problem-solving skills, understanding of lcm, and mathematical thinking abilities. Students must demonstrate proficiency in number_theory techniques and be able to apply lcm concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_20",
+      "question": "<p>The number $2013$ is expressed in the form <br/> </p><p><br/>where $a_1 \\ge a_2 \\ge \\cdots \\ge a_m$ and $b_1 \\ge b_2 \\ge \\cdots \\ge b_n$ are positive integers and $a_1 + b_1$ is as small as possible. What is $|a_1 - b_1|$?</p>",
+      "solutions": [
+        "<p>The prime factorization of $2013$ is $61\\cdot11\\cdot3$. To have a factor of $61$ in the numerator and to minimize $a_1,$ $a_1$ must equal $61$. Now we notice that there can be no prime $p$ which is not a factor of $2013$ such that $b_1<p<61,$ because this prime will not be canceled out in the denominator, and will lead to an extra factor in the numerator. The highest prime less than $61$ is $59$, so there must be a factor of $59$ in the denominator. It follows that $b_1 = 59$ (to minimize $b_1$ as well), so the answer is $|61-59| = \\boxed{\\textbf{(B) }2}$. One possible way to express $2013$ with $(a_1, b_1) = (61, 59)$ is \\[2013 = \\frac{61!\\cdot19!\\cdot11!}{59!\\cdot20!\\cdot10!}.\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Problem 20 from 2013 AMC 10B - algebra problem involving fraction operations and proportional relationships. Students need to understand algebra concepts deeply, work with fractions principles systematically, and apply mathematical reasoning to solve this problem. This tests algebra problem-solving skills, understanding of fractions, and mathematical thinking abilities. Students must demonstrate proficiency in algebra techniques and be able to apply fractions concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_21",
+      "question": "<p>Two non-decreasing sequences of nonnegative integers have different first terms. Each sequence has the property that each term beginning with the third is the sum of the previous two terms, and the seventh term of each sequence is $N$. What is the smallest possible value of $N$?</p>",
+      "solutions": [
+        "<p>Let the first two terms of the first sequence be $x_{1}$ and $x_{2}$ and the first two of the second sequence be $y_{1}$ and $y_{2}$. Computing the seventh term, we see that $5x_{1} + 8x_{2} = 5y_{1} + 8y_{2}$. Note that this means that $x_{1}$ and $y_{1}$ must have the same value modulo $8$. To minimize, let one of them be $0$; <a class=\"mw-redirect\" href=\"/wiki/index.php/WLOG\" title=\"WLOG\">WLOG</a>, assume that $x_{1} = 0$. Thus, the smallest possible value of $y_{1}$ is $8$; and since the sequences are non-decreasing we get $y_{2} \\ge 8$. To minimize, let $y_{2} = 8$. Thus, $5y_{1} + 8y_{2} = 40 + 64 = \\boxed{\\textbf{(C) }104}$.</p>",
+        "<p>WLOG, let $a_i$, $b_i$ be the sequences with $a_1<b_1$. Then \\[N=5a_1+8a_2=5b_1+8b_2\\] or \\[5a_1+8a_2=5(a_1+c)+8(a_2-d)\\] for some natural numbers $c$, $d$. Thus $5c=8d$. To minimize $c$ and $d$, we have $(c,d)=(8,5)$, or \\[5a_1+8a_2=5(a_1+8)+8(a_2-5).\\] To minimize $a_1$ and $b_1$, we have $(a_1,b_1)=(0,0+c)=(0,8)$. Using the same method, since $b_2\\ge b_1$, we have $b_2\\ge8$. </p><p>Thus the minimum $N=5b_1+8b_2= \\boxed{\\textbf{(C) }104}$.</p><p><br/>~ Nafer</p>",
+        "<p>Do the same thing as any of the previous solutions to find the 7th term must be in the form $5a+8b$ and $5c+8d$ where $a\\neq c$. Then test the options and find the smallest number that can be expressed in these 2 ways is $\\boxed{\\textbf{(C) }104}$.</p><p>-Andrew2019</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Problem 21 from 2013 AMC 10B - probability problem involving independent probability events and compound probability calculations. Students need to understand probability concepts deeply, work with independent_events principles systematically, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills, understanding of independent_events, and mathematical thinking abilities. Students must demonstrate proficiency in probability techniques and be able to apply independent_events concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_22",
+      "question": "<p>The regular octagon $ABCDEFGH$ has its center at $J$. Each of the vertices and the center are to be associated with one of the digits $1$ through $9$, with each digit used once, in such a way that the sums of the numbers on the lines $AJE$, $BJF$, $CJG$, and $DJH$ are all equal. In how many ways can this be done?</p><p>[asy] pair A,B,C,D,E,F,G,H,J; A=(20,20(2+sqrt(2))); B=(20(1+sqrt(2)),20(2+sqrt(2))); C=(20(2+sqrt(2)),20(1+sqrt(2))); D=(20(2+sqrt(2)),20); E=(20(1+sqrt(2)),0); F=(20,0); G=(0,20); H=(0,20(1+sqrt(2))); J=(10(2+sqrt(2)),10(2+sqrt(2))); draw(A--B); draw(B--C); draw(C--D); draw(D--E); draw(E--F); draw(F--G); draw(G--H); draw(H--A); dot(A); dot(B); dot(C); dot(D); dot(E); dot(F); dot(G); dot(H); dot(J); label(\"A\",A,NNW); label(\"B\",B,NNE); label(\"C\",C,ENE); label(\"D\",D,ESE); label(\"E\",E,SSE); label(\"F\",F,SSW); label(\"G\",G,WSW); label(\"H\",H,WNW); label(\"J\",J,SE); [/asy]</p>",
+      "solutions": [
+        "<p>First of all, note that $J$ must be $1$, $5$, or $9$ to preserve symmetry, since the sum of 1 to 9 is 45, and we need the remaining 8 to be divisible by 4 (otherwise we will have uneven sums). So, we have:</p><p>[asy] pair A,B,C,D,E,F,G,H,J; A=(20,20(2+sqrt(2))); B=(20(1+sqrt(2)),20(2+sqrt(2))); C=(20(2+sqrt(2)),20(1+sqrt(2))); D=(20(2+sqrt(2)),20); E=(20(1+sqrt(2)),0); F=(20,0); G=(0,20); H=(0,20(1+sqrt(2))); J=(10(2+sqrt(2)),10(2+sqrt(2))); draw(A--B); draw(B--C); draw(C--D); draw(D--E); draw(E--F); draw(F--G); draw(G--H); draw(H--A); dot(A); dot(B); dot(C); dot(D); dot(E); dot(F); dot(G); dot(H); dot(J); label(\"A\",A,NNW); label(\"B\",B,NNE); label(\"C\",C,ENE); label(\"D\",D,ESE); label(\"E\",E,SSE); label(\"F\",F,SSW); label(\"G\",G,WSW); label(\"H\",H,WNW); label(\"J $(1, 5, 9)$\",J,SE); [/asy]</p><p>We also notice that $A+E = B+F = C+G = D+H$. </p><p>WLOG, assume that $J = 1$. Thus the pairs of vertices must be $9$ and $2$, $8$ and $3$, $7$ and $4$, and $6$ and $5$. There are $4! = 24$ ways to assign these to the vertices. Furthermore, there are $2^{4} = 16$ ways to switch them (i.e. do $2$ $9$ instead of $9$ $2$). </p><p>Thus, there are $16(24) = 384$ ways for each possible J value. There are $3$ possible J values that still preserve symmetry: $384(3) = \\boxed{\\textbf{(C) }1152}$</p>",
+        "<p>As in solution 1, $J$ must be $1$, $5$, or $9$ giving us 3 choices. Additionally $A+E = B+F = C+G = D+H$. This means once we choose $J$ there are $8$ remaining choices. Going clockwise from $A$ we count, $8$ possibilities for $A$. Choosing $A$ also determines $E$ which leaves $6$ choices for $B$, once $B$ is chosen it also determines $F$ leaving $4$ choices for $C$. Once $C$ is chosen it determines $G$ leaving $2$ choices for $D$. Choosing $D$ determines $H$, exhausting the numbers. Additionally, there are three possible values for $J$. To get the answer we multiply $2\\cdot4\\cdot6\\cdot8\\cdot3=\\boxed{\\textbf{(C) }1152}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Problem 22 from 2013 AMC 10B - probability problem involving conditional probability and advanced probability reasoning. Students need to understand probability concepts deeply, work with conditional_probability principles systematically, and apply mathematical reasoning to solve this problem. This tests probability problem-solving skills, understanding of conditional_probability, and mathematical thinking abilities. Students must demonstrate proficiency in probability techniques and be able to apply conditional_probability concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_23",
+      "question": "<p>In triangle $ABC$, $AB=13$, $BC=14$, and $CA=15$. Distinct points $D$, $E$, and $F$ lie on segments $\\overline{BC}$, $\\overline{CA}$, and $\\overline{DE}$, respectively, such that $\\overline{AD}\\perp\\overline{BC}$, $\\overline{DE}\\perp\\overline{AC}$, and $\\overline{AF}\\perp\\overline{BF}$. The length of segment $\\overline{DF}$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?</p>",
+      "solutions": [
+        "<p>Since $\\angle{AFB}=\\angle{ADB}=90^{\\circ}$, quadrilateral $ABDF$ is cyclic. It follows that $\\angle{ADE}=\\angle{ABF}$, so $\\triangle ABF \\sim \\triangle ADE$ are similar. In addition, $\\triangle ADE \\sim \\triangle ACD$. We can easily find $AD=12$, $BD = 5$, and $DC=9$ using Pythagorean triples. </p><p>So, the ratio of the longer leg to the hypotenuse of all three similar triangles is $\\tfrac{12}{15} = \\tfrac{4}{5}$, and the ratio of the shorter leg to the hypotenuse is $\\tfrac{9}{15} = \\tfrac{3}{5}$. It follows that $AF=(\\tfrac{4}{5}\\cdot 13), BF=(\\tfrac{3}{5}\\cdot 13)$. </p><p>Let $x=DF$. By <a class=\"mw-redirect\" href=\"/wiki/index.php/Ptolemy%27s_Theorem\" title=\"Ptolemy's Theorem\">Ptolemy's Theorem</a>, we have \\[13x+\\left(5\\cdot 13\\cdot \\frac{4}{5}\\right)= 12\\cdot 13\\cdot \\frac{3}{5} \\qquad \\Leftrightarrow \\qquad 13x+52=93.6.\\] Dividing by $13$ we get $x+4=7.2\\implies x=\\frac{16}{5}$ so our answer is $\\boxed{\\textbf{(B) }21}$.</p><p>~Edits by BakedPotato66</p>",
+        "<p>From solution 1, we know that $AD = 12$ and $DC = 9$. Since $\\triangle ADC \\sim \\triangle DEC$, we can figure out that $DE = \\frac{36}{5}$. We also know what $AC$ is so we can figure what $AE$ is: $AE = 15 - \\frac{27}{5} = \\frac{48}{5}$ . Quadrilateral $ABDF$ is cyclic, implying that $\\angle{B} + \\angle{DFA}$ = 180\u00b0. Therefore, $\\angle{B} = 180 - \\angle{DFA} = \\angle{EFA}$, and triangles $\\triangle AEF \\sim \\triangle ADB$. Solving the resulting proportion gives $EF = 4$. Therefore, $DF = ED - EF = \\frac{16}{5}$. $m + n = 16 + 5 = 21$ and our answer is $\\boxed{\\textbf{(B) } 21}$. </p><p>$\\triangle ADC \\sim \\triangle DEC$ because of $AA \\sim$ . $\\angle{ADC} = \\angle{DEC} = 90\u00b0$. Lets say $\\angle{ADE} = x$. So $\\angle{EDC} = 90 - x$ and $\\angle{DEC} = 180 - 90 - (90 - x) = x$ so $\\angle{ADE} = \\angle{DEC}$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:South\" rel=\"nofollow\">South</a></p>",
+        "<p>Let $\\angle{ADF} = \\theta,$ and $DF = x.$ Noting that $AD$ is the altitude from $A$ to $BC,$ $AD=12,$ $BD = 5,$ and $DC = 9.$ Notice that since $DE$ is perpendicular to $AC$, $\\triangle{ADC}$ is similar to $\\triangle{AEC}.$ Therefore since $\\triangle{ADC}$ is a $3$-$4$-$5$ triangle, $\\cos{\\theta}=\\frac{3}{5}.$Applying Law of Cosines on $\\triangle{ADF}$ we have,\\[AF^2 = 144+x^2 - 2\\cdot 12 \\cdot x \\cdot \\cos{\\theta} = 144+x^2 - \\frac{72x}{5}.\\] Next notice that $\\cos{\\angle{BDF}} = \\cos{(90 + \\theta)} = -\\sin{\\theta} = \\frac{-4}{5}.$ Now we apply Law of Cosines on $\\triangle{BDF},$\\[BF^2 = 25 + x^2 - 2 \\cdot 5 \\cdot x \\cdot \\cos{\\angle{BDF}} = 25 + x^2 + 8x.\\]Finally using Pythagorean Theorem on $\\triangle{ABF}$ we have, \\[AB^2 = AF^2 + BF^2.\\] \\[13^2 = 144+x^2 - \\frac{72x}{5} + 25 + x^2 + 8x.\\] \\[0 = 2x^2 - \\frac{32x}{5}.\\] Solving for the nonnegative value for $x$ we find $x = DF = \\frac{16}{5} \\implies \\boxed{21}.$</p><p>~<a href=\"/wiki/index.php/User:Mathkiddus\" title=\"User:Mathkiddus\">mathkiddus</a></p>",
+        "<p>If we draw a diagram as given, but then add point $G$ on $\\overline{BC}$ such that $\\overline{FG}\\perp\\overline{BC}$ in order to use the Pythagorean theorem, we end up with similar triangles $\\triangle{DFG}$ and $\\triangle{DCE}$. Thus, $FG=\\tfrac35x$ and $DG=\\tfrac45x$, where $x$ is the length of $\\overline{DF}$. Using the Pythagorean theorem, we now get \\[BF = \\sqrt{\\left(\\frac45x+ 5\\right)^2 + \\left(\\frac35x\\right)^2}\\] and $AF$ can be found out noting that $AE$ is just $\\tfrac{48}5$ through base times height (since $12\\cdot 9 = 15 \\cdot \\tfrac{36}5$, similar triangles gives $AE = \\tfrac{48}5$), and that $EF$ is just $\\tfrac{36}5 - x$. From there, \\[AF = \\sqrt{\\left(\\frac{36}5 - x\\right)^2 + \\left(\\frac{48}5\\right)^2}.\\] Now, $BF^2 + AF^2 = 169$, and squaring and adding both sides and subtracting a 169 from both sides gives $2x^2 - \\tfrac{32}5x = 0$, so $x = \\tfrac{16}5$. Thus, the answer is $\\boxed{\\textbf{(B)}}$.</p>",
+        "<p>First, we find $BD = 5$, $DC = 9$, and $AD = 12$ via the Pythagorean Theorem or by using similar triangles. Next, because $DE$ is an altitude of triangle $ADC$, $DE = \\frac{AD\\cdot DC}{AC} = \\frac{36}{5}$. Using that, we can use the Pythagorean Theorem and similar triangles to find $EC = \\frac{27}{5}$ and $AE = \\frac{48}{5}$. </p><p>Points $A$, $B$, $D$, and $F$ all lie on a circle whose diameter is $AB$. Let the point where the circle intersects $AC$ be $G$. Using power of a point, we can write the following equation to solve for $AG$: \\[DC\\cdot BC = CG\\cdot AC\\] \\[9\\cdot 14 = CG\\cdot 15\\] \\[CG = 126/15\\] Using that, we can find $AG = \\frac{99}{15}$, and using $AG$, we can find that $GE = 3$.</p><p>We can use power of a point again to solve for $DF$: \\[FE\\cdot DE = GE\\cdot AE\\] \\[(\\frac{36}{5} - DF)\\cdot \\frac{36}{5} = 3 \\cdot \\frac{48}{5}\\] \\[\\frac{36}{5} - DF = 4\\] \\[DF = \\frac{16}{5} = \\frac{m}{n}\\] Thus, $m+n = 16+5 = 21$ $\\boxed{\\textbf{(B)}}$.</p>",
+        "<p>If we draw the diagram like above, but make $BC$ the base, we can set $B(0,0), C(14,0)$ and $A(5,12)$, as $AD$ can quickly be verified to be $12$ by Pythagorean triples or similar triangles. Construct $X$ on $BC$ such that $EX \\perp BC$. This implies $\\triangle ADC \\sim \\triangle EXC$ as $AD \\parallel EX$, and $\\angle ACD = \\angle ECX$. Also construct $FY$ such that $FY \\perp BC$.</p><p><br/>Line $\\overline {AC}$ has a slope of $-\\frac{4}{3}$ by slope formula. Since $D = (5,0)$ and $DE \\perp AC,$, the equation of $DE = \\frac{3}{4}x - \\frac{15}{4}$. </p><p>Furthermore, $F$ can now be expressed as $(x,\\frac{3}{4}x - \\frac{15}{4}).$ Since we know $AF \\perp BF,$ we can solve for $x$ with the perpendicular slope formula like so: \\[\\frac{\\frac{3}{4}x - \\frac{63}{4}}{x - 5} \\cdot \\frac{\\frac{3}{4}x - \\frac {15}{4}}{x} = -1\\] \\[\\frac{x-21}{x-5} \\cdot \\frac{x-5}{x} = -\\frac{16}{9}\\] \\[\\frac{x-21}{x} = -\\frac{16}{9}\\] \\[9x = 189 -16x\\] \\[x = \\frac{189}{25}\\]</p><p>Plugging $\\frac{189}{25}$ into $F$, we get $F(\\frac{189}{25},\\frac{48}{25}).$ Since $FY \\perp DY$, we get that $\\triangle FYD$ has side lengths of $FY = \\frac{48}{25}$</p><p>and $DY = BY - BD = BY - 5 = \\frac{64}{25}$. </p><p>Clearly, $\\triangle FYD$ is a $3 - 4 - 5$ pythagorean triple, so $DF = \\frac{80}{25} = \\frac{16}{5}$.</p><p>$16 + 5 = m + n = \\boxed{\\textbf{(B) }21}$.</p><p>~JT0543164</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Problem 23 from 2013 AMC 10B - geometry problem involving distance calculations and coordinate geometry applications. Students need to understand geometry concepts deeply, work with distance principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of distance, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply distance concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_24",
+      "question": "<p>A positive integer $n$ is <i>nice</i> if there is a positive integer $m$ with exactly four positive divisors (including $1$ and $m$) such that the sum of the four divisors is equal to $n$. How many numbers in the set $\\{ 2010,2011,2012,\\dotsc,2019 \\}$ are nice?</p>",
+      "solutions": [
+        "<p>A positive integer with only four positive divisors has its prime factorization in the form of $a \\cdot b$, where $a$ and $b$ are both prime positive integers or $c^3$ where $c$ is a prime. One can easily deduce that none of the numbers are even near a cube so the second case is not possible. We now look at the case of $a \\cdot b$. The four factors of this number would be $1$, $a$, $b$, and $ab$. The sum of these would be $ab+a+b+1$, which can be factored into the form $(a+1)(b+1)$. Easily we can see that now we can take cases again. </p><p>Case 1: Either $a$ or $b$ is 2. </p><p>If this is true then we have to have that one of $(a+1)$ or $(b+1)$ is odd and that one is 3. The other is still even. So we have that in this case the only numbers that work are even multiples of 3 which are 2010 and 2016. So we just have to check if either $\\frac{2016}{3} - 1$ or $\\frac{2010}{3} - 1$ is a prime. We see that in this case none of them work.</p><p>Case 2: Both $a$ and $b$ are odd primes. </p><p>This implies that both $(a+1)$ and $(b+1)$ are even which implies that in this case the number must be divisible by $4$. This leaves only $2012$ and $2016$.$2012={4}\\cdot{503}$ so either $(a+1)$ or $(b+1)$ both have a factor of $2$ or one has a factor of $4$ since $503$ is prime. If it was the first case, then $a$ or $b$ will equal $1$. That means that either $(a+1)$ or $(b+1)$ has a factor of $4$. That means that $a$ or $b$ is $502$ which isn't a prime, so 2012 does not work. $2016 = 4 \\cdot 504$ so we have $(503 + 1)(3 + 1)$. 503 and 3 are both odd primes, so 2016 is a solution. Thus the answer is $\\boxed{\\textbf{(A)}\\ 1}$.</p><p>After deducing that $2012$ and case $1$ is impossible, and since there is no option for $0$, $2016$ is obviously a solution and the answer is $\\boxed{\\textbf{(A)}\\ 1}$.</p><p>-mathboy282</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 24 from 2013 AMC 10B - geometry problem involving complex area calculations and geometric analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    },
+    {
+      "id": "amc_2013_10b_25",
+      "question": "<p>Bernardo chooses a three-digit positive integer $N$ and writes both its base-5 and base-6 representations on a blackboard. Later LeRoy sees the two numbers Bernardo has written. Treating the two numbers as base-10 integers, he adds them to obtain an integer $S$. For example, if $N = 749$, Bernardo writes the numbers $10,\\!444$ and $3,\\!245$, and LeRoy obtains the sum $S = 13,\\!689$. For how many choices of $N$ are the two rightmost digits of $S$, in order, the same as those of $2N$?</p>",
+      "solutions": [
+        "<p>First, we can examine the units digits of the number base 5 and base 6 and eliminate some possibilities.</p><p>Say that $N \\equiv a \\pmod{6}$</p><p>also that $N \\equiv b \\pmod{5}$</p><p>Substituting these equations into the question and setting the units digits of $2N$ and $S$ equal to each other, it can be seen that $b < 5$ (because otherwise $a$ and $b$ will have different parities), and thus $a=b$.$N \\equiv a \\pmod{6}$,$N \\equiv  a \\pmod{5}$,$\\implies N=a \\pmod{30}$,$0 \\le a \\le 4$</p><p>Therefore, $N$ can be written as $30x+y$and $2N$ can be written as $60x+2y$</p><p>Just keep in mind that $y$ can be one of five choices: $0, 1, 2, 3,$ or $4$,\u00a0;Also, we have already found which digits of $y$ will add up into the units digits of $2N$.</p><p>Now, examine the tens digit, $x$ by using $\\mod{25}$ and $\\mod{36}$ to find the tens digit (units digits can be disregarded because $y=0,1,2,3,4$ will always work)Then we take $N=30x+y$ $\\mod{25}$ and $\\mod{36}$ to find the last two digits in the base $5$ and $6$ representation.\\[N \\equiv 30x \\pmod{36}\\]\\[N \\equiv 30x \\equiv 5x \\pmod{25}\\] Both of those must add up to \\[2N\\equiv60x \\pmod{100}\\]</p><p>($33 \\ge x \\ge 4$)</p><p>Now, since $y=0,1,2,3,4$ will always work if $x$ works, then we can treat $x$ as a units digit instead of a tens digit in the respective bases and decrease the mods so that $x$ is now the units digit.\\[N \\equiv 5x \\pmod{6}\\]\\[N \\equiv 6x \\equiv x \\pmod{5}\\]\\[2N\\equiv 6x \\pmod{10}\\]</p><p>Say that $x=5m+n$ (m is between 0-6, n is 0-4 because of constraints on x)Then </p><p>\\[N \\equiv 5m+n \\pmod{5}\\]\\[N \\equiv 25m+5n \\pmod{6}\\]\\[2N\\equiv30m + 6n \\pmod{10}\\]</p><p>and this simplifies to </p><p>\\[N \\equiv n \\pmod{5}\\]\\[N \\equiv m+5n \\pmod{6}\\]\\[2N\\equiv 6n \\pmod{10}\\]</p><p>From careful inspection, this is true when</p><p>$n=0, m=6$</p><p>$n=1, m=6$</p><p>$n=2, m=2$</p><p>$n=3, m=2$</p><p>$n=4, m=4$</p><p>This gives you $5$ choices for $x$, and $5$ choices for $y$, so the answer is $5* 5 = \\boxed{\\textbf{(E) }25}$</p>",
+        "<p>Notice that there are exactly $1000-100=900=5^2\\cdot 6^2$ possible values of $N$. This means, in $100\\le N\\le 999$, every possible combination of $2$ digits will happen exactly once. We know that $N=900,901,902,903,904$ work because $900\\equiv\\dots00_5\\equiv\\dots00_6$.</p><p>We know for sure that the units digit will add perfectly every $30$ added or subtracted, because $\\text{lcm }(5, 6)=30$. So we only have to care about cases of $N$ every $30$ subtracted. In each case, $2N$ subtracts $6$/adds $4$, $N_5$ subtracts $1$ and $N_6$ adds $1$ for the $10$'s digit.</p><p>\\[\\textbf{5 }\\textcolor{red}{\\text{ 0}}\\text{ 4 3 2 1 0 }\\textcolor{red}{\\text{4}}\\text{ 3 2 1 0 4 3 2 1 0 4 }\\textcolor{red}{\\text{3 2}}\\text{ 1 0 4 3 2 1 0 4 3 2 }\\textcolor{red}{\\text{1}}\\]</p><p>\\[\\textbf{6 }\\textcolor{red}{\\text{ 0}}\\text{ 1 2 3 4 5 }\\textcolor{red}{\\text{0}}\\text{ 1 2 3 4 5 0 1 2 3 4 }\\textcolor{red}{\\text{5 0}}\\text{ 1 2 3 4 5 0 1 2 3 4 }\\textcolor{red}{\\text{5}}\\]</p><p>\\[\\textbf{10}\\textcolor{red}{\\text{ 0}}\\text{ 4 8 2 6 0 }\\textcolor{red}{\\text{4}}\\text{ 8 2 6 0 4 8 2 6 0 4 }\\textcolor{red}{\\text{8 2}}\\text{ 6 0 4 8 2 6 0 4 8 2 }\\textcolor{red}{\\text{6}}\\]</p><p>As we can see, there are $5$ cases, including the original, that work. These are highlighted in $\\textcolor{red}{\\text{red}}$. So, thus, there are $5$ possibilities for each case, and $5\\cdot 5=\\boxed{\\textbf{(E) }25}$.</p>",
+        "<p>Notice that $N_5$ ranges from $3$ to $5$ digits and $N_6$ ranges from $3$ to $4$ digits.</p><p>Then let $a_i$, $b_i$ denotes the digits of $N_5$, $N_6$, respectively such that \\[0\\le a_i<5,0\\le b_i<6\\] Thus we have \\[N=5^4a_1+5^3a_2+5^2a_3+5a_4+a_5=6^3b_1+6^2b_2+6b_3+b_4\\]\\[625a_1+125a_2+25a_3+5a_4+a_5=216b_1+36b_2+6b_3+b_4\\] Now we are given \\[2N \\equiv S \\equiv N_5+N_6\\pmod{100}\\]\\[2(625a_1+125a_2+25a_3+5a_4+a_5) \\equiv (10000a_1+1000a_2+100a_3+10a_4+a_5)+(1000b_1+100b_2+10b_3+b_4)\\pmod{100}\\]\\[1250a_1+250a_2+50a_3+10a_4+2a_5 \\equiv 10000a_1+1000a_2+1000b_1+100a_3+100b_2+10a_4+10b_3+a_5+b_4\\pmod{100}\\]\\[50a_1+50a_2+50a_3+10a_4+2a_5 \\equiv 10a_4+10b_3+a_5+b_4\\pmod{100}\\]Canceling out $a_5$ left with\\[50a_1+50a_2+50a_3+10a_4+a_5 \\equiv 10a_4+10b_3+b_4\\pmod{100}\\]</p><p>Since $a_5$, $b_4$ determine the unit digits of the two sides of the congruence equation, we have $a_5=b_4=0,1,2,3,4$. Thus,</p><p>\\[50a_1+50a_2+50a_3+10a_4 \\equiv 10a_4+10b_3\\pmod{100}\\] canceling out $10a_4$, we have \\[50a_1+50a_2+50a_3 \\equiv 10b_3\\pmod{100}\\]\\[5a_1+5a_2+5a_3 \\equiv b_3\\pmod{10}\\]\\[5(a_1+a_2+a_3) \\equiv b_3\\pmod{10}\\]</p><p>Thus $b_3$ is a multiple of $5$.</p><p>Now going back to our original equation \\[625a_1+125a_2+25a_3+5a_4+a_5=216b_1+36b_2+6b_3+b_4\\] Since $a_5=b_4$,\\[625a_1+125a_2+25a_3+5a_4=216b_1+36b_2+6b_3\\]\\[5(125a_1+25a_2+5a_3+a_4)=6(36b_1+6b_2+b_3)\\]\\[5(125a_1+25a_2+5a_3+a_4)=6[6(6b_1+b_2)+b_3]\\]</p><p>Since the left side is a multiple of $5$, then so does the right side. Thus $5\\mid6(6b_1+b_2)+b_3$.</p><p>Since we already know that $5\\mid b_3$, then $5\\mid6(6b_1+b_2)$, from where we also know that $5\\mid6b_1+b_2$.</p><p>For $b_1,b_2<6$, there is a total of 7 ordered pairs that satisfy the condition. Namely,</p><p>\\[(b_1,b_2)=(0,0),(0,5),(1,4),(2,3),(3,2),(4,1),(5,0)\\]</p><p>Since $N_6$ has at least $3$ digits, $(b_1,b_2)=(0,0)$ doesn't work. Furthermore, when $b_1=5$, $216b_1$ exceeds $1000$ which is not possible as $N$ is a three digit number, thus $(b_1,b_2)=(5,0)$ won't work as well. </p><p>Since we know that $a_i<5$, for each of the ordered pairs $(b_1,b_2)$, there is respectively one and only one solution $(a_1,a_2,a_3,a_4)$ that satisfies the equation </p><p>\\[625a_1+125a_2+25a_3+5a_4=216b_1+36b_2+6b_3\\]</p><p>Thus there are five solutions to the equation. Also since we have 5 possibilities for $a_5=b_4$, we have a total of $5\\cdot5=25$ values for $N$. $\\boxed{\\textbf{(E) }25}$</p><p>~ Nafer</p>",
+        "<p>Observe that the maximum possible value of the sum of the last two digits of the base $5$ number and the base $6$ number is $44+55=99$. Let $N \\equiv a \\pmod {25}$ and $N \\equiv b \\pmod {36}$. </p><p>If $a < \\frac{25}{2}$, $2N \\equiv 2a \\pmod {25}$ and if $a > \\frac{25}{2}$, $2N \\equiv 2a - 25 \\pmod {25}$.</p><p>Using the same logic for $b$, if $b < 18$, $2N \\equiv 2b \\pmod {36}$, and in the other case $2N \\equiv 2b - 36 \\pmod {36}$.</p><p>We can do four cases:</p><p>Case 1: $a + b = 2a - 25 + 2b - 36 \\implies a + b = 61$.</p><p>For this case, there is trivially only one possible solution, $(a, b) = (25, 36)$, which is equivalent to $(a, b) = (0, 0)$. </p><p>Case 2: $a + b = 2a - 25 + 2b \\implies a + b = 25$.</p><p>Note that in this case, $a \\geq 13$ must hold, and $b < 18$ must hold. We find the possible ordered pairs to be: $(13, 12), (14, 11), (15, 10), ..., (24, 1)$ for a total of $12$ ordered pairs.</p><p>Case 3: $a + b = 2a + 2b - 36 \\implies a + b = 36$.</p><p>Note that in this case, $b \\geq 18$ must hold, and $a < 13$ must hold.We find the possible ordered pairs to be: $(24, 12), (25, 11), (26, 10), ..., (35, 1)$ for a total of $12$ ordered pairs.</p><p>Case 4: $a + b = 2a + 2b$.</p><p>Trivially no solutions except $(a, b) = (0, 0)$, which matches the solution in Case 1, which makes this an overcount.</p><p>By CRT, each solution $(a, b)$ corresponds exactly one positive integer in a set of exactly $\\text{lcm} (25, 36) = 900$ consecutive positive integers, and since there are $900$ positive integers between $100$ and $999$, our induction is complete, and our answer is $1 + 12 + 12 = \\boxed{\\textbf{(E) }25}$.</p><p>~ fidgetboss_4000</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Problem 25 from 2013 AMC 10B - geometry problem involving area calculations and geometric relationship analysis. Students need to understand geometry concepts deeply, work with area principles systematically, and apply mathematical reasoning to solve this problem. This tests geometry problem-solving skills, understanding of area, and mathematical thinking abilities. Students must demonstrate proficiency in geometry techniques and be able to apply area concepts in complex problem-solving scenarios."
+        }
+      ]
+    }
+  ]
+}

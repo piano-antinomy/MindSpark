@@ -1,0 +1,720 @@
+{
+  "year": "2005",
+  "competition": "AMC_12",
+  "problems": [
+    {
+      "id": "amc_2005_12a_1",
+      "question": "<p>Two is $10 \\%$ of $x$ and $20 \\%$ of $y$. What is $x - y$?</p>",
+      "solutions": [
+        "<p>$2 = \\frac {1}{10}x \\Longrightarrow x = 20,\\quad 2 = \\frac{1}{5}y \\Longrightarrow y = 10,\\quad x-y = 20 - 10=10  \\mathrm{(D)}$.</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "basic_operations",
+        "confidence": 0.95,
+        "reasoning": "This problem involves basic algebraic operations and calculations, typically evaluating expressions or solving simple equations."
+      }
+    },
+    {
+      "id": "amc_2005_12a_2",
+      "question": "<p>The equations $2x + 7 = 3$ and $bx - 10 = -2$ have the same solution $x$. What is the value of $b$?</p>",
+      "solutions": [
+        "<p>$2x + 7 = 3 \\iff x = -2$, so we require $-2b-10 = -2 \\iff -2b = 8 \\iff b = \\boxed{\\textbf{(B) } -4}$.</p>"
+      ],
+      "categorization": {
+        "category": "arithmetic",
+        "subcategory": "basic_operations",
+        "confidence": 0.95,
+        "reasoning": "This problem involves basic arithmetic calculations and number sense, often involving percentages or ratios."
+      }
+    },
+    {
+      "id": "amc_2005_12a_3",
+      "question": "<p>A <a href=\"/wiki/index.php/Rectangle\" title=\"Rectangle\">rectangle</a> with a diagonal of length $x$ is twice as long as it is wide. What is the area of the rectangle?</p>",
+      "solutions": [
+        "<p>Let $w$ be the width, so the length is $2w$. By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, $w^2 + 4w^2 = x^2 \\Longrightarrow \\frac{x}{\\sqrt{5}} = w$. The area of the rectangle is $(w)(2w) = 2w^2 = 2\\left(\\frac{x}{\\sqrt{5}}\\right)^2 = \\frac{2}{5}x^2 \\ \\mathrm{(B)}$.</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "polygons",
+        "confidence": 0.9,
+        "reasoning": "This problem involves finding areas or perimeters of polygons, requiring understanding of geometric formulas."
+      }
+    },
+    {
+      "id": "amc_2005_12a_4",
+      "question": "<p>A store normally sells windows at $$100$ each. This week the store is offering one free window for each purchase of four. Dave needs seven windows and Doug needs eight windows. How many dollars will they save if they purchase the windows together rather than separately?</p>",
+      "solutions": [
+        "<p>For $n$ windows, the store offers a discount of $100 \\cdot \\left\\lfloor\\frac{n}{5}\\right\\rfloor$ (<a href=\"/wiki/index.php/Floor_function\" title=\"Floor function\">floor function</a>). Dave receives a discount of $100 \\cdot \\left\\lfloor \\frac{7}{5}\\right \\rfloor = 100$ and Doug receives a discount of $100 \\cdot \\left\\lfloor \\frac{8}{5}\\right\\rfloor = 100$. These amount to $200$ dollars in discounts. Together, they receive a discount of $100 \\cdot \\left\\lfloor \\frac{15}{5} \\right\\rfloor = 300$, so they save $300-200=100\\ \\mathrm{(A)}$.</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "equations",
+        "confidence": 0.9,
+        "reasoning": "This problem involves setting up and solving equations, often with word problems or geometric applications."
+      }
+    },
+    {
+      "id": "amc_2005_12a_5",
+      "question": "<p>The average (mean) of $20$ numbers is $30$, and the average of $30$ other numbers is $20$. What is the average of all $50$ numbers?</p>",
+      "solutions": [
+        "<p>The sum of the first $20$ numbers is $20 \\cdot 30$ and the sum of the other $30$ numbers is $30\\cdot 20$. Hence the overall average is $\\frac{20 \\cdot 30 + 30 \\cdot 20}{50} = 24 \\ \\mathrm{(B)}$.</p><p>This is just the harmonic mean, so the answer is $\\frac{2 \\cdot 20 \\cdot 30}{20+30}=24 \\ \\mathrm{(B)}$.</p><p>Solution by franzliszt</p>",
+        "<p>The sum of the first $20$ numbers is $20 \\cdot 30$ and the sum of the other $30$ numbers is $30\\cdot 20$. Hence the overall average is $\\frac{20 \\cdot 30 + 30 \\cdot 20}{50} = 24 \\ \\mathrm{(B)}$.</p>",
+        "<p>This is just the harmonic mean, so the answer is $\\frac{2 \\cdot 20 \\cdot 30}{20+30}=24 \\ \\mathrm{(B)}$.</p><p>Solution by franzliszt</p>"
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "subcategory": "divisibility",
+        "confidence": 0.9,
+        "reasoning": "This problem involves understanding divisibility properties and number theory concepts."
+      }
+    },
+    {
+      "id": "amc_2005_12a_6",
+      "question": "<p>Josh and Mike live $13$ miles apart. Yesterday Josh started to ride his bicycle toward Mike's house. A little later Mike started to ride his bicycle toward Josh's house. When they met, Josh had ridden for twice the length of time as Mike and at four-fifths of Mike's rate. How many miles had Mike ridden when they met?</p>",
+      "solutions": [
+        "<p>Let $D_J, D_M$ be the distances traveled by Josh and Mike, respectively, and let $r,t$ be the time and rate of Mike. Using $d = rt$, we have that $D_M = rt$ and $D_J = \\left(\\frac{4}{5}r\\right)\\left(2t\\right) = \\frac 85rt$. Then $13 = D_M + D_J = rt + \\frac{8}{5}rt = \\frac{13}{5}rt$ $\\Longrightarrow rt = D_M = 5\\ \\mathrm{(B)}$. </p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "circles",
+        "confidence": 0.9,
+        "reasoning": "This problem involves circle geometry and area calculations, often using pi and radius relationships."
+      }
+    },
+    {
+      "id": "amc_2005_12a_7",
+      "question": "<p>Square $EFGH$ is inside square $ABCD$ so that each side of $EFGH$ can be extended to pass through a vertex of $ABCD$. Square $ABCD$ has side length $\\sqrt{50}$, $E$ is between $B$ and $H$, and $BE = 1$. What is the area of the inner square $EFGH$?</p><p>[asy] unitsize(4cm); defaultpen(linewidth(.8pt)+fontsize(10pt)); pair D=(0,0), C=(1,0), B=(1,1), A=(0,1); pair F=intersectionpoints(Circle(D,2/sqrt(5)),Circle(A,1))[0]; pair G=foot(A,D,F), H=foot(B,A,G), E=foot(C,B,H); draw(A--B--C--D--cycle); draw(D--F); draw(C--E); draw(B--H); draw(A--G); label(\"$A$\",A,NW); label(\"$B$\",B,NE); label(\"$C$\",C,SE); label(\"$D$\",D,SW); label(\"$E$\",E,NNW); label(\"$F$\",F,ENE); label(\"$G$\",G,SSE); label(\"$H$\",H,WSW); [/asy]</p>",
+      "solutions": [
+        "<p><a class=\"image\" href=\"/wiki/index.php/File:2005_12A_AMC-7b.png\">2005 12A AMC-7b.png</a></p><p>Arguable the hardest part of this question is to visualize the diagram. Since each side of $EFGH$ can be extended to pass through a vertex of $ABCD$, we realize that $EFGH$ must be tilted in such a fashion. Let a side of $EFGH$ be $x$. </p><p><a class=\"image\" href=\"/wiki/index.php/File:2005_12A_AMC-7.png\">2005 12A AMC-7.png</a></p><p>Notice the <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right triangle</a> (in blue) with legs $1, x+1$ and <a href=\"/wiki/index.php/Hypotenuse\" title=\"Hypotenuse\">hypotenuse</a> $\\sqrt{50}$. By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, we have $1^2 + (x+1)^2 = (\\sqrt{50})^2 \\Longrightarrow (x+1)^2 = 49 \\Longrightarrow x = 6$. Thus, $[EFGH] = x^2 = 36\\ \\mathrm{(C)}$</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "inequalities",
+        "confidence": 0.9,
+        "reasoning": "This problem involves solving inequalities and finding ranges of possible values."
+      }
+    },
+    {
+      "id": "amc_2005_12a_8",
+      "question": "<p>Let $A,M$, and $C$ be digits with</p><p>\\[(100A+10M+C)(A+M+C) = 2005.\\]</p><p>What is $A$?</p>",
+      "solutions": [
+        "<p>Clearly the two quantities are both integers, so we check the <a href=\"/wiki/index.php/Prime_factorization\" title=\"Prime factorization\">prime factorization</a> of $2005 = 5 \\cdot 401$. It is easy to see now that $(A,M,C) = (4,0,1)$ works, so the answer is $\\mathrm{(D)}$.</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "triangles",
+        "confidence": 0.9,
+        "reasoning": "This problem involves triangle properties and geometric calculations, often using the Pythagorean theorem."
+      }
+    },
+    {
+      "id": "amc_2005_12a_9",
+      "question": "<p>There are two values of $a$ for which the equation $4x^2 + ax + 8x + 9 = 0$ has only one solution for $x$. What is the sum of those values of $a$?</p>",
+      "solutions": [
+        "<p><a class=\"external free\" href=\"https://youtu.be/3dfbWzOfJAI?t=222\" rel=\"nofollow\">https://youtu.be/3dfbWzOfJAI?t=222</a>~AVM2023</p><p>We first rewrite $4x^2 + ax + 8x + 9 = 0$ as $4x^2 + (a+8)x + 9 = 0$. Since there is only one root, the discriminant, $(a+8)^2-144$, has to be 0. We solve the remaining as below:$(a+8)^2 = a^2+16a+64$.$a^2+16a+64-144=a^2+16a-80=0$.To apply the quadratic formula, we rewrite $a^2+16a-80$ as $a^2+16a+-80$.Then the formula yields:$\\frac{-16\\pm24}{2}$.Which is,$-8\\pm12$.This gives $-20$ and $4$, which sums up to $\\boxed{-16\\text{ (A)}}$.~AVM2023</p><p>We first rewrite $4x^2 + ax + 8x + 9 = 0$ as $4x^2 + (a+8)x + 9 = 0$. Since there is only one root, the discriminant, $(a+8)^2-144$, has to be 0. We expand $(a+8)^2$ as $a^2+16a+64$. Applying our discriminant rule yields:$a^2+16a+64-144=a^2+16a-80=0$.To apply the quadratic formula, we rewrite $a^2+16a-80$ as $a^2+16a+-80$.Then the formula yields:$\\frac{-16\\pm24}{2}$.Which is,$-8\\pm12$.Notice that we have to find the sum of the two values, since the average is obviously $-8$, the sum is $2\\cdot-8=\\boxed{-16\\text{ (A)}}$.~AVM2023</p><p>We first rewrite $4x^2 + ax + 8x + 9 = 0$ as $4x^2 + (a+8)x + 9 = 0$. Since there is only one root, the discriminant, $(a+8)^2-144$, has to be 0. We solve the remaining as below:$(a+8)^2-144=0$ so$(a+8)^2=144$.So $a+8$ is either $12$ or $-12$, which make $a$ either $4$ or $-20$, respectively. The sum of these values is $\\boxed{-16\\text{ (A)}}$.~AVM2023</p><p>We first rewrite $4x^2 + ax + 8x + 9 = 0$ as $4x^2 + (a+8)x + 9 = 0$. Since there is only one root, the discriminant, $(a+8)^2-144$, has to be 0. We solve the remaining as below:$(a+8)^2-144=0$ so$(a+8)^2=144$.So $a+8$ is either $12$ or $-12$, which make $2a+16=0$, the sum, or $2a$, is $\\boxed{-16\\text{ (A)}}$.~AVM2023</p>",
+        "<p>We first rewrite $4x^2 + ax + 8x + 9 = 0$ as $4x^2 + (a+8)x + 9 = 0$. Since there is only one root, the discriminant, $(a+8)^2-144$, has to be 0. We solve the remaining as below:$(a+8)^2 = a^2+16a+64$.$a^2+16a+64-144=a^2+16a-80=0$.To apply the quadratic formula, we rewrite $a^2+16a-80$ as $a^2+16a+-80$.Then the formula yields:$\\frac{-16\\pm24}{2}$.Which is,$-8\\pm12$.This gives $-20$ and $4$, which sums up to $\\boxed{-16\\text{ (A)}}$.~AVM2023</p>",
+        "<p>We first rewrite $4x^2 + ax + 8x + 9 = 0$ as $4x^2 + (a+8)x + 9 = 0$. Since there is only one root, the discriminant, $(a+8)^2-144$, has to be 0. We expand $(a+8)^2$ as $a^2+16a+64$. Applying our discriminant rule yields:$a^2+16a+64-144=a^2+16a-80=0$.To apply the quadratic formula, we rewrite $a^2+16a-80$ as $a^2+16a+-80$.Then the formula yields:$\\frac{-16\\pm24}{2}$.Which is,$-8\\pm12$.Notice that we have to find the sum of the two values, since the average is obviously $-8$, the sum is $2\\cdot-8=\\boxed{-16\\text{ (A)}}$.~AVM2023</p>",
+        "<p>We first rewrite $4x^2 + ax + 8x + 9 = 0$ as $4x^2 + (a+8)x + 9 = 0$. Since there is only one root, the discriminant, $(a+8)^2-144$, has to be 0. We solve the remaining as below:$(a+8)^2-144=0$ so$(a+8)^2=144$.So $a+8$ is either $12$ or $-12$, which make $a$ either $4$ or $-20$, respectively. The sum of these values is $\\boxed{-16\\text{ (A)}}$.~AVM2023</p>",
+        "<p>We first rewrite $4x^2 + ax + 8x + 9 = 0$ as $4x^2 + (a+8)x + 9 = 0$. Since there is only one root, the discriminant, $(a+8)^2-144$, has to be 0. We solve the remaining as below:$(a+8)^2-144=0$ so$(a+8)^2=144$.So $a+8$ is either $12$ or $-12$, which make $2a+16=0$, the sum, or $2a$, is $\\boxed{-16\\text{ (A)}}$.~AVM2023</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "functions",
+        "confidence": 0.9,
+        "reasoning": "This problem involves analyzing function properties and behavior, often finding specific values."
+      }
+    },
+    {
+      "id": "amc_2005_12a_10",
+      "question": "<p>A wooden cube $n$ units on a side is painted red on all six faces and then cut into $n^3$ unit cubes. Exactly one-fourth of the total number of faces of the unit cubes are red. What is $n$? </p>",
+      "solutions": [
+        "<p>There are $6n^3$ sides total on the unit cubes, and $6n^2$ are painted red.</p><p>$\\dfrac{6n^2}{6n^3}=\\dfrac{1}{4} \\Rightarrow n=4 \\rightarrow \\mathrm {B}$</p>"
+      ],
+      "categorization": {
+        "category": "arithmetic",
+        "subcategory": "percentages",
+        "confidence": 0.9,
+        "reasoning": "This problem involves percentage calculations and relationships between quantities."
+      }
+    },
+    {
+      "id": "amc_2005_12a_11",
+      "question": "<p>How many three-digit numbers satisfy the property that the middle digit is the average of the first and the last digits?</p>",
+      "solutions": [
+        "<p>Let the digits be $A, B, C$ so that $B = \\frac {A + C}{2}$. In order for this to be an integer, $A$ and $C$ have to have the same <a href=\"/wiki/index.php/Parity\" title=\"Parity\">parity</a>. There are $9$ possibilities for $A$, and $5$ for $C$. $B$ depends on the value of both $A$ and $C$ and is unique for each $(A,C)$. Thus our answer is $9 \\cdot 5 \\cdot 1 = 45 \\implies E$.</p><p>Thus, the three digits form an <a href=\"/wiki/index.php/Arithmetic_sequence\" title=\"Arithmetic sequence\">arithmetic sequence</a>. </p><ul><li>If the numbers are all the same, then there are $9$ possible three-digit numbers.</li><li>If the numbers are different, then we count the number of strictly increasing arithmetic sequences between $0$ and $10$ and multiply by 2 for the decreasing ones:</li></ul><p>This gives us $2(8+6+4+2) = 40$. However, the question asks for three-digit numbers, so we have to ignore the four sequences starting with $0$. Thus our answer is $40 + 9 - 4 = 45 \\Longrightarrow \\mathrm{(E)}$.</p>",
+        "<p>Let the digits be $A, B, C$ so that $B = \\frac {A + C}{2}$. In order for this to be an integer, $A$ and $C$ have to have the same <a href=\"/wiki/index.php/Parity\" title=\"Parity\">parity</a>. There are $9$ possibilities for $A$, and $5$ for $C$. $B$ depends on the value of both $A$ and $C$ and is unique for each $(A,C)$. Thus our answer is $9 \\cdot 5 \\cdot 1 = 45 \\implies E$.</p>",
+        "<p>Thus, the three digits form an <a href=\"/wiki/index.php/Arithmetic_sequence\" title=\"Arithmetic sequence\">arithmetic sequence</a>. </p><ul><li>If the numbers are all the same, then there are $9$ possible three-digit numbers.</li><li>If the numbers are different, then we count the number of strictly increasing arithmetic sequences between $0$ and $10$ and multiply by 2 for the decreasing ones:</li></ul><p>This gives us $2(8+6+4+2) = 40$. However, the question asks for three-digit numbers, so we have to ignore the four sequences starting with $0$. Thus our answer is $40 + 9 - 4 = 45 \\Longrightarrow \\mathrm{(E)}$.</p>"
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "subcategory": "counting",
+        "confidence": 0.9,
+        "reasoning": "This problem involves systematic counting and combinatorial methods, often using permutations or combinations."
+      }
+    },
+    {
+      "id": "amc_2005_12a_12",
+      "question": "<p>A line passes through $A(1,1)$ and $B(100,1000)$. How many other points with integer coordinates are on the line and strictly between $A$ and $B$?</p>",
+      "solutions": [
+        "<p>For convenience\u2019s sake, we can transform $A$ to the origin and $B$ to $(99,999)$ (this does not change the problem). The line $AB$ has the <a href=\"/wiki/index.php/Equation\" title=\"Equation\">equation</a> $y = \\frac{999}{99}x = \\frac{111}{11}x$. The coordinates are integers if $11|x$, so the values of $x$ are $11, 22 \\ldots 88$, with a total of $8\\implies \\boxed{\\mathrm{(D)}}$ coordinates.</p>",
+        "<p>The slope of the line is$\\frac{1000-1}{100-1}=\\frac{111}{11},$so all points on the line have the form $(1+11t, 1+111t)$ for some value of $t$ (the rise is 111 and the run is 11). Such a point has integer coordinates if and only if $t$ is an integer, and the point is strictly between $A$ and $B$ if and only if $0<t<9$. Thus, there are $\\boxed{8}$ points with the required property.-Paixiao</p>",
+        "<p>We can re-write the equation in slope-intercept form (where y is on the left side). We know that the slope is $\\frac{1000 - 1}{100 - 1} = \\frac{999}{99} = \\frac{111}{11}$. Then, we have $y = \\frac{111}{11}x - \\frac{100}{11}$ which reduces to $y = \\frac{111x - 100}{11}$. Now, it remains to look for values of $x$ such that $111x \\equiv 1 (\\mod 11)$. Since $111 \\equiv 1 (\\mod 11)$, there are $\\boxed{8 \\textbf{(D)}}$ coordinates for which this is true. ~elpianista227</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "polygons",
+        "confidence": 0.9,
+        "reasoning": "This problem involves complex polygon geometry and area calculations, often with coordinate geometry."
+      }
+    },
+    {
+      "id": "amc_2005_12a_13",
+      "question": "<p>In the five-sided star shown, the letters $A$, $B$, $C$, $D$ and $E$ are replaced by the numbers $3$, $5$, $6$, $7$ and $9$, although not necessarily in that order. The sums of the numbers at the ends of the line segments $\\overline{AB}$, $\\overline{BC}$, $\\overline{CD}$, $\\overline{DE}$ and $\\overline{EA}$ form an arithmetic sequence, although not necessarily in that order. What is the middle term of the arithmetic sequence?</p><p>[asy] size(150); defaultpen(linewidth(0.8)); string[] strng = {'A','D','B','E','C'}; pair A=dir(90),B=dir(306),C=dir(162),D=dir(18),E=dir(234); draw(A--B--C--D--E--cycle); for(int i=0;i<=4;i=i+1) { path circ=circle(dir(90-72*i),0.125); unfill(circ); draw(circ); label(\"$\"+strng[i]+\"$\",dir(90-72*i)); } [/asy]</p>",
+      "solutions": [
+        "<p>$(A+B) + (B+C) + (C+D) + (D+E) + (E+A) = 2(A+B+C+D+E)$ (i.e., each number is counted twice). The sum $A + B + C + D + E$ will always be $3 + 5 + 6 + 7 + 9 = 30$, so the arithmetic sequence has a sum of $2 \\cdot 30 = 60$. The middle term must be the average of the five numbers, which is $\\frac{60}{5} = 12 \\Longrightarrow \\mathrm{(D)}$.</p><p>Let the terms in the arithmetic sequence be $a$, $a + d$, $a + 2d$, $a + 3d$, and $a + 4d$. We seek the middle term $a + 2d$.</p><p>These five terms are $A + B$, $B + C$, $C + D$, $D + E$, and $E + A$, in some order. The numbers $A$, $B$, $C$, $D$, and $E$ are equal to 3, 5, 6, 7, and 9, in some order, so\\[A + B + C + D + E = 3 + 5 + 6 + 7 + 9 = 30.\\]Hence, the sum of the five terms is\\[(A + B) + (B + C) + (C + D) + (D + E) + (E + A) = 2A + 2B + 2C + 2D + 2E = 60.\\]But adding all five numbers, we also get $a + (a + d) + (a + 2d) + (a + 3d) + (a + 4d) = 5a + 10d$, so\\[5a + 10d = 60.\\]Dividing both sides by 5, we get $a + 2d = \\boxed{12}$, which is the middle term. The answer is (D).</p><p>Not too bad with some logic and the awesome guess and check. Let $A=6$. Then let $B=7,E=5$ and $C=3,D=9$. Our arithmetic sequence is $10,11,12,13,14$ so our answer is $12 \\Longrightarrow \\mathrm{(D)}$.</p><p>Solution by franzliszt</p>",
+        "<p>$(A+B) + (B+C) + (C+D) + (D+E) + (E+A) = 2(A+B+C+D+E)$ (i.e., each number is counted twice). The sum $A + B + C + D + E$ will always be $3 + 5 + 6 + 7 + 9 = 30$, so the arithmetic sequence has a sum of $2 \\cdot 30 = 60$. The middle term must be the average of the five numbers, which is $\\frac{60}{5} = 12 \\Longrightarrow \\mathrm{(D)}$.</p>",
+        "<p>Let the terms in the arithmetic sequence be $a$, $a + d$, $a + 2d$, $a + 3d$, and $a + 4d$. We seek the middle term $a + 2d$.</p><p>These five terms are $A + B$, $B + C$, $C + D$, $D + E$, and $E + A$, in some order. The numbers $A$, $B$, $C$, $D$, and $E$ are equal to 3, 5, 6, 7, and 9, in some order, so\\[A + B + C + D + E = 3 + 5 + 6 + 7 + 9 = 30.\\]Hence, the sum of the five terms is\\[(A + B) + (B + C) + (C + D) + (D + E) + (E + A) = 2A + 2B + 2C + 2D + 2E = 60.\\]But adding all five numbers, we also get $a + (a + d) + (a + 2d) + (a + 3d) + (a + 4d) = 5a + 10d$, so\\[5a + 10d = 60.\\]Dividing both sides by 5, we get $a + 2d = \\boxed{12}$, which is the middle term. The answer is (D).</p>",
+        "<p>Not too bad with some logic and the awesome guess and check. Let $A=6$. Then let $B=7,E=5$ and $C=3,D=9$. Our arithmetic sequence is $10,11,12,13,14$ so our answer is $12 \\Longrightarrow \\mathrm{(D)}$.</p><p>Solution by franzliszt</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "sequences",
+        "confidence": 0.9,
+        "reasoning": "This problem involves analyzing sequences and finding patterns, often arithmetic or geometric sequences."
+      }
+    },
+    {
+      "id": "amc_2005_12a_14",
+      "question": "<p>On a standard die one of the dots is removed at random with each dot equally likely to be chosen. The die is then rolled. What is the probability that the top face has an odd number of dots?</p>",
+      "solutions": [
+        "<p>There are $1 + 2 + 3 + 4 + 5 + 6 = 21$ dots total. <a href=\"/wiki/index.php/Casework\" title=\"Casework\">Casework</a>:</p><ul><li>The dot is removed from an even face. There is a $\\frac{2+4+6}{21} = \\frac{4}{7}$ chance of this happening. Then there are 4 odd faces, giving us a probability of $\\frac 47 \\cdot \\frac 46 = \\frac{8}{21}$.</li><li>The dot is removed from an odd face. There is a $\\frac{1+3+5}{21} = \\frac{3}{7}$ chance of this happening. Then there are 2 odd faces, giving us a probability of $\\frac 37 \\cdot \\frac 26 = \\frac{1}{7}$.</li></ul><p>Thus the answer is $\\frac 8{21} + \\frac 17 = \\frac{11}{21} \\Longrightarrow \\mathrm{(D)}$.</p><p>The probability that the top face is odd is $1/3$ if a dot is removed from an odd face, and the probability that the top face is odd is $2/3$ if a dot is removed from an even face. Because each dot has the probability $1/21$ of being removed, the top face is odd with probability$\\left(\\frac{1}{3}\\right)\\left(\\frac{1+3+5}{21}\\right) +\\left(\\frac{2}{3}\\right)\\left(\\frac{2+4+6}{21}\\right) = \\frac{33}{63} = \\boxed{\\frac{11}{21}}$.</p>",
+        "<p>There are $1 + 2 + 3 + 4 + 5 + 6 = 21$ dots total. <a href=\"/wiki/index.php/Casework\" title=\"Casework\">Casework</a>:</p><ul><li>The dot is removed from an even face. There is a $\\frac{2+4+6}{21} = \\frac{4}{7}$ chance of this happening. Then there are 4 odd faces, giving us a probability of $\\frac 47 \\cdot \\frac 46 = \\frac{8}{21}$.</li><li>The dot is removed from an odd face. There is a $\\frac{1+3+5}{21} = \\frac{3}{7}$ chance of this happening. Then there are 2 odd faces, giving us a probability of $\\frac 37 \\cdot \\frac 26 = \\frac{1}{7}$.</li></ul><p>Thus the answer is $\\frac 8{21} + \\frac 17 = \\frac{11}{21} \\Longrightarrow \\mathrm{(D)}$.</p>",
+        "<p>The probability that the top face is odd is $1/3$ if a dot is removed from an odd face, and the probability that the top face is odd is $2/3$ if a dot is removed from an even face. Because each dot has the probability $1/21$ of being removed, the top face is odd with probability$\\left(\\frac{1}{3}\\right)\\left(\\frac{1+3+5}{21}\\right) +\\left(\\frac{2}{3}\\right)\\left(\\frac{2+4+6}{21}\\right) = \\frac{33}{63} = \\boxed{\\frac{11}{21}}$.</p>"
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "subcategory": "primes",
+        "confidence": 0.9,
+        "reasoning": "This problem involves prime number properties and number theory concepts."
+      }
+    },
+    {
+      "id": "amc_2005_12a_15",
+      "question": "<p>Let $\\overline{AB}$ be a diameter of a circle and $C$ be a point on $\\overline{AB}$ with $2 \\cdot AC = BC$. Let $D$ and $E$ be points on the circle such that $\\overline{DC} \\perp \\overline{AB}$ and $\\overline{DE}$ is a second diameter. What is the ratio of the area of $\\triangle DCE$ to the area of $\\triangle ABD$?</p><p>[asy] unitsize(2.5cm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=3; pair O=(0,0), C=(-1/3.0), B=(1,0), A=(-1,0); pair D=dir(aCos(C.x)), E=(-D.x,-D.y); draw(A--B--D--cycle); draw(D--E--C); draw(unitcircle,white); drawline(D,C); dot(O); clip(unitcircle); draw(unitcircle); label(\"$E$\",E,SSE); label(\"$B$\",B,E); label(\"$A$\",A,W); label(\"$D$\",D,NNW); label(\"$C$\",C,SW); draw(rightanglemark(D,C,B,2));[/asy]</p>",
+      "solutions": [
+        "<p>Notice that the bases of both triangles are diameters of the circle. Hence the ratio of the areas is just the ratio of the heights of the triangles, or $\\frac{CF}{CD}$ ($F$ is the foot of the <a href=\"/wiki/index.php/Perpendicular\" title=\"Perpendicular\">perpendicular</a> from $C$ to $DE$).</p><p>Call the radius $r$. Then $AC = \\frac 13(2r) = \\frac 23r$, $CO = \\frac 13r$. Using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> in $\\triangle OCD$, we get $\\frac{1}{9}r^2 + CD^2 = r^2 \\Longrightarrow CD = \\frac{2\\sqrt{2}}3r$. </p><p>Now we have to find $CF$. Notice $\\triangle OCD \\sim \\triangle OFC$, so we can write the <a href=\"/wiki/index.php/Proportion\" title=\"Proportion\">proportion</a>:</p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> in $\\triangle OFC$, we have $\\left(\\frac{1}{9}r\\right)^2 + CF^2 = \\left(\\frac{1}{3}r\\right)^2 \\Longrightarrow CF = \\sqrt{\\frac{8}{81}r^2} = \\frac{2\\sqrt{2}}{9}r$.</p><p>Our answer is $\\frac{CF}{CD} = \\frac{\\frac{2\\sqrt{2}}{9}r}{\\frac{2\\sqrt{2}}{3}r} = \\frac 13 \\Longrightarrow \\mathrm{(C)}$.</p><p>Let the center of the circle be $O$.</p><p>Note that $2 \\cdot AC = BC \\Rightarrow 3 \\cdot AC = AB$.</p><p>$O$ is midpoint of $AB \\Rightarrow \\frac{3}{2}AC = AO \\Rightarrow CO = \\frac{1}{3}AO \\Rightarrow CO = \\frac{1}{6} AB$.</p><p>$O$ is midpoint of $DE \\Rightarrow$ Area of $\\triangle DCE = 2 \\cdot$ Area of $\\triangle DCO = 2 \\cdot (\\frac{1}{6} \\cdot$ Area of $\\triangle ABD) = \\frac{1}{3} \\cdot$ Area of $\\triangle ABD \\Longrightarrow \\mathrm{(C)}$.</p><p>Let $r$ be the radius of the circle. Note that $AC+BC = 2r$ so $AC = \\frac{2}{3}r$.</p><p>By <a href=\"/wiki/index.php/Power_of_a_Point_Theorem\" title=\"Power of a Point Theorem\">Power of a Point Theorem</a>, $CD^2= AC \\cdot BC = 2\\cdot AC^2$, and thus $CD = \\sqrt{2} \\cdot AC = \\frac{2\\sqrt{2}}{3}r$</p><p>Then the area of $\\triangle ABD$ is $\\frac{1}{2} AB \\cdot CD = \\frac{2\\sqrt{2}}{3}r^2$. Similarly, the area of $\\triangle DCE$ is $\\frac{1}{2}(r-AC) \\cdot 2 \\cdot CD = \\frac{2\\sqrt{2}}{9}r^2$, so the desired ratio is $\\frac{\\frac{2\\sqrt{2}}{9}r^2}{\\frac{2\\sqrt{2}}{3}r^2} = \\frac{1}{3} \\Longrightarrow \\mathrm{(C)}$</p><p>[asy] unitsize(2.5cm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=3; pair O=(0,0), C=(-1/3.0), B=(1,0), A=(-1,0); pair D=dir(aCos(C.x)), e=(-D.x,-D.y); pair H=(e.x,0); draw(A--B--D--cycle); draw(D--e--C); draw(unitcircle,white); drawline(D,C); dot(O); clip(unitcircle); draw(unitcircle); label(\"$E$\",e,SSE); label(\"$B$\",B,NE); label(\"$A$\",A,W); label(\"$D$\",D,NNW); label(\"$C$\",C,SW); label(\"$H$\",H,SE); draw(e--H,dashed); label(\"O\",(0,0),NE); label(\"1\",(C--O),N); label(\"1\",(H--O),N); label(\"2\",(A--C),N); label(\"2\",(H--B),N); label(\"3\",(O--D),NE); label(\"3\",(O--e),NE); label(\"$2\\sqrt{2}$\",(D--C),W); label(\"$2\\sqrt{2}$\",(H--e),E); draw(rightanglemark(e,(e.x,0),A,2)); draw(rightanglemark(D,C,B,2));[/asy]</p><p>Let the center of the circle be $O$.Without loss of generality, let the radius of the circle be equal to $3$. Thus, $AO=3$ and $OB=3$. As a consequence of $2(AC)=BC$, $AC=2$ and $CO=1$. Also, we know that $DO$ and $OE$ are both equal to $3$ due to the fact that they are both radii. Thus from the Pythagorean Theorem, we have DC being equal to $\\sqrt{3^2-1^2}$ or $2\\sqrt{2}$. Now we know that the area of $[ABD]$ is equal to $\\frac{(3+2+1)(2\\sqrt{2})}{2}$ or $6\\sqrt{2}$. Know we need to find the area of $[DCE]$. By simple inspection $[COD]$ $\\cong$ $[HOE]$ due to angles being equal and CPCTC. Thus $HE=2\\sqrt{2}$ and $OH=1$. Know we know the area of $[CHE]=\\frac{(1+1)(2\\sqrt{2})}{2}$ or $2\\sqrt{2}$. We also know that the area of $[OHE]=\\frac{(1)(2\\sqrt{2})}{2}$ or $\\sqrt{2}$. Thus the area of $[COE]=2\\sqrt{2}-\\sqrt{2}$ or $\\sqrt{2}$. We also can calculate the area of $[DOC]$ to be $\\frac{(1)(2\\sqrt{2})}{2}$ or $\\sqrt{2}$. Thus $[DCE]$ is equal to $[COE]$ + $[DOC]$ or $\\sqrt{2}+\\sqrt{2}$ or $2\\sqrt{2}$. The ratio between $[DCE]$ and $[ABD]$ is equal to $\\frac{2\\sqrt{2}}{6\\sqrt{2}}$ or $\\frac{1}{3}$ $\\Longrightarrow \\mathrm{(C)}$.</p><p>We will use the shoelace formula. Our origin is the center of the circle. Denote the ordered pair for $D (x,y)$, and notice how $E$ is a 180 degree rotation of $D$, using the rotation matrix formula we get $E = (-x,-y)$. WLOG say that this circle has radius $3$. We can now find points $A$, $B$, and $C$ which are $(-3,0)$, $(3,0)$, and $(-1,0)$ respectively.By shoelace the area of $CED$ is $Y$, and the area of $ADB$ is $3Y$. Using division we get that the answer is $\\mathrm{(C)}$.</p><p>[asy] /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */ import graph; size(7cm);  real labelscalefactor = 0.5; /* changes label-to-point distance */ pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */  pen dotstyle = black; /* point style */  real xmin = -4.24313994860289, xmax = 6.360350402147026, ymin = -8.17642986522568, ymax = 4.1323989018072735;  /* image dimensions */ pen wrwrwr = rgb(0.3803921568627451,0.3803921568627451,0.3803921568627451);   /* draw figures */ draw(circle((0.9223776980185863,-1.084225871478444), 3.171161249925393), linewidth(2) + wrwrwr);  draw((-0.5623104956355617,1.717909856970905)--(-0.39884850438732933,-3.9670413347199647), linewidth(2) + wrwrwr);  draw((-2.2487343499798245,-1.1018908670262892)--(4.0935388680341624,-1.0849377800575102), linewidth(2) + wrwrwr);  draw((-0.4813673187299407,-1.0971666418223938)--(2.1729847859273126,-3.904641555130568), linewidth(2) + wrwrwr);  draw((-0.5623104956355617,1.717909856970905)--(2.1561002471522333,-3.887757016355488), linewidth(2) + wrwrwr);  draw((-2.2487343499798245,-1.1018908670262892)--(-0.5623104956355617,1.717909856970905), linewidth(2) + wrwrwr);  draw((-0.5623104956355617,1.717909856970905)--(4.0935388680341624,-1.0849377800575102), linewidth(2) + wrwrwr);  draw(circle((-2.858607769046372,-1.1524617347926092), 0.45463011998128017), linewidth(2) + wrwrwr);  draw(circle((4.790088296064635,-1.144019465405069), 0.45463011998128006), linewidth(2) + wrwrwr);  draw(circle((-0.9168858099122313,-1.6336710898823752), 0.45463011998127983), linewidth(2) + wrwrwr);  draw(circle((1.4976032349241348,-1.3128648531558642), 0.4546301199812797), linewidth(2) + wrwrwr);  draw(circle((-0.815578577261755,2.334195522261307), 0.4546301199812809), linewidth(2) + wrwrwr);  draw(circle((2.6119827940793803,-4.5546962979711285), 0.45463011998128033), linewidth(2) + wrwrwr);   /* dots and labels */ dot((0.9223776980185863,-1.084225871478444),dotstyle);  dot((-0.5623104956355617,1.717909856970905),dotstyle);  label(\"$D$\", (-0.49477234053524466,1.8867552447217006), NE * labelscalefactor);  dot((-0.39884850438732933,-3.9670413347199647),dotstyle);  dot((-2.2487343499798245,-1.1018908670262892),dotstyle);  label(\"A\", (-2.183226218043193,-0.9329627307165757), NE * labelscalefactor);  dot((4.0935388680341624,-1.0849377800575102),dotstyle);  label(\"B\", (4.165360361386693,-0.9160781919414961), NE * labelscalefactor);  dot((-0.4813673187299407,-1.0971666418223938),linewidth(4pt) + dotstyle);  label(\"C\", (-0.41034964665984724,-0.9667318082667347), NE * labelscalefactor);  dot((2.1729847859273126,-3.904641555130568),dotstyle);  dot((2.1561002471522333,-3.887757016355488),dotstyle);  label(\"E\", (2.2236384022525524,-3.7189116286046926), NE * labelscalefactor);  label(\"2\", (-2.9261459241466903,-1.2031153511178476), NE * labelscalefactor,wrwrwr);  label(\"1\", (4.722550140964316,-1.186230812342768), NE * labelscalefactor,wrwrwr);  label(\"3\", (-0.9844239650125497,-1.6758824368200735), NE * labelscalefactor,wrwrwr);  label(\"4\", (1.4300650798238166,-1.355076200093563), NE * labelscalefactor,wrwrwr);  label(\"2\", (-0.8831167323620728,2.2919841753236083), NE * labelscalefactor,wrwrwr);  label(\"2\", (2.5444446389790625,-4.5969076449088275), NE * labelscalefactor,wrwrwr);  clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);   /* end of picture */ [/asy]</p><p>We set point $A$ as a mass of 2. This means that point $B$ has a mass of $1$ since $2\\times{AC} = 1\\times{BC}$. This implies that point $C$ has a mass of $2+1 = 3$ and the center of the circle has a mass of $3+1 = 4$. After this, we notice that points $D$ and $E$ both must have a mass of $2$ since $2+2 = 4$ and they are both radii of the circle.</p><p>To find the ratio of the areas, we do the reciprocal of the multiplication of the mass points of DCE and the multiplication of ABD divided by each other. Which is simply $\\frac{3\\times2\\times2}{2\\times2\\times1}$ which is $\\boxed{\\frac{1}{3}}$ (the reciprocal of 3)</p><p>-Brudder</p><p>[asy] unitsize(3.5cm); defaultpen(fontsize(12pt)+linewidth(.8pt)); dotfactor=3; pair O=(0,0), C=(-1/3.0), B=(1,0), A=(-1,0); pair D=dir(aCos(C.x)), E=(-D.x,-D.y); draw(A--B--D--cycle); draw(D--E--C); draw(unitcircle,white); drawline(D,C); dot(O); clip(unitcircle); draw(unitcircle); label(\"$E$\",E,SSE); label(\"$B$\",B,NE); label(\"$A$\",A,W); label(\"$D$\",D,NNW); label(\"$C$\",C,SW); label(\"O\",(0,0),NE); label(\"x\",(C--O),N); label(\"3x\",(B--O),N); label(\"2x\",(A--C),N); label(\"3x\",(O--D),NE); label(\"3x\",(O--E),NE); label(\"$2x\\sqrt{2}$\",(D--C),W); draw(rightanglemark(D,C,B,2));[/asy]</p><p>Let the center of the circle be $O$.The area of $ADB$ is $\\frac{1}{2} \\cdot 6x \\cdot 2x\\sqrt{2}$ = $6x^2\\sqrt{2}$. The area of $DCE$ is $\\frac{1}{2} \\cdot DC \\cdot DE \\cdot$ sin $CDE$. We find sin $CDE$ is $\\frac{OC}{OD}$ = $\\frac{1}{3}$. Substituting $DC = 2x\\sqrt{2}$ and $DE = 6x$, we get $[DCE]$ = $\\frac{1}{2} \\cdot 2x\\sqrt{2} \\cdot 6x \\cdot \\frac{1}{3}$ = $2x^2\\sqrt{2}$. Hence, the ratio between the areas of $DCE$ and $ADB$ is equal to $\\frac{2x^2\\sqrt{2}}{6x^2\\sqrt{2}}$ or $\\frac{1}{3}$ = $\\boxed{(C)}$.</p><p>~Math_Genius_164</p><p>In my opinion, the solution below is the easiest and quickest. </p><p>Since both $DE$ and $AB$ are diameters, they intersect at the center of the circle. Call this center $O$. WLOG, let $AC=2, CO=1,OB=3$. Call the point where the extension of $DC$ hits the circle $F$. Notice that $\\angle DCB = 90^\\circ$. This implies that $DC=CF$. WOLG, let $DC=CF=1$. Then, $[DCE]=\\frac 12 bh = \\frac 12 * DF*CO = \\frac 12 *2*1=1$ and $[ABD]=\\frac 12 bh = \\frac 12 *AB*CD = \\frac 12 *6*1 = 3$. Thus, the answer is $\\frac{1}{3}$ = $\\boxed{(C)}$.</p><p>Solution by franzliszt</p><p>[asy] unitsize(2.5cm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=3; pair O=(0,0), C=(-1/3.0), B=(1,0), A=(-1,0), X = (1/3.0); pair D=dir(aCos(C.x)), E=(-D.x,-D.y); draw(A--B--D--cycle); draw(D--E--C); draw(D--X); draw(unitcircle,white); drawline(D,C); dot(O); clip(unitcircle); draw(unitcircle); label(\"$E$\",E,SSE); label(\"$B$\",B,E); label(\"$A$\",A,W); label(\"$D$\",D,NNW); label(\"$C$\",C,SW); label(\"$X$\",X,NE); draw(rightanglemark(D,C,B,2));[/asy]Let $X$ be the reflection of $C$ over the center $O.$ Since $\\triangle DXO\\cong\\triangle ECO$ by SAS, it follows that the area of $\\triangle DEC$ is equal to the area of $\\triangle DCX.$ However, we know that \\[BC = 2AC\\implies CO=\\frac{1}{2}AC\\implies CX=AC,\\]so the ratio of the area of $\\triangle DEC$ to the area of $\\triangle ABD$ is $\\frac{\\frac{AC\\cdot DC}{2}}{\\frac{3AC\\cdot DC}{2}}=\\frac{1}{3}\\implies \\boxed{(C)}$</p>",
+        "<p>Notice that the bases of both triangles are diameters of the circle. Hence the ratio of the areas is just the ratio of the heights of the triangles, or $\\frac{CF}{CD}$ ($F$ is the foot of the <a href=\"/wiki/index.php/Perpendicular\" title=\"Perpendicular\">perpendicular</a> from $C$ to $DE$).</p><p>Call the radius $r$. Then $AC = \\frac 13(2r) = \\frac 23r$, $CO = \\frac 13r$. Using the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> in $\\triangle OCD$, we get $\\frac{1}{9}r^2 + CD^2 = r^2 \\Longrightarrow CD = \\frac{2\\sqrt{2}}3r$. </p><p>Now we have to find $CF$. Notice $\\triangle OCD \\sim \\triangle OFC$, so we can write the <a href=\"/wiki/index.php/Proportion\" title=\"Proportion\">proportion</a>:</p><p>By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> in $\\triangle OFC$, we have $\\left(\\frac{1}{9}r\\right)^2 + CF^2 = \\left(\\frac{1}{3}r\\right)^2 \\Longrightarrow CF = \\sqrt{\\frac{8}{81}r^2} = \\frac{2\\sqrt{2}}{9}r$.</p><p>Our answer is $\\frac{CF}{CD} = \\frac{\\frac{2\\sqrt{2}}{9}r}{\\frac{2\\sqrt{2}}{3}r} = \\frac 13 \\Longrightarrow \\mathrm{(C)}$.</p>",
+        "<p>Let the center of the circle be $O$.</p><p>Note that $2 \\cdot AC = BC \\Rightarrow 3 \\cdot AC = AB$.</p><p>$O$ is midpoint of $AB \\Rightarrow \\frac{3}{2}AC = AO \\Rightarrow CO = \\frac{1}{3}AO \\Rightarrow CO = \\frac{1}{6} AB$.</p><p>$O$ is midpoint of $DE \\Rightarrow$ Area of $\\triangle DCE = 2 \\cdot$ Area of $\\triangle DCO = 2 \\cdot (\\frac{1}{6} \\cdot$ Area of $\\triangle ABD) = \\frac{1}{3} \\cdot$ Area of $\\triangle ABD \\Longrightarrow \\mathrm{(C)}$.</p>",
+        "<p>Let $r$ be the radius of the circle. Note that $AC+BC = 2r$ so $AC = \\frac{2}{3}r$.</p><p>By <a href=\"/wiki/index.php/Power_of_a_Point_Theorem\" title=\"Power of a Point Theorem\">Power of a Point Theorem</a>, $CD^2= AC \\cdot BC = 2\\cdot AC^2$, and thus $CD = \\sqrt{2} \\cdot AC = \\frac{2\\sqrt{2}}{3}r$</p><p>Then the area of $\\triangle ABD$ is $\\frac{1}{2} AB \\cdot CD = \\frac{2\\sqrt{2}}{3}r^2$. Similarly, the area of $\\triangle DCE$ is $\\frac{1}{2}(r-AC) \\cdot 2 \\cdot CD = \\frac{2\\sqrt{2}}{9}r^2$, so the desired ratio is $\\frac{\\frac{2\\sqrt{2}}{9}r^2}{\\frac{2\\sqrt{2}}{3}r^2} = \\frac{1}{3} \\Longrightarrow \\mathrm{(C)}$</p>",
+        "<p>[asy] unitsize(2.5cm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=3; pair O=(0,0), C=(-1/3.0), B=(1,0), A=(-1,0); pair D=dir(aCos(C.x)), e=(-D.x,-D.y); pair H=(e.x,0); draw(A--B--D--cycle); draw(D--e--C); draw(unitcircle,white); drawline(D,C); dot(O); clip(unitcircle); draw(unitcircle); label(\"$E$\",e,SSE); label(\"$B$\",B,NE); label(\"$A$\",A,W); label(\"$D$\",D,NNW); label(\"$C$\",C,SW); label(\"$H$\",H,SE); draw(e--H,dashed); label(\"O\",(0,0),NE); label(\"1\",(C--O),N); label(\"1\",(H--O),N); label(\"2\",(A--C),N); label(\"2\",(H--B),N); label(\"3\",(O--D),NE); label(\"3\",(O--e),NE); label(\"$2\\sqrt{2}$\",(D--C),W); label(\"$2\\sqrt{2}$\",(H--e),E); draw(rightanglemark(e,(e.x,0),A,2)); draw(rightanglemark(D,C,B,2));[/asy]</p><p>Let the center of the circle be $O$.Without loss of generality, let the radius of the circle be equal to $3$. Thus, $AO=3$ and $OB=3$. As a consequence of $2(AC)=BC$, $AC=2$ and $CO=1$. Also, we know that $DO$ and $OE$ are both equal to $3$ due to the fact that they are both radii. Thus from the Pythagorean Theorem, we have DC being equal to $\\sqrt{3^2-1^2}$ or $2\\sqrt{2}$. Now we know that the area of $[ABD]$ is equal to $\\frac{(3+2+1)(2\\sqrt{2})}{2}$ or $6\\sqrt{2}$. Know we need to find the area of $[DCE]$. By simple inspection $[COD]$ $\\cong$ $[HOE]$ due to angles being equal and CPCTC. Thus $HE=2\\sqrt{2}$ and $OH=1$. Know we know the area of $[CHE]=\\frac{(1+1)(2\\sqrt{2})}{2}$ or $2\\sqrt{2}$. We also know that the area of $[OHE]=\\frac{(1)(2\\sqrt{2})}{2}$ or $\\sqrt{2}$. Thus the area of $[COE]=2\\sqrt{2}-\\sqrt{2}$ or $\\sqrt{2}$. We also can calculate the area of $[DOC]$ to be $\\frac{(1)(2\\sqrt{2})}{2}$ or $\\sqrt{2}$. Thus $[DCE]$ is equal to $[COE]$ + $[DOC]$ or $\\sqrt{2}+\\sqrt{2}$ or $2\\sqrt{2}$. The ratio between $[DCE]$ and $[ABD]$ is equal to $\\frac{2\\sqrt{2}}{6\\sqrt{2}}$ or $\\frac{1}{3}$ $\\Longrightarrow \\mathrm{(C)}$.</p>",
+        "<p>We will use the shoelace formula. Our origin is the center of the circle. Denote the ordered pair for $D (x,y)$, and notice how $E$ is a 180 degree rotation of $D$, using the rotation matrix formula we get $E = (-x,-y)$. WLOG say that this circle has radius $3$. We can now find points $A$, $B$, and $C$ which are $(-3,0)$, $(3,0)$, and $(-1,0)$ respectively.By shoelace the area of $CED$ is $Y$, and the area of $ADB$ is $3Y$. Using division we get that the answer is $\\mathrm{(C)}$.</p>",
+        "<p>[asy] /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */ import graph; size(7cm);  real labelscalefactor = 0.5; /* changes label-to-point distance */ pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */  pen dotstyle = black; /* point style */  real xmin = -4.24313994860289, xmax = 6.360350402147026, ymin = -8.17642986522568, ymax = 4.1323989018072735;  /* image dimensions */ pen wrwrwr = rgb(0.3803921568627451,0.3803921568627451,0.3803921568627451);   /* draw figures */ draw(circle((0.9223776980185863,-1.084225871478444), 3.171161249925393), linewidth(2) + wrwrwr);  draw((-0.5623104956355617,1.717909856970905)--(-0.39884850438732933,-3.9670413347199647), linewidth(2) + wrwrwr);  draw((-2.2487343499798245,-1.1018908670262892)--(4.0935388680341624,-1.0849377800575102), linewidth(2) + wrwrwr);  draw((-0.4813673187299407,-1.0971666418223938)--(2.1729847859273126,-3.904641555130568), linewidth(2) + wrwrwr);  draw((-0.5623104956355617,1.717909856970905)--(2.1561002471522333,-3.887757016355488), linewidth(2) + wrwrwr);  draw((-2.2487343499798245,-1.1018908670262892)--(-0.5623104956355617,1.717909856970905), linewidth(2) + wrwrwr);  draw((-0.5623104956355617,1.717909856970905)--(4.0935388680341624,-1.0849377800575102), linewidth(2) + wrwrwr);  draw(circle((-2.858607769046372,-1.1524617347926092), 0.45463011998128017), linewidth(2) + wrwrwr);  draw(circle((4.790088296064635,-1.144019465405069), 0.45463011998128006), linewidth(2) + wrwrwr);  draw(circle((-0.9168858099122313,-1.6336710898823752), 0.45463011998127983), linewidth(2) + wrwrwr);  draw(circle((1.4976032349241348,-1.3128648531558642), 0.4546301199812797), linewidth(2) + wrwrwr);  draw(circle((-0.815578577261755,2.334195522261307), 0.4546301199812809), linewidth(2) + wrwrwr);  draw(circle((2.6119827940793803,-4.5546962979711285), 0.45463011998128033), linewidth(2) + wrwrwr);   /* dots and labels */ dot((0.9223776980185863,-1.084225871478444),dotstyle);  dot((-0.5623104956355617,1.717909856970905),dotstyle);  label(\"$D$\", (-0.49477234053524466,1.8867552447217006), NE * labelscalefactor);  dot((-0.39884850438732933,-3.9670413347199647),dotstyle);  dot((-2.2487343499798245,-1.1018908670262892),dotstyle);  label(\"A\", (-2.183226218043193,-0.9329627307165757), NE * labelscalefactor);  dot((4.0935388680341624,-1.0849377800575102),dotstyle);  label(\"B\", (4.165360361386693,-0.9160781919414961), NE * labelscalefactor);  dot((-0.4813673187299407,-1.0971666418223938),linewidth(4pt) + dotstyle);  label(\"C\", (-0.41034964665984724,-0.9667318082667347), NE * labelscalefactor);  dot((2.1729847859273126,-3.904641555130568),dotstyle);  dot((2.1561002471522333,-3.887757016355488),dotstyle);  label(\"E\", (2.2236384022525524,-3.7189116286046926), NE * labelscalefactor);  label(\"2\", (-2.9261459241466903,-1.2031153511178476), NE * labelscalefactor,wrwrwr);  label(\"1\", (4.722550140964316,-1.186230812342768), NE * labelscalefactor,wrwrwr);  label(\"3\", (-0.9844239650125497,-1.6758824368200735), NE * labelscalefactor,wrwrwr);  label(\"4\", (1.4300650798238166,-1.355076200093563), NE * labelscalefactor,wrwrwr);  label(\"2\", (-0.8831167323620728,2.2919841753236083), NE * labelscalefactor,wrwrwr);  label(\"2\", (2.5444446389790625,-4.5969076449088275), NE * labelscalefactor,wrwrwr);  clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle);   /* end of picture */ [/asy]</p><p>We set point $A$ as a mass of 2. This means that point $B$ has a mass of $1$ since $2\\times{AC} = 1\\times{BC}$. This implies that point $C$ has a mass of $2+1 = 3$ and the center of the circle has a mass of $3+1 = 4$. After this, we notice that points $D$ and $E$ both must have a mass of $2$ since $2+2 = 4$ and they are both radii of the circle.</p><p>To find the ratio of the areas, we do the reciprocal of the multiplication of the mass points of DCE and the multiplication of ABD divided by each other. Which is simply $\\frac{3\\times2\\times2}{2\\times2\\times1}$ which is $\\boxed{\\frac{1}{3}}$ (the reciprocal of 3)</p><p>-Brudder</p>",
+        "<p>[asy] unitsize(3.5cm); defaultpen(fontsize(12pt)+linewidth(.8pt)); dotfactor=3; pair O=(0,0), C=(-1/3.0), B=(1,0), A=(-1,0); pair D=dir(aCos(C.x)), E=(-D.x,-D.y); draw(A--B--D--cycle); draw(D--E--C); draw(unitcircle,white); drawline(D,C); dot(O); clip(unitcircle); draw(unitcircle); label(\"$E$\",E,SSE); label(\"$B$\",B,NE); label(\"$A$\",A,W); label(\"$D$\",D,NNW); label(\"$C$\",C,SW); label(\"O\",(0,0),NE); label(\"x\",(C--O),N); label(\"3x\",(B--O),N); label(\"2x\",(A--C),N); label(\"3x\",(O--D),NE); label(\"3x\",(O--E),NE); label(\"$2x\\sqrt{2}$\",(D--C),W); draw(rightanglemark(D,C,B,2));[/asy]</p><p>Let the center of the circle be $O$.The area of $ADB$ is $\\frac{1}{2} \\cdot 6x \\cdot 2x\\sqrt{2}$ = $6x^2\\sqrt{2}$. The area of $DCE$ is $\\frac{1}{2} \\cdot DC \\cdot DE \\cdot$ sin $CDE$. We find sin $CDE$ is $\\frac{OC}{OD}$ = $\\frac{1}{3}$. Substituting $DC = 2x\\sqrt{2}$ and $DE = 6x$, we get $[DCE]$ = $\\frac{1}{2} \\cdot 2x\\sqrt{2} \\cdot 6x \\cdot \\frac{1}{3}$ = $2x^2\\sqrt{2}$. Hence, the ratio between the areas of $DCE$ and $ADB$ is equal to $\\frac{2x^2\\sqrt{2}}{6x^2\\sqrt{2}}$ or $\\frac{1}{3}$ = $\\boxed{(C)}$.</p><p>~Math_Genius_164</p>",
+        "<p>In my opinion, the solution below is the easiest and quickest. </p><p>Since both $DE$ and $AB$ are diameters, they intersect at the center of the circle. Call this center $O$. WLOG, let $AC=2, CO=1,OB=3$. Call the point where the extension of $DC$ hits the circle $F$. Notice that $\\angle DCB = 90^\\circ$. This implies that $DC=CF$. WOLG, let $DC=CF=1$. Then, $[DCE]=\\frac 12 bh = \\frac 12 * DF*CO = \\frac 12 *2*1=1$ and $[ABD]=\\frac 12 bh = \\frac 12 *AB*CD = \\frac 12 *6*1 = 3$. Thus, the answer is $\\frac{1}{3}$ = $\\boxed{(C)}$.</p><p>Solution by franzliszt</p>",
+        "<p>[asy] unitsize(2.5cm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=3; pair O=(0,0), C=(-1/3.0), B=(1,0), A=(-1,0), X = (1/3.0); pair D=dir(aCos(C.x)), E=(-D.x,-D.y); draw(A--B--D--cycle); draw(D--E--C); draw(D--X); draw(unitcircle,white); drawline(D,C); dot(O); clip(unitcircle); draw(unitcircle); label(\"$E$\",E,SSE); label(\"$B$\",B,E); label(\"$A$\",A,W); label(\"$D$\",D,NNW); label(\"$C$\",C,SW); label(\"$X$\",X,NE); draw(rightanglemark(D,C,B,2));[/asy]Let $X$ be the reflection of $C$ over the center $O.$ Since $\\triangle DXO\\cong\\triangle ECO$ by SAS, it follows that the area of $\\triangle DEC$ is equal to the area of $\\triangle DCX.$ However, we know that \\[BC = 2AC\\implies CO=\\frac{1}{2}AC\\implies CX=AC,\\]so the ratio of the area of $\\triangle DEC$ to the area of $\\triangle ABD$ is $\\frac{\\frac{AC\\cdot DC}{2}}{\\frac{3AC\\cdot DC}{2}}=\\frac{1}{3}\\implies \\boxed{(C)}$</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "circles",
+        "confidence": 0.9,
+        "reasoning": "This problem involves advanced circle geometry and area relationships."
+      }
+    },
+    {
+      "id": "amc_2005_12a_16",
+      "question": "<p>Three circles of radius $s$ are drawn in the first quadrant of the $xy$-plane. The first circle is tangent to both axes, the second is tangent to the first circle and the $x$-axis, and the third is tangent to the first circle and the $y$-axis. A circle of radius $r > s$ is tangent to both axes and to the second and third circles. What is $r/s$?</p><p>[asy] unitsize(3mm); defaultpen(linewidth(.8pt)+fontsize(10pt)); dotfactor=3; pair O0=(9,9), O1=(1,1), O2=(3,1), O3=(1,3); pair P0=O0+9*dir(-45), P3=O3+dir(70); pair[] ps={O0,O1,O2,O3}; dot(ps); draw(Circle(O0,9)); draw(Circle(O1,1)); draw(Circle(O2,1)); draw(Circle(O3,1)); draw(O0--P0,linetype(\"3 3\")); draw(O3--P3,linetype(\"2 2\")); draw((0,0)--(18,0)); draw((0,0)--(0,18)); label(\"$r$\",midpoint(O0--P0),NE); label(\"$s$\",(-1.5,4)); draw((-1,4)--midpoint(O3--P3));[/asy]</p>",
+      "solutions": [
+        "<p><a class=\"image\" href=\"/wiki/index.php/File:2005_12A_AMC-16b.png\">2005 12A AMC-16b.png</a></p><p>Set $s =1$ so that we only have to find $r$. Draw the segment between the center of the third circle and the large circle; this has length $r+1$. We then draw the <a href=\"/wiki/index.php/Radius\" title=\"Radius\">radius</a> of the large circle that is perpendicular to the <a href=\"/wiki/index.php/X-axis\" title=\"X-axis\">x-axis</a>, and draw the perpendicular from this radius to the center of the third circle. This gives us a <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right triangle</a> with legs $r-3,r-1$ and <a href=\"/wiki/index.php/Hypotenuse\" title=\"Hypotenuse\">hypotenuse</a> $r+1$. The <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> yields:</p><p>Quite obviously $r > 1$, so $r = 9$.</p>"
+      ],
+      "categorization": {
+        "category": "probability",
+        "subcategory": "counting",
+        "confidence": 0.9,
+        "reasoning": "This problem involves probability calculations and combinatorial counting methods."
+      }
+    },
+    {
+      "id": "amc_2005_12a_17",
+      "question": "<p>A unit cube is cut twice to form three triangular prisms, two of which are congruent, as shown in Figure $1$. The cube is then cut in the same manner along the dashed lines shown in Figure $2$. This creates nine pieces. What is the volume of the piece that contains vertex $W$?</p><p><a class=\"image\" href=\"/wiki/index.php/File:2005_AMC_12A_Problem_17.png\">2005 AMC 12A Problem 17.png</a></p>",
+      "solutions": [
+        "<p>It is a <a href=\"/wiki/index.php/Pyramid\" title=\"Pyramid\">pyramid</a> with height $1$ and base area $\\frac{1}{4}$, so using the formula for the volume of a pyramid, $\\frac{1}{3} \\cdot \\left(\\frac{1}{4}\\right) \\cdot (1) = \\frac {1}{12} \\Rightarrow \\boxed{(\\mathrm {A})}$.</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "logarithms",
+        "confidence": 0.9,
+        "reasoning": "This problem involves logarithmic properties and calculations."
+      }
+    },
+    {
+      "id": "amc_2005_12a_18",
+      "question": "<p>Call a number \"prime-looking\" if it is composite but not divisible by $2$, $3$, or $5$. The three smallest prime-looking numbers are $49$, $77$, and $91$. There are $168$ prime numbers less than $1000$. How many prime-looking numbers are there less than $1000$?</p>",
+      "solutions": [
+        "<p>The given states that there are $168$ prime numbers less than $1000$, which is a fact we must somehow utilize. Since there seems to be no easy way to directly calculate the number of \"prime-looking\" numbers, we can apply <a href=\"/wiki/index.php/Complementary_counting\" title=\"Complementary counting\">complementary counting</a>. We can split the numbers from $1$ to $1000$ into several groups: $\\{1\\},$ $\\{\\mathrm{numbers\\ divisible\\ by\\ 2 = S_2}\\},$ $\\{\\mathrm{numbers\\ divisible\\ by\\ 3 = S_3}\\},$ $\\{\\mathrm{numbers\\ divisible\\ by\\ 5 = S_5}\\}, \\{\\mathrm{primes\\ not\\ including\\ 2,3,5}\\},$ $\\{\\mathrm{prime-looking}\\}$. Hence, the number of prime-looking numbers is $1000 - (168-3) - 1 - |S_2 \\cup S_3 \\cup S_5|$ (note that $2,3,5$ are primes).</p><p>We can calculate $S_2 \\cup S_3 \\cup S_5$ using the <a href=\"/wiki/index.php/Principle_of_Inclusion-Exclusion\" title=\"Principle of Inclusion-Exclusion\">Principle of Inclusion-Exclusion</a>: (the values of $|S_2| \\ldots$ and their intersections can be found quite easily)</p><p>Substituting, we find that our answer is $1000 - 165 - 1 - 734 = 100 \\Longrightarrow \\mathrm{(A)}$.</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "polygons",
+        "confidence": 0.9,
+        "reasoning": "This problem involves complex polygon geometry and coordinate calculations."
+      }
+    },
+    {
+      "id": "amc_2005_12a_19",
+      "question": "<p>A faulty car odometer proceeds from digit $3$ to digit $5$, always skipping the digit $4$, regardless of position. For example, after traveling one mile the odometer changed from $000039$ to $000050$. If the odometer now reads $002005$, how many miles has the car actually traveled?</p>",
+      "solutions": [
+        "<p>We find the number of numbers with a $4$ and subtract from $2005$. Quick counting tells us that there are $200$ numbers with a 4 in the hundreds place, $200$ numbers with a 4 in the tens place, and $201$ numbers with a 4 in the units place (counting $2004$). Now we apply the <a href=\"/wiki/index.php/Principle_of_Inclusion-Exclusion\" title=\"Principle of Inclusion-Exclusion\">Principle of Inclusion-Exclusion</a>. There are $20$ numbers with a 4 in the hundreds and in the tens, and $20$ for both the other two <a href=\"/wiki/index.php/Intersection\" title=\"Intersection\">intersections</a>. The intersection of all three sets is just $2$. So we get:</p><p>Alternatively, consider that counting without the number $4$ is almost equivalent to counting in base $9$; only, in base $9$, the number $9$ is not counted. Since $4$ is skipped, the symbol $5$ represents $4$ miles of travel, and we have traveled $2004_9$ miles. By  base conversion, $2004_9=9^3(2)+9^0(4)=729(2)+1(4)=1458+4=\\boxed{1462}$</p><p>Since any numbers containing one or more $4$s were skipped, we need only to find the numbers that don't contain a $4$ at all. First we consider $1$ - $1999$. Single digits are simply four digit numbers with a zero in all but the ones place (this concept applies to double and triple digits numbers as well). From $1$ - $1999$, we have $2$ possibilities for the thousands place, and $9$ possibilities for the hundreds, tens, and ones places. This is $2 \\cdot 9 \\cdot 9 \\cdot 9-1$ possibilities (because $0000$ doesn't count) or $1457$ numbers. From $2000$ - $2005$ there are $6$ numbers, $5$ of which don't contain a $4$. Therefore the total is $1457 + 5$, or $1462$ $\\Rightarrow$ $\\boxed{\\text{B}}$.</p><p>We seek to find  the amount of numbers that contain at least one $4,$ and subtract this number from $2005.$</p><p>We can simply apply casework to this problem.</p><p>The amount of numbers with at least one $4$ that are one or two digit numbers are $4,14,24,34,40-49,54,\\cdots,94$ which gives $19$ numbers.</p><p>The amount of three digit numbers with at least one $4$ is $8*19+100=252.$</p><p>The amount of four digit numbers with at least one $4$ is $252+1+19=272$</p><p>This, our answer is $2005-19-252-272=1462,$ or $\\boxed{B}.$</p><p>~coolmath2017</p><p>This is very analogous to base $9$. But, in base $9$, we don't have a $9$. So, this means that these are equal except for that base 9 will be one more than the operation here. $2005_9 = 5+0+0+1458 = 1463$. $1463 - 1 = 1462$</p><p>Therefore, our answer is $\\boxed {1462}$</p><p>~Arcticturn</p>",
+        "<p>We find the number of numbers with a $4$ and subtract from $2005$. Quick counting tells us that there are $200$ numbers with a 4 in the hundreds place, $200$ numbers with a 4 in the tens place, and $201$ numbers with a 4 in the units place (counting $2004$). Now we apply the <a href=\"/wiki/index.php/Principle_of_Inclusion-Exclusion\" title=\"Principle of Inclusion-Exclusion\">Principle of Inclusion-Exclusion</a>. There are $20$ numbers with a 4 in the hundreds and in the tens, and $20$ for both the other two <a href=\"/wiki/index.php/Intersection\" title=\"Intersection\">intersections</a>. The intersection of all three sets is just $2$. So we get:</p>",
+        "<p>Alternatively, consider that counting without the number $4$ is almost equivalent to counting in base $9$; only, in base $9$, the number $9$ is not counted. Since $4$ is skipped, the symbol $5$ represents $4$ miles of travel, and we have traveled $2004_9$ miles. By  base conversion, $2004_9=9^3(2)+9^0(4)=729(2)+1(4)=1458+4=\\boxed{1462}$</p>",
+        "<p>Since any numbers containing one or more $4$s were skipped, we need only to find the numbers that don't contain a $4$ at all. First we consider $1$ - $1999$. Single digits are simply four digit numbers with a zero in all but the ones place (this concept applies to double and triple digits numbers as well). From $1$ - $1999$, we have $2$ possibilities for the thousands place, and $9$ possibilities for the hundreds, tens, and ones places. This is $2 \\cdot 9 \\cdot 9 \\cdot 9-1$ possibilities (because $0000$ doesn't count) or $1457$ numbers. From $2000$ - $2005$ there are $6$ numbers, $5$ of which don't contain a $4$. Therefore the total is $1457 + 5$, or $1462$ $\\Rightarrow$ $\\boxed{\\text{B}}$.</p>",
+        "<p>We seek to find  the amount of numbers that contain at least one $4,$ and subtract this number from $2005.$</p><p>We can simply apply casework to this problem.</p><p>The amount of numbers with at least one $4$ that are one or two digit numbers are $4,14,24,34,40-49,54,\\cdots,94$ which gives $19$ numbers.</p><p>The amount of three digit numbers with at least one $4$ is $8*19+100=252.$</p><p>The amount of four digit numbers with at least one $4$ is $252+1+19=272$</p><p>This, our answer is $2005-19-252-272=1462,$ or $\\boxed{B}.$</p><p>~coolmath2017</p>",
+        "<p>This is very analogous to base $9$. But, in base $9$, we don't have a $9$. So, this means that these are equal except for that base 9 will be one more than the operation here. $2005_9 = 5+0+0+1458 = 1463$. $1463 - 1 = 1462$</p><p>Therefore, our answer is $\\boxed {1462}$</p><p>~Arcticturn</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "polynomials",
+        "confidence": 0.9,
+        "reasoning": "This problem involves polynomial properties and analysis."
+      }
+    },
+    {
+      "id": "amc_2005_12a_20",
+      "question": "<p>For each $x$ in $[0,1]$, define</p><p>\\[f(x) = \\begin{cases}  2x, \\qquad\\qquad \\mathrm{if} \\quad 0 \\leq x \\leq \\frac{1}{2}\\\\  2-2x, \\qquad \\mathrm{if} \\quad \\frac{1}{2} < x \\leq 1.  \\end{cases}\\]</p><p>Let $f^{[2]}(x) = f(f(x))$, and $f^{[n + 1]}(x) = f^{[n]}(f(x))$ for each integer $n \\geq 2$. For how many values of $x$ in $[0,1]$ is $f^{[2005]}(x) = 1/2$?</p>",
+      "solutions": [
+        "<p>For the two functions $f(x)=2x,0\\le x\\le \\frac{1}{2}$ and $f(x)=2-2x,\\frac{1}{2}\\le x\\le 1$,as long as $f(x)$ is between $0$ and $1$, $x$ will be in the right domain, so we don't need to worry about the domain of $x$. </p><p>Also, every time we change $f(x)$, the expression for the final answer in terms of $x$ will be in a different form (although they'll all satisfy the final equation), so we get a different starting value of $x$. Every time we have two choices for $f(x$) and altogether we have to choose $2005$ times. Thus, $2^{2005}\\Rightarrow\\boxed{E}$.</p><p>Note: the values of x that satisfy $f^{[n]}(x) = \\frac {1}{2}$ are $\\frac{1}{2^{n+1}}$, $\\frac{3}{2^{n+1}}$, $\\frac{5}{2^{n+1}}$, $\\cdots$ ,$\\frac{2^{n+1}-1}{2^{n+1}}$.</p>",
+        "<p>We are given that $f^{[2005]}(x) = \\frac {1}{2}$. Thus, $f(f^{[2004]}(x))=\\frac{1}{2}$. Let $f^{[2004]}(x)$ be equal to $y$. Thus $f(y)=\\frac{1}{2}$ or $y=\\frac{1}{4}$ or $\\frac{3}{4}$. Now we know $f^{[2004]}(x)$ is equal to $\\frac{1}{4}$ or $\\frac{3}{4}$. Now we know that $f(f^{[2003]}(x))=\\frac{1}{4}$ or $\\frac{3}{4}$. Now we solve for $f^{[2003]}(x)$ and let $f^{[2003]}(x)=z$. Thus $f(z)$ is equal to $\\frac{1}{8}$,$\\frac{7}{8}$,$\\frac{5}{8}$,and $\\frac{3}{8}$. As we see, $f^{[2005]}(x)$ has 1 solution, $f^{[2004]}(x)$ has 2 solutions, and $f^{[2003]}(x)$ has 4 solutions. Thus for each iteration we double the number of possible solutions. There are $2005$ iterations and thus the number of solutions is $2^{2005}$ $\\Rightarrow\\boxed{E}$</p>"
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "subcategory": "perfect_squares",
+        "confidence": 0.9,
+        "reasoning": "This problem involves perfect square properties and number theory."
+      }
+    },
+    {
+      "id": "amc_2005_12a_21",
+      "question": "<p>How many ordered triples of integers $(a,b,c)$, with $a \\geq 2$, $b \\geq 1$, and $c \\geq 0$, satisfy both $\\log_{a}b = c^{2005}$ and $a + b + c = 2005$?</p>",
+      "solutions": [
+        "<p>$a^{c^{2005}} = b$</p><p><a href=\"/wiki/index.php/Casework\" title=\"Casework\">Casework</a> upon $c$:</p><ul><li>$c = 0$: Then $a^0 = b \\Longrightarrow b = 1$. Thus we get $(2004,1,0)$.</li><li>$c = 1$: Then $a^1 = b \\Longrightarrow a = b$. Thus we get $(1002,1002,1)$.</li><li>$c \\ge 2$: Then the exponent of $a$ becomes huge, and since $a \\ge 2$ there is no way we can satisfy the second condition. Hence we have two ordered triples $\\mathrm{(C)}$.</li></ul>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "probability",
+        "confidence": 0.9,
+        "reasoning": "This problem involves geometric probability and area calculations."
+      }
+    },
+    {
+      "id": "amc_2005_12a_22",
+      "question": "<p>A rectangular box $P$ is inscribed in a sphere of radius $r$. The surface area of $P$ is 384, and the sum of the lengths of its $12$ edges is $112$. What is $r$?</p>",
+      "solutions": [
+        "<p>Box P has dimensions $l$, $w$, and $h$. Its surface area is \\[2lw+2lh+2wh=384,\\] and the sum of all its edges is \\[l + w + h = \\dfrac{4l+4w+4h}{4} = \\dfrac{112}{4} = 28.\\]</p><p>The diameter of the sphere is the space diagonal of the prism, which is \\[\\sqrt{l^2 + w^2 +h^2}.\\]Notice that \\begin{align*}(l + w + h)^2 - (2lw + 2lh + 2wh) &= l^2 + w^2 + h^2 \\\\ &= 784 - 384 \\\\ &= 400,\\end{align*} so the diameter is\\[\\sqrt{l^2 + w^2 +h^2} = \\sqrt{400} = 20.\\] The radius is half of the diameter, so\\[r=\\frac{20}{2} = \\boxed{\\textbf{(B) } 10}.\\]</p>",
+        "<p>As in the previous solution, we have that $2lw+2lh+2wh=384$ and $l + w + h = \\dfrac{4l+4w+4h}{4} = \\dfrac{112}{4} = 28$, and the diameter of the sphere is the space diagonal of the prism, $\\sqrt{l^2 + w^2 + h^2}$.</p><p>Now, since this is competition math, we only need to find the space diagonal of any one box that fits the requirements, so assume that $h=0$. (This essentially means that we have an infinitesimally thin box.) We now have that $2lw = 384$ and $l + w = 28$, and we are solving for $\\sqrt{l^2 + w^2}$. Because \\begin{align*}(l + w)^2 - 2lw &= l^2 + 2lw + w^2 - 2lw \\\\ &= l^2 + w^2,\\end{align*} this means that \\[l^2 + w^2 = 28^2 - 384 = 400,\\] so the space diagonal is $\\sqrt{400} = 20$. Since the diameter of the sphere is $20$, the radius is $\\boxed{\\textbf{(B) } 10}$. ~<a href=\"/wiki/index.php/User:Emerald_block\" title=\"User:Emerald block\">emerald_block</a></p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "functions",
+        "confidence": 0.9,
+        "reasoning": "This problem involves complex function analysis and properties."
+      }
+    },
+    {
+      "id": "amc_2005_12a_23",
+      "question": "<p>Two distinct numbers $a$ and $b$ are chosen randomly from the set $\\{2, 2^2, 2^3, \\ldots, 2^{25}\\}$. What is the probability that $\\log_{a}b$ is an integer?</p>",
+      "solutions": [
+        "<p>Let $\\log_{a}b = z$, so $a^z = b$. Define $a = 2^x$, $b = 2^y$; then $\\left(2^x\\right)^z = 2^{xz}= 2^y$, so $x \\mid y$. Here we can just make a table and count the number of values of $y$ per value of $x$. The largest possible value of $x$ is $12$, and so we get $\\sum_{x=1}^{12} \\left\\lfloor\\frac{25}{x}-1\\right\\rfloor = 24 + 11 + 7 + 5 + 4 + 3 + 2 + 2 + 1 + 1 + 1 + 1 = 62$. </p><p>The total number of ways to pick two distinct numbers (where the order matters) is $\\frac{25!}{(25-2)!}= 25 \\cdot 24 = 600$, so we get a probability of $\\frac{62}{600} = \\boxed{\\textbf{(B) }\\frac{31}{300}}$.</p>"
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "subcategory": "counting",
+        "confidence": 0.9,
+        "reasoning": "This problem involves advanced combinatorial counting methods."
+      }
+    },
+    {
+      "id": "amc_2005_12a_24",
+      "question": "<p>Let $P(x)=(x-1)(x-2)(x-3)$. For how many polynomials $Q(x)$ does there exist a polynomial $R(x)$ of degree $3$ such that $P(Q(x)) = P(x) \\cdot R(x)$?</p>",
+      "solutions": [
+        "<p>We can write the problem as</p><p><br/>Since $\\deg P(x) = 3$ and $\\deg R(x) = 3$, $\\deg P(x)\\cdot R(x) = 6$. Thus, $\\deg P(Q(x)) = 6$, so $\\deg Q(x) = 2$.</p><p>Hence, we conclude $Q(1)$, $Q(2)$, and $Q(3)$ must each be $1$, $2$, or $3$. Since a quadratic is uniquely determined by three points, there can be $3*3*3 = 27$ different quadratics $Q(x)$ after each of the values of $Q(1)$, $Q(2)$, and $Q(3)$ are chosen.</p><p><br/>However, we have included polynomials $Q(x)$ which are linear, rather than quadratic. Namely,</p><p>Clearly, we could not have included any other constant functions. For any linear function, we have $2\\cdot Q(2) = Q(1) + Q(3)$ because $Q(2)$ is the $y$-coordinate of the midpoint of $(1, Q(1))$ and $(3, Q(3))$. So we have not included any other linear functions. Therefore, the desired answer is $27 - 5 = \\boxed{\\textbf{(B) }22}$.</p>",
+        "<p>We see that \\[P(Q(x))=(Q(x)-1)(Q(x)-2)(Q(x)-3)=P(x)\\cdot R(x)=(x-1)(x-2)(x-3)\\cdot R(x).\\]Therefore, $P(x) | P(Q(x))$. Since $\\deg Q = 2,$ we must have $x-1, x-2, x-3$ divide $P(Q(x))$. So, we pair them off with one of $Q(x)-1, Q(x)-2,$ and $Q(x)-3$ to see that there are $3!+3 \\cdot 2 \\cdot \\binom{3}{2} = 24$ without restrictions. (Note that this count was made by pairing off linear factors of $P(x)$ with $Q(x)-1, Q(x)-2,$ and $Q(x)-3$, and also note that the degree of $Q$ is $2$.) However, we have two functions which are constant, which are $Q(x) = x$ and $Q(x) = 4-x$. So we subtract $2$ to get a final answer of $\\boxed{22} \\implies \\boxed{B}$. </p><p>~Williamgolly</p>",
+        "<p>Obviously, $\\deg Q = 2$ and the RHS has roots $1, 2, 3$. Thus, the only requirement is that $Q$ is a quadratic that maps each of the numbers $1, 2, 3$ to one of ${1, 2, 3}.$ It suffices to count the number of such mappings, as this uniquely determines $Q$ through polynomial interpolation. Thus there are $3^3$ possibilities. But we have three functions that are constant (i.e. that give $Q(1) =Q(2) = Q(3)$), and $2$ that are linear (i.e. that map $\\{1, 2, 3\\} \\mapsto \\{3, 2, 1\\}$ or $\\{1, 2, 3\\} \\mapsto \\{1, 2, 3\\}$). Hence there are $3^3-3-2 = \\boxed{22}$ solutions, so $\\boxed{B}$.</p><p>~Maximilian113</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "circles",
+        "confidence": 0.9,
+        "reasoning": "This problem involves advanced circle geometry and area relationships."
+      }
+    },
+    {
+      "id": "amc_2005_12a_25",
+      "question": "<p>Let $S$ be the set of all points with coordinates $(x,y,z)$, where $x$, $y$, and $z$ are each chosen from the set $\\{0,1,2\\}$. How many equilateral triangles all have their vertices in $S$?</p>",
+      "solutions": [
+        "<p>For this solution, we will just find as many equilateral triangles as possible, until it becomes intuitive that there are no more size of triangles left.</p><p>First, we observe that we can form an equilateral triangle with vertices in $S$ by taking any point in $S$ and connecting it to the $2$ adjacent points. This triangle will have a side length of $\\sqrt{2}$; a quick further examination of this cube will show us that this is the only possible side length (the red triangle in the diagram below). Each of these triangles is determined by one vertex of the cube, so in one cube we have $8$ equilateral triangles. We have $8$ unit cubes, as well as the entire $2 \\times 2 \\times 2$ cube (giving the green triangle in the diagram), for a total of $8+1 = 9$ cubes, and thus $9 \\cdot 8 = 72$ equilateral triangles. </p><p>(Note that connecting the centers of the faces will actually give an octahedron, not a cube, because it only has $6$ vertices.)</p><p>Now we look for any further equilateral triangles. Connecting the midpoints of $3$ non-adjacent, non-parallel edges indeed gives us more equilateral triangles (e.g. the blue triangle in the diagram below). Notice that picking these $3$ edges leaves $2$ vertices alone (labelled A and B in the diagram), and that picking any $2$ opposite vertices determines $2$ equilateral triangles. Hence there are $\\frac{8 \\cdot 2}{2} = 8$ of these equilateral triangles, so adding these to the triangles already found above gives a total of $72+8 = \\boxed{\\textbf{(C) }80}$.</p>",
+        "<p>The three-dimensional distance formula shows that the side length of the equilateral triangle must be $\\sqrt{d_x^2 + d_y^2 + d_z^2}$ with $\\left\\lvert d_x\\right\\rvert,\\left\\lvert d_y\\right\\rvert,\\left\\lvert d_z\\right\\rvert \\in \\{0-0,1-0,1-1,2-0,2-1,2-2\\} = \\{0,1,2\\}$, so the possible side lengths are\\begin{align*}&\\sqrt{0^2+0^2+1^2}=\\sqrt{1},\\ \\sqrt{0^2+1^2+1^2}=\\sqrt{2},\\ \\sqrt{1^2+1^2+1^2}=\\sqrt{3}, \\\\ &\\sqrt{0^2+0^2+2^2}=\\sqrt{4},\\ \\sqrt{0^2+1^2+2^2}=\\sqrt{5},\\ \\sqrt{1^2+1^2+2^2}=\\sqrt{6}, \\\\ &\\sqrt{0^2+2^2+2^2}=\\sqrt{8},\\ \\sqrt{1^2+2^2+2^2}=\\sqrt{9},\\ \\sqrt{2^2+2^2+2^2}=\\sqrt{12}.\\end{align*}</p><p>Some casework shows that $\\sqrt{2}$, $\\sqrt{6}$, and $\\sqrt{8}$ are the only lengths that work, after which we can complete the problem using the same counting argument as in Solution 1.</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "equations",
+        "confidence": 0.9,
+        "reasoning": "This problem involves solving complex equations with multiple constraints."
+      }
+    },
+    {
+      "id": "amc_2005_12b_1",
+      "question": "<p>A scout troop buys $1000$ candy bars at a price of five for $2$ dollars. They sell all the candy bars at the price of two for $1$ dollar. What was their profit, in dollars?</p>",
+      "solutions": [
+        "<p>\\begin{align*} \\mbox{Expenses} &= 1000 \\cdot \\frac25 = 400 \\\\ \\mbox{Revenue}  &= 1000 \\cdot \\frac12 = 500 \\\\ \\mbox{Profit}   &= \\mbox{Revenue} - \\mbox{Expenses} = 500-400 = \\boxed{\\textbf{(A) }100}. \\end{align*}Note: Revenue is a gain.</p>",
+        "<p>Note that the troop buys $10$ candy bars at a price of $4$ dollars and sells $10$ bars at a price of $5$ dollars. So the troop gains $1$ dollar for every $10$ bars. So therefore we divide $1000 \\div 10 = 100$. So our answer is $\\boxed{\\textbf{(A) }100}$.~HyperVoid</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "basic_operations",
+        "confidence": 0.95,
+        "reasoning": "This problem involves basic algebraic operations and calculations, typically evaluating expressions or solving simple equations."
+      }
+    },
+    {
+      "id": "amc_2005_12b_2",
+      "question": "<p>A positive number $x$ has the property that $x\\%$ of $x$ is $4$. What is $x$?</p>",
+      "solutions": [
+        "<p>Since $x\\%$ means $0.01x$, the statement \"$x\\% \\text{ of } x \\text{ is 4}$\" can be rewritten as \"$0.01x \\cdot x = 4$\":</p><p>$0.01x \\cdot x=4 \\Rightarrow x^2 = 400 \\Rightarrow x = \\boxed{\\textbf{(D) }20}.$</p><p>Try the answer choices one by one. Upon examination, it is quite obvious that the answer is $\\boxed{\\textbf{(D) }20}.$ Very fast.</p><p><br/>Solution by franzliszt</p>",
+        "<p>Since $x\\%$ means $0.01x$, the statement \"$x\\% \\text{ of } x \\text{ is 4}$\" can be rewritten as \"$0.01x \\cdot x = 4$\":</p><p>$0.01x \\cdot x=4 \\Rightarrow x^2 = 400 \\Rightarrow x = \\boxed{\\textbf{(D) }20}.$</p>",
+        "<p>Try the answer choices one by one. Upon examination, it is quite obvious that the answer is $\\boxed{\\textbf{(D) }20}.$ Very fast.</p><p><br/>Solution by franzliszt</p>"
+      ],
+      "categorization": {
+        "category": "arithmetic",
+        "subcategory": "basic_operations",
+        "confidence": 0.95,
+        "reasoning": "This problem involves basic arithmetic calculations and number sense, often involving percentages or ratios."
+      }
+    },
+    {
+      "id": "amc_2005_12b_3",
+      "question": "<p>Brianna is using part of the money she earned on her weekend job to buy several equally-priced CDs. She used one fifth of her money to buy one third of the CDs. What fraction of her money will she have left after she buys all the CDs? </p>",
+      "solutions": [
+        "<p>Let $m =$ Brianna's money. We have $\\frac15 m = \\frac13 (\\mbox{CDs}) \\Rightarrow \\frac35 m = (\\mbox{CDs})$. Thus, the money left over is $m-\\frac35m = \\frac25m$, so the answer is $\\boxed{\\textbf{(C) }\\frac{2}{5}}$.</p><p>This was just a simple manipulation of the equation. No solving was needed!</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "polygons",
+        "confidence": 0.9,
+        "reasoning": "This problem involves finding areas or perimeters of polygons, requiring understanding of geometric formulas."
+      }
+    },
+    {
+      "id": "amc_2005_12b_4",
+      "question": "<p>At the beginning of the school year, Lisa's goal was to earn an $A$ on at least $80\\%$ of her $50$ quizzes for the year. She earned an $A$ on $22$ of the first $30$ quizzes. If she is to achieve her goal, on at most how many of the remaining quizzes can she earn a grade lower than an $A$?</p>",
+      "solutions": [
+        "<p>Lisa's goal was to get an $A$ on $80\\% \\cdot 50 = 40$ quizzes. She already has $A$'s on $22$ quizzes, so she needs to get $A$'s on $40-22=18$ more. There are $50-30=20$ quizzes left, so she can afford to get less than an $A$ on $20-18=\\boxed{\\textbf{(B) }2}$ of them.</p><p>Here, only the $A$'s matter... No complicated stuff!</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "equations",
+        "confidence": 0.9,
+        "reasoning": "This problem involves setting up and solving equations, often with word problems or geometric applications."
+      }
+    },
+    {
+      "id": "amc_2005_12b_5",
+      "question": "<p>An $8$-foot by $10$-foot bathroom floor is tiled with square tiles of size $1$ foot by $1$ foot. Each tile has a pattern consisting of four white quarter circles of radius $1/2$ foot centered at each corner of the tile. The remaining portion of the tile is shaded. How many square feet of the floor are shaded?</p><p>[asy] unitsize(2cm); defaultpen(linewidth(.8pt)); fill(unitsquare,gray); filldraw(Arc((0,0),.5,0,90)--(0,0)--cycle,white,black); filldraw(Arc((1,0),.5,90,180)--(1,0)--cycle,white,black); filldraw(Arc((1,1),.5,180,270)--(1,1)--cycle,white,black); filldraw(Arc((0,1),.5,270,360)--(0,1)--cycle,white,black); [/asy]</p>",
+      "solutions": [
+        "<p>There are $80$ tiles. Each tile has $[\\mbox{square} - 4 \\cdot (\\mbox{quarter circle})]$ shaded. Thus:</p><p>\\begin{align*} \\mbox{shaded area} &= 80 \\left( 1 - 4 \\cdot \\dfrac{1}{4} \\cdot \\pi \\cdot \\left(\\dfrac{1}{2}\\right)^2\\right) \\\\ &= 80\\left(1-\\dfrac{1}{4}\\pi\\right) \\\\ &= \\boxed{\\textbf{(A) }80-20\\pi}. \\end{align*}4 quarters of a circle is a circle so that may save you 0.5 seconds (very much lots)\u00a0:)</p>"
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "subcategory": "divisibility",
+        "confidence": 0.9,
+        "reasoning": "This problem involves understanding divisibility properties and number theory concepts."
+      }
+    },
+    {
+      "id": "amc_2005_12b_6",
+      "question": "<p>In $\\triangle ABC$, we have $AC=BC=7$ and $AB=2$. Suppose that $D$ is a point on line $AB$ such that $B$ lies between $A$ and $D$ and $CD=8$. What is $BD$?</p>",
+      "solutions": [
+        "<p>Draw height $CH$ (Perpendicular line from point C to line AD). We have that $BH=1$. By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, $CH=\\sqrt{48}$. Since $CD=8$, $HD=\\sqrt{8^2-48}=\\sqrt{16}=4$, and $BD=HD-1$, so $BD=\\boxed{\\textbf{(A) }3}$.</p><p>After drawing out a diagram, let $\\angle{ABC}=\\theta$. By the Law of Cosines, $7^2=2^2+7^2-2(7)(2)\\cos{\\theta} \\rightarrow 0=4-28\\cos{\\theta} \\rightarrow \\cos{\\theta}=\\frac{1}{7}$. In $\\triangle CBD$, we have $\\angle{CBD}=(180-\\theta)$, and using the identity $\\cos(180-\\theta)=-\\cos{\\theta}$ and Law of Cosines one more time: $8^2=7^2+x^2-2(7)(x)\\left( \\frac{-1}{7} \\right) \\rightarrow 64=49+x^2+2x \\rightarrow x^2+2x-15=0$. The only positive value for $x$ is $3$, which gives the length of $\\overline{BD}$. Thus the answer is $\\boxed{\\textbf{(A) }3}$.</p><p>~Bowser498</p>",
+        "<p>Draw height $CH$ (Perpendicular line from point C to line AD). We have that $BH=1$. By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, $CH=\\sqrt{48}$. Since $CD=8$, $HD=\\sqrt{8^2-48}=\\sqrt{16}=4$, and $BD=HD-1$, so $BD=\\boxed{\\textbf{(A) }3}$.</p>",
+        "<p>After drawing out a diagram, let $\\angle{ABC}=\\theta$. By the Law of Cosines, $7^2=2^2+7^2-2(7)(2)\\cos{\\theta} \\rightarrow 0=4-28\\cos{\\theta} \\rightarrow \\cos{\\theta}=\\frac{1}{7}$. In $\\triangle CBD$, we have $\\angle{CBD}=(180-\\theta)$, and using the identity $\\cos(180-\\theta)=-\\cos{\\theta}$ and Law of Cosines one more time: $8^2=7^2+x^2-2(7)(x)\\left( \\frac{-1}{7} \\right) \\rightarrow 64=49+x^2+2x \\rightarrow x^2+2x-15=0$. The only positive value for $x$ is $3$, which gives the length of $\\overline{BD}$. Thus the answer is $\\boxed{\\textbf{(A) }3}$.</p><p>~Bowser498</p>",
+        "<p>Let $BD=k$. Then, by <a href=\"/wiki/index.php/Stewart%27s_Theorem\" title=\"Stewart's Theorem\">Stewart's Theorem</a>, </p><p>$2k(2+k)+7^2(2+k)=7^2k+8^2\\cdot 2 \\implies k^2+2k-15=0 \\implies k=\\boxed{\\textbf{(A) }3}$</p><p>~apsid</p><p>~edited by always90degrees (tiny fix, sign error)</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "circles",
+        "confidence": 0.9,
+        "reasoning": "This problem involves circle geometry and area calculations, often using pi and radius relationships."
+      }
+    },
+    {
+      "id": "amc_2005_12b_7",
+      "question": "<p>What is the area enclosed by the graph of $|3x|+|4y|=12$?</p>",
+      "solutions": [
+        "<p>If we get rid of the absolute values, we are left with the following 4 equations (using the logic that if $|a|=b$, then $a$ is either $b$ or $-b$):</p><p>\\begin{align*} 3x+4y=12 \\\\ -3x+4y=12 \\\\ 3x-4y=12 \\\\ -3x-4y=12 \\end{align*}</p><p>We can then put these equations in slope-intercept form in order to graph them.</p><p>\\begin{align*} 3x+4y=12 \\,\\implies\\, y=-\\dfrac{3}{4}x+3\\\\ -3x+4y=12\\,\\implies\\, y=\\dfrac{3}{4}x+3\\\\ 3x-4y=12\\,\\implies\\, y=\\dfrac{3}{4}x-3\\\\ -3x-4y=12\\,\\implies\\, y=-\\dfrac{3}{4}x-3\\end{align*}</p><p>Now you can graph the lines to find the shape of the graph:</p><p>[asy] Label f;  f.p=fontsize(6);  xaxis(-8,8,Ticks(f, 4.0));  yaxis(-6,6,Ticks(f, 3.0));  fill((0,-3)--(4,0)--(0,3)--(-4,0)--cycle,grey); draw((-4,-6)--(8,3), Arrows(4)); draw((4,-6)--(-8,3), Arrows(4)); draw((-4,6)--(8,-3), Arrows(4)); draw((4,6)--(-8,-3), Arrows(4));[/asy]</p><p>We can easily see that it is a rhombus with diagonals of $6$ and $8$. The area is $\\dfrac{1}{2}\\times 6\\times8$, or $\\boxed{\\mathrm{(D)}\\ 24}$</p>",
+        "<p>You can also assign $x$ and $y$ to be $0$. Then you can easily see that the diagonals are $6$ and $8$. Multiply and divide by $2$ to get D. $24$</p>",
+        "<p>The graph is symmetric with respect to both coordinate axes, and in the first quadrant it coincides with the graph of the line $3x + 4y = 12.$ Therefore the region is a rhombus, and the area is</p><p>\\[\\text{Area} = 4\\left(\\frac{1}{2}(4\\cdot 3)\\right) = 24 \\rightarrow \\boxed{D}\\]</p><p>[asy] draw((-5,0)--(5,0),Arrow); draw((0,-4)--(0,4),Arrow); label(\"$x$\",(5,0),S); label(\"$y$\",(0,4),E); label(\"4\",(4,0),S); label(\"-4\",(-4,0),S); label(\"3\",(0,3),NW); label(\"-3\",(0,-3),SW); draw((4,0)--(0,3)--(-4,0)--(0,-3)--cycle,linewidth(0.7)); [/asy]</p><p>~Alcumus</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "inequalities",
+        "confidence": 0.9,
+        "reasoning": "This problem involves solving inequalities and finding ranges of possible values."
+      }
+    },
+    {
+      "id": "amc_2005_12b_8",
+      "question": "<p>For how many values of $a$ is it true that the line $y = x + a$ passes through thevertex of the parabola $y = x^2 + a^2$\u00a0?</p>",
+      "solutions": [
+        "<p>We see that the vertex of the quadratic function $y = x^2 + a^2$ is $(0,\\,a^2)$. The y-intercept of the line $y = x + a$ is $(0,\\,a)$. We want to find the values (if any) such that $a=a^2$. Solving for $a$, the only values that satisfy this are $0$ and $1$, so the answer is $\\boxed{\\mathrm{(C)}\\ 2}$</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "triangles",
+        "confidence": 0.9,
+        "reasoning": "This problem involves triangle properties and geometric calculations, often using the Pythagorean theorem."
+      }
+    },
+    {
+      "id": "amc_2005_12b_9",
+      "question": "<p>On a certain math exam, $10\\%$ of the students got $70$ points, $25\\%$ got $80$ points, $20\\%$ got $85$ points, $15\\%$ got $90$ points, and the rest got $95$ points. What is the difference between the <a href=\"/wiki/index.php/Mean\" title=\"Mean\">mean</a> and the <a href=\"/wiki/index.php/Median\" title=\"Median\">median</a> score on this exam?</p>",
+      "solutions": [
+        "<p>To begin, we see that the remaining $30\\%$ of the students got $95$ points. Assume that there are $20$ students; we see that $2$ students got $70$ points, $5$ students got $80$ points, $4$ students got $85$ points, $3$ students got $90$ points, and $6$ students got $95$ points. The median is $85$, since the $10^{\\text{th}}$ and $11^{\\text{th}}$ terms are both $85$. The mean is $\\dfrac{70\\,(2)+80\\,(5)+85\\,(4)+90\\,(3)+95\\,(6)}{20}=\\dfrac{1720}{20}=86$. The difference between the mean and median, therefore, is $\\boxed{\\textbf{(B)}\\ 1}$.</p>",
+        "<p>The remaining $30\\%$ of the students got $95$ points.The mean is equal to $10\\%\\cdot70 + 25\\%\\cdot80 + 20\\%\\cdot85 + 15\\%\\cdot90 + 30\\%\\cdot95 = 86$.The score greater than or equal to $50\\%$ of other scores is the median. Since $35\\%$ scored $80$ or lower and the next $20\\%$ scored $85$, the median is $85$. The difference between the mean and the median is $\\boxed{\\textbf{(B)}\\ 1}$.</p><p>~mobius247</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "functions",
+        "confidence": 0.9,
+        "reasoning": "This problem involves analyzing function properties and behavior, often finding specific values."
+      }
+    },
+    {
+      "id": "amc_2005_12b_10",
+      "question": "<p>The first term of a sequence is $2005$. Each succeeding term is the sum of the cubes of the digits of the previous term. What is the ${2005}^{\\text{th}}$ term of the sequence?</p>",
+      "solutions": [
+        "<p>Performing this operation several times yields the results of $133$ for the second term, $55$ for the third term, and $250$ for the fourth term. The sum of the cubes of the digits of $250$ equal $133$, a complete cycle. The cycle is, excluding the first term, the $2^{\\text{nd}}$, $3^{\\text{rd}}$, and $4^{\\text{th}}$ terms will equal $133$, $55$, and $250$, following the fourth term. Any term number that is equivalent to $1\\ (\\text{mod}\\ 3)$ will produce a result of $250$. It just so happens that $2005\\equiv 1\\ (\\text{mod}\\ 3)$, which leads us to the answer of $\\boxed{\\textbf{(E) } 250}$.</p>"
+      ],
+      "categorization": {
+        "category": "arithmetic",
+        "subcategory": "percentages",
+        "confidence": 0.9,
+        "reasoning": "This problem involves percentage calculations and relationships between quantities."
+      }
+    },
+    {
+      "id": "amc_2005_12b_11",
+      "question": "<p>An envelope contains eight bills: $2$ ones, $2$ fives, $2$ tens, and $2$ twenties. Two bills are drawn at random without replacement. What is the probability that their sum is $$20$ or more?</p>",
+      "solutions": [
+        "<p>The only way to get a total of $$20$ or more is if you pick a twenty and another bill, or if you pick both tens. There are a total of $\\dbinom{8}{2}=\\dfrac{8\\times7}{2\\times1}=28$ ways to choose $2$ bills out of $8$. There are $12$ ways to choose a twenty and some other non-twenty bill. There is $1$ way to choose both twenties, and also $1$ way to choose both tens. Adding these up, we find that there are a total of $14$ ways to attain a sum of $20$ or greater, so there is a total probability of $\\dfrac{14}{28}=\\boxed{\\textbf{(D) }\\frac{1}{2}}$.</p>",
+        "<p>Another way to do this problem is to use <a href=\"/wiki/index.php/Complementary_counting\" title=\"Complementary counting\">complementary counting</a>, i.e. how many ways that the sum is less than $20$. Now, you do not have to consider the $2$ twenties, so you have $6$ bills left. $\\dbinom{6}{2} = \\dfrac{6\\times5}{2\\times1} = 15$ ways. However, you counted the case when you have $2$ tens, so you need to subtract 1, and you get $14$. Finding the ways to get $20$ or higher, you subtract $14$ from $28$ and get $14$. So the answer is $\\dfrac{14}{28} = \\boxed{\\textbf{(D) }\\dfrac{1}{2}}$</p>",
+        "<p>There are two cases that work, namely getting at least $1$ twenty, or getting $2$ tens.</p><p>Case $1$: $P(\\text{Get at least one twenty}) = 1-P(\\text{Do not get a single twenty})=1- \\frac{\\binom{6}{2}}{\\binom{8}{2}}=\\frac{28-15}{28}=\\frac{13}{28}$</p><p>Case $2$\u00a0: $P(\\text{Get two tens}) = \\frac{1}{\\binom{8}{2}} = \\frac{1}{28}$</p><p>Summing up our cases, we have $\\frac{13}{28}+\\frac{1}{28}=\\frac{14}{28}=\\boxed{\\textbf{(D) } \\dfrac{1}{2}}$</p>",
+        "<p>Note that if a twenty is drawn, anything else that is drawn will create a total greater than $20$; The probability of a twenty being drawn first is $\\frac{1}{4}.$ The same could be said for drawing anything, and then drawing a twenty. However, we can only draw something that isn't a twenty first (since we've already accounted for the probability of drawing two twenties). </p><p>The probability of drawing a non-twenty first, then a twenty second is $\\frac{3}{4}\\cdot\\frac{2}{7}=\\frac{3}{14}.$ Finally, we can draw two tens. The probability of this occuring is $\\frac{1}{4}\\cdot\\frac{1}{7}=\\frac{1}{28}.$</p><p>Adding these three probabilities gives us $\\frac{1}{4}+\\frac{3}{14}+\\frac{1}{28}=\\boxed{\\textbf{(D) } \\dfrac{1}{2}}$</p><p>-Benedict T (countmath1) (edited by AMC_8)</p>",
+        "<p>We see that there are $2$ of each bill. We can simplify the question to only drawing $1$ bill out of $4$, and trying to draw $$ 10$. (Originally you need to draw $$ 20$, but the bill is halved, so you need to draw only $$ 10$.) We see that we have $1$ of each bill $$1$, $$5$, $$10$, and $$20$.Thus, we can easily see the solution is $\\boxed{(D) \\frac{1}{2}}$.</p>"
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "subcategory": "counting",
+        "confidence": 0.9,
+        "reasoning": "This problem involves systematic counting and combinatorial methods, often using permutations or combinations."
+      }
+    },
+    {
+      "id": "amc_2005_12b_12",
+      "question": "<p>The <a href=\"/wiki/index.php/Quadratic_equation\" title=\"Quadratic equation\">quadratic equation</a> $x^2+mx+n$ has roots twice those of $x^2+px+m$, and none of $m,n,$ and $p$ is zero. What is the value of $n/p$?</p>",
+      "solutions": [
+        "<p>Let $x^2 + px + m = 0$ have roots $a$ and $b$. Then </p><p>\\[x^2 + px + m = (x-a)(x-b) = x^2 - (a+b)x + ab,\\]</p><p>so $p = -(a+b)$ and $m = ab$. Also, $x^2 + mx + n = 0$ has roots $2a$ and $2b$, so</p><p>\\[x^2 + mx + n = (x-2a)(x-2b) = x^2 - 2(a+b)x + 4ab,\\]</p><p>and $m = -2(a+b)$ and $n = 4ab$. Thus $\\frac{n}{p} = \\frac{4ab}{-(a+b)} = \\frac{4m}{\\frac{m}{2}} = \\boxed{\\textbf{(D) }8}$. </p><p>To test that this actually works, consider the quadratics $x^2 + 8x + 16 = 0,\\ x^2 + 16x + 64 = 0$.</p><p>If the roots of $x^2 + mx + n = 0$ are $2a$ and $2b$ and the roots of $x^2 + px + m = 0$ are $a$ and $b$, then using Vieta's formulas,\\[2a + 2b = -m\\]\\[a + b = -p\\]\\[2a(2b) = n\\]\\[a(b) = m\\]Therefore, substituting the second equation into the first equation gives \\[m = 2(p)\\]and substituting the fourth equation into the third equation gives\\[n = 4(m)\\]Therefore, $n = 8p$, so $\\frac{n}{p}= \\boxed{\\textbf{(D) }8}$</p>",
+        "<p>Let $x^2 + px + m = 0$ have roots $a$ and $b$. Then </p><p>\\[x^2 + px + m = (x-a)(x-b) = x^2 - (a+b)x + ab,\\]</p><p>so $p = -(a+b)$ and $m = ab$. Also, $x^2 + mx + n = 0$ has roots $2a$ and $2b$, so</p><p>\\[x^2 + mx + n = (x-2a)(x-2b) = x^2 - 2(a+b)x + 4ab,\\]</p><p>and $m = -2(a+b)$ and $n = 4ab$. Thus $\\frac{n}{p} = \\frac{4ab}{-(a+b)} = \\frac{4m}{\\frac{m}{2}} = \\boxed{\\textbf{(D) }8}$. </p><p>To test that this actually works, consider the quadratics $x^2 + 8x + 16 = 0,\\ x^2 + 16x + 64 = 0$.</p>",
+        "<p>If the roots of $x^2 + mx + n = 0$ are $2a$ and $2b$ and the roots of $x^2 + px + m = 0$ are $a$ and $b$, then using Vieta's formulas,\\[2a + 2b = -m\\]\\[a + b = -p\\]\\[2a(2b) = n\\]\\[a(b) = m\\]Therefore, substituting the second equation into the first equation gives \\[m = 2(p)\\]and substituting the fourth equation into the third equation gives\\[n = 4(m)\\]Therefore, $n = 8p$, so $\\frac{n}{p}= \\boxed{\\textbf{(D) }8}$</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "polygons",
+        "confidence": 0.9,
+        "reasoning": "This problem involves complex polygon geometry and area calculations, often with coordinate geometry."
+      }
+    },
+    {
+      "id": "amc_2005_12b_13",
+      "question": "<p>Suppose that $4^{x_1}=5$, $5^{x_2}=6$, $6^{x_3}=7$, ... , $127^{x_{124}}=128$. What is $x_1x_2...x_{124}$?</p>",
+      "solutions": [
+        "<p>We see that we can re-write $4^{x_1}=5$, $5^{x_2}=6$, $6^{x_3}=7$, ... , $127^{x_{124}}=128$ as $\\left(...\\left(\\left(\\left(4^{x_1}\\right)^{x_2}\\right)^{x_3}\\right)...\\right)^{x_{124}}=128$ by using substitution. By using the properties of exponents, we know that $4^{x_1x_2...x_{124}}=128$. </p><p>$4^{x_1x_2...x_{124}}=128\\\\2^{2x_1x_2...x_{124}}=2^7\\\\2x_1x_2...x_{124}=7\\\\x_1x_2...x_{124}=\\dfrac{7}{2}$</p><p>Therefore, the answer is $\\boxed{\\mathrm{(D)}\\,\\dfrac{7}{2}}$</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "sequences",
+        "confidence": 0.9,
+        "reasoning": "This problem involves analyzing sequences and finding patterns, often arithmetic or geometric sequences."
+      }
+    },
+    {
+      "id": "amc_2005_12b_14",
+      "question": "<p>A circle having center $(0,k)$, with $k>6$, is tangent to the lines $y=x$, $y=-x$ and $y=6$. What is the radius of this circle?</p>",
+      "solutions": [
+        "<p>Let $R$ be the radius of the circle. Draw the two radii that meet the points of tangency to the lines $y = \\pm x$. We can see that a square is formed by the origin, two tangency points, and the center of the circle. The side lengths of this square are $R$ and the diagonal is $k = R+6$. The diagonal of a square is $\\sqrt{2}$ times the side length. Therefore, $R+6 = R\\sqrt{2} \\Rightarrow R = \\dfrac{6}{\\sqrt{2}-1} = 6+6\\sqrt{2} \\Rightarrow \\boxed{\\mathrm{E}}$. </p>"
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "subcategory": "primes",
+        "confidence": 0.9,
+        "reasoning": "This problem involves prime number properties and number theory concepts."
+      }
+    },
+    {
+      "id": "amc_2005_12b_15",
+      "question": "<p>The sum of four two-digit numbers is $221$. None of the eight digits is $0$ and no two of them are the same. Which of the following is <b>not</b> included among the eight digits?</p>",
+      "solutions": [
+        "<p>$221$ can be written as the sum of four two-digit numbers, let's say $\\overline{ae}$, $\\overline{bf}$, $\\overline{cg}$, and $\\overline{dh}$. Then $221= 10(a+b+c+d)+(e+f+g+h)$. The last digit of $221$ is $1$, and $10(a+b+c+d)$ won't affect the units digits, so $(e+f+g+h)$ must end with $1$. The smallest value $(e+f+g+h)$ can have is $(1+2+3+4)=10$, and the greatest value is $(6+7+8+9)=30$. Therefore, $(e+f+g+h)$ must equal $11$ or $21$. </p><p>Case 1: $(e+f+g+h)=11$</p><p>The only distinct positive integers that can add up to $11$ is $(1+2+3+5)$. So, $a$,$b$,$c$, and $d$ must include four of the five numbers $(4,6,7,8,9)$. We have $10(a+b+c+d)=221-11=210$, or $a+b+c+d=21$. We can add all of $4+6+7+8+9=34$, and try subtracting one number to get to $21$, but none of them work. Therefore, $(e+f+g+h)$ cannot add up to $11$.</p><p>Case 2: $(e+f+g+h)=21$</p><p>Checking all the values for $e$,$f$,$g$,and $h$ each individually may be time-consuming, instead of only having $1$ solution like Case 1. We can try a different approach by looking at $(a+b+c+d)$ first. If $(e+f+g+h)=21$, $10(a+b+c+d)=221-21=200$, or $(a+b+c+d)=20$. That means $(a+b+c+d)+(e+f+g+h)=21+20=41$. We know $(1+2+3+4+5+6+7+8+9)=45$, so the missing digit is $45-41=\\boxed{\\mathrm{(D)}\\ 4}$</p>",
+        "<p>Alternatively, we know that a number is congruent to the sum of its digits mod 9, so $221 \\equiv 5 \\equiv 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 - d \\equiv -d$, where $d$ is some digit. Clearly, $\\boxed{d = 4}$.</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "circles",
+        "confidence": 0.9,
+        "reasoning": "This problem involves advanced circle geometry and area relationships."
+      }
+    },
+    {
+      "id": "amc_2005_12b_16",
+      "question": "<p>Eight spheres of radius 1, one per octant, are each tangent to the coordinate planes. What is the radius of the smallest sphere, centered at the origin, that contains these eight spheres?</p>",
+      "solutions": [
+        "<p>The eight spheres are formed by shifting spheres of radius $1$ and center $(0, 0, 0)$ $\\pm 1$ in the $x, y, z$ directions. Hence, the centers of the spheres are $(\\pm 1, \\pm 1, \\pm 1)$. For a sphere centered at the origin to contain all eight spheres, its radius must be greater than or equal to the longest distance from the origin to one of these spheres. This length is the sum of the distance from $(\\pm 1, \\pm 1, \\pm 1)$ to the origin and the radius of the spheres, or $\\sqrt{3} + 1$. To verify this is the longest length, we can see from the triangle inequality that the length from the origin to any other point on the spheres is strictly smaller. Thus, the answer is $\\boxed{\\mathrm{D}}$.</p>",
+        "<p>Simplify the problem - in $2$ dimensions, place $4$ circles in each quadrant in the coordinate plane. To find the circle enclosing these $4$ circles, notice that if you connect the $4$ centers as a square, the diameter of the large circle will be the diagonal of the square plus two small radii. </p><p>Similarly, in $3$ dimensions, consider the cube created by connecting the $8$ centers of the spheres. The diameter of the large spheres will just be the space diagonal of this cube, plus the two radiuses on either side. The side length of the cube is $2$, so the space diagonal will be $2\\sqrt{3}$. Then the diameter of the large sphere is $2\\sqrt{3} + 2$ and the radius is $\\sqrt{3} + 1$ or $\\boxed{\\mathrm{D}}$.</p><p>~Silverdragon</p>"
+      ],
+      "categorization": {
+        "category": "probability",
+        "subcategory": "counting",
+        "confidence": 0.9,
+        "reasoning": "This problem involves probability calculations and combinatorial counting methods."
+      }
+    },
+    {
+      "id": "amc_2005_12b_17",
+      "question": "<p>How many distinct four-tuples $(a,b,c,d)$ of rational numbers are there with</p><p>\\[a\\cdot\\log_{10}2+b\\cdot\\log_{10}3+c\\cdot\\log_{10}5+d\\cdot\\log_{10}7=2005?\\]</p>",
+      "solutions": [
+        "<p>Using the laws of <a class=\"mw-redirect\" href=\"/wiki/index.php/Logarithms\" title=\"Logarithms\">logarithms</a>, the given equation becomes</p><p>\\[\\log_{10}2^{a}+\\log_{10}3^{b}+\\log_{10}5^{c}+\\log_{10}7^{d}=2005\\]\\[\\Rightarrow \\log_{10}{2^{a}\\cdot 3^{b}\\cdot 5^{c}\\cdot 7^{d}}=2005\\]\\[\\Rightarrow 2^{a}\\cdot 3^{b}\\cdot 5^{c}\\cdot 7^{d} = 10^{2005}\\]</p><p>As $a,b,c,d$ must all be rational, and there are no powers of $3$ or $7$ in $10^{2005}$, $b=d=0$. Then $2^{a}\\cdot 5^{c}=2^{2005}\\cdot 5^{2005} \\Rightarrow a=c=2005$.</p><p>Only the four-tuple $(2005,0,2005,0)$ satisfies the equation, so the answer is $\\boxed{1} \\Rightarrow \\mathrm{(B)}$.</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "logarithms",
+        "confidence": 0.9,
+        "reasoning": "This problem involves logarithmic properties and calculations."
+      }
+    },
+    {
+      "id": "amc_2005_12b_18",
+      "question": "<p>Let $A(2,2)$ and $B(7,7)$ be points in the plane. Define $R$ as the region in the first quadrant consisting of those points $C$ such that $\\triangle ABC$ is an acute triangle. What is the closest integer to the area of the region $R$?</p>",
+      "solutions": [
+        "<p>[asy] Label f;  f.p=fontsize(6); xaxis(-1,15,Ticks(f, 2.0));  yaxis(-1,15,Ticks(f, 2.0));  pair A = MP(\"A\",(2,2),SW), B = MP(\"B\",(7,7),NE); D(A--B); filldraw((0,4)--(4,0)--(14,0)--(0,14)--cycle,gray); filldraw(CP(0.5(A+B),A),white); D(A); D(B); [/asy]</p><p>For angle $A$ and $B$ to be acute, $C$ must be between the two lines that are perpendicular to $\\overline{AB}$ and contain points $A$ and $B$. For angle $C$ to be acute, first draw a $45-45-90$ triangle with $\\overline{AB}$ as the hypotenuse. Note $C$ cannot be inside this triangle's circumscribed circle or else $\\angle C > 90^\\circ$. Hence, the area of $R$ is the area of the large triangle minus the area of the small triangle minus the area of the circle, which is $\\frac{14^2}{2}-\\frac{4^2}{2}-(\\frac{5\\sqrt{2}}{2})^2\\pi=98-8-\\frac{25\\pi}{2}$, which is approximately $51$. The answer is $\\boxed{\\mathrm{C}}$.</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "polygons",
+        "confidence": 0.9,
+        "reasoning": "This problem involves complex polygon geometry and coordinate calculations."
+      }
+    },
+    {
+      "id": "amc_2005_12b_19",
+      "question": "<p>Let $x$ and $y$ be two-digit integers such that $y$ is obtained by reversing the digits of $x$. The integers $x$ and $y$ satisfy $x^{2}-y^{2}=m^{2}$ for some positive integer $m$. What is $x+y+m$?</p>",
+      "solutions": [
+        "<p>let $x=10a+b$, then $y=10b+a$ where $a$ and $b$ are nonzero digits.</p><p>By <a href=\"/wiki/index.php/Difference_of_squares\" title=\"Difference of squares\">difference of squares</a>,\\[x^2-y^2=(x+y)(x-y)\\]\\[=(10a+b+10b+a)(10a+b-10b-a)\\]\\[=(11(a+b))(9(a-b))\\]</p><p>For this product to be a square, the factor of $11$ must be repeated in either $(a+b)$ or $(a-b)$, and given the constraints it has to be $(a+b)=11$. The factor of $9$ is already a square and can be ignored. Now $(a-b)$ must be another square, and since $a$ cannot be $10$ or greater then $(a-b)$ must equal $4$ or $1$. If $a-b=4$ then $(a+b)+(a-b)=11+4$, $2a=15$, $a=15/2$, which is not a digit. Hence the only possible value for $a-b$ is $1$. Now we have $(a+b)+(a-b)=11+1$, $2a=12$, $a=6$, then $b=5$, $x=65$, $y=56$, $m=33$, and $x+y+m=154\\Rightarrow\\boxed{\\mathrm{E}}$</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "polynomials",
+        "confidence": 0.9,
+        "reasoning": "This problem involves polynomial properties and analysis."
+      }
+    },
+    {
+      "id": "amc_2005_12b_20",
+      "question": "<p>Let $a,b,c,d,e,f,g$ and $h$ be distinct elements in the set $\\{-7,-5,-3,-2,2,4,6,13\\}.$</p><p>What is the minimum possible value of $(a+b+c+d)^{2}+(e+f+g+h)^{2}?$</p>",
+      "solutions": [
+        "<p>The sum of the set is $-7-5-3-2+2+4+6+13=8$, so if we could have the sum in each set of parenthesis be $4$ then the minimum value would be $2(4^2)=32$. Considering the set of four terms containing $13$, this sum could only be even if it had two or four odd terms. If it had all four odd terms then it would be $13-7-5-3=-2$, and with two odd terms then its minimum value is $13-7+2-2=6$, so we cannot achieve two sums of $4$. The closest we could have to $4$ and $4$ is $3$ and $5$, which can be achieved through $13-7-5+2$ and $6-3-2+4$. So the minimum possible value is $3^2+5^2=34\\Rightarrow\\boxed{\\mathrm{C}}$.</p>",
+        "<p>Trying out the values for a bit leads to us getting $34$ with $(-3, -2, 2, 6)$ in 1 set for a total of 9 and the other numbers giving a total of 25. </p><p>We start off with trying to get a $2(4^2) = 32$ solution, so we only need to find one set with a sum of 4 (the other will automatically have a sum of 4). </p><p>We can add 7 to each number. We are now trying to get a set with 32.</p><p>\\[(0, 2, 4, 5, 9, 11, 13, 20)\\]</p><p>Observe that there are 4 odd and 4 even values. To get 32 from 4 numbers $a,b,c,d$, the numbers either have to be 4 odds, 4 evens, or 2 odds and evens. The 4 odd numbers do not work (38) nor the 4 even numbers (26). </p><p>If $a,b,c,d$ has 2 odd numbers and 2 even numbers we can divide them into two cases: whether $a,b,c,d$ has 20 or doesn't have 20.</p><p>Case 1: $a,b,c,d$ doesn't have 20.</p><p>The maximum sum of the 2 even numbers are 2 + 4 = 6 and the maximum sum of the 2 odd numbers are 11 + 13 = 24. This is not enough to reach the 32 we need.</p><p>Case 2: $a,b,c,d$ has 20.</p><p>The minimum sum of the 2 even numbers are 20 + 0 = 20 and the minimum sum of the 2 odd numbers are 5 + 9 = 14. This is already greater than the 32 we need.</p><p>We have proven that we cannot partition the 8 numbers into two groups of 4 with the same sum, so the smallest value is $\\boxed{C}$.</p>",
+        "<p>Apply Cauchy's inequality to bound the sum, yielding $(1+1)\\left((a+b+c+d)^{2}+(e+f+g+h)^{2}\\right) \\ge (a+b+c+d+e+f+g+h)^2$ and rearrange to get $(a+b+c+d)^{2}+(e+f+g+h)^{2} \\ge 32$, where equality is attained iff $\\frac{a+b+c+d}{1}=\\frac{e+f+g+h}{1}=4$, which is impossible from the numbers given upon observing. Therefore, we can eliminate choices $\\mathrm{(A)}$ and $\\mathrm{(B)}$. Now experiment to get that $13-7-5+2$ and $6-3-2+4$ give $34$, which must be the minimum since we've eliminated the smaller answer choices. $\\implies \\boxed{\\mathrm{C}}$</p><p>~bomberdoodles</p>"
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "subcategory": "perfect_squares",
+        "confidence": 0.9,
+        "reasoning": "This problem involves perfect square properties and number theory."
+      }
+    },
+    {
+      "id": "amc_2005_12b_21",
+      "question": "<p>A positive integer $n$ has $60$ divisors and $7n$ has $80$ divisors. What is the greatest integer $k$ such that $7^k$ divides $n$?</p>",
+      "solutions": [
+        "<p>We may let $n = 7^k \\cdot m$, where $m$ is not divisible by 7. Using the fact that the number of divisors function $d(n)$ is multiplicative, we have $d(n) = d(7^k)d(m) = (k+1)d(m) = 60$. Also, $d(7n) = d(7^{k+1})d(m) = (k+2)d(m) = 80$. These numbers are in the ratio 3:4, so $\\frac{k+1}{k+2} = \\frac{3}{4} \\implies k = 2 \\Rightarrow \\boxed{\\mathrm{C}}$.</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "probability",
+        "confidence": 0.9,
+        "reasoning": "This problem involves geometric probability and area calculations."
+      }
+    },
+    {
+      "id": "amc_2005_12b_22",
+      "question": "<p>A sequence of complex numbers $z_{0}, z_{1}, z_{2}, ...$ is defined by the rule</p><p>\\[z_{n+1} = \\frac {iz_{n}}{\\overline {z_{n}}},\\]</p><p>where $\\overline {z_{n}}$ is the <a href=\"/wiki/index.php/Complex_conjugate\" title=\"Complex conjugate\">complex conjugate</a> of $z_{n}$ and $i^{2}=-1$. Suppose that $|z_{0}|=1$ and $z_{2005}=1$. How many possible values are there for $z_{0}$?</p>",
+      "solutions": [
+        "<p>Since $|z_0|=1$, let $z_0=e^{i\\theta_0}$, where $\\theta_0$ is an <a href=\"/wiki/index.php/Argument\" title=\"Argument\">argument</a> of $z_0$. We will prove by induction that $z_n=e^{i\\theta_n}$, where $\\theta_n=2^n(\\theta_0+\\frac{\\pi}{2})-\\frac{\\pi}{2}$.</p><p>Base Case: trivial</p><p>Inductive Step: Suppose the formula is correct for $z_k$, then\\[z_{k+1}=\\frac{iz_k}{\\overline {z_k}}=i e^{i\\theta_k} e^{i\\theta_k}=e^{i(2\\theta_k+\\pi/2)}\\]Since\\[2\\theta_k+\\frac{\\pi}{2}=2\\cdot 2^n(\\theta_0+\\frac{\\pi}{2})-\\pi+\\frac{\\pi}{2}=2^{n+1}(\\theta_0+\\frac{\\pi}{2})-\\frac{\\pi}{2}=\\theta_{n+1}\\]the formula is proven</p><p>$z_{2005}=1\\Rightarrow \\theta_{2005}=2k\\pi$, where $k$ is an integer. Therefore,\\[2^{2005}(\\theta_0+\\frac{\\pi}{2})=(2k+\\frac{1}{2})\\pi\\]\\[\\theta_0=\\frac{k}{2^{2004}}\\pi+\\left(\\frac{1}{2^{2006}}-\\frac{1}{2}\\right)\\pi\\]The value of $\\theta_0$ only matters <a class=\"mw-redirect\" href=\"/wiki/index.php/Modulo\" title=\"Modulo\">modulo</a> $2\\pi$. Since $\\frac{k+2^{2005}}{2^{2004}}\\pi\\equiv\\frac{k}{2^{2004}}\\pi\\mod 2\\pi$, k can take values from 0 to $2^{2005}-1$, so the answer is $2^{2005}\\Rightarrow\\boxed{\\mathrm{E}}$</p>",
+        "<p>Let $z_0 = \\cos \\theta + i\\sin \\theta = e^{i\\theta}$.\\[z_1 = \\frac {iz_{0}}{\\overline {z_{0}}} = \\frac{i(\\cos \\theta + i\\sin \\theta)}{\\cos \\theta - i\\sin \\theta} = i(\\cos \\theta + i\\sin \\theta)^2 = i(\\cos 2\\theta + i\\sin 2\\theta) = ie^{i2\\theta}\\]\\[z_2 = \\frac {iz_{1}}{\\overline {z_{1}}} = \\frac {i(ie^{i2\\theta})}{-ie^{-i2\\theta}} = -ie^{i4\\theta}\\]\\[z_3 = \\frac {iz_{2}}{\\overline {z_{2}}} = \\frac {i(-ie^{i4\\theta})}{ie^{-i4\\theta}} = -ie^{i8\\theta}\\]</p><p>Repeating through this recursive process, we can quickly see that for $n>1$\\[z_n = -i \\cdot e^{i2^n\\theta}\\]Plugging in $n=2005$, we get \\[z_{2005} = -ie^{i2^{2005}\\theta} = 1\\]Rearranging terms, we see that $e^{i2^{2005}\\theta}=i$.This means that $e^{i2^{2005}\\theta}$ lies at point $i$ on the unit circle in the complex plane, which happens when $2^{2005}\\theta = \\frac{\\pi}{2} + 2k\\pi$. Solving for $\\theta$, we get $\\theta=\\frac{\\pi(2k+\\frac{1}{2})}{2^{2005}}$ where $k = 0,1,2...2^{2005}-1$. So the answer is $2^{2005}\\Rightarrow\\boxed{\\mathrm{E}}$. (Author: Patrick Yin)</p>",
+        "<p>Note that for any complex number $z$, we have $|z|=|\\overline z|$. Therefore, the magnitude of $\\frac{iz_n}{|z_n|}$ is always $1$, meaning that all of the numbers in the sequence $z_k$ are of magnitude $1$.</p><p>Another property of complex numbers is that $z\\overline z=|z|^2$. For the numbers in our sequence, this means $z\\overline z=1$, so $\\overline z=z^{-1}$. Rewriting our recursive condition with these facts, we now have\\[z_{n+1}=\\frac{iz_n}{z_n^{-1}}=iz_n^2.\\]Solving for $z_n$ here, we obtain\\[z_n=\\frac{\\pm\\sqrt{z_{n+1}}}i=-i\\cdot(\\pm\\sqrt{z_{n+1}}).\\]It is seen that there are two values of $z_n$ which correspond to one value of $z_{n+1}$. That means that there are two possible values of $z_{2004}$, four possible values of $z_{2003}$, and so on. Therefore, there are $2^{2005}$ possible values of $z_0$, giving the answer as $\\boxed{\\mathrm{(E)}\\text{ }2^{2005}}$.</p>",
+        "<p>Let $z_0=e^{i\\theta}$. Then $z_1=\\frac{iz_0}{\\overline{z_0}}=\\frac{ie^{i\\theta}}{e^{-i\\theta}}=ie^{i2\\theta}$, $z_2=\\frac{iz_1}{\\overline{z_1}}-e^{i2^2 \\theta}$, $z_3=\\frac{iz_2}{\\overline{z_2}}=-ie^{i2^3 \\theta}$, $z_4=\\frac{iz_3}{\\overline{z_3}}=e^{i2^4\\theta}$. Now we see that every for every positive integer $4k$, $z_{4k}=e^{i2^{4k}\\theta}$ so $z_{2004}=e^{i2^{2004}\\theta}$ and $z_{2005}=ie^{i2^{2005}\\theta}=1 \\iff e^{i(2^{2005}\\theta + \\frac{\\pi}{2})}=1$, which has $2^{2005}$ solutions of the form \\[\\theta=\\frac{\\frac{3\\pi}{2}+2\\pi k}{2^{2005}}\\] for $k \\in \\{0, 1, \\dots 2^{2005}-1\\}$. $\\implies \\boxed{\\mathrm{E}}$</p><p>~bomberdoodles</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "functions",
+        "confidence": 0.9,
+        "reasoning": "This problem involves complex function analysis and properties."
+      }
+    },
+    {
+      "id": "amc_2005_12b_23",
+      "question": "<p>Let $S$ be the set of ordered triples $(x,y,z)$ of real numbers for which</p><p>\\[\\log_{10}(x+y) = z \\text{ and } \\log_{10}(x^{2}+y^{2}) = z+1.\\]There are real numbers $a$ and $b$ such that for all ordered triples $(x,y,z)$ in $S$ we have $x^{3}+y^{3}=a \\cdot 10^{3z} + b \\cdot 10^{2z}.$ What is the value of $a+b?$</p>",
+      "solutions": [
+        "<p>Let $x + y = s$ and $x^2 + y^2 = t$.  Then, $\\log(s)=z$ implies $\\log(10s) = z+1= \\log(t)$,so $t=10s$.  Therefore, $x^3 + y^3 = s\\cdot\\dfrac{3t-s^2}{2} = s(15s-\\dfrac{s^2}{2})$. Since $s = 10^z$, we find that $x^3 + y^3 = 15\\cdot10^{2z} - (1/2)\\cdot10^{3z}$. Thus, $a+b = \\frac{29}{2}$ $\\Rightarrow$ $\\boxed{B}$</p>",
+        "<p>First, remember that $x^3 + y^3$ factors to $(x + y) (x^2 - xy + y^2)$. By the givens, $x + y = 10^z$ and $x^2 + y^2 = 10^{z + 1}$. These can be used to find $xy$:\\[(x + y)^2 = 10^{2z}\\]\\[x^2 + 2xy + y^2 = 10^{2z}\\]\\[2xy = 10^{2z} - 10^{z + 1}\\]\\[xy = \\frac{10^{2z} - 10^{z + 1}}{2}\\]</p><p>Therefore,\\[x^3 + y^3 = a \\cdot 10^{3z} + b \\cdot 10^{2z} = 10^z\\left(10^{z + 1} - \\frac{10^{2z} - 10^{z + 1}}{2}\\right)\\]\\[= 10^z\\left(10^{z + 1} - \\frac{10^{2z} - 10^{z + 1}}{2}\\right)\\]\\[= 10^{2z + 1} - \\frac{10^{3z} - 10^{2z + 1}}{2}\\]\\[= -\\frac{1}{2} \\cdot 10^{3z} + \\frac{3}{2} \\cdot 10^{2z + 1}\\]\\[= -\\frac{1}{2} \\cdot 10^{3z} + 15 \\cdot 10^{2z}.\\]</p><p>It follows that $a = -\\frac{1}{2}$ and $b = 15$, thus $a + b = \\frac{29}{2}.$</p>",
+        "<p>We can rearrange $\\log_{10}(x+y)=z$ into $x+y=10^{z}$ and $\\log_{10}(x^2+y^2)=z+1$ into $x^2+y^2=10^{z+1}$</p><p>We can then put $x+y$ to the third power or $(x+y)^{3}=10^{3z}$. Basic polynomial multiplication shows us that $(x+y)^{3}=x^3+3x^{2}y+3xy^{2}+y^3=10^{3z}$ Thus, $x^3+y^3=10^{3z}-3x^{2}y-3xy^{2}$ or $x^3+y^3=10^{3z}-3xy(x+y)$. We know that $x+y=10^{z}$ so we have $x^3+y^3=10^{3z}-3xy(10^{z})$.</p><p>Now we need to find out what $xy$ is equal to in terms of $z$. We will find $xy$ by squaring $x+y$. It is basic polynomial multiplication to figure out that $(x+y)^{2}=x^2+2xy+y^2$. We are also given that $x^2+y^2=10^{z+1}$ and $x+y=10^{z}$. Thus $(10^{z})^{2}=10^{z+1}+2xy$ or $10^{2z}=10^{z+1}+2xy$. Rearranging the terms of this equation we obtain that $xy=\\frac{10^{2z}-10^{z+1}}{2}$ or $xy=\\frac{10^z(10^z-10)}{2}$. Now plugging this equation into our original equation $x^3+y^3=10^{3z}-3xy(10^{z})$, we obtain the equation $x^3+y^3=10^{3z}-3(\\frac{10^z(10^z-10)}{2})(10^{z})$ Simple rearranging of this equation yields the result that $x^3+y^3=10^{3z}-3(\\frac{10^{3z}}{2})+30(\\frac{10^{2z}}{2})$.Combining like terms we obtain the equation $x^3+y^3= -(\\frac{10^{3z}}{2})+30(\\frac{10^{2z}}{2})$.</p><p>Now we know the coefficients of $10^{3z}$ and $10^{2z}$ which are $\\frac{-1}{2}$ and $\\frac{30}{2}$ respectively. Adding the two coefficients we obtain an answer of $\\frac{29}{2}.$ $\\Rightarrow$ $\\boxed{B}$ (Author: David Camacho)</p>",
+        "<p>From the given conditions it follows that\\[ x+y=10^z, \\quad x^2+y^2=10\\cdot 10^z\\quad\\text{and}\\quad 10^{2z}=(x+y)^2=x^2+2xy+y^2. \\]Thus\\[ xy=\\frac{1}{2}(10^{2z}-10\\cdot 10^z). \\]Also\\[ (x+y)^3=10^{3z}\\quad\\text{and}\\quad x^3+y^3=(x+y)^3-3xy(x+y), \\]which yields\\begin{align*} x^3+y^3&=10^{3z}-\\frac{3}{2}(10^{2z}-10\\cdot 10^z)(10^z) \\\\ &=10^{3z}-\\frac{3}{2}(10^{3z}-10\\cdot 10^{2z}) =-\\frac{1}{2}10^{3z}+15\\cdot 10^{2z}, \\end{align*}and $a+b=-\\frac{1}{2}+15=\\boxed{29/2}$.</p><p>No other value of $a + b$ is possible for all members of $S$, because the triple $\\left(\\frac{1}{2}(1 + \\sqrt{19}), \\frac{1}{2}(1 - \\sqrt{19}), 0\\right)$ is in $S$, and for this ordered triple, the equation $x^3 + y^3 = a\\cdot 10^{3z} + b\\cdot 10^{2z}$ reduces to $a + b = 29/2$.</p>"
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "subcategory": "counting",
+        "confidence": 0.9,
+        "reasoning": "This problem involves advanced combinatorial counting methods."
+      }
+    },
+    {
+      "id": "amc_2005_12b_24",
+      "question": "<p>All three vertices of an equilateral triangle are on the parabola $y = x^2$, and one of its sides has a slope of $2$. The $x$-coordinates of the three vertices have a sum of $m/n$, where $m$ and $n$ are relatively prime positive integers. What is the value of $m + n$? </p>",
+      "solutions": [
+        "<p>Let the three points be at $A = (x_1, x_1^2)$, $B = (x_2, x_2^2)$, and $C = (x_3, x_3^2)$, such that the slope between the first two is $2$, and $A$ is the point with the least $y$-coordinate.</p><p>Then, we have $\\textrm{Slope of }AC = \\frac{x_1^2 - x_3^2}{x_1 - x_3} = x_1 + x_3$. Similarly, the slope of $BC$ is $x_2 + x_3$, and the slope of $AB$ is $x_1 + x_2 = 2$. The desired sum is $x_1 + x_2 + x_3$, which is equal to the sum of the slopes divided by $2$.</p><p>To find the slope of $AC$, we note that it comes at a $60^{\\circ}$ angle with $AB$. Thus, we can find the slope of $AC$ by multiplying the two complex numbers $1 + 2i$ and $1 + \\sqrt{3}i$. What this does is generate the complex number that is at a $60^{\\circ}$ angle with the complex number $1 + 2i$. Then, we can find the slope of the line between this new complex number and the origin:\\[(1+2i)(1+\\sqrt{3}i)\\]\\[= 1 - 2\\sqrt{3} + 2i + \\sqrt{3}i\\]\\[\\textrm{Slope } = \\frac{2 + \\sqrt{3}}{1 - 2\\sqrt{3}}\\]\\[= \\frac{2 + \\sqrt{3}}{1 - 2\\sqrt{3}} \\cdot \\frac{1 + 2\\sqrt{3}}{1 + 2\\sqrt{3}}\\]\\[= \\frac{8 + 5\\sqrt{3}}{-11}\\]\\[= \\frac{-8 - 5\\sqrt{3}}{11}.\\]The slope $BC$ can also be solved similarly, noting that it makes a $120^{\\circ}$ angle with $AB$:\\[(1+2i)(-1+\\sqrt{3}i)\\]\\[= -1 - 2\\sqrt{3} - 2i + \\sqrt{3}i\\]\\[\\textrm{Slope } = \\frac{\\sqrt{3} - 2}{-2\\sqrt{3} - 1}\\]\\[= \\frac{2 - \\sqrt{3}}{1 + 2\\sqrt{3}} \\cdot \\frac{1 - 2\\sqrt{3}}{1 - 2\\sqrt{3}}\\]</p><p>At this point, we start to notice a pattern: This expression is equal to $\\frac{2 + \\sqrt{3}}{1 - 2\\sqrt{3}} \\cdot \\frac{1 + 2\\sqrt{3}}{1 + 2\\sqrt{3}}$, except the numerators of the first fractions are conjugates! Notice that this means that when we multiply out, the rational term will stay the same, but the coefficient of $\\sqrt{3}$ will have its sign switched. This means that the two complex numbers are conjugates, so their irrational terms cancel out.</p><p>Our sum is simply $2 - 2\\cdot\\frac{8}{11} = \\frac{6}{11}$, and thus we can divide by $2$ to obtain $\\frac{3}{11}$, which gives the answer $\\boxed{\\mathrm{(A)}\\ 14}$.</p><p>~mathboy100</p>",
+        "<p>Using the slope formula and differences of squares, we find: </p><p>$a+b$ = the slope of $AB$, </p><p>$b+c$ = the slope of $BC$, </p><p>$a+c$ = the slope of $AC$. </p><p>So the value that we need to find is the sum of the slopes of the three sides of the triangle divided by $2$. Without loss of generality, let $AB$ be the side that has the smallest angle with the positive $x$-axis. Let $J$ be an arbitrary point with the coordinates $(1, 0)$. Translate the triangle so $A$ is at the origin. Then $\\tan(BOJ) = 2$. Since the slope of a line is equal to the tangent of the angle formed by the line and the positive x- axis, the answer is $\\dfrac{\\tan(BOJ) + \\tan(BOJ+60) + \\tan(BOJ-60)}{2}$. </p><p>Using $\\tan(BOJ) = 2$, and the tangent addition formula, this simplifies to $\\dfrac{3}{11}$, so the answer is $3 + 11 = \\boxed{\\mathrm{(A)}\\ 14}$</p>"
+      ],
+      "categorization": {
+        "category": "geometry",
+        "subcategory": "circles",
+        "confidence": 0.9,
+        "reasoning": "This problem involves advanced circle geometry and area relationships."
+      }
+    },
+    {
+      "id": "amc_2005_12b_25",
+      "question": "<p>Six ants simultaneously stand on the six <a href=\"/wiki/index.php/Vertex\" title=\"Vertex\">vertices</a> of a regular <a href=\"/wiki/index.php/Octahedron\" title=\"Octahedron\">octahedron</a>, with each ant at a different vertex. Simultaneously and independently, each ant moves from its vertex to one of the four adjacent vertices, each with equal <a href=\"/wiki/index.php/Probability\" title=\"Probability\">probability</a>. What is the probability that no two ants arrive at the same vertex?</p>",
+      "solutions": [
+        "<p>We approach this problem by counting the number of ways ants can do their desired migration, and then multiply this number by the probability that each case occurs.</p><p>Let the octahedron be $ABCDEF$, with points $B,C,D,E$ <a href=\"/wiki/index.php/Coplanar\" title=\"Coplanar\">coplanar</a>. Then the ant from $A$ and the ant from $F$ must move to plane $BCDE$. Suppose, without loss of generality, that the ant from $A$ moved to point $B$. Then, we must consider three cases.</p><ul><li>Case 1: Ant from point $F$ moved to point $C$</li></ul><p>On the plane, points $B$ and $C$ are taken. The ant that moves to $D$ can come from either $E$ or $C$. The ant that moves to $E$ can come from either $B$ or $D$. Once these two ants are fixed, the other two ants must migrate to the \"poles\" of the octahedron, points $A$ and $F$. Thus, there are two degrees of freedom in deciding which ant moves to $D$, two degrees of freedom in deciding which ant moves to $E$, and two degrees of freedom in deciding which ant moves to $A$. Hence, there are $2 \\times 2 \\times 2=8$ ways the ants can move to different points.</p><ul><li>Case 2: Ant from point $F$ moved to point $D$</li></ul><p>On the plane, points $B$ and $D$ are taken. The ant that moves to $C$ must be from $B$ or $D$, but the ant that moves to $E$ must also be from $B$ or $D$. The other two ants, originating from points $C$ and $E$, must move to the poles. Therefore, there are two degrees of freedom in deciding which ant moves to $C$ and two degrees of freedom in choosing which ant moves to $A$. Hence, there are $2 \\times 2=4$ ways the ants can move to different points.</p><ul><li>Case 3: Ant from point $F$ moved to point $E$</li></ul><p>By symmetry to Case 1, there are $8$ ways the ants can move to different points.</p><p>Given a point $B$, there is a total of $8+4+8=20$ ways the ants can move to different points. We oriented the square so that point $B$ was defined as the point to which the ant from point $A$ moved. Since the ant from point $A$ can actually move to four different points, there is a total of $4 \\times 20=80$ ways the ants can move to different points.</p><p>Each ant acts independently, having four different points to choose from. Hence, each ant has probability $1/4$ of moving to the desired location. Since there are six ants, the probability of each case occuring is $\\frac{1}{4^6} = \\frac{1}{4096}$. Thus, the desired answer is $\\frac{80}{4096}= \\boxed{\\frac{5}{256}} \\Rightarrow \\mathrm{(A)}$.</p><p>Let $f(n)$ be the number of <a class=\"mw-redirect\" href=\"/wiki/index.php/Cycle\" title=\"Cycle\">cycles</a> of length $n$ the can be walked among the vertices of an octahedron. For example, $f(3)$ would represent the number of ways in which an ant could navigate $2$ vertices and then return back to the original spot. Since an ant cannot stay still, $f(1) = 0$. We also easily see that $f(2) = 1, f(3) = 2$. </p><p>Now consider any four vertices of the octahedron. All four vertices will be connected by edges except for one pair. Let\u2019s think of this as a <a href=\"/wiki/index.php/Square\" title=\"Square\">square</a> with one diagonal (from top left to bottom right). EDIT: This part is wrong as if you choose the 4 vertices that have a cross section as a square, there exists no connecting diagonal. </p><p>Suppose an ant moved across this diagonal; then the ant at the other end can only move across the diagonal (which creates 2-cycle, bad) or it can move to another vertex, but then the ant at that vertex must move to the spot of the original ant (which creates 3-cycle, bad). Thus none of the ants can navigate the diagonal and can either shift clockwise or counterclockwise, and so $f(4) = 2$.</p><p>For $f(6)$, consider an ant at the top of the octahedron. It has four choices. Afterwards, it can either travel directly to the bottom, and then it has $2$ ways back up, or it can travel along the sides and then go to the bottom, of which simple counting gives us $6$ ways back up. Hence, this totals $4 \\times (2+6) = 32$.</p><p>Now, the number of possible ways is given by the sum of all possible cycles,\\[a \\cdot f(2) \\cdot f(2) \\cdot f(2) + b \\cdot f(2) \\cdot f(4) + c \\cdot f(3) \\cdot f(3) + d \\cdot f(6)\\]</p><p>where the <a href=\"/wiki/index.php/Coefficient\" title=\"Coefficient\">coefficients</a> represent the number of ways we can configure these cycles. To find $a$, fix any face, there are $4$ adjacent faces to select from to complete the cycle. From the four remaining faces there are only $2$ ways to create cycles, hence $a = 8$.</p><p>To find $b$, each cycle of $2$ faces is distinguished by their common edge, and there are $12$ edges, so $b = 12$.</p><p>To find $c$, each three-cycle is distinguished by the vertex, and there are $8$ edges. However, since the two three-cycles are indistinguishable, $c = 8/2 = 4$.</p><p>Clearly $d = 1$. Finally,</p><p>\\[8(1)(1)(1) + 12(1)(2) + 4(2)(2) + (32) = 80\\]</p><p>Each bug has $4$ possibilities to choose from, so the probability is $\\frac{80}{4^6} = \\frac{5}{256}$.</p>",
+        "<p>We approach this problem by counting the number of ways ants can do their desired migration, and then multiply this number by the probability that each case occurs.</p><p>Let the octahedron be $ABCDEF$, with points $B,C,D,E$ <a href=\"/wiki/index.php/Coplanar\" title=\"Coplanar\">coplanar</a>. Then the ant from $A$ and the ant from $F$ must move to plane $BCDE$. Suppose, without loss of generality, that the ant from $A$ moved to point $B$. Then, we must consider three cases.</p><ul><li>Case 1: Ant from point $F$ moved to point $C$</li></ul><p>On the plane, points $B$ and $C$ are taken. The ant that moves to $D$ can come from either $E$ or $C$. The ant that moves to $E$ can come from either $B$ or $D$. Once these two ants are fixed, the other two ants must migrate to the \"poles\" of the octahedron, points $A$ and $F$. Thus, there are two degrees of freedom in deciding which ant moves to $D$, two degrees of freedom in deciding which ant moves to $E$, and two degrees of freedom in deciding which ant moves to $A$. Hence, there are $2 \\times 2 \\times 2=8$ ways the ants can move to different points.</p><ul><li>Case 2: Ant from point $F$ moved to point $D$</li></ul><p>On the plane, points $B$ and $D$ are taken. The ant that moves to $C$ must be from $B$ or $D$, but the ant that moves to $E$ must also be from $B$ or $D$. The other two ants, originating from points $C$ and $E$, must move to the poles. Therefore, there are two degrees of freedom in deciding which ant moves to $C$ and two degrees of freedom in choosing which ant moves to $A$. Hence, there are $2 \\times 2=4$ ways the ants can move to different points.</p><ul><li>Case 3: Ant from point $F$ moved to point $E$</li></ul><p>By symmetry to Case 1, there are $8$ ways the ants can move to different points.</p><p>Given a point $B$, there is a total of $8+4+8=20$ ways the ants can move to different points. We oriented the square so that point $B$ was defined as the point to which the ant from point $A$ moved. Since the ant from point $A$ can actually move to four different points, there is a total of $4 \\times 20=80$ ways the ants can move to different points.</p><p>Each ant acts independently, having four different points to choose from. Hence, each ant has probability $1/4$ of moving to the desired location. Since there are six ants, the probability of each case occuring is $\\frac{1}{4^6} = \\frac{1}{4096}$. Thus, the desired answer is $\\frac{80}{4096}= \\boxed{\\frac{5}{256}} \\Rightarrow \\mathrm{(A)}$.</p>",
+        "<p>Let $f(n)$ be the number of <a class=\"mw-redirect\" href=\"/wiki/index.php/Cycle\" title=\"Cycle\">cycles</a> of length $n$ the can be walked among the vertices of an octahedron. For example, $f(3)$ would represent the number of ways in which an ant could navigate $2$ vertices and then return back to the original spot. Since an ant cannot stay still, $f(1) = 0$. We also easily see that $f(2) = 1, f(3) = 2$. </p><p>Now consider any four vertices of the octahedron. All four vertices will be connected by edges except for one pair. Let\u2019s think of this as a <a href=\"/wiki/index.php/Square\" title=\"Square\">square</a> with one diagonal (from top left to bottom right). EDIT: This part is wrong as if you choose the 4 vertices that have a cross section as a square, there exists no connecting diagonal. </p><p>Suppose an ant moved across this diagonal; then the ant at the other end can only move across the diagonal (which creates 2-cycle, bad) or it can move to another vertex, but then the ant at that vertex must move to the spot of the original ant (which creates 3-cycle, bad). Thus none of the ants can navigate the diagonal and can either shift clockwise or counterclockwise, and so $f(4) = 2$.</p><p>For $f(6)$, consider an ant at the top of the octahedron. It has four choices. Afterwards, it can either travel directly to the bottom, and then it has $2$ ways back up, or it can travel along the sides and then go to the bottom, of which simple counting gives us $6$ ways back up. Hence, this totals $4 \\times (2+6) = 32$.</p><p>Now, the number of possible ways is given by the sum of all possible cycles,\\[a \\cdot f(2) \\cdot f(2) \\cdot f(2) + b \\cdot f(2) \\cdot f(4) + c \\cdot f(3) \\cdot f(3) + d \\cdot f(6)\\]</p><p>where the <a href=\"/wiki/index.php/Coefficient\" title=\"Coefficient\">coefficients</a> represent the number of ways we can configure these cycles. To find $a$, fix any face, there are $4$ adjacent faces to select from to complete the cycle. From the four remaining faces there are only $2$ ways to create cycles, hence $a = 8$.</p><p>To find $b$, each cycle of $2$ faces is distinguished by their common edge, and there are $12$ edges, so $b = 12$.</p><p>To find $c$, each three-cycle is distinguished by the vertex, and there are $8$ edges. However, since the two three-cycles are indistinguishable, $c = 8/2 = 4$.</p><p>Clearly $d = 1$. Finally,</p><p>\\[8(1)(1)(1) + 12(1)(2) + 4(2)(2) + (32) = 80\\]</p><p>Each bug has $4$ possibilities to choose from, so the probability is $\\frac{80}{4^6} = \\frac{5}{256}$.</p>",
+        "<p>We use the idea of cycles. </p><p>Case 1: Two 3-cycles.We have 4 ways to divide the faces into cycles. There are 8 faces, and once a face has been chosen, the other three vertices must form the other cycle of length 3. Then there are $2^2$ ways to choose the direction of the cycle. There are $4 \\cdot 4 = 16.$</p><p>Case 2: Three 2-cycles.There are $4 \\cdot 2 = 8$ ways to do so. </p><p>Case 3: One 4-cycle, one 2-cycle.There are $12 \\cdot 2 = 24$ ways here because there are 12 different edges for the 2-cycle and we can choose the direction of the 4-cycle. </p><p>Case 4: One 6-cycle.Visualizing the octahedron as a 4-sided pyramid pointing up above one pointing down, we look at the ways an ant can start from the top vertex and visit all vertices without revisiting one along the way and returning to the top. Because the first step must be from the top to the middle square ring, we choose one vertex to move to and will multiply the final result by four.</p><p>We divide the paths into two sub-cases.</p><p>Sub-case 1: The ant continues to the bottom vertex. In this case, the ant has visited three corners of a square, but can not next visit the fourth corner or there will be no way to connect the remaining two vertices of the octahedron. Thus, the ant must next visit one of the other two vertices, and that selection decides the remainder of the path. Thus, this sub-case has 2 possible paths.</p><p>Sub-case 2: The ant continues along the \"equator\" square ring. By symmetry, there are two choices. Choose one, and we will multiply the final result by two. From that second point on the equator, there are two choices. If it continues to a third point on the equator, there is only one path to complete the cycle. If it next moves to the bottom vertex, there are two ways to complete the cycle. This gives a total of three possible paths. Multiplying by 2 gives 6 for this sub-case.</p><p>There are $(2 + 6) \\cdot 4 = 32$ ways here. </p><p>Overall, there are $80$ cases. Answer is $80/2^{12} = 5/256$</p><p>~Williamgolly + Dr. 17</p>",
+        "<p>Let $ACEDFB$ be the octahedron such that points $CDEF$ are coplanar, $C/D$ are opposite each other and $E/F$ are opposite each other.</p><p>The set of points that the ants from $A/B$ can travel to is $\\{C,D,E,F\\}$, the set of points that the ants from $C/D$ can travel to is $\\{A,B,E,F\\}$ and the set of points that the ants from $E/F$ can travel to is $\\{A,B,C,D\\}$. So the problem is analogous to finding the number of ways to take 2 elements from each of these sets to make the set $\\{A,B,C,D,E,F\\}$.</p><ul><li>Case 1: Ants from $E/F$ travel to $A/B$</li></ul><p>If this occurs then the ants from $C/D$ must travel to $E/F$ and therefore the ants from $E/F$ must travel to $C/D$. So this gives 1 case.</p><ul><li>Case 2: Ants from $E/F$ travel to $A/C$</li></ul><p>If this happens then one of the ants from $C/D$ must go to $B$ and one of the ants from $A/B$ must go to $D$ and the remaining ant from $C/D$ can choose to go to $E$ or $F$ and then the remaining ant from $A/B$ has only 1 choice. So this gives 2 cases.</p><p>The ants from $E/F$ traveling to $A/B$ is equivalent to them traveling to $C/D$ (both remove 2 elements from another set). And the ants from $E/F$ traveling to $A/C$ is equivalent to them traveling to $A/D$ or $B/C$ or $B/D$ (both remove 1 element from the other 2 sets). Also, for each of the 3 pairs of ants there are 2 ways the pair of ants can go to 2 points (for example, $E\\mapsto A$ and $F\\mapsto B$ or $E\\mapsto B$ and $F\\mapsto A$) so there are $2^{3}(2\\cdot1 + 4\\cdot2) = 80$ possibilties. There are a total of $2^{12}$ ways the ants can move so the answer is $\\frac{80}{2^{12}} = \\boxed{\\textbf{(A) } \\frac{5}{256}}$.~LuisFonseca123</p>"
+      ],
+      "categorization": {
+        "category": "algebra",
+        "subcategory": "equations",
+        "confidence": 0.9,
+        "reasoning": "This problem involves solving complex equations with multiple constraints."
+      }
+    }
+  ]
+}

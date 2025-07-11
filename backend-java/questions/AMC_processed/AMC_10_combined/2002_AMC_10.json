@@ -1,0 +1,751 @@
+{
+  "year": "2002",
+  "competition": "AMC_10",
+  "problems": [
+    {
+      "id": "amc_2002_10a_1",
+      "question": "<p>The ratio $\\frac{10^{2000}+10^{2002}}{10^{2001}+10^{2001}}$ is closest to which of the following numbers?</p>",
+      "solutions": [
+        "<p>We factor $\\frac{10^{2000}+10^{2002}}{10^{2001}+10^{2001}}$ as $\\frac{10^{2000}(1+100)}{10^{2001}(1+1)}=\\frac{101}{20}$. As $\\frac{101}{20}=5.05$, our answer is $\\boxed{\\textbf{(D)}\\ 5 }$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple arithmetic word problem involving basic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_2",
+      "question": "<p>Given that a, b, and c are non-zero real numbers, define $(a, b, c) = \\frac{a}{b} + \\frac{b}{c} + \\frac{c}{a}$, find $(2, 12, 9)$.</p>",
+      "solutions": [
+        "<p>$(2, 12, 9)=\\frac{2}{12}+\\frac{12}{9}+\\frac{9}{2}=\\frac{1}{6}+\\frac{4}{3}+\\frac{9}{2}=\\frac{1}{6}+\\frac{8}{6}+\\frac{27}{6}=\\frac{36}{6}=6$. Our answer is then $\\boxed{\\textbf{(C) }6}$.</p>",
+        "<p>Without computing the answer exactly, we see that $2/12=\\text{a little}$, $12/9=\\text{more than }1$, and $9/2=4.5$.The sum is $4.5 + (\\text{more than }1) + (\\text{a little}) = (\\text{more than }5.5) + (\\text{a little})$, and as all the options are integers, the correct one is $\\boxed{\\textbf{(C) }6}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating discounts and savings"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_3",
+      "question": "<p>According to the standard convention for exponentiation, \\[2^{2^{2^{2}}} = 2^{(2^{(2^2)})} = 2^{16} = 65536.\\]</p><p>If the order in which the exponentiations are performed is changed, how many other values are possible?</p>",
+      "solutions": [
+        "<p>The best way to solve this problem is by simple brute force. </p><p>It is convenient to drop the usual way how exponentiation is denoted, and to write the formula as $2\\uparrow 2\\uparrow 2\\uparrow 2$, where $\\uparrow$ denotes exponentiation. We are now examining all ways to add parentheses to this expression. There are 5 ways to do so:</p><p>We can note that $2\\uparrow (2\\uparrow 2) = (2\\uparrow 2)\\uparrow 2 =16$. Therefore options 1 and 2 are equal, and options 3 and 4 are equal.Option 1 is the one given in the problem statement. Thus we only need to evaluate options 3 and 5.</p><p>$((2\\uparrow 2)\\uparrow 2)\\uparrow 2 = 16\\uparrow 2 = 256$</p><p>$(2\\uparrow 2)\\uparrow (2\\uparrow 2) = 4 \\uparrow 4 = 256$</p><p>Thus the only other result is $256$, and our answer is $\\boxed{\\textbf{(B) } 1}$.</p>",
+        "<p>We will proceed by recursion using the same notation as Solution 1. Note that we can either have $(2 \\uparrow 2 \\uparrow 2) \\uparrow 2$ or $2 \\uparrow (2 \\uparrow 2 \\uparrow 2)$.</p><p>However, the expression in the parentheses can either be $(2 \\uparrow 2) \\uparrow 2$ or $2 \\uparrow (2 \\uparrow 2)$, which correspond to the same value of $16$. Therefore, we can either have $16^2$ or $2^{16}$, so our answer is $\\boxed{\\textbf{(B) }1}$.</p><p>~TPColor</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving finding area of geometric shapes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_4",
+      "question": "<p>For how many positive integers $m$ does there exist at least one positive integer n such that $m \\cdot n \\le m + n$?</p>",
+      "solutions": [
+        "<p>For any $m$ we can pick $n=1$, we get $m \\cdot 1 \\le m + 1$,therefore the answer is $\\boxed{\\textbf{(E) } \\text{infinitely many}}$.</p>",
+        "<p>Another solution, slightly similar to this first one would be using <a href=\"/wiki/index.php/Simon%27s_Favorite_Factoring_Trick\" title=\"Simon's Favorite Factoring Trick\">Simon's Favorite Factoring Trick</a>.</p><p>$(m-1)(n-1) \\leq 1$</p><p>Let $n=1$, then</p><p>$0 \\leq 1$</p><p>This means that there are infinitely many numbers $m$ that can satisfy the inequality. So the answer is $\\boxed{\\textbf{(E) } \\text{infinitely many}}$.</p>",
+        "<p>If we subtract $n$ from both sides of the equation, we get $m \\cdot n - n \\le m$. Factor the left side to get $(m - 1)(n) \\le m$. Divide both sides by $(m-1)$ and we get $n \\le \\frac {m}{m-1}$. The fraction $\\frac {m}{m-1} > 1$ if $m > 1$. There is an infinite amount of integers greater than $1$, therefore the answer is $\\boxed{\\textbf{(E) } \\text{infinitely many}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_5",
+      "question": "<p>Each of the small circles in the figure has radius one. The innermost circle is tangent to the six circles that surround it, and each of those circles is tangent to the large circle and to its small-circle neighbors. Find the area of the shaded region.</p><p>[asy] unitsize(.3cm); path c=Circle((0,2),1); filldraw(Circle((0,0),3),grey,black); filldraw(Circle((0,0),1),white,black); filldraw(c,white,black); filldraw(rotate(60)*c,white,black); filldraw(rotate(120)*c,white,black); filldraw(rotate(180)*c,white,black); filldraw(rotate(240)*c,white,black); filldraw(rotate(300)*c,white,black); [/asy]</p>",
+      "solutions": [
+        "<p>The outer circle has radius $1+1+1=3$, and thus area $9\\pi$. The little circles have area $\\pi$ each; since there are 7, their total area is $7\\pi$. Thus, our answer is $9\\pi-7\\pi=\\boxed{2\\pi\\Rightarrow \\textbf{(C)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_6",
+      "question": "<p>Cindy was asked by her teacher to subtract 3 from a certain number and then divide the result by 9. Instead, she subtracted 9 and then divided the result by 3, giving an answer of 43. What would her answer have been had she worked the problem correctly?</p>",
+      "solutions": [
+        "<p>We work backwards; the number that Cindy started with is $3(43)+9=138$. Now, the correct result is $\\frac{138-3}{9}=\\frac{135}{9}=15$. Our answer is $\\boxed{\\textbf{(A) }15}$.</p><p><br/></p>",
+        "<p>Let the number be $x$. We transform the problem into an equation: $\\frac{x-9}{3}=43$. Solve for $x$ gives us $x=138$. Therefore, the correct result is $\\frac{138-3}{9}=\\frac{135}{9}=\\boxed{\\textbf{(A) }15}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_7",
+      "question": "<p>A $45^\\circ$ arc of circle A is equal in length to a $30^\\circ$ arc of circle B. What is the ratio of circle A's area and circle B's area?</p>",
+      "solutions": [
+        "<p>Let $r_1$ and $r_2$ be the radii of circles $A$ and$B$, respectively. </p><p>It is well known that in a circle with radius $r$, a subtended arc opposite an angle of $\\theta$ degrees has length $\\frac{\\theta}{360} \\cdot 2\\pi r$. </p><p>Using that here, the arc of circle A has length $\\frac{45}{360}\\cdot2\\pi{r_1}=\\frac{r_1\\pi}{4}$. The arc of circle B has length $\\frac{30}{360} \\cdot 2\\pi{r_2}=\\frac{r_2\\pi}{6}$. We know that they are equal, so $\\frac{r_1\\pi}{4}=\\frac{r_2\\pi}{6}$, so we multiply through and simplify to get $\\frac{r_1}{r_2}=\\frac{2}{3}$. As all circles are similar to one another, the ratio of the areas is just the square of the ratios of the radii, so our answer is $\\boxed{\\textbf{(A) } 4/9}$.</p><p>The arc of circle $A$ is $\\frac{45}{30}=\\frac{3}{2}$ that of circle $B$.</p><p>The circumference of circle $A$ is $\\frac{2}{3}$ that of circle $B$ ($B$ is the larger circle).</p><p>The radius of circle $A$ is $\\frac{2}{3}$ that of circle $B$.</p><p>The area of circle $A$ is ${\\left(\\frac{2}{3}\\right)}^2=\\boxed{\\textbf{(A) } 4/9}$ that of circle $B$.</p><p>We can use a very cheap way to find the answer based on the choices. Firstly, if a higher angle measure equals a lower angle measure, that means that the ratio of areas must be lower, cutting D and E. Then we realize that the ratio has to be with square numbers, as there are no square roots. Therefore, it is $(A)$</p><p>-dragoon</p><ul><li>Written by a 6th grader, please don't mind*</li></ul><p>Set Circle A's arc to 45 degrees. In a full circle, there is 360 degrees, so 360/45 = 8. If we set the arc to be pi degrees, then in total there will be 8 pi in the circumference of this circle, yielding 4 as the radius and 16pi as the area. </p><p>Since the arc of 30 degrees in Circle B is also pi, and there are 12 30 degree arcs in a circle, there will be 12pi in the circumference of Circle B, yielding 6 as the radius and 36pi as the area. </p><p>Now, we put 16pi/36pi as our ratio, yielding 16/36=4/9. Therefore, it is $(A)$4/9. </p><p>~MathKatana</p>",
+        "<p>Let $r_1$ and $r_2$ be the radii of circles $A$ and$B$, respectively. </p><p>It is well known that in a circle with radius $r$, a subtended arc opposite an angle of $\\theta$ degrees has length $\\frac{\\theta}{360} \\cdot 2\\pi r$. </p><p>Using that here, the arc of circle A has length $\\frac{45}{360}\\cdot2\\pi{r_1}=\\frac{r_1\\pi}{4}$. The arc of circle B has length $\\frac{30}{360} \\cdot 2\\pi{r_2}=\\frac{r_2\\pi}{6}$. We know that they are equal, so $\\frac{r_1\\pi}{4}=\\frac{r_2\\pi}{6}$, so we multiply through and simplify to get $\\frac{r_1}{r_2}=\\frac{2}{3}$. As all circles are similar to one another, the ratio of the areas is just the square of the ratios of the radii, so our answer is $\\boxed{\\textbf{(A) } 4/9}$.</p>",
+        "<p>The arc of circle $A$ is $\\frac{45}{30}=\\frac{3}{2}$ that of circle $B$.</p><p>The circumference of circle $A$ is $\\frac{2}{3}$ that of circle $B$ ($B$ is the larger circle).</p><p>The radius of circle $A$ is $\\frac{2}{3}$ that of circle $B$.</p><p>The area of circle $A$ is ${\\left(\\frac{2}{3}\\right)}^2=\\boxed{\\textbf{(A) } 4/9}$ that of circle $B$.</p>",
+        "<p>We can use a very cheap way to find the answer based on the choices. Firstly, if a higher angle measure equals a lower angle measure, that means that the ratio of areas must be lower, cutting D and E. Then we realize that the ratio has to be with square numbers, as there are no square roots. Therefore, it is $(A)$</p><p>-dragoon</p>",
+        "<ul><li>Written by a 6th grader, please don't mind*</li></ul><p>Set Circle A's arc to 45 degrees. In a full circle, there is 360 degrees, so 360/45 = 8. If we set the arc to be pi degrees, then in total there will be 8 pi in the circumference of this circle, yielding 4 as the radius and 16pi as the area. </p><p>Since the arc of 30 degrees in Circle B is also pi, and there are 12 30 degree arcs in a circle, there will be 12pi in the circumference of Circle B, yielding 6 as the radius and 36pi as the area. </p><p>Now, we put 16pi/36pi as our ratio, yielding 16/36=4/9. Therefore, it is $(A)$4/9. </p><p>~MathKatana</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_8",
+      "question": "<p>Betsy designed a flag using blue triangles, small white squares, and a red center square, as shown. Let $B$ be the total area of the blue triangles, $W$ the total area of the white squares, and $P$ the area of the red square. Which of the following is correct?</p><p>[asy] unitsize(3mm); fill((-4,-4)--(-4,4)--(4,4)--(4,-4)--cycle,blue); fill((-2,-2)--(-2,2)--(2,2)--(2,-2)--cycle,red); path onewhite=(-3,3)--(-2,4)--(-1,3)--(-2,2)--(-3,3)--(-1,3)--(0,4)--(1,3)--(0,2)--(-1,3)--(1,3)--(2,4)--(3,3)--(2,2)--(1,3)--cycle; path divider=(-2,2)--(-3,3)--cycle; fill(onewhite,white); fill(rotate(90)*onewhite,white); fill(rotate(180)*onewhite,white); fill(rotate(270)*onewhite,white); [/asy]</p>",
+      "solutions": [
+        "<p>The blue that's touching the center red square makes up 8 triangles, or 4 squares. Each of the corners is 1 square and each of the edges is 1, totaling 12 squares. There are 12 white squares, thus we have $\\boxed{B=W\\Rightarrow \\text{(A)}}$.</p>",
+        "<p>Cut the pattern into 16 square regions and use symmetry.[asy] unitsize(3mm); fill((-4,-4)--(-4,4)--(4,4)--(4,-4)--cycle,blue); fill((-2,-2)--(-2,2)--(2,2)--(2,-2)--cycle,red); path onewhite=(-3,3)--(-2,4)--(-1,3)--(-2,2)--(-3,3)--(-1,3)--(0,4)--(1,3)--(0,2)--(-1,3)--(1,3)--(2,4)--(3,3)--(2,2)--(1,3)--cycle; path divider=(-2,2)--(-3,3)--cycle; fill(onewhite,white); fill(rotate(90)*onewhite,white); fill(rotate(180)*onewhite,white); fill(rotate(270)*onewhite,white); draw((-4,-2)--(4,-2),black); draw((-4,0)--(4,0),black); draw((-4,2)--(4,2),black); draw((-2,-4)--(-2,4),black); draw((0,-4)--(0,4),black); draw((2,-4)--(2,4),black); [/asy]</p><p>This clearly shows $\\boxed{\\textbf{(A) }B=W}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving divisibility and number properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_9",
+      "question": "<p>There are 3 numbers A, B, and C, such that $1001C - 2002A = 4004$, and $1001B + 3003A = 5005$. What is the average of A, B, and C?</p>",
+      "solutions": [
+        "<p>Notice that we don't need to find what $A, B,$ and $C$ actually are, just their average. In other words, if we can find $A+B+C$, we will be done. </p><p>Adding up the equations gives $1001(A+B+C)=9009=1001(9)$ so $A+B+C=9$ and the average is $\\frac{9}{3}=3$. Our answer is $\\boxed{\\textbf{(B) }3}$.</p>",
+        "<p>As there are only 2 equations and 3 variables, just set one of the variables to something convenient, like 0. Setting C as 0, we get A is -2, and B is 11 by substitution. By basic arithmetic the average is 3=>B</p><p>-dragoon</p>",
+        "<p>Start by isolating $B$ and $C$ in both of the equations, in order to represent the variables $C$ and $B$ in terms of A. Ending up with the two equations $C = 2A +4$ and $B = -3A + 5$, we have to calculate the value of the expression $\\frac{A+B+C}{3}$. Plugging in $2A + 4$ for $C$ and $-3A + 5$ for $B$, we add them up and end up with a value of 9. Dividing 9 by 3 to compute the average, we get our answer of $\\boxed{\\textbf{(B) }3}$.</p><p>~Darth_Cadet</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles",
+          "confidence": 0.95,
+          "reasoning": "Triangle geometry problem involving angles and side lengths"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_10",
+      "question": "<p>Compute the sum of all the roots of$(2x+3)(x-4)+(2x+3)(x-6)=0$</p>",
+      "solutions": [
+        "<p>We expand to get $2x^2-8x+3x-12+2x^2-12x+3x-18=0$ which is $4x^2-14x-30=0$ after combining like terms. Using the quadratic part of <a href=\"/wiki/index.php/Vieta%27s_Formulas\" title=\"Vieta's Formulas\">Vieta's Formulas</a>, we find the sum of the roots is $\\frac{14}4 = \\boxed{\\textbf{(A) }7/2}$.</p>",
+        "<p>We see a $(2x+3)$ term in both addends so we can factor the equation to $(2x+3)((x-4)+(x-6))=(2x+3)(2x-10)=0.$ The two roots become obvious: they are $-\\frac{3}{2}$ and $\\frac{10}{2}.$ Adding these two gives $\\boxed{\\textbf{(A) }7/2}.$</p><p>-starwarmonkey</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate word problem involving time, distance, and speed relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_11",
+      "question": "<p>Jamal wants to save 30 files onto disks, each with 1.44 MB space. 3 of the files take up 0.8 MB, 12 of the files take up 0.7 MB, and the rest take up 0.4 MB. It is not possible to split a file onto 2 different disks. What is the smallest number of disks needed to store all 30 files?</p>",
+      "solutions": [
+        "<p>A $0.8$ MB file can either be on its own disk, or share it with a $0.4$ MB. Clearly it is better to pick the second possibility. Thus we will have $3$ disks, each with one $0.8$ MB file and one $0.4$ MB file.</p><p>We are left with $12$ files of $0.7$ MB each, and $12$ files of $0.4$ MB each. Their total size is $12\\cdot (0.7 + 0.4) = 13.2$ MB. The total capacity of $9$ disks is $9\\cdot 1.44 = 12.96$ MB, hence we need at least $10$ more disks. And we can easily verify that $10$ disks are indeed enough: six of them will carry two $0.7$ MB files each, and four will carry three $0.4$ MB files each.</p><p>Thus our answer is $3+10 = \\boxed{\\textbf{(B) }13 }$.</p>",
+        "<p>Similarly to Solution 1, we see that there must be $3$ disks to account for the $0.8$ MB file. Secondly, since there are $[30-(3+12)]-3 = 12$ files(for both 0.4 MB and 0.7 MB) left, it is easy to see that the optimal way to place the files would be $3$ files per disks for the 0.4 MB files and hence would require 4 disks. </p><p>We are left with $12$ files($0.7$ MB), where the optimal number of files per disks is $2$, so the optimal number of disks for this type of file would be $6$ disks. Therefore, the answer is $3+4+6=\\boxed{13}$.</p><p>~quantumpsiinverted</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating percentages and changes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_12",
+      "question": "<p>Mr. Earl E. Bird gets up every day at 8:00 AM to go to work. If he drives at an average speed of 40 miles per hour, he will be late by 3 minutes. If he drives at an average speed of 60 miles per hour, he will be early by 3 minutes. How many miles per hour does Mr. Bird need to drive to get to work exactly on time?</p>",
+      "solutions": [
+        "<p>Let the time he needs to get there in be $t$ and the distance he travels be $d$. From the given equations, we know that $d=\\left(t+\\frac{1}{20}\\right)40$ and $d=\\left(t-\\frac{1}{20}\\right)60$. Setting the two equal, we have $40t+2=60t-3$ and we find $t=\\frac{1}{4}$ of an hour. Substituting t back in, we find $d=12$. From $d=rt$, we find that $r$, our answer, is $\\boxed{\\textbf{(B) }48 }$.</p><p>Since either time he arrives at is $3$ minutes from the desired time, the answer is merely the <a href=\"/wiki/index.php/Harmonic_mean\" title=\"Harmonic mean\">harmonic mean</a> of 40 and 60. Substituting $t=\\frac ds$ and dividing both sides by $d$, we get $\\frac 2s = \\frac 1{40} + \\frac 1{60}$ hence $s=\\boxed{\\textbf{(B) }48}$.</p><p>(Note that this approach would work even if the time by which he is late was different from the time by which he is early in the other case - we would simply take a weighted sum in step two, and hence obtain a weighted harmonic mean in step three.)</p><p>Let x be equal to the total amount of distance he needs to cover. Let y be equal to the amount of time he would travel correctly.Setting up a system of equations, $\\frac x{40} -3 = y$ and $\\frac x{60} +3 = y$</p><p>Solving, we get x = 720 and y = 15. </p><p>We divide x by y to get the average speed, $\\frac {720}{15} = 48$. Therefore, the answer is $\\boxed{\\textbf{(B) }48}$.</p><p>~MathKatana</p><p>Let $v$ be Mr Bird's speed in miles per hour and $t$ be the desired time in hours. No matter what, the product of Mr Bird's speed and time must always be constant. </p><p><a class=\"image\" href=\"/wiki/index.php/File:Vtequalsconstant.png\">Vtequalsconstant.png</a></p><p>From the diagram above, $(60 - v) \\left(t - \\frac{1}{20} \\right) = \\frac{v}{20}$ and similarly, $(v - 40)t = \\frac{40}{20} = 2$. Expanding, $60t - 3 - vt + \\frac{v}{20} = \\frac{v}{20}$ and so $60t - 3 - (2 + 40t) = 0, t = \\frac{1}{4}$. Hence $v = \\frac{2}{1/4} + 40 = 48$.</p>",
+        "<p>Let the time he needs to get there in be $t$ and the distance he travels be $d$. From the given equations, we know that $d=\\left(t+\\frac{1}{20}\\right)40$ and $d=\\left(t-\\frac{1}{20}\\right)60$. Setting the two equal, we have $40t+2=60t-3$ and we find $t=\\frac{1}{4}$ of an hour. Substituting t back in, we find $d=12$. From $d=rt$, we find that $r$, our answer, is $\\boxed{\\textbf{(B) }48 }$.</p>",
+        "<p>Since either time he arrives at is $3$ minutes from the desired time, the answer is merely the <a href=\"/wiki/index.php/Harmonic_mean\" title=\"Harmonic mean\">harmonic mean</a> of 40 and 60. Substituting $t=\\frac ds$ and dividing both sides by $d$, we get $\\frac 2s = \\frac 1{40} + \\frac 1{60}$ hence $s=\\boxed{\\textbf{(B) }48}$.</p><p>(Note that this approach would work even if the time by which he is late was different from the time by which he is early in the other case - we would simply take a weighted sum in step two, and hence obtain a weighted harmonic mean in step three.)</p>",
+        "<p>Let x be equal to the total amount of distance he needs to cover. Let y be equal to the amount of time he would travel correctly.Setting up a system of equations, $\\frac x{40} -3 = y$ and $\\frac x{60} +3 = y$</p><p>Solving, we get x = 720 and y = 15. </p><p>We divide x by y to get the average speed, $\\frac {720}{15} = 48$. Therefore, the answer is $\\boxed{\\textbf{(B) }48}$.</p><p>~MathKatana</p>",
+        "<p>Let $v$ be Mr Bird's speed in miles per hour and $t$ be the desired time in hours. No matter what, the product of Mr Bird's speed and time must always be constant. </p><p><a class=\"image\" href=\"/wiki/index.php/File:Vtequalsconstant.png\">Vtequalsconstant.png</a></p><p>From the diagram above, $(60 - v) \\left(t - \\frac{1}{20} \\right) = \\frac{v}{20}$ and similarly, $(v - 40)t = \\frac{40}{20} = 2$. Expanding, $60t - 3 - vt + \\frac{v}{20} = \\frac{v}{20}$ and so $60t - 3 - (2 + 40t) = 0, t = \\frac{1}{4}$. Hence $v = \\frac{2}{1/4} + 40 = 48$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "arithmetic_sequences",
+          "confidence": 0.95,
+          "reasoning": "Arithmetic sequence problem involving finding terms in a sequence"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_13",
+      "question": "<p>Given a triangle with side lengths 15, 20, and 25, find the triangle's shortest altitude.</p>",
+      "solutions": [
+        "<p>This is a Pythagorean triple (a $3-4-5$ actually) with legs $15$ and $20$. The area is then $\\frac{(15)(20)}{2}=150$. Now, consider an altitude drawn to any side. Since the area remains constant, the altitude and side to which it is drawn are inversely proportional. To get the smallest altitude, it must be drawn to the hypotenuse. Let the length be $x$; we have $\\frac{(x)(25)}{2}=\\frac{(15)(20)}{2}$, so $25x=300$ and $x$ is 12. Our answer is then $\\boxed{\\textbf{(B)}\\ 12}$.</p><p>By <a class=\"mw-redirect\" href=\"/wiki/index.php/Heron%27s_formula\" title=\"Heron's formula\">Heron's formula</a>, the area is $150$, hence the shortest altitude's length is $2\\cdot\\frac{150}{25}=\\boxed{12\\Rightarrow \\textbf{(B)}}$.</p><p>The sides are in the ratio of $3-4-5$, and are therefore a Pythagorean Triple and a part of a right triangle.We know two altitudes, the legs $15$ and $20$. All that is left is to check the altitude from the right angle vertex to the hypotenuse. There is a rule that states that the three triangles formed when the altitude is dropped (the big triangle and two smaller ones it gets split into) are similar! We take the triangle with hypotenuse $20$. The ratio of sides between that triangle and the bigger one is $4:5$. Since the side of length $15$ in the big triangle corresponds with our altitude, we take $15\\cdot\\frac{4}{5}$ to get our answer ${12}$ or $\\boxed{\\textbf{(B)}\\ 12}$.</p><p>The triangle forms a $3-4-5$ right triangle, so we can first draw a triangle with legs $3$ and $4$ and hypotenuse $5$. The two altitudes $3$ and $4$ are known, and the area is $6$; therefore $5x/2 = 6$, and $x=12/5$, which is clearly less than $3$ or $4$. Now scale the triangle back up by multiplying every dimension by $5$. The smallest altitude is then $12/5 * 5$ = ${12}$ or $\\boxed{\\textbf{(B)}\\ 12}$</p>",
+        "<p>This is a Pythagorean triple (a $3-4-5$ actually) with legs $15$ and $20$. The area is then $\\frac{(15)(20)}{2}=150$. Now, consider an altitude drawn to any side. Since the area remains constant, the altitude and side to which it is drawn are inversely proportional. To get the smallest altitude, it must be drawn to the hypotenuse. Let the length be $x$; we have $\\frac{(x)(25)}{2}=\\frac{(15)(20)}{2}$, so $25x=300$ and $x$ is 12. Our answer is then $\\boxed{\\textbf{(B)}\\ 12}$.</p>",
+        "<p>By <a class=\"mw-redirect\" href=\"/wiki/index.php/Heron%27s_formula\" title=\"Heron's formula\">Heron's formula</a>, the area is $150$, hence the shortest altitude's length is $2\\cdot\\frac{150}{25}=\\boxed{12\\Rightarrow \\textbf{(B)}}$.</p>",
+        "<p>The sides are in the ratio of $3-4-5$, and are therefore a Pythagorean Triple and a part of a right triangle.We know two altitudes, the legs $15$ and $20$. All that is left is to check the altitude from the right angle vertex to the hypotenuse. There is a rule that states that the three triangles formed when the altitude is dropped (the big triangle and two smaller ones it gets split into) are similar! We take the triangle with hypotenuse $20$. The ratio of sides between that triangle and the bigger one is $4:5$. Since the side of length $15$ in the big triangle corresponds with our altitude, we take $15\\cdot\\frac{4}{5}$ to get our answer ${12}$ or $\\boxed{\\textbf{(B)}\\ 12}$.</p>",
+        "<p>The triangle forms a $3-4-5$ right triangle, so we can first draw a triangle with legs $3$ and $4$ and hypotenuse $5$. The two altitudes $3$ and $4$ are known, and the area is $6$; therefore $5x/2 = 6$, and $x=12/5$, which is clearly less than $3$ or $4$. Now scale the triangle back up by multiplying every dimension by $5$. The smallest altitude is then $12/5 * 5$ = ${12}$ or $\\boxed{\\textbf{(B)}\\ 12}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_14",
+      "question": "<p>Both roots of the quadratic equation $x^2 - 63x + k = 0$ are prime numbers. The number of possible values of $k$ is </p>",
+      "solutions": [
+        "<p>Consider a general quadratic with the coefficient of $x^2$ being $1$ and the roots being $r$ and $s$. It can be factored as $(x-r)(x-s)$ which is just $x^2-(r+s)x+rs$. Thus, the sum of the roots is the negative of the coefficient of $x$ and the product is the constant term. (In general, this leads to <a href=\"/wiki/index.php/Vieta%27s_Formulas\" title=\"Vieta's Formulas\">Vieta's Formulas</a>).</p><p>We now have that the sum of the two roots is $63$ while the product is $k$. Since both roots are primes, one must be $2$, otherwise, the sum would be even. That means the other root is $61$ and the product must be $122$. Hence, our answer is $\\boxed{\\text{(B)}\\ 1 }$.</p>",
+        "<p>Let the quadratic be factored as $(x-r)(x-s)$. Then $-r-s=-63$ and $rs=k$. We know that both $r$ and $s$ are prime, and all primes but $2$ are odd. The sum of two odd numbers is also always even, but in this case the sum of two primes is odd, which means that one of the primes is $2$. This leaves only one possible value for the other root and one possible value for their product $k$.</p>",
+        "<p>By Vieta's you have \\[a+b=63\\]\\[ab=k\\]Since we know odd + even = odd, we must have either $a$ or $b$ equal to $2$ and the other equal to $63-2=61.$ Both of these are prime so they satisfy the restraints. Thus there is $\\boxed{(B) 1}$ solution.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles",
+          "confidence": 0.95,
+          "reasoning": "Circle geometry problem involving area and circumference"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_15",
+      "question": "<p>Using the digits 1, 2, 3, 4, 5, 6, 7, and 9, form 4 two-digit prime numbers, using each digit only once. What is the sum of the 4 prime numbers?</p>",
+      "solutions": [
+        "<p>Since a multiple-digit prime number is not divisible by either 2 or 5, it must end with 1, 3, 7, or 9 in the units place. The remaining digits given must therefore appear in the tens place. Hence our answer is $20 + 40 + 50 + 60 + 1 + 3 + 7 + 9 = 190\\Rightarrow\\boxed{(E)= 190}$.</p><p>(Note that we did not need to actually construct the primes. If we had to, one way to match the tens and ones digits to form four primes is $23$, $41$, $59$, and $67$.)</p><p>(You could also guess the numbers, if you have a lot of spare time.)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_16",
+      "question": "<p>Let $a + 1 = b + 2 = c + 3 = d + 4 = a + b + c + d + 5$. What is $a + b + c + d$?</p>",
+      "solutions": [
+        "<p>Let $x=a + 1 = b + 2 = c + 3 = d + 4 = a + b + c + d + 5$. Since one of the sums involves $a, b, c,$ and $d,$ it makes sense to consider $4x$. We have $4x=(a+1)+(b+2)+(c+3)+(d+4)=a+b+c+d+10=4(a+b+c+d)+20$. Rearranging, we have $3(a+b+c+d)=-10$, so $a+b+c+d=\\frac{-10}{3}$. Thus, our answer is $\\boxed{\\text{(B)}\\ -10/3}$.</p>",
+        "<p>Take $a + 1 = a + b + c + d + 5$.Now we can clearly see:$-4 = b + c + d$.Continuing this same method with $b + 2, c + 3$, and $d + 4$ we get:$-4 = b + c + d$, $-3 = a + c + d$,$-2 = a + b + d$, and$-1 = a + b + c$,Adding, we see $-10 = 3a + 3b + 3c + 3d$. Therefore, $a + b + c + d = \\boxed{\\frac{-10}{3}}$.</p>",
+        "<p><a class=\"external free\" href=\"https://www.youtube.com/watch?v=rz86M2hlOGk&amp;feature=emb_logo\" rel=\"nofollow\">https://www.youtube.com/watch?v=rz86M2hlOGk&amp;feature=emb_logo</a><a class=\"external free\" href=\"https://youtu.be/NRdOxPUDngI\" rel=\"nofollow\">https://youtu.be/NRdOxPUDngI</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "System of equations problem involving multiple variables"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_17",
+      "question": "<p>Sarah places four ounces of coffee into an eight-ounce cup and four ounces of cream into a second cup of the same size. She then pours half the coffee from the first cup to the second and, after stirring thoroughly, pours half the liquid in the second cup back to the first. What fraction of the liquid in the first cup is now cream?</p>",
+      "solutions": [
+        "<p>We will simulate the process in steps.</p><p>In the beginning, we have:</p><ul><li>$4$ ounces of coffee in cup $1$</li><li>$4$ ounces of cream in cup $2$</li></ul><p>In the first step we pour $4/2=2$ ounces of coffee from cup $1$ to cup $2$, getting:</p><ul><li>$2$ ounces of coffee in cup $1$</li><li>$2$ ounces of coffee and $4$ ounces of cream in cup $2$</li></ul><p>In the second step we pour $2/2=1$ ounce of coffee and $4/2=2$ ounces of cream from cup $2$ to cup $1$, getting:</p><ul><li>$2+1=3$ ounces of coffee and $0+2=2$ ounces of cream in cup $1$</li><li>the rest in cup $2$</li></ul><p>Hence at the end we have $3+2=5$ ounces of liquid in cup $1$, and out of these $2$ ounces is cream. Thus the answer is $\\boxed{\\text{(D) } \\frac 25}$.</p><p>Let's consider this in steps. We have 4 ounces of coffee in the first cup. We hace 4 ounces of cream in the second cup. We take half of the coffee in the first cup(2 ounces), and add it to the second cup, yielding 6 ounces in total in the second cup(in a 1:2 ratio between coffee and cream, respecitvely).We then take half of the second cup and pour it into the first cup. $6/2=3$, so there is now 5 ounces in the first cup, 2 coffee and 3 the mixture.Remember that the mixture is in a 1:2 ratio between coffee and cream. So, coffee has one ounce and cream has 2 ounces. In total, there is 2 ounces in the 5 ounce first cup. Putting 2 over 5, we get the answer. Therefore, the answer is $\\boxed{\\text{(D) } \\frac 25}$.</p><p>~MathKatana</p>",
+        "<p>We will simulate the process in steps.</p><p>In the beginning, we have:</p><ul><li>$4$ ounces of coffee in cup $1$</li><li>$4$ ounces of cream in cup $2$</li></ul><p>In the first step we pour $4/2=2$ ounces of coffee from cup $1$ to cup $2$, getting:</p><ul><li>$2$ ounces of coffee in cup $1$</li><li>$2$ ounces of coffee and $4$ ounces of cream in cup $2$</li></ul><p>In the second step we pour $2/2=1$ ounce of coffee and $4/2=2$ ounces of cream from cup $2$ to cup $1$, getting:</p><ul><li>$2+1=3$ ounces of coffee and $0+2=2$ ounces of cream in cup $1$</li><li>the rest in cup $2$</li></ul><p>Hence at the end we have $3+2=5$ ounces of liquid in cup $1$, and out of these $2$ ounces is cream. Thus the answer is $\\boxed{\\text{(D) } \\frac 25}$.</p>",
+        "<p>Let's consider this in steps. We have 4 ounces of coffee in the first cup. We hace 4 ounces of cream in the second cup. We take half of the coffee in the first cup(2 ounces), and add it to the second cup, yielding 6 ounces in total in the second cup(in a 1:2 ratio between coffee and cream, respecitvely).We then take half of the second cup and pour it into the first cup. $6/2=3$, so there is now 5 ounces in the first cup, 2 coffee and 3 the mixture.Remember that the mixture is in a 1:2 ratio between coffee and cream. So, coffee has one ounce and cream has 2 ounces. In total, there is 2 ounces in the 5 ounce first cup. Putting 2 over 5, we get the answer. Therefore, the answer is $\\boxed{\\text{(D) } \\frac 25}$.</p><p>~MathKatana</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_18",
+      "question": "<p>A $3$x$3$x$3$ cube is made of $27$ normal dice. Each die's opposite sides sum to $7$. What is the smallest possible sum of all of the values visible on the $6$ faces of the large cube?</p>",
+      "solutions": [
+        "<p>In a 3x3x3 cube, there are $8$ cubes with three faces showing, $12$ with two faces showing and $6$ with one face showing. The smallest sum with three faces showing is $1+2+3=6$, with two faces showing is $1+2=3$, and with one face showing is $1$. Hence, the smallest possible sum is $8(6)+12(3)+6(1)=48+36+6=90$. Our answer is thus $\\boxed{\\text{(D)}\\ 90}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving multiple statements and determining truth values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_19",
+      "question": "<p>Spot's doghouse has a regular hexagonal base that measures one yard on each side. He is tethered to a vertex with a two-yard rope. What is the area, in square yards, of the region outside of the doghouse that Spot can reach?</p>",
+      "solutions": [
+        "<p>Part of what Spot can reach is $\\frac{240}{360}=\\frac{2}{3}$ of a circle with radius 2, which gives him $\\frac{8\\pi}{3}$. He can also reach two $\\frac{60}{360}$ parts of a unit circle, which combines to give $\\frac{\\pi}{3}$. The total area is then $3\\pi$, which gives $\\boxed{\\text{(E)}}$.</p><p>We can clearly see that the area must be more than $\\frac{8\\pi}{3}$, and the only such answer is $\\boxed{\\text{(E)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_20",
+      "question": "<p>Points $A,B,C,D,E$ and $F$ lie, in that order, on $\\overline{AF}$, dividing it into five segments, each of length 1. Point $G$ is not on line $AF$. Point $H$ lies on $\\overline{GD}$, and point $J$ lies on $\\overline{GF}$. The line segments $\\overline{HC}, \\overline{JE},$ and $\\overline{AG}$ are parallel. Find $HC/JE$.</p>",
+      "solutions": [
+        "<p>First we can draw an image.[asy] unitsize(0.8 cm);  pair A, B, C, D, E, F, G, H, J;  A = (0,0); B = (1,0); C = (2,0); D = (3,0); E = (4,0); F = (5,0); G = (-1.5,4); H = extension(D, G, C, C + G - A); J = extension(F, G, E, E + G - A);  draw(A--F--G--cycle); draw(B--G); draw(C--G); draw(D--G); draw(E--G); draw(C--H); draw(E--J);  label(\"$A$\", A, SW); label(\"$B$\", B, S); label(\"$C$\", C, S); label(\"$D$\", D, S); label(\"$E$\", E, S); label(\"$F$\", F, SE); label(\"$G$\", G, NW); label(\"$H$\", H, W); label(\"$J$\", J, NE); [/asy]</p><p>Since $\\overline{AG}$ and $\\overline{CH}$ are parallel, triangles $\\triangle GAD$ and $\\triangle HCD$ are similar. Hence, $\\frac{CH}{AG} = \\frac{CD}{AD} = \\frac{1}{3}$.</p><p>Since $\\overline{AG}$ and $\\overline{JE}$ are parallel, triangles $\\triangle GAF$ and $\\triangle JEF$ are similar. Hence, $\\frac{EJ}{AG} = \\frac{EF}{AF} = \\frac{1}{5}$. Therefore, $\\frac{CH}{EJ} = \\left(\\frac{CH}{AG}\\right)\\div\\left(\\frac{EJ}{AG}\\right) = \\left(\\frac{1}{3}\\right)\\div\\left(\\frac{1}{5}\\right) = \\boxed{\\frac{5}{3}}$. The answer is $\\boxed{(D) 5/3}$.</p>",
+        "<p>As angle F is clearly congruent to itself, we get from AA similarity, $\\triangle AGF \\sim \\triangle EJF$; hence $\\frac {AG}{JE} =5$. Similarly, $\\frac {AG}{HC} = 3$. Thus, $\\frac {HC}{JE}=\\left(\\frac{AG}{JE}\\right)\\left(\\frac{HC}{AG}\\right) = \\boxed{\\frac {5}{3}\\Rightarrow \\text{(D)}}$.</p>",
+        "<p>Assume an arbitrary value of $AG=15$ WLOG. $\\overline{AG}$ and $\\overline{CH}$ are parallel, so $\\triangle GAD$ and $\\triangle HCD$ are similar. So, $\\frac{AD}{CD}=3=\\frac{GA}{HC}$ which means $HC=5$. By the same logic, $JE=3$, so $\\frac{HC}{JE}=\\frac{5}{3}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving ratios and proportions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_21",
+      "question": "<p>The mean, median, unique mode, and range of a collection of eight integers are all equal to 8. The largest integer that can be an element of this collection is </p>",
+      "solutions": [
+        "<p>As the unique mode is $8$, there are at least two $8$s.</p><p>As the range is $8$ and one of the numbers is $8$, the largest one can be at most $16$.</p><p>If the largest one is $16$, then the smallest one is $8$, and thus the mean is strictly larger than $8$, which is a contradiction.</p><p>If we have 2 8's we can add find the numbers 4, 6, 7, 8, 8, 9, 10, 12.This is a possible solution but has not reached the maximum.</p><p>If we have 4 8's we can find the numbers 6, 6, 6, 8, 8, 8, 8, 14.</p><p>We can also see that they satisfy the need for the mode, median, and range to be 8. This means that the answer will be$\\boxed{\\text{(D)}\\ 14 }$. ~By QWERTYUIOPASDFGHJKLZXCVBNM</p>",
+        "<p>We could express this collection as integers $a\\textsubscript{1}$ through $a\\textsubscript{8}$, with $a\\textsubscript{1}$ being the smallest and $a\\textsubscript{8}$ being the largest.</p><p>Since the mode is $8$, we know that $a\\textsubscript{4}$ and $a\\textsubscript{5}$ must also be $8$. If they were not, the other numbers, which are lesser and greater than $a\\textsubscript{4}$ and $a\\textsubscript{5}$ respectively, would not be able to satisfy the condition that $8$ is the mode.</p><p>There are $8$ terms and the mean is $8$. This tells us that the sum of all the numbers is $64$.</p><p>We want to maximize the value of $a\\textsubscript{8}$, so we set $a\\textsubscript{6}$ and $a\\textsubscript{7}$ to $8$ as well.</p><p>Knowing that we want to minimize numbers and that the range is $8$ , we set $a\\textsubscript{1}$, $a\\textsubscript{2}$, and $a\\textsubscript{3}$ equal to $a\\textsubscript{8} - 8$.</p><p>{$a\\textsubscript{1}$, $a\\textsubscript{2}$, $a\\textsubscript{3}$, $a\\textsubscript{4}$, $a\\textsubscript{5}$, $a\\textsubscript{6}$, $a\\textsubscript{7}$, $a\\textsubscript{8}$} $=$ {$a\\textsubscript{8} - 8$, $a\\textsubscript{8} - 8$, $a\\textsubscript{8} - 8$, $8$, $8$, $8$, $8$, $a\\textsubscript{8}$}</p><p>Letting the sum of all the numbers be $64$, we find that $32 + 4a_8 - 24 = 64$, which simplifies to $4a_8 = 56$. Solving, we get $\\boxed{\\text{(D)}\\ 14 }$. ~By SK80, mod_x and huniiya for minor edits</p>",
+        "<p>Let's say that we choose $k$ numbers to be 8, and the largest number to be $L$. There will therefore be $7-k$ numbers with the value of $L - 8$.</p><p>This gives the following expression $\\frac{(7-k)(L-8)+ 8k + L}{8} = 8$. Solving for $k$ gives $\\frac{120-8L}{16-L} = k$. The bank of choices we have for $L$ is represented by answer choices (A), (B), (C), (D), and (E).</p><p>We find that the value for $14$ gives $k = 4$ creating the set $666-8888-14$, which satisfies all conditions.</p><p>This gives $\\boxed{\\text{(D)}\\ 14 }$.</p>",
+        "<p>Since the mean of the numbers is $8$ and there are $8$ numbers, the sum of all $8$ numbers is $64$. Since the range is also $8$, let the smallest value in the set $= x$. Therefore the largest number in the set is $x+8$. The mode is the number which appears most often, so we can let the $4$th to $7$th largest integers $= 8$. To maximize the largest value, we will let the $2$nd and $3$rd smallest integers also equal $x$.</p><p>In order this will be: $x, x, x, 8, 8, 8, 8, x+8$</p><p>Now we can set the expression equal to $64$ (because of what we determined in the $1$st step): $x+x+x+8+8+8+8+x+8=64$</p><p>Simplyifying, </p><p>$4x+40=64$</p><p>$4x=24$</p><p>$x=6$</p><p>Therefore, since $x$ is the smallest number in the set, the largest number in the set will be $x+8$, which is $\\boxed{\\text{(D)}\\ 14 }$.</p><p>~goofytaipan</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent events and calculating probabilities"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_22",
+      "question": "<p>A set of tiles numbered 1 through 100 is modified repeatedly by the following operation: remove all tiles numbered with a <a href=\"/wiki/index.php/Perfect_square\" title=\"Perfect square\">perfect square</a>, and renumber the remaining tiles consecutively starting with 1. How many times must the operation be performed to reduce the number of tiles in the set to one?</p>",
+      "solutions": [
+        "<p>The pattern is quite simple to see after listing a couple of terms.</p><p>\\[\\begin{tabular}{|r|r|r|} \\hline \\#&\\text{Removed}&\\text{Left}\\\\ \\hline 1&10&90\\\\ 2&9&81\\\\ 3&9&72\\\\ 4&8&64\\\\ 5&8&56\\\\ 6&7&49\\\\ 7&7&42\\\\ 8&6&36\\\\ 9&6&30\\\\ 10&5&25\\\\ 11&5&20\\\\ 12&4&16\\\\ 13&4&12\\\\ 14&3&9\\\\ 15&3&6\\\\ 16&2&4\\\\ 17&2&2\\\\ 18&1&1\\\\     \\hline \\end{tabular}\\]</p><p>Thus, the answer is $\\boxed{\\text{(C) } 18}$.</p>",
+        "<p>Given $n^2$ tiles, a step removes $n$ tiles, leaving $n^2 - n$ tiles behind. Now, $(n-1)^2 = n^2 - n + (1-n) < n^2 - n < n^2$, so in the next step $n-1$ tiles are removed. This gives $(n^2 - n) - (n-1) = n^2 - 2n + 1 = (n-1)^2$, another perfect square.</p><p>Thus each two steps we cycle down a perfect square, and in $(10-1)\\times 2 = 18$ steps, we are left with $1$ tile, hence our answer is $\\boxed{\\text{(C) } 18}$.</p>",
+        "<p>We start of with $100 = 10 \\cdot 10$ numbers. When we use the certain operation, call if $P(x)$, have $100 - 10 = 90 = 10 \\cdot 9$.Then we do $P(x)$ again, to subtract $9$ numbers and get $9 \\cdot 9$. In the end, we will want $1 = 1 \\cdot 1$. We can say we have to use $P(x)$ once to make $n \\cdot n$ into $n \\cdot (n-1)$. Thus we must use it twice to get from $n \\cdot n$ to $(n-1)(n-1)$. For example, it takes us $2$ of $P(x)$ to get from $10 \\cdot 10$ to $9 \\cdot 9$. Then $2$ of $P(x)$ to get from $9 \\cdot 9$ to $8 \\cdot 8$. You should try this with $7$ and $6$, and see it works. This means we can have $n$ be the number we start with, and $1$ be the number we want. Then we would use $P(x)$, $2(n - 1)$ times to get $1 \\cdot 1$. Substituting $n$ for $10$ we get $2(10-1) = 2 \\cdot 9 = \\boxed{18}$.- Wiselion</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving conditional probability and ratios"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_23",
+      "question": "<p>Points $A,B,C$ and $D$ lie on a line, in that order, with $AB = CD$ and $BC = 12$. Point $E$ is not on the line, and $BE = CE = 10$. The perimeter of $\\triangle AED$ is twice the perimeter of $\\triangle BEC$. Find $AB$.</p>",
+      "solutions": [
+        "<p>First, we draw an altitude to $BC$ from $E$. Let it intersect at $M$. As $\\triangle BEC$ is isosceles, we immediately get $MB=MC=6$, so the altitude is $8$. Now, let $AB=CD=x$. Using the Pythagorean Theorem on $\\triangle EMA$, we find $AE=\\sqrt{x^2+12x+100}$. From symmetry, $DE=\\sqrt{x^2+12x+100}$ as well. Now, we use the fact that the perimeter of $\\triangle AED$ is twice the perimeter of $\\triangle BEC$.</p><p>[asy] unitsize(0.25 cm);  pair A, B, C, D, E, M;  A = (0,0); B = (9,0); C = (21,0); D = (30,0); E = (15,-8); M = (15,0);  draw(A--D--E--cycle); draw(B--E); draw(M--E); draw(C--E);  label(\"$A$\", A, N); label(\"$B$\", B, N); label(\"$C$\", C, N); label(\"$D$\", D, N); label(\"$E$\", E, S); label(\"$M$\", M, N); [/asy]</p><p>We have $2\\sqrt{x^2+12x+100}+2x+12=2(32)$ so $\\sqrt{x^2+12x+100}=26-x$. Squaring both sides, we have $x^2+12x+100=676-52x+x^2$ which nicely rearranges into $64x=576\\rightarrow{x=9}$. Hence, AB is 9 so our answer is $\\boxed{\\text{(D)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving distance and position relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_24",
+      "question": "<p>Tina randomly selects two distinct numbers from the set $\\{ 1, 2, 3, 4, 5 \\}$, and Sergio randomly selects a number from the set $\\{ 1, 2, ..., 10 \\}$. What is the probability that Sergio's number is larger than the sum of the two numbers chosen by Tina? </p>",
+      "solutions": [
+        "<p>This is not too bad using casework. </p><p>Tina gets a sum of 3: This happens in only one way $(1,2)$ and Sergio can choose a number from 4 to 10, inclusive. There are 7 ways that Sergio gets a desirable number here.</p><p>Tina gets a sum of 4: This once again happens in only one way $(1,3)$. Sergio can choose a number from 5 to 10, so 6 ways here.</p><p>Tina gets a sum of 5: This can happen in two ways $(1,4)$ and $(2,3)$. Sergio can choose a number from 6 to 10, so $2\\cdot5=10$ ways here.</p><p>Tina gets a sum of 6: Two ways here $(1,5)$ and $(2,4)$. Sergio can choose a number from 7 to 10, so $2\\cdot4=8$ here.</p><p>Tina gets a sum of 7: Two ways here $(2,5)$ and $(3,4)$. Sergio can choose from 8 to 10, so $2\\cdot3=6$ ways here.</p><p>Tina gets a sum of 8: Only one way possible $(3,5$). Sergio chooses 9 or 10, so 2 ways here.</p><p>Tina gets a sum of 9: Only one way $(4,5)$. Sergio must choose 10, so 1 way.</p><p>In all, there are $7+6+10+8+6+2+1=40$ ways. Tina chooses two distinct numbers in $\\binom{5}{2}=10$ ways while Sergio chooses a number in $10$ ways, so there are $10\\cdot 10=100$ ways in all. Since $\\frac{40}{100}=\\frac{2}{5}$, our answer is $\\boxed{\\text{(A)}\\frac{2}{5}}$.</p>",
+        "<p>We invoke some symmetry. Let $T$ denote Tina's sum, and let $S$ denote Sergio's number. Observe that, for $i = 2, 3, \\ldots, 10$, $\\text{Pr}(T=i) = \\text{Pr}(T=12-i)$.</p><p>If Tina's sum is $i$, then the probability that Sergio's number is larger than Tina's sum is $\\frac{10-i}{10}$. Thus, the probability $P$ is</p><p>\\[P = \\text{Pr}(S>T) = \\sum_{i=2}^{10} \\text{Pr}(T=i) \\times \\frac{10-i}{10}\\]</p><p>Using the symmetry observation, we can also write the above sum as\\[P = \\sum_{i=2}^{10} \\text{Pr}(T=12-i) \\times \\frac{10-i}{10} = \\sum_{i=2}^{10} \\text{Pr}(T=i) \\times \\frac{i-2}{10}\\]where the last equality follows as we reversed the indices of the sum (by replacing $12-i$ with $i$). Thus, adding the two equivalent expressions for $P$, we have</p><p>\\begin{align*} 2P &= \\sum_{i=2}^{10} \\text{Pr}(T=i) \\times \\left(\\frac{10-i}{10} + \\frac{i-2}{10}\\right) \\\\ &= \\sum_{i=2}^{10} \\text{Pr}(T=i) \\times \\frac{4}{5} \\\\ &= \\frac{4}{5} \\sum_{i=2}^{10} \\text{Pr}(T=i) \\\\ &= \\frac{4}{5} \\end{align*}</p><p>Since this represents twice the desired probability, the answer is $P = \\boxed{\\textbf{(A)} \\frac{2}{5}}$. -scrabbler94</p>",
+        "<p>We have 4 cases, if Tina chooses $1, 2, 3,$ or $4$ and always chooses numbers greater than the first number she chose.</p><p>The number of ways of choosing 2 numbers from $5$ are $\\binom{5}{2}$.</p><p>Case 1: Tina chooses $1$.</p><p>In this case, since the numbers are distinct, Tina can choose $(1, 2), (1, 3), (1, 4),$ or $(1, 5).$</p><p>If Tina chooses $1$ and $2$ which sum to $3$, Sergio only has $10-3=7$ choices.</p><p>Since the sum of the combined numbers increases by $1$ every time for this specific case, Sergio has $1$ less choice every time.</p><p>Therefore, the probability of this is $\\frac{7+6+5+4}{10 \\cdot \\binom{5}{2}}$.</p><p>Case 2: Tina chooses $2$.</p><p>In this case, Tina can choose $(2, 3), (2, 4),$ or $(2, 5).$</p><p>If Tina chooses $2$ and $3$ which sum to $5$, Sergio only has $10-5=5$ choices.</p><p>Since the sum of the combined numbers increases by $1$ every time for this specific case, Sergio has $1$ less choice every time.</p><p>Therefore, the probability of this is $\\frac{5+4+3}{10 \\cdot \\binom{5}{2}}$.</p><p>Case 3: Tina chooses $3$.</p><p>In this case, Tina can choose $(3, 4),$ or $(3, 5).$</p><p>If Tina chooses $3$ and $4$ which sum to $7$, Sergio only has $10-7=3$ choices.</p><p>Since the sum of the combined numbers increases by $1$ every time for this specific case, Sergio has $1$ less choice every time.</p><p>Therefore, the probability of this is $\\frac{3+2}{10 \\cdot \\binom{5}{2}}$.</p><p>Case 4: Tina chooses $4$.</p><p>In this case, Tina can only choose $(4,5).$</p><p>If Tina chooses $4$ and $5$ which sum to $9$, Sergio only has $10-9=1$ choice.</p><p>Therefore, the probability of this is $\\frac{1}{10 \\cdot \\binom{5}{2}}$.</p><p>Once you add these probabilities up, you will have $\\frac{(7+6+5+4)+(5+4+3)+(3+2)+(1)}{10 \\cdot\\binom{5}{2}} = \\frac{40}{100} = \\frac{2}{5}$ probability.</p><p>Thus our answer is $\\frac{2}{5}$.</p><p>~mathboy282</p><p>Assume Sergio chooses from ${2,3,\\ldots,10}$. The probability of Tina getting a sum of $6+x$ and a sum of $6-x$, where $x \\leq 4$, are equal due to symmetry. The probability of Sergio choosing numbers higher/lower than $6+x$ is equal to him choosing numbers lower/higher than $6-x$. Therefore over all of Tina's sums, the probability of Sergio choosing a number higher is equal to the probability of choosing a number lower. </p><p>The probability that they get the same value is $1/9$, so the probability of Sergio getting a higher number is $\\frac{(9-1)/2}{9} = \\frac49$. </p><p>Sergio never wins when choosing $1$ so the probability is $\\frac49 \\cdot \\frac{9}{10} + (0)\\frac{1}{10} = \\boxed{\\textbf{(A)} \\frac{2}{5}}.$</p><p>~zeric</p><p>List all the cases where $S \\in [1, 10]$ and you get $\\frac{0+0+0+1+2+4+6+8+9+10}{\\binom{5}{2} \\cdot 10} = \\boxed{\\textbf{(A)} \\frac{2}{5}}$</p><p>~mathboy282</p>",
+        "<p>Assume Sergio chooses from ${2,3,\\ldots,10}$. The probability of Tina getting a sum of $6+x$ and a sum of $6-x$, where $x \\leq 4$, are equal due to symmetry. The probability of Sergio choosing numbers higher/lower than $6+x$ is equal to him choosing numbers lower/higher than $6-x$. Therefore over all of Tina's sums, the probability of Sergio choosing a number higher is equal to the probability of choosing a number lower. </p><p>The probability that they get the same value is $1/9$, so the probability of Sergio getting a higher number is $\\frac{(9-1)/2}{9} = \\frac49$. </p><p>Sergio never wins when choosing $1$ so the probability is $\\frac49 \\cdot \\frac{9}{10} + (0)\\frac{1}{10} = \\boxed{\\textbf{(A)} \\frac{2}{5}}.$</p><p>~zeric</p>",
+        "<p>List all the cases where $S \\in [1, 10]$ and you get $\\frac{0+0+0+1+2+4+6+8+9+10}{\\binom{5}{2} \\cdot 10} = \\boxed{\\textbf{(A)} \\frac{2}{5}}$</p><p>~mathboy282</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10a_25",
+      "question": "<p>In <a href=\"/wiki/index.php/Trapezoid\" title=\"Trapezoid\">trapezoid</a> $ABCD$ with bases $AB$ and $CD$, we have $AB = 52$, $BC = 12$, $CD = 39$, and $DA = 5$. The area of $ABCD$ is</p><p>[asy] pair A,B,C,D; A=(0,0); B=(52,0); C=(38,20); D=(5,20); dot(A); dot(B); dot(C); dot(D); draw(A--B--C--D--cycle); label(\"$A$\",A,S); label(\"$B$\",B,S); label(\"$C$\",C,N); label(\"$D$\",D,N); label(\"52\",(A+B)/2,S); label(\"39\",(C+D)/2,N); label(\"12\",(B+C)/2,E); label(\"5\",(D+A)/2,W); [/asy]</p>",
+      "solutions": [
+        "<p>It shouldn't be hard to use <a href=\"/wiki/index.php/Trigonometry\" title=\"Trigonometry\">trigonometry</a> to bash this and find the height, but there is a much easier way. Extend $\\overline{AD}$ and $\\overline{BC}$ to meet at point $E$:</p><p>Since $\\overline{AB} || \\overline{CD}$ we have $\\triangle AEB \\sim \\triangle DEC$, with the ratio of <a href=\"/wiki/index.php/Proportion\" title=\"Proportion\">proportionality</a> being $\\frac {39}{52} = \\frac {3}{4}$. Thus\\begin{align*} \\frac {CE}{CE + 12} = \\frac {3}{4} & \\Longrightarrow CE = 36 \\\\ \\frac {DE}{DE + 5} = \\frac {3}{4} & \\Longrightarrow DE = 15 \\end{align*}So the sides of $\\triangle CDE$ are $15,36,39$, which we recognize to be a $5 - 12 - 13$ <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right triangle</a>. Therefore (we could simplify some of the calculation using that the ratio of areas is equal to the ratio of the sides squared),\\[[ABCD] = [ABE] - [CDE] = \\frac {1}{2}\\cdot 20 \\cdot 48 - \\frac {1}{2} \\cdot 15 \\cdot 36 = \\boxed{\\mathrm{(C)}\\ 210}\\]</p><p>Draw altitudes from points $C$ and $D$:</p><p>Translate the triangle $ADD'$ so that $DD'$ coincides with $CC'$. We get the following triangle:</p><p>The length of $A'B$ in this triangle is equal to the length of the original $AB$, minus the length of $CD$.Thus $A'B = 52 - 39 = 13$.</p><p>Therefore $A'BC$ is a well-known $(5,12,13)$ right triangle. Its area is $[A'BC]=\\frac{A'C\\cdot BC}2 = \\frac{5\\cdot 12}2 = 30$, and therefore its altitude $CC'$ is $\\frac{[A'BC]}{A'B} = \\frac{60}{13}$.</p><p>Now the area of the original trapezoid is $\\frac{(AB+CD)\\cdot CC'}2 = \\frac{91 \\cdot 60}{13 \\cdot 2} = 7\\cdot 30 = \\boxed{\\mathrm{(C)}\\ 210}$</p><p>Draw altitudes from points $C$ and $D$:</p><p>Call the length of $AD'$ to be $y$, the length of $BC'$ to be $z$, and the height of the trapezoid to be $x$.By the Pythagorean Theorem, we have:\\[z^2 + x^2 = 144\\]\\[y^2 + x^2 = 25\\]</p><p>Subtracting these two equation yields:\\[z^2-y^2=119 \\implies (z+y)(z-y)=119\\]</p><p>We also have: $z+y=52-39=13$.</p><p>We can substitute the value of $z+y$ into the equation we just obtained, so we now have:</p><p>\\[(13) (z-y)=119 \\implies z-y=\\frac{119}{13}\\].</p><p>We can add the $z+y$ and the $z-y$ equation to find the value of $z$, which simplifies down to be $\\frac{144}{13}$. Finally, we can plug in $z$ and use the Pythagorean theorem to find the height of the trapezoid.</p><p>\\[\\frac{12^4}{13^2} + x^2 = 12^2 \\implies x^2 = \\frac{(12^2)(13^2)}{13^2} -\\frac{12^4}{13^2}  \\implies x^2 = \\frac{(12 \\cdot 13)^2 - (144)^2}{13^2} \\implies x^2 = \\frac{(156+144)(156-144)}{13^2} \\implies x = \\sqrt{\\frac{3600}{169}} = \\frac{60}{13}\\]</p><p>Now that we have the height of the trapezoid, we can multiply this by the median to find our answer.</p><p>The median of the trapezoid is $\\frac{39+52}{2} = \\frac{91}{2}$, and multiplying this and the height of the trapezoid gets us:</p><p>\\[\\frac{60 \\cdot 91}{13 \\cdot 2} = \\boxed{\\mathrm{(C)}\\ 210}\\]</p><p>We construct a line segment parallel to $\\overline{AD}$ from point $C$ to line $\\overline{AB},$ and label the intersection of this segment with line $\\overline{AB}$ as point $E.$ Then quadrilateral $AECD$ is a parallelogram, so $CE=5, AE=39,$ and $EB=13.$ Triangle $EBC$ is therefore a right triangle, with area $\\frac12 \\cdot 5 \\cdot 12 = 30.$</p><p>By continuing to split $\\overline{AB}$ and $\\overline{CD}$ into segments of length $13,$ we can connect these vertices in a \"zig-zag,\" creating seven congruent right triangles, each with sides $5,12,$ and $13,$ and each with area $30.$ The total area is therefore $7 \\cdot 30 = \\boxed{\\textbf{(C)} 210}.$</p><p>Alternative: Instead of creating seven congruent right triangles, we can find the height of parallelogram $AECD$ by drawing an altitude from $D$ to side $AE$, creating the new point $F$. By recognizing that triangle $DAF$ is similar to triangle $BEC$, we can use properties of similar triangles and find that $DE = 12 \\cdot \\frac{5}{13} = \\frac{60}{13}$. Thus, the area of parallelogram $AECD$ is $\\frac{60}{13} \\cdot 39 = 180$. Finally, we add the areas of the parallelogram $AECD$ and the right triangle $BEC$ together and we get $180 + 30 = \\boxed{\\textbf{(C)} 210}$. ~scarletsyc</p><p>From Solution $2$ we know that the the altitude of the trapezoid is $\\frac{60}{13}$ and the triangle's area is $30$.Note that once we remove the triangle we get a rectangle with length $39$ and height $\\frac{60}{13}$.The numbers multiply nicely to get $180+30=\\boxed{(C) 210}$-harsha12345</p><p>First note how the answer choices are all integers.The area of the trapezoid is $\\frac{39+52}{2} \\cdot h = \\frac{91}{2} h$. So h divides 2. Let $x$ be $2h$. The area is now $91x$. Trying $x=1$ and $x=2$ can easily be seen to not work. Those make the only integers possible so now you know x is a fraction. Since the area is an integer the denominator of x must divide either 13 or 7 since $91 = 13\\cdot7$.Seeing how $39 = 3\\cdot13$ and $52 = 4\\cdot13$ assume that the denominator divides 13. Letting $y = \\frac{x}{13}$ the area is now $7y$.Note that (A) and (C) are the only multiples of 7. We know that A doesn't work because that would mean $h$ is $4$ which we ruled out. So the answer is $\\boxed{\\textbf{(C)} 210}$. - megateleportingrobots</p>",
+        "<p>It shouldn't be hard to use <a href=\"/wiki/index.php/Trigonometry\" title=\"Trigonometry\">trigonometry</a> to bash this and find the height, but there is a much easier way. Extend $\\overline{AD}$ and $\\overline{BC}$ to meet at point $E$:</p><p>Since $\\overline{AB} || \\overline{CD}$ we have $\\triangle AEB \\sim \\triangle DEC$, with the ratio of <a href=\"/wiki/index.php/Proportion\" title=\"Proportion\">proportionality</a> being $\\frac {39}{52} = \\frac {3}{4}$. Thus\\begin{align*} \\frac {CE}{CE + 12} = \\frac {3}{4} & \\Longrightarrow CE = 36 \\\\ \\frac {DE}{DE + 5} = \\frac {3}{4} & \\Longrightarrow DE = 15 \\end{align*}So the sides of $\\triangle CDE$ are $15,36,39$, which we recognize to be a $5 - 12 - 13$ <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right triangle</a>. Therefore (we could simplify some of the calculation using that the ratio of areas is equal to the ratio of the sides squared),\\[[ABCD] = [ABE] - [CDE] = \\frac {1}{2}\\cdot 20 \\cdot 48 - \\frac {1}{2} \\cdot 15 \\cdot 36 = \\boxed{\\mathrm{(C)}\\ 210}\\]</p>",
+        "<p>Draw altitudes from points $C$ and $D$:</p><p>Translate the triangle $ADD'$ so that $DD'$ coincides with $CC'$. We get the following triangle:</p><p>The length of $A'B$ in this triangle is equal to the length of the original $AB$, minus the length of $CD$.Thus $A'B = 52 - 39 = 13$.</p><p>Therefore $A'BC$ is a well-known $(5,12,13)$ right triangle. Its area is $[A'BC]=\\frac{A'C\\cdot BC}2 = \\frac{5\\cdot 12}2 = 30$, and therefore its altitude $CC'$ is $\\frac{[A'BC]}{A'B} = \\frac{60}{13}$.</p><p>Now the area of the original trapezoid is $\\frac{(AB+CD)\\cdot CC'}2 = \\frac{91 \\cdot 60}{13 \\cdot 2} = 7\\cdot 30 = \\boxed{\\mathrm{(C)}\\ 210}$</p>",
+        "<p>Draw altitudes from points $C$ and $D$:</p><p>Call the length of $AD'$ to be $y$, the length of $BC'$ to be $z$, and the height of the trapezoid to be $x$.By the Pythagorean Theorem, we have:\\[z^2 + x^2 = 144\\]\\[y^2 + x^2 = 25\\]</p><p>Subtracting these two equation yields:\\[z^2-y^2=119 \\implies (z+y)(z-y)=119\\]</p><p>We also have: $z+y=52-39=13$.</p><p>We can substitute the value of $z+y$ into the equation we just obtained, so we now have:</p><p>\\[(13) (z-y)=119 \\implies z-y=\\frac{119}{13}\\].</p><p>We can add the $z+y$ and the $z-y$ equation to find the value of $z$, which simplifies down to be $\\frac{144}{13}$. Finally, we can plug in $z$ and use the Pythagorean theorem to find the height of the trapezoid.</p><p>\\[\\frac{12^4}{13^2} + x^2 = 12^2 \\implies x^2 = \\frac{(12^2)(13^2)}{13^2} -\\frac{12^4}{13^2}  \\implies x^2 = \\frac{(12 \\cdot 13)^2 - (144)^2}{13^2} \\implies x^2 = \\frac{(156+144)(156-144)}{13^2} \\implies x = \\sqrt{\\frac{3600}{169}} = \\frac{60}{13}\\]</p><p>Now that we have the height of the trapezoid, we can multiply this by the median to find our answer.</p><p>The median of the trapezoid is $\\frac{39+52}{2} = \\frac{91}{2}$, and multiplying this and the height of the trapezoid gets us:</p><p>\\[\\frac{60 \\cdot 91}{13 \\cdot 2} = \\boxed{\\mathrm{(C)}\\ 210}\\]</p>",
+        "<p>We construct a line segment parallel to $\\overline{AD}$ from point $C$ to line $\\overline{AB},$ and label the intersection of this segment with line $\\overline{AB}$ as point $E.$ Then quadrilateral $AECD$ is a parallelogram, so $CE=5, AE=39,$ and $EB=13.$ Triangle $EBC$ is therefore a right triangle, with area $\\frac12 \\cdot 5 \\cdot 12 = 30.$</p><p>By continuing to split $\\overline{AB}$ and $\\overline{CD}$ into segments of length $13,$ we can connect these vertices in a \"zig-zag,\" creating seven congruent right triangles, each with sides $5,12,$ and $13,$ and each with area $30.$ The total area is therefore $7 \\cdot 30 = \\boxed{\\textbf{(C)} 210}.$</p><p>Alternative: Instead of creating seven congruent right triangles, we can find the height of parallelogram $AECD$ by drawing an altitude from $D$ to side $AE$, creating the new point $F$. By recognizing that triangle $DAF$ is similar to triangle $BEC$, we can use properties of similar triangles and find that $DE = 12 \\cdot \\frac{5}{13} = \\frac{60}{13}$. Thus, the area of parallelogram $AECD$ is $\\frac{60}{13} \\cdot 39 = 180$. Finally, we add the areas of the parallelogram $AECD$ and the right triangle $BEC$ together and we get $180 + 30 = \\boxed{\\textbf{(C)} 210}$. ~scarletsyc</p>",
+        "<p>From Solution $2$ we know that the the altitude of the trapezoid is $\\frac{60}{13}$ and the triangle's area is $30$.Note that once we remove the triangle we get a rectangle with length $39$ and height $\\frac{60}{13}$.The numbers multiply nicely to get $180+30=\\boxed{(C) 210}$-harsha12345</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving area calculations and geometric relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_1",
+      "question": "<p>The ratio $\\frac{2^{2001}\\cdot3^{2003}}{6^{2002}}$ is:</p>",
+      "solutions": [
+        "<p>$\\frac{2^{2001}\\cdot3^{2003}}{6^{2002}}=\\frac{6^{2001}\\cdot 3^2}{6^{2002}}=\\frac{9}{6}=\\frac{3}{2}$ or $\\mathrm{ (E) \\ }$</p><p><br/></p>",
+        "<p>$\\frac{2^{2001}\\cdot3^{2003}}{6^{2002}}=\\frac{2^{2001}\\cdot 2\\cdot 3^{2002}\\cdot 3}{6^{2002}\\cdot 2}=\\frac{2^{2002} \\cdot 3^{2002} \\cdot 3}{6^{2002}\\cdot 2}=\\frac{6^{2002}\\cdot 3}{6^{2002}\\cdot 2}=\\frac{3}{2}$ or $\\mathrm{ (E) \\ }$~by mathwiz0</p>",
+        "<p>$\\frac{2^{2001}\\cdot3^{2003}}{6^{2002}}=\\frac{2^{2001}\\cdot3^{2003}}{2^{2002}\\cdot3^{2002}}=\\frac{3}{2}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple arithmetic word problem involving basic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_2",
+      "question": "<p>For the nonzero numbers a, b, and c, define</p><p>$D(a,b,c)=\\frac{abc}{a+b+c}$</p><p>Find $D(2,4,6)$.</p>",
+      "solutions": [
+        "<p>$\\frac{2\\cdot 4\\cdot 6}{2+4+6}=\\frac{48}{12}=4\\Longrightarrow\\mathrm{ (C) \\ }$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "percentages",
+          "confidence": 0.95,
+          "reasoning": "Percentage word problem involving calculating discounts and savings"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_3",
+      "question": "<p>The <a href=\"/wiki/index.php/Arithmetic_mean\" title=\"Arithmetic mean\">arithmetic mean</a> of the nine numbers in the set $\\{9, 99, 999, 9999, \\ldots, 999999999\\}$ is a $9$-digit number $M$, all of whose digits are distinct. The number $M$ doesn't contain the digit</p>",
+      "solutions": [
+        "<p>We wish to find $\\frac{9+99+\\cdots +999999999}{9}$, or $\\frac{9(1+11+111+\\cdots +111111111)}{9}=123456789$. This doesn't have the digit 0, so the answer is $\\boxed{\\mathrm{(A)}\\ 0}$</p>",
+        "<p>Notice that the final number is guaranteed to have the digits $\\{1, 3, 5, 7, 9\\}$ and that each of these digits can be paired with an even number adding up to 9. $\\boxed{\\mathrm{(A)}\\ 0}$ can be taken out, with the other digits fulfilling divisibility by 9.</p>",
+        "<p>The arithmetic mean is $\\frac{(10^1-1)+(10^2-1)+\\ldots+(10^9-1)}{9}=\\frac{1111111101}{9}=123456789$. So select $\\boxed{\\mathrm{A}}$.~hastapasta</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving finding area of geometric shapes"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_4",
+      "question": "<p>What is the value of $(3x - 2)(4x + 1) - (3x - 2)4x + 1$ when $x=4$?</p>",
+      "solutions": [
+        "<p>By the distributive property, </p><p>\\[(3x-2)[(4x+1)-4x] + 1 = 3x-2 + 1 = 3x-1 = 3(4) - 1 = \\boxed{\\mathrm{(D)}\\ 11}\\].</p>",
+        "<p>Inputting 4 into $x$ in the original equation,</p><p>\\[[3(4)-2][4(4)+1]-[3(4)-2][4(4)]+1 = 170-160+1 = \\boxed{\\mathrm{(D)}\\ 11}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Simple word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_5",
+      "question": "<p>Circles of radius $2$ and $3$ are externally tangent and are circumscribed by a third circle, as shown in the figure. Find the area of the shaded region.</p>",
+      "solutions": [
+        "<p>A line going through the centers of the two smaller circles also goes through the diameter. The length of this line within the circle is $3+3+2+2=10.$ Because this is the length of the larger circle's diameter, the length of its radius is $5.$</p><p>The area of the large circle is $25\\pi$, and the area of the two smaller circles is $9\\pi + 4\\pi = 13\\pi.$ To find the area of the shaded region, subtract the area of the two smaller circles from the area of the large circle. $\\longrightarrow 25\\pi - 13\\pi = \\boxed{\\mathrm{(E) \\ } 12\\pi}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_6",
+      "question": "<p>For how many positive integers $n$ is $n^2 - 3n + 2$ a <a class=\"mw-redirect\" href=\"/wiki/index.php/Prime\" title=\"Prime\">prime</a> number?</p>",
+      "solutions": [
+        "<p>Factoring, we get $n^2 - 3n + 2 = (n-2)(n-1)$. Either $n-1$ or $n-2$ is odd, and the other is even. Their product must yield an even number. The only prime that is even is $2$, which is when $n$ is $3$ or $0$. Since $0$ is not a positive number, the answer is $\\boxed{\\mathrm{(B)}\\ \\text{one}}$.</p>",
+        "<p>Considering parity, we see that $n^2 - 3n + 2$ is always even. The only even prime is $2$, and so $n^2-3n=0$ whence $n=3\\Rightarrow\\boxed{\\mathrm{(B)}\\ \\text{one}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95,
+          "reasoning": "Word problem involving basic arithmetic operations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_7",
+      "question": "<p>Let $n$ be a positive <a href=\"/wiki/index.php/Integer\" title=\"Integer\">integer</a> such that $\\frac 12 + \\frac 13 + \\frac 17 + \\frac 1n$ is an integer. Which of the following statements is <b>not </b> true:</p>",
+      "solutions": [
+        "<p>Since $\\frac 12 + \\frac 13 + \\frac 17  = \\frac {41}{42}$, $0 < \\lim_{n \\rightarrow \\infty} \\left(\\frac{41}{42} + \\frac{1}{n}\\right) < \\frac {41}{42} + \\frac 1n < \\frac{41}{42} + \\frac 11 < 2$</p><p>From which it follows that $\\frac{41}{42} + \\frac 1n = 1$ and $n = 42$. The only answer choice that is not true is $\\boxed{\\mathrm{(E)}\\ n>84}$.</p>",
+        "<p>Since $\\frac 12 + \\frac 13 + \\frac 17  = \\frac {41}{42}$, it is very clear that $n=42$ makes the expression an integer*. Because $n$ is a positive integer, $\\frac{1}{n}$ must be less than or equal to $1$. Thus, the only integer the expression can take is $1$, which means the only value for $n$ is $42$. Thus $\\boxed{\\mathrm{(E)}\\ n>84}$</p><p>~superagh</p>",
+        "<p>Once you find $n=42$, you can skip the rest of Solution 2 by noting that $n=42=2\\times3\\times7$, which satisfies A, B, C, D, but not E. Thus $\\boxed{\\mathrm{(E)}\\ n>84}$ must be the answer by PoE (Process of Elimination).</p><p><br/>~speed tip by rawr3507</p>",
+        "<p>Cross multiplying and adding the fraction we get the fraction to be equal to $\\frac {41n + 42}{42n}$, This value has to be an integer. This implies,</p><p>$42n|(41n+42)$.</p><p>=> $42|(41n + 42)$</p><p>=> $n|(41n+42)$</p><p>from (1) and (2) we get that n=42.Comparing this with the options, we see that option E is the incorrect statement and hence E is the answer.</p><p>~rudolf1279</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_10",
+      "question": "<p>Suppose that $a$ and $b$ are nonzero real numbers, and that the <a href=\"/wiki/index.php/Equation\" title=\"Equation\">equation</a> $x^2 + ax + b = 0$ has solutions $a$ and $b$. Then the pair $(a,b)$ is</p>",
+      "solutions": [
+        "<p>Since $(x-a)(x-b) = x^2 - (a+b)x + ab = x^2 + ax + b = 0$, it follows by comparing <a href=\"/wiki/index.php/Coefficient\" title=\"Coefficient\">coefficients</a> that $-a - b = a$ and that $ab = b$. Since $b$ is nonzero, $a = 1$, and $-1 - b = 1 \\Longrightarrow b = -2$. Thus $(a,b) = \\boxed{\\mathrm{(C)}\\ (1,-2)}$.</p>",
+        "<p>Another method is to use <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\">Vieta's formulas</a>. The sum of the solutions to this polynomial is equal to the opposite of the $x$ coefficient, since the leading coefficient is 1; in other words, $a + b = -a$ and the product of the solutions is equal to the constant term (i.e, $a*b = b$). Since $b$ is nonzero, it follows that $a = 1$ and therefore (from the first equation), $b = -2a = -2$. Hence, $(a,b) = \\boxed{\\mathrm{(C)}\\ (1,-2)}$</p>",
+        "<p>Since $a$ and $b$ are solutions to the given equation, we can write the two equations $a^2 + a^2 + b = 2a^2 + b = 0,$ and $b^2 + ab + b = 0.$ From the first equation, we get that $b = -2a^2,$ and substituting this in our second equation, we get that $4a^4 - 2a^3 - 2a^2 = 0,$ and solving this gives us the solutions $a = -\\tfrac{1}{2},$ $a = 0$ and $a = 1.$ We discard the first two solutions, as the first one doesnt show up in the answer choices and we are given that $a$ is nonzero. The only valid solution is then $a = 1,$ which gives us $b = -2,$ and $(a, b) = \\boxed{\\text{(C) } (1, -2)}$</p>",
+        "<p>Note that for roots $a$ and $b$, $ab = b$. This implies that $a$ is $1.0$, and there is only one answer choice with $1$ in the position for $a$, hence, $(a,b) = \\boxed{\\mathrm{(C)}\\ (1,-2)}$</p>",
+        "<p>We can use Vieta's formulas to solve this. We know that $a + b = -a$, and $ab = b.$ We can test the answer choices, so that we find that $\\boxed{\\mathrm{(C)}\\ (1,-2)}$ works.</p><p>-monkey_land</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "rates",
+          "confidence": 0.95,
+          "reasoning": "Rate word problem involving time, distance, and speed relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_15",
+      "question": "<p>The positive integers $A, B, A-B,$ and $A+B$ are all prime numbers. The sum of these four primes is</p>",
+      "solutions": [
+        "<p>Since $A-B$ and $A+B$ must have the same <a href=\"/wiki/index.php/Parity\" title=\"Parity\">parity</a>, and since there is only one even prime number, it follows that $A-B$ and $A+B$ are both odd. Thus one of $A, B$ is odd and the other even. Since $A+B > A > A-B > 2$, it follows that $A$ (as a prime greater than $2$) is odd. Thus $B = 2$, and $A-2, A, A+2$ are consecutive odd primes. At least one of $A-2, A, A+2$ is divisible by $3$, from which it follows that $A-2 = 3$ and $A = 5$. The sum of these numbers is thus $17$, a prime, so the answer is $\\boxed{\\mathrm{(E)}\\ \\text{prime}}$.</p>",
+        "<p>In order for both $A - B$ and $A + B$ to be prime, one of $A, B$ must be 2, or else both $A - B$, $A + B$ would be even numbers. </p><p>If $A = 2$, then $A < B$ and $A - B < 0$, which is not possible. Thus $B = 2$.</p><p>Since $A$ is prime and $A > A - B > 2$, we can infer that $A > 3$ and thus $A$ can be expressed as $6n \\pm 1$ for some natural number $n$. </p><p>However in either case, one of $A - B$ and $A + B$ can be expressed as $6n \\pm 3 = 3(2n \\pm 1)$ which is a multiple of 3. Therefore the only possibility that works is when $A - B = 3$ and \\[A + B + (A - B) + (A + B) = 5 + 2 + 3 + 7 = 17\\]</p><p>Which is a prime number. $\\boxed{(E)}$</p><p>~ Nafer</p>",
+        "<p>Trying out some primes for $A$ and $B$ such that $A-B$ and $A+B$ are prime, $A=5$ and $B=2$ can be found almost immediately. Summing the four primes, the result is $5+2+3+7=17$, which is $\\boxed{\\mathrm{(E)}\\ \\text{prime}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.95,
+          "reasoning": "Counting problem involving different arrangements and combinations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_16",
+      "question": "<p>For how many integers $n$ is $\\dfrac n{20-n}$ the <a href=\"/wiki/index.php/Perfect_square\" title=\"Perfect square\">square</a> of an integer?</p>",
+      "solutions": [
+        "<p>Let $x^2 = \\frac{n}{20-n}$, with $x \\ge 0$ (note that the solutions $x < 0$ do not give any additional solutions for $n$). Then rewriting, $n = \\frac{20x^2}{x^2 + 1}$. Since $\\text{gcd}(x^2, x^2 + 1) = 1$, it follows that $x^2 + 1$ divides $20$. Listing the factors of $20$, we find that $x = 0, 1, 2 , 3$ are the only $\\boxed{\\mathrm{(D)}\\ 4}$ solutions (respectively yielding $n = 0, 10, 16, 18$).</p>",
+        "<p>For $n<0$ and $n>20$ the fraction is negative, for $n=20$ it is not defined, and for $n\\in\\{1,\\dots,9\\}$ it is between 0 and 1.</p><p>Thus we only need to examine $n=0$ and $n\\in\\{10,\\dots,19\\}$.</p><p>For $n=0$ and $n=10$ we obviously get the squares $0$ and $1$ respectively.</p><p>For prime $n$ the fraction will not be an integer, as the denominator will not contain the prime in the numerator.</p><p>This leaves $n\\in\\{12,14,15,16,18\\}$, and a quick substitution shows that out of these only $n=16$ and $n=18$ yield a square. Therefore, there are only $\\boxed{\\mathrm{(D)}\\ 4}$ solutions (respectively yielding $n = 0, 10, 16, 18$).</p>",
+        "<p>If $\\frac{n}{20-n} = k^2 \\ge 0$, then $n \\ge 0$ and $20-n > 0$, otherwise $\\frac{n}{20-n}$ will be negative. Thus $0 \\le n \\le 19$ and \\[0 = \\frac{0}{20-(0)} \\le \\frac{n}{20-n} \\le \\frac{19}{20-(19)} = 19\\] Checking all $k$ for which $0 \\le k^2 \\le 19$, we have $0$, $1$, $2$, $3$ as the possibilities. $\\boxed{(D)}$</p><p>~ Nafer</p>",
+        "<p>For all integers x, $x^2$ is always a positive integer. So solve for $\\frac{n}{20-n} = 0$, getting $n=0$ and $\\frac{n}{20-n} = 1$, getting $n =10$. For all values n less than 0 and greater than 20, the value $\\frac{n}{20-n}$ is negative, so now try values of n between 10 and 20. Quick substitution finds $0$, $10$, $16$, and $18$ which yields $x=0$, $x=1$, $x=2$, and $x=3$ respectively. 4 values, or $\\boxed{(D)}$</p><p><br/></p>",
+        "<p>Simon's Favourite Factoring Trick.</p><p>Since $\\frac{n}{20-n}$ is an integer $k$, we multiply both sides by $20-n$. This gives us $n=20k^2$-$nk^2$. We subtract $20k^2$ on both sides, then add $nk^2$ on both sides as a prerequisite for using Simon's Favorite Factoring Trick. We have $(k^2+1)(n-20)=20$. We then consider the different factors of $20$ that $k^2+1$ can be. It could be $1,2,4,5,10$, and $20$. After checking case by case, we then are able to identify that there are $4$ such $k$ values that also yield an integer $n$ value, meaning that there are $4$ values, so the correct answer is $\\boxed{(D)}$~CharmaineMa07292010</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "systems_of_equations",
+          "confidence": 0.95,
+          "reasoning": "System of equations problem involving multiple variables"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_17",
+      "question": "<p>A regular octagon $ABCDEFGH$ has sides of length two. Find the area of $\\triangle ADG$.</p>",
+      "solutions": [
+        "<p>[asy] unitsize(1cm); defaultpen(0.8); pair[] A = new pair[8]; A[0]=(0,0); for (int i=1; i<8; ++i) A[i] = A[i-1] + 2*dir(45*(i-1)); draw( A[0]--A[1]--A[2]--A[3]--A[4]--A[5]--A[6]--A[7]--cycle ); label(\"$A$\",A[0],SW); label(\"$B$\",A[1],SE); label(\"$C$\",A[2],SE); label(\"$D$\",A[3],NE); label(\"$E$\",A[4],NE); label(\"$F$\",A[5],NW); label(\"$G$\",A[6],NW); label(\"$H$\",A[7],SW); filldraw( A[0]--A[3]--A[6]--cycle, lightgray, black ); pair P = intersectionpoint( A[3]--A[6], A[0]--A[5] ); draw( A[0]--P ); draw( P -- A[5], dashed ); label(\"$P$\",P,NE); draw( A[1]--A[4], dashed ); pair Q = intersectionpoint( A[3]--A[6], A[1]--A[4] ); label(\"$Q$\",Q,NW); [/asy]</p><p>The area of the triangle $ADG$ can be computed as $\\frac{DG \\cdot AP}2$. We will now find $DG$ and $AP$.</p><p>Clearly, $PFG$ is a right isosceles triangle with hypotenuse of length $2$, hence $PG=\\sqrt 2$. The same holds for triangle $QED$ and its leg $QD$. The length of $PQ$ is equal to $FE=2$.Hence $GD = 2 + 2\\sqrt 2$, and $AP = PD = 2 + \\sqrt 2$.</p><p>Then the area of $ADG$ equals $\\frac{DG \\cdot AP}2 = \\frac{(2+2\\sqrt 2)(2+\\sqrt 2)}2 = \\frac{8+6\\sqrt 2}2 = \\boxed{\\textbf{(C)}=4+3\\sqrt 2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_18",
+      "question": "<p>Four distinct <a href=\"/wiki/index.php/Circle\" title=\"Circle\">circles</a> are drawn in a <a href=\"/wiki/index.php/Plane\" title=\"Plane\">plane</a>. What is the maximum number of points where at least two of the circles intersect?</p>",
+      "solutions": [
+        "<p>For any given pair of circles, they can intersect at most $2$ times. Since there are ${4\\choose 2} = 6$ pairs of circles, the maximum number of possible intersections is $6 \\cdot 2 = 12$. We can construct such a situation as below, so the answer is $\\boxed{\\mathrm{(D)}\\ 12}$.</p><p><a class=\"image\" href=\"/wiki/index.php/File:2002_12B_AMC-14.png\">2002 12B AMC-14.png</a></p>",
+        "<p>Because a pair or circles can intersect at most $2$ times, the first circle can intersect the second at $2$ points, the third can intersect the first two at $4$ points, and the fourth can intersect the first three at $6$ points. This means that our answer is $2+4+6=\\boxed{\\mathrm{(D)}\\ 12}.$</p>",
+        "<p>Pick a circle any circle- $4$ ways. Then, pick any other circle- $3$ ways. For each of these circles, there will be $2$ intersections for a total of $4*3*2$ = $24$ intersections. However, we have counted each intersection twice, so we divide for overcounting. Therefore, we reach a total of $\\frac{24}{2}=\\boxed{12}$, which corresponds to $\\text{(D)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "deductive_reasoning",
+          "confidence": 0.95,
+          "reasoning": "Logic problem involving multiple statements and determining truth values"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_19",
+      "question": "<p>Suppose that $\\{a_n\\}$ is an arithmetic sequence with\\[a_1+a_2+\\cdots+a_{100}=100 \\text{ and } a_{101}+a_{102}+\\cdots+a_{200}=200.\\]What is the value of $a_2 - a_1\u00a0?$</p>",
+      "solutions": [
+        "<p>We should realize that the two equations are 100 terms apart, so by subtracting the two equations in a form like...</p><p>\\[(a_{101} - a_1) + (a_{102} - a_2) +... + (a_{200} - a_{100}) = 200-100 = 100\\]</p><p>...we get the value of the common difference of every hundred terms one hundred times. So we have to divide the answer by one hundred to get ... </p><p>$\\frac{100}{100} = 1$</p><p>...the common difference of every hundred terms. Then we have to simply divide the answer by hundred again to find the common difference between one term, therefore...</p><p>$\\frac{1}{100} =\\boxed{(\\textbf{C})\\ 0.01}$</p>",
+        "<p>Adding the two given equations together gives </p><p>$a_1+a_2+...+a_{200}=300$.</p><p>Now, let the common difference be $d$. Notice that $a_2-a_1=d$, so we merely need to find $d$ to get the answer. The formula for an arithmetic sum is </p><p>$\\frac{n}{2}\\left(2a_1+d(n-1)\\right)$,</p><p>where $a_1$ is the first term, $n$ is the number of terms, and $d$ is the common difference. Now we use this formula to find a closed form for the first given equation and the sum of the given equations. For the first equation, we have $n=100$. Therefore, we have </p><p>$50(2a_1+99d)=100$,</p><p>or </p><p>$2a_1+99d=2$.     *<b>(1)</b></p><p>For the sum of the equations (shown at the beginning of the solution) we have $n=200$, so</p><p>$100(2a_1+199d)=300$</p><p>or </p><p>$2a_1+199d=3$     *<b>(2)</b></p><p>Now we have a system of equations in terms of $a_1$ and $d$.Subtracting <b>(1)</b> from <b>(2)</b> eliminates $a_1$, yielding $100d=1$, and $d=a_2-a_1=\\frac{1}{100}=\\boxed{(\\textbf{C})\\ 0.01}$.</p>",
+        "<p>Subtracting the 2 given equations yields</p><p><br/>$(a_{101}-a_1)+(a_{102}-a_2)+(a_{103}-a_3)+...+(a_{200}-a_{100})=100$</p><p><br/>Now express each $a_n$ in terms of first term $a_1$ and common difference $x$ between consecutive terms</p><p><br/>$((a_1+100x)-(a_1))+((a_1+101x)-(a_1+x))+((a_1+102x)-(a_1+2x))+...+((a_1+199x)-(a_1+99x))=100$</p><p><br/>Simplifying and canceling $a_1$ and $x$ terms gives</p><p><br/>$100x+100x+100x+...+100x=100$</p><p><br/>$100x\\times100=100$</p><p><br/>$100x=1$</p><p><br/>$x=0.01=\\boxed{(\\textbf{C})\\ 0.01}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "lcm",
+          "confidence": 0.95,
+          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_20",
+      "question": "<p>Let $a$, $b$, and $c$ be real numbers such that $a-7b+8c=4$ and $8a+4b-c=7$. Then $a^2-b^2+c^2$ is </p>",
+      "solutions": [
+        "<p>Rearranging, we get $a+8c=7b+4$ and $8a-c=7-4b$</p><p>Squaring both, $a^2+16ac+64c^2=49b^2+56b+16$ and $64a^2-16ac+c^2=16b^2-56b+49$ are obtained.</p><p>Adding the two equations and dividing by $65$ gives $a^2+c^2=b^2+1$, so $a^2-b^2+c^2=\\boxed{(\\text{B})1}$.</p><p>The easiest way is to assume a value for $a$ and then solve the system of equations. For $a = 1$, we get the equations $-7b + 8c = 3$ and$4b - c = -1$Multiplying the second equation by $8$, we have $32b - 8c = -8$Adding up the two equations yields $25b = -5$, so $b = -\\frac{1}{5}$We obtain $c = \\frac{1}{5}$ after plugging in the value for $b$.Therefore, $a^2-b^2+c^2 = 1-\\frac{1}{25}+\\frac{1}{25}=\\boxed{1}$ which corresponds to $\\text{(B)}$.This time-saving trick works only because we know that for any value of $a$, $a^2-b^2+c^2$ will always be constant (it's a contest), so any value of $a$ will work. This is also called <a href=\"/wiki/index.php/Without_loss_of_generality\" title=\"Without loss of generality\">without loss of generality</a> or WLOG.</p><p>Notice that the coefficients of $a$ and $c$ are pretty similar (15s for reading and noticing), so let $b=0$ gives $a+8c=4$, and $8a-c=7$ (10s writing). Since the desired quantity simplifies to $a^2+c^2$, the $ac$ term of the quadratics after squaring gets canceled by adding up the squares of the two equations because they have the same coefficients but opposite sign (15s mind-binom). This simplifies to $65(a^2+c^2)=16+49$, or $a^2-b^2+c^2=\\frac{65}{65}=\\boxed{1}$(15s writing and addition and fraction simplification and (B) circling and submission)</p><p><a class=\"external free\" href=\"https://www.youtube.com/watch?v=3Oq21r5OezA\" rel=\"nofollow\">https://www.youtube.com/watch?v=3Oq21r5OezA</a>  ~David</p>",
+        "<p>Rearranging, we get $a+8c=7b+4$ and $8a-c=7-4b$</p><p>Squaring both, $a^2+16ac+64c^2=49b^2+56b+16$ and $64a^2-16ac+c^2=16b^2-56b+49$ are obtained.</p><p>Adding the two equations and dividing by $65$ gives $a^2+c^2=b^2+1$, so $a^2-b^2+c^2=\\boxed{(\\text{B})1}$.</p>",
+        "<p>The easiest way is to assume a value for $a$ and then solve the system of equations. For $a = 1$, we get the equations $-7b + 8c = 3$ and$4b - c = -1$Multiplying the second equation by $8$, we have $32b - 8c = -8$Adding up the two equations yields $25b = -5$, so $b = -\\frac{1}{5}$We obtain $c = \\frac{1}{5}$ after plugging in the value for $b$.Therefore, $a^2-b^2+c^2 = 1-\\frac{1}{25}+\\frac{1}{25}=\\boxed{1}$ which corresponds to $\\text{(B)}$.This time-saving trick works only because we know that for any value of $a$, $a^2-b^2+c^2$ will always be constant (it's a contest), so any value of $a$ will work. This is also called <a href=\"/wiki/index.php/Without_loss_of_generality\" title=\"Without loss of generality\">without loss of generality</a> or WLOG.</p>",
+        "<p>Notice that the coefficients of $a$ and $c$ are pretty similar (15s for reading and noticing), so let $b=0$ gives $a+8c=4$, and $8a-c=7$ (10s writing). Since the desired quantity simplifies to $a^2+c^2$, the $ac$ term of the quadratics after squaring gets canceled by adding up the squares of the two equations because they have the same coefficients but opposite sign (15s mind-binom). This simplifies to $65(a^2+c^2)=16+49$, or $a^2-b^2+c^2=\\frac{65}{65}=\\boxed{1}$(15s writing and addition and fraction simplification and (B) circling and submission)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "fractions",
+          "confidence": 0.95,
+          "reasoning": "Fraction word problem involving ratios and proportions"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_21",
+      "question": "<p>Andy's lawn has twice as much area as Beth's lawn and three times as much area as Carlos' lawn. Carlos' lawn mower cuts half as fast as Beth's mower and one third as fast as Andy's mower. If they all start to mow their lawns at the same time, who will finish first?</p>",
+      "solutions": [
+        "<p>We say Andy's lawn has an area of $x$. Beth's lawn thus has an area of $\\frac{x}{2}$, and Carlos's lawn has an area of $\\frac{x}{3}$. </p><p>We say Andy's lawn mower cuts at a speed of $y$. Carlos's cuts at a speed of $\\frac{y}{3}$, and Beth's cuts at a speed $\\frac{2y}{3}$.</p><p>Each person's lawn is cut at a time of $\\frac{\\text{area}}{\\text{rate}}$, so Andy's is cut in $\\frac{x}{y}$ time, as is Carlos's. Beth's is cut in $\\frac{3}{4}\\times\\frac{x}{y}$, so the first one to finish is $\\boxed{\\mathrm{(B)}\\ \\text{Beth}}$.</p>",
+        "<p>WLOG, we can set values of their lawns' areas and their owners' speeds. Let the area of Andy's lawn be $6$ units, Beth's lawn be $3$ units, and Carlos's lawn be $2$ units. Let Carlos's mowing area per hour (honestly the time you set won't matter) be $1$, let Beth's mowing area per hour be $2$, and let Andy's mowing area per hour be $3$. Now, we can easily calculate their time by dividing their lawns' areas by their respective owners' speeds. Andy's time is $\\frac{6}{3} = 2$ hours, Beth's time is $\\frac{3}{2} = 1.5$ hours, and Carlos's time is $\\frac{6}{3} = 2$ hours. Our answer is clearly $\\boxed{\\mathrm{(B)}\\ \\text{Beth}}$.</p><p><br/>~Solution by virjoy2001</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "independent_events",
+          "confidence": 0.95,
+          "reasoning": "Probability problem involving independent events and calculating probabilities"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_22",
+      "question": "<p>Let $\\triangle XOY$ be a <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right-angled triangle</a> with $m\\angle XOY = 90^{\\circ}$. Let $M$ and $N$ be the <a href=\"/wiki/index.php/Midpoint\" title=\"Midpoint\">midpoints</a> of legs $OX$ and $OY$, respectively. Given that $XN = 19$ and $YM = 22$, find $XY$. </p>",
+      "solutions": [
+        "<p><a class=\"image\" href=\"/wiki/index.php/File:2002_12B_AMC-20.png\">2002 12B AMC-20.png</a></p><p>Let $OM = x$, $ON = y$. By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a> on $\\triangle XON, MOY$ respectively,\\begin{align*} (2x)^2 + y^2 &= 19^2\\\\ x^2 + (2y)^2 &= 22^2\\end{align*}</p><p>Summing these gives $5x^2 + 5y^2 = 845 \\Longrightarrow x^2 + y^2 = 169$. </p><p>By the Pythagorean Theorem again, we have </p><p>\\[(2x)^2 + (2y)^2 = XY^2 \\Longrightarrow XY = \\sqrt{4(x^2 + y^2)} = \\sqrt{4(169)} = \\sqrt{676} = \\boxed{\\mathrm{(B)}\\ 26}.\\]</p><p>Alternatively, we could note that since we found $x^2 + y^2 = 169$, segment $MN=13$. Right triangles $\\triangle MON$ and $\\triangle XOY$ are similar by Leg-Leg with a ratio of $\\frac{1}{2}$, so $XY=2(MN)=\\boxed{\\mathrm{(B)}\\ 26}$.</p><p><br/></p>",
+        "<p>Let $XO=x$ and $YO=y.$ Then, $XY=\\sqrt{x^2+y^2}.$</p><p>Since $XN=19$ and $YM=22,$\\[XN^2=19^2=x^2+(\\dfrac{y}{2})^2)=\\dfrac{x^2}{4}+y^2\\]\\[YM^2=22^2=(\\dfrac{x}{2})^2+y^2=\\dfrac{x^2}{4}+y^2.\\]</p><p>Adding these up: \\[19^2+22^2=\\dfrac{4x^2+y^2}{4}+\\dfrac{x^2+4y^2}{4}\\]\\[845=\\dfrac{5x^2+5y^2}{4}\\]\\[3380=5x^2+5y^2\\]\\[676=x^2+y^2.\\]</p><p>Then, we substitute: $XY=\\sqrt{x^2+y^2}=\\sqrt{676}=\\boxed{26}.$</p><p><br/></p>",
+        "<p>Refer to the diagram in solution 1. $4x^2+y^2=361$ and $4y^2+x^2=484$, so add them: $5x^2+5y^2=845$ and divide by 5: $x^2+y^2=169$ so $\\dfrac{XY}{2}=\\sqrt{169}=13$ and so $XY=26$, or answer $\\boxed{\\text{(B)}}$.</p>",
+        "<p>Use the diagram in solution 1. Get $4x^2+y^2=361$ and $4y^2+x^2=484$, and multiply the second equation by 4 to get $4x^2+16y^2=1936$ and then subtract the first from the second. Get $15y^2=1575$ and $y^2=105$. Repeat for the other variable to get $15x^2=960$ and $x^2=64$. Now XY is equal to the square root of four times these quantities, so $(105+64) \\cdot 4=676$, and $XY=\\boxed{\\text{(B)}\\ 26}$.</p>",
+        "<p>Let $XM = MO = y$, and $ON = NY  = x$. Now, we can write some equations. We have that \\[(2y)^2+x^2 = 19^2 \\Longrightarrow 4y^2 + x^2 = 361,\\] and \\[(2x)^2+y^2 = 22^2 \\Longrightarrow 4x^2+y^2 = 484.\\] Adding the $2$ equations up we get \\[5x^2+5y^2 = 845.\\] The hypotenuse of the triangle is equal to \\[\\sqrt{4x^2+4y^2},\\] so that is what we want. In order to get \\[4x^2+4y^2,\\] we need to subtract $x^2+y^2$ from $5x^2+5y^2$, and since $x^2+y^2 = \\dfrac{1}{5}\\left(5x^2+5y^2\\right)$, we have that \\[4x^2+4y^2 = \\dfrac{4}{5} \\cdot 845 = 676.\\] Therefore, the hypotenuse is $\\sqrt{676} = \\boxed{\\text{(B)}\\ 26}$.</p><p>-jb2015007</p>"
+      ],
+      "categorization": [
+        {
+          "category": "probability",
+          "sub_category": "conditional_probability",
+          "confidence": 0.95,
+          "reasoning": "Probability word problem involving conditional probability and ratios"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_23",
+      "question": "<p>Let $\\{a_k\\}$ be a sequence of integers such that $a_1=1$ and $a_{m+n}=a_m+a_n+mn,$ for all positive integers $m$ and $n.$ Then $a_{12}$ is</p>",
+      "solutions": [
+        "<p>When $m=1$, $a_{n+1}=1+a_n+n$. Hence,\\[a_{2}=1+a_1+1\\]\\[a_{3}=1+a_2+2\\]\\[a_{4}=1+a_3+3\\]\\[\\dots\\]\\[a_{12}=1+a_{11}+11\\]Adding these equations up, we have that $a_{12}=12+(1+2+3+...+11)=\\boxed{\\mathrm{(D) \\ } 78}$</p><p>~AopsUser101</p>",
+        "<p>Substituting $n=1$ into $a_{m+n}=a_m+a_n+mn$: $a_{m+1}=a_m+a_{1}+m$.</p><p>Since $a_1 = 1$, $a_{m+1}=a_m+m+1$.</p><p>Therefore, $a_m = a_{m-1} + m, a_{m-1}=a_{m-2}+(m-1), a_{m-2} = a_{m-3} + (m-2)$, and so on until $a_2 = a_1 + 2$.</p><p>Adding the Left Hand Sides of all of these equations gives $a_m + a_{m-1} + a_{m-2} + a_{m-3} + \\cdots + a_2$.</p><p>Adding the Right Hand Sides of these equations gives </p><p>$(a_{m-1} + a_{m-2} + a_{m-3} + \\cdots + a_1) + (m + (m-1) + (m-2) + \\cdots + 2)$.</p><p>These two expressions must be equal; hence $a_m + a_{m-1} + a_{m-2} + a_{m-3} + \\cdots + a_2 = (a_{m-1} + a_{m-2} + a_{m-3} + \\cdots + a_1) + (m + (m-1) + (m-2) + \\cdots + 2)$ and $a_m = a_1 + (m + (m-1) + (m-2) + \\cdots + 2)$.</p><p>Substituting $a_1 = 1$: $a_m = 1 + (m + (m-1) + (m-2) + \\cdots + 2) = 1+2+3+4+ \\cdots +m = \\frac{(m+1)(m)}{2}$.</p><p>Thus we have a general formula for $a_m$ and substituting $m=12$: $a_{12} = \\frac{(13)(12)}{2} = (13)(6) = \\boxed{\\mathrm{(D)} 78}$.</p>",
+        "<p>We can literally just plug stuff in. No prerequisite is actually said in the sequence. Since $a_{m+n} = a_m+a_n +mn$, we know $a_2=a_1+a_1+1\\cdot1=1+1+1=3$. After this, we can use $a_2$ to find $a_4$. $a_4=a_2+a_2+2\\cdot 2 = 3+3+4 = 10$. Now, we can use $a_2$ and $a_4$ to find $a_6$, or $a_6=a_4+a_2+4\\cdot 2 = 10+3+8=21$. Lastly, we can use $a_6$ to find $a_{12}$. $a_{12} = a_6+a_6+6\\cdot 6 = 21+21+36= \\boxed{\\mathrm{(D) \\ } 78}$</p>",
+        "<p>We can set $n$ equal to $m$, so we can say that \\[a_{m + m} = a_m + a_m + m*m\\]\\[a_{2m} = 2a_m + m^2\\]</p><p>We set $2m = 12$, we get $m = 6$.\\[a_{12} = 2a_6 + 36\\]</p><p>We set $2m = 6$m, we get $m = 3$.\\[a_6 = 2a_3 + 9\\]</p><p>Solving for $a_3$ is easy, just direct substitution.\\[a_2 = 1 + 1 + 1 = 3\\]\\[a_3 = a_{2 + 1} = 3 + 1 + 2 = 6\\]</p><p>Substituting, we get\\[a_6 = 2(6) + 9 = 21\\]\\[a_{12} = 2(21) + 36 = 78\\]</p><p>Thus, the answer is $\\boxed{D}$.</p><p>~ euler123</p>",
+        "<p>Note that the sequence of triangular numbers $T_n=1+2+3+...+n$ satisfies these conditions. It is immediately obvious that it satisfies $a_1=1$, and $a_{m+n}=a_m+a_n+mn$ can be visually proven with the diagram below.</p><p>[asy] for(int i=5; i > 0; --i) { for(int j=0; j < i; ++j) { draw(circle((j+(5-i)/2,(5-i)*sqrt(3)/2),.2)); }; }; path m1 = brace((2,-.3),(0,-.3),.2); draw(m1); label(\"$m$\",m1,S);  path n1 = brace((4,-.3),(3,-.3),.2); draw(n1); label(\"$n$\",n1,S);   draw((-.2*sqrt(3),-.2)--(2+.2*sqrt(3),-.2)--(1,.4+sqrt(3))--cycle); label(\"$T_m$\",(1,1/3*sqrt(3)));  draw((3-.2*sqrt(3),-.2)--(4+.2*sqrt(3),-.2)--(3.5,.4+.5*sqrt(3))--cycle); label(\"$T_n$\",(3.5,.5/3*sqrt(3)));   path m2 = brace((2+.15*sqrt(3),.15+2*sqrt(3)),(3+.15*sqrt(3),.15+sqrt(3)),.2); draw(m2); label(\"$m$\",m2,(.5*sqrt(3),.5));  path n2 = brace((1.5-.15*sqrt(3),.15+1.5*sqrt(3)),(2-.15*sqrt(3),.15+2*sqrt(3)),.2); draw(n2); label(\"$n$\",n2,(-.5*sqrt(3),.5));   draw((2.5,-.4+.5*sqrt(3))--(3+.4/3*sqrt(3),sqrt(3))--(2,.4+2*sqrt(3))--(1.5-.4/3*sqrt(3),1.5*sqrt(3))--cycle); label(\"$mn$\",(2.25,1.25*sqrt(3))); [/asy]</p><p>This means that we can use the triangular number formula $T_n = \\frac{n(n+1)}{2}$, so the answer is $T_{12} = \\frac{12(12+1)}{2} = \\boxed{\\mathrm{(D) \\ } 78}$.</p><p><br/>~<a href=\"/wiki/index.php/User:Emerald_block\" title=\"User:Emerald block\">emerald_block</a></p>",
+        "<p>Follow solution 4 with plugging in m=n, but for the last part since since the subscript is 2n, and we aren't given anything that has odd numbers ( without substitution into the original equation), we need to find two numbers that add up to 12, which result from the multiplication of two even numbers. We realize that 4+8 works, since 4=2x2 and 8=4x2. We then proceed in substituting n=2 and n=4 into the equation, then add to obtain 78.~Charmainema07292010</p>",
+        "<p>Find $a_2$ which is just \\[a_2 = a_{1+1} = 1+1+1 = 3\\]. Now, we can find $a_4$ and so on until $a_12$. So here goes: \\[a_4 = a_{2+2} = 3+3+4 = 10\\]\\[a_8 = a_{4+4} = 10+10+16 = 36\\]\\[a_{12} = a_{8+4} = 36+10+32 = \\boxed{\\mathrm{(D) \\ } 78}\\]</p><p>-jb2015007</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "distance",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving distance and position relationships"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_24",
+      "question": "<p>Riders on a Ferris wheel travel in a circle in a vertical plane. A particular wheel has radius $20$ feet and revolves at the constant rate of one revolution per minute. How many seconds does it take a rider to travel from the bottom of the wheel to a point $10$ vertical feet above the bottom?</p>",
+      "solutions": [
+        "<p>We can let this circle represent the ferris wheel with center $O,$ and $C$ represent the desired point $10$ feet above the bottom. Draw a diagram like the one above. We find out $\\triangle OBC$ is a $30-60-90$ triangle. That means $\\angle BOC = 60^\\circ$ and the ferris wheel has made $\\frac{60}{360} = \\frac{1}{6}$ of a revolution. Therefore, the time it takes to travel that much of a distance is $\\frac{1}{6}\\text{th}$ of a minute, or $10$ seconds. The answer is $\\boxed{\\mathrm{(D) \\ } 10}$. Alternatively, we could also say that $\\triangle ABC$ is congruent to $\\triangle OBC$ by SAS, so $AC$ is 20, and $\\triangle AOC$ is equilateral, and $\\angle BOC = 60^\\circ$</p>",
+        "<p>The path that the rider takes along the Ferris wheel can be represented by a sinusoidal graph, where $x$ represents the time in seconds. Since $x=0$ is at the crest of the graph and not at the midline, we will use a cosine graph. Therefore, we will use the form:\\[f(x) = A\\cos(Bx - C) + D.\\]</p><p>The graph starts at the lowest point at $0$ feet, then goes up to reach the highest point at $40$ feet, then comes back down. Therefore, the amplitude is $20$ (and negative since it starts at the bottom, not the top), and the vertical shift is $20$. There is no horizontal shift since the lowest point is at $x=0$. It takes $60$ seconds to make one full revolution (the period), so $B = \\frac{2\\pi}{60} = \\frac{\\pi}{30}.$ Now we have all the parts we need for the equation of our graph, and we can set it equal to the height we want, $10.$</p><p>\\[10 = -20\\cos\\left(\\frac{\\pi}{30}x\\right) + 20.\\]</p><p>We get to $\\frac{1}{2} = \\cos\\left(\\frac{\\pi}{30}x\\right)$ and remember that the problem is looking for the first instance of $f(x) = 10$, so $\\frac{\\pi}{30}x = \\frac{\\pi}{3}.$ Solving, we get that $x = \\boxed{\\mathrm{(D) \\ } 10}$.</p><p>~jp06132</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+        }
+      ]
+    },
+    {
+      "id": "amc_2002_10b_25",
+      "question": "<p>When $15$ is appended to a list of integers, the mean is increased by $2$. When $1$ is appended to the enlarged list, the mean of the enlarged list is decreased by $1$. How many integers were in the original list?</p>",
+      "solutions": [
+        "<p>Let $x$ be the sum of the integers and $y$ be the number of elements in the list. Then we get the equations $\\dfrac{x+15}{y+1}=\\dfrac{x}{y}+2$ and $\\dfrac{x+15+1}{y+1+1}=\\dfrac{x+16}{y+2}=\\frac{x}{y}+2-1=\\frac{x}{y}+1$. With a lot of algebra, the solution is found to be $y= \\boxed{\\textbf{(A)}\\ 4}$.</p>",
+        "<p>We let $n$ be the original number of elements in the set and we let $m$ be the original average of the terms of the original list. Then we have $mn$ is the sum of all the elements of the list. So we have two equations: \\[mn+15=(m+2)(n+1)=mn+m+2n+2\\] and \\[mn+16=(m+1)(n+2)=mn+2m+n+2.\\]Simplifying both equations and we get,\\[13=m+2n\\]\\[14=2m+n\\]Solving for $m$ and $n$, we get $m=5$ and $n=\\boxed{\\textbf{(A)}4}$.</p>",
+        "<p>Warning: This solution will rarely ever work in any other case. However, seeing that you can so easily plug and chug in problem 25 it is funny to see this.</p><p>Plug and chug random numbers with the answer choices, starting with the choice of $4$ numbers. You see that if you have 4 5s and you add 15 to the set, the resulting mean will be 7; we can verify this with math\\[\\frac{5+5+5+5+15}{5}=7\\]adding in 1 to the set you result in the mean to be 6.\\[\\frac{5+5+5+5+15+1}{6}=6\\]Thus we conclude that 4 is the correct choice or $\\boxed{\\textbf{(A)}}$</p><p><br/>Video solution by Canadamath<a class=\"external free\" href=\"https://www.youtube.com/watch?v=hYq8GgJ0it4\" rel=\"nofollow\">https://www.youtube.com/watch?v=hYq8GgJ0it4</a></p>",
+        "<p>Let $S$ be the sum of the numbers. Let $x$ be the number of integers, and the mean be $y$. We have the equation $\\frac{S}{x} = y$. We also have $\\frac{S+15}{x+1} = y+2$ and $\\frac{S+16}{x+2} = y+1$. From the first equation, we have $S = xy$. We can multiply both sides by the denominators of the second and third equations to yield $S+15 = xy+2x+y+2$ and $S+16 = xy+x+2y+2$. Since $S = xy$, we can substitute that into the equations and subtract by $xy$ to get $15 = 2x+y+2$ or $13 = 2x+y$. We also get $x+2y = 14$, and adding the two equations up gives $3x+3y = 27$, or $x+y = 9$. Subtracting $x+y=9$ from $2x+y=13$ gives $x = 4$ and $y = 5$. </p><p>We can check that this is the correct answer by having $4, 9, 6,$ and $1$ as our numbers. The sum is 20, and the mean is 5. Adding 15 gives that the sum is 35, and the number of integers is 5, so the mean is 2, an increase of 2. Adding 1 to the integers gives that the sum is 36, and the number of numbers is 6, for a mean of 6, a decrease of 1.</p><p>We can also prove that since the sum is 20, the number of integers is 4, and the mean is 5, we have $\\frac{20}{4} = 5$, which is true. The second equation gives $\\frac{35}{5} = 7 = 5+2$, which satisfies the condition. We also have $\\frac{36}{6} = 6 = 7-1$, which also satisfies the condition.</p><p>Therefore, since we correctly solved it and checked our work multiple ways, we can be confident that the answer is $\\textbf{(A)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "area",
+          "confidence": 0.95,
+          "reasoning": "Geometry problem involving area calculations and geometric relationships"
+        }
+      ]
+    }
+  ]
+}
