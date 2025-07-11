@@ -37,7 +37,7 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "percentages",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
           "reasoning": "Percentage word problem involving calculating savings from a 20% discount"
         }
@@ -52,7 +52,7 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "symmetry",
+          "sub_category": "general",
           "confidence": 0.95,
           "reasoning": "Geometry problem involving line of symmetry on diagonal of a square grid"
         }
@@ -67,7 +67,7 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "perimeter",
+          "sub_category": "polygons",
           "confidence": 0.95,
           "reasoning": "Perimeter word problem - finding area of square with same perimeter as triangle"
         }
@@ -82,9 +82,15 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "optimization",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
           "reasoning": "Optimization problem - finding minimum number of packs to buy exactly 90 cans"
+        },
+        {
+          "category": "combinatorics",
+          "sub_category": "counting",
+          "confidence": 0.85,
+          "reasoning": "Combinatorial optimization problem involving counting minimum packs needed"
         }
       ]
     },
@@ -112,7 +118,7 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "pythagorean_theorem",
+          "sub_category": "triangles",
           "confidence": 0.95,
           "reasoning": "Distance problem using Pythagorean theorem to find direct distance from starting point"
         }
@@ -127,7 +133,7 @@
       "categorization": [
         {
           "category": "number_theory",
-          "sub_category": "parity",
+          "sub_category": "general",
           "confidence": 0.95,
           "reasoning": "Number theory problem involving odd/even properties of integers"
         }
@@ -160,7 +166,7 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "rates",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
           "reasoning": "Rate word problem involving walking and running at different speeds"
         }
@@ -175,7 +181,7 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "percentages",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
           "reasoning": "Percentage problem involving sales tax and discounts - commutative property shows same result"
         }
@@ -192,7 +198,7 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "arithmetic_sequences",
+          "sub_category": "sequences",
           "confidence": 0.95,
           "reasoning": "Arithmetic sequence word problem - finding number of bananas eaten on specific day"
         }
@@ -208,7 +214,7 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "area",
+          "sub_category": "polygons",
           "confidence": 0.95,
           "reasoning": "Area problem involving polygon with given side lengths and area"
         }
@@ -223,10 +229,10 @@
       ],
       "categorization": [
         {
-          "category": "geometry",
-          "sub_category": "circles",
+          "category": "combinatorics",
+          "sub_category": "counting",
           "confidence": 0.95,
-          "reasoning": "Circle geometry problem involving area and circumference relationships"
+          "reasoning": "Combinatorics problem involving counting basketball games between teams in divisions"
         }
       ]
     },
@@ -253,10 +259,10 @@
       ],
       "categorization": [
         {
-          "category": "algebra",
-          "sub_category": "systems_of_equations",
+          "category": "combinatorics",
+          "sub_category": "pigeonhole_principle",
           "confidence": 0.95,
-          "reasoning": "System of equations problem involving multiple variables and constraints"
+          "reasoning": "Pigeonhole principle problem - finding minimum socks needed to guarantee 5 of same color"
         }
       ]
     },
@@ -268,10 +274,10 @@
       ],
       "categorization": [
         {
-          "category": "geometry",
-          "sub_category": "area",
+          "category": "algebra",
+          "sub_category": "functions",
           "confidence": 0.95,
-          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+          "reasoning": "Function interpretation problem analyzing distance-time graph and finding slopes (speed)"
         }
       ]
     },
@@ -283,10 +289,10 @@
       ],
       "categorization": [
         {
-          "category": "logic",
-          "sub_category": "deductive_reasoning",
+          "category": "number_theory",
+          "sub_category": "divisibility",
           "confidence": 0.95,
-          "reasoning": "Logic problem involving multiple statements and determining truth values"
+          "reasoning": "Number theory problem involving counting multiples of 13 in a range"
         }
       ]
     },
@@ -298,10 +304,10 @@
       ],
       "categorization": [
         {
-          "category": "number_theory",
-          "sub_category": "lcm",
+          "category": "geometry",
+          "sub_category": "polygons",
           "confidence": 0.95,
-          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+          "reasoning": "Geometry problem involving trapezoid perimeter using Pythagorean theorem"
         }
       ]
     },
@@ -313,10 +319,10 @@
       ],
       "categorization": [
         {
-          "category": "algebra",
-          "sub_category": "fractions",
+          "category": "number_theory",
+          "sub_category": "modular_arithmetic",
           "confidence": 0.95,
-          "reasoning": "Fraction word problem involving people, chairs, and working backwards"
+          "reasoning": "Modular arithmetic problem involving periodic movement around a circle"
         }
       ]
     },
@@ -329,10 +335,10 @@
       ],
       "categorization": [
         {
-          "category": "probability",
-          "sub_category": "independent_events",
+          "category": "combinatorics",
+          "sub_category": "counting",
           "confidence": 0.95,
-          "reasoning": "Probability problem involving independent spinners and finding probability of even product"
+          "reasoning": "Combinatorics problem counting distinct triangles from grid points"
         }
       ]
     },
@@ -344,10 +350,10 @@
       ],
       "categorization": [
         {
-          "category": "probability",
-          "sub_category": "conditional_probability",
+          "category": "algebra",
+          "sub_category": "inequalities",
           "confidence": 0.95,
-          "reasoning": "Probability word problem involving single women and married men, finding fraction of married men"
+          "reasoning": "Inequality problem comparing cost efficiency (cost per unit) of different sized products"
         }
       ]
     },
@@ -360,9 +366,9 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "distance",
+          "sub_category": "circles",
           "confidence": 0.95,
-          "reasoning": "Geometry problem analyzing distance from home as function of position around rectangle"
+          "reasoning": "Geometry problem involving semicircle inscribed in isosceles right triangle"
         }
       ]
     },
@@ -375,10 +381,10 @@
       ],
       "categorization": [
         {
-          "category": "geometry",
-          "sub_category": "area",
+          "category": "combinatorics",
+          "sub_category": "counting",
           "confidence": 0.95,
-          "reasoning": "Geometry problem finding height of parallelogram using area calculations and right triangles"
+          "reasoning": "Counting/optimization problem finding minimum keystrokes to reach target number"
         }
       ]
     },
@@ -392,9 +398,9 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "area",
+          "sub_category": "circles",
           "confidence": 0.95,
-          "reasoning": "Geometry problem involving intersecting squares, circle area, and finding shaded region area"
+          "reasoning": "Geometry problem involving circle and square with equal areas"
         }
       ]
     }
