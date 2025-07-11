@@ -36,7 +36,7 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "patterns",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
           "reasoning": "Pattern recognition problem involving code substitution. The problem requires understanding that letters represent digits and finding the 4-digit number represented by 'CLUE'."
         }
@@ -53,7 +53,7 @@
       "categorization": [
         {
           "category": "number_theory",
-          "sub_category": "remainders",
+          "sub_category": "modular_arithmetic",
           "confidence": 0.95,
           "reasoning": "Number theory problem involving calendar calculations and modular arithmetic. The problem requires working backwards from February 13 to find what day February 1 falls on."
         }
@@ -68,7 +68,7 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "area",
+          "sub_category": "triangles",
           "confidence": 0.95,
           "reasoning": "Geometry problem involving area of triangles and trapezoids. The problem requires finding the area of one trapezoid by dividing the remaining area equally among three congruent trapezoids."
         }
@@ -83,7 +83,7 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "rates",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
           "reasoning": "Rate and distance word problem involving average speed. The problem requires calculating the total distance traveled and total time to find the average speed."
         }
@@ -98,7 +98,7 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "area",
+          "sub_category": "polygons",
           "confidence": 0.95,
           "reasoning": "Geometry problem involving area ratio of gray squares to white squares. The problem requires counting the number of gray and white tiles to find their ratio."
         }
@@ -143,7 +143,7 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "percentages",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
           "reasoning": "Percentage word problem involving investment gains and losses. The problem requires calculating the final value after a loss followed by a gain and finding the overall percentage change."
         }
@@ -189,7 +189,7 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "sequences_patterns",
+          "sub_category": "sequences",
           "confidence": 0.95,
           "reasoning": "Geometric sequence problem involving bouncing ball heights. The problem requires calculating successive terms of a geometric sequence to find when the height drops below a certain threshold."
         }
@@ -245,7 +245,7 @@
       "id": "amc_2008_8_16",
       "question": "<p>A shape is created by joining seven unit cubes, as shown. What is the ratio of the volume in cubic units to the surface area in square units?</p><p>[asy] import three; defaultpen(linewidth(0.8)); real r=0.5; currentprojection=orthographic(1,1/2,1/4); draw(unitcube, white, thick(), nolight); draw(shift(1,0,0)*unitcube, white, thick(), nolight); draw(shift(1,-1,0)*unitcube, white, thick(), nolight); draw(shift(1,0,-1)*unitcube, white, thick(), nolight); draw(shift(2,0,0)*unitcube, white, thick(), nolight); draw(shift(1,1,0)*unitcube, white, thick(), nolight); draw(shift(1,0,1)*unitcube, white, thick(), nolight);[/asy]</p>",
       "solutions": [
-        "<p>The volume is of seven unit cubes which is $7$. The surface area is the same for each of the protruding cubes which is $5\\cdot 6=30$. The ratio of the volume to the surface area is $\\boxed{\\textbf{(D)}\\: 7\u00a0: 30}$.</p>"
+        "<p>The volume is of seven unit cubes which is $7$. The surface area is the same for each of the protruding cubes which is $5\\cdot 6=30$. The ratio of the volume to the surface area is $\\boxed{\\textbf{(D)}\\: 7 : 30}$.</p>"
       ],
       "categorization": [
         {
@@ -265,7 +265,7 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "area",
+          "sub_category": "polygons",
           "confidence": 0.95,
           "reasoning": "Geometry problem involving area optimization of rectangles. The problem requires finding the maximum and minimum possible areas of rectangles with a given perimeter."
         }
@@ -280,8 +280,8 @@
       ],
       "categorization": [
         {
-          "category": "number_theory",
-          "sub_category": "lcm",
+          "category": "combinatorics",
+          "sub_category": "probability",
           "confidence": 0.95,
           "reasoning": "Number theory problem involving least common multiple and remainder properties"
         }
@@ -296,8 +296,8 @@
       ],
       "categorization": [
         {
-          "category": "probability",
-          "sub_category": "independent_events",
+          "category": "algebra",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
           "reasoning": "Probability problem involving geometric points and distance. The problem requires calculating the probability that two randomly chosen points are one unit apart."
         }
@@ -311,8 +311,8 @@
       ],
       "categorization": [
         {
-          "category": "algebra",
-          "sub_category": "fractions",
+          "category": "geometry",
+          "sub_category": "volume",
           "confidence": 0.95,
           "reasoning": "Fraction word problem involving ratios and proportions. The problem requires setting up equations to find the minimum number of students given passing rates for boys and girls."
         }
@@ -329,8 +329,8 @@
       ],
       "categorization": [
         {
-          "category": "geometry",
-          "sub_category": "volume",
+          "category": "number_theory",
+          "sub_category": "divisibility",
           "confidence": 0.95,
           "reasoning": "Geometry problem involving volume of a cylinder wedge. The problem requires calculating the volume of a wedge cut from a cylinder."
         }
@@ -345,8 +345,8 @@
       ],
       "categorization": [
         {
-          "category": "number_theory",
-          "sub_category": "divisibility",
+          "category": "geometry",
+          "sub_category": "triangles",
           "confidence": 0.95,
           "reasoning": "Number theory problem involving divisibility and inequalities. The problem requires finding positive integers n where both n/3 and 3n are three-digit numbers."
         }
@@ -360,8 +360,8 @@
       ],
       "categorization": [
         {
-          "category": "geometry",
-          "sub_category": "area",
+          "category": "combinatorics",
+          "sub_category": "probability",
           "confidence": 0.95,
           "reasoning": "Geometry problem involving area ratio of a triangle to a square. The problem requires calculating the area of triangle BFD and finding its ratio to the area of the square."
         }
@@ -375,8 +375,8 @@
       ],
       "categorization": [
         {
-          "category": "probability",
-          "sub_category": "independent_events",
+          "category": "geometry",
+          "sub_category": "circles",
           "confidence": 0.95,
           "reasoning": "Probability problem involving products and perfect squares. The problem requires finding the probability that the product of a tile number and die roll is a perfect square."
         }

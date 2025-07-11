@@ -122,7 +122,7 @@
     },
     {
       "id": "amc_2006_8_8",
-      "question": "<p>The table shows some of the results of a survey by radiostation KACL. What percentage of the males surveyed listen to the station?</p><p>$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males &\u00a0? & 26 &\u00a0?\\\\ \\hline Females & 58 &\u00a0? & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$</p>",
+      "question": "<p>The table shows some of the results of a survey by radiostation KACL. What percentage of the males surveyed listen to the station?</p><p>$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males & ? & 26 & ?\\\\ \\hline Females & 58 & ? & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$</p>",
       "solutions": [
         "<p>Filling out the chart, it becomes</p><p>$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males & 78 & 26 & 104\\\\ \\hline Females & 58 & 38 & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$</p><p>Thus, the percentage of males surveyed that listen to the station is $100 \\cdot \\frac{78}{104} \\%= \\boxed{\\textbf{(E)}\\ 75 \\%}$.</p>",
         "<p>Instead of filling out the entire chart, you can find the number of male listeners which is 200 - 96 = 104. Since we know the fraction of males that don't listen to the station is $\\frac{26}{104}$, we know that the percent of males that DO listen is much larger than 50%, so the only answer is $\\boxed{\\textbf{(E)}\\ 75 \\%}$.</p>"
@@ -130,7 +130,7 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "percentages",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
           "reasoning": "Percentage word problem involving data analysis from a table. The problem requires filling in missing values in a table and calculating the percentage of males who listen to the station."
         }
@@ -138,7 +138,7 @@
     },
     {
       "id": "amc_2006_8_9",
-      "question": "<p>What is the product of $\\frac{3}{2}\\times\\frac{4}{3}\\times\\frac{5}{4}\\times\\cdots\\times\\frac{2006}{2005}$\u00a0?</p>",
+      "question": "<p>What is the product of $\\frac{3}{2}\\times\\frac{4}{3}\\times\\frac{5}{4}\\times\\cdots\\times\\frac{2006}{2005}$ ?</p>",
       "solutions": [
         "<p>The numerator in each fraction cancels out with the denominator of the next fraction. There are only two numbers that didn't cancel: $\\frac{2006}{2}=\\boxed{\\textbf{(C)}\\ 1003}$.</p>"
       ],
@@ -361,7 +361,7 @@
       "categorization": [
         {
           "category": "number_theory",
-          "sub_category": "remainders",
+          "sub_category": "modular_arithmetic",
           "confidence": 0.95,
           "reasoning": "Number theory problem involving remainders and divisibility. The problem requires finding the smallest number that leaves specific remainders when divided by 6 and 5, then finding the remainder when divided by 7."
         }
@@ -376,9 +376,9 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "patterns",
+          "sub_category": "basic_operations",
           "confidence": 0.95,
-          "reasoning": "Algebra problem involving pattern recognition in multiplication. The problem requires recognizing that CDCD = CD \u00d7 101, which leads to ABA = 101, allowing determination of digits A and B."
+          "reasoning": "Algebra problem involving pattern recognition in multiplication. The problem requires recognizing that CDCD = CD × 101, which leads to ABA = 101, allowing determination of digits A and B."
         }
       ]
     },
@@ -391,7 +391,7 @@
       "categorization": [
         {
           "category": "number_theory",
-          "sub_category": "prime_numbers",
+          "sub_category": "primes",
           "confidence": 0.95,
           "reasoning": "Number theory problem involving prime numbers and logical deduction. The problem requires using properties of even/odd numbers and prime numbers to determine the hidden numbers on cards and find their average."
         }
