@@ -22,8 +22,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Simple arithmetic word problem involving basic operations"
+          "confidence": 0.95
         }
       ]
     },
@@ -37,8 +36,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Percentage word problem involving calculating discounts and savings"
+          "confidence": 0.95
         }
       ]
     },
@@ -53,8 +51,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Area problem involving finding area of geometric shapes"
+          "confidence": 0.95
         }
       ]
     },
@@ -69,8 +66,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Simple word problem involving basic arithmetic operations"
+          "confidence": 0.95
         }
       ]
     },
@@ -83,10 +79,9 @@
       ],
       "categorization": [
         {
-          "category": "algebra",
-          "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Counting problem involving different arrangements and combinations"
+          "category": "geometry",
+          "sub_category": "polygons",
+          "confidence": 0.95
         }
       ]
     },
@@ -99,9 +94,8 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "polygons",
-          "confidence": 0.95,
-          "reasoning": "Word problem involving basic arithmetic operations"
+          "sub_category": "general",
+          "confidence": 0.95
         }
       ]
     },
@@ -116,8 +110,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Area problem involving geometric shapes and area calculations"
+          "confidence": 0.95
         }
       ]
     },
@@ -125,7 +118,7 @@
       "id": "amc_2012_8_8",
       "question": "<p>A shop advertises everything is \"half price in today's sale.\" In addition, a coupon gives a 20% discount on sale prices. Using the coupon, the price today represents what percentage off the original price?</p>",
       "solutions": [
-        "<p>Let the original price of an item be $x$.</p><p>First, everything is half-off, so the price is now $\\frac{x}{2} = 0.5x$.</p><p>Next, the extra coupon applies 20% off on the <i>sale price</i>, so the price after this discount will be $100\\% - 20\\% = 80\\%$ of what it was before. (Notice how this is not applied to the original price; if it were, the solution would be applying 50% + 20 % = 70% off the original price.)</p><p>$80\\% \\cdot 0.5 x = \\frac{4}{5} \\cdot 0.5 x = 0.4x$</p><p>The price of the item after all discounts have been applied is $0.4x = 40\\% \\cdot x$. However, we need to find the percentage off the original price, not the current percentage of the original price. We then subtract $40\\% x$ from $100\\% x$ (the original price of the item), to find the answer, $\\boxed{\\textbf{(D)}\\ 60}$.</p>",
+        "<p>Let the original price of an item be $x$.</p><p>First, everything is half-off, so the price is now $\\frac{x}{2} = 0.5x$.</p><p>Next, the extra coupon applies 20% off on the <i>sale price</i>, so the price after this discount will be $100\\% - 20\\% = 80\\%$ of what it was before. (Notice how this is not applied to the original price; if it were, the solution would be applying 50% + 20\u00a0% = 70% off the original price.)</p><p>$80\\% \\cdot 0.5 x = \\frac{4}{5} \\cdot 0.5 x = 0.4x$</p><p>The price of the item after all discounts have been applied is $0.4x = 40\\% \\cdot x$. However, we need to find the percentage off the original price, not the current percentage of the original price. We then subtract $40\\% x$ from $100\\% x$ (the original price of the item), to find the answer, $\\boxed{\\textbf{(D)}\\ 60}$.</p>",
         "<p>Since the problem implies that the percentage off the original price will be the same for every item in the store, <a href=\"/wiki/index.php/Fakesolving\" title=\"Fakesolving\">fakesolving</a> is applicable here. Say we are buying an item worth 10 dollars, a convenient number to work with. First, it is clear that we'll get 50% off, which makes the price then 5 dollars. Taking 20% off of 5 dollars gives us 4 dollars. Therefore, we have saved a total of $\\frac{10-4}{10} = \\frac{6}{10} = \\frac{60}{100} = \\boxed{\\textbf{(D)}\\ 60} \\%$.</p>",
         "<p>The percent off would be 50% of 20% because it has an additional 20% off of half the price. The answer to that would be 10%. You could do 10% + 50% to find the answer. This answer is (D)60</p><p>~ SmartGrowth</p>",
         "<p>The price is $50\\%$ off, which means the price would be $100\\% - 50\\% = 50\\%$ of what it was before. Then, you get $20\\%$ off. Sidenote: A common mistake is finding $20\\%$ of the price, but forgetting to subtract it. $20\\%$ off the price is $100\\% - 20\\% = 80\\%.$ Now, we can multiply the two discounts as decimals. $0.5 \\times 0.8 = 0.4 = 40\\%.$ Our final answer is $100\\% - 40\\% = \\boxed{\\textbf{(D)}\\ 60\\%}$</p><p>~ ENDERGAMER25/Endy</p>"
@@ -134,8 +127,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Number theory problem involving divisibility and number properties"
+          "confidence": 0.95
         }
       ]
     },
@@ -151,8 +143,7 @@
         {
           "category": "algebra",
           "sub_category": "linear_equations",
-          "confidence": 0.95,
-          "reasoning": "Triangle geometry problem involving angles and side lengths"
+          "confidence": 0.95
         }
       ]
     },
@@ -162,15 +153,14 @@
       "solutions": [
         "<p>For this problem, all we need to do is find the amount of valid 4-digit numbers that can be made from the digits of $2012$, since all of the valid 4-digit number will always be greater than $1000$. The best way to solve this problem is by using casework.</p><p>There can be only two leading digits, namely $1$ or $2$.</p><p>When the leading digit is $1$, you can make $\\frac{3!}{2!1!} \\implies 3$ such numbers. </p><p>When the leading digit is $2$, you can make $3! \\implies 6$ such numbers.</p><p>Summing the amounts of numbers, we find that there are $\\boxed{\\textbf{(D)}\\ 9}$ such numbers.</p>",
         "<p>Notice that the first digit cannot be $0$, as the number is greater than $1000$. Therefore, there are three digits that can be in the thousands. </p><p>The rest three digits of the number have no restrictions, and therefore there are $3! \\implies 6$ for each leading digit.</p><p>Since the two $2$'s are indistinguishable, there are $\\frac {3\\cdot6}{2}$ such numbers $\\implies \\boxed{\\textbf{(D)}\\ 9}$.</p><p>Note by algebramaster2: 1 and 2 are the only digits that can be in the thousands place as 0 in the thousands place will not make the number 4 digit anymore.</p>",
-        "<p>We can list out the four digits in the number. The first digit of the number can’t be 0 since the number is greater than $1000$. This leaves us with three integers for the digit in the thousands place. We have no restrictions in the hundreds place except for the fact that it can’t be the integer we chose for the thousands place. Continuing this pattern, there are $3$ choices for the thousands place, $3$ for the hundreds, $2$ for the tens, and $1$ for the ones. Adding this up we get $9$ which is choice $\\boxed{\\textbf{(D)} }$.</p><p>—-jason.ca</p>",
+        "<p>We can list out the four digits in the number. The first digit of the number can\u2019t be 0 since the number is greater than $1000$. This leaves us with three integers for the digit in the thousands place. We have no restrictions in the hundreds place except for the fact that it can\u2019t be the integer we chose for the thousands place. Continuing this pattern, there are $3$ choices for the thousands place, $3$ for the hundreds, $2$ for the tens, and $1$ for the ones. Adding this up we get $9$ which is choice $\\boxed{\\textbf{(D)} }$.</p><p>\u2014-jason.ca</p>",
         "<p>There are $\\frac{4!}{2!}$ ways to arrange the numbers in $2012$. The number of ways to arrange 2012 with 0 as the first digit is 3 because there are three places to put the 1 and the 2s are the same. $12-3= 9$ which is choice $\\boxed{\\textbf{(D)} }$.</p><p>~ Edited by GeometryMystery</p>"
       ],
       "categorization": [
         {
           "category": "combinatorics",
           "sub_category": "counting",
-          "confidence": 0.95,
-          "reasoning": "Rate word problem involving time, distance, and speed relationships"
+          "confidence": 0.95
         }
       ]
     },
@@ -187,8 +177,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Percentage word problem involving calculating percentages and changes"
+          "confidence": 0.95
         }
       ]
     },
@@ -197,14 +186,13 @@
       "question": "<p>What is the units digit of $13^{2012}$?</p>",
       "solutions": [
         "<p>The problem wants us to find the units digit of $13^{2012}$, therefore, we can eliminate the tens digit of $13$, because the tens digit will not affect the final result. So our new expression is $3^{2012}$. Now we need to look for a pattern in the units digit.</p><p>$3^1 \\implies 3$</p><p>$3^2 \\implies 9$</p><p>$3^3 \\implies 7$</p><p>$3^4 \\implies 1$</p><p>$3^5 \\implies 3$</p><p>We observe that there is a pattern for the units digit which recurs every four powers of three. Using this pattern, we can subtract 1 from 2012 and divide by 4. The remainder is the power of three that we are looking for, plus one. $2011$ divided by $4$ leaves a remainder of $3$, so the answer is the units digit of $3^{3+1}$, or $3^4$. Thus, we find that the units digit of $13^{2012}$ is $\\boxed{{\\textbf{(A)}\\ 1}}$.</p>",
-        "<p>Ignore the tens digit of $13$, we find a pattern in the units digit that $3^4 \\implies 1$. We also find $2012$ can be divided by $4$ evenly, which is $2012/4=503$. So $3^{2012}$ = $(3^4)^{503}$. Because the units digit of $3^4 \\implies 1$，so the units digit $1^{503} \\implies 1$. Thus, the units digit of $13^{2012}$ is $\\boxed{{\\textbf{(A)}\\ 1}}$.  ---LarryFlora</p>"
+        "<p>Ignore the tens digit of $13$, we find a pattern in the units digit that $3^4 \\implies 1$. We also find $2012$ can be divided by $4$ evenly, which is $2012/4=503$. So $3^{2012}$ = $(3^4)^{503}$. Because the units digit of $3^4 \\implies 1$\uff0cso the units digit $1^{503} \\implies 1$. Thus, the units digit of $13^{2012}$ is $\\boxed{{\\textbf{(A)}\\ 1}}$.  ---LarryFlora</p>"
       ],
       "categorization": [
         {
           "category": "number_theory",
           "sub_category": "modular_arithmetic",
-          "confidence": 0.95,
-          "reasoning": "Arithmetic sequence problem involving finding terms in a sequence"
+          "confidence": 0.95
         }
       ]
     },
@@ -220,8 +208,7 @@
         {
           "category": "number_theory",
           "sub_category": "divisibility",
-          "confidence": 0.95,
-          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+          "confidence": 0.95
         }
       ]
     },
@@ -236,8 +223,7 @@
         {
           "category": "combinatorics",
           "sub_category": "counting",
-          "confidence": 0.95,
-          "reasoning": "Circle geometry problem involving area and circumference"
+          "confidence": 0.95
         }
       ]
     },
@@ -251,8 +237,7 @@
         {
           "category": "number_theory",
           "sub_category": "modular_arithmetic",
-          "confidence": 0.95,
-          "reasoning": "Counting problem involving different arrangements and combinations"
+          "confidence": 0.95
         }
       ]
     },
@@ -268,8 +253,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "System of equations problem involving multiple variables"
+          "confidence": 0.95
         }
       ]
     },
@@ -282,9 +266,8 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "polygons",
-          "confidence": 0.95,
-          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+          "sub_category": "general",
+          "confidence": 0.95
         }
       ]
     },
@@ -298,8 +281,7 @@
         {
           "category": "number_theory",
           "sub_category": "primes",
-          "confidence": 0.95,
-          "reasoning": "Logic problem involving multiple statements and determining truth values"
+          "confidence": 0.95
         }
       ]
     },
@@ -311,15 +293,14 @@
         "<p>We already knew the facts: $6$ are blue and green, meaning $b+g=6$; $8$ are red and blue, meaning $r+b=8$; $4$ are red and green, meaning $r+g=4$. Then we need to add these three equations: $b+g+r+b+r+g=2(r+g+b)=6+8+4=18$. It gives us all of the marbles are $r+g+b = 18/2 = 9$. So the answer is $\\boxed{\\textbf{(C)}\\ 9}$. ~LarryFlora</p>",
         "<p>We may draw three Venn diagrams to represent these three cases, respectively. </p><p><a class=\"image\" href=\"/wiki/index.php/File:Screen_Shot_2021-08-29_at_9.14.51_AM.png\">Screen Shot 2021-08-29 at 9.14.51 AM.png</a></p><p>Let the amount of all the marbles be $x$, meaning $R+G+B = x$. </p><p>The Venn diagrams give us the equation: $x = (x-6)+(x-8)+(x-4)$. So $x = 3x-18$, $x = 18/2 =9$. Thus, the answer is $\\boxed{\\textbf{(C)}\\ 9}$.  ~LarryFlora</p>",
         "<p>Since we know all but $8$ marbles in the jar are green, the jar must have at least $9$ marbles. Then we can just start from $C$ and keep going. If there are $9$ marbles total, there are $3$ red marbles $(9-6)$, $1$ green marble $(9-8)$, and $5$ blue marbles $(9-4)$. Since we assumed there were $9$ marbles and $3+1+5=9$, the answer is $\\boxed{\\textbf{(C)}\\ 9}$.</p>",
-        "<p>Let $x$ be the number of total marbles. There are $x – 6$ red marbles, $x – 8$ green marbles, and $x – 4$ blue marbles. We can create an equation: $(x – 6)+(x – 8)+(x – 4)=x$Solving, we get $x=9$, which means the total number of marbles is $\\boxed{\\textbf{(C)}\\ 9}$.-J.L.L(Feel free to edit)</p>",
+        "<p>Let $x$ be the number of total marbles. There are $x \u2013 6$ red marbles, $x \u2013 8$ green marbles, and $x \u2013 4$ blue marbles. We can create an equation: $(x \u2013 6)+(x \u2013 8)+(x \u2013 4)=x$Solving, we get $x=9$, which means the total number of marbles is $\\boxed{\\textbf{(C)}\\ 9}$.-J.L.L(Feel free to edit)</p>",
         "<p>Let $x$ be the number of total marbles, $r$ be the number of red marbles, $g$ be the number of green marbles, and $b$ be the number of blue marbles. Then we have $x - r = 6$, $x - g = 8$, $x - b = 4$, and $r + g + b = x$. Adding the first three equations together, we get $3x - r - g - b = 18$ or $3x - (r + g + b) = 18$. Substituting in the fourth equation, we have $3x - x = 18$ $\\implies$ $\\boxed{\\textbf{(C)}\\ 9}$.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a></p>"
       ],
       "categorization": [
         {
           "category": "algebra",
           "sub_category": "linear_equations",
-          "confidence": 0.95,
-          "reasoning": "Number theory problem involving least common multiple and remainder properties"
+          "confidence": 0.95
         }
       ]
     },
@@ -335,8 +316,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Fraction word problem involving ratios and proportions"
+          "confidence": 0.95
         }
       ]
     },
@@ -349,9 +329,8 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "polygons",
-          "confidence": 0.95,
-          "reasoning": "Probability problem involving independent events and calculating probabilities"
+          "sub_category": "solid_geometry",
+          "confidence": 0.95
         }
       ]
     },
@@ -366,8 +345,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Probability word problem involving conditional probability and ratios"
+          "confidence": 0.95
         }
       ]
     },
@@ -375,15 +353,14 @@
       "id": "amc_2012_8_23",
       "question": "<p>An equilateral triangle and a regular hexagon have equal perimeters. If the triangle's area is 4, what is the area of the hexagon?</p>",
       "solutions": [
-        "<p>Let the perimeter of the equilateral triangle be $3s$. The side length of the equilateral triangle would then be $s$ and the sidelength of the hexagon would be $\\frac{s}{2}$.</p><p>A hexagon contains six equilateral triangles. One of these triangles would be similar to the large equilateral triangle in the ratio $1 : 4$, since the sidelength of the small equilateral triangle is half the side length of the large one. Thus, the area of one of the small equilateral triangles is $1$. The area of the hexagon is then $1 \\times 6 = \\boxed{\\textbf{(C)}\\ 6}$.</p>",
+        "<p>Let the perimeter of the equilateral triangle be $3s$. The side length of the equilateral triangle would then be $s$ and the sidelength of the hexagon would be $\\frac{s}{2}$.</p><p>A hexagon contains six equilateral triangles. One of these triangles would be similar to the large equilateral triangle in the ratio $1\u00a0: 4$, since the sidelength of the small equilateral triangle is half the side length of the large one. Thus, the area of one of the small equilateral triangles is $1$. The area of the hexagon is then $1 \\times 6 = \\boxed{\\textbf{(C)}\\ 6}$.</p>",
         "<p>Let the side length of the small triangle be $2x$, so the side length of the hexagon is $x$. By the Pythagorean theorem, the height of the triangle is $x\\sqrt{3}$, so the area of the triangle is $\\frac{x^2}{\\sqrt{3}}$ We are given that the area is $4$, so x must be $\\frac{2}{\\sqrt[4]{3}}$. Therefore, by the Pythagorean theorem, the height of one of the triangles in the hexagon (made by subdividing the hexagon into $6$ congruent triangles), is $\\frac{\\sqrt{3}}{\\sqrt[4]{3}}$, so the area is $\\frac{\\frac{2}{\\sqrt[4]{3}}\\times\\frac{\\sqrt{3}}{\\sqrt[4]{3}}}{2}$, which equals $1$. Since there are $6$ such triangles in the hexagon, the area of the hexagon is $\\boxed{\\textbf{(C)}\\ 6}$.</p>"
       ],
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "polygons",
-          "confidence": 0.95,
-          "reasoning": "Geometry problem involving distance and position relationships"
+          "sub_category": "general",
+          "confidence": 0.95
         }
       ]
     },
@@ -397,8 +374,7 @@
         {
           "category": "geometry",
           "sub_category": "circles",
-          "confidence": 0.95,
-          "reasoning": "Area problem involving complex geometric shapes and area calculations"
+          "confidence": 0.95
         }
       ]
     },
@@ -414,9 +390,8 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "triangles",
-          "confidence": 0.95,
-          "reasoning": "Geometry problem involving area calculations and geometric relationships"
+          "sub_category": "general",
+          "confidence": 0.95
         }
       ]
     }

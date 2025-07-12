@@ -21,8 +21,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Simple arithmetic word problem involving addition and rounding to the nearest dollar. The problem requires basic addition of three dollar amounts and rounding the result."
+          "confidence": 0.95
         }
       ]
     },
@@ -36,8 +35,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Simple counting problem involving calculating a score based on correct answers. The problem only requires counting the number of correct answers (13) as the score."
+          "confidence": 0.95
         }
       ]
     },
@@ -50,9 +48,8 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "rates",
-          "confidence": 0.95,
-          "reasoning": "Rate word problem involving calculating time per lap and finding the difference. The problem requires finding the time per lap for two different scenarios and calculating the improvement."
+          "sub_category": "basic_operations",
+          "confidence": 0.95
         }
       ]
     },
@@ -65,10 +62,9 @@
       ],
       "categorization": [
         {
-          "category": "geometry",
-          "sub_category": "symmetry",
-          "confidence": 0.95,
-          "reasoning": "Geometry problem involving rotational symmetry and direction. The problem requires calculating net rotation by combining clockwise and counterclockwise revolutions to determine final direction."
+          "category": "algebra",
+          "sub_category": "basic_operations",
+          "confidence": 0.95
         }
       ]
     },
@@ -84,9 +80,8 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "area",
-          "confidence": 0.95,
-          "reasoning": "Geometry problem involving area of squares and triangles. The problem requires understanding that the smaller square has half the area of the larger square, using geometric relationships."
+          "sub_category": "polygons",
+          "confidence": 0.95
         }
       ]
     },
@@ -99,9 +94,8 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "perimeter",
-          "confidence": 0.95,
-          "reasoning": "Geometry problem involving perimeter calculation of a composite shape. The problem requires calculating the perimeter of a T-shape formed by two rectangles, accounting for shared edges."
+          "sub_category": "polygons",
+          "confidence": 0.95
         }
       ]
     },
@@ -115,14 +109,13 @@
         {
           "category": "geometry",
           "sub_category": "circles",
-          "confidence": 0.95,
-          "reasoning": "Circle geometry problem involving radius, circumference, and area relationships. The problem requires using circle formulas to find radii and then ordering them from smallest to largest."
+          "confidence": 0.95
         }
       ]
     },
     {
       "id": "amc_2006_8_8",
-      "question": "<p>The table shows some of the results of a survey by radiostation KACL. What percentage of the males surveyed listen to the station?</p><p>$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males & ? & 26 & ?\\\\ \\hline Females & 58 & ? & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$</p>",
+      "question": "<p>The table shows some of the results of a survey by radiostation KACL. What percentage of the males surveyed listen to the station?</p><p>$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males &\u00a0? & 26 &\u00a0?\\\\ \\hline Females & 58 &\u00a0? & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$</p>",
       "solutions": [
         "<p>Filling out the chart, it becomes</p><p>$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males & 78 & 26 & 104\\\\ \\hline Females & 58 & 38 & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$</p><p>Thus, the percentage of males surveyed that listen to the station is $100 \\cdot \\frac{78}{104} \\%= \\boxed{\\textbf{(E)}\\ 75 \\%}$.</p>",
         "<p>Instead of filling out the entire chart, you can find the number of male listeners which is 200 - 96 = 104. Since we know the fraction of males that don't listen to the station is $\\frac{26}{104}$, we know that the percent of males that DO listen is much larger than 50%, so the only answer is $\\boxed{\\textbf{(E)}\\ 75 \\%}$.</p>"
@@ -131,23 +124,21 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Percentage word problem involving data analysis from a table. The problem requires filling in missing values in a table and calculating the percentage of males who listen to the station."
+          "confidence": 0.95
         }
       ]
     },
     {
       "id": "amc_2006_8_9",
-      "question": "<p>What is the product of $\\frac{3}{2}\\times\\frac{4}{3}\\times\\frac{5}{4}\\times\\cdots\\times\\frac{2006}{2005}$ ?</p>",
+      "question": "<p>What is the product of $\\frac{3}{2}\\times\\frac{4}{3}\\times\\frac{5}{4}\\times\\cdots\\times\\frac{2006}{2005}$\u00a0?</p>",
       "solutions": [
         "<p>The numerator in each fraction cancels out with the denominator of the next fraction. There are only two numbers that didn't cancel: $\\frac{2006}{2}=\\boxed{\\textbf{(C)}\\ 1003}$.</p>"
       ],
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "fractions",
-          "confidence": 0.95,
-          "reasoning": "Fraction multiplication problem with telescoping product. The problem involves multiplying a series of fractions where most terms cancel out, leaving only the first numerator and last denominator."
+          "sub_category": "basic_operations",
+          "confidence": 0.95
         }
       ]
     },
@@ -161,8 +152,7 @@
         {
           "category": "geometry",
           "sub_category": "coordinate_geometry",
-          "confidence": 0.95,
-          "reasoning": "Coordinate geometry problem involving inverse relationships. The problem requires understanding that for a rectangle with fixed area, length and width have an inverse relationship (l = 12/w)."
+          "confidence": 0.95
         }
       ]
     },
@@ -176,8 +166,7 @@
         {
           "category": "combinatorics",
           "sub_category": "counting",
-          "confidence": 0.95,
-          "reasoning": "Combinatorics problem involving systematic counting. The problem requires enumerating all two-digit numbers whose digit sum is a perfect square (1, 4, 9, or 16)."
+          "confidence": 0.95
         }
       ]
     },
@@ -190,9 +179,8 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "percentages",
-          "confidence": 0.95,
-          "reasoning": "Weighted average problem involving combining test scores. The problem requires calculating a weighted average of three different test scores based on the number of problems in each test."
+          "sub_category": "basic_operations",
+          "confidence": 0.95
         }
       ]
     },
@@ -206,9 +194,8 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "rates",
-          "confidence": 0.95,
-          "reasoning": "Distance, rate, and time word problem involving two people traveling toward each other. The problem requires setting up equations to find when two people traveling at different speeds will meet."
+          "sub_category": "basic_operations",
+          "confidence": 0.95
         }
       ]
     },
@@ -221,9 +208,8 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "rates",
-          "confidence": 0.95,
-          "reasoning": "Rate and time word problem involving reading speeds. The problem requires calculating the difference in time it takes two people to read the same book at different speeds."
+          "sub_category": "basic_operations",
+          "confidence": 0.95
         }
       ]
     },
@@ -237,9 +223,8 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "rates",
-          "confidence": 0.95,
-          "reasoning": "Rate and time problem requiring equation solving. The problem involves setting up an equation to find how many pages each person should read so they spend equal time reading."
+          "sub_category": "basic_operations",
+          "confidence": 0.95
         }
       ]
     },
@@ -253,9 +238,8 @@
       "categorization": [
         {
           "category": "algebra",
-          "sub_category": "systems_of_equations",
-          "confidence": 0.95,
-          "reasoning": "Rate and time problem requiring systems of equations. The problem involves three people with different reading speeds and requires finding how to divide the book so all spend equal time reading."
+          "sub_category": "basic_operations",
+          "confidence": 0.95
         }
       ]
     },
@@ -267,10 +251,9 @@
       ],
       "categorization": [
         {
-          "category": "probability",
-          "sub_category": "independent_events",
-          "confidence": 0.95,
-          "reasoning": "Probability problem involving three spinners and finding the probability of an odd sum. The problem requires analyzing the possible combinations that result in an odd sum and calculating the probability."
+          "category": "combinatorics",
+          "sub_category": "probability",
+          "confidence": 0.95
         }
       ]
     },
@@ -284,9 +267,8 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "surface_area",
-          "confidence": 0.95,
-          "reasoning": "Geometry problem involving surface area and counting. The problem requires calculating the surface area of a cube and determining what fraction is white based on the placement of black cubes at corners."
+          "sub_category": "solid_geometry",
+          "confidence": 0.95
         }
       ]
     },
@@ -300,8 +282,7 @@
         {
           "category": "geometry",
           "sub_category": "triangles",
-          "confidence": 0.95,
-          "reasoning": "Triangle geometry problem involving congruence and midpoints. The problem requires using triangle congruence and midpoint properties to find the length of a segment."
+          "confidence": 0.95
         }
       ]
     },
@@ -315,8 +296,7 @@
         {
           "category": "combinatorics",
           "sub_category": "counting",
-          "confidence": 0.95,
-          "reasoning": "Combinatorics problem involving tournament results and counting. The problem requires calculating the total number of games in a round-robin tournament and finding the missing win count."
+          "confidence": 0.95
         }
       ]
     },
@@ -329,9 +309,8 @@
       "categorization": [
         {
           "category": "geometry",
-          "sub_category": "volume",
-          "confidence": 0.95,
-          "reasoning": "Geometry problem involving volume and displacement. The problem requires calculating how much the water level rises when a rock is placed in an aquarium, using volume displacement principles."
+          "sub_category": "solid_geometry",
+          "confidence": 0.95
         }
       ]
     },
@@ -345,8 +324,7 @@
         {
           "category": "combinatorics",
           "sub_category": "counting",
-          "confidence": 0.95,
-          "reasoning": "Combinatorics problem involving optimization and counting. The problem requires finding the maximum and minimum possible values in a triangular number arrangement by trying different combinations."
+          "confidence": 0.95
         }
       ]
     },
@@ -362,8 +340,7 @@
         {
           "category": "number_theory",
           "sub_category": "modular_arithmetic",
-          "confidence": 0.95,
-          "reasoning": "Number theory problem involving remainders and divisibility. The problem requires finding the smallest number that leaves specific remainders when divided by 6 and 5, then finding the remainder when divided by 7."
+          "confidence": 0.95
         }
       ]
     },
@@ -377,8 +354,7 @@
         {
           "category": "algebra",
           "sub_category": "basic_operations",
-          "confidence": 0.95,
-          "reasoning": "Algebra problem involving pattern recognition in multiplication. The problem requires recognizing that CDCD = CD × 101, which leads to ABA = 101, allowing determination of digits A and B."
+          "confidence": 0.95
         }
       ]
     },
@@ -392,8 +368,7 @@
         {
           "category": "number_theory",
           "sub_category": "primes",
-          "confidence": 0.95,
-          "reasoning": "Number theory problem involving prime numbers and logical deduction. The problem requires using properties of even/odd numbers and prime numbers to determine the hidden numbers on cards and find their average."
+          "confidence": 0.95
         }
       ]
     }
