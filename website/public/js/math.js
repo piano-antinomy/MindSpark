@@ -266,7 +266,10 @@ function processQuestionText(questionText, insertions) {
         insertionsKeys: insertions ? Object.keys(insertions) : 'null/undefined'
     });
     
-    if (!insertions) return questionText;
+    if (!insertions) {
+        debugLog('No insertions found, returning original text');
+        return questionText;
+    }
     
     let processedText = questionText;
     
@@ -274,11 +277,15 @@ function processQuestionText(questionText, insertions) {
     Object.keys(insertions).forEach(key => {
         const insertion = insertions[key];
         const marker = key; // e.g., "INSERTION_INDEX_1"
+        const markerPattern = `[${marker}]`;
         
         debugLog(`Processing insertion ${marker}:`, {
+            marker: marker,
+            markerPattern: markerPattern,
             alt_type: insertion.alt_type,
             alt_value: insertion.alt_value,
-            picture: insertion.picture
+            picture: insertion.picture,
+            markerFoundInText: processedText.includes(markerPattern)
         });
         
         if (insertion.alt_type === 'latex' && insertion.alt_value) {
@@ -298,30 +305,30 @@ function processQuestionText(questionText, insertions) {
             if (latexContent.startsWith('$') && latexContent.endsWith('$')) {
                 // Already has $ delimiters, use as-is
                 debugLog(`Using existing $ delimiters: ${latexContent}`);
-                processedText = processedText.replace(`[${marker}]`, latexContent);
+                processedText = processedText.replace(`<${marker}>`, latexContent);
             } else if (latexContent.startsWith('\\(') && latexContent.endsWith('\\)')) {
                 // Already has \\( \\) delimiters, use as-is
                 debugLog(`Using existing \\\\( \\\\) delimiters: ${latexContent}`);
-                processedText = processedText.replace(`[${marker}]`, latexContent);
+                processedText = processedText.replace(`<${marker}>`, latexContent);
             } else if (latexContent.startsWith('\\[') && latexContent.endsWith('\\]')) {
                 // Already has \\[ \\] delimiters (display math), use as-is
                 debugLog(`Using existing \\\\[ \\\\] delimiters: ${latexContent}`);
-                processedText = processedText.replace(`[${marker}]`, latexContent);
+                processedText = processedText.replace(`<${marker}>`, latexContent);
             } else {
                 // No delimiters, add \\( \\) for inline math
                 debugLog(`Adding \\\\( \\\\) delimiters to: ${latexContent}`);
-                processedText = processedText.replace(`[${marker}]`, `\\(${latexContent}\\)`);
+                processedText = processedText.replace(`<${marker}>`, `\\(${latexContent}\\)`);
             }
         } else if (insertion.alt_type === 'asy' && insertion.picture) {
             // Handle Asymptote diagrams - use picture field for asy type
             debugLog(`Processing asy insertion - using picture field: ${insertion.picture}`);
-            processedText = processedText.replace(`[${marker}]`, `<img src="${insertion.picture}" alt="${insertion.alt_value || 'Question diagram'}" class="question-image" />`);
+            processedText = processedText.replace(`<${marker}>`, `<img src="${insertion.picture}" alt="${insertion.alt_value || 'Question diagram'}" class="question-image" />`);
         } else if (insertion.picture) {
             // Use picture URL for other types
-            processedText = processedText.replace(`[${marker}]`, `<img src="${insertion.picture}" alt="${insertion.alt_value || 'Question image'}" class="question-image" />`);
+            processedText = processedText.replace(`<${marker}>`, `<img src="${insertion.picture}" alt="${insertion.alt_value || 'Question image'}" class="question-image" />`);
         } else if (insertion.alt_value) {
             // Use alternative text value
-            processedText = processedText.replace(`[${marker}]`, insertion.alt_value);
+            processedText = processedText.replace(`<${marker}>`, insertion.alt_value);
         }
         
         debugLog(`After processing ${marker}, text is now:`, processedText);

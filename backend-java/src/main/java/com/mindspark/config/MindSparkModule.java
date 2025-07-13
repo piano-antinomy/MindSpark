@@ -1,5 +1,6 @@
 package com.mindspark.config;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
@@ -25,6 +26,8 @@ public class MindSparkModule extends AbstractModule {
         ObjectMapper mapper = new ObjectMapper();
         // Configure the mapper as needed
         mapper.findAndRegisterModules();
+
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return mapper;
     }
 } 
