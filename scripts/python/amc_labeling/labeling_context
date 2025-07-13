@@ -1,0 +1,106 @@
+Those are the official categories and subcategories, you are only allowed to use those to categorize math problems. Do not use any other categories
+{
+  "categories": {
+    "algebra": [
+      "linear_equations",
+      "quadratic_equations", 
+      "polynomials",
+      "functions",
+      "inequalities",
+      "basic_operations",
+      "sequences",
+      "general"
+    ],
+    "geometry": [
+      "triangles",
+      "circles",
+      "polygons",
+      "coordinate_geometry",
+      "solid_geometry",
+      "general"
+    ],
+    "number_theory": [
+      "divisibility",
+      "primes",
+      "modular_arithmetic",
+      "diophantine_equations",
+      "sequences_patterns",
+      "general"
+    ],
+    "combinatorics": [
+      "counting",
+      "permutations_combinations",
+      "pigeonhole_principle",
+      "graph_theory",
+      "probability",
+      "general"
+    ],
+    "precalculus": [
+      "trigonometry",
+      "complex_numbers",
+      "vectors",
+      "matrices",
+      "conic_sections",
+      "general"
+    ],
+    "logic": [
+      "logical_reasoning",
+      "truth_tables",
+      "logical_equivalence",
+      "general"
+    ]
+  }
+} 
+
+I have problems in backend-java/questions/AMC_processed/AMC_10_combined folder
+
+We will process file one by one. The files are already organized by year in the format of <year>_AMC_10.json
+When I say a year, for example 2010, it means the file is 2010_AMC_10.json
+
+There are 50 problems in each file, under the problems key
+Each problem has a unique id, for example, amc_2010_10a_1, amc_2010_10a_2, and a question and solutions section.
+
+
+In this project, I need you to do two things:
+Task 1, categorize the math problems into the official categories and subcategories; 
+all problems have already been categorized by the reviewer, you should review them, and redo the categorization you disagree with.
+You should review all 50 problems.
+
+Write a script to help me update the file with the correct categorization.
+Don't give me any summary; do not fix lint error; do not generate comment in your script. 
+Your script should be concise
+Your goal is to help me update the file with the correct categorization.
+
+
+Task 2, Later, I am going to ask a reviewer to review your categorization, and the reviewer will give you categorization opinions, you should review and correct the ones you agree with. The reviewer will provide problem id. In each batch, the problems all come from the same file. So you only need to read one file's problems, then analyze reviewer's opinion. Tell me which one you agree and which one you disagree, then only fix the categorization for the ones you agree with.
+
+
+In both tasks, you should generate script, save it under scripts/python/amc_labeling folder, then run it to update the file.
+You don't need to save a backkup file for my original file.
+
+There is a category_validator.py file in the same folder, you can use it to validate the categorization. Read scripts/python/amc_labeling/example_how_to_use_category_validator.py for how to incorporate it into your scripts used to fix categorization.
+
+To avoid file not found error due to incorrect path, let's use absolute path when you review and update the problems
+
+The path for the problem folder is 
+
+/Users/bxu2/vibecoding/MindSpark/backend-java/questions/AMC_processed/AMC_10_combined
+
+The path for the labeling script folder is 
+
+/Users/bxu2/vibecoding/MindSpark/scripts/python/amc_labeling
+
+I will have two prompt words:
+1, "task 1" means you should do task 1. For example, if i say task 1 2011, then you should process 2011 file and fix categorization
+2, "task 2" means you should do task 2
+
+
+
+
+
+
+
+
+
+
+
