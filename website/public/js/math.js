@@ -256,6 +256,51 @@ function displayCurrentQuestion() {
 }
 
 /**
+ * Process [asy]...[/asy] blocks in question text and convert them to LaTeX format
+ */
+function processAsyBlocks(questionText) {
+    debugLog('Processing ASY blocks in question text');
+    
+    // Regular expression to find [asy]...[/asy] blocks
+    const asymptoteRegex = /\[asy\]([\s\S]*?)\[\/asy\]/g;
+    
+    let processedText = questionText;
+    let match;
+    let blockCount = 0;
+    
+    while ((match = asymptoteRegex.exec(questionText)) !== null) {
+        blockCount++;
+        const fullMatch = match[0];
+        const asymptoteCode = match[1].trim();
+        
+        debugLog(`Found ASY block ${blockCount}:`, {
+            fullMatch: fullMatch.substring(0, 100) + '...',
+            asymptoteCode: asymptoteCode.substring(0, 100) + '...',
+            codeLength: asymptoteCode.length
+        });
+        
+        // For now, convert to a LaTeX comment block that preserves the code
+        // You can replace this with your actual Asymptote-to-LaTeX conversion
+        const latexReplacement = `\\begin{center}
+% ASY_BLOCK_START
+% ${asymptoteCode.replace(/\n/g, '\n% ')}
+% ASY_BLOCK_END
+\\text{[Asymptote Diagram - Block ${blockCount}]}
+\\end{center}`;
+        
+        processedText = processedText.replace(fullMatch, latexReplacement);
+        
+        debugLog(`Replaced ASY block ${blockCount} with LaTeX placeholder`);
+    }
+    
+    if (blockCount > 0) {
+        debugLog(`Processed ${blockCount} ASY blocks total`);
+    }
+    
+    return processedText;
+}
+
+/**
  * Process question text by replacing insertion markers with actual content
  */
 function processQuestionText(questionText, insertions) {
@@ -265,6 +310,9 @@ function processQuestionText(questionText, insertions) {
         insertionsType: typeof insertions,
         insertionsKeys: insertions ? Object.keys(insertions) : 'null/undefined'
     });
+    
+    // First process any [asy]...[/asy] blocks
+    questionText = processAsyBlocks(questionText);
     
     if (!insertions) {
         debugLog('No insertions found, returning original text');

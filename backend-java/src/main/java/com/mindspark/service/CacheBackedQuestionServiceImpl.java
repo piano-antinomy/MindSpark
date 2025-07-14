@@ -3,6 +3,7 @@ package com.mindspark.service;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mindspark.model.Question;
+import com.mindspark.model.QuestionFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -81,12 +82,14 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
             for (File jsonFile : jsonFiles) {
                 try {
                     logger.debug("Loading questions from: {}", jsonFile.getName());
-                    List<Question> questions = objectMapper.readValue(
-                        jsonFile, 
-                        new TypeReference<List<Question>>() {}
-                    );
-                    allQuestionsForLevel.addAll(questions);
-                    logger.debug("Loaded {} questions from {}", questions.size(), jsonFile.getName());
+                    QuestionFile questionFile = objectMapper.readValue(jsonFile, QuestionFile.class);
+                    List<Question> questions = questionFile.getProblems();
+                    if (questions != null) {
+                        allQuestionsForLevel.addAll(questions);
+                        logger.debug("Loaded {} questions from {}", questions.size(), jsonFile.getName());
+                    } else {
+                        logger.warn("No problems found in file: {}", jsonFile.getName());
+                    }
                 } catch (IOException e) {
                     logger.error("Error loading questions from file: {}", jsonFile.getName(), e);
                 }
