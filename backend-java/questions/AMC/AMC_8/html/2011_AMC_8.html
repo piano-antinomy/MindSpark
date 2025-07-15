@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2011_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2011_AMC_8</h1>
+            <div class="info">
+                Year: 2011 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>Margie bought $3$ apples at a cost of $50$ cents per apple. She paid with a 5-dollar bill. How much change did Margie receive?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\textdollar 1.50\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\textdollar 2.00\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\textdollar 2.50\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\textdollar 3.00\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\textdollar 3.50\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>Karl's rectangular vegetable garden is $20$ feet by $45$ feet, and Makenna's is $25$ feet by $40$ feet. Whose garden is larger in area?</p><p>$\textbf{(C)}\ \\text{The gardens are the same size.}$</p><p>$\textbf{(D)}\ \\text{Makenna's garden is larger by 25 square feet.}$</p><p>$\textbf{(E)}\ \\text{Makenna's garden is larger by 100 square feet.}$</p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p>Extend the square pattern of 8 black and 17 white square tiles by attaching a border of black tiles around the square. What is the ratio of black tiles to white tiles in the extended pattern?<br/><img src="https://latex.artofproblemsolving.com/a/2/4/a24e23a268700a40b52b1b449dac9c6d2ec80a4e.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>8:17</div>
+                    <div class="choice"><span class="choice-label">(B)</span>25:49</div>
+                    <div class="choice"><span class="choice-label">(C)</span>36:25</div>
+                    <div class="choice"><span class="choice-label">(D)</span>32:17</div>
+                    <div class="choice"><span class="choice-label">(E)</span>36:17</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>Here is a list of the numbers of fish that Tyler caught in nine outings last summer: \[2,0,1,3,0,3,3,1,2.\] Which statement about the mean, median, and mode is true?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>< <</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(< < \\ \\ < <\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(< < \\ \\ < <\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>What time was it $2011$ minutes after midnight on January 1, 2011? </p><p>$\textbf{(C)}\ \\text{January 2 at 3:11AM}$</p><p>$\textbf{(D)}\ \\text{January 2 at 9:31AM}$</p><p>$\textbf{(E)}\ \\text{January 2 at 6:01PM}$</p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>In a town of $351$ adults, every adult owns a car, motorcycle, or both. If $331$ adults own cars and $45$ adults own motorcycles, how many of the car owners do not own a motorcycle?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>20</div>
+                    <div class="choice"><span class="choice-label">(B)</span>25</div>
+                    <div class="choice"><span class="choice-label">(C)</span>45</div>
+                    <div class="choice"><span class="choice-label">(D)</span>306</div>
+                    <div class="choice"><span class="choice-label">(E)</span>351</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>Each of the following four large congruent squares is subdivided into combinations of congruent triangles or rectangles and is partially <b>bolded</b>. What percent of the total area is partially bolded?<img src="https://latex.artofproblemsolving.com/c/d/b/cdbba2ea0ada53090463d4e816585674ffb314ef.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(12\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>20</div>
+                    <div class="choice"><span class="choice-label">(C)</span>25</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(33\\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(37\\\frac{1}{2}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>Bag A has three chips labeled 1, 3, and 5. Bag B has three chips labeled 2, 4, and 6. If one chip is drawn from each bag, how many different values are possible for the sum of the two numbers on the chips?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>7</div>
+                    <div class="choice"><span class="choice-label">(E)</span>9</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>Carmen takes a long bike ride on a hilly highway. The graph indicates the miles traveled during the time of her ride. What is Carmen's average speed for her entire ride in miles per hour?</p><p><img src="https://latex.artofproblemsolving.com/b/7/b/b7b1eec1082e610840acfb54c74952d80d4dc7a3.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2.5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>4</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4.5</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>The taxi fare in Gotham City is $2.40 for the first $\frac12$ mile and additional mileage charged at the rate $0.20 for each additional 0.1 mile. You plan to give the driver a $2 tip. How many miles can you ride for $10?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3.0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>3.25</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3.3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>3.5</div>
+                    <div class="choice"><span class="choice-label">(E)</span>3.75</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>The graph shows the number of minutes studied by both Asha (black bar) and Sasha (grey bar) in one week. On the average, how many more minutes per day did Sasha study than Asha?</p><p><img src="https://latex.artofproblemsolving.com/3/f/8/3f89cfb6f42754e61437502705cb54a5f518690d.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>9</div>
+                    <div class="choice"><span class="choice-label">(D)</span>10</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>Angie, Bridget, Carlos, and Diego are seated at random around a square table, one person to a side. What is the probability that Angie and Carlos are seated opposite each other?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{2}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{3}{4}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>Two congruent squares, $ABCD$ and $PQRS$, have side length $15$. They overlap to form the $15$ by $25$ rectangle $AQRD$ shown. What percent of the area of rectangle $AQRD$ is shaded? </p><p><img src="https://latex.artofproblemsolving.com/2/3/6/236d17f1bb6b7c18318444d3cce64f632976b385.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>15</div>
+                    <div class="choice"><span class="choice-label">(B)</span>18</div>
+                    <div class="choice"><span class="choice-label">(C)</span>20</div>
+                    <div class="choice"><span class="choice-label">(D)</span>24</div>
+                    <div class="choice"><span class="choice-label">(E)</span>25</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>There are $270$ students at Colfax Middle School, where the ratio of boys to girls is $5 : 4$. There are $180$ students at Winthrop Middle School, where the ratio of boys to girls is $4 : 5$. The two schools hold a dance and all students from both schools attend. What fraction of the students at the dance are girls?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\dfrac7{18}</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\dfrac7{15}</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\d\frac{22}{45}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\d\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\d\frac{23}{45}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>How many digits are in the product $4^5 \cdot 5^{10}$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>8</div>
+                    <div class="choice"><span class="choice-label">(B)</span>9</div>
+                    <div class="choice"><span class="choice-label">(C)</span>10</div>
+                    <div class="choice"><span class="choice-label">(D)</span>11</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>Let $A$ be the area of the triangle with sides of length $25, 25$, and $30$. Let $B$ be the area of the triangle with sides of length $25, 25,$ and $40$. What is the relationship between $A$ and $B$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(A = \dfrac9{16}B\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(A = \d\\frac{3}{4}B\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>A=B</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(A = \d\\frac{4}{3}B\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(A = \dfrac{16}9B\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>Let $w$, $x$, $y$, and $z$ be whole numbers. If $2^w \cdot 3^x \cdot 5^y \cdot 7^z = 588$, then what does $2w + 3x + 5y + 7z$ equal?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>21</div>
+                    <div class="choice"><span class="choice-label">(B)</span>25</div>
+                    <div class="choice"><span class="choice-label">(C)</span>27</div>
+                    <div class="choice"><span class="choice-label">(D)</span>35</div>
+                    <div class="choice"><span class="choice-label">(E)</span>56</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>A fair $6$ sided die is rolled twice. What is the probability that the first number that comes up is greater than or equal to the second number?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(d\\frac{1}{6}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>dfrac5{12}</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(d\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>dfrac7{12}</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(d\\frac{5}{6}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>How many rectangles are in this figure?</p><p><img src="https://latex.artofproblemsolving.com/7/1/1/7111cf9af97b6671111a8bda634b2877ecb06289.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>8</div>
+                    <div class="choice"><span class="choice-label">(B)</span>9</div>
+                    <div class="choice"><span class="choice-label">(C)</span>10</div>
+                    <div class="choice"><span class="choice-label">(D)</span>11</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>Quadrilateral $ABCD$ is a trapezoid, $AD = 15$, $AB = 50$, $BC = 20$, and the altitude is $12$. What is the area of the trapezoid?</p><p><img src="https://latex.artofproblemsolving.com/a/5/b/a5bd7719b521c33191726670908546d54161aeda.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>600</div>
+                    <div class="choice"><span class="choice-label">(B)</span>650</div>
+                    <div class="choice"><span class="choice-label">(C)</span>700</div>
+                    <div class="choice"><span class="choice-label">(D)</span>750</div>
+                    <div class="choice"><span class="choice-label">(E)</span>800</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>Students guess that Norb's age is $24, 28, 30, 32, 36, 38, 41, 44, 47$, and $49$. Norb says, "At least half of you guessed too low, two of you are off by one, and my age is a prime number." How old is Norb?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>29</div>
+                    <div class="choice"><span class="choice-label">(B)</span>31</div>
+                    <div class="choice"><span class="choice-label">(C)</span>37</div>
+                    <div class="choice"><span class="choice-label">(D)</span>43</div>
+                    <div class="choice"><span class="choice-label">(E)</span>48</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>What is the tens digit of $7^{2011}$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>7</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>How many 4-digit positive integers have four different digits, where the leading digit is not zero, the integer is a multiple of 5, and 5 is the largest digit?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>24</div>
+                    <div class="choice"><span class="choice-label">(B)</span>48</div>
+                    <div class="choice"><span class="choice-label">(C)</span>60</div>
+                    <div class="choice"><span class="choice-label">(D)</span>84</div>
+                    <div class="choice"><span class="choice-label">(E)</span>108</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>In how many ways can $10001$ be written as the sum of two primes?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1</div>
+                    <div class="choice"><span class="choice-label">(C)</span>2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>3</div>
+                    <div class="choice"><span class="choice-label">(E)</span>4</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>A circle with radius $1$ is inscribed in a square and circumscribed about another square as shown. Which fraction is closest to the ratio of the circle's shaded area to the area between the two squares?</p><p><img src="https://latex.artofproblemsolving.com/e/c/1/ec1e342aed303af8799c42492f077aab15037276.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\frac{1}2\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\frac{3}2\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>2</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\frac{5}2\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

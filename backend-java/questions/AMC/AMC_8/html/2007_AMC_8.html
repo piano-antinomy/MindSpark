@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2007_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2007_AMC_8</h1>
+            <div class="info">
+                Year: 2007 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>Theresa's parents have agreed to buy her tickets to see her favorite band if she spends an average of $10$ hours per week helping around the house for $6$ weeks. For the first $5$ weeks she helps around the house for $8$, $11$, $7$, $12$ and $10$ hours. How many hours must she work for the final week to earn the tickets?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>9</div>
+                    <div class="choice"><span class="choice-label">(B)</span>10</div>
+                    <div class="choice"><span class="choice-label">(C)</span>11</div>
+                    <div class="choice"><span class="choice-label">(D)</span>12</div>
+                    <div class="choice"><span class="choice-label">(E)</span>13</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>$650$ students were surveyed about their pasta preferences. The choices were lasagna, manicotti, ravioli and spaghetti. The results of the survey are displayed in the bar graph. What is the ratio of the number of students who preferred spaghetti to the number of students who preferred manicotti?</p><p><img src="https://latex.artofproblemsolving.com/f/e/c/fec3399a97d908194ebbb1e95eff24484c816a96.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{2}{5}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{5}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{5}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{5}{2}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p>What is the sum of the two smallest prime factors of $250$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>7</div>
+                    <div class="choice"><span class="choice-label">(D)</span>10</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>A haunted house has six windows. In how many ways canGeorgie the Ghost enter the house by one window and leaveby a different window?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>12</div>
+                    <div class="choice"><span class="choice-label">(B)</span>15</div>
+                    <div class="choice"><span class="choice-label">(C)</span>18</div>
+                    <div class="choice"><span class="choice-label">(D)</span>30</div>
+                    <div class="choice"><span class="choice-label">(E)</span>36</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>Chandler wants to buy a $500$ dollar mountain bike. For his birthday, his grandparentssend him $50$ dollars, his aunt sends him $35$ dollars and his cousin gives him $15$ dollars. He earns$16$ dollars per week for his paper route. He will use all of his birthday money and allof the money he earns from his paper route. In how many weeks will he be ableto buy the mountain bike?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>24</div>
+                    <div class="choice"><span class="choice-label">(B)</span>25</div>
+                    <div class="choice"><span class="choice-label">(C)</span>26</div>
+                    <div class="choice"><span class="choice-label">(D)</span>27</div>
+                    <div class="choice"><span class="choice-label">(E)</span>28</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>The average cost of a long-distance call in the USA in $1985$ was$41$ cents per minute, and the average cost of a long-distancecall in the USA in $2005$ was $7$ cents per minute. Find theapproximate percent decrease in the cost per minute of a long-distance call.</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>7</div>
+                    <div class="choice"><span class="choice-label">(B)</span>17</div>
+                    <div class="choice"><span class="choice-label">(C)</span>34</div>
+                    <div class="choice"><span class="choice-label">(D)</span>41</div>
+                    <div class="choice"><span class="choice-label">(E)</span>80</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>The average age of $5$ people in a room is $30$ years. An $18$-year-old person leavesthe room. What is the average age of the four remaining people?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>25</div>
+                    <div class="choice"><span class="choice-label">(B)</span>26</div>
+                    <div class="choice"><span class="choice-label">(C)</span>29</div>
+                    <div class="choice"><span class="choice-label">(D)</span>33</div>
+                    <div class="choice"><span class="choice-label">(E)</span>36</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>In trapezoid $ABCD$, $\overline{AD}$ is perpendicular to $\overline{DC}$,$AD = AB = 3$, and $DC = 6$. In addition, $E$ is on $\overline{DC}$, and $\overline{BE}$ is parallel to $\overline{AD}$. Find the area of $\triangle BEC$.<img src="https://latex.artofproblemsolving.com/d/c/c/dccbcc1d762d975a6d3a54f56433f5da50a2502d.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4.5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>9</div>
+                    <div class="choice"><span class="choice-label">(E)</span>18</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>To complete the grid below, each of the digits 1 through 4 must occur oncein each row and once in each column. What number will occupy the lowerright-hand square?</p><p>\[\begin{tabular}{|c|c|c|c|}\hline 1 & & 2 &\\ \hline 2 & 3 & &\\ \hline & &&4\\ \hline & &&\\ \hline\end{tabular}\]</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>For any positive integer $n$, define $\boxed{n}$ to be the sum of the positive factors of $n$.For example, $\boxed{6} = 1 + 2 + 3 + 6 = 12$. Find $\boxed{\boxed{11}}$ .</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>13</div>
+                    <div class="choice"><span class="choice-label">(B)</span>20</div>
+                    <div class="choice"><span class="choice-label">(C)</span>24</div>
+                    <div class="choice"><span class="choice-label">(D)</span>28</div>
+                    <div class="choice"><span class="choice-label">(E)</span>30</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>Tiles $I, II, III$ and $IV$ are translated so one tile coincides with each of the rectangles $A, B, C$ and $D$. In the final arrangement, the two numbers on any side common to two adjacent tiles must be the same. Which of the tiles is translated to Rectangle $C$?</p><p><img src="https://latex.artofproblemsolving.com/7/e/7/7e7f71699fece62a1150cc80613baf59935980df.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>I</div>
+                    <div class="choice"><span class="choice-label">(B)</span>II</div>
+                    <div class="choice"><span class="choice-label">(C)</span>III</div>
+                    <div class="choice"><span class="choice-label">(D)</span>IV</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>A unit hexagram is composed of a regular hexagon of side length $1$ and its $6$equilateral triangular extensions, as shown in the diagram. What is the ratio ofthe area of the extensions to the area of the original hexagon?</p><p><img src="https://latex.artofproblemsolving.com/b/7/5/b756761ed7ffb05e7be7328280ba353674aecaf6.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1:1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>6:5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3:2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>2:1</div>
+                    <div class="choice"><span class="choice-label">(E)</span>3:1</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>Sets $A$ and $B$, shown in the Venn diagram, have the same number of elements.Their union has $2007$ elements and their intersection has $1001$ elements. Findthe number of elements in $A$.</p><p><img src="https://latex.artofproblemsolving.com/b/f/d/bfdb09b66054973cff11a173317d646fe1d66de1.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>503</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1006</div>
+                    <div class="choice"><span class="choice-label">(C)</span>1504</div>
+                    <div class="choice"><span class="choice-label">(D)</span>1507</div>
+                    <div class="choice"><span class="choice-label">(E)</span>1510</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>The base of isosceles $\triangle ABC$ is $24$ and its area is $60$. What is the length of oneof the congruent sides?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>13</div>
+                    <div class="choice"><span class="choice-label">(D)</span>14</div>
+                    <div class="choice"><span class="choice-label">(E)</span>18</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>Let $a, b$ and $c$ be numbers with $0 < a < b < c$. Which of the following isimpossible?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>a + c < b</div>
+                    <div class="choice"><span class="choice-label">(B)</span>a \cdot b < c</div>
+                    <div class="choice"><span class="choice-label">(C)</span>a + b < c</div>
+                    <div class="choice"><span class="choice-label">(D)</span>a \cdot c < b</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\frac{b}{c} = a\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>Amanda Reckonwith draws five circles with radii $1, 2, 3, 4$ and $5$. Then for each circle she plots the point $(C,A)$,where $C$ is its circumference and $A$ is its area. Which of thefollowing could be her graph?</p><p>$\textbf{(C)}$<img src="https://latex.artofproblemsolving.com/9/5/d/95defaa77d8b1dd10283c438752810174f3e6d94.png" alt="Question diagram" class="question-image" /></p><p>$\textbf{(D)}$<img src="https://latex.artofproblemsolving.com/9/d/4/9d43329cbcfb1249b7fcf1fc15cd2b90bc666ef4.png" alt="Question diagram" class="question-image" /></p><p>$\textbf{(E)}$<img src="https://latex.artofproblemsolving.com/5/7/d/57d2b3b4be42360bf68db966abbc090187b5cdb3.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>A mixture of $30$ liters of paint is $25\%$ red tint, $30\%$ yellowtint and $45\%$ water. Five liters of yellow tint are added tothe original mixture. What is the percent of yellow tintin the new mixture?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>25</div>
+                    <div class="choice"><span class="choice-label">(B)</span>35</div>
+                    <div class="choice"><span class="choice-label">(C)</span>40</div>
+                    <div class="choice"><span class="choice-label">(D)</span>45</div>
+                    <div class="choice"><span class="choice-label">(E)</span>50</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>The product of the two $99$-digit numbers</p><p>$303,030,303,...,030,303$ and $505,050,505,...,050,505$</p><p>has thousands digit $A$ and units digit $B$. What is the sum of $A$ and $B$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3</div>
+                    <div class="choice"><span class="choice-label">(B)</span>5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>10</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>Pick two consecutive positive integers whose sum is less than $100$. Square bothof those integers and then find the difference of the squares. Which of thefollowing could be the difference?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>64</div>
+                    <div class="choice"><span class="choice-label">(C)</span>79</div>
+                    <div class="choice"><span class="choice-label">(D)</span>96</div>
+                    <div class="choice"><span class="choice-label">(E)</span>131</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>Before the district play, the Unicorns had won $45\%$ of their basketball games. During district play, they won six more games and lost two, to finish the season having won half their games. How many games did the Unicorns play in all?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>48</div>
+                    <div class="choice"><span class="choice-label">(B)</span>50</div>
+                    <div class="choice"><span class="choice-label">(C)</span>52</div>
+                    <div class="choice"><span class="choice-label">(D)</span>54</div>
+                    <div class="choice"><span class="choice-label">(E)</span>60</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>Two cards are dealt from a deck of four red cards labeled $A$, $B$, $C$, $D$ and four green cards labeled $A$, $B$, $C$, $D$. A winning pair is two of the same color or two of the same letter. What is the probability of drawing a winning pair?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{2}{7}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{3}{8}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{4}{7}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{5}{8}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>A lemming sits at a corner of a square with side length $10$ meters. The lemming runs $6.2$ meters along a diagonal toward the opposite corner. It stops, makes a $90^{\circ}$ right turn and runs $2$ more meters. A scientist measures the shortest distance between the lemming and each side of the square. What is the average of these four distances in meters?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4.5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>6.2</div>
+                    <div class="choice"><span class="choice-label">(E)</span>7</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>What is the area of the shaded pinwheel shown in the $5 \\times 5$ grid?</p><p><img src="https://latex.artofproblemsolving.com/b/b/1/bb1fcead3fb785c17349c43a31ed1e90bfc319e0.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>: 4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>: 6</div>
+                    <div class="choice"><span class="choice-label">(C)</span>: 8</div>
+                    <div class="choice"><span class="choice-label">(D)</span>: 10</div>
+                    <div class="choice"><span class="choice-label">(E)</span>: 12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>A bag contains four pieces of paper, each labeled with one of the digits $1$, $2$, $3$ or $4$, with no repeats. Three of these pieces are drawn, one at a time without replacement, to construct a three-digit number. What is the probability that the three-digit number is a multiple of $3$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{2}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{3}{4}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>On the dart board shown in the figure below, the outer circle has radius $6$ and the inner circle has radius $3$. Three radii divide each circle into three congruent regions, with point values shown. The probability that a dart will hit a given region is proportional to the area of the region. When two darts hit this board, the score is the sum of the point values of the regions hit. What is the probability that the score is odd?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{17}{36}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{35}{72}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{37}{72}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{19}{36}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

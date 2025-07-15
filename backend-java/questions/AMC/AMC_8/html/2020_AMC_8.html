@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2020_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2020_AMC_8</h1>
+            <div class="info">
+                Year: 2020 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>Luka is making lemonade to sell at a school fundraiser. His recipe requires $4$ times as much water as sugar and twice as much sugar as lemon juice. He uses $3$ cups of lemon juice. How many cups of water does he need?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>12</div>
+                    <div class="choice"><span class="choice-label">(D)</span>18</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>Four friends do yardwork for their neighbors over the weekend, earning $$15, $20, $25,$ and $$40,$ respectively. They decide to split their earnings equally among themselves. In total, how much will the friend who earned $$40$ give to the others?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>$5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>$10</div>
+                    <div class="choice"><span class="choice-label">(C)</span>$15</div>
+                    <div class="choice"><span class="choice-label">(D)</span>$20</div>
+                    <div class="choice"><span class="choice-label">(E)</span>$25</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p>Carrie has a rectangular garden that measures $6$ feet by $8$ feet. She plants the entire garden with strawberry plants. Carrie is able to plant $4$ strawberry plants per square foot, and she harvests an average of $10$ strawberries per plant. How many strawberries can she expect to harvest?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>560</div>
+                    <div class="choice"><span class="choice-label">(B)</span>960</div>
+                    <div class="choice"><span class="choice-label">(C)</span>1120</div>
+                    <div class="choice"><span class="choice-label">(D)</span>1920</div>
+                    <div class="choice"><span class="choice-label">(E)</span>3840</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>Three hexagons of increasing size are shown below. Suppose the dot pattern continues so that each successive hexagon contains one more band of dots. How many dots are in the next hexagon?</p><p><img src="https://latex.artofproblemsolving.com/3/8/1/381ea96ddcbeccb0522187fcd4a41c78bd9c8364.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>35</div>
+                    <div class="choice"><span class="choice-label">(B)</span>37</div>
+                    <div class="choice"><span class="choice-label">(C)</span>39</div>
+                    <div class="choice"><span class="choice-label">(D)</span>43</div>
+                    <div class="choice"><span class="choice-label">(E)</span>49</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>Three fourths of a pitcher is filled with pineapple juice. The pitcher is emptied by pouring an equal amount of juice into each of $5$ cups. What percent of the total capacity of the pitcher did each cup receive?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>10</div>
+                    <div class="choice"><span class="choice-label">(C)</span>15</div>
+                    <div class="choice"><span class="choice-label">(D)</span>20</div>
+                    <div class="choice"><span class="choice-label">(E)</span>25</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>Aaron, Darren, Karen, Maren, and Sharon rode on a small train that has five cars that seat one person each. Maren sat in the last car. Aaron sat directly behind Sharon. Darren sat in one of the cars in front of Aaron. At least one person sat between Karen and Darren. Who sat in the middle car?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\text{Aaron}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\text{Darren}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\text{Karen}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\text{Maren}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\text{Sharon}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>How many integers between $2020$ and $2400$ have four distinct digits arranged in increasing order? (For example, $2347$ is one integer.).</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\text{9}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\text{10}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\text{15}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\text{21}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\text{28}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>Ricardo has $2020$ coins, some of which are pennies ($1$-cent coins) and the rest of which are nickels ($5$-cent coins). He has at least one penny and at least one nickel. What is the difference in cents between the greatest possible and least amounts of money that Ricardo can have?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\text{806}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\text{8068}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\text{8072}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\text{8076}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\text{8082}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>Akash's birthday cake is in the form of a $4 \\times 4 \\times 4$ inch cube. The cake has icing on the top and the four side faces, and no icing on the bottom. Suppose the cake is cut into $64$ smaller cubes, each measuring $1 \\times 1 \\times 1$ inch, as shown below. How many of the small pieces will have icing on exactly two sides?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>12</div>
+                    <div class="choice"><span class="choice-label">(B)</span>16</div>
+                    <div class="choice"><span class="choice-label">(C)</span>18</div>
+                    <div class="choice"><span class="choice-label">(D)</span>20</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>Zara has a collection of $4$ marbles: an Aggie, a Bumblebee, a Steelie, and a Tiger. She wants to display them in a row on a shelf, but does not want to put the Steelie and the Tiger next to one another. In how many ways can she do this?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>12</div>
+                    <div class="choice"><span class="choice-label">(D)</span>18</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>After school, Maya and Naomi headed to the beach, $6$ miles away. Maya decided to bike while Naomi took a bus. The graph below shows their journeys, indicating the time and distance traveled. What was the difference, in miles per hour, between Naomi's and Maya's average speeds?</p><p><img src="https://latex.artofproblemsolving.com/1/0/1/1012d4ebea522bd45aaa55a5d54f98b4db812507.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>12</div>
+                    <div class="choice"><span class="choice-label">(C)</span>18</div>
+                    <div class="choice"><span class="choice-label">(D)</span>20</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>For a positive integer $n$, the factorial notation $n!$ represents the product of the integers from $n$ to $1$. What value of $N$ satisfies the following equation? \[5!\cdot 9!=12\cdot N!\]</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>10</div>
+                    <div class="choice"><span class="choice-label">(B)</span>11</div>
+                    <div class="choice"><span class="choice-label">(C)</span>12</div>
+                    <div class="choice"><span class="choice-label">(D)</span>13</div>
+                    <div class="choice"><span class="choice-label">(E)</span>14</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>Jamal has a drawer containing $6$ green socks, $18$ purple socks, and $12$ orange socks. After adding more purple socks, Jamal noticed that there is now a $60\%$ chance that a sock randomly selected from the drawer is purple. How many purple socks did Jamal add?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>9</div>
+                    <div class="choice"><span class="choice-label">(C)</span>12</div>
+                    <div class="choice"><span class="choice-label">(D)</span>18</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>There are $20$ cities in the County of Newton. Their populations are shown in the bar chart below. The average population of all the cities is indicated by the horizontal dashed line. Which of the following is closest to the total population of all $20$ cities?</p><p><img src="https://latex.artofproblemsolving.com/a/b/f/abffd65d59aacaaf81b6039c162d0898cca8b729.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>65{,}000</div>
+                    <div class="choice"><span class="choice-label">(B)</span>75{,}000</div>
+                    <div class="choice"><span class="choice-label">(C)</span>85{,}000</div>
+                    <div class="choice"><span class="choice-label">(D)</span>95{,}000</div>
+                    <div class="choice"><span class="choice-label">(E)</span>105{,}000</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>Suppose $15\%$ of $x$ equals $20\%$ of $y.$ What percentage of $x$ is $y?$</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>35</div>
+                    <div class="choice"><span class="choice-label">(C)</span>75</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(133 \\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>300</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>Each of the points $A,B,C,D,E,$ and $F$ in the figure below represents a different digit from $1$ to $6.$ Each of the five lines shown passes through some of these points. The digits along each line are added to produce five sums, one for each line. The total of the five sums is $47.$ What is the digit represented by $B?$</p><p><img src="https://latex.artofproblemsolving.com/d/8/7/d878779f0718f46b33d37199ff7b7df96df2948e.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>How many positive integer factors of $2020$ have more than $3$ factors? (As an example, $12$ has $6$ factors, namely $1,2,3,4,6,$ and $12.$)</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>7</div>
+                    <div class="choice"><span class="choice-label">(C)</span>8</div>
+                    <div class="choice"><span class="choice-label">(D)</span>9</div>
+                    <div class="choice"><span class="choice-label">(E)</span>10</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>Rectangle $ABCD$ is inscribed in a semicircle with diameter $\overline{FE},$ as shown in the figure. Let $DA=16,$ and let $FD=AE=9.$ What is the area of $ABCD?$</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>240</div>
+                    <div class="choice"><span class="choice-label">(B)</span>248</div>
+                    <div class="choice"><span class="choice-label">(C)</span>256</div>
+                    <div class="choice"><span class="choice-label">(D)</span>264</div>
+                    <div class="choice"><span class="choice-label">(E)</span>272</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>A number is called flippy if its digits alternate between two distinct digits. For example, $2020$ and $37373$ are flippy, but $3883$ and $123123$ are not. How many five-digit flippy numbers are divisible by $15?$</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>6</div>
+                    <div class="choice"><span class="choice-label">(E)</span>8</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>A scientist walking through a forest recorded as integers the heights of $5$ trees standing in a row. She observed that each tree was either twice as tall or half as tall as the one to its right. Unfortunately some of her data was lost when rain fell on her notebook. Her notes are shown below, with blanks indicating the missing numbers. Based on her observations, the scientist was able to reconstruct the lost data. What was the average height of the trees, in meters?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>22.2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>24.2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>33.2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>35.2</div>
+                    <div class="choice"><span class="choice-label">(E)</span>37.2</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>A game board consists of $64$ squares that alternate in color between black and white. The figure below shows square $P$ in the bottom row and square $Q$ in the top row. A marker is placed at $P.$ A step consists of moving the marker onto one of the adjoining white squares in the row above. How many $7$-step paths are there from $P$ to $Q?$ (The figure shows a sample path.)</p><p><img src="https://latex.artofproblemsolving.com/2/1/0/210b98fc88e4c297773b0400a31787193c0d4338.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>28</div>
+                    <div class="choice"><span class="choice-label">(B)</span>30</div>
+                    <div class="choice"><span class="choice-label">(C)</span>32</div>
+                    <div class="choice"><span class="choice-label">(D)</span>33</div>
+                    <div class="choice"><span class="choice-label">(E)</span>35</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>When a positive integer $N$ is fed into a machine, the output is a number calculated according to the rule shown below.</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>$N=7,$</div>
+                    <div class="choice"><span class="choice-label">(B)</span>$3 \cdot 7 +1 = 22.$</div>
+                    <div class="choice"><span class="choice-label">(C)</span>$26.$</div>
+                    <div class="choice"><span class="choice-label">(D)</span>$6$</div>
+                    <div class="choice"><span class="choice-label">(E)</span>$N,$</div>
+                    <div class="choice"><span class="choice-label">(F)</span>$1.$</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>Five different awards are to be given to three students. Each student will receive at least one award. In how many different ways can the awards be distributed? </p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>120</div>
+                    <div class="choice"><span class="choice-label">(B)</span>150</div>
+                    <div class="choice"><span class="choice-label">(C)</span>180</div>
+                    <div class="choice"><span class="choice-label">(D)</span>210</div>
+                    <div class="choice"><span class="choice-label">(E)</span>240</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>A large square region is paved with $n^2$ gray square tiles, each measuring $s$ inches on a side. A border $d$ inches wide surrounds each tile. The figure below shows the case for $n=3$. When $n=24$, the $576$ gray tiles cover $64\%$ of the area of the large square region. What is the ratio $\\frac{d}{s}$ for this larger value of $n?$</p><p><img src="https://latex.artofproblemsolving.com/8/f/d/8fd65da31faff2077b0526ddc1de09fec17ff2df.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\frac{6}{25}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\frac{1}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\frac{9}{25}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\frac{7}{16}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\frac{9}{16}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>Rectangles $R_1$ and $R_2,$ and squares $S_1,\,S_2,\,$ and $S_3,$ shown below, combine to form a rectangle that is 3322 units wide and 2020 units high. What is the side length of $S_2$ in units?</p><p><img src="https://latex.artofproblemsolving.com/a/5/5/a55c518a1179d67520c6a03827b4ba25ca1413f2.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>651</div>
+                    <div class="choice"><span class="choice-label">(B)</span>655</div>
+                    <div class="choice"><span class="choice-label">(C)</span>656</div>
+                    <div class="choice"><span class="choice-label">(D)</span>662</div>
+                    <div class="choice"><span class="choice-label">(E)</span>666</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

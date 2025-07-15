@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2004_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2004_AMC_8</h1>
+            <div class="info">
+                Year: 2004 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>On a map, a $12$-centimeter length represents $72$ kilometers. How many kilometers does a $17$-centimeter length represent?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>102</div>
+                    <div class="choice"><span class="choice-label">(C)</span>204</div>
+                    <div class="choice"><span class="choice-label">(D)</span>864</div>
+                    <div class="choice"><span class="choice-label">(E)</span>1224</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>How many different four-digit numbers can be formed by rearranging the four digits in $2004$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>6</div>
+                    <div class="choice"><span class="choice-label">(C)</span>16</div>
+                    <div class="choice"><span class="choice-label">(D)</span>24</div>
+                    <div class="choice"><span class="choice-label">(E)</span>81</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p>Twelve friends met for dinner at Oscar's Overstuffed Oyster House, and each ordered one meal. The portions were so large, there was enough food for $18$ people. If they shared, how many meals should they have ordered to have just enough food for the $12$ of them?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>8</div>
+                    <div class="choice"><span class="choice-label">(B)</span>9</div>
+                    <div class="choice"><span class="choice-label">(C)</span>10</div>
+                    <div class="choice"><span class="choice-label">(D)</span>15</div>
+                    <div class="choice"><span class="choice-label">(E)</span>18</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>Ms. Hamilton’s eighth-grade class wants to participate in the annual three-person-team basketball tournament.</p><p>Lance, Sally, Joy, and Fred are chosen for the team. In how many ways can the three starters be chosen?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>10</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>Ms. Hamilton's eighth-grade class wants to participate in the annual three-person-team basketball tournament. The losing team of each game is eliminated from the tournament. If sixteen teams compete, how many games will be played to determine the winner?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>7</div>
+                    <div class="choice"><span class="choice-label">(C)</span>8</div>
+                    <div class="choice"><span class="choice-label">(D)</span>15</div>
+                    <div class="choice"><span class="choice-label">(E)</span>16</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>After Sally takes $20$ shots, she has made $55\%$ of her shots. After she takes $5$ more shots, she raises her percentage to $56\%$. How many of the last $5$ shots did she make?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>An athlete's target heart rate, in beats per minute, is $80\%$ of the theoretical maximum heart rate. The maximum heart rate is found by subtracting the athlete's age, in years, from $220$. To the nearest whole number, what is the target heart rate of an athlete who is $26$ years old?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>134</div>
+                    <div class="choice"><span class="choice-label">(B)</span>155</div>
+                    <div class="choice"><span class="choice-label">(C)</span>176</div>
+                    <div class="choice"><span class="choice-label">(D)</span>194</div>
+                    <div class="choice"><span class="choice-label">(E)</span>243</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>Find the number of two-digit positive integers whose digits total $7$.</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>7</div>
+                    <div class="choice"><span class="choice-label">(C)</span>8</div>
+                    <div class="choice"><span class="choice-label">(D)</span>9</div>
+                    <div class="choice"><span class="choice-label">(E)</span>10</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>The average of the five numbers in a list is $54$. The average of the first twonumbers is $48$. What is the average of the last three numbers?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>55</div>
+                    <div class="choice"><span class="choice-label">(B)</span>56</div>
+                    <div class="choice"><span class="choice-label">(C)</span>57</div>
+                    <div class="choice"><span class="choice-label">(D)</span>58</div>
+                    <div class="choice"><span class="choice-label">(E)</span>59</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>Handy Aaron helped a neighbor $1 \frac14$ hours on Monday, $50$ minutes on Tuesday, from 8:20 to 10:45 on Wednesday morning, and a half-hour on Friday. He is paid $\textdollar 3$ per hour. How much did he earn for the week?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\textdollar 8\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\textdollar 9\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\textdollar 10\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\textdollar 12\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\textdollar 15\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>The numbers $-2, 4, 6, 9$ and $12$ are rearranged according to these rules:</p><p>What is the average of the first and last numbers?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3.5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6.5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>7.5</div>
+                    <div class="choice"><span class="choice-label">(E)</span>8</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>Niki usually leaves her cell phone on. If her cell phone is on butshe is not actually using it, the battery will last for $24$ hours. Ifshe is using it constantly, the battery will last for only $3$ hours.Since the last recharge, her phone has been on $9$ hours, and duringthat time she has used it for $60$ minutes. If she doesn’t use it anymore but leaves the phone on, how many more hours will the battery last?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>7</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>11</div>
+                    <div class="choice"><span class="choice-label">(D)</span>14</div>
+                    <div class="choice"><span class="choice-label">(E)</span>15</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>Amy, Bill and Celine are friends with different ages. Exactly one of the following statements is true.</p><p>Rank the friends from the oldest to youngest.</p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>What is the area enclosed by the geoboard quadrilateral below?</p><p><img src="https://latex.artofproblemsolving.com/7/6/0/76034624e12f53431e5b0c0d4dd5abb475dc1fbb.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>15</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(18\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(22\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>27</div>
+                    <div class="choice"><span class="choice-label">(E)</span>41</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>Thirteen black and six white hexagonal tiles were used to create the figure below. If a new figure is created by attaching a border of white tiles with the same size and shape as the others, what will be the difference between the total number of white tiles and the total number of black tiles in the new figure?</p><p><br/><img src="https://latex.artofproblemsolving.com/d/4/7/d47bfb69fb44779010bc8d7ac34f9cbf9d41ecfb.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>7</div>
+                    <div class="choice"><span class="choice-label">(C)</span>11</div>
+                    <div class="choice"><span class="choice-label">(D)</span>12</div>
+                    <div class="choice"><span class="choice-label">(E)</span>18</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>Two $600$ mL pitchers contain orange juice. One pitcher is $1/3$ full and the other pitcher is $2/5$ full. Water is added to fill each pitcher completely, then both pitchers are poured into one large container. What fraction of the mixture in the large container is orange juice?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{8}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{3}{16}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{11}{30}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{11}{19}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{11}{15}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>Three friends have a total of $6$ identical pencils, and each one has at least one pencil. In how many ways can this happen?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>3</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>10</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>Five friends compete in a dart-throwing contest. Each one has two darts to throw at the same circular target, and each individual's score is the sum of the scores in the target regions that are hit. The scores for the target regions are the whole numbers $1$ through $10$. Each throw hits the target in a region with a different value. The scores are: Alice $16$ points, Ben $4$ points, Cindy $7$ points, Dave $11$ points, and Ellen $17$ points. Who hits the region worth $6$ points?</p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>A whole number larger than $2$ leaves a remainder of $2$ when divided by each of the numbers $3, 4, 5,$ and $6$. The smallest such number lies between which two numbers?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>40\ 49</div>
+                    <div class="choice"><span class="choice-label">(B)</span>60 79</div>
+                    <div class="choice"><span class="choice-label">(C)</span>100\ 129</div>
+                    <div class="choice"><span class="choice-label">(D)</span>210\ 249</div>
+                    <div class="choice"><span class="choice-label">(E)</span>320\ 369</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>Two-thirds of the people in a room are seated in three-fourths of the chairs. The rest of the people are standing. If there are $6$ empty chairs, how many people are in the room?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>12</div>
+                    <div class="choice"><span class="choice-label">(B)</span>18</div>
+                    <div class="choice"><span class="choice-label">(C)</span>24</div>
+                    <div class="choice"><span class="choice-label">(D)</span>27</div>
+                    <div class="choice"><span class="choice-label">(E)</span>36</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>Spinners $A$ and $B$ are spun. On each spinner, the arrow is equally likely to land on each number. What is the probability that the product of the two spinners' numbers is even?</p><p><img src="https://latex.artofproblemsolving.com/2/b/8/2b8c0e9de9eb3c68e3938fd3467803e6bbb24ef3.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{2}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{3}{4}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>At a party there are only single women and married men with their wives. The probability that a randomly selected woman is single is $\frac25$. What fraction of the people in the room are married men?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{3}{8}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{2}{5}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{5}{12}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{3}{5}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>Tess runs counterclockwise around rectangular block $JKLM$. She lives at corner $J$. Which graph could represent her straight-line distance from home?</p><p><img src="https://latex.artofproblemsolving.com/c/f/a/cfa3151064b41051d0fd988b63693968a5f5531e.png" alt="Question diagram" class="question-image" /></p><p>$\textbf{(C)}$<img src="https://latex.artofproblemsolving.com/b/f/f/bff98a36d2d506b16dadd585fc7d43750b30b43b.png" alt="Question diagram" class="question-image" /></p><p>$\textbf{(D)}$<img src="https://latex.artofproblemsolving.com/c/4/f/c4f99af82414203b386ec3abd62914e6b1f85cff.png" alt="Question diagram" class="question-image" /></p><p>$\textbf{(E)}$<img src="https://latex.artofproblemsolving.com/1/8/d/18dee85d26f1e02bceb105cd20a1bd2880aaee49.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>In the figure, $ABCD$ is a rectangle and $EFGH$ is a parallelogram. Using the measurements given in the figure, what is the length $d$ of the segment that is perpendicular to $\overline{HE}$ and $\overline{FG}$?</p><p><img src="https://latex.artofproblemsolving.com/d/2/3/d23e9bb30960feaeb516f8d23d48c117676bfbd0.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6.8</div>
+                    <div class="choice"><span class="choice-label">(B)</span>7.1</div>
+                    <div class="choice"><span class="choice-label">(C)</span>7.6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>7.8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>8.1</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>Two $4 \\times 4$ squares intersect at right angles, bisecting their intersecting sides, as shown. The circle's diameter is the segment between the two points of intersection. What is the area of the shaded region created by removing the circle from the squares?</p><p><img src="https://latex.artofproblemsolving.com/f/f/3/ff3f7c00e1a1162a19e43dda58d4387172fd8380.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(16-4\pi\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(16-2\pi\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(28-4\pi\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(28-2\pi\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(32-2\pi\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

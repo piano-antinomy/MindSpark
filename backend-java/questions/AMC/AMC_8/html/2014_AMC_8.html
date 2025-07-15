@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2014_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2014_AMC_8</h1>
+            <div class="info">
+                Year: 2014 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>Harry and Terry are each told to calculate $8-(2+5)$. Harry gets the correct answer. Terry ignores the parentheses and calculates $8-2+5$. If Harry's answer is $H$ and Terry's answer is $T$, what is $H-T$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(-10\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(-6\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>0</div>
+                    <div class="choice"><span class="choice-label">(D)</span>6</div>
+                    <div class="choice"><span class="choice-label">(E)</span>10</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>Paul owes Paula $35$ cents and has a pocket full of $5$-cent coins, $10$-cent coins, and $25$-cent coins that he can use to pay her. What is the difference between the largest and the smallest number of coins he can use to pay her?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p>Isabella had a week to read a book for a school assignment. She read an average of $36$ pages per day for the first three days and an average of $44$ pages per day for the next three days. She then finished the book by reading $10$ pages on the last day. How many pages were in the book?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>240</div>
+                    <div class="choice"><span class="choice-label">(B)</span>250</div>
+                    <div class="choice"><span class="choice-label">(C)</span>260</div>
+                    <div class="choice"><span class="choice-label">(D)</span>270</div>
+                    <div class="choice"><span class="choice-label">(E)</span>280</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>The sum of two prime numbers is $85$. What is the product of these two prime numbers?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>85</div>
+                    <div class="choice"><span class="choice-label">(B)</span>91</div>
+                    <div class="choice"><span class="choice-label">(C)</span>115</div>
+                    <div class="choice"><span class="choice-label">(D)</span>133</div>
+                    <div class="choice"><span class="choice-label">(E)</span>166</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>Margie's car can go $32$ miles on a gallon of gas, and gas currently costs $$4$ per gallon. How many miles can Margie drive on $\textdollar 20$ worth of gas?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>64</div>
+                    <div class="choice"><span class="choice-label">(B)</span>128</div>
+                    <div class="choice"><span class="choice-label">(C)</span>160</div>
+                    <div class="choice"><span class="choice-label">(D)</span>320</div>
+                    <div class="choice"><span class="choice-label">(E)</span>640</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>Six rectangles each with a common base width of $2$ have lengths of $1, 4, 9, 16, 25$, and $36$. What is the sum of the areas of the six rectangles?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>91</div>
+                    <div class="choice"><span class="choice-label">(B)</span>93</div>
+                    <div class="choice"><span class="choice-label">(C)</span>162</div>
+                    <div class="choice"><span class="choice-label">(D)</span>182</div>
+                    <div class="choice"><span class="choice-label">(E)</span>202</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>There are four more girls than boys in Ms. Raub's class of $28$ students. What is the ratio of number of girls to the number of boys in her class?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3 : 4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4 : 3</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3 : 2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>7 : 4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>2 : 1</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>Eleven members of the Middle School Math Club each paid the same amount for a guest speaker to talk about problem solving at their math club meeting. They paid their guest speaker $\textdollar\underline{1} \underline{A} \underline{2}$. What is the missing digit $A$ of this $3$-digit number?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1</div>
+                    <div class="choice"><span class="choice-label">(C)</span>2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>3</div>
+                    <div class="choice"><span class="choice-label">(E)</span>4</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>In $\bigtriangleup ABC$, $D$ is a point on side $\overline{AC}$ such that $BD=DC$ and $\angle BCD$ measures $70^\circ$. What is the degree measure of $\angle ADB$?</p><p><img src="https://latex.artofproblemsolving.com/9/4/7/94770df9a0e1d5a71f602bfb3b45022dcca9dec4.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>100</div>
+                    <div class="choice"><span class="choice-label">(B)</span>120</div>
+                    <div class="choice"><span class="choice-label">(C)</span>135</div>
+                    <div class="choice"><span class="choice-label">(D)</span>140</div>
+                    <div class="choice"><span class="choice-label">(E)</span>150</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>The first AMC $8$ was given in $1985$ and it has been given annually since that time. Samantha turned $12$ years old the year that she took the seventh AMC $8$. In what year was Samantha born?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1979</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1980</div>
+                    <div class="choice"><span class="choice-label">(C)</span>1981</div>
+                    <div class="choice"><span class="choice-label">(D)</span>1982</div>
+                    <div class="choice"><span class="choice-label">(E)</span>1983</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>Jack wants to bike from his house to Jill's house, which is located three blocks east and two blocks north of Jack's house. After biking each block, Jack can continue either east or north, but he needs to avoid a dangerous intersection one block east and one block north of his house. In how many ways can he reach Jill's house by biking a total of five blocks?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>10</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>A magazine printed photos of three celebrities along with three photos of the celebrities as babies. The baby pictures did not identify the celebrities. Readers were asked to match each celebrity with the correct baby pictures. What is the probability that a reader guessing at random will match all three correctly? </p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\frac{1}{9}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\frac{1}{6}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\frac{1}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\frac{1}{2}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>If $n$ and $m$ are integers and $n^2+m^2$ is even, which of the following is impossible?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>$\textbf{(A) }$</div>
+                    <div class="choice"><span class="choice-label">(B)</span>$n$</div>
+                    <div class="choice"><span class="choice-label">(C)</span>$m$</div>
+                    <div class="choice"><span class="choice-label">(D)</span>$\qquad\textbf{(B) }$</div>
+                    <div class="choice"><span class="choice-label">(E)</span>$n$</div>
+                    <div class="choice"><span class="choice-label">(F)</span>$m$</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>Rectangle $ABCD$ and right triangle $DCE$ have the same area. They are joined to form a trapezoid, as shown. What is $DE$?</p><p><img src="https://latex.artofproblemsolving.com/c/3/5/c358884777664e69762bbb69b74c260349626ff4.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>12</div>
+                    <div class="choice"><span class="choice-label">(B)</span>13</div>
+                    <div class="choice"><span class="choice-label">(C)</span>14</div>
+                    <div class="choice"><span class="choice-label">(D)</span>15</div>
+                    <div class="choice"><span class="choice-label">(E)</span>16</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>The circumference of the circle with center $O$ is divided into $12$ equal arcs, marked the letters $A$ through $L$ as seen below. What is the number of degrees in the sum of the angles $x$ and $y$?</p><p><img src="https://latex.artofproblemsolving.com/3/7/1/371f42726ae702ba57a0002d787f0e3c62767ec2.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>75</div>
+                    <div class="choice"><span class="choice-label">(B)</span>80</div>
+                    <div class="choice"><span class="choice-label">(C)</span>90</div>
+                    <div class="choice"><span class="choice-label">(D)</span>120</div>
+                    <div class="choice"><span class="choice-label">(E)</span>150</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>The "Middle School Eight" basketball conference has $8$ teams. Every season, each team plays every other conference team twice (home and away), and each team also plays $4$ games against non-conference opponents. What is the total number of games in a season involving the "Middle School Eight" teams?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>60</div>
+                    <div class="choice"><span class="choice-label">(B)</span>88</div>
+                    <div class="choice"><span class="choice-label">(C)</span>96</div>
+                    <div class="choice"><span class="choice-label">(D)</span>144</div>
+                    <div class="choice"><span class="choice-label">(E)</span>160</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>George walks $1$ mile to school. He leaves home at the same time each day, walks at a steady speed of $3$ miles per hour, and arrives just as school begins. Today he was distracted by the pleasant weather and walked the first $\\frac{1}{2}$ mile at a speed of only $2$ miles per hour. At how many miles per hour must George run the last $\\frac{1}{2}$ mile in order to arrive just as school begins today?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>6</div>
+                    <div class="choice"><span class="choice-label">(C)</span>8</div>
+                    <div class="choice"><span class="choice-label">(D)</span>10</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>Four children were born at City Hospital yesterday. Assume each child is equally likely to be a boy or a girl. Which of the following outcomes is most likely?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>all 4 are boys</div>
+                    <div class="choice"><span class="choice-label">(B)</span>all 4 are girls</div>
+                    <div class="choice"><span class="choice-label">(C)</span>2 are girls and 2 are boys</div>
+                    <div class="choice"><span class="choice-label">(D)</span>3 are of one gender and 1 is of the other gender</div>
+                    <div class="choice"><span class="choice-label">(E)</span>all of these outcomes are equally likely</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>A cube with $3$-inch edges is to be constructed from $27$ smaller cubes with $1$-inch edges. Twenty-one of the cubes are colored red and $6$ are colored white. If the $3$-inch cube is constructed to have the smallest possible white surface area showing, what fraction of the surface area is white?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\frac{5}{54}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\frac{1}{9}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\frac{5}{27}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\frac{2}{9}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\frac{1}{3}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>Rectangle $ABCD$ has sides $CD=3$ and $DA=5$. A circle of radius $1$ is centered at $A$, a circle of radius $2$ is centered at $B$, and a circle of radius $3$ is centered at $C$. Which of the following is closest to the area of the region inside the rectangle but outside all three circles?</p><p><img src="https://latex.artofproblemsolving.com/e/5/3/e531c5a59c1c4eec0d30c2a3e6ca52cd6bfe139a.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3.5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4.0</div>
+                    <div class="choice"><span class="choice-label">(C)</span>4.5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>5.0</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5.5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>The $7$-digit numbers $\underline{7} \underline{4} \underline{A} \underline{5} \underline{2} \underline{B} \underline{1}$ and $\underline{3} \underline{2} \underline{6} \underline{A} \underline{B} \underline{4} \underline{C}$ are each multiples of $3$. Which of the following could be the value of $C$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>5</div>
+                    <div class="choice"><span class="choice-label">(E)</span>8</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>A $2$-digit number is such that the product of the digits plus the sum of the digits is equal to the number. What is the units digit of the number?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>3</div>
+                    <div class="choice"><span class="choice-label">(C)</span>5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>7</div>
+                    <div class="choice"><span class="choice-label">(E)</span>9</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>Three members of the Euclid Middle School girls' softball team had the following conversation.</p><p>Ashley: I just realized that our uniform numbers are all $2$-digit primes.</p><p>Bethany : And the sum of your two uniform numbers is the date of my birthday earlier this month.</p><p>Caitlin: That's funny. The sum of your two uniform numbers is the date of my birthday later this month.</p><p>Ashley: And the sum of your two uniform numbers is today's date.</p><p>What number does Caitlin wear?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>11</div>
+                    <div class="choice"><span class="choice-label">(B)</span>13</div>
+                    <div class="choice"><span class="choice-label">(C)</span>17</div>
+                    <div class="choice"><span class="choice-label">(D)</span>19</div>
+                    <div class="choice"><span class="choice-label">(E)</span>23</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>One day the Beverage Barn sold $252$ cans of soda to $100$ customers, and every customer bought at least one can of soda. What is the maximum possible median number of cans of soda bought per customer on that day?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2.5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>3.0</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3.5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4.0</div>
+                    <div class="choice"><span class="choice-label">(E)</span>4.5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>A straight one-mile stretch of highway, 40 feet wide, is closed. Robert rides his bike on a path composed of semicircles as shown. If he rides at 5 miles per hour, how many hours will it take to cover the one-mile stretch?<img src="https://latex.artofproblemsolving.com/7/1/a/71a0b57907e6bd351febe1d78fad2839d5131421.png" alt="Question diagram" class="question-image" />Note: 1 mile = 5280 feet</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\frac{\pi}{11}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\frac{\pi}{10}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\frac{\pi}{5}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\frac{2\pi}{5}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\frac{2\pi}{3}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

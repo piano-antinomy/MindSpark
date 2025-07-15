@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2009_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2009_AMC_8</h1>
+            <div class="info">
+                Year: 2009 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>Bridget bought a bag of apples at the grocery store. She gave half of the apples to Ann. Then she gave Cassie 3 apples, keeping 4 apples for herself. How many apples did Bridget buy? </p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>7</div>
+                    <div class="choice"><span class="choice-label">(D)</span>11</div>
+                    <div class="choice"><span class="choice-label">(E)</span>14</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>On average, for every 4 sports cars sold at the local dealership, 7 sedans are sold. The dealership predicts that it will sell 28 sports cars next month. How many sedans does it expect to sell? </p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>7</div>
+                    <div class="choice"><span class="choice-label">(B)</span>32</div>
+                    <div class="choice"><span class="choice-label">(C)</span>35</div>
+                    <div class="choice"><span class="choice-label">(D)</span>49</div>
+                    <div class="choice"><span class="choice-label">(E)</span>112</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p>The graph shows the constant rate at which Suzanna rides her bike. If she rides a total of a half an hour at the same speed, how many miles would she have ridden?</p><p><img src="https://latex.artofproblemsolving.com/8/e/6/8e6a016e771b1190c29cf5d287fb3a89514557bc.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>5.5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>6.5</div>
+                    <div class="choice"><span class="choice-label">(E)</span>7</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>The five pieces shown below can be arranged to form four of the five figures shown in the choices. Which figure <b>cannot</b> be formed?<img src="https://latex.artofproblemsolving.com/c/4/f/c4f79ad76fa1db088553b2ed970eec53d2fdb878.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span><img src="https://latex.artofproblemsolving.com/f/b/4/fb48f64accc93ee27ac75f695ac7d512c9e12f7a.png" alt="Choice A" class="choice-image" /></div>
+                    <div class="choice"><span class="choice-label">(B)</span><img src="https://latex.artofproblemsolving.com/c/9/1/c91a399a954405c9abe5b1a2036d7e5d2917d99c.png" alt="Choice B" class="choice-image" /></div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>A sequence of numbers starts with $1$, $2$, and $3$. The fourth number of the sequence is the sum of the previous three numbers in the sequence: $1+2+3=6$. In the same way, every number after the fourth is the sum of the previous three numbers. What is the eighth number in the sequence? </p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>11</div>
+                    <div class="choice"><span class="choice-label">(B)</span>20</div>
+                    <div class="choice"><span class="choice-label">(C)</span>37</div>
+                    <div class="choice"><span class="choice-label">(D)</span>68</div>
+                    <div class="choice"><span class="choice-label">(E)</span>99</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>Steve's empty swimming pool will hold $24,000$ gallons of water when full. It will be filled by $4$ hoses, each of which supplies $2.5$ gallons of water per minute. How many hours will it take to fill Steve's pool?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>40</div>
+                    <div class="choice"><span class="choice-label">(B)</span>42</div>
+                    <div class="choice"><span class="choice-label">(C)</span>44</div>
+                    <div class="choice"><span class="choice-label">(D)</span>46</div>
+                    <div class="choice"><span class="choice-label">(E)</span>48</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>The triangular plot of ACD lies between Aspen Road, Brown Road and a railroad. Main Street runs east and west, and the railroad runs north and south. The numbers in the diagram indicate distances in miles. The width of the railroad track can be ignored. How many square miles are in the plot of land ACD?</p><p><img src="https://latex.artofproblemsolving.com/5/b/3/5b3fa3817ad8d7032d6357d1446ffb5cfec46ac6.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>3</div>
+                    <div class="choice"><span class="choice-label">(C)</span>4.5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>6</div>
+                    <div class="choice"><span class="choice-label">(E)</span>9</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>The length of a rectangle is increased by $10\%$ percent and the width is decreased by $10\%$ percent. What percent of the old area is the new area?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>90</div>
+                    <div class="choice"><span class="choice-label">(B)</span>99</div>
+                    <div class="choice"><span class="choice-label">(C)</span>100</div>
+                    <div class="choice"><span class="choice-label">(D)</span>101</div>
+                    <div class="choice"><span class="choice-label">(E)</span>110</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>Construct a square on one side of an equilateral triangle. On one non-adjacent side of the square, construct a regular pentagon, as shown. On a non-adjacent side of the pentagon, construct a hexagon. Continue to construct regular polygons in the same way, until you construct an octagon. How many sides does the resulting polygon have?</p><p><img src="https://latex.artofproblemsolving.com/d/4/a/d4a192b1c509fea9e4f0b63b29b58c056ff0a1ab.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>21</div>
+                    <div class="choice"><span class="choice-label">(B)</span>23</div>
+                    <div class="choice"><span class="choice-label">(C)</span>25</div>
+                    <div class="choice"><span class="choice-label">(D)</span>27</div>
+                    <div class="choice"><span class="choice-label">(E)</span>29</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>On a checkerboard composed of 64 unit squares, what is the probability that a randomly chosen unit square does <b>not</b> touch the outer edge of the board?</p><p><img src="https://latex.artofproblemsolving.com/7/a/d/7ad920d7725a36a31548a17581628896fb8480ae.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{16}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{7}{16}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\frac{1}2\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{9}{16}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{49}{64}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>The Amaco Middle School bookstore sells pencils costing a whole number of cents. Some seventh graders each bought a pencil, paying a total of $1.43$ dollars. Some of the $30$ sixth graders each bought a pencil, and they paid a total of $1.95$ dollars. How many more sixth graders than seventh graders bought a pencil?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>The two spinners shown are spun once and each lands on one of the numbered sectors. What is the probability that the sum of the numbers in the two sectors is prime? </p><p><img src="https://latex.artofproblemsolving.com/e/f/2/ef23ec00d65a4669943af5033ead69ca82d03505.png" alt="Question diagram" class="question-image" /><img src="https://latex.artofproblemsolving.com/3/0/5/3058f62f5eba87c82939ed3a26d69037c009ba5c.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{2}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{3}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{7}{9}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{5}{6}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>A three-digit integer contains one of each of the digits $1$, $3$, and $5$. What is the probability that the integer is divisible by $5$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{6}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{2}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{5}{6}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>Austin and Temple are $50$ miles apart along Interstate 35. Bonnie drove from Austin to her daughter's house in Temple, averaging $60$ miles per hour. Leaving the car with her daughter, Bonnie rode a bus back to Austin along the same route and averaged $40$ miles per hour on the return trip. What was the average speed for the round trip, in miles per hour?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>46</div>
+                    <div class="choice"><span class="choice-label">(B)</span>48</div>
+                    <div class="choice"><span class="choice-label">(C)</span>50</div>
+                    <div class="choice"><span class="choice-label">(D)</span>52</div>
+                    <div class="choice"><span class="choice-label">(E)</span>54</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>A recipe that makes $5$ servings of hot chocolate requires $2$ squares of chocolate, $\\frac{1}{4}$ cup sugar, $1$ cup water and $4$ cups milk. Jordan has $5$ squares of chocolate, $2$ cups of sugar, lots of water, and $7$ cups of milk. If he maintains the same ratio of ingredients, what is the greatest number of servings of hot chocolate he can make?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(5 \\\frac{1}{8}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(6\\\frac{1}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(7\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(8 \\\frac{3}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(9\\\frac{7}{8}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>How many $3$-digit positive integers have digits whose product equals $24$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>12</div>
+                    <div class="choice"><span class="choice-label">(B)</span>15</div>
+                    <div class="choice"><span class="choice-label">(C)</span>18</div>
+                    <div class="choice"><span class="choice-label">(D)</span>21</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>The positive integers $x$ and $y$ are the two smallest positive integers for which the product of $360$ and $x$ is a square and the product of $360$ and $y$ is a cube. What is the sum of $x$ and $y$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>80</div>
+                    <div class="choice"><span class="choice-label">(B)</span>85</div>
+                    <div class="choice"><span class="choice-label">(C)</span>115</div>
+                    <div class="choice"><span class="choice-label">(D)</span>165</div>
+                    <div class="choice"><span class="choice-label">(E)</span>610</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>The diagram represents a $7$-foot-by-$7$-foot floor that is tiled with $1$-square-foot black tiles and white tiles. Notice that the corners have white tiles. If a $15$-foot-by-$15$-foot floor is to be tiled in the same manner, how many white tiles will be needed?</p><p><img src="https://latex.artofproblemsolving.com/b/9/3/b930ac4db49eb7fe094a36707bd316921d9d85db.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>49</div>
+                    <div class="choice"><span class="choice-label">(B)</span>57</div>
+                    <div class="choice"><span class="choice-label">(C)</span>64</div>
+                    <div class="choice"><span class="choice-label">(D)</span>96</div>
+                    <div class="choice"><span class="choice-label">(E)</span>126</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>Two angles of an isosceles triangle measure $70^\circ$ and $x^\circ$. What is the sum of the three possible values of $x$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>95</div>
+                    <div class="choice"><span class="choice-label">(B)</span>125</div>
+                    <div class="choice"><span class="choice-label">(C)</span>140</div>
+                    <div class="choice"><span class="choice-label">(D)</span>165</div>
+                    <div class="choice"><span class="choice-label">(E)</span>180</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>How many non-congruent triangles have vertices at three of the eight points in the array shown below?</p><p><img src="https://latex.artofproblemsolving.com/9/d/f/9df9390740014533082572b1aac7c25c4bedfb57.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>6</div>
+                    <div class="choice"><span class="choice-label">(C)</span>7</div>
+                    <div class="choice"><span class="choice-label">(D)</span>8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>9</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>Andy and Bethany have a rectangular array of numbers with $40$ rows and $75$ columns. Andy adds the numbers in each row. The average of his $40$ sums is $A$. Bethany adds the numbers in each column. The average of her $75$ sums is $B$. What is the value of $\\frac{A}{B}$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{64}{225}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{8}{15}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>1</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{15}{8}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{225}{64}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>How many whole numbers between 1 and 1000 do <b>not</b> contain the digit 1?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>512</div>
+                    <div class="choice"><span class="choice-label">(B)</span>648</div>
+                    <div class="choice"><span class="choice-label">(C)</span>720</div>
+                    <div class="choice"><span class="choice-label">(D)</span>728</div>
+                    <div class="choice"><span class="choice-label">(E)</span>800</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>On the last day of school, Mrs. Wonderful gave jelly beans to her class. She gave each boy as many jelly beans as there were boys in the class. She gave each girl as many jelly beans as there were girls in the class. She brought $400$ jelly beans, and when she finished, she had six jelly beans left. There were two more boys than girls in her class. How many students were in her class?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>26</div>
+                    <div class="choice"><span class="choice-label">(B)</span>28</div>
+                    <div class="choice"><span class="choice-label">(C)</span>30</div>
+                    <div class="choice"><span class="choice-label">(D)</span>32</div>
+                    <div class="choice"><span class="choice-label">(E)</span>34</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>The letters $A$, $B$, $C$ and $D$ represent digits. If $\begin{tabular}{ccc}&A&B\\ +&C&A\\ \hline &D&A\end{tabular}$and $\begin{tabular}{ccc}&A&B\\ -&C&A\\ \hline &&A\end{tabular}$,what digit does $D$ represent?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>6</div>
+                    <div class="choice"><span class="choice-label">(C)</span>7</div>
+                    <div class="choice"><span class="choice-label">(D)</span>8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>9</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>A one-cubic-foot cube is cut into four pieces by three cuts parallel to the top face of the cube. The first cut is $\\frac{1}{2}$ foot from the top face. The second cut is $\\frac{1}{3}$ foot below the first cut, and the third cut is $\\frac{1}{17}$ foot below the second cut. From the top to the bottom the pieces are labeled A, B, C, and D. The pieces are then glued together end to end as shown in the second diagram. What is the total surface area of this solid in square feet?<img src="https://latex.artofproblemsolving.com/3/9/7/3977b5be01a243040aa706b7f678b5ef8c594486.png" alt="Question diagram" class="question-image" /></p><p><img src="https://latex.artofproblemsolving.com/b/8/3/b83dcb80466742b64848dd3d7e106eccd92292ed.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>:6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>:7</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(:\\\frac{419}{51}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(:\\\frac{158}{17}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>:11</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

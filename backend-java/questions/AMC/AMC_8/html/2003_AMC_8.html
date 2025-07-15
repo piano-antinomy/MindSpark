@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2003_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2003_AMC_8</h1>
+            <div class="info">
+                Year: 2003 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>Jamie counted the number of edges of a cube, Jimmy counted the numbers of corners, and Judy counted the number of faces. They then added the three numbers. What was the resulting sum?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\text {(A)}\ 22\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\text {(B)}\ 23\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>{(C)}\ 24</div>
+                    <div class="choice"><span class="choice-label">(D)</span>{(D)}\ 25</div>
+                    <div class="choice"><span class="choice-label">(E)</span>{(E)}\ 26</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>Which of the following numbers has the smallest prime factor?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>55</div>
+                    <div class="choice"><span class="choice-label">(B)</span>57</div>
+                    <div class="choice"><span class="choice-label">(C)</span>58</div>
+                    <div class="choice"><span class="choice-label">(D)</span>59</div>
+                    <div class="choice"><span class="choice-label">(E)</span>61</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p>A burger at Ricky C's weighs $120$ grams, of which $30$ grams are filler. What percent of the burger is not filler?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>60\%</div>
+                    <div class="choice"><span class="choice-label">(B)</span>65\%</div>
+                    <div class="choice"><span class="choice-label">(C)</span>70\%</div>
+                    <div class="choice"><span class="choice-label">(D)</span>75\%</div>
+                    <div class="choice"><span class="choice-label">(E)</span>90\%</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>A group of children riding on bicycles and tricycles rode past Billy Bob's house. Billy Bob counted $7$ children and $19$ wheels. How many tricycles were there?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>6</div>
+                    <div class="choice"><span class="choice-label">(E)</span>7</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>If $20\%$ of a number is $12$, what is $30\%$ of the same number? </p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>15</div>
+                    <div class="choice"><span class="choice-label">(B)</span>18</div>
+                    <div class="choice"><span class="choice-label">(C)</span>20</div>
+                    <div class="choice"><span class="choice-label">(D)</span>24</div>
+                    <div class="choice"><span class="choice-label">(E)</span>30</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>Given the areas of the three squares in the figure, what is the area of the interior triangle?</p><p><img src="https://latex.artofproblemsolving.com/3/7/2/372ee1f13836b7ad774c0aa23e598d4f8b07cbb6.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>13</div>
+                    <div class="choice"><span class="choice-label">(B)</span>30</div>
+                    <div class="choice"><span class="choice-label">(C)</span>60</div>
+                    <div class="choice"><span class="choice-label">(D)</span>300</div>
+                    <div class="choice"><span class="choice-label">(E)</span>1800</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>Blake and Jenny each took four $100$-point tests. Blake averaged $78$ on the four tests. Jenny scored $10$ points higher than Blake on the first test, $10$ points lower than him on the second test, and $20$ points higher on both the third and fourth tests. What is the difference between Jenny's average and Blake's average on these four tests?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>10</div>
+                    <div class="choice"><span class="choice-label">(B)</span>15</div>
+                    <div class="choice"><span class="choice-label">(C)</span>20</div>
+                    <div class="choice"><span class="choice-label">(D)</span>25</div>
+                    <div class="choice"><span class="choice-label">(E)</span>40</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>Problems 8, 9 and 10 use the data found in the accompanying paragraph and figures</p><p>Four friends, Art, Roger, Paul and Trisha, bake cookies, and all cookies have the same thickness. The shapes of the cookies differ, as shown.</p><p>$\circ$ Art's cookies are trapezoids. <img src="https://latex.artofproblemsolving.com/3/d/5/3d531b95a6e97cf02b7ade98fe9eebdcf1a10ad3.png" alt="Question diagram" class="question-image" /></p><p>$\circ$ Roger's cookies are rectangles.<img src="https://latex.artofproblemsolving.com/3/b/b/3bb42c95ed47ad88dc8045d2158c24b3b513dc36.png" alt="Question diagram" class="question-image" /></p><p>$\circ$ Paul's cookies are parallelograms.<img src="https://latex.artofproblemsolving.com/0/f/f/0ff4ffd66b62485d742d63d1b12a9a321024937a.png" alt="Question diagram" class="question-image" /></p><p>$\circ$ Trisha's cookies are triangles.<img src="https://latex.artofproblemsolving.com/5/b/7/5b7f1b1605342590d1d41eae41b1be7f1ebbf9a5.png" alt="Question diagram" class="question-image" /></p><p>Each friend uses the same amount of dough, and Art makes exactly 12 cookies. Who gets the fewest cookies from one batch of cookie dough?</p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>Problems 8, 9 and 10 use the data found in the accompanying paragraph and figures</p><p>Four friends, Art, Roger, Paul and Trisha, bake cookies, and all cookies have the same thickness. The shapes of the cookies differ, as shown.</p><p>$\circ$ Art's cookies are trapezoids: <img src="https://latex.artofproblemsolving.com/a/3/0/a30c19e251320f614c89dd05c7666eb4b5b8eb84.png" alt="Question diagram" class="question-image" /></p><p>$\circ$ Roger's cookies are rectangles: <img src="https://latex.artofproblemsolving.com/b/f/f/bffcf7138f4fa79b3d3030ad4a0e82a3a03322bc.png" alt="Question diagram" class="question-image" /></p><p>$\circ$ Paul's cookies are parallelograms: <img src="https://latex.artofproblemsolving.com/e/b/7/eb7278165b0333733d86c18cdd642361a580edc4.png" alt="Question diagram" class="question-image" /></p><p>$\circ$ Trisha's cookies are triangles: <img src="https://latex.artofproblemsolving.com/d/a/4/da492eba3c75cd91135085acf373c1215d7f5b48.png" alt="Question diagram" class="question-image" /></p><p>Each friend uses the same amount of dough, and Art makes exactly $12$ cookies. Art's cookies sell for $60$ cents each. To earn the same amount from a single batch, how much should one of Roger's cookies cost in cents?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>18</div>
+                    <div class="choice"><span class="choice-label">(B)</span>25</div>
+                    <div class="choice"><span class="choice-label">(C)</span>40</div>
+                    <div class="choice"><span class="choice-label">(D)</span>75</div>
+                    <div class="choice"><span class="choice-label">(E)</span>90</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>Problems 8, 9 and 10 use the data found in the accompanying paragraph and figures</p><p>Four friends, Art, Roger, Paul and Trisha, bake cookies, and all cookies have the same thickness. The shapes of the cookies differ, as shown.</p><p>$\circ$ Art's cookies are trapezoids: <img src="https://latex.artofproblemsolving.com/a/3/0/a30c19e251320f614c89dd05c7666eb4b5b8eb84.png" alt="Question diagram" class="question-image" /></p><p>$\circ$ Roger's cookies are rectangles: <img src="https://latex.artofproblemsolving.com/b/f/f/bffcf7138f4fa79b3d3030ad4a0e82a3a03322bc.png" alt="Question diagram" class="question-image" /></p><p>$\circ$ Paul's cookies are parallelograms: <img src="https://latex.artofproblemsolving.com/e/b/7/eb7278165b0333733d86c18cdd642361a580edc4.png" alt="Question diagram" class="question-image" /></p><p>$\circ$ Trisha's cookies are triangles: <img src="https://latex.artofproblemsolving.com/d/a/4/da492eba3c75cd91135085acf373c1215d7f5b48.png" alt="Question diagram" class="question-image" /></p><p>How many cookies will be in one batch of Trisha's cookies?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>10</div>
+                    <div class="choice"><span class="choice-label">(B)</span>12</div>
+                    <div class="choice"><span class="choice-label">(C)</span>16</div>
+                    <div class="choice"><span class="choice-label">(D)</span>18</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>Business is a little slow at Lou's Fine Shoes, so Lou decides to have asale. On Friday, Lou increases all of Thursday's prices by $10$ percent. Over theweekend, Lou advertises the sale: "Ten percent off the listed price. Salestarts Monday." How much does a pair of shoes cost on Monday thatcost $40$ dollars on Thursday?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>36</div>
+                    <div class="choice"><span class="choice-label">(B)</span>39.60</div>
+                    <div class="choice"><span class="choice-label">(C)</span>40</div>
+                    <div class="choice"><span class="choice-label">(D)</span>40.40</div>
+                    <div class="choice"><span class="choice-label">(E)</span>44</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>When a fair six-sided dice is tossed on a table top, the bottom face cannot be seen. What is the probability that the product of the faces that can be seen is divisible by $6$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(1/3\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(1/2\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(2/3\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(5/6\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>1</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>Fourteen white cubes are put together to form the figure on the right. The complete surface of the figure, including the bottom, is painted red. The figure is then separated into individual cubes. How many of the individual cubes have exactly four red faces</p><p><img src="https://latex.artofproblemsolving.com/a/d/8/ad8d99504ec6b48d8afd6b366c02c827e11c198e.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>6</div>
+                    <div class="choice"><span class="choice-label">(C)</span>8</div>
+                    <div class="choice"><span class="choice-label">(D)</span>10</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>In this addition problem, each letter stands for a different digit.</p><p>$\setlength{\tabcolsep}{0.5mm}\begin{array}{cccc}&T & W & O\\ +&T & W & O\\ \hline F& O & U & R\end{array}$</p><p>If T = 7 and the letter O represents an even number, what is the only possible value for W?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1</div>
+                    <div class="choice"><span class="choice-label">(C)</span>2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>3</div>
+                    <div class="choice"><span class="choice-label">(E)</span>4</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>A figure is constructed from unit cubes. Each cube shares at least one face with another cube. What is the minimum number of cubes needed to build a figure with the front and side views shown?</p><p><img src="https://latex.artofproblemsolving.com/e/6/d/e6d30f2f3ae60f8b661b55b5a6167693d0ecc30b.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>6</div>
+                    <div class="choice"><span class="choice-label">(E)</span>7</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>Ali, Bonnie, Carlo, and Dianna are going to drive together to a nearby theme park. The car they are using has $4$ seats: $1$ Driver seat, $1$ front passenger seat, and $2$ back passenger seats. Bonnie and Carlo are the only ones who know how to drive the car. How many possible seating arrangements are there?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>12</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>The six children listed below are from two families of three siblings each. Each child has blue or brown eyes and black or blond hair. Children from the same family have at least one of these characteristics in common. Which two children are Jim's siblings?</p><p>\[\begin{array}{c|c|c}\\text{Child}&\\text{Eye Color}&\\text{Hair Color}\\ \hline\\text{Benjamin}&\\text{Blue}&\\text{Black}\\ \hline\\text{Jim}&\\text{Brown}&\\text{Blonde}\\ \hline\\text{Nadeen}&\\text{Brown}&\\text{Black}\\ \hline\\text{Austin}&\\text{Blue}&\\text{Blonde}\\ \hline\\text{Tevyn}&\\text{Blue}&\\text{Black}\\ \hline\\text{Sue}&\\text{Blue}&\\text{Blonde}\\ \hline\end{array}\]</p><p>$\textbf{(E)}\ \\text{Austin and Sue}$</p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>Each of the twenty dots on the graph below represents one of Sarah's classmates. Classmates who are friends are connected with a line segment. For her birthday party, Sarah is inviting only the following: all of her friends and all of those classmates who are friends with at least one of her friends. How many classmates will not be invited to Sarah's party?<img src="https://latex.artofproblemsolving.com/8/5/7/8574a9ed5e1d1bbfa8860c587504b3d9136789cd.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>6</div>
+                    <div class="choice"><span class="choice-label">(E)</span>7</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>How many integers between 1000 and 2000 have all three of the numbers 15, 20, and 25 as factors?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>What is the measure of the acute angle formed by the hands of the clock at 4:20 PM?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>8</div>
+                    <div class="choice"><span class="choice-label">(D)</span>10</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>The area of trapezoid $ABCD$ is $164\\text{ cm}^2$. The altitude is 8 cm, $AB$ is 10 cm, and $CD$ is 17 cm. What is $BC$, in centimeters?</p><p><img src="https://latex.artofproblemsolving.com/c/6/6/c66899b4bcfdeca2247f2e6ca1ab430486b95306.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>9</div>
+                    <div class="choice"><span class="choice-label">(B)</span>10</div>
+                    <div class="choice"><span class="choice-label">(C)</span>12</div>
+                    <div class="choice"><span class="choice-label">(D)</span>15</div>
+                    <div class="choice"><span class="choice-label">(E)</span>20</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>The following figures are composed of squares and circles. Which figure has a shaded region with largest area?</p><p><img src="https://latex.artofproblemsolving.com/6/6/6/666ac41befa9511afaf3ff9277993a8e313ccc43.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>In the pattern below, the cat moves clockwise through the four squares, and the mouse moves counterclockwise through the eight exterior segments of the four squares.</p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>A ship travels from point $A$ to point $B$ along a semicircular path, centered at Island $X$. Then it travels along a straight path from $B$ to $C$. Which of these graphs best shows the ship's distance from Island $X$ as it moves along its course?</p></div>
+                <div class="choices">
+                    <div class="choices-image-container">
+                        <img src="https://latex.artofproblemsolving.com/9/1/9/91933f8be27c24174af480d964c31782da9f3bb4.png" alt="Choice options" class="choices-image" />
+                    </div>
+                    <div class="choice-selection">
+                        <p><strong>Select your answer:</strong></p>
+                        <button class="choice-button" data-choice="A">(A)</button>
+                        <button class="choice-button" data-choice="B">(B)</button>
+                        <button class="choice-button" data-choice="C">(C)</button>
+                        <button class="choice-button" data-choice="D">(D)</button>
+                        <button class="choice-button" data-choice="E">(E)</button>
+                    </div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>In the figure, the area of square $WXYZ$ is $25 \\text{ cm}^2$. The four smaller squares have sides 1 cm long, either parallel to or coinciding with the sides of the large square. In $\triangle ABC$, $AB = AC$, and when $\triangle ABC$ is folded over side $\overline{BC}$, point $A$ coincides with $O$, the center of square $WXYZ$. What is the area of $\triangle ABC$, in square centimeters?</p><p><img src="https://latex.artofproblemsolving.com/f/b/5/fb5de36e57bfb81488edf36e2717cf7b93f0444b.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\frac{15}4\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\frac{21}4\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\frac{27}4\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\frac{21}2\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\frac{27}2\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

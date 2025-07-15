@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2023_AMC_8</h1>
+            <div class="info">
+                Year: 2023 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>What is the value of $(8 \\times 4 + 2) - (8 + 4 \\times 2)$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>6</div>
+                    <div class="choice"><span class="choice-label">(C)</span>10</div>
+                    <div class="choice"><span class="choice-label">(D)</span>18</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>A square piece of paper is folded twice into four equal quarters, as shown below, then cut along the dashed line. When unfolded, the paper will match which of the following figures?<img src="https://latex.artofproblemsolving.com/6/d/3/6d385621437744e469b64fd20d5c8183e9e93ac1.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choices-image-container">
+                        <img src="https://latex.artofproblemsolving.com/0/f/8/0f8ca5448d7ae5672368a192ed9ee5af7a40419b.png" alt="Choice options" class="choices-image" />
+                    </div>
+                    <div class="choice-selection">
+                        <p><strong>Select your answer:</strong></p>
+                        <button class="choice-button" data-choice="A">(A)</button>
+                        <button class="choice-button" data-choice="B">(B)</button>
+                        <button class="choice-button" data-choice="C">(C)</button>
+                        <button class="choice-button" data-choice="D">(D)</button>
+                        <button class="choice-button" data-choice="E">(E)</button>
+                    </div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p><i>Wind chill</i> is a measure of how cold people feel when exposed to wind outside. A good estimate for wind chill can be found using this calculation\[(\\text{wind chill}) = (\\text{air temperature}) - 0.7 \\times (\\text{wind speed}),\]where temperature is measured in degrees Fahrenheit $(^{\circ}\\text{F})$ and the wind speed is measured in miles per hour (mph). Suppose the air temperature is $36^{\circ}\\text{F}$ and the wind speed is $18$ mph. Which of the following is closest to the approximate wind chill?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>18</div>
+                    <div class="choice"><span class="choice-label">(B)</span>23</div>
+                    <div class="choice"><span class="choice-label">(C)</span>28</div>
+                    <div class="choice"><span class="choice-label">(D)</span>32</div>
+                    <div class="choice"><span class="choice-label">(E)</span>35</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>The numbers from $1$ to $49$ are arranged in a spiral pattern on a square grid, beginning at the center. The first few numbers have been entered into the grid below. Consider the four numbers that will appear in the shaded squares, on the same diagonal as the number $7.$ How many of these four numbers are prime?<img src="https://latex.artofproblemsolving.com/6/e/8/6e88180afd53a16ea3b9e0389e44933a31876e70.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1</div>
+                    <div class="choice"><span class="choice-label">(C)</span>2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>3</div>
+                    <div class="choice"><span class="choice-label">(E)</span>4</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>A lake contains $250$ trout, along with a variety of other fish. When a marine biologist catches and releases a sample of $180$ fish from the lake, $30$ are identified as trout. Assume that the ratio of trout to the total number of fish is the same in both the sample and the lake. How many fish are there in the lake?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1250</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1500</div>
+                    <div class="choice"><span class="choice-label">(C)</span>1750</div>
+                    <div class="choice"><span class="choice-label">(D)</span>1800</div>
+                    <div class="choice"><span class="choice-label">(E)</span>2000</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>The digits $2,0,2,$ and $3$ are placed in the expression below, one digit per box. What is the maximum possible value of the expression?</p><p><img src="https://latex.artofproblemsolving.com/4/e/6/4e639504d3a7127498b862326310586835b4dfa3.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>9</div>
+                    <div class="choice"><span class="choice-label">(D)</span>16</div>
+                    <div class="choice"><span class="choice-label">(E)</span>18</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>A rectangle, with sides parallel to the $x$-axis and $y$-axis, has opposite vertices located at $(15, 3)$ and $(16, 5)$. A line is drawn through points $A(0, 0)$ and $B(3, 1)$. Another line is drawn through points $C(0, 10)$ and $D(2, 9)$. How many points on the rectangle lie on at least one of the two lines?<img src="https://latex.artofproblemsolving.com/3/f/2/3f2bc5fa9ed29072b71e62f652eec4cdbbf3f142.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1</div>
+                    <div class="choice"><span class="choice-label">(C)</span>2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>3</div>
+                    <div class="choice"><span class="choice-label">(E)</span>4</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>Lola, Lolo, Tiya, and Tiyo participated in a ping pong tournament. Each player competed against each of the other three players exactly twice. Shown below are the win-loss records for the players. The numbers $1$ and $0$ represent a win or loss, respectively. For example, Lola won five matches and lost the fourth match. What was Tiyo’s win-loss record?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\texttt{000101}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\texttt{001001}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\texttt{010000}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\texttt{010101}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\texttt{011000}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>Malaika is skiing on a mountain. The graph below shows her elevation, in meters, above the base of the mountain as she skis along a trail. In total, how many seconds does she spend at an elevation between $4$ and $7$ meters?<img src="https://latex.artofproblemsolving.com/8/f/b/8fb400c99ed94b8b0a7d87fc66909b3cde3ca1fa.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>10</div>
+                    <div class="choice"><span class="choice-label">(D)</span>12</div>
+                    <div class="choice"><span class="choice-label">(E)</span>14</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>Harold made a plum pie to take on a picnic. He was able to eat only $\\frac{1}{4}$ of the pie, and he left the rest for his friends. A moose came by and ate $\\frac{1}{3}$ of what Harold left behind. After that, a porcupine ate $\\frac{1}{3}$ of what the moose left behind. How much of the original pie still remained after the porcupine left?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{12}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{1}{6}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{1}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{5}{12}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>NASA’s Perseverance Rover was launched on July $30,$ $2020.$ After traveling $292{,}526{,}838$ miles, it landed on Mars in Jezero Crater about $6.5$ months later. Which of the following is closest to the Rover’s average interplanetary speed in miles per hour?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6{,}000</div>
+                    <div class="choice"><span class="choice-label">(B)</span>12{,}000</div>
+                    <div class="choice"><span class="choice-label">(C)</span>60{,}000</div>
+                    <div class="choice"><span class="choice-label">(D)</span>120{,}000</div>
+                    <div class="choice"><span class="choice-label">(E)</span>600{,}000</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>The figure below shows a large white circle with a number of smaller white and shaded circles in itsinterior. What fraction of the interior of the large white circle is shaded?</p><p><img src="https://latex.artofproblemsolving.com/8/8/2/8828bc341da153e3d2856185043028e8ceb903cf.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{11}{36}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{19}{36}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{5}{9}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>Along the route of a bicycle race, $7$ water stations are evenly spaced between the start and finish lines,as shown in the figure below. There are also $2$ repair stations evenly spaced between the start andfinish lines. The $3$rd water station is located $2$ miles after the $1$st repair station. How long is the racein miles?<img src="https://latex.artofproblemsolving.com/e/f/a/efaa138f2f7bc240bc49299009af49a7fc9a0420.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>8</div>
+                    <div class="choice"><span class="choice-label">(B)</span>16</div>
+                    <div class="choice"><span class="choice-label">(C)</span>24</div>
+                    <div class="choice"><span class="choice-label">(D)</span>48</div>
+                    <div class="choice"><span class="choice-label">(E)</span>96</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>Nicolas is planning to send a package to his friend Anton, who is a stamp collector. To pay for the postage, Nicolas would like to cover the package with a large number of stamps. Suppose he has a collection of $5$-cent, $10$-cent, and $25$-cent stamps, with exactly $20$ of each type. What is the greatest number of stamps Nicolas can use to make exactly $$7.10$ in postage?(Note: The amount $$7.10$ corresponds to $7$ dollars and $10$ cents. One dollar is worth $100$ cents.)</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>45</div>
+                    <div class="choice"><span class="choice-label">(B)</span>46</div>
+                    <div class="choice"><span class="choice-label">(C)</span>51</div>
+                    <div class="choice"><span class="choice-label">(D)</span>54</div>
+                    <div class="choice"><span class="choice-label">(E)</span>55</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>Viswam walks half a mile to get to school each day. His route consists of $10$ city blocks of equal length and he takes $1$ minute to walk each block. Today, after walking $5$ blocks, Viswam discovers he has to make a detour, walking $3$ blocks of equal length instead of $1$ block to reach the next corner. From the time he starts his detour, at what speed, in mph, must he walk, in order to get to school at his usual time?<img src="https://latex.artofproblemsolving.com/f/7/5/f75d299d4b35cf040c71ccfca989da9a7787ce2b.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4.2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>4.5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4.8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>The letters $\\text{P}, \\text{Q},$ and $\\text{R}$ are entered into a $20\times20$ table according to the pattern shown below. How many $\\text{P}$s, $\\text{Q}$s, and $\\text{R}$s will appear in the completed table? <img src="https://latex.artofproblemsolving.com/c/b/5/cb56c83bbe94022221482c1b9445b3a1810eeca2.png" alt="Question diagram" class="question-image" />$\textbf{(A)}~132\\text{ Ps, }134\\text{ Qs, }134\\text{ Rs}$</p><p>$\textbf{(B)}~133\\text{ Ps, }133\\text{ Qs, }134\\text{ Rs}$</p><p>$\textbf{(C)}~133\\text{ Ps, }134\\text{ Qs, }133\\text{ Rs}$</p><p>$\textbf{(D)}~134\\text{ Ps, }132\\text{ Qs, }134\\text{ Rs}$</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>~134133133</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>A <i>regular octahedron</i> has eight equilateral triangle faces with four faces meeting at each vertex. Jun will make the regular octahedron shown on the right by folding the piece of paper shown on the left. Which numbered face will end up to the right of $Q$?</p><p><img src="https://latex.artofproblemsolving.com/7/3/5/73573481f96dd080a6118ceb2a3c4588148704dc.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>Greta Grasshopper sits on a long line of lily pads in a pond. From any lily pad, Greta can jump $5$ pads to the right or $3$ pads to the left. What is the fewest number of jumps Greta must make to reach the lily pad located $2023$ pads to the right of her starting position?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>405</div>
+                    <div class="choice"><span class="choice-label">(B)</span>407</div>
+                    <div class="choice"><span class="choice-label">(C)</span>409</div>
+                    <div class="choice"><span class="choice-label">(D)</span>411</div>
+                    <div class="choice"><span class="choice-label">(E)</span>413</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>An equilateral triangle is placed inside a larger equilateral triangle so that the region between them can be divided into three congruent trapezoids, as shown below. The side length of the inner triangle is $\frac23$ the side length of the larger triangle. What is the ratio of the area of one trapezoid to the area of the inner triangle?</p><p><img src="https://latex.artofproblemsolving.com/c/5/f/c5f0d710200d86f7fe0ffc7ea4226812f1de1cf8.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1 : 3</div>
+                    <div class="choice"><span class="choice-label">(B)</span>3 : 8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>5 : 12</div>
+                    <div class="choice"><span class="choice-label">(D)</span>7 : 16</div>
+                    <div class="choice"><span class="choice-label">(E)</span>4 : 9</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>Two integers are inserted into the list $3, 3, 8, 11, 28$ to double its range. The mode and median remain unchanged. What is the maximum possible sum of the two additional numbers?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>56</div>
+                    <div class="choice"><span class="choice-label">(B)</span>57</div>
+                    <div class="choice"><span class="choice-label">(C)</span>58</div>
+                    <div class="choice"><span class="choice-label">(D)</span>60</div>
+                    <div class="choice"><span class="choice-label">(E)</span>61</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>Alina writes the numbers $1, 2, \dots , 9$ on separate cards, one number per card. She wishes to divide the cards into $3$ groups of $3$ cards so that the sum of the numbers in each group will be the same. In how many ways can this be done?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>1</div>
+                    <div class="choice"><span class="choice-label">(C)</span>2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>3</div>
+                    <div class="choice"><span class="choice-label">(E)</span>4</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>In a sequence of positive integers, each term after the second is the product of the previous two terms. The sixth term is $4000$. What is the first term?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>4</div>
+                    <div class="choice"><span class="choice-label">(D)</span>5</div>
+                    <div class="choice"><span class="choice-label">(E)</span>10</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>Each square in a $3 \\times 3$ grid is randomly filled with one of the $4$ gray and white tiles shown below on the right. <img src="https://latex.artofproblemsolving.com/c/0/1/c01163352203e89b9926215ea00f34b275a6c630.png" alt="Question diagram" class="question-image" />What is the probability that the tiling will contain a large gray diamond in one of the smaller $2 \\times 2$ grids? Below is an example of such tiling. <img src="https://latex.artofproblemsolving.com/8/d/9/8d9055c9c5a4feb6f71e870557f61ce1d6b5033a.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\\frac{1}{1024}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\\frac{1}{256}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{1}{64}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\\\frac{1}{16}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\\\frac{1}{4}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>Isosceles $\triangle ABC$ has equal side lengths $AB$ and $BC$. In the figure below, segments are drawn parallel to $\overline{AC}$ so that the shaded portions of $\triangle ABC$ have the same area. The heights of the two unshaded portions are 11 and 5 units, respectively. What is the height of $h$ of $\triangle ABC$? (Diagram not drawn to scale.)</p><p><img src="https://latex.artofproblemsolving.com/6/1/6/61696b1f6c1847f1610683505bd7e902290c51da.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>14.6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>14.8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>15</div>
+                    <div class="choice"><span class="choice-label">(D)</span>15.2</div>
+                    <div class="choice"><span class="choice-label">(E)</span>15.4</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>Fifteen integers $a_1, a_2, a_3, \dots, a_{15}$ are arranged in order on a number line. The integers are equally spaced and have the property that\[1 \le a_1 \le 10, \thickspace 13 \le a_2 \le 20, \thickspace \\text{ and } \thickspace 241 \le a_{15}\le 250.\]What is the sum of digits of $a_{14}?$</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>8</div>
+                    <div class="choice"><span class="choice-label">(B)</span>9</div>
+                    <div class="choice"><span class="choice-label">(C)</span>10</div>
+                    <div class="choice"><span class="choice-label">(D)</span>11</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

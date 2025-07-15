@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2005_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2005_AMC_8</h1>
+            <div class="info">
+                Year: 2005 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>Connie multiplies a number by $2$ and gets $60$ as her answer. However, she should have divided the number by $2$ to get the correct answer. What is the correct answer?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>7.5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>15</div>
+                    <div class="choice"><span class="choice-label">(C)</span>30</div>
+                    <div class="choice"><span class="choice-label">(D)</span>120</div>
+                    <div class="choice"><span class="choice-label">(E)</span>240</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>Karl bought five folders from Pay-A-Lot at a cost of $\textdollar 2.50$ each.Pay-A-Lot had a 20%-off sale the following day. How much couldKarl have saved on the purchase by waiting a day?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\textdollar 1.00\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\textdollar 2.00\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\textdollar 2.50\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\textdollar 2.75\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\textdollar 5.00\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p>What is the minimum number of small squares that must be colored black so that a line of symmetry lies on the diagonal $\overline{BD}$ of square $ABCD$?</p><p><img src="https://latex.artofproblemsolving.com/7/5/f/75f8ad6c87a6d20912c9a932a8e8dbc6b6364d2d.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>A square and a triangle have equal perimeters. The lengths of the three sides of the triangle are 6.1 cm, 8.2 cm and 9.7 cm. What is the area of the square in square centimeters?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>24</div>
+                    <div class="choice"><span class="choice-label">(B)</span>25</div>
+                    <div class="choice"><span class="choice-label">(C)</span>36</div>
+                    <div class="choice"><span class="choice-label">(D)</span>48</div>
+                    <div class="choice"><span class="choice-label">(E)</span>64</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>Soda is sold in packs of 6, 12 and 24 cans. What is the minimum number of packs needed to buy exactly 90 cans of soda?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>15</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>Suppose $d$ is a digit. For how many values of $d$ is $2.00d5 > 2.005$?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>0</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>6</div>
+                    <div class="choice"><span class="choice-label">(E)</span>10</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>Bill walks $\tfrac12$ mile south, then $\tfrac34$ mile east, and finally $\tfrac12$ mile south. How many miles is he, in a direct line, from his starting point?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(1\t\\frac{1}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(1\t\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(1\t\\frac{3}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>2</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>Suppose m and n are positive odd integers. Which of the following must also be an odd integer?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(m+3n\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(3m-n\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(3m^2 + 3n^2\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\((nm + 3)^2\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>3mn</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>In quadrilateral $ABCD$, sides $\overline{AB}$ and $\overline{BC}$ both have length 10, sides $\overline{CD}$ and $\overline{DA}$ both have length 17, and the measure of angle $ADC$ is $60^\circ$. What is the length of diagonal $\overline{AC}$?</p><p><img src="https://latex.artofproblemsolving.com/7/9/c/79c8d6aaa1d59d7dfca5a5044d41a1565c2ed306.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>13.5</div>
+                    <div class="choice"><span class="choice-label">(B)</span>14</div>
+                    <div class="choice"><span class="choice-label">(C)</span>15.5</div>
+                    <div class="choice"><span class="choice-label">(D)</span>17</div>
+                    <div class="choice"><span class="choice-label">(E)</span>18.5</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>Joe had walked half way from home to school when he realized he was late. He ran the rest of the way to school. He ran 3 times as fast as he walked. Joe took 6 minutes to walk half way to school. How many minutes did it take Joe to get from home to school?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>7</div>
+                    <div class="choice"><span class="choice-label">(B)</span>7.3</div>
+                    <div class="choice"><span class="choice-label">(C)</span>7.7</div>
+                    <div class="choice"><span class="choice-label">(D)</span>8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>8.3</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>The sales tax rate in Rubenenkoville is 6%. During a sale at the Bergville Coat Closet, the price of a coat is discounted 20% from its $90.00 price. Two clerks, Jack and Jill, calculate the bill independently. Jack rings up $90.00 and adds 6% sales tax, then subtracts 20% from this total. Jill rings up $90.00, subtracts 20% of the price, then adds 6% of the discounted price for sales tax. What is Jack's total minus Jill's total?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(-\textdollar 1.06\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(-\textdollar 0.53\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\textdollar 0\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\textdollar 0.53\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\textdollar 1.06\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>Big Al, the ape, ate 100 bananas from May 1 through May 5. Each day he ate six more bananas than on the previous day. How many bananas did Big Al eat on May 5?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>20</div>
+                    <div class="choice"><span class="choice-label">(B)</span>22</div>
+                    <div class="choice"><span class="choice-label">(C)</span>30</div>
+                    <div class="choice"><span class="choice-label">(D)</span>32</div>
+                    <div class="choice"><span class="choice-label">(E)</span>34</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>The area of polygon $ABCDEF$ is 52 with $AB=8$, $BC=9$ and $FA=5$. What is $DE+EF$?</p><p><img src="https://latex.artofproblemsolving.com/1/a/9/1a9b3504d94fa699730b91e95cc71d2a3c84db6b.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>7</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>9</div>
+                    <div class="choice"><span class="choice-label">(D)</span>10</div>
+                    <div class="choice"><span class="choice-label">(E)</span>11</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>The Little Twelve Basketball Conference has two divisions, with six teams in each division. Each team plays each of the other teams in its own division twice and every team in the other division once. How many conference games are scheduled?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>80</div>
+                    <div class="choice"><span class="choice-label">(B)</span>96</div>
+                    <div class="choice"><span class="choice-label">(C)</span>100</div>
+                    <div class="choice"><span class="choice-label">(D)</span>108</div>
+                    <div class="choice"><span class="choice-label">(E)</span>192</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>How many different isosceles triangles have integer side lengths and perimeter 23?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>2</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>9</div>
+                    <div class="choice"><span class="choice-label">(E)</span>11</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>A five-legged Martian has a drawer full of socks, each of which is red, white or blue, and there are at least five socks of each color. The Martian pulls out one sock at a time without looking. How many socks must the Martian remove from the drawer to be certain there will be 5 socks of the same color?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>9</div>
+                    <div class="choice"><span class="choice-label">(C)</span>12</div>
+                    <div class="choice"><span class="choice-label">(D)</span>13</div>
+                    <div class="choice"><span class="choice-label">(E)</span>15</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>The results of a cross-country team's training run are graphed below. Which student has the greatest average speed?</p><p><img src="https://latex.artofproblemsolving.com/2/b/0/2b04d909f0586cae29f85ef276c64483f0e0c0e2.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>How many three-digit numbers are divisible by 13?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>7</div>
+                    <div class="choice"><span class="choice-label">(B)</span>67</div>
+                    <div class="choice"><span class="choice-label">(C)</span>69</div>
+                    <div class="choice"><span class="choice-label">(D)</span>76</div>
+                    <div class="choice"><span class="choice-label">(E)</span>77</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>What is the perimeter of trapezoid $ABCD$?</p><p><img src="https://latex.artofproblemsolving.com/0/9/6/096a58ba6264c3736c928365300c0d13f53fcf0b.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>180</div>
+                    <div class="choice"><span class="choice-label">(B)</span>188</div>
+                    <div class="choice"><span class="choice-label">(C)</span>196</div>
+                    <div class="choice"><span class="choice-label">(D)</span>200</div>
+                    <div class="choice"><span class="choice-label">(E)</span>204</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>Alice and Bob play a game involving a circle whose circumference is divided by 12 equally-spaced points. The points are numbered clockwise, from 1 to 12. Both start on point 12. Alice moves clockwise and Bob, counterclockwise.In a turn of the game, Alice moves 5 points clockwise and Bob moves 9 points counterclockwise. The game ends when they stop on the same point. How many turns will this take?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>12</div>
+                    <div class="choice"><span class="choice-label">(D)</span>14</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>How many distinct triangles can be drawn using three of the dots below as vertices?</p><p><img src="https://latex.artofproblemsolving.com/5/a/2/5a2b71fd41fb8101c84f6e83e00a34af1e6c98ef.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>9</div>
+                    <div class="choice"><span class="choice-label">(B)</span>12</div>
+                    <div class="choice"><span class="choice-label">(C)</span>18</div>
+                    <div class="choice"><span class="choice-label">(D)</span>20</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>A company sells detergent in three different sized boxes: small (S), medium (M) and large (L). The medium size costs 50% more than the small size and contains 20% less detergent than the large size. The large size contains twice as much detergent as the small size and costs 30% more than the medium size. Rank the three sizes from best to worst buy.</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>, SML</div>
+                    <div class="choice"><span class="choice-label">(B)</span>, LMS</div>
+                    <div class="choice"><span class="choice-label">(C)</span>, MSL</div>
+                    <div class="choice"><span class="choice-label">(D)</span>, LSM</div>
+                    <div class="choice"><span class="choice-label">(E)</span>, MLS</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>Isosceles right triangle $ABC$ encloses a semicircle of area $2\pi$. The circle has its center $O$ on hypotenuse $\overline{AB}$ and is tangent to sides $\overline{AC}$ and $\overline{BC}$. What is the area of triangle $ABC$?</p><p><img src="https://latex.artofproblemsolving.com/8/a/7/8a7fba91b0cdfee41e69cbd89d6b1389d4169877.png" alt="Question diagram" class="question-image" /></p><p>First, we notice half a square so first let's create a square. Once we have a square, we will have a full circle. This circle has a diameter of 4 which will be the side of the square. The area would be $4\cdot 4 = 16.$ Divide 16 by 2 to get the original shape and you get $\boxed{8}$</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>6</div>
+                    <div class="choice"><span class="choice-label">(B)</span>8</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(3\pi\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>10</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(4\pi\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>A certain calculator has only two keys [+1] and [x2]. When you press one of the keys, the calculator automatically displays the result. For instance, if the calculator originally displayed "9" and you pressed [+1], it would display "10." If you then pressed [x2], it would display "20." Starting with the display "1," what is the fewest number of keystrokes you would need to reach "200"?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>8</div>
+                    <div class="choice"><span class="choice-label">(B)</span>9</div>
+                    <div class="choice"><span class="choice-label">(C)</span>10</div>
+                    <div class="choice"><span class="choice-label">(D)</span>11</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>A square with side length 2 and a circle share the same center. The total area of the regions that are inside the circle and outside the square is equal to the total area of the regions that are outside the circle and inside the square. What is the radius of the circle?</p><p><img src="https://latex.artofproblemsolving.com/c/8/c/c8c667941886cc09d8e6a51330698d67e111d5d3.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\\frac{2}{\sqrt{\pi}}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\\frac{1+\sqrt{2}}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\\\frac{3}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\sqrt{3}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\sqrt{\pi}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

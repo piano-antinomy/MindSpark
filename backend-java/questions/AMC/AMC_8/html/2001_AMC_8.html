@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2001_AMC_8 - Math Questions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .header .info {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .question {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+        .question-header {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        .question-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+                 .question-image {
+             max-width: 100%;
+             height: auto;
+             display: block;
+             margin: 15px auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-image {
+             max-width: 200px;
+             height: auto;
+             display: inline-block;
+             margin-left: 10px;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choices-image-container {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choices-image {
+             max-width: 100%;
+             height: auto;
+             border: 1px solid #ddd;
+             border-radius: 4px;
+         }
+         .choice-selection {
+             text-align: center;
+             margin: 20px 0;
+         }
+         .choice-button {
+             display: inline-block;
+             margin: 5px 10px;
+             padding: 10px 20px;
+             background-color: white;
+             border: 2px solid #ddd;
+             border-radius: 5px;
+             cursor: pointer;
+             font-size: 16px;
+             font-weight: bold;
+             transition: all 0.2s;
+         }
+         .choice-button:hover {
+             background-color: #e8f4f8;
+             border-color: #2c3e50;
+         }
+         .choice-button:active {
+             background-color: #d4edda;
+             border-color: #28a745;
+         }
+        .choices {
+            margin-top: 20px;
+        }
+        .choice {
+            margin: 10px 0;
+            padding: 12px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .choice:hover {
+            background-color: #e8f4f8;
+        }
+        .choice-label {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+        .answer {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            color: #155724;
+        }
+        .answer-label {
+            font-weight: bold;
+        }
+    </style>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>2001_AMC_8</h1>
+            <div class="info">
+                Year: 2001 | Total Problems: 25
+            </div>
+        </div>
+        
+        <div class="questions">
+
+            <div class="question">
+                <div class="question-header">Problem 1</div>
+                <div class="question-text"><p>Casey's shop class is making a golf trophy. He has to paint 300 dimples on a golf ball. If it takes him 2 seconds to paint one dimple, how many minutes will it take for him to finish </p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 2</div>
+                <div class="question-text"><p>I'm thinking of two whole numbers. Their product is 24 and their sum is 11. What is the larger number?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>3</div>
+                    <div class="choice"><span class="choice-label">(B)</span>4</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>8</div>
+                    <div class="choice"><span class="choice-label">(E)</span>12</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 3</div>
+                <div class="question-text"><p>Granny Smith has $63. Elberta has $2 more than Anjou and Anjou has one-third as much as Granny Smith. How many dollars does Elberta have?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>17</div>
+                    <div class="choice"><span class="choice-label">(B)</span>18</div>
+                    <div class="choice"><span class="choice-label">(C)</span>19</div>
+                    <div class="choice"><span class="choice-label">(D)</span>21</div>
+                    <div class="choice"><span class="choice-label">(E)</span>23</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 4</div>
+                <div class="question-text"><p>The digits 1, 2, 3, 4 and 9 are each used once to form the smallest possible <b>even</b> five-digit number. The digit in the tens place is</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>9</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 5</div>
+                <div class="question-text"><p>On a dark and stormy night Snoopy suddenly saw a flash of lightning. Ten seconds later he heard the sound of thunder. The speed of sound is 1088 feet per second and one mile is 5280 feet. Estimate, to the nearest half-mile, how far Snoopy was from the flash of lightning.</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(1\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>2</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(2\\\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>3</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 6</div>
+                <div class="question-text"><p>Six trees are equally spaced along one side of a straight road. The distance from the first tree to the fourth is 60 feet. What is the distance in feet between the first and last trees?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>90</div>
+                    <div class="choice"><span class="choice-label">(B)</span>100</div>
+                    <div class="choice"><span class="choice-label">(C)</span>105</div>
+                    <div class="choice"><span class="choice-label">(D)</span>120</div>
+                    <div class="choice"><span class="choice-label">(E)</span>140</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 7</div>
+                <div class="question-text"><p>To promote her school's annual Kite Olympics, Genevieve makes a small kite and a large kite for a bulletin board display. The kites look like the one in the diagram. For her small kite Genevieve draws the kite on a one-inch grid. For the large kite she triples both the height and width of the entire grid.<img src="https://latex.artofproblemsolving.com/f/1/f/f1f9469db4540c2a66686ef837e33ea3746e6e8a.png" alt="Question diagram" class="question-image" /></p><p>What is the number of square inches in the area of the small kite?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>21</div>
+                    <div class="choice"><span class="choice-label">(B)</span>22</div>
+                    <div class="choice"><span class="choice-label">(C)</span>23</div>
+                    <div class="choice"><span class="choice-label">(D)</span>24</div>
+                    <div class="choice"><span class="choice-label">(E)</span>25</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 8</div>
+                <div class="question-text"><p>To promote her school's annual Kite Olympics, Genevieve makes a small kite and a large kite for a bulletin board display. The kites look like the one in the diagram. For her small kite Genevieve draws the kite on a one-inch grid. For the large kite she triples both the height and width of the entire grid.</p><p><img src="https://latex.artofproblemsolving.com/2/a/8/2a8dc1e865933bce5ace2fa416aaac621779ff0a.png" alt="Question diagram" class="question-image" /></p><p>Genevieve puts bracing on her large kite in the form of a cross connecting opposite corners of the kite. How many inches of bracing material does she need?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>30</div>
+                    <div class="choice"><span class="choice-label">(B)</span>32</div>
+                    <div class="choice"><span class="choice-label">(C)</span>35</div>
+                    <div class="choice"><span class="choice-label">(D)</span>38</div>
+                    <div class="choice"><span class="choice-label">(E)</span>39</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 9</div>
+                <div class="question-text"><p>To promote her school's annual Kite Olympics, Genevieve makes a small kite and a large kite for a bulletin board display. The kites look like the one in the diagram. For her small kite Genevieve draws the kite on a one-inch grid. For the large kite she triples both the height and width of the entire grid.</p><p><img src="https://latex.artofproblemsolving.com/f/1/f/f1f9469db4540c2a66686ef837e33ea3746e6e8a.png" alt="Question diagram" class="question-image" /></p><p>The large kite is covered with gold foil. The foil is cut from a rectangular piece that just covers the entire grid. How many square inches of waste material are cut off from the four corners?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>63</div>
+                    <div class="choice"><span class="choice-label">(B)</span>72</div>
+                    <div class="choice"><span class="choice-label">(C)</span>180</div>
+                    <div class="choice"><span class="choice-label">(D)</span>189</div>
+                    <div class="choice"><span class="choice-label">(E)</span>264</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 10</div>
+                <div class="question-text"><p>A collector offers to buy state quarters for 2000% of their face value. At that rate how much will Bryden get for his four state quarters?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>20</div>
+                    <div class="choice"><span class="choice-label">(B)</span>50</div>
+                    <div class="choice"><span class="choice-label">(C)</span>200</div>
+                    <div class="choice"><span class="choice-label">(D)</span>500</div>
+                    <div class="choice"><span class="choice-label">(E)</span>2000</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 11</div>
+                <div class="question-text"><p>Points $A$, $B$, $C$ and $D$ have these coordinates: $A(3,2)$, $B(3,-2)$, $C(-3,-2)$ and $D(-3, 0)$. The area of quadrilateral $ABCD$ is</p><p><img src="https://latex.artofproblemsolving.com/4/a/5/4a5d673b417777371c05a721a7afc4dce870e712.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>12</div>
+                    <div class="choice"><span class="choice-label">(B)</span>15</div>
+                    <div class="choice"><span class="choice-label">(C)</span>18</div>
+                    <div class="choice"><span class="choice-label">(D)</span>21</div>
+                    <div class="choice"><span class="choice-label">(E)</span>24</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 12</div>
+                <div class="question-text"><p>If $a\otimes b = \dfrac{a + b}{a - b}$, then $(6\otimes 4)\otimes 3 =$</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>13</div>
+                    <div class="choice"><span class="choice-label">(C)</span>15</div>
+                    <div class="choice"><span class="choice-label">(D)</span>30</div>
+                    <div class="choice"><span class="choice-label">(E)</span>72</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 13</div>
+                <div class="question-text"><p>Of the 36 students in Richelle's class, 12 prefer chocolate pie, 8 prefer apple, and 6 prefer blueberry. Half of the remaining students prefer cherry pie and half prefer lemon. For Richelle's pie graph showing this data, how many degrees should she use for cherry pie?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>10</div>
+                    <div class="choice"><span class="choice-label">(B)</span>20</div>
+                    <div class="choice"><span class="choice-label">(C)</span>30</div>
+                    <div class="choice"><span class="choice-label">(D)</span>50</div>
+                    <div class="choice"><span class="choice-label">(E)</span>72</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 14</div>
+                <div class="question-text"><p>Tyler has entered a buffet line in which he chooses one kind of meat, two different vegetables and one dessert. If the order of food items is not important, how many different meals might he choose?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>24</div>
+                    <div class="choice"><span class="choice-label">(C)</span>72</div>
+                    <div class="choice"><span class="choice-label">(D)</span>80</div>
+                    <div class="choice"><span class="choice-label">(E)</span>144</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> C</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 15</div>
+                <div class="question-text"><p>Homer began peeling a pile of 44 potatoes at the rate of 3 potatoes per minute. Four minutes later Christen joined him and peeled at the rate of 5 potatoes per minute. When they finished, how many potatoes had Christen peeled?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>20</div>
+                    <div class="choice"><span class="choice-label">(B)</span>24</div>
+                    <div class="choice"><span class="choice-label">(C)</span>32</div>
+                    <div class="choice"><span class="choice-label">(D)</span>33</div>
+                    <div class="choice"><span class="choice-label">(E)</span>40</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 16</div>
+                <div class="question-text"><p>A square piece of paper, 4 inches on a side, is folded in half vertically. Both layers are then cut in half parallel to the fold. Three new rectangles are formed, a large one and two small ones. What is the ratio of the perimeter of one of the small rectangles to the perimeter of the large rectangle?</p><p><img src="https://latex.artofproblemsolving.com/7/e/9/7e91c72c703f0e511d42bca49f65aa22acae754b.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\d\frac{1}{3}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\d\frac{1}{2}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\d\frac{3}{4}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\d\frac{4}{5}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\d\frac{5}{6}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 17</div>
+                <div class="question-text"><p>For the game show <i>Who Wants To Be A Millionaire?</i>, the dollar values of each question are shown in the following table (where K = 1000).</p><p>\[\begin{tabular}{rccccccccccccccc} \\text{Question} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\ \\text{Value} & 100 & 200 & 300 & 500 & 1\\text{K} & 2\\text{K} & 4\\text{K} & 8\\text{K} & 16\\text{K} & 32\\text{K} & 64\\text{K} & 125\\text{K} & 250\\text{K} & 500\\text{K} & 1000\\text{K} \end{tabular}\]</p><p>Between which two questions is the percent increase of the value the smallest?</p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 18</div>
+                <div class="question-text"><p>Two dice are thrown. What is the probability that the product of the two numbers is a multiple of 5?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>\(\d\frac{1}{36}\)</div>
+                    <div class="choice"><span class="choice-label">(B)</span>\(\d\frac{1}{18}\)</div>
+                    <div class="choice"><span class="choice-label">(C)</span>\(\d\frac{1}{6}\)</div>
+                    <div class="choice"><span class="choice-label">(D)</span>\(\d\frac{11}{36}\)</div>
+                    <div class="choice"><span class="choice-label">(E)</span>\(\d\frac{1}{3}\)</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 19</div>
+                <div class="question-text"><p>Car M traveled at a constant speed for a given time. This is shown by the dashed line. Car N traveled at twice the speed for the same distance. If Car M and Car N's speed and time are shown as solid line, which graph illustrates this?</p></div>
+                <div class="choices">
+                    <div class="choices-image-container">
+                        <img src="https://latex.artofproblemsolving.com/c/f/5/cf5f4932472c29c9b113be5cbee4ee9eea008993.png" alt="Choice options" class="choices-image" />
+                    </div>
+                    <div class="choice-selection">
+                        <p><strong>Select your answer:</strong></p>
+                        <button class="choice-button" data-choice="A">(A)</button>
+                        <button class="choice-button" data-choice="B">(B)</button>
+                        <button class="choice-button" data-choice="C">(C)</button>
+                        <button class="choice-button" data-choice="D">(D)</button>
+                        <button class="choice-button" data-choice="E">(E)</button>
+                    </div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 20</div>
+                <div class="question-text"><p>Kaleana shows her test score to Quay, Marty and Shana, but the others keep theirs hidden. Quay thinks, "At least two of us have the same score." Marty thinks, "I didn't get the lowest score." Shana thinks, "I didn't get the highest score." List the scores from lowest to highest for Marty (M), Quay (Q) and Shana (S).</p></div>
+                <div class="answer"><span class="answer-label">Answer:</span> A</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 21</div>
+                <div class="question-text"><p>The mean of a set of five different positive integers is 15. The median is 18. The maximum possible value of the largest of these five integers is</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>19</div>
+                    <div class="choice"><span class="choice-label">(B)</span>24</div>
+                    <div class="choice"><span class="choice-label">(C)</span>32</div>
+                    <div class="choice"><span class="choice-label">(D)</span>35</div>
+                    <div class="choice"><span class="choice-label">(E)</span>40</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 22</div>
+                <div class="question-text"><p>On a twenty-question test, each correct answer is worth 5 points, each unanswered question is worth 1 point and each incorrect answer is worth 0 points. Which of the following scores is <b>NOT</b> possible?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>90</div>
+                    <div class="choice"><span class="choice-label">(B)</span>91</div>
+                    <div class="choice"><span class="choice-label">(C)</span>92</div>
+                    <div class="choice"><span class="choice-label">(D)</span>95</div>
+                    <div class="choice"><span class="choice-label">(E)</span>97</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> E</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 23</div>
+                <div class="question-text"><p>Points $R$, $S$ and $T$ are vertices of an equilateral triangle, and points $X$, $Y$ and $Z$ are midpoints of its sides. How many noncongruent triangles can bedrawn using any three of these six points as vertices?</p><p><img src="https://latex.artofproblemsolving.com/8/5/a/85a81732e12f5eaa1d40ce7d0ba5d9185110000f.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>1</div>
+                    <div class="choice"><span class="choice-label">(B)</span>2</div>
+                    <div class="choice"><span class="choice-label">(C)</span>3</div>
+                    <div class="choice"><span class="choice-label">(D)</span>4</div>
+                    <div class="choice"><span class="choice-label">(E)</span>20</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 24</div>
+                <div class="question-text"><p>Each half of this figure is composed of 3 red triangles, 5 blue triangles and 8 white triangles. When the upper half is folded down over the centerline, 2 pairs of red triangles coincide, as do 3 pairs of blue triangles. There are 2 red-white pairs. How many white pairs coincide?</p><p><img src="https://latex.artofproblemsolving.com/a/6/e/a6ea4df0291b906ab438eabfdd597f614bf8c42b.png" alt="Question diagram" class="question-image" /></p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>4</div>
+                    <div class="choice"><span class="choice-label">(B)</span>5</div>
+                    <div class="choice"><span class="choice-label">(C)</span>6</div>
+                    <div class="choice"><span class="choice-label">(D)</span>7</div>
+                    <div class="choice"><span class="choice-label">(E)</span>9</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> B</div>
+            </div>
+
+            <div class="question">
+                <div class="question-header">Problem 25</div>
+                <div class="question-text"><p>There are 24 four-digit whole numbers that use each of the four digits 2, 4, 5 and 7 exactly once. Only one of these four-digit numbers is a multiple of another one. Which of the following is it?</p></div>
+                <div class="choices">
+                    <div class="choice"><span class="choice-label">(A)</span>5724</div>
+                    <div class="choice"><span class="choice-label">(B)</span>7245</div>
+                    <div class="choice"><span class="choice-label">(C)</span>7254</div>
+                    <div class="choice"><span class="choice-label">(D)</span>7425</div>
+                    <div class="choice"><span class="choice-label">(E)</span>7542</div>
+                </div>
+                <div class="answer"><span class="answer-label">Answer:</span> D</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
