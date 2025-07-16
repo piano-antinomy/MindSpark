@@ -52,13 +52,42 @@ Those are the official categories and subcategories, you are only allowed to use
   }
 } 
 
-I have problems in backend-java/questions/AMC_processed/AMC_10_combined folder
 
-We will process file one by one. The files are already organized by year in the format of <year>_AMC_10.json
-When I say a year, for example 2010, it means the file is 2010_AMC_10.json
 
-There are 50 problems in each file, under the problems key
+There are 50 problems under the problems key
 Each problem has a unique id, for example, amc_2010_10a_1, amc_2010_10a_2, and a question and solutions section.
+
+~~~~~~~~~~~
+
+read each problem's question and solutions field and dump your categorization as a json. 
+
+the output should like like 
+
+{
+
+<problem_id>: {"category": xxx, "sub_category": xxx},
+
+...
+
+}
+
+~~~~~~~~~~~~~
+
+review your categorization again, tell me which one you disagree with, and your new proposed category and sub category. do not give me reasoning. just your new proposal very concisely
+
+~~~~~~~~~~~~~
+
+review your new proposal, and read those problems again, tell me which one you agree and which you disagree. do not give me reasonining. just tell me your decision
+
+~~~~~~~~~~~~
+
+update your json again for the new categories you agree with
+
+～～～～～～
+
+you are using invalid categories for those questions. fix them, then generate a new json just containing those problem
+
+
 
 
 In this project, I need you to do two things:

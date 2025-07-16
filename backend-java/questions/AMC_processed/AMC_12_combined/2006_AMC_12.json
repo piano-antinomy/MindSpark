@@ -7,6 +7,12 @@
       "question": "<p>Sandwiches at Joe's Fast Food cost $$3$ each and sodas cost $$2$ each. How many dollars will it cost to purchase $5$ sandwiches and $8$ sodas?</p>",
       "solutions": [
         "<p>The $5$ sandwiches cost $5\\cdot 3=15$ dollars. The $8$ sodas cost $8\\cdot 2=16$ dollars. In total, the purchase costs $15+16=\\boxed{\\textbf{(A) }31}$ dollars.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -14,6 +20,12 @@
       "question": "<p>Define $x\\otimes y=x^3-y$. What is $h\\otimes (h\\otimes h)$?</p>",
       "solutions": [
         "<p>By the definition of $\\otimes$, we have $h\\otimes h=h^{3}-h$. </p><p>Then, $h\\otimes (h\\otimes h)=h\\otimes (h^{3}-h)=h^{3}-(h^{3}-h)=\\boxed{\\textbf{(C) }h}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
       ]
     },
     {
@@ -22,6 +34,12 @@
       "solutions": [
         "<p>Let $m$ be Mary's age. Then $\\frac{m}{30}=\\frac{3}{5}$. Solving for $m$, we obtain $m=\\boxed{\\textbf{(B) }18}.$</p>",
         "<p>We can see this is a combined ratio of $8$, $(5+3)$. We can equalize by doing $30\\div5=6$, and $6\\cdot3=\\boxed{\\textbf{(B) }18}$. With the common ratio of $8$ and difference ratio of $6$, we see $6\\cdot8=30+18$. Therefore, we can see our answer is correct.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -31,6 +49,12 @@
         "<p>From the <a href=\"/wiki/index.php/Greedy_algorithm\" title=\"Greedy algorithm\">greedy algorithm</a>, we have $9$ in the hours section and $59$ in the minutes section. $9+5+9=\\boxed{\\textbf{(E) }23}$</p>",
         "<p>With a matrix, we can see$\\begin{bmatrix} 1+2&9&6&3\\\\ 1+1&8&5&2\\\\ 1+0&7&4&1 \\end{bmatrix}$The largest single digit sum we can get is $9$.For the minutes digits, we can combine the largest $2$ digits, which are $9,5 \\Rightarrow 9+5=14$, and finally $14+9=\\boxed{\\textbf{(E) }23}$</p>",
         "<p>We first note that since the watch displays time in AM and PM, the value for the hours section varies from $00-12$. Therefore, the maximum value of the digits for the hours is when the watch displays $09$, which gives us $0+9=9$.</p><p>Next, we look at the value of the minutes section, which varies from $00-59$. Let this value be a number $ab$. We quickly find that the maximum value for $a$ and $b$ is respectively $5$ and $9$.</p><p>Adding these up, we get $9+5+9=\\boxed{\\textbf{(E) }23}$.</p><p>~<a href=\"/wiki/index.php/User:Dairyqueenxd\" title=\"User:Dairyqueenxd\">Dairyqueenxd</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "logical_reasoning"
+        }
       ]
     },
     {
@@ -38,6 +62,12 @@
       "question": "<p>Doug and Dave shared a pizza with $8$ equally-sized slices. Doug wanted a plain pizza, but Dave wanted anchovies on half the pizza. The cost of a plain pizza was $8$ dollars, and there was an additional cost of $2$ dollars for putting anchovies on one half. Dave ate all the slices of anchovy pizza and one plain slice. Doug ate the remainder. Each paid for what he had eaten. How many more dollars did Dave pay than Doug?</p>",
       "solutions": [
         "<p>Dave and Doug paid $8+2=10$ dollars in total. Doug paid for three slices of plain pizza, which cost $\\frac{3}{8}\\cdot 8=3$. Dave paid $10-3=7$ dollars. Dave paid $7-3=\\boxed{\\textbf{(D) }4}$ more dollars than Doug.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -47,6 +77,12 @@
         "<p>Since the two <a href=\"/wiki/index.php/Hexagon\" title=\"Hexagon\">hexagons</a> are going to be repositioned to form a <a href=\"/wiki/index.php/Square_(geometry)\" title=\"Square (geometry)\"> square</a> without overlap, the <a href=\"/wiki/index.php/Area\" title=\"Area\">area</a> will remain the same. The rectangle's area is $18\\cdot8=144$. This means the square will have four sides of length 12. The only way to do this is shown below.<br/></p><p>[asy] size(175); pair A,B,C,D,E,F,G,H; A=(0,8); B=(12,12); C=(12,4); D=(0,0); E=(0,12); F=(12,0); G=(6,4); H=(6,8); draw(A--E--B--C--G--H--A--D--F--C); label(\"$A$\",A,W); label(\"$B$\",B,NE); label(\"$C$\",(12.6,4)); label(\"$D$\",D,SW); label(\"$12$\",E--B,N); label(\"$12$\",D--F,S);  label(\"$4$\",E--A,W); label(\"$4$\",(12.4,-1.75),E); label(\"$8$\",A--D,W); label(\"$8$\",(12.4,4),E); label(\"$y$\",A--H,S); label(\"$y$\",G--C,N); [/asy]</p><p>As you can see from the diagram, the <a href=\"/wiki/index.php/Line_segment\" title=\"Line segment\">line segment</a> denoted as $y$ is half the length of the side of the square, which leads to $y = \\frac{12}{2} = \\boxed{\\textbf{(A) }6}$.</p><p>As solution 1 says, the two hexagons are going to be repositioned to form a square without overlap. Thus we create this square out of the original rectangle.</p><p><br/>[asy] size(175); pair A,B,C,D,E,F,G,H; A=(0,8); B=(12,12); C=(12,4); D=(0,0); E=(0,12); F=(12,0); G=(6,4); H=(6,8); draw(A--E--B--C--G--H--A--D--F--C); label(\"$y$\",A--H,S); label(\"$y$\",G--C,N); [/asy]</p><p>As you can see from the diagram, the length $y$ fits into the previously blank side, so we know that it is equal to $y$.</p><p>[asy] unitsize(3mm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=4; draw((0,4)--(18,4)--(18,-4)--(0,-4)--cycle); draw((6,4)--(6,0)--(12,0)--(12,-4)); label(\"$y$\",(9,-2),NW); label(\"$A$\",(0,4),NW); label(\"$B$\",(18,4),NE); label(\"$C$\",(18,-4),SE); label(\"$D$\",(0,-4),SW); label(\"$y$\",(3,4),S); label(\"$y$\",(15,-4),N); label(\"$18$\",(9,4),N); label(\"$18$\",(9,-4),S); label(\"$8$\",(0,0),W); label(\"$8$\",(18,0),E); dot((0,4)); dot((18,4)); dot((18,-4)); dot((0,-4));[/asy]</p><p><br/>From there we can say $3y = 18$ so $y = \\frac{18}{3} = \\boxed{\\textbf{(A) }6}$.</p><p>~Ezraft</p>",
         "<p>As solution 1 says, the two hexagons are going to be repositioned to form a square without overlap. Thus we create this square out of the original rectangle.</p><p><br/>[asy] size(175); pair A,B,C,D,E,F,G,H; A=(0,8); B=(12,12); C=(12,4); D=(0,0); E=(0,12); F=(12,0); G=(6,4); H=(6,8); draw(A--E--B--C--G--H--A--D--F--C); label(\"$y$\",A--H,S); label(\"$y$\",G--C,N); [/asy]</p><p>As you can see from the diagram, the length $y$ fits into the previously blank side, so we know that it is equal to $y$.</p><p>[asy] unitsize(3mm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=4; draw((0,4)--(18,4)--(18,-4)--(0,-4)--cycle); draw((6,4)--(6,0)--(12,0)--(12,-4)); label(\"$y$\",(9,-2),NW); label(\"$A$\",(0,4),NW); label(\"$B$\",(18,4),NE); label(\"$C$\",(18,-4),SE); label(\"$D$\",(0,-4),SW); label(\"$y$\",(3,4),S); label(\"$y$\",(15,-4),N); label(\"$18$\",(9,4),N); label(\"$18$\",(9,-4),S); label(\"$8$\",(0,0),W); label(\"$8$\",(18,0),E); dot((0,4)); dot((18,4)); dot((18,-4)); dot((0,-4));[/asy]</p><p><br/>From there we can say $3y = 18$ so $y = \\frac{18}{3} = \\boxed{\\textbf{(A) }6}$.</p><p>~Ezraft</p>",
         "<p>Because the two hexagons are congruent, we know that the perpendicular line to $A$ is half of $BC$, or $4$. Next, we plug the answer choices in to see which one works. Trying $A$, we get the area of one hexagon is $72$ , as desired, so the answer is $\\boxed{\\textbf{(A) }6}$ .</p><p>~coolmath2017</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -54,6 +90,12 @@
       "question": "<p>Mary is $20\\%$ older than Sally, and Sally is $40\\%$ younger than Danielle. The sum of their ages is $23.2$ years. How old will Mary be on her next birthday?</p>",
       "solutions": [
         "<p>Let $m$ be Mary's age, let $s$ be Sally's age, and let $d$ be Danielle's age. We have $s=.6d$, and $m=1.2s=1.2(.6d)=.72d$. The sum of their ages is $m+s+d=.72d+.6d+d=2.32d$. Therefore, $2.32d=23.2$, and $d=10$. Then $m=.72(10)=7.2$. Mary will be $8$ on her next birthday. The answer is $\\mathrm{(B)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -63,6 +105,12 @@
         "<p>Notice that if the consecutive positive integers have a sum of $15$, then their average (which could be a fraction) must be a divisor of $15$. If the number of integers in the list is odd, then the average must be either $1, 3,$ or $5$, and $1$ is clearly not possible. The other two possibilities both work:</p><ul><li>$1 + 2 + 3 + 4 + 5 = 15$</li><li>$4 + 5 + 6 = 15$</li></ul><p>If the number of integers in the list is even, then the average will have a $\\frac{1}{2}$. The only possibility is $\\frac{15}{2}$, from which we get:</p><ul><li>$15 = 7 + 8$</li></ul><p>Thus, the correct answer is $\\boxed{\\textbf{(C) }3}.$</p><p><br/>Question: (RealityWrites) Is it possible that the answer is $4$, because $0+1+2+3+4+5$ should technically count, right?</p><p>Answer: (IMGROOT2) It isn't possible because the question asks for positive integers, and this means that negative integers or zero aren't allowed.</p><p>Note to readers: make sure to always read the problem VERY carefully before attempting; it could mean the difference of making the cutoff.</p>",
         "<p>Any set will form a arithmetic progression with the first term say $a$. Since the numbers are consecutive the common difference $d = 1$.</p><p>The sum of the AP has to be 15. So,</p><p>\\[S_n = \\frac{n}{2} \\cdot (2a + (n-1)d)\\]\\[S_n = \\frac{n}{2} \\cdot (2a + (n-1)1)\\]\\[15 = \\frac{n}{2} \\cdot (2a + n - 1)\\]\\[2an + n^2 - n = 30\\]\\[n^2 + n(2a - 1) - 30 = 0\\]</p><p>Now we need to find the number of possible sets of values of a, n which satisfy this equation. Now $a$ cannot be 15 as we need 2 terms. So a can only be less the 15.</p><p>Trying all the values of a from 1 to 14 we observe that $a = 4$, $a = 7$ and $a = 1$ provide the only real solutions to the above equation.The three possibilites of a and n are.</p><p>\\[(a,n) = (4,3),(7, 2),(1, 6)\\]</p><p>The above values are obtained by solving the following equations obtained by substituting the above mentioned values of a into $n^2 + n(2a - 1) - 30 = 0$,</p><p>\\[n^2 + 7n - 30 = 0\\]\\[n^2 + 13n - 30 = 0\\]\\[n^2 - n - 30 = 0\\]</p><p>Since there are 3 possibilities the answer is $\\boxed{\\textbf{(C) }3}.$</p>",
         "<p>We want some consecutive numbers that add up. We can use casework to solve this. We know that any set of 6 consecutive, positive integers cannot be greater than 5. Therefore the max amount of elements is 5.</p><p>-We know that 15/5 = 3, so if we put 3 as our middle number and expand evenly, we get {1,2,3,4,5}</p><p>-By a bit of bashing we find that there are no solutions</p><p>-We know that 15/3 = 5, so if we put 5 as our middle number and expand evenly, we get {4,5,6}</p><p>-We'll say x is the lower number. Thus x + (x + 1) = 15. Solving for x, x = 7. Thus getting {7,8}</p><p>Adding up all the cases we get 1 + 0 + 1 + 1 = $\\boxed{\\textbf{(C) }3}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "sequences_patterns"
+        }
       ]
     },
     {
@@ -71,6 +119,12 @@
       "solutions": [
         "<p>Let the price of a pencil be $p$ and an eraser $e$. Then $13p + 3e = 100$ with $p > e > 0$. Since $p$ and $e$ are <a href=\"/wiki/index.php/Positive_integer\" title=\"Positive integer\">positive integers</a>, we must have $e \\geq 1$ and $p \\geq 2$.</p><p>Considering the <a href=\"/wiki/index.php/Equation\" title=\"Equation\">equation</a> $13p + 3e = 100$ <a class=\"mw-redirect\" href=\"/wiki/index.php/Modulo\" title=\"Modulo\">modulo</a> 3 (that is, comparing the <a href=\"/wiki/index.php/Remainder\" title=\"Remainder\">remainders</a> when both sides are divided by 3) we have $p + 0e \\equiv 1 \\pmod 3$ so $p$ leaves a remainder of 1 on division by 3.</p><p>Since $p \\geq 2$, possible values for $p$ are 4, 7, 10 ....</p><p>Since 13 pencils cost less than 100 cents, $13p < 100$. $13 \\times 10 = 130$ is too high, so $p$ must be 4 or 7.</p><p>If $p = 4$ then $13p = 52$ and so $3e = 48$ giving $e = 16$. This contradicts the pencil being more expensive. The only remaining value for $p$ is 7; then the 13 pencils cost $7 \\times 13= 91$ cents and so the 3 erasers together cost 9 cents and each eraser costs $\\frac{9}{3} = 3$ cents.</p><p>Thus one pencil plus one eraser cost $7 + 3 = 10$ cents, which is answer choice $\\mathrm{(A) \\ }$.</p>",
         "<p>Since we know that the values of pencils and erasers are both whole numbers, and that there are $3$ erasers and $13$ pencils, we can choose numbers to be the value for the pencil, and if the remainder to $1.00$ is divisible by 3, we know our answer is correct. There are 7 numbers to check, although we can eliminate $1, 2, 3, 4,$ and $5$ mentally, since those numbers would probably have the cost of erasers higher than the cost of pencils (6 would too, but it is faster to just test 6). Trying 6, $13 \\cdot 6 = 72$. 28 is not divisible by 3, so we know that this number is not correct. Moving on to 7, $13 \\cdot 7 = 91$. We know that 9 is a multiple of 3, so this value works! </p><p>Since the total cost of erasers is 9 cents, we know the individual eraser is $\\frac{9}{3} = 3$. $3 + 7 = 10$ so our answer is answer choice $\\mathrm{(A) \\ }$</p><p>~Shadow-18</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "diophantine_equations"
+        }
       ]
     },
     {
@@ -78,6 +132,12 @@
       "question": "<p>For how many real values of $x$ is $\\sqrt{120-\\sqrt{x}}$ an integer?</p>",
       "solutions": [
         "<p>For $\\sqrt{120-\\sqrt{x}}$ to be an integer, $120-\\sqrt{x}$ must be a perfect square. </p><p>Since $\\sqrt{x}$ can't be negative, $120-\\sqrt{x} \\leq 120$. </p><p>The perfect squares that are less than or equal to $120$ are $\\{0,1,4,9,16,25,36,49,64,81,100\\}$, so there are $11$ values for $120-\\sqrt{x}$. </p><p>Since every value of $120-\\sqrt{x}$ gives one and only one possible value for $x$, the number of values of $x$ is $\\boxed{\\textbf{(E) }11}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "general"
+        }
       ]
     },
     {
@@ -85,6 +145,12 @@
       "question": "<p>Which of the following describes the graph of the equation $(x+y)^2=x^2+y^2$?</p>",
       "solutions": [
         "<p>\\begin{align*}(x+y)^2&=x^2+y^2\\\\ x^2 + 2xy + y^2 &= x^2 + y^2\\\\ 2xy &= 0\\end{align*}Either $x = 0$ or $y = 0$. The <a href=\"/wiki/index.php/Union\" title=\"Union\">union</a> of them is 2 lines, and thus the answer is $\\mathrm{(C)}$.</p><p>[asy] draw((0,-50)--(0,50));draw((-50,0)--(50,0));[/asy]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -93,6 +159,12 @@
       "solutions": [
         "<p>The inside diameters of the rings are the positive integers from $1$ to $18$. The total distance needed is the sum of these values plus $2$ for the top of the first ring and the bottom of the last ring. Using the formula for the sum of an <a class=\"mw-redirect\" href=\"/wiki/index.php/Arithmetic_series\" title=\"Arithmetic series\">arithmetic series</a>, the answer is $\\frac{18 \\cdot 19}{2} + 2 = \\boxed{\\textbf{(B) }173}$.</p>",
         "<p>Alternatively, the sum of the consecutive integers from 3 to 20 is $\\frac{1}{2}(18)(3+20) = 207$. However, the 17 <a href=\"/wiki/index.php/Intersection\" title=\"Intersection\">intersections</a> between the rings must be subtracted, and we also get $207 - 2(17) = \\boxed{\\textbf{(B) }173}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -100,6 +172,12 @@
       "question": "<p>The <a href=\"/wiki/index.php/Vertex\" title=\"Vertex\">vertices</a> of a $3-4-5$ <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right triangle</a> are the centers of three mutually externally tangent <a href=\"/wiki/index.php/Circle\" title=\"Circle\">circles</a>, as shown. What is the sum of the areas of the three circles?</p><p><a class=\"image\" href=\"/wiki/index.php/File:Original_2006_12A_13.png\">Original 2006 12A 13.png</a></p>",
       "solutions": [
         "<p>Let the radius of the smallest circle be $r_A$, the radius of the second largest circle be $r_B$, and the radius of the largest circle be $r_C$. \\[r_A + r_B = 3\\]\\[r_A + r_C = 4\\]\\[r_ B + r_C = 5\\]</p><p>Adding up all these equations and then dividing both sides by 2, we get,</p><p>\\[r_A + r_B + r_C = 6\\]</p><p>Then, we get $r_A = 1$, $r_B = 2$, and $r_C = 3$ Then we get $1^2 \\pi + 2^2 \\pi + 3^2 \\pi = 14 \\pi \\iff\\mathrm{(E)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
       ]
     },
     {
@@ -109,6 +187,12 @@
         "<p>The problem can be restated as an equation of the form $300p + 210g = x$, where $p$ is the number of pigs, $g$ is the number of goats, and $x$ is the positive debt. The problem asks us to find the lowest <i>x</i> possible. <i>$p$</i> and <i>$g$</i> must be integers, which makes the equation a <a href=\"/wiki/index.php/Diophantine_equation\" title=\"Diophantine equation\">Diophantine equation</a>. <a class=\"mw-redirect\" href=\"/wiki/index.php/Bezout%27s_Lemma\" title=\"Bezout's Lemma\">Bezout's Lemma</a> tells us that the smallest $c$ for the Diophantine equation $am + bn = c$ to have solutions is when $c$ is the GCD (<a href=\"/wiki/index.php/Greatest_common_divisor\" title=\"Greatest common divisor\">greatest common divisor</a>) of $a$ and $b$. Therefore, the answer is $gcd(300,210)=\\boxed{\\textbf{(C) }30}.$</p>",
         "<p>Alternatively, note that $300p + 210g = 30(10p + 7g)$ is divisible by $30$ no matter what $p$ and $g$ are, so our answer must be divisible by $30$. Since we want the smallest integer, we can suppose that the answer is $30$ and go on from there. Note that three goats minus two pigs gives us $630 - 600 = 30$ exactly. Since our supposition can be achieved, the answer is $\\boxed{\\textbf{(C) }30}$.</p>",
         "<p>Let us simplify this problem. Dividing by $30$, we get a pig to be: $\\frac{300}{30} =  10$, and a goat to be $\\frac{210}{30}= 7$. It becomes evident that if you exchange $5$ pigs for $7$ goats, we get the smallest positive difference - $5\\cdot 10 - 7\\cdot 7 = 50-49 = 1$, since we can't make a non-integer with a linear combination of integers. Since we originally divided by $30$, we need to multiply again, thus getting the answer $1\\cdot 30 = \\boxed{\\textbf{(C) }30}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
       ]
     },
     {
@@ -116,6 +200,12 @@
       "question": "<p>Suppose $\\cos x=0$ and $\\cos (x+z)=1/2$. What is the smallest possible positive value of $z$?</p>",
       "solutions": [
         "<ul><li>For $\\cos x = 0$, x must be in the form of $\\frac{\\pi}{2} + \\pi n$, where $n$ denotes any <a href=\"/wiki/index.php/Integer\" title=\"Integer\">integer</a>.</li><li>For $\\cos (x+z) = 1 / 2$, $x + z = \\frac{\\pi}{3} +2\\pi n, \\frac{5\\pi}{3} + 2\\pi n$.</li></ul><p>The smallest possible value of $z$ will be that of $\\frac{5\\pi}{3} - \\frac{3\\pi}{2} = \\frac{\\pi}{6} \\Rightarrow \\mathrm{(A)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
       ]
     },
     {
@@ -123,6 +213,12 @@
       "question": "<p>Circles with centers $A$ and $B$ have radius 3 and 8, respectively. A <a href=\"/wiki/index.php/Common_internal_tangent_line\" title=\"Common internal tangent line\"> common internal tangent</a> intersects the circles at $C$ and $D$, respectively. Lines $AB$ and $CD$ intersect at $E$, and $AE=5$. What is $CD$?</p><p>[asy] unitsize(2.5mm); defaultpen(fontsize(10pt)+linewidth(.8pt)); dotfactor=3;  pair A=(0,0), Ep=(5,0), B=(5+40/3,0); pair M=midpoint(A--Ep); pair C=intersectionpoints(Circle(M,2.5),Circle(A,3))[1]; pair D=B+8*dir(180+degrees(C));  dot(A); dot(C); dot(B); dot(D); draw(C--D); draw(A--B); draw(Circle(A,3)); draw(Circle(B,8));  label(\"$A$\",A,W); label(\"$B$\",B,E); label(\"$C$\",C,SE); label(\"$E$\",Ep,SSE); label(\"$D$\",D,NW); [/asy]</p>",
       "solutions": [
         "<p><a class=\"image\" href=\"/wiki/index.php/File:2006_AMC12A-16a.png\">2006 AMC12A-16a.png</a></p><p>$\\angle AED$ and $\\angle BEC$ are vertical angles so they are congruent, as are angles $\\angle ADE$ and $\\angle BCE$ (both are right angles because the radius and <a class=\"mw-redirect\" href=\"/wiki/index.php/Tangent_line\" title=\"Tangent line\">tangent line</a> at a point on a circle are always perpendicular). Thus, $\\triangle ACE \\sim \\triangle BDE$.By the <a href=\"/wiki/index.php/Pythagorean_Theorem\" title=\"Pythagorean Theorem\">Pythagorean Theorem</a>, line segment $DE = 4$. The sides are proportional, so $\\frac{DE}{AD} = \\frac{CE}{BC} \\Rightarrow \\frac{4}{3} = \\frac{CE}{8}$. This makes $CE = \\frac{32}{3}$ and $CD = CE + DE = 4 + \\frac{32}{3} = \\boxed{\\textbf{(B) }\\frac{44}{3}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
       ]
     },
     {
@@ -135,6 +231,12 @@
         "<p>(Similar to Solution 1)First, draw line AE and mark a point Z that is equidistant from E and D so that $\\angle{DZE} = 90^\\circ$ and that line $\\overline{AZ}$ includes point D. Since DE is equal to the radius $r$, $DZ=EZ=\\frac{r}{\\sqrt2}=\\frac{r\\sqrt2}{2}.$</p><p>Note that triangles $\\triangle AFE$ and $\\triangle AZE$ share the same hypotenuse $(AE)$, meaning that\\[AZ^2+EZ^2=AF^2+EF^2\\]Plugging in our values we have:\\[\\left(s+\\frac{r\\sqrt{2}}{2}\\right)^2+\\left(\\frac{r\\sqrt{2}}{2}\\right)^2=\\left(\\sqrt{9+5\\sqrt{2}}\\right)^2+r^2\\]\\[s^2+sr\\sqrt{2}+\\frac{r^2}{2}+\\frac{r^2}{2}=9+5\\sqrt{2}+r^2\\]\\[s^2+sr\\sqrt{2}=9+5\\sqrt{2}\\]By logic $s=3$ and $sr=5 \\implies r=5/3.$</p><p>Therefore, $\\frac{\\frac{5}{3}}{3}=\\frac{5}{9}=\\boxed{B}$</p>",
         "<p>Let $B=(0,0)$, $C=(s,0)$, $A=(0,s)$, $D=(s,s)$, and $E=\\left(s+\\frac{r}{\\sqrt{2}},s+\\frac{r}{\\sqrt{2}} \\right)$. Apply the Pythagorean Theorem to $\\triangle AFE$ to obtain \\[r^2+\\left(9+5\\sqrt{2}\\right)=\\left(s+\\frac{r}{\\sqrt{2}}\\right)^2+\\left(\\frac{r}{\\sqrt{2}}\\right)^2,\\] from which $9+5\\sqrt{2}=s^2+rs\\sqrt{2}$. Because $r$ and $s$ are rational, it follows that $s^2=9$ and $rs=5$, so $r/s = \\boxed{5/9}$.</p><p>OR</p><p>Extend $\\overline{AD}$ past $D$ to meet the circle at $G \\ne D$. Because $E$ is collinear with $B$ and $D$, $\\angle EDG = 45^\\circ.$ Also, $ED = EG,$ which implies $\\angle EGD = 45^\\circ$, so $\\triangle EDG$ is an isosceles right triangle. Thus $DG = r\\sqrt{2}$. By the Power of a Point Theorem,\\begin{align*} 9+5\\sqrt{2} &= AF^2 \\\\ &= AD\\cdot AG\\\\ & = AD\\cdot \\left(AD+DG\\right) \\\\ &= s\\left(s+r\\sqrt{2}\\right) \\\\ &= s^2+rs\\sqrt{2}.\\end{align*} As in the first solution, we conclude that $r/s=\\boxed{5/9}$.</p>",
         "<p>(Last minute solution) We roughly measure the distance of $r$ and the distance of $y$. Since $r$ is clearly less than $s$, we can eliminate answer choices (D) and (E). Next, if we compare the distances, $r$ seems to be just a little more than half of $s$, thus eliminating answer choice (A). $r$ is only a little bit bigger than half of $s$, so we can reasonably assume that their ratio is less than $\\frac{3}{5}$. That leaves us with answer choice $\\boxed{C}$ , or $\\frac{5}{9}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
       ]
     },
     {
@@ -143,6 +245,12 @@
       "solutions": [
         "<p>Quickly verifying by plugging in values verifies that $-1$ and $1$ are in the domain.</p><p>$f(x)+f\\left(\\frac{1}{x}\\right)=x$</p><p>Plugging in $\\frac{1}{x}$ into the <a href=\"/wiki/index.php/Function\" title=\"Function\">function</a>: </p><p>$f\\left(\\frac{1}{x}\\right)+f\\left(\\frac{1}{\\frac{1}{x}}\\right)=\\frac{1}{x}$</p><p>$f\\left(\\frac{1}{x}\\right)+ f(x)= \\frac{1}{x}$</p><p>Since $f(x) + f\\left(\\frac{1}{x}\\right)$ cannot have two values: </p><p>$x = \\frac{1}{x}$</p><p>$x^2 = 1$</p><p>$x=\\pm 1$</p><p>Therefore, the largest <a href=\"/wiki/index.php/Set\" title=\"Set\">set</a> of <a href=\"/wiki/index.php/Real_number\" title=\"Real number\">real numbers</a> that can be in the <a href=\"/wiki/index.php/Domain\" title=\"Domain\">domain</a> of $f$ is $\\{-1,1\\} \\Rightarrow E$</p>",
         "<p>We know that $f(x) + f \\left(\\frac{1}{x}\\right) = x.$ Plugging in $x = \\frac{1}{x}$ we get \\[f \\left(\\frac{1}{x}\\right) + f \\left(\\frac{1}{\\frac{1}{x}}\\right) = \\frac{1}{x}\\] \\[f \\left(\\frac{1}{x}\\right) + f(x) = \\frac{1}{x}.\\]</p><p>Also notice \\[f \\left(\\frac{1}{x}\\right) + f(x) = x\\] by the commutative property(this is the same as the equation given in the problem. We are just rearranging). So we can set $\\frac{1}{x} = x$ which gives us $x = \\pm 1$ which is answer option $\\boxed{\\mathrm{(E) \\ }  \\{-1,1\\}}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
       ]
     },
     {
@@ -150,6 +258,12 @@
       "question": "<p><a href=\"/wiki/index.php/Circle\" title=\"Circle\">Circles</a> with <a href=\"/wiki/index.php/Center_(geometry)\" title=\"Center (geometry)\"> centers</a> $(2,4)$ and $(14,9)$ have <a href=\"/wiki/index.php/Radius\" title=\"Radius\"> radii</a> $4$ and $9$, respectively. The equation of a common external <a class=\"mw-redirect\" href=\"/wiki/index.php/Tangent_line\" title=\"Tangent line\">tangent</a> to the circles can be written in the form $y=mx+b$ with $m>0$. What is $b$?[asy] size(150); defaultpen(linewidth(0.7)+fontsize(8)); draw(circle((2,4),4));draw(circle((14,9),9)); draw((0,-2)--(0,20));draw((-6,0)--(25,0)); draw((2,4)--(2,4)+4*expi(pi*4.5/11)); draw((14,9)--(14,9)+9*expi(pi*6/7)); label(\"4\",(2,4)+2*expi(pi*4.5/11),(-1,0)); label(\"9\",(14,9)+4.5*expi(pi*6/7),(1,1)); label(\"(2,4)\",(2,4),(0.5,-1.5));label(\"(14,9)\",(14,9),(1,-1)); draw((-4,120*-4/119+912/119)--(11,120*11/119+912/119)); dot((2,4)^^(14,9)); [/asy]</p>",
       "solutions": [
         "<p>Let $L_1$ be the line that goes through $(2,4)$ and $(14,9)$, and let $L_2$ be the line $y=mx+b$. If we let $\\theta$ be the measure of the acute angle formed by $L_1$ and the x-axis, then $\\tan\\theta=\\frac{5}{12}$. $L_1$ clearly bisects the angle formed by $L_2$ and the x-axis, so $m=\\tan{2\\theta}=\\frac{2\\tan\\theta}{1-\\tan^2{\\theta}}=\\frac{120}{119}$. We also know that $L_1$ and $L_2$ intersect at a point on the x-axis. The equation of $L_1$ is $y=\\frac{5}{12}x+\\frac{19}{6}$, so the coordinate of this point is $\\left(-\\frac{38}{5},0\\right)$. Hence the equation of $L_2$ is $y=\\frac{120}{119}x+\\frac{912}{119}$, so $b=\\frac{912}{119}$, and our answer choice is $\\boxed{\\mathrm{E}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -161,6 +275,12 @@
         "<p>As in Solution 1, the bug can move from its arbitrary starting vertex to a neighboring vertex in $3$ ways. After this, the bug can move to a new neighbor in $2$ ways (it cannot return to the first vertex). The total number of paths (as stated above) is $3^7$ or $2187$. Therefore, the probability of the bug following a good path is equal to $\\frac{6x}{2187}$ for some positive integer $x$. The only answer choice which can be expressed in this form is $\\boxed{\\textbf{(C) }\\frac2{243}}$.</p>",
         "<p>Pick 1 vertex to start from. Notice that on all the odd moves the bug will move to 1 of 4 other vertices. Notice that on all even moves the bug must go to 1 of 3 other vertices (4 including the starting vertex). Thus, the bug will end on one of the odd vertices. There are 3 choices for the bug's first move from the starting vertex, and 2 choices for the bug's second move (it can't go back to the previous vertices). Then, notice that the bug has 3 choices of an odd vertex to end on not including the vertex the bug went to on move 1. Now pick 1 of the 3 ending vertices to end on. Notice that there are only 6 valid paths from start to finish (1 valid path after moves 1 and 2) to that point because all the moves are forced after the first 2 moves (try it out). Thus, there are $3 \\cdot 2 \\cdot 3 = 18$ valid paths the bug can take. There are $3^7 = 2187$total paths, so the answer is 18/2187 = $\\boxed{\\textbf{(C) }\\frac{2}{243}}$.</p>",
         "<p>Let the cube have vertices $ABCDEFGH$ such that $ABCD$ and $EFGH$ are two opposite faces with $A$ above $E$ and $B$ above $F$. The bug starts at $A$ and every step has 3 choices so that there're $3^7 = 2187$ possible paths. We can split the case into odd and even steps. After an odd number of steps, the possible points that can be reached are $B$,$D$,$G$,$E$. Then, for even-numbered steps, the remaining points can be reached. Since he has taken seven steps, the end point must be one of the points in $B$,$D$,$G$,$E$. At this point, we classify and discuss the movement trajectory of the bug. </p><p>Case 1: It moves to another plane after completing one plane. If it starts on the upper plane, there are two possibilities for the first step, $B$ or $D$. The second and third steps are restricted to the upper plane, and the fourth step will move to the nearby point on another plane. These three steps have only one possibility each, so there is no need for classification. Then, when it reaches the lower plane, the fifth step has two possibilities, thus limiting the sixth and seventh steps as well. Proceeding in this way, the bug can also move from left to right or from front to back. Therefore, there are $2 \\cdot 2 \\cdot 3 = 12$ situations. </p><p>Case 2: Opposite to case 1, it can directly pass through to another point G on the other diagonal of the cube within the first three steps. There are three choices for the first step, two choices for the second step, and only one choice for the third step. Therefore, there are $3 \\cdot 2 = 6$ situations for the first three steps. The subsequent steps will be restricted to a single path (try it yourself). </p><p>In summary, there are 12 + 6 = 18 situations in total. Therefore, the final probability is 18/2187 = $\\boxed{\\textbf{(C) }\\frac2{243}}$.</p><p>~ A mystery eastern egg (wtng)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -168,6 +288,12 @@
       "question": "<p>Let $S_1=\\{(x,y)|\\log_{10}(1+x^2+y^2)\\le 1+\\log_{10}(x+y)\\}$and $S_2=\\{(x,y)|\\log_{10}(2+x^2+y^2)\\le 2+\\log_{10}(x+y)\\}$.</p><p>What is the ratio of the area of $S_2$ to the area of $S_1$?</p>",
       "solutions": [
         "<p>Looking at the constraints of $S_1$:</p><p>$x+y > 0$</p><p>$\\log_{10}(1+x^2+y^2)\\le 1+\\log_{10}(x+y)$</p><p>$\\log_{10}(1+x^2+y^2)\\le \\log_{10} 10 +\\log_{10}(x+y)$</p><p>$\\log_{10}(1+x^2+y^2)\\le \\log_{10}(10x+10y)$</p><p>$1+x^2+y^2 \\le 10x+10y$</p><p>$x^2-10x+y^2-10y \\le -1$</p><p>$x^2-10x+25+y^2-10y+25 \\le 49$</p><p>$(x-5)^2 + (y-5)^2 \\le (7)^2$</p><p>$S_1$ is a circle with a radius of $7$. So, the area of $S_1$ is $49\\pi$.</p><p>Looking at the constraints of $S_2$:</p><p>$x+y > 0$</p><p>$\\log_{10}(2+x^2+y^2)\\le 2+\\log_{10}(x+y)$</p><p>$\\log_{10}(2+x^2+y^2)\\le \\log_{10} 100 +\\log_{10}(x+y)$</p><p>$\\log_{10}(2+x^2+y^2)\\le \\log_{10}(100x+100y)$</p><p>$2+x^2+y^2 \\le 100x+100y$</p><p>$x^2-100x+y^2-100y \\le -2$</p><p>$x^2-100x+2500+y^2-100y+2500 \\le 4998$</p><p>$(x-50)^2 + (y-50)^2 \\le (7\\sqrt{102})^2$</p><p>$S_2$ is a circle with a radius of $7\\sqrt{102}$. So, the area of $S_2$ is $4998\\pi$.</p><p>So the desired ratio is $\\frac{4998\\pi}{49\\pi} = 102 \\Rightarrow \\boxed{E}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "general"
+        }
       ]
     },
     {
@@ -175,6 +301,12 @@
       "question": "<p>A <a href=\"/wiki/index.php/Circle\" title=\"Circle\">circle</a> of <a href=\"/wiki/index.php/Radius\" title=\"Radius\">radius</a> $r$ is <a href=\"/wiki/index.php/Concentric\" title=\"Concentric\">concentric</a> with and outside a <a href=\"/wiki/index.php/Regular_polygon\" title=\"Regular polygon\"> regular</a> <a href=\"/wiki/index.php/Hexagon\" title=\"Hexagon\">hexagon</a> of side length $2$. The <a href=\"/wiki/index.php/Probability\" title=\"Probability\">probability</a> that three entire sides of hexagon are visible from a randomly chosen point on the circle is $1/2$. What is $r$?</p>",
       "solutions": [
         "<p>Project any two non-adjacent and non-opposite sides of the <a href=\"/wiki/index.php/Hexagon\" title=\"Hexagon\">hexagon</a> to the <a href=\"/wiki/index.php/Circle\" title=\"Circle\">circle</a>; the <a href=\"/wiki/index.php/Arc\" title=\"Arc\">arc</a> between the two points formed is the location where all three sides of the hexagon can be fully viewed. Since there are six such pairs of sides, there are six arcs. The probability of choosing a point is $1 / 2$, or if the total arc degree measures add up to $\\frac{1}{2} \\cdot 360^{\\circ} = 180^{\\circ}$. Each arc must equal $\\frac{180^{\\circ}}{6} = 30^\\mathrm{\\circ}$.</p><p><a class=\"image\" href=\"/wiki/index.php/File:2006_12A_AMC-22.png\">2006 12A AMC-22.png</a></p><p>Call the center $O$, and the two endpoints of the arc $A$ and $B$, so $\\angle AOB = 30^{\\circ}$. Let $P$ be the intersections of the projections of the sides of the hexagon corresponding to $\\overline{AB}$. Notice that $\\triangle APO$ is an <a href=\"/wiki/index.php/Isosceles_triangle\" title=\"Isosceles triangle\">isosceles triangle</a>: $\\angle AOP = 15^{\\circ}$ and $\\angle OAP = OAB - 60^{\\circ} = \\frac{180^{\\circ}-30^{\\circ}}{2} - 60^{\\circ} = 15^{\\circ}$. Since $OA$ is a radius and $OP$ can be found in terms of a side of the hexagon, we are almost done.</p><p>If we draw the altitude of $APO$ from $P$, then we get a <a href=\"/wiki/index.php/Right_triangle\" title=\"Right triangle\">right triangle</a>. Using simple trigonometry, $\\cos 15^{\\circ} = \\frac{\\frac{r}{2}}{2\\sqrt{3}} = \\frac{r}{4\\sqrt{3}}$.</p><p>Since $\\cos 15^{\\circ} = \\cos (45^{\\circ} - 30^{\\circ}) = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$, we get $r = \\left(\\frac{\\sqrt{6} + \\sqrt{2}}{4}\\right) \\cdot 4\\sqrt{3} = 3\\sqrt{2} + \\sqrt{6} \\Rightarrow \\boxed{D}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -183,6 +315,12 @@
       "solutions": [
         "<p>\\[A^1(S)=\\left(\\frac{1+x}{2},\\frac{x+x^2}{2},...,\\frac{x^{99}+x^{100}}{2}\\right)\\]\\[A^2(S)=\\left(\\frac{1+2x+x^2}{2^2},\\frac{x+2x^2+x^3}{2^2},...,\\frac{x^{98}+2x^{99}+x^{100}}{2^2}\\right)\\]\\[\\Rightarrow A^2(S)=\\left(\\frac{(x+1)^2}{2^2},\\frac{x(x+1)^2}{2^2},...,\\frac{x^{98}(x+1)^2}{2^2}\\right)\\]</p><p>In general, $A^n(S)=\\left(\\frac{(x+1)^n}{2^n},\\frac{x(x+1)^n}{2^n},...,\\frac{x^{100-n}(x+1)^n}{2^n}\\right)$ such that $A^n(s)$ has $101-n$ terms. Specifically, $A^{100}(S)=\\frac{(x+1)^{100}}{2^{100}}$ To find x, we need only solve the equation $\\frac{(x+1)^{100}}{2^{100}}=\\frac{1}{2^{50}}$. Algebra yields $x=\\sqrt{2}-1$.</p>",
         "<p>For every sequence $S=\\left(a_1,a_2,\\dots, a_n\\right)$ of at least three terms,</p><p>\\[A^2(S)=\\left(\\frac{a_1+2a_2+a_3}{4},\\frac{a_2+2a_3+a_4}{4},\\dots,\\frac{a_{n-2}+2a_{n-1}+a_n}{4}\\right).\\]Thus for $m = 1\\text{ and }2$, the coefficients of the terms in the numerator of $A^m(S)$ are the binomial coefficients $\\binom{m}{0},\\binom{m}{1},\\dots,\\binom{m}{m}$, and the denominator is $2^m$. Because $\\binom{m}{r}+\\binom{m}{r+1}=\\binom{m+1}{r+1}$ for all integers $r\\geq 0$, the coefficients of the terms in the numerators of $A^{m+1}(S)$ are $\\binom{m+1}{0},\\binom{m+1}{1},\\ldots,\\binom{m+1}{m+1}$ for $2\\leq m\\leq n-2$. The definition implies that the denominator of each term in $A^{m+1}(S)$ is $2^{m+1}$. For the given sequence, the sole term in $A^{100}(S)$ is \\[\\frac{1}{2^{100}} \\sum_{m=0}^{100} \\binom{100}{m}a_{m+1} = \\frac{1}{2^{100}} \\sum_{m=0}^{100} \\binom{100}{m}x^m = \\frac{1}{2^{100}}(x+1)^{100}.\\]Therefore, \\[\\left(\\frac{1}{2^{50}}\\right)=A^{100}(S)=\\left(\\frac{(1+x)^{100}}{2^{100}}\\right),\\]so $(1+x)^{100}=2^{50}$, and because $x>0$, we have $x=\\boxed{\\sqrt{2}-1}$.- Alcumus</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -195,6 +333,12 @@
         "<p>Using stars and bars we know that $(x+y+z)^{2006}$ has ${2006+2\\choose 2}$ or $2015028$ different terms. Now we need to find out how many of these terms are canceled out by $(x-y-z)^{2006}$. We know that for any term(let's say $x^{a}(-y)^{b}(-z)^{c}$) where $a+b+c=2006$ of the expansion of $(x-y-z)^{2006}$ is only going to cancel out with the corresponding term $x^{a}y^{b}z^{c}$ if only $b$ is odd and $c$ is even or $b$ is even and $c$ is odd. Now let's do some casework to see how many terms fit this criteria:</p><p>Case 1:  $a$ is even </p><p>Now we know that $a$ is even and $a+b+c=2006$. Thus $b+c$ is also even or both $b$ and $c$ are odd or both $b$ and $c$ are even. This case clearly fails the above criteria and there are 0 possible solutions.</p><p>Case 2:  $a$ is odd</p><p>Now we know that $a$ is odd and $a+b+c=2006$. Thus $b+c$ is odd and $b$ is odd and $c$ is even or $b$ is even and $c$ is odd. All terms that have $a$ being odd work.</p><p>We now need to figure out how many of the terms have $a$ as a odd number. We know that $a$ can be equal to any number between 0 and 2006. There are 1003 odd numbers between this range and 2007 total numbers. Thus $\\frac{1003}{2007}$ of the $2015028$ terms will cancel out and $\\frac{1004}{2007}$ of the terms will work. Thus there are $(\\frac{1004}{2007})(2015028)$ terms. This number comes out to be $1,008,016$ $\\implies \\boxed{D}$(Author: David Camacho)</p>",
         "<p>Noticing how $y$ and $z$ are negative in the second part of the expression, let $x=a$ and $y+z = b$. Then we get \\[(a+b)^{2006} + (a-b)^{2006}\\]We know that the terms that don't cancel out have even powers of $a$ and $b$. Our expansion will be in the form of\\[2a^{2006} + x_1a^{2004}b^{2} + x_2a^{2002}b^{4} + \\cdots + 2b^{2006}\\]Note that $b^n = (x+y)^n$ has $n+1$ terms. Furthermore, the current expression is irreducible as each term has a different $x$ power. Thus, when we write $a$ and $b$ back to their original terms, we will have $1+3+5+ \\cdots + 2007 = 1004^2 = 1,008,016 \\implies \\boxed{D}$</p><p>-smartguy888</p>",
         "<p>Only consider $(x-y-z)^{2006}$ for now. If a term there is subtracted, it would be canceled out since there is a corresponding positive term in $(x+y+z)^{2006}$. So the only terms that will appear are the terms with positive coefficients. If one such term is $x^{a}y^{b}z^{c}$, then b and c are both even or both odd. $a + b + c <= 2006$, so we can do casework on a:$a = 0, b = 0, 2, 4... 2006, c = 2006, 2004...0$ 1004 possibilities.$a = 1, b = 1, 3, 5... 2005$ 1003$a = 2, b = 0, 2, 4... 2004$ 1003$a = 3, b = 1, 3, 5... 2003$ 1002$a = 4, b = 0, 2, 4... 2002$ 1002$a = 5, b = 1, 3, 5... 2001$ 1001.................................$a = 2004, b = 0, 2$ 2$a = 2005, b = 1$ 1$a = 2006, b = 0$ 1.So there are $2(1+2+3...+1003) + 1004$ total, which is $1003*1004 + 1004$ = $1004^2$ = 1008016 $\\implies \\boxed{D}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -206,6 +350,12 @@
         "<p>We have the same setup as in the previous solution.</p><p>Note that if $n < 2k - 1$, the answer will be 0. Otherwise, the $k$ elements we choose define $k + 1$ boxes (which divide the nonconsecutive numbers) into which we can drop the $n - k$ remaining elements, with the caveat that each of the middle $k - 1$ boxes must have at least one element (since the numbers are nonconsecutive). This is equivalent to dropping $n - 2k + 1$ elements into $k + 1$ boxes, where each box is allowed to be empty. And this is equivalent to arranging $n - k + 1$ objects, $k$ of which are dividers, which we can do in $F(n, k) = {n - k + 1 \\choose k}$ ways.</p><p>Now, looking at our original question, we see that the thing we want to calculate is just $F(15, 1) + F(14, 2) + F(13, 3) + F(12, 4) + F(11, 5) = {15\\choose 1} + {13\\choose2} + {11\\choose 3} + {9\\choose 4} + {7 \\choose 5} = 15 + 78 + 165 + 126 + 21  = 405 \\Longrightarrow \\mathrm{(E)}$</p>",
         "<p>Let $s$ be the numbers of elements in a subset. First we examine the second condition. No elements less than $s$ can be put in a subset of size $s$, therefore the \"lowest\" element that can go into the subset is $s$, whereas the \"highest\" element that can go into the subset is $15$. This is a total of $15-s+1$ or $16-s$ possible elements. </p><p>Now we consider the first condition. No consecutive elements are allowed. This means that if an element $e$ is put into the subset, both $e-1$ and $e+1$ are no longer possibilities. Assume that all subsets are ordered from least to greatest (we are looking for the number of combinations, so we can order these combinations however we want). Then the first element will be $s$ (as a reminder, the lowest possible element in a subset is $s$), the second element will be at least $s+2$, and so on. After $s$ elements are chosen, we will have skipped $s-1$ elements (these are the elements that were \"eliminated\" as they were consecutive). Therefore, we ignore exactly $s-1$ elements (if we ignore more or less elements, then $s$ changes) Since we must ignore $s-1$ elements, we can simply remove those beforehand. ($16-s)-(s-1) = 17-2s$ possible elements</p><p>Now we look for the bounds of $s$. We are looking for non-empty subsets, so $s\\ge1$. If $s$ is too large, there will not be enough non-consecutive terms between $s$ and $15$. Specifically, the highest element in a subset using \"optimal\" selection will be $s+2(s-1)$ or $3s-2$. If $3s-1>15$, that means s is too large. Therefore $3s-2\\le15$; solving for $s$ yields $s\\le5$. Now we know that $1 \\le s \\le 5$.</p><p>We want to know the number of ways to arrange $17-2s$ \"balls\" into $s$ identical \"boxes\" with at most $1$ ball per box, for $s=1$ to $s=5$. This is equivalent to $\\sum_{s=1}^{5}{17-2s \\choose s} = 405$, or $\\boxed{\\text{E}}$.</p>",
         "<p>We will split the problem into cases, and maybe one could then generalize this to arbitrary $n$. </p><p>$\\bold{Case 1}:$ ($n=15, k=1$). Then this is easy. We have $\\binom{15}{1}=15$.</p><p>$\\bold{Case 2}:$ ($n=14, k=2$). Now we have something tricky. To get a good grasp on this case, let us consider the smallest element; $2$, in the first spot. We then have $15-1=14$ numbers left. However, we cannot have the digit $3$. Hence we have to choose $2$ numbers from $14-1=13$ integers left. This can be done in $\\binom{13}{2}=78$ ways.</p><p>$\\bold{Case 3}:$ ($n=13, k=3$). As in the last case, we can use the smallest element to get a good grasp on this case. Put the digit $3$ in the first spot. Then there are $11$ integers left for the second spot. But in total, we have to avoid $2$ elements for each subset of cardinality $3$ ${a,b,c}$. So we have to choose $3$ elements from $13-2=11$ elements, which can be done in $\\binom{11}{3}=165$ ways. </p><p>$\\bold{Case 4}:$ ($n=12, k=4$). As in the previous case, we have to avoid $3$ numbers, and choose $4$ from them. Which is choosing $4$ elements from $12-3=9$ elements, which can be done in $\\binom{9}{4}=126$ ways.</p><p>$\\bold{Case 5}:$ ($n=11, k=4$). Now you are accustomed to the strategy. We remove $4$ integers leaving $\\binom{7}{5}=21$ ways.</p><p>Adding up all of the cases yields $405$, as in $\\boxed{E)405}$. SHEN KISLAY KAI~~2023</p><p>Note also that we only went up to cardinality or $k=5$, or else for greater $k$, we would always have consecutive numbers.</p><p>EDIT: I have coincidentally found a video solution using the exact same method: <a class=\"external free\" href=\"https://www.youtube.com/watch?v=mqE9P2JEs-k\" rel=\"nofollow\">https://www.youtube.com/watch?v=mqE9P2JEs-k</a>(Also if you think I am copying, why would I have then posted the video, hm? Explain that)!</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "permutations_combinations"
+        }
       ]
     },
     {
@@ -213,6 +363,12 @@
       "question": "<p>What is $( - 1)^1 + ( - 1)^2 + \\cdots + ( - 1)^{2006}$?</p>",
       "solutions": [
         "<p>$(-1)^n=1$ if n is even and $-1$ if n is odd. So we have</p><p>$-1+1-1+1-\\cdots-1+1=0+0+\\cdots+0+0=0 \\Rightarrow \\text{(C)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -220,6 +376,12 @@
       "question": "<p>For real numbers $x$ and $y$, define $x\\spadesuit y = (x + y)(x - y)$. What is $3\\spadesuit(4\\spadesuit 5)$?</p>",
       "solutions": [
         "<p>$4\\spadesuit 5=-9$</p><p>$3\\spadesuit -9=-72 \\Rightarrow \\text{(A)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
       ]
     },
     {
@@ -229,6 +391,12 @@
         "<p>If the Cougars won by a margin of 14 points, then the Panthers' score would be half of (34-14). That's 10 $\\Rightarrow \\boxed{\\text{(A)}}$.</p><p>Let the Panthers' score be $x$. The Cougars then scored $x+14$. Since the teams combined scored $34$, we get $x+x+14=34 \\\\ \\rightarrow 2x+14=34 \\\\ \\rightarrow 2x=20 \\\\ \\rightarrow x = 10$, </p><p>and the answer is $\\boxed{\\text{(A)}}$.</p>",
         "<p>If the Cougars won by a margin of 14 points, then the Panthers' score would be half of (34-14). That's 10 $\\Rightarrow \\boxed{\\text{(A)}}$.</p>",
         "<p>Let the Panthers' score be $x$. The Cougars then scored $x+14$. Since the teams combined scored $34$, we get $x+x+14=34 \\\\ \\rightarrow 2x+14=34 \\\\ \\rightarrow 2x=20 \\\\ \\rightarrow x = 10$, </p><p>and the answer is $\\boxed{\\text{(A)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -236,6 +404,12 @@
       "question": "<p>Mary is about to pay for five items at the grocery store. The prices of the items are $7.99$, $4.99$, $2.99$, $1.99$, and $0.99$. Mary will pay with a twenty-dollar bill. Which of the following is closest to the percentage of the $20.00$ that she will receive in change?</p>",
       "solutions": [
         "<p>The total price of the items is $(8-.01)+(5-.01)+(3-.01)+(2-.01)+(1-.01)=19-.05=18.95$</p><p>$20-18.95=1.05$</p><p>$\\frac{1.05}{20}=.0525 \\Rightarrow \\text{(A)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -243,6 +417,12 @@
       "question": "<p>John is walking east at a speed of 3 miles per hour, while Bob is also walking east, but at a speed of 5 miles per hour. If Bob is now 1 mile west of John, how many minutes will it take for Bob to catch up to John?</p>",
       "solutions": [
         "<p>The speed that Bob is catching up to John is $5-3=2$ miles per hour. Since Bob is one mile behind John, it will take $\\frac{1}{2} \\Rightarrow \\text{(A)}$ of an hour to catch up to John.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -250,6 +430,12 @@
       "question": "<p>Francesca uses 100 grams of lemon juice, 100 grams of sugar, and 400 grams of water to make lemonade. There are 25 calories in 100 grams of lemon juice and 386 calories in 100 grams of sugar. Water contains no calories. How many calories are in 200 grams of her lemonade?</p>",
       "solutions": [
         "<p>Francesca makes a total of $100+100+400=600$ grams of lemonade, and in those $600$ grams, there are $25$ calories from the lemon juice and $386$ calories from the sugar, for a total of $25+386=411$ calories per $600$ grams. We want to know how many calories there are in $200=600/3$ grams, so we just divide $411$ by $3$ to get $137\\implies\\boxed{(\\text{B})}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -258,6 +444,12 @@
       "solutions": [
         "<p>First, we seat the children.</p><p>The first child can be seated in $3$ spaces.</p><p>The second child can be seated in $2$ spaces.</p><p>Now there are $2 \\times 1$ ways to seat the adults.</p><p>$3 \\times 2 \\times 2 = 12 \\Rightarrow \\text{(B)}$</p>",
         "<p>There are only two possible occupants for the driver's seat. After the driver is chosen, any of the remaining three people can sit in the front, and there are two arrangements for the other two people in the back. Thus, there are $2\\cdot 3\\cdot 2 = \\boxed{12}$ possible seating arrangements. ~ aopsav (Credit to AoPS Alcumus)</p><p>Alternative solution:</p><p>If there was no restriction, there would be 4!=24 ways to sit. However, only 2/4 of the people can sit in the driver's seat, so our answer is $\\frac{2}{4}\\cdot 24= 12 \\Rightarrow \\text{(B)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "permutations_combinations"
+        }
       ]
     },
     {
@@ -267,6 +459,12 @@
         "<p>$4x-4a=y$</p><p>$4x-4a=\\frac{1}{4}x+b$</p><p>$4\\cdot1-4a=\\frac{1}{4}\\cdot1+b=2$</p><p>$a=\\frac{1}{2}$</p><p>$b=\\frac{7}{4}$</p><p>$a+b=\\frac{9}{4} \\Rightarrow \\fbox{(E)}$</p>",
         "<p>Add both equations:</p><p>$\\begin{cases}x=\\frac{1}{4}y+a\\\\ y=\\frac{1}{4}x+b \\end{cases}$</p><p>Simplify:</p><p>$\\frac{4}{4}(x+y)=\\frac{1}{4}(x+y)+(a+b)$</p><p>Isolate our solution:</p><p>$\\frac{3}{4}(x+y)=a+b$</p><p>Substitute the point of intersection $[x=1, y=2]$</p><p>$a+b=\\frac{3}{4}\\cdot3=\\frac{9}{4} \\Rightarrow \\fbox{(E)}$</p>",
         "<p>Plugging in $(1,2)$ into the first equation, and solving for $a$ we get $a$ as $\\frac{1}{2}$.</p><p>Doing the same for the second equation for the second equation, we get $b$ as $\\frac{7}{4}$</p><p>Adding $a+b = \\frac{1}{2} + \\frac{7}{4} = \\frac{9}{4} \\Rightarrow \\fbox{(E)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -278,6 +476,12 @@
         "<p>The last digit is 4, 6, or 8.</p><p>If the last digit is $x$, the possibilities for the first two digits correspond to 2-element subsets of $\\{1,2,\\dots,x-1\\}$.</p><p>Thus the answer is ${3\\choose 2} + {5\\choose 2} + {7\\choose 2} = 3 + 10 + 21 = \\boxed{34}$.</p>",
         "<p>The answer must be half of a triangular number (evens and decreasing/increasing) so $\\boxed{34}$ or the letter B.-</p>",
         "<p>Casework:</p><p>For the sake of simplicity, we are going to call the number $\\overline{abc}$.</p><p>1. If $a=1$:</p><p>a. $c=2$. No such number exists.</p><p>b. $c=4$. $b=2, 3$.</p><p>c. $c=6$. $b=2, 3, 4, 5$.</p><p>d. $c=8$. $b=2, 3, 4, 5, 6, 7$.</p><p>2. If $a=2$: continue as above.</p><p>We can count up that there are 34 such integers, so select $\\boxed{B}$.</p><p>~hastapasta</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "permutations_combinations"
+        }
       ]
     },
     {
@@ -285,6 +489,12 @@
       "question": "<p>In a triangle with integer side lengths, one side is three times as long as a second side, and the length of the third side is 15. What is the greatest possible perimeter of the triangle?</p>",
       "solutions": [
         "<p>If the second size has length x, then the first side has length 3x, and we have the third side which has length 15. By the triangle inequality, we have: \\[\\\\ x+15>3x \\Rightarrow 2x<15 \\Rightarrow x<7.5\\] Now, since we want the greatest perimeter, we want the greatest integer x, and if $x<7.5$ then $x=7$. Then, the first side has length $3*7=21$, the second side has length $7$, the third side has length $15$, and so the perimeter is $21+7+15=43 \\Rightarrow \\boxed{\\text {(A)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -292,6 +502,12 @@
       "question": "<p>Joe and JoAnn each bought 12 ounces of coffee in a 16-ounce cup. Joe drank 2 ounces of his coffee and then added 2 ounces of cream. JoAnn added 2 ounces of cream, stirred the coffee well, and then drank 2 ounces. What is the resulting ratio of the amount of cream in Joe's coffee to that in JoAnn's coffee?</p>",
       "solutions": [
         "<p>Joe has 2 ounces of cream, as stated in the problem.</p><p>JoAnn had 14 ounces of liquid, and drank $\\frac{1}{7}$ of it. Therefore, she drank $\\frac{1}{7}$ of her cream, leaving her $2*\\frac{6}{7}$.</p><p>$\\frac{2}{2*\\frac{6}{7}}=\\frac{7}{6} \\Rightarrow \\boxed{\\text{(E)}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -300,6 +516,12 @@
       "solutions": [
         "<p>Substituting $(0,-p)$, we find that $y = -p = a(0)^2 + b(0) + c = c$, so our parabola is $y = ax^2 + bx - p$. </p><p>The x-coordinate of the vertex of a parabola is given by $x = p = \\frac{-b}{2a} \\Longleftrightarrow a = \\frac{-b}{2p}$. Additionally, substituting $(p,p)$, we find that $y = p = a(p)^2 + b(p) - p \\Longleftrightarrow ap^2 + (b-2)p = \\left(\\frac{-b}{2p}\\right)p^2 + (b-2)p = p\\left(\\frac b2-2\\right) = 0$. Since it is given that $p \\neq 0$, then $\\frac{b}{2} = 2 \\Longrightarrow b = 4\\ \\mathrm{(D)}$.</p>",
         "<p>A parabola with the given equation and with vertex $(p,p)$ must have equation $y=a(x-p)^2+p$. Because the $y$-intercept is $(0,-p)$ and $p\\ne 0$, it follows that $a=-2/p$. Thus\\[y=-\\frac{2}{p}(x^2-2px+p^2)+p=-\\frac{2}{p}x^2+4x-p,\\] so $\\boxed{b=4}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "quadratic_equations"
+        }
       ]
     },
     {
@@ -309,6 +531,12 @@
         "<p>The ratio of any length on $ABCD$ to a corresponding length on $BFDE^2$ is equal to the ratio of their areas. Since $\\angle BAD=60$, $\\triangle ADB$ and $\\triangle DBC$ are equilateral. $DB$, which is equal to $AB$, is the diagonal of rhombus $ABCD$. Therefore, $AC=\\frac{DB(2)}{2\\sqrt{3}}=\\frac{DB}{\\sqrt{3}}$. $DB$ and $AC$ are the longer diagonal of rhombuses $BEDF$ and $ABCD$, respectively. So the ratio of their areas is $(\\frac{1}{\\sqrt{3}})^2$ or $\\frac{1}{3}$. One-third the area of $ABCD$ is equal to $8$. So the answer is $\\boxed{\\text{C}}$.</p><p>Draw the line $\\overline{DB}$ to form an equilateral triangle, since $\\angle BAD=60$, and line segments $\\overline{AB}$ and $\\overline{AD}$ are equal in length. To find the area of the smaller rhombus, we only need to find the value of any arbitrary base, then square the result. To find the value of the base, use the line we just drew and connect it to point $E$ at a right angle along line $\\overline{DB}$. Call the connected point $P$, with triangles $DPE$ and $EPB$ being 30-60-90 triangles, meaning we can find the length of $\\overline{ED}$ or $\\overline{EB}$. The base of $ABCD$ must be $\\sqrt{24}$, and half of that length must be $\\sqrt{6}$(triangles $DPE$ and $EPB$ are congruent by $SSS$). Solving for the third length yields $\\sqrt{8}$, which we square to get the answer $\\boxed{\\text{C}}$.</p><p>Draw line DB, cutting rhombus BFDE into two triangles which fit nicely into 2/3 of equilateral triangle ABD. Thus the area of BFDE is (2/3)*12=8.</p>",
         "<p>Draw the line $\\overline{DB}$ to form an equilateral triangle, since $\\angle BAD=60$, and line segments $\\overline{AB}$ and $\\overline{AD}$ are equal in length. To find the area of the smaller rhombus, we only need to find the value of any arbitrary base, then square the result. To find the value of the base, use the line we just drew and connect it to point $E$ at a right angle along line $\\overline{DB}$. Call the connected point $P$, with triangles $DPE$ and $EPB$ being 30-60-90 triangles, meaning we can find the length of $\\overline{ED}$ or $\\overline{EB}$. The base of $ABCD$ must be $\\sqrt{24}$, and half of that length must be $\\sqrt{6}$(triangles $DPE$ and $EPB$ are congruent by $SSS$). Solving for the third length yields $\\sqrt{8}$, which we square to get the answer $\\boxed{\\text{C}}$.</p>",
         "<p>Draw line DB, cutting rhombus BFDE into two triangles which fit nicely into 2/3 of equilateral triangle ABD. Thus the area of BFDE is (2/3)*12=8.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -316,6 +544,12 @@
       "question": "<p>Elmo makes $N$ sandwiches for a fundraiser. For each sandwich he uses $B$ globs of peanut butter at $4$ cents per glob and $J$ blobs of jam at $5$ cents per glob. The cost of the peanut butter and jam to make all the sandwiches is $2.53$. Assume that $B$, $J$ and $N$ are all positive integers with $N>1$. What is the cost of the jam Elmo uses to make the sandwiches? </p>",
       "solutions": [
         "<p>From the given, we know that </p><p>$253=N(4B+5J)$ (The numbers are in cents)</p><p>since $253=11\\cdot23$, and since $N$ is an integer, then $4B+5J=11$ or $23$. It is easily deduced that $11$ is impossible to make with $B$ and $J$ integers, so $N=11$ and $4B+5J=23$. Then, it can be guessed and checked quite simply that if $B=2$ and $J=3$, then $4B+5J=4(2)+5(3)=23$. The problem asks for the total cost of jam, or $N(5J)=11(15)=165$ cents, or $1.65\\implies\\mathrm{(D)}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "diophantine_equations"
+        }
       ]
     },
     {
@@ -324,6 +558,12 @@
       "solutions": [
         "<p>Draw the altitude from $O$ onto $DP$ and call the point $H$. Because $\\angle OAD$ and $\\angle ADP$ are right angles due to being tangent to the circles, and the altitude creates $\\angle OHD$ as a right angle. $ADHO$ is a rectangle with $OH$ bisecting $DP$. The length $OP$ is $4+2$ and $HP$ has a length of $2$, so by pythagorean's, $OH$ is $\\sqrt{32}$.</p><p>$2 \\cdot \\sqrt{32} + \\frac{1}{2}\\cdot2\\cdot \\sqrt{32} = 3\\sqrt{32} = 12\\sqrt{2}$, which is half the area of the hexagon, so the area of the entire hexagon is $2\\cdot12\\sqrt{2} = \\boxed{(B)24\\sqrt{2}}$</p>",
         "<p>$ADPO$ and $OPBC$ are congruent right trapezoids with legs $2$ and $4$ and with $OP$ equal to $6$. Draw an altitude from $O$ to either $DP$ or $CP$, creating a rectangle with width $2$ and base $x$, and a right triangle with one leg $2$, the hypotenuse $6$, and the other $x$. Usingthe <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a>, $x$ is equal to $4\\sqrt{2}$, and $x$ is also equal to the height of the trapezoid. The area of the trapezoid is thus $\\frac{1}{2}\\cdot(4+2)\\cdot4\\sqrt{2} = 12\\sqrt{2}$, and the total area is two trapezoids, or $\\boxed{24\\sqrt{2}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
       ]
     },
     {
@@ -332,6 +572,12 @@
       "solutions": [
         "<p>To find the area of the regular hexagon, we only need to calculate the side length.a distance of $\\sqrt{7^2+1^2} = \\sqrt{50} = 5\\sqrt{2}$ apart. Half of this distance is the length of the longer leg of the right triangles. Therefore, the side length of the hexagon is $\\frac{5\\sqrt{2}}{2}\\cdot\\frac{1}{\\sqrt{3}}\\cdot2 = \\frac{5\\sqrt{6}}{3}$.</p><p>The apothem is thus $\\frac{1}{2}\\cdot\\frac{5\\sqrt{6}}{3}\\cdot\\sqrt{3} = \\frac{5\\sqrt{2}}{2}$, yielding an area of $\\frac{1}{2}\\cdot10\\sqrt{6}\\cdot\\frac{5\\sqrt{2}}{2}=25\\sqrt{3} \\implies \\mathrm{(C)}$.</p>",
         "<p>Solution 2 has the exact same solution as Solution 1 denoted, but instead, we do not need to know the value of the apothem. We could just apply s, which is the side length in this problem, $\\frac{5\\sqrt{6}}{3}$ into the hexagon area formula, $\\frac{3  (5 \\sqrt{2} )^2 \\sqrt{3} }{2}=25\\sqrt{3} \\implies \\mathrm{(C)}$ &lt;-- 5 root 6 over 3 instead of 5 root 2 btw</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -339,6 +585,12 @@
       "question": "<p>For a particular peculiar pair of dice, the probabilities of rolling $1$, $2$, $3$, $4$, $5$ and $6$ on each die are in the ratio $1:2:3:4:5:6$. What is the probability of rolling a total of $7$ on the two dice?</p>",
       "solutions": [
         "<p>The probability of getting an $x$ on one of these dice is $\\frac{x}{21}$.</p><p>The probability of getting $1$ on the first and $6$ on the second die is $\\frac 1{21}\\cdot\\frac 6{21}$. Similarly we can express the probabilities for the other five ways how we can get a total $7$. (Note that we only need the first three, the other three are symmetric.)</p><p>Summing these, the probability of getting a total $7$ is:\\[2\\cdot\\left( \\frac 1{21}\\cdot\\frac 6{21} + \\frac 2{21}\\cdot\\frac 5{21} + \\frac 3{21}\\cdot\\frac 4{21} \\right) =  \\frac{56}{441} = \\boxed{\\frac{8}{63}}\\]</p><p>See also <a href=\"/wiki/index.php/2016_AIME_I_Problems/Problem_2\" title=\"2016 AIME I Problems/Problem 2\">2016 AIME I Problems/Problem 2</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -347,6 +599,12 @@
       "solutions": [
         "<p>Let the starting point be $(0,0)$. After $10$ steps we can only be in locations $(x,y)$ where $|x|+|y|\\leq 10$. Additionally, each step changes the <a href=\"/wiki/index.php/Parity\" title=\"Parity\">parity</a> of exactly one coordinate. Hence after $10$ steps we can only be in locations $(x,y)$ where $x+y$ is even. It can easily be shown that each location that satisfies these two conditions is indeed reachable.</p><p>Once we pick $x\\in\\{-10,\\dots,10\\}$, we have $11-|x|$ valid choices for $y$, giving a total of $\\boxed{121}$ possible positions.</p>",
         "<p>$10$ moves results in a lot of possible endpoints, so we try small cases first.</p><p>If the object only makes $1$ move, it is obvious that there are only 4 possible points that the object can move to.If the object makes $2$ moves, it can move to $(0, 2)$, $(1, 1)$, $(2, 0)$, $(1, -1)$, $(0, -2)$, $(-1, -1)$, $(-2, 0)$ as well as $(0, 0)$, for a total of $9$ moves.If the object makes $3$ moves, it can end up at $(0, 3)$, $(2, 1)$, $(1, 2)$, $(3, 0)$, $(2, -1)$, $(1, -2)$, $(0, -3)$, $(-1, -2)$, $(-2, -1)$, $(0, -3)$ etc. for a total of $16$ moves.</p><p>At this point we can guess that for n moves, there are $(n + 1)^2$ different endpoints. Thus, for 10 moves, there are $11^2 = 121$ endpoints, and the answer is $\\boxed{B}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -354,6 +612,12 @@
       "question": "<p>Mr. Jones has eight children of different ages. On a family trip his oldest child, who is 9, spots a license plate with a 4-digit number in which each of two digits appears two times. \"Look, daddy!\" she exclaims. \"That number is evenly divisible by the age of each of us kids!\" \"That's right,\" replies Mr. Jones, \"and the last two digits just happen to be my age.\" Which of the following is not the age of one of Mr. Jones's children?</p>",
       "solutions": [
         "<p>First, The number of the plate is divisible by $9$ and in the form of$aabb$, $abba$ or $abab$. </p><p>We can conclude straight away that $a+b= 9$ using the $9$ divisibility rule. </p><p>If $b=1$, the number is not divisible by $2$ (unless it's $1818$, which is not divisible by $4$), which means there are no $2$, $4$, $6$, or $8$ year olds on the car, but that can't be true, as that would mean there are less than $8$ kids on the car. </p><p>If $b=2$, then the only possible number is $7272$. $7272$ is divisible by $4$, $6$, and $8$, but not by $5$ and $7$, so that doesn't work. </p><p>If $b=3$, then the only number is $6336$, also not divisible by $5$ or $7$. </p><p>If $b=4$, the only number is $5544$. It is divisible by $4$, $6$, $7$, and $8$. </p><p>Therefore, we conclude that the answer is $\\mathrm{(B)}\\ 5$</p><p><b>NOTE</b>: Automatically, since there are 8 children and all of their ages are less than or equal to 9 and are different, the answer choices can be narrowed down to $5$ or $8$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
       ]
     },
     {
@@ -362,6 +626,12 @@
       "solutions": [
         "<p>Let $k$ be an arbitrary integer. For which $x$ do we have $\\lfloor\\log_{10}4x\\rfloor = \\lfloor\\log_{10}x\\rfloor = k$?</p><p>The equation $\\lfloor\\log_{10}x\\rfloor = k$ can be rewritten as $10^k \\leq x < 10^{k+1}$. The second one gives us $10^k \\leq 4x < 10^{k+1}$. Combining these, we get that both hold at the same time if and only if $10^k \\leq x < \\frac{10^{k+1}}4$.</p><p>Hence for each integer $k$ we get an interval of values for which $\\lfloor\\log_{10}4x\\rfloor - \\lfloor\\log_{10}x\\rfloor = 0$. These intervals are obviously pairwise disjoint.</p><p>For any $k\\geq 0$ the corresponding interval is disjoint with $(0,1)$, so it does not contribute to our answer. On the other hand, for any $k<0$ the entire interval is inside $(0,1)$. Hence our answer is the sum of the lengths of the intervals for $k<0$.</p><p>For a fixed $k$ the length of the interval $\\left[ 10^k, \\frac{10^{k+1}}4 \\right)$ is $\\frac 32\\cdot 10^k$. </p><p>This means that our result is $\\frac 32 \\left( 10^{-1} + 10^{-2} + \\cdots \\right) = \\frac 32 \\cdot \\frac 19 = \\boxed{\\frac 16}$.</p>",
         "<p>The largest value for $x$ is $10^{0}$. If $x > 10^{-1}$, then $\\lfloor\\log_{10}4x\\rfloor$ doesn't fulfill the condition unless $10^{-2} \\leq x < 0.25 * 10^{-1}$. The same holds when you get smaller, because $x = 0.25 * 10^{n}$ for $n \\leq 0$ is the lowest value such that $4x$ becomes a higher power of 10.</p><p>Recognize that this is a geometric sequence. The probability of choosing $x$ such that $\\lfloor\\log_{10}4x\\rfloor$ and $\\lfloor\\log_{10}x\\rfloor$ both equal $-1$ is $(9/10)* (15/90) =15/100$, because there is a 90 percent chance of choosing $x > 10^{-1}$, and only values of $x$ between $10^{-1}$ and $0.25*10^{0}$ work in this case. Then, for $x$ such that $\\lfloor\\log_{10}4x\\rfloor$ and $\\lfloor\\log_{10}x\\rfloor$ both equal $-2$, you have $(1/10) * ((9/10) *(15/90))$. This is a geometric series with ratio $1/10$. Using $a/(1-r)$ for the sum of an infinite geometric sequence, we get $(15/100)/(1-(1/10)) =  \\boxed{\\frac 16}$.</p><p>Solution by Halt_CatchFire</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -369,6 +639,12 @@
       "question": "<p>Rectangle $ABCD$ has area $2006$. An ellipse with area $2006\\pi$ passes through $A$ and $C$ and has foci at $B$ and $D$. What is the perimeter of the rectangle? (The area of an ellipse is $ab\\pi$ where $2a$ and $2b$ are the lengths of the axes.)</p>",
       "solutions": [
         "<p>[asy] size(7cm);  real l=10, w=7, ang=asin(w/sqrt(l*l+w*w))*180/pi;  draw((-l,-w)--(l,-w)--(l,w)--(-l,w)--cycle); draw(rotate(ang)*ellipse((0,0),2*l+2*w,l*w*2/sqrt(l^2+w^2)));  draw(rotate(ang)*((0,0)--(2l+2w,0)),red); draw(rotate(ang+90)*((0,0)--(l*w*2/sqrt(l^2+w^2),0)),red);  label(\"$A$\",(-l,w),NW); label(\"$B$\",(-l,-w),SW); label(\"$C$\",(l,-w),SE); label(\"$D$\",(l,w),SE); // Made by chezbgone2 [/asy]</p><p>Let the rectangle have side lengths $l$ and $w$. Let the axis of the ellipse on which the foci lie have length $2a$, and let the other axis have length $2b$. We have\\[lw=ab=2006\\]From the definition of an ellipse, $l+w=2a\\Longrightarrow \\frac{l+w}{2}=a$. Also, the diagonal of the rectangle has length $\\sqrt{l^2+w^2}$. Comparing the lengths of the axes and the distance from the foci to the center, we have\\[a^2=\\frac{l^2+w^2}{4}+b^2\\Longrightarrow \\frac{l^2+2lw+w^2}{4}=\\frac{l^2+w^2}{4}+b^2\\Longrightarrow \\frac{lw}{2}=b^2\\Longrightarrow b=\\sqrt{1003}\\]Since $ab=2006$, we now know $a\\sqrt{1003}=2006\\Longrightarrow a=2\\sqrt{1003}$ and because $a=\\frac{l+w}{2}$, or one-fourth of the rectangle's perimeter, we multiply by four to get an answer of $\\boxed{8\\sqrt{1003}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "conic_sections"
+        }
       ]
     },
     {
@@ -377,6 +653,12 @@
       "solutions": [
         "<p>The power of $10$ for any factorial is given by the well-known algorithm \\[\\left\\lfloor \\frac n{5}\\right\\rfloor + \\left\\lfloor \\frac n{25}\\right\\rfloor + \\left\\lfloor \\frac n{125}\\right\\rfloor + \\cdots\\]It is rational to guess numbers right before powers of $5$ because we won't have any extra numbers from higher powers of $5$. As we list out the powers of 5, it is clear that $5^{4}=625$ is less than 2006 and $5^{5}=3125$ is greater. Therefore, set $a$ and $b$ to be 624. Thus, c is $2006-(624\\cdot 2)=758$. Applying the algorithm, we see that our answer is $152+152+188= \\boxed{492}$.</p>",
         "<p>Clearly, the power of $2$ that divides $n!$ is larger or equal than the power of $5$ which dividesit. Hence we are trying to minimize the power of $5$ that will divide $a!b!c!$.</p><p>Consider $n! = 1\\cdot 2 \\cdot \\dots \\cdot n$. Each fifth term is divisible by $5$, each $25$-th oneby $25$, and so on. Hence the total power of $5$ that divides $n$ is $\\left\\lfloor \\frac n{5}\\right\\rfloor + \\left\\lfloor \\frac n{25}\\right\\rfloor + \\cdots$. (For any $n$ only finitely many terms in the sumarenon-zero.)</p><p>In our case we have $a<2006$, so the largest power of $5$ that will be less than $a$ is at most$5^4 = 625$. Therefore the power of $5$ that divides $a!$ is equal to $\\left\\lfloor \\frac a{5}\\right\\rfloor + \\left\\lfloor \\frac a{25}\\right\\rfloor + \\left\\lfloor \\frac a{125}\\right\\rfloor + \\left\\lfloor \\frac a{625}\\right\\rfloor$. The sameis true for $b$ and $c$.</p><p>Intuition may now try to lure us to split $2006$ into $a+b+c$ as evenly as possible, giving$a=b=669$ and $c=668$. However, this solution is not optimal.</p><p>To see how we can do better, let's rearrange the terms as follows:</p><p>\\begin{align*} \\text{result} & = \\Big\\lfloor \\frac a{5}\\Big\\rfloor + \\Big\\lfloor \\frac b{5}\\Big\\rfloor + \\Big\\lfloor \\frac c{5}\\Big\\rfloor \\\\ & + \\Big\\lfloor \\frac a{25}\\Big\\rfloor + \\Big\\lfloor \\frac b{25}\\Big\\rfloor + \\Big\\lfloor \\frac c{25}\\Big\\rfloor \\\\ & + \\Big\\lfloor \\frac a{125}\\Big\\rfloor + \\Big\\lfloor \\frac b{125}\\Big\\rfloor + \\Big\\lfloor \\frac c{125}\\Big\\rfloor \\\\ & + \\Big\\lfloor \\frac a{625}\\Big\\rfloor + \\Big\\lfloor \\frac b{625}\\Big\\rfloor + \\Big\\lfloor \\frac c{625}\\Big\\rfloor \\end{align*}</p><p>The idea is that the rows of the above equation are roughly equal to $\\left\\lfloor \\frac n{5}\\right\\rfloor$, $\\left\\lfloor \\frac n{25}\\right\\rfloor$, etc.</p><p>More precisely, we can now notice that for any positive integers $a,b,c,k$ we can write $a,b,c$ in the form $a=a_0k + a_1$, $b=b_0k+b_1$, $c=c_0k + c_1$, where all $a_i,b_i,c_i$ are integers and $0\\leq a_1,b_1,c_1<k$.</p><p>It follows that\\[\\Big\\lfloor \\frac a{k}\\Big\\rfloor + \\Big\\lfloor \\frac b{k}\\Big\\rfloor + \\Big\\lfloor \\frac c{k}\\Big\\rfloor = a_0+b_0+c_0\\]and\\[\\Big\\lfloor \\frac {a+b+c}k\\Big\\rfloor = a_0 + b_0 + c_0 + \\Big\\lfloor \\frac {a_1+b_1+c_1}k\\Big\\rfloor \\leq a_0 + b_0 + c_0 + 2\\]</p><p>Hence we get that for any positive integers $a,b,c,k$ we have\\[\\Big\\lfloor \\frac a{k}\\Big\\rfloor + \\Big\\lfloor \\frac b{k}\\Big\\rfloor + \\Big\\lfloor \\frac c{k}\\Big\\rfloor \\quad \\geq \\quad \\Big\\lfloor \\frac {a+b+c}k\\Big\\rfloor - 2\\]</p><p>Therefore for any $a,b,c$ the result is at least $\\left\\lfloor \\frac n{5}\\right\\rfloor + \\left\\lfloor \\frac n{25}\\right\\rfloor + \\left\\lfloor \\frac n{125}\\right\\rfloor + \\left\\lfloor \\frac n{625}\\right\\rfloor - 8 = 401 + 80 + 16 + 3 - 8 = 500 - 8 = 492$.</p><p>If we now show how to pick $a,b,c$ so that we'll get the result $492$, we will be done.</p><p>Consider the row with $625$ in the denominator. We need to achieve sum $1$ in this row,hence we need to make two of the numbers smaller than $625$. Choosing $a=b=624$does this, and it will give us the largest possible remainders for $a$ and $b$ inthe other three rows, so this is a pretty good candidate. We can compute$c=2006-a-b=758$ and verify that this triple gives the desired result $\\boxed{492}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "primes"
+        }
       ]
     },
     {
@@ -386,6 +668,12 @@
         "<p>[asy] pathpen = linewidth(0.7); pen f = fontsize(10); size(5cm); pair B = (0,sqrt(85+42*sqrt(2))); pair A = (B.y,0); pair C = (0,0); pair P = IP(arc(B,7,180,360),arc(C,6,0,90)); D(A--B--C--cycle); D(P--A); D(P--B); D(P--C); MP(\"A\",D(A),plain.E,f); MP(\"B\",D(B),plain.N,f); MP(\"C\",D(C),plain.SW,f); MP(\"P\",D(P),plain.NE,f); MP(\"\\alpha\",C,5*dir(80),f); MP(\"90^\\circ-\\alpha\",C,3*dir(30),f); MP(\"s\",(A+C)/2,plain.S,f); MP(\"s\",(B+C)/2,plain.W,f); [/asy]Using the Law of Cosines on $\\triangle PBC$, we have:</p><p>\\begin{align*} PB^2&=BC^2+PC^2-2\\cdot BC\\cdot PC\\cdot \\cos(\\alpha) \\Rightarrow 49 = 36 + s^2 - 12s\\cos(\\alpha) \\Rightarrow \\cos(\\alpha) = \\dfrac{s^2-13}{12s}. \\end{align*}</p><p>Using the Law of Cosines on $\\triangle PAC$, we have:\\begin{align*} PA^2&=AC^2+PC^2-2\\cdot AC\\cdot PC\\cdot \\cos(90^\\circ-\\alpha) \\Rightarrow 121 = 36 + s^2 - 12s\\sin(\\alpha) \\Rightarrow \\sin(\\alpha) = \\dfrac{s^2-85}{12s}. \\end{align*}</p><p>Now we use $\\sin^2(\\alpha) + \\cos^2(\\alpha) = 1$.\\begin{align*} \\sin^2(\\alpha)+\\cos^2(\\alpha) = 1 &\\Rightarrow \\frac{s^4-26s^2+169}{144s^2} + \\frac{s^4-170s^2+7225}{144s^2} = 1 \\\\ &\\Rightarrow s^4-170s^2+3697 = 0 \\\\ &\\Rightarrow s^2 = \\dfrac{170 \\pm 84\\sqrt{2}}{2} = 85 \\pm 42\\sqrt2  \\end{align*}</p><p>Note that we know that we want the solution with $s^2 > 85$ since we know that $\\sin(\\alpha) > 0$. Thus, $a+b=85+42=\\boxed{127}$.</p>",
         "<p>Rotate triangle $PAC$ 90 degrees counterclockwise about $C$ so that the image of $A$ rests on $B$. Now let the image of $P$ be $\\widetilde{P}$. [asy]  pathpen = linewidth(0.7);  pen f = fontsize(10); size(10cm);  pair B = (0,sqrt(85+42*sqrt(2)));  pair A = (B.y,0);  pair C = (0,0);  pair P = IP(arc(B,7,180,360),arc(C,6,0,90));  draw(A--B--C--cycle, black+0.8); D(P--A); D(P--B); D(P--C);  MP(\"A\",D(A),E,f); MP(\"B, \\widetilde{A}\",D(B),N,f); MP(\"C\",D(C),S,f); MP(\"P\",D(P),NE,f);   pair Bp = dir(90)*(B-origin); pair Pp = dir(90)*(P-origin); D(B--Bp--C--Pp--B); MP(\"\\widetilde{P}\",D(Pp),SW,f); MP(\"\\widetilde{B}\",D(Bp),W,f); [/asy]Note that $\\widetilde{P}C=6$, meaning triangle $PC\\widetilde{P}$ is right isosceles, and $\\angle P\\widetilde{P}C=45^\\circ$. Then $P\\widetilde{P}=6\\sqrt{2}$. Now because $PB=7$ and $\\widetilde{P}B=11$, we observe that $\\angle \\widetilde{P}PB=90^\\circ$, by the Pythagorean Theorem on $\\widetilde{P}PB$. Now we have that $\\angle APC=\\angle B\\widetilde{P}C=\\angle B\\widetilde{P}P + \\angle P\\widetilde{P}C$. So we take the cosine of the second equality, using that fact that $\\angle P\\widetilde{P}C=45^\\circ$, to get $\\cos(B\\widetilde{P}C)=\\frac{6\\sqrt{2}-7}{11\\sqrt{2}}$. Finally, we use the fact that $\\cos(B\\widetilde{P}C)=\\cos(CPA)$ and use the Law of Cosines on triangle $CPA$ to arrive at the value of $s^2$.</p><p>Or notice that since $\\angle \\widetilde{P}PB=90^\\circ$ and $\\angle P\\widetilde{P}C=45^\\circ$, we have $\\angle BPC=135^\\circ$, and Law of Cosines on triangle $BPC$ gives the value of $s^2$.</p>",
         "<p>Let point $P$ have coordinates $(x,y)$ and $C$ have coordinates $(0,0).$ Then, $A$ has $(s,0)$ and $B$ has $(0,s)$. </p><p>By distance formula, we have \\[x^2+y^2=36 \\tag{1}.\\]\\[x^2+(y-s)^2=49 \\tag{2}.\\]\\[(x-s)^2+y^2=121 \\tag{3}\\]</p><p>Expanding $(2)$ and $(3)$ gives \\[x^2+y^2-2ys+s^2=49,\\] and \\[x^2+y^2-2sx+s^2=121,\\] respectively. Then, using equation $(1)$, we have that \\[-2ys+s^2=49-36=13,\\] and \\[-2sx+s^2=121-36=85.\\]</p><p>Then, solving for $x$ and $y$ gives\\[x=\\frac{85-s^2}{-2s}=\\frac{s^2-85}{2s},\\] and\\[y=\\frac{13-s^2}{-2s}=\\frac{s^2-13}{2s}.\\] Plugging these values of $x$ and $y$ into equation $(1)$ yields \\[\\left(\\frac{s^2-85}{2s}\\right)^2+\\left(\\frac{s^2-13}{2s}\\right)^2=36.\\]</p><p>We multiply both sides by $4s^2$ and expand, yielding the equation \\[s^4-170s^2+7225+s^4-26s^2+169=144s^2.\\] Simplifying gives the equation \\[2s^4-340s^2+7394=0.\\] Solving this quadratic gives $s^2=85\\pm 42\\sqrt{2}.$ Now, if this were the actual test, we stop here, noting that the question tells us $a$ and $b$ are positive, so $s^2$ must be $85+42\\sqrt{2}$, and our solution is $127$.</p><p>However, here is why $s^2$ cannot be $85-42\\sqrt{2}$:</p><p>If $s^2=85-42\\sqrt{2}$, using $1.4$ as an approximation for $\\sqrt{2}$, $s^2\\approx 85-42\\cdot 1.4=85-58.8=26.2$, and $s$ is slightly greater than $5$. Also note that this implies that $AB\\approx 7$. </p><p>Note that at least one of $\\angle BPA$, $\\angle APC$ and $\\angle BPC$ must be obtuse, since they sum to $360^{\\circ}$. Then, note the well known fact that if $\\angle A$ is the largest angle in $\\Delta ABC$, $BC$ must be the largest side. However, combined with the first fact, implies that either $AB$ is the largest side of $\\Delta ABP$, $BC$ is the largest side of $\\Delta BPC$, or $AC$ is the largest side of $\\Delta APC$. By our approximations, this cannot possibly be true, even if we are generous with our margin of error, so $s^2$ cannot equal $85-42\\sqrt{2}$, and $s^2=85+42\\sqrt{2}$. </p><p>The answer is $85+42=\\boxed{127}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -394,6 +682,12 @@
       "solutions": [
         "<p>We start out by solving the equality first.\\begin{align*} \\sin^2x - \\sin x \\sin y + \\sin^2y &= \\frac34 \\\\ \\sin x &= \\frac{\\sin y \\pm \\sqrt{\\sin^2 y - 4 ( \\sin^2y - \\frac34 ) }}{2} \\\\  &= \\frac{\\sin y \\pm \\sqrt{3 - 3 \\sin^2 y }}{2} \\\\  &= \\frac{\\sin y \\pm \\sqrt{3 \\cos^2 y }}{2} \\\\  &= \\frac12 \\sin y \\pm \\frac{\\sqrt3}{2} \\cos y \\\\ \\sin x &= \\sin (y \\pm \\frac{\\pi}{3}) \\end{align*}We end up with three lines that matter: $x = y + \\frac\\pi3$, $x = y - \\frac\\pi3$, and $x = \\pi - (y + \\frac\\pi3) = \\frac{2\\pi}{3} - y$. We plot these lines below.[asy] size(5cm); D((0,0)--(3,0)--(3,3)--(0,3)--cycle); D((1,-0.1)--(1,0.1)); D((2,-0.1)--(2,0.1)); D((-0.1,1)--(0.1,1)); D((-0.1,2)--(0.1,2)); D((2,0)--(3,1)--(1,3)--(0,2)); MP(\"\\frac{\\pi}{6}\", (1,0), plain.S); MP(\"\\frac{\\pi}{3}\", (2,0), plain.S); MP(\"\\frac{\\pi}{2}\", (3,0), plain.S); MP(\"\\frac{\\pi}{6}\", (0,1), plain.W); MP(\"\\frac{\\pi}{3}\", (0,2), plain.W); MP(\"\\frac{\\pi}{2}\", (0,3), plain.W); [/asy]Note that by testing the point $(\\pi/6,\\pi/6)$, we can see that we want the area of the <a href=\"/wiki/index.php/Pentagon\" title=\"Pentagon\">pentagon</a>. We can calculate that by calculating the area of the square and then subtracting the area of the 3 triangles. (Note we could also do this by adding the areas of the isosceles triangle in the bottom left corner and the rectangle with the previous triangle's hypotenuse as the longer side.)\\begin{align*} A &= \\left(\\frac{\\pi}{2}\\right)^2 - 2 \\cdot \\frac12 \\cdot \\left(\\frac{\\pi}{6}\\right)^2 - \\frac12 \\cdot \\left(\\frac{\\pi}{3}\\right)^2 \\\\ &= \\pi^2 \\left ( \\frac14 - \\frac1{36} - \\frac1{18}\\right ) \\\\ &= \\pi^2 \\left ( \\frac{9-1-2}{36} \\right ) = \\boxed{\\text{(C)}\\ \\frac{\\pi^2}{6}} \\end{align*}</p>",
         "<p>We can write the given equation as \\[\\sin^3x + \\sin^3y \\le \\frac{3}{4}(\\sin x + \\sin y).\\] Note that when $x = 0$, we have $\\sin y \\le \\frac{\\sqrt{3}}{2}$ which implies $y \\le \\frac{\\pi}{3}$. Similary we have $x \\le \\frac{\\pi}{3}$ when $y = 0$. Then we see what happens at $x = \\frac{\\pi}{2}$. Clearly at $x = \\frac{\\pi}{2}$, we see that $y \\le \\frac{\\pi}{6}$. By symmetry we have $x \\le \\frac{\\pi}{6}$ when $y = \\frac{\\pi}{2}$. So we get a graph like [asy] size(5cm); D((0,0)--(3,0)--(3,3)--(0,3)--cycle); D((1,-0.1)--(1,0.1)); D((2,-0.1)--(2,0.1)); D((-0.1,1)--(0.1,1)); D((-0.1,2)--(0.1,2)); D((2,0)--(3,1)--(1,3)--(0,2)); MP(\"\\frac{\\pi}{6}\", (1,0), plain.S); MP(\"\\frac{\\pi}{3}\", (2,0), plain.S); MP(\"\\frac{\\pi}{2}\", (3,0), plain.S); MP(\"\\frac{\\pi}{6}\", (0,1), plain.W); MP(\"\\frac{\\pi}{3}\", (0,2), plain.W); MP(\"\\frac{\\pi}{2}\", (0,3), plain.W); [/asy]Thus the area of what we are interested in is \\[\\frac{\\pi^2}{4} - (\\frac{\\pi^2}{18} + \\frac{\\pi^2}{36}) = \\frac{\\pi^2}{6}.\\]~coolmath_2018</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
       ]
     },
     {
@@ -402,6 +696,12 @@
       "solutions": [
         "<p>We say the sequence $(a_n)$ completes at $i$ if $i$ is the minimal positive integer such that $a_i = a_{i + 1} = 1$. Otherwise, we say $(a_n)$ does not complete.</p><p><br/>Note that if $d = \\gcd(999, a_2) \\neq 1$, then $d|a_n$ for all $n \\geq 1$, and $d$ does not divide $1$, so if $\\gcd(999, a_2) \\neq 1$, then $(a_n)$ does not complete. (Also, $a_{2006}$ cannot be 1 in this case since $d$ does not divide $1$, so we do not care about these $a_2$ at all.)</p><p>From now on, suppose $\\gcd(999, a_2) = 1$.</p><p><br/>We will now show that $(a_n)$ completes at $i$ for some $i \\leq 2006$. We will do this with 3 lemmas.</p><p><br/><b>Lemma:</b> If $a_j \\neq a_{j + 1}$, and neither value is $0$, then $\\max(a_j, a_{j + 1}) > \\max(a_{j + 2}, a_{j + 3})$.</p><p><b>Proof:</b> There are 2 cases to consider.</p><p>If $a_j > a_{j + 1}$, then $a_{j + 2} = a_j - a_{j + 1}$, and $a_{j + 3} = |a_j - 2a_{j + 1}|$. So $a_j > a_{j + 2}$ and $a_j > a_{j + 3}$.</p><p>If $a_j < a_{j + 1}$, then $a_{j + 2} = a_{j + 1} - a_j$, and $a_{j + 3} = a_j$. So $a_{j + 1} > a_{j + 2}$ and $a_{j + 1} > a_{j + 3}$.</p><p>In both cases, $\\max(a_j, a_{j + 1}) > \\max(a_{j + 2}, a_{j + 3})$, as desired.</p><p><b>Lemma:</b> If $a_i = a_{i + 1}$, then $a_i = 1$. Moreover, if instead we have $a_i = 0$ for some $i > 2$, then $a_{i - 1} = a_{i - 2} = 1$.</p><p><b>Proof:</b> By the way $(a_n)$ is constructed in the problem statement, having two equal consecutive terms $a_i = a_{i + 1}$ implies that $a_i$ divides every term in the sequence. So $a_i | 999$ and $a_i | a_2$, so $a_i | \\gcd(999, a_2) = 1$, so $a_i = 1$. For the proof of the second result, note that if $a_i = 0$, then $a_{i - 1} = a_{i - 2}$, so by the first result we just proved, $a_{i - 2} = a_{i - 1} = 1$.</p><p><b>Lemma:</b> $(a_n)$ completes at $i$ for some $i \\leq 2000$.</p><p><b>Proof:</b> Suppose $(a_n)$ completed at some $i > 2000$ or not at all. Then by the second lemma and the fact that neither $999$ nor $a_2$ are $0$, none of the pairs $(a_1, a_2), ..., (a_{1999}, a_{2000})$ can have a $0$ or be equal to $(1, 1)$. So the first lemma implies\\[\\max(a_1, a_2) > \\max(a_3, a_4) > \\cdots > \\max(a_{1999}, a_{2000})  > 0,\\]so $999 = \\max(a_1, a_2) \\geq 1000$, a contradiction. Hence $(a_n)$ completes at $i$ for some $i \\leq 2000$.</p><p><br/>Now we're ready to find exactly which values of $a_2$ we want to count.</p><p>Let's keep in mind that $2006 \\equiv 2 \\pmod 3$ and that $a_1 = 999$ is odd. We have two cases to consider.</p><p><br/><b>Case 1:</b> If $a_2$ is odd, then $a_3$ is even, so $a_4$ is odd, so $a_5$ is odd, so $a_6$ is even, and this pattern must repeat every three terms because of the recursive definition of $(a_n)$, so the terms of $(a_n)$ reduced modulo 2 are\\[1, 1, 0, 1, 1, 0, ...,\\] so $a_{2006}$ is odd and hence $1$ (since if $(a_n)$ completes at $i$, then $a_k$ must be $0$ or $1$ for all $k \\geq i$).</p><p><b>Case 2:</b> If $a_2$ is even, then $a_3$ is odd, so $a_4$ is odd, so $a_5$ is even, so $a_6$ is odd, and this pattern must repeat every three terms, so the terms of $(a_n)$ reduced modulo 2 are \\[1, 0, 1, 1, 0, 1, ...,\\]so $a_{2006}$ is even, and hence $0$.</p><p><br/>We have found that $a_{2006} = 1$ is true precisely when $\\gcd(999, a_2) = 1$ and $a_2$ is odd. This tells us what we need to count.</p><p><br/>There are $\\phi(999) = 648$ numbers less than $999$ and relatively prime to it ($\\phi$ is the Euler totient function). We want to count how many of these are odd. Note that\\[t \\mapsto 999 - t\\]is a 1-1 correspondence between the odd and even numbers less than and relatively prime to $999$. So our final answer is $648/2 = 324$, or $\\boxed{\\text{B}}$.</p>",
         "<p>As in Solution 1, we show that $a_2$ must be odd. We notice that, after experimentation, all numbers eventually end up in a sequence $1,1,0,1,1,0,\\ldots$, which points to the assumption that every $2$ out of $3$ values for $a_2$ work due to residue classes. Combining this with an estimated 50-50 chance that these values are either odd or even, since $999$ values are nonnegative integers less than $999$, we can estimate that there are about $999\\cdot\\frac{2}{3}\\cdot\\frac{1}{2}=333$ different values of $a_2$ that work. The closest answer choice by far is $\\boxed{\\textbf{(B) }324}$.</p><p>~eevee9406</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "sequences_patterns"
+        }
       ]
     }
   ]

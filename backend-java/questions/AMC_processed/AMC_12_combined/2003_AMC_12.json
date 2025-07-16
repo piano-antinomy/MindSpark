@@ -12,12 +12,12 @@
         "<p>In the case that we don't know if $0$ is considered an even number, we note that it doesn't matter! The sum of odd numbers is $O=1+3+5+...+4005$. And the sum of even numbers is either $E_1=0+2+4...+4004$ or $E_2=2+4+6+...+4006$. When compared to the sum of odd numbers, we see that each of the $n$th term in the series of even numbers differ by $1$. For example, take series $O$ and $E_1$. The first terms are $1$ and $0$. Their difference is $|1-0|=1$. Similarly, take take series $O$ and $E_2$. The first terms are $1$ and $2$. Their difference is $|1-2|=1$. Since there are $2003$ terms in each set, the answer $\\boxed{\\mathrm{(D)}\\ 2003}$.</p>",
         "<p>We can pair each term of the sums - the first even number with the first odd number, the second with the second, and so forth. Then, there are 2003 pairs with a difference of 1 in each pair - 2-1 is 1, 4-3 is 1, 6-5 is 1, and so on. Then, the solution is $1 \\cdot 2003$, and the answer is $\\boxed{\\text{(D) }2003}$.</p><p>&lt;3</p>"
       ],
-      "categorization": {
-        "category": "arithmetic",
-        "subcategory": "sequences",
-        "confidence": 0.95,
-        "reasoning": "This problem involves finding the difference between the sum of the first 2003 even numbers and the first 2003 odd numbers, requiring understanding of arithmetic sequences and systematic pairing."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_2",
@@ -25,12 +25,12 @@
       "solutions": [
         "<p>Since T-shirts cost $5$ dollars more than a pair of socks, T-shirts cost $5+4=9$ dollars. </p><p>Since each member needs $2$ pairs of socks and $2$ T-shirts, the total cost for $1$ member is $2(4+9)=26$ dollars. </p><p>Since $2366$ dollars was the cost for the club, and $26$ was the cost per member, the number of members in the League is $2366\\div 26=\\boxed{\\mathrm{(B)}\\ 91}$. </p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "basic_operations",
-        "confidence": 0.95,
-        "reasoning": "This problem involves setting up and solving a simple equation to find the number of members in a soccer league, requiring understanding of cost calculations and division."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_3",
@@ -38,12 +38,12 @@
       "solutions": [
         "<p>The volume of the original box is $15\\cdot10\\cdot8=1200.$</p><p>The volume of each cube that is removed is $3\\cdot3\\cdot3=27.$</p><p>Since there are $8$ corners on the box, $8$ cubes are removed. </p><p>So the total volume removed is $8\\cdot27=216$. </p><p>Therefore, the desired percentage is $\\frac{216}{1200}\\cdot100 = \\boxed{\\mathrm{(D)}\\ 18\\%}.$</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "volume",
-        "confidence": 0.9,
-        "reasoning": "This problem involves calculating the percentage of volume removed from a box when cubes are removed from each corner, requiring understanding of volume calculations and percentages."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_4",
@@ -52,12 +52,12 @@
         "<p>Since she walked $1$ km to school and $1$ km back home, her total distance is $1+1=2$ km. </p><p>Since she spent $30$ minutes walking to school and $10$ minutes walking back home, her total time is $30+10=40$ minutes = $\\frac{40}{60}=\\frac{2}{3}$ hours. </p><p>Therefore her average speed in km/hr is $\\frac{2}{\\left(\\frac{2}{3}\\right)}=\\boxed{\\mathrm{(A)}\\ 3}$.</p>",
         "<p>The average speed of two speeds that travel the same distance is the <a href=\"/wiki/index.php/Harmonic_mean\" title=\"Harmonic mean\">harmonic mean</a> of the speeds, or $\\dfrac{2}{\\left(\\dfrac{1}{x}+\\dfrac{1}{y}\\right)}=\\dfrac{2xy}{x+y}$ (for speeds $x$ and $y$). Mary's speed going to school is $2\\,\\text{km/hr}$, and her speed coming back is $6\\,\\text{km/hr}$. Plugging the numbers in, we get that the average speed is $\\dfrac{2\\times 6\\times 2}{6+2}=\\dfrac{24}{8}=\\boxed{\\mathrm{(A)}\\ 3}$.</p>"
       ],
-      "categorization": {
-        "category": "arithmetic",
-        "subcategory": "time_and_rate",
-        "confidence": 0.9,
-        "reasoning": "This problem involves calculating average speed for a round trip with different speeds in each direction, requiring understanding of harmonic mean and rate calculations."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_5",
@@ -68,12 +68,12 @@
         "<p>Consider the place values of the digits of $AMC10$ and $AMC12$. </p><p>When we add $AMC10$ and $AMC12$, $C + C$ must result in a units digit of $4$, meaning $C$ is either $2$ or $7$. Since $M$ is odd, this means a ten was carried over to the next place value from $C + C$, and thus $C = 7$ (as $7 + 7 = 14$ and the ten is carried over). Now, we know 3 is the units digit of $M + M + 1$, so $M$ is either $1$ or $6$. Again, we must look at the digit before $M$, or $A$. $A$ is even, so $M$ must be less than $5$, or else the ten would be carried over. Ergo, $M$ is $1$. Nothing is carried over, so we have $A + A = 12$, and $A = 6$. Therefore, the sum of $A$, $M$, and $C$ is $6 + 1 + 7 = \\boxed{\\mathrm{(E)}\\ 14}$.</p>",
         "<p>Intuitively, adding $AMC10$ and $AMC12$ is the same as adding $AMC11$ to itself. We can divide $123422$ by $2$ to get $61711$. So, $A$ = $6$, $M$ = 1, and $C$ = $7$. Adding all those up yields $6 + 1 + 7 = \\boxed{\\mathrm{(E)}\\ 14}$ ~sdmd</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "basic_operations",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the sum of digits in a 5-digit number given information about place value relationships, requiring understanding of digit analysis and place value."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "general"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_6",
@@ -81,12 +81,12 @@
       "solutions": [
         "<p>We start by looking at the answers. Examining statement C, we notice:</p><p>$x \\heartsuit 0 = |x-0| = |x|$</p><p>$|x| \\neq x$ when $x<0$, but statement C says that it does for all $x$. </p><p>Therefore the statement that is not true is $\\boxed{\\mathrm{(C)}\\ x\\heartsuit 0=x\\ \\text{for all}\\ x}$</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "absolute_value",
-        "confidence": 0.9,
-        "reasoning": "This problem involves analyzing a custom operation defined as absolute difference and determining which property does not hold, requiring understanding of absolute value properties."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_7",
@@ -94,12 +94,12 @@
       "solutions": [
         "<p>By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Triangle_inequality\" title=\"Triangle inequality\">triangle inequality</a>, no side may have a length greater than the semiperimeter, which is $\\frac{1}{2}\\cdot7=3.5$. </p><p>Since all sides must be integers, the largest possible length of a side is $3$. Therefore, all such triangles must have all sides of length $1$, $2$, or $3$. Since $2+2+2=6<7$, at least one side must have a length of $3$. Thus, the remaining two sides have a combined length of $7-3=4$. So, the remaining sides must be either $3$ and $1$ or $2$ and $2$. Therefore, the number of triangles is $\\boxed{\\mathrm{(B)}\\ 2}$.</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "triangles",
-        "confidence": 0.9,
-        "reasoning": "This problem involves counting non-congruent triangles with integer side lengths and a given perimeter, requiring understanding of triangle inequality and systematic counting."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_8",
@@ -110,12 +110,12 @@
         "<p>Testing all positive integers less than $7$, we find that $1$, $2$, $3$, $4$, $5$, and $6$ all divide $60$. The prime factorization of $60$ is $2^2 \\cdot 3 \\cdot 5$, so using the standard <a href=\"/wiki/index.php/Divisor_function\" title=\"Divisor function\">formula for the number of divisors</a>, the total number of divisors of $60$ is $3 \\cdot 2 \\cdot 2 = 12$. Therefore, the required probability is $\\frac{6}{12} = \\boxed{\\mathrm{(E)}\\ \\frac{1}{2}}$.</p>",
         "<p>Though this is not recommended for reasons of time, one can simply write out all the factors of $60$, eventually finding that \\[60 = 1 \\cdot 60 = 2 \\cdot 30 = 3 \\cdot 20 = 4 \\cdot 15 = 5 \\cdot 12 = 6 \\cdot 10.\\] Hence $60$ has $12$ factors, of which $6$ are less than $7$ (namely, $1$, $2$, $3$, $4$, $5$, and $6$), so the answer is $\\frac{6}{12} = \\boxed{\\mathrm{(E)}\\ \\frac{1}{2}}$.</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "divisibility",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the probability that a randomly chosen factor of 60 is less than 7, requiring understanding of factor properties and probability."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_9",
@@ -123,12 +123,12 @@
       "solutions": [
         "<p>If $(2,3)$ is in $S$, then its reflection in the line $y = x$, i.e. $(3,2)$, is also in $S$. Now by reflecting these points in both coordinate axes, we quickly deduce that every point of the form $(\\pm 2, \\pm 3)$ or $(\\pm 3, \\pm 2)$ must be in $S$. Moreover, by drawing out this set of $8$ points, we observe that it satisfies all of the required symmetry conditions, so no more points need to be added to $S$. Accordingly, the smallest possible number of points in $S$ is precisely $\\boxed{\\mathrm{(D)}\\ 8}$.</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "coordinate_geometry",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the minimum number of points in a set with specific symmetry properties, requiring understanding of coordinate geometry and symmetry."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_10",
@@ -136,12 +136,12 @@
       "solutions": [
         "<p>Because the ratios are $3:2:1$, Al, Bert, and Carl believe that they need to take $1/2$, $1/3$, and $1/6$ of the pile when they each arrive, respectively. After each person comes, $1/2$, $2/3$, and $5/6$ of the pile's size (just before each came) remains. The pile starts at $1$, and at the end $\\frac{1}{2}\\cdot \\frac{2}{3}\\cdot \\frac{5}{6}\\cdot 1 = \\frac{5}{18}$ of the original pile goes unclaimed. (Note that because of the properties of multiplication, it does not matter what order the three come in.) Hence the answer is $\\boxed{\\mathrm{(D)}\\ \\dfrac{5}{18}}$.</p>"
       ],
-      "categorization": {
-        "category": "arithmetic",
-        "subcategory": "fractions",
-        "confidence": 0.9,
-        "reasoning": "This problem involves calculating what fraction of candy goes unclaimed when three people take shares based on incorrect assumptions, requiring understanding of fraction operations."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_11",
@@ -149,12 +149,12 @@
       "solutions": [
         "<p>Suppose that the common perimeter is $P$. Then the side lengths of the square and the triangle are $\\frac{P}{4}$ and $\\frac{P}{3}$, respectively.</p><p>The circle circumscribed about the square has a diameter equal to the diagonal of the square, which is therefore $\\frac{P}{4} \\cdot \\sqrt{2} = \\frac{P\\sqrt{2}}{4}$, and so its radius is $\\frac{\\left(\\frac{P\\sqrt{2}}{4}\\right)}{2} = \\frac{P\\sqrt{2}}{8}$. Hence the area of the circle is \\[A = \\pi\\left(\\frac{P\\sqrt{2}}{8}\\right)^2 = \\pi \\cdot \\frac{2P^2}{64} = \\frac{\\pi P^2}{32}.\\]</p><p>Now consider the circle circumscribed around the equilateral triangle. By symmetry, its center must be the same as that of the triangle, so its radius is simply the distance from the center of the triangle to a vertex. Recalling that the centroid of any triangle divides its medians in the ratio $2:1$, and that the medians of an equilateral triangle are the same as its altitudes, we deduce that the radius is $\\frac{2}{3}$ of the total length of an altitude. Since the side length of this triangle is $\\frac{P}{3}$, the length of an altitude is $\\frac{P}{3}\\sin\\left(60^{\\circ}\\right) = \\frac{P}{3} \\cdot \\frac{\\sqrt{3}}{2} = \\frac{P\\sqrt{3}}{6}$, so finally the radius is \\[\\frac{2}{3} \\cdot \\frac{P\\sqrt{3}}{6} = \\frac{P\\sqrt{3}}{9},\\]and thus the area of this circle is \\[B = \\pi\\left(\\frac{P\\sqrt{3}}{9}\\right)^2 = \\pi \\cdot \\frac{3P^2}{81} = \\frac{\\pi P^2}{27}.\\]</p><p>This gives \\[\\frac{A}{B}=\\frac{\\left(\\frac{\\pi P^2}{32}\\right)}{\\left(\\frac{\\pi P^2}{27}\\right)} = \\frac{\\pi P^2}{32} \\cdot \\frac{27}{\\pi P^2}= \\boxed{\\mathrm{(C) \\ } \\frac{27}{32}}.\\]</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "circles",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the ratio of areas of circumscribed circles for a square and equilateral triangle with the same perimeter, requiring understanding of circle properties and geometric ratios."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_12",
@@ -162,12 +162,12 @@
       "solutions": [
         "<p>Let $R_i$ and $B_j$ designate the red card numbered $i$ and the blue card numbered $j$, respectively. </p><p>$B_5$ is the only blue card that $R_5$ evenly divides, so $R_5$ must be at one end of the stack and $B_5$ must be the card next to it. </p><p>$R_1$ is the only other red card that evenly divides $B_5$, so $R_1$ must be the other card next to $B_5$. </p><p>$B_4$ is the only blue card that $R_4$ evenly divides, so $R_4$ must be at one end of the stack and $B_4$ must be the card next to it. </p><p>$R_2$ is the only other red card that evenly divides $B_4$, so $R_2$ must be the other card next to $B_4$. </p><p>$R_2$ doesn't evenly divide $B_3$, so $B_3$ must be next to $R_1$, $B_6$ must be next to $R_2$, and $R_3$ must be in the middle. </p><p>This yields the following arrangement from top to bottom: $\\{R_5,B_5,R_1,B_3,R_3,B_6,R_2,B_4,R_4\\}$</p><p>Therefore, the sum of the numbers on the middle three cards is $3+3+6=\\boxed{\\mathrm{(E)}\\ 12}$.</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "This problem involves arranging cards with specific divisibility constraints and finding the sum of middle cards, requiring understanding of systematic counting and divisibility."
-      }
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "logical_reasoning"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_13",
@@ -178,12 +178,12 @@
         "<p>Another way to think of it is that a cube missing one face has $5$ of its $6$ faces. Since the shape has $4$ faces already, we need another face. The only way to add another face is if the added square does not overlap any of the others. $1$,$2$, and $3$ overlap, while squares $4$ to $9$ do not. The answer is $\\boxed{\\mathrm{(E)}\\ 6}$</p>",
         "<p>If you're good at visualizing, you can imagine each box and fold up the shape into a 3D shape. This solution is only recommended if you are either in a hurry or extremely skilled at visualizing. We find out that $4,5,6,7,8$ and $9$ work. Therefore, the answer is $\\boxed{\\mathrm{(E)}\\ 6}$. ~Sophia866</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "This problem involves determining how many ways to add a square to a polygon to make it foldable into a cube, requiring understanding of 3D geometry and spatial reasoning."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_14",
@@ -194,12 +194,12 @@
         "<p>Because $ABCD$ has area $16$, its side length is simply $\\sqrt{16}\\implies 4$.</p><p>Angle chasing, we find that the angle of $KBL=360-(90+2(60))=360-(210)=150$.</p><p>We also know that $KB=4, BL=4$.</p><p>Using Law of Cosines, we find that side $(KL)^2=16+16-2(16)cos{150}\\implies (KL)^2=32+\\frac{32\\sqrt{3}}{2}\\implies (KL)^2=32+16\\sqrt{3}$.</p><p>However, the area of $KLMN$ is simply $(KL)^2$, hence the answer is $\\boxed{\\textbf{(D) } 32+16\\sqrt{3}}$</p>",
         "<p>First we show that $KLMN$ is a square. How? Show that it is a rhombus that has a right angle.</p><p>$\\angle{NAK}=\\angle{KBL}=\\angle{LCM}=\\angle{DNM}=150^\\circ$. All the sides of the equilateral triangles are equal, so the triangles are congruent. Notice that $\\angle{KNL}=45^\\circ$, etc, so $\\angle{KNM}=90^\\circ$. So we have a square.</p><p>Instead of going to find $KN$ using Law of Cosines, we can inscribe the square in another bigger one and then subtract the four right triangles in the corners, so after all of this, we find that the answer is $\\boxed{\\textbf{(D) } 32+16\\sqrt{3}}$</p><p>~hastapasta (edited)</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the area of a quadrilateral formed by equilateral triangles constructed on the sides of a square, requiring understanding of coordinate geometry and area calculations."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_15",
@@ -207,12 +207,12 @@
       "solutions": [
         "<p>[asy] import graph; size(150); defaultpen(fontsize(8)); pair A=(-2,0), B=(2,0); filldraw(Arc((0,sqrt(3)),1,0,180)--cycle,mediumgray); fill(Arc((0,0),2,0,180)--cycle,white); draw(Arc((0,0),2,0,180)--cycle); draw((0,0)--2*expi(2*pi/6)--2*expi(2*pi/6*2)--(0,0));  label(\"A\",(0,2),(0,4)); label(\"B\",(0,2),(0,-1)); label(\"C\",(0,sqrt(3)/2),(0,2)); label(\"1\",(-0.5,sqrt(3)/2),(-1,0)); label(\"1\",(0.5,sqrt(3)/2),(1,0)); [/asy]</p><p><br/>The shaded area $[A]$ is equal to the area of the smaller semicircle $[A+B]$ minus the area of a <a href=\"/wiki/index.php/Sector\" title=\"Sector\">sector</a> of the larger circle $[B+C]$ plus the area of a <a href=\"/wiki/index.php/Triangle\" title=\"Triangle\">triangle</a> formed by two <a href=\"/wiki/index.php/Radius\" title=\"Radius\"> radii</a> of the larger semicircle and the diameter of the smaller semicircle $[C]$.</p><p>The area of the smaller semicircle is $[A+B] = \\frac{1}{2}\\pi\\cdot\\left(\\frac{1}{2}\\right)^{2}=\\frac{1}{8}\\pi$. </p><p>Since the radius of the larger semicircle is equal to the diameter of the smaller half circle, the triangle is an equilateral triangle and the sector measures $60^\\circ$. </p><p>The area of the $60^\\circ$ sector of the larger semicircle is $[B+C] = \\frac{60}{360}\\pi\\cdot\\left(\\frac{2}{2}\\right)^{2}=\\frac{1}{6}\\pi$. </p><p>The area of the triangle is $[C] = \\frac{1^{2}\\sqrt{3}}{4}=\\frac{\\sqrt{3}}{4}$.</p><p>So the shaded area is $[A] = [A+B]-[B+C]+[C] = \\left(\\frac{1}{8}\\pi\\right)-\\left(\\frac{1}{6}\\pi\\right)+\\left(\\frac{\\sqrt{3}}{4}\\right)=\\boxed{\\mathrm{(C)}\\ \\frac{\\sqrt{3}}{4}-\\frac{1}{24}\\pi}$. We have thus solved the problem.</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "circles",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the area of a lune (region between two semicircles), requiring understanding of circle geometry and area relationships."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_16",
@@ -223,12 +223,12 @@
         "<p>We will use geometric probability. Let us take point $P$, and draw the perpendiculars to $BC$, $CA$, and $AB$, and call the feet of these perpendiculars $D$, $E$, and $F$ respectively. The area of $\\triangle ACP$ is simply $\\frac{1}{2} * AC * PF$. Similarly we can find the area of triangles $BCP$ and $ABP$. If we add these up and realize that it equals the area of the entire triangle, we see that no matter where we choose $P, PD + PE + PF$ = the height of the triangle. Setting the area of triangle $ABP$ greater than $ACP$ and $BCP$, we want $PF$ to be the largest of $PF$, $PD$, and $PE$. We then realize that $PF = PD = PE$ when $P$ is the incenter of $\\triangle ABC$. Let us call the incenter of the triangle $Q$. If we want $PF$ to be the largest of the three, by testing points we realize that $P$ must be in the interior of quadrilateral $QDCE$. So our probability (using geometric probability) is the area of $QDCE$ divided by the area of $ABC$. We will now show that the three quadrilaterals, $QDCE$, $QEAF$, and $QFBD$ are congruent. As the definition of point $Q$ yields, $QF$ = $QD$ = $QE$. Since $ABC$ is equilateral, $Q$ is also the circumcenter of $\\triangle ABC$, so $QA = QB = QC$. By the Pythagorean Theorem, $BD = DC = CE = EA = AF = FB$. Also, angles $BDQ, BFQ, CEQ, CDQ, AFQ$, and $AEQ$ are all equal to $90^\\circ$. Angles $DBF, FAE, ECD$ are all equal to $60$ degrees, so it is now clear that quadrilaterals $QDCE, QEAF, QFBD$ are all congruent. Summing up these areas gives us the area of $\\triangle ABC$. $QDCE$ contributes to a third of that area so $\\frac{[QDCE]}{[ABC]}=\\boxed{\\mathrm{(C)}\\ \\dfrac{1}{3}}$.</p>",
         "<p>Due to symmetry, we notice that the probability one triangle is greater than the other is $\\frac{1}{2}$. For two triangles this gives $\\frac{1}{2} * \\frac{1}{2} = \\frac{1}{4}$. However, the probability of one triangle being greater than the other, depends on knowing whether one triangle is greater or less than the other. This means the probability is less than $\\frac{1}{2}$ but greater than $\\frac{1}{4}$ giving $\\boxed{\\mathrm{(C)}\\ \\dfrac{1}{3}}$.</p><p>~PeterDoesPhysics</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "probability",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the probability that a randomly chosen point in an equilateral triangle creates the largest area triangle, requiring understanding of geometric probability."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_17",
@@ -242,12 +242,12 @@
         "<p>Let $H$ be the foot of the perpendicular from $P$ to $CD$, and let $HD = x$. Then we have $HC = 4-x$, and $PH = 4 - \\sqrt{16 - x^2}$. Since $\\triangle DHP \\sim \\triangle PHC$, we have $HP^2 = DH \\cdot HC$, or $-x^2 + 4x = 16 - 8\\sqrt{16-x^2}$. Solving gives $x = \\frac{16}{5}$.</p>",
         "<p>[asy] size(8cm, 8cm); pair A,B,C,D,M,P,Q,R; D = (0,0); C = (10,0); B = (10,10); A = (0,10); M = (5,0); P = (8,4); Q = (D+P)/2; R = (0,4); dot(M); dot(P); draw(A--B--C--D--cycle,linewidth(0.7)); draw((5,5)..D--C..cycle,linewidth(0.7)); draw((7.07,2.93)..B--A--D..cycle,linewidth(0.7)); draw(A--M,linewidth(0.7)); draw(A--P,linewidth(0.7)); draw(D--P,linewidth(0.7)); draw(R--P,linewidth(0.7)); label(\"$A$\",A,NW); label(\"$B$\",B,NE); label(\"$C$\",C,SE); label(\"$D$\",D,SW); label(\"$M$\",M,S); label(\"$P$\",P,N); label(\"$Q$\",Q,W); label(\"$R$\",R,W);  draw(rightanglemark(M, Q, P), linewidth(.5)); [/asy]</p><p>Draw $AM$, $DP$, and $PR$. $PR$ is parallel with $CD$</p><p>$[AMD] = \\frac12 \\cdot AD \\cdot DM = 4$, $AM = \\sqrt{AD^2 + DM^2} = 2 \\sqrt{5}$</p><p>$\\triangle ADQ \\sim \\triangle AMD$ by $AA$, $[ADQ] = [AMD] \\cdot \\left( \\frac{AD}{AM} \\right) ^2 = 4 \\cdot \\left( \\frac{2 \\sqrt{5}}{5} \\right)^2 = \\frac{16}{5}$</p><p>$\\triangle ADQ \\cong \\triangle APQ$, $[APD] = 2 \\cdot [ADQ] = 2 \\cdot \\frac{16}{5} = \\frac{32}{5}$</p><p>$PR = \\frac{2 \\cdot [APD]}{AD} = \\frac{2 \\cdot \\frac{32}{5}}{4} = \\boxed{\\textbf{(B) } \\frac{16}{5} }$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "circles",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the distance from a point to a line given information about intersecting circles, requiring understanding of circle geometry and coordinate geometry."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_18",
@@ -257,12 +257,12 @@
         "<p>Notice that $q+r\\equiv0\\pmod{11}\\Rightarrow100q+r\\equiv0\\pmod{11}$. This means that any number whose quotient and remainder sum is divisible by 11 must also be divisible by 11. Therefore, there are $\\frac{99990-10010}{11}+1=8181$ possible values. The answer is $\\boxed{\\textbf{(B) }8181}$.</p>",
         "<p>Let $abcde$ be the five digits of $n$. Then $q = abc$ and $r = de$. By the divisibility rules of $11$, $q = a - b + c \\pmod{11}$ and $r = -d + e \\pmod{11}$, so $q + r = a - b + c - d + e = abcde = n \\pmod{11}$. Thus, $n$ must be divisble by $11$. There are $\\frac{99990 - 10010}{11} + 1 = 8181$ five-digit multiples of $11$, so the answer is $\\boxed{\\textbf{(B) }8181}$.</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "divisibility",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding how many 5-digit numbers have the property that the sum of quotient and remainder when divided by 100 is divisible by 11, requiring understanding of divisibility rules."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_19",
@@ -271,41 +271,41 @@
         "<p>If we take the parabola $ax^2 + bx + c$ and reflect it over the x - axis, we have the parabola $-ax^2 - bx - c$. Without loss of generality, let us say that the parabola is translated 5 units to the left, and the reflection to the right. Then:</p><p>\\begin{align*} f(x) = a(x+5)^2 + b(x+5) + c = ax^2 + (10a+b)x + 25a + 5b + c \\\\  g(x)  = -a(x-5)^2 - b(x-5) - c = -ax^2 + 10ax -bx - 25a + 5b - c \\end{align*}</p><p>Adding them up produces: \\begin{align*} (f + g)(x) = ax^2 + (10a+b)x + 25a + 5b + c - ax^2 + 10ax -bx - 25a + 5b - c = 20ax + 10b \\end{align*}</p><p>This is a line with slope $20a$. Since $a$ cannot be $0$ (because $ax^2 + bx + c$ would be a line) we end up with $\\boxed{\\textbf{(D)} \\text{ a non-horizontal line }}$</p>",
         "<p>WLOG let the parabola be $y=x^2$, and the reflected parabola is thus $y=-x^2$. We can also assume \\[f(x) = (x+5)^2 = x^2 + 10x + 25\\] and \\[g(x) = -(x-5)^2 = -x^2 + 10x - 25.\\] Therefore, \\[(f+g)(x) = x^2 + 10x + 25 - x^2 + 10x - 25 = 20x,\\] which is a non-horizontal line $\\Rightarrow \\boxed{\\textbf{D}}$.</p><p>-MP8148</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "functions",
-        "confidence": 0.9,
-        "reasoning": "This problem involves analyzing the sum of two functions obtained by reflecting and translating a parabola, requiring understanding of function transformations."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_20",
       "question": "<p>How many $15$-letter arrangements of $5$ A's, $5$ B's, and $5$ C's have no A's in the first $5$ letters, no B's in the next $5$ letters, and no C's in the last $5$ letters?</p>",
       "solutions": [
         "<p>The answer is $\\boxed{\\textrm{(A)}}$.</p><p>Note that the first five letters must be B's or C's, the next five letters must be C's or A's, and the last five letters must be A's or B's. If there are $k$ B's in the first five letters, then there must be $5-k$ C's in the first five letters, so there must be $k$ C's and $5-k$ A's in the next five letters, and $k$ A's and $5-k$ B's in the last five letters. Therefore the number of each letter in each group of five is determined completely by the number of B's in the first 5 letters, and the number of ways to arrange these 15 letters with this restriction is $\\binom{5}{k}^3$ (since there are $\\binom{5}{k}$ ways to arrange $k$ B's and $5-k$ C's). Therefore the answer is $\\sum_{k=0}^{5}\\binom{5}{k}^{3}$.</p><p><br/></p>",
-        "<p>Note that answer choices B and E have a power of 3 in them, which is impossible since every letter only has 2 options due to the restriction. Therefore, they are automatically eliminated.</p><p><br/>Answer choice C is eliminated due to the fact that not every combination is counted for in 2^15. We can show this in a very simple way:</p><p>If all 5 C\u2019s are used in the first 5 letters of the arrangements, then the next 5 letters must be A\u2019s, as B\u2019s are not allowed according to the question. Therefore, there is only one option for these 5 letters, showing a case not accounted for in 2^15.</p><p><br/>Answer choice D is eliminated because although it finds the amount of possible arrangements, it ignores the restriction of the question (A\u2019s cannot be in the first 5 letters, B\u2019s in the second 5, etc.).</p><p><br/>Therefore, the only remaining answer choice is $\\boxed{\\textrm{(A)}}$.</p><p>-SwordOfJustice</p>"
+        "<p>Note that answer choices B and E have a power of 3 in them, which is impossible since every letter only has 2 options due to the restriction. Therefore, they are automatically eliminated.</p><p><br/>Answer choice C is eliminated due to the fact that not every combination is counted for in 2^15. We can show this in a very simple way:</p><p>If all 5 C’s are used in the first 5 letters of the arrangements, then the next 5 letters must be A’s, as B’s are not allowed according to the question. Therefore, there is only one option for these 5 letters, showing a case not accounted for in 2^15.</p><p><br/>Answer choice D is eliminated because although it finds the amount of possible arrangements, it ignores the restriction of the question (A’s cannot be in the first 5 letters, B’s in the second 5, etc.).</p><p><br/>Therefore, the only remaining answer choice is $\\boxed{\\textrm{(A)}}$.</p><p>-SwordOfJustice</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "This problem involves counting arrangements of letters with specific constraints on which letters can appear in which positions, requiring understanding of systematic counting and restrictions."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "permutations_combinations"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_21",
       "question": "<p>The graph of the <a href=\"/wiki/index.php/Polynomial\" title=\"Polynomial\">polynomial</a></p><p>\\[P(x) = x^5 + ax^4 + bx^3 + cx^2 + dx + e\\]</p><p>has five distinct $x$-intercepts, one of which is at $(0,0)$. Which of the following <a href=\"/wiki/index.php/Coefficient\" title=\"Coefficient\">coefficients</a> cannot be zero?</p>",
       "solutions": [
-        "<p>Let the roots be $r_1=0, r_2, r_3, r_4, r_5$. According to <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\"> Vi\u00e8te's formulae</a>, we have $d=r_1r_2r_3r_4 + r_1r_2r_3r_5 + r_1r_2r_4r_5 + r_1r_3r_4r_5 + r_2r_3r_4r_5$. The first four terms contain $r_1=0$ and are therefore zero, thus $d=r_2r_3r_4r_5$. This is a product of four non-zero numbers, therefore $d$ must be non-zero $\\Longrightarrow \\mathrm{(D)}$.</p><p>Clearly, since $(0,0)$ is an intercept, $e$ must be $0$. But if $d$ was $0$, $x^2$ would divide the polynomial, which means it would have a double root at $0$, which is impossible, since all five roots are distinct.</p>",
-        "<p>Let the roots be $r_1=0, r_2, r_3, r_4, r_5$. According to <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\"> Vi\u00e8te's formulae</a>, we have $d=r_1r_2r_3r_4 + r_1r_2r_3r_5 + r_1r_2r_4r_5 + r_1r_3r_4r_5 + r_2r_3r_4r_5$. The first four terms contain $r_1=0$ and are therefore zero, thus $d=r_2r_3r_4r_5$. This is a product of four non-zero numbers, therefore $d$ must be non-zero $\\Longrightarrow \\mathrm{(D)}$.</p>",
+        "<p>Let the roots be $r_1=0, r_2, r_3, r_4, r_5$. According to <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\"> Viète's formulae</a>, we have $d=r_1r_2r_3r_4 + r_1r_2r_3r_5 + r_1r_2r_4r_5 + r_1r_3r_4r_5 + r_2r_3r_4r_5$. The first four terms contain $r_1=0$ and are therefore zero, thus $d=r_2r_3r_4r_5$. This is a product of four non-zero numbers, therefore $d$ must be non-zero $\\Longrightarrow \\mathrm{(D)}$.</p><p>Clearly, since $(0,0)$ is an intercept, $e$ must be $0$. But if $d$ was $0$, $x^2$ would divide the polynomial, which means it would have a double root at $0$, which is impossible, since all five roots are distinct.</p>",
+        "<p>Let the roots be $r_1=0, r_2, r_3, r_4, r_5$. According to <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\"> Viète's formulae</a>, we have $d=r_1r_2r_3r_4 + r_1r_2r_3r_5 + r_1r_2r_4r_5 + r_1r_3r_4r_5 + r_2r_3r_4r_5$. The first four terms contain $r_1=0$ and are therefore zero, thus $d=r_2r_3r_4r_5$. This is a product of four non-zero numbers, therefore $d$ must be non-zero $\\Longrightarrow \\mathrm{(D)}$.</p>",
         "<p>Clearly, since $(0,0)$ is an intercept, $e$ must be $0$. But if $d$ was $0$, $x^2$ would divide the polynomial, which means it would have a double root at $0$, which is impossible, since all five roots are distinct.</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "polynomials",
-        "confidence": 0.9,
-        "reasoning": "This problem involves determining which coefficient of a polynomial cannot be zero given information about its roots, requiring understanding of Vieta's formulas and polynomial properties."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_22",
@@ -315,12 +315,12 @@
         "<p>We know that the sum of the vertical steps must be equal to $7$. We also know that they must take $6$ steps each. Since moving vertically or horizontally is equally likely, we can write all the possible paths as a generating function:</p><p>\\[P(x)=(x+1)^{12}\\]</p><p>Where we need to extract the $x^5$ coefficient. By the binomial coefficient theorem, that term is $\\binom{12}{5}=792$ paths. Since there are also $2^{12}$ paths, we have:</p><p>$\\frac{792}{2^{12}}=\\frac{792}{4096}\\approx\\frac{800}{4000}\\approx\\boxed{\\text{(C) } 0.20}$</p>",
         "<p>Since there are twelve steps between $(0,0)$ and $(5,7)$, $A$ and $B$ can meet only after they have each moved six steps. The possible meeting places are $P_{0} = (0,6)$, $P_{1} = (1,5)$, $P_{2} = (2,4)$, $P_{3}=(3,3)$, $P_{4} = (4,2)$, and $P_{5} = (5,1)$. Let $a_{i}$ and $b_{i}$ denote the number of paths to $P_{i}$ from $(0,0)$ and $(5,7)$, respectively. Since $A$ has to take $i$ steps to the right and $B$ has to take $i+1$ steps down, the number of ways in which $A$ and $B$ can meet at $P_{i}$ is\\[a_{i}\\cdot b_{i} = \\binom{6}{i} \\binom{6}{i+1}.\\]Since $A$ and $B$ can each take $2^{6}$ paths in six steps, the probability that they meet is\\begin{align*}&amp;\\sum_{i = 0}^{5}\\displaystyle\\left ( \\frac{a_{i}}{2^{6}}\\displaystyle\\right)\\displaystyle\\left( \\frac{b_{i}}{2^{6}} \\displaystyle\\right) \\\\&amp; \\qquad = \\frac{\\binom{6}{0}\\binom{6}{1} + \\binom{6}{1}\\binom{6}{2} + \\binom{6}{2}\\binom{6}{3}+ \\binom{6}{3}\\binom{6}{4}+ \\binom{6}{4}\\binom{6}{5} + \\binom{6}{5}\\binom{6}{6}}{2^{12}}\\\\&amp; \\qquad = \\frac{99}{512} \\\\&amp; \\qquad \\approx \\boxed{0.20}.\\end{align*}Solution 2:Consider the $\\binom{12}{5}$ walks that start at $(0,0)$, end at $(5,7)$, and consist of 12 steps, each one either up or to the right. There is a one-to-one correspondence between these walks and the set of $(A,B)$-paths where $A$ and $B$ meet. In particular, given one of the $\\binom{12}{5}$ walks from $(0,0)$ to $(5,7)$, the path followed by $A$ consists of the first six steps of the walk, and the path followed by $B$ is obtained by starting at $(5,7)$ and reversing the last six steps of the walk. There are $2^{6}$ paths that take 6 steps from $(0,0)$ and $2^{6}$ paths that take 6 steps from $(5,7)$, so there are $2^{12}$ pairs of paths that $A$ and $B$ can take. The probability that they meet is\\begin{align*}P&amp;=\\frac{1}{2^{12}}\\binom{12}{5}\\\\&amp;=\\frac{1}{2^{12}}\\frac{12\\cdot 11 \\cdot 10 \\cdot 9 \\cdot 8}{5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1}\\\\&amp;=\\frac{99}{2^9}.\\\\\\end{align*}This is approximately $0.20$, so the answer is $\\boxed{C}$.</p>"
       ],
-      "categorization": {
-        "category": "probability",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "This problem involves calculating the probability that two objects moving in a coordinate plane meet, requiring understanding of probability and combinatorial counting."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_23",
@@ -329,12 +329,12 @@
         "<p>We want to find the number of perfect square factors in the product of all the factorials of numbers from $1 - 9$. We can write this out and take out the factorials, and then find a prime factorization of the entire product. We can also find this prime factorization by finding the number of times each factor is repeated in each factorial. This comes out to be equal to $2^{30} \\cdot 3^{13} \\cdot 5^5 \\cdot 7^3$. To find the amount of perfect square factors, we realize that each exponent in the prime factorization must be even: $2^{15} \\cdot 3^{6}\\cdot 5^2 \\cdot 7^1$. To find the total number of possibilities, we add $1$ to each exponent and multiply them all together. This gives us $16 \\cdot 7 \\cdot 3 \\cdot 2 = 672$ $\\Rightarrow\\boxed{\\mathrm{(B)}}$.</p>",
         "<p>(Explanation of 1)</p><p>Factorials up to 9 in product lead to prime factorization $2^{30}$ $*$ $3^{13}$ $*$ $5^5$ $*$ $7^3$ So the number of pairs possible is { $2^{0}$ $,$ $2^{2}$ $,$ ... $2^{30}$ }{ $3^{0}$ $,$ $3^{2}$ $,$ ... $3^{12}$ }{ $5^{0}$ $,$ $5^{2}$ $,$ ... $5^{4}$ }{ $7^{0}$ $,$ $7^{2}$ }</p><p>Which leads to resulting number of pairs = $16*7*3*2$ $=$ $672$ $\\Rightarrow\\boxed{\\mathrm{(B)}}$.</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "perfect_squares",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding how many perfect squares are divisors of a product of factorials, requiring understanding of prime factorization and perfect square properties."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_24",
@@ -343,12 +343,12 @@
         "<p>Using logarithmic rules, we see that</p><p>\\[\\log_{a}a-\\log_{a}b+\\log_{b}b-\\log_{b}a = 2-(\\log_{a}b+\\log_{b}a)\\]\\[=2-\\left(\\log_{a}b+\\frac {1}{\\log_{a}b}\\right)\\]</p><p>Since $a$ and $b$ are both greater than $1$, using <a class=\"mw-redirect\" href=\"/wiki/index.php/AM-GM\" title=\"AM-GM\">AM-GM</a> gives that the term in parentheses must be at least $2$, so the largest possible values is $2-2=0 \\Rightarrow \\boxed{\\textbf{B}}.$</p><p>Note that the maximum occurs when $a=b$.</p>",
         "<p>By the logarithmic rules, we have $2-(\\log_a{b}+\\frac{1}{\\log_a{b}})$.Let $x=\\log_a{b}$. Thus, the expression becomes $2-(x+\\frac{1}{x})$. We want to find the maximum of the function. To do so, we will find its derivative and let it equal to 0. We get: $\\frac{d}{dx}\\big(2-(x+\\frac{1}{x})\\big)=\\frac{d}{dx}\\big(2-x-\\frac{1}{x})=-1+x^{-2}=0 \\implies \\frac{1}{x^2}=1, x^2=1, x=\\pm1.$Since $a\\geq b>1, x=-1$ is not a solution. Thus, $x=1$. Substituting it into the original expression $2-(x+\\frac{1}{x})$, we get $2-(1+\\frac{1}{1})=2-2=\\boxed{0}$.</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "logarithms",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the maximum value of a logarithmic expression, requiring understanding of logarithmic properties and optimization."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "inequalities"
+        }
+      ]
     },
     {
       "id": "amc_2003_12a_25",
@@ -358,12 +358,12 @@
         "<p>If $f(x)=y$, then squaring both sides of the given equation and subtracting $ax^2$ and $bx$ yields $y^2-ax^2-bx=0$. Completing the square, we get $(x+\\frac{b}{2a})^2-\\frac{y^2}{a}=\\frac{b^2}{4a^2}$ where $y\\geq 0$. Divide out by $\\frac{b^2}{4a^2}$ to put the equation in the standard form of an ellipse or hyperbola (depending on the sign of $a$) to get $\\frac{(x+\\frac{b}{2a})^2}{(\\frac{b}{2a})^2}-\\frac{y^2}{(\\frac{b}{2\\sqrt {\\pm a}})^2}=1$.</p><p>Before continuing, it is important to note that because $f(x)=\\sqrt{ax^2+bx}=\\sqrt{ax(x+\\frac{b}{a})}$, $f(x)$ has roots 0 and $-\\frac{b}{a}$. Now, we can use the function we deduced to figure out some of its properties when:</p><p>$a>0$: A semi-hyperbola above or on the x-axis. Therefore, no positive value of $a$ allows the domain and range to be the same set because the range will always be $[0, \\infty)$ and the domain will always be undefined on some finite range between some value and zero.</p><p>$a=0$: We must refer back to the original function; this results in a horizontal semiparabola in the first quadrant, which satisfies that the domain and range of the function are equal. Specifically, both sets are $[0, \\infty )$. $a=0$ is the only case where this happens.</p><p>$a<0$: A semi-ellipse in quadrant one. Since its roots are 0 and $-\\frac{b}{a}$, its domain must be $[0, -\\frac{b}{a}]$. To make its domain and range equal, the maximum value of the ellipse must then be $-\\frac{b}{a}$. But we have another expression for the maximum value of the ellipse, which is $0+\\frac{b}{2\\sqrt {\\pm a}}$. Setting these two expressions equal to each other will find us the final value of $a$ that satisfies the question.</p><p>$\\frac{b}{-a}=\\frac{b}{2\\sqrt {\\pm a}}$</p><p>$-a=2\\sqrt {\\pm a}$</p><p>$a^2=\\pm 4a$</p><p>$a=0,\\pm 4$</p><p>We already knew 0 was a solution from earlier, so -4 is our only new solution (we already ruled out any positive value of $a$ as a solution, so 4 does not work). Thus there are $\\boxed {2\\implies C}$ values of $a$ that make the domain and range of $f(x)$ the same set.</p>",
         "<ul><li>When numbers are referred to as positive and negative, it is understood that they are real numbers, as complex numbers don't have a definite positive/negative value.</li></ul><p>First, notice that the square root of anything, whether it be a positive number, a negative number, or a complex, cannot yield a negative number. The square root of a positive number is a positive number, and the square root of a negative or complex number will yield a complex number. Complex numbers are a bit harder to address than real numbers, so I won't go into depth on complex domain/range (You don't need to, as this is a 2003 question, and the test writers most likely did not intend for test takers to take complex numbers into consideration. Also, even without considering complex domain/range, we can still get the answer).</p><p>Since the range cannot include negative numbers, the domain must be the same. This means that the graph of $f(x)$ must only exist in the real coordinate plane for non-negative x-values. If any negative value of x yields a positive value under the square root, then $f(x)$ will be positive, and then a negative x-value will be part the domain, and that contradicts what the first thing that we found. Now, first consider the graph of a quadratic equation/parabola. We know that a parabola always has a vertex, and always extends until $+$ or $-$ infinity, depending on the $a$ value. Quite conveniently, we have an $a$ value in the problem.</p><p>Consider the case where $a$ is positive. Then, the parabola will \"start\" at the vertex, and extend upwards, hitting the x-axis at any roots. The y-values of a \"positive\" parabola are $[\\infty, 0]$ between x-values of $-\\infty$ and $r_1$ (the leftmost root), negative between $r_1$ and $r_2$ (the two roots) and $[0, \\infty]$ between $r_2$ and $\\infty$. If we take the square root of such a parabola, the new function will exist only from $x=[-\\infty, r_1]$ and $x=[r_2, \\infty]$. In order words, if $a$ is positive, the graph of $f(x)$ will exist from $-\\infty$ to $\\infty$ except between the two roots. This means, that regardless of where the roots are, some negative value of $x$ will yield a positive value of $f(x)$. This means a positive value of $a$ will not work.</p><p>Now we consider the case where $a$ is negative. The parabola will do the opposite of the above; i.e. extend downwards. Now, either the entire graph of the parabola is below the x-axis (no roots), or some part including the vertex sticks out above it. The graph of the square root of the parabola will either be non-existent, or exist only between the 2 roots, respectively. This could work, as long as both roots are at least 0 (this way we will not have negative x-values in the domain). </p><p>Upon examination, we find that $ax^2+bx$ can be rewritten $x(ax+b)$. The roots are then $x=0$ and $x=-\\frac{b}{a}$. Since $a$ is negative, and $b$ is positive, $-\\frac{b}{a}$ will always be positive. Therefore, the graph of $f(x)$ will only exist from $x=\\left[0, -\\frac{b}{a}\\right]$ (the domain).</p><p>Notice that $ax^2+bx$ can also be written in vertex form. The maximum value of $f(x)$ (since $a$ is negative) is the y-coordinate of the vertex, i.e. the range of $f(x)$ is $[0, \\text{vertex}]$. Converting $ax^2+bx$ to vertex form yields $f(x) = a\\left(x + \\frac{b}{2a}\\right)^2 - \\frac{b^2}{4a}$. The y-coordinate of the vertex is then $-\\frac{b^2}{4a}$. We want the square root of this, so the range of $f(x)$ is $\\left[0, \\sqrt{-\\frac{b^2}{4a}}\\right]$. Since domain and range must be equivalent, we have $\\frac{b}{-a} = \\sqrt{\\frac{b^2}{-4a}} \\Rightarrow \\frac{b}{-a} = \\frac{b}{\\sqrt{-4a}} \\Rightarrow -a = \\sqrt{-4a} \\Rightarrow a^2 = -4a \\Rightarrow a^2 + 4a = 0 \\Rightarrow a(a+4) = 0$. So we have $a= 0, -4$, which is 2 values or $\\boxed{\\mathbf{(C)}}$</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "functions",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding real values of a parameter for which a function has the same domain and range, requiring understanding of function properties and domain/range analysis."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_1",
@@ -372,12 +372,12 @@
         "<p>\\[\\frac{2-4+6-8+10-12+14}{3-6+9-12+15-18+21}=\\frac{2+(-4+6)+(-8+10)+(-12+14)}{3+(-6+9)+(-12+15)+(-18+21)}=\\frac{2\\cdot4}{3\\cdot4}=\\text {(C) } \\frac{2}{3}\\]</p>",
         "<p>Each term in the numerator is $\\text {(C) } \\frac{2}{3}$ of a corresponding term in the denominator, so this must be the quotient.</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "basic_operations",
-        "confidence": 0.95,
-        "reasoning": "This problem involves basic algebraic operations and calculations, typically evaluating expressions or solving simple equations."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_2",
@@ -385,12 +385,12 @@
       "solutions": [
         "<p>Because there are $14$ days in two weeks, Al spends $546/14 = 39$ dollars per day for the cost of a green pill and a pink pill. If the green pill costs $x$ dollars and the pink pill $x-1$ dollars, the sum of the two costs $2x-1$ should equal $39$ dollars. Then the cost of the green pill $x$ is $\\boxed{\\textbf{(D) }\\textdollar  20}$.</p>"
       ],
-      "categorization": {
-        "category": "arithmetic",
-        "subcategory": "basic_operations",
-        "confidence": 0.95,
-        "reasoning": "This problem involves basic arithmetic calculations and number sense, often involving percentages or ratios."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_3",
@@ -398,12 +398,12 @@
       "solutions": [
         "<p>The areas of the five regions from greatest to least are $21,20,15,6$ and $4$.</p><p>If we want to minimize the cost, we want to maximize the area of the cheapest flower and minimize the area of the most expensive flower. Doing this, the cost is $1\\cdot21+1.50\\cdot20+2\\cdot15+2.50\\cdot6+3\\cdot4$, which simplifies to $$$108$.Therefore the answer is $\\boxed{\\textbf{(A) } 108}$.</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding areas or perimeters of polygons, requiring understanding of geometric formulas."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_4",
@@ -412,26 +412,26 @@
         "<p>Since the swath Moe actually mows is $24$ inches, or $2$ feet wide, he mows $10000$ square feet in one hour. His lawn has an area of $13500$, so it will take Moe $1.35$ hours to finish mowing the lawn. Thus the answer is $\\boxed{\\textbf{(C) } 1.35}$.</p><p><br/></p>",
         "<p>Let's assume that the swath moves back and forth; parallel to the $90$ feet side. Thus, the length of one strip is $90$ feet. Now we need to find out how many strips there are. In reality, the swath Moe mows is $24$ inches wide, which can be easily translated into $2$ feet. $\\frac{150}{2}$ is the number of strips Moe needs to mow, which is equal to $75$. Therefore, the total number of feet Moe mows is $75\\times90$. Since Moe's mowing rate is $5000$ feet per hour, $\\frac{75\\times90}{5000}$ is the number of hours it takes him to do his job. Using basic calculations, we compute the answer. $\\boxed{\\textbf{(C) } 1.35}$.</p><p>~sakshamsethi</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "equations",
-        "confidence": 0.9,
-        "reasoning": "This problem involves setting up and solving equations, often with word problems or geometric applications."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_5",
       "question": "<p>Many television screens are rectangles that are measured by the length of their diagonals. The ratio of the horizontal length to the height in a standard television screen is $4:3$. The horizontal length of a \"$27$-inch\" television screen is closest, in inches, to which of the following?</p>",
       "solutions": [
-        "<p>If you divide the television screen into two right triangles, the legs are in the ratio of $4\u00a0: 3$, and we can let one leg be $4x$ and the other be $3x$. Then we can use the Pythagorean Theorem.</p><p>\\begin{align*}(4x)^2+(3x)^2&=27^2\\\\ 16x^2+9x^2&=729\\\\ 25x^2&=729\\\\ x^2&=\\frac{729}{25}\\\\ x&=\\frac{27}{5}\\\\ x&=5.4\\end{align*}</p><p>The horizontal length is $5.4\\times4=21.6$, which is closest to $\\boxed{\\textbf{(D) \\ } 21.5}$.</p>",
-        "<p>One can realize that the diagonal, vertical, and horizontal lengths all make up a $3,4,5$ triangle. Therefore, the horizontal length, being the $4$ in the $4\u00a0: 3$ ratio, is simply $\\frac{4}{5}$ times the hypotenuse. $\\frac{4}{5}\\cdot27=21.6 \\approx \\boxed{\\textbf{(D) } 21.5}$.</p>"
+        "<p>If you divide the television screen into two right triangles, the legs are in the ratio of $4 : 3$, and we can let one leg be $4x$ and the other be $3x$. Then we can use the Pythagorean Theorem.</p><p>\\begin{align*}(4x)^2+(3x)^2&=27^2\\\\ 16x^2+9x^2&=729\\\\ 25x^2&=729\\\\ x^2&=\\frac{729}{25}\\\\ x&=\\frac{27}{5}\\\\ x&=5.4\\end{align*}</p><p>The horizontal length is $5.4\\times4=21.6$, which is closest to $\\boxed{\\textbf{(D) \\ } 21.5}$.</p>",
+        "<p>One can realize that the diagonal, vertical, and horizontal lengths all make up a $3,4,5$ triangle. Therefore, the horizontal length, being the $4$ in the $4 : 3$ ratio, is simply $\\frac{4}{5}$ times the hypotenuse. $\\frac{4}{5}\\cdot27=21.6 \\approx \\boxed{\\textbf{(D) } 21.5}$.</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "divisibility",
-        "confidence": 0.9,
-        "reasoning": "This problem involves understanding divisibility properties and number theory concepts."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_6",
@@ -439,12 +439,12 @@
       "solutions": [
         "<p>Let the first term be $a$ and the common ratio be $r$. Therefore, </p><p>\\[ar=2\\ \\ (1) \\qquad \\text{and} \\qquad ar^3=6\\ \\ (2)\\]</p><p>Dividing $(2)$ by $(1)$ eliminates the $a$, yielding $r^2=3$, so $r=\\pm\\sqrt{3}$.</p><p>Now, since $ar=2$, $a=\\frac{2}{r}$, so $a=\\frac{2}{\\pm\\sqrt{3}}=\\pm\\frac{2\\sqrt{3}}{3}$.</p><p>We therefore see that $\\boxed{\\textbf{(B)}\\ -\\frac{2\\sqrt{3}}{3}}$ is a possible first term.</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "circles",
-        "confidence": 0.9,
-        "reasoning": "This problem involves circle geometry and area calculations, often using pi and radius relationships."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_7",
@@ -452,12 +452,12 @@
       "solutions": [
         "<p>Where $a,b,c$ is the number of nickels, dimes, and quarters, respectively, we can set up two equations:</p><p>\\[(1)\\ 5a+10b+25c=835\\ \\ \\ \\ (2)\\ a+b+c=100\\]</p><p>Eliminate $a$ by subtracting $(2)$ from $(1)/5$ to get $b+4c=67$. Of the integer solutions $(b,c)$ to this equation, the number of dimes $b$ is least in $(3,16)$ and greatest in $(67,0)$, yielding a difference of $67-3=\\boxed{\\textbf{(D)}\\ 64}$.</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "inequalities",
-        "confidence": 0.9,
-        "reasoning": "This problem involves solving inequalities and finding ranges of possible values."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_8",
@@ -465,12 +465,12 @@
       "solutions": [
         "<p>Let $y=\\clubsuit (x)$. Since $x \\leq 99$, we have $y \\leq 18$. Thus if $\\clubsuit (y)=3$, then $y=3$ or $y=12$. The 3 values of $x$ for which $\\clubsuit (x)=3$ are 12, 21, and 30, and the 7 values of $x$ for which $\\clubsuit (x)=12$ are 39, 48, 57, 66, 75, 84, and 93. There are $\\boxed{E}$ = $\\boxed{10}$ values in all.</p><p>~Andrew_Lu/Mismatchedcubing</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "triangles",
-        "confidence": 0.9,
-        "reasoning": "This problem involves triangle properties and geometric calculations, often using the Pythagorean theorem."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "general"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_9",
@@ -479,12 +479,12 @@
         "<p>Since $f$ is a linear function with slope $m$,</p><p>\\[m = \\frac{f(6) - f(2)}{\\Delta x} = \\frac{12}{6 - 2} = 3\\]</p><p>\\[f(12) - f(2) = m \\Delta x = 3(12 - 2) = 30 \\Rightarrow \\text (D)\\]</p>",
         "<p>Since $f$ is linear, we can easily guess and check to confirm that $f(x)=3x$. Indeed, $f(6)-f(2)=3(6-2)=12$. So, we have $f(12)-f(2)=3(12-2)=30 \\Rightarrow \\text (D).$</p><p>Solution by franzliszt</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "functions",
-        "confidence": 0.9,
-        "reasoning": "This problem involves analyzing function properties and behavior, often finding specific values."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_10",
@@ -493,12 +493,12 @@
         "<p>Place the first triangle. Now, we can place the second triangle either adjacent to the first, or with one side between them, for a total of $\\boxed{\\text{(B) }2}$</p><p>Take ${5 \\choose 2}$ to realize there are 10 ways to choose 2 different triangles. Then divide by 5 for each vertex of a pentagon to get $\\boxed{\\text{(B) }2}$</p>",
         "<p>Take ${5 \\choose 2}$ to realize there are 10 ways to choose 2 different triangles. Then divide by 5 for each vertex of a pentagon to get $\\boxed{\\text{(B) }2}$</p>"
       ],
-      "categorization": {
-        "category": "arithmetic",
-        "subcategory": "percentages",
-        "confidence": 0.9,
-        "reasoning": "This problem involves percentage calculations and relationships between quantities."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_11",
@@ -506,12 +506,12 @@
       "solutions": [
         "<p>For every $60$ minutes that pass by in actual time, $57+\\frac{36}{60}=57.6$ minutes pass by on Cassandra's watch. When her watch first reads, 10:00 pm, $10(60)=600$ minutes have passed by on her watch. Setting up a proportion,</p><p>\\[\\frac{57.6}{60}=\\frac{600}{x}\\]</p><p>where $x$ is the number of minutes that have passed by in actual time. Solve for $x$ to get $625$ minutes, or $10$ hours and $25$ minutes $\\Rightarrow \\boxed{\\textbf{(C)}\\ \\text{10:25 PM}}$.</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "This problem involves systematic counting and combinatorial methods, often using permutations or combinations."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_12",
@@ -520,25 +520,25 @@
         "<p>For all consecutive odd integers, one of every five is a multiple of 5 and one of every three is a multiple of 3. The answer is $3 \\cdot 5 = 15$, so ${\\boxed{\\textbf{(D)15}}}$ is the correct answer.</p>",
         "<p>We'll just test all the answer choices.</p><p>Note that for any 3 consecutive odd integers, there will be exactly one multiple of $3.$</p><p>Let's list all possibilities of 3 consecutive odd integers. (multiple of 3, not multiple of 3, not multiple of 3), (not multiple of 3, multiple of 3, not multiple of 3) and (not multiple of 3, not multiple of 3, multiple of 3)</p><p>To support this further, list the first few consecutive lists of 3 consecutive odd integers.</p><p>We have $(1, 3, 5), (3, 5, 7), (5, 7, 9), (7, 9, 11), (11, 13, 15), \\ldots$</p><p>So if the first two consecutive odd numbers aren't multiples of three, the last one must be a multiple of three.</p><p>Therefore for five consecutive odd integers, there must be at least one multiple of three.</p><p>In the same fashion as we did above, note that for any 5 consecutive integers, there will also be exactly one multiple of $5.$</p><p>Therefore, for any 5 consecutive odd integers, there must be exactly one multiple of five.</p><p>We can skip 7 since none of the answer choices are a multiple of 7.</p><p>Now we try $11.$ 11 doesn't work since as we see the first set of 5 consecutive odd integers doesn't fit, namely $(1, 3, 5, 7, 9).$</p><p>Since any 5 consecutive integers is divisible both by $3$ and $5$, it also must be divisible by ${\\boxed{\\textbf{(D)15}}}$ and no higher since we saw that $11$ does not work and that there is no answer choice that is multiple of $7$.</p><p>~mathboy282</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "This problem involves complex polygon geometry and area calculations, often with coordinate geometry."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_13",
-      "question": "<p>An ice cream <a href=\"/wiki/index.php/Cone\" title=\"Cone\">cone</a> consists of a <a href=\"/wiki/index.php/Sphere\" title=\"Sphere\">sphere</a> of vanilla ice cream and a right circular cone that has the same diameter as the sphere. If the ice cream melts, it will exactly fill the cone. Assume that the melted ice cream occupies $75\\%$ of the volume of the frozen ice cream. What is the ratio of the cone\u2019s height to its <a href=\"/wiki/index.php/Radius\" title=\"Radius\">radius</a>? </p>",
+      "question": "<p>An ice cream <a href=\"/wiki/index.php/Cone\" title=\"Cone\">cone</a> consists of a <a href=\"/wiki/index.php/Sphere\" title=\"Sphere\">sphere</a> of vanilla ice cream and a right circular cone that has the same diameter as the sphere. If the ice cream melts, it will exactly fill the cone. Assume that the melted ice cream occupies $75\\%$ of the volume of the frozen ice cream. What is the ratio of the cone’s height to its <a href=\"/wiki/index.php/Radius\" title=\"Radius\">radius</a>? </p>",
       "solutions": [
-        "<p>Let $r$ be the common radius of the sphere and the cone, and $h$ be the cone\u2019s height. Then\\[75\\% \\cdot \\left(\\frac 43 \\pi r^3\\right) = \\frac 13 \\pi r^2 h \\Longrightarrow h = 3r\\]Thus $h:r = 3:1$ and the answer is $\\boxed{B}$.</p>"
+        "<p>Let $r$ be the common radius of the sphere and the cone, and $h$ be the cone’s height. Then\\[75\\% \\cdot \\left(\\frac 43 \\pi r^3\\right) = \\frac 13 \\pi r^2 h \\Longrightarrow h = 3r\\]Thus $h:r = 3:1$ and the answer is $\\boxed{B}$.</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "sequences",
-        "confidence": 0.9,
-        "reasoning": "This problem involves analyzing sequences and finding patterns, often arithmetic or geometric sequences."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_14",
@@ -550,12 +550,12 @@
         "<p>Since $\\Delta{ABE}\\sim{\\Delta{FGE}}$ then $[AFGB]\\sim{[FXYG]}$, where $X$ and $Y$ are ponts on $EF$ and $EG$ respectivley which make the areas similar. This process can be done over and over again multiple times by the ratio of $\\frac{FG}{AB}=\\frac{2}{5}$, or something like this\\[[AEB]=[AFGB]+[FXYZ]+...\\]\\[[AEB]=[AFGB]+\\frac{2}{5}[AFGB]+(\\frac{2}{5})^2[AFGB]+...\\]we have to find the ratio of the areas when the sides have shrunk by length $\\frac{2}{5}l$</p><p>[asy] unitsize(0.6 cm);  pair A, B, C, D, E, F, G;  A = (0,0); B = (5,0); C = (5,3); D = (0,3); F = (1,3); G = (3,3); E = extension(A,F,B,G);  draw(A--B--C--D--cycle); draw(A--E--B);  label(\"$A$\", A, SW); label(\"$B$\", B, SE); label(\"$C$\", C, NE); label(\"$D$\", D, NW); label(\"$E$\", E, N); label(\"$F$\", F, SE); label(\"$G$\", G, SW); label(\"$2/5$\", (D + F)/2, N); label(\"$4/5$\", (G + C)/2, N); label(\"$6/5$\", (B + C)/2, dir(0)); label(\"$6/5$\", (A + D)/2, W); label(\"$2$\", (A + B)/2, S); [/asy]</p><p>Let $[AFGB]'$ be the area of the shape whose length is $\\frac{2}{5}l$\\[[AFGB]'=[ADCB]-[ADF]-[BCG]\\]\\[[AFGB]'=12/5-6/25-12/25\\]\\[[AFGB]'=42/25\\]Now comparing the ratios of $[AFGB]'$ to $[AFGB]$ we get\\[\\frac{[AFGB]'}{[AFGB]}=\\frac{42}{25}/\\frac{21}{2}\\implies \\frac{[AFGB]'}{[AFGB]}=\\frac{4}{25}\\]By applying an infinite summation\\[[AEB]=\\sum_{n=0}^{\\infty} \\frac{21}{2}\\cdot{(\\frac{4}{25})^n}\\]\\[S=\\frac{a_1}{1-r}\\]\\[\\boxed{[AEB]=\\frac{25}{2}}\\]</p>",
         "<p>Drop a perpendicular from $E$ to $AB$ and call the intersection point $X.$ $\\triangle EXA$ and $\\triangle DFA$ are similar and so are $\\triangle BCG$ and $\\triangle EXB$ (You can prove this with $AA$ by observing that $\\angle DFA$ is congruent to $\\angle EAB$ and so on). This means that $\\dfrac{AX}{BX}=\\dfrac{1}{2}$ so $AX=\\dfrac{5}{3}.$ $\\dfrac{EX}{AX}=3,$ which means that $EX=5.$ Then, $[AEB]=\\dfrac{5\\cdot 5}{2}=\\boxed{\\textbf{(D) } \\dfrac{25}{2}}.$</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "primes",
-        "confidence": 0.9,
-        "reasoning": "This problem involves prime number properties and number theory concepts."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_15",
@@ -566,12 +566,12 @@
         "<p>[asy] unitsize(1cm); defaultpen(linewidth(.8pt)+fontsize(8pt)); pair C=dir(22.5), B=dir(67.5), A=dir(112.5), H=dir(157.5), G=dir(202.5), F=dir(247.5), E=dir(292.5), D=dir(337.5); draw(A--B--C--D--E--F--G--H--cycle); label(\"$A$\",A,NNW); label(\"$B$\",B,NNE); label(\"$C$\",C,ENE); label(\"$D$\",D,ESE); label(\"$E$\",E,SSE); label(\"$F$\",F,SSW); label(\"$G$\",G,WSW); label(\"$H$\",H,WNW);  draw(A--D--E--H--G--B--C--F); [/asy]Drawing lines $AD$, $BG$, $CF$, and $EH$, we can see that the octagon is comprised of $1$ square, $4$ rectangles, and $4$ triangles. The triangles each are $45-45-90$ triangles, and since their diagonal is length $x$, each of their sides is $\\frac{\\sqrt{2}}{2}x$. The area of the entire figure is, likewise, $x^2$ (the square)$+4x^2\\frac{\\sqrt{2}}{2}$ (the 4 rectangles)$+2\\cdot(\\frac{\\sqrt{2}}{2}x)^2$ (the triangles), which simplifies to $2x^2 + 2\\sqrt{2}x^2$. The area of $ABEF$ is just $x(x+\\frac{2\\sqrt{2}}{2}x)$, or $x^2$ + $x^2\\sqrt{2}$, which we can see is the area of $\\frac{ABCDEFGH}{2} =  \\boxed{\\textbf{(D)}\\ \\frac{1}{2}}$ the area of the octagon.</p>",
         "<p>First, we are going to divide the diagram. Now we need to find the ratio of the area of the rectangle to the area of the trapezoid. </p><p>[asy] unitsize(1cm); defaultpen(linewidth(.8pt)+fontsize(8pt)); pair C=dir(22.5), B=dir(67.5), A=dir(112.5), H=dir(157.5), G=dir(202.5), F=dir(247.5), E=dir(292.5), D=dir(337.5); draw(A--B--C--D--E--F--G--H--cycle); label(\"$A$\",A,NNW); label(\"$B$\",B,NNE); label(\"$C$\",C,ENE); label(\"$D$\",D,ESE); label(\"$E$\",E,SSE); label(\"$F$\",F,SSW); label(\"$G$\",G,WSW); label(\"$H$\",H,WNW);draw(A--F);draw(B--E);draw(D--G);draw(C--H);[/asy]</p><p>The area of a trapezoid is $\\frac{b_1 + b_2}{2}h$Note that the trapezoid is made out of 2 45-45-90 triangles and a rectangle, and that $AH=FG=1$. By realizing that, the area of the trapezoid is $(\\frac{2+\\sqrt{2}}{2})(\\frac{\\sqrt{2}}{2}$). To make this product easier, note there is two trapezoids, so the new product is now this, $(\\frac{2+\\sqrt{2}}{2})(\\sqrt{2}) = \\sqrt{2} + 1$</p><p>Notice how the rectangle has side lengths $\\sqrt{2}+1$ and $1$, so it's area is also $\\sqrt{2}+1$.</p><p>The ratio of the area of rectangle $ABEF$ to the two trapezoids is $1:1$, meaning they share half the area of the octagon. Since the area of the octagon is 1, $\\therefore$ the area of the rectangle is $\\boxed{\\textbf{(D)}\\ \\frac{1}{2}}$.</p><p>~ghfhgvghj10</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "circles",
-        "confidence": 0.9,
-        "reasoning": "This problem involves advanced circle geometry and area relationships."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_16",
@@ -579,14 +579,14 @@
       "solutions": [
         "<p>[asy] import graph; unitsize(14mm); defaultpen(linewidth(.8pt)+fontsize(8pt)); dashed=linetype(\"4 4\"); dotfactor=3; pair A=(-2,0), B=(2,0); fill(Arc((0,0),2,0,180)--cycle,mediumgray); fill(Arc((-1,0),1,0,180)--cycle,white); fill(Arc((0,0),1,0,180)--cycle,white); fill(Arc((1,0),1,0,180)--cycle,white); draw(Arc((-1,0),1,60,180)); draw(Arc((0,0),1,0,60),dashed); draw(Arc((0,0),1,60,120)); draw(Arc((0,0),1,120,180),dashed); draw(Arc((1,0),1,0,120)); draw(Arc((0,0),2,0,180)--cycle); dot((0,0)); dot((-1,0)); dot((1,0)); draw((-2,-0.1)--(-2,-0.3),gray); draw((-1,-0.1)--(-1,-0.3),gray); draw((1,-0.1)--(1,-0.3),gray); draw((2,-0.1)--(2,-0.3),gray); label(\"$A$\",A,W); label(\"$B$\",B,E); label(\"1\",(-1.5,-0.1),S); label(\"2\",(0,-0.1),S); label(\"1\",(1.5,-0.1),S); draw((1,0)--(0.5,0.866)); draw((0,0)--(0.5,0.866)); draw((-1,0)--(-0.5,0.866)); draw((0,0)--(-0.5,0.866));[/asy]</p><p>By drawing four lines from the intersect of the semicircles to their centers, we have split the white region into $\\frac{5}{6}$ of a circle with radius $1$ and two equilateral triangles with side length $1$. This gives the area of the white region as $\\frac{5}{6}\\pi+\\frac{2\\cdot\\sqrt3}{4}=\\frac{5}{6}\\pi+\\frac{\\sqrt3}{2}$. The area of the shaded region is the area of the white region subtracted from the area of the large semicircle. This is equivalent to $2\\pi-\\left(\\frac{5}{6}\\pi+\\frac{\\sqrt3}{2}\\right)=\\frac{7}{6}\\pi-\\frac{\\sqrt3}{2}$.</p><p>Thus the answer is $\\boxed{\\textbf{(E)}\\ \\frac{7}{6}\\pi-\\frac{\\sqrt3}{2}}$.</p><p>The reason why it is $\\frac{5}{6}$ of a circle and why the triangles are equilateral are because, first, the radii are the same and they make up the equilateral triangles.</p><p>Secondly, the reason it is $\\frac{5}{6}$ of a circle is because the middle sector has a degree of $180-2 \\cdot 60 = 60$ and thus $\\frac{60}{360}=\\frac{1}{6}$ of a circle.</p><p>The other two have areas of $\\frac{180-60}{360}=\\frac{1}{3}$ of a triangle each.</p><p>Therefore, the total fraction of the circle(since they have the same radii) is $\\frac{1}{6} + 2 \\cdot \\frac{1}{3} = \\frac{1}{6} + \\frac{4}{6} = \\frac{5}{6}.$</p><p>~mathboy282</p>",
         "<p>Answer choices A and B are impossible since the area is obviously not a circle of radius 1 minus a triangle.</p><p>Answer choices C and D are also impossible since they are adding but we are subtracting.</p><p>That leaves us with only answer choice $\\textbf{(E)}.$</p><p>~mathboy282</p>",
-        "<p>We can see that the area of the $3$ overlapped white semi circles is equal to\u00a0:</p><p>$2*\\frac{1}{2}\\pi+\\frac{1}{2}*\\frac{\\pi}{3}-2*\\frac{1}{2}\\left(\\frac{\\pi}{3} -\\ \\frac{\\sqrt{3}}{2}\\right)$</p><p>We get this because we think of the 2 overlapped circles on the side as 2 full semi circles then adding the area of the sector in between but subtracting the area segments of the 2 semi circles out (So that they don't overlap). Now by using the formulas:</p><p>Area of sector $=\\frac{1}{2}r^2*\\text{sin}\\theta$</p><p>Area of segment $=\\frac{1}{2}r^2\\left( \\theta -\\ \\text{sin}\\theta\\right)$</p><p>($\\theta$ is in radians)</p><p>and so we get\u00a0:</p><p>$=\\frac{5}{6}\\pi+\\frac{\\sqrt3}{2}$</p><p>then the solution is the same as in solution 1.</p><p>~Gamor</p>"
+        "<p>We can see that the area of the $3$ overlapped white semi circles is equal to :</p><p>$2*\\frac{1}{2}\\pi+\\frac{1}{2}*\\frac{\\pi}{3}-2*\\frac{1}{2}\\left(\\frac{\\pi}{3} -\\ \\frac{\\sqrt{3}}{2}\\right)$</p><p>We get this because we think of the 2 overlapped circles on the side as 2 full semi circles then adding the area of the sector in between but subtracting the area segments of the 2 semi circles out (So that they don't overlap). Now by using the formulas:</p><p>Area of sector $=\\frac{1}{2}r^2*\\text{sin}\\theta$</p><p>Area of segment $=\\frac{1}{2}r^2\\left( \\theta -\\ \\text{sin}\\theta\\right)$</p><p>($\\theta$ is in radians)</p><p>and so we get :</p><p>$=\\frac{5}{6}\\pi+\\frac{\\sqrt3}{2}$</p><p>then the solution is the same as in solution 1.</p><p>~Gamor</p>"
       ],
-      "categorization": {
-        "category": "probability",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "This problem involves probability calculations and combinatorial counting methods."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_17",
@@ -598,12 +598,12 @@
         "<p>We rewrite the logarithms in the problem. \\[\\log(x) + 3\\log(y) = 1\\] \\[2\\log(x) + \\log(y) = 1\\] \\[\\log(x) + \\log(y) = c\\] where $c$ is the desired quantity. Set $u = \\log(x)$ and $v = \\log(y)$. Then we have that \\[u + 3y = 1 \\textbf{(1)}\\] \\[2u + y = 1 \\textbf{(2)}\\] \\[u + v = c\\]. Notice that \\[2 \\cdot \\textbf{(2)} + \\textbf{(1)} = 5u + 5v = 3 \\implies u + v = \\frac{3}{5} \\implies c = \\boxed{\\textbf{(D)}~\\frac{3}{5}}\\].</p><p>~ <a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Cxsmi\" rel=\"nofollow\">cxsmi</a></p>",
         "<p>Let $\\log(x) = a, \\log(y) = b$. The first equation can be written as $a + 3b = 1$, and the second as $2a + b = 1$. Solving this system of equations, we get that $a = \\frac{2}{5}$, and $b = \\frac{1}{5}$. Thus, the value of the expression we want to find is $a + b = \\frac{1}{5} + \\frac{2}{5} = \\boxed{\\textbf{(D)}~\\frac{3}{5}}$</p><p>~andliu766</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "logarithms",
-        "confidence": 0.9,
-        "reasoning": "This problem involves logarithmic properties and calculations."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "general"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_18",
@@ -614,12 +614,12 @@
         "<p>Another way to solve this problem solve for x. First, we can divide both sides by 7 to get:</p><p>\\[x^5 = \\frac{11y^{13}}{7}\\]</p><p>Next, we take the fifth root on both sides, which gets us:</p><p>\\[x = \\sqrt[5]{\\frac{11y^{13}}{7}}\\]</p><p>\\[x = y^2 \\cdot \\sqrt[5]{\\frac{11y^{3}}{7}}\\]</p><p>Since we know x is a positive integer that we are trying to minimize, we can let y equal the smallest number that will make x an integer. In this case, we let $y = 11^3 \\cdot 7^2$(Make sure you see why this makes x the smallest integer possible!), which when plugged in, results in:</p><p>\\[x = (11^3 \\cdot 7^2)^2 \\cdot \\sqrt[5]{\\frac{11}{7}\\cdot (11^3 \\cdot 7^2)^3}\\]</p><p>\\[x = (11^3 \\cdot 7^2)^2 \\cdot \\sqrt[5]{\\frac{11}{7}\\cdot 11^9 \\cdot 7^6}\\]</p><p>\\[x = (11^3 \\cdot 7^2)^2 \\cdot \\sqrt[5]{11^{10} \\cdot 7^5}\\]</p><p>\\[x = (11^3 \\cdot 7^2)^2 \\cdot 11^2 \\cdot 7^1\\]</p><p>\\[x = 7^5 \\cdot 11^ 8\\]</p><p>This gets us $a^cb^d = 7^5\\cdot 11^8$, so $a + b + c + d = 7 + 5 + 11 + 8 = \\boxed{\\textbf{(B)}\\ 31}$~lucaswujc, $\\LaTeX$ help from Technodoggo</p>",
         "<p>According to the problem, we have that $x^5$ and $y^{13}$ must be a multiple of both $7$ and $11$. Thus, in their prime factorisation, there must be $7$ and $11$. Thus, we have $a=7$ and $b=11$. Now, let $x=7^c11^d\\implies x^5=7^{5c}11^{5d}\\implies7x^5=7^{5c+1}11^{5d}$.We can now divide both sides by 11 in our original equation $7x^5=11y^{13}$ to get $y^{13}=7^{5c+1}11^{5d-1}$. As we are only considering integers, we have \\[5c+1\\equiv0~(\\text{mod}~13)\\implies5c\\equiv12~(\\text{mod}~13)\\] and \\[5d-1\\equiv0~(\\text{mod}~13)\\implies5d\\equiv1~(\\text{mod}~13).\\]</p><p>We can apply brute force to solve for $c$ and $d$ as the numbers aren't big. For the first congruence, we find that $25$ is the smallest number that satisfies, thus $c=5$. For the second congruence, we find that $40$ is the smallest number that satisfies, thus $d=8$. Summarising, we get $a+b+c+d=7+11+5+8=\\boxed{\\textbf{(B)}~31}$.</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "This problem involves complex polygon geometry and coordinate calculations."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "primes"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_19",
@@ -630,12 +630,12 @@
         "<p>Let's focus on 2, 3, 4, and 5 right now. There are $4!$ ways to arrange these numbers. We can \"insert\" 1 into the arrangement after the first, second, third, and fourth numbers. There are $4! \\cdot 4 = 96$ ways to do this. </p><p>In 24 of those ways, 1 is in the second position, and in the remaining 72 sequences, 2, 3, 4, and 5 occur in the second position the same number of times. $\\frac{\\frac{72}{4}}{96} = \\frac{3}{16}$, therefore $3 + 16 = 19 \\Rightarrow \\mathrm{(E)}$</p>",
         "<p>The probability could be written as a fraction where $\\frac {\\text{number of viable solutions in S}}{\\text{total permutations in S}}$.</p><p>The total number of permutations is essentially $5!$, and the number of permutations where $1$ is the first number is $4!$, therefore the number of permutations in $S$ is $5!-4!$.</p><p>For the first number in the desired solution, there are 3 options ($3$, $4$, $5$). For the second number in the desired solution, there is only one option ($2$). For the third number in the desired solution, there are 3 options ($1$, and the numbers not used in the first digit). For the fourth number in the desired solution, there are 2 options (numbers not used in the third digit). For the last number in the desired solution, there is only one option (number not used in the fourth digit). </p><p>Therefore, $3 \\cdot 1 \\cdot 3 \\cdot 2 \\cdot 1$ will be the number of desired outcomes.</p><p>Finally, $\\frac {3 \\cdot 1 \\cdot 3 \\cdot 2 \\cdot 1}{5!-4!}$ equates to $\\frac {18}{96}$, which is $\\frac {3}{16}$. </p><p>The answer is then $3+16=\\boxed{\\textbf{(E)}\\ 19}$.</p><p>~ Tyrone12345</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "polynomials",
-        "confidence": 0.9,
-        "reasoning": "This problem involves polynomial properties and analysis."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_20",
@@ -648,12 +648,12 @@
         "<p>The roots of this equation are $-1, 1, \\text{ and } x$, letting $x$ be the root not shown in the graph. By Vieta, we know that $-1+1+x=x=-\\frac{b}{a}$ and $-1\\cdot 1\\cdot x=-x=-\\frac{d}{a}$. Therefore, $x=\\frac{d}{a}$. Setting the two equations for $x$ equal to each other, $\\frac{d}{a}=-\\frac{b}{a}$. We know that the y-intercept of the polynomial is $d$, so $d=2$. Plugging in for $d$, $\\frac{2}{a}=-\\frac{b}{a}$.</p><p>Therefore, $b=-2 \\Rightarrow \\boxed{B}$</p>",
         "<p>From the graph, we have $f(0)=2$ so $d=2$. Also from the graph, we have $f(1)=a+b+c+2=0$. But we also have from the graph $f(-1)=-a+b-c+2=0$. Summing $f(1)+f(2)$ we get $2b+4=0$ so $b = -2 \\Rightarrow \\mathrm{(B)}$.</p><p>Solution by franzliszt</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "perfect_squares",
-        "confidence": 0.9,
-        "reasoning": "This problem involves perfect square properties and number theory."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_21",
@@ -663,12 +663,12 @@
         "<p>$WLOG$, let the object turn clockwise.</p><p>Let $B = (0, 0)$, $A = (0, -8)$.</p><p>Note that the possible points of $C$ create a semi-circle of radius $5$ and center $B$. The area where $AC < 7$ is enclosed by a circle of radius $7$ and center $A$. The probability that $AC < 7$ is $\\frac{\\angle ABO}{180 ^\\circ}$.</p><p>The function of $\\odot B$ is $x^2 + y^2 = 25$, the function of $\\odot A$ is $x^2 + (y+8)^2 = 49$.</p><p>$O$ is the point that satisfies the system of equations: $\\begin{cases} x^2 + y^2 = 25 \\\\ x^2 + (y+8)^2 = 49 \\end{cases}$</p><p>$x^2 + (y+8)^2 - x^2 - y^2 = 49 - 25$, $64 + 16y =24$, $y = - \\frac52$, $x = \\frac{5 \\sqrt{3}}{2}$, $O = (\\frac{5 \\sqrt{3}}{2}, - \\frac52)$</p><p>Note that $\\triangle BDO$ is a $30-60-90$ triangle, as $BO = 5$, $BD = \\frac{5 \\sqrt{3}}{2}$, $DO = \\frac52$. As a result $\\angle CBO = 30 ^\\circ$, $\\angle ABO = 60 ^\\circ$.</p><p>Therefore the probability that $AC < 7$ is $\\frac{\\angle ABO}{180 ^\\circ} = \\frac{60 ^\\circ}{180 ^\\circ} = \\boxed{\\textbf{(D) } \\frac13 }$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>",
         "<p>Setting $A = (0,0)$ we get that $B = (8,0)$, after assuming segment AB to be straight in the x-direction relative to our coordinate system (in other words, due to symmetrically we can set $x = 8$ for point B). This gives $C = (8 + 5cos(\\alpha), 5sin(\\alpha))$. Using the distance formula we get $sqrt((8 + 5cos(\\alpha))^2 + (5sin(\\alpha))^2) < 7$. After algebra, this simplifies to $cos(\\alpha) < -\\frac{1}{2}$. After evaluating the constraints of the problem, we land on option (D).</p><p>~PeterDoesPhysics</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "probability",
-        "confidence": 0.9,
-        "reasoning": "This problem involves geometric probability and area calculations."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_22",
@@ -678,12 +678,12 @@
         "<p>Let the intersection of $\\overline{AC}$ and $\\overline{BD}$ be $E$. Since $ABCD$ is a rhombus, we have $\\overline{AC} \\perp \\overline{BD}$ and $AE = CE = \\dfrac{AC}{2} = 8$. Since $\\overline{NQ} \\perp \\overline{BD}$, we have $\\overline{NQ} \\parallel \\overline{AC}$, so $\\triangle{BNQ} \\sim \\triangle{BAE} \\sim \\triangle{NAP}$. Therefore, \\[\\dfrac{NP}{AP} = \\dfrac{NP}{8 - NQ} = \\dfrac{BE}{AE} = \\dfrac{15}{8} \\Rightarrow NP = 15 - \\dfrac{15}{8} NQ.\\] By Pythagorean Theorem, \\[PQ^2 = NQ^2 + NP^2 = NQ^2 + \\left(15 - \\dfrac{15}{8} NQ \\right)^2 = \\dfrac{289}{64} NQ^2 - \\dfrac{225}{4} NQ + 225.\\] The minimum value of $PQ^2$ would give the minimum value of $PQ$, so we take the derivative (or use vertex form) to find that the minimum occurs when $NQ = \\dfrac{225 \\cdot 8}{289}$ which gives $PQ^2 = \\dfrac{225 \\cdot 64}{289}$. Hence, the minimum value of $PQ$ is $\\sqrt{\\dfrac{225 \\cdot 64}{289}} = \\dfrac{120}{17}$, which is closest to $7 \\Rightarrow \\boxed{\\textbf{C}}$.</p><p>-MP8148</p>",
         "<p>Let the intersection $\\overline{AC}$ and $\\overline{BD}$ be $E.$ Let $\\overline{PE}=y \\implies \\overline{AP}=8-y$ and $\\overline{EQ}=x \\implies \\overline {QB}=15-x.$ Since $\\triangle NQB \\sim \\triangle APN,$ we have $\\frac{8-y}{x}=\\frac{y}{15-x} \\implies 120=15y+8x.$ We want to minimize $\\overline{PQ}=\\sqrt{x^2+y^2}.$ By Cauchy, $17^2(x^2+y^2)=(x^2+y^2)(8^2+15^2) \\ge (8x+15y)^2=120^2 \\implies \\sqrt{x^2+y^2} \\ge \\frac{120}{17} \\approx 7.$ So, choice $\\boxed{C}$ is closest to the minimum.</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "functions",
-        "confidence": 0.9,
-        "reasoning": "This problem involves complex function analysis and properties."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_23",
@@ -692,12 +692,12 @@
         "<p>The function $f(x) = \\sin x$ has roots in the form of $\\pi n$ for all integers $n$. Therefore, we want $\\frac{1}{x} = \\pi n$ on $\\frac{1}{10000} \\le x \\le \\frac{1}{1000}$, so $1000 \\le \\frac 1x = \\pi n \\le 10000$. There are $\\frac{10000-1000}{\\pi} \\approx \\boxed{2900} \\Rightarrow \\mathrm{(A)}$ solutions for $n$ on this interval. </p>",
         "<p>We know that $x$ belongs to the interval $(0.0001,0.001)$ for $\\sin(1/x)$. We see that when we plug in $x$ into $\\sin(1/x)$, the argument $(1/x)$ is always from the range $(1000, 10000)$. Therefore, the problem simply asks for all the zeros of $\\sin(x)$ with $x$ values between $(1000, 10000)$. We know that the $x$ values of any sine graph is $\\pi(n-1)$ so, we see that values of $n$ are any integer value from $320$ to $3184$ and therefore gives us an answer of approximately $2865$ which is answer $\\boxed{\\text{(A)} 2900}$</p><p>~Jske25</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "This problem involves advanced combinatorial counting methods."
-      }
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_24",
@@ -706,12 +706,12 @@
         "<p>Consider the graph of $f(x)=|x-a|+|x-b|+|x-c|$.</p><p>When $x<a$, the slope is $-3$.</p><p>When $a<x<b$, the slope is $-1$.</p><p>When $b<x<c$, the slope is $1$.</p><p>When $c<x$, the slope is $3$.</p><p>Setting $x=b$ gives $y=|b-a|+|b-b|+|b-c|=c-a$, so $(b,c-a)$ is a point on $f(x)$. In fact, it is the minimum of $f(x)$ considering the slope of lines to the left and right of $(b,c-a)$. Thus, graphing this will produce a figure that looks like a cup:[asy] import graph; size(100); draw((0,6)--(3,0)); xaxis(0,8.5); yaxis(0,10); real f(real x) { return -3(x-2)+5; } real f2(real x) { return -1(x-2)+5; } real f3(real x) { return 1(x-4)+3; } real f4(real x) { return 3(x-7)+6; } draw(graph(f,0,2)); draw(graph(f2,2,4)); draw(graph(f3,4,7)); draw(graph(f4,7,8.5)); draw((2,-0.25)--(2,0.25)); label(\"a\",(2,0),N); draw((4,-0.25)--(4,0.25)); label(\"b\",(4,0),N); draw((7,-0.25)--(7,0.25)); label(\"c\",(7,0),N); dot((2,5)); label(\"P\",(1.9,5.2),E); [/asy]From the graph, it is clear that $f(x)$ and $2x+y=2003$ have one intersection point if and only if they intersect at $x=a$. Since the line where $a<x<b$ has slope $-1$, the positive difference in $y$-coordinates from $x=a$ to $x=b$ must be $b-a$. Together with the fact that $(b,c-a)$ is on $f(x)$, we see that $P=(a,c-a+b-a)$. Since this point is on $x=a$, the only intersection point with $2x+y=2003$, we have $2 \\cdot a+(b+c-2a)=2003 \\implies b+c=2003$. As $c>b$, the smallest possible value of $c$ occurs when $b=1001$ and $c=1002$. This is indeed a solution as $a=1000$ puts $P$ on $y=2003-2x$, and thus the answer is $\\boxed{\\mathrm{(C)}\\ 1002}$.</p><p>This indeed works for the two right segments of slope $1$ and $3$. We already know that the minimum is achieved between slopes $-3$ and $-1$ with $b+c=2003$:\\[2003-2x=-a-b+c+x\\longrightarrow 3x\\ne a+b-c+2003 \\{b<x<c\\}\\rightarrow (3b,3c)\\ne a+2b\\rightarrow b>a\\text{ (true)}\\]\\[2003-2x=-a-b-c+3x\\longrightarrow 5x\\ne a+b+c+2003 \\{x>c\\}\\rightarrow (5c,+5\\infty)\\ne a+2b+2c\\rightarrow 3c>a+2b\\text{ (true)}\\]Indeed, within the restricted domain of $x$ in each segment, these inequalities prove to be unequal everywhere. So $y=2003-2x$ is strictly below $y=|x-a|+|x-b|+|x-c|$ at these domains.</p>",
         "<p>Does the system have a solution where $x\\leq a$? </p><p>For such a solution we would have $y=(a-x)+(b-x)+(c-x)$, hence $2x+(a+b+c-3x)=2003$, which solves to $x=a+b+c-2003$.If we want to avoid this solution, we need to have $a+b+c-2003>a$, hence $b+c>2003$, hence $c\\geq 1003$. In other words, if $c<1003$, there will always be one solution $(x,y)$ such that $x\\leq a$. </p><p>We will now find out whether there is a $c<1003$ for which (and some $a,b$) the system has only one solution. We already know of one such solution, so we need to make sure that no other solution appears.</p><p>Obviously, there are three more theoretically possible solutions: one $x$ in $\\left(a,b\\right]$, one in $\\left(b,c\\right]$, and one in $\\left(c,\\infty\\right)$.The first case solves to $x=2003+a-b-c$, the second to $3x=2003+a+b-c$, and the third to $5x=2003+a+b+c$.We need to make sure that the following three conditions hold:</p><p>Let $c=1002$ and $b=1001$. We then have:</p><p>Hence for $c=1002$, $b=1001$ and any valid $a$ the system has exactly one solution $(x,y)=(a,2003-2a)$.</p><p>We will now show that for $c<1002$ the system always has a solution such that $x>a$. This will mean that the system has at least two solutions, and thus the solution with $c=1002$ is optimal.</p><p>The last two inequalities contradict each other, thus there are no $a,b,c$ that would satisfy both of them.</p><p>We just showed that whenever $c<1002$, the system has at least two different solutions: one with $x\\leq a$ and one with $x>a$. </p><p>We also showed that for $c=1002$ there are some $a,b$ for which the system has exactly one solution. </p><p>Hence the optimal value of $c$ is $\\boxed{\\mathrm{(C)}\\ 1002}$.</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "circles",
-        "confidence": 0.9,
-        "reasoning": "This problem involves advanced circle geometry and area relationships."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "inequalities"
+        }
+      ]
     },
     {
       "id": "amc_2003_12b_25",
@@ -721,12 +721,12 @@
         "<p>We will use geometric probability.</p><p>The first point can be anywhere. Each point must be $\\frac{\\pi}{3}$ or less away from each other.</p><p>Define $x$ be the amount of radians away the second point is from the first. We limit $x$ to be in the interval $[-\\pi, \\pi]$. Define $y$ be the amount of radians away the third point is from the first. We limit $y$ to be in the interval $[-\\pi, \\pi]$. Now, we can deduct that: \\[|x| \\le \\frac{\\pi}{3},\\] \\[|y| \\le \\frac{\\pi}{3},\\] and \\[|x-y| \\le \\frac{\\pi}{3}.\\] We now begin plotting these on the coordinate grid. </p><p>First note that the area of the points that $x$ and $y$ can be (ignoring the conditions) is $(2\\pi)^2$ (remember what we restricted $x$ and $y$ to). </p><p>Now, we can graph the equations we deduced on the coordinate grid. That should look like this: [asy] fill((40, 0)--(40, 40)--(0, 40)--(-40, 0)--(-40, -40)--(0, -40)--cycle, green); draw((-50, 0)--(50, 0)); draw((0, -50)--(0, 50)); draw((-50, -10)--(10, 50),red); draw((-10, -50)--(50, 10),red); draw((-40, 40)--(40, 40),red); draw((-40, -40)--(40, -40),red); draw((40, 40)--(40, -40),red); draw((-40, 40)--(-40, -40),red); label(\"$\\frac{\\pi}{3}$\", (40, 0), SE); label(\"$\\frac{\\pi}{3}$\", (-40, 0), SW); label(\"$\\frac{\\pi}{3}$\", (0, 40), NE); label(\"$\\frac{\\pi}{3}$\", (0, -40), NW); [/asy]The area of the shaded region can be calculated in many ways. Eventually, you will find that the area is $\\frac{\\pi^2}{3}$. </p><p>Thus, the probability is $\\frac{\\frac{\\pi^2}{3}}{(2\\pi)^2} = \\frac{1}{12}$, or $\\boxed{\\text{(D)}}$.</p><p>~superagh</p>",
         "<p>There are $\\binom32 = 3$ different ways to choose $2$ points out of $3$. The probability that an angle between $2$ points is smaller than $60^\\circ$ is $\\frac{60^\\circ}{360^\\circ} = \\frac16$. The probability that the third point is inside the $60^\\circ$ angle is $\\frac{60^\\circ}{360^\\circ} = \\frac16$</p><p>$3 \\cdot \\frac16 \\cdot \\frac16 = \\boxed{\\text{(D)} \\frac{1}{12} }$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "equations",
-        "confidence": 0.9,
-        "reasoning": "This problem involves solving complex equations with multiple constraints."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
+      ]
     }
   ]
 }
