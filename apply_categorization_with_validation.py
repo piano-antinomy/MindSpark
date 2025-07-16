@@ -54,6 +54,11 @@ def validate_categorization_data(categorization_data, validator):
     invalid_entries = []
     
     for problem_id, categorization in categorization_data.items():
+        # Debug: Check the type of categorization
+        if not isinstance(categorization, dict):
+            print(f"ERROR: categorization for {problem_id} is not a dict, it's a {type(categorization)}: {categorization}")
+            continue
+            
         category = categorization.get('category', '')
         sub_category = categorization.get('sub_category', '')
         

@@ -10,12 +10,12 @@
         "<p>Continued fractions with integer parts $q_i$ and numerators all $1$ can be calculated as \\begin{align*} \\dfrac{[q_0,q_1,q_2,\\ldots,q_n]}{[q_1,q_2,\\ldots,q_n]} \\end{align*}where\\begin{align*} []&=1 \\\\ [q_0,q_1,q_2,\\ldots,q_n]&=q_0[q_1,q_2,\\ldots,q_n]+[q_2,\\ldots,q_n]\\\\ \\end{align*}</p><p>\\begin{align*} [3]&=3(1) = 3\\\\ [3,3]&=3(3)+1=10\\\\ [3,3,3]&=3(10)+3=33\\\\ [3,3,3,3]&=3(33)+10=109\\\\ \\dfrac{[q_0,q_1,q_2,\\ldots,q_n]}{[q_1,q_2,\\ldots,q_n]}&=\\dfrac{[3,3,3,3]}{[3,3,3]}\\\\ &=\\boxed{\\textbf{(D)}\\ \\frac{109}{33}} \\end{align*}~lopkiloinm</p>",
         "<p>Finite continued fractions of form $n+\\frac{1}{n+\\frac{1}{n+\\cdots}}=\\frac{x}{y}$ have linear combinations of $x, y$ that solve Pell's Equation. Specifically, the denominator $y$ and numerator $x$ are solutions to the Diophantine equation $(n^2+4)\\left(\\frac{y}{2}\\right)^2-\\left(x-\\frac{ny}{2}\\right)^2=\\pm{1}$. So for this problem in particular, the denominator $y$ and numerator $x$ are solutions to the Diophantine equation $13\\left(\\frac{y}{2}\\right)^2-\\left(x-\\frac{3y}{2}\\right)^2=\\pm{1}$. That leaves two answers. Since the number of $1$'s in the continued fraction is odd, we further narrow it down to $13\\left(\\frac{y}{2}\\right)^2-\\left(x-\\frac{3y}{2}\\right)^2=-1$, which only leaves us with $1$ answer and that is $(x,y)=(109,33)$ which means $\\boxed{\\textbf{(D)}\\ \\frac{109}{33}}$. </p><p>~lopkiloinm</p><p>(Note: Integer solutions increase exponentially, so our next solution will have a numerator greater than $3^2(109)$. Therefore, when you don't see numerators greater than $3^2(109)$ in the answer choices, this method should be fine.)</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "basic_operations",
-        "confidence": 0.95,
-        "reasoning": "This problem involves evaluating a simple algebraic expression and understanding the order of operations, which is a basic algebra skill."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_2",
@@ -27,12 +27,12 @@
         "<p>Note that $27$ minutes is a little bit less than half of $57$ minutes. Mike will therefore run a little bit less than $15/2=7.5$ laps, which is about $\\boxed{\\textbf{(B) }7}$. </p><p>~UltimateDL</p>",
         "<p>Note that $57$ minutes is almost equal to $1$ hour. Running $15$ laps in $1$ hour is running approximately $1$ lap every $4$ minutes. This means that in $27$ minutes, Mike will run approximately $\\frac{27}{4}$ laps. This is very close to $\\frac{28}{4} = \\boxed{\\textbf{(B) }7}$.</p><p>~TheGoldenRetriever</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "The problem is about the sum of the interior angles of a polygon, which is a classic geometry topic involving polygons."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "general"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_3",
@@ -42,12 +42,12 @@
         "<p>Solve this using a system of equations. Let $x,y,$ and $z$ be the three numbers, respectively. We get three equations:\\begin{align*} x+y+z&=96, \\\\ x&=6z, \\\\ z&=y-40. \\end{align*}Rewriting the third equation gives us $y=z+40,$ so we can substitute $x$ as $6z$ and $y$ as $z+40.$</p><p>Therefore, we get\\begin{align*} 6z+(z+40)+z&=96 \\\\ 8z+40&=96 \\\\ 8z&=56 \\\\ z&=7. \\end{align*}Substituting 7 in for $z$ gives us $x=6z=6(7)=42$ and $y=z+40=7+40=47.$</p><p>So, the answer is $|x-y|=|42-47|=\\boxed{\\textbf{(E) } 5}.$</p><p>~alexdapog A-A</p>",
         "<p>In accordance with Solution 2, \\[y = z+40, x = 6z \\implies |x-y| = |6z - z - 40| = 5|z - 8| \\implies \\boxed{\\textbf{(E) } 5}.\\]<b>vladimir.shelomovskii@gmail.com, vvsss</b></p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "divisibility",
-        "confidence": 0.9,
-        "reasoning": "This problem requires understanding divisibility rules and properties of numbers, which is a number theory concept."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_4",
@@ -57,12 +57,12 @@
         "<p>Since it can be a bit odd to think of \"liters per $100$ km\", this statement's numerical value is equivalent to $100$ km per $1$ liter:</p><p>$1$ km requires $l$ liters, so the numerator is simply $l$. Since $l$ liters is $1$ gallon, and $x$ miles is $1$ gallon, we have $1\\text{ liter} = \\frac{x}{l}$.</p><p>Therefore, the requested expression is \\[100\\cdot\\frac{m}{(\\frac{x}{l})} = \\boxed{\\textbf{(E) } \\frac{100lm}{x}}.\\]-Benedict T (countmath1)</p>",
         "<p>A car that gets a gallon for $x$ miles has a fuel efficiency of $\\frac{1 \\text{ gallon}}{x\\text{ miles}}.$ We want to convert these units to liters and kilometers. Since one gallon is $l$ liters, that can be rewritten as $\\frac{l \\text{ liters}}{x\\text{ miles}}$.</p><p>Now to convert the miles into kilometers. $1$ km is $m$ miles, so $1$ mile is $\\frac{1}{m}$ km. Plug that in to get $\\frac{l \\text{ liter}}{x * \\frac{1}{m} \\text{ km}}.$ Simplifying, we get $\\frac{lm \\text{ liters}}{x \\text{ km}}$.</p><p>But the problem asked for the fuel efficiency of liters per $100$ km, not just $1$ km. So instead of $m$, we put in $100 m$, getting $\\boxed{\\textbf{(E) } \\frac{100lm}{x}}$ as the answer.</p><p>~mihikamishra</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "functions",
-        "confidence": 0.9,
-        "reasoning": "The problem involves evaluating a function and understanding function notation, which is a fundamental algebra skill."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "general"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_5",
@@ -73,12 +73,12 @@
         "<p>We can find areas in terms of $s.$ From the diagram, draw in segments $SP$ and $RQ.$ We then have two non-shaded triangles, two shaded triangles, and a rectangle.</p><p>The non-shaded triangles have leg lengths of $1-s,$ so they each have area $\\frac{(1-s)^2}{2}.$ Therefore, the total area of the two triangles is $(1-s)^2.$</p><p>The shaded triangles have side lengths $s,$ so they each have area $\\frac{s^2}{2}.$ Then, we get that their combined area is $s^2.$</p><p>Looking at the rectangle, we find that $SP=RQ=s\\sqrt2,$ from 45-45-90 triangles $APS$ and $CRQ.$ Multiplying this with the other side length $s,$ we see that the rectangle has area $s^2\\sqrt2.$</p><p>These three expressions of area sum up to the big square, which has area 1. So, we add them up and solve:</p><p>\\begin{align*} (1-s)^2+s^2+s^2\\sqrt2=&~1 \\\\ s^2-2s+1+s^2+s^2\\sqrt2=&~1 \\\\ 2s^2+s^2\\sqrt2-2s=&~0 \\\\ s((2+\\sqrt2)s-2)=&~0 \\\\ \\end{align*}</p><p>$s$ cannot be 0, since it represents a positive side length. This means that $s$ satisfies $(2+\\sqrt2)s-2=0.$ Solving, we see that </p><p>\\[s=\\frac{2}{2+\\sqrt2}=\\frac{2}{2+\\sqrt2}\\cdot\\frac{2-\\sqrt2}{2-\\sqrt2}=\\frac{4-2\\sqrt2}{2}=\\boxed{\\textbf{(C) }2-{\\sqrt2}}.\\]</p><p>~UltimateDL</p>",
         "<p>A corner of the square gives a right triangle (e.g. $\\triangle DRS$) with legs $1-s$ and hypotenuse $s$. It follows that</p><p>\\begin{align*} 2(1-s)^2&=s^2 \\\\ s^2-4s+2&=0 \\\\ \\end{align*}</p><p>Completing the square gives</p><p>\\begin{align*} s^2-4s+4&=2 \\\\ (s-2)^2&=2 \\\\ s&=\\pm \\sqrt{2}+2 \\\\ \\end{align*}</p><p>The only answer choice that appears in our solution is $-\\sqrt{2}+2$, or $\\boxed{\\textbf{(C) }2-{\\sqrt2}}$.</p><p>~MrThinker</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "coordinate_geometry",
-        "confidence": 0.9,
-        "reasoning": "This problem involves points and distances in the coordinate plane, which is coordinate geometry."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_6",
@@ -88,12 +88,12 @@
         "<p>Assume that $a=-1.$ Then, the given expression simplifies to $5$:\\begin{align*} \\left|a-2-\\sqrt{(a-1)^2}\\right| &= \\left|-1-2-\\sqrt{(-1-1)^2}\\right| \\\\ &= \\left|-1-2-\\sqrt{4}\\right| \\\\ &= \\left|-1-2-2\\right| \\\\ &= 5. \\end{align*}Then, we test each of the answer choices to see which one is equal to $5$:</p><p>$\\textbf{(A) } 3-2a = 3-2\\cdot(-1) = 3+2 = 5.$</p><p>$\\textbf{(B) } 1-a = 1-(-1) = 2 \\neq 5.$</p><p>$\\textbf{(C) } 1 \\neq 5.$</p><p>$\\textbf{(D) } a+1 = -1+1 = 0 \\neq 5.$</p><p>$\\textbf{(E) } 3 \\neq 5.$</p><p>The only answer choice equal to $5$ for $a=-1$ is $\\boxed{\\textbf{(A) } 3-2a}.$</p><p>-MathWizard09</p>",
         "<p>The given function is continuous, so assume that $a=0.$ Then, the given expression simplifies to $3.$</p><p>We test each of the answer choices and get $\\textbf{(A) } 3-2a$ or $\\textbf{(E) } 3.$</p><p>We test $x = - 1000$ and get $\\left|-1000-2- \\text{positive} \\right| \\ne 3 \\implies \\boxed{\\textbf{(A) } 3-2a}.$</p><p><b>vladimir.shelomovskii@gmail.com, vvsss</b></p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "functions",
-        "confidence": 0.9,
-        "reasoning": "The problem involves evaluating an expression with an absolute value and a square root, which is algebraic manipulation."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_7",
@@ -102,12 +102,12 @@
         "<p>Note that\\begin{align*} 18 &= 2\\cdot3^2, \\\\ 180 &= 2^2\\cdot3^2\\cdot5, \\\\ 45 &= 3^2\\cdot5 \\\\ 15 &= 3\\cdot5. \\end{align*}Let $n = 2^a\\cdot3^b\\cdot5^c.$ It follows that:</p><p>Together, we conclude that $n=2^2\\cdot3\\cdot5=60.$ The sum of its digits is $6+0=\\boxed{\\textbf{(B) } 6}.$</p><p>~MRENTHUSIASM ~USAMO333</p>",
         "<p>The options for $\\text{lcm}(x, 18)=180$ are $20$, $60$, and $180$. The options for $\\text{gcd}(y, 45)=15$ are $15$, $30$, $60$, $75$, etc. We see that $60$ appears in both lists; therefore, $6+0=\\boxed{\\textbf{(B) } 6}$.</p><p>~MrThinker</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "divisibility",
-        "confidence": 0.9,
-        "reasoning": "The problem involves least common multiple and greatest common divisor, which are core number theory topics."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_8",
@@ -115,12 +115,12 @@
       "solutions": [
         "<p>First, note that $1+7+5+2+5=20$. There are $3$ possible cases:</p><p><b>Case 1: the mean is $5$.</b></p><p>$X = 5 \\cdot 6 - 20 = 10$.</p><p><b>Case 2: the mean is $7$.</b></p><p>$X = 7 \\cdot 6 - 20 = 22$.</p><p><b>Case 3: the mean is $X$.</b></p><p>$X= \\frac{20+X}{6} \\Rightarrow X=4$.</p><p>Therefore, the answer is $10+22+4=\\boxed{\\textbf{(D) }36}$.</p><p>~MrThinker</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "sequences",
-        "confidence": 0.9,
-        "reasoning": "The problem is about arithmetic mean and possible values in a data set, which is related to sequences and averages in algebra."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "general"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_9",
@@ -130,12 +130,12 @@
         "<p>Case 1: All the rectangles are different colors. It would be $5! = 120$ choices. </p><p>Case 2: Two rectangles that are the same color. Grouping these two rectangles as one gives us $5\\cdot4\\cdot3\\cdot2 = 120$. But, you need to multiply this number by three because the same-colored rectangles can be chosen at the top left and bottom right, the top right and bottom left, or the bottom right and bottom left, which gives us a grand total of $360$.</p><p>Case 3: We have two sets of rectangles chosen from these choices (top right &amp; bottom left, top left &amp; bottom right) that have the same color. However, the choice of the bottom left and bottom right does not work for this case, as the second pair would be chosen from two touching rectangles. Again, grouping the same-colored rectangles gives us $5\\cdot4\\cdot3 = 60$. </p><p>Therefore, we have $120 + 360 + 60 = \\boxed{\\textbf{(D) }540}$.</p><p>~<a class=\"new\" href=\"/wiki/index.php?title=OrenSH&amp;action=edit&amp;redlink=1\" title=\"OrenSH (page does not exist)\">orenbad</a></p>",
         "<p>Let us first choose the color of the bottom-middle rectangle, as it is touching all the other rectangles and has to be a different color than all of them. This rectangle has $5$ possibilities. To make things easier for us, let's assume we chose the color red. Now, lets choose the color of the top-left rectangle. This has $4$ options: orange, yellow, blue, or green (it can't be the same color as the middle rectangle, which we assumed was red). Lets assume this is orange. Now, we know that the bottom-left rectangle only has $3$ choices: yellow, blue, or green. Lets assume this is colored yellow. Now, lets do casework on the color of the bottom right-rectangle. It either can be the same color as the top-left (orange), or different.CASE 1: (Its the same color)We then know that the bottom-right rectangle is also colored orange. We now know that the top-left rectangle only has $3$ choices: yellow, blue, or green (it can't be orange or red). The sum of the possibilities of this case is $5\\cdot4\\cdot3\\cdot3$.</p><p>CASE 2: (Its a different color)We then know that the bottom-right rectangle has $3$ options (yellow, blue, or green, since it can't be red, and it can't be orange since we already covered that in the case 1). Lets assume it is colored yellow. We know have $3$ choices for the top-right rectangle (blue or green). The sum of the possibilities of this case is $5\\cdot4\\cdot3\\cdot3\\cdot2$</p><p>We can then sum up the possibilities of our two cases, which is $5\\cdot4\\cdot3\\cdot3+5\\cdot4\\cdot3\\cdot3\\cdot2 = 5\\cdot4\\cdot3(3+3\\cdot2) = 60\\cdot9 = \\boxed{\\textbf{(D) }540}$</p><p>~Irfans123</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "The problem is about coloring regions with restrictions, which is a classic combinatorial counting problem."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_10",
@@ -144,12 +144,12 @@
         "<p>[asy] /* Edited by MRENTHUSIASM */ size(250); real x, y; x = 6; y = 3; draw((0,0)--(x,0)); draw((0,0)--(0,y)); draw((0,y)--(x,y)); draw((x,0)--(x,y)); draw((0.5,0)--(0.5,0.5)--(0,0.5)); draw((x-0.5,y)--(x-0.5,y-0.5)--(x,y-0.5)); draw((0.5,0.5)--(x-0.5,y-0.5),dashed,Arrows()); draw((x,0)--(0,y),dashed,Arrows()); label(\"$1$\",(x-0.5,y-0.25),W); label(\"$1$\",(x-0.25,y-0.5),S); label(\"$8$\",midpoint((0.5,y-0.5)--(x/2,y/2)),(0,2.5)); label(\"$4\\sqrt{2}$\",midpoint((0.5,0.5)--(x/2,y/2)),S); label(\"$A$\",(0,0),SW); label(\"$E$\",(0,0.5),W); label(\"$F$\",(0.5,0),S); label(\"$I$\",(0.5,0.5),N); label(\"$D$\",(x,y),NE); label(\"$G$\",(x-0.5,y),N); label(\"$H$\",(x,y-0.5),E); label(\"$J$\",(x-0.5,y-0.5),S); Label L1 = Label(\"$w$\", align=(0,0), position=MidPoint, filltype=Fill(3,0,white)); Label L2 = Label(\"$\\ell$\", align=(0,0), position=MidPoint, filltype=Fill(0,3,white)); draw((0,-1)--(x,-1), L=L1, arrow=Arrows(),bar=Bars(15)); draw((x+1,0)--(x+1,y), L=L2, arrow=Arrows(),bar=Bars(15)); [/asy]Label the bottom left corner of the larger rectangle (without the square cut out) as $A$ and the top right as $D$. $w$ is the width of the rectangle and $\\ell$ is the length. Now we have vertices $E, F, G, H$ as vertices of the irregular octagon created by cutting out the squares. Let $I, J$ be the two closest vertices formed by the squares.The distance between the two closest vertices of the squares is thus $IJ=\\left(4\\sqrt{2}\\right).$Substituting, we get </p><p>\\[(IJ)^2 = (w-2)^2 + (\\ell-2)^2 = \\left(4\\sqrt{2}\\right)^2 = 32 \\implies w^2+\\ell^2-4w-4\\ell = 24.\\]Using the fact that the diagonal of the rectangle is $8,$ we get \\[w^2+\\ell^2 = 64.\\]Subtracting the first equation from the second equation, we get \\[4w+4\\ell=40 \\implies w+\\ell = 10.\\]Squaring yields \\[w^2 + 2w\\ell + \\ell^2 = 100.\\]Subtracting the second equation from this, we get $2w\\ell = 36,$ and thus area of the original rectangle is $w\\ell = \\boxed{\\textbf{(E) } 18}.$</p><p>~USAMO333</p><p>Edits and Diagram by ~KingRavi and ~MRENTHUSIASM</p><p>Minor edit by yanes04</p>",
         "<p><a class=\"external free\" href=\"https://youtu.be/SRV4e74qsM8\" rel=\"nofollow\">https://youtu.be/SRV4e74qsM8</a></p><p>Let x be the width of the original rectangle and y be the height. Through observation and logic, we can then conclude that (x-2)^2 + (y-2)^2 = 32. After expanding and simplifying the expressions, you end up with x+y=10. If you then solve for x in terms of y, you end up with x=10=y. Since 8 is the diagonal of the original rectangle, we can write that (10-y)^2+y^2=64. Use the quadratic formula to solve for y, and then solve for x. Using either root, yields a product of the difference of squares, 25-7=18. Therefore, 18 (E) is our solution!</p><p>~Namya</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "The problem involves a rectangle and geometric transformations, which is geometry with polygons."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_11",
@@ -159,12 +159,12 @@
         "<p>We can rewrite the equation using fractional exponents and take logarithms of both sides: \\[\\log_2{(2^{m}\\cdot4096^{-1/2}}) = \\log_2{(2\\cdot4096^{-1/m})}.\\] We can then use the additive properties of logarithms to split them up: \\[\\log_2{(2^{m})} + \\log_2{(4096^{-1/2})} = \\log_2{2} + \\log_2{(4096^{-1/m})}.\\] Using the power rule, the fact that $4096 = 2^{12},$ and bringing the exponents down, we get\\begin{align*} m - 6 &= 1 - \\frac{12}{m} \\\\ m + \\frac{12}{m} &= 7 \\\\ m^{2} + 12 &= 7m \\\\ m^{2} - 7m + 12 &= 0 \\\\ (m-3)(m-4) &= 0, \\end{align*}from which $m = 3$ or $m = 4$. Therefore, the answer is $3+4 = \\boxed{\\textbf{(C) } 7}.$</p><p>- youtube.com/indianmathguy</p>",
         "<p>Since third roots are conventionally positive integers, assume $m$ is an integer, so $m$ can only be $1$, $2$, $3$, $4$, $6$, and $12$. $\\sqrt{\\frac{1}{4096}}=\\frac{1}{64}$. Testing out $m$, we see that only $3$ and $4$ work. Hence, $3+4=\\boxed{\\textbf{(C) }7}$.</p><p>~MrThinker</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "polynomials",
-        "confidence": 0.9,
-        "reasoning": "The problem involves exponents and roots, and equating two algebraic expressions, which is polynomial manipulation."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_12",
@@ -173,12 +173,12 @@
         "<p>Note that:</p><ul><li>Truth-tellers would answer yes-no-no to the three questions in this order.</li></ul><ul><li>Liars would answer yes-yes-no to the three questions in this order.</li></ul><ul><li>Alternaters who responded truth-lie-truth would answer no-no-no to the three questions in this order.</li></ul><ul><li>Alternaters who responded lie-truth-lie would answer yes-yes-yes to the three questions in this order.</li></ul><p>Suppose that there are $T$ truth-tellers, $L$ liars, and $A$ alternaters who responded lie-truth-lie.</p><p>The conditions of the first two questions imply that\\begin{align*} T+L+A&=22, \\\\ L+A&=15. \\end{align*}Subtracting the second equation from the first, we have $T=22-15=\\boxed{\\textbf{(A) } 7}.$</p><p><u><b>Remark</b></u></p><p>The condition of the third question is extraneous. However, we know that $A=9$ and $L=6,$ so there are $9$ alternaters who responded lie-truth-lie, $6$ liars, and $9$ alternaters who responded truth-lie-truth from this condition.</p><p>~sigma ~<a class=\"new\" href=\"/wiki/index.php?title=OrenSH&amp;action=edit&amp;redlink=1\" title=\"OrenSH (page does not exist)\">orenbad</a> ~MRENTHUSIASM</p>",
         "<p>Consider when the principal asks \"Are you a liar?\": The truth tellers truthfully say no, and the liars lie and say no. This leaves only alternaters who lie on this question to answer yes. Thus, all $9$ children that answered yes are alternaters that falsely answer Questions 1 and 3, and truthfully answer Question 2. The rest of the alternaters, however many there are, have the opposite behavior.</p><p>Consider the second question, \"Are you an alternater?\": The truth tellers again answer no, the liars falsely answer yes, and alternaters that truthfully answer also say yes. From the previous part, we know that $9$ alternaters truthfully answer here. Because only liars and $9$ alternaters answer yes, we can deduce that there are $15-9=6$ liars.</p><p>Consider the first question, \"Are you a truth teller?\": Truth tellers say yes, liars also say yes, and alternaters that lie on this question also say yes. From the first part, we know that $9$ alternaters lie here. From the previous part, we know that there are $6$ liars. Because only the number of truth tellers is unknown here, we can deduce that there are $22-9-6=7$ truth tellers.</p><p>The final question is how many pieces of candy did the principal give to truth tellers. Because truth tellers answer yes on only the first question, we know that all $7$ of them said yes once, resulting in $\\boxed{\\textbf{(A) } 7}$ pieces of candy.</p><p>~phuang1024</p>"
       ],
-      "categorization": {
-        "category": "logic",
-        "subcategory": "logical_reasoning",
-        "confidence": 0.9,
-        "reasoning": "The problem is about truth-tellers, liars, and alternators, which is a logic puzzle involving logical reasoning."
-      }
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "logical_reasoning"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_13",
@@ -189,12 +189,12 @@
         "<p>Let point $B$ be the origin, with $C$ being on the positive $x$-axis and $A$ being in the first quadrant.</p><p>By the Angle Bisector Theorem, $AB:AC = 2:3$. Thus, assume that $AB = 4$, and $AC = 6$.</p><p>Let the perpendicular from $A$ to $BC$ be $AM$. </p><p>Using Heron's formula, \\[[ABC] = \\sqrt{\\frac{15}{2}\\left(\\frac{15}{2}-4\\right)\\left(\\frac{15}{2}-5\\right)\\left(\\frac{15}{2}-6\\right)} = \\frac{15}{4}\\sqrt{7}.\\]</p><p>Hence, \\[AM = \\frac{\\frac{15}{4}\\sqrt{7}}{\\frac{5}{2}} = \\frac{3}{2}\\sqrt{7}.\\]</p><p>Next, we have \\[BM^2 + AM^2 = AB^2\\]\\[\\therefore BM = \\sqrt{16 - \\frac{63}{4}} = \\sqrt{\\frac{1}{4}} = \\frac{1}{2} \\textrm{ and } PM = \\frac{3}{2}.\\]</p><p>The slope of line $AP$ is thus \\[\\frac{-\\frac{3}{2}\\sqrt{7}}{\\frac{3}{2}} = -\\sqrt{7}.\\]</p><p>Therefore, since the slopes of perpendicular lines have a product of $-1$, the slope of line $BD$ is $\\frac{1}{\\sqrt{7}}$. This means that we can solve for the coordinates of $D$:</p><p>\\[y = \\frac{3}{2}\\sqrt{7}\\]\\[y = \\frac{1}{\\sqrt{7}}x\\]\\[\\frac{1}{\\sqrt{7}}x = \\frac{3}{2}\\sqrt{7}\\]\\[x = \\frac{7 \\cdot 3}{2} = \\frac{21}{2}\\]\\[D = \\left(\\frac{21}{2}, \\frac{3}{2}\\sqrt{7}\\right).\\]</p><p>We also know that the coordinates of $A$ are $\\left(\\frac{1}{2}, \\frac{3}{2}\\sqrt{7}\\right)$, because $BM = \\frac{1}{2}$ and $AM = \\frac{3}{2}\\sqrt{7}$.</p><p>Since the $y$-coordinates of $A$ and $D$ are the same, and their $x$-coordinates differ by $10$, the distance between them is $10$. Our answer is $\\boxed{\\textbf{(C) }10}.$</p><p>~mathboy100</p>",
         "<p>[asy] size(300); pair A, B, C, P, XX, D; B = (0,0); P = (2,0); C = (5,0); A=(0,4.47214); D = A + (10,0); draw(A--B--C--cycle, linewidth(1)); dot(\"$A$\", A, N); dot(\"$B$\", B, SW); dot(\"$C$\", C, E); dot(\"$P$\", P, S); dot(\"$D$\", D, E); markscalefactor = 0.1; draw(anglemark(B,A,P)); markscalefactor = 0.12; draw(anglemark(P,A,C)); draw(P--A--D--B, linewidth(1)); XX = intersectionpoints(A--P,B--D)[0]; dot(\"$X$\", XX, dir(150)); markscalefactor = 0.03; draw(rightanglemark(A,B,C)); draw(rightanglemark(D,XX,P)); [/asy]Since there is only one possible value of $AD$, we assume $\\angle{B}=90^{\\circ}$. By the angle bisector theorem, $\\frac{AB}{AC}=\\frac{2}{3}$, so $AB=2\\sqrt{5}$ and $AC=3\\sqrt{5}$. Now observe that $\\angle{BAD}=90^{\\circ}$. Let the intersection of $BD$ and $AP$ be $X$. Then $\\angle{ABD}=90^{\\circ}-\\angle{BAX}=\\angle{APB}$. Consequently, \\[\\bigtriangleup DAB \\sim \\bigtriangleup ABP\\] and therefore $\\frac{DA}{AB} = \\frac{AB}{BP}$, so $AD=\\boxed{\\textbf{(C) }10}$, and we're done!</p><p>~<a href=\"/wiki/index.php/User:Bxiao31415\" title=\"User:Bxiao31415\">Bxiao31415</a></p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "triangles",
-        "confidence": 0.9,
-        "reasoning": "The problem involves a triangle, angle bisector, and similar triangles, which are all triangle geometry topics."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_14",
@@ -204,12 +204,12 @@
         "<p>As said in Solution 1, clearly, the integers from $8$ through $14$ must be in different pairs.</p><p>We know that $8$ or $9$ can pair with any integer from $1$ to $4$, $10$ or $11$ can pair with any integer from $1$ to $5$, and $12$ or $13$ can pair with any integer from $1$ to $6$. Thus, $8$ will have $4$ choices to pair with, $9$ will then have $3$ choices to pair with ($9$ cannot pair with the same number as the one $8$ pairs with). $10$ cannot pair with the numbers $8$ and $9$ has paired with but can also now pair with $5$, so there are $3$ choices. $11$ cannot pair with $8$'s, $9$'s, or $10$'s paired numbers, so there will be $2$ choices for $11$. $12$ can pair with an integer from $1$ to $5$ that hasn't been paired with already, or it can pair with $6$. $13$ will only have one choice left, and $7$ must pair with $14$.</p><p>So, the answer is $4\\cdot3\\cdot3\\cdot2\\cdot2\\cdot1\\cdot1=\\boxed{\\textbf{(E) } 144}.$</p><p>~Scarletsyc</p>",
         "<p>The integers $x \\in \\{8, \\ldots , 14 \\}$ must each be the larger elements of a distinct pair.</p><p>Assign partners in decreasing order for $x \\in \\{7, \\dots, 1\\}$:</p><p>Note that $7$ must pair with $14$: $\\mathbf{1} \\textbf{ choice}$.</p><p>For $5 \\leq x \\leq 7$, the choices are $\\{2x, \\dots, 14\\} - \\{ \\text{previous choices}\\}$. As $x$ decreases by 1, The minuend increases by 2 elements, and the subtrahend increases by 1 element, so the difference increases by 1, yielding $\\mathbf{3!} \\textbf{ combined choices}$.</p><p>After assigning a partner to $5$, there are no invalid pairings for yet-unpaired numbers, so there are $\\mathbf{4!} \\textbf{ ways}$ to choose partners for $\\{1,2,3,4\\}$.</p><p>The answer is $3! \\cdot 4! = \\boxed{\\textbf{(E) } 144}$.</p><p>In general, for $1,\\ldots,2n$, the same logic yields answer: $\\left\\lfloor\\dfrac{n}{2}\\right\\rfloor! \\cdot \\left\\lceil\\dfrac{n}{2}\\right\\rceil!$</p><p>~oinava</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "The problem is about pairing numbers with constraints, which is a combinatorial counting problem."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_15",
@@ -220,12 +220,12 @@
         "<p>We can guess that this quadrilateral is actually made of two right triangles: $\\triangle CDA$ has a $3 \\text{-} 4 \\text{-} 5$ ratio in the side lengths, and $\\triangle ABC$ is a $7 \\text{-} 24 \\text{-} 25$ triangle. (See Solution 1 for a proof.)</p><p>Next, we can choose one of these triangles and use the circumradius formula to find the radius. Let's choose the $15-20-25$ triangle. The area of the triangle is equal to the product of the side lengths divided by $4$ times the circumradius. Therefore, $150 = \\frac{15\\cdot20\\cdot25}{4r}$. Solving this simple algebraic equation gives us $r = \\frac{25}{2}$. </p><p>Plugging in the values, we have $\\frac{25}{2}^2\\cdot\\pi - \\left(\\frac{15\\cdot20}{2}+\\frac{7\\cdot24}{2}\\right) = \\frac{625\\cdot\\pi}{4} - 234$. Rewriting this gives us $\\frac{625\\pi-936}{4}$.</p><p>Therefore, adding these values gets us $\\boxed{\\textbf{(D) } 1565}.$</p><p>~<a class=\"new\" href=\"/wiki/index.php?title=OrenSH&amp;action=edit&amp;redlink=1\" title=\"OrenSH (page does not exist)\">orenbad</a></p>",
         "<p>To start, we can apply a couple formulas to find the circumradius and the area of the cyclic quadrilateral, and then just subtract the area of the quadrilateral from the area of the circle, and that is our final answer. This formula is really tedious with many calculations so don't do this in a contest. To find the circumradius we have: \\[\\text{Circumradius} = \\frac{1}{4} \\sqrt{\\frac{(ab + cd)(ac + bd)(ad + bc)}{(s-a)(s-b)(s-c)(s-d)}}\\]If we let $a = 7, b = 24, c = 20, \\text{and}, d = 15$, that means that the semi-perimeter is just \\[\\dfrac{7+24+20+15}{2} = 33\\]. Note that $s$ stands for the semi-perimeter. The calculations will take very long so Im just going to skip to the answer of $\\dfrac{25}{2}$ as our circumradius. This means that the area of the circle is $\\dfrac{625}{4}\\pi$. Now applying Brahmagupta's formula to find the area of a cyclic quadrilateral which is just: \\[\\sqrt{(s-a)(s-b)(s-c)(s-d)}\\]. Again we will use the same representations as these letters from before, so $a = 7, b = 24, c = 20, \\text{and}, d = 15$. Plugging in the numbers we have that the area is $234$. To express our answer in the form that was asked at the top we have: \\[\\dfrac{625\\pi-936}{4}\\], so our final answer is \\[625+936+4 = \\boxed{\\textbf{(D) } 1565}.\\]</p><p>-jb2015007</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "The problem involves a cyclic quadrilateral and area, which is geometry with polygons."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_16",
@@ -239,12 +239,12 @@
         "<p>By Vieta's, we can see that $ABC = \\frac{6}{10}$.Using this, we can see that if each side $ABC$ is the same length, the length is between $0.8$ ($0.512$) and $0.9$ ($0.729$). Adding $2$ to these numbers would give us three numbers that are close to $3$. Rounding up, we will just assume they are all three. If we multiply all of them, it gives us $27$.The closest answer choice is $\\boxed{\\textbf{(D) } 30},$ as all of the other choices are far from this number (the second closest answer choice being $11$ away).</p><p>~<a class=\"new\" href=\"/wiki/index.php?title=OrenSH&amp;action=edit&amp;redlink=1\" title=\"OrenSH (page does not exist)\">orenbad</a></p><p><br/>$(2+0.6^{1/3})^3 \\approx 23$ is a lower bound for the answer (if the roots are more spread out then adding to a smaller root stretches the product more than adding 2 to a larger root shrinks the product), but a different $P(x)$ with the same product of roots could have roots that lead to a much larger answer (but not exactly 48, it turns out). Going by this bound alone, only answers A, B, and C can be eliminated, leaving a guess between D and E. </p><p>-oinava</p><p><br/></p>",
         "<p>If we let the roots of the cubic polynomial be $p,q,r$, then we can write what we want in terms of $p, q, r$. So, we have \\[(p+2)(q+2)(r+2) = pqr + 2pq + 2qr + 4q + 2pr + 4p + 4r + 8 = pqr + 2(pq + qr + pr) + 4(q + p + r) + 8.\\] Now, we can just use Vieta's to finish up from here! We have $pqr = -(-\\dfrac{6}{10}) = \\dfrac{3}{5}$. Now, we can find the sum of the pairwise roots which is just $pq + qr + pr = \\dfrac{29}{10}$ and then multiply by $2$ which gives $\\dfrac{29}{5}$. Looking good so far! Now, we need to find the sum of the roots which is just $p + q + r = \\dfrac{39}{10}$ and then multiply by $4$ which gives $\\dfrac{78}{5}$. Almost there! Now, we just add $8$ to that sum, and then sum it all up to get $\\boxed{\\textbf{(D) } 30}$</p><p>-jb2015007</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "polynomials",
-        "confidence": 0.9,
-        "reasoning": "The problem involves roots of a cubic polynomial and Vieta's formulas, which is algebraic manipulation of polynomials."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_17",
@@ -252,12 +252,12 @@
       "solutions": [
         "<p>We rewrite the given equation, then rearrange:\\begin{align*} \\frac{100a+10b+c}{999} &= \\frac13\\left(\\frac a9 + \\frac b9 + \\frac c9\\right) \\\\ 100a+10b+c &= 37a + 37b + 37c \\\\ 63a &= 27b+36c \\\\ 7a &= 3b+4c. \\end{align*}Now, this problem is equivalent to counting the ordered triples $(a,b,c)$ that satisfies the equation.</p><p>Clearly, the $9$ ordered triples $(a,b,c)=(1,1,1),(2,2,2),\\ldots,(9,9,9)$ are solutions to this equation.</p><p>The expression $3b+4c$ has the same value when:</p><ul><li>$b$ increases by $4$ as $c$ decreases by $3.$</li></ul><ul><li>$b$ decreases by $4$ as $c$ increases by $3.$</li></ul><p>We find $4$ more solutions from the $9$ solutions above: $(a,b,c)=(4,8,1),(5,1,8),(5,9,2),(6,2,9).$ Note that all solutions are symmetric about $(a,b,c)=(5,5,5).$</p><p>Together, we have $9+4=\\boxed{\\textbf{(D) } 13}$ ordered triples $(a,b,c).$</p><p>~MRENTHUSIASM</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "divisibility",
-        "confidence": 0.9,
-        "reasoning": "The problem involves repeating decimals and digit constraints, which is number theory with divisibility and modular arithmetic."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "modular_arithmetic"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_18",
@@ -269,12 +269,12 @@
         "<p>We can consider the rotations and reflections separately. For the rotations, each rotation turns it by the next natural number. Thus the total number of degrees turned would be a triangle number. We test the smallest number, $359$ first, and we get that it turns $\\frac{(1+359)359}{2} = 180n$, where $n$ is an integer. Thus, the point would be rotated to $(-1,0)$. We may be tempted to dismiss this option but we haven't considered the reflections. Each reflection acts as a $180^{\\circ}$ rotation, so every two reflections cancel. However, $359$ is odd so we have to reflect $(-1,0)$, taking us to $(1,0)$, which is what we want. Thus we get $\\boxed{\\textbf{(A) } 359}$.</p>",
         "<p>Rotations and reflections in 2D are very nice to describe using complex numbers in polar form. Reflections and rotations also don't affect the length (modulus or absolute value) of a complex number. This motivates us to set $z = \\exp (i\\theta)$, starting with $z=1+0i=\\exp(i0)$.Then, we can describe rotations and reflections about the $y$-axis using these formulas:\\[\\text{Rotation}(\\exp(i\\theta), k): \\exp(i\\theta) \\mapsto \\exp(i(\\theta + k))\\]\\[\\text{Reflection}(\\exp(i\\theta)): \\exp(i\\theta) \\mapsto \\exp i (180^\\circ - \\theta) = -\\exp(i(-\\theta))\\]</p><p>If we apply two successive iterations, we see a simplification:</p><p>\\[T_k(\\exp(i\\theta)) = -\\exp(-i(\\theta+k))\\]</p><p>\\begin{aligned}T_{k+1}(T_k(\\exp(i\\theta))) &amp;= T_{k+1}(-\\exp(i(-\\theta-k))\\\\&amp;= --\\exp(-i(-\\theta-k+(k+1))\\\\&amp;= \\exp i(\\theta-1)\\end{aligned}</p><p><br/>We also can calculate $T_1(\\exp i0) = \\exp 179^\\circ$. Thus, the point $(1,0)$ gets sent back to when all double iterations after $1$ cancel $179^\\circ$. $179-\\left(\\frac{n-1}{2}\\right)=0$ so $n = 1 + 2 \\cdot 179 = \\boxed{\\textbf{(A) }359}$.</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "coordinate_geometry",
-        "confidence": 0.9,
-        "reasoning": "The problem involves transformations in the coordinate plane, which is coordinate geometry."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_19",
@@ -284,12 +284,12 @@
         "<p>As in solution 1, we express the LHS as a sum under one common denominator. We note that \\[\\frac{1}{1} + \\frac{1}{2} + \\dots + \\frac{1}{17} = \\frac{\\frac{17!}{1}}{17!} + \\frac{\\frac{17!}{2}}{17!} + \\frac{\\frac{17!}{3}}{17!} + \\dots + \\frac{\\frac{17!}{17}}{17!}\\]</p><p>Now, we have $h = L_{17}\\left(\\frac{\\frac{17!}{1} + \\frac{17!}{2} + \\frac{17!}{3} + \\dots + \\frac{17!}{17}}{17!}\\right)$. We'd like to find $h \\pmod{17},$ so we can evaluate our expression $\\pmod{17}.$ Since $\\frac{\\frac{17!}{1}}{17!}, \\frac{\\frac{17!}{2}}{17!}, \\dots, \\frac{\\frac{17!}{16}}{17!}$ don't have a factor of $17$ in their denominators, and since $L_{17}$ is a multiple of $17,$ multiplying each of those terms and adding them will get a multiple of $17.$ $\\pmod{17}$, that result is $0.$ Thus, we only need to consider $L_{17}\\cdot \\frac{\\frac{17!}{17}}{17!} = \\frac{L_{17}}{17} \\pmod{17}.$ Proceed with solution $1$ to get $\\boxed{\\textbf{(C) }5}$.</p><p>~sirswagger21</p>",
         "<p>Using Wolstenholmes' Theorem, we can rewrite $1 + \\frac{1}{2} \\dots + \\frac{1}{16}$ as $\\frac{17^2 n}{(17 - 1)!} = \\frac{17^2 n}{16!}$ (for some $n \\in \\mathbb{Z}$). Adding the $\\frac{1}{17}$ to $\\frac{17^2 n}{16!}$, we get $\\frac{17^3 n + 16!}{17!}$. </p><p>Now we have $\\frac{17^3 n + 16!}{17!} = \\frac{h}{L_{17}}$ and we want $h \\pmod{17}$. We find that $\\frac{L_{17}(17^3 n + 16!)}{17!} = \\frac{L_{16}(17^3 n + 16!)}{16!} = h$. Taking $\\pmod{17}$ and multiplying, we get $L_{16}(17^3 n + 16!) \\equiv 16! \\cdot h \\pmod{17}$.</p><p>Applying Wilson's Theorem on $16!$ and reducing, we simplify the congruence to $L_{16}(0 - 1) \\equiv -L_{16} \\equiv -h \\pmod{17}$. Now we proceed with Solution 1 and find that $L_{16} \\equiv 5 \\pmod{17}$, so our answer is $\\boxed{\\textbf{(C) }5}$. </p><p>~kn07</p><p><br/></p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "divisibility",
-        "confidence": 0.9,
-        "reasoning": "The problem involves least common multiples and modular arithmetic, which are number theory topics."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "modular_arithmetic"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_20",
@@ -298,31 +298,31 @@
         "<p>Let the arithmetic sequence be $a,a+d,a+2d,a+3d$ and the geometric sequence be $b,br,br^2,br^3.$</p><p>We are given that\\begin{align*} a+b&=57, \\\\ a+d+br&=60, \\\\ a+2d+br^2&=91, \\end{align*}and we wish to find $a+3d+br^3.$</p><p>Subtracting the first equation from the second and the second equation from the third, we get\\begin{align*} d+b(r-1)&=3, \\\\ d+br(r-1)&=31. \\end{align*}Subtract these results, we get \\[b(r-1)^2=28.\\]Note that either $(r-1)^2=1$ or $(r-1)^2=4.$ We proceed with casework:</p><ul><li>If $(r-1)^2=1,$ then $r=2,b=28,a=29,$ and $d=-25.$ The arithmetic sequence is $29,4,-21,-46,$ arriving at a contradiction.</li></ul><ul><li>If $(r-1)^2=4,$ then $r=3,b=7,a=50,$ and $d=-11.$ The arithmetic sequence is $50,39,28,17,$ and the geometric sequence is $7,21,63,189.$ This case is valid.</li></ul><p>Therefore, The answer is $a+3d+br^3=17+189=\\boxed{\\textbf{(E) } 206}.$</p><p>~mathboy282 ~MRENTHUSIASM</p>",
         "<p>Start similarly to Solution 1 and deduce the three equations\\begin{align*} a+b&=57, \\\\ a+d+br&=60, \\\\ a+2d+br^2&=91. \\end{align*}Then, add the last two equations and take away the first equation to get $a+3d+br^2+br-b=94$ We can solve for this in terms of what we want: $a+3d=-br^2-br+b+94$.</p><p>We're looking for $a+3d+br^3$. We can substitute our value of $a+3d$ in here to get \\[br^3-br^2-br+b+94=b(r+1)(r-1)(r-1)+94.\\]Since our sequence only has positive integers we can now check by the answer choices. For each answer choice, we can subtract $94$ and factor it to see if it has a perfect square factor and at least one other factor and those should differ by $2$.\\begin{alignat*}{8} \\textbf{(A)} \\ 190-94&=96&&=2^5\\cdot3, \\\\ \\textbf{(B)} \\ 194-94&=100&&=2^2\\cdot5^2, \\\\ \\textbf{(C)} \\ 198-94&=104&&=2^3\\cdot13, \\\\ \\textbf{(D)} \\ 202-94&=108&&=2^2\\cdot3^3, \\\\ \\textbf{(E)} \\ 206-94&=112&&=2^4\\cdot7. \\end{alignat*}From this, the only possible answer choices are $\\textbf{(A)}$ and $\\textbf{(E)}$, where $r=3$. To solve for $b$, we look back to the given equations above.</p><p>We are looking for $a+3d+27b$. If $\\textbf{(A)}$ were the answer, then we know that $a$ would have to be divisible by $3$ and $b$ would equal $6$. Looking at our second equation, if this were the case, then $d$ would also have to be divisible by $3$. However, this contradicts the third equation, as all variables are divisible by $3$, but their sum isn't. So, $\\boxed{\\textbf{(E) } 206}$ is our answer.</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "sequences",
-        "confidence": 0.9,
-        "reasoning": "The problem involves arithmetic and geometric sequences, which is algebraic sequences."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_21",
-      "question": "<p>A bowl is formed by attaching four regular hexagons of side $1$ to a square of side $1$. The edges of the adjacent hexagons coincide, as shown in the figure. What is the area of the octagon obtained by joining the top eight vertices of the four hexagons, situated on the rim of the bowl?[asy] import three; size(225); currentprojection=   orthographic(camera=(-5.52541796301147,-2.61548797564715,1.6545450372312),                up=(0.00247902062334861,0.000877141782387748,0.00966536329192992),                target=(0,0,0),                zoom=0.570588560870951); currentpen = black+1.5bp; triple A = O; triple M = (X+Y)/2; triple B = (-1/2,-1/2,1/sqrt(2)); triple C = (-1,0,sqrt(2)); triple D = (0,-1,sqrt(2)); transform3 rho = rotate(90,M,M+Z);  //arrays of vertices for the lower level (the square), the middle level, //and the interleaves vertices of the upper level (the octagon) triple[] lVs = {A}; triple[] mVs = {B}; triple[] uVsl = {C}; triple[] uVsr = {D};  for(int i = 0; i < 3; ++i){   lVs.push(rho*lVs[i]);   mVs.push(rho*mVs[i]);   uVsl.push(rho*uVsl[i]);   uVsr.push(rho*uVsr[i]); }  lVs.cyclic = true; uVsl.cyclic = true;  for(int i\u00a0: new int[] {0,1,2,3}){   draw(uVsl[i]--uVsr[i]);   draw(uVsr[i]--uVsl[i+1]); } draw(lVs[0]--lVs[1]^^lVs[0]--lVs[3]); for(int i\u00a0: new int[] {0,1,3}){   draw(lVs[0]--lVs[i]);   draw(lVs[i]--mVs[i]);   draw(mVs[i]--uVsl[i]); } for(int i\u00a0: new int[] {0,3}){   draw(mVs[i]--uVsr[i]); }  for(int i\u00a0: new int[] {1,3}) draw(lVs[2]--lVs[i],dashed); draw(lVs[2]--mVs[2],dashed); draw(mVs[2]--uVsl[2]^^mVs[2]--uVsr[2],dashed); draw(mVs[1]--uVsr[1],dashed);  //Comment two lines below to remove red edges //draw(lVs[1]--lVs[3],red+2bp); //draw(uVsl[0]--uVsr[0],red+2bp); [/asy]</p>",
+      "question": "<p>A bowl is formed by attaching four regular hexagons of side $1$ to a square of side $1$. The edges of the adjacent hexagons coincide, as shown in the figure. What is the area of the octagon obtained by joining the top eight vertices of the four hexagons, situated on the rim of the bowl?[asy] import three; size(225); currentprojection=   orthographic(camera=(-5.52541796301147,-2.61548797564715,1.6545450372312),                up=(0.00247902062334861,0.000877141782387748,0.00966536329192992),                target=(0,0,0),                zoom=0.570588560870951); currentpen = black+1.5bp; triple A = O; triple M = (X+Y)/2; triple B = (-1/2,-1/2,1/sqrt(2)); triple C = (-1,0,sqrt(2)); triple D = (0,-1,sqrt(2)); transform3 rho = rotate(90,M,M+Z);  //arrays of vertices for the lower level (the square), the middle level, //and the interleaves vertices of the upper level (the octagon) triple[] lVs = {A}; triple[] mVs = {B}; triple[] uVsl = {C}; triple[] uVsr = {D};  for(int i = 0; i < 3; ++i){   lVs.push(rho*lVs[i]);   mVs.push(rho*mVs[i]);   uVsl.push(rho*uVsl[i]);   uVsr.push(rho*uVsr[i]); }  lVs.cyclic = true; uVsl.cyclic = true;  for(int i : new int[] {0,1,2,3}){   draw(uVsl[i]--uVsr[i]);   draw(uVsr[i]--uVsl[i+1]); } draw(lVs[0]--lVs[1]^^lVs[0]--lVs[3]); for(int i : new int[] {0,1,3}){   draw(lVs[0]--lVs[i]);   draw(lVs[i]--mVs[i]);   draw(mVs[i]--uVsl[i]); } for(int i : new int[] {0,3}){   draw(mVs[i]--uVsr[i]); }  for(int i : new int[] {1,3}) draw(lVs[2]--lVs[i],dashed); draw(lVs[2]--mVs[2],dashed); draw(mVs[2]--uVsl[2]^^mVs[2]--uVsr[2],dashed); draw(mVs[1]--uVsr[1],dashed);  //Comment two lines below to remove red edges //draw(lVs[1]--lVs[3],red+2bp); //draw(uVsl[0]--uVsr[0],red+2bp); [/asy]</p>",
       "solutions": [
-        "<p>We extend line segments $\\ell,m,$ and $n$ to their point of concurrency, as shown below:[asy] /* Made by AoPS; edited by MRENTHUSIASM */ import three; size(225); currentprojection=   orthographic(camera=(-5.52541796301147,-2.61548797564715,1.6545450372312),                up=(0.00247902062334861,0.000877141782387748,0.00966536329192992),                target=(0,0,0),                zoom=0.570588560870951); currentpen = black+1.5bp; triple A = O; triple M = (X+Y)/2; triple B = (-1/2,-1/2,1/sqrt(2)); triple C = (-1,0,sqrt(2)); triple D = (0,-1,sqrt(2)); transform3 rho = rotate(90,M,M+Z);  //arrays of vertices for the lower level (the square), the middle level, //and the interleaves vertices of the upper level (the octagon) triple[] lVs = {A}; triple[] mVs = {B}; triple[] uVsl = {C}; triple[] uVsr = {D};  for(int i = 0; i < 3; ++i){   lVs.push(rho*lVs[i]);   mVs.push(rho*mVs[i]);   uVsl.push(rho*uVsl[i]);   uVsr.push(rho*uVsr[i]); }  lVs.cyclic = true; uVsl.cyclic = true;  draw(surface(uVsl[0]--uVsr[0]--uVsl[1]--uVsr[1]--uVsl[2]--uVsr[2]--uVsl[3]--uVsr[3]--cycle),yellow);  for(int i\u00a0: new int[] {0,1,2,3}){   draw(uVsl[i]--uVsr[i]);   draw(uVsr[i]--uVsl[i+1]); } draw(lVs[0]--lVs[1]^^lVs[0]--lVs[3]); for(int i\u00a0: new int[] {0,1,3}){   draw(lVs[0]--lVs[i]);   draw(lVs[i]--mVs[i]);   draw(mVs[i]--uVsl[i]); } for(int i\u00a0: new int[] {0,3}){   draw(mVs[i]--uVsr[i]); }  for(int i\u00a0: new int[] {1,3}) draw(lVs[2]--lVs[i],dashed); draw(lVs[2]--mVs[2],dashed); draw(mVs[2]--uVsl[2]^^mVs[2]--uVsr[2],dashed); draw(mVs[1]--uVsr[1],dashed);  draw(uVsl[1]--uVsr[0],red+2bp); draw(uVsr[3]--uVsl[4],red+2bp); draw(lVs[0]--mVs[0],red+2bp);  draw(uVsr[0]--uVsr[0]+uVsr[0]-uVsl[1],red+dashed+2bp); draw(uVsl[4]--uVsl[4]+uVsl[4]-uVsr[3],red+dashed+2bp); draw(mVs[0]--mVs[0]+mVs[0]-lVs[0],red+dashed+2bp);  label(\"$\\ell$\",midpoint(lVs[0]--mVs[0]),(1,2,0),red); label(\"$m$\",midpoint(uVsr[3]--uVsl[4]),(1,0,-2),red); label(\"$n$\",midpoint(uVsl[1]--uVsr[0]),(-1,0,-2),red); [/asy]We claim that lines $\\ell,m,$ and $n$ are concurrent: In the lateral faces of the bowl, we know that lines $\\ell$ and $m$ must intersect, and lines $\\ell$ and $n$ must intersect. In addition, line $\\ell$ intersects the top plane of the bowl at exactly one point. Since lines $m$ and $n$ are both in the top plane of the bowl, we conclude that lines $\\ell,m,$ and $n$ are concurrent.</p><p>In the lateral faces of the bowl, the dashed red line segments create equilateral triangles. So, the dashed red line segments all have length $1.$ In the top plane of the bowl, we know that $\\overleftrightarrow{m}\\perp\\overleftrightarrow{n}.$ So, the dashed red line segments create an isosceles triangle with leg-length $1.$</p><p>Note that octagon has four pairs of parallel sides, and the successive side-lengths are $1,\\sqrt2,1,\\sqrt2,1,\\sqrt2,1,\\sqrt2,$ as shown below:[asy] /* Made by AoPS; edited by MRENTHUSIASM */ size(225); real r = 1/3; draw((0,r)--(0,0)--(r,0)^^(1-r,0)--(1,0)--(1,r)^^(1,1-r)--(1,1)--(1-r,1)^^(r,1)--(0,1)--(0,1-r),red+2bp+dashed); fill((r,0)--(1-r,0)--(1,r)--(1,1-r)--(1-r,1)--(r,1)--(0,1-r)--(0,r)--cycle,yellow); draw((r,0)--(1-r,0)--(1,r)--(1,1-r)--(1-r,1)--(r,1)--(0,1-r)--(0,r)--cycle,black+2bp); label(\"$1$\",(0.5,0),S); label(\"$1$\",(1,0.5),E); label(\"$1$\",(0.5,1),N); label(\"$1$\",(0,0.5),W); label(\"$\\sqrt2$\",(1-r/2,r/2),NW); label(\"$\\sqrt2$\",(1-r/2,1-r/2),SW); label(\"$\\sqrt2$\",(r/2,1-r/2),SE); label(\"$\\sqrt2$\",(r/2,r/2),NE); label(\"$1$\",(1-r/2,0),S); label(\"$1$\",(1,r/2),E); label(\"$1$\",(1,1-r/2),E); label(\"$1$\",(1-r/2,1),N); label(\"$1$\",(r/2,1),N); label(\"$1$\",(0,1-r/2),W); label(\"$1$\",(0,r/2),W); label(\"$1$\",(r/2,0),S); [/asy]The area of the octagon is \\[3^2-4\\cdot\\left(\\frac12\\cdot1^2\\right)=\\boxed{\\textbf{(B) }7}.\\]</p><p>~MRENTHUSIASM</p>",
+        "<p>We extend line segments $\\ell,m,$ and $n$ to their point of concurrency, as shown below:[asy] /* Made by AoPS; edited by MRENTHUSIASM */ import three; size(225); currentprojection=   orthographic(camera=(-5.52541796301147,-2.61548797564715,1.6545450372312),                up=(0.00247902062334861,0.000877141782387748,0.00966536329192992),                target=(0,0,0),                zoom=0.570588560870951); currentpen = black+1.5bp; triple A = O; triple M = (X+Y)/2; triple B = (-1/2,-1/2,1/sqrt(2)); triple C = (-1,0,sqrt(2)); triple D = (0,-1,sqrt(2)); transform3 rho = rotate(90,M,M+Z);  //arrays of vertices for the lower level (the square), the middle level, //and the interleaves vertices of the upper level (the octagon) triple[] lVs = {A}; triple[] mVs = {B}; triple[] uVsl = {C}; triple[] uVsr = {D};  for(int i = 0; i < 3; ++i){   lVs.push(rho*lVs[i]);   mVs.push(rho*mVs[i]);   uVsl.push(rho*uVsl[i]);   uVsr.push(rho*uVsr[i]); }  lVs.cyclic = true; uVsl.cyclic = true;  draw(surface(uVsl[0]--uVsr[0]--uVsl[1]--uVsr[1]--uVsl[2]--uVsr[2]--uVsl[3]--uVsr[3]--cycle),yellow);  for(int i : new int[] {0,1,2,3}){   draw(uVsl[i]--uVsr[i]);   draw(uVsr[i]--uVsl[i+1]); } draw(lVs[0]--lVs[1]^^lVs[0]--lVs[3]); for(int i : new int[] {0,1,3}){   draw(lVs[0]--lVs[i]);   draw(lVs[i]--mVs[i]);   draw(mVs[i]--uVsl[i]); } for(int i : new int[] {0,3}){   draw(mVs[i]--uVsr[i]); }  for(int i : new int[] {1,3}) draw(lVs[2]--lVs[i],dashed); draw(lVs[2]--mVs[2],dashed); draw(mVs[2]--uVsl[2]^^mVs[2]--uVsr[2],dashed); draw(mVs[1]--uVsr[1],dashed);  draw(uVsl[1]--uVsr[0],red+2bp); draw(uVsr[3]--uVsl[4],red+2bp); draw(lVs[0]--mVs[0],red+2bp);  draw(uVsr[0]--uVsr[0]+uVsr[0]-uVsl[1],red+dashed+2bp); draw(uVsl[4]--uVsl[4]+uVsl[4]-uVsr[3],red+dashed+2bp); draw(mVs[0]--mVs[0]+mVs[0]-lVs[0],red+dashed+2bp);  label(\"$\\ell$\",midpoint(lVs[0]--mVs[0]),(1,2,0),red); label(\"$m$\",midpoint(uVsr[3]--uVsl[4]),(1,0,-2),red); label(\"$n$\",midpoint(uVsl[1]--uVsr[0]),(-1,0,-2),red); [/asy]We claim that lines $\\ell,m,$ and $n$ are concurrent: In the lateral faces of the bowl, we know that lines $\\ell$ and $m$ must intersect, and lines $\\ell$ and $n$ must intersect. In addition, line $\\ell$ intersects the top plane of the bowl at exactly one point. Since lines $m$ and $n$ are both in the top plane of the bowl, we conclude that lines $\\ell,m,$ and $n$ are concurrent.</p><p>In the lateral faces of the bowl, the dashed red line segments create equilateral triangles. So, the dashed red line segments all have length $1.$ In the top plane of the bowl, we know that $\\overleftrightarrow{m}\\perp\\overleftrightarrow{n}.$ So, the dashed red line segments create an isosceles triangle with leg-length $1.$</p><p>Note that octagon has four pairs of parallel sides, and the successive side-lengths are $1,\\sqrt2,1,\\sqrt2,1,\\sqrt2,1,\\sqrt2,$ as shown below:[asy] /* Made by AoPS; edited by MRENTHUSIASM */ size(225); real r = 1/3; draw((0,r)--(0,0)--(r,0)^^(1-r,0)--(1,0)--(1,r)^^(1,1-r)--(1,1)--(1-r,1)^^(r,1)--(0,1)--(0,1-r),red+2bp+dashed); fill((r,0)--(1-r,0)--(1,r)--(1,1-r)--(1-r,1)--(r,1)--(0,1-r)--(0,r)--cycle,yellow); draw((r,0)--(1-r,0)--(1,r)--(1,1-r)--(1-r,1)--(r,1)--(0,1-r)--(0,r)--cycle,black+2bp); label(\"$1$\",(0.5,0),S); label(\"$1$\",(1,0.5),E); label(\"$1$\",(0.5,1),N); label(\"$1$\",(0,0.5),W); label(\"$\\sqrt2$\",(1-r/2,r/2),NW); label(\"$\\sqrt2$\",(1-r/2,1-r/2),SW); label(\"$\\sqrt2$\",(r/2,1-r/2),SE); label(\"$\\sqrt2$\",(r/2,r/2),NE); label(\"$1$\",(1-r/2,0),S); label(\"$1$\",(1,r/2),E); label(\"$1$\",(1,1-r/2),E); label(\"$1$\",(1-r/2,1),N); label(\"$1$\",(r/2,1),N); label(\"$1$\",(0,1-r/2),W); label(\"$1$\",(0,r/2),W); label(\"$1$\",(r/2,0),S); [/asy]The area of the octagon is \\[3^2-4\\cdot\\left(\\frac12\\cdot1^2\\right)=\\boxed{\\textbf{(B) }7}.\\]</p><p>~MRENTHUSIASM</p>",
         "<p>(This is an alternate way of analyzing the red extension line segments drawn in Solution 1.)</p><p>The perimeter of the square bottom of the bowl is $4$.Halfway up the bowl, the boundary is still a square, with perimeter $4$ times the hexagon circumradius, aka $4 \\times 2 = 8$ times the hexagon (also square) side length (1), an increase of $4$.</p><p>Extending the bottom half of the bowl to twice its height (full height of the bowl) would increase the perimeter by the same amount again, forming a square with perimeter $4 + (8-4)\\times 2= 12$. Thus the top octagon is cut out of a square of side length $12\\div4=3$ and thus area $9$. </p><p>The difference between the above-constructed square and the octagon is four right triangles, and (by rotational and reflection symmetry), each is isosceles with equal-length perpendicular bases of length $(3-1)/2 = 1$, and thus having area $\\frac12$. Therefore the area of the octagon is $9-(4\\times 1/2) = \\boxed{\\textbf{(B) }7}$.</p><p>-oinava</p>",
         "<p>Note that the octagon is equiangular by symmetry, but it is not equilateral. $4$ of its sides are shared with the hexagon's sides, so each of those sides have side length $1$. However, the other $4$ sides are touching the triangles, so we wish to find the length of these sides. </p><p>Notice that when two adjacent hexagons meet at a side, their planes make the same dihedral angle at the bottom-most point of intersection and at the top-most point of intersection by symmetry. Therefore, the triangle that is wedged between the two hexagons has the same angle as the square at the bottom wedged between the hexagons. Thus, the triangle is a $45-45-90$ isosceles triangle.This conclusion can also be reached by cutting the bottom square across a diagonal and noticing that each resulting triangle is congruent to each triangle wedged between the hexagons by symmetry. Furthermore, notice that if you take a copy of this bowl and invert it and place it on top of this bowl, you will get a polyhedron with faces of hexagons and squares, a truncated octahedron, and therefore this triangle has a $90^\\circ$-angle:</p><p>Now that we have come to this conclusion, by simple Pythagorean theorem, we have that the other $4$ sides of the octagon are $\\sqrt{2}$. </p><p>We can draw a square around the octagon so that the area of the octagon is the area of the square minus each corner triangle. The hypotenuse of these corner triangles are $1$ and they are $45-45-90$ triangles because the octagon is equiangular, so each has dimensions $\\frac{\\sqrt{2}}{2},\\frac{\\sqrt{2}}{2},1$. The side length of the square is $\\sqrt{2}$ for the larger sides of the octagon, and adding $2$ of $\\frac{\\sqrt{2}}{2}$ for each width of the triangle. Therefore, the area of the square is:\\[\\left(\\sqrt{2} + 2 \\cdot \\frac{\\sqrt{2}}{2}\\right)^2 \\implies \\left(2\\sqrt{2}\\right)^2 = 8\\]The area of each triangle is $\\frac{1}{2} \\cdot \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{2}}{2} = \\frac{1}{4}$ and there are $4$ of them, so we subtract $1$ from the area of the square. The area of the octagon is thus $\\boxed{\\textbf{(B) }7}$.</p><p>~KingRavi</p>",
         "<p>Denote a square $ABCD, AB = 1,\\pi$ is the plane $ABC,$ regular hexagons $ABFKSE, BCHMLF, CDGPNH, ADGQRE,$ triangles $FKL, ESR, GPQ, HMN.$</p><p>The main diagonal of each regular hexagon $EF = 2 \\implies EFGH$ is square with side $2$ parallel to $\\pi.$</p><p>The area of this square $[EFGH] = 4 \\implies [EFGH] - [ABCD] = 3.$</p><p>The difference $3$ is the area of the projection of $4$ half of hexagons on the plane $\\pi.$</p><p>So the area of the projections of another $4$ half of hexagons is $3.$</p><p>It is evident (may be not only for me) that projections of the coincide sides of hexagons are along diagonals of $ABCD$ (for example $A, E, C,$ and $H$ are collinear.)</p><p>So the projections on $\\pi$ of the coincide sides of hexagons and triangles are perpendicular to this lines $(SE \\perp AE).$</p><p>Therefore in plane $\\pi$ projections of points $S, E,$ and $R$ are collinear and plane of $\\triangle ESR$ is perpendicular to $\\pi.$</p><p>We get $1 +3 +3 = \\boxed{\\textbf{(B) }7}.$</p><p>PS. Denote $A = \\left (0.5,0.5, 0 \\right), E = \\left (1,1, h \\right ), E'$ is the midpoint of $RS.$\\[|AE| = 1 \\implies h = \\frac {1}{\\sqrt{2}}.\\]\\[R = \\left( 0.5, 1.5, 2h \\right), S = \\left (1.5, 0.5, 2h \\right) \\implies E' = \\left( 1, 1, 2h \\right) \\implies EE' \\perp ABC.\\]</p><p><b>vladimir.shelomovskii@gmail.com, vvsss</b></p>",
         "<p>Through observation, we can reasonably assume that each of the triangles on this shape is a right triangle. Since each side length of the hexagons is $1$, the hypotenuse of the triangles would be $\\sqrt2$. Now we know the side lengths of the octagon whose area we are solving for. The octagon can be broken into nine pieces. We have four triangles whose side lengths are 1, and their hypotenuse is a side whose length is $\\sqrt2$. Next, we have $5$ $1$ by $1$ squares. The triangles each have an area of $\\frac{1}{2}$, and the squares each have an area of $1$. </p><p>Then, we add these up, so we get $\\boxed{\\textbf{(B) }7}.$</p><p>~<a class=\"new\" href=\"/wiki/index.php?title=OrenSH&amp;action=edit&amp;redlink=1\" title=\"OrenSH (page does not exist)\">orenbad</a></p>",
         "<p>Let one of the bottom points of the solid be the origin, $(0, 0, 0).$ Then, we can define one of the points where the vertices of the hexagons meet closest to our origin as $(x, y, x).$ Then, note that either the $x$ coordinate or $z$ coordinate must be $0$ in the two vertices closest to the origin in the octagon. We can then let two adjacent points on the octagon near $(x, y, x)$ be $(2x, 2y, 0)$ and $(0, 2y, 2x).$ Since these two points must be a distance of $\\sqrt{3}$ from our origin (the height of a regular hexagon), and $(x, y, x)$ must be a distance of $1$ from our origin, we get\\[2x^2+y^2=1, 4x^2+4y^2=3,\\]\\[2x^2+y^2=1, x^2+y^2=\\frac 34,\\]\\[x^2=\\frac 14, y^2=\\frac 12,\\]\\[x=\\frac 12, y=\\frac{\\sqrt 2}{2}.\\]Then, the distance between $(2x, 2y, 0)$ and $(0, 2y, 2x)$ is $2\\sqrt2 x=\\sqrt 2,$ so the octagon has sides $1, \\sqrt2, 1, \\sqrt2, 1, \\sqrt2, 1, \\sqrt2,$ and the solution follows.</p><p>-piemax</p>",
-        "<p>[asy] import three; size(225); currentprojection=   orthographic(camera=(-5.52541796301147,-2.61548797564715,1.6545450372312),                up=(0.00247902062334861,0.000877141782387748,0.00966536329192992),                target=(0,0,0),                zoom=0.570588560870951); currentpen = black+1.5bp; triple A = O; triple M = (X+Y)/2; triple B = (-1/2,-1/2,1/sqrt(2)); triple C = (-1,0,sqrt(2)); triple D = (0,-1,sqrt(2)); transform3 rho = rotate(90,M,M+Z);  //arrays of vertices for the lower level (the square), the middle level, //and the interleaves vertices of the upper level (the octagon) triple[] lVs = {A}; triple[] mVs = {B}; triple[] uVsl = {C}; triple[] uVsr = {D};  for(int i = 0; i < 3; ++i){   lVs.push(rho*lVs[i]);   mVs.push(rho*mVs[i]);   uVsl.push(rho*uVsl[i]);   uVsr.push(rho*uVsr[i]); }  lVs.cyclic = true; uVsl.cyclic = true;  for(int i\u00a0: new int[] {0,1,2,3}){   draw(uVsl[i]--uVsr[i]);   draw(uVsr[i]--uVsl[i+1]); } draw(lVs[0]--lVs[1]^^lVs[0]--lVs[3]); for(int i\u00a0: new int[] {0,1,3}){   draw(lVs[0]--lVs[i]);   draw(lVs[i]--mVs[i]);   draw(mVs[i]--uVsl[i]); } for(int i\u00a0: new int[] {0,3}){   draw(mVs[i]--uVsr[i]); }  for(int i\u00a0: new int[] {1,3}) draw(lVs[2]--lVs[i],dashed); draw(lVs[2]--mVs[2],dashed); draw(mVs[2]--uVsl[2]^^mVs[2]--uVsr[2],dashed); draw(mVs[1]--uVsr[1],dashed);  //Comment two lines below to remove red edges draw(lVs[1]--lVs[3],red+2bp+dashed); draw(uVsl[2]--uVsr[2],red+2bp); draw(uVsl[2]--lVs[1],red+2bp+dashed); draw(uVsr[2]--lVs[3],red+2bp+dashed); label(\"$A$\", lVs[3], SW); label(\"$B$\", lVs[1], SE); label(\"$C$\", uVsl[2], NE); label(\"$D$\", uVsr[2], NW); label(\"$P$\", lVs[2], NE); label(\"$Q$\", mVs[2], N); [/asy]</p><p>Notice that $AD \\parallel PQ$, $BC \\parallel PQ$, so $AD \\parallel BC$. Obviously, $AD = BC$, so $ABCD$ is a parallelogram, we get \\[CD = AB = \\sqrt{1^2+1^2} = \\sqrt{2}.\\]</p><p>Note that octagon has four pairs of parallel sides, and the successive side-lengths are $1,\\sqrt2,1,\\sqrt2,1,\\sqrt2,1,\\sqrt2,$ as shown below:[asy] size(225); real r = 1/3; draw((r,0)--(1-r,0)--(1,r)--(1,1-r)--(1-r,1)--(r,1)--(0,1-r)--(0,r)--cycle,black+2bp); draw((r,0)--(r,1)^^(1-r,0)--(1-r,1)^^(0,r)--(1,r)^^(0,1-r)--(1,1-r), dashed); label(\"$1$\",(0.5,0),S); label(\"$1$\",(1,0.5),E); label(\"$1$\",(0.5,1),N); label(\"$1$\",(0,0.5),W); label(\"$\\sqrt2$\",(1-r/2,r/2),SE); label(\"$\\sqrt2$\",(1-r/2,1-r/2),NE); label(\"$\\sqrt2$\",(r/2,1-r/2),NW); label(\"$\\sqrt2$\",(r/2,r/2),SW); label(\"$1$\",(r/2,1/2)); label(\"$1$\",(1-r/2,1/2)); label(\"$1$\",(1/2,1/2)); label(\"$1$\",(1/2,r/2)); label(\"$1$\",(1/2,1-r/2)); real rr=r*2/3; label(\"$\\frac{1}{2}$\",(rr,rr)); label(\"$\\frac{1}{2}$\",(1-rr,1-rr)); label(\"$\\frac{1}{2}$\",(rr,1-rr)); label(\"$\\frac{1}{2}$\",(1-rr,rr)); label(\"$C$\",(r,1),N); label(\"$D$\",(0,1-r),W); [/asy]The area of the octagon is $\\boxed{\\textbf{(B) }7}.$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Reda_mandymath\" rel=\"nofollow\">reda_mandymath</a></p>"
+        "<p>[asy] import three; size(225); currentprojection=   orthographic(camera=(-5.52541796301147,-2.61548797564715,1.6545450372312),                up=(0.00247902062334861,0.000877141782387748,0.00966536329192992),                target=(0,0,0),                zoom=0.570588560870951); currentpen = black+1.5bp; triple A = O; triple M = (X+Y)/2; triple B = (-1/2,-1/2,1/sqrt(2)); triple C = (-1,0,sqrt(2)); triple D = (0,-1,sqrt(2)); transform3 rho = rotate(90,M,M+Z);  //arrays of vertices for the lower level (the square), the middle level, //and the interleaves vertices of the upper level (the octagon) triple[] lVs = {A}; triple[] mVs = {B}; triple[] uVsl = {C}; triple[] uVsr = {D};  for(int i = 0; i < 3; ++i){   lVs.push(rho*lVs[i]);   mVs.push(rho*mVs[i]);   uVsl.push(rho*uVsl[i]);   uVsr.push(rho*uVsr[i]); }  lVs.cyclic = true; uVsl.cyclic = true;  for(int i : new int[] {0,1,2,3}){   draw(uVsl[i]--uVsr[i]);   draw(uVsr[i]--uVsl[i+1]); } draw(lVs[0]--lVs[1]^^lVs[0]--lVs[3]); for(int i : new int[] {0,1,3}){   draw(lVs[0]--lVs[i]);   draw(lVs[i]--mVs[i]);   draw(mVs[i]--uVsl[i]); } for(int i : new int[] {0,3}){   draw(mVs[i]--uVsr[i]); }  for(int i : new int[] {1,3}) draw(lVs[2]--lVs[i],dashed); draw(lVs[2]--mVs[2],dashed); draw(mVs[2]--uVsl[2]^^mVs[2]--uVsr[2],dashed); draw(mVs[1]--uVsr[1],dashed);  //Comment two lines below to remove red edges draw(lVs[1]--lVs[3],red+2bp+dashed); draw(uVsl[2]--uVsr[2],red+2bp); draw(uVsl[2]--lVs[1],red+2bp+dashed); draw(uVsr[2]--lVs[3],red+2bp+dashed); label(\"$A$\", lVs[3], SW); label(\"$B$\", lVs[1], SE); label(\"$C$\", uVsl[2], NE); label(\"$D$\", uVsr[2], NW); label(\"$P$\", lVs[2], NE); label(\"$Q$\", mVs[2], N); [/asy]</p><p>Notice that $AD \\parallel PQ$, $BC \\parallel PQ$, so $AD \\parallel BC$. Obviously, $AD = BC$, so $ABCD$ is a parallelogram, we get \\[CD = AB = \\sqrt{1^2+1^2} = \\sqrt{2}.\\]</p><p>Note that octagon has four pairs of parallel sides, and the successive side-lengths are $1,\\sqrt2,1,\\sqrt2,1,\\sqrt2,1,\\sqrt2,$ as shown below:[asy] size(225); real r = 1/3; draw((r,0)--(1-r,0)--(1,r)--(1,1-r)--(1-r,1)--(r,1)--(0,1-r)--(0,r)--cycle,black+2bp); draw((r,0)--(r,1)^^(1-r,0)--(1-r,1)^^(0,r)--(1,r)^^(0,1-r)--(1,1-r), dashed); label(\"$1$\",(0.5,0),S); label(\"$1$\",(1,0.5),E); label(\"$1$\",(0.5,1),N); label(\"$1$\",(0,0.5),W); label(\"$\\sqrt2$\",(1-r/2,r/2),SE); label(\"$\\sqrt2$\",(1-r/2,1-r/2),NE); label(\"$\\sqrt2$\",(r/2,1-r/2),NW); label(\"$\\sqrt2$\",(r/2,r/2),SW); label(\"$1$\",(r/2,1/2)); label(\"$1$\",(1-r/2,1/2)); label(\"$1$\",(1/2,1/2)); label(\"$1$\",(1/2,r/2)); label(\"$1$\",(1/2,1-r/2)); real rr=r*2/3; label(\"$\\frac{1}{2}$\",(rr,rr)); label(\"$\\frac{1}{2}$\",(1-rr,1-rr)); label(\"$\\frac{1}{2}$\",(rr,1-rr)); label(\"$\\frac{1}{2}$\",(1-rr,rr)); label(\"$C$\",(r,1),N); label(\"$D$\",(0,1-r),W); [/asy]The area of the octagon is $\\boxed{\\textbf{(B) }7}.$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Reda_mandymath\" rel=\"nofollow\">reda_mandymath</a></p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "The problem involves an octagon formed from hexagons and a square, which is geometry with polygons."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_22",
@@ -335,12 +335,12 @@
         "<p>Notice that for each card \"position\", we can choose for it to be picked up on the first or second pass, for a total of $2^{13}$ options. However, if all of the cards selected to be picked up first are before all of the cards to be picked up second, then this means that the list is in consecutive ascending order (and thus all cards will be picked up on the first pass instead). This can happen in 14 ways, so our answer is $2^{13}-14=\\boxed{\\textbf{(D) } 8178}$.</p><p>~pooh_bear</p>",
         "<p>To satisfy the condition the question provided, we can arrange the numbers between 1 and 13 into 3 groups. Though writing out the groups is not necessary, below is a basic 'format'. (# of elements in 1st group, # of elements in the 2nd group, # of elements in the 3rd group)=(1,1,11)=(1,2,10)=(1,3,9)=(1,4,8)=(1,5,7)=(1,6,6)=(2,2,9)=(2,3,8)=(2,4,7)=(2,3,8)=(2,4,7)=(2,5,6)=(3,3,7)=(3,4,6)=(3,5,5)</p><p>Then to arrange these groups we need to multiply the final value by 3!. Hence, we know that the answer should be a multiple of 3!, which is 6. Since the only answer choice that is a multiple of 6 is D.</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "The problem is about arrangements and passes, which is a combinatorial counting problem."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_23",
@@ -354,18 +354,18 @@
         "<p>Notice that the question never says what the height of the trapezoid is; the only property we know about it is that $AC=BD$. Therefore, we can assume that the height of the trapezoid is $0$ and all $5$ points, including $P$, lie on the same line with $PA=AB=BC=CD=1$. Notice that this satisfies the problem requirements because $PA=1, PB=2, PC=3,PD=4$, and $AC=BD=2$.Now all we have to find is $\\frac{BC}{AD} = \\boxed{\\textbf{(B) }\\frac{1}{3}}$.</p><p>~KingRavi</p><p>~ShawnX (Diagram)</p>",
         "<p>Consider the reflection $P^{\\prime}$ of $P$ over the perpendicular bisector of $\\overline{BC}$. \\[PB = P^{\\prime}C = a, PC = P^{\\prime}B = b.\\]Let $PE \\perp BC, P^{\\prime}E^{\\prime} \\perp BC.$\\[BE = CE^{\\prime}, PP^{\\prime} = EE^{\\prime} \\implies\\]\\[b^2 - a^2 = PC^2 - PB^2 = CE^2 - BE^2\\]\\[=(CE - BE)(CE + BE) = EE^{\\prime} \\cdot BC = PP^{\\prime} \\cdot BC.\\]Similarly,\\[d^2 - c^2 = PP^{\\prime} \\cdot AD \\implies \\frac {BC}{AD} = \\frac {b^2 - a^2}{d^2 - c^2}= \\boxed{\\textbf{(B) }\\frac{1}{3}}.\\]<b>vladimir.shelomovskii@gmail.com, vvsss</b></p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "The problem involves an isosceles trapezoid and ratios, which is geometry with polygons."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_24",
       "question": "<p>How many strings of length $5$ formed from the digits $0$, $1$, $2$, $3$, $4$ are there such that for each $j \\in \\{1,2,3,4\\}$, at least $j$ of the digits are less than $j$? (For example, $02214$ satisfies this conditionbecause it contains at least $1$ digit less than $1$, at least $2$ digits less than $2$, at least $3$ digits lessthan $3$, and at least $4$ digits less than $4$. The string $23404$ does not satisfy the condition because itdoes not contain at least $2$ digits less than $2$.)</p>",
       "solutions": [
-        "<p>For some $n$, let there be $n+1$ parking spaces counterclockwise in a circle. Consider a string of $n$ integers $c_1c_2 \\ldots c_n$ each between $0$ and $n$, and let $n$ cars come into this circle so that the $i$th car tries to park at spot $c_i$, but if it is already taken then it instead keeps going counterclockwise and takes the next available spot. After this process, exactly one spot will remain empty.</p><p>Then the strings of $n$ numbers between $0$ and $n-1$ that contain at least $k$ integers $<k$ for $1 \\leq k \\leq n$ are exactly the set of strings that leave spot $n$ empty. Also note for any string $c_1c_2 \\ldots c_n$, we can add $1$ to each $c_i$ (mod $n+1$) to shift the empty spot counterclockwise, meaning for each string there exists exactly one $j$ with $0 \\leq j \\leq n$ so that $(c_1+j)(c_2+j) \\ldots (c_n+j)$ leaves spot $n$ empty. This gives there are $\\frac{(n+1)^{n}}{n+1} = (n+1)^{n-1}$ such strings. </p><p>Plugging in $n = 5$ gives $\\boxed{\\textbf{(E) }1296}$ such strings.</p><p>~oh54321</p><p>Note: If you are confused, the problem is equivalent to \u201cHow many strings of length $5$ formed from the digits $0$, $1$, $2$, $3$, $4$, $5$ are there such that for each $j \\in \\{1,2,3,4,5\\}$, at least $j$ of the digits are less than $j$?\u201d</p><p>~inaccessibles</p>",
+        "<p>For some $n$, let there be $n+1$ parking spaces counterclockwise in a circle. Consider a string of $n$ integers $c_1c_2 \\ldots c_n$ each between $0$ and $n$, and let $n$ cars come into this circle so that the $i$th car tries to park at spot $c_i$, but if it is already taken then it instead keeps going counterclockwise and takes the next available spot. After this process, exactly one spot will remain empty.</p><p>Then the strings of $n$ numbers between $0$ and $n-1$ that contain at least $k$ integers $<k$ for $1 \\leq k \\leq n$ are exactly the set of strings that leave spot $n$ empty. Also note for any string $c_1c_2 \\ldots c_n$, we can add $1$ to each $c_i$ (mod $n+1$) to shift the empty spot counterclockwise, meaning for each string there exists exactly one $j$ with $0 \\leq j \\leq n$ so that $(c_1+j)(c_2+j) \\ldots (c_n+j)$ leaves spot $n$ empty. This gives there are $\\frac{(n+1)^{n}}{n+1} = (n+1)^{n-1}$ such strings. </p><p>Plugging in $n = 5$ gives $\\boxed{\\textbf{(E) }1296}$ such strings.</p><p>~oh54321</p><p>Note: If you are confused, the problem is equivalent to “How many strings of length $5$ formed from the digits $0$, $1$, $2$, $3$, $4$, $5$ are there such that for each $j \\in \\{1,2,3,4,5\\}$, at least $j$ of the digits are less than $j$?”</p><p>~inaccessibles</p>",
         "<p>Note that a valid string must have at least one $0.$</p><p>We perform casework on the number of different digits such strings can have. For each string, we list the digits in ascending order, then consider permutations:</p><p>Together, the answer is $1+75+500+600+120=\\boxed{\\textbf{(E) }1296}.$</p><p>~MRENTHUSIASM</p>",
         "<p>Denote by $N \\left( p, q \\right)$ the number of $p$-digit strings formed by using numbers $0, 1, \\cdots, q$, where for each $j \\in \\{1,2, \\cdots , q\\}$, at least $j$ of the digits are less than $j$.</p><p>We have the following recursive equation:\\[N \\left( p, q \\right) = \\sum_{i = 0}^{p - q} \\binom{p}{i} N \\left( p - i, q - 1 \\right) , \\ \\forall \\ p \\geq q \\mbox{ and } q \\geq 1\\]and the boundary condition $N \\left( p, 0 \\right) = 1$ for any $p \\geq 0$.</p><p>By solving this recursive equation, for $q = 1$ and $p \\geq q$, we get\\begin{align*} N \\left( p , 1 \\right) & = \\sum_{i = 0}^{p - 1} \\binom{p}{i} N \\left( p - i, 0 \\right) \\\\ & = \\sum_{i = 0}^{p - 1} \\binom{p}{i} \\\\ & = \\sum_{i = 0}^p \\binom{p}{i} - \\binom{p}{p} \\\\ & = 2^p - 1 . \\end{align*}</p><p>For $q = 2$ and $p \\geq q$, we get\\begin{align*} N \\left( p , 2 \\right) & = \\sum_{i = 0}^{p - 2} \\binom{p}{i} N \\left( p - i, 1 \\right) \\\\ & = \\sum_{i = 0}^{p - 2} \\binom{p}{i} \\left( 2^{p - i} - 1 \\right) \\\\ & = \\sum_{i = 0}^p \\binom{p}{i} \\left( 2^{p - i} - 1 \\right) - \\sum_{i = p - 1}^p \\binom{p}{i} \\left( 2^{p - i} - 1 \\right) \\\\ & = \\sum_{i = 0}^p \\left( \\binom{p}{i} 1^i 2^{p - i} - \\binom{p}{i} 1^i 1^{p - i} \\right) - p \\\\ & = \\left( 1 + 2 \\right)^p - \\left( 1 + 1 \\right)^p - p \\\\ & = 3^p - 2^p - p . \\end{align*}</p><p>For $q = 3$ and $p \\geq q$, we get\\begin{align*} N \\left( p , 3 \\right) & = \\sum_{i = 0}^{p - 3} \\binom{p}{i} N \\left( p - i, 2 \\right) \\\\ & = \\sum_{i = 0}^{p - 3} \\binom{p}{i} \\left( 3^{p - i} - 2^{p - i} - \\left( p - i \\right) \\right) \\\\ & = \\sum_{i = 0}^p \\binom{p}{i} \\left( 3^{p - i} - 2^{p - i} - \\left( p - i \\right) \\right) - \\sum_{i = p - 2}^p \\binom{p}{i} \\left( 3^{p - i} - 2^{p - i} - \\left( p - i \\right) \\right) \\\\ & = \\sum_{i = 0}^p \\left( \\binom{p}{i} 1^i 3^{p - i} - \\binom{p}{i} 1^i 2^{p - i} - \\binom{p}{i} \\left( p - i \\right) \\right) - \\frac{3}{2} p \\left( p - 1 \\right) \\\\ & = \\left( 1 + 3 \\right)^p - \\left( 1 + 2 \\right)^p - \\frac{d \\left( 1 + x \\right)^p}{dx} \\bigg|_{x = 1} - \\frac{3}{2} p \\left( p - 1 \\right) \\\\ & = 4^p - 3^p - 2^{p-1} p - \\frac{3}{2} p \\left( p - 1 \\right) . \\end{align*}</p><p>For $q = 4$ and $p = 5$, we get\\begin{align*} N \\left( 5 , 4 \\right) & = \\sum_{i = 0}^1 \\binom{5}{i} N \\left( 5 - i , 3 \\right) \\\\ & = N \\left( 5 , 3 \\right) + 5 N \\left( 4 , 3 \\right) \\\\ & = \\boxed{\\textbf{(E) }1296}  . \\end{align*}</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)</p>",
         "<p>The number of strings is $(n+1)^{(n-1)}$ as shown by Solution 1 (Parking Function), which is always equivalent to 1 (mod n). Thus you can choose $\\boxed{\\textbf{(E) }1296}$.</p><p>However, you **CANNOT** prove that fact from this *incorrect* argument:</p><p>Let the set of all valid sequences be $S$. Notice that for any sequence $\\{a_1,a_2,a_3,a_4,a_5\\}$ in $S$, the 5 cyclic permutations\\begin{align*} \\{a_1,a_2,a_3,a_4,a_5\\}\\\\ \\{a_2,a_3,a_4,a_5,a_1\\}\\\\ \\{a_3,a_4,a_5,a_1,a_2\\}\\\\ \\{a_4,a_5,a_1,a_2,a_3\\}\\\\ \\{a_5,a_1,a_2,a_3,a_4\\} \\end{align*}must also belong in $S$. However, one must consider the edge case all 5 elements are the same (only $\\{0,0,0,0,0\\}$), in which case all sequences listed are equivalent.</p><p>Alas, one must also consider cases like 10101 that only have 3 distinct cyclic permutations, so we cannot get a useful constraint from this view, unless *all* the cases are categorized and counted. </p><p>Thus it is NOT implied that $\\lvert S \\rvert \\equiv 1  \\pmod 5$, so it is not justified to choose $\\boxed{\\textbf{(E) }1296}$ by inspection of answer options.</p><p>If you solve $S(n)$ for smaller $n$ by bashing, you can find $|S(1)| =1$, $|S(2)| = 3$, $|S(3)| =16$, $|S(4)| =125$, which leads to an Engineer's Induction guess that $|S(n)| \\equiv 1 \\pmod n$, or the exact formula $(n+1)^{(n-1)}$</p><p>~ idea by Tau, logic corrected by oinava</p>",
@@ -374,27 +374,27 @@
         "<p>Let us call the condition where you require at least $j$ digits less than $j$ Rule $j$.For a sequence to break Rule $1$, it must contain no $0$s. There are $4^5=1024$ ways to do this.For a sequence to break Rule $2$ but not Rule $1$, it must contain exactly 1 $0$. However, this one $0$ contributes toward completing the rule, meaning all other digits must be greater than $2$. After placing the one $0$ in any of $5$ slots, there are $4$ slots left with $3$ options each, giving a total of $5 \\cdot 3^4 = 405$ ways.For a sequence to break Rule $3$ but neither Rule $2$ or $1$, it must have two digits less than $2$ (either $(0, 0)$ or $(0, 1)$) and all other digits must be $3$ or $4$. There are a total of $30$ ways to arrange the first two digits and $2^3$ ways to arrange the latter three, leaving $240$ ways to do this.Finally, for a sequence to only break rule $4$, it must have three digits less than $3$. They could be $(0, 1, 2)$ (60 arr.), $(0, 1, 1); (0, 0, 1); (0, 0, 2)$ ($30$ arr. each), or $(0, 0, 0)$ ($10$ arr.) This gives $160$ possible arrangements overall.</p><p>There are in total $5^5=3125$ possible arrangements, so by adding all of the invalid states together and subtracting from $3125$, we get our answer, which is $\\boxed{\\textbf{(E) }1296}$</p><p>~ Shadowleafy</p>",
         "<p>We will use recursion to solve this problem. Let us break up the problem's condition into criteria, with criterion \\( k \\) being the requirement that at least \\( k \\) of the digits are less than \\( k \\). Define \\( A_n \\) as the number of strings of length \\( n \\) formed from the digits \\( 0, 1, 2, \\dots, n-1 \\) such that at least \\( j \\) of the digits are less than \\( j \\) for all integers \\( j \\); \\( 1 \\le j \\le n-1 \\).</p><p>Note that the final criterion any string counted as apart of \\( A_{n-1} \\) is required to meet is criterion \\( n-2 \\). However, all strings that \\( A_{n-1} \\) counts will also meet criterion \\( n-1 \\). This is due to the maximum value of such strings' \\( n-1 \\) digits being \\( n-2 \\). Initially, we have \\( A_1 = 1 \\). We check cases and find \\( A_2 = 3 \\). To generate recursion, consider the compliment of the problem's condition. Without the condition, we are counting strings of length \\( n \\) with \\( n \\) choices for each digit. There are of course \\( n^n \\) such strings. To count the number of strings that do not meet at least one criterion, we denote a string as \\( k \\)-bad if the first criterion the string violates is criterion \\( k \\). For example, the string $33040$ is $3$-bad because it meets criteria 1 and 2, but violates criterion 3. Similarly, the string $13223$ is $1$-bad because it does contain 1 digit less than 1. We can count the number of strings that are \\( k \\)-bad by first choosing and assigning \\( k-1 \\) of the string's \\( n \\) spots to a string counted as apart of \\( A_{k-1} \\). This can be done in \\( \\binom{n}{k-1} \\cdot A_{k-1} \\) ways. This \\( (k-1) \\) digit string will meet all criteria up to criterion \\( k-1 \\). To ensure criterion \\( k \\) is not met, we fill up the remaining \\( n-(k-1) \\) spots with a digit from \\( k \\) to \\( n-1 \\), inclusive. This can be done in \\( (n-k)^{n+1-k} \\) ways. We sum over all integers \\( k \\), \\( 1 \\le k \\le n-1 \\) to count all strings that do not meet at least one criterion.</p><p>\\[\\sum_{k=1}^{n-1} \\binom{n}{k-1} A_{k-1} (n-k)^{n+1-k}\\]This is the same as\\[\\sum_{k=2}^{n} \\binom{n}{k-2} A_{k-2} (n-k+1)^{n+2-k}=\\sum_{k=2}^{n} \\binom{n}{n+2-k} A_{k-2} (n-k+1)^{n+2-k}\\]We substitute \\( n+2-k \\) for \\( k \\) as the expression takes on the same set of values. We have\\[\\sum_{k=2}^{n} \\binom{n}{n+2-(n+2-k)} A_{(n+2-k)-2} (n-(n+2-k)+1)^{n+2-(n+2-k)} = \\sum_{k=2}^{n} \\binom{n}{k} A_{n-k} (k-1)^k\\]Therefore,\\[A_n = n^n - \\sum_{k=2}^{n} \\binom{n}{k} A_{n-k} (k-1)^k\\]Setting \\( A_0 = 1 \\) and \\( A_1 = 1 \\), we use the recursion to derive \\( A_2 = 3 \\), \\( A_3 = 16 \\), \\( A_4 = 125 \\), \\( A_5 = 1296 \\). In our problem, we were counting 5 digits strings. Thus, the answer is $\\boxed{\\textbf{(E) }1296}$</p><p>~sutirth_hazra</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "The problem is about strings of digits with constraints, which is a combinatorial counting problem."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
+      ]
     },
     {
       "id": "amc_2022_10a_25",
       "question": "<p>Let $R$, $S$, and $T$ be squares that have vertices at lattice points (i.e., points whose coordinates are both integers) in the coordinate plane, together with their interiors. The bottom edge of each square is on the $x$-axis. The left edge of $R$ and the right edge of $S$ are on the $y$-axis, and $R$ contains $\\frac{9}{4}$ as many lattice points as does $S$. The top two vertices of $T$ are in $R \\cup S$, and $T$ contains $\\frac{1}{4}$ of the lattice points contained in $R \\cup S.$ See the figure (not drawn to scale).[asy] size(8cm); label(scale(.8)*\"$y$\", (0,60), N); label(scale(.8)*\"$x$\", (60,0), E); filldraw((0,0)--(55,0)--(55,55)--(0,55)--cycle, yellow+orange+white+white); label(scale(1.3)*\"$R$\", (55/2,55/2)); filldraw((0,0)--(0,28)--(-28,28)--(-28,0)--cycle, green+white+white); label(scale(1.3)*\"$S$\",(-14,14)); filldraw((-10,0)--(15,0)--(15,25)--(-10,25)--cycle, red+white+white); label(scale(1.3)*\"$T$\",(3.5,25/2)); draw((0,-10)--(0,60),EndArrow()); draw((-34,0)--(60,0),EndArrow()); [/asy]The fraction of lattice points in $S$ that are in $S \\cap T$ is $27$ times the fraction of lattice points in $R$ that are in $R \\cap T$. What is the minimum possible value of the edge length of $R$ plus the edge length of $S$ plus the edge length of $T$?</p>",
       "solutions": [
-        "<p>Let $r$ be the number of lattice points on the side length of square $R$, $s$ be the number of lattice points on the side length of square $S$, and $t$ be the number of lattice points on the side length of square $T$. Note that the actual lengths of the side lengths are the number of lattice points minus $1$, so we can work in terms of $r, s, t$ and subtract $3$ to get the actual answer at the end. Furthermore, note that the number of lattice points inside a rectangular region is equal to the number of lattice points in its width times the number of lattice points along its length.</p><p>Using this fact, the number of lattice points in $R$ is $r^2$, the number of lattice points in $S$ is $s^2$, and the number of lattice points in $T$ is $t^2$.</p><p>Now, by the first condition, we have \\[r^2=\\frac{9}{4}\\cdot s^2 \\implies r = \\frac{3}{2}s     \\quad \\quad \\quad \\quad \\quad (1)\\]</p><p>The second condition, the number of lattice points contained in $T$ is a fourth of the number of lattice points contained in $R \\cup S$. The number of lattice points in $R \\cup S$ is equal to the sum of the lattice points in their individually bounded regions, but the lattice points along the y-axis for the full length of square $S$ is shared by both of them, so we need to subtract that out.</p><p>In all, this condition yields us $t^2 = \\frac{1}{4}\\cdot(r^2 + s^2 - s )\\implies t^2 = \\frac{1}{4}\\cdot\\left(\\frac{9}{4}\\cdot s^2 + s^2 - s \\right)$$\\implies t^2=\\frac{1}{4}\\cdot\\frac{13s^2-4s}{4} \\implies 16t^2= s(13s-4)$</p><p>Note from $(1)$ that $s$ is a multiple of $2$. We can write $s=2j$ and substitute:$16t^2=2j(26j-4) \\implies 4t^2=j(13j-2)$.Note that $j$ must be divisible by two for the product to be divisible by 4. Thus we make another substitution, $j=2k$:\\[4t^2=2k(26k-2) \\implies  t^2 = k(13k-1) \\quad \\quad \\quad \\quad \\quad (2)\\]</p><p>Finally we look at the last condition; that the fraction of the lattice points inside $S$ that are inside $S \\cap T$ is $27$ times the fraction of lattice points inside $r$ that are inside $R \\cap T$.</p><p>Let $x$ be the number of lattice points along the bottom of the rectangle formed by $S \\cap T$, and $y$ be the number of lattice points along the bottom of the the rectangle formed by $R \\cap T$.</p><p>Therefore, the number of lattice points in $S\\cap T$ is $xt$ and the number of lattice points in $R \\cap T$ is $yt$.</p><p>Thus by this condition, $\\frac{xt}{s^2} = 27 \\cdot \\frac{yt}{r^2} \\implies \\frac{x}{s^2} = 27 \\cdot \\frac{y}{\\frac{9}{4}\\cdot s^2} \\implies x= 12y$</p><p>Finally, notice that $t=x+y-1=12y+y-1$ (subtracting overlap), and so we have \\[t=13y-1 \\quad \\quad \\quad \\quad \\quad (3)\\]</p><p>Now notice that by $(3)$ , $t\\equiv -1 \\pmod{13}\\implies t^2 \\equiv 1 \\pmod{13}$.</p><p>However, by $(2)$ , $t^2 \\equiv k \\cdot -1 \\pmod{13}$. Therefore, $-k \\equiv 1 \\pmod{13} \\implies k \\equiv -1 \\pmod{13}$</p><p>Also, by $(2)$ , we know $k$ must be a perfect square since $k$ is relatively prime to $13k-1$ (Euclids algorithm) and the two must multiply to a perfect square. Hence we know two conditions on $k$, and we can now guess and check to find the smallest that satisfies both.</p><p>We check $k=12$ first since its one less than a multiple of $13$, but this does not work. Next, we have $k=25$ which works because $25$ is a perfect square. Thus we have found the smallest $k$, and therefore the smallest $r, s, t$.</p><p>Now we just work backwards: $j= 2k = 50$ and $s=2j=100$. Then $r=\\frac{3}{2}\\cdot 100 = 150$. Finally, from $(2)$ , $t^2=25(13\\cdot25-1) \\implies t^2 = 25 \\cdot 324 \\implies t=5\\cdot 18=90$.</p><p>Finally, the sum of each square\u2019s side lengths is $r+s+t-3=340-3=337=\\boxed{\\textbf{(B) }337}$.</p><p>~KingRavi</p>",
+        "<p>Let $r$ be the number of lattice points on the side length of square $R$, $s$ be the number of lattice points on the side length of square $S$, and $t$ be the number of lattice points on the side length of square $T$. Note that the actual lengths of the side lengths are the number of lattice points minus $1$, so we can work in terms of $r, s, t$ and subtract $3$ to get the actual answer at the end. Furthermore, note that the number of lattice points inside a rectangular region is equal to the number of lattice points in its width times the number of lattice points along its length.</p><p>Using this fact, the number of lattice points in $R$ is $r^2$, the number of lattice points in $S$ is $s^2$, and the number of lattice points in $T$ is $t^2$.</p><p>Now, by the first condition, we have \\[r^2=\\frac{9}{4}\\cdot s^2 \\implies r = \\frac{3}{2}s     \\quad \\quad \\quad \\quad \\quad (1)\\]</p><p>The second condition, the number of lattice points contained in $T$ is a fourth of the number of lattice points contained in $R \\cup S$. The number of lattice points in $R \\cup S$ is equal to the sum of the lattice points in their individually bounded regions, but the lattice points along the y-axis for the full length of square $S$ is shared by both of them, so we need to subtract that out.</p><p>In all, this condition yields us $t^2 = \\frac{1}{4}\\cdot(r^2 + s^2 - s )\\implies t^2 = \\frac{1}{4}\\cdot\\left(\\frac{9}{4}\\cdot s^2 + s^2 - s \\right)$$\\implies t^2=\\frac{1}{4}\\cdot\\frac{13s^2-4s}{4} \\implies 16t^2= s(13s-4)$</p><p>Note from $(1)$ that $s$ is a multiple of $2$. We can write $s=2j$ and substitute:$16t^2=2j(26j-4) \\implies 4t^2=j(13j-2)$.Note that $j$ must be divisible by two for the product to be divisible by 4. Thus we make another substitution, $j=2k$:\\[4t^2=2k(26k-2) \\implies  t^2 = k(13k-1) \\quad \\quad \\quad \\quad \\quad (2)\\]</p><p>Finally we look at the last condition; that the fraction of the lattice points inside $S$ that are inside $S \\cap T$ is $27$ times the fraction of lattice points inside $r$ that are inside $R \\cap T$.</p><p>Let $x$ be the number of lattice points along the bottom of the rectangle formed by $S \\cap T$, and $y$ be the number of lattice points along the bottom of the the rectangle formed by $R \\cap T$.</p><p>Therefore, the number of lattice points in $S\\cap T$ is $xt$ and the number of lattice points in $R \\cap T$ is $yt$.</p><p>Thus by this condition, $\\frac{xt}{s^2} = 27 \\cdot \\frac{yt}{r^2} \\implies \\frac{x}{s^2} = 27 \\cdot \\frac{y}{\\frac{9}{4}\\cdot s^2} \\implies x= 12y$</p><p>Finally, notice that $t=x+y-1=12y+y-1$ (subtracting overlap), and so we have \\[t=13y-1 \\quad \\quad \\quad \\quad \\quad (3)\\]</p><p>Now notice that by $(3)$ , $t\\equiv -1 \\pmod{13}\\implies t^2 \\equiv 1 \\pmod{13}$.</p><p>However, by $(2)$ , $t^2 \\equiv k \\cdot -1 \\pmod{13}$. Therefore, $-k \\equiv 1 \\pmod{13} \\implies k \\equiv -1 \\pmod{13}$</p><p>Also, by $(2)$ , we know $k$ must be a perfect square since $k$ is relatively prime to $13k-1$ (Euclids algorithm) and the two must multiply to a perfect square. Hence we know two conditions on $k$, and we can now guess and check to find the smallest that satisfies both.</p><p>We check $k=12$ first since its one less than a multiple of $13$, but this does not work. Next, we have $k=25$ which works because $25$ is a perfect square. Thus we have found the smallest $k$, and therefore the smallest $r, s, t$.</p><p>Now we just work backwards: $j= 2k = 50$ and $s=2j=100$. Then $r=\\frac{3}{2}\\cdot 100 = 150$. Finally, from $(2)$ , $t^2=25(13\\cdot25-1) \\implies t^2 = 25 \\cdot 324 \\implies t=5\\cdot 18=90$.</p><p>Finally, the sum of each square’s side lengths is $r+s+t-3=340-3=337=\\boxed{\\textbf{(B) }337}$.</p><p>~KingRavi</p>",
         "<p>Notice that each answer choice has a different residue mod $13$. Therefore, we can just find the residue of $r+s+t-3$ mod $13$ and find the unique answer choice that fits, without actually finding $r, s, t$.</p><p>From Solution 1, we have $16t^2 = s(13s-4)$ from the second condition. From the third condition, $t\\equiv -1 \\pmod{13} \\implies t^2 \\equiv 1 \\pmod{13}$.Substituting, we get $16 \\cdot 1 \\equiv s \\cdot -4 \\pmod{13}$. Therefore, $s \\equiv -4 \\pmod{13}$.From the first condition, we have $r=\\frac{3}{2} \\cdot s$, so $r \\equiv -6 \\pmod{13}$.</p><p>Therefore $r+s+t \\equiv -6-4-1 \\equiv -11 \\equiv 2 \\pmod {13}$. </p><p>We want to find $r+s+t-3$, so our answer will have a remainder of $-1$ when divided by $13$. </p><p>We divide $340$ by $13$ and find that the remainder is $2$. Therefore the answer that will give us a remainder of $-1$ will be $340-3=337=\\boxed{\\textbf{(B) }337}$.</p><p>~KingRavi</p>",
         "<p><strong>Solution:</strong> Let $r$, $s$, $t$ be the edge length of square $R$, $S$, and $T$ respectively. Then we have \\[(r+1)^2=\\dfrac{9}{4}(s+1)^2\\ \\ \\ \\ \\ (t+1)^2=\\dfrac{1}{4}((s+1)^2+(r+1)^2-(s+1))\\] Therefore \\[r=\\dfrac{3s+1}{2}\\ \\ \\ \\ \\ t=\\dfrac{1}{4}\\sqrt{(s+1)(13s+9)}-1\\] Therefore \\[r+s+t=\\dfrac{3s+1}{2}+s+\\dfrac{1}{4}\\sqrt{(s+1)(13s+9)}-1\\] \\[\\approx\\dfrac{5}{2}s+\\dfrac{\\sqrt{13}}{4}s-\\dfrac{1}{2}\\approx 3.4\\cdot s\\]</p><p>Given that average of the answer choices is around $340$, therefore $s\\approx 100$. Since $t$ is an integer, therefore $(s+1)(13s+9)$ must be a perfect square divisible by 16. Plugging in $s=99$, $t=89$ and $r=149$. Therefore $r+s+t=99+89+149=337$. So the answer is $\\boxed{(\\text{B})\\ 337}$.</p><p>-fasterthanlight</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "coordinate_geometry",
-        "confidence": 0.9,
-        "reasoning": "The problem involves lattice points and squares in the coordinate plane, which is coordinate geometry."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_1",
@@ -403,12 +403,12 @@
         "<p>We have \\begin{align*} (1\\diamond(2\\diamond3))-((1\\diamond2)\\diamond3) &= |1-|2-3|| - ||1-2|-3| \\\\ &= |1-1| - |1-3| \\\\ &= 0-2 \\\\ &= \\boxed{\\textbf{(A)}\\ {-}2}. \\end{align*}~MRENTHUSIASM</p>",
         "<p>Observe that the $\\diamond$ function is simply the positive difference between two numbers. Thus, we evaluate: the difference between $2$ and $3$ is $1;$ the difference between $1$ and $1$ is $0;$ the difference between $1$ and $2$ is $1;$ the difference between $1$ and $3$ is $2;$ and finally, $0-2=\\boxed{\\textbf{(A)}\\ {-}2}.$</p><p>~Technodoggo</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "basic_operations",
-        "confidence": 0.95,
-        "reasoning": "This problem involves evaluating a custom operation defined as absolute difference, which is a basic algebraic concept requiring understanding of order of operations and absolute value."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_2",
@@ -417,12 +417,12 @@
         "<p>[asy] pair A = (0,0); label(\"$A$\", A, SW); pair B = (2.25,3); label(\"$B$\", B, NW); pair C = (6,3); label(\"$C$\", C, NE); pair D = (3.75,0); label(\"$D$\", D, SE); pair P = (2.25,0); label(\"$P$\", P, S); draw(A--B--C--D--cycle); draw(P--B); draw(rightanglemark(B,P,D)); [/asy]</p><p>\\[\\textbf{Figure redrawn to scale.}\\]</p><p>$AD = AP + PD = 3 + 2 = 5$.</p><p>$ABCD$ is a rhombus, so $AB = AD = 5$.</p><p>$\\bigtriangleup APB$ is a $3-4-5$ right triangle, hence $BP = 4$.</p><p>The area of the rhombus is base times height: $bh = (AD)(BP) = 5 \\cdot 4 = \\boxed{\\textbf{(D) }20}$.</p><p>~richiedelgado</p>",
         "<p>[asy] pair A = (0,0); label(\"$A$\", A, SW); pair B = (2.25,3); label(\"$B$\", B, NW); pair C = (6,3); label(\"$C$\", C, NE); pair D = (3.75,0); label(\"$D$\", D, SE); pair P = (2.25,0); label(\"$P$\", P, S); draw(A--B--C--D--cycle); draw(D--B); draw(B--P); draw(rightanglemark(B,P,D)); [/asy]</p><p>The diagram is from as Solution 1, but a line is constructed at $BD$.</p><p>When it comes to the sides of a rhombus, their opposite sides are congruent and parallel. This means that $\\angle ABD \\cong \\angle BDC$, by the Alternate Interior Angles Theorem.</p><p>By SAS Congruence, we get $\\triangle ABD \\cong \\triangle BDC$.</p><p>Since $AP=3$ and $AB=5$, we know that $BP=4$ because $\\triangle APB$ is a 3-4-5 right triangle, as stated in Solution 1.</p><p>The area of $\\triangle ABD$ would be $10$, since the area of the triangle is $\\frac{bh}{2}$.</p><p>Since we know that $\\triangle ABD \\cong \\triangle BDC$ and that $ABCD=\\triangle ABD + \\triangle BDC$, so we can double the area of $\\triangle ADB$ to get $10 \\cdot 2 = \\boxed{\\textbf{(D) }20}$.</p><p>~ghfhgvghj10, minor edits by MinecraftPlayer404</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "polygons",
-        "confidence": 0.9,
-        "reasoning": "The problem involves a rhombus with specific geometric properties, requiring knowledge of rhombus properties, right triangles, and area calculations using base times height."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_3",
@@ -431,27 +431,27 @@
         "<p>We use simple case work to solve this problem.</p><p>Case 1: even, even, even = $4 \\cdot 5 \\cdot 5 = 100$</p><p>Case 2: even, odd, odd = $4 \\cdot 5 \\cdot 5 = 100$</p><p>Case 3: odd, even, odd = $5 \\cdot 5 \\cdot 5 = 125$</p><p>Case 4: odd, odd, even = $5 \\cdot 5 \\cdot 5 = 125$</p><p>Simply sum up the cases to get your answer, $100 + 100 + 125 + 125 = \\boxed{\\textbf{(D)~}450}$.</p><p>- Wesseywes7254</p>",
         "<p>We will show that the answer is $450$ by proving a bijection between the three digit integers that have an even number of even digits and the three digit integers that have an odd number of even digits. For every even number with an odd number of even digits, we increment the number's last digit by $1$, unless the last digit is $9$, in which case it becomes $0$. It is very easy to show that every number with an even number of even digits is mapped to every number with an odd number of even digits, and vice versa. Thus, the answer is half the number of three digit numbers, or $\\boxed{\\textbf{(D)~}450}$</p><p>~mathboy100</p><p><br/></p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.95,
-        "reasoning": "This is a counting problem involving casework to determine how many three-digit numbers have an odd number of even digits, requiring systematic enumeration."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_4",
-      "question": "<p>A donkey suffers an attack of hiccups and the first hiccup happens at $4:00$ one afternoon. Suppose thatthe donkey hiccups regularly every $5$ seconds. At what time does the donkey\u2019s $700$th hiccup occur?</p><p>$\\textbf{(C) }25 \\text{ seconds after } 4:58$</p><p>$\\textbf{(D) }30 \\text{ seconds after } 4:58$</p><p>$\\textbf{(E) }35 \\text{ seconds after } 4:58$</p>",
+      "question": "<p>A donkey suffers an attack of hiccups and the first hiccup happens at $4:00$ one afternoon. Suppose thatthe donkey hiccups regularly every $5$ seconds. At what time does the donkey’s $700$th hiccup occur?</p><p>$\\textbf{(C) }25 \\text{ seconds after } 4:58$</p><p>$\\textbf{(D) }30 \\text{ seconds after } 4:58$</p><p>$\\textbf{(E) }35 \\text{ seconds after } 4:58$</p>",
       "solutions": [
         "<p>Since the donkey hiccupped the 1st hiccup at $4:00$, it hiccupped for $5 \\cdot (700-1) = 3495$ seconds, which is $58$ minutes and $15$ seconds, so the answer is $\\boxed{\\textbf{(A) }15 \\text{ seconds after } 4:58}$.</p><p>~MrThinker</p>",
         "<p>We see that the minute has already been determined.The donkey hiccups once every 5 seconds, or 12 times a minute. $700\\equiv 4 \\pmod{12}$, so the 700th hiccup happened on the same second as the 4th, which occurred on the $5(4-1)=15$th second. $\\boxed{\\textbf{(A) }15 \\text{ seconds after } 4:58}$.</p><p>~not_slay and HIPHOPFROG1</p>",
         "<p>We can add $7\\cdot500=3500$ and then minus $5$ seconds.\\begin{align*} 4:00+3500\\text{ seconds} &= 4:00+3600\\text{ seconds }-100\\text{ seconds} \\\\ &=4:00+1\\text{ hour }-100\\text{ seconds} \\\\ &=5:00-100\\text{ seconds} \\\\ &=20 \\text{ seconds after } 4:58. \\end{align*}Finally, we minus $5$ seconds giving $\\boxed{\\textbf{(A) }15 \\text{ seconds after } 4:58}$.</p><p>~Pancakerunner2</p>"
       ],
-      "categorization": {
-        "category": "arithmetic",
-        "subcategory": "time_and_rate",
-        "confidence": 0.9,
-        "reasoning": "The problem involves calculating time intervals and understanding rate problems, specifically dealing with regular time intervals and converting between units."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "general"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_5",
@@ -461,12 +461,12 @@
         "<p>Since these numbers are fairly small, we can use brute force as follows: \\[\\frac{(1+\\frac{1}{3})(1+\\frac{1}{5})(1+\\frac{1}{7})}{\\sqrt{(1-\\frac{1}{3^2})(1-\\frac{1}{5^2})(1-\\frac{1}{7^2})}} =\\frac{\\frac{4}{3}\\cdot\\frac{6}{5}\\cdot\\frac{8}{7}}{\\sqrt{\\frac{8}{9}\\cdot\\frac{24}{25}\\cdot\\frac{48}{49}}} =\\frac{\\frac{4\\cdot6\\cdot8}{3\\cdot5\\cdot7}}{\\sqrt{\\frac{(2^3)(2^3\\cdot3^1)(2^4\\cdot3^1)}{(3^2)(5^2)(7^2)}}} =\\frac{\\frac{64}{35}}{\\frac{96}{105}}=\\frac{64}{35}\\cdot\\frac{105}{96}=\\boxed{\\textbf{(B)}\\ 2}.\\]~not_slay</p>",
         "<p>This solution starts precisely like the one above. We simplify to get the following:</p><p>\\[\\frac{(1+\\frac{1}{3})(1+\\frac{1}{5})(1+\\frac{1}{7})}{\\sqrt{(1-\\frac{1}{3^2})(1-\\frac{1}{5^2})(1-\\frac{1}{7^2})}} = \\frac{\\frac{4\\cdot6\\cdot8}{3\\cdot5\\cdot7}}{\\sqrt{\\frac{(2^3)(2^3\\cdot3^1)(2^4\\cdot3^1)}{(3^2)(5^2)(7^2)}}}\\]</p><p>But now, we can get a nice simplification as shown: \\[\\frac{\\frac{4\\cdot6\\cdot8}{3\\cdot5\\cdot7}}{\\sqrt{\\frac{(2^3)(2^3\\cdot3^1)(2^4\\cdot3^1)}{(3^2)(5^2)(7^2)}}} = \\dfrac{\\frac{4\\cdot6\\cdot8}{3\\cdot5\\cdot7}}{\\sqrt{\\frac{2^{10} \\cdot 3^{2}}{3^2\\cdot 5^2\\cdot 7^2}}} = \\dfrac{\\frac{4\\cdot6\\cdot8}{3\\cdot5\\cdot7}}{\\frac{2^5 \\cdot 3}{3\\cdot5\\cdot 7}}  =\\dfrac{4\\cdot6\\cdot8}{3\\cdot5\\cdot7} \\hspace{0.05 in} \\cdot \\hspace{0.05 in}\\dfrac{3\\cdot5\\cdot 7}{2^5 \\cdot 3}  =\\dfrac{2^6\\cdot 3}{2^5\\cdot 3} = \\boxed{\\textbf{(B)}\\ 2}.\\]</p><p>~TaeKim</p><p>~minor edits by mathboy100</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "fractions_and_rational_expressions",
-        "confidence": 0.95,
-        "reasoning": "This problem involves simplifying complex rational expressions using difference of squares and algebraic manipulation of fractions."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_6",
@@ -477,12 +477,12 @@
         "<p>Observe how \\begin{align*} 121 &= 110 + 11, \\\\ 11211 &= 11100 + 111, \\\\ 1112111 &= 1111000 + 1111, \\\\ & \\ \\vdots \\end{align*}all take the form of \\[\\underbrace{111\\ldots}_{n+1}\\underbrace{00\\ldots}_{n} + \\underbrace{111\\ldots}_{n+1} = \\underbrace{111\\ldots}_{n+1}(10^{n} + 1).\\]Factoring each of the sums, we have \\[11(10+1), 111(100+1), 1111(1000+1), \\ldots\\] respectively. With each number factored, there are $\\boxed{\\textbf{(A) } 0}$ primes in the set.</p><p>~ab2024</p>",
         "<p>Note that $121$ is divisible by $11$ and $11211$ is divisible by $3$. Because this is Problem 6 of the AMC 10, we assume we do not need to check two-digit prime divisibility or use obscure theorems. Therefore, the answer is $\\boxed{\\textbf{(A) } 0}.$</p><p>~Dhillonr25</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "prime_factorization",
-        "confidence": 0.9,
-        "reasoning": "The problem involves analyzing a sequence of numbers to determine which are prime, requiring understanding of prime factorization and number patterns."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_7",
@@ -493,12 +493,12 @@
         "<p>Proceed similar to Solution 2 and deduce that the discriminant of $x^{2}+kx+36$ must be a perfect square greater than $0$ to satisfy all given conditions. Seeing something like $k^2-144$ might remind us of a right triangle, where $k$ is the hypotenuse, and $12$ is a leg. There are four ways we could have this: a $9$-$12$-$15$ triangle, a $12$-$16$-$20$ triangle, a $5$-$12$-$13$ triangle, and a $12$-$35$-$37$ triangle.</p><p>Multiply by $2$ to account for negative $k$ values (since $k$ is being squared), and our answer is $\\boxed{\\textbf{(B) }8}$.</p>",
         "<p>Since $36 = 2^2\\cdot3^2$, that means there are $(2+1)(2+1) = 9$ possible factors of $36$. Since $6 \\cdot 6$ violates the distinct root condition, subtract $1$ from $9$ to get $8$. Each sum is counted twice, and we count of those twice for negatives. This cancels out, so we get $\\boxed{\\textbf{(B) }8}$.</p><p>~songmath20 Edited 5.1.2023</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "quadratic_equations",
-        "confidence": 0.95,
-        "reasoning": "This problem involves finding values of k for which a quadratic has distinct integer roots, using Vieta's formulas and understanding of quadratic equations."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "quadratic_equations"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_8",
@@ -511,12 +511,12 @@
         "<p>Let $a$ be the number of sets with $1$ multiple of $7$ and $b$ be the number of sets with $2$ multiples of $7$. Note that it is impossible for a set to have more than two multiples of $7$. </p><p>Since there are a total of $100$ sets, $a+b=100$. Also, since there are $\\lfloor \\frac{1000}{7}\\rfloor = 142$ multiples of $7$ between $1$ and $1000$, we must have $a+2b=142$. </p><p>Solving the system of equations</p><p>\\[a+b=100\\]\\[a+2b=142\\]</p><p>for $b$ gives us the answer of $\\boxed{\\textbf{(B) }42}$.</p><p>~FIREDRAGONMATH16~scrares (minor edit)</p>",
         "<p>(Similar to Solution 2, but a little more intuitive and less numbers.) Note that this system loops every cycle of length $70$, or $7$ such sets. From $1$ to $70$, the multiples of $7$ are $7$, $14$, $21$, $28$, $35$, $42$, $49$, $56$, $63$, and $70$; note that $(21,28),(42,49),$ and $(63,70)$ are in the same sets. Thus, for every $7$ sets, we have $3$ sets with exactly two multiples of $7$. We have $100$ sets, which is $98+2=7\\cdot14+2$; the first $98$ sets contain $\\dfrac37(7\\cdot14)=42$ desired sets. The last two sets comprise the integers from $981$ to $999$; the multiples of $7$ here are $987$ and $994$. Neither of the two last sets contains two multiples of $7$, so our answer is simply $\\boxed{\\textbf{(D) }42}$. </p><p>~Technodoggo</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "The problem involves counting sets with specific properties regarding multiples of 7, requiring systematic counting and pattern recognition."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_9",
@@ -532,12 +532,12 @@
         "<p>We calculate the Taylor series error to be $\\frac{1}{2023!}$ and this error happens $2023$ times so it is $\\frac{2023}{2023!}$ which is $\\frac{1}{2022!}$</p>",
         "<p>Note that $\\frac{1}{2!} = 1-\\frac{1}{2!}$, so we guess $a=1$ and $b=2022$. We get $1+2022=\\boxed{\\textbf{(D) }2023}.$</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "sequences_and_series",
-        "confidence": 0.95,
-        "reasoning": "This problem involves a telescoping series where each term can be rewritten as a difference, requiring understanding of series manipulation and telescoping sums."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_10",
@@ -546,12 +546,12 @@
         "<p>Let $M$ be the median. It follows that the two largest integers are both $M+2.$</p><p>Let $a$ and $b$ be the two smallest integers such that $a<b.$ The sorted list is \\[a,b,M,M+2,M+2.\\]Since the median is $2$ greater than their arithmetic mean, we have $\\frac{a+b+M+(M+2)+(M+2)}{5}+2=M,$ or \\[a+b+14=2M.\\]Note that $a+b$ must be even. We minimize this sum so that the arithmetic mean, the median, and the unique mode are minimized. Let $a=1$ and $b=3,$ from which $M=9$ and $M+2=\\boxed{\\textbf{(D)}\\ 11}.$</p><p>~MRENTHUSIASM</p>",
         "<p>We can also easily test all the answer choices. (This strategy is generally good to use for multiple-choice questions if you don't have a concrete method to proceed with!)</p><p>For answer choice $\\textbf{(A)},$ the mode is $5,$ the median is $3,$ and the arithmetic mean is $1.$ However, we can quickly see this doesn't work, as there are five integers, and they can't have an arithmetic mean of $1$ while having a mode of $5.$</p><p>Trying answer choice $\\textbf{(B)},$ the mode is $7,$ the median is $5,$ and the arithmetic mean is $3.$ From the arithmetic mean, we know that all the numbers have to sum to $15.$ We know three of the numbers: $\\underline{\\hspace{3mm}},\\underline{\\hspace{3mm}},5,7,7.$ This exceeds the sum of $15.$</p><p>Now we try answer choice $\\textbf{(C)}.$ The mode is $9,$ the median is $7,$ and the arithmetic mean is $5.$ From the arithmetic mean, we know that the list sums to $25.$ Three of the numbers are $\\underline{\\hspace{3mm}},\\underline{\\hspace{3mm}},7,9,9,$ which is exactly $25.$ However, our list needs positive integers, so this won't work.</p><p>Since we were really close on answer choice $\\textbf{(C)},$ we can intuitively feel that the answer is probably going to be $\\textbf{(D)}.$ We can confirm this by creating a list that satisfies the problem and choose $\\textbf{(D)}: 1,3,9,11,11.$</p><p>So, our answer is $\\boxed{\\textbf{(D)}\\ 11}.$</p>"
       ],
-      "categorization": {
-        "category": "statistics",
-        "subcategory": "central_tendency",
-        "confidence": 0.9,
-        "reasoning": "The problem involves finding the minimum value of a mode given relationships between mean, median, and mode, requiring understanding of statistical measures."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "general"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_11",
@@ -560,12 +560,12 @@
         "<p>Let $B$ denote a school that is bigger than Euclid HS, and $M$ denote a school that sold more T-shirts than Euclid HS.</p><p>It follows that $\\neg B$ denotes a school that is <b>not bigger than</b> Euclid HS, and $\\neg M$ denotes a school that <b>did not sell more</b> T-shirts than Euclid HS.</p><p>Converting everything to conditional statements (if-then form), the given statement becomes \\[B\\implies\\neg M.\\]Its contrapositive is $M\\implies\\neg B,$ which is $\\boxed{\\textbf{(B)}}.$</p><p>Note that \"not bigger than\" does not mean \"smaller than\", and \"not selling more\" does not mean \"selling fewer\". There is an equality case. Therefore, none of the other answer choices is equivalent to $B\\implies\\neg M.$</p><p>~MRENTHUSIASM</p>",
         "<p>Suppose we have five schools: Euclid HS with $50$ students and $10$ T-shirts sold.</p><ul><li>School $A$ with $51$ students and $10$ T-shirts sold.</li></ul><ul><li>School $B$ with $49$ students and $10$ T-shirts sold.</li></ul><ul><li>School $C$ with $49$ students and $9$ T-shirts sold.</li></ul><ul><li>School $D$ with $51$ students and $9$ T-shirts sold (This configuration is legal.)</li></ul><p>Then, school $B$ rules out $\\textbf{(A)}$, school $A$ rules out $\\textbf{(C)}$, school $D$ rules out $\\textbf{(D)}$, and school $C$ rules out $\\textbf{(E)}$, leaving us with $\\boxed{\\textbf{(B)}}$ as the correct answer.</p><p>~mathboy100 (Solution)</p><p>~michaelwang13675 (Formatting)</p>"
       ],
-      "categorization": {
-        "category": "logic",
-        "subcategory": "logical_equivalence",
-        "confidence": 0.95,
-        "reasoning": "This problem involves finding the logical equivalent of a given statement, requiring understanding of logical operators and contrapositives."
-      }
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "logical_equivalence"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_12",
@@ -576,12 +576,12 @@
         "<p>We can start by figuring out what the probability is for each die to add up to $7$ if there is only $1$ roll. We can quickly see that the probability is $\\frac16$, as there are $6$ ways to make $7$ from $2$ numbers on a die, and there are a total of $36$ ways to add $2$ numbers on a die. And since each time we roll the dice, we are adding to the probability, we can conclude that the total probability for rolling a sum of $7$ in $n$ rolls would be $\\frac16$$n$. The smallest number that satisfies this is $\\boxed {\\textbf{(C) }4}$.</p><p>~mihikamishra</p>",
         "<p>On each roll, there is a $\\frac 16$ chance of rolling a sum of $7$. You would need $4$ of these rolls to get $4 \\cdot \\frac 16,$ which is larger than $\\frac 12.$ Therefore, the answer is $\\boxed {\\textbf{(C) }4}.$</p><p>~dbnl</p>"
       ],
-      "categorization": {
-        "category": "probability",
-        "subcategory": "geometric_probability",
-        "confidence": 0.9,
-        "reasoning": "The problem involves finding the minimum number of dice rolls needed to achieve a certain probability, requiring understanding of probability and complementary counting."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_13",
@@ -592,12 +592,12 @@
         "<p>Let the two primes be $p$ and $q$ such that $p-q=2$ and $p^{3}-q^{3}=31106$</p><p>By the difference of cubes formula, $p^{3}-q^{3}=(p-q)(p^{2}+pq+q^{2})$</p><p>Plugging in $p-q=2$ and $p^{3}-q^{3}=31106$,</p><p>$31106=2(p^{2}+pq+q^{2})$</p><p>Through the givens, we can see that $p \\approx q$.</p><p>Thus, $31106=2(p^{2}+pq+q^{2})\\approx 6p^{2}\\\\p^2\\approx \\tfrac{31106}{6}\\approx 5200$</p><p>Recall that $70^2=4900$ and $80^2=6400$. It follows that our primes must be only marginally larger than $70$, where we conveniently find $p=73, q=71$</p><p>The least prime greater than these two primes is $79 \\implies 7 + 9 \\implies \\boxed{\\textbf{(E) }16}$</p><p>~BrandonZhang202415~SwordOfJustice (small edits)</p>",
         "<p>Let the two primes be $x + 1$ and $x - 1$. Then, plugging it into the second condition, we get $(x + 1)^3 - (x - 1)^3 = 31106.$ Expanding the left side, \\[6x^2 + 2 = 31106 \\implies x^2 = 5184.\\] Taking the square root of both sides, we get that $x = 72$ and the larger prime is $73$. The smallest prime larger than $73$ is $79$, which has a digit sum of $7 + 9 = \\boxed{16}.$</p><p>- NL008</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "polynomials",
-        "confidence": 0.95,
-        "reasoning": "This problem involves solving a system of equations with prime numbers and cubes, requiring algebraic manipulation and understanding of prime properties."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_14",
@@ -605,16 +605,16 @@
       "solutions": [
         "<p>Let $M$ be the largest number in $S$.We categorize numbers $\\left\\{ 1, 2, \\ldots , M-1 \\right\\}$ (except $\\frac{M}{2}$ if $M$ is even) into $\\left\\lfloor \\frac{M-1}{2} \\right\\rfloor$ groups, such that the $i$th group contains two numbers $i$ and $M-i$.</p><p>Recall that $M \\in S$ and the sum of two numbers in $S$ cannot be equal to $M$, and the sum of numbers in each group above is equal to $S$. Thus, each of the above $\\left\\lfloor \\frac{M-1}{2} \\right\\rfloor$ groups can have at most one number in $S$.Therefore,\\begin{align*} |S| & \\leq 1 + \\left\\lfloor \\frac{M-1}{2} \\right\\rfloor \\\\ & \\leq 1 + \\left\\lfloor \\frac{25}{2} \\right\\rfloor \\\\ & = 13. \\end{align*}</p><p>Next, we construct an instance of $S$ with $|S| = 13$.Let $S = \\left\\{ 13, 14, \\ldots , 25 \\right\\}$.Thus, this set is feasible.Therefore, the most number of elements in $S$ is$\\boxed{\\textbf{(B) }13}$.</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)</p>",
         "<p>We know that two odd numbers sum to an even number, so we can easily say that odd numbers $1-25$ can be included in the list, making for $13$ elements. But, how do we know we can't include even numbers for a higher element value? Well, to get a higher element value than $13$, odd numbers as well as even numbers would have to be included in the list (since there are only $12$ even numbers from $1-25$, and many of those even numbers are the sum of even numbers). However, for every even value we add to our odd list, we have to take away an odd number because there are either two odd numbers that sum to that even value, or that even value and another odd number will sum to an odd number later in the list. So, $\\boxed{\\textbf{(B) }13}$ elements is the highest we can go.</p>",
-        "<p>The smallest sum of a number $a + b$ where $b \\geq a$ is $a + a = 2a$ as we are using the smallest value of $b$. Using this, we can say that if $12$ were an element of $S$, then one of the sums (the smallest) would be $12 + 12 = 24 < 25$. Thus $13$ must be the smallest element. So the largest amount of elements that could be in $S$ is the list of numbers from $13$ to $25$ as they all work. Because it is inclusive we have, $25 - 13 + 1 =   \\boxed{\\textbf{(B) }13}$.</p><p>~ Wiselion\u00a0:]</p>",
+        "<p>The smallest sum of a number $a + b$ where $b \\geq a$ is $a + a = 2a$ as we are using the smallest value of $b$. Using this, we can say that if $12$ were an element of $S$, then one of the sums (the smallest) would be $12 + 12 = 24 < 25$. Thus $13$ must be the smallest element. So the largest amount of elements that could be in $S$ is the list of numbers from $13$ to $25$ as they all work. Because it is inclusive we have, $25 - 13 + 1 =   \\boxed{\\textbf{(B) }13}$.</p><p>~ Wiselion :]</p>",
         "<p>We construct a possible subset $S$ with $13$ elements by including all odd integers from $1$ to $25$, inclusive. $S=\\left\\{ 1, 3, 5, \\cdots , 25 \\right\\}$. The sum of any $2$ elements is even, and thus cannot be an element of $S$.</p><p>To show that $S$ cannot have more than $13$ elements, assume for sake of contradiction that $|S| \\geq 14$. Let $S=\\left\\{ x_1, x_2, \\cdots , x_n \\right\\}$ where $n \\geq 14$ and $x_1 < x_2 < \\cdots < x_n$. Because the sums of any $2$ (not necessarily distinct) elements do not appear in $S$, $x_1+x_i$ is not an element of $S$ for all $1 \\leq i \\leq n$. So, $x_1, x_2, \\cdots , x_n , x_1+x_1, x_1+x_2, \\cdots , x_1+x_n$ are all distinct integers. Let these integers be elements of the set $T$. $|T|=2n$, and because $n \\geq 14$, $|T| \\geq 28$. But all elements of $T$ must be $\\geq x_1$ and $\\leq x_1+x_n \\leq x_1+25$, leaving only 26 possible values for the elements in $T$. By the Pigeonhole Principle, the elements cannot be distinct, and we have a contradiction.</p><p>Thus, $\\boxed{\\textbf{(B) }13}$ is the maximum possible size of $S$.</p><p>~starwars101</p>",
         "<p>The first element of subset $S$ must be $1$. Nothing between $1$ and $25$ can possibly add up to $1$, so that's your first number. Since you included $1$, you cannot include $2$ and must instead include $3$. Now that you have $1$ and $3$, you cannot include $4$ or $6$, so you include $5$. Including $5$ rules out $8$ and $10$. So the next numbers to include are $7$ and $9$. By this point, it's evident that you're going by odds. But will this pattern will continue? </p><p>Since you started out with $1$ and then $3$, you could only ever use those odd numbers to create even numbers. Odd plus odd is never odd, so the next smallest number $S$ can contain will always be the next smallest odd number.</p><p><br/>So now you have the odds from $1$ to $25$. You might realize quickly that that is $\\textbf{13}$ elements, but if you don't, you can convert them to the evens $2$ to $26$. By halving each term, you have integers $1$ to $13$, so it's obvious now that the answer is $\\boxed{\\textbf{(B)} 13}$</p><p>~mihikamishra</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "set_theory",
-        "confidence": 0.9,
-        "reasoning": "The problem involves finding the maximum size of a subset with specific properties regarding sums, requiring combinatorial reasoning and optimization."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_15",
@@ -623,12 +623,12 @@
         "<p>Let's say that our sequence is \\[a, a+2, a+4, a+6, a+8, a+10, \\ldots.\\]Then, since the value of n doesn't matter in the quotient $\\frac{S_{3n}}{S_n}$, we can say that\\[\\frac{S_{3}}{S_1} = \\frac{S_{6}}{S_2}.\\]Simplifying, we get $\\frac{3a+6}{a}=\\frac{6a+30}{2a+2}$, from which \\[\\frac{3a+6}{a}=\\frac{3a+15}{a+1}.\\] \\[3a^2+9a+6=3a^2+15a\\] \\[6a=6\\] Solving for $a$, we get that $a=1$. </p><p>Since the sum of the first $n$ odd numbers is $n^2$, $S_{20} = 20^2 = \\boxed{\\textbf{(D) } 400}$.</p>",
         "<p>Recall that the sum of the first $n$ odd numbers is $n^2$.</p><p>Since $\\frac{S_{3n}}{S_{n}} = \\frac{9n^2}{n^2} = 9$, we have $S_{20} = 20^2 = \\boxed{\\textbf{(D) } 400}$.</p><p>~numerophile</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "sequences_and_series",
-        "confidence": 0.95,
-        "reasoning": "This problem involves arithmetic sequences and finding a specific sum, requiring understanding of arithmetic sequences and their properties."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_16",
@@ -640,12 +640,12 @@
         "<p>Notice the small triangle in the upper right corner is a $3-4-5$ triangle. Then that triangle is similar to the big triangle by AA similarity. From that, do similar triangles and you find that the longer leg of the small triangle is 1. Then you find that the triangle below is $3-4-5$, so the side length of the rectangle (without the outer rectangle) is 7. afterwards you just add the half of the square + the remaining triangle which can be found by multiplying base and height (in which we already know)</p><p>~mathboy282</p><p><br/>I found the same solution when solving this, but essentially, we know all triangles in the picture are similar, and we know the lower left hand triangle is a $3-4-5$ triangle, and it is similar to the top triangle, where 4 corresponds to 5, therefore the unknown side length of that triangle is 15/4. Continuing on, the are of the white part of the square is $5 * 15/4 * 1/2 = 75/8,  25 - 75/8 = \\fbox{(D)}$</p><p><br/>-kaiser</p>",
         "<p>For reference, use the points labelled in the diagram of Solution 3. Let the point one unit to the right of $A$ be $A'$ (so that $A'$ is one of the vertices of the square). The square means $A'C = 5$, so we get a $3$-$4$-$5$ triangle $A'BC$.</p><p>$m\\angle BA'C = 90 ^{\\circ} - m\\angle CA'G = m\\angle GA'H$. </p><p>Therefore $\\triangle GA'H$ is proportional to a $3$-$4$-$5$ triangle, with $HG$ corresponding to $3$ and $A'H$ corresponding to $4$. By similar triangles, we find </p><p>$HG = A'H \\cdot \\frac{3}{4} = \\frac{15}{4}$.</p><p>~lolsmybagelz (minor corrections by Technodoggo)</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "area_and_perimeter",
-        "confidence": 0.9,
-        "reasoning": "The problem involves finding the area of intersection between a rectangle and square, requiring geometric reasoning and area calculations."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_17",
@@ -657,12 +657,12 @@
         "<p>We examine option E first. $2^{607}$ has a units digit of $8$ (Taking the units digit of the first few powers of two gives a pattern of $2, 4, 8, 6, 2, 4, 8, 6, 2, 4, 8, 6,\\cdots$) and $3^{607}$ has a units digit of $7$ (Taking the units digit of the first few powers of three gives a pattern of $3, 9, 7, 1, 3, 9, 7, 1, 3, 9, 7, 1,\\cdots$). Adding $7$ and $8$ together, we get $15$, which is a multiple of $5$, meaning that $2^{607}+3^{607}$ is divisible by 5.</p><p>Next, we examine option D. We take the first few powers of $2$ added with $1$:\\[2^1+1=3\\]\\[2^2+1=5\\]\\[2^3+1=9\\]\\[2^4+1=17\\]\\[2^5+1=33\\]\\[2^6+1=65\\]\\[2^7+1=129\\]</p><p>We see that the odd powers of $2$ added with 1 are multiples of three. If we continue this pattern, $2^{607}+1$ will be divisible by $3$. (The reason why this pattern works: When you multiply $2 \\equiv2\\pmod{3}$ by $2$, you obtain $4 \\equiv1 \\pmod{3}$. Multiplying by $2$ again, we get $1\\cdot2\\equiv2 \\pmod{3}$. We see that in every cycle of two powers of $2$, it goes from $2 \\pmod{3}$ to $1 \\pmod{3}$ and back to $2 \\pmod{3}$.)</p><p>Next, we examine option B. We see that $2^{606}$ has a units of digits of $4$ (Taking the units digit of the first few powers of two gives a pattern of $2, 4, 8, 6, 2, 4, 8, 6, 2, 4, 8, 6,\\cdots$). Adding $1$ to $4$, we get $5$. Since $2^{606}+1$ has a units digit of $5$, it is divisible by $5$.</p><p>Lastly, we examine option A. Using the difference of cubes factorization $a^3-b^3=(a-b)(a^2+ab+b^2)$, we have $2^{606}-1^3=(2^{202}-1)(2^{404}+2^{202}+1)$. Since $2^{404}+2^{202}+1\\equiv0\\pmod{3}$ (Every term in the sequence is equivalent to $1\\pmod{3}$), $2^{606}-1$ is divisible by $3$.</p><p>Since we have eliminated every option except C, $\\boxed{\\text{(C)} \\hspace{0.1 in}2^{607}-1}$ is not divisible by any prime less than $10$.</p><p>~arjken (+ minor LaTeX edits ~TaeKim)</p>",
         "<p>We know that the prime numbers less than 10 are $2,3,5$ and $7$. We can start by testing if any of the answer choices are divisible by $2$. We see that they are all sums of one even number and one odd number, which is simply odd. So, we cannot exclude any answer choices so far. Now, let's check divisibility by $3$. We can use the fact that $2 \\equiv -1 \\pmod{3}$ to our advantage: </p><p><br/></p><p>$(\\text{A})\\hspace{0.1in} 2^{606}-1$$\\equiv (-1)^{606} -1$$\\equiv 1-1$$\\equiv 0 \\pmod{3}$</p><p><br/>$(\\text{B}) \\hspace{0.1in} 2^{606}+1$$\\equiv (-1)^{606} +1$$\\equiv 1+1$$\\equiv 2 \\pmod{3}$</p><p><br/>$(\\text{C})\\hspace{0.1in} 2^{607}-1$$\\equiv (-1)^{607} -1$$\\equiv -1 - 1$$\\equiv -2 \\pmod{3}$</p><p><br/>$(\\text{D})\\hspace{0.1in} 2^{607} +1 \\equiv (-1)^{607} +1 \\equiv -1+1 \\equiv 0 \\pmod{3}$</p><p><br/>$(\\text{E}) \\hspace{0.1in}  2^{607} + 3^{607} \\equiv 2^{607} \\equiv (-1)^{607} \\equiv -1 \\pmod{3}$</p><p><br/>So, we eliminate choices A and D from divisibility by 3. Now, we move onto divisibility by 5. We can use cycling of powers to find useful remainders. Let's start with choice $B$. </p><p><br/></p><p>$(\\text{B}) \\hspace{0.1in} 2^{606}+1$</p><p><br/></p><p>We see that the remainders of powers of $2$ when divided by $5$ cycle in a pattern: $2,4,3,1,2,4,3,1 \\dots$. Since the pattern cycles every 4 terms, we use modulo 4 to simplify 606, getting that $606 \\equiv 2\\pmod{4}$. So, we get that $2^{606}$ is congruent modulo 5 to the second term of our pattern, so $2^{606} \\equiv{4} \\pmod{5}$. Thus, $2^{606}+1 \\equiv 4+1 \\equiv 5\\equiv 0\\pmod{5}$. We now eliminate choice B and compare choices C and E. </p><p><br/>$(\\text{E}) \\hspace{0.1in} 2^{607} + 3^{607}$</p><p><br/></p><p><br/>Looking at choice E, we see that we have to do similar cycling for powers of $3$. We get a pattern of $3,4,2,1,3,4,2,1 \\dots$. Since this pattern also cycles every 4 terms, we use modulo 4 to simplify 607, getting that $607 \\equiv 3\\pmod{4}$. Both the power of 3 and the power of 2 have an exponent of 607, so we use the third term (since we just found that $607 \\equiv 3\\pmod{4}$) in each corresponding 4 term pattern to get that $2^{607} + 3^{607} \\equiv 3+2 \\equiv 5 \\equiv 0\\pmod{5}$. We eliminate choice E, and we are left with the correct answer: choice $\\boxed{(\\text{C}) \\hspace{0.1in} 2^{607}-1}$</p><p><br/>~TaeKim</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "divisibility",
-        "confidence": 0.95,
-        "reasoning": "This problem involves determining which number is not divisible by primes less than 10, requiring understanding of divisibility rules and modular arithmetic."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_18",
@@ -688,12 +688,12 @@
       "solutions": [
         "<p>There are two cases for the initial configuration:</p><p>Together, the answer is $2+20=\\boxed{\\textbf{(C)}\\ 22}.$</p><p>~mathboy100 ~MRENTHUSIASM</p>"
       ],
-      "categorization": {
-        "category": "combinatorics",
-        "subcategory": "counting",
-        "confidence": 0.9,
-        "reasoning": "This problem involves counting possible configurations in a grid transformation, requiring systematic counting and pattern recognition."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_20",
@@ -706,18 +706,18 @@
         "<p>This solution refers to the <b>Diagram</b> section.</p><p>We extend $AD$ and $BE$ to point $G$, as shown below:[asy] /* Made by ghfhgvghj10 Edited by MRENTHUSIASM */ size(300); pair A, B, C, D, E, F, G; D = origin; A = 6*dir(46); C = (6,0); B = C + (A-D); E = midpoint(C--D); F = foot(A,B,E); G = 6*dir(226); dot(\"$A$\",A,1.5*NW,linewidth(5)); dot(\"$B$\",B,1.5*NE,linewidth(5)); dot(\"$C$\",C,1.5*SE,linewidth(5)); dot(\"$D$\",D,1.5*NW,linewidth(5)); dot(\"$E$\",E,1.5*S,linewidth(5)); dot(\"$F$\",F,1.5*dir(-20),linewidth(5)); dot(\"$G$\",G,1.5*SW,linewidth(5)); markscalefactor=0.04; draw(rightanglemark(A,F,B),red); draw(A--B--C--D--cycle^^A--F--C^^B--E^^D--G^^E--G); label(\"$46^{\\circ}$\",D,3*dir(26),red+fontsize(10)); [/asy]We know that $AB=AD=2$ and $CE=DE=1$. </p><p>By AA Similarity, $\\triangle ABG \\sim \\triangle DEG$ with a ratio of $2:1$. This implies that $2AD=AG$ and $AD \\cong DG$, so $AG=2AD=2\\cdot2=4$. That is, $D$ is the midpoint of $AG$.</p><p>Note that as $\\angle{AFG}$ has an angle of 90 deg and $AG=2DG$, we can redraw our previous diagram, but construct a circle with radius $AD$ or $2$ centered at $D$ and by extending $CD$ to point $H$, which is on the circle, as shown below:[asy] /* Made by ghfhgvghj10 Edited by MRENTHUSIASM */ size(300); pair A, B, C, D, E, F, G; D = origin; A = 6*dir(46); C = (6,0); B = C + (A-D); E = midpoint(C--D); F = foot(A,B,E); G = 6*dir(226); dot(\"$A$\",A,1.5*NE,linewidth(5)); dot(\"$B$\",B,1.5*NE,linewidth(5)); dot(\"$C$\",C,1.5*SE,linewidth(5)); dot(\"$D$\",D,1.5*NW,linewidth(5)); dot(\"$E$\",E,1.5*S,linewidth(5)); dot(\"$F$\",F,1.5*dir(-20),linewidth(5)); dot(\"$G$\",G,1.5*SW,linewidth(5)); markscalefactor=0.04; draw(rightanglemark(A,F,B),red); draw(A--B--C--D--cycle^^A--F--C^^B--E^^D--G^^E--G); label(\"$46^{\\circ}$\",D,3*dir(26),red+fontsize(10)); draw(Circle(D,6),dashed); [/asy]Notice how $F$ and $C$ are on the circle and that $\\angle CFE$ intercepts with $\\overset{\\Large\\frown} {CG}$. </p><p>Let's call $\\angle CFE = \\theta$.</p><p>Note that $\\angle CDG$ also intercepts $\\overset{\\Large\\frown} {CG}$, So $\\angle CDG = 2\\angle CFE$. </p><p>Let $\\angle CDG = 2\\theta$. Notice how $\\angle CDG$ and $\\angle ADC$ are supplementary to each other. We conclude that \\begin{align*} 2\\theta &= 180-\\angle ADC \\\\ 2\\theta &= 180-46 \\\\ 2\\theta &= 134 \\\\ \\theta &= 67.  \\end{align*}Since $\\angle BFC=180-\\theta$, we have $\\angle BFC=180-67=\\boxed{\\textbf{(D)} \\ 113}$.</p><p>~ghfhgvghj10 (If I make any minor mistakes, feel free to make minor fixes and edits).~mathboy282</p>",
         "<p>If angle $ADC$ was a right angle, it would be much easier. Thus, first pretend that $ADC$ is a right angle. $ABCD$ is now a square. WLOG, let each of the side lengths be 1. We can use the Pythagorean Theorem to find the length of line $AE$, which is $\\sqrt{5}/2$. We want the measure of angle $BFC$, so to work closer to it, we should try finding the length of line $BF$. Angle $FAB$ and angle $ABF$ are complementary. Angle $ABF$ and angle $FBC$ are also complementary. Thus, $\\sin FAB=\\cos ABF=\\sin FBC$. $\\sin FAB=\\sin FBC=(1/2)/(\\sqrt{5}/2)=1/\\sqrt{5}$. Since $\\sin FAB=1\\sqrt{5}$,and $AB=1$, $FB=\\sin FAB$. It follows now that $FE=3*\\sqrt{5}/10$. </p><p>Now, zoom in on triangle $BEC$. To use the Law of Cosines on triangle $FBC$, we need the length of $FC$. Use the Law of Cosines on triangle $EFC$. Cos $E=1/\\sqrt{5}$. Thus, after using the Law of Cosines, $FC=\\sqrt{2/5}$. </p><p>Since we now have SSS on $BEC$, we can get use the Law of Cosines. $\\cos BFC=1/-\\sqrt{2}$. $\\arccos 1/-\\sqrt{2}$ is 45, but if the cosine is negative that means that the angle is the supplement of the positive cosine value. $180-45=135$. Angle $BFC$ is $135^\\circ$. </p><p>Realize that, around point F, there will always be 3 right angles, regardless of what angle $ADC$ is. There are only two angles that change when $ADC$ changes. Break up angle $BFC$ into angle $BFB'$, which is always 90 degrees, and angle $B'FC$, which we have discovered to to be half of $ADC$. Thus, when angle $ADC$ is 46 degrees, then $B'FC$ will be 23. $23+90=113$. Angle $BFC$ is $\\boxed{\\textbf{(D) }113}$ degrees.</p><p><br/></p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "angles",
-        "confidence": 0.95,
-        "reasoning": "The problem involves finding angle measures in a rhombus with specific geometric conditions, requiring geometric reasoning and angle calculations."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_21",
       "question": "<p>Let $P(x)$ be a polynomial with rational coefficients such that when $P(x)$ is divided by the polynomial$x^2 + x + 1$, the remainder is $x+2$, and when $P(x)$ is divided by the polynomial $x^2+1$, the remainderis $2x+1$. There is a unique polynomial of least degree with these two properties. What is the sum ofthe squares of the coefficients of that polynomial?</p>",
       "solutions": [
-        "<p>Given that all the answer choices and coefficients are integers, we hope that $P(x)$ has positive integer coefficients.</p><p>Throughout this solution, we will express all polynomials in base $x$. E.g. $x^2 + x + 1 = 111_{x}$.</p><p>We are given:\\[111a + 12 = 101b + 21 = P(x).\\]We add $111$ and $101$ to each side and balance respectively:\\[111(a - 1) + 123 = 101(b - 1) + 122 = P(x).\\]We make the unit's digits equal:\\[111(a - 1) + 123 = 101(b - 2) + 223 = P(x).\\]We now notice that:\\[111(a - 11) + 1233 = 101(b - 12) + 1233 = P(x).\\]Therefore $a = 11_{x} = x + 1$, $b = 12_{x} = x + 2$, and $P(x) = 1233_{x} = x^3 + 2x^2 + 3x + 3$. $3$ is the minimal degree of $P(x)$ since there is no way to influence the $x$\u2018s digit in $101b + 21$ when $b$ is an integer. The desired sum is $1^2 + 2^2 +3^2+ 3^2 = \\boxed{\\textbf{(E)} \\ 23}$</p><p>P.S. The four computational steps can be deduced through quick experimentation.</p><p>~ numerophile</p>",
+        "<p>Given that all the answer choices and coefficients are integers, we hope that $P(x)$ has positive integer coefficients.</p><p>Throughout this solution, we will express all polynomials in base $x$. E.g. $x^2 + x + 1 = 111_{x}$.</p><p>We are given:\\[111a + 12 = 101b + 21 = P(x).\\]We add $111$ and $101$ to each side and balance respectively:\\[111(a - 1) + 123 = 101(b - 1) + 122 = P(x).\\]We make the unit's digits equal:\\[111(a - 1) + 123 = 101(b - 2) + 223 = P(x).\\]We now notice that:\\[111(a - 11) + 1233 = 101(b - 12) + 1233 = P(x).\\]Therefore $a = 11_{x} = x + 1$, $b = 12_{x} = x + 2$, and $P(x) = 1233_{x} = x^3 + 2x^2 + 3x + 3$. $3$ is the minimal degree of $P(x)$ since there is no way to influence the $x$‘s digit in $101b + 21$ when $b$ is an integer. The desired sum is $1^2 + 2^2 +3^2+ 3^2 = \\boxed{\\textbf{(E)} \\ 23}$</p><p>P.S. The four computational steps can be deduced through quick experimentation.</p><p>~ numerophile</p>",
         "<p>Let $P(x) = Q(x)(x^2+x+1) + x + 2$, then $P(x) = Q(x)(x^2+1) + xQ(x) + x + 2$, therefore $xQ(x) + x + 2 \\equiv 2x + 1 \\pmod{x^2+1}$, or $xQ(x) \\equiv x-1 \\pmod{x^2+1}$. Clearly the minimum is when $Q(x) = x+1$, and expanding gives $P(x) = x^3+2x^2+3x+3$. Summing the squares of coefficients gives $\\boxed{\\textbf{(E)} \\ 23}$</p><p>~mathfan2020</p>",
         "<p>Let $P(x) = (x^2+x+1)Q_1(x) + x + 2$, then $P(x) = (x^2+1)Q_1(x) + xQ_1(x) + x + 2$</p><p>Also $P(x) = (x^2+1)Q_2(x) + 2x + 1$</p><p>We infer that $Q_1(x)$ and $Q_2(x)$ have same degree, we can assume $Q_1(x) = x + a$, and $Q_2(x) = x + b$, since $P(x)$ has least degree. If this cannot work, we will try quadratic, etc.</p><p>Then we get:$(x^2+1)(Q_1(x) - Q_2(x)) + xQ_1(x) - x + 1 = 0$</p><p>The constant term gives us:$(Q_1(x) - Q_2(x)) + 1 = 0$</p><p>So $Q_1(x) - Q_2(x) = -1$</p><p>Substituting this in gives: $-(x^2+1) + xQ_1(x) - x + 1 = 0$</p><p>Solving this equation, we get$Q_1(x) = x + 1$</p><p>Plugging this into our original equation we get $P(x) = x^3 + 2x^2 + 3x + 3$</p><p>Verify this works with $P(x) = (x^2+1)Q_2(x) + 2x + 1$</p><p>Therefore the answer is $1^2 + 2^2 + 3^2 + 3^2 = \\boxed{\\textbf{(E)} \\ 23}$</p><p>~qgcui</p>",
         "<p>Notice that we cannot have the quotients equal to some constants, since the same constant will yield different constant terms for $P(x)$ (which is bad) and different constants will yield different first coefficients (also bad). Thus, we try setting the quotients equal to linear terms (for minimizing degree).</p><p>Let $P(x)=(x^2+x+1)(ax+b)+(x+2)$ and $P(x)=(x^2+1)(ax+c)+(2x+1)$. The quotients have the same $x$ coefficient, since $P(x)$ must have the same $x^3$ coefficient in both cases. Expanding, we get \\[P(x)=ax^3+(a+b)x^2+(a+b+1)x+(b+2)\\] and \\[P(x)=ax^3+cx^2+(a+2)x+(c+1).\\]</p><p>Equating coefficients, we get $b+2=c+1$, $a+b+1=a+2$, and $a+b=c$. From the second equation, we get $b=1$, then substituting into     the first, $c=2$. Finally, from $a+b=c$, we have $a=1$. Now, $P(x)=(x^2+x+1)(ax+b)+(x+2)=(x^2+x+1)(x+1)+(x+2)=x^3+2x^2+3x+3$ and our answer is \\[1^2+2^2+3^2+3^2=\\boxed{\\textbf{(E)} \\ 23}.\\]</p><p>~MathHayden</p>",
@@ -727,12 +727,12 @@
         "<p>Since the divisors $x^2 + x + 1$ and $x^2 + 1$ are both powers of 2, and the remainders $x + 2$ and $2x + 1$ are both linear, we can assume that $P(x)$ has a minimum degree of 3.</p><p>We can then set the coefficients of the polynomial as $P(x) = ax^3 + bx^2 + cx + d$.</p><p>Then, using long division, we divide $P(x) = ax^3 + bx^2 + cx + d$ by $x^2 + x + 1$ and obtain a remainder of $(c - b)x + (a + d - b)$, which is equal to $x + 2$</p><p>We also divide $P(x) = ax^3 + bx^2 + cx + d$ by $x^2 + 1$ and obtain a remainder of $(c - a)x + (d - b)$, which is equal to $2x + 1$.</p><p>From here we can set up a systems of equations:</p><p>$c -b = 1$</p><p>$a + d - b = 2$</p><p>$c - a = 1$</p><p>$d - b = 1$</p><p>Thus giving us the solutions $a = 1$, $b = 2$, $c = 3$, $d = 3$ and hence $P(x) = x^3 + 2x^2 + 3x + 3$</p><p>Squaring the coefficients, then adding them, $1^2 + 2^2 + 3^2 + 3^2$ we get the final answer $\\boxed{\\textbf{(E)} \\ 23}$</p><p>~Sedric S</p>",
         "<p>We assume $P(x)$ is a monic cubic polynomial. Now, we set $P(x)=x^{3}+ax^{2}+bx+c$, and set the equations:</p><p>$x^{3}+ax^{2}+bx+c=Q_{1}(x)(x^{2}+x+1)+x+2$</p><p>$x^{3}+ax^{2}+bx+c=Q_{2}(x)(x^{2}+1)+2x+1$</p><p>Plugging in $x=i$ for the second equation, we get $-i-a+bi+c=2i+1$, and matching coefficients gives $c-a=1$ and $b-1=2 \\rightarrow b=3$. Now, we can guess values for $a$ and $c$ based on the answer choices. We have that the sum of the squares of the current known coefficients is $1^{2}+3^{2}=10$, and guessing $c=1, a=0$ clearly doesnt match up with the answer choices, so we guess $c=3, a=2$ and find that the answer is $\\boxed{\\textbf{(E)} \\ 23}$</p>"
       ],
-      "categorization": {
-        "category": "algebra",
-        "subcategory": "polynomials",
-        "confidence": 0.95,
-        "reasoning": "This problem involves finding a polynomial with specific remainder properties, requiring understanding of polynomial division and algebraic manipulation."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_22",
@@ -741,27 +741,27 @@
         "<p>[asy]         import geometry;         unitsize(0.5cm);  \t\tvoid dc(pair x, pen p) {           pair y = intersectionpoints(circle((0,0),8),(0,0)--1000*x)[0];           draw(circle(x, abs(x-y)),p+linewidth(2));         }          pair O1 = (0,0),O2=(5,0),P1=intersectionpoints(circle(O1,5),circle(O2,3+sqrt(3)))[0],P2=intersectionpoints(circle(O1,3),circle(O2,5+sqrt(3)))[0],P3=intersectionpoints(circle(O1,5),circle(O2,3-sqrt(3)))[0],P4=intersectionpoints(circle(O1,3),circle(O2,5-sqrt(3)))[0];          draw(circle(O1,2));         draw(circle(O1,8));         draw(circle(O2,sqrt(3)));  \t\tdc(P1,blue); \t\tdc(P2,red); \t\tdc(P3,mediumgreen); \t\tdc(P4,brown); [/asy]The circles match up as follows: Case $1$ is brown, Case $2$ is blue, Case $3$ is green, and Case 4 is red.Let $x^2 + y^2 = 64$ be circle $O$, $x^2 + y^2 = 4$ be circle $P$, and $(x-5)^2 + y^2 = 3$ be circle $Q$.All the circles in S are internally tangent to circle $O$.There are four cases with two circles belonging to each:</p><p>$*$ $P$ and $Q$ are internally tangent to $S$.</p><p>$*$ $P$ and $Q$ are externally tangent to $S$.</p><p>$*$ $P$ is externally and Circle $Q$ is internally tangent to $S$.</p><p>$*$ $P$ is internally and Circle $Q$ is externally tangent to $S$.</p><p>Consider Cases $1$ and $4$ together. Since circles $O$ and $P$ have the same center, the line connecting the center of $S$ and the center of $O$ will pass through the tangency point of both $S$ and $O$ and the tangency point of $S$ and $P$. This line will be the diameter of $S$ and have length $r_P + r_O = 10$. Therefore the radius of $S$ in these cases is $5$.</p><p>Consider Cases $2$ and $3$ together. Similarly to Cases $1$ and $4$, the line connecting the center of $S$ to the center of $O$ will pass through the tangency points. This time, however, the diameter of $S$ will have length $r_P-r_O=6$. Therefore, the radius of $S$ in these cases is $3$.</p><p>The set of circles $S$ consists of $8$ circles - $4$ of which have radius $5$ and $4$ of which have radius $3$. The total area of all circles in $S$ is $4(5^2\\pi + 3^2\\pi) = 136\\pi \\Rightarrow \\boxed{\\textbf{(E)}}$.</p><p>-naman12</p>",
         "<p>We denote by $C_1$ the circle that has the equation $x^2 + y^2 = 4$.We denote by $C_2$ the circle that has the equation $x^2 + y^2 = 64$.We denote by $C_3$ the circle that has the equation $(x-5)^2 + y^2 = 3$.</p><p>We denote by $C_0$ a circle that is tangent to $C_1$, $C_2$ and $C_3$.We denote by $\\left( u, v \\right)$ the coordinates of circle $C_0$, and $r$ the radius of this circle.</p><p>From the graphs of circles $C_1$, $C_2$, $C_3$, we observe that if $C_0$ is tangent to all of them, then $C_0$ must be internally tangent to $C_2$.We have\\[ u^2 + v^2 = \\left( 8 - r \\right)^2 . \\hspace{1cm} (1) \\]</p><p>We do the following casework analysis in terms of the whether $C_0$ is externally tangent to $C_1$ and $C_3$.</p><p>Case 1: $C_0$ is externally tangent to $C_1$ and $C_3$.</p><p>We have\\[ u^2 + v^2 = \\left( r + 2 \\right)^2   \\hspace{1cm} (2) \\]and\\[ (u-5)^2 + v^2 = \\left( r + \\sqrt{3} \\right)^2 . \\hspace{1cm} (3) \\]</p><p>Taking $(2) - (1)$, we get $r + 2 = 8 - r$. Thus, $r = 3$.We can further compute (omitted here) that there exist feasible $(u,v)$ with this given $r$.</p><p>Case 2: $C_1$ is internally tangent to $C_0$ and $C_3$ is externally tangent to $C_0$.</p><p>We have\\[ u^2 + v^2 = \\left( r - 2 \\right)^2  \\hspace{1cm} (2) \\]and\\[ (u-5)^2 + v^2 = \\left( r + \\sqrt{3} \\right)^2 . \\hspace{1cm} (3) \\]</p><p>Taking $(2) - (1)$, we get $r - 2 = 8 - r$. Thus, $r = 5$.We can further compute (omitted here) that there exist feasible $(u,v)$ with this given $r$.</p><p>Case 3: $C_1$ is externally tangent to $C_0$ and $C_3$ is internally tangent to $C_0$.</p><p>We have\\[ u^2 + v^2 = \\left( r + 2 \\right)^2  \\hspace{1cm} (2) \\]and\\[ (u-5)^2 + v^2 = \\left( r - \\sqrt{3} \\right)^2 . \\hspace{1cm} (3) \\]</p><p>Taking $(2) - (1)$, we get $r + 2 = 8 - r$. Thus, $r = 3$.We can further compute (omitted here) that there exist feasible $(u,v)$ with this given $r$.</p><p>Case 4: $C_1$ is internally tangent to $C_0$ and $C_3$ is internally tangent to $C_0$.</p><p>We have\\[ u^2 + v^2 = \\left( r - 2 \\right)^2  \\hspace{1cm} (2) \\]and\\[ (u-5)^2 + v^2 = \\left( r - \\sqrt{3} \\right)^2 . \\hspace{1cm} (3) \\]</p><p>Taking $(2) - (1)$, we get $r - 2 = 8 - r$. Thus, $r = 5$.We can further compute (omitted here) that there exist feasible $(u,v)$ with this given $r$.</p><p><br/>Because the graph is symmetric with the $x$-axis, and for each case above, the solution of $v$ is not 0. Hence, in each case, there are two congruent circles whose centers are symmetric through the $x$-axis.</p><p>Therefore, the sum of the areas of all the circles in $S$ is $2\\left( 3^2 \\pi +5^2 \\pi +3^2 \\pi +5^2 \\pi \\right) = \\boxed{\\textbf{(E) } 136 \\pi}$.</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)</p><p>~MrThinker (LaTeX Error)</p>"
       ],
-      "categorization": {
-        "category": "geometry",
-        "subcategory": "circles",
-        "confidence": 0.9,
-        "reasoning": "The problem involves finding circles tangent to three given circles, requiring geometric reasoning about tangency and circle properties."
-      }
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_23",
-      "question": "<p>Ant Amelia starts on the number line at $0$ and crawls in the following manner. For $n=1,2,3,$ Amelia chooses a time duration $t_n$ and an increment $x_n$ independently and uniformly at random from the interval $(0,1).$ During the $n$th step of the process, Amelia moves $x_n$ units in the positive direction, using up $t_n$ minutes. If the total elapsed time has exceeded $1$ minute during the $n$th step, she stops at the end of that step; otherwise, she continues with the next step, taking at most $3$ steps in all. What is the probability that Amelia\u2019s position when she stops will be greater than $1$?</p>",
+      "question": "<p>Ant Amelia starts on the number line at $0$ and crawls in the following manner. For $n=1,2,3,$ Amelia chooses a time duration $t_n$ and an increment $x_n$ independently and uniformly at random from the interval $(0,1).$ During the $n$th step of the process, Amelia moves $x_n$ units in the positive direction, using up $t_n$ minutes. If the total elapsed time has exceeded $1$ minute during the $n$th step, she stops at the end of that step; otherwise, she continues with the next step, taking at most $3$ steps in all. What is the probability that Amelia’s position when she stops will be greater than $1$?</p>",
       "solutions": [
         "<p>Let $x$ and $y$ be random variables that are independently and uniformly distributed in the interval $(0,1).$ Note that \\[P(x+y\\leq 1)=\\frac{\\frac12\\cdot1^2}{1^2}=\\frac12,\\] as shown below:[asy] /* Made by MRENTHUSIASM */ size(200);   real xMin = -0.25; real xMax = 1.25; real yMin = -0.25; real yMax = 1.25;  //Draws the horizontal ticks void horizontalTicks() {   for (real i = 1; i < yMax; ++i)   {     draw((-1/32,i)--(1/32,i), black+linewidth(1));   } }  //Draws the vertical ticks void verticalTicks() {   for (real i = 1; i < xMax; ++i)   {     draw((i,-1/32)--(i,1/32), black+linewidth(1));   } }  horizontalTicks(); verticalTicks(); label(\"$0$\",(0,0),2*SW); label(\"$1$\",(1,0),2*S); label(\"$1$\",(0,1),2*W); fill((0,0)--(1,0)--(0,1)--cycle,yellow); draw((0,1)--(1,1)^^(1,0)--(1,1),dashed); draw((0,1)--(1,0)); draw((xMin,0)--(xMax,0),black+linewidth(1.5),EndArrow(8)); draw((0,yMin)--(0,yMax),black+linewidth(1.5),EndArrow(8)); label(\"$x$\",(xMax,0),(2,0)); label(\"$y$\",(0,yMax),(0,2)); [/asy]Let $x,y,$ and $z$ be random variables that are independently and uniformly distributed in the interval $(0,1).$ Note that \\[P(x+y+z\\leq 1)=\\frac{\\frac13\\cdot\\left(\\frac12\\cdot1^2\\right)\\cdot1}{1^3}=\\frac16,\\] as shown below:[asy] /* Made by MRENTHUSIASM */ size(200); import graph3; import solids;  currentprojection=orthographic((0.3,0.1,0.1));  draw(surface((1,0,0)--(0,1,0)--(0,0,1)--cycle),yellow); draw(surface((1,0,0)--(0,1,0)--(0,0,0)--cycle),yellow); draw(surface((1,0,0)--(0,0,1)--(0,0,0)--cycle),yellow); draw(surface((0,1,0)--(0,0,1)--(0,0,0)--cycle),yellow);  draw((0,0,1)--(0,1,1)--(1,1,1)--(1,0,1)--cycle,dashed); draw((0,1,0)--(1,1,0)--(1,0,0),dashed); draw((0,1,1)--(0,1,0)^^(1,1,1)--(1,1,0)^^(1,0,1)--(1,0,0),dashed); draw((-0.5,0,0)--(1.5,0,0),linewidth(1.25),EndArrow3(10)); draw((0,-0.5,0)--(0,1.5,0),linewidth(1.25),EndArrow3(10)); draw((0,0,-0.5)--(0,0,1.5),linewidth(1.25),EndArrow3(10)); draw((-0.1,0,1)--(0.1,0,1),linewidth(1)); draw((0,1,-0.1)--(0,1,0.1),linewidth(1)); draw((1,-0.1,0)--(1,0.1,0),linewidth(1)); label(\"$x$\",(1.5,0,0),4*dir((1.5,0,0))); label(\"$y$\",(0,1.5,0),2*dir((0,1.5,0))); label(\"$z$\",(0,0,1.5),2*dir((0,0,1.5))); label(\"$0$\",(0,0,0),2*dir((0,0.5,-0.5))); label(\"$1$\",(1,0,0),4*dir((0,-1,0))); label(\"$1$\",(0,1,0),4*dir((0,0,-1))); label(\"$1$\",(0,0,1),5*dir((-1,0,0))); draw((1,0,0)--(0,1,0)--(0,0,1)--cycle); [/asy]We have two cases:</p><p>Together, the answer is $\\frac14 + \\frac{5}{12} = \\boxed{\\textbf{(C) }\\frac{2}{3}}.$</p><p>~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)</p><p>~MRENTHUSIASM</p>",
         "<p>We can in fact find the probability that any number of randomly distributed numbers on the interval $[0, 1]$ sum to more than $1$ using geometric probability, as shown in the video below.</p><p>If we graph the points that satisfy $x + y < 1$, $0 < x, y < 1$, we get the triangle with points $(0, 0)$, $(1, 0)$, and $(0, 1)$. If we graph the points that satisfy $x + y + z < 1$, $0 < x, y, z < 1$, we get the tetrahedron with points $(0, 0, 0)$, $(1, 0, 0)$, $(0, 1, 0)$, and $(0, 0, 1)$.</p><p>Of course, the probability of either of these cases happening is simply the area/volume of the points we graphed divided by the total area of the graph, which is always $1$ (this would be much simpler than my calculus proof above).</p><p>Thus, we can now solve for the probability that the sum is less than one for $n$ numbers using induction.</p><p>$\\textbf{Claim:}$ The probability that the sum is less than one is $\\frac{1}{n!}$.</p><p>$\\textbf{Base Case:}$ For just $1$ number, the probability is $1$.</p><p>$\\textbf{Induction step:}$ Suppose that the probability for $n$ numbers is $\\frac{1}{n!}$. We will prove that the probability for $n+1$ numbers is $\\frac{1}{(n+1)!}$. To prove this, we consider that the area of an $n+1$-dimensional tetrahedron is simply the area/volume of the base times the height divided by $n+1$. </p><p>Of course, the area of the base is $\\frac{1}{n!}$, and the height is $1$, and thus, we obtain $\\frac{1}{n! \\cdot (n+1)} = \\frac{1}{(n+1)!}$ as our volume (this may be hard to visualize for higher dimensions). The induction step is complete.</p><p>The probability of the sum being less than $1$ is $\\frac{1}{n!}$, and the probability of the sum being more than $1$ is $\\frac{n!-1}{n!}$. This trivializes the problem. The answer is \\[\\frac{1}{2} \\cdot \\frac{2! - 1}{2!} + \\frac{1}{2} \\cdot \\frac{3! - 1}{3!} = \\boxed{\\textbf{(C) }\\frac{2}{3}}.\\]</p><p>~mathboy100</p>",
         "<p>There are two cases: Amelia takes two steps or three steps. </p><p>The former case has a probability of $\\frac{1}{2}$, as stated in Solution 1, and thus the latter also has a probability of $\\frac{1}{2}$. </p><p>The probability that Amelia passes $1$ after two steps is also $\\frac{1}{2}$, as it is symmetric to the probability above.</p><p>Thus, if the probability that Amelia passes $1$ after three steps is $x$, our total probability is $\\frac{1}{2} \\cdot \\frac{1}{2} + \\frac{1}{2} \\cdot x$. We know that $0 < x < 1$, and it is relatively obvious that $x > \\frac{1}{2}$ (because the probability that $x > \\frac{3}{2}$ is $\\frac{1}{2}$). This means that our total probability is between $\\frac{1}{2}$ and $\\frac{3}{4}$, non-inclusive, so the only answer choice that fits is $\\boxed{\\textbf{(C) }\\frac{2}{3}}$.</p><p>~mathboy100</p>"
       ],
-      "categorization": {
-        "category": "probability",
-        "subcategory": "geometric_probability",
-        "confidence": 0.95,
-        "reasoning": "This problem involves calculating probability of a random walk exceeding a certain position, requiring understanding of probability and geometric probability."
-      }
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_24",
@@ -772,30 +772,30 @@
         "<p>Divide both sides by $|x - y|$ to get $\\frac{|f(x) - f(y)|}{|x - y|} \\leq \\frac{1}{2}$. This means that when we take any two points on $f$, the absolute value of the slope between the two points is at most $\\frac{1}{2}$.</p><p>Let $f(300) = f(900) = c$, and since we want to find the maximum value of $|f(800) - f(400)|$, we can take the most extreme case and draw a line with slope $-\\frac{1}{2}$ down from $f(300)$ to $f(400)$ and a line with slope $\\frac{1}{2}$ up from $f(800)$ to $f(900)$. Then $f(400) = c - 50$ and $f(800) = c + 50$, so $|f(800) - f(400)| = |c + 50 - (c - 50)| = 100$, and this is attainable because the slope of the line connecting $f(400)$ and $f(800)$ still has absolute value less than $\\frac{1}{2}$.</p><p>Therefore, $|f(f(800)) - f(f(400))| \\leq \\frac{1}{2}|f(800) - f(400)| = \\frac{1}{2}(100) = \\boxed{\\textbf{(B)}\\ 50}$.</p>",
         "<p>Consider $g(x) = f(x)-f(300)$. Then $g(x)$ satisfies all the conditions and $g(300) = g(900) = 0$. We would want $g(400)$ and $g(800)$ as distant from each other as possible. So assign $g(400) = -50$ and $g(800) = 50$, the possible lower and upper bounds respectively. It follows that one can obtain the upper bound for $|g(g(800)) - g(g(400))| = |g(50) - g(-50  )| \\leq \\frac{1}{2}(100) = \\boxed{\\textbf{(B)}\\ 50}$ as the answer.</p>"
       ],
-      "categorization": {
-        "category": "calculus",
-        "subcategory": "limits_and_continuity",
-        "confidence": 0.9,
-        "reasoning": "This problem involves finding the maximum value of a function difference given Lipschitz conditions, requiring understanding of function properties and optimization."
-      }
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
+      ]
     },
     {
       "id": "amc_2022_10b_25",
       "question": "<p>Let $x_0,x_1,x_2,\\dotsc$ be a sequence of numbers, where each $x_k$ is either $0$ or $1$. For each positive integer $n$, define \\[S_n = \\sum_{k=0}^{n-1} x_k 2^k\\]Suppose $7S_n \\equiv 1 \\pmod{2^n}$ for all $n \\geq 1$. What is the value of the sum \\[x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022}?\\]</p>",
       "solutions": [
-        "<p>In binary numbers, we have \\[S_n = (x_{n-1} x_{n-2} x_{n-3} x_{n-4} \\ldots x_{2} x_{1} x_{0})_2.\\]It follows that \\[8S_n = (x_{n-1} x_{n-2} x_{n-3} x_{n-4} \\ldots x_{2} x_{1} x_{0}000)_2.\\]We obtain $7S_n$ by subtracting the equations:\\[\\begin{array}{clccrccccccr}   & (x_{n-1} & x_{n-2} & x_{n-3} & x_{n-4} & \\ldots & x_2 & x_1 & x_0 & 0 & 0 & 0 \\ )_2 \\\\ -\\quad & & & & (x_{n-1} & \\ldots & x_5 & x_4 & x_3 & x_2 & x_1 & x_0)_2 \\\\ \\hline   & & & & & & & & & & &  \\\\ [-2.5ex]   & ( \\ \\\u00a0?&\u00a0? &\u00a0? & 0 \\ \\ \\ & \\ldots & 0 & 0 & 0 & 0 & 0 & 1 \\ )_2 \\\\ \\end{array}\\]We work from right to left:\\begin{alignat*}{6} x_0=x_1=x_2=1  \\quad &\\implies \\quad &x_3 &= 0& \\\\  \\quad &\\implies \\quad &x_4 &= 1& \\\\  \\quad &\\implies \\quad &x_5 &= 1& \\\\ \\quad &\\implies \\quad &x_6 &= 0& \\\\  \\quad &\\implies \\quad &x_7 &= 1& \\\\  \\quad &\\implies \\quad &x_8 &= 1& \\\\ \\quad &\\quad \\vdots & & & \\end{alignat*}For all $n\\geq3,$ we conclude that</p><ul><li>$x_n=0$ if and only if $n\\equiv 0\\pmod{3}.$</li></ul><ul><li>$x_n=1$ if and only if $n\\not\\equiv 0\\pmod{3}.$</li></ul><p>Finally, we get $(x_{2019},x_{2020},x_{2021},x_{2022})=(0,1,1,0),$ from which \\[x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022} = \\boxed{\\textbf{(A) } 6}.\\]~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)</p><p>~MRENTHUSIASM</p>",
+        "<p>In binary numbers, we have \\[S_n = (x_{n-1} x_{n-2} x_{n-3} x_{n-4} \\ldots x_{2} x_{1} x_{0})_2.\\]It follows that \\[8S_n = (x_{n-1} x_{n-2} x_{n-3} x_{n-4} \\ldots x_{2} x_{1} x_{0}000)_2.\\]We obtain $7S_n$ by subtracting the equations:\\[\\begin{array}{clccrccccccr}   & (x_{n-1} & x_{n-2} & x_{n-3} & x_{n-4} & \\ldots & x_2 & x_1 & x_0 & 0 & 0 & 0 \\ )_2 \\\\ -\\quad & & & & (x_{n-1} & \\ldots & x_5 & x_4 & x_3 & x_2 & x_1 & x_0)_2 \\\\ \\hline   & & & & & & & & & & &  \\\\ [-2.5ex]   & ( \\ \\ ?& ? & ? & 0 \\ \\ \\ & \\ldots & 0 & 0 & 0 & 0 & 0 & 1 \\ )_2 \\\\ \\end{array}\\]We work from right to left:\\begin{alignat*}{6} x_0=x_1=x_2=1  \\quad &\\implies \\quad &x_3 &= 0& \\\\  \\quad &\\implies \\quad &x_4 &= 1& \\\\  \\quad &\\implies \\quad &x_5 &= 1& \\\\ \\quad &\\implies \\quad &x_6 &= 0& \\\\  \\quad &\\implies \\quad &x_7 &= 1& \\\\  \\quad &\\implies \\quad &x_8 &= 1& \\\\ \\quad &\\quad \\vdots & & & \\end{alignat*}For all $n\\geq3,$ we conclude that</p><ul><li>$x_n=0$ if and only if $n\\equiv 0\\pmod{3}.$</li></ul><ul><li>$x_n=1$ if and only if $n\\not\\equiv 0\\pmod{3}.$</li></ul><p>Finally, we get $(x_{2019},x_{2020},x_{2021},x_{2022})=(0,1,1,0),$ from which \\[x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022} = \\boxed{\\textbf{(A) } 6}.\\]~Steven Chen (Professor Chen Education Palace, www.professorchenedu.com)</p><p>~MRENTHUSIASM</p>",
         "<p>First, notice that \\[x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022} = \\frac{S_{2023} - S_{2019}}{2^{2019}}.\\]Then since $S_n$ is the modular inverse of $7$ in $\\mathbb{Z}_{2^n}$, we can perform the Euclidean Algorithm to find it for $n = 2019,2023$.</p><p>Starting with $2019$, \\begin{align*} 7S_{2019} &\\equiv 1 \\pmod{2^{2019}} \\\\ 7S_{2019} &= 2^{2019}k + 1. \\end{align*}Now, take both sides $\\operatorname{mod} \\ 7$:\\[0 \\equiv 2^{2019}k + 1 \\pmod{7}.\\]Using Fermat's Little Theorem, \\[2^{2019} = (2^{336})^6 \\cdot 2^3 \\equiv 2^3 \\equiv 1 \\pmod{7}.\\]Thus, \\[0 \\equiv k + 1 \\pmod{7} \\implies k \\equiv 6 \\pmod{7} \\implies k = 7j + 6.\\]Therefore, \\[7S_{2019} = 2^{2019} (7j + 6) + 1 \\implies S_{2019} = \\frac{2^{2019} (7j + 6) + 1}{7}.\\]</p><p>We may repeat this same calculation with $S_{2023}$ to yield \\[S_{2023} = \\frac{2^{2023} (7h + 3) + 1}{7}.\\]Now, we notice that $S_n$ is basically an integer expressed in binary form with $n$ bits.This gives rise to a simple inequality, \\[0 \\leqslant S_n \\leqslant 2^n.\\]Since the maximum possible number that can be generated with $n$ bits is \\[\\underbrace{{11111\\dotsc1}_2}_{n} = \\sum_{k=0}^{n-1} 2^k = 2^n - 1 \\leqslant 2^n.\\]Looking at our calculations for $S_{2019}$ and $S_{2023}$, we see that the only valid integers that satisfy that constraint are $j = h = 0$.\\[\\frac{S_{2023} - S_{2019}}{2^{2019}} = \\frac{\\tfrac{2^{2023} \\cdot 3 + 1}{7} - \\tfrac{2^{2019} \\cdot 6 + 1}{7}}{2^{2019}} = \\frac{2^4 \\cdot 3 - 6}{7} = \\boxed{\\textbf{(A) } 6}.\\]~zoomanTV</p>",
         "<p>As in Solution 2, we note that \\[x_{2019}+2x_{2020}+4x_{2021}+8x_{2022}=\\frac{S_{2023}-S_{2019}}{2^{2019}}.\\]We also know that $7S_{2023} \\equiv 1 \\pmod{2^{2023}}$ and $7S_{2019} \\equiv 1 \\pmod{2^{2019}}$, this implies:\\[\\textbf{(1) } 7S_{2023}=2^{2023}\\cdot{x} + 1,\\]\\[\\textbf{(2) } 7S_{2019}=2^{2019}\\cdot{y} + 1.\\]Dividing by $7$, we can isolate the previous sums:\\[\\textbf{(3) } S_{2023}=\\frac{2^{2023}\\cdot{x} + 1}{7},\\]\\[\\textbf{(4) } S_{2019}=\\frac{2^{2019}\\cdot{y} + 1}{7}.\\]The maximum value of $S_n$ occurs when every $x_i$ is equal to $1$. Even when this happens, the value of $S_n$ is less than $2^n$. Therefore, we can construct the following inequalities:\\[\\textbf{(3) } S_{2023}=\\frac{2^{2023}\\cdot{x} + 1}{7} < 2^{2023},\\]\\[\\textbf{(4) } S_{2019}=\\frac{2^{2019}\\cdot{y} + 1}{7} < 2^{2019}.\\]From these two equations, we can deduce that both $x$ and $y$ are less than $7$. </p><p>Reducing $\\textbf{1}$ and $\\textbf{2}$ $\\pmod{7},$ we see that \\[2^{2023}\\cdot{x}\\equiv 6\\pmod{7},\\]and \\[2^{2019}\\cdot{y}\\equiv 6\\pmod{7}.\\]</p><p>The powers of $2$ repeat every $3, \\pmod{7}.$</p><p>Therefore, $2^{2023}\\equiv 2 \\pmod 7$ and $2^{2019} \\equiv 1 \\pmod {7}.$ Substituing this back into the above equations, \\[2x\\equiv{6}\\pmod{7}\\]and\\[y\\equiv{6}\\pmod{7}.\\]</p><p>Since $x$ and $y$ are integers less than $7$, the only values of $x$ and $y$ are $3$ and $6$ respectively. </p><p>The requested sum is \\begin{align*} \\frac{S_{2023}-S_{2019}}{2^{2019}} &= \\frac{\\frac{2^{2023}\\cdot{x} + 1}{7} - \\frac{2^{2019}\\cdot{y} + 1}{7}}{2^{2019}} \\\\ &= \\frac{1}{2^{2019}}\\left(\\frac{2^{2023}\\cdot{3} + 1}{7} -\\left(\\frac{2^{2019}\\cdot{6} + 1}{7}  \\right)\\right) \\\\ &= \\frac{3\\cdot{2^4}-6}{7} \\\\ &= \\boxed{\\textbf{(A) } 6}. \\end{align*}-Benedict T (countmath1)</p>",
         "<p>Note that, as in Solution 2, we have \\[x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022} = \\frac{S_{2023} - S_{2019}}{2^{2019}}.\\] This is because \\[S_{2023} = x_{0}2^{0} + x_{1}2^{1} + \\cdots + x_{2019}2^{2019} + \\cdots + x_{2022}2^{2022}\\] and \\[S_{2019} = x_{0}2^{0} + x_{1}2^{1} + \\cdots + x_{2018}2^{2018}.\\] Note that \\[S_{2023} - S_{2019} = x_{2019}2^{2019} + \\cdots + x_{2022}2^{2022} = 2^{2019}(x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022}).\\] Therefore, \\[x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022} = \\frac{S_{2023} - S_{2019}}{2^{2019}}.\\] Multiplying both sides by 7 gives us \\[7(x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022}) = \\frac{7S_{2023} - 7S_{2019}}{2^{2019}}.\\] We can write \\[7S_{2023} = 1\\pmod{2^{2023}} = 1 + 2^{2023}a = 1 + 2^{2019}*16a\\] and \\[7S_{2019} = 1\\pmod{2^{2019}} = 1 + 2^{2019}b\\] for some a and b. Substituting, we get \\[7(x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022}) = \\frac{(1 + 2^{2019} * 16a) - (1 + 2^{2019}b)}{2^{2019}} = 16a - b.\\] Therefore, our answer can be written as \\[\\frac{16a - b}{7}.\\] Another thing to notice is that a and b are integers between 0 and 6. This is because \\[7(1 + 2 + 4 + 8 + \\cdots + 2^{2022}) \\geqslant 7S_{2023} = 1 + 2^{2023}a\\] which is \\[7(2^{2023}) - 7 \\geqslant 1 + 2^{2023}a\\] \\[(7-a) \\geqslant \\frac{8}{2^{2023}}\\] which only holds when a is less than 7 because the right is very small positive number, so the left must be positive, too. Clearly, a is also non-negative, because otherwise, \\[7S_{2023} = 1 + 2^{2023}a < 0\\] which would mean \\[S_{2023} < 0\\] which cannot happen, so a is greater than 0. A similar explanation for b shows that b is an integer between 0 and 6 inclusive. </p><p>Going back to the solution, if our answer to the problem is n, then \\[16a - b = 7n\\] and \\[16a = 7n + b,\\] so we can try the five option choices and see which one, when multiplied by 7 and added to some whole number between 0 and 6 results in a multiple of 16. Trying all the option choices, we see that you need to add 7n to something more than 6 to equal a multiple of 16 other than for option A. Therefore, the answer is $\\boxed{\\textbf{(A) } 6}.$</p><p>-Rutvik Arora (youtube channel: <a class=\"external free\" href=\"https://www.youtube.com/channel/UCkgAgmNAQV8WGTOazGYEGwg\" rel=\"nofollow\">https://www.youtube.com/channel/UCkgAgmNAQV8WGTOazGYEGwg</a>)-whatdohumanitarianseat made a small edit for a typo</p>",
         "<p>Given that $7S_n \\equiv 1 \\pmod{2^n}$, we have\\begin{align*} 7S_n &= a_n2^n + 1\\\\ 7S_{n-1} &= a_{n-1}2^{n-1} + 1. \\end{align*}where $a_n$ is integer.</p><p>Notice that \\[S_n = S_{n-1} + 2^{n-1}x_{n-1}.\\]Thus,\\begin{align*} 7(S_n - S_{n-1}) &= 2^{n-1}(2a_n - a_{n-1})\\\\ 7 \\cdot 2^{n - 1}x_{n - 1} &= 2^{n - 1}(2a_n - a_{n - 1})\\\\ 7x_{n-1} &= 2a_n - a_{n-1}. \\end{align*}Obviously, $x_0 = 1$, $S_1 = 1$, $7S_1 = 3 \\times 2^1 + 1$, so $a_1 = 3$. For each $i$, $x_i$ must be 0 or 1, and $a_i$ is an integer, so we can repeat the recursion to yield\\begin{align*} x_1 = \\frac{2a_2 - a_1}{7} = \\frac{2a_2 - 3}{7}\\text{ can only be 1, where }a_2 = 5\\\\ x_2 = \\frac{2a_3 - a_2}{7} = \\frac{2a_3 - 5}{7}\\text{ can only be 1, where }a_3 = 6\\\\ x_3 = \\frac{2a_4 - a_3}{7} = \\frac{2a_4 - 6}{7}\\text{ can only be 0, where }a_4 = 3\\\\ x_4 = \\frac{2a_5 - a_4}{7} = \\frac{2a_5 - 3}{7}\\text{ can only be 1, where }a_5 = 5\\\\ x_5 = \\frac{2a_6 - a_5}{7} = \\frac{2a_6 - 5}{7}\\text{ can only be 1, where }a_6 = 6\\\\ x_6 = \\frac{2a_7 - a_6}{7} = \\frac{2a_7 - 6}{7}\\text{ can only be 0, where }a_7 = 3 \\end{align*}So for any non-negative integer $k$, we can find that $x_{3k + 1} = 1$, $x_{3k + 2} = 1$, $x_{3k + 3} = 0$, \\[x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022} = 0 + 2 \\times 1 + 4 \\times 1 + 8 \\times  0 = \\boxed{\\textbf{(A) } 6}.\\]</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Reda_mandymath\" rel=\"nofollow\">reda_mandymath</a></p>",
         "<p>Using the given conditions, it is evident that $x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022}=\\frac{S_{2023}-S_{2019}}{2^{2019}}=a$ (for simplicity). Moreover, because $7S_n \\equiv 1 \\pmod{2^n}$ is true, an impulse to multiply the numerator and denominator by 7 is created. Let $7S_{2023}=2^{2023}k+1$ and $7S_{2019}=2^{2019}k'+1$.\\begin{align*}a=\\frac{7S_{2023}-7S_{2019}}{7\\cdot2^{2019}}&amp;=\\frac{2^{2023}k+1-2^{2019}k'-1}{7\\cdot2^{2019}} \\\\&amp;=\\frac{2^4k-k'}{7} \\\\&amp;=\\frac{16k-k'}{7} \\\\\\end{align*}Furthermore, because $0\\le x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022}\\le15$, $0\\le\\frac{16k-k'}{7}\\le15$. The order pairs $(k,k',a)$ could be found through trial and error that satisfies conditions $7S_{2023}=2^{2023}k+1$ and $7S_{2019}=2^{2019}k'+1$. It is evident that $k\\ne0,1,2$ using Euler's Theorem.</p><p>$(3,6,6)$ is valid because $7|2^{2023}\\cdot3+1$ and $7|2^{2019}\\cdot6$.Thereby, $x_{2019} + 2x_{2020} + 4x_{2021} + 8x_{2022}=\\boxed{\\textbf{(A) } 6}$.</p><p>~MaPhyCom</p>"
       ],
-      "categorization": {
-        "category": "number_theory",
-        "subcategory": "modular_arithmetic",
-        "confidence": 0.95,
-        "reasoning": "This problem involves analyzing a binary sequence with specific modular properties, requiring understanding of binary numbers and modular arithmetic."
-      }
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "modular_arithmetic"
+        }
+      ]
     }
   ]
 }
