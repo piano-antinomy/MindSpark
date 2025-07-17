@@ -7,6 +7,12 @@
       "question": "<p>Kim's flight took off from Newark at 10:34 AM and landed in Miami at 1:18 PM. Both cities are in the same time zone. If her flight took $h$ hours and $m$ minutes, with $0 < m < 60$, what is $h + m$?</p>",
       "solutions": [
         "<p>There is $1$ hour and $60-34 = 26$ minutes between 10:34 AM and noon; and there is $1$ hour and $18$ minutes between noon and 1:18 PM. Hence the flight took $2$ hours and $26 + 18 = 44$ minutes,and 2+44=46s0 $h+m= 46\\ \\textbf{(A)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -14,6 +20,12 @@
       "question": "<p>Which of the following is equal to $1 + \\frac {1}{1 + \\frac {1}{1 + 1}}$?</p>",
       "solutions": [
         "<p>We compute:</p><p>\\begin{align*} 1 + \\frac {1}{1 + \\frac {1}{1 + 1}} &= 1 + \\frac {1}{1 + \\frac {1}{1 + 1}} \\\\ &= 1 + \\frac {1}{1 + \\frac 12} \\\\ &= 1 + \\frac {1}{\\frac 32} \\\\ &= 1 + \\frac 23 \\\\ &= \\frac 53 \\end{align*}</p><p>This is choice $\\boxed{\\text{C}}$.</p><p>Interesting sidenote: The continued fraction $1 + \\frac {1}{1 + \\frac {1}{1 + 1....}}$ is equal to the golden ratio, or $\\frac{1+\\sqrt{5}}{2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -23,13 +35,25 @@
         "<p>We can rewrite the two given fractions as $\\frac 3{12}$ and $\\frac 9{12}$. (We multiplied all numerators and denominators by $3$.)</p><p>Now it is obvious that the interval between them is divided into three parts by the fractions $\\boxed{\\frac 5{12}}$ and $\\frac 7{12}$.</p><p>The number we seek can be obtained as a weighted average of the two endpoints, where the closer one has weight $2$ and the further one $1$. We compute:</p><p>\\[\\dfrac{ 2\\cdot\\frac 14 + 1\\cdot\\frac 34 }3 = \\dfrac{ \\frac 54 }3 = \\boxed{\\dfrac 5{12}}\\]</p>",
         "<p>We can rewrite the two given fractions as $\\frac 3{12}$ and $\\frac 9{12}$. (We multiplied all numerators and denominators by $3$.)</p><p>Now it is obvious that the interval between them is divided into three parts by the fractions $\\boxed{\\frac 5{12}}$ and $\\frac 7{12}$.</p>",
         "<p>The number we seek can be obtained as a weighted average of the two endpoints, where the closer one has weight $2$ and the further one $1$. We compute:</p><p>\\[\\dfrac{ 2\\cdot\\frac 14 + 1\\cdot\\frac 34 }3 = \\dfrac{ \\frac 54 }3 = \\boxed{\\dfrac 5{12}}\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
       "id": "amc_2009_12a_4",
       "question": "<p>Four coins are picked out of a piggy bank that contains a collection of pennies, nickels, dimes, and quarters. Which of the following could <em>not</em> be the total value of the four coins, in cents?</p>",
       "solutions": [
-        "<p>We need to find which total value cannot be made with exactly 4 coins from pennies (1\u00a2), nickels (5\u00a2), dimes (10\u00a2), and quarters (25\u00a2).</p><p>Let's check each option:</p><p>A) 15\u00a2: We need 4 coins that sum to 15. The maximum with 4 coins is 4 quarters = 100\u00a2, so this is possible. But can we make 15\u00a2 with exactly 4 coins? The smallest 4 coins would be 4 pennies = 4\u00a2, which is too small. We need to use some larger coins. Let's try: 1 nickel + 3 pennies = 5 + 3 = 8\u00a2 (too small), 2 nickels + 2 pennies = 10 + 2 = 12\u00a2 (too small), 3 nickels + 1 penny = 15 + 1 = 16\u00a2 (too large). We cannot make exactly 15\u00a2 with 4 coins.</p><p>B) 25\u00a2: 1 quarter = 25\u00a2, but we need 4 coins. 1 quarter + 3 pennies = 25 + 3 = 28\u00a2 (too large). 5 nickels = 25\u00a2, but we need exactly 4 coins. 4 nickels + 1 penny = 20 + 1 = 21\u00a2 (too small). 3 nickels + 2 pennies = 15 + 2 = 17\u00a2 (too small). We cannot make exactly 25\u00a2 with 4 coins either.</p><p>Wait, let me reconsider. The problem asks which total value could NOT be made. Let me check more carefully:</p><p>A) 15\u00a2: Can we make 15\u00a2 with exactly 4 coins? 1 dime + 1 nickel = 15\u00a2, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 10 + 5 + 2 = 17\u00a2 (too large). 3 nickels = 15\u00a2, but that's only 3 coins. We cannot make exactly 15\u00a2 with 4 coins.</p><p>B) 25\u00a2: 1 quarter = 25\u00a2, but we need 4 coins. 1 quarter + 3 pennies = 28\u00a2 (too large). 5 nickels = 25\u00a2, but we need exactly 4 coins. 4 nickels + 1 penny = 21\u00a2 (too small). We cannot make exactly 25\u00a2 with 4 coins.</p><p>C) 35\u00a2: 1 quarter + 1 dime = 35\u00a2, but that's only 2 coins. 1 quarter + 1 dime + 2 pennies = 37\u00a2 (too large). 3 dimes + 1 nickel = 30 + 5 = 35\u00a2, but that's only 4 coins. Wait, 3 dimes + 1 nickel = 30 + 5 = 35\u00a2 with exactly 4 coins. This is possible.</p><p>D) 45\u00a2: 1 quarter + 2 dimes = 25 + 20 = 45\u00a2, but that's only 3 coins. 1 quarter + 2 dimes + 1 penny = 46\u00a2 (too large). 4 dimes + 1 nickel = 40 + 5 = 45\u00a2, but that's 5 coins. We cannot make exactly 45\u00a2 with 4 coins.</p><p>E) 55\u00a2: 2 quarters + 1 nickel = 50 + 5 = 55\u00a2, but that's only 3 coins. 2 quarters + 1 nickel + 1 penny = 56\u00a2 (too large). 1 quarter + 3 dimes = 25 + 30 = 55\u00a2, but that's only 4 coins. Wait, 1 quarter + 3 dimes = 25 + 30 = 55\u00a2 with exactly 4 coins. This is possible.</p><p>So the values that cannot be made with exactly 4 coins are: A (15\u00a2), B (25\u00a2), and D (45\u00a2). But the problem asks for which one could NOT be made, implying only one answer. Let me check more carefully:</p><p>Actually, let me list all possible combinations of 4 coins and see what totals we can make:</p><p>4 pennies = 4\u00a2</p><p>3 pennies + 1 nickel = 8\u00a2</p><p>2 pennies + 2 nickels = 12\u00a2</p><p>1 penny + 3 nickels = 16\u00a2</p><p>4 nickels = 20\u00a2</p><p>3 nickels + 1 dime = 25\u00a2</p><p>2 nickels + 2 dimes = 30\u00a2</p><p>1 nickel + 3 dimes = 35\u00a2</p><p>4 dimes = 40\u00a2</p><p>3 dimes + 1 quarter = 55\u00a2</p><p>2 dimes + 2 quarters = 70\u00a2</p><p>1 dime + 3 quarters = 85\u00a2</p><p>4 quarters = 100\u00a2</p><p>And combinations with pennies: 3 pennies + 1 dime = 13\u00a2, 2 pennies + 1 nickel + 1 dime = 17\u00a2, 1 penny + 2 nickels + 1 dime = 21\u00a2, etc.</p><p>Looking at the options: A) 15\u00a2 - not in our list, B) 25\u00a2 - possible (3 nickels + 1 dime), C) 35\u00a2 - possible (1 nickel + 3 dimes), D) 45\u00a2 - not in our list, E) 55\u00a2 - possible (3 dimes + 1 quarter).</p><p>So A (15\u00a2) and D (45\u00a2) cannot be made. But the problem asks for which one could NOT be made, implying only one answer. Let me check if I missed any combinations.</p><p>Actually, let me be more systematic. The problem is asking which total value could NOT be the total value of the four coins. Let me check each option:</p><p>A) 15\u00a2: Can we make 15\u00a2 with exactly 4 coins? Let's try: 1 dime + 1 nickel = 15\u00a2, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 17\u00a2 (too large). 3 nickels = 15\u00a2, but that's only 3 coins. 3 nickels + 1 penny = 16\u00a2 (too large). 2 nickels + 2 pennies = 12\u00a2 (too small). 1 nickel + 4 pennies = 9\u00a2 (too small). We cannot make exactly 15\u00a2 with 4 coins.</p><p>Therefore, the answer is A) 15\u00a2.</p>"
+        "<p>We need to find which total value cannot be made with exactly 4 coins from pennies (1¢), nickels (5¢), dimes (10¢), and quarters (25¢).</p><p>Let's check each option:</p><p>A) 15¢: We need 4 coins that sum to 15. The maximum with 4 coins is 4 quarters = 100¢, so this is possible. But can we make 15¢ with exactly 4 coins? The smallest 4 coins would be 4 pennies = 4¢, which is too small. We need to use some larger coins. Let's try: 1 nickel + 3 pennies = 5 + 3 = 8¢ (too small), 2 nickels + 2 pennies = 10 + 2 = 12¢ (too small), 3 nickels + 1 penny = 15 + 1 = 16¢ (too large). We cannot make exactly 15¢ with 4 coins.</p><p>B) 25¢: 1 quarter = 25¢, but we need 4 coins. 1 quarter + 3 pennies = 25 + 3 = 28¢ (too large). 5 nickels = 25¢, but we need exactly 4 coins. 4 nickels + 1 penny = 20 + 1 = 21¢ (too small). 3 nickels + 2 pennies = 15 + 2 = 17¢ (too small). We cannot make exactly 25¢ with 4 coins either.</p><p>Wait, let me reconsider. The problem asks which total value could NOT be made. Let me check more carefully:</p><p>A) 15¢: Can we make 15¢ with exactly 4 coins? 1 dime + 1 nickel = 15¢, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 10 + 5 + 2 = 17¢ (too large). 3 nickels = 15¢, but that's only 3 coins. We cannot make exactly 15¢ with 4 coins.</p><p>B) 25¢: 1 quarter = 25¢, but we need 4 coins. 1 quarter + 3 pennies = 28¢ (too large). 5 nickels = 25¢, but we need exactly 4 coins. 4 nickels + 1 penny = 21¢ (too small). We cannot make exactly 25¢ with 4 coins.</p><p>C) 35¢: 1 quarter + 1 dime = 35¢, but that's only 2 coins. 1 quarter + 1 dime + 2 pennies = 37¢ (too large). 3 dimes + 1 nickel = 30 + 5 = 35¢, but that's only 4 coins. Wait, 3 dimes + 1 nickel = 30 + 5 = 35¢ with exactly 4 coins. This is possible.</p><p>D) 45¢: 1 quarter + 2 dimes = 25 + 20 = 45¢, but that's only 3 coins. 1 quarter + 2 dimes + 1 penny = 46¢ (too large). 4 dimes + 1 nickel = 40 + 5 = 45¢, but that's 5 coins. We cannot make exactly 45¢ with 4 coins.</p><p>E) 55¢: 2 quarters + 1 nickel = 50 + 5 = 55¢, but that's only 3 coins. 2 quarters + 1 nickel + 1 penny = 56¢ (too large). 1 quarter + 3 dimes = 25 + 30 = 55¢, but that's only 4 coins. Wait, 1 quarter + 3 dimes = 25 + 30 = 55¢ with exactly 4 coins. This is possible.</p><p>So the values that cannot be made with exactly 4 coins are: A (15¢), B (25¢), and D (45¢). But the problem asks for which one could NOT be made, implying only one answer. Let me check more carefully:</p><p>Actually, let me list all possible combinations of 4 coins and see what totals we can make:</p><p>4 pennies = 4¢</p><p>3 pennies + 1 nickel = 8¢</p><p>2 pennies + 2 nickels = 12¢</p><p>1 penny + 3 nickels = 16¢</p><p>4 nickels = 20¢</p><p>3 nickels + 1 dime = 25¢</p><p>2 nickels + 2 dimes = 30¢</p><p>1 nickel + 3 dimes = 35¢</p><p>4 dimes = 40¢</p><p>3 dimes + 1 quarter = 55¢</p><p>2 dimes + 2 quarters = 70¢</p><p>1 dime + 3 quarters = 85¢</p><p>4 quarters = 100¢</p><p>And combinations with pennies: 3 pennies + 1 dime = 13¢, 2 pennies + 1 nickel + 1 dime = 17¢, 1 penny + 2 nickels + 1 dime = 21¢, etc.</p><p>Looking at the options: A) 15¢ - not in our list, B) 25¢ - possible (3 nickels + 1 dime), C) 35¢ - possible (1 nickel + 3 dimes), D) 45¢ - not in our list, E) 55¢ - possible (3 dimes + 1 quarter).</p><p>So A (15¢) and D (45¢) cannot be made. But the problem asks for which one could NOT be made, implying only one answer. Let me check if I missed any combinations.</p><p>Actually, let me be more systematic. The problem is asking which total value could NOT be the total value of the four coins. Let me check each option:</p><p>A) 15¢: Can we make 15¢ with exactly 4 coins? Let's try: 1 dime + 1 nickel = 15¢, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 17¢ (too large). 3 nickels = 15¢, but that's only 3 coins. 3 nickels + 1 penny = 16¢ (too large). 2 nickels + 2 pennies = 12¢ (too small). 1 nickel + 4 pennies = 9¢ (too small). We cannot make exactly 15¢ with 4 coins.</p><p>Therefore, the answer is A) 15¢.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "diophantine_equations"
+        }
       ]
     },
     {
@@ -37,6 +61,12 @@
       "question": "<p>One dimension of a cube is increased by $1$, another is decreased by $1$, and the third is left unchanged. The volume of the new rectangular solid is $5$ less than that of the cube. What was the volume of the cube?</p>",
       "solutions": [
         "<p>Let the original cube have edge length $a$. Then its volume is $a^3$.The new box has dimensions $a-1$, $a$, and $a+1$, hence its volume is $(a-1)a(a+1) = a^3-a$. The difference between the two volumes is $a$. As we are given that the difference is $5$, we have $a=5$, and the volume of the original cube was $5^3 = 125\\Rightarrow\\boxed{\\text{(D)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
       ]
     },
     {
@@ -44,6 +74,12 @@
       "question": "<p>Suppose that $P = 2^m$ and $Q = 3^n$. Which of the following is equal to $12^{mn}$ for every pair of integers $(m,n)$?</p>",
       "solutions": [
         "<p>We have $12^{mn} = (2\\cdot 2\\cdot 3)^{mn} = 2^{2mn} \\cdot 3^{mn} = (2^m)^{2n} \\cdot (3^n)^m = \\boxed{\\bold{E)} P^{2n} Q^m}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -51,6 +87,12 @@
       "question": "<p>The first three terms of an arithmetic sequence are $2x - 3$, $5x - 11$, and $3x + 1$ respectively. The $n$th term of the sequence is $2009$. What is $n$?</p>",
       "solutions": [
         "<p>As this is an arithmetic sequence, the difference must be constant: $(5x-11) - (2x-3) = (3x+1) - (5x-11)$. This solves to $x=4$. The first three terms then are $5$, $9$, and $13$. In general, the $n$th term is $1+4n$. Solving $1+4n=2009$, we get $n=\\boxed{502}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -61,6 +103,12 @@
         "<p>Let the side length of the smaller square be $1$, and let the smaller side of the rectangles be $y$. Since the larger square's area is four times larger than the smaller square's, the larger square's side length is $2$. $2$ is equivalent to $2y+1$, giving $y=1/2$. Then, the longer side of the rectangles is $3/2$. $\\frac{\\frac{3}{2}}{\\frac{1}{2}}=\\boxed{3}$.</p>",
         "<p>Let the longer side length be $x$, and the shorter side be $a$.</p><p>We have that $(x+a)^2=4(x-a)^2\\implies x+a=2(x-a)\\implies x+a=2x-2a\\implies x=3a \\implies \\frac{x}{a}=3$</p><p>Hence, the answer is $\\boxed{A}\\implies 3$</p>",
         "<p>WLOG, let the shorter side of the rectangle be $1$, and the longer side be $x$ . Thus, the area of the larger square is $(1+x)^2$ . The area of the smaller square is $(x-1)^2$ . Thus, we have the equation $(1+x)^2 = 4 (x-2)^2$ . Solving for $x$, we get $x$ = $3$ .</p><p>~coolmath2017</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -69,6 +117,12 @@
       "solutions": [
         "<p>As $f(x)=ax^2 + bx + c$, we have $f(1)=a\\cdot 1^2 + b\\cdot 1 + c = a+b+c$. </p><p>To compute $f(1)$, set $x=-2$ in the first formula. We get $f(1) = f(-2+3) = 3(-2)^2 + 7(-2) + 4 = 12 - 14 + 4 = \\boxed{2}$.</p>",
         "<p>Combining the two formulas, we know that $f(x+3) = a(x+3)^2 + b(x+3) + c$.</p><p>We can rearrange the right hand side to $ax^2 + (6a+b)x + (9a+3b+c)$.</p><p>Comparing coefficients we have $a=3$, $6a+b=7$, and $9a+3b+c = 4$. From the second equation we get $b=-11$, and then from the third we get $c=10$. Hence $a+b+c = 3-11+10 = \\boxed{2}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
       ]
     },
     {
@@ -76,6 +130,12 @@
       "question": "<p>In quadrilateral $ABCD$, $AB = 5$, $BC = 17$, $CD = 5$, $DA = 9$, and $BD$ is an integer. What is $BD$?</p>",
       "solutions": [
         "<p>By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Triangle_inequality\" title=\"Triangle inequality\">triangle inequality</a> we have $BD < DA + AB = 9 + 5 = 14$, and also $BD + CD > BC$, hence $BD > BC - CD = 17 - 5 = 12$.</p><p>We get that $12 < BD < 14$, and as we know that $BD$ is an integer, we must have $BD=\\boxed{13}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -86,6 +146,12 @@
         "<p>Color the diamond layers alternately blue and red, starting from the outside. You'll get the following pattern:</p><p>[asy] unitsize(3mm); defaultpen(linewidth(.8pt)+fontsize(8pt));  path d=(1/2,0)--(0,sqrt(3)/2)--(-1/2,0)--(0,-sqrt(3)/2)--cycle; marker mred=marker(scale(5)*d,red,Fill); marker mblue=marker(scale(5)*d,blue,Fill); path f1=(0,0); path f2=(-1,1)--(1,1)--(1,-1)--(-1,-1)--cycle; path f3=(-2,-2)--(-2,0)--(-2,2)--(0,2)--(2,2)--(2,0)--(2,-2)--(0,-2)--cycle; path f4=(-3,-3)--(-3,-1)--(-3,1)--(-3,3)--(-1,3)--(1,3)--(3,3)--(3,1)--(3,-1)--(3,-3)--(1,-3)--(-1,-3)--cycle;  draw((-3,-3)--(3,3)); draw((-3,3)--(3,-3)); draw(f1,mred); draw(f2,mblue); draw(f3,mred); draw(f4,mblue); [/asy]</p><p>In the figure $F_n$, the blue diamonds form a $n\\times n$ square, and the red diamonds form a $(n-1)\\times(n-1)$ square. Hence the total number of diamonds in $F_{20}$ is $20^2 + 19^2 = \\boxed{761}$.</p>",
         "<p>When constructing $F_n$ from $F_{n-1}$, we add $4(n-1)$ new diamonds. Let $d_n$ be the number of diamonds in $F_n$. We now know that $d_1=1$ and $\\forall n>1:~ d_n=d_{n-1} + 4(n-1)$.</p><p>Hence we get:\\begin{align*} d_{20} & = d_{19} + 4\\cdot 19 \\\\ & = d_{18} + 4\\cdot 18 + 4\\cdot 19 \\\\ & = \\cdots \\\\ & = 1 + 4(1+2+\\cdots+18+19) \\\\ & = 1 + 4\\cdot\\frac{19\\cdot 20}2 \\\\ & = \\boxed{761} \\end{align*}</p>",
         "<p>The sequence $\\{ d_n\\}$ goes $1, 5, 13, 25, 41,\\dots$. The first finite differences go $4, 8, 12, 16, \\dots$. The second finite differences go $4, 4, 4, \\dots$, so we see that the second finite difference is constant. Thus, $d_n$ can be represented as a quadratic, $d_n = an^2 + bn + c$. However, we already know $d_1 = 1$, $d_2 = 3$, and $d_3 = 13$. Thus,\\[a + b + c = d_1 = 1\\]\\[4a + 2b + c = d_2 = 3\\]\\[9a + 3b + c = d_3 = 13\\]Solving this system for $a$, $b$, and $c$ gives $a = 2$, $b = -2$, $c = 1$. Finally, $d_n = 2n^2 - 2n + 1\\implies d_{20} = \\boxed{(E)761}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -96,6 +162,12 @@
         "<p>The sum of the digits is at most $9+9+9=27$. Therefore the number is at most $6\\cdot 27 = 162$. Out of the numbers $1$ to $162$ the one with the largest sum of digits is $99$, and the sum is $9+9=18$. Hence the sum of digits will be at most $18$.</p><p>Also, each number with this property is divisible by $6$, therefore it is divisible by $3$, and thus also its sum of digits is divisible by $3$. Thus, the number is divisible by $18$.</p><p>We only have six possibilities left for the sum of the digits: $3$, $6$, $9$, $12$, $15$, and $18$, but since the number is divisible by $18$, the digits can only add to $9$ or $18$. This leads to the integers $18$, $36$, $54$, $72$, $90$, and $108$ being possibilities. We can check to see that $\\boxed{1}$ solution: the number $54$ is the only solution that satisfies the conditions in the problem.</p>",
         "<p>We can write each integer between $1$ and $999$ inclusive as $\\overline{abc}=100a+10b+c$ where $a,b,c\\in\\{0,1,\\dots,9\\}$ and $a+b+c>0$.The sum of digits of this number is $a+b+c$, hence we get the equation $100a+10b+c = 6(a+b+c)$. This simplifies to $94a + 4b - 5c = 0$. Clearly for $a>0$ there are no solutions, hence $a=0$ and we get the equation $4b=5c$. This obviously has only one valid solution $(b,c)=(5,4)$, hence the only solution is the number $54$.</p>",
         "<p>The sum of the digits is at most $9+9+9=27$. Therefore the number is at most $6\\cdot 27 = 162$. Since the number is $6$ times the sum of its digits, it must be divisible by $6$, therefore also by $3$, therefore the sum of its digits must be divisible by $3$. With this in mind we can conclude that the number must be divisible by $18$, not just by $6$. Since the number is divisible by $18$, it is also divisible by $9$, therefore the sum of its digits is divisible by $9$, therefore the number is divisible by $54$, which leaves us with $54$, $108$ and $162$. Only $54$ is $6$ times its digits, hence the answer is $\\boxed{1}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "diophantine_equations"
+        }
       ]
     },
     {
@@ -103,14 +175,26 @@
       "question": "<p>A ship sails $10$ miles in a straight line from $A$ to $B$, turns through an angle between $45^{\\circ}$ and $60^{\\circ}$, and then sails another $20$ miles to $C$. Let $AC$ be measured in miles. Which of the following intervals contains $AC^2$?[asy] unitsize(2mm); defaultpen(linewidth(.8pt)+fontsize(10pt)); dotfactor=4;  pair B=(0,0), A=(-10,0), C=20*dir(50);  draw(A--B--C); draw(A--C,linetype(\"4 4\"));  dot(A); dot(B); dot(C); label(\"$10$\",midpoint(A--B),S); label(\"$20$\",midpoint(B--C),SE); label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C$\",C,NE); [/asy]</p>",
       "solutions": [
         "<p>To answer the question we are asked, it is enough to compute $AC^2$ for two different angles, preferably for both extremes ($45$ and $60$ degrees). You can use the law of cosines to do so.</p><p>Alternately, it is enough to compute $AC^2$ for one of the extreme angles. In case it falls inside one of the given intervals, we are done. In case it falls on the boundary between two options, we also have to argue whether our $AC^2$ is the minimal or the maximal possible value of $AC^2$.</p><p>Below we show a complete solution in which we also show that all possible values of $AC^2$ do indeed lie in the given interval.</p><p>Let $C_1$ be the point the ship would reach if it turned $45^\\circ$, and $C_2$ the point it would reach if it turned $60^\\circ$. Obviously, $C_1$ is the furthest possible point from $A$, and $C_2$ is the closest possible point to $A$.</p><p>Hence the interval of possible values for $AC^2$ is $[AC_2^2,AC_1^2]$.</p><p>[asy] unitsize(3mm); defaultpen(linewidth(.8pt)+fontsize(10pt)); dotfactor=4;  pair B=(0,0), A=(-10,0), C1=20*dir(45), C2=20*dir(60);  draw(A--B--C1); draw(A--C1,linetype(\"4 4\")); draw(A--B--C2); draw(A--C2,linetype(\"4 4\"));  draw( arc(A, length(C1-A), 0, 55 ), dotted ); draw( arc(A, length(C2-A), 0, 55 ), dotted ); draw( arc(B, C1, C2) );  dot(A); dot(B); dot(C1); dot(C2); label(\"$10$\",midpoint(A--B),S); label(\"$20$\",midpoint(B--C1),SE); label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C_1$\",C1,NE); label(\"$C_2$\",C2,N); [/asy]</p><p>We can find $AC_1^2$ and $AC_2^2$ as follows:</p><p>Let $D_1$ and $D_2$ be the feet of the heights from $C_1$ and $C_2$ onto $AB$. The angles in the triangle $BD_1C_1$ are $45^\\circ$, $45^\\circ$, and $90^\\circ$, hence $BD_1 = D_1C_1 = BC_1 / \\sqrt 2$. Similarly, the angles in the triangle $BD_2C_2$ are $30^\\circ$, $60^\\circ$, and $90^\\circ$, hence $BD_2 = BC_2 / 2$ and $D_2C_2 = BC_2 \\sqrt 3 / 2$.</p><p>[asy] unitsize(3mm); defaultpen(linewidth(.8pt)+fontsize(10pt)); dotfactor=4;  pair B=(0,0), A=(-10,0), C1=20*dir(45), C2=20*dir(60);  draw(A--B--C1); draw(A--C1,linetype(\"4 4\"));  dot(A); dot(B); dot(C1);  pair D1 = (C1.x,0); dot(D1); draw(B--D1--C1);  label(\"$10$\",midpoint(A--B),S); label(\"$20$\",midpoint(B--C1),SE); label(\"$20/\\sqrt 2$\",midpoint(B--D1),S); label(\"$20/\\sqrt 2$\",midpoint(D1--C1),E); label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C_1$\",C1,NE); label(\"$D_1$\",D1,S); [/asy]</p><p>[asy] unitsize(3mm); defaultpen(linewidth(.8pt)+fontsize(10pt)); dotfactor=4;  pair B=(0,0), A=(-10,0), C1=20*dir(45), C2=20*dir(60);  draw(A--B--C2); draw(A--C2,linetype(\"4 4\"));  dot(A); dot(B); dot(C2);  pair D2 = (C2.x,0); dot(D2); draw(B--D2--C2);  label(\"$10$\",midpoint(A--B),S); label(\"$20$\",midpoint(B--C2),SE); label(\"$10$\",midpoint(B--D2),S); label(\"$10\\sqrt 3$\",midpoint(D2--C2),E); label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C_2$\",C2,NE); label(\"$D_2$\",D2,S); [/asy]</p><p>Hence we get:</p><p>\\[AC_2^2 = AD_2^2 + D_2C_2^2 = 20^2 + (10\\sqrt 3)^2 = 400 + 300 = 700\\]</p><p>\\[AC_1^2 = AD_1^2 + D_1C_1^2 = (10 + 20/\\sqrt 2)^2 + (20\\sqrt 2)^2 = 100 + 400/\\sqrt 2 + 200 + 200 = 500 + 200\\sqrt 2 < 500 + 200\\cdot 1.5 = 800\\]</p><p>Therefore for any valid $C$ the value $AC^2$ is surely in the interval $\\boxed{ \\textbf{(D)}[700,800] }$.</p><p>From the law of cosines, $500-400\\cos120^\\circ<AC^2<500-400\\cos135^\\circ\\implies700<AC^2<500+200\\sqrt{2}$. This is essentially the same solution as above. The answer is $\\boxed{\\textbf{(D)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
       ]
     },
     {
       "id": "amc_2009_12a_14",
       "question": "<p>A triangle has vertices $(0,0)$, $(1,1)$, and $(6m,0)$, and the line $y = mx$ divides the triangle into two triangles of equal area. What is the sum of all possible values of $m$?</p>",
       "solutions": [
-        "<p>Let's label the three points as $A=(0,0)$, $B=(1,1)$, and $C=(6m,0)$.</p><p>Clearly, whenever the line $y=mx$ intersects the inside of the triangle, it will intersect the side $BC$. Let $D$ be the point of intersection. </p><p>The triangles $ABD$ and $ACD$ have the same height, which is the distance between the point $A$ and the line $BC$.Hence they have equal areas if and only if $D$ is the midpoint of $BC$.</p><p>The midpoint of the segment $BC$ has coordinates $\\left( \\frac{6m+1}2, \\frac 12 \\right)$. This point lies on the line $y=mx$ if and only if $\\frac 12 = m \\cdot \\frac{6m+1}2$. This simplifies to $6m^2 + m - 1 = 0$. Using Vieta's formulas, we find that the sum of the roots is $\\boxed{\\textbf{(B)} - \\!\\frac {1}{6}}$.</p><p><br/>For illustration, below are pictures of the situation for $m=1.5$, $m=0.5$, $m=1/3$, and $m=-1/2$.</p><p>[asy] unitsize(1cm); defaultpen(0.8); real m=1.5; draw( (0,0)--(1,1)--(6*m,0)--cycle ); draw( ((-0.5)*(1,m)) -- ((1.5)*(1,m)), dashed ); label(\"$A$\",(0,0),NW); label(\"$B$\",(1,1),NE); label(\"$C$\",(6*m,0),E); [/asy]</p><p>[asy] unitsize(2cm); defaultpen(0.8); real m=0.5; draw( (0,0)--(1,1)--(6*m,0)--cycle ); draw( ((-1)*(1,m)) -- (3*(1,m)), dashed ); label(\"$A$\",(0,0),NW); label(\"$B$\",(1,1),N); label(\"$C$\",(6*m,0),E); pair D = intersectionpoint( (1,1)--(6*m,0), ((-1)*(1,m)) -- (3*(1,m)) ); dot(D); label(\"$D$\",D,S); [/asy]</p><p>[asy] unitsize(2cm); defaultpen(0.8); real m=1/3; draw( (0,0)--(1,1)--(6*m,0)--cycle ); draw( ((-1)*(1,m)) -- (3*(1,m)), dashed ); label(\"$A$\",(0,0),NW); label(\"$B$\",(1,1),N); label(\"$C$\",(6*m,0),E); pair D = intersectionpoint( (1,1)--(6*m,0), ((-1)*(1,m)) -- (3*(1,m)) ); dot(D); label(\"$D$\",D,S); [/asy]</p><p><br/>[asy] unitsize(2cm); defaultpen(0.8); real m=-1/2; draw( (0,0)--(1,1)--(6*m,0)--cycle ); draw( ((-2)*(1,m)) -- (1*(1,m)), dashed ); label(\"$A$\",(0,0),S); label(\"$B$\",(1,1),NE); label(\"$C$\",(6*m,0),W); pair D = intersectionpoint( (1,1)--(6*m,0), ((-1)*(1,m)) -- (3*(1,m)) ); dot(D); label(\"$D$\",D,S); [/asy]</p><p>Note\u00a0: In contests when you get problems like these, your AOPS knowledge will not be enough. AOPs books are just the basic, always prep for more.</p>",
+        "<p>Let's label the three points as $A=(0,0)$, $B=(1,1)$, and $C=(6m,0)$.</p><p>Clearly, whenever the line $y=mx$ intersects the inside of the triangle, it will intersect the side $BC$. Let $D$ be the point of intersection. </p><p>The triangles $ABD$ and $ACD$ have the same height, which is the distance between the point $A$ and the line $BC$.Hence they have equal areas if and only if $D$ is the midpoint of $BC$.</p><p>The midpoint of the segment $BC$ has coordinates $\\left( \\frac{6m+1}2, \\frac 12 \\right)$. This point lies on the line $y=mx$ if and only if $\\frac 12 = m \\cdot \\frac{6m+1}2$. This simplifies to $6m^2 + m - 1 = 0$. Using Vieta's formulas, we find that the sum of the roots is $\\boxed{\\textbf{(B)} - \\!\\frac {1}{6}}$.</p><p><br/>For illustration, below are pictures of the situation for $m=1.5$, $m=0.5$, $m=1/3$, and $m=-1/2$.</p><p>[asy] unitsize(1cm); defaultpen(0.8); real m=1.5; draw( (0,0)--(1,1)--(6*m,0)--cycle ); draw( ((-0.5)*(1,m)) -- ((1.5)*(1,m)), dashed ); label(\"$A$\",(0,0),NW); label(\"$B$\",(1,1),NE); label(\"$C$\",(6*m,0),E); [/asy]</p><p>[asy] unitsize(2cm); defaultpen(0.8); real m=0.5; draw( (0,0)--(1,1)--(6*m,0)--cycle ); draw( ((-1)*(1,m)) -- (3*(1,m)), dashed ); label(\"$A$\",(0,0),NW); label(\"$B$\",(1,1),N); label(\"$C$\",(6*m,0),E); pair D = intersectionpoint( (1,1)--(6*m,0), ((-1)*(1,m)) -- (3*(1,m)) ); dot(D); label(\"$D$\",D,S); [/asy]</p><p>[asy] unitsize(2cm); defaultpen(0.8); real m=1/3; draw( (0,0)--(1,1)--(6*m,0)--cycle ); draw( ((-1)*(1,m)) -- (3*(1,m)), dashed ); label(\"$A$\",(0,0),NW); label(\"$B$\",(1,1),N); label(\"$C$\",(6*m,0),E); pair D = intersectionpoint( (1,1)--(6*m,0), ((-1)*(1,m)) -- (3*(1,m)) ); dot(D); label(\"$D$\",D,S); [/asy]</p><p><br/>[asy] unitsize(2cm); defaultpen(0.8); real m=-1/2; draw( (0,0)--(1,1)--(6*m,0)--cycle ); draw( ((-2)*(1,m)) -- (1*(1,m)), dashed ); label(\"$A$\",(0,0),S); label(\"$B$\",(1,1),NE); label(\"$C$\",(6*m,0),W); pair D = intersectionpoint( (1,1)--(6*m,0), ((-1)*(1,m)) -- (3*(1,m)) ); dot(D); label(\"$D$\",D,S); [/asy]</p><p>Note : In contests when you get problems like these, your AOPS knowledge will not be enough. AOPs books are just the basic, always prep for more.</p>",
         "<p>The line must pass through the triangle's centroid, since the line divides the triangle in half. The coordinates of the centroid are found by averaging those of the vertices. The slope of the line from the origin through the centroid is thus $\\frac{\\frac{1}{3}}{\\frac{1+6m}{3}}$, which is equal to $m$.</p><p>$\\frac{\\frac{1}{3}}{\\frac{1+6m}{3}}=m$</p><p>$\\frac{1}{3}=m\\left(\\frac{1+6m}{3}\\right)$</p><p>$1=m(1+6m)$</p><p>$6m^2+m-1=0$</p><p>Using Vieta's Formulas, the sum of the possible values of $m$ is $\\boxed{\\textbf{(B)}\\; -\\frac{1}{6}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -120,6 +204,12 @@
         "<p>We know that $i^x$ cycles every $4$ powers so we group the sum in $4$s. \\[i+2i^2+3i^3+4i^4=2-2i\\]\\[5i^5+6i^6+7i^7+8i^8=2-2i\\]</p><p>We can postulate that every group of $4$ is equal to $2-2i$.For 24 groups we thus, get $48-48i$ as our sum. We know the solution must lie nearThe next term is the $24*4+1=97$th term. This term is equal to $97i$ (first in a group of $4$ so $i^{97}=i$) and our sum is now $48+49i$ so $n=97\\Rightarrow\\boxed{\\mathbf{D}}$ is our answer</p>",
         "<p>Obviously, even powers of $i$ are real and odd powers of $i$ are imaginary. Hence the real part of the sum is $2i^2 + 4i^4 + 6i^6 + \\ldots$, and the imaginary part is $i + 3i^3 + 5i^5 + \\cdots$.</p><p>Let's take a look at the real part first. We have $i^2=-1$, hence the real part simplifies to $-2+4-6+8-10+\\cdots$.If there were an odd number of terms, we could pair them as follows: $-2 + (4-6) + (8-10) + \\cdots$, hence the result would be negative. As we need the real part to be $48$, we must have an even number of terms. If we have an even number of terms, we can pair them as $(-2+4) + (-6+8) + \\cdots$. Each parenthesis is equal to $2$, thus there are $24$ of them, and the last value used is $96$. This happens for $n=96$ and $n=97$. As $n=96$ is not present as an option, we may conclude that the answer is $\\boxed{97}$.</p><p>In a complete solution, we should now verify which of $n=96$ and $n=97$ will give us the correct imaginary part.</p><p>We can rewrite the imaginary part as follows: $i + 3i^3 + 5i^5 + \\cdots = i(1 + 3i^2 + 5i^4 + \\cdots) = i(1 - 3 + 5 - \\cdots)$. We need to obtain $(1 - 3 + 5 - \\cdots) = 49$. Once again we can repeat the same reasoning: If the number of terms were even, the left hand side would be negative, thus the number of terms is odd. The left hand side can then be rewritten as $1 + (-3+5) + (-7+9) + \\cdots$. We need $24$ parentheses, therefore the last value used is $97$. This happens when $n=97$ or $n=98$, and we are done.</p>",
         "<p>Some may know the equation:</p><p>\\[\\sum_{k=1}^{n}kr^{k-1}=\\frac{1-(n+1)r^n+nr^{n+1}}{(1-r)^2}\\]</p><p>(For those curious, this comes from differentiating the equation for finite geometric sums)</p><p>Using this equation, we have</p><p>\\[48+49i=i\\frac{1-(n+1)i^n+ni^{n+1}}{(1-i)^2}\\]\\[=\\frac{1-(n+1)i^n+ni^{n+1}}{-2}\\]\\[=-\\frac{1}{2}+\\frac{(n+1)i^n}{2}-\\frac{ni^{n+1}}{2}\\]</p><p>Since the imaginary and the real part must be positive, we know that $i^{n+1}=-1$ or $i^{n+1}=-i$. By the same line of reason, $i^{n}=1,i$. This only works for $n\\equiv 1 \\mod 4$. Therefore, we have:</p><p>\\[\\frac{-1+n}{2}+\\frac{(n+1)i}{2}=48+49i\\]</p><p>Solving either the real or imaginary part gives $\\boxed{\\mathbf{(D) }97}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "complex_numbers"
+        }
       ]
     },
     {
@@ -127,6 +217,12 @@
       "question": "<p>A circle with center $C$ is tangent to the positive $x$ and $y$-axes and externally tangent to the circle centered at $(3,0)$ with radius $1$. What is the sum of all possible radii of the circle with center $C$?</p>",
       "solutions": [
         "<p>Let $r$ be the radius of our circle. For it to be tangent to the positive $x$ and $y$ axes, we must have $C=(r,r)$. For the circle to be externally tangent to the circle centered at $(3,0)$ with radius $1$, the distance between $C$ and $(3,0)$ must be exactly $r+1$.</p><p>By the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> the distance between $(r,r)$ and $(3,0)$ is $\\sqrt{ (r-3)^2 + r^2 }$, hence we get the equation $(r-3)^2 + r^2 = (r+1)^2$.</p><p>Simplifying, we obtain $r^2 - 8r + 8 = 0$. By <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\">Vieta's formulas</a> the sum of the two roots of this equation is $\\boxed{8}$.</p><p>(We should actually solve for $r$ to verify that there are two distinct positive roots. In this case we get $r=4\\pm 2\\sqrt 2$. This is generally a good rule of thumb, but is not necessary as all of the available answers are integers, and the equation obviously doesn't factor as integers. You can also tell that there are two positive roots based on the visual interpretation.)</p><p>[asy] unitsize(0.5cm); defaultpen(0.8); filldraw( Circle( (3,0), 1 ), lightgray, black ); draw( (0,0) -- (15,0), Arrow ); draw( (0,0) -- (0,15), Arrow ); draw( (0,0) -- (15,15), dashed ); real r1 = 4 - 2*sqrt(2), r2 = 4 + 2*sqrt(2); pair S1=(r1,r1), S2=(r2,r2); dot(S1); dot(S2); dot((3,0)); draw( Circle(S1,r1) ); draw( Circle(S2,r2) ); [/asy]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -136,6 +232,12 @@
         "<p>Using the formula for the sum of a geometric series we get that the sums of the given two sequences are $\\frac a{1-r_1}$ and $\\frac a{1-r_2}$. </p><p>Hence we have $\\frac a{1-r_1} = r_1$ and $\\frac a{1-r_2} = r_2$.This can be rewritten as $r_1(1-r_1) = r_2(1-r_2) = a$. </p><p>As we are given that $r_1$ and $r_2$ are distinct, these must be precisely the two roots of the equation $x^2 - x + a = 0$.</p><p>Using <a class=\"mw-redirect\" href=\"/wiki/index.php/Vieta%27s_formulas\" title=\"Vieta's formulas\">Vieta's formulas</a> we get that the sum of these two roots is $\\boxed{1}$.</p><p><br/></p>",
         "<p>Using the previous solution we reach the equality $r_1(1-r_1) = r_2(1-r_2)$.</p><p>Obviously, since $r_1 \\neq r_2$, then $r_1 = 1 - r_2$ so $r_1 + r_2 = 1$.</p><p><br/>-Vignesh Peddi</p>",
         "<p>We basically have two infinite geometric series whose sum is equivalent to the common ratio. Let us have a geometric series: $b, br, br^2.....$. </p><p>The sum is: $\\frac{b}{1-r} = r.$ Thus, $b = r-r^2$ and by Vieta's, the sum of the two possible values of $r$ ($r_1$ and $r_2$) is $1$.</p><p><br/></p><p>~conantwiz2023</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -148,6 +250,12 @@
         "<p>Similar to the other solutions, notice that $I_k$ can be written as $10^{k+2}+64 \\Rightarrow 2^{k+2}5^{k+2}+2^6$. Factoring out $2^6$ we see that</p><p>$I_k = 2^6(2^{k-4}5^{k+2}+1)$</p><p>Notice that for $k < 4$, $2^{k-4}$ will not be an integer, and will \"steal\" some $2$'s from the $2^6$. We don't want this to happen, since we want to maximize the exponent of $2$. We start by considering $k = 4$. Then</p><p>$I_k = 2^6(*5^6+1) \\Rightarrow 2^6(5^6+1)$</p><p>$5^6$ is an odd number; more specifically, it ends in $25$ (all powers of $5$ after $5^1$ end in $25$). Therefore the value in the parentheses will be some large number that ends in $26$. Considering the rules of divisibility, we find that $5^6+1$ is even, so it is divisible by $2$. Now our exponent of $2$ is at $7$. But the divisibility rule for $4$ is the last $2$ digits of the number must be divisible by $4$. We know the last digits: $26$, which is not divisible by $4$. Therefore $5^6 + 1$ is divisible by $2$, but not $4$. Testing more values of $k$, we find that for $k \\ge 5$, the last digit becomes $1$, which means it is not even divisible by $2$. Therefore the highest possible exponent of $2$ that we can reach is $7 \\Rightarrow \\boxed{\\text{B}}$.</p>",
         "<p>Let $m=k+2$. $v_2(10^m+2^6)=6$ if $m>6$ and $v_2(10^m+2^6)=m$ if $m<6$. However, if $m=6$, then $v_2(10^6+2^6)=v_2(2^6(5^6+1))=6+v_2(5^6+1)$. By LTE, $v_2(5^6-1)=v_2(5-1)+v_2(5+1)+v_2(6)-1=2+1+1-1=3$. Since $v_2(5^6-1)=3$, $v_2(5^6+1)$ must equal $1$. So, the answer is $6+1=7 \\Rightarrow \\boxed{\\text{B}}$</p>",
         "<p>Note that if $k<5$, then $I_k$ is not divisible by $64=2^6$. However, if $k=5$, then $1000064$ is divisible by $64$. So, we can write $I_k$ for $k=5$ as $I_5=64(1+15625)=2^6(1+15625)$. For $k=5$, we see that $I_5=2^6(1+15625)=2^6(15626)$, which is divisible by $2^7$, because there is already a $2^6$ and the $15626$ only adds one more factor of $2$ (the last two digits of $15626$, $26$, are not divisible by $4$). For $k>5$ or $k\\geq6$, there are $(k-5)$ zeroes trailing behind $15625$, giving $I_k=2^6(1+156250...0)$. $156250...0$ is clearly even if there is at least one zero. Then, adding the extra $1$ to the even $156250...0$ gives $156250...01$, which is odd. Thus, for $k>5$, $I_k=2^6(156250...01)$, which is only divisible by $2^6$. Therefore, the maximum value of $N(k)$ is $\\boxed{\\textbf{(B)} 7}$ when $k=5$.</p><p>Written by ChristianZhang</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
       ]
     },
     {
@@ -157,6 +265,12 @@
         "<p>In any regular polygon with side length $2$, consider the isosceles triangle formed by the center of the polygon $S$ and two consecutive vertices $X$ and $Y$. We are given that $XY=2$. Obviously $SX=SY=r$, where $r$ is the radius of the circumcircle. Let $T$ be the midpoint of $XY$. Then $XT=TY=1$, and $TS=\\rho$, where $\\rho$ is the radius of the incircle.</p><p>Applying the <a class=\"mw-redirect\" href=\"/wiki/index.php/Pythagorean_theorem\" title=\"Pythagorean theorem\">Pythagorean theorem</a> on the triangle $STX$, we get that $\\rho^2 + 1 = r^2$.</p><p>Then the area between the circumcircle and the incircle can be computed as $\\pi r^2 - \\pi \\rho^2 = \\pi r^2 - \\pi (r^2 - 1) = \\pi$.</p><p>Hence $A=\\pi$, $B=\\pi$, and therefore $\\boxed{\\textbf{(C) }A=B}$.</p>",
         "<p>Similar to the first solution, consider the isosceles triangle formed by each polygon. If you drop an altitude to the side of each polygon, you get in both polygons a right triangle with base of $1$. For both the pentagon and heptagon, the hypotenuse of these right triangles is the radii of the larger circles and the apothems (the altitude we dropped to the side of each polygon) are the radii of the smaller circles. </p><p>Label the apothem of the pentagon $A_{1}$ and the apothem of the heptagon $A_{2}$. Label the hypotenuse in the pentagon $H_{1}$ and the hypotenuse in the heptagon $H_{2}$.</p><p>Now, finding the angles in the triangles and applying trig functions to find these radii, we get the following:</p><p>$A_{1}$ = $\\cot 36^\\circ$</p><p>$A_{2}$ = $\\cot \\frac {180}{7}^\\circ$</p><p>$H_{1}$ = $\\csc 36^\\circ$</p><p>$H_{2}$ = $\\csc \\frac {180}{7}^\\circ$</p><p>Now, the areas in between the circles are:</p><p>$\\text{Pentagon circles}$ = $\\pi((\\csc 36^\\circ)^2 - (\\cot 36^\\circ)^2)$</p><p>$\\text{Heptagon circles}$ = $\\pi((\\csc \\frac {180}{7}^\\circ)^2 - (\\cot \\frac {180}{7}^\\circ)^2)$</p><p>Note the trig identity $(\\cot\\theta)^2 +1 = (\\csc\\theta)^2$, from which we can easily get that $(\\csc\\theta)^2 - (\\cot\\theta)^2 = 1$</p><p>Thus, the area between the circles in both the heptagon and the pentagon are equivalent to $\\pi$, and therefore the answer is $\\boxed{\\textbf{(C) }A=B}$.</p>",
         "<p>Note that the answer choices all include powers of $5$ and $7$. This indicates that the answer must depend on the number of sides the two shapes have. </p><p>For simplicity, we solve the same problem with triangle and square instead of pentagon and heptagon. For the triangle setup, $A = \\left(\\frac{2}{\\sqrt{3}}\\right)^2 \\cdot \\pi - \\left(\\frac{1}{\\sqrt{3}}\\right)^2 \\cdot \\pi = \\pi.$ For the square setup, $B = \\left(\\sqrt{2}\\right)^2 \\cdot \\pi - \\left(1\\right)^2 \\cdot \\pi = \\pi.$</p><p>Since $A = B$ for the triangle-square case, it should be the same for the pentagon-heptagon case. Therefore, we choose $\\boxed{\\textbf{(C) } A=B }$.</p><p>~sirswagger21</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -167,6 +281,12 @@
         "<p>Using the sine area formula AREA= absinc/2 on triangles $AED$ and $BEC$, as $\\angle AED = \\angle BEC$, we see that </p><p>Since $\\angle AEB = \\angle DEC$, triangles $AEB$ and $DEC$ are similar. Their ratio is $\\frac {AB}{CD} = \\frac {3}{4}$. Since $AE + EC = 14$, we must have $EC = 8$, so $AE = 6\\ \\textbf{(E)}$.</p>",
         "<p>The easiest way for the areas of the triangles to be equal would be if they were congruent <a class=\"external autonumber\" href=\"https://artofproblemsolving.com/wiki/index.php/Constraints_Strategy\" rel=\"nofollow\">[1]</a>. A way for that to work would be if $ABCD$ were simply an isosceles trapezoid! Since $AC = 14$ and $AE:EC = 3:4$ (look at the side lengths and you'll know why!), $\\boxed{AE = 6}$</p>",
         "<p>Using the fact that $[AED] = [BEC]$ and the fact that $\\triangle AEB \\sim \\triangle EDC$ (which should be trivial given the two equal triangles) we have that</p><p>\\[\\frac{AE}{DC} = \\frac{BE}{EC} = \\frac{9}{12}\\]</p><p>We know that $DC=EC,$ so we have</p><p>\\[\\frac{AE}{EC} = \\frac{BE}{EC} = \\frac{3}{4}\\]</p><p>Thus </p><p>\\[\\frac{AE}{EC} = \\frac{3}{4}\\]</p><p>But $EC = 14 - AE$ so we have</p><p>\\[\\frac{AE}{14 - AE} = \\frac{3}{4}\\]</p><p>Simplifying gives $AE = \\boxed{6}.$</p><p>~mathboy282</p><p>The two triangles that are equal in area imply that $AB$ is parallel to $DC$ which implies that $\\angle{EAB} = \\angle{CDE}$ and $\\angle{EBA} = \\angle{DCE}.$ Furthermore, since $\\angle{AEB} = \\angle{DEC}$ (vertical angles). By AAA similarity, $\\triangle AEB \\sim \\triangle EDC.$</p><p>~mathboy282</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -174,6 +294,12 @@
       "question": "<p>Let $p(x) = x^3 + ax^2 + bx + c$, where $a$, $b$, and $c$ are complex numbers. Suppose that</p><p>What is the number of nonreal zeros of $x^{12} + ax^8 + bx^4 + c$?</p>",
       "solutions": [
         "<p>From the three zeroes, we have $p(x) = (x - (2009 + 9002\\pi i))(x - 2009)(x - 9002)$.</p><p>Then $p(x^4) = (x^4 - (2009 + 9002\\pi i))(x^4 - 2009)(x^4 - 9002)=x^{12}+ax^8+bx^4+c$.</p><p>Let's do each factor case by case:</p><ul><li>$x^4 - (2009 + 9002\\pi i) = 0$: Clearly, all the fourth roots are going to be complex.</li><li>$x^4 - 2009 = 0$: The real roots are $\\pm \\sqrt [4]{2009}$, and there are two complex roots.</li><li>$x^4 - 9002 = 0$: The real roots are $\\pm \\sqrt [4]{9002}$, and there are two complex roots.</li></ul><p>So the answer is $4 + 2 + 2 = 8\\ \\mathbf{(C)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "complex_numbers"
+        }
       ]
     },
     {
@@ -183,6 +309,12 @@
         "<p>Firstly, note that the intersection of the plane must be a hexagon. Consider the net of the octahedron. Notice that the hexagon becomes a line on the net. Also, notice that, given the parallel to the faces conditions, the line must be parallel to precisely $\\frac{1}{3}$ of the sides of the net. Now, notice that, through symmetry, 2 of the hexagon's vertexes lie on the midpoint of the side of the \"square\" in the octahedron. In the net, the condition gives you that one of the intersections of the line with the net have to be on the midpoint of the side. However, if one is on the midpoint, because of the parallel conditions, all of the vertices are on the midpoint of a side. Thus, we have a regular hexagon with a side length of the midline of an equilateral triangle with side length 1, which is $\\frac{1}{2}$. Thus, the answer is$\\frac {3\\sqrt {3}}{8}$, and $a + b + c = 14\\ \\mathbf{(E)}$.</p><p>(Can somebody clarify this and provide a diagram?)</p><p>The plane cuts the octahedron into two congruent solids, which allows us to consider only the cut through the top half (a square pyramid). Because the cut is parallel to one side of the pyramid and must create two congruent solids, we can see that it must take the shape of a trapezoid with right, left, and top sides being 0.5 and a bottom side of 1. This is equivalent to a unit equilateral triangle with the tip cut off at the midpoint. Accordingly, the area of the polygon is $2 \\cdot \\frac{1}{2} \\cdot \\frac{\\sqrt{3}}{2} \\cdot \\frac{3}{4}$ or $\\frac{3\\sqrt{3}}{8}$, and $a + b + c = 14$.</p>",
         "<p>Firstly, note that the intersection of the plane must be a hexagon. Consider the net of the octahedron. Notice that the hexagon becomes a line on the net. Also, notice that, given the parallel to the faces conditions, the line must be parallel to precisely $\\frac{1}{3}$ of the sides of the net. Now, notice that, through symmetry, 2 of the hexagon's vertexes lie on the midpoint of the side of the \"square\" in the octahedron. In the net, the condition gives you that one of the intersections of the line with the net have to be on the midpoint of the side. However, if one is on the midpoint, because of the parallel conditions, all of the vertices are on the midpoint of a side. Thus, we have a regular hexagon with a side length of the midline of an equilateral triangle with side length 1, which is $\\frac{1}{2}$. Thus, the answer is$\\frac {3\\sqrt {3}}{8}$, and $a + b + c = 14\\ \\mathbf{(E)}$.</p><p>(Can somebody clarify this and provide a diagram?)</p>",
         "<p>The plane cuts the octahedron into two congruent solids, which allows us to consider only the cut through the top half (a square pyramid). Because the cut is parallel to one side of the pyramid and must create two congruent solids, we can see that it must take the shape of a trapezoid with right, left, and top sides being 0.5 and a bottom side of 1. This is equivalent to a unit equilateral triangle with the tip cut off at the midpoint. Accordingly, the area of the polygon is $2 \\cdot \\frac{1}{2} \\cdot \\frac{\\sqrt{3}}{2} \\cdot \\frac{3}{4}$ or $\\frac{3\\sqrt{3}}{8}$, and $a + b + c = 14$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry"
+        }
       ]
     },
     {
@@ -190,14 +322,26 @@
       "question": "<p><a href=\"/wiki/index.php/Function\" title=\"Function\">Functions</a> $f$ and $g$ are <a class=\"mw-redirect\" href=\"/wiki/index.php/Quadratic\" title=\"Quadratic\">quadratic</a>, $g(x) = - f(100 - x)$, and the graph of $g$ contains the <a href=\"/wiki/index.php/Vertex\" title=\"Vertex\">vertex</a> of the graph of $f$. The four $x$-intercepts on the two graphs have $x$-coordinates $x_1$, $x_2$, $x_3$, and $x_4$, in increasing order, and $x_3 - x_2 = 150$. Then $x_4 - x_1 = m + n\\sqrt p$, where $m$, $n$, and $p$ are positive integers, and $p$ is not divisible by the square of any prime. What is $m + n + p$?</p>",
       "solutions": [
         "<p>The two quadratics are $180^{\\circ}$ rotations of each other about $(50,0)$. Since we are only dealing with differences of roots, we can translate them to be symmetric about $(0,0)$. Now $x_3 = - x_2 = 75$ and $x_4 = - x_1$. Say our translated versions of $f$ and $g$ are $p$ and $q$, respectively, so that $p(x) = - q( - x)$. Let $x_3 = 75$ be a root of $p$ and $x_2 = - 75$ a root of $q$ by symmetry. Note that since they each contain each other's vertex, $x_1$, $x_2$, $x_3$, and $x_4$ must be roots of alternating polynomials, so $x_1$ is a root of $p$ and $x_4$ a root of $q$</p><p>The vertex of $p(x)$ is half the sum of its roots, or $\\frac {75 + x_1}{2}$. We are told that the vertex of one quadratic lies on the other, so</p><p>Let $x_1 = 75u$ and divide through by $75^2$, since it will drastically simplify computations. We know $u < - 1$ and that $(u - 1)^2 = (3u + 1)(u + 3)$, or</p><p>So $u = \\frac { - 6\\pm\\sqrt {32}}{2} = - 3\\pm2\\sqrt2$. Since $u < - 1$, $u = - 3 - 2\\sqrt2$. </p><p>The answer is $x_4 - x_1 = (-x_1) - x_1 = - 150u = 450 + 300\\sqrt {2}$, and $450 + 300 + 2 = 752\\ \\mathbf{(D)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
       ]
     },
     {
       "id": "amc_2009_12a_24",
       "question": "<p>The <i>tower function of twos</i> is defined recursively as follows: $T(1) = 2$ and $T(n + 1) = 2^{T(n)}$ for $n\\ge1$. Let $A = (T(2009))^{T(2009)}$ and $B = (T(2009))^A$. What is the largest integer $k$ for which \\[\\underbrace{\\log_2\\log_2\\log_2\\ldots\\log_2B}_{k\\text{ times}}\\] is defined?</p>",
       "solutions": [
-        "<p>Testing the first two (or three) positive integers instead of 2009, $k$ seems to always be 4 more. Put E and go on to tackle #25\u00a0:)~ dolphin7</p>",
+        "<p>Testing the first two (or three) positive integers instead of 2009, $k$ seems to always be 4 more. Put E and go on to tackle #25 :)~ dolphin7</p>",
         "<p>We just look at the last three logarithms for the moment, and use the fact that $\\log_2 T(k) = T(k - 1)$. We wish to find:\\begin{align*} \\log_2\\log_2\\log_2\\left({T(2009)^{\\left({T(2009)}^{T(2009)}\\right)}}\\right) &= \\log_2(T(2009)\\log_2(T(2009)\\log_2 T(2009)))\\\\ &= \\log_2(T(2009)\\log_2(T(2009)T(2008)))\\\\ &= \\log_2 \\{ T(2009) [ T(2008) + T(2007) ] \\} \\\\ \\end{align*}</p><p><br/>Now we realize that $T(n - 1)$ is much smaller than $T(n)$. So we approximate this, remembering we have rounded down, as:</p><p>We have used $3$ logarithms so far. Applying $2007$ more to the left of our expression, we get $T(1) = 2$. Then we can apply the logarithm $2$ more times, until we get to $0$. So our answer is approximately $3 + 2007 + 2 = 2012$. But we rounded down, so that means that after $2012$ logarithms we get a number slightly greater than $0$, so we can apply logarithms one more time. We can be sure it is small enough so that the logarithm can only be applied $1$ more time since $2012 + 1 = 2013$ is the largest answer choice. So the answer is $\\mathbf{(E)}$.</p><p>EDIT: Why use answer choices? @above solution should explain at the end WHY they can be sure.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
       ]
     },
     {
@@ -206,6 +350,12 @@
       "solutions": [
         "<p>Consider another sequence $\\{\\theta_1, \\theta_2, \\theta_3...\\}$ such that $a_n = \\tan{\\theta_n}$, and $0 \\leq \\theta_n < 180$.</p><p>The given recurrence becomes</p><p>It follows that $\\theta_{n + 2} \\equiv \\theta_{n + 1} + \\theta_{n} \\pmod{180}$. Since $\\theta_1 = 45, \\theta_2 = 30$, all terms in the sequence $\\{\\theta_1, \\theta_2, \\theta_3...\\}$ will be a multiple of $15$.</p><p>Now consider another sequence $\\{b_1, b_2, b_3...\\}$ such that $b_n = \\theta_n/15$, and $0 \\leq b_n < 12$. The sequence $b_n$ satisfies $b_1 = 3, b_2 = 2, b_{n + 2} \\equiv b_{n + 1} + b_n \\pmod{12}$.</p><p>As the number of possible consecutive two terms is finite, we know that the sequence $b_n$ is periodic. Write out the first few terms of the sequence until it starts to repeat.</p><p>$\\{b_n\\} = \\{3,2,5,7,0,7,7,2,9,11,8,7,3,10,1,11,0,11,11,10,9,7,4,11,3,2,5,7,...\\}$</p><p>Note that $b_{25} = b_1 = 3$ and $b_{26} = b_2 = 2$. Thus $\\{b_n\\}$ has a period of $24$: $b_{n + 24} = b_n$.</p><p>It follows that $b_{2009} = b_{17} = 0$ and $\\theta_{2009} = 15 b_{2009} = 0$. Thus $a_{2009} = \\tan{\\theta_{2009}} = \\tan{0} = 0.$</p><p>Our answer is $|a_{2009}| = \\boxed{\\textbf{(A)}\\ 0}$.</p>",
         "<p>First, some intuition. The given recurrence relation: $a_{n + 2} = \\frac {a_n + a_{n + 1}}{1 - a_na_{n + 1}}$ looks much like the tangent addition formula. So, we let $a_n=\\tan{\\theta_n}$. Then, we get:\\[\\tan{\\theta_n}=\\tan{(\\theta_{n-1}+\\theta_{n-2})}\\]This gives us:\\[\\theta_n \\equiv \\theta_{n-1}+\\theta_{n-2} \\pmod{180}\\]Now, observe that \\[\\theta_1=45\\]\\[\\theta_2=30\\]We know that this sequence of values for $\\theta_n$ will repeat eventually because it is mod $180$.It is just a matter of when, so we start bashing:</p><p>\\[\\theta_3=75\\]\\[\\theta_4=105\\]\\[\\theta_5=0\\]\\[\\theta_6=105\\]\\[\\theta_7=105\\]\\[\\theta_8=30\\]\\[\\theta_9=135\\]\\[\\theta_{10}=165\\]\\[\\theta_{11}=120\\]\\[\\theta_{12}=105\\]\\[\\theta_{13}=45\\]\\[\\theta_{14}=150\\]\\[\\theta_{15}=15\\]\\[\\theta_{16}=165\\]\\[\\theta_{17}=0\\]\\[\\theta_{18}=165\\]\\[\\theta_{19}=165\\]\\[\\theta_{20}=150\\]\\[\\theta_{21}=135\\]\\[\\theta_{22}=105\\]\\[\\theta_{23}=60\\]\\[\\theta_{24}=165\\]\\[\\theta_{25}=45\\]\\[\\theta_{26}=30\\]And there is the repetition. So, this series has a period of 24. $2009 \\equiv 17 \\pmod{24}$, so $|a_{2009}|=|\\tan{\\theta_{17}}|=|\\tan{0}|=|0|= \\boxed{\\textbf{(A)}\\ 0}$ ~Firebolt360</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
       ]
     },
     {
@@ -215,6 +365,12 @@
         "<p>If Jane bought one more bagel but one fewer muffin, then her total cost for the week would increase by $25$ cents.</p><p>If Jane bought $1$ bagel, then she bought $4$ muffins. Her total cost for the week would be $75\\cdot1+50\\cdot4=275$ cents, or $2.75$ dollars. Clearly, she bought one more bagel but one fewer muffin at a total cost of $3.00$ dollars. Therefore, she bought $\\boxed{\\textbf{(B) } 2}$ bagels.</p><p>~MRENTHUSIASM</p>",
         "<ul><li>If Jane bought $1$ bagel, then she bought $4$ muffins. Her total cost for the week would be $75\\cdot1+50\\cdot4=275$ cents, or $2.75$ dollars. So, $\\textbf{(A)}$ is incorrect.</li></ul><ul><li>If Jane bought $2$ bagels, then she bought $3$ muffins. Her total cost for the week would be $75\\cdot2+50\\cdot3=300$ cents, or $3.00$ dollars. So, $\\boxed{\\textbf{(B) } 2}$ is correct.</li></ul><p>For completeness, we will check $\\textbf{(C)},\\textbf{(D)},$ and $\\textbf{(E)}$ too. If you decide to use this solution on the real test, then you will not need to do that, as you want to save more time.</p><ul><li>If Jane bought $3$ bagels, then she bought $2$ muffins. Her total cost for the week would be $75\\cdot3+50\\cdot2=325$ cents, or $3.25$ dollars. So, $\\textbf{(C)}$ is incorrect.</li></ul><ul><li>If Jane bought $4$ bagels, then she bought $1$ muffin. Her total cost for the week would be $75\\cdot4+50\\cdot1=350$ cents, or $3.50$ dollars. So, $\\textbf{(D)}$ is incorrect.</li></ul><ul><li>If Jane bought $5$ bagels, then she bought $0$ muffins. Her total cost for the week would be $75\\cdot5+50\\cdot0=375$ cents, or $3.75$ dollars. So, $\\textbf{(E)}$ is incorrect.</li></ul><p>~MRENTHUSIASM</p>",
         "<p>In this solution, all amounts are in the unit of cents.</p><p>Note that the amount spent on muffins must end in either $00$ or $50,$ and the amount spent on bagels must end in one of $00,25,50,$ or $75.$ Furthermore, the number of muffins bought and the number of bagels bought must sum to $5.$</p><p>We have two possible cases:</p><p>~MRENTHUSIASM</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "diophantine_equations"
+        }
       ]
     },
     {
@@ -222,6 +378,12 @@
       "question": "<p>Paula the painter had just enough paint for 30 identically sized rooms. Unfortunately, on the way to work, three cans of paint fell off her truck, so she had only enough paint for 25 rooms. How many cans of paint did she use for the 25 rooms?</p>",
       "solutions": [
         "<p>Losing three cans of paint corresponds to being able to paint five fewer rooms. So $\\frac 35 \\cdot 25 = \\boxed{15}$. The answer is $\\mathrm{(C)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -229,6 +391,12 @@
       "question": "<p>Twenty percent less than 60 is one-third more than what number?</p>",
       "solutions": [
         "<p>Twenty percent less than 60 is $\\frac 45 \\cdot 60 = 48$. One-third more than a number <i>n</i> is $\\frac 43n$. Therefore $\\frac 43n = 48$ and the number is $\\boxed {36}$. The answer is $\\mathrm{(D)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -237,6 +405,12 @@
       "solutions": [
         "<p>Each triangle has leg length $\\frac 12 \\cdot (25 - 15) = 5$ meters and area $\\frac 12 \\cdot 5^2 = \\frac {25}{2}$ square meters. Thus the flower beds have a total area of $25$ square meters. The entire yard has length $25$ m and width $5$ m, so its area is $125$ square meters. The fraction of the yard occupied by the flower beds is $\\frac {25}{125} = \\boxed{\\frac15}$. The answer is $\\mathrm{(C)}$.</p>",
         "<p>The length of each triangle is $\\frac{25-15}{2}=5$ meters. By translating then rotating the top right triangle so that it forms a square with the top left triangle, the ratio we desire is literally the ratio of the $5*5=25$ and the total area, which is $5*25=125$. Alternatively we can use side length ratios, but each way we get $\\frac{25}{125}=\\frac{1}{5}$. Select $\\mathrm{(C)}$.</p><p>~hastapasta</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -244,6 +418,12 @@
       "question": "<p>Kiana has two older twin brothers. The product of their three ages is 128. What is the sum of their three ages?</p>",
       "solutions": [
         "<p>The age of each person is a factor of $128 = 2^7$. So the twins could be $2^0 = 1, 2^1 = 2, 2^2 = 4, 2^3 = 8$ years of age and, consequently Kiana could be $128$, $32$, $8$, or $2$ years old, respectively. Because Kiana is younger than her brothers, she must be $2$ years old. So the sum of their ages is $2 + 8 + 8 = \\boxed{18}$. The answer is $\\mathrm{(D)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
       ]
     },
     {
@@ -251,6 +431,12 @@
       "question": "<p>By inserting parentheses, it is possible to give the expression\\[2\\times3 + 4\\times5\\]several values. How many different values can be obtained?</p>",
       "solutions": [
         "<p>The three operations can be performed on any of $3! = 6$ orders. However, if the addition is performed either first or last, then multiplying in either order produces the same result. So at most four distinct values can be obtained. It is easy to check that the values of the four expressions\\begin{align*} (2\\times3) + (4\\times5) &= 26,\\\\ (2\\times3 + 4)\\times5 &= 50,\\\\ 2\\times(3 + 4\\times5) &= 46,\\\\ 2\\times(3 + 4)\\times5 &= 70 \\end{align*}are in fact all distinct. So the answer is $\\boxed{4}$, which is choice $\\mathrm{(C)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -259,6 +445,12 @@
       "solutions": [
         "<p>Let $p$ be the price at the beginning of January. The price at the end of March was $(1.2)(0.8)(1.25)p = 1.2p.$ Because the price at the end of April was $p$, the price decreased by $0.2p$ during April, and the percent decrease was\\[x = 100 \\cdot \\frac{0.2p}{1.2p} = \\frac {100}{6} \\approx 16.7.\\]So to the nearest integer $x$ is $\\boxed{17}$. The answer is $\\mathrm{(B)}$.</p>",
         "<p>Without loss of generality, we can assume the price at the beginning of January was $$100$. </p><p>When it rose by $20\\%$, it became $$120$, when it fell by $20\\%$, it became $$96$, and when it rose by $25\\%$, it became $$120$ again. </p><p>In order for the price at the end of April to be the same as it was at the beginning of January ($$100$), the price must decrease by $$20$. </p><p>20 is $\\frac{1}{6}th$ of 120, and $\\frac{1}{6} \\approx 0.167 \\approx 17\\%$ So to the nearest integer, $x = 17$ and the answer is $\\boxed{\\textbf{(B) } 17}$. ~azc1027</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -271,6 +463,12 @@
         "<p>We are looking for an expression of the form $xa + yb$.</p><p>We must have $x+y=1$, as the desired result contains exactly one bucket. Also, we must have $\\frac 23 x + \\frac 12 y = 1$, as the desired result contains exactly one bucket of water.</p><p>At this moment, it is easiest to check that only the options (A), (B), and (E) satisfy $x+y=1$, and out of these only (E) satisfies the second equation.</p><p>Alternatively, we can directly solve the system, getting $x=3$ and $y=-2$.</p>",
         "<p>Since $a$ is one bucket plus two-thirds of the total amount of water, and $b$ is one bucket plus one-half of the total amount of water, $a-b$ would equal $\\cancel{\\text{bucket}}+\\frac23\\cdot\\text{water}-(\\cancel{\\text{bucket}}+\\frac12\\cdot\\text{water})=\\frac16\\cdot\\text{water}$. Therefore, $a-b$ is one-sixth of the total mass of the water. Starting from $a$, we add two one-sixths of the total amount of the water to become full. Therefore, the full bucket of water is $a+2(a-b)=a+2a-2b=3a-2b\\Rightarrow\\textbf{(E)}$</p><p>-<a href=\"/wiki/index.php/User:Sweetmango77\" title=\"User:Sweetmango77\">SweetMango77</a></p>",
         "<p>WLOG let the bucket hold 6 units of water. Then b=4, a=3. Then test out all the answer choices to arrive at the answer choice (E)~PEKKA</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -282,6 +480,12 @@
         "<p>The base of the triangle is $AB = \\sqrt{3^2 + 3^2} = 3\\sqrt 2$. Its altitude is the distance between the point $A$ and the parallel line $x + y = 7$, which is $\\frac 4{\\sqrt 2} = 2\\sqrt 2$. Therefore its area is $\\frac 12 \\cdot 3\\sqrt 2 \\cdot 2\\sqrt 2 = \\boxed{6}$. The answer is $\\mathrm{(A)}$.</p><p>[asy] unitsize(0.75cm); defaultpen(0.8); pair A=(3,0), B=(0,3); draw ( (-1,0) -- (9,0), dashed ); draw ( (0,-1) -- (0,9), dashed ); dot(A); dot(B); draw(A--B); draw ( (-1,8) -- (8,-1) ); label( \"$A$\", A, S ); label( \"$B$\", B, W ); label( \"$3$\", A--(0,0), S ); label( \"$3$\", B--(0,0), W ); label( \"$x+y=7$\", (8,-1), SE ); pair C = intersectionpoint(A--(10,7),(7,0)--(0,7)); draw( A--C, dashed ); draw(rightanglemark(A,C,(7,0))); draw(rightanglemark(C,A,B)); label( \"$4$\", A--(7,0), S ); label( \"$3\\sqrt 2$\", 0.67*B+0.33*A, NE ); label( \"$\\frac 4{\\sqrt 2}$\", A--C, NW ); label( \"$\\frac 4{\\sqrt 2}$\", C--(7,0), NE ); [/asy]</p>",
         "<p>By Shoelace, our area is:\\[\\frac {1}{2} \\cdot |(3\\cdot 3 + 0 \\cdot y+ 0 \\cdot x)-(0*0+3(x+y))|.\\]We know $x+y=7$ so we get:\\[\\frac {1}{2} \\cdot |9-21|=\\boxed 6\\]</p>",
         "<p>WLOG, let the coordinates of $C$ be $(3,4)$ , or any coordinate, for that matter. Applying the shoelace formula, we get the area as $\\boxed 6$.</p><p>~coolmath2017</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -291,6 +495,12 @@
         "<p>The clock will display the incorrect time for the entire hours of $1, 10, 11$ and $12$. So the correct hour is displayed $\\frac 23$ of the time. The minutes will not display correctly whenever either the tens digit or the ones digit is a $1$, so the minutes that will not display correctly are $10, 11, 12, \\dots, 19$ and $01, 21, 31, 41,$ and $51$. This amounts to fifteen of the sixty possible minutes for any given hour. Hence the fraction of the day that the clock shows the correct time is $\\frac 23 \\cdot \\left(1 - \\frac {15}{60}\\right) = \\frac 23 \\cdot \\frac 34  = \\boxed{\\frac 12}$. The answer is $\\mathrm{(A)}$.</p><p>The required fraction is the number of correct times divided by the total times. There are 60 minutes in an hour and 12 hours on a clock, so there are 720 total times.</p><p>We count the correct times directly; let a correct time be $x:yz$, where $x$ is a number from 1 to 12 and $y$ and $z$ are digits, where $y<6$. There are 8 values of $x$ that will display the correct time: 2, 3, 4, 5, 6, 7, 8, and 9. There are five values of $y$ that will display the correct time: 0, 2, 3, 4, and 5. There are nine values of $z$ that will display the correct time: 0, 2, 3, 4, 5, 6, 7, 8, and 9. Therefore there are $8\\cdot 5\\cdot 9=40\\cdot 9=360$ correct times.</p><p>Therefore the required fraction is $\\frac{360}{720}=\\frac{1}{2}\\Rightarrow \\boxed{\\mathrm{(A)}}$.</p><p><br/></p>",
         "<p>The clock will display the incorrect time for the entire hours of $1, 10, 11$ and $12$. So the correct hour is displayed $\\frac 23$ of the time. The minutes will not display correctly whenever either the tens digit or the ones digit is a $1$, so the minutes that will not display correctly are $10, 11, 12, \\dots, 19$ and $01, 21, 31, 41,$ and $51$. This amounts to fifteen of the sixty possible minutes for any given hour. Hence the fraction of the day that the clock shows the correct time is $\\frac 23 \\cdot \\left(1 - \\frac {15}{60}\\right) = \\frac 23 \\cdot \\frac 34  = \\boxed{\\frac 12}$. The answer is $\\mathrm{(A)}$.</p>",
         "<p>The required fraction is the number of correct times divided by the total times. There are 60 minutes in an hour and 12 hours on a clock, so there are 720 total times.</p><p>We count the correct times directly; let a correct time be $x:yz$, where $x$ is a number from 1 to 12 and $y$ and $z$ are digits, where $y<6$. There are 8 values of $x$ that will display the correct time: 2, 3, 4, 5, 6, 7, 8, and 9. There are five values of $y$ that will display the correct time: 0, 2, 3, 4, and 5. There are nine values of $z$ that will display the correct time: 0, 2, 3, 4, 5, 6, 7, 8, and 9. Therefore there are $8\\cdot 5\\cdot 9=40\\cdot 9=360$ correct times.</p><p>Therefore the required fraction is $\\frac{360}{720}=\\frac{1}{2}\\Rightarrow \\boxed{\\mathrm{(A)}}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -300,6 +510,12 @@
         "<p>On Monday, day 1, the birds find $\\frac 14$ quart of millet in the feeder. On Tuesday they find\\[\\frac 14 + \\frac 34 \\cdot \\frac 14\\]quarts of millet. On Wednesday, day 3, they find\\[\\frac 14 + \\frac 34 \\cdot \\frac 14 + \\left(\\frac34\\right)^2 \\cdot \\frac 14\\]quarts of millet. The number of quarts of millet they find on day $n$ is\\[\\frac 14 + \\frac 34 \\cdot \\frac 14 + \\left(\\frac34\\right)^2 \\cdot \\frac 14 + \\cdots + \\left(\\frac 34\\right)^{n-1} \\cdot \\frac 14 = \\frac {(\\frac 14)(1 - (\\frac 34)^n)}{1 - \\frac 34} = 1 - \\left(\\frac 34\\right)^n .\\]The birds always find $\\frac 34$ quart of other seeds, so more than half the seeds are millet if $1 - \\left(\\frac 34\\right)^n > \\frac 34$, that is, when $\\left(\\frac 34\\right)^n < \\frac 14$. Because $\\left(\\frac 34\\right)^4 = \\frac {81}{256} > \\frac 14$ and $\\left(\\frac 34\\right)^5 = \\frac {243}{1024} < \\frac 14$, this will first occur on day $5$ which is $\\boxed {\\text{Friday}}$. The answer is $\\mathrm{(D)}$.</p>",
         "<p>Notice that, every day, there is always $\\frac34$ quarts of other seeds in the feeder, so we simply need to calculate when the quantity of millet seeds is greater than $\\frac34$ quarts. Every day that elapses, a fourth of the millet is taken away (eaten by birds), and then a fourth of a quart is added (by Millie). Thus, if $n$ was the quantity of millet seeds the previous day, then on the next day, the quantity is $\\dfrac34n+\\dfrac14=\\dfrac14\\left(3n+1\\right).$<br/>Monday: $\\dfrac14\\quad$<br/><br/>Tuesday: $\\dfrac14\\left(3\\cdot\\dfrac14+1\\right)=\\dfrac{7}{16}$<br/><br/>Wednesday: $\\dfrac14\\left(3\\cdot\\dfrac{7}{16}+1\\right)=\\dfrac{37}{64}$<br/><br/>Thursday: $\\dfrac14\\left(3\\cdot\\dfrac{37}{64}+1\\right)=\\dfrac{175}{256}$<br/><br/>Friday: $\\dfrac14\\left(3\\cdot\\dfrac{175}{256}+1\\right)=\\dfrac{781}{1024}>\\dfrac{768}{1024}=\\dfrac34.$<br/><br/>Brute forcing, we see that it takes $4$ days. Thus, the answer is $\\boxed{\\text{Friday}}$, or $\\boxed{\\text{(D)}}$. ~ aidan0626, lucaswujc, &amp; Technodoggo<br/>Note: Yes there is a pattern to it, $1-\\left(\\frac{3}{4}\\right)^x$ where $x$ is the number of days, as shown in Solution 1. This solution is only if you didn't notice the pattern. -aidan0626</p>",
         "<p>Let $a_n$ denote the the amount of millet that the birds find on day $n$. Here $n\\ge1$ and $n=1$ corresponds to Monday. Similarly, let $b_n$ denote the amount of other seeds that the birds find on day $n$. Notice that $a_n$ and $b_n$ satisfy the following:</p><p>\\begin{cases}a_1=\\frac{1}{4}\\\\a_n=\\frac{3}{4}a_{n-1}+\\frac{1}{4}\\quad (n>1)\\end{cases}</p><p><br/></p><p>\\[b_n=\\frac{3}{4}\\]</p><p><br/>We can solve for $a_n$ using difference equations to get $a_n=-\\left(\\frac{3}{4}\\right)^n+1$. We want to find the least $n$ for which $a_n>\\frac{1}{2}(a_n+b_n)$. In other words, $a_n>b_n$. Substituting in what we know about $a_n$ and $b_n$ we get:</p><p><br/>\\[-\\left(\\frac{3}{4}\\right)^n+1>\\frac{3}{4}\\]</p><p>\\[\\left(\\frac{3}{4}\\right)^n<\\frac{1}{4}\\]</p><p>\\[3^n<4^{n-1}\\]</p><p>\\[n\\ge5\\]</p><p><br/>Hence, the answer is $\\boxed{\\text{Friday}}$, or $\\boxed{\\text{(D)}}$.</p><p>~tsun26</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -307,6 +523,12 @@
       "question": "<p>The fifth and eighth terms of a geometric sequence of real numbers are $7!$</p>",
       "solutions": [
         "<p>Let the $n$th term of the series be $ar^{n-1}$. Because\\[\\frac {8!}{7!} = \\frac {ar^7}{ar^4} = r^3 = 8,\\]it follows that $r = 2$ and the first term is $a = \\frac {7!}{r^4} = \\frac {7!}{16} = \\boxed{315}$. The answer is $\\mathrm{(E)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -314,18 +536,30 @@
       "question": "<p>Triangle $ABC$ has $AB = 13$ and $AC = 15$, and the altitude to $\\overline{BC}$ has length $12$. What is the sum of the two possible values of $BC$?</p>",
       "solutions": [
         "<p>Let $D$ be the foot of the altitude to $\\overline{BC}$. Then $BD = \\sqrt {13^2 - 12^2} = 5$ and $DC = \\sqrt {15^2 - 12^2} = 9$. Thus $BC = BD + BC = 5 + 9 = 14$. Otherwise, assume that the triangle is obtuse at angle $B$ then $BC = DC - BD = 9 -5 = 4$. The sum of the two possible values is $14 + 4 = \\boxed{18}$. The answer is $\\mathrm{(D)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
       "id": "amc_2009_12b_14",
       "question": "<p>Five unit squares are arranged in the coordinate plane as shown, with the lower left corner at the origin. The slanted line, extending from $(c,0)$ to $(3,3)$, divides the entire region into two regions of equal area. What is $c$?</p><p>[asy] unitsize(0.2cm); defaultpen(linewidth(.8pt)+fontsize(8pt));  fill((2/3,0)--(3,3)--(3,1)--(2,1)--(2,0)--cycle,gray);  xaxis(\"$x$\",-0.5,4,EndArrow(HookHead,4)); yaxis(\"$y$\",-0.5,4,EndArrow(4));  draw((0,1)--(3,1)--(3,3)--(2,3)--(2,0)); draw((1,0)--(1,2)--(3,2)); draw((2/3,0)--(3,3));  label(\"$(c,0)$\",(2/3,0),S); label(\"$(3,3)$\",(3,3),NE); [/asy]</p>",
       "solutions": [
-        "<p>For $c\\geq 1.5$ the shaded area is at most $1.5$, which is too little. Hence $c<1.5$, and therefore the point $(2,1)$ is indeed inside the shaded part, as shown in the picture.</p><p>Then the area of the shaded part is one less than the area of the triangle with vertices $(c,0)$, $(3,0)$, and $(3,3)$. The area of the entire triangle is $\\frac{3(3-c)}2$, therefore the area of the shaded part is $\\frac{7-3c}{2}$.</p><p>The entire figure has area $5$, hence we want the shaded part to have area $\\frac 52$. Solving for $c$, we get $c=\\boxed{\\frac 23}$. The answer is $\\mathrm{(C)}$ ( what a coincidence\u00a0;) ).</p><p>The unit square is of area 1, so the five unit squares have area 5.Therefore the shaded space must occupy 2.5. The missing unit square is of area 1, and if reconstituted the original triangle would be of area 3.5.It can then be inferred:$(3-c) * 3 = 7$.</p><p>$3-c=\\frac{7}{3}$, so $3-\\frac{7}{3}=c$.</p><p>$3-\\frac{7}{3} = \\frac{9-7}{3} = \\frac{2}{3}$. $\\boxed{\\mathrm{(C)}}$.</p><p>The shaded space of the object can become a triangle by adding a unit square to its bottom. This triangle has a base length of $3-c$ and a height of $3$. The area of this triangle region is now (using the formula $A=bh/2$ for a triangle)$(9-3c)/2$. But, remember that we have to subtract the area of the extra unit square from this area to get the area of the shaded region. </p><p>If you add 3 unit squares to the top of the unshaded portion, the figure is now a right trapezoid. Using the formula for a trapezoid, you can derive that its area is $(9+3c)/2$. After you subtract the area of the 3 extra unit squares, we have derived the area of the unshaded portion.</p><p>Since these areas are both equal, we set them equal to each other and solve for $c$. $(9-3c)/2 -1 = (9+3c)/2 -3$. $c$ is now solved to be $\\frac{2}{3}$. $\\boxed{\\mathrm{(C)}}$.</p><p>~Solution by athens2016</p><p>We are looking for the area of the shaded region to be $\\frac 52$. We start by testing $(A) \\frac 12$. The area of the shaded region would be $\\frac{(3-\\frac 12)(3) }{2}-1=\\frac {11}{4}$ when $c=\\frac 12$. This does not match our wanted answer.</p><p>We try $(B) \\frac 35$ next. The area of the shaded region would be $\\frac{(3-\\frac 35)(3) }{2}-1=\\frac {13}{5}$ when $c=\\frac 35$. This also does not match our desired answer.</p><p>We then try $(C) \\frac 23$. The area of the shaded region would be $\\frac{(3-\\frac 23)(3) }{2}-1=\\frac {5}{2}$ when $c=\\frac 23$. Therefore, our answer is $\\boxed{\\mathrm{(C) \\frac 23}}$.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:South\" rel=\"nofollow\">South</a></p><p>Use the shoelace theorem to get the area of the unshaded portion in terms of a. Divide this area by the whole area which is 5. This fraction should be equal to $1/2$. You can easily solve for the answer from there.-mewto</p>",
-        "<p>For $c\\geq 1.5$ the shaded area is at most $1.5$, which is too little. Hence $c<1.5$, and therefore the point $(2,1)$ is indeed inside the shaded part, as shown in the picture.</p><p>Then the area of the shaded part is one less than the area of the triangle with vertices $(c,0)$, $(3,0)$, and $(3,3)$. The area of the entire triangle is $\\frac{3(3-c)}2$, therefore the area of the shaded part is $\\frac{7-3c}{2}$.</p><p>The entire figure has area $5$, hence we want the shaded part to have area $\\frac 52$. Solving for $c$, we get $c=\\boxed{\\frac 23}$. The answer is $\\mathrm{(C)}$ ( what a coincidence\u00a0;) ).</p>",
+        "<p>For $c\\geq 1.5$ the shaded area is at most $1.5$, which is too little. Hence $c<1.5$, and therefore the point $(2,1)$ is indeed inside the shaded part, as shown in the picture.</p><p>Then the area of the shaded part is one less than the area of the triangle with vertices $(c,0)$, $(3,0)$, and $(3,3)$. The area of the entire triangle is $\\frac{3(3-c)}2$, therefore the area of the shaded part is $\\frac{7-3c}{2}$.</p><p>The entire figure has area $5$, hence we want the shaded part to have area $\\frac 52$. Solving for $c$, we get $c=\\boxed{\\frac 23}$. The answer is $\\mathrm{(C)}$ ( what a coincidence ;) ).</p><p>The unit square is of area 1, so the five unit squares have area 5.Therefore the shaded space must occupy 2.5. The missing unit square is of area 1, and if reconstituted the original triangle would be of area 3.5.It can then be inferred:$(3-c) * 3 = 7$.</p><p>$3-c=\\frac{7}{3}$, so $3-\\frac{7}{3}=c$.</p><p>$3-\\frac{7}{3} = \\frac{9-7}{3} = \\frac{2}{3}$. $\\boxed{\\mathrm{(C)}}$.</p><p>The shaded space of the object can become a triangle by adding a unit square to its bottom. This triangle has a base length of $3-c$ and a height of $3$. The area of this triangle region is now (using the formula $A=bh/2$ for a triangle)$(9-3c)/2$. But, remember that we have to subtract the area of the extra unit square from this area to get the area of the shaded region. </p><p>If you add 3 unit squares to the top of the unshaded portion, the figure is now a right trapezoid. Using the formula for a trapezoid, you can derive that its area is $(9+3c)/2$. After you subtract the area of the 3 extra unit squares, we have derived the area of the unshaded portion.</p><p>Since these areas are both equal, we set them equal to each other and solve for $c$. $(9-3c)/2 -1 = (9+3c)/2 -3$. $c$ is now solved to be $\\frac{2}{3}$. $\\boxed{\\mathrm{(C)}}$.</p><p>~Solution by athens2016</p><p>We are looking for the area of the shaded region to be $\\frac 52$. We start by testing $(A) \\frac 12$. The area of the shaded region would be $\\frac{(3-\\frac 12)(3) }{2}-1=\\frac {11}{4}$ when $c=\\frac 12$. This does not match our wanted answer.</p><p>We try $(B) \\frac 35$ next. The area of the shaded region would be $\\frac{(3-\\frac 35)(3) }{2}-1=\\frac {13}{5}$ when $c=\\frac 35$. This also does not match our desired answer.</p><p>We then try $(C) \\frac 23$. The area of the shaded region would be $\\frac{(3-\\frac 23)(3) }{2}-1=\\frac {5}{2}$ when $c=\\frac 23$. Therefore, our answer is $\\boxed{\\mathrm{(C) \\frac 23}}$.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:South\" rel=\"nofollow\">South</a></p><p>Use the shoelace theorem to get the area of the unshaded portion in terms of a. Divide this area by the whole area which is 5. This fraction should be equal to $1/2$. You can easily solve for the answer from there.-mewto</p>",
+        "<p>For $c\\geq 1.5$ the shaded area is at most $1.5$, which is too little. Hence $c<1.5$, and therefore the point $(2,1)$ is indeed inside the shaded part, as shown in the picture.</p><p>Then the area of the shaded part is one less than the area of the triangle with vertices $(c,0)$, $(3,0)$, and $(3,3)$. The area of the entire triangle is $\\frac{3(3-c)}2$, therefore the area of the shaded part is $\\frac{7-3c}{2}$.</p><p>The entire figure has area $5$, hence we want the shaded part to have area $\\frac 52$. Solving for $c$, we get $c=\\boxed{\\frac 23}$. The answer is $\\mathrm{(C)}$ ( what a coincidence ;) ).</p>",
         "<p>The unit square is of area 1, so the five unit squares have area 5.Therefore the shaded space must occupy 2.5. The missing unit square is of area 1, and if reconstituted the original triangle would be of area 3.5.It can then be inferred:$(3-c) * 3 = 7$.</p><p>$3-c=\\frac{7}{3}$, so $3-\\frac{7}{3}=c$.</p><p>$3-\\frac{7}{3} = \\frac{9-7}{3} = \\frac{2}{3}$. $\\boxed{\\mathrm{(C)}}$.</p>",
         "<p>The shaded space of the object can become a triangle by adding a unit square to its bottom. This triangle has a base length of $3-c$ and a height of $3$. The area of this triangle region is now (using the formula $A=bh/2$ for a triangle)$(9-3c)/2$. But, remember that we have to subtract the area of the extra unit square from this area to get the area of the shaded region. </p><p>If you add 3 unit squares to the top of the unshaded portion, the figure is now a right trapezoid. Using the formula for a trapezoid, you can derive that its area is $(9+3c)/2$. After you subtract the area of the 3 extra unit squares, we have derived the area of the unshaded portion.</p><p>Since these areas are both equal, we set them equal to each other and solve for $c$. $(9-3c)/2 -1 = (9+3c)/2 -3$. $c$ is now solved to be $\\frac{2}{3}$. $\\boxed{\\mathrm{(C)}}$.</p><p>~Solution by athens2016</p>",
         "<p>We are looking for the area of the shaded region to be $\\frac 52$. We start by testing $(A) \\frac 12$. The area of the shaded region would be $\\frac{(3-\\frac 12)(3) }{2}-1=\\frac {11}{4}$ when $c=\\frac 12$. This does not match our wanted answer.</p><p>We try $(B) \\frac 35$ next. The area of the shaded region would be $\\frac{(3-\\frac 35)(3) }{2}-1=\\frac {13}{5}$ when $c=\\frac 35$. This also does not match our desired answer.</p><p>We then try $(C) \\frac 23$. The area of the shaded region would be $\\frac{(3-\\frac 23)(3) }{2}-1=\\frac {5}{2}$ when $c=\\frac 23$. Therefore, our answer is $\\boxed{\\mathrm{(C) \\frac 23}}$.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:South\" rel=\"nofollow\">South</a></p>",
         "<p>Use the shoelace theorem to get the area of the unshaded portion in terms of a. Divide this area by the whole area which is 5. This fraction should be equal to $1/2$. You can easily solve for the answer from there.-mewto</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -334,6 +568,12 @@
       "solutions": [
         "<p><b>(B)</b> Intuitively, $x$ will be largest for that option for which the value in the parentheses is smallest.</p><p>Formally, first note that each of the values in parentheses is larger than $1$. Now, each of the options is of the form $3f(r)^x = 7$. This can be rewritten as $x\\log f(r) = \\log\\frac 73$. As $f(r)>1$, we have $\\log f(r)>0$. Thus $x$ is the largest for the option for which $\\log f(r)$ is smallest. And as $\\log f(r)$ is an increasing function, this is the option for which $f(r)$ is smallest.</p><p>We now get the following easier problem: Given that $0<r<3$, find the smallest value in the set $\\{ 1+r, 1+r/10, 1+2r, 1+\\sqrt r, 1+1/r\\}$.</p><p>Clearly $1+r/10$ is smaller than the first and the third option. </p><p>We have $r^2 < 10$, dividing both sides by $10r$ we get $r/10 < 1/r$. </p><p>And finally, $r/100 < 1$, therefore $r^2/100 < r$, and as both sides are positive, we can take the square root and get $r/10 < \\sqrt r$.</p><p>Thus the answer is $\\boxed{\\textbf{(B) } 3\\left(1+\\frac{r}{10}\\right)^x = 7}$.</p>",
         "<p>As stated in the first solution, $x$ will be largest when the value in the parenthesis is smallest.</p><p>We can plug in a value for $r$ (for instance, $r=2$) and see which parenthesis has the smallest value. Doing so, we see that B is the answer.</p><p>-Made_in_2004</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "inequalities"
+        }
       ]
     },
     {
@@ -342,6 +582,12 @@
       "solutions": [
         "<p>Extend $\\overline {AB}$ and $\\overline {DC}$ to meet at $E$. Then</p><p>\\begin{align*} \\angle BED &= 180^{\\circ} - \\angle EDB - \\angle DBE\\\\ &= 180^{\\circ} - 134^{\\circ} -23^{\\circ} = 23^{\\circ}. \\end{align*}</p><p>Thus $\\triangle BDE$ is isosceles with $DE = BD$. Because $\\overline {AD} \\parallel \\overline {BC}$, it follows that the triangles $BCE$ and $ADE$ are similar. Therefore\\[\\frac 95 = \\frac {BC}{AD} = \\frac {CD + DE}{DE} = \\frac {CD}{BD} + 1 = CD + 1,\\]so $CD = \\boxed{\\frac 45}.$</p>",
         "<p>Extend $\\overline {AB}$ and $\\overline {DC}$ to meet at $E$. Then</p><p>\\begin{align*} \\angle BED &= 180^{\\circ} - \\angle EDB - \\angle DBE\\\\ &= 180^{\\circ} - 134^{\\circ} -23^{\\circ} = 23^{\\circ}. \\end{align*}</p><p>Thus $\\triangle BDE$ is isosceles with $DE = BD$. Because $\\overline {AD} \\parallel \\overline {BC}$, it follows that the triangles $BCE$ and $ADE$ are similar. Therefore\\[\\frac 95 = \\frac {BC}{AD} = \\frac {CD + DE}{DE} = \\frac {CD}{BD} + 1 = CD + 1,\\]so $CD = \\boxed{\\frac 45}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -354,6 +600,12 @@
         "<p>There are three possible orientations of an encircling stripe. For any one of these to appear, the stripes on the four faces through which the continuous stripe is to pass must be properly aligned. The probability of each such stripe alignment is $\\left(\\frac 12\\right)^4 = \\frac {1}{16}$. Since there are three such possibilities and they are disjoint, the total probability is $3 \\cdot \\frac {1}{16} = \\boxed{\\frac {3}{16}}$. The answer is $\\mathrm{(B)}$.</p>",
         "<p>Consider a vertex on the cube and the three faces that are adjacent to that vertex. If no two stripes on those three faces are aligned, then there is no stripe encircling the cube. The probability that the stripes aren't aligned is $\\frac{1}{4}$, since for each alignment of one stripe, there is one and only one way to align the other two stripes out of four total possibilities. therefore there is a probability of $\\frac{3}{4}$ that two stripes are aligned.</p><p>Now consider the opposing vertex and the three sides adjacent to it. Given the two connected stripes next to our first vertex, we have two more that must be connected to make a continuous stripe. There is a probability of $\\left(\\frac{1}{2}\\right)^2=\\frac{1}{4}$ that they are aligned, so there is a probability of $\\frac{3}{4}\\cdot \\frac{1}{4}=\\boxed{\\frac {3}{16}}$ that there is a continuous stripe.</p><p><br/></p>",
         "<p>Each face has two possible stripes, so there are $2^6=64$ ways in total.</p><p>We need to choose $2$ opposite faces to leave out. Since the second is fixed once we pick the first face, we only need to calculate $\\binom{3}{1}=3$ orientations. Next, the two faces also each have 2 orientations, since they don't matter to the stripe. Therefore there are $3\\cdot2\\cdot2=12$ ways. The probability is $\\frac{12}{64}=\\frac{3}{16} \\Longrightarrow \\boxed{\\textbf{(B) } \\frac{3}{16}}$.</p><p><br/>~JH. L</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -362,6 +614,12 @@
       "solutions": [
         "<p>After $10$ minutes $(600$ seconds$),$ Rachel will have completed $6$ laps and be $30$ seconds from completing her seventh lap. Because Rachel runs one-fourth of a lap in $22.5$ seconds, she will be in the picture between $18.75$ seconds and $41.25$ seconds of the tenth minute. After 10 minutes, Robert will have completed $7$ laps and be $40$ seconds from completing his eighth lap. Because Robert runs one-fourth of a lap in $20$ seconds, he will be in the picture between $30$ seconds and $50$ seconds of the tenth minute. Hence both Rachel and Robert will be in the picture if it is taken between $30$ seconds and $41.25$ seconds of the tenth minute. So the probability that both runners are in the picture is $\\frac {41.25 - 30} {60} = \\boxed{\\frac {3}{16}}$. The answer is $\\mathrm{(C)}$.</p>",
         "<p>Video: <a class=\"external free\" href=\"https://youtu.be/eZjJ5MQV47o\" rel=\"nofollow\">https://youtu.be/eZjJ5MQV47o</a>~DaBobWhoLikeMath</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -373,6 +631,12 @@
         "<p>We will now show a complete solution, with a proof that no other values are prime. </p><p>Consider the function $g(x) = x^2 - 360x + 400$, then obviously $f(x) = g(x^2)$.</p><p>The roots of $g$ are:\\[x_{1,2}  = \\frac{ 360 \\pm \\sqrt{ 360^2 - 4\\cdot 400 } }2  = 180 \\pm 80 \\sqrt 5\\]</p><p>We can then write $g(x) = (x - 180 - 80\\sqrt 5)(x - 180 + 80\\sqrt 5)$, and thus $f(x) = (x^2 - 180 - 80\\sqrt 5)(x^2 - 180 + 80\\sqrt 5)$.</p><p>We would now like to factor the right hand side further, using the formula $(x^2 - y^2) = (x-y)(x+y)$. To do this, we need to express both constants as squares of some other constants. Luckily, we have a pretty good idea how they look like.</p><p>We are looking for rational $a$ and $b$ such that $(a+b\\sqrt 5)^2 = 180 + 80\\sqrt 5$. Expanding the left hand side and comparing coefficients, we get $ab=40$ and $a^2 + 5b^2 = 180$. We can easily guess (or compute) the solution $a=10$, $b=4$.</p><p>Hence $180 + 80\\sqrt 5 = (10 + 4\\sqrt 5)^2$, and we can easily verify that also $180 - 80\\sqrt 5 = (10 - 4\\sqrt 5)^2$.</p><p>We now know the complete factorization of $f(x)$: </p><p>\\[f(x) = (x - 10 - 4\\sqrt 5)(x + 10 + 4\\sqrt 5)(x - 10 + 4\\sqrt 5)(x + 10 - 4\\sqrt 5)\\]</p><p>As the final step, we can now combine the factors in a different way, in order to get rid of the square roots. </p><p>We have $(x - 10 - 4\\sqrt 5)(x - 10 + 4\\sqrt 5) = (x-10)^2 - (4\\sqrt 5)^2 = x^2 - 20x + 20$,and $(x + 10 - 4\\sqrt 5)(x + 10 + 4\\sqrt 5) = x^2 + 20x + 20$.</p><p>Hence we obtain the factorization $f(x) = (x^2 - 20x + 20)(x^2 + 20x + 20)$.</p><p>For $x\\geq 20$ both terms are positive and larger than one, hence $f(x)$ is not prime. For $1<x<19$ the second factor is positive and the first one is negative, hence $f(x)$ is not a prime. The remaining cases are $x=1$ and $x=19$. In both cases, $f(x)$ is indeed a prime, and their sum is $f(1) + f(19) = 41 + 761 = \\boxed{802}$.</p>",
         "<p>Instead of doing the hard work, we can try to guess the factorization. One good approach:</p><p>We can make the observation that $f(x)$ looks similar to $(x^2 + 20)^2$ with the exception of the $x^2$ term. In fact, we have $(x^2 + 20)^2 = x^4 + 40x^2 + 400$. But then we notice that it differs from the desired expression by a square: $f(x) = (x^2 + 20)^2 - 400x^2 = (x^2 + 20)^2 - (20x)^2$.</p><p>Now we can use the formula $(x^2 - y^2) = (x-y)(x+y)$ to obtain the same factorization as in the previous solution, without all the work.</p>",
         "<p>After arriving at the factorization $f(x) = (x^2 - 20x + 20)(x^2 + 20x + 20)$, a more mathematical approach would be to realize that the second factor is always positive when $x$ is a positive integer. Therefore, in order for $f(x)$ to be prime, the first factor has to be $1$.</p><p>We can set it equal to 1 and solve for $x$: </p><p>$x^2-20x+20=1$</p><p>$x^2-20x+19=0$</p><p>$(x-1)(x-19)=0$</p><p>$x=1, x=19$</p><p>Substituting these values into the second factor and adding would give the answer.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "primes"
+        }
       ]
     },
     {
@@ -385,6 +649,12 @@
         "<p>Euler's Polyhedron Formula applied to $Q$ gives $n - 100 + F = 2$, where F is the number of faces of $Q$. Each edge of $Q$ is cut by two planes, so $R$ has $200$ vertices. Each cut by a plane $P_k$ creates an additional face on $R$, so Euler's Polyhedron Formula applied to $R$ gives $200 - E + (F+n) = 2$, where $E$ is the number of edges of $R$. Subtracting the first equation from the second gives $300 - E = 0$, whence $E = \\boxed {(C)300}$.</p>",
         "<p>Each edge connects two points. The plane cuts that edge so it splits into $2$ at each end (like two legs) for a total of $4$ new edges.</p><p>[asy] pair A,B,C,D,E,F; A=(0,50); B=(0,-50); C=(86.602540378443864676372317075294,0); D=(300,0); E=(370.7,70.7); F=(370.7,-70.7); draw(A--C--B); draw(C--D); draw(E--D--F); [/asy]</p><p>But because each new edge is shared by an adjacent original edge cut similarly, the additional edges are overcounted $\\times 2$.</p><p>[asy] pair A,B,C,D,E,F,G,H,I,J,K; A=(0,50); B=(0,-50); C=(86.602540378443864676372317075294,0); D=(300,0); E=(370.7,70.7); F=(370.7,-70.7);  G=(-107.5,236.2); H=(-107.5,-236.2); I=(370.7,285); J=(370.7,-285); K=(441.4,0);  draw(A--C--B); draw(C--D); draw(E--D--F);  draw(G--A, red); draw(H--B, red); draw(I--E, red); draw(J--F, red);  draw(A--B, dashed); draw(E--K, dashed); draw(F--K, dashed);  [/asy]</p><p>Since there are $100$ edges to start with, $400/2=200$ new edges result. So there are $100+200=\\boxed{\\textbf{(C) }300}$ edges in the figure.</p>",
         "<p>The question specifies the slices create as many pyramids as there are vertices, implying each vertex owns 4 edge ends. There are twice as many edge-ends as there are edges, and $2 \\cdot 100 = 200$.</p><p>$\\frac{200}{4} = 50$, so there are $50$ vertices.</p><p>The base of a pyramid has 4 edges, so each sliced vertex would add four edges to $R$.</p><p>$100 + 4 \\cdot 50$ = $\\boxed{\\textbf{(C) } 300}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry"
+        }
       ]
     },
     {
@@ -394,6 +664,12 @@
         "<p>Notice that either a woman stays in her own seat after the rearrangement, or two adjacent women swap places. Thus, our answer is counting the number of ways to arrange 1x1 and 2x1 blocks to form a 1x10 rectangle. This can be done via casework depending on the number of 2x1 blocks. The cases of 0, 1, 2, 3, 4, 5 2x1 blocks correspond to 10, 8, 6, 4, 2, 0 1x1 blocks, and so the sum of the cases is\\[\\binom{10}{0} + \\binom{9}{1} + \\binom{8}{2} + \\binom{7}{3} + \\binom{6}{4} + \\binom{5}{5} = 1 + 9 + 28 + 35 + 15 + 1 = \\boxed{89}.\\]</p><p>Recall that the number of ways to arrange 1x1 and 2x1 blocks to form a 1xn rectangle results in <a class=\"mw-redirect\" href=\"/wiki/index.php/Fibonacci_numbers\" title=\"Fibonacci numbers\">Fibonacci numbers</a>. Clearly, $\\boxed{89}$ is the only fibonacci number, so no calculation is needed for this problem.</p>",
         "<p>Recall that the number of ways to arrange 1x1 and 2x1 blocks to form a 1xn rectangle results in <a class=\"mw-redirect\" href=\"/wiki/index.php/Fibonacci_numbers\" title=\"Fibonacci numbers\">Fibonacci numbers</a>. Clearly, $\\boxed{89}$ is the only fibonacci number, so no calculation is needed for this problem.</p>",
         "<p>Let $S_n$ be the number of possible seating arrangements with $n$ women. Consider $n \\ge 3,$ and focus on the rightmost woman. If she returns back to her seat, then there are $S_{n-1}$ ways to seat the remaining $n-1$ women. If she sits in the second to last seat, then the woman who previously sat there must now sit at the rightmost seat. This gives us $S_{n-2}$ ways to seat the other $n-2$ women, so we obtain the recursion\\[S_n = S_{n-1}+S_{n-2}.\\]</p><p>Starting with $S_1=1$ and $S_2=2,$ we can calculate $S_{10}=\\boxed{89}.$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -404,6 +680,12 @@
         "<p>The area of any parallelogram $ABCD$ can be computed as the size of the vector product of $\\overrightarrow{AB}$ and $\\overrightarrow{AD}$.</p><p>In our setting where $A=(0,0)$, $B=(s,s)$, and $D=(t,kt)$ this is simply $s\\cdot kt - s\\cdot t = (k-1)st$. </p><p>In other words, we need to count the triples of integers $(k,s,t)$ where $k>1$, $s,t>0$ and $(k-1)st = 1,\\!000,\\!000 = 2^6 5^6$.</p><p>These can be counted as follows: We have $6$ identical red balls (representing powers of $2$), $6$ blue balls (representing powers of $5$), and three labeled urns (representing the factors $k-1$, $s$, and $t$). The red balls can be distributed in ${8\\choose 2} = 28$ ways, and for each of these ways, the blue balls can then also be distributed in $28$ ways. (See <a href=\"/wiki/index.php/Distinguishability\" title=\"Distinguishability\">Distinguishability</a> for a more detailed explanation.)</p><p>Thus there are exactly $28^2 = 784$ ways how to break $1,\\!000,\\!000$ into three positive integer factors, and for each of them we get a single parallelogram. Hence the number of valid parallelograms is $784 \\longrightarrow \\boxed{C}$.</p>",
         "<p>Without the vector product the area of $ABCD$ can be computed for example as follows: If $B=(s,s)$ and $D=(t,kt)$, then clearly $C=(s+t,s+kt)$. Let $B'=(s,0)$, $C'=(s+t,0)$ and $D'=(t,0)$ be the orthogonal projections of $B$, $C$, and $D$ onto the $x$ axis. Let $[P]$ denote the area of the polygon $P$. We can then compute:</p><p>\\begin{align*} [ABCD] & = [ADD'] + [DD'C'C] - [BB'C'C] - [ABB'] \\\\ & = \\frac{kt^2}2 + \\frac{s(s+2kt)}2 - \\frac{t(2s+kt)}2 - \\frac{s^2}2 \\\\ & = kst - st \\\\ & = (k-1)st. \\end{align*}The remainder of the solution is the same as the above.</p><p><br/></p>",
         "<p>We know that $A$ is $(0, 0)$. Since $B$ is on the line $y=x$, let it be represented by the point $(b, b)$. Similarly, let $D$ be $(d, kd)$. Since this is a parallelogram, sides $\\overline{AD}$ and $\\overline{BC}$ are parallel. Therefore, the distance and relative position of $D$ to $A$ is equivalent to that of $C$ to $B$ (if we take the translation of $A$ to $D$ and apply it to $B$, we will get the coordinates of $C$). This yields $C (b+d, b+kd)$. Using the <a href=\"/wiki/index.php/Shoelace_Theorem\" title=\"Shoelace Theorem\">Shoelace Theorem</a> we get</p><p><br/>$1,000,000 = \\frac{1}{2}|\\left(b(b+kd) + (b+d)(kd)\\right) - \\left(b(b+d) + (b+kd)d\\right)|$</p><p><br/>$\\Rightarrow 2,000,000 = |2kbd - 2bd|$</p><p><br/>$\\Rightarrow 1,000,000 = |kbd - bd|$</p><p><br/>Since $k > 1, kbd > bd$. The equation becomes</p><p><br/>$1,000,000 = (k-1)bd$</p><p><br/>$\\Rightarrow \\frac{1,000,000}{k-1} = bd$</p><p><br/>Since $k$ must be a positive integer greater than $1$, we know $k-1$ will be a positive integer. We also know that $bd$ is an integer, so $k-1$ must be a factor of $1,000,000$. Therefore $bd$ will also be a factor of $1,000,000$.</p><p>Notice that $1,000,000 = 10^6 = 2^6*5^6$.</p><p>Let $b$ be $2^x5^y$ such that $x, y$ are integers on the interval $[0, 6]$.</p><p>Let $d$ be $2^w5^z$ such that $w, z$ are integers, $x+w \\le 6$, and $y+z \\le 6$.</p><p>For a pair $(x, y)$, there are $7-x$ possibilities for $w$ and $7-y$ possibilites for $z$ ($d$ doesn't have to be the co-factor of $1,000,000$, it just can't be big enough such that $bd > 1,000,000$), for a total of $(7-x)(7-y)$ possibilities. So we want</p><p><br/>$\\sum_{k=0, i=0}^6 (7-k)(7-i)$</p><p><br/>$\\left(\\text{the sum of the number of possible pairs}(w, z) \\text{ for all pairs}(k , i)\\text{ for } k[0, 6]\\text{ and } i[0, 6]\\right)$</p><p><br/>Notice that if we \"fix\" the value of $k$, at, say $6$, then run through all of the values of $i$, change the value of $k$ to $5$, and run through all of the values of $i$ again, and so on until we exhaust all $49$ combinations of $(k, i)$ we get something like this:</p><p><br/>$1*1 + 1*2 + ... + 1*6 + 1*7 + 2*1 + 2*2 + ... + 2*6 + 2*7 + ..... + 7*1 + 7*2 + ... + 7*6 + 7*7$</p><p><br/>which can be rewritten</p><p><br/>$1(1+2+...+7)+2(1+2+...+7)+.....+7(1+2+...+7)$</p><p><br/>$\\Rightarrow (1+2+...+7)(1+2+...+7)$</p><p><br/>$\\Rightarrow 28^2$</p><p><br/>$\\Rightarrow 784$</p><p><br/>So there are $784$ possible sets of coordinates $B,$ $C$, and $D \\Rightarrow \\boxed{\\text{C}}$.</p><p>Note: this solution could be greatly simplified by using the Shoelace Formula on the triangle $ABD$, which we know has half the area of the parallelogram. This eliminates the need to find the coordinates of point $C$. </p><p>(Notational note: I'm not sure if the notation for double index summation is correct or even applicable in the context of this problem. If someone could fix the notation so that it is correct, or replace it without changing the general content of this solution, that would be great. If the notation is correct, then just delete this footnote)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "diophantine_equations"
+        }
       ]
     },
     {
@@ -412,6 +694,12 @@
       "solutions": [
         "<p>First, turn $\\frac34 + \\frac34i$ into polar form as $\\frac{3\\sqrt{2}}{4}e^{\\frac{\\pi}{4}i}$. Restated using geometric probabilities, we are trying to find the portion of a square enlarged by a factor of $\\frac{3\\sqrt{2}}{4}$ and rotated $45$ degrees that lies within the original square. This skips all the absolute values required before. Finish with the symmetry method stated above.</p><p>-asdf334</p><p><br/></p>",
         "<p>We multiply $z$ and $\\left(\\frac{3}{4}+\\frac{3}{4}i\\right)$ to get \\[\\left(\\frac{3}{4}x-\\frac{3}{4}y\\right)+\\left(\\frac{3}{4}xi+\\frac{3}{4}yi\\right).\\] Since we want to find the probability that this number is in $S$, we need the real and complex coefficients of this number to be less than or equal to $1$ or greater than or equal to $-1.$ This gives us the equations \\[-1\\le \\frac{3}{4}x-\\frac{3}{4}y \\le 1\\] and \\[-1\\le \\frac{3}{4}x+\\frac{3}{4}y\\le 1.\\] Now, we see that we can solve this by graphing. We can graph our barriers $-1\\le x\\le 1$ and $-1\\le y\\le 1$ to form a $2$ by $2$ square centered at the origin. Graphing our two equations gives us the four lines \\[x-y=\\frac{4}{3},\\] \\[x-y=-\\frac{4}{3},\\] \\[x+y=\\frac{4}{3},\\] \\[x+y=-\\frac{4}{3}.\\] The square that is formed is the region that satisfies these four equations. Now, the barriers and this square gives us an octagon as the desired region. The area of this octagon is the total area of the square minus the 4 small triangles on each corner, each with $\\frac{2}{9}$ area. Therefore, the octagon has area of $\\frac{28}{9}.$ Finally, to find the probability of it working, we find the area of the octagon divided by the area of the entire square which is $\\frac{\\frac{28}{9}}{4}=\\frac{7}{9}$ or $\\boxed{D}.$</p><p>-jeteagle</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -422,6 +710,12 @@
         "<p>Since $0\\leq \\cos^{-1}(a) \\leq \\pi$ for all $a$, the equation reduces to $\\sin^{-1}(\\sin(6x)) = x$. Since $-\\pi/2 \\leq \\sin^{-1}(a) \\leq \\pi/2$ for all $a$, $0 \\leq x \\leq \\pi/2$. To make the problem easier, we will measure angles in degrees. We will consider each sixth of the interval $[0, 90]$.</p><p>For $0 \\leq x \\leq 15$, $6x$ is in the first quadrant. Thus, $\\sin^{-1}(\\sin(6x)) = 6x$. Setting this equal to $x$ yields the solution $x = 0$.</p><p>For $15 \\leq x \\leq 30$, $6x$ is in the second quadrant. Thus, $\\sin^{-1}(\\sin(6x)) = 180 - 6x$. This yields the solution $x = \\frac{180}7$.</p><p>For $30 \\leq x \\leq 45$, $6x$ is in the third quadrant. Thus, $\\sin^{-1}(\\sin(6x)) = 180 - 6x$. As $\\frac{180}{7}$ is not on the interval $30 \\leq x \\leq 45$, this yields no solution.</p><p>For $45 \\leq x \\leq 60$, $6x$ is in the fourth quadrant. Thus, $\\sin^{-1}(\\sin(6x)) = 6x - 360$. As $72$ is not on the interval $45 \\leq x \\leq 60$, this yields no solution.</p><p>For $60 \\leq x \\leq 75$, $6x$ is in the first quadrant plus a full revolution. Thus, $\\sin^{-1}(\\sin(6x)) = 6x - 360$. This yields the solution $x = 72$.</p><p>For $75 \\leq x \\leq 90$, $6x$ is in the second quadrant plus a full revolution. Thus $\\sin^{-1}(\\sin(6x)) = 540 - 6x$. This yields the solution $x = \\frac{540}7$.</p><p>There are $\\boxed{\\textbf{(B) }4}$ solutions, $x=0$, $x=\\pi/7$, $x=2\\pi/5$, and $x=3\\pi/7$.</p>",
         "<p>Algebraically, the inverse function of a function should just cancel out, leaving $6x=x$. However, upon inspection we find that the graphs of these \"inverse function of the function\" equations are also periodic, like their normal trig function counterparts, due to the fact that inverse trig functions will never return any angle value higher than $2\\pi$. But instead of a smooth wave, these graphs are made up of zigzags with slope $1$ and $-1$. Trying a few values, we see that</p><p><br/>$y = \\arcsin{\\sin{x}}$</p><p><br/>peaks at $\\frac{\\pi}{2}$ and</p><p><br/>$y = \\arccos{\\cos{x}}$</p><p><br/>peaks at $\\pi$</p><p><br/>But we want the graph of $y = \\arcsin{(\\sin6{x})}$, which has a period of $\\frac{\\pi}{3}$ instead of $2\\pi$. So this means the interval $[0, \\pi]$ will show $3$ periods instead of $\\frac{1}{2}$ of a period. Visually it would be lines with slopes $6$ and $-6$. Using the graph paper given to us, we plot out the two equations according to the above and we see that they intersect $4$ times $\\Rightarrow \\boxed{\\text{B}}$.</p>",
         "<p>The most conventional domain and range for $\\cos^{-1} x$ is $x \\in [-1, 1]$ and $\\cos^{-1} x \\in [0, \\pi]$. For $\\cos x$, $x \\in [0, \\pi]$ and $\\cos x \\in [-1, 1]$. Since the domain of $\\cos x$ is equal to the range of $\\cos^{-1} x$, and the range of $\\cos x$ is equal to the domain of $\\cos^{-1} x$, $\\cos^{-1} (\\cos x) = x$.</p><p>Meaning that $\\sin^{ - 1}(\\sin 6x) = x$, $\\sin x = \\sin (6x)$.</p><p>By graphing $\\sin x$ and $\\sin 6x$ together, it can be seen that there are 7 intersections for $x \\in [0, \\pi]$.</p><p>However, the range of $\\sin^{-1} x$ is $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$. Therefore $x \\in [0, \\frac{\\pi}{2}]$ for $x = \\sin^{ - 1}(\\sin 6x)$. There are $\\boxed{\\textbf{(B) }4}$ solutions for $x \\in [0, \\frac{\\pi}{2}]$.</p><p>The $4$ solutions are respectively:</p><p>$x = 6x$, $x = 0$</p><p>$x + 2 \\pi = 6x$, $x = \\frac25 \\pi$</p><p>$\\pi - x = 6x$, $x = \\frac{\\pi}{7}$</p><p>$3 \\pi - x = 6x$, $x = \\frac37 \\pi$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
       ]
     },
     {
@@ -432,6 +726,12 @@
         "<p>This is based on a clever bijection given in <a class=\"external text\" href=\"http://web2.slc.qc.ca/sh/Contest/AMC12_2009B-S.pdf\" rel=\"nofollow\">this page</a>.</p><p>Consider any square $ABCD$ where all four vertices are in $G$, and the side length is at least $6$, so the four vertices must lie in distinct quadrants (Same proof as in solution 1). Without loss of generality, assume that $A,B,C,D$ are in the first, second, third, fourth quadrant. Then we consider the following mapping:</p><p>\\[A \\to A' = A\\]\\[B \\to B' = B + (10,0)\\]\\[C \\to C' = C + (10,10)\\]\\[D \\to D' = D + (0,10)\\]</p><p>Then the new points $A'$, $B'$, $C'$, $D'$ are either being the same point or forming a square in $G_1 = G \\cap \\{ x>0, y>0 \\}$, a 5x5 grid. </p><p>Conversely, for any point in $G_1$, it can be reversed to a square $ABCD$; however, for any square in $G_1$, there are four possible squares $ABCD$ that were mapped to them. Therefore the number of possible squares $ABCD$ is equal to $25 + 4N$, where $N$ is the number of squares inscribed in $G_1$.</p><p>Moreover by the same idea in solution 1, each square (with sides parallel or slanted to the axes) in a $G_1$ can be inscribed in a square in $G_1$, with sides parallel to one of the axes, call it \"standard square\". Noticing that each standard square of side length $a$ corresponds to $a$ inscribed squares, and that there are $(5-a)^2$ number of standard squares of side length $a$, we have</p><p>\\[N = \\sum_{a=1}^{4} a(5-a)^2 = 1\\cdot 16 + 2\\cdot 9 + 3 \\cdot 4 + 4 \\cdot 1 = 16+18+12+4=50\\]</p><p>So the answer is $25+4\\cdot 50 = 225$</p><p>Motivation(by williamgolly, solution by MAA):Homotheties</p>",
         "<p>Start with Solution 2: the number of possible squares $ABCD$ is equal to $25 + 4N$. Notice there are only 2 options ($A$, and $E$) which have integer solutions for N. Option $A$ corresponds to $N=25$, and option $E$ corresponds to $N=50$. At this point, guessing between the 2 choices is already worth it, but there are already 16 unit squares (solutions to N), meaning that the answer is more probably $E$.</p><p>Edit:There are 125 squares you can make w/out tilted ones, so the answer is more than 125, hence $E$.</p>",
         "<p>Consider any square that meets the requirements described in the problem. Then, take the vertices of the square and translate them to the first quadrant (This is the \"mapping\" described in Solution 2). For example, consider a square with vertices $(7, 7), (-7, 7), (-7, -7),$ and $(7, -7)$:</p><p><br/>[asy] defaultpen(black+0.75bp+fontsize(8pt)); size(5cm); path p = scale(.15)*unitcircle; draw((-8,0)--(8.5,0),Arrow(HookHead,1mm)); draw((0,-8)--(0,8.5),Arrow(HookHead,1mm)); int i,j; for (i=-7;i<8;++i) { for (j=-7;j<8;++j) { if (((-7 <= i) && (i <= -3)) || ((3 <= i) &&  (i<= 7))) { if (((-7 <= j) && (j <= -3)) || ((3 <= j) &&  (j<= 7))) { fill(shift(i,j)*p,black); }}}} draw((-7,-.2)--(-7,.2),black+0.5bp); draw((-3,-.2)--(-3,.2),black+0.5bp); draw((3,-.2)--(3,.2),black+0.5bp); draw((7,-.2)--(7,.2),black+0.5bp); draw((-.2,-7)--(.2,-7),black+0.5bp); draw((-.2,-3)--(.2,-3),black+0.5bp); draw((-.2,3)--(.2,3),black+0.5bp); draw((-.2,7)--(.2,7),black+0.5bp); label(\"$-7$\",(-7,0),S); label(\"$-3$\",(-3,0),S); label(\"$3$\",(3,0),S); label(\"$7$\",(7,0),S); label(\"$-7$\",(0,-7),W); label(\"$-3$\",(0,-3),W); label(\"$3$\",(0,3),W); label(\"$7$\",(0,7),W); draw( (7,7) -- (-7,7) -- (-7,-7) -- (7,-7) -- cycle, black ); [/asy]</p><p><br/>After following the mapping described in Solution 2, the square looks like this:</p><p><br/>[asy] defaultpen(black+0.75bp+fontsize(8pt)); size(5cm); path p = scale(.15)*unitcircle; draw((-8,0)--(8.5,0),Arrow(HookHead,1mm)); draw((0,-8)--(0,8.5),Arrow(HookHead,1mm)); int i,j; for (i=-7;i<8;++i) { for (j=-7;j<8;++j) { if (((-7 <= i) && (i <= -3)) || ((3 <= i) &&  (i<= 7))) { if (((-7 <= j) && (j <= -3)) || ((3 <= j) &&  (j<= 7))) { fill(shift(i,j)*p,black); }}}} draw((-7,-.2)--(-7,.2),black+0.5bp); draw((-3,-.2)--(-3,.2),black+0.5bp); draw((3,-.2)--(3,.2),black+0.5bp); draw((7,-.2)--(7,.2),black+0.5bp); draw((-.2,-7)--(.2,-7),black+0.5bp); draw((-.2,-3)--(.2,-3),black+0.5bp); draw((-.2,3)--(.2,3),black+0.5bp); draw((-.2,7)--(.2,7),black+0.5bp); label(\"$-7$\",(-7,0),S); label(\"$-3$\",(-3,0),S); label(\"$3$\",(3,0),S); label(\"$7$\",(7,0),S); label(\"$-7$\",(0,-7),W); label(\"$-3$\",(0,-3),W); label(\"$3$\",(0,3),W); label(\"$7$\",(0,7),W); draw( (3,3) -- (3,7) -- (7,7) -- (7,3) -- cycle, black ); [/asy]</p><p><br/>The position of each vertex within their corresponding grid has not changed.For example, the point $(-7, 7)$ is still the top-left point in a grid, albeit a change in quadrant. Trying this out with a couple of other squares, we see that the following property holds:</p><p>\\[\\text{\"For any and all squares with vertices in each of the four quadrants, the 'mapped' version is also a square.\"}\\]</p><p><br/>Therefore the logical inverse is true:</p><p><br/>\\[\\text{\"For any 'mapped' square with all four vertices in the first quadrant,}\\]\\[\\text{there exists at least one corresponding 'unmapped' square with a vertex in each of the four quadrants.\"}\\]</p><p><br/>But how many \"unmapped\" squares, to be exact? </p><p><br/>This might seem complicated at first, but with some intuitive thinking, we realize that there are exactly $4$ \"unmapped\" squares that correspond with a \"mapped\" square. This is because given a \"mapped\" square, there are $4$ choices for the vertex that will remain in the first quadrant; but once that point is chosen, there is only $1$ distribution of the other $3$ vertices that will result in a square. So, we want four times the number of squares we can make in the first quadrant grid.</p><p><br/>We divide our counting method into two cases: squares with side length $0$ after mapping (which means all four vertices are in the same position relative to their own grids) and squares with side length $1-4$ after mapping.</p><p><br/>Case 1: There are $25$ such squares of length $0$ (this is equivalent to counting the number of points on the grid). However, in this scenario, all of the vertices have been mapped onto the same point. So instead of $4$ choices for the first quadrant vertex, there is only one. Subsequently there are only $25$ such squares that correspond to them.</p><p><br/>Case 2: Let a square with sides parallel to the axes be known as $A$ squares. These $A$ squares can have side length $1, 2, 3,$ or $4$. However, the number of $A$ squares possible depends on the side length. For example, there is only $1$ possible $A$ square of side length $4$, but $16$ squares of side length $1$. To be exact, there are $(5-s)^2$ possible $A$ squares of side length $s$. So, the total number of $A$ squares is</p><p><br/>$\\sum_{s=1}^4 (5-s)^2$</p><p><br/>But what about \"tilted\" squares? Notice that \"tilted squares\" can always be inscribed (drawn within) another, bigger square. Let a square inscribed within an $A$ square be called a $B$ square. How many $B$ squares are there? Well, this also depends on the side length. We only want squares whose vertices are lattice points (integer value coordinates), so the number of $B$ squares should increase along with side length. We defined $B$ squares to be inscribed within $A$ squares, so we can say that all $B$ squares have their vertices on the side on an $A$ square. Consider an $A$ square with side length $4$. There are $3$ other lattice points along the side of the $A$ square, not counting the vertices. Therefore, we can say that there are $s-1$ possible $B$ squares for every $A$ square with side length $s$. We can multiply $(s-1)$ times the number of $A$ squares to get the number of $B$ squares. This is </p><p><br/>$\\sum_{s=1}^4 (s-1)(5-s)^2$</p><p><br/>total $B$ squares. But we need to add these two quantities to get the number of squares for Case 2:</p><p><br/>$\\sum_{s=1}^4 (s-1)(5-s)^2 + \\sum_{s=1}^4 (5-s)^2$</p><p><br/>By distributive property, the expression becomes</p><p><br/>$\\sum_{s=1}^4 s(5-s)^2$</p><p><br/>Solving, we get $50$ \"mapped\" squares, both $A$ and $B$. Multiplying this by $4$ to get the corresponding number of \"unmapped\" squares, then adding to get the number of squares for Case 1, we get</p><p><br/>$50*4 + 25 = 225 \\Rightarrow \\boxed{\\text{E}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     }
   ]

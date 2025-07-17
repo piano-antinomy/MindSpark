@@ -7,6 +7,12 @@
       "question": "<p>Square $ABCD$ has side length $10$. Point $E$ is on $\\overline{BC}$, and the area of $\\bigtriangleup ABE$ is $40$. What is $BE$?</p><p>[asy] pair A,B,C,D,E; A=(0,0); B=(0,50); C=(50,50); D=(50,0); E = (40,50); draw(A--B); draw(B--E); draw(E--C); draw(C--D); draw(D--A); draw(A--E); dot(A); dot(B); dot(C); dot(D); dot(E); label(\"A\",A,SW); label(\"B\",B,NW); label(\"C\",C,NE); label(\"D\",D,SE); label(\"E\",E,N); [/asy]</p>",
       "solutions": [
         "<p>We are given that the area of $\\triangle ABE$ is $40$, and that $AB = 10$.</p><p>The area of a triangle is:</p><p>$A = \\frac{bh}{2}$</p><p>Using $AB$ as the height of $\\triangle ABE$,</p><p>$40 = \\frac{10b}{2}$</p><p>and solving for $b$,</p><p>$b = 8$, which is $\\boxed{\\textbf{(E)}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -14,6 +20,12 @@
       "question": "<p>A softball team played ten games, scoring $1,2,3,4,5,6,7,8,9$, and $10$ runs. They lost by one run in exactly five games. In each of the other games, they scored twice as many runs as their opponent. How many total runs did their opponents score? </p>",
       "solutions": [
         "<p>To score twice as many runs as their opponent, the softball team must have scored an even number.</p><p>Therefore we can deduce that when they scored an odd number of runs, they lost by one, and when they scored an even number of runs, they won by twice as much.</p><p>Therefore, the total runs by the opponent is $(2+4+6+8+10)+(1+2+3+4+5) = 45$, which is $C$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "logical_reasoning"
+        }
       ]
     },
     {
@@ -21,6 +33,12 @@
       "question": "<p>A flower bouquet contains pink roses, red roses, pink carnations, and red carnations. One third of the pink flowers are roses, three fourths of the red flowers are carnations, and six tenths of the flowers are pink. What percent of the flowers are carnations?</p>",
       "solutions": [
         "<p>We are given that $\\frac{6}{10} = \\frac{3}{5}$ of the flowers are pink, so we know $\\frac{2}{5}$ of the flowers are red.</p><p>Since $\\frac{1}{3}$ of the pink flowers are roses, $\\frac{2}{3}$ of the pink flowers are carnations.</p><p>We are given that $\\frac{3}{4}$ of the red flowers are carnations.</p><p>The percent of flowers that are carnations is </p><p>$\\frac{3}{5} * \\frac{2}{3} + \\frac{2}{5} * \\frac{3}{4} = \\frac{2}{5} + \\frac{3}{10} = \\frac{7}{10} = 70\\%$, which is $E$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -30,6 +48,12 @@
         "<p>$\\frac{2^{2014}+2^{2012}}{2^{2014}-2^{2012}}$</p><p>We can factor a ${2^{2012}}$ out of the numerator and denominator to obtain</p><p>$\\frac{2^{2012}*(2^2+1)}{2^{2012}*(2^2-1)}$</p><p>The ${2^{2012}}$ cancels, so we get </p><p>$\\frac{(2^2+1)}{(2^2-1)}=\\frac{5}{3}$, which is $C$</p>",
         "<p>Suppose that \\[x=2^{2012}.\\] Then the given expression is equal to \\[\\frac{4x+x}{4x-x}=\\frac{5x}{3x}=\\boxed{\\frac{5}{3}\\textbf{(C)}}.\\]</p><p>~sugar_rush</p><p><br/></p>",
         "<p>Choice $A$ cannot be true, because $2^{2014}+2^{2012}$ is clearly larger than $2^{2014}-2^{2012}$. We can apply our same logic to choice $B$ and eliminate it as well. $2013$ and $2^{4024}$ are all whole numbers, but $2^{2014}+2^{2012}$ is not a multiple of $2^{2014}-2^{2012}$, so we can eliminate choices $D$ and $E$ too. This leaves us with choice $\\boxed{C}$ as our final answer.</p><p>~dbnl</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -38,6 +62,12 @@
       "solutions": [
         "<p>Simply write down two algebraic equations. We know that Tom gave $t$ dollars and Dorothy gave $d$ dollars. In addition, Tom originally paid $105$ dollars and Dorothy paid $125$ dollars originally. Since they all pay the same amount, we have: \\[105 + t = 125 + d.\\] Rearranging, we have \\[t-d = \\boxed{\\textbf{(B)} 20}.\\]</p><p>Solution $\\textcopyright 2018$ RandomPieKevin. All Rights Reserved. skrrt...</p>",
         "<p>Add up the amounts that Tom, Dorothy, and Sammy paid to get $$405$, and divide by 3 to get $$135$, the amount that each should have paid.</p><p>Tom, having paid $$105$, owes Sammy $$30$, and Dorothy, having paid $$125$, owes Sammy $$10$.</p><p>Thus, $t - d = 30 - 10 = 20$, which is $\\boxed{\\textbf{(B)}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -47,6 +77,12 @@
         "<p>Let the number of 3-point shots attempted be $x$. Since she attempted 30 shots, the number of 2-point shots attempted must be $30 - x$.</p><p>Since she was successful on $20\\%$, or $\\frac{1}{5}$, of her 3-pointers, and $30\\%$, or $\\frac{3}{10}$, of her 2-pointers, then her score must be</p><p>$\\frac{1}{5}*3x + \\frac{3}{10}*2(30-x)$</p><p><br/>$\\frac{3}{5}*x + \\frac{3}{5}(30-x)$</p><p><br/>$\\frac{3}{5}(x+30-x)$</p><p><br/>$\\frac{3}{5}*30$</p><p><br/>$18$, which is $B$</p>",
         "<p>Since the problem doesn't specify the number of 3-point shots she attempted, it can be assumed that number doesn't matter, so let it be $0$. Then, she must have attempted $30$ 2-point shots. So, her score must be:</p><p>$\\frac{3}{10}*30*2$,which is $B$.</p>",
         "<p>(similar to Solution 1, however a slightly more obvious way)</p><p>Say that </p><p>x = # of 2-pt shots</p><p>y = # of 3-pt shots</p><p>Because the total number of shots is $30$, $x + y = 30$</p><p>However, Shenille was only successful on $20\\%$ of the 3-pt shots, and $30\\%$ of the 2-pt shots, so </p><p>$0.2x + 0.3y$ = #number of successful shots</p><p>For each successful shot, there is an associated number of points with it. </p><p>Therefore, $0.2(x)(3) + (0.3)(y)(2)$ = her score</p><p>this evaluates to $0.6 (x + y)$ = her score</p><p>$x + y$ is already determined to be 30, so her score is $0.6 (30) = \\boxed{\\textbf{(B)}\\ 18}$</p><p>~amuppalla</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -54,6 +90,12 @@
       "question": "<p>The sequence $S_1, S_2, S_3, \\cdots, S_{10}$ has the property that every term beginning with the third is the sum of the previous two. That is, \\[S_n = S_{n-2} + S_{n-1} \\text{ for } n \\ge 3.\\] Suppose that $S_9 = 110$ and $S_7 = 42$. What is $S_4$?</p>",
       "solutions": [
         "<p>$S_9 = 110$, $S_7 = 42$</p><p>$S_8 = S_9 - S_ 7 = 110 - 42 = 68$</p><p>$S_6 = S_8 - S_7 = 68 - 42 = 26$</p><p>$S_5 = S_7 - S_6 = 42 - 26 = 16$</p><p>$S_4 = S_6 - S_5 = 26 - 16 = 10$</p><p>Therefore, the answer is $\\boxed{\\textbf{(C) }{10}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -62,8 +104,14 @@
       "solutions": [
         "<p>$x+\\tfrac{2}{x}= y+\\tfrac{2}{y}$</p><p>Since $x\\not=y$, we may assume that $x=\\frac{2}{y}$ and/or, equivalently, $y=\\frac{2}{x}$.</p><p>Cross multiply in either equation, giving us $xy=2$.</p><p>$\\boxed{\\textbf{(D) }{2}}$</p>",
         "<p>$x+\\tfrac{2}{x}= y+\\tfrac{2}{y}$</p><p>$x-y+\\frac{2}{x}-\\frac{2}{y} = 0$</p><p>$(x-y)+2(\\frac{y-x}{xy}) = 0$</p><p>$(x-y)(1-\\frac{2}{xy})=0$</p><p>Since $x\\not=y$</p><p>$1 = \\frac{2}{xy}$</p><p>$xy = 2$</p>",
-        "<p>Let $A = x + \\frac{2}{x} = y + \\frac{2}{y}.$ Consider the equation \\[u + \\frac{2}{u} = A.\\] Reorganizing, we see that $u$ satisfies \\[u^2 - Au + 2 = 0.\\] Notice that there can be at most two distinct values of $u$ which satisfy this equation, and $x$ and $y$ are two distinct possible values for $u.$ Therefore, $x$ and $y$ are roots of this quadratic, and by Vieta\u2019s formulas we see that $xy$ thereby must equal $\\boxed{2}.$</p><p>~ Professor-Mom</p>",
+        "<p>Let $A = x + \\frac{2}{x} = y + \\frac{2}{y}.$ Consider the equation \\[u + \\frac{2}{u} = A.\\] Reorganizing, we see that $u$ satisfies \\[u^2 - Au + 2 = 0.\\] Notice that there can be at most two distinct values of $u$ which satisfy this equation, and $x$ and $y$ are two distinct possible values for $u.$ Therefore, $x$ and $y$ are roots of this quadratic, and by Vieta’s formulas we see that $xy$ thereby must equal $\\boxed{2}.$</p><p>~ Professor-Mom</p>",
         "<p>\\[x + \\frac{2}{x} = y + \\frac{2}{y}.\\]</p><p>Multiply both sides by xy to get</p><p>\\[x^2y + 2y = y^2x +2x\\]</p><p>Rearrange to get</p><p>\\[x^2y - y^2x = 2x - 2y\\]</p><p>Factor out $xy$ on the left side and $2$ on the right side to get</p><p>\\[xy(x-y) = 2(x-y)\\]</p><p>Divide by $(x-y)$ {You can do this since x and y are distinct} to get</p><p>$\\boxed{\\textbf{(D) }{2}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "quadratic_equations"
+        }
       ]
     },
     {
@@ -72,6 +120,12 @@
       "solutions": [
         "<p>Note that because $\\overline{DE}$ and $\\overline{EF}$ are parallel to the sides of $\\triangle ABC$, the internal triangles $\\triangle BDE$ and $\\triangle EFC$ are similar to $\\triangle ABC$, and are therefore also isosceles triangles.</p><p>It follows that $BD = DE$. Thus, $AD + DE = AD + DB = AB = 28$.</p><p>Since opposite sides of parallelograms are equal, the perimeter is $2 * (AD + DE) =   \\boxed{\\textbf{(C) }{56}}$.</p>",
         "<p>We can set point $F$ to be on point $C$, and point $D$ to be on point $A$.</p><p>This makes a degenerate parallelogram with sides of length $28$ and $0$, so it has a perimeter of $28 + 28 =  \\boxed{\\textbf{(C) }{56}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -82,6 +136,12 @@
         "<p>Let us begin by working with the condition $0.\\overline{ab} = 0.ababab\\cdots,$. Let $x = 0.ababab\\cdots$. So, $100x-x = ab \\Rightarrow x = \\frac{ab}{99}$. In order for this fraction $x$ to be in the form $\\frac{1}{n}$, $99$ must be a multiple of $ab$. Hence the possibilities of $ab$ are $1,3,9,11,33,99$. Checking each of these, $\\frac{1}{99} = 0.\\overline{01}, \\frac{3}{99}=\\frac{1}{33} = 0.\\overline{03}, \\frac{9}{99}=\\frac{1}{11} = 0.\\overline{09}, \\frac{11}{99}=\\frac{1}{9} = 0.\\overline{1}, \\frac{33}{99} =\\frac{1}{3}= 0.\\overline{3},$ and $\\frac{99}{99} = 1$. So the only values of $n$ that have distinct $a$ and $b$ are $11,33,$ and $99$. So, $11+33+99= \\boxed{\\textbf{(D)} 143}$</p><p><br/></p>",
         "<p>Notice that we have $\\frac{100}{n}= ab.\\overline{ab}$</p><p>We can subtract $\\frac{1}{n}=00.\\overline{ab}$ to get \\[\\frac{99}{n}=ab\\]</p><p>From this we determine $n$ must be a positive factor of $99$</p><p><br/>The factors of $99$ are $1,3,9,11,33,$ and $99$.</p><p>For $n=1,3,$ and $9$ however, they yield $ab=99,33$ and $11$ which doesn't satisfy $a$ and $b$ being distinct. </p><p>For $n=11,33$ and $99$ we have $ab=09,03$ and $01$. (Notice that $a$ or $b$ can be zero)</p><p>The sum of these $n$ are $11+33+99=143$</p><p>$\\boxed{\\textbf{(D)} 143}$</p><p><br/></p>",
         "<p>As in previous solutions, we have $n|99$ and $\\overline{ab} = 99/n$. If we had $a=b$, the decimal would be $0.\\overline{a}$, which is characterized by $n|9$ and $a = 9/n$. So we seek the sum of the factors of 99 that are not also factors of 9.</p><p>Since $99 = 3^2 \\cdot 11$, the sum is $(1 + 3 + 9)(1 + 11) - (1 + 3 + 9) = 13(12 - 1) = \\textbf{(D)} 143$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
       ]
     },
     {
@@ -89,6 +149,12 @@
       "question": "<p>Triangle $ABC$ is equilateral with $AB=1$. Points $E$ and $G$ are on $\\overline{AC}$ and points $D$ and $F$ are on $\\overline{AB}$ such that both $\\overline{DE}$ and $\\overline{FG}$ are parallel to $\\overline{BC}$. Furthermore, triangle $ADE$ and trapezoids $DFGE$ and $FBCG$ all have the same perimeter. What is $DE+FG$?</p><p>[asy] size(180); pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); real s=1/2,m=5/6,l=1; pair A=origin,B=(l,0),C=rotate(60)*l,D=(s,0),E=rotate(60)*s,F=m,G=rotate(60)*m; draw(A--B--C--cycle^^D--E^^F--G); dot(A^^B^^C^^D^^E^^F^^G); label(\"$A$\",A,SW); label(\"$B$\",B,SE); label(\"$C$\",C,N); label(\"$D$\",D,S); label(\"$E$\",E,NW); label(\"$F$\",F,S); label(\"$G$\",G,NW); [/asy]</p>",
       "solutions": [
         "<p>Let $AD = x$, and $AG = y$. We want to find $DE + FG$, which is nothing but $x+y$.</p><p>Based on the fact that $ADE$, $DEFG$, and $BCFG$ have the same perimeters, we can say the following:</p><p>$3x = x + 2(y-x) + y = y + 2(1-y) + 1$</p><p>Simplifying, we can find that</p><p>$3x = 3y-x = 3-y$</p><p>Since $3-y = 3x$, $y = 3-3x$.</p><p>After substitution, we find that $9-10x = 3x$, and $x$ = $\\frac{9}{13}$.</p><p>Again substituting, we find $y$ = $\\frac{12}{13}$.</p><p>Therefore, $x+y$ = $\\frac{21}{13}$, which is $C$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -96,6 +162,12 @@
       "question": "<p>The angles in a particular triangle are in arithmetic progression, and the side lengths are $4,5,x$. The sum of the possible values of x equals $a+\\sqrt{b}+\\sqrt{c}$ where $a, b$, and $c$ are positive integers. What is $a+b+c$?</p>",
       "solutions": [
         "<p>Because the angles are in an arithmetic progression, and the angles add up to $180^{\\circ}$, the second largest angle in the triangle must be $60^{\\circ}$. Also, the side opposite of that angle must be the second longest because of the angle-side relationship. Any of the three sides, $4$, $5$, or $x$, could be the second longest side of the triangle.</p><p>The law of cosines can be applied to solve for $x$ in all three cases.</p><p>When the second longest side is $5$, we get that $5^2 = 4^2 + x^2 - 2(4)(x)\\cos 60^{\\circ}$, therefore $x^2 - 4x - 9 = 0$. By using the quadratic formula, $x = \\frac {4 + \\sqrt{16 + 36}}{2}$, therefore $x = 2 + \\sqrt{13}$.</p><p>When the second longest side is $x$, we get that $x^2 = 5^2 + 4^2 - 40\\cos 60^{\\circ}$, therefore $x = \\sqrt{21}$.</p><p>When the second longest side is $4$, we get that $4^2 = 5^2 + x^2 - 2(5)(x)\\cos 60^{\\circ}$, therefore $x^2 - 5x + 9 = 0$. Using the quadratic formula, $x = \\frac {5 + \\sqrt{25 - 36}}{2}$. However, $\\sqrt{-11}$ is not real, therefore the second longest side cannot equal $4$.</p><p>Adding the two other possibilities gets $2 + \\sqrt{13} + \\sqrt{21}$, with $a = 2, b=13$, and $c=21$. $a + b + c = 36$, which is answer choice $\\text{(A)}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
       ]
     },
     {
@@ -104,6 +176,12 @@
       "solutions": [
         "<p>If you have graph paper, use Pick's Theorem to quickly and efficiently find the area of the quadrilateral. If not, just find the area by other methods.</p><p>Pick's Theorem states that</p><p>$A$ = $I$ $+$ $\\frac{B}{2}$ - $1$, where $I$ is the number of lattice points in the interior of the polygon, and $B$ is the number of lattice points on the boundary of the polygon.</p><p>In this case, </p><p>$A$ = $5$ $+$ $\\frac{7}{2}$ - $1$ = $7.5$</p><p>so</p><p>$\\frac{A}{2}$ = $3.75$</p><p>The bottom half of the quadrilateral makes a triangle with base $4$ and half the total area, so we can deduce that the height of the triangle must be $\\frac{15}{8}$ in order for its area to be $3.75$. This height is the y coordinate of our desired intersection point.</p><p><br/>Note that segment CD lies on the line $y = -3x + 12$. Substituting in $\\frac{15}{8}$ for y, we can find that the x coordinate of our intersection point is $\\frac{27}{8}$.</p><p>Therefore the point of intersection is ($\\frac{27}{8}$, $\\frac{15}{8}$), and our desired result is $27+8+15+8= \\boxed{ \\text{B}) \\ 58}$.</p>",
         "<p>Let the point of intersection be $E$, with coordinates $(x, y)$. Then, $ABCD$ is cut into $ABCE$ and $AED$. </p><p>Since the areas are equal, we can use <a href=\"/wiki/index.php/Shoelace_Theorem\" title=\"Shoelace Theorem\">Shoelace Theorem</a> to find the area. This gives $3 + 3x - 3y = 4y$.</p><p>The line going through $CD$ is $y = -3x + 12$. Since $E$ is on $CD$, we can substitute this in, giving $3 + 3x = -21x + 84$. Solving for $x$ gives $\\frac{27}{8}$. Plugging this back into the line equation gives $y = \\frac{15}{8}$, for a final answer of $\\boxed{58}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -112,14 +190,26 @@
       "solutions": [
         "<p>Since the sequence is arithmetic, </p><p>$\\log_{12}{162}$ + $4d$ = $\\log_{12}{1250}$, where $d$ is the common difference.</p><p><br/>Therefore,</p><p>$4d$ = $\\log_{12}{1250}$ - $\\log_{12}{162}$ = $\\log_{12}{(1250/162)}$, and</p><p>$d$ = $\\frac{1}{4}$($\\log_{12}{(1250/162)}$) = $\\log_{12}{(1250/162)^{1/4}}$</p><p><br/></p><p>Now that we found $d$, we just add it to the first term to find $x$:</p><p>$\\log_{12}{162}$ + $\\log_{12}{(1250/162)^{1/4}}$ = $\\log_{12}{((162)(1250/162)^{1/4})}$</p><p>$x$ = $(162)$$(1250/162)^{1/4}$ = $(162)$$(625/81)^{1/4}$ = $(162)(5/3)$ = $270$, which is $B$</p>",
         "<p>As the sequence $\\log_{12}{162}$, $\\log_{12}{x}$, $\\log_{12}{y}$, $\\log_{12}{z}$, $\\log_{12}{1250}$ is an arithmetic progression, the sequence $162,x,y,z,1250$ must be a geometric progression.</p><p>If we factor the two known terms we get $162=2\\cdot 3^4$ and $1250=2\\cdot 5^4$, thus the quotient is obviously $5/3$ and therefore $x=162\\cdot(5/3) = 270$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
       "id": "amc_2013_12a_15",
-      "question": "<p>Rabbits Peter and Pauline have three offspring\u2014Flopsie, Mopsie, and Cotton-tail. These five rabbits are to be distributed to four different pet stores so that no store gets both a parent and a child. It is not required that every store gets a rabbit. In how many different ways can this be done?</p>",
+      "question": "<p>Rabbits Peter and Pauline have three offspring—Flopsie, Mopsie, and Cotton-tail. These five rabbits are to be distributed to four different pet stores so that no store gets both a parent and a child. It is not required that every store gets a rabbit. In how many different ways can this be done?</p>",
       "solutions": [
         "<p>There are two possibilities regarding the parents.</p><p>1) Both are in the same store. In this case, we can treat them both as a single bunny, and they can go in any of the 4 stores. The 3 baby bunnies can go in any of the remaining 3 stores. There are $4 \\cdot 3^3 = 108$ combinations.</p><p><br/>2) The two are in different stores. In this case, one can go in any of the 4 stores, and the other can go in any of the 3 remaining stores. The 3 baby bunnies can each go in any of the remaining 2 stores. There are $4 \\cdot 3 \\cdot 2^3 = 96$ combinations.</p><p>Adding up, we get $108 + 96 = 204$ combinations.</p>",
         "<p>We tackle the problem by sorting it by how many stores are involved in the transaction.</p><p>1) $2$ stores are involved. There are $\\binom{4}{2} = 6$ ways to choose which of the stores are involved and 2 ways to choose which store recieves the parents. $6 \\cdot 2 = 12$ total arrangements.</p><p><br/>2) $3$ stores are involved. There are $\\binom{4}{3} = 4$ ways to choose which of the stores are involved. We then break the problem down to into two subsections - when the parents and grouped together or sold separately.</p><p><br/><b>Separately:</b>All children must be in one store. There are $3!$ ways to arrange this. $6$ ways in total.</p><p><b>Together:</b>Both parents are in one store and the 3 children are split between the other two. There are $\\binom{3}{2}$ ways to split the children and $3!$ ways to choose to which store each group will be sold. $3! \\cdot \\binom{3}{2} = 18$.</p><p>$(6 + 18) \\cdot 4 = 96$ total arrangements.</p><p><br/>3) All $4$ stores are involved. We break down the problem as previously shown.</p><p><br/><b>Separately:</b>All children must be split between two stores. There are $\\binom{3}{2} = 3$ ways to arrange this. We can then arrange which group is sold to which store in $4!$ ways. $4! \\cdot 3 = 72$.</p><p><b>Together:</b>Both parents are in one store and the 3 children are each in another store. There are $4! = 24$ ways to arrange this.</p><p>$24 + 72 = 96$ total arrangements.</p><p><br/><b>Final Answer:</b>$12 + 96 + 96 = \\boxed{\\textbf{(D)} \\: 204}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -129,9 +219,15 @@
         "<p>Let pile $A$ have $A$ rocks, and so on.</p><p>The total weight of $A$ and $C$ can be expressed as $44(A + C)$.</p><p>To get the total weight of $B$ and $C$, we add the weight of $B$ and subtract the weight of $A$: $44(A + C) + 50B - 40A = 4A + 44C + 50B$</p><p>Therefore, the mean of $B$ and $C$ is $\\frac{4A + 44C + 50B}{B + C}$, which is simplified to $44 + \\frac{4A + 6B}{B + C}$.</p><p>We now need to eliminate $A$ in the numerator. Since we know that $40A + 50B = 43(A + B)$, we have $A = \\frac{7}{3}B$</p><p>Substituting,</p><p>$44 + \\frac{4(\\frac{7}{3}B) + 6B}{B + C}=44 + \\frac{46}{3}*\\frac{B}{B + C}$</p><p>In order to maximize $\\frac{B}{B + C}$, we can minimize the denominator by letting $C = 1$ (C must be a positive integer). Since $\\frac{46}{3}$ must cancel to give an integer, and the only fraction that satisfies both conditions is $\\frac{45}{46}$</p><p>Plugging in, we get</p><p>$44 + \\frac{46}{3} * \\frac{45}{46} = 44 + 15 = 59$, which is choice E</p>",
         "<p>Suppose there are $A,B,C$ rocks in the three piles, and that the mean of pile C is $x$, and that the mean of the combination of $B$ and $C$ is $y$. We are going to maximize $y$, subject to the following conditions:</p><p>\\[40A+50B=43(A+B)\\]\\[40A+xC=44(A+C)\\]\\[50B+xC=y(B+C)\\]</p><p>which can be rearranged as:</p><p>\\[7B=3A\\]\\[(x-44)C=4A\\]\\[(x-y)C=(y-50)B\\]</p><p>Let us test $y=59$ is possible. If so, it is already the answer. If not, there will be some contradiction. So the third equation becomes </p><p>\\[(x-59)C=9B.\\]</p><p>So $15C = (x-44)C - (x-59)C = 4A - 9B$, $45C=4(3A)-27B=28B-27B$, $105C=28A-9(7B)=A$, therefore,</p><p>$A=105C, B=45C, x=4(105)+44=464$, which gives us a consistent solution. Therefore $y=59$ is the answer.</p><p>(Note: To further illustrate the idea, let us look at $y=60$ and see what happens. We then get $7\\cdot 16C = 4A-30A<0$, which is a contradiction!)</p>",
         "<p>Obtain the 3 equations as in <b>solution 2</b>.</p><p>\\[7B=3A\\]\\[(x-44)C=4A\\]\\[(x-y)C=(y-50)B\\]</p><p>Our goal is to try to isolate $y$ into an inequality. The first equation gives $A=\\frac{7}{3}B$, which we plug into the second equation to get</p><p>\\[(x-44)C=\\frac{28}{3}B\\]</p><p>To eliminate $x$, subtract equation 3 from equation 2:</p><p>\\[(x-44)C-(x-y)C=\\frac{28}{3}B-(y-50)B\\]\\[(y-44)C=(\\frac{178}{3}-y)B\\]</p><p>In order for the coefficients to be positive, \\[44<y<\\frac{178}{3}\\]</p><p>Thus, the greatest integer value is $y=59$, choice $(E)$.</p>",
-        "<p>Let the number of rocks in $A$ be $a$, $B$ be $b$, $C$ be $c$. The total weight of $A$ be $40a$, $B$ be $50b$, $C$ be $kc$.</p><p>We can write the information given as, $\\frac{40a + 50b}{a+b} = 43$, $\\frac{40a + kc}{a+c} = 44$, $\\frac{50b + kc}{b+c} =\u00a0?$</p><p>$40a + 50b = 43 a + 43 b$, $3a = 7b$</p><p>$40a + kc = 44a + 44 c$, $kc = 4a + 44c = \\frac{28}{3}b + 44c$</p><p>$\\frac{50b + kc}{b+c} = \\frac{50 \\cdot \\frac{3}{7}a + kc}{\\frac{3}{7}a+c} = \\frac{150a + 7kc}{3a + 7c} = \\frac{150a + 28a + 308c}{3a+7c} = \\frac{178a + 308c}{3a+7c} = \\frac{44(3a+7c)+46a}{3a+7c}$</p><p>$= 44 + \\frac{46a}{3a+7c} = 44 + \\frac{46}{3 + \\frac{7}{a}} < 44 + \\frac{46}{3} \\approx 59.3$</p><p>$\\frac{50b + kc}{b+c} \\le \\boxed{\\textbf{(E) } 59}$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>",
+        "<p>Let the number of rocks in $A$ be $a$, $B$ be $b$, $C$ be $c$. The total weight of $A$ be $40a$, $B$ be $50b$, $C$ be $kc$.</p><p>We can write the information given as, $\\frac{40a + 50b}{a+b} = 43$, $\\frac{40a + kc}{a+c} = 44$, $\\frac{50b + kc}{b+c} = ?$</p><p>$40a + 50b = 43 a + 43 b$, $3a = 7b$</p><p>$40a + kc = 44a + 44 c$, $kc = 4a + 44c = \\frac{28}{3}b + 44c$</p><p>$\\frac{50b + kc}{b+c} = \\frac{50 \\cdot \\frac{3}{7}a + kc}{\\frac{3}{7}a+c} = \\frac{150a + 7kc}{3a + 7c} = \\frac{150a + 28a + 308c}{3a+7c} = \\frac{178a + 308c}{3a+7c} = \\frac{44(3a+7c)+46a}{3a+7c}$</p><p>$= 44 + \\frac{46a}{3a+7c} = 44 + \\frac{46}{3 + \\frac{7}{a}} < 44 + \\frac{46}{3} \\approx 59.3$</p><p>$\\frac{50b + kc}{b+c} \\le \\boxed{\\textbf{(E) } 59}$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>",
         "<p>Let the total number of rocks in pile $A$ be $A_n$, and the total number of rocks in pile $B$ be $B_n$. Then, by restriction 3 (the average of $A$ and $B$), we can establish the equation: \\[\\frac{40A_n+50B_n}{A_n+B_n}=43\\].Cross-multiplying, we get: \\[40A_n+50B_n=43A_n+43B_n \\implies 3A_n=7B_n\\].Let's say we have $7k$ rocks in $A$ and $3k$ rocks in $B$. Hence, we have $280k$ and $150k$ as the total weight of piles $A$ and $B$, respectively. Let the total weight of $C$ be $m$, and the total number of rocks in $C$ be $n$. Using the last restriction regarding the average of piles $A$ and $C$, we have: \\[\\frac{280k+m}{7k+n}=44 \\implies 280k + m=280k + 28k + 44n \\implies m=28k+44n\\].To find the average of piles $B$ and $C$, we can establish the expression: \\[\\frac{150k+28k+44n}{3k+n}=\\frac{178k+44n}{3k+n}=\\frac{132k+44n+46k}{3k+n}=\\frac{44(3k+n)+46k}{3k+n}=44+\\frac{46k}{3k+n}.\\]When we let the final expression equal $59$, we get: \\[44+\\frac{46k}{3k+n}=59\\implies\\frac{46k}{3k+n}=15\\]Cross-multiplying, we get: \\[46k=45k+14n\\implies k=14n\\]$k$ is still positive here, so 59 works. As this is the greatest option, we can circle $\\textbf{(E)}$ immediately.To show why $59$ is the greatest, consider the following:When we let the final expression equal $60$, we get: \\[44+\\frac{46k}{3k+n}=60\\implies\\frac{46k}{3k+n}=16\\]Cross-multiplying, we get: \\[46k=48k+14n\\implies k=-7n\\]Since $k$ is positive, the final expression could not equal 60. It further implies that the final expression could not equal any other integer greater than 60. Therefore, we have our final answer $\\boxed{59}$.</p>",
         "<p>Denote the number of rocks in each of the three piles as $a$, $b$, and $c$, respectively, and denote the weight of each rock in pile $C$ as $x$. We are given:\\begin{align}\\frac{40a + 50b}{a+b} &amp;= 43\\\\\\frac{40a + xc}{b+c} &amp;= 44\\\\\\end{align}From these equations, we get $b = \\frac{3}{7}a$ and $c = \\frac{4}{x-44}a$.</p><p>Now, we can compute the average weight in combined piles B and C:\\begin{align}\\frac{50b + xc}{b+c} &amp;= \\frac{\\frac{150}{7}a + \\frac{4x}{x-44}a}{\\frac{3}{7}a + \\frac{4}{x-44}a}\\\\&amp;= \\frac{178x-6600}{3x-104}\\\\&amp;= 59 + \\frac{1}{3} - \\frac{C}{3x-104}\\\\\\end{align}Where $C$ is just some constant that I'm too lazy to compute. As $x$ approaches infinity, we have that $\\frac{C}{3x-104}$ becomes negligibly small, and at some point, $59$ is attained. ~akliu</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "inequalities"
+        }
       ]
     },
     {
@@ -142,6 +238,12 @@
         "<p>The first pirate takes $\\frac{1}{12}$ of the $x$ coins, leaving $\\frac{11}{12} x$.</p><p>The second pirate takes $\\frac{2}{12}$ of the remaining coins, leaving $\\frac{10}{12}\\cdot   \\frac{11}{12}*x$.</p><p>Note that</p><p>$12^{11} = (2^2 \\cdot 3)^{11} = 2^{22} \\cdot 3^{11}$</p><p>$11! = 11 \\cdot 10 \\cdot 9 \\cdot 8 \\cdot 7 \\cdot 6 \\cdot 5 \\cdot 4 \\cdot 3 \\cdot 2$</p><p><br/>All the $2$s and $3$s cancel out of $11!$, leaving</p><p>$11 \\cdot 5 \\cdot 7 \\cdot 5 = 1925$</p><p>in the numerator.</p><p><br/>We know there were just enough coins to cancel out the denominator in the fraction. So, at minimum, $x$ is the denominator, leaving $\\boxed{\\textbf{(D) }1925}$ coins for the twelfth pirate.</p>",
         "<p>The answer cannot be an even number. Here is why:</p><p>Consider the highest power of 2 that divides the starting number of coins, and consider how this value changes as each pirate takes their share. At each step, the size of the pile is multiplied by some $\\frac{n}{12}$. This means the highest power of 2 that divides the number of coins is continually decreasing or staying the same (except once, briefly, when we multiply by $\\frac{2}{3}$ for pirate 4, but it immediately drops again in the next step).</p><p>Therefore, if the 12th pirate's coin total were even, then it can't be the smallest possible value, because we can safely cut the initial pot (and all the intermediate totals) in half. We could continue halving the result until the 12th pirate's total is finally odd.</p><p>Only one of the choices given is odd, $\\boxed{\\textbf{(D) }1925}$.</p><p>Note that if there had been multiple odd answer choices, we could repeat the reasoning above to see that the value also must not be divisible by 3.</p>",
         "<p>Let $x$ be the number of coins the $12$th pirate takes. Then the number of coins the $k<12$th pirate takes is $\\frac{12}{1} \\cdot \\frac{12}{2} \\cdots \\frac{12}{12-k} x$. For all these to be an integer, we need the denominators to divide into the numerators. Looking at prime factors, obviously there are sufficient $2$s and $3$s, so we just need $5^2 \\cdot 7 \\cdot 11 = \\boxed{\\textbf{(D) }1925}$ to divide into $x$. -Frestho</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "primes"
+        }
       ]
     },
     {
@@ -151,6 +253,12 @@
         "<p>Set up an isosceles triangle between the center of the 8th sphere and two opposite ends of the hexagon. Then set up another triangle between the point of tangency of the 7th and 8th spheres, and the points of tangency between the 7th sphere and 2 of the original spheres on opposite sides of the hexagon. Express each side length of the triangles in terms of r (the radius of sphere 8) and h (the height of the first triangle). You can then use Pythagorean Theorem to set up two equations for the two triangles, and find the values of h and r.</p><p>$(1+r)^2=2^2+h^2$</p><p>$(3\\sqrt{2})^2=3^2+(h+r)^2$</p><p>$r = \\boxed{\\textbf{(B) }\\frac{3}{2}}$</p>",
         "<p>We have a regular hexagon with side lengths 2 and six spheres on each vertex with radius 1 that are internally tangent, therefore drawing radii going through all of them would create this regular hexagon.</p><p>There is a larger sphere which the 6 spheres are internally tangent to, with center in the center of the hexagon. To find the radius of the larger sphere we must first, either by prior knowledge or by deducing from the angle sum that the hexagon can be split into 6 equilateral triangles from it's vertices, that the radius is $2+1=3$</p><p>The 8th sphere is now, when thinking about it in 3D, sitting on top of the 6 spheres, which is the only possibility for it to tangent all the 6 small spheres externally and the larger sphere internally. The ring of the 6 small spheres is symmetrical and the 8th sphere will be resting with it's center aligned with the diameter of the large sphere.</p><p>We can therefore now create a triangle with the horizontal component 2, as it is from the vertex of the hexagon to the center of the hexagon. The vertical component is from the center of the large sphere to the center of the 8th sphere. This length equals 3, the radius of the large sphere, take away the radius of the 8th sphere, we can call it r, since the radius of the large sphere will include the diameter of the 8th sphere if we subtract radius we will reach the center.The last component is the hypotenuse of the right angled triangle. This consists of the radius of the small sphere - 1 - and the radius of the 8th sphere - r -.</p><p>We therefore now have a right angled triangle which when applied Pythagoras states $2^2+(3-r)^2=(1+r)^2$Expanding brackets gives us $4+9-6r+r^2=1+2r+r^2$ here we can cancel out $r^2$Isolating the r's $12=8r$and then finally we have the answer: $r=\\frac{12}{8}=\\frac{3}{2}$</p>",
         "<p>It can be seen that the diameter of the eighth sphere is equal to the radius of the seventh sphere by drawing out a diagram of the insides of the seventh sphere. The radius of the seventh sphere is $2+1=3$, the radius of the eight sphere is $\\boxed{\\textbf{(B) } \\frac32}$.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry"
+        }
       ]
     },
     {
@@ -162,6 +270,12 @@
         "<p>Let $BX = q$, $CX = p$, and $AC$ meet the circle at $Y$ and $Z$, with $Y$ on $AC$. Then $AZ = AY = 86$. Using the Power of a Point, we get that $p(p+q) = 11(183) = 11 * 3 * 61$. We know that $p+q>p$, and that $p>13$ by the triangle inequality on $\\triangle ACX$. Thus, we get that $BC = p+q = \\boxed{\\textbf{(D) }61}$</p>",
         "<p>Let $x$ represent $CX$, and let $y$ represent $BX$. Since the circle goes through $B$ and $X$, $AB = AX = 86$.Then by Stewart's Theorem,</p><p>$xy(x+y) + 86^2 (x+y) = 97^2 y + 86^2 x.$</p><p>$x^2 y + xy^2 + 86^2 x + 86^2 y = 97^2 y + 86^2 x$</p><p>$x^2 + xy + 86^2 = 97^2$</p><p>(Since $y$ cannot be equal to $0$, dividing both sides of the equation by $y$ is allowed.)</p><p>$x(x+y) = (97+86)(97-86)$</p><p>$x(x+y) = 2013$</p><p>The prime factors of $2013$ are $3$, $11$, and $61$. Obviously, $x < x+y$. In addition, by the Triangle Inequality, $BC < AB + AC$, so $x+y < 183$. Therefore, $x$ must equal $33$, and $x+y$ must equal $\\boxed{\\textbf{(D) }61}$</p>",
         "<p>Motivation and general line of reasoning: we use a law of cosines condition on triangle $ABX$ and triangle $ABC$ to derive some equivalent formations of the same quantity $\\cos B$, which looks promising since it involves the desired length $BC$, as well as $BX$ and $CX$.An intermediate step would be to use the integer condition and pay attention to the divisors of stuff. </p><p>Let $BX$=$x_1$ and $CX$=$x_2$. </p><p>First we have $\\cos(B)=\\frac{86^2+x_{1}^2-86^2}{172x_{1}}$ by applying the law of cosines to triangle $ABX$. Another equivalent formation of $\\cos B$ is$\\frac{86^2+(x_{1}+x_2)^2-97^2}{172(x_{1}+x_2)}$. Now that we have the necessary ingredients, we can make a system of equations and deduce that $x_1=\\frac{(x_1+x_2)^2+86^2-97^2}{x_1+x_2}$. </p><p>Don't lose focus by now-we try to find $x_1+x_2$, an integer value as given in the problem. To do this, we want the quantity $\\frac{(x_1+x_2)^2+86^2-97^2}{x_1+x_2}$ to 1) be an integer and 2) smaller than $x_1+x_2$. For the sake of conciseness in notation we let $M=x_1+x_2$, then $M+\\frac{86^2-97^2}{M}$ is an integer. Now recalling the fact that $(a+b)(a-b)=a^2-b^2$, we get that $\\frac{183(-11)}{M}$ must be an integer.</p><p>Now the prime factor decomposition of $183 \\cdot -11$ is $(61)(3)(-11)$. Trying out all the possible integer values that divide this quantity, we get that the only viable option for $M$ is 61 (verify that yourself!) Therefore the answer is $\\boxed{\\textbf{(D) }61}$. (Solution by CreamyCream123)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
       ]
     },
     {
@@ -173,6 +287,12 @@
         "<p>The conditions are very strange. The major way $x,y,z$ can satisfy is if $(1 \\leq z-y \\leq 9 , 1 \\leq y-x \\leq 9 , z-x \\geq 10)$ because at this point $z > x$ no matter what. This is the only case that works, but we can rotate the variables around, so our answer is a multiple of $3$.</p><p>Suppose $z=y+a$ and $y=x+b$ where $0<a,b<10$. That means $z=x+a+b$ and $10 \\leq z \\leq 18$. WLOG $z>y>x$. Start casework on what $a+b$ is, anywhere from $10$ to $18$. There are 2 main factors:1. the number of ways to choose $a,b$, which is $a+b-1$.2. the number of ways to choose $x$ or start the sequence, which is $19-(a+b)$The sum of all cases turns out to be the sum of squares from $9^2$ to $1^2$, which is $\\frac{9 \\cdot 10 \\cdot 19}{2 \\cdot 3}$.Multiply that by $3$ and get $\\fbox{(B)855}$</p><p>~dragnin</p>",
         "<p>Note that if we take $a, b, c\\mod{19}$, the conditions are equivalent to $0<a-b\\le{9}\\mod{19}$, $0<b-c\\le{9}\\mod{19}$, and $0<c-a\\le{9}\\mod{19}$. Let $m=a-b, n=b-c$. We have $19$ ways to pick $a$, and $81$ cases in our sample space for $m, n$. Of these cases, only those where $m+n>9$ will work. By stars and bars, this turns out to be $\\binom{10}{2}=45$, hence the answer is $45*19=\\fbox{(B)855}$.~sigmapie</p>",
         "<p>$x \\succ_1 y$ will denote the first inequality, and $x\\succ_2 y$ will denote the second.</p><p><br/>We soon see that we cannot have $x\\succ_1 y \\succ_1 z \\succ_1 x$ by adding the inequalities we obtain from them together, as it results in $0<0$.</p><p><br/>Similarly, we can't have $x\\succ_2 y \\succ_2 z \\succ_2 x$. $x\\succ_2 y \\succ_2 z \\succ_1 x$ is also not possible by observing the inequalities.</p><p><br/>Thus, we only have to consider $x \\succ_1 y\\succ_1 z \\succ_2 x$. Something like $x \\succ_2 y \\succ_1 z \\succ_1 x$ is just a rotation of this case.</p><p><br/>Here, we start with $0<x-y\\le 9$, $0<y-z\\le 9$, and $x-z > 9$. We begin with casework on $z$, since it is the smallest.</p><p><br/>When $z=1$, $x$ can range from $[11,19]$. There are $9+8+7+6+5+4+3+2+1 = 45$ different values for $y$ as x ranges across $11-19$.</p><p><br/>When $z=2$, $x$ can range from $[12-19]$. There are $9+8+7+6+5+4+3+2 = 44$ different values for $y$ as x ranges across $12-19$.</p><p><br/>Continuing this pattern, we get the sum $45+44+42+39+35+30+24+17+9 = 285$. Multiplying by three to count for rotations, we get $\\boxed{(\\textbf{B}) 855}$.</p><p>-skibbysiggy</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -188,6 +308,12 @@
         "<p>Let $f(x) = \\log(x + \\log((x-1) + \\log((x-2) + \\ldots + \\log 2 \\ldots )))$. From the answer choices, we see that $3 < f(2013) < 4$. Since $f(x)$ grows very slowly, we can assume $3 < f(2012) < 4$. Therefore, $f(2013) = \\log(2013 + f(2012)) \\in (\\log 2016, \\log 2017) \\implies \\boxed{\\textbf{(A)}}$.</p><p>~rayfish</p>",
         "<p>Start small from $log(3+log2)$. Because $log2$ is close to $0$, the expression is close to $log 3$. This continues for the 1 digit numbers. However, when we get to $log(11+log10)$, $log10=1$ so the expression equals $log12$. We can round down how much each new log contributes to the expression as an approximate answer. There are 90 2 digit numbers, 900 3 digit numbers, and 1014 4 digit numbers that increase the expression. $1000< 90 \\cdot 1 + 900 \\cdot 2 + 1014 \\cdot 3< 10000$, so it increases between 3 and 4. The answer is $\\boxed{\\textbf{(A)}}$. </p><p>~dragnin</p>",
         "<p>Consider $\\log (2013+\\log(2012))$ and disregard every other log. We do this because we assume that the logs from $2011$ onward cannot contribute more than $7987$ because of the nature of logs. We have $\\log(2016)<\\log (2013+\\log(2012))<\\log(2017)$ so the answer is $\\boxed{A}.$</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
       ]
     },
     {
@@ -197,6 +323,12 @@
         "<p>By working backwards, we can multiply 5-digit palindromes $ABCBA$ by $11$, giving a 6-digit palindrome:</p><p>$\\overline{A (A+B) (B+C) (B+C) (A+B) A}$</p><p>Note that if $A + B >= 10$ or $B + C >= 10$, then the symmetry will be broken by carried 1s</p><p>Simply count the combinations of $(A, B, C)$ for which $A + B < 10$ and $B + C < 10$</p><p>$A = 1$ implies $9$ possible $B$ (0 through 8), for each of which there are $10, 9, 8, 7, 6, 5, 4, 3, 2$ possible C, respectively. There are $54$ valid palindromes when $A = 1$</p><p>$A = 2$ implies $8$ possible $B$ (0 through 7), for each of which there are $10, 9, 8, 7, 6, 5, 4, 3$ possible C, respectively. There are $52$ valid palindromes when $A = 2$</p><p>Following this pattern, the total is</p><p>$54 + 52 + 49 + 45 + 40 + 34 + 27 + 19 + 10 = 330$</p><p>6-digit palindromes are of the form $XYZZYX$, and the first digit cannot be a zero, so there are $9 \\cdot 10  \\cdot 10 = 900$ combinations of $(X, Y, Z)$</p><p>So, the probability is $\\frac{330}{900} = \\frac{11}{30}$</p><p>You can more easily count the number of triples $(A, B, C)$ by noticing that there are $9 - B$ possible values for $A$ and $10 - B$ possible values for $C$ once $B$ is chosen. Summing over all $B$, the number is \\[9\\cdot 10 + 8\\cdot 9 + \\ldots + 1\\cdot 2 = 2\\left(\\binom{2}{2} + \\binom{3}{2} + \\ldots + \\binom{10}{2}\\right).\\]By the hockey-stick identity, it is $2\\binom{11}{3} = 330$.</p><p>~rayfish</p>",
         "<p>Let the palindrome be the form in the previous solution which is $XYZZYX$. It doesn't matter what $Z$ is because it only affects the middle digit. There are $90$ ways to pick $X$ and $Y$, and the only answer choice with denominator a factor of $90$ is $\\boxed{\\textbf{(E)} \\ \\frac{11}{30}}$.</p>",
         "<p>A six-digit palindrome, that when divided by 11, has to, if another palindrome, equal a five-digit palindrome. It cannot be a four-digit palindrome, otherwise, it would be too small. We now have a five-digit palindrome $ABCBA$, where the digits could be the same. If we multiply by $11$ we are adding like this:</p><p>+ ABCBA=</p><p>Commas separating the digits,We don't have to worry about A because it can be any digit, however, we have to do casework on B, as it affects all the digits.</p><p>B=0 A=1-9 C=0-9,B=1 A=1-8 C=0-8,B=2 A=1-7 C=0-7,B=3 A=1-6 C=0-6,B=4 A=1-5 C=0-5,B=5 A=1-4 C=0-4,B=6 A=1-3 C=0-3,B=7 A=1-2 C=0-2,B=8 A=1  C=0-1,</p><p>B=9, does not work because A's only option is equal to 0 which makes it an invalid number (four-digit)</p><p>These solutions work as we ensure that all the digits do not carry into the following digits (e.g., The tens cannot carry into the hundreds or it would not be a palindrome).</p><p>For probability, as Richard Rusczyk says the total possibilities over the total successful outcomes Possibilities--> which are A=1-9, B=0-9, and C=0-9 --> 9 x 10 x 10 = 900</p><p>Successful Outcomes--> which are from the casework above --> \\[(9 \\cdot 10) + (8 \\cdot 9) + (7 \\cdot 8) + (6 \\cdot 7) + (5 \\cdot 6) + (4 \\cdot 5) + (3 \\cdot 4) + (2 \\cdot 3) + (1 \\cdot 2)\\] = $90 + 72 + 56 + 42 + 30 + 20 + 12 + 6 + 2 = 330$</p><p>330/900 = $\\boxed{\\textbf{(E)} \\ \\frac{11}{30}}$</p><p>~Solution by Daily Dose of Math (Thesmartgreekmathdude)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -204,6 +336,12 @@
       "question": "<p>$ABCD$ is a square of side length $\\sqrt{3} + 1$. Point $P$ is on $\\overline{AC}$ such that $AP = \\sqrt{2}$. The square region bounded by $ABCD$ is rotated $90^{\\circ}$ counterclockwise with center $P$, sweeping out a region whose area is $\\frac{1}{c} (a \\pi + b)$, where $a$, $b$, and $c$ are positive integers and $\\text{gcd}(a,b,c) = 1$. What is $a + b + c$?</p>",
       "solutions": [
         "<p>We first note that diagonal $\\overline{AC}$ is of length $\\sqrt{6} + \\sqrt{2}$. It must be that $\\overline{AP}$ divides the diagonal into two segments in the ratio $\\sqrt{3}$ to $1$. It is not difficult to visualize that when the square is rotated, the initial and final squares overlap in a rectangular region of dimensions $2\\sqrt{3}$ by $\\sqrt{3} + 1$. The area of the overall region (of the initial and final squares) is therefore twice the area of the original square minus the overlap, or $2 (\\sqrt{3} + 1)^2 - 2 (\\sqrt{3} + 1) = 2 (4 + 2 \\sqrt{3}) - 2 \\sqrt{3} - 2 = 6 + 2 \\sqrt{3}$.</p><p><br/>The area also includes $4$ circular segments. Two are quarter-circles centered at $P$ of radii $\\sqrt{2}$ (the segment bounded by $\\overline{PA}$ and $\\overline{PA'}$) and $\\sqrt{6}$ (that bounded by $\\overline{PC}$ and $\\overline{PC'}$). Assuming $A$ is the bottom-left vertex and $B$ is the bottom-right one, it is clear that the third segment is formed as $B$ swings out to the right of the original square [recall that the square is rotated counterclockwise], while the fourth is formed when $D$ overshoots the final square's left edge. To find these areas, consider the perpendicular from $P$ to $\\overline{BC}$. Call the point of intersection $E$. From the previous paragraph, it is clear that $PE = \\sqrt{3}$ and $BE = 1$. This means $PB = 2$, and $B$ swings back inside edge $\\overline{BC}$ at a point $1$ unit above $E$ (since it left the edge $1$ unit below). The triangle of the circular sector is therefore an equilateral triangle of side length $2$, and so the angle of the segment is $60^{\\circ}$. Imagining the process in reverse, it is clear that the situation is the same with point $D$.</p><p><br/>The area of the segments can be found by subtracting the area of the triangle from that of the sector; it follows that the two quarter-segments have areas $\\frac{1}{4} \\pi (\\sqrt{2})^2 - \\frac{1}{2} \\sqrt{2} \\sqrt{2} = \\frac{\\pi}{2} - 1$ and $\\frac{1}{4} \\pi (\\sqrt{6})^2 - \\frac{1}{2} \\sqrt{6} \\sqrt{6} = \\frac{3 \\pi}{2} - 3$. The other two segments both have area $\\frac{1}{6} \\pi (2)^2 - \\frac{(2)^2 \\sqrt{3}}{4} = \\frac{2 \\pi}{3} - \\sqrt{3}$.</p><p><br/>The total area is therefore \\[(6 + 2 \\sqrt{3}) + (\\frac{\\pi}{2} - 1) + (\\frac{3 \\pi}{2} - 3) + 2 (\\frac{2 \\pi}{3} - \\sqrt{3})\\] \\[= 2 + 2 \\sqrt{3} + 2 \\pi + \\frac{4 \\pi}{3} - 2 \\sqrt{3}\\] \\[= \\frac{10 \\pi}{3} + 2\\] \\[= \\frac{1}{3} (10 \\pi + 6)\\]</p><p><br/>Since $a = 10$, $b = 6$, and $c = 3$, the answer is $a + b + c = 10 + 6 + 3 = \\boxed{\\textbf{(C)} \\ 19}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -211,14 +349,26 @@
       "question": "<p>Three distinct segments are chosen at random among the segments whose end-points are the vertices of a regular 12-gon. What is the probability that the lengths of these three segments are the three side lengths of a triangle with positive area?</p>",
       "solutions": [
         "<p>Suppose $p$ is the answer. We calculate $1-p$.</p><p>Assume that the circumradius of the 12-gon is $1$, and the 6 different lengths are $a_1$, $a_2$, $\\cdots$, $a_6$, in increasing order. Then</p><p>$a_k = 2\\sin ( \\frac{k\\pi}{12} )$. </p><p>So $a_1=(\\sqrt{6}-\\sqrt{2})/2 \\approx 0.5$, </p><p>$a_2=1$,</p><p>$a_3=\\sqrt{2}\\approx 1.4$, </p><p>$a_4=\\sqrt{3}\\approx 1.7$,</p><p>$a_5=(\\sqrt{6}+\\sqrt{2})/2 = a_1 + a_3$,</p><p>$a_6 = 2$.</p><p><br/></p><p>Now, Consider the following inequalities:</p><p>$a_3>2a_1 > a_2$</p><p>$a_4> a_1 + a_2>a_3$</p><p>$a_4<a_1 + a_3=a_5$</p><p>$a_1 + a_4 > a_6$</p><p>$2a_2 = 2 = a_6$. Thus any two segments with at least one them longer than $a_2$ have a sum greater than $a_6$.</p><p>Therefore, all triples (in increasing order) that can't be the side lengths of a triangle are the following. Note that x-y-z means $(a_x, a_y, a_z)$:</p><p>Note that there are $12$ segments of each length of $a_1$, $a_2$, $\\cdots$, $a_5$, respectively, and $6$ segments of length $a_6$. There are $66$ segments in total.</p><p>In the above list there are $3$ triples of the type a-a-b without <i>6</i>, $2$ triples of a-a-6 where a is not <i>6</i>, $3$ triples of a-b-c without <i>6</i>, and $2$ triples of a-b-6 where a, b are not <i>6</i>. So,</p><p>\\[1-p = \\frac{1}{66\\cdot 65\\cdot 64} ( 3\\cdot 3 \\cdot 12\\cdot 11\\cdot 12 + 2\\cdot 3 \\cdot 12\\cdot 11\\cdot 6 + 3\\cdot 6\\cdot 12^3 + 2\\cdot 6 \\cdot 12^2 \\cdot 6)\\]</p><p>\\[= \\frac{1}{66\\cdot 65\\cdot 64} (12^2 (99+33) + 12^3(18+6)) = \\frac{1}{66\\cdot 65\\cdot 64} (12^3 \\cdot 35) = \\frac{63}{286}\\]</p><p>So $p = 223/286$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
       "id": "amc_2013_12a_25",
-      "question": "<p>Let $f\u00a0: \\mathbb{C} \\to \\mathbb{C}$ be defined by $f(z) = z^2 + iz + 1$. How many complex numbers $z$ are there such that $\\text{Im}(z) > 0$ and both the real and the imaginary parts of $f(z)$ are integers with absolute value at most $10$?</p>",
+      "question": "<p>Let $f : \\mathbb{C} \\to \\mathbb{C}$ be defined by $f(z) = z^2 + iz + 1$. How many complex numbers $z$ are there such that $\\text{Im}(z) > 0$ and both the real and the imaginary parts of $f(z)$ are integers with absolute value at most $10$?</p>",
       "solutions": [
         "<p>Suppose $f(z)=z^2+iz+1=c=a+bi$. We look for $z$ with $\\operatorname{Im}(z)>0$ such that $a,b$ are integers where $|a|, |b|\\leq 10$.</p><p>First, use the quadratic formula:</p><p>$z = \\frac{1}{2} (-i \\pm \\sqrt{-1-4(1-c)}) = -\\frac{i}{2} \\pm \\sqrt{ -\\frac{5}{4} + c }$</p><p>Generally, consider the imaginary part of a radical of a complex number: $\\sqrt{u}$, where $u = v+wi = r e^{i\\theta}$.</p><p>$\\operatorname{Im}(\\sqrt{u}) = \\operatorname{Im}(\\pm \\sqrt{r} e^{i\\theta/2}) = \\pm \\sqrt{r} \\sin(\\theta/2) = \\pm \\sqrt{r}\\sqrt{\\frac{1-\\cos\\theta}{2}} = \\pm \\sqrt{\\frac{r-v}{2}}$.</p><p>Now let $u= -5/4 + c$, then $v = -5/4 + a$, $w=b$, $r=\\sqrt{v^2 + w^2}$.</p><p>Note that $\\operatorname{Im}(z)>0$ if and only if $\\pm \\sqrt{\\frac{r-v}{2}}>\\frac{1}{2}$. The latter is true only when we take the positive sign, and that $r-v > 1/2$,</p><p>or $v^2 + w^2 > (1/2 + v)^2 = 1/4 + v + v^2$, $w^2 > 1/4 + v$, or $b^2 > a-1$.</p><p>In other words, when $b^2 > a-1$, the equation $f(z)=a+bi$ has unique solution $z$ in the region $\\operatorname{Im}(z)>0$; and when $b^2 \\leq a-1$ there is no solution. Therefore the number of desired solution $z$ is the same as the number of ordered pairs $(a,b)$ such that integers $|a|, |b|\\leq 10$, and that $b^2 \\geq a$.</p><p>When $a\\leq 0$, there is no restriction on $b$ so there are $11\\cdot 21 = 231$ pairs;</p><p>when $a > 0$, there are $2(1+4+9+10+10+10+10+10+10+10)=2(84)=168$ pairs.</p><p>So there are $231+168=\\boxed{399}$ in total.</p>",
         "<p>We consider the function $f(z)$ as a mapping from the 2-D complex plane onto itself. We complete the square of $f(z)=z^2+iz+1=(z+\\frac{i}{2})^2+\\frac{5}{4}$.</p><p>Now, we must decide the range of $f(z)$ based on the domain of $z$, $\\operatorname{Im}(z)>0$. To do this, we are interested in mapping the boundary line $\\operatorname{Im}(z)=0$. To make the mapping simpler, let $f(z)=g(z)+\\frac{5}{4}$, or $g(z)=(z+\\frac{i}{2})^2$.</p><p>We intend to map of the line $\\operatorname{Im}(z)=0$ using the function $g(z)$. This transformation is equivalent to the polar equation $r=(\\frac{1}{2}\\csc(\\frac{\\theta}{2}))^2$. Using polar and trig identities, we can restate this equation as the rectangular form of a parabola,</p><p>$x=y^2-\\frac{1}{4}$,</p><p>where $x=\\operatorname{Re}(z)$ and $y=\\operatorname{Im}(z)$. So, we conclude that $f(z)$ maps the line $\\operatorname{Im}(z)=0$ to the parabola </p><p>$x=y^2-\\frac{1}{4}+\\frac{5}{4}=y^2+1$.</p><p>A quick check reveals that the range of $f(z)$ is to the left of the parabola, meaning that any point on or to the right of parabola cannot be reached.</p><p>Since the problem requires $|\\operatorname{Re}(z)|$ and $|\\operatorname{Im}(z)|$ to both be integers and at most 10, all that remains is counting all points with integer coordinates in the range of $f(z), \\operatorname{Im}(z)>0$. To do this, we employ complementary counting.</p><p>The points of interest are $|\\operatorname{Re}(z)|\\leq 10$ and $|\\operatorname{Im}(z)|\\leq 10$, resulting in a total of $441$ points. For lattice points on or to the right of the parabola, there are $10$ points for $x=0$, $9$ points for $x=\\pm 1$, $6$ points for $x=\\pm 2$, and $1$ point for $x=\\pm 3$. Summing it all together, our answer is $441-(10+2*9+2*6+2*1)=\\boxed{399}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "complex_numbers"
+        }
       ]
     },
     {
@@ -226,6 +376,12 @@
       "question": "<p>On a particular January day, the high temperature in Lincoln, Nebraska, was $16$ degrees higher than the low temperature, and the average of the high and low temperatures was $3$. In degrees, what was the low temperature in Lincoln that day?</p>",
       "solutions": [
         "<p>Let $L$ be the low temperature. The high temperature is $L+16$. The average is $\\frac{L+(L+16)}{2}=3$. Solving for $L$, we get $L=\\boxed{\\textbf{(C)} \\  -5}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -233,6 +389,12 @@
       "question": "<p>Mr. Green measures his rectangular garden by walking two of the sides and finds that it is $15$ steps by $20$ steps. Each of Mr. Green's steps is $2$ feet long. Mr. Green expects a half a pound of potatoes per square foot from his garden. How many pounds of potatoes does Mr. Green expect from his garden?</p>",
       "solutions": [
         "<p>Since each step is $2$ feet, his garden is $30$ by $40$ feet. Thus, the area of $30(40) = 1200$ square feet. Since he is expecting $\\frac{1}{2}$ of a pound per square foot, the total amount of potatoes expected is $1200 \\times \\frac{1}{2} =  \\boxed{\\textbf{(A) }600}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -240,6 +402,12 @@
       "question": "<p>When counting from $3$ to $201$, $53$ is the $51^{\\text{st}}$ number counted. When counting backwards from $201$ to $3$, $53$ is the $n^{\\text{th}}$ number counted. What is $n$?</p>",
       "solutions": [
         "<p>Note that $n$ is equal to the number of integers between $53$ and $201$, inclusive. Thus, $n=201-53+1=\\boxed{\\textbf{(D)}\\ 149}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -249,6 +417,12 @@
         "<p>Let Ray and Tom drive 40 miles. Ray's car would require $\\frac{40}{40}=1$ gallon of gas and Tom's car would require $\\frac{40}{10}=4$ gallons of gas. They would have driven a total of $40+40=80$ miles, on $1+4=5$ gallons of gas, for a combined rate of $\\frac{80}{5}=$ $\\boxed{\\textbf{(B) }16}$</p>",
         "<p>Taking the harmonic mean of the two rates, we get \\[\\left(\\frac{40^{-1} + 10^{-1}}{2}\\right)^{-1} = \\frac{2}{\\frac{1}{40}+\\frac{1}{10}} = \\frac{2}{\\frac{5}{40}} = \\frac{2}{\\frac{1}{8}} = \\boxed{\\textbf{(B) }16}.\\]</p><p>-Solution by Joeya</p>",
         "<p>Let the number of miles that Ray and Tom each drive be denoted by $m$. Thus the number of gallons Ray's car uses can be represented by $\\frac{m}{40}$ and the number of gallons that Tom's car uses can likewise be expressed as $\\frac{m}{10}$. Thus the total amount of gallons used by both cars can be expressed as $\\frac{m}{40} + \\frac{m}{10} = \\frac{m}{8}$. The total distance that both drive is equal to $2m$ so the total miles per gallon can be expressed as $\\frac{2m}{\\frac{m}{8}} = \\boxed{\\textbf{(B) }16}$</p><p>~AnkitAMC</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -256,6 +430,12 @@
       "question": "<p>The average age of $33$ fifth-graders is $11$. The average age of $55$ of their parents is $33$. What is the average age of all of these parents and fifth-graders?</p>",
       "solutions": [
         "<p>The sum of the ages of the fifth graders is $33 * 11$, while the sum of the ages of the parents is $55 * 33$. Therefore, the total sum of all their ages must be $2178$, and given $33 + 55 = 88$ people in total, their average age is $\\frac{2178}{88} = \\frac{99}{4} = \\boxed{\\textbf{(C)}\\ 24.75}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -264,6 +444,12 @@
       "solutions": [
         "<p>If we move every term dependent on $x$ or $y$ to the LHS, we get $x^2 - 10x + y^2 + 6y = -34$. Adding $34$ to both sides, we have $x^2 - 10x + y^2 + 6y + 34 = 0$. We can split the $34$ into $25$ and $9$ to get $(x - 5)^2 + (y + 3)^2 = 0$. Notice this is a circle with radius $0$, which only contains one point. So, the only point is $(5, -3)$, so the sum is $5 + (-3) = 2 \\implies \\boxed{\\textbf{(B)}}$. ~ asdf334</p>",
         "<p>If we move every term including $x$ or $y$ to the LHS, we get \\[x^2 - 10x + y^2 + 6y = -34.\\] We can complete the square to find that this equation becomes \\[(x - 5)^2 + (y + 3)^2 = 0.\\] Since the square of any real number is nonnegative, we know that the sum is greater than or equal to $0$. Equality holds when the value inside the parhentheses is equal to $0$. We find that \\[(x,y) = (5,-3)\\] and the sum we are looking for is \\[5+(-3)=2 \\implies \\boxed{\\textbf{(B)}}.\\] - Honestly</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "quadratic_equations"
+        }
       ]
     },
     {
@@ -272,6 +458,12 @@
       "solutions": [
         "<p>We notice that the number of numbers said is incremented by one each time; that is, Jo says one number, then Blair says two numbers, then Jo says three numbers, etc. Thus, after nine \"turns\", $1+2+3+4+5+6+7+8+9=45$ numbers have been said. In the tenth turn, the eighth number will be the 53rd number said, because $53-45=8$. Since we are starting from 1 every turn, the 53rd number said will be $\\boxed{\\textbf{(E) }8}$.</p>",
         "<p>Let $T(n)$ denote the $n$th triangle number. Then, observe that the $T(n)$th number said is $n$. It follows that the $55$th number is $10$ (as $55 = T(10)$). Thus, the $53$rd number is $10 - 2 = 8$, which is answer choice $\\boxed{\\textbf{(E)}}$.</p><p>~Mathavi</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -280,6 +472,12 @@
       "solutions": [
         "<p>Line $l_1$ has the equation $y=3x/2-1/2$ when rearranged. Substituting $1$ for $y$, we find that line $l_2$ will meet this line at point $(1,1)$, which is point $B$. We call $\\overline{BC}$ the base and the altitude from $A$ to the line connecting $B$ and $C$, $y=-1$, the height. The altitude has length $|-2-1|=3$, and the area of $\\triangle{ABC}=3$. Since $A={bh}/2$, $b=2$. Because $l_3$ has positive slope, it will meet $l_2$ to the right of $B$, and the point $2$ to the right of $B$ is $(3,1)$. $l_3$ passes through $(-1,-2)$ and $(3,1)$, and thus has slope $\\frac{|1-(-2)|}{|3-(-1)|}=$ $\\boxed{\\textbf{(B) }\\frac{3}{4}}$.</p>",
         "<p>We know lines $l_1$ and $l_2$ intersect at $B$, so we can solve for that point:\\[3x-2y=1\\]Because $y = 1$ we have: \\[3x-2(1) = 1\\]\\[3x-2=1\\]\\[3x=3\\]\\[x = 1\\]</p><p>Thus we have $B = (1,1)$. </p><p>We know that the area of the triangle is $3$, so by Shoelace Theorem we have: </p><p>\\[A = \\dfrac{1}{2} |(-2x+y-1) - (-2+x-y)|\\]\\[A = \\dfrac{1}{2} |-2x+y-1+2-x+y|\\]\\[3 = \\dfrac{1}{2} |-2x+y-1+2-x+y|\\]\\[6 = |-3x+2y+1|.\\]</p><p>Thus we have two options: </p><p>\\[6 = -3x+2y+1\\]\\[5 = -3x+2y\\]</p><p>or</p><p>\\[6 = 3x-2y-1\\]\\[7 = 3x-2y.\\]</p><p>Now we must just find a point that satisfies $m_{l_3}$ is positive. </p><p>Since ${l_3}$ intersects ${l_2}$ at $y=1$, from the second equation: </p><p>\\[7 = 3x-2(1)\\]\\[7+2 = 3x\\]\\[x=3\\]</p><p>so a valid point here is $(3,1)$. When calculated, the slope of $l_3$ in this situation yields $\\boxed{\\textbf{(B) }\\frac{3}{4}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -287,6 +485,12 @@
       "question": "<p>What is the sum of the exponents of the prime factors of the square root of the largest perfect square that divides $12!$?</p>",
       "solutions": [
         "<p>Looking at the prime numbers under $12$, we see that there are $\\left\\lfloor\\frac{12}{2}\\right\\rfloor+\\left\\lfloor\\frac{12}{2^2}\\right\\rfloor+\\left\\lfloor\\frac{12}{2^3}\\right\\rfloor=6+3+1=10$ factors of $2$, $\\left\\lfloor\\frac{12}{3}\\right\\rfloor+\\left\\lfloor\\frac{12}{3^2}\\right\\rfloor=4+1=5$ factors of $3$, and $\\left\\lfloor\\frac{12}{5}\\right\\rfloor=2$ factors of $5$. All greater primes are represented once or none in $12!$, so they cannot be part of the square. Since we are looking for a perfect square, the exponents on its prime factors must be even, so we can only use $4$ of the $5$ factors of $3$. Therefore, the prime factorization of the square is $2^{10}\\cdot3^4\\cdot5^2$. To find the square root of this, we halve the exponents, leaving $2^5\\cdot3^2\\cdot5$. The sum of the exponents is $\\boxed{\\textbf{(C) }8}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "primes"
+        }
       ]
     },
     {
@@ -297,6 +501,12 @@
         "<p>We can approach this problem by assuming he goes to the red booth first. You start with $75 \\text{R}$ and $75 \\text{B}$ and at the end of the first booth, you will have $1 \\text{R}$ and $112 \\text{B}$ and $37 \\text{S}$. We now move to the blue booth, and working through each booth until we have none left, we will end up with:$1 \\text{R}$, $2 \\text{B}$ and $103 \\text{S}$. So, the answer is $\\boxed{\\textbf{(E)}103}$</p>",
         "<p>Let $x$ denote the number of visits to the first booth and $y$ denote the number of visits to the second booth. Then we can describe the quantities of his red and blue coins as follows:\\[R(x,y)=-2x+y+75\\]\\[B(x,y)=x-3y+75\\]There are no legal exchanges when he has fewer than $2$ red coins and fewer than $3$ blue coins, namely when he has a red coin and $2$ blue coins. We can then create a system of equations:\\[1=-2x+y+75\\]\\[2=x-3y+75\\]Solving yields $x=59$ and $y=44$. Since he gains one silver coin per visit to each booth, he has $x+y=44+59=\\boxed{\\textbf{(E)}103}$ silver coins in total.</p>",
         "<p>Suppose we set the values of the coins: Red = 4, Blue = 3, Silver = 5. This way, whenever an exchange is made, Alex's total value in coins does not change. His total value at the beginning (and thus also at the end) is $3\\cdot 75+4\\cdot 75=525$, so his theoretical possible total (if everything works out perfectly) is 105.</p><p>Note that the maximum possible leftover red coins is 1, and the maximum possible leftover blue coins is 2, so the maximum leftover non-silver value is 10. This perfectly gives us 103 silver coins.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -304,6 +514,12 @@
       "question": "<p>Two bees start at the same spot and fly at the same rate in the following directions. Bee $A$ travels $1$ foot north, then $1$ foot east, then $1$ foot upwards, and then continues to repeat this pattern. Bee $B$ travels $1$ foot south, then $1$ foot west, and then continues to repeat this pattern. In what directions are the bees traveling when they are exactly $10$ feet away from each other?</p>",
       "solutions": [
         "<p>Let A and B begin at $(0,0,0)$. In $6$ steps, $A$ will have done his route twice, ending up at $(2,2,2)$, and $B$ will have done his route three times, ending at $(-3,-3,0)$. Their distance is $\\sqrt{(2+3)^2+(2+3)^2+2^2}=\\sqrt{54} < 10$. We now move forward one step at a time until they are ten feet away:</p><p>7 steps: $A$ moves north to $(2,3,2)$, $B$ moves south to $(-3,-4,0)$, distance of $\\sqrt{(2+3)^2+(3+4)^2+2^2}=\\sqrt{78} < 10$</p><p>8 steps: $A$ moves east to $(3,3,2)$, $B$ moves west to $(-4,-4,0)$, distance of $\\sqrt{(3+4)^2+(3+4)^2+2^2}=\\sqrt{102}>10$</p><p>Thus they reach $10$ feet away when $A$ is moving east and B is moving west, between moves 7 and 8. Thus the answer is $\\boxed{\\textbf{(A)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry"
+        }
       ]
     },
     {
@@ -311,6 +527,12 @@
       "question": "<p>Cities $A$, $B$, $C$, $D$, and $E$ are connected by roads $\\widetilde{AB}$, $\\widetilde{AD}$, $\\widetilde{AE}$, $\\widetilde{BC}$, $\\widetilde{BD}$, $\\widetilde{CD}$, and $\\widetilde{DE}$. How many different routes are there from $A$ to $B$ that use each road exactly once? (Such a route will necessarily visit some cities more than once.)</p><p>[asy] unitsize(10mm); defaultpen(linewidth(1.2pt)+fontsize(10pt)); dotfactor=4; pair A=(1,0), B=(4.24,0), C=(5.24,3.08), D=(2.62,4.98), E=(0,3.08); dot (A); dot (B); dot (C); dot (D); dot (E); label(\"$A$\",A,S); label(\"$B$\",B,SE); label(\"$C$\",C,E); label(\"$D$\",D,N); label(\"$E$\",E,W); guide squiggly(path g, real stepsize, real slope=45) {  real len = arclength(g);  real step = len / round(len / stepsize);  guide squig;  for (real u = 0; u < len; u += step){  real a = arctime(g, u);  real b = arctime(g, u + step / 2);  pair p = point(g, a);  pair q = point(g, b);  pair np = unit( rotate(slope) * dir(g,a));  pair nq = unit( rotate(0 - slope) * dir(g,b));  squig = squig .. p{np} .. q{nq};  }  squig = squig .. point(g, length(g)){unit(rotate(slope)*dir(g,length(g)))};  return squig; } pen pp = defaultpen + 2.718; draw(squiggly(A--B, 4.04, 30), pp); draw(squiggly(A--D, 7.777, 20), pp); draw(squiggly(A--E, 5.050, 15), pp); draw(squiggly(B--C, 5.050, 15), pp); draw(squiggly(B--D, 4.04, 20), pp); draw(squiggly(C--D, 2.718, 20), pp); draw(squiggly(D--E, 2.718, -60), pp); [/asy]</p>",
       "solutions": [
         "<p>Note that cities $C$ and $E$ can be removed when counting paths because if a path goes in to $C$ or $E$, there is only one possible path to take out of cities $C$ or $E$.So the diagram is as follows:</p><p>[asy] unitsize(10mm); defaultpen(linewidth(1.2pt)+fontsize(10pt)); dotfactor=4; pair A=(1,0), B=(4.24,0), C=(5.24,3.08), D=(2.62,4.98), E=(0,3.08); dot (A); dot (B);  dot (D);  label(\"$A$\",A,S); label(\"$B$\",B,SE);  label(\"$D$\",D,N);  draw(A--B..D..cycle); draw(A--D); draw(B--D); [/asy]</p><p>Now we proceed with casework. Remember that there are two ways to travel from $A$ to $D$, $D$ to $A$, $B$ to $D$ and $D$ to $B$.:</p><p>Case 1 $A \\Rightarrow D$: From $D$, if the path returns to $A$, then the next path must go to $B\\Rightarrow D \\Rightarrow B$. There are $2 \\cdot 1 \\cdot 2 = 4$ possibilities of the path $ADABDB$. If the path goes to $D$ from $B$, then the path must continue with either $BDAB$ or $BADB$. There are $2 \\cdot 2 \\cdot 2 = 8$ possibilities. So, this case gives $4+8=12$ different possibilities.</p><p>Case 2 $A \\Rightarrow B$: The path must continue with $BDADB$. There are $2 \\cdot 2 = 4$ possibilities for this case. </p><p>Putting the two cases together gives $12+4 = \\boxed{\\textbf{(D)} \\ 16}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "graph_theory"
+        }
       ]
     },
     {
@@ -318,6 +540,12 @@
       "question": "<p>The internal angles of quadrilateral $ABCD$ form an arithmetic progression. Triangles $ABD$ and $DCB$ are similar with $\\angle DBA = \\angle DCB$ and $\\angle ADB = \\angle CBD$. Moreover, the angles in each of these two triangles also form an arithmetic progression. In degrees, what is the largest possible sum of the two largest angles of $ABCD$?</p>",
       "solutions": [
         "<p>Since the angles of Quadrilateral $ABCD$ form an arithmetic sequence, we can assign each angle with the value $a$, $a+d$, $a+2d$, and $a+3d$. Also, since these angles form an arithmetic progression, we can reason out that $(a)+(a+3d)=(a+d)+(a+2d)=180$.</p><p>For the sake of simplicity, lets rename the angles of each similar triangle. Let $\\angle ADB = \\angle CBD = \\alpha$, $\\angle DBA = \\angle DCB = \\beta$, $\\angle CDB = \\angle BAD = \\gamma$.</p><p>Now the four angles of $ABCD$ are $\\beta$, $\\alpha + \\beta$, $\\gamma$, and $\\alpha + \\gamma$.</p><p>As for the similar triangles, we can name their angles $y$, $y+b$, and $y+2b$. Therefore $y+y+b+y+2b=180$ and $y+b=60$. Because these 3 angles are each equal to one of $\\alpha, \\beta, \\gamma$, we know that one of these three angles is equal to 60 degrees.</p><p>Now we we use trial and error. Let $\\alpha = 60^{\\circ}$. Then the angles of ABCD are $\\beta$, $60^{\\circ} + \\beta$, $\\gamma$, and $60^{\\circ} + \\gamma$. Since these four angles add up to 360, then $\\beta + \\gamma= 120$. If we list them in increasing value, we get $\\beta$, $\\gamma$, $60^{\\circ} + \\beta$, $60^{\\circ} + \\gamma$. Note that this is the only sequence that works because the common difference is less than 45. So, this would give us the four angles 45, 75, 105, and 135. In this case, $\\alpha, \\beta, \\gamma$ also form an arithmetic sequence with 45, 60, and 75, and the largest two angles of the quadrilateral add up to 240 which is an answer choice.</p><p>If we apply the same reasoning to $\\beta$ and $\\gamma$, we would get the sum of the highest two angles as 220, which works but is lower than 240. Therefore, $\\boxed{\\textbf{(D) }240}$ is the correct answer.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -327,6 +555,12 @@
         "<p>Let the first two terms of the first sequence be $x_{1}$ and $x_{2}$ and the first two of the second sequence be $y_{1}$ and $y_{2}$. Computing the seventh term, we see that $5x_{1} + 8x_{2} = 5y_{1} + 8y_{2}$. Note that this means that $x_{1}$ and $y_{1}$ must have the same value modulo $8$. To minimize, let one of them be $0$; <a class=\"mw-redirect\" href=\"/wiki/index.php/WLOG\" title=\"WLOG\">WLOG</a>, assume that $x_{1} = 0$. Thus, the smallest possible value of $y_{1}$ is $8$; and since the sequences are non-decreasing we get $y_{2} \\ge 8$. To minimize, let $y_{2} = 8$. Thus, $5y_{1} + 8y_{2} = 40 + 64 = \\boxed{\\textbf{(C) }104}$.</p>",
         "<p>WLOG, let $a_i$, $b_i$ be the sequences with $a_1<b_1$. Then \\[N=5a_1+8a_2=5b_1+8b_2\\] or \\[5a_1+8a_2=5(a_1+c)+8(a_2-d)\\] for some natural numbers $c$, $d$. Thus $5c=8d$. To minimize $c$ and $d$, we have $(c,d)=(8,5)$, or \\[5a_1+8a_2=5(a_1+8)+8(a_2-5).\\] To minimize $a_1$ and $b_1$, we have $(a_1,b_1)=(0,0+c)=(0,8)$. Using the same method, since $b_2\\ge b_1$, we have $b_2\\ge8$. </p><p>Thus the minimum $N=5b_1+8b_2= \\boxed{\\textbf{(C) }104}$.</p><p><br/>~ Nafer</p>",
         "<p>Do the same thing as any of the previous solutions to find the 7th term must be in the form $5a+8b$ and $5c+8d$ where $a\\neq c$. Then test the options and find the smallest number that can be expressed in these 2 ways is $\\boxed{\\textbf{(C) }104}$.</p><p>-Andrew2019</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "diophantine_equations"
+        }
       ]
     },
     {
@@ -334,6 +568,12 @@
       "question": "<p>The number $2013$ is expressed in the form <br/> </p><p><br/>where $a_1 \\ge a_2 \\ge \\cdots \\ge a_m$ and $b_1 \\ge b_2 \\ge \\cdots \\ge b_n$ are positive integers and $a_1 + b_1$ is as small as possible. What is $|a_1 - b_1|$?</p>",
       "solutions": [
         "<p>The prime factorization of $2013$ is $61\\cdot11\\cdot3$. To have a factor of $61$ in the numerator and to minimize $a_1,$ $a_1$ must equal $61$. Now we notice that there can be no prime $p$ which is not a factor of $2013$ such that $b_1<p<61,$ because this prime will not be canceled out in the denominator, and will lead to an extra factor in the numerator. The highest prime less than $61$ is $59$, so there must be a factor of $59$ in the denominator. It follows that $b_1 = 59$ (to minimize $b_1$ as well), so the answer is $|61-59| = \\boxed{\\textbf{(B) }2}$. One possible way to express $2013$ with $(a_1, b_1) = (61, 59)$ is \\[2013 = \\frac{61!\\cdot19!\\cdot11!}{59!\\cdot20!\\cdot10!}.\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "primes"
+        }
       ]
     },
     {
@@ -342,6 +582,12 @@
       "solutions": [
         "<p>The five pointed star can be thought of as five triangles sitting on the five sides of the pentagon. Because the pentagon is equiangular, each of its angles has measure $\\frac{180^\\circ (5-2)}{5}=108^\\circ$, and so the base angles of the aforementioned triangles (i.e., the angles adjacent to the pentagon) have measure $180^\\circ - 108^\\circ = 72^\\circ$. The base angles are equal, so the triangles must be isosceles.</p><p>Let one of the sides of the pentagon have length $x_1$ (and the others $x_2, x_3, x_4, x_5$). Then, by trigonometry, the non-base sides of the triangle sitting on that side of the pentagon each has length $\\frac{x_1}{2} \\sec 72^\\circ$, and so the two sides together have length $x_1 \\sec 72^\\circ$. To find the perimeter of the star, we sum up the lengths of the non-base sides for each of the five triangles to get $(x_1+x_2+x_3+x_4+x_5) \\sec 72^\\circ = (1) \\sec 72^\\circ = \\sec 72^\\circ$ (because the perimeter of the pentagon is $1$). The perimeter of the star is constant, so the difference between the maximum and minimum perimeters is $\\boxed{\\textbf{(A)} \\ 0}$.</p>",
         "<p>The extreme case, that results in the minimum and/or maximum, would probably be a pentagon that approaches a degenerate pentagon. However, due to the way the problem is phrased, we know there exists a minimum and maximum; therefore, we can reasonably assume that the star's perimeter is constant, and answer with $\\boxed{\\textbf{(A)} \\ 0}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -355,14 +601,26 @@
         "<p>Draw the sphere and the plane represented by the two equations in Cartesian space, with the $z$-axis representing $c$. The intersection between the sphere and plane is a circle. We wish to find the point on the circle where $z$ is minimized and the point where $z$ is maximized. Looking at the graph, it is clear by symmetry that $x = y$ when $z$ is maximized or minimized. Thus, we can set $a = b$. This gives us the following system of equations:</p><p>$2a + c = 2$</p><p>$2a^2 + c^2 = 12$</p><p>Solving gives $c = \\frac{10}{3}, -2$, which are the maximum and minimum values of $c$ respectively. The answer follows from here.</p>",
         "<p>We can consider $a$, $b$, and $c$ to be solutions to a cubic equation. Then, given our information, we have $a+b+c=2$ and $ab+ac+bc=-4$, so our cubic equation looks like this: $x^3-2x^2-4x+m$ where $m$ can be any real number. </p><p>Since this cubic has $3$ real solutions, it must have both a maximum and a minimum (noticed by looking at the graph). Then the greatest solution is maximized when the other two solutions are the same and is minimized when the other two solutions are the same. </p><p>Thus, equating $a$ and $b$, we have \\[2a+c=2\\]and\\[2a^2+c^2=12\\]Solving this, we get the quadratic \\[3c^2-4c+4=24 \\Rightarrow c=\\frac{10}{3}, -2\\]implying the answer.</p>",
         "<p>Subtracting $c$ from the first equation yields $a+b=2-c$. Subtracting $c^2$ from the second equation yields $a^2+b^2=12-c^2$. Thus we have the equations \\[\\begin{cases}  a+b=2-c\\\\ a^2+b^2=12-c^2\\\\ \\end{cases}\\]Squaring the first equation yields \\[a^2+2ab+b^2=4-4c+c^2\\] Subtracting the second equation from this one yields \\[2ab=2c^2-4c-8\\] \\[\\iff ab=c^2-2c-4\\] Thus we have the system of equations \\[\\begin{cases}  a+b=2-c\\\\ ab=c^2-2c-4\\\\ \\end{cases}\\]We can reverse <a href=\"/wiki/index.php/Vieta%27s_Formulas\" title=\"Vieta's Formulas\">Vieta's Formulas</a>, to get that $a$ and $b$ are roots of the quadratic equation(in $x$) \\[x^2-(2-c)x+(c^2-2c-4).\\] Because we have $a, b\\in \\mathbb{R}$, we have that the discriminant of this quadratic equation must be nonnegative. The discriminant is \\[(2-c)^2-4(c^2-2c-4)=-3c^2+4c+20,\\] and it can be factored as $-3(c+2)(c-\\frac{10}{2})$. Since we have $-3(c+2)(c-\\frac{10}{2})\\geq 0$, we must have $(c+2)(c-\\frac{10}{2})\\leq 0$. If $c<-2$, then we have that $(c+2)(c-\\frac{10}{2})>0$. If $c=-2$, then $(c+2)(c-\\frac{10}{2})=0$. If $c\\in (-2, \\frac{10}{3})$, then $(c+2)(c-\\frac{10}{2})<0$. If $c=\\frac{10}{3}$, then $(c+2)(c-\\frac{10}{2})=0$. If $c>\\frac{10}{3}$, then $(c+2)(c-\\frac{10}{2})>0$. Thus our inequality holds if and only if $c\\in \\left [-2, \\frac{10}{3}\\right]$, and the maxmimum value is $\\frac{10}{3}$, whilst the minimum value is $-2$. Thus the difference between the maximum and minimum values is $\\frac{10}{3}-(-2)=\\boxed{\\textbf{(D)} \\frac{16}{3}}$</p><p>-vsamc</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "inequalities"
+        }
       ]
     },
     {
       "id": "amc_2013_12b_18",
-      "question": "<p>Barbara and Jenna play the following game, in which they take turns. A number of coins lie on a table. When it is Barbara\u2019s turn, she must remove $2$ or $4$ coins, unless only one coin remains, in which case she loses her turn. When it is Jenna\u2019s turn, she must remove $1$ or $3$ coins. A coin flip determines who goes first. Whoever removes the last coin wins the game. Assume both players use their best strategy. Who will win when the game starts with $2013$ coins and when the game starts with $2014$ coins?</p><p>$\\textbf{(C)}$ Barbara will win with $2013$ coins, and whoever goes second will win with $2014$ coins.</p><p>$\\textbf{(D)}$ Jenna will win with $2013$ coins, and Barbara will win with $2014$ coins.</p><p>$\\textbf{(E)}$ Whoever goes first will win with $2013$ coins, and whoever goes second will win with $2014$ coins.</p>",
+      "question": "<p>Barbara and Jenna play the following game, in which they take turns. A number of coins lie on a table. When it is Barbara’s turn, she must remove $2$ or $4$ coins, unless only one coin remains, in which case she loses her turn. When it is Jenna’s turn, she must remove $1$ or $3$ coins. A coin flip determines who goes first. Whoever removes the last coin wins the game. Assume both players use their best strategy. Who will win when the game starts with $2013$ coins and when the game starts with $2014$ coins?</p><p>$\\textbf{(C)}$ Barbara will win with $2013$ coins, and whoever goes second will win with $2014$ coins.</p><p>$\\textbf{(D)}$ Jenna will win with $2013$ coins, and Barbara will win with $2014$ coins.</p><p>$\\textbf{(E)}$ Whoever goes first will win with $2013$ coins, and whoever goes second will win with $2014$ coins.</p>",
       "solutions": [
         "<p>We split into 2 cases: 2013 coins, and 2014 coins.</p><p>$\\textbf{2013 coins:}$Notice that when there are $5$ coins left, whoever moves first loses, as they must leave an amount of coins the other person can take. If Jenna goes first, she can take $3$ coins. Then, whenever Barbara takes coins, Jenna will take the amount that makes the total coins taken in that round $5$. (For instance, if Barbara takes $4$ coins, Jenna will take $1$). Eventually, since $2010=0 (\\text{mod }5)$ it will be Barbara's move with $5$ coins remaining, so she will lose. If Barbara goes first, on each round, Jenna will take the amount of coins that makes the total coins taken on that round $5$. Since $2013=3 (\\text{mod }5)$, it will be Barbara's move with $3$ coins remaining, so she will have to take $2$ coins, allowing Jenna to take the last coin. Therefore, Jenna will win with $2013$ coins.</p><p>$\\textbf{2014 coins:}$If Jenna moves first, she will take $1$ coin, leaving $2013$ coins, and she wins as shown above. If Barbara moves first, she can take $4$ coins, leaving $2010$. After every move by Jenna, Barbara will then take the number of coins that makes the total taken in that round $5$. Since $2010=0\\text{(mod }5)$, it will be Jenna's turn with $5$ coins left, so Barbara will win. In this case, whoever moves first wins.</p><p>Based on this, the answer is $\\boxed{\\textbf{(B)}}$</p><p><br/></p>",
         "<p>We start with some key observations. </p><p>First, notice that when there are $0 (\\text{mod }5)$ coins left, whoever moves first loses, since the other player can keep taking exactly $5$ minus the amount the first player took, eventually removing the last coin.</p><p>Furthermore, notice that if Barbara is going first when there are $1 (\\text{mod }5)$ coins left, she will lose, since the Jenna can follow a similar strategy to the $0 (\\text{mod }5)$ case. This will leave Barbara with only 1 coin at the end, in which she loses her turn and Jenna wins.</p><p><br/></p><p>With these in mind, we split into 2 cases: 2013 coins, and 2014 coins.</p><p><br/>$\\textbf{2013 coins:}$</p><p>If Barbara goes first, she can remove either $2$ or $4$ coins. If she removes $2$ coins, then Jenna will remove $1$ coin, so there will be $0 (\\text{mod }5)$ left (hence Barbara will lose). Alternatively, if she removes $4$ coins, then Jenna will remove $3$ coins, so there will be $1 (\\text{mod }5)$ left (and Barbara will lose again). In both of these cases, Jenna will win.</p><p><br/>If Jenna goes first, she will remove $3$ coins, so there will be $0 (\\text{mod }5)$ coins left. Hence Jenna will win if she goes first.</p><p><br/>Putting these together, Jenna will always win with 2013 coins.</p><p><br/></p><p>$\\textbf{2014 coins:}$</p><p>If Barbara goes first, she will remove $4$ coins, so there will be $0 (\\text{mod }5)$ coins left. Hence Barbara will win.</p><p><br/>Or, if Jenna goes first, she will remove $3$ coins, so there will be $1 (\\text{mod }5)$ coins left. Hence Jenna will win.</p><p><br/>Based on these, whoever goes first will win with 2014 coins.</p><p><br/></p><p>Therefore, the answer is $\\boxed{\\textbf{(B)}}$.</p><p>~xHypotenuse</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "logical_reasoning"
+        }
       ]
     },
     {
@@ -370,11 +628,17 @@
       "question": "<p>In triangle $ABC$, $AB=13$, $BC=14$, and $CA=15$. Distinct points $D$, $E$, and $F$ lie on segments $\\overline{BC}$, $\\overline{CA}$, and $\\overline{DE}$, respectively, such that $\\overline{AD}\\perp\\overline{BC}$, $\\overline{DE}\\perp\\overline{AC}$, and $\\overline{AF}\\perp\\overline{BF}$. The length of segment $\\overline{DF}$ can be written as $\\frac{m}{n}$, where $m$ and $n$ are relatively prime positive integers. What is $m+n$?</p>",
       "solutions": [
         "<p>Since $\\angle{AFB}=\\angle{ADB}=90^{\\circ}$, quadrilateral $ABDF$ is cyclic. It follows that $\\angle{ADE}=\\angle{ABF}$, so $\\triangle ABF \\sim \\triangle ADE$ are similar. In addition, $\\triangle ADE \\sim \\triangle ACD$. We can easily find $AD=12$, $BD = 5$, and $DC=9$ using Pythagorean triples. </p><p>So, the ratio of the longer leg to the hypotenuse of all three similar triangles is $\\tfrac{12}{15} = \\tfrac{4}{5}$, and the ratio of the shorter leg to the hypotenuse is $\\tfrac{9}{15} = \\tfrac{3}{5}$. It follows that $AF=(\\tfrac{4}{5}\\cdot 13), BF=(\\tfrac{3}{5}\\cdot 13)$. </p><p>Let $x=DF$. By <a class=\"mw-redirect\" href=\"/wiki/index.php/Ptolemy%27s_Theorem\" title=\"Ptolemy's Theorem\">Ptolemy's Theorem</a>, we have \\[13x+\\left(5\\cdot 13\\cdot \\frac{4}{5}\\right)= 12\\cdot 13\\cdot \\frac{3}{5} \\qquad \\Leftrightarrow \\qquad 13x+52=93.6.\\] Dividing by $13$ we get $x+4=7.2\\implies x=\\frac{16}{5}$ so our answer is $\\boxed{\\textbf{(B) }21}$.</p><p>~Edits by BakedPotato66</p>",
-        "<p>From solution 1, we know that $AD = 12$ and $DC = 9$. Since $\\triangle ADC \\sim \\triangle DEC$, we can figure out that $DE = \\frac{36}{5}$. We also know what $AC$ is so we can figure what $AE$ is: $AE = 15 - \\frac{27}{5} = \\frac{48}{5}$ . Quadrilateral $ABDF$ is cyclic, implying that $\\angle{B} + \\angle{DFA}$ = 180\u00b0. Therefore, $\\angle{B} = 180 - \\angle{DFA} = \\angle{EFA}$, and triangles $\\triangle AEF \\sim \\triangle ADB$. Solving the resulting proportion gives $EF = 4$. Therefore, $DF = ED - EF = \\frac{16}{5}$. $m + n = 16 + 5 = 21$ and our answer is $\\boxed{\\textbf{(B) } 21}$. </p><p>$\\triangle ADC \\sim \\triangle DEC$ because of $AA \\sim$ . $\\angle{ADC} = \\angle{DEC} = 90\u00b0$. Lets say $\\angle{ADE} = x$. So $\\angle{EDC} = 90 - x$ and $\\angle{DEC} = 180 - 90 - (90 - x) = x$ so $\\angle{ADE} = \\angle{DEC}$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:South\" rel=\"nofollow\">South</a></p>",
+        "<p>From solution 1, we know that $AD = 12$ and $DC = 9$. Since $\\triangle ADC \\sim \\triangle DEC$, we can figure out that $DE = \\frac{36}{5}$. We also know what $AC$ is so we can figure what $AE$ is: $AE = 15 - \\frac{27}{5} = \\frac{48}{5}$ . Quadrilateral $ABDF$ is cyclic, implying that $\\angle{B} + \\angle{DFA}$ = 180°. Therefore, $\\angle{B} = 180 - \\angle{DFA} = \\angle{EFA}$, and triangles $\\triangle AEF \\sim \\triangle ADB$. Solving the resulting proportion gives $EF = 4$. Therefore, $DF = ED - EF = \\frac{16}{5}$. $m + n = 16 + 5 = 21$ and our answer is $\\boxed{\\textbf{(B) } 21}$. </p><p>$\\triangle ADC \\sim \\triangle DEC$ because of $AA \\sim$ . $\\angle{ADC} = \\angle{DEC} = 90°$. Lets say $\\angle{ADE} = x$. So $\\angle{EDC} = 90 - x$ and $\\angle{DEC} = 180 - 90 - (90 - x) = x$ so $\\angle{ADE} = \\angle{DEC}$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:South\" rel=\"nofollow\">South</a></p>",
         "<p>Let $\\angle{ADF} = \\theta,$ and $DF = x.$ Noting that $AD$ is the altitude from $A$ to $BC,$ $AD=12,$ $BD = 5,$ and $DC = 9.$ Notice that since $DE$ is perpendicular to $AC$, $\\triangle{ADC}$ is similar to $\\triangle{AEC}.$ Therefore since $\\triangle{ADC}$ is a $3$-$4$-$5$ triangle, $\\cos{\\theta}=\\frac{3}{5}.$Applying Law of Cosines on $\\triangle{ADF}$ we have,\\[AF^2 = 144+x^2 - 2\\cdot 12 \\cdot x \\cdot \\cos{\\theta} = 144+x^2 - \\frac{72x}{5}.\\] Next notice that $\\cos{\\angle{BDF}} = \\cos{(90 + \\theta)} = -\\sin{\\theta} = \\frac{-4}{5}.$ Now we apply Law of Cosines on $\\triangle{BDF},$\\[BF^2 = 25 + x^2 - 2 \\cdot 5 \\cdot x \\cdot \\cos{\\angle{BDF}} = 25 + x^2 + 8x.\\]Finally using Pythagorean Theorem on $\\triangle{ABF}$ we have, \\[AB^2 = AF^2 + BF^2.\\] \\[13^2 = 144+x^2 - \\frac{72x}{5} + 25 + x^2 + 8x.\\] \\[0 = 2x^2 - \\frac{32x}{5}.\\] Solving for the nonnegative value for $x$ we find $x = DF = \\frac{16}{5} \\implies \\boxed{21}.$</p><p>~<a href=\"/wiki/index.php/User:Mathkiddus\" title=\"User:Mathkiddus\">mathkiddus</a></p>",
         "<p>If we draw a diagram as given, but then add point $G$ on $\\overline{BC}$ such that $\\overline{FG}\\perp\\overline{BC}$ in order to use the Pythagorean theorem, we end up with similar triangles $\\triangle{DFG}$ and $\\triangle{DCE}$. Thus, $FG=\\tfrac35x$ and $DG=\\tfrac45x$, where $x$ is the length of $\\overline{DF}$. Using the Pythagorean theorem, we now get \\[BF = \\sqrt{\\left(\\frac45x+ 5\\right)^2 + \\left(\\frac35x\\right)^2}\\] and $AF$ can be found out noting that $AE$ is just $\\tfrac{48}5$ through base times height (since $12\\cdot 9 = 15 \\cdot \\tfrac{36}5$, similar triangles gives $AE = \\tfrac{48}5$), and that $EF$ is just $\\tfrac{36}5 - x$. From there, \\[AF = \\sqrt{\\left(\\frac{36}5 - x\\right)^2 + \\left(\\frac{48}5\\right)^2}.\\] Now, $BF^2 + AF^2 = 169$, and squaring and adding both sides and subtracting a 169 from both sides gives $2x^2 - \\tfrac{32}5x = 0$, so $x = \\tfrac{16}5$. Thus, the answer is $\\boxed{\\textbf{(B)}}$.</p>",
         "<p>First, we find $BD = 5$, $DC = 9$, and $AD = 12$ via the Pythagorean Theorem or by using similar triangles. Next, because $DE$ is an altitude of triangle $ADC$, $DE = \\frac{AD\\cdot DC}{AC} = \\frac{36}{5}$. Using that, we can use the Pythagorean Theorem and similar triangles to find $EC = \\frac{27}{5}$ and $AE = \\frac{48}{5}$. </p><p>Points $A$, $B$, $D$, and $F$ all lie on a circle whose diameter is $AB$. Let the point where the circle intersects $AC$ be $G$. Using power of a point, we can write the following equation to solve for $AG$: \\[DC\\cdot BC = CG\\cdot AC\\] \\[9\\cdot 14 = CG\\cdot 15\\] \\[CG = 126/15\\] Using that, we can find $AG = \\frac{99}{15}$, and using $AG$, we can find that $GE = 3$.</p><p>We can use power of a point again to solve for $DF$: \\[FE\\cdot DE = GE\\cdot AE\\] \\[(\\frac{36}{5} - DF)\\cdot \\frac{36}{5} = 3 \\cdot \\frac{48}{5}\\] \\[\\frac{36}{5} - DF = 4\\] \\[DF = \\frac{16}{5} = \\frac{m}{n}\\] Thus, $m+n = 16+5 = 21$ $\\boxed{\\textbf{(B)}}$.</p>",
         "<p>If we draw the diagram like above, but make $BC$ the base, we can set $B(0,0), C(14,0)$ and $A(5,12)$, as $AD$ can quickly be verified to be $12$ by Pythagorean triples or similar triangles. Construct $X$ on $BC$ such that $EX \\perp BC$. This implies $\\triangle ADC \\sim \\triangle EXC$ as $AD \\parallel EX$, and $\\angle ACD = \\angle ECX$. Also construct $FY$ such that $FY \\perp BC$.</p><p><br/>Line $\\overline {AC}$ has a slope of $-\\frac{4}{3}$ by slope formula. Since $D = (5,0)$ and $DE \\perp AC,$, the equation of $DE = \\frac{3}{4}x - \\frac{15}{4}$. </p><p>Furthermore, $F$ can now be expressed as $(x,\\frac{3}{4}x - \\frac{15}{4}).$ Since we know $AF \\perp BF,$ we can solve for $x$ with the perpendicular slope formula like so: \\[\\frac{\\frac{3}{4}x - \\frac{63}{4}}{x - 5} \\cdot \\frac{\\frac{3}{4}x - \\frac {15}{4}}{x} = -1\\] \\[\\frac{x-21}{x-5} \\cdot \\frac{x-5}{x} = -\\frac{16}{9}\\] \\[\\frac{x-21}{x} = -\\frac{16}{9}\\] \\[9x = 189 -16x\\] \\[x = \\frac{189}{25}\\]</p><p>Plugging $\\frac{189}{25}$ into $F$, we get $F(\\frac{189}{25},\\frac{48}{25}).$ Since $FY \\perp DY$, we get that $\\triangle FYD$ has side lengths of $FY = \\frac{48}{25}$</p><p>and $DY = BY - BD = BY - 5 = \\frac{64}{25}$. </p><p>Clearly, $\\triangle FYD$ is a $3 - 4 - 5$ pythagorean triple, so $DF = \\frac{80}{25} = \\frac{16}{5}$.</p><p>$16 + 5 = m + n = \\boxed{\\textbf{(B) }21}$.</p><p>~JT0543164</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -382,6 +646,12 @@
       "question": "<p>For $135^\\circ < x < 180^\\circ$, points $P=(\\cos x, \\cos^2 x), Q=(\\cot x, \\cot^2 x), R=(\\sin x, \\sin^2 x)$ and $S =(\\tan x, \\tan^2 x)$ are the vertices of a trapezoid. What is $\\sin(2x)$?</p>",
       "solutions": [
         "<p>Let $f,g,h,j$ be $\\sin, \\cos, \\tan, \\cot$ (not respectively). Then we have four points $(f,f^2),(g,g^2),(h,h^2),(j,j^2)$, and a pair of lines each connecting two points must be parallel (as we are dealing with a trapezoid). WLOG, take the line connecting the first two points and the line connecting the last two points to be parallel, so that $\\frac{g^2-f^2}{g-f} = \\frac{j^2-h^2}{j-h}$, or $g+f = j+h$.</p><p>Now, we must find how to match up $\\sin, \\cos, \\tan, \\cot$ to $f,g,h,j$ so that the above equation has a solution. On the interval $135^\\circ < x < 180^\\circ$, we have $\\cot x <-1<\\cos x<0<\\sin x$, and $\\cot x <-1<\\tan x<0<\\sin x$ so the sum of the largest and the smallest is equal to the sum of the other two, namely, $\\sin x+\\cot x = \\cos x+\\tan x$.</p><p>Now, we perform some algebraic manipulation to find $\\sin (2x)$:</p><p>$\\sin x+\\cot x = \\cos x+\\tan x \\\\ \\sin x - \\cos x = \\tan x - \\cot x = (\\sin x - \\cos x) (\\sin x + \\cos x) / (\\sin x \\cos x) \\\\ \\sin x \\cos x = \\sin x + \\cos x \\\\ (\\sin x \\cos x)^2 = (\\sin x + \\cos x)^2 \\\\ (\\sin x \\cos x)^2 = \\sin^2 x + 2\\sin x \\cos x + \\cos^2 x \\\\ (\\sin x \\cos x)^2 - 2\\sin x \\cos x - 1 =0$</p><p>Solve the quadratic to find $\\sin x \\cos x = \\frac{2 - 2\\sqrt{2}}{2}$, so that $\\sin(2x) = 2 \\sin x \\cos x = \\boxed{\\textbf{(A)} \\ 2 - 2\\sqrt{2}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
       ]
     },
     {
@@ -390,6 +660,12 @@
       "solutions": [
         "<p>Being on two parabolas means having the same distance from the common focus and both directrices. In particular, you have to be on an angle bisector of the directrices, and clearly on the same \"side\" of the directrices as the focus. So it's easy to see there are at most two solutions per pair of parabolae. Convexity and continuity imply exactly two solutions unless the directrices are parallel and on the same side of the focus.</p><p>So out of $2\\dbinom{30}{2}$ possible intersection points, only $2*5*2*\\dbinom{3}{2}$ fail to exist. This leaves $870-60=810=\\boxed{\\textbf{(C)} \\ 810}$ solutions.</p>",
         "<p>Through similar reasoning as above in Solution I, determine that two parabolas that have a common focus intersect zero times if their directrixes are parallel and the focus lies on the same side of both directrixes, and intersect twice otherwise. Thereby, as each parabola will intersect $30-3 = 27$ other parabolas twice, we see that the answer is \\[2 \\times \\frac{30 \\times 27}{2} = \\boxed{810}.\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -397,16 +673,28 @@
       "question": "<p>Let $m>1$ and $n>1$ be integers. Suppose that the product of the solutions for $x$ of the equation</p><p><br/>\\[8(\\log_n x)(\\log_m x)-7\\log_n x-6 \\log_m x-2013 = 0\\]</p><p><br/>\tis the smallest possible integer. What is $m+n$?</p><p><br/></p>",
       "solutions": [
         "<p>Rearranging logs, the original equation becomes</p><p><br/>\\[\\frac{8}{\\log n \\log m}(\\log x)^2 - \\left(\\frac{7}{\\log n}+\\frac{6}{\\log m}\\right)\\log x - 2013 = 0\\]</p><p><br/></p><p><br/>\tBy Vieta's Theorem, the sum of the possible values of $\\log x$ is $\\frac{\\frac{7}{\\log n}+\\frac{6}{\\log m}}{\\frac{8}{\\log n \\log m}} = \\frac{7\\log m + 6 \\log n}{8} = \\log \\sqrt[8]{m^7n^6}$. But the sum of the possible values of $\\log x$ is the logarithm of the product of the possible values of $x$. Thus the product of the possible values of $x$ is equal to $\\sqrt[8]{m^7n^6}$.</p><p><br/></p><p><br/>\tIt remains to minimize the integer value of $\\sqrt[8]{m^7n^6}$. Since $m, n>1$, we can check that $m = 2^2$ and $n = 2^3$ work. Thus the answer is $4+8 = \\boxed{\\textbf{(A)}\\ 12}$.</p><p><br/></p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
       ]
     },
     {
       "id": "amc_2013_12b_23",
       "question": "<p>Bernardo chooses a three-digit positive integer $N$ and writes both its base-5 and base-6 representations on a blackboard. Later LeRoy sees the two numbers Bernardo has written. Treating the two numbers as base-10 integers, he adds them to obtain an integer $S$. For example, if $N = 749$, Bernardo writes the numbers $10,\\!444$ and $3,\\!245$, and LeRoy obtains the sum $S = 13,\\!689$. For how many choices of $N$ are the two rightmost digits of $S$, in order, the same as those of $2N$?</p>",
       "solutions": [
-        "<p>First, we can examine the units digits of the number base 5 and base 6 and eliminate some possibilities.</p><p>Say that $N \\equiv a \\pmod{6}$</p><p>also that $N \\equiv b \\pmod{5}$</p><p>Substituting these equations into the question and setting the units digits of $2N$ and $S$ equal to each other, it can be seen that $b < 5$ (because otherwise $a$ and $b$ will have different parities), and thus $a=b$.$N \\equiv a \\pmod{6}$,$N \\equiv  a \\pmod{5}$,$\\implies N=a \\pmod{30}$,$0 \\le a \\le 4$</p><p>Therefore, $N$ can be written as $30x+y$and $2N$ can be written as $60x+2y$</p><p>Just keep in mind that $y$ can be one of five choices: $0, 1, 2, 3,$ or $4$,\u00a0;Also, we have already found which digits of $y$ will add up into the units digits of $2N$.</p><p>Now, examine the tens digit, $x$ by using $\\mod{25}$ and $\\mod{36}$ to find the tens digit (units digits can be disregarded because $y=0,1,2,3,4$ will always work)Then we take $N=30x+y$ $\\mod{25}$ and $\\mod{36}$ to find the last two digits in the base $5$ and $6$ representation.\\[N \\equiv 30x \\pmod{36}\\]\\[N \\equiv 30x \\equiv 5x \\pmod{25}\\] Both of those must add up to \\[2N\\equiv60x \\pmod{100}\\]</p><p>($33 \\ge x \\ge 4$)</p><p>Now, since $y=0,1,2,3,4$ will always work if $x$ works, then we can treat $x$ as a units digit instead of a tens digit in the respective bases and decrease the mods so that $x$ is now the units digit.\\[N \\equiv 5x \\pmod{6}\\]\\[N \\equiv 6x \\equiv x \\pmod{5}\\]\\[2N\\equiv 6x \\pmod{10}\\]</p><p>Say that $x=5m+n$ (m is between 0-6, n is 0-4 because of constraints on x)Then </p><p>\\[N \\equiv 5m+n \\pmod{5}\\]\\[N \\equiv 25m+5n \\pmod{6}\\]\\[2N\\equiv30m + 6n \\pmod{10}\\]</p><p>and this simplifies to </p><p>\\[N \\equiv n \\pmod{5}\\]\\[N \\equiv m+5n \\pmod{6}\\]\\[2N\\equiv 6n \\pmod{10}\\]</p><p>From careful inspection, this is true when</p><p>$n=0, m=6$</p><p>$n=1, m=6$</p><p>$n=2, m=2$</p><p>$n=3, m=2$</p><p>$n=4, m=4$</p><p>This gives you $5$ choices for $x$, and $5$ choices for $y$, so the answer is $5* 5 = \\boxed{\\textbf{(E) }25}$</p>",
+        "<p>First, we can examine the units digits of the number base 5 and base 6 and eliminate some possibilities.</p><p>Say that $N \\equiv a \\pmod{6}$</p><p>also that $N \\equiv b \\pmod{5}$</p><p>Substituting these equations into the question and setting the units digits of $2N$ and $S$ equal to each other, it can be seen that $b < 5$ (because otherwise $a$ and $b$ will have different parities), and thus $a=b$.$N \\equiv a \\pmod{6}$,$N \\equiv  a \\pmod{5}$,$\\implies N=a \\pmod{30}$,$0 \\le a \\le 4$</p><p>Therefore, $N$ can be written as $30x+y$and $2N$ can be written as $60x+2y$</p><p>Just keep in mind that $y$ can be one of five choices: $0, 1, 2, 3,$ or $4$, ;Also, we have already found which digits of $y$ will add up into the units digits of $2N$.</p><p>Now, examine the tens digit, $x$ by using $\\mod{25}$ and $\\mod{36}$ to find the tens digit (units digits can be disregarded because $y=0,1,2,3,4$ will always work)Then we take $N=30x+y$ $\\mod{25}$ and $\\mod{36}$ to find the last two digits in the base $5$ and $6$ representation.\\[N \\equiv 30x \\pmod{36}\\]\\[N \\equiv 30x \\equiv 5x \\pmod{25}\\] Both of those must add up to \\[2N\\equiv60x \\pmod{100}\\]</p><p>($33 \\ge x \\ge 4$)</p><p>Now, since $y=0,1,2,3,4$ will always work if $x$ works, then we can treat $x$ as a units digit instead of a tens digit in the respective bases and decrease the mods so that $x$ is now the units digit.\\[N \\equiv 5x \\pmod{6}\\]\\[N \\equiv 6x \\equiv x \\pmod{5}\\]\\[2N\\equiv 6x \\pmod{10}\\]</p><p>Say that $x=5m+n$ (m is between 0-6, n is 0-4 because of constraints on x)Then </p><p>\\[N \\equiv 5m+n \\pmod{5}\\]\\[N \\equiv 25m+5n \\pmod{6}\\]\\[2N\\equiv30m + 6n \\pmod{10}\\]</p><p>and this simplifies to </p><p>\\[N \\equiv n \\pmod{5}\\]\\[N \\equiv m+5n \\pmod{6}\\]\\[2N\\equiv 6n \\pmod{10}\\]</p><p>From careful inspection, this is true when</p><p>$n=0, m=6$</p><p>$n=1, m=6$</p><p>$n=2, m=2$</p><p>$n=3, m=2$</p><p>$n=4, m=4$</p><p>This gives you $5$ choices for $x$, and $5$ choices for $y$, so the answer is $5* 5 = \\boxed{\\textbf{(E) }25}$</p>",
         "<p>Notice that there are exactly $1000-100=900=5^2\\cdot 6^2$ possible values of $N$. This means, in $100\\le N\\le 999$, every possible combination of $2$ digits will happen exactly once. We know that $N=900,901,902,903,904$ work because $900\\equiv\\dots00_5\\equiv\\dots00_6$.</p><p>We know for sure that the units digit will add perfectly every $30$ added or subtracted, because $\\text{lcm }(5, 6)=30$. So we only have to care about cases of $N$ every $30$ subtracted. In each case, $2N$ subtracts $6$/adds $4$, $N_5$ subtracts $1$ and $N_6$ adds $1$ for the $10$'s digit.</p><p>\\[\\textbf{5 }\\textcolor{red}{\\text{ 0}}\\text{ 4 3 2 1 0 }\\textcolor{red}{\\text{4}}\\text{ 3 2 1 0 4 3 2 1 0 4 }\\textcolor{red}{\\text{3 2}}\\text{ 1 0 4 3 2 1 0 4 3 2 }\\textcolor{red}{\\text{1}}\\]</p><p>\\[\\textbf{6 }\\textcolor{red}{\\text{ 0}}\\text{ 1 2 3 4 5 }\\textcolor{red}{\\text{0}}\\text{ 1 2 3 4 5 0 1 2 3 4 }\\textcolor{red}{\\text{5 0}}\\text{ 1 2 3 4 5 0 1 2 3 4 }\\textcolor{red}{\\text{5}}\\]</p><p>\\[\\textbf{10}\\textcolor{red}{\\text{ 0}}\\text{ 4 8 2 6 0 }\\textcolor{red}{\\text{4}}\\text{ 8 2 6 0 4 8 2 6 0 4 }\\textcolor{red}{\\text{8 2}}\\text{ 6 0 4 8 2 6 0 4 8 2 }\\textcolor{red}{\\text{6}}\\]</p><p>As we can see, there are $5$ cases, including the original, that work. These are highlighted in $\\textcolor{red}{\\text{red}}$. So, thus, there are $5$ possibilities for each case, and $5\\cdot 5=\\boxed{\\textbf{(E) }25}$.</p>",
         "<p>Notice that $N_5$ ranges from $3$ to $5$ digits and $N_6$ ranges from $3$ to $4$ digits.</p><p>Then let $a_i$, $b_i$ denotes the digits of $N_5$, $N_6$, respectively such that \\[0\\le a_i<5,0\\le b_i<6\\] Thus we have \\[N=5^4a_1+5^3a_2+5^2a_3+5a_4+a_5=6^3b_1+6^2b_2+6b_3+b_4\\]\\[625a_1+125a_2+25a_3+5a_4+a_5=216b_1+36b_2+6b_3+b_4\\] Now we are given \\[2N \\equiv S \\equiv N_5+N_6\\pmod{100}\\]\\[2(625a_1+125a_2+25a_3+5a_4+a_5) \\equiv (10000a_1+1000a_2+100a_3+10a_4+a_5)+(1000b_1+100b_2+10b_3+b_4)\\pmod{100}\\]\\[1250a_1+250a_2+50a_3+10a_4+2a_5 \\equiv 10000a_1+1000a_2+1000b_1+100a_3+100b_2+10a_4+10b_3+a_5+b_4\\pmod{100}\\]\\[50a_1+50a_2+50a_3+10a_4+2a_5 \\equiv 10a_4+10b_3+a_5+b_4\\pmod{100}\\]Canceling out $a_5$ left with\\[50a_1+50a_2+50a_3+10a_4+a_5 \\equiv 10a_4+10b_3+b_4\\pmod{100}\\]</p><p>Since $a_5$, $b_4$ determine the unit digits of the two sides of the congruence equation, we have $a_5=b_4=0,1,2,3,4$. Thus,</p><p>\\[50a_1+50a_2+50a_3+10a_4 \\equiv 10a_4+10b_3\\pmod{100}\\] canceling out $10a_4$, we have \\[50a_1+50a_2+50a_3 \\equiv 10b_3\\pmod{100}\\]\\[5a_1+5a_2+5a_3 \\equiv b_3\\pmod{10}\\]\\[5(a_1+a_2+a_3) \\equiv b_3\\pmod{10}\\]</p><p>Thus $b_3$ is a multiple of $5$.</p><p>Now going back to our original equation \\[625a_1+125a_2+25a_3+5a_4+a_5=216b_1+36b_2+6b_3+b_4\\] Since $a_5=b_4$,\\[625a_1+125a_2+25a_3+5a_4=216b_1+36b_2+6b_3\\]\\[5(125a_1+25a_2+5a_3+a_4)=6(36b_1+6b_2+b_3)\\]\\[5(125a_1+25a_2+5a_3+a_4)=6[6(6b_1+b_2)+b_3]\\]</p><p>Since the left side is a multiple of $5$, then so does the right side. Thus $5\\mid6(6b_1+b_2)+b_3$.</p><p>Since we already know that $5\\mid b_3$, then $5\\mid6(6b_1+b_2)$, from where we also know that $5\\mid6b_1+b_2$.</p><p>For $b_1,b_2<6$, there is a total of 7 ordered pairs that satisfy the condition. Namely,</p><p>\\[(b_1,b_2)=(0,0),(0,5),(1,4),(2,3),(3,2),(4,1),(5,0)\\]</p><p>Since $N_6$ has at least $3$ digits, $(b_1,b_2)=(0,0)$ doesn't work. Furthermore, when $b_1=5$, $216b_1$ exceeds $1000$ which is not possible as $N$ is a three digit number, thus $(b_1,b_2)=(5,0)$ won't work as well. </p><p>Since we know that $a_i<5$, for each of the ordered pairs $(b_1,b_2)$, there is respectively one and only one solution $(a_1,a_2,a_3,a_4)$ that satisfies the equation </p><p>\\[625a_1+125a_2+25a_3+5a_4=216b_1+36b_2+6b_3\\]</p><p>Thus there are five solutions to the equation. Also since we have 5 possibilities for $a_5=b_4$, we have a total of $5\\cdot5=25$ values for $N$. $\\boxed{\\textbf{(E) }25}$</p><p>~ Nafer</p>",
         "<p>Observe that the maximum possible value of the sum of the last two digits of the base $5$ number and the base $6$ number is $44+55=99$. Let $N \\equiv a \\pmod {25}$ and $N \\equiv b \\pmod {36}$. </p><p>If $a < \\frac{25}{2}$, $2N \\equiv 2a \\pmod {25}$ and if $a > \\frac{25}{2}$, $2N \\equiv 2a - 25 \\pmod {25}$.</p><p>Using the same logic for $b$, if $b < 18$, $2N \\equiv 2b \\pmod {36}$, and in the other case $2N \\equiv 2b - 36 \\pmod {36}$.</p><p>We can do four cases:</p><p>Case 1: $a + b = 2a - 25 + 2b - 36 \\implies a + b = 61$.</p><p>For this case, there is trivially only one possible solution, $(a, b) = (25, 36)$, which is equivalent to $(a, b) = (0, 0)$. </p><p>Case 2: $a + b = 2a - 25 + 2b \\implies a + b = 25$.</p><p>Note that in this case, $a \\geq 13$ must hold, and $b < 18$ must hold. We find the possible ordered pairs to be: $(13, 12), (14, 11), (15, 10), ..., (24, 1)$ for a total of $12$ ordered pairs.</p><p>Case 3: $a + b = 2a + 2b - 36 \\implies a + b = 36$.</p><p>Note that in this case, $b \\geq 18$ must hold, and $a < 13$ must hold.We find the possible ordered pairs to be: $(24, 12), (25, 11), (26, 10), ..., (35, 1)$ for a total of $12$ ordered pairs.</p><p>Case 4: $a + b = 2a + 2b$.</p><p>Trivially no solutions except $(a, b) = (0, 0)$, which matches the solution in Case 1, which makes this an overcount.</p><p>By CRT, each solution $(a, b)$ corresponds exactly one positive integer in a set of exactly $\\text{lcm} (25, 36) = 900$ consecutive positive integers, and since there are $900$ positive integers between $100$ and $999$, our induction is complete, and our answer is $1 + 12 + 12 = \\boxed{\\textbf{(E) }25}$.</p><p>~ fidgetboss_4000</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "modular_arithmetic"
+        }
       ]
     },
     {
@@ -419,6 +707,12 @@
         "<p>Since $\\triangle BXN$ is equilateral, let's assume the sides of them are all $a$, and denote the length of $XM$ is $m$. Since $CN$ bisects $\\angle BCA$, applying the angle bisector theorem and we can get $BC=\\frac{a}{m}$;$AN=2m$. Now applying LOC, we can get $(a+2m)^2+(a+m)^2-2(a+2m)(a+m)\\cos\\frac{\\pi}{3}=1$. We get $a^2+3m^2+3am=1$. Now applying the Stewart theorem in $\\triangle BAC$, we can find that ${\\frac{a^2}{m^2}+(a+2m)^2=2(1+(a+m)^2)}$, after simplifying, we get ${\\frac{a^2}{m^2}-a^2+2m^2=2}$. After observation, the main key for this problem is $a^2$, so we can solve $a$ in term of $m$. Let's see the equation ${\\frac{a^2}{m^2}-a^2+2m^2=2}$, we can find that $a=\\sqrt{2}m$ so $a^2=2m^2$. Now back solving the first equation we can get that $a=\\frac{-3m+\\sqrt{4-3m^2}}{m}$cuz the negative one can't work. After solving, we can get that $m^2=\\frac{1}{5+3\\sqrt{2}}$ so $a^2=2m^2$ and we get $a^2 = \\boxed{\\textbf{(A) } \\frac{10-6\\sqrt{2}}{7}}$~ bluesoul</p>",
         "<p>Denote the length of $AN$ as $a$ and the length of $NB$ as $b.$</p><p>Let $M'$ be the midpoint of $\\overline{BC} .$ Denote the intersection of $\\overline{MM'}$ and $\\overline{CN}$ as $X' .$ Note that $MX' = \\frac12 AN = \\frac{a}{2}$ and $CN = 2\\cdot NX' .$ As $\\overline{MM'} || \\overline{AB},$ we have that $\\triangle MXX' \\sim \\triangle BXN$ or $\\triangle MXX'$ is equilateral and $XX' =MX' = \\frac{a}{2}.$ Thus, $CN = 2b+a$ and $CX=a+b.$</p><p>Observe that </p><p>\\[\\triangle BXC\\sim \\triangle ANC \\implies \\frac{BX}{XC} =\\frac{AN}{NC} \\implies \\frac{b}{b+a} = \\frac{a}{2b+a} \\implies a = \\sqrt 2 b.\\]</p><p>By the angle bisector theorem, we have that $BC=\\frac{2b}{a} = \\sqrt 2.$</p><p>We apply the Law of Cosines on $\\triangle BXC$ as follows:\\[BC^2=BX^2+XC^2-2BX\\cdot XC\\cdot \\cos120^\\circ\\]\\begin{align*} 2&=b^2+(\\sqrt 2+1)^2b^2 +(\\sqrt2 + 1)b^2 \\\\ &=b^2(5+3\\sqrt 2) \\end{align*}or\\[\\boxed{b^2=\\textbf{(A) } \\frac{10-6\\sqrt{2}}{7}}\\]</p><p>~ASAB</p>",
         "<p>$\\angle BXC = \\angle ANC$, $\\angle BCX = \\angle ACN$, $\\triangle BCX \\sim \\triangle ACN$, $\\frac{CX}{CN} = \\frac{BC}{AC}$</p><p>$\\angle MBC = \\angle BAC$, $\\angle BCM = \\angle ACB$, $\\triangle BCM \\sim \\triangle ACB$, $\\frac{BC}{AC} = \\frac{CM}{BC}$, $BC = \\sqrt{2}$</p><p>Let $BX = x$, $CN = CX + x$, $\\frac{CX}{CX + x} = \\frac{\\sqrt{2}}{2}$, $2CX = CX \\sqrt{2} + x \\sqrt{2}$, $CX = x(\\sqrt{2} + 1)$</p><p>$BC^2 = BX^2 + CX^2 - 2 \\cdot BX \\cdot CX \\cdot \\cos 120^\\circ$</p><p>$2 = x^2(\\sqrt{2} + 1)^2 + x^2 + x^2(\\sqrt{2} + 1) = 5x^2 + 3x^2 \\sqrt{2}$</p><p>$x^2 = \\frac{2}{5 + 3 \\sqrt{2} } = \\boxed{\\textbf{(A) }\\frac{10-6\\sqrt{2}}{7}}$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -428,6 +722,12 @@
         "<p>If we factor into irreducible polynomials (in $\\mathbb{Q}[x]$), each factor $f_i$ has exponent $1$ in the factorization and degree at most $2$ (since the $a+bi$ with $b\\ne0$ come in conjugate pairs with product $a^2+b^2$). Clearly we want the product of constant terms of these polynomials to equal $50$; for $d\\mid 50$, let $f(d)$ be the number of permitted $f_i$ with constant term $d$. It's easy to compute $f(1)=2$, $f(2)=3$, $f(5)=5$, $f(10)=5$, $f(25)=6$, $f(50)=7$, and obviously $f(d) = 1$ for negative $d\\mid 50$.</p><p>Note that by the distinctness condition, the only constant terms $d$ that can be repeated are those with $d^2\\mid 50$ and $f(d)>1$, i.e. $+1$ and $+5$. Also, the $+1$s don't affect the product, so we can simply count the number of polynomials with no constant terms of $+1$ and multiply by $2^{f(1)} = 4$ at the end.</p><p>We do casework on the (unique) even constant term $d\\in\\{\\pm2,\\pm10,\\pm50\\}$ in our product. For convenience, let $F(d)$ be the number of ways to get a product of $50/d$ without using $\\pm 1$ (so only using $\\pm5,\\pm25$) and recall $f(-1) = 1$; then our final answer will be $2^{f(1)}\\sum_{d\\in\\{2,10,50\\}}(f(-d)+f(d))(F(-d)+F(d))$. It's easy to compute $F(-50)=0$, $F(50)=1$, $F(-10)=f(5)=5$, $F(10)=f(-5)=1$, $F(-2)=f(-25)+f(-5)f(5)=6$, $F(2)=f(25)+\\binom{f(5)}{2}=16$, so we get\\[4 [ (1+3)(6+16) + (1+5)(1+5) + (1+7)(0+1) ] = 4[132] = \\boxed{\\textbf{(B) }528}\\]</p>",
         "<p>Disregard sign; we can tack on $x-1$ if the product ends up being negative.</p><p>$1: \\pm i,-1$ (2) (1 is not included)</p><p>$2: \\pm 2, \\pm 1\\pm i$ (4)</p><p>$5: \\pm 2\\pm i, \\pm 1\\pm 2i, \\pm 5$ (6)</p><p>$10: \\pm 3\\pm i, \\pm 1\\pm 3i, \\pm 10$ (6)</p><p>$25: \\pm 25, \\pm 3\\pm 4i, \\pm 4\\pm 3i, \\pm 5i$ (7)</p><p>$50: \\pm 50, \\pm 1\\pm 7i, \\pm7\\pm i, \\pm 5\\pm 5i$ (8)</p><p>Our answer is $2^2\\left(4\\cdot\\binom{6}{2}+6\\cdot 6+4\\cdot 7+8\\right)=\\boxed{528.}$</p>",
         "<p>By Vieta's formula $50$ is the product of all $n$ roots. As the roots are all in the form $a + bi$, there must exist a conjugate $a-bi$ for each root.</p><p>$(a+bi)(a-bi) = a^2 + b^2$</p><p>$50 = 2 \\cdot 5^2$</p><p>If $a \\neq b \\neq 0$, the roots can be $a \\pm bi$, $-a \\pm bi$, $b \\pm ai$, $-b \\pm ai$, totaling $4$ pairs of roots.</p><p>If $a = b$, the roots can be $a \\pm ai$, $-a \\pm ai$, totaling $2$ pairs of roots.</p><p>If $a \\neq b$, $b = 0$, the roots can be $\\pm a$, $\\pm ai$, totaling $2$ pairs of roots.</p><p>\\begin{align*} 2 \\cdot 25 &= (1^2+1^2)5^2 &: 2 \\cdot 2 = 4\\\\ 2 \\cdot 25 &= 2 \\cdot 5^2 &: 2 \\cdot 2 = 4\\\\ 2 \\cdot 25 &= (1^2+1^2) \\cdot (3^2+4^2) &: 2 \\cdot 4 = 8\\\\ 2 \\cdot 25 &= 2 \\cdot (3^2+4^2) &: 2 \\cdot 4 = 8 \\end{align*}</p><p>\\begin{align*} 10 \\cdot 5 &= (1^2+3^2)(1^2+2^2) &&: 4 \\cdot 4 = 16\\\\ 10 \\cdot 5 &= 10 \\cdot (1^2+2^2) &&: 2 \\cdot 4 = 8\\\\ 10 \\cdot 5 &= (1^2+3^2) \\cdot 5 &&: 4 \\cdot 2 = 8\\\\ 10 \\cdot 5 &= 10 \\cdot 5 &&: 2 \\cdot 2 = 4\\\\ \\end{align*}</p><p>\\begin{align*} 2 \\cdot 5  \\cdot 5&= (1^2+1^2)(1^2+2^2)(1^2+2^2) &&: 2 \\cdot 4 \\cdot 4 = 32\\\\ 2 \\cdot 5  \\cdot 5&= 2 \\cdot (1^2+2^2)(1^2+2^2) &&: 2 \\cdot 4 \\cdot 4 = 32\\\\ 2 \\cdot 5  \\cdot 5&= 2 \\cdot 5 \\cdot (1^2+2^2) &&: 2 \\cdot 2 \\cdot 4 = 16\\\\ 2 \\cdot 5  \\cdot 5&= 2 \\cdot 5 \\cdot 5 &&: 2 \\cdot 2 \\cdot 2 = 8\\\\ 2 \\cdot 5  \\cdot 5&= (1^2+1^2) \\cdot 5 \\cdot (1^2+2^2) &&: 2 \\cdot 2 \\cdot 4 = 16\\\\ 2 \\cdot 5  \\cdot 5&= (1^2+1^2) \\cdot 5 \\cdot 5 &&: 2 \\cdot 2 \\cdot 2 = 8\\\\ \\end{align*}</p><p>\\begin{align*} (1^2+7^2) &: 4\\\\ (5^2+5^2) &: 2\\\\ 50 &: 2 \\end{align*}</p><p>$4+4+8+8+16+8+8+4+32+32+16+8+16+8+4+2+2 = 176$</p><p>For each case $1^2$ can be added, yielding 2 more cases $(\\pm 1, \\pm i)$. $176 \\cdot 3 = \\boxed{\\textbf{(B) }528}$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "general"
+        }
       ]
     }
   ]
