@@ -7,6 +7,12 @@
       "question": "<p>Pablo buys popsicles for his friends. The store sells single popsicles for $$1$ each, 3-popsicle boxes for $$2$, and 5-popsicle boxes for $$3$. What is the greatest number of popsicles that Pablo can buy with $$8$?</p>",
       "solutions": [
         "<p>We can take two 5-popsicle boxes and one 3-popsicle box with $$8$. Note that it is optimal since one popsicle is at the rate of $$1$ per popsicle, three popsicles at $$\\frac{2}{3}$ per popsicle and finally, five popsicles at $$\\frac{3}{5}$ per popsicle, hence we want as many $$3$ sets as possible. It is clear that the above is the optimal method. $\\boxed{\\textbf{D}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -15,6 +21,12 @@
       "solutions": [
         "<p>Let $x, y$ be our two numbers. Then $x+y = 4xy$. Thus, </p><p>$\\frac{1}{x} + \\frac{1}{y} = \\frac{x+y}{xy} = 4$. </p><p>$\\boxed{ \\textbf{C}}$.</p>",
         "<p>We can let $x=y.$ Then, we have that $2x=4x^2$ making $x=\\tfrac{1}{2}.$ The answer is $\\dfrac{2}{x}=4=\\boxed{ \\textbf{C}}.$ ~ <a href=\"/wiki/index.php/User:Solasky\" title=\"User:Solasky\">Solasky</a> (<a class=\"new\" href=\"/wiki/index.php?title=User_talk:Solasky&amp;action=edit&amp;redlink=1\" title=\"User talk:Solasky (page does not exist)\">talk</a>)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -22,6 +34,12 @@
       "question": "<p>Ms. Carroll promised that anyone who got all the multiple choice questions right on the upcoming exam would receive an A on the exam. Which one of these statements necessarily follows logically?</p>",
       "solutions": [
         "<p>Taking the contrapositive of the statement \"if he got all of them right, he got an A\" yields \"if he didn't get an A, he didn't get all of them right\", yielding the answer $\\boxed{\\textbf{(B)}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "logic",
+          "sub_category": "logical_reasoning"
+        }
       ]
     },
     {
@@ -29,6 +47,12 @@
       "question": "<p>Jerry and Silvia wanted to go from the southwest corner of a square field to the northeast corner. Jerry walked due east and then due north to reach the goal, but Silvia headed northeast and reached the goal walking in a straight line. Which of the following is closest to how much shorter Silvia's trip was, compared to Jerry's trip?</p>",
       "solutions": [
         "<p>Let $j$ represent how far Jerry walked, and $s$ represent how far Sylvia walked. Since the field is a square, and Jerry walked two sides of it, while Silvia walked the diagonal, we can simply define the side of the square field to be one, and find the distances they walked. Since Jerry walked two sides, $j = 2$Since Silvia walked the diagonal, she walked the hypotenuse of a $45$, $45$, $90$ triangle with leg length $1$. Thus,$s = \\sqrt{2} = 1.414...$We can then take $\\frac{j-s}{j} \\approx \\frac{2 - 1.4}{2} = 0.3 = 30\\%$$\\boxed{ \\textbf{A}}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -40,6 +64,12 @@
         "<p>The number of handshakes will be equivalent to the difference between the number of total interactions and the number of hugs, which are ${30\\choose 2}$ and ${20\\choose 2}$, respectively. Thus, the total amount of handshakes is ${30\\choose 2} - {20\\choose 2} = 435 - 190= \\boxed{(B)=\\ 245}$</p>",
         "<p>Each of the $10$ people who do not know anybody will shake hands with all $20$ of the people who do know each other. This means there will be at least $20 * 10 = 200$ handshakes. In addition, those $10$ people will also shake hands with each other, giving us another $9+8+7+6+5+4+3+2+1 = 45$ handshakes. Therefore, there is a total of $200+45 = \\boxed{(B) = 245}$ handshakes.</p>",
         "<p>Every one of the $20$ people who know each other will shake hands with each of the $10$ people who know no one, so there are $20\\cdot 10 = 200$ handshakes here. Each of the $10$ people will also shake hands with each other, so there will be ${10 \\choose 2}$ $=45$ handshakes for this case. In total, there are $200+45 = \\boxed{\\textbf{(B)}\\ 245}$ handshakes. </p><p>-Benedict T (countmath1)</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "permutations_combinations"
+        }
       ]
     },
     {
@@ -47,6 +77,12 @@
       "question": "<p>Joy has $30$ thin rods, one each of every integer length from $1 \\text{ cm}$ through $30 \\text{ cm}$. She places the rods with lengths $3 \\text{ cm}$, $7 \\text{ cm}$, and $15 \\text{cm}$ on a table. She then wants to choose a fourth rod that she can put with these three to form a quadrilateral with positive area. How many of the remaining rods can she choose as the fourth rod?</p>",
       "solutions": [
         "<p>The quadrilateral cannot be a straight line. Thus, the fourth side must be longer than $15 - (3 + 7) = 5$ and shorter than $15 + 3 + 7 = 25$. This means Joy can use the $19$ possible integer rod lengths that fall into $[6, 24]$. However, she has already used the rods of length $7$ cm and $15$ cm so the answer is $19 - 2 = 17$ $\\boxed{\\textbf{(B)}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -54,6 +90,12 @@
       "question": "<p>Define a function on the positive integers recursively by $f(1) = 2$, $f(n) = f(n-1) + 1$ if $n$ is even, and $f(n) = f(n-2) + 2$ if $n$ is odd and greater than $1$. What is $f(2017)$?</p>",
       "solutions": [
         "<p>This is a recursive function, which means the function refers back to itself to calculate subsequent terms. To solve this, we must identify the base case, $f(1)=2$. We also know that when $n$ is odd, $f(n)=f(n-2)+2$. Thus we know that $f(2017)=f(2015)+2$. Thus we know that n will always be odd in the recursion of $f(2017)$, and we add $2$ each recursive cycle, which there are $1008$ of. Thus the answer is $1008*2+2=2018$, which is answer$\\boxed{\\textbf{(B)}}$.Note that when you write out a few numbers, you find that $f(n)=n+1$ for any $n$, so $f(2017)=2018$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "sequences"
+        }
       ]
     },
     {
@@ -61,6 +103,12 @@
       "question": "<p>The region consisting of all points in three-dimensional space within $3$ units of line segment $\\overline{AB}$ has volume $216 \\pi$. What is the length $AB$?</p>",
       "solutions": [
         "<p>Let the length $AB$ be $L$. Then, we see that the region is just the union of the cylinder with central axis $\\overline{AB}$ and radius $3$ and the two hemispheres connected to each face of the cylinder (also with radius $3$). Thus the volume is</p><p>$9\\pi L + \\frac{4}{3}\\pi(3)^3 = 9\\pi L + 36\\pi ( = 216\\pi)$</p><p>$9\\pi L = 180\\pi$</p><p>$L = \\boxed{(D)=\\ 20}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry"
+        }
       ]
     },
     {
@@ -68,6 +116,12 @@
       "question": "<p>Let $S$ be the set of points $(x,y)$ in the coordinate plane such that two of the three quantities $3$, $x+2$, and $y-4$ are equal and the third of the three quantities is no greater than the common value. Which of the following is a correct description of $S$?</p>",
       "solutions": [
         "<p>If the two equal values are $3$ and $x+2$, then $x=1$. Also, $y-4\\leqslant 3$ because $3$ is the common value. Solving for $y$, we get $y\\leqslant 7$. Therefore the portion of the line $x=1$ where $y\\leqslant 7$ is part of $S$. This is a ray with an endpoint of $(1, 7)$. </p><p>Similar to the process above, we assume that the two equal values are $3$ and $y-4$. Solving the equation $3=y-4$ then $y=7$. Also, $x+2\\leqslant 3$ because $3$ is the common value. Solving for $x$, we get $x\\leqslant 1$. Therefore the portion of the line $y=7$ where $x\\leqslant 1$ is also part of $S$. This is another ray with the same endpoint as the above ray: $(1, 7)$. (Note that the only answer choice which has rays in it is answer choice $E$.)</p><p>If $x+2$ and $y-4$ are the two equal values, then $x+2=y-4$. Solving the equation for $y$, we get $y=x+6$. Also $3\\leqslant y-4$ because $y-4$ is one way to express the common value (using $x-2$ as the common value works as well). Solving for $y$, we get $y\\geqslant 7$. Therefore the portion of the line $y=x+6$ where $y\\geqslant 7$ is part of $S$ like the other two rays. The lowest possible value that can be achieved is also $(1, 7)$.</p><p>Since $S$ is made up of three rays with common endpoint $(1, 7)$, the answer is $\\boxed{E}$.</p><p>Solution by TheMathematicsTiger7</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -76,6 +130,12 @@
       "solutions": [
         "<p>Suppose Laurent's number is in the interval $[ 0, 2017 ]$. Then, by symmetry, the probability of Laurent's number being greater is $\\dfrac{1}{2}$. Next, suppose Laurent's number is in the interval $[ 2017, 4034 ]$. Then Laurent's number will be greater with a probability of $1$. Since each case is equally likely, the probability of Laurent's number being greater is $\\dfrac{1 + \\frac{1}{2}}{2} = \\dfrac{3}{4}$, so the answer is $\\boxed{C}$.</p>",
         "<p>Let $x$ be the number chosen randomly by Chloe. Because it is given that the number Chloe chooses is in the interval $[ 0, 2017 ]$, $0 \\leq x \\leq 2017$. Next, let $y$ be the number chosen randomly by Laurent. Because it is given that the number Laurent chooses is in the interval $[ 0, 4034 ]$, $0 \\leq y \\leq 4034$. Since we are looking for when Laurent's number is greater than Chloe's we write the equation $y > x$. When these three inequalities are graphed the area captured by $0 \\leq x \\leq 2017$ and $0 \\leq y \\leq 4034$ represents all the possibilities, forming a rectangle $2017$ in width and $4034$ in height. Thus making its area $4034 * 2017$. The area captured by $0 \\leq x \\leq 2017$, $0 \\leq y \\leq 4034$, and $y > x$ represents the possibilities of Laurent winning, forming a trapezoid with a height $2017$ in length and bases $4034$ and $2017$ length, thus making an area $2017 *\\frac{4034+2017}{2}$.  The simplified quotient of these two areas is the probability Laurent's number is larger than Chloe's, which is $\\boxed {C=\\frac{3}{4}}$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -84,6 +144,12 @@
       "solutions": [
         "<p>We know that the sum of the interior angles of the polygon is a multiple of $180$. Note that $\\left\\lceil\\frac{2017}{180}\\right\\rceil = 12$ and $180\\cdot 12 = 2160$, so the angle Claire forgot is $\\equiv 2160-2017=143\\mod 180$. Since the polygon is convex, the angle is $\\leq 180$, so the answer is $\\boxed{(D)\\ =\\ 143}$.</p>",
         "<p>Because the sum of the interior angles is a multiple of $180$, we know that the sum of the angles in a polygon is $0 \\mod 9$. $2017$ is congruent to $1 \\mod 9$, so the answer has to be $-1 \\mod 9$. The only answer that is congruent to $-1 \\mod 9$ is $143$.-harsha12345</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "polygons"
+        }
       ]
     },
     {
@@ -92,6 +158,12 @@
       "solutions": [
         "<p>We know that Horse $k$ will be at the starting point after $n$ minutes if $k|n$. Thus, we are looking for the smallest $n$ such that at least $5$ of the numbers $\\{1,2,\\cdots,10\\}$ divide $n$. Thus, $n$ has at least $5$ positive integer divisors.</p><p>We quickly see that $12$ is the smallest number with at least $5$ positive integer divisors and that $1,2,3,4,6$ are each numbers of horses. Thus, our answer is $1+2=\\boxed{\\textbf{(B) } 3}$.</p><p><br/></p>",
         "<p>In order for at least $5$ horses to finish simultaneously, the current time needs to have at least $5$ divisors. Thus the number must have a form of either $p^4$ or $p^2*q$, which have $5$ and $6$ factors respectively. The smallest number of the first form is $16$, and the smallest number of the second form is $12.$ Thus, our answer is $1+2=\\boxed{\\textbf{(B) } 3}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
       ]
     },
     {
@@ -99,6 +171,12 @@
       "question": "<p>Driving at a constant speed, Sharon usually takes $180$ minutes to drive from her house to her mother's house. One day Sharon begins the drive at her usual speed, but after driving $\\frac{1}{3}$ of the way, she hits a bad snowstorm and reduces her speed by $20$ miles per hour. This time the trip takes her a total of $276$ minutes. How many miles is the drive from Sharon's house to her mother's house?</p>",
       "solutions": [
         "<p>Let total distance be $x$. Her speed in miles per minute is $\\tfrac{x}{180}$. Then, the distance that she drove before hitting the snowstorm is $\\tfrac{x}{3}$. Her speed in snowstorm is reduced $20$ miles per hour, or $\\tfrac{1}{3}$ miles per minute. Knowing it took her $276$ minutes in total, we create equation: \\[\\text{Time before Storm}\\, + \\, \\text{Time after Storm} = \\text{Total Time} \\Longrightarrow\\]\\[\\frac{\\text{Distance before Storm}}{\\text{Speed before Storm}} + \\frac{\\text{Distance in Storm}}{\\text{Speed in Storm}} = \\text{Total Time} \\Longrightarrow \\frac{\\tfrac{x}{3}}{\\tfrac{x}{180}} + \\frac{\\tfrac{2x}{3}}{\\tfrac{x}{180} - \\tfrac{1}{3}} = 276\\]</p><p>Solving equation, we get $x=135$ $\\Longrightarrow \\boxed{B}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -106,6 +184,12 @@
       "question": "<p>Alice refuses to sit next to either Bob or Carla. Derek refuses to sit next to Eric. How many ways are there for the five of them to sit in a row of $5$ chairs under these conditions?</p>",
       "solutions": [
         "<p>Alice may sit in the center chair, in an end chair, or in a next-to-end chair. Suppose she sits in the center chair. The 2nd and 4th chairs (next to her) must be occupied by Derek and Eric, in either order, leaving the end chairs for Bob and Carla in either order; this yields $2! * 2! = 4$ ways to seat the group.</p><p>Next, suppose Alice sits in one of the end chairs. Then the chair beside her will be occupied by either Derek or Eric. The center chair must be occupied by Bob or Carla, leaving the last two people to fill the last two chairs in either order. $2$ ways to seat Alice times $2$ ways to fill the next chair times $2$ ways to fill the center chair times $2$ ways to fill the last two chairs yields $2 * 2 * 2 * 2 = 16$ ways to fill the chairs.</p><p>Finally, suppose Alice sits in the second or fourth chair. Then the chairs next to her must be occupied by Derek and Eric in either order, and the other two chairs must be occupied by Bob and Carla in either order. This yields $2 * 2 * 2 = 8$ ways to fill the chairs. </p><p>In total, there are $4 + 8 + 16$ ways to fill the chairs, so the answer is $\\boxed{\\bold{(C)}\\ 28}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "permutations_combinations"
+        }
       ]
     },
     {
@@ -115,6 +199,12 @@
         "<p>We must first get an idea of what $f(x)$ looks like:</p><p>Between $0$ and $1$, $f(x)$ starts at $2$ and increases; clearly there is no zero here.</p><p>Between $1$ and $\\frac{\\pi}{2}$, $f(x)$ starts at a positive number and increases to $\\infty$; there is no zero here either.</p><p>Between $\\frac{\\pi}{2}$ and 3, $f(x)$ starts at $-\\infty$ and increases to some negative number; there is no zero here either.</p><p>Between $3$ and $\\pi$, $f(x)$ starts at some negative number and increases to -2; there is no zero here either.</p><p>Between $\\pi$ and $\\pi+\\frac{\\pi}{4} < 4$, $f(x)$ starts at -2 and increases to $-\\frac{\\sqrt2}{2} + 2\\left(-\\frac{\\sqrt2}{2}\\right) + 3\\left(1\\right)=3\\left(1-\\frac{\\sqrt2}{2}\\right)>0$. There is a zero here by the Intermediate Value Theorem. Therefore, the answer is $\\boxed{\\textbf{(D)}}$.</p>",
         "<p>If you quickly take a moment to sketch the graphs of the three functions, you will see that between $0$ and $\\frac{\\pi}{2}$ everything is positive, while the positive number created by the sin does not outweigh the negative by the cos and tan function. Upon further examination, it is clear that the positive the tan function creates will balance the other two functions, and thus the first solution is a little bit after $\\pi$, which is around $3.14$. Hence the answer is $\\boxed{\\textbf{(D)}}$.</p><p>Solution by roadchicken~</p><p>(Not original author) Here is the graph:[asy] Label f;  f.p=fontsize(6);  xaxis(-5,5,Ticks(f, 1.0));  yaxis(-8,8,Ticks(f, 2.0)); real f(real x) { return sin(x); } draw(graph(f, -5,5)); real g(real x) { return 2*cos(x); } draw(graph(g, -5,5)); real h(real x) { return 3*tan(x); } draw(graph(h, -1.2,1.2)); draw(graph(h, 1.94, 4.34)); draw(graph(h, -4.34, -1.94)); [/asy]</p>",
         "<p>Denote $D_{f}$ as the domain of $f(x).$ Obviously $D_{f}=\\left \\{x|x\\neq \\frac{(2k+1)\\pi}{2}  \\right \\} .$</p><p>$f^{'}(x)=\\cos x-2\\sin x+3\\sec^{2}x=\\sqrt{5}\\cos(x+\\phi)+3\\sec^{2}x > 0$ for all $x$ in sub-intervals of $D_{f}.$</p><p>When $x\\in (0,\\frac{\\pi}{2}), f(0)=2,  \\lim_{x \\to \\frac{\\pi}{2}^{-} }f(x)=+\\infty  .$ Hence $f(x)>0$ in this interval.</p><p>When $x\\in (\\frac{\\pi}{2},\\pi),\\lim_{x \\to \\frac{\\pi}{2}^{+} }f(x)=-\\infty, f(\\pi)=-2.$ Hence $f(x)<0$ in this interval.</p><p>When $x\\in (\\pi,\\frac{3\\pi}{2}),f(\\pi)=-2<0.$</p><p>Notice that $\\frac{5\\pi}{4}<\\frac{3.15*5}{4}<4<\\frac{3\\pi}{2}, f(\\frac{5\\pi}{4})=3-\\frac{3\\sqrt{2}}{2}>0 .$ Hence there must be a root located in the interval $(3,4).$ Choose $\\boxed{\\textbf{(D)}}$.</p><p><br/>~PythZhou</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
       ]
     },
     {
@@ -127,6 +217,12 @@
         "<p>Let $C$, the center of the large semicircle, to be at $(0, 0)$, and $P$ to be at $(h, k)$.</p><p>[asy] size(5cm); draw(arc((0,0),3,0,180)); draw(arc((2,0),1,0,180)); draw(arc((-1,0),2,0,180)); draw((-3,0)--(3,0)); pair P = (9/7,12/7); pair A = (-1,0); pair C = (0,0); pair B = (2,0); draw(circle(P,6/7)); dot((-1,0)); dot((2,0)); dot((0,0)); dot(P); draw((-1,0)--P); draw((2,0)--P); draw((0,0)--(9/5,12/5)); label(\"$A$\",A,SW); label(\"$C$\",C,S); label(\"$B$\",B,SE); label(\"$P$\",P,N); [/asy]</p><p>Therefore $A$ is at $(-1, 0)$ and $B$ is at $(2, 0)$.</p><p>Let the radius of circle $P$ be $r$.</p><p>Using Distance Formula, we get the following system of three equations:</p><p>\\[h^2+k^2=(3-r)^2, (h+1)^2+k^2=(r+2)^2, (h-2)^2+k^2=(r+1)^2\\]</p><p>By simplifying, we get </p><p>\\[h^2+k^2=r^2-6r+9, h^2+2r+1+k^2=r^2+4r+4, h^2-4r+4+k^2=r^2+2r+1\\]</p><p>By subtracting the first equation from the second and third equations, we get</p><p>\\[8r=-4h+12, 10r=2h+6\\]</p><p>which simplifies to</p><p>\\[2r=3-h, 5r=h+3\\]</p><p>When we add these two equations, we get</p><p>\\[7r=6\\]</p><p>So \\[r = \\boxed{\\frac{6}{7}} \\to \\boxed{\\textbf{(B)}}\\] $w^5$</p>",
         "<p>Let $\\Omega$ be a circle with radius of $6$ and centered at the left corner of the semi-circle (O) with radius $3$. Extend the three semicircles to full circles. Label the resulting four circles as shown in the diagram:</p><p>[asy] size(5cm); path circle1 = Circle((3, 0), 3); path circle2 = Circle((2, 0), 2); path circle3 = Circle((5, 0), 1); pair P = (2,0)+(2+6/7)*dir(36.86989); path circle4 = Circle(P, 6/7); draw(circle1); draw(circle2); draw(circle3); draw(circle4); draw((0, 0)--(6, 0)); dot((2,0)); dot((5,0)); dot(P); dot((3, 0)); dot(origin); path inversion = arc((0,0), 6, -30, 30); draw(inversion, dashed); label(\"$\\Omega$\", (6, 0) * dir(30), NE); label(\"$C_1$\", (3, 0), N); label(\"$C_2$\", (2, 0), N); label(\"$C_3$\", (5, 0), N); label(\"$C_4$\", P, N); label(\"$O$\", origin, W); [/asy]</p><p>$C_1$ has radius $3$, $C_2$ has radius $2$, and $C_3$ has radius $1$. We want to find the radius of $C_4$.</p><p>We now invert the four circles. $C_1$ inverts to a line. Given that one point is on $\\Omega$, and all points on $\\Omega$ invert to themselves, we know that the resulting line must intersect that intersection point. $C_2$ also inverts to a line. $C_2$ has radius $4$, and since $\\Omega$ has radius of $6$, the resulting line must be $\\frac{36}{4} = 9$ units away from $O$. $C_3$ inverts to a circle. By observing the diagram, we note that $C_3'$'s center must be on $\\overline{OC_3}$ and be between the two inverted lines, because $C_3$ is tangent to $C_1$ and $C_2$ (Remeber that tangency still holds in inverted diagrams). Therefore, we must have a circle with radius $\\frac{3}{2}$ that is $\\frac{15}{2}$ units from $O$. </p><p>[asy] size(10cm); path circle1 = Circle((3, 0), 3); path circle2 = Circle((2, 0), 2); path circle3 = Circle((5, 0), 1); pair P = (2,0)+(2+6/7)*dir(36.86989); path circle4 = Circle(P, 6/7); draw(circle1); draw(circle2); draw(circle3); draw(circle4); draw((0, 0)--(9, 0)); dot((2,0)); dot((5,0)); dot(P); dot((3, 0)); dot(origin); path inversion = arc((0,0), 6, -30, 30); draw(inversion, dashed); label(\"$\\Omega$\", (6, 0) * dir(30), NW); label(\"$C_1$\", (3, 0), N); label(\"$C_2$\", (2, 0), N); label(\"$C_3$\", (5, 0), N); label(\"$C_4$\", P, N); label(\"$O$\", origin, W); draw((6, 3)--(6, -3)); draw((9, 3)--(9, -3)); draw(Circle((15/2, 0), 3/2)); label(\"$C_1'$\", (6, 3), N); label(\"$C_2'$\", (9, 3), N); label(\"$C_3'$\", (15/2, 0), N); dot((15/2, 0)); [/asy]</p><p>Now, we invert $C_4$. Note that $C_4$ is tangent to the three other original circles. So, in the inversion, $C_4'$ must be tangent to the two lines <i>and</i> $C_3'$. It is then quickly seen that $C_3'$ and $C_4'$ have the same radius: $\\frac{3}{2}$.</p><p>Now, we can determine the radius of $C_4$ using the formula $r = \\frac{k^2 \\cdot r'}{\\overline{OC_2}^2 - r'^2}$. $k^2 = 36$, and $r' = \\frac{3}{2}$. $\\overline{OC}$ is just the distance from the center of the inverted circle to the center of inversion. The center of $C_4'$ is $3$ units above the center of $C_3'$. Since $\\overline{OC_3'} = \\frac{15}{2}$, we use Pythagoras to learn that $\\overline{OC_4'}^2 = \\left(\\frac{15}{2}\\right)^2 + 9$. We do not take the square root because our relationship formula takes $\\overline{OC_4'}^2$. </p><p>Therefore, we have: \\[r = \\frac{36 \\cdot \\frac{3}{2}}{\\left(\\frac{15}{2}\\right)^2 - \\left(\\frac{3}{2}\\right)^2 + 9} = \\frac{54}{9 \\cdot 6 + 9} = \\frac{6}{7} = \\boxed{B}.\\]</p><p>Here is the diagram with $C_4'$.</p><p>[asy] size(10cm); path circle1 = Circle((3, 0), 3); path circle2 = Circle((2, 0), 2); path circle3 = Circle((5, 0), 1); pair P = (2,0)+(2+6/7)*dir(36.86989); path circle4 = Circle(P, 6/7); draw(circle1); draw(circle2); draw(circle3); draw(circle4); draw((0, 0)--(9, 0)); dot((2,0)); dot((5,0)); dot(P); dot((3, 0)); dot(origin); path inversion = arc((0,0), 6, -45, 45); draw(inversion, dashed); label(\"$\\Omega$\", (6, 0) * dir(45), NW); label(\"$C_1$\", (3, 0), N); label(\"$C_2$\", (2, 0), N); label(\"$C_3$\", (5, 0), N); label(\"$C_4$\", P, N); label(\"$O$\", origin, W); draw((6, 4.5)--(6, -3)); draw((9, 4.5)--(9, -3)); draw(Circle((15/2, 0), 3/2)); label(\"$C_1'$\", (6, -3), SW); label(\"$C_2'$\", (9, -3), SE); label(\"$C_3'$\", (15/2, 0), NE); dot((15/2, 0)); draw(Circle((15/2, 3), 3/2)); dot((15/2, 3)); label(\"$C_4'$\", (15/2, 3), N); draw((15/2, 0)--(15/2, 3)); draw(rightanglemark(origin, (15/2, 0), (15/2, 3))); [/asy]</p>",
         "<p>Draw the other half of the largest circle and proceed with <a href=\"/wiki/index.php/Descartes%27_Circle_Formula\" title=\"Descartes' Circle Formula\">Descartes' Circle Formula</a>.</p><p>The curvatures of circles $A,B,C$, and $P$ are $\\frac{1}{2}, 1, -\\frac{1}{3},$ and $\\frac{1}{r}$, respectively.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
       ]
     },
     {
@@ -138,6 +234,12 @@
         "<p>From the start, recall from the Fundamental Theorem of Algebra that $z^{24} = 1$ must have $24$ solutions (and these must be distinct since the equation factors into $0 = (z-1)(z^{23} + z^{22} + z^{21}... + z + 1)$), or notice that the question is simply referring to the 24th roots of unity, of which we know there must be $24$. Notice that $1 = z^{24} = (z^6)^4$, so for any solution $z$, $z^6$ will be one of the 4th roots of unity ($1$, $i$, $-1$, or $-i$). Then $6$ solutions $z$ will satisfy $z^6 = 1$, $6$ will satisfy $z^6 = -1$ (and this is further justified by knowledge of the 6th roots of unity), so there must be $\\boxed{(D) \\: 12}$ such $z$.</p>",
         "<p>Let $a\\in\\mathbb{R}$ and $a = z^6.$ We have\\[a^4 = 1 \\implies a = 1,-1.\\]$z^6 = \\pm 1$ has 6 solutions for $1$ and $-1$ respectively, so $6+6=\\boxed{(D)\\ 12}.$ \\[\\]-svyn</p>",
         "<p>Because $z^{24} = 1$, we can plot these points on the Argand plane as a regular 24-gon, as shown: <a class=\"image\" href=\"/wiki/index.php/File:2017AMC12aP17.png\">2017AMC12aP17.png</a>These are a graphical representation of all 24 values of z, as stated in the problem. Now, we want $z^6$ to be real. The only 2 cases where this happens are if $z^6 = 1$ or $z^6 = -1$. Squaring both sides for the latter equation, we get $z^{12}=1$, which, if one were to square root it, would give us a system of both $z^6 = 1$ and $z^6 = -1$, just as we desire. We can plot the points for $z^{12}=1$ on an Argand plane again, giving us: <a class=\"image\" href=\"/wiki/index.php/File:2017AMC12aP17-p2.png\">2017AMC12aP17-p2.png</a>We note that all of these points are also on the first Argand plane, and counting the points nets us $\\boxed{(D)\\ 12}$ total values for $z$. \\[\\]-yingkai_0_ \\[\\]Credit to Michael Andrejkovics for providing the GeoGebra widget used to make these diagrams!</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "complex_numbers"
+        }
       ]
     },
     {
@@ -148,6 +250,12 @@
         "<p>One possible value of $S(n)$ would be $1275$, but this is not any of the choices. Therefore, we know that $n$ ends in $9$, and after adding $1$, the last digit $9$ carries over, turning the last digit into $0$. If the next digit is also a $9$, this process repeats until we get to a non-$9$ digit. By the end, the sum of digits would decrease by $9$ multiplied by the number of carry-overs but increase by $1$ as a result of the final carrying over. Therefore, the result must be $9x-1$ less than original value of $S(n)$, $1274$, where $x$ is a positive integer. The only choice that satisfies this condition is $\\boxed{1239}$, since $(1274-1239+1) \\bmod 9 = 0$. The answer is $\\boxed{D}$.</p>",
         "<p>Another way to solve this is to realize that if you continuously add the digits of the number $1274 (1 + 2 + 7 + 4 = 14, 1 + 4 = 5)$, we get $5$. Adding one to that, we get $6$. So, if we assess each option to see which one attains $6$, we would discover that $1239$ satisfies the requirement, because $1 + 2 + 3 + 9 = 15$. $1 + 5 = 6$. The answer is $\\boxed{D}$.</p>",
         "<p>Note that a lot of numbers can have a sum of $1274$, but what we use wishful thinking and want is some simple number $n$ where it is easy to compute the sum of the digits of $n+1$. This number would consists of basically all digits $9$, since when you add $1$ a lot of stuff will cancel out and end up at $0$(ex: $399+1=400$). We see that the maximum number of $9$s that can be in $1274$ is $141$ and we are left with a remainder of $5$, so $n$ is in the form $99...9599...9$. If we add $1$ to this number we will get $99...9600...0$ so this the sum of the digits of $n+1$ is congruent to $6 \\mod 9$. The only answer choice that is equivalent to $6 \\mod 9$ is $1239$, so our answer is $\\boxed{D}$ -srisainandan6</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "modular_arithmetic"
+        }
       ]
     },
     {
@@ -155,6 +263,12 @@
       "question": "<p>A square with side length $x$ is inscribed in a right triangle with sides of length $3$, $4$, and $5$ so that one vertex of the square coincides with the right-angle vertex of the triangle. A square with side length $y$ is inscribed in another right triangle with sides of length $3$, $4$, and $5$ so that one side of the square lies on the hypotenuse of the triangle. What is $\\frac{x}{y}$?</p>",
       "solutions": [
         "<p>Analyze the first right triangle.</p><p>[asy] pair A,B,C; pair D, e, F; A = (0,0); B = (4,0); C = (0,3);  D = (0, 12/7); e = (12/7 , 12/7); F = (12/7, 0);  draw(A--B--C--cycle); draw(D--e--F);  label(\"$x$\", D/2, W); label(\"$A$\", A, SW); label(\"$B$\", B, SE); label(\"$C$\", C, N); label(\"$D$\", D, W); label(\"$E$\", e, NE); label(\"$F$\", F, S); [/asy]</p><p>Note that $\\triangle ABC$ and $\\triangle FBE$ are similar, so $\\frac{BF}{FE} = \\frac{AB}{AC}$. This can be written as $\\frac{4-x}{x}=\\frac{4}{3}$. Solving, $x = \\frac{12}{7}$.</p><p>Now we analyze the second triangle.</p><p><br/>[asy] pair A,B,C; pair q, R, S, T; A = (0,0); B = (4,0); C = (0,3);  q = (1.297, 0); R = (2.27 , 1.297); S = (0.973, 2.27); T  = (0, 0.973);  draw(A--B--C--cycle); draw(q--R--S--T--cycle);  label(\"$y$\", (q+R)/2, NW); label(\"$A'$\", A, SW); label(\"$B'$\", B, SE); label(\"$C'$\", C, N); label(\"$Q$\", (q-(0,0.3))); label(\"$R$\", R, NE); label(\"$S$\", S, NE); label(\"$T$\", T, W); [/asy]</p><p>Similarly, $\\triangle A'B'C'$ and $\\triangle RB'Q$ are similar, so $RB' = \\frac{4}{3}y$, and $C'S = \\frac{3}{4}y$. Thus, $C'B' = C'S + SR + RB' = \\frac{4}{3}y + y + \\frac{3}{4}y = 5$. Solving for $y$, we get $y = \\frac{60}{37}$. Thus, $\\frac{x}{y} = \\frac{37}{35} \\implies \\boxed{\\textbf{D}}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -162,6 +276,12 @@
       "question": "<p>How many ordered pairs $(a,b)$ such that $a$ is a positive real number and $b$ is an integer between $2$ and $200$, inclusive, satisfy the equation $(\\log_b a)^{2017}=\\log_b(a^{2017})?$</p>",
       "solutions": [
         "<p>By the properties of logarithms, we can rearrange the equation to read $x^{2017}=2017x$ with $x=\\log_b a$. If $x\\neq 0$, we may divide by it and get $x^{2016}=2017$, which implies $x=\\pm \\root{2016}\\of{2017}$. Hence, we have $3$ possible values $x$, namely \\[x=0,\\qquad x=2017^{\\frac1{2016}},\\, \\text{and}\\quad  x=-2017^{\\frac1{2016}}.\\]</p><p>Since $\\log_b a=x$ is equivalent to $a=b^x$, each possible value $x$ yields exactly $199$ solutions $(b,a)$, as we can assign $a=b^x$ to each $b=2,3,\\dots,200$. In total, we have $3\\cdot 199=\\boxed{\\textbf{(E) } 597}$ solutions.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "functions"
+        }
       ]
     },
     {
@@ -169,6 +289,12 @@
       "question": "<p>A set $S$ is constructed as follows. To begin, $S = \\{0,10\\}$. Repeatedly, as long as possible, if $x$ is an integer root of some polynomial $a_{n}x^n + a_{n-1}x^{n-1} + \\dots + a_{1}x + a_0$ for some $n\\geq{1}$, all of whose coefficients $a_i$ are elements of $S$, then $x$ is put into $S$. When no more elements can be added to $S$, how many elements does $S$ have?</p>",
       "solutions": [
         "<p>At first, $S=\\{0,10\\}$.</p><p>\\[\\begin{tabular}{r c l c l} \\(10x+10\\) & has root & \\(x=-1\\) & so now & \\(S=\\{-1,0,10\\}\\) \\\\ \\(-x^{10}-x^9-x^8-x^7-x^6-x^5-x^4-x^3-x^2-x+10\\) & has root & \\(x=1\\) & so now & \\(S=\\{-1,0,1,10\\}\\) \\\\ \\(x+10\\) & has root & \\(x=-10\\) & so now & \\(S=\\{-10,-1,0,1,10\\}\\) \\\\ \\(x^3+x-10\\) & has root & \\(x=2\\) & so now & \\(S=\\{-10,-1,0,1,2,10\\}\\) \\\\ \\(x+2\\) & has root & \\(x=-2\\) & so now & \\(S=\\{-10,-2,-1,0,1,2,10\\}\\) \\\\ \\(2x-10\\) & has root & \\(x=5\\) & so now & \\(S=\\{-10,-2,-1,0,1,2,5,10\\}\\) \\\\ \\(x+5\\) & has root & \\(x=-5\\) & so now & \\(S=\\{-10,-5,-2,-1,0,1,2,5,10\\}\\) \\end{tabular}\\]</p><p>At this point, no more elements can be added to $S$. To see this, let</p><p>\\begin{align*} a_{n}x^n + a_{n-1}x^{n-1} + ... + a_{2}x^2 + a_{1}x + a_0 &= 0 \\\\ x(a_{n}x^{n-1} + a_{n-1}x^{n-2} + ... + a_{2}x + a_{1}) + a_0 &= 0 \\\\ x(a_{n}x^{n-1} + a_{n-1}x^{n-2} + ... + a_{2}x + a_{1}) &= -a_0 \\end{align*}</p><p>with each $a_i$ in $S$. $x$ is a factor of $a_0$, and $a_0$ is in $S$, so $x$ has to be a factor of some element in $S$. There are no such integers left, so there can be no additional elements. $\\{-10,-5,-2,-1,0,1,2,5,10\\}$ has $9$ elements $\\to \\boxed{\\textbf{(D)}}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
       ]
     },
     {
@@ -176,6 +302,12 @@
       "question": "<p>A square is drawn in the Cartesian coordinate plane with vertices at $(2, 2)$, $(-2, 2)$, $(-2, -2)$, $(2, -2)$. A particle starts at $(0,0)$. Every second it moves with equal probability to one of the eight lattice points (points with integer coordinates) closest to its current position, independently of its previous moves. In other words, the probability is $1/8$ that the particle will move from $(x, y)$ to each of $(x, y + 1)$, $(x + 1, y + 1)$, $(x + 1, y)$, $(x + 1, y - 1)$, $(x, y - 1)$, $(x - 1, y - 1)$, $(x - 1, y)$, or $(x - 1, y + 1)$. The particle will eventually hit the square for the first time, either at one of the 4 corners of the square or at one of the 12 lattice points in the interior of one of the sides of the square. The probability that it will hit at a corner rather than at an interior point of a side is $m/n$, where $m$ and $n$ are relatively prime positive integers. What is $m + n$?</p>",
       "solutions": [
         "<p>We let $c, e,$ and $m$ be the probability of reaching a corner before an edge when starting at an \"inside corner\" (e.g. $(1, 1)$), an \"inside edge\" (e.g. $(1, 0)$), and the middle respectively.</p><p>Starting in the middle, there is a $\\frac{4}{8}$ chance of moving to an inside edge and a $\\frac{4}{8}$ chance of moving to an inside corner, so</p><p>\\[m = \\frac{1}{2}e + \\frac{1}{2}c.\\]</p><p>Starting at an inside edge, there is a $\\frac{2}{8}$ chance of moving to another inside edge, a $\\frac{2}{8}$ chance of moving to an inside corner, a $\\frac{1}{8}$ chance of moving into the middle, and a $\\frac{3}{8}$ chance of reaching an outside edge and stopping. Therefore,</p><p>\\[e = \\frac{1}{4}e + \\frac{1}{4}c + \\frac{1}{8}m + \\frac{3}{8}\\cdot 0 = \\frac{1}{4}e + \\frac{1}{4}c + \\frac{1}{8}m.\\]</p><p>Starting at an inside corner, there is a $\\frac{2}{8}$ chance of moving to an inside edge, a $\\frac{1}{8}$ chance of moving into the middle, a $\\frac{4}{8}$ chance of moving to an outside edge and stopping, and finally a $\\frac{1}{8}$ chance of reaching that elusive outside corner. This gives</p><p>\\[c = \\frac{1}{4}e + \\frac{1}{8}m + \\frac{1}{2}0 + \\frac{1}{8}\\cdot 1 = \\frac{1}{4}e + \\frac{1}{8}m + \\frac{1}{8}.\\]</p><p>Solving this system of equations gives</p><p>\\[m = \\frac{4}{35},\\]\\[e = \\frac{1}{14},\\]\\[c = \\frac{11}{70}.\\]</p><p>Since the particle starts at $(0, 0),$ it is $m$ we are looking for, so the final answer is</p><p>\\[4 + 35 = \\boxed{\\textbf{(E) }39}.\\]</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -191,8 +323,14 @@
         "<p>We notice that the constant term of $f(x)=c$ and the constant term in $g(x)=10$. Because $f(x)$ can be factored as $g(x) \\cdot (x- r)$ (where $r$ is the unshared root of $f(x)$, we see that using the constant term, $-10 \\cdot r = c$ and therefore $r = -\\frac{c}{10}$.Now we once again write $f(x)$ out in factored form: </p><p>\\[f(x) = g(x)\\cdot (x-r) = (x^3+ax^2+x+10)\\left(x+\\frac{c}{10}\\right)\\].</p><p>We can expand the expression on the right-hand side to get:</p><p>\\[f(x) = x^4+\\left(a+\\frac{c}{10}\\right)x^3+\\left(1+\\frac{ac}{10}\\right)x^2+\\left(10+\\frac{c}{10}\\right)x+c\\]</p><p>Now we have $f(x) = x^4+\\left(a+\\frac{c}{10}\\right)x^3+\\left(1+\\frac{ac}{10}\\right)x^2+\\left(10+\\frac{c}{10} \\right)x+c=x^4+x^3+bx^2+100x+c$.</p><p>Simply looking at the coefficients for each corresponding term (knowing that they must be equal), we have the equations:\\[10+\\frac{c}{10}=100 \\Rightarrow c=900\\]\\[a+\\frac{c}{10} = 1, c=900 \\Rightarrow a + 90 =1 \\Rightarrow a= -89\\]</p><p>and finally,</p><p>\\[1+\\frac{ac}{10} = b = 1+\\frac{-89 \\cdot 900}{10} = b = -8009\\].</p><p>We know that $f(1)$ is the sum of its coefficients, hence $1+1+b+100+c$. We substitute the values we obtained for $b$ and $c$ into this expression to get $f(1) = 1 + 1 + (-8009) + 100 + 900 = \\boxed{\\textbf{(C)}\\,-7007}$.</p>",
         "<p>Let $r_1,r_2,$ and $r_3$ be the roots of $g(x)$. Let $r_4$ be the additional root of $f(x)$. Then from Vieta's formulas on the quadratic term of $g(x)$ and the cubic term of $f(x)$, we obtain the following:</p><p>\\begin{align*} r_1+r_2+r_3&=-a \\\\  r_1+r_2+r_3+r_4&=-1 \\end{align*}</p><p>Thus $r_4=a-1$.</p><p>Now applying Vieta's formulas on the constant term of $g(x)$, the linear term of $g(x)$, and the linear term of $f(x)$, we obtain:</p><p>\\begin{align*} r_1r_2r_3  & = -10\\\\ r_1r_2+r_2r_3+r_3r_1 &= 1\\\\  r_1r_2r_3+r_2r_3r_4+r_3r_4r_1+r_4r_1r_2  & = -100\\\\ \\end{align*}</p><p>Substituting for $r_1r_2r_3$ in the bottom equation and factoring the remainder of the expression, we obtain:</p><p>\\[-10+(r_1r_2+r_2r_3+r_3r_1)r_4=-10+r_4=-100\\]</p><p>It follows that $r_4=-90$. But $r_4=a-1$ so $a=-89$</p><p>Now we can factor $f(x)$ in terms of $g(x)$ as</p><p>\\[f(x)=(x-r_4)g(x)=(x+90)g(x)\\]</p><p>Then $f(1)=91g(1)$ and</p><p>\\[g(1)=1^3-89\\cdot 1^2+1+10=-77\\]</p><p>Hence $f(1)=91\\cdot(-77)=\\boxed{\\textbf{(C)}\\,-7007}$.</p>",
         "<p>Let the roots of $g(x)$ be $r_1$, $r_2$, and $r_3$. Let the roots of $f(x)$ be $r_1$, $r_2$, $r_3$, and $r_4$. From Vieta's, we have:\\begin{align*} r_1+r_2+r_3=-a \\\\ r_1+r_2+r_3+r_4=-1 \\\\ r_4=a-1 \\end{align*}The fourth root is $a-1$. Since $r_1$, $r_2$, and $r_3$ are common roots, we have:\\begin{align*} f(x)=g(x)(x-(a-1)) \\\\ f(1)=g(1)(1-(a-1)) \\\\ f(1)=(a+12)(2-a) \\\\ f(1)=-(a+12)(a-2) \\\\ \\end{align*}Let $a-2=k$:\\begin{align*} f(1)=-k(k+14) \\end{align*}Note that $-7007=-1001\\cdot(7)=-(7\\cdot(11)\\cdot(13))\\cdot(7)=-91\\cdot(77)$This gives us a pretty good guess of $\\boxed{\\textbf{(C)}\\, -7007}$.</p>",
-        "<p>First off, let's get rid of the $x^4$ term by finding $h(x)=f(x)-xg(x)$. This polynomial consists of the difference of two polynomials with $3$ common factors, so it must also have these factors. The polynomial is $h(x)=(1-a)x^3 + (b-1)x^2 + 90x + c$, and must be equal to $(1-a)g(x)$. Equating the coefficients, we get $3$ equations. We will tackle the situation one equation at a time, starting the $x$ terms. Looking at the coefficients, we get $\\dfrac{90}{1-a} = 1$. \\[\\therefore 90=1-a.\\] The solution to the previous is obviously $a=-89$. We can now find $b$ and $c$. $\\dfrac{b-1}{1-a} = a$, \\[\\therefore b-1=a(1-a)=-89\\cdot90=-8010\\] and $b=-8009$. Finally $\\dfrac{c}{1-a} = 10$, \\[\\therefore c=10(1-a)=10\\cdot90=900\\] Solving the original problem, $f(1)=1 + 1 + b + 100 + c = 102+b+c=102+900-8009=\\boxed{\\textbf{\u00a9}\\, -7007}$.</p>",
+        "<p>First off, let's get rid of the $x^4$ term by finding $h(x)=f(x)-xg(x)$. This polynomial consists of the difference of two polynomials with $3$ common factors, so it must also have these factors. The polynomial is $h(x)=(1-a)x^3 + (b-1)x^2 + 90x + c$, and must be equal to $(1-a)g(x)$. Equating the coefficients, we get $3$ equations. We will tackle the situation one equation at a time, starting the $x$ terms. Looking at the coefficients, we get $\\dfrac{90}{1-a} = 1$. \\[\\therefore 90=1-a.\\] The solution to the previous is obviously $a=-89$. We can now find $b$ and $c$. $\\dfrac{b-1}{1-a} = a$, \\[\\therefore b-1=a(1-a)=-89\\cdot90=-8010\\] and $b=-8009$. Finally $\\dfrac{c}{1-a} = 10$, \\[\\therefore c=10(1-a)=10\\cdot90=900\\] Solving the original problem, $f(1)=1 + 1 + b + 100 + c = 102+b+c=102+900-8009=\\boxed{\\textbf{©}\\, -7007}$.</p>",
         "<p>Simple polynomial division is a feasible method. Even though we have variables, we can equate terms at the end of the division so that we can cancel terms. Doing the division of $\\frac{f(x)}{g(x)}$ eventually brings us the final step $(1-a)x^3 + (b-1)x^2 + 90x + c$ minus $(1-a)x^3 - (a-a^2)x^2 + (1-a)x + 10(1-a)$ after we multiply $f(x)$ by $(1-a)$. Now we equate coefficients of same-degree $x$ terms. This gives us $10(1-a) = c, b-1 = a - a^2, 1-a = 90 \\Rightarrow a = -89, c = 900, b = -8009$. We are interested in finding $f(1)$, which equals $1^4 + 1^3 -8009\\cdot1^2 + 100\\cdot1 + 900 = \\boxed{\\textbf{(C)}\\,-7007}$. ~skyscraper</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
       ]
     },
     {
@@ -203,6 +341,12 @@
         "<p>We shall make use of the pairs of similar triangles present in the problem, Ptolemy's Theorem, and Power of a Point. Let $Z$ be the intersection of $AC$ and $BD$. First, from $ABCD$ being a cyclic quadrilateral, we have that $\\triangle BCZ \\sim \\triangle AZD$, $\\triangle BZA \\sim \\triangle CDZ$. Therefore, $\\frac{2}{BZ} = \\frac{8}{AZ}$, $\\frac{6}{CZ} = \\frac{3}{BZ}$, and $\\frac{2}{CZ} = \\frac{8}{DZ}$, so we have $BZ = \\frac{1}{2}CZ$, $AZ = 2CZ$, and $DZ = 4CZ$. By Ptolemy's Theorem, \\[(AB)(CD) + (BC)(DA) = (AC)(BD) = (AZ + ZC)(BZ + ZD)\\] \\[\\rightarrow 3 \\cdot 6 + 2 \\cdot 8 = 34 = \\left(2CZ + ZC\\right)\\left(\\frac{1}{2}CZ + 4CZ\\right) = \\frac{27}{2}CZ^2.\\] Thus, $CZ^2 = \\frac{68}{27}$. Then, by Power of a Point, $GX \\cdot XC = BX \\cdot XD = \\frac{3}{4} \\cdot \\frac{1}{4}BD^2 = \\frac{3}{16} \\cdot \\left(\\frac{9}{2}CZ\\right)^2 = \\frac{9 \\cdot 17}{16}$. So, $XG = \\frac{9 \\cdot 17}{16XC}$.Next, observe that $\\triangle ACX \\sim \\triangle EFX$, so $\\frac{XE}{XF} = \\frac{AX}{XC}$. Also, $\\triangle{AXD} \\sim \\triangle{EXY}$, so $\\frac{8}{AX} = \\frac{EY}{XE}$. We can compute $EY = \\frac{128}{9}$ after noticing that $XY = BD - BY - DX = BD - \\frac{11}{36}BD - \\frac{1}{4}BD = \\frac{4}{9}BD$ and that $\\frac{8}{DX} = \\frac{32}{BD} = \\frac{EY}{XY} = \\frac{EY}{\\frac{4}{9}BD}$. So, $\\frac{8}{AX} = \\frac{128}{9XE}$. Then, $\\frac{XE}{AX} = \\frac{XF}{XC} = \\frac{16}{9} \\rightarrow XF = \\frac{16}{9}XC$. </p><p>Multiplying our equations for $XF$ and $XG$ yields that $XF \\cdot XG = \\frac{9 \\cdot 17}{16XC} \\cdot \\frac{16}{9}XC = \\boxed{\\textbf{(A)}\\ 17}.$</p>",
         "<p>Denote $P$ to be the intersection between line $AE$ and circle $O$. Note that $\\angle GFE = \\angle ACG = \\angle APG = 180 - \\angle GPE$, making $\\angle GFE + \\angle GDE = 180$. Thus, $PEFG$ is a cyclic quadrilateral. Using <a class=\"mw-redirect\" href=\"/wiki/index.php/Power_of_a_Point\" title=\"Power of a Point\">Power of a Point</a> on $X$ gives $XP \\cdot XE = XG \\cdot XF$.</p><p>Since $\\triangle ADX \\sim \\triangle EYX$ and $\\triangle ACX \\sim \\triangle EFX$, $AX/XE = XD/YX = 9/16$. Using Power of a Point on $X$ again, $(AX)(PX) = (BX)(DX)$. Plugging in $AX=9/16 XE$ gives:\\[\\dfrac{9}{16}(XE)(PX) = (BX)(DX) = \\dfrac{9}{16}(FX)(GX)\\]By <a href=\"/wiki/index.php/Law_of_Cosines\" title=\"Law of Cosines\">Law of Cosines</a>, we can find $BD = \\sqrt{51}$, as in Solution 1. Now, $BX = 3/4 (\\sqrt{51})$ and $DX = 1/4 (\\sqrt{51})$, making $\\dfrac{9}{16}(FX)(GX) = \\left( \\dfrac{\\sqrt{51}}{4}\\right)\\left( \\dfrac{3\\sqrt{51}}{4}\\right) = \\dfrac{3(51)}{16}$. This gives us $FX \\cdot GX = \\boxed{\\textbf{(A)}\\ 17}$ as a result.</p><p>-Solution by sml1809</p><p>You could have also got the relation $XP \\cdot XE = XG \\cdot XF$ as follows: From the similarities, $AX/XE = CX/XF = 9/16$. PoP on $X$ gives $(AX)(PX) = (CX)(GX)$. Plugging in $AX = 9/16 XE$ and $CX=9/16 FX$ gives\\[9/16 (XE)(PX) = 9/16(FX)(GX),\\]implying that $(XP)(XE) = (XG)(XP)$.</p><p>~sml1809</p>",
         "<p>$\\because$ $AC \t\\parallel EF$, $\\quad \\therefore$ $\\triangle ACX \\sim \\triangle EFX$, $\\quad \\frac{XF}{XC} = \\frac{XE}{XA}$</p><p>By Power of a Point, $XG \\cdot XC = XD \\cdot XB$</p><p>By multiplying the $2$ equations we get $XF \\cdot XG = \\frac{XE}{XA} \\cdot XD \\cdot XB$</p><p>$\\because$ $YE \t\\parallel AD$, $\\quad \\therefore$ $\\triangle EYX \\sim \\triangle ADX$, $\\quad \\frac{XD}{XY} = \\frac{XA}{XE}, \\quad XD \\cdot XE = XA \\cdot XY, \\quad XD = \\frac{XA \\cdot XY}{XE}$</p><p>By substitution, $XF \\cdot XG = \\frac{XE}{XA} \\cdot \\frac{XA \\cdot XY}{XE} \\cdot XB = XY \\cdot XB = \\frac{4}{9} BD \\cdot \\frac{3}{4} BD = \\frac{BD^2}{3}$</p><p>Let $a = AB$, $b = BC$, $c = CD$, $d = AD$, $p = AC$, and $q = BD$</p><p>By Ptolemy's theorem, $p \\cdot q = a \\cdot c + b \\cdot d$</p><p>\\[[ABD] = \\frac12 \\cdot ad \\cdot \\sin A, \\quad [BCD] = \\frac12 \\cdot bc \\cdot \\sin C = \\frac12 \\cdot bc \\cdot \\sin A\\]</p><p>\\[[ABC] = \\frac12 \\cdot ab \\cdot \\sin B, \\quad [ACD] = \\frac12 \\cdot cd \\cdot \\sin D = \\frac12 \\cdot cd \\cdot \\sin B\\]</p><p>\\[[ABCD] = [ABD] + [BCD] = \\frac12 \\cdot ad \\cdot \\sin A + \\frac12 \\cdot bc \\cdot \\sin A = \\frac12 (ad + bc) \\sin A\\]</p><p>\\[[ABCD] = [ABC] + [ACD] = \\frac12 \\cdot ab \\cdot \\sin B + \\frac12 \\cdot cd \\cdot \\sin B = \\frac12 (ab + cd) \\sin B\\]</p><p>\\[\\frac{ab + cd}{ad + bc} = \\frac{ \\sin A }{ \\sin B} = \\frac{ \\frac{q}{2R} }{ \\frac{p}{2R} } = \\frac{q}{p}, \\quad p = \\frac{q(ad + bc)}{ab + cd}\\]</p><p>\\[\\frac{q(ad + bc)}{ab + cd} \\cdot q = ac + bd\\]</p><p>\\[BD^2 = q^2 = \\frac{ (ac + bd)(ab + cd) }{ad + bc} = \\frac{(3 \\cdot 6 + 2 \\cdot 8)(3 \\cdot 2 + 6 \\cdot 8)}{3 \\cdot 8 + 2 \\cdot 6} = 51\\]</p><p>\\[XF \\cdot XG = \\frac{51}{3} = \\boxed{\\textbf{(A) } 17}\\]</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
       ]
     },
     {
@@ -215,6 +359,12 @@
         "<p>We can write the points in polar form $(r, \\theta)$ as\\[V = \\left\\{ \\left(\\sqrt{2}, \\frac{\\pi}{2}\\right), \\left(\\sqrt{2}, \\frac{3\\pi}{2}\\right), \\left(\\frac{1}{2}, \\frac{\\pi}{4}\\right), \\left(\\frac{1}{2}, \\frac{3\\pi}{4}\\right), \\left(\\frac{1}{2}, \\frac{5\\pi}{4}\\right), \\left(\\frac{1}{2}, \\frac{7\\pi}{4}\\right)\\right\\}.\\]Note that when multiplying complex numbers, the $r$'s multiply and the $\\theta$'s add, and since $-1 = (1, \\pi),$ we need $8$ complex numbers with $r = \\sqrt{2} = 2^{0.5}$ and $4$ with $r = \\frac{1}{2} = 2^{-1}.$ By binomial distribution, the probability of this occurring is $\\dbinom{12}{4} \\left(\\frac{1}{3}\\right)^8 \\left(\\frac{2}{3}\\right)^4.$ For the $\\theta$ part, note that $\\frac{4\\theta}{\\pi}$ must be congruent to $4 \\mod 8,$ and by using simple symmetry, the probability of the aforementioned occurring is $\\frac{1}{4}.$ This is since $2a + 6b$ is even for all $a + b =8,$ and the number of ordered quadruples $(a_1, a_2, a_3, a_4)$ such that $a_i \\in \\{1, 3, 5, 7\\}$ for all $1 \\leq i \\leq 4$ and $a_1 + a_2 + a_3 + a_4 \\equiv 2k \\mod 8$ is the same for all $1 \\leq k \\leq 4,$ again by using symmetry. Thus, our probability is \\[\\left(\\frac{1}{4}\\right) \\left(\\frac{1}{3}\\right)^8 \\left(\\frac{2}{3}\\right)^4 \\dbinom{12}{4} = \\frac{2^2}{3^{12}} \\dbinom{12}{4} = \\boxed{\\textbf{(E)} ~\\frac{2^2\\cdot 5\\cdot 11}{3^{10}}}\\]</p><p>-fidgetboss_4000</p>",
         "<p>The absolute value of the first two complex numbers is $\\sqrt{2}$ while the absolute value of the latter four is $\\frac12$. For the absolute value of the product to be $1$, we need $8$ elements with absolute value $\\sqrt{2}$ and $4$ elements with absolute value of $\\frac12$.</p><p>We pick $8$ elements from $A = \\left\\{   \\sqrt{2}i,-\\sqrt{2}i\\right\\}$ and $4$ elements from $B = \\left\\{\\frac{1}{\\sqrt{8}}(1+i),\\frac{1}{\\sqrt{8}}(-1+i),\\frac{1}{\\sqrt{8}}(1-i),\\frac{1}{\\sqrt{8}}(-1-i) \\right\\}$. We also need to choose which $8$ of $z_j$ will be chosen from $A$ which gives us ${12 \\choose 8} \\cdot 2^8 \\cdot 4^4$ cases. However, suppose we have chosen $11$ elements and we need to choose one more element from $B$. The product of these $11$ elements can have any of these values: $\\left\\{ 2\\mathrm{cis}(\\frac{\\pi}{4}), 2\\mathrm{cis}(\\frac{3\\pi}{4}), 2\\mathrm{cis}(\\frac{5\\pi}{4}), 2\\mathrm{cis}(\\frac{7\\pi}{4}), \\right\\}$. For either of these values, there is just one value of $z_{12} \\in B$ such that $P = -1$ so we must divide by $4$ which gives ${12 \\choose 8} \\cdot 2^8 \\cdot 4^3$ cases. </p><p>Because there are $6^{12}$ ways to pick any $12$ elements, our probability is simply $\\frac{{12 \\choose 8} \\cdot 2^8 \\cdot 4^3}{6^{12}} = \\frac{2^2}{3^{12}} {12 \\choose 8} = \\boxed{\\text{\\textbf{(E) }} \\frac{2^2\\cdot5\\cdot11}{3^{10}} }$</p><p>~Zeric</p>",
         "<p>Let $a = \\sqrt{2}i$, $b = \\frac{1}{\\sqrt{8}}(1+i)$, $c = \\frac{1}{\\sqrt{8}}(-1+i)$. $\\bar{a} = -\\sqrt{2}i$, $\\bar{b} = \\frac{1}{\\sqrt{8}}(1-i)$, $\\bar{c} = \\frac{1}{\\sqrt{8}}(-1-i)$</p><p>The magnitude of $\\left\\{ a, \\bar{a} \\right\\}$ is $\\sqrt{2}$, while the magnitude of $\\left\\{ b, \\bar{b}, c, \\bar{c} \\right\\}$ is $\\frac12$. For the product's magnitude to be $1$, we need $8$ elements from $\\left\\{ a, \\bar{a} \\right\\}$, and $4$ elements from $\\left\\{ b, \\bar{b}, c, \\bar{c} \\right\\}$.</p><p>The product of $8$ elements from $\\left\\{ a, \\bar{a} \\right\\}$ will be either $16$ or $-16$. The product of $4$ elements from $\\left\\{ b, \\bar{b}, c, \\bar{c} \\right\\}$ will be either $\\frac{1}{16}$ or $-\\frac{1}{16}$.</p><p>\\[\\text{Combinations of } \\left\\{ a, \\bar{a} \\right\\} \\text{ multiplied to 16 is} \\left\\{ a^8, \\bar{a}^8, a^2\\bar{a}^6, a^6\\bar{a}^2, a^4\\bar{a}^4 \\right\\}\\]</p><p>\\[\\text{Combinations of } \\left\\{ a, \\bar{a} \\right\\} \\text{ multiplied to -16 is} \\left\\{ a\\bar{a}^7, a^7\\bar{a}, a^5\\bar{a}^3, a^3\\bar{a}^5 \\right\\}\\]</p><p>\\[\\text{Combinations of } \\left\\{ b, \\bar{b}, c, \\bar{c} \\right\\} \\text{ multiplied to } \\frac{1}{16} \\text{ is} \\left\\{ b^2\\bar{b}^2, c^2\\bar{c}^2, b^2c^2, \\bar{b}^2\\bar{c}^2, b\\bar{b}c\\bar{c}, b^3\\bar{c}, b\\bar{c}^3, \\bar{b}^3c, \\bar{b}c^3 \\right\\}\\]</p><p>\\[\\text{Combinations of } \\left\\{ b, \\bar{b}, c, \\bar{c} \\right\\} \\text{ multiplied to } -\\frac{1}{16} \\text{ is} \\left\\{ b^2\\bar{b}c, b\\bar{b}^2\\bar{c}, bc^2\\bar{c}, \\bar{b}c\\bar{c}^2, b^4, c^4, \\bar{b}^4, \\bar{c}^4, b^2\\bar{c}^2, \\bar{b}^2c^2 \\right\\}\\]</p><p>Notice that the denominator of the desired probability is $6^{12}$, therefore, the numerator of the desired probability will be the sum of the permutations of all combinations that multiply to $-1$.</p><p>Multiplying combinations of $\\left\\{ a, \\bar{a} \\right\\}$ multiplied to $16$ with combinations of $\\left\\{ b, \\bar{b}, c, \\bar{c} \\right\\}$ multiplied to $-\\frac{1}{16}$ gives the desired product $-1$. Similarly, multiplying combinations of $\\left\\{ a, \\bar{a} \\right\\}$ multiplied to $-16$ with combinations of $\\left\\{ b, \\bar{b}, c, \\bar{c} \\right\\}$ multiplied to $\\frac{1}{16}$ also gives the desired product $-1$.</p><p>Cases with combinations of $\\left\\{ a, \\bar{a} \\right\\}$ multiplied to $16$ and combinations of $\\left\\{ b, \\bar{b}, c, \\bar{c} \\right\\}$ multiplied to $-\\frac{1}{16}$:</p><p>Cases with combinations of $\\left\\{ a, \\bar{a} \\right\\}$ multiplied to $-16$ and combinations of $\\left\\{ b, \\bar{b}, c, \\bar{c} \\right\\}$ multiplied to $\\frac{1}{16}$:</p><p>Sum of the permutations of all combinations that multiply to $-1$:\\begin{align*} &\\frac{12!}{8!} \\cdot 4 + \\frac{12!}{8!} \\cdot \\frac13 + \\frac{12!}{8!} + \\frac{12!}{6!} \\cdot 2 + \\frac{12!}{6!} \\cdot \\frac16 + \\frac{12!}{6!} \\cdot \\frac12 + \\frac{12!}{4!} \\cdot \\frac{1}{12} + \\frac{12!}{4!} \\cdot \\frac{1}{144} + \\frac{12!}{4!} \\cdot \\frac{1}{48} + \\frac{12!}{7!} \\cdot 2 + \\frac{12!}{7!} \\cdot 2 + \\frac{12!}{7!} \\cdot \\frac{4}{3}\\\\ &+ \\frac{12!}{6!} \\cdot 2 + \\frac{12!}{6!} \\cdot 2 + \\frac{12!}{6!} \\cdot \\frac{4}{3} \\\\  &= \\frac{12!}{7!} \\left( \\frac{1}{2} + \\frac{1}{24} + \\frac{1}{8} + 14 + \\frac{7}{6} + \\frac{7}{2} + \\frac{35}{2} + \\frac{35}{24} + \\frac{35}{8} + 2 + 2 + \\frac{4}{3} + 14 + 14 + \\frac{28}{3} \\right)\\\\ &= \\frac{12!}{7!} \\cdot \\frac{256}{3} \\end{align*}</p><p>\\[\\frac{ \\frac{12!}{7!} \\cdot \\frac{256}{3} }{ 6^{12} } = \\boxed{\\textbf{(E)} ~\\frac{2^2\\cdot 5\\cdot 11}{3^{10}}}\\]</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -222,6 +372,12 @@
       "question": "<p>Kymbrea's comic book collection currently has $30$ comic books in it, and she is adding to her collection at the rate of $2$ comic books per month. LaShawn's collection currently has $10$ comic books in it, and he is adding to his collection at the rate of $6$ comic books per month. After how many months will LaShawn's collection have twice as many comic books as Kymbrea's?</p>",
       "solutions": [
         "<p>Kymbrea has $30$ comic books initially and every month, she adds two. This can be represented as $30 + 2x$ where x is the number of months elapsed. LaShawn's collection, similarly, is $10 + 6x$. To find when LaShawn will have twice the number of comic books as Kymbrea, we solve for x with the equation $2(2x + 30) = 6x + 10$ and get $x = \\boxed{\\textbf{(E) } 25}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -229,6 +385,12 @@
       "question": "<p>Real numbers $x$, $y$, and $z$ satisfy the inequalities$0<x<1$, $-1<y<0$, and $1<z<2$.Which of the following numbers is necessarily positive?</p>",
       "solutions": [
         "<p>Notice that $y+z$ must be positive because $|z|>|y|$. Therefore the answer is $\\boxed{\\textbf{(E) } y+z}$.</p><p>The other choices:</p><p>$\\textbf{(A)}$ As $x$ grows closer to $0$, $x^2$ decreases and thus becomes less than $y$.</p><p>$\\textbf{(B)}$ $x$ can be as small as possible ($x>0$), so $xz$ grows close to $0$ as $x$ approaches $0$.</p><p>$\\textbf{(C)}$ For all $-1<y<0$, $|y|>|y^2|$, and thus it is always negative.</p><p>$\\textbf{(D)}$ The same logic as above, but when $-\\frac{1}{2}<y<0$ this time.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "inequalities"
+        }
       ]
     },
     {
@@ -238,6 +400,12 @@
         "<p>Rearranging, we find $3x+y=-2x+6y$, or $5x=5y\\implies x=y$.Substituting, we can convert the second equation into $\\frac{x+3x}{3x-x}=\\frac{4x}{2x}=\\boxed{\\textbf{(D)}\\ 2}$.</p><p><br/></p><p>More step-by-step explanation:</p><p>$\\frac{3x+y}{x-3y}=-2$</p><p>$3x+y=-2\\left(x-3y\\right)$</p><p>$3x+y=-2x+6y$</p><p>$5x=5y$</p><p>$x=y$</p><p>$\\frac{x+3y}{3x-y}=\\frac{1+3\\left(1\\right)}{3\\left(1\\right)-1}=\\frac{4}{2}=2$.</p><p>We choose $\\boxed{\\textbf{(D)}\\ 2}$.</p>",
         "<p>Substituting each $x$ and $y$ with $1$, we see that the given equation holds true, as $\\frac{3(1)+1}{1-3(1)} = -2$. Thus, $\\frac{x+3y}{3x-y}=\\boxed{\\textbf{(D)}\\ 2}$</p>",
         "<p>Let $y=ax$. The first equation converts into $\\frac{(3+a)x}{(1-3a)x}=-2$, which simplifies to $3+a=-2(1-3a)$. After a bit of algebra we found out $a=1$, which means that $x=y$. Substituting $y=x$ into the second equation it becomes $\\frac{4x}{2x}=\\boxed{\\textbf{(D)}\\ 2}$ - mathleticguyyy</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -248,6 +416,12 @@
         "<p>Notice that Samia walks $\\frac {17}{5}$ times slower than she bikes, and that she walks and bikes the same distance. Thus, the fraction of the total time that Samia will be walking is\\[\\frac{\\frac{17}{5}}{\\frac{17}{5}+\\frac{5}{5}} = \\frac{17}{22}\\] Then, multiply this by the time\\[\\frac{17}{22} \\cdot 44 \\text{minutes} = 34 \\text{minutes}\\]34 minutes is a little greater than $\\frac {1}{2}$ of an hour so Samia traveled \\[\\sim \\frac {1}{2} \\cdot 5 = 2.5 \\text{kilometers}\\] The answer choice a little greater than 2.5 is $\\boxed{\\bold{(C)} 2.8}$. (Note that we could've multiplied $\\frac {34}{60}=\\frac {17}{30}$ by $5$ and gotten the exact answer as well)</p>",
         "<p>Since the distance between biking and walking is equal, we can use the given rates' harmonic mean to find the average speed.</p><p>\\[\\frac{2ab}{a+b}\\implies\\frac{2 \\cdot 17 \\cdot 5}{17+5}=\\frac{85}{11}\\text{kph}\\]</p><p>Then, multiplying by $\\frac{11}{15}$ hours gives the overall distance $\\frac{17}{3}$ kilometers. Samia only walks half of that, so $\\frac{17}{6}\\approx \\boxed{\\textbf{(C) }2.8}$ kilometers.</p><p>~mn28407</p>",
         "<p>Since the distance traveled by bicycle and foot are equal, we can substitute the time traveled by bike, or $b$, as $\\frac{5}{17}$ of the time traveled by foot, or $f$</p><p>Accordingly, we have $\\frac{22}{17}f=44$This comes out to $f=34$This means that Samia traveled $34$ minutes on foot, and hence, $44-34=10$ minutes on bicycle</p><p>Because $10$ minutes on bike yields $\\frac{17}{6}$ kilometers, and distance on bike = distance on foot, we have the final answer of $\\frac{17}{6} \\approx \\boxed{2.8}$</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "linear_equations"
+        }
       ]
     },
     {
@@ -255,6 +429,12 @@
       "question": "<p>The data set $[6, 19, 33, 33, 39, 41, 41, 43, 51, 57]$ has median $Q_2 = 40$, first quartile $Q_1 = 33$, and third quartile $Q_3 = 43$. An outlier in a data set is a value that is more than $1.5$ times the interquartile range below the first quartle ($Q_1$) or more than $1.5$ times the interquartile range above the third quartile ($Q_3$), where the interquartile range is defined as $Q_3 - Q_1$. How many outliers does this data set have?</p>",
       "solutions": [
         "<p>The interquartile range is defined as $Q3 - Q1$, which is $43 - 33 = 10$. $1.5$ times this value is $15$, so all values more than $15$ below $Q1$ = $33 - 15 = 18$ is an outlier. The only one that fits this is $6$. All values more than $15$ above $Q3 = 43 + 15 = 58$ are also outliers, of which there are none so there is only $\\boxed{\\textbf{(B) 1}}$ outlier in total.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "basic_operations"
+        }
       ]
     },
     {
@@ -263,6 +443,12 @@
       "solutions": [
         "<p>Because the two points are on a diameter, the center must be halfway between them at the point $(4,3)$. The distance from $(0,0)$ to $(4,3)$ is 5 so the circle has radius 5. Thus, the equation of the circle is $(x-4)^2+(y-3)^2=25$. </p><p>To find the x-intercept, y must be 0, so $(x-4)^2+(0-3)^2=25$, so $(x-4)^2=16$, $x-4=4$, $x=8, \\boxed{D}$.</p><p>Written by: SilverLion</p>",
         "<p>As in solution 1, we find that the midpoint of the circle is (4,3) by finding half of the x and y coordinates of (8,6) point. We see a 3-4-5 triangle! For a point to be on the circle, it has to be 5 units away from the center.</p><p>We are able to create another 3-4-5 triangle by drawing a segment from (4,3) to (0,8). Therefore we know our answer is $\\boxed{D}$</p><p><a class=\"external free\" href=\"https://www.geogebra.org/geometry/xryzxpyw\" rel=\"nofollow\">https://www.geogebra.org/geometry/xryzxpyw</a></p><p>-thedodecagon</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -271,6 +457,12 @@
       "solutions": [
         "<p>Start by noting that $\\cos(-x)=\\cos(x)$. Then realize that under this function, the negative sine values yield the same as their positive value, so take the absolute value of the sine function to get the new period. This has period $\\pi$, so the answer is $\\boxed{(B)}$.</p>",
         "<p>First, we can eliminate D and E, as both $\\sin$ and $\\cos$ are periodic with period $2\\pi$, as stated. Therefore the nested function must be periodic with period $p \\le 2\\pi$. Next, we know $\\sin$ and $\\cos$ have ranges of $[-1, 1]$ with turning points/zeroes at values of $x$ in the set $S = \\{0, \\frac{\\pi}{2}, \\pi, \\frac{3\\pi}{2}\\}$. These 4 values are easy to compute and should convey the relevant information about our function, so let's consider these.</p><p>First compute the values of $\\sin(x)$ to be $(0, 1, 0, -1)$ over the set $S$. Therefore, the values of $\\cos(\\sin(x))$ are $(1, \\cos(1), 1, \\cos(-1))$. You may notice that one appears twice: at the values $x=0$ and $x=\\pi$, and guess that the period is $\\pi$. Alternatively, you can use the fact that $\\cos(-x)=\\cos(x)$ as in solution 1, which can be shown by considering the unit circle definition of cosine. You then get that the values of $\\cos(\\sin(x))$ are $(1, \\cos(1), 1, \\cos(1))$, which is more obviously periodic with period $\\pi$, therefore the answer is $\\boxed{(B)}$.</p><p>NOTE: This method is not strict proof that the function has period $\\pi$ as we only consider 4 values in the interval.</p><p>~rawr3507</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "trigonometry"
+        }
       ]
     },
     {
@@ -280,6 +472,12 @@
         "<p>Let $a$ be the short side of the rectangle, and $b$ be the long side of the rectangle. The diagonal, therefore, is $\\sqrt{a^2 + b^2}$. We can get the equation $\\frac{a}{b} = \\frac{b}{\\sqrt{a^2 + b^2}}$. Cross-multiplying, we get $a\\sqrt{a^2 + b^2} = b^2$. Squaring both sides of the equation, we get $a^2 (a^2 + b^2) = b^4$, which simplifies to $a^4 + a^2b^2 - b^4 = 0$. Solving for a quadratic in $a^2$, using the quadratic formula we get $a^2 = \\frac{-b^2 \\pm \\sqrt{5b^4}}{2}$ which gives us $\\frac{a^2}{b^2} = \\frac{-1 \\pm \\sqrt{5}}{2}$. We know that the square of the ratio must be positive (the square of any real number is positive), so the solution is $\\boxed{\\textbf{(C)} \\frac{\\sqrt{5}-1}{2}}$.</p><p>Solution by: vedadehhc</p>",
         "<p>Solution by HydroQuantum</p><p><br/>Let the short side of the rectangle be $a$ and let the long side of the rectangle be $b$. Then, the diagonal, according to the Pythagorean Theorem, is $\\sqrt{a^2+b^2}$. Therefore, we can write the equation:</p><p>$\\frac{a}{b} = \\frac{b}{\\sqrt{a^2 + b^2}}$.</p><p>We are trying to find the square of the ratio of $a$ to $b$. Let's let our answer, $\\frac{a^2}{b^2}$, be $k$. Then, squaring the above equation,</p><p>$\\frac{a^2}{b^2}=k=\\frac{b^2}{a^2 + b^2}=\\frac{b^2}{a^2}-\\frac{b^2}{b^2}=\\frac{1}{k}-1$.</p><p>Thus, $k=\\frac{1}{k}-1$.</p><p>Multiplying each side of the equation by $k$,</p><p>$k^2=1-k$.</p><p>Adding each side by $k-1$,</p><p>$k^2+k-1=0$.</p><p>Solving for $k$ using the Quadratic Formula,</p><p>$k=\\frac{-1\\pm\\sqrt{1^2-4(1)(-1)}}{2}=\\frac{-1\\pm\\sqrt{5}}{2}$.</p><p>Since the ratio of lengths and diagonals of a rectangle cannot be negative, and $\\sqrt{5}>1$, the $\\pm$ symbol can only take on the $+$. Therefore,</p><p>$k=\\frac{-1+\\sqrt{5}}{2}=\\boxed{\\textbf{(C)} \\frac{\\sqrt{5}-1}{2}}$.</p>",
         "<p>WLOG, assume the short side of the rectangle is 1 and the long side is $x$. Then, we wish to find $\\frac{1}{x^2}$ when we are given \\[\\frac{1}{x}=\\frac{x}{\\sqrt{x^2+1}}\\implies x^4-x^2-1=0.\\] Let $y=x^2$ and note that $y^2-y-1=0$ has solutions $y=\\frac{1\\pm\\sqrt{5}}{2}$. Since we want the positive answer, then $x^2=y=\\frac{1+\\sqrt{5}}{2}$ and $\\frac{1}{x^2}=\\boxed{\\textbf{(C)} \\frac{\\sqrt{5}-1}{2}}$. </p><p>Solution by Jzhang21</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "quadratic_equations"
+        }
       ]
     },
     {
@@ -288,6 +486,12 @@
       "solutions": [
         "<p>The equations of the two circles are $(x+10)^2+(y+4)^2=169$ and $(x-3)^2+(y-9)^2=65$. Rearrange them to $(x+10)^2+(y+4)^2-169=0$ and $(x-3)^2+(y-9)^2-65=0$, respectively. Their intersection points are where these two equations gain equality. The two points lie on the line with the equation $(x+10)^2+(y+4)^2-169=(x-3)^2+(y-9)^2-65$. We can simplify this like the following. $(x+10)^2+(y+4)^2-169=(x-3)^2+(y-9)^2-65 \\rightarrow (x^2+20x+100)+(y^2+8y+16)-(x^2-6x+9)-(y^2-18y+81)=104 \\rightarrow 26x+26y+26=104 \\rightarrow 26x+26y=78 \\rightarrow x+y=3$. Thus, $c = \\boxed{\\textbf{(A)}\\ 3}$.</p><p>Solution by TheUltimate123</p>",
         "<p>Note the specificity of the radii, $13$ and $\\sqrt{65}$, and that specificity is often deliberately added to simplify the solution to a problem.</p><p>One may recognize $13$ as the hypotenuse of the $\\text{5-12-13}$ right triangle and $\\sqrt{65}$ as the hypotenuse of the right triangle with legs $1$ and $8$. We can suppose that the legs of these triangles connect the circles' centers to their intersection along the gridlines of the plane.</p><p>If we suspect that one of the intersections lies $12$ units to the right of and $5$ units above the center of the first circle, we find the point $(-10 + 12,-4 + 5) = (2,1)$, which is in fact $1$ unit to the left of and $8$ units below the center of the second circle at $(3,9)$.</p><p>Plugging $(2,1)$ into $x + y$ gives us $c = 2 + 1 = \\boxed{\\textbf{(A) } 3}$.</p><p>A similar solution uses the other intersection point, $(-5,8)$.</p><p><br/></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "coordinate_geometry"
+        }
       ]
     },
     {
@@ -296,6 +500,12 @@
       "solutions": [
         "<p>WLOG, let there be $100$ students. $60$ of them like dancing, and $40$ do not. Of those who like dancing, $20\\%$, or $12$ of them say they dislike dancing. Of those who dislike dancing, $90\\%$, or $36$ of them say they dislike it. Thus, $\\frac{12}{12+36} = \\frac{12}{48} = \\frac{1}{4} = 25\\% \\boxed{\\textbf{(D)}}$</p>",
         "<p>The question can be translated into P(Likes|Says Dislike). </p><p>By Bayes' Theorem, this is equal to the probability of $\\frac{\\textnormal{P(Likes} \\cap \\textnormal{Says Dislike)}}{\\textnormal{P(Says Dislike)}}$. $\\textnormal{P(Likes} \\cap \\textnormal{Says Dislike)} = 0.6 \\cdot 0.2 = 0.12$, and $\\textnormal{P(Says Dislike)} = (0.4 \\cdot 0.9) + (0.6 \\cdot 0.2) = 0.48$.Therefore, you get a probability of $\\frac{0.12}{0.48} = 25\\% \\boxed{\\textbf{(D)}}$</p><p>~Directrixxx</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -307,6 +517,12 @@
         "<p>Unlike the first two solutions, we can do our casework based off of whether or not the number contains a $0$. </p><p>If it does, then we know the $0$ must be the last digit in the number (and hence, the number has to be decreasing). Because $0$ is not positive, $0$ is not monotonous. So, we need to pick at least $1$ number in the set $[1, 9].$ After choosing our numbers, there will be just $1$ way to arrange them so that the overall number is monotonous.</p><p>In total, each of the $9$ digits can either be in the monotonous number or not, yielding $2^9 = 512$ total solutions. However, we said earlier that $0$ cannot be by itself so we have to subtract out the case in which we picked none of the numbers $1-9$. So, this case gives us $511$. </p><p><br/>Onto the second case, if there are no $0$s, then the number can either be arranged in ascending order or in descending order. So, for each selection of the digits $1- 9$, there are $2$ solutions. This gives \\[2 \\cdot (2^9 - 1) = 2 \\cdot 511 = 1022\\] possibilities. Note that we subtracted out the $1$ because we cannot choose none of the numbers. </p><p>However, realize that if we pick just $1$ digit, then there is only $1$ arrangement. We cannot put a single digit in both ascending and descending order. So, we must subtract out $9$ from there (because there are $9$ possible ways to select one number and for each case, we overcounted by $1$). </p><p>All in all, that gives $511 + 1022 - 9 = \\boxed{\\textbf{(B)  } 1524}$ monotonous numbers.</p>",
         "<p>Let $n$ be the number of digits of a monotonous number. Notice for an increasing monotonous number with $n \\ge 2$, we can obtain 2 more monotonous numbers that are decreasing by reversing its digits and adding a $0$ to the end of the reversed digits. Whenever $n$ digits are chosen, the order is fixed. There are $\\binom{9}{n}$ ways to obtain an increasing monotonous number with $n$ digits. So, there are $3\\cdot \\sum_{n=2}^{9} \\binom{9}{n}$ monotonous numbers when $n \\ge 2$. When $n=1$, there is no reverse but we could add $0$ to the end, so there are $2 \\cdot \\binom{9}{1}$ monotonous numbers.</p><p>The answer is:</p><p>$3\\cdot \\sum_{n=2}^{9} \\binom{9}{n} + 2 \\cdot \\binom{9}{1}$ $=3\\cdot \\sum_{n=1}^{9} \\binom{9}{n}  -  \\binom{9}{1}$ $=3\\cdot \\left( \\sum_{n=0}^{9} \\binom{9}{n} - \\binom{9}{0} \\right) -  \\binom{9}{1}$ $= 3 \\cdot (2^9-1) - 9$ $=\\boxed{\\textbf{(B)  } 1524}$</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>",
         "<p>We have 2 cases.</p><p><b>Case 1: Ascending order</b></p><p>We can set up a 1-1 Correspondence. For any subset of all the digits $1$ to $9$ ($0$ cannot be a digit for ascending order), we can always rearrange them into an ascending monotonous number. Therefore, the number of subsets of the integers $1$ to $9$ is equivalent to the number of ascending integers. So, $2^9=512$. However, the empty set ($\\emptyset$) is not an integer, so we must subtract 1. Thus, $512-1=511$.</p><p><b>Case 2: Descending order</b></p><p>Similarly, any subset of the digits $0$ to $9$ can be rearranged into a descending monotonous number. So, $2^{10}=1024$. However, $\\emptyset$ and $0$ are not <i>positive</i> integers, so we must subtract 2. Thus, $1024-2=1022$.</p><p><br/></p><p>We have covered all the cases. We add $511$ to $1022$, giving us $1533$. So now we just innocently go ahead and choose $\\textbf{(C) } 1533$ as our answer, right? No! We overcounted the $9$ <i>single-digit integers</i>. The answer is actually $1533-9=\\boxed{\\textbf{(B)  } 1524}$.</p><p>~MrThinker</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -315,6 +531,12 @@
       "solutions": [
         "<p>The root of any polynomial of the form $z^n = a$ will have all $n$ of it roots will have magnitude $\\sqrt[n]{a}$ and be the vertices of a regular $n$-gon in the complex plane (This concept is known as the roots of unity). For the equation $z^{12} = 64$, it is easy to see $\\pm\\sqrt{2}$ and $\\pm {i} \\sqrt{2}$ as roots. Graphing these in the complex plane, we have four vertices of a regular dodecagon. Since the roots must be equally spaced, besides $\\sqrt{2}$, there are four more roots with positive real parts lying in the first and fourth quadrants. We also know that the angle between these roots is $30^{\\circ}$. We only have to find the real parts of the roots lying in the first quadrant, because the imaginary parts would cancel out with those from the fourth quadrant. We have two $30-60-90$ triangles (the triangles formed by connecting the origin to the roots, and dropping a perpendicular line from each root to the real-axis), both with hypotenuse $\\sqrt{2}$. This means that one has base $\\frac{\\sqrt{2}}{2}$ and the other has base $\\frac{\\sqrt{6}}{2}$. Adding these and multiplying by two, we get the sum of the four roots as $\\sqrt{2} + \\sqrt{6}$. However, we have to add in the original solution of $\\sqrt{2}$, so the answer is $\\boxed{\\textbf{(D) }2\\sqrt{2} + \\sqrt{6}}$.</p><p>Solution by vedadehhc</p>",
         "<p>$z^{12}=64$ has a factor of $\\sqrt{2}$, so we need to remember to multiply our solution below, using the Roots of Unity. We notice that the sum of the complex parts of all these roots is $0$, because the points on the complex plane are symmetric. The roots with $re(z)>0$ are $e^{0i}, e^{\\frac{\\pm\\pi}{6}i},$ and $e^{\\frac{\\pm\\pi}{3}i}$ by the Roots of Unity. Their real parts are $\\cos(0), \\pm\\cos(\\frac{\\pi}{6}),$ and $\\pm\\cos(\\frac{\\pi}{3})$. Their sum is $1+2(\\frac{\\sqrt{3}}{2}+\\frac{1}{2})=1+\\sqrt{3}+1=2+\\sqrt{3}$. But, remember to multiply by $\\sqrt{2}$. The answer is $\\sqrt{2}(2+\\sqrt{3})=\\boxed{\\textbf{(D)}\\ 2\\sqrt{2}+\\sqrt{6}}$.</p><p>Solution by TheUltimate123</p>"
+      ],
+      "categorization": [
+        {
+          "category": "precalculus",
+          "sub_category": "complex_numbers"
+        }
       ]
     },
     {
@@ -322,7 +544,13 @@
       "question": "<p>In the figure below, $3$ of the $6$ disks are to be painted blue, $2$ are to be painted red, and $1$ is to be painted green. Two paintings that can be obtained from one another by a rotation or a reflection of the entire figure are considered the same. How many different paintings are possible?</p><p>[asy] size(100); pair A, B, C, D, E, F; A = (0,0); B = (1,0); C = (2,0); D = rotate(60, A)*B; E = B + D; F = rotate(60, A)*C; draw(Circle(A, 0.5)); draw(Circle(B, 0.5)); draw(Circle(C, 0.5)); draw(Circle(D, 0.5)); draw(Circle(E, 0.5)); draw(Circle(F, 0.5)); [/asy]</p>",
       "solutions": [
         "<p>Looking at the answer choices, we see that the possibilities are indeed countable. Thus, we will utilize that approach in the form of two separate cases, as rotation and reflection take care of numerous possibilities. First, consider the case that the green disk is in a corner. This yields $6$ possible arrangements for the $3$ blue disks and $2$ red disks in the remaining available slots. Now, consider the case that the green disk is on an edge. This yields $6$ more possible arrangements for the $3$ blue disks and $2$ red disks in the remaining available slots. Thus, our answer is $6 + 6 = \\boxed{\\bold{(D)}\\, 12}$</p><p>Solution by akaashp11</p>",
-        "<p>Burnside's Lemma can be applied to the problem. Number the disks 1-6 from top to bottom and left to right. First, we count the number of group actions. There are $6$ in total: $3$ rotations, $0$\u00b0, $120$\u00b0, and $240$\u00b0. Additionally, there are $3$ different reflections, which are over lines passing through the middle of disks $1$, $4$, and $6$. The $0$\u00b0 rotation has the total number of diagrams fixed, which is $6!/3!\\cdot2!=60$. The $120$\u00b0 and $240$\u00b0 rotations each have $0$ fixed diagrams, as one would need the same color for disks $1, 4, 6$ and the same color for disks $2, 3, 5,$ which isn't possible. Consider the reflection over the line passing through disk $1$. The green can be placed in $2$ places, disk $1$ or $5$, and then, the blue must go in either disks $2$ and $3$ or disks $4$ and $6$, so the number of fixed diagrams is $2\\cdot2=4$. The other two reflections also have $4$ unique fixed diagrams. Therefore, applying Burnside's Lemma, we get $(60+4+4+4)/6 = \\boxed{\\bold{(D)}\\, 12}$</p><p>Solution by Aadileo</p>"
+        "<p>Burnside's Lemma can be applied to the problem. Number the disks 1-6 from top to bottom and left to right. First, we count the number of group actions. There are $6$ in total: $3$ rotations, $0$°, $120$°, and $240$°. Additionally, there are $3$ different reflections, which are over lines passing through the middle of disks $1$, $4$, and $6$. The $0$° rotation has the total number of diagrams fixed, which is $6!/3!\\cdot2!=60$. The $120$° and $240$° rotations each have $0$ fixed diagrams, as one would need the same color for disks $1, 4, 6$ and the same color for disks $2, 3, 5,$ which isn't possible. Consider the reflection over the line passing through disk $1$. The green can be placed in $2$ places, disk $1$ or $5$, and then, the blue must go in either disks $2$ and $3$ or disks $4$ and $6$, so the number of fixed diagrams is $2\\cdot2=4$. The other two reflections also have $4$ unique fixed diagrams. Therefore, applying Burnside's Lemma, we get $(60+4+4+4)/6 = \\boxed{\\bold{(D)}\\, 12}$</p><p>Solution by Aadileo</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "counting"
+        }
       ]
     },
     {
@@ -330,15 +558,21 @@
       "question": "<p>An ice-cream novelty item consists of a cup in the shape of a 4-inch-tall frustum of a right circular cone, with a 2-inch-diameter base at the bottom and a 4-inch-diameter base at the top, packed solid with ice cream, together with a solid cone of ice cream of height 4 inches, whose base, at the bottom, is the top base of the frustum. What is the total volume of the ice cream, in cubic inches?</p>",
       "solutions": [
         "<p>The top cone has radius 2 and height 4 so it has volume $\\dfrac{1}{3} \\pi (2)^2 \\times 4$. </p><p>The frustum is made up by taking away a small cone of radius 1, height 4 from a large cone of radius 2, height 8, so it has volume$\\dfrac{1}{3} \\pi (2)^2 \\times 8 - \\dfrac{1}{3} \\pi (1)^2 \\times 4$.</p><p>Adding, we get $\\dfrac{1}{3} \\pi (16+32-4) = \\boxed{ \\textbf{E} \\ \\dfrac{44\\pi}{3}}$. </p><p>Solution by: SilverLion </p>",
-        "<p>Find the volume of the cone with the method in Solution 1. The volume of the frustrum is $\\pi\\int_{0}^{4} \\left(-\\frac{1}{4}x+2\\right)^2 dx=\\frac{28\\pi}{3}$</p><p>Adding, we get $\\dfrac{44\\pi}{3}$.</p><p>Solution by IdentityChaos2020</p><p>These problems are copyrighted \u00a9 by the <a class=\"external text\" href=\"https://www.maa.org\" rel=\"nofollow\">Mathematical Association of America</a>, as part of the <a class=\"external text\" href=\"https://maa.org/student-programs/amc/\" rel=\"nofollow\">American Mathematics Competitions</a>. <a class=\"image\" href=\"/wiki/index.php/File:AMC_logo.png\">AMC logo.png</a></p>"
+        "<p>Find the volume of the cone with the method in Solution 1. The volume of the frustrum is $\\pi\\int_{0}^{4} \\left(-\\frac{1}{4}x+2\\right)^2 dx=\\frac{28\\pi}{3}$</p><p>Adding, we get $\\dfrac{44\\pi}{3}$.</p><p>Solution by IdentityChaos2020</p><p>These problems are copyrighted © by the <a class=\"external text\" href=\"https://www.maa.org\" rel=\"nofollow\">Mathematical Association of America</a>, as part of the <a class=\"external text\" href=\"https://maa.org/student-programs/amc/\" rel=\"nofollow\">American Mathematics Competitions</a>. <a class=\"image\" href=\"/wiki/index.php/File:AMC_logo.png\">AMC logo.png</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "solid_geometry"
+        }
       ]
     },
     {
       "id": "amc_2017_12b_15",
       "question": "<p>Let $ABC$ be an equilateral triangle. Extend side $\\overline{AB}$ beyond $B$ to a point $B'$ so that $BB'=3AB$. Similarly, extend side $\\overline{BC}$ beyond $C$ to a point $C'$ so that $CC'=3BC$, and extend side $\\overline{CA}$ beyond $A$ to a point $A'$ so that $AA'=3CA$. What is the ratio of the area of $\\triangle A'B'C'$ to the area of $\\triangle ABC$?</p>",
       "solutions": [
-        "<p>Note that by symmetry, $\\triangle A'B'C'$ is also equilateral. Therefore, we only need to find one of the sides of $A'B'C'$ to determine the area ratio. WLOG, let $AB = BC = CA = 1$. Therefore, $BB' = 3$ and $BC' = 4$. Also, $\\angle B'BC' = 120^{\\circ}$, so by the Law of Cosines, $B'C' = \\sqrt{37}$. Therefore, the answer is $(\\sqrt{37})^2\u00a0: 1^2 = \\boxed{\\textbf{(E) } 37}$</p>",
-        "<p>As mentioned in the first solution, $\\triangle A'B'C'$ is equilateral. WLOG, let $AB=2$. Let $D$ be on the line passing through $AB$ such that $A'D$ is perpendicular to $AB$. Note that $\\triangle A'DA$ is a 30-60-90 with right angle at $D$. Since $AA'=6$, $AD=3$ and $A'D=3\\sqrt{3}$. So we know that $DB'=11$. Note that $\\triangle A'DB'$ is a right triangle with right angle at $D$. So by the Pythagorean theorem, we find $A'B'= \\sqrt{(3\\sqrt{3})^2 + 11^2} = 2\\sqrt{37}.$ Therefore, the answer is $(2\\sqrt{37})^2\u00a0: 2^2 = \\boxed{\\textbf{(E) } 37}$.</p>",
+        "<p>Note that by symmetry, $\\triangle A'B'C'$ is also equilateral. Therefore, we only need to find one of the sides of $A'B'C'$ to determine the area ratio. WLOG, let $AB = BC = CA = 1$. Therefore, $BB' = 3$ and $BC' = 4$. Also, $\\angle B'BC' = 120^{\\circ}$, so by the Law of Cosines, $B'C' = \\sqrt{37}$. Therefore, the answer is $(\\sqrt{37})^2 : 1^2 = \\boxed{\\textbf{(E) } 37}$</p>",
+        "<p>As mentioned in the first solution, $\\triangle A'B'C'$ is equilateral. WLOG, let $AB=2$. Let $D$ be on the line passing through $AB$ such that $A'D$ is perpendicular to $AB$. Note that $\\triangle A'DA$ is a 30-60-90 with right angle at $D$. Since $AA'=6$, $AD=3$ and $A'D=3\\sqrt{3}$. So we know that $DB'=11$. Note that $\\triangle A'DB'$ is a right triangle with right angle at $D$. So by the Pythagorean theorem, we find $A'B'= \\sqrt{(3\\sqrt{3})^2 + 11^2} = 2\\sqrt{37}.$ Therefore, the answer is $(2\\sqrt{37})^2 : 2^2 = \\boxed{\\textbf{(E) } 37}$.</p>",
         "<p>Let $AB=BC=CA=x$. We start by noting that we can just write $AB'$ as just $AB+BB'=4AB$.Similarly $BC'=4BC$, and $CA'=4CA$. We can evaluate the area of triangle $ABC$ by simply using Heron's formula, $[ABC]=\\sqrt{\\frac{3x}{2}\\cdot {\\left(\\frac{3x}{2}-x\\right)}^3}=\\frac{x^2\\sqrt{3}}{4}$.Next in order to evaluate $A'B'C'$ we need to evaluate the area of the larger triangles $AA'B',BB'C', \\text{ and } CC'A'$.In this solution we shall just compute $1$ of these as the others are trivially equivalent.In order to compute the area of $\\Delta{AA'B'}$ we can use the formula $[XYZ]=\\frac{1}{2}xy\\cdot\\sin{z}$.Since $ABC$ is equilateral and $A$, $B$, $B'$ are collinear, we already know $\\angle{A'AB'}=180-60=120$Similarly from above we know $AB'$ and $A'A$ to be $4x$, and $3x$ respectively. Thus the area of $\\Delta{AA'B'}$ is $\\frac{1}{2}\\cdot 4x\\cdot 3x \\cdot \\sin{120}=3x^2\\cdot\\sqrt{3}$. Likewise we can find $BB'C', \\text{ and } CC'A'$ to also be $3x^2\\cdot\\sqrt{3}$.$[A'B'C']=[AA'B']+[BB'C']+[CC'A']+[ABC]=3\\cdot3x^2\\cdot\\sqrt{3}+\\frac{x^2\\sqrt{3}}{4}=\\sqrt{3}\\cdot\\left(9x^2+\\frac{x^2}{4}\\right)$.Therefore the ratio of $[A'B'C']$ to $[ABC]$ is $\\frac{\\sqrt{3}\\cdot\\left(9x^2+\\frac{x^2}{4}\\right)}{\\frac{x^2\\sqrt{3}}{4}}=\\boxed{\\textbf{(E) } 37}$</p>",
         "<p>Looking at the answer choices, we see that all but ${\\textbf{(E)}}$ has a perfect square in the ratio. With some intuition, we can guess that the sidelength of the new triangle formed is not an integer, thus we pick $\\boxed{\\textbf{(E) } 37}$.</p><p>Additionally, notice that option D is 36:1, which is 1 below 37:1. It's quite possible that people would forget to include the area of $ABC$ when calculating the area of $A'B'C'$ and erroneously get an answer that is 1 below the correct one, which further supports picking $\\boxed{\\textbf{(E) } 37}$.</p><p>Solution by sp1729Modification by rawr3507</p>",
         "<p>We use barycentric coordinates wrt $\\triangle ABC$, to which we can easily obtain that $A'=(4,0,-3)$, $B'=(-3,4,0)$, and $C'=(0,-3,4)$. Now, since the coordinates are homogenized ($-3+4=1$), we can directly apply the area formula to obtain that\\[[A'B'C']=[ABC]\\cdot\\left| \\begin{array}{ccc} 4 & 0 & -3 \\\\ -3 & 4 & 0 \\\\ 0 & -3 & 4 \\end{array} \\right| = (64-27)[ABC]=37[ABC],\\]so the answer is $\\boxed{\\textbf{(E) } 37}$</p>",
@@ -346,9 +580,15 @@
         "<p>Scale down the figure so that the area formulas for the $120^\\circ$ and equilateral triangles become proportional with proportionality constant equivalent to the product of the corresponding sides. By the proportionality, it becomes clear that the answer is $3*4*3+1*1=37, \\boxed{\\text{E}}$.~ Solution by mathchampion1</p>",
         "<p>Drawing the diagram, we see that the large triangle, $A'B'C'$, is composed of three congruent triangles with the triangle $ABC$ at the center. Let each of the sides of triangle $ABC$ be $x$. Therefore, using the equilateral triangle area formula, the $[ABC] = \\frac{x^2\\sqrt{3}}{4}$. We also know now that the sides of the triangles are $3x$ and $3x + x$, or $4x$. We also know that since $BB'$ are collinear, as are the others, angle $C'BB'$ is $180 - 60$, which is $120$ degrees. Because that angle is an included angle, we get the area of all three congruent triangle's are $\\frac{12x^2\\sin120}{2} \\cdot 3$. Simplifying that yields $\\frac{36x^2\\sqrt{3}}{4}$. Adding that to the $[ABC]$ yields $\\frac{37x^2\\sqrt{3}}{4}$. From this, we can compare the ratios by canceling everything out except for the $37$, so the answer is $\\boxed{\\textbf{(E) }37}$</p><p>~Solution by EricShi1685</p>",
         "<p>Solution by HydroQuantum</p><p><br/>Let $AB=BC=CA=x$.</p><p><br/>Recall The Law of Cosines. Letting $A'B'=B'C'=C'A'=y$, \\[y^2=(3x)^2+(x+3x)^2-2(3x)(x+3x)(\\cos 120) =\\] \\[(3x)^2+(4x)^2-2(3x)(4x)(\\cos 120)=9x^2+16x^2-24x(\\cos 120)=25x^2+12x^2=37x^2.\\] Since both $\\triangle ABC$ and $\\triangle A'B'C'$ are both equilateral triangles, they must be similar due to $AA$ similarity. This means that $\\frac{A'B'}{AB}$ $=$ $\\frac{B'C'}{BC}$ $=$ $\\frac{C'A'}{CA}$ $=$ $\\frac{[\\triangle A'B'C']}{[\\triangle ABC]}$ $=$ $\\frac{37}{1}$.</p><p><br/>Therefore, our answer is $\\boxed{\\textbf{(E) }37}$.</p>",
-        "<p>Note that the height and base of $\\triangle A'CC'$ are respectively 4 times and 3 times that of $\\triangle ABC$. Therefore the area of $\\triangle A'CC'$ is 12 times that of $\\triangle ABC$.</p><p>By symmetry, $\\triangle A'CC' \\cong \\triangle B'AA' \\cong \\triangle C'BB'$. Adding the areas of these three triangles and $\\triangle ABC$ for the total area of $\\triangle A'B'C'$ gives a ratio of $(12 + 12 + 12 + 1)\u00a0: 1$, or $\\boxed{\\textbf{(E) } 37}$.</p>",
+        "<p>Note that the height and base of $\\triangle A'CC'$ are respectively 4 times and 3 times that of $\\triangle ABC$. Therefore the area of $\\triangle A'CC'$ is 12 times that of $\\triangle ABC$.</p><p>By symmetry, $\\triangle A'CC' \\cong \\triangle B'AA' \\cong \\triangle C'BB'$. Adding the areas of these three triangles and $\\triangle ABC$ for the total area of $\\triangle A'B'C'$ gives a ratio of $(12 + 12 + 12 + 1) : 1$, or $\\boxed{\\textbf{(E) } 37}$.</p>",
         "<p>First we note that $A'B'C'\\sim ABC$ due to symmetry. WLOG, let $B = (0, 0)$ and $AB = 1$ Therefore, $C = (1, 0), A = \\frac{1}{2}, \\left(\\frac{\\sqrt{3}}{2}\\right)$. Using the condition that $CC' = 3$, we get $C' = (4, 0)$ and $B' = \\left(\\frac{-3}{2}, \\frac{-3\\sqrt{3}}{2}\\right)$. It is easy to check that $B'C' = \\sqrt{37}$. Since the area ratios of two similar figures is the square of the ratio of their lengths, the ratio is $\\boxed{\\textbf{(E) } 37}$</p><p>Solution by <i>mathwiz0803</i></p>",
-        "<p>Note that angle $C'BB'$ is $120$\u00b0, as it is supplementary to the equilateral triangle. Then, using area $= \\frac{1}{2}ab\\sin\\theta$ and letting side $AB = 1$ for ease, we get: $4\\cdot3\\cdot\\frac{\\sin120}{2} = 3\\sqrt{3}$ as the area of $C'BB'$. Then, the area of $ABC$ is $\\frac{\\sqrt{3}}{4}$, so the ratio is $\\frac{3(3\\sqrt{3})+\\frac{\\sqrt{3}}{4}}{\\frac{\\sqrt{3}}{4}} = \\boxed{\\textbf{(E) } 37}$</p><p>Solution by Aadileo</p>"
+        "<p>Note that angle $C'BB'$ is $120$°, as it is supplementary to the equilateral triangle. Then, using area $= \\frac{1}{2}ab\\sin\\theta$ and letting side $AB = 1$ for ease, we get: $4\\cdot3\\cdot\\frac{\\sin120}{2} = 3\\sqrt{3}$ as the area of $C'BB'$. Then, the area of $ABC$ is $\\frac{\\sqrt{3}}{4}$, so the ratio is $\\frac{3(3\\sqrt{3})+\\frac{\\sqrt{3}}{4}}{\\frac{\\sqrt{3}}{4}} = \\boxed{\\textbf{(E) } 37}$</p><p>Solution by Aadileo</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -359,6 +599,12 @@
         "<p>If $21!$ prime factorizes into $p$ prime factors with exponents $e_1$ through $e_k$, then the product of the sums of each of these exponents plus $1$ should be over $60,000$. If $e_2$ is the exponent of $2$ in the prime factorization of 21!, then we can find the number of odd factors of $21!$ by dividing the total by $e_2+1$. Then, the number of odd divisors over total divisors is $\\dfrac{1}{e_2+1}$. We can find $e_2$ easily using Legendre's, so our final answer is $\\dfrac{1}{10 + 5 + 2 + 1+1} = \\boxed{\\text{(B)} \\dfrac{1}{19}}.$</p><p>~ icecreamrolls8</p>",
         "<p>If a factor of $21!$ is odd, that means it contains no factors of $2$. We can find the number of factors of two in $21!$ by counting the number multiples of $2$, $4$, $8$, and $16$ that are less than or equal to $21$ (Legendre's Formula). After some quick counting we find that this number is $10+5+2+1 = 18$. If the prime factorization of $21!$ has $18$ factors of $2$, there are $19$ choices for each divisor for how many factors of $2$ should be included ($0$ to $18$ inclusive). The probability that a randomly chosen factor is odd is the same as if the number of factors of $2$ is $0$ which is   $\\boxed{\\textbf{(B)}\\frac{1}{19}}$.</p><p>Solution by: vedadehhc</p><p>Note: Legendre's Formula states that the exponent of $p$ in the prime factorization of $n!$ is given by\\[e_p(n!)=\\sum_{i=1}^{\\infty}\\left\\lfloor\\frac{n}{p^i}\\right\\rfloor=\\frac{n-S_p(n)}{p-1},\\]where $S_p(n)$ is the sum of the digits of $n$ when written in base $p$. For example, $21$ in binary is $1011$, so $S_2(21)=1+0+1+1=3$. We have $e_2(21!)=\\frac{21-3}{2-1}=18$, then proceed with the rest of solution 3.</p><p>~ happyhippos</p>",
         "<p>We can write $21!$ as its prime factorization:\\[21!=2^{18}\\times3^9\\times5^4\\times7^3\\times11\\times13\\times17\\times19\\]</p><p>Each exponent of these prime numbers are one less than the number of factors at play here. This makes sense; $2^{18}$ is going to have $19$ factors: $2^0, 2^1, 2^2,...\\text{ }2^{18}$, and the other exponents will behave identically. </p><p>In other words, $21!$ has $(18+1)(9+1)(4+1)(3+1)(1+1)(1+1)(1+1)(1+1)$ factors. </p><p>We are looking for the probability that a randomly chosen factor of $21!$ will be odd--numbers that do not contain multiples of $2$ as factors.</p><p>From our earlier observation, the only factors of $21!$ that are even are ones with at least one multiplier of $2$, so our probability of finding an odd factor becomes the following:\\[P(\\text{odd})=\\dfrac{\\text{number of odd factors}}{\\text{number of all factors}}=\\dfrac{(9+1)(4+1)(3+1)(1+1)(1+1)(1+1)(1+1)}{(18+1)(9+1)(4+1)(3+1)(1+1)(1+1)(1+1)(1+1)}=\\dfrac{1}{(18+1)}=\\boxed{\\dfrac{1}{19}}\\]</p><p>Solution submitted by <a href=\"/wiki/index.php/User:TrueshotBarrage\" title=\"User:TrueshotBarrage\">David Kim</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
       ]
     },
     {
@@ -366,6 +612,12 @@
       "question": "<p>A coin is biased in such a way that on each toss the probability of heads is $\\frac{2}{3}$ and the probability of tails is $\\frac{1}{3}$. The outcomes of the tosses are independent. A player has the choice of playing Game A or Game B. In Game A she tosses the coin three times and wins if all three outcomes are the same. In Game B she tosses the coin four times and wins if both the outcomes of the first and second tosses are the same and the outcomes of the third and fourth tosses are the same. How do the chances of winning Game A compare to the chances of winning Game B?</p><p>$\\textbf{(C)}$ The probabilities are the same.</p><p>$\\textbf{(D)}$ The probability of winning Game A is $\\frac{2}{81}$ greater than the probability of winning Game B.</p><p>$\\textbf{(E)}$ The probability of winning Game A is $\\frac{4}{81}$ greater than the probability of winning Game B.</p>",
       "solutions": [
         "<p>The probability of winning Game A is the sum of the probabilities of getting three tails and getting three heads which is $\\left(\\frac{2}{3}\\right)^3 + \\left(\\frac{1}{3}\\right)^3 = \\frac{8}{27} + \\frac{1}{27} = \\frac{9}{27} = \\frac{27}{81}$. The probability of winning Game B is the sum of the probabilities of getting two heads and getting two tails squared. This gives us $\\left(\\left(\\frac{2}{3}\\right)^2 + \\left(\\frac{1}{3}\\right)^2 \\right)^2 = \\left(\\frac{5}{9}\\right)^2 = \\frac{25}{81}$. The probability of winning Game A is $\\frac{27}{81}$ and the probability of winning Game B is $\\frac{25}{81}$, so the answer is $\\boxed{\\textbf{(D)}}$</p><p>Solution by: vedadehhc</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -378,6 +630,12 @@
         "<p>Or, use similar triangles all the way, dispense with Pythagorean, and go for minimal calculation:</p><p>Draw $BF \\parallel ED$ with $F$ on $AE$. $BF=5\\times\\frac{4}{7}=\\frac{20}{7}$.</p><p>$[\\triangle ABF]=\\frac{1}{2} \\times 4 \\times \\frac{20}{7}=\\frac{40}{7}$.</p><p>$AC:CB:CF=49:35:25$. ($7:5$ ratio applied twice)</p><p>$[\\triangle ABC]=\\frac{49}{49+25}[\\triangle ABF]=\\boxed{\\textbf{(D)}\\ \\frac{140}{37}}$.</p>",
         "<p>Let $A$ be at the origin $(0, 0)$ of a coordinate plane, with $B$ being located at $(4, 0)$, etc.</p><p>We can find the area of $\\triangle ABC$ by finding the the altitude from line $AB$ to point $C$. Realize that this altitude is the $y$ coordinate of point $C$ on the coordinate plane, since the respective base of $\\triangle ABC$ is on the $x$-axis.</p><p>Using the diagram in solution one, the equation for circle $O$ is $(x-2)^2+y^2 = 4$. </p><p>The equation for line $AE$ is then $y = \\frac{5}{7}x$, therefore $x = \\frac{7}{5}y$.</p><p>Substituting $\\frac{7}{5}y$ for $x$ in the equation for circle $O$, we get:</p><p>$\\left(\\frac{7}{5}y-2\\right)^2+y^2 = 4$</p><p>We can solve for $y$ to yield the $y$ coordinate of point $C$ in the coordinate plane, since this is the point of intersection of the circle and line $AE$. Note that one root will yield the intersection of the circle and line $AE$ at the origin, so we will ignore this root.</p><p>Expanding the expression and factoring, we get:</p><p>$\\left(\\frac{49}{25}y^2-\\frac{28}{5}y+4\\right)+y^2 = 4$</p><p>$\\frac{74}{25}y^2-\\frac{28}{5}y = 0$</p><p>$50y(37y-70) = 0$</p><p>Our non-zero root is thus $\\frac{70}{37}$. Calculating the area of $\\triangle ABC$ with $4$ as the length of $AB$ and $\\frac{70}{37}$ as the altitude, we get:</p><p>$\\frac{(4)(\\frac{70}{37})}{2} = \\boxed{\\textbf{(D)}\\ \\frac{140}{37}}$.</p><p>-Solution by Joeya</p>",
         "<p>Slope of AC is 5/7As stated in other solutions AB is the diameter, ABC is right.</p><p>Let CF be an altitude of ABC.</p><p>AF:CF = CF:BF = 7:5 </p><p>We can set AF = 49, CF = 35, BF = 25 and scale back later</p><p>Then the radius is $\\frac{AB}{2}$ = $\\frac{AF+BF}{2}$ = $\\frac{74}{2}$ = $37$. </p><p>So the radius is 37 and the height of ABC is 35.</p><p>If we scale it back so that our radius is 2, our height is $\\frac{70}{37}$.</p><p>Area of ABC is bh/2 = $\\frac{(4)(\\frac{70}{37})}{2}$ = $\\boxed{\\textbf{(D)}\\ \\frac{140}{37}}$.</p><p>-mathophobia</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "circles"
+        }
       ]
     },
     {
@@ -389,6 +647,12 @@
         "<p>To find the sum of digits of our number, we break it up into $5$ cases, starting with $0$, $1$, $2$, $3$, or $4$.</p><p>Case 1: $1+2+3+\\cdots+9 = 45$,</p><p>Case 2: $1+0+1+1+1+2+\\cdots+1+8+1+9 = 55$ (We add 10 to the previous cases, as we are in the next ten's place)</p><p>Case 3: $2+0+2+1+\\cdots+2+9 = 65$,</p><p>Case 4: $3+0+3+1+\\cdots+3+9 = 75$,</p><p>Case 5: $4+0+4+1+\\cdots+4+4 = 30$,</p><p>Thus the sum of the digits is $45+55+65+75+30 = 270$, so the number is divisible by $9$. We notice that the number ends in \"$4$\", which is $9$ more than a multiple of $5$. Thus if we subtracted $9$ from our number it would be divisible by $5$, and $5\\cdot 9 = 45$. (Multiple of n - n = Multiple of n)</p><p><br/>So our remainder is $\\boxed{\\textbf{(C)}\\,9}$, the value we need to add to the multiple of $45$ to get to our number.</p>",
         "<p>We notice that $10^{k}\\equiv 10 \\pmod {45}$.</p><p>Hence $N = 44+43\\cdot10^{2}+42\\cdot10^{4}+\\cdots+10^{78} \\equiv 44+10\\cdot(1+2+3+\\cdots+43)\\equiv 9 \\pmod {45}.$</p><p>Choose $\\boxed{\\textbf{(C)}\\,9}$</p><p>~ PythZhou</p>",
         "<p>The sum of all of the digits is just the sum of consecutive numbers from $1 -> 44$ or $\\frac{44}{2}(45) = 990$. The prime factorization of $45$ is $3^2 * 5$. So if a number is divisible by $45$ it has to both be divisible by $9$ and $5$. The first number that satisfies this ends in $35$ because the ten's digit is one greater than the ten's digit in the consecutive numbers from $1$ to $44$, and the one's digit is one less than this number, and the number ends in a 5. The difference between $35$ and $44$ is $9$ giving $\\boxed{\\textbf{(C)}\\,9}$.</p><p>~PeterDoesPhysics</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "modular_arithmetic"
+        }
       ]
     },
     {
@@ -396,6 +660,12 @@
       "question": "<p>Real numbers $x$ and $y$ are chosen independently and uniformly at random from the interval $(0,1)$. What is the probability that $\\lfloor\\log_2x\\rfloor=\\lfloor\\log_2y\\rfloor$?</p>",
       "solutions": [
         "<p>First let us take the case that $\\lfloor \\log_2{x} \\rfloor = \\lfloor \\log_2{y} \\rfloor = -1$. In this case, both $x$ and $y$ lie in the interval $[{1\\over2}, 1)$. The probability of this is $\\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{4}$. Similarly, in the case that $\\lfloor \\log_2{x} \\rfloor = \\lfloor \\log_2{y} \\rfloor = -2$, $x$ and $y$ lie in the interval $[{1\\over4}, {1\\over2})$, and the probability is $\\frac{1}{4} \\cdot \\frac{1}{4} = \\frac{1}{16}$. Recall that the probability that $A$ or $B$ is the case, where case $A$ and case $B$ are mutually exclusive, is the sum of each individual probability. Symbolically that's $P(A \\text{ or } B \\text{ or } C...) = P(A) + P(B) + P(C)...$. Thus, the probability we are looking for is the sum of the probability for each of the cases $\\lfloor \\log_2{x} \\rfloor = \\lfloor \\log_2{y} \\rfloor = -1, -2, -3...$. It is easy to see that the probabilities for $\\lfloor \\log_2{x} \\rfloor = \\lfloor \\log_2{y} \\rfloor = n$ for $-\\infty < n < 0$ are the infinite geometric series that starts at $\\frac{1}{4}$ and with common ratio $\\frac{1}{4}$. Using the formula for the sum of an infinite geometric series, we get that the probability is $\\frac{\\frac{1}{4}}{1 - \\frac{1}{4}} = \\boxed{\\textbf{(D)}\\frac{1}{3}}$.</p><p>Solution by: vedadehhc\\\\ Edited by: jingwei325</p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -406,8 +676,14 @@
         "<p>Let us simplify the problem. Since all of Isabella's test scores can be expressed as the sum of $90$ and an integer between $1$ and $10$, we rewrite the problem into receiving scores between $1$ and $10$. Later, we can add $90$ to her score to obtain the real answer.</p><p>From this point of view, the problem states that Isabella's score on the seventh test was $5$. We note that Isabella received $7$ integer scores out of $1$ to $10$. Since $5$ is already given as the seventh test score, the possible scores for Isabella on the other six tests are $S={1,2,3,4,6,7,8,9,10}$. </p><p>The average score for the seven tests must be an integer. In other words, six distinct integers must be picked from set $S$ above, and their sum with $5$ must be a multiple of $7$. The interval containing the possible sums of the six numbers in S are from $1 +2+3+4+6+7=23$ to $4+6+7+8+9+10=44$. We must now find multiples of $7$ from the interval $23+5 = 28$ to $44+5=49$. There are four possibilities: $28$, $35$, $42$, $49$.However, we also note that the sum of the six numbers (besides $5$) must be a multiple of $6$ as well. Thus, $35$ is the only valid choice.(The six numbers sum to $30$.)</p><p>Thus the sum of the six numbers equals to $30$. We apply the logic above in a similar way for the sum of the scores from the first test to the fifth test. The sum must be a multiple of $5$. The possible interval is from $1+2+3+4+6=16$ to $6+7+8+9+10=40$. Since the sum of the five scores must be less than $30$, the only possibilities are $20$ and $25$. However, we notice that $25$ does not work because the seventh score turns out to be $5$ from the calculation. Therefore, the sum of Isabella's scores from test $1$ to $5$ is $20$. Therefore, her score on the sixth test is $10$.Our final answer is $10+90=  \\boxed{\\textbf{(E) }100}$.</p>",
         "<p>Let $n$ be Isabella's average after $6$ tests. $6n+95 \\equiv 0 \\pmod{7}$, so $n \\equiv 4 \\pmod{7}$. The only integer between $90$ and $100$ that satisfies this condition is $95$. Let $m$ be Isabella's average after $5$ tests, and let $a$ be her sixth test score. $5m+a= 6\\cdot95 \\equiv 0 \\pmod{5}$, so $a$ is a multiple of $5$. Since $100$ is the only choice that is a multiple of $5$, the answer is $\\boxed{\\textbf{(E) }100}$.</p>",
         "<p>Let $T$ be the total sum of Isabella's first five test scores, and let $S$ be her score on the sixth test. It follows that $T\\equiv 0\\pmod {5}$, $T+S\\equiv 0\\pmod {6}$, and $T+S+95\\equiv 0\\pmod {7}$, since at each step, her average score was an integer. Using the last equivalence, $T+S\\equiv -95\\equiv 3\\pmod{7}$, so we have a system of equivalences for $T+S$. Solving this using the Chinese Remainder Theorem, we get $T+S\\equiv (0)(7)(1)+(3)(6)(-1) \\equiv -18 \\equiv 24 \\pmod{42}$.</p><p>Now let's put a bound on $T$. Using the given information that each test score was a distinct integer from $91$ to $100$ inclusive and that the seventh score was 95, we get $91+92+93+94+96\\leq T\\leq 100+99+98+97+96$. Since $T\\equiv 0 \\pmod{5}$, we get $T=470,475,480,485,490$. Therefore, $T\\equiv 8,13,18,23,28\\pmod{42}$</p><p>The last preparation step will involve calculating all the possible test scores $\\pmod {42}$. Here they are:$91\\equiv 7\\pmod{42},92\\equiv 8\\pmod{42},93\\equiv 9\\pmod{42},94\\equiv 10\\pmod{42},95\\equiv 11\\pmod{42},96\\equiv 12\\pmod{42},97\\equiv 13\\pmod{42},98\\equiv 14\\pmod{42},99\\equiv 15\\pmod{42},100\\equiv 16\\pmod{42}$. This means that $S\\equiv 7,8,9,10,12,13,14,15,16\\pmod{42}$. Note that $11$ is not in the previous list because it corresponds to a score of $95$, which we cannot have.</p><p>We must have $T+S\\equiv 24\\pmod{42}$, and using the possible values we found for $T$ and $S$, the only two that sum to $24$ are $T\\equiv 8\\pmod{42}$ and $S\\equiv 16\\pmod{42}$. This corresponds to an $S$ value of $100$, so the answer is $\\boxed{\\bold{(E)} 100}$.</p>",
-        "<p>We know that Isabella's score on the 7th test is 95, and we work backwards. Let $a_n$ denote the average of the first $n$ scores. We are given that all $a_n$ are integers. If the $a_6$ is different from the $a_7$, then the last score must be a multiple of 7 away from $a_6$. However, $95-7=88$ and $95+7=102$ clearly cannot be $a_6$ since they are outside the range of 91 to 100. Thus, $a_6$ must be 95. Additionally, $a_5$ cannot be 95 since that would mean the sixth score is 95, which isn't possible since scores can't repeat (also, it's not an answer choice). Intuitively, $a_5$ should be close to 95 due to the constraint on the range of scores. We can try 94 and 96 for $a_5$. Again, the sixth score must be a multiple of 6 (preferably only one multiple) away from $a_5$. The only one that works is $94+6=100$, and we can check that the rest don't work since they exceed the range. The answer is $\\boxed{\\bold{(E)} 100}$.</p><p>- Lingjun\u00a0:)</p>",
+        "<p>We know that Isabella's score on the 7th test is 95, and we work backwards. Let $a_n$ denote the average of the first $n$ scores. We are given that all $a_n$ are integers. If the $a_6$ is different from the $a_7$, then the last score must be a multiple of 7 away from $a_6$. However, $95-7=88$ and $95+7=102$ clearly cannot be $a_6$ since they are outside the range of 91 to 100. Thus, $a_6$ must be 95. Additionally, $a_5$ cannot be 95 since that would mean the sixth score is 95, which isn't possible since scores can't repeat (also, it's not an answer choice). Intuitively, $a_5$ should be close to 95 due to the constraint on the range of scores. We can try 94 and 96 for $a_5$. Again, the sixth score must be a multiple of 6 (preferably only one multiple) away from $a_5$. The only one that works is $94+6=100$, and we can check that the rest don't work since they exceed the range. The answer is $\\boxed{\\bold{(E)} 100}$.</p><p>- Lingjun :)</p>",
         "<p>Say the sum of the first 6 scores is $n$. Then, we know that $n + 95 \\equiv 0 \\pmod{7}$. Thus, $n \\equiv 3 \\pmod{7}$. Additionally, since the average of these 6 scores was an integer, we know that $n \\equiv 0 \\pmod{6}$. We find that the smallest $n$ to satisfy both of these inequalities is 24 (series below). \\[3, 10, 17, 24, ...\\] To get to the next one, we have to add $6 \\cdot 7 = 42$ so as not to ruin the moduli.</p><p>Next, we know that $n$ is between $91 \\cdot 6 = 546$ and $100 \\cdot 6 = 600$. It can't take on either value as all the scores have to be different. Now, we calculate the first $n$ that satisfies both moduli equations:</p><p>\\[546 < 42 + 24x\\]\\[91 < 7 + 4x\\]\\[84 < 4x\\]\\[21 < x\\]</p><p>$x = 22$ works while $x = 23$ does not (as it hits the upper limit of 600), and we find that $n = 42 + 24 \\cdot 22 = 570$. So, the sum of the first 6 scores is 570. We also know that the sum of the first 5 scores is a multiple of 5. Since $5~\\mid~570$, the 6th score must be a multiple of 5. 95 is taken, so the only possibility $\\boxed{\\bold{(E)} 100}$.</p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
       ]
     },
     {
@@ -419,6 +695,12 @@
         "<p>Similar to solution 2, we think in terms of transactions. WLOG, for the 1st transaction, we assume that A gives to B, which we denote AB. For the 2nd transaction, there are 12 options to choose from, so there are $12^3$ possible options.</p><p>Case 1 (Giving back immediately): The 2nd transaction is BA (1 option). Then, the 3rd transaction can be whatever you like (12 options), but the 4th transaction is now fixed to be the opposite of the 3rd transaction (1 option). So here we have $1\\cdot 12\\cdot 1 = 12$ good options.</p><p>Case 2 (Allows a cycle or two back-and-forths): The 2nd transaction is one of BC, BD, CA, DA, CD, DC (6 options). Then, for the 3rd transaction, 2 options force a \"cycle\" on the 4th transaction (example 2.1), and 2 options force two \"back-and-forths\" on the 4th transaction (example 2.2). In total, there are $2+2=4$ options for the 3rd transaction. So here we have $6\\cdot 4\\cdot 1 = 24$ good options. </p><p>Example 2.1: suppose 2nd = BC. Then if 3rd = DA or CD, the 4th is forced to be CD or DA respectively, completing a transaction \"cycle\"</p><p>Example 2.2: suppose 2nd = BC. Then if 3rd = AB or BC, the 4th is forced to be BC or AB respectively. In the end, both A-B and B-C had back-and-forth transactions</p><p>Case 3 (Allows two back-and-forths only): The 2nd transaction is one of AC, AD, DB, CB (4 options). Then, for the 3th transaction, there are only 2 possible options (namely, to reverse one of the previous transactions). Of course, the final transaction is forced. Here, we have $4\\cdot 2\\cdot 1 = 8$ good options.</p><p>Case 4 (AB again): The 2nd transaction is AB (same as 1st). This forces the later transactions to both be BA. Here we have 1 good option.</p><p>Summing, we have $12+24+8+1=45$ good options among $12^3$ total options, so the solution is $\\frac{45}{(12^3)}= \\boxed{\\textbf{(B)}\\frac{5}{192}}$. </p><p>SilverLion</p><p><br/></p>",
         "<p>Define a cycle of length $n$ to be a sequence of $n$ transactions, starting and ending with the same person. For example, $A \\to B, B \\to C, C \\to A$ would be a cycle of $3$.</p><p>$\\textbf{Case 1}$: Two different cycles of $2$: There are $\\binom{4}{2}$ to choose the people for each cycle, giving $\\binom{\\binom{4}{2}}{2} = 15$ possible ways to choose the two cycles. Then, there would be $4! = 24$ ways to order the transactions. This will mean $15\\cdot 24 = 360$ ways for the first case.</p><p>$\\textbf{Case 2}$: Two same cycles of $2$: There are $\\binom{4}{2}$ to choose the two people, multiplying by $\\binom{4}{2}$ for the number of orderings of the four transactions. Thus, $6\\cdot 6 = 36$ ways for this case.</p><p>$\\textbf{Case 3}$: One cycle of $4$: We choose what goes in front of $A$ (whom $A$ gives a coin to) in $3$ ways, and what goes before $A$ (whom gives a coin to $A$) in $2$ ways. The remaining two transactions immediately get fixed after that. Again, there are $4! = 24$ ways to order the four transactions, giving $2\\cdot 3\\cdot 24 = 144$ ways for this case.</p><p>Thus, there would be a total of $360+36+144 = 540$ total ways: $P = \\dfrac{540}{12^4} = \\boxed{\\textbf{(B)}\\frac{5}{192}}$</p><p>~sml1809</p><p><a class=\"external free\" href=\"https://www.happymatheducation.com/uploads/1/3/6/4/136474762/2017amc12b22.jpg\" rel=\"nofollow\">https://www.happymatheducation.com/uploads/1/3/6/4/136474762/2017amc12b22.jpg</a></p><p>~Di</p><p>The link does not work anymore</p>",
         "<p>Let the notation $(a,b,c,d)$ be the arrangement of the $16$ coins, where order does not matter. Notice that after the first round, $(3,5,4,4)$ is the only possible arrangement. Also, notice that the arrangement after the third round also has to be $(3,5,4,4)$ for the arrangement at the end of the fourth round to return to $(4,4,4,4)$. The probability of $(4,4,4,4)$ occurring after $(3,5,4,4)$ is $\\frac{1}{12}$</p><p>After the arrangement $(3,5,4,4)$, there are $12$ permutations that are $6$ different arrangements, they are:\\begin{align*} (2,6,4,4) \\text{ occurs once} \\quad & (4,4,4,4) \\text{ occurs once} \\quad & (2,5,5,4) \\text{ occurs twice}\\\\ (4,5,3,4) \\text{ occurs 4 times} \\quad & (3,6,3,4) \\text{ occurs twice} \\quad & (3,5,3,5) \\text{ occurs twice}\\\\ \\end{align*}</p><p>Therefore, we can create $6$ cases and calculate the probability of each case occurring. For each case, only the arrangement after the second round is different, therefore, we will ignore the probability for the fourth round, and consider it in the end when adding the cases.</p><p>The probability that at the end of the fourth round the arrangement is $(4,4,4,4)$ is\\[\\frac{1}{12} \\left( \\frac{1}{144} + \\frac{1}{12} + \\frac{1}{36} + \\frac19 + \\frac{1}{36} + \\frac{1}{18} \\right) = \\boxed{\\textbf{(B)}\\frac{5}{192}}\\]</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "combinatorics",
+          "sub_category": "probability"
+        }
       ]
     },
     {
@@ -429,6 +711,12 @@
         "<p>No need to find the equations for the lines, really. First of all, $f(x) = a(x-2)(x-3)(x-4) +x^2$. Let's say the line $AB$ is $y=bx+c$, and $x_1$ is the $x$ coordinate of the third intersection, then $2$, $3$, and $x_1$ are the three roots of $f(x) - bx-c$. The values of $b$ and $c$ have no effect on the sum of the 3 roots, because the coefficient of the $x^2$ term is always $-9a+1$. So we have \\[\\frac{9a-1}{a} = 2 + 3 + x_1= 3 + 4 + x_2 = 2 + 4 + x_3\\]Adding all three equations up, we get \\[3\\left(\\frac{9a-1}{a}\\right) = 18 + x_1 + x_2 + x_3 = 18 + 24\\]Solving this equation, we get $a = -\\frac{1}{5}$. We finish as Solution 1 does.$\\boxed{\\textbf{(D)}\\frac{24}{5}}$.</p><p>- Mathdummy</p><p>Cleaned up by SSding</p>",
         "<p>Map every point $(x,y)$ to $(x, y - x^2)$. Note that the x-coordinates do not change. Under this map, $A$ goes to $(2,0)$, $B$ goes to $(3, 0)$ and $C$ goes to $(4,0)$. The cubic through $A$, $B$, and $C$ remains a cubic, while the lines between two points turn into quadratics. Finally, note that the intersection points of the lines and the cubic have the same x-coordinates as the intersection points of the quadratics and the cubic after applying the mapping. The cubic under this new coordinate plane has equation $k(x-2)(x-3)(x-4)$. The quadratic through $A$ and $B$ is $c(x-2)(x-3)$. Note that $c(x-2)(x-3) + x^2$ must be a line, so $c = -1$ to cancel out the squared terms. The intersection of the quadratic and cubic is solved by\\[-(x-2)(x-3) = k(x-2)(x-3)(x-4) \\implies x = 4 - \\frac{1}{k}\\]Similarly, the other x-coordinates are $3 - \\frac{1}{k}$ and $2 - \\frac{1}{k}$. Summing, we have\\[9 - \\frac{3}{k} = 24 \\implies k = -\\frac{1}{5}\\]We have $f(x) = -\\frac{1}{5} (x-2)(x-3)(x-4) + x^2$ so $f(0) = 2 \\cdot 3 \\cdot 4 / 5 = \\boxed{\\textbf{(D)}\\frac{24}{5}}$.</p><p>If the mapping is too complicated, this solution is equivalent to realizing that the line $AB$ has the equation $y = x^2 - (x-2)(x-3)$ and solving for the intersection points.</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Crazyvideogamez\" rel=\"nofollow\">CrazyVideoGamez</a></p>",
         "<p>Since $f(x)$ is a third degree polynomial, let $f(x)=ax^3+bx^2+cx+d$. We want to solve for $d$. </p><p>Notice that the 3 solutions to $f(x)=x^2$ are $2, 3, 4$. Hence the polynomial $ax^3+(b-1)x^2+cx+d$ has roots 2, 3, 4. By Vieta's theorem we get $-\\frac{d}{a}=24$. It's not hard to get that $AB$, $AC$, and $BC$ are given by the equations $y = 5x - 6$, $y= 6x-8$, and $y=7x-12$ respectively. The 3 solutions to $f(x)=5x-6$ are $2, 3, x_D$. Like before, using Vieta's theorem we get $-\\frac{d+6}{a}=6x_D$. Similarly we get $-\\frac{d+8}{a}=8x_E$ and $-\\frac{d+12}{a}=12x_F$.</p><p>At this point we have 5 unknowns: $a, d, x_D, x_E, x_F$, and 5 equations:\\begin{align}&amp; -\\frac{d}{a}=24\\\\\\\\&amp; -\\frac{d+6}{a}=6x_D\\\\\\\\&amp; -\\frac{d+8}{a}=8x_E\\\\\\\\&amp;-\\frac{d+12}{a}=12x_F\\\\\\\\&amp;x_D+x_E+x_F=24\\end{align}</p><p>The specific structure of this system of equations allows it to be solved with relatively ease. Solving, we get $d=\\frac{24}{5}$</p><p>~tsun26</p>"
+      ],
+      "categorization": [
+        {
+          "category": "algebra",
+          "sub_category": "polynomials"
+        }
       ]
     },
     {
@@ -441,6 +729,12 @@
         "<p>Let $A=(-1,4a), B=(-1,0), C=(1,0), D=\\bigg(1,\\frac{1}{a}\\bigg)$. Then from the similar triangles condition, we compute $CE=\\frac{4a}{\\sqrt{4a^2+1}}$ and $BE=\\frac{2}{\\sqrt{4a^2+1}}$. Hence, the $y$-coordinate of $E$ is just $\\frac{BE\\cdot CE}{BC}=\\frac{4a}{4a^2+1}$. Since $E$ lies on the unit circle, we can compute the $x$ coordinate as $\\frac{1-4a^2}{4a^2+1}$. By Shoelace, we want \\[\\frac{1}{2}\\det\\begin{bmatrix} -1 & 4a & 1\\\\  \\frac{1-4a^2}{4a^2+1} & \\frac{4a}{4a^2+1} & 1\\\\  1 & \\frac{1}{a} & 1 \\end{bmatrix}=17\\cdot\\frac{1}{2}\\cdot 2 \\cdot \\frac{4a}{4a^2+1}\\]Factoring out denominators and expanding by minors, this is equivalent to\\[\\frac{32a^4-8a^2+2}{2a(4a^2+1)}=\\frac{68a}{4a^2+1} \\Longrightarrow 16a^4-72a^2+1=0\\]This factors as $(4a^2-8a-1)(4a^2+8a-1)=0$, so $a=1+\\frac{\\sqrt{5}}{2}$ and so the answer is $\\textbf{(D) \\ }$.</p>",
         "<p>Let $C = (0,0), D=(\\frac1a, 0), B = (0,1), A = (a,1)$ where $a>1$. Because $BC = 1, a = \\frac{AB}{BC}$. Notice that the diagonals are perpendicular with slopes of $\\frac1a$ and $-a$. Let the intersection of $AC$ and $BD$ be $F$, then $\\triangle BFC \\sim \\triangle ABC$. However, because $ABCD$ is a trapezoid, $\\triangle$$BCF$ and $\\triangle ADF$ share the same area, therefore $\\triangle$$BCE$ is the reflection of $\\triangle$$BCF$ over the perpendicular bisector of $BC$, which is $y=\\frac12$. We use the linear equations of the diagonals, $y = -ax + 1, y = \\frac1a x$, to find the coordinates of $F$. \\[-ax+1 = \\frac1ax \\Longrightarrow x = \\frac{1}{a+\\frac1a} = \\frac{a}{a^2+1}\\] \\[y = \\frac1ax = \\frac{1}{a^2+1}\\]The y-coordinate of $E$ is simply $1-\\frac{1}{a^2+1} = \\frac{a^2}{a^2+1}$The area of $\\triangle BCE$ is $\\frac12 \\frac{a}{a^2+1}$. We apply shoelace theorem to solve for the area of $\\triangle ADE$. The coordinates of the triangle are $\\{(\\frac{a}{a^2+1}, \\frac{a^2}{a^2+1}), (a,1), (\\frac1a, 0)\\}$, so the area is </p><p>\\[\\frac12 |\\frac{a^3}{a^2+1} + \\frac1a - \\frac{a}{a^2+1} - \\frac{a}{a^2+1}| = \\frac12 |\\frac{a^3-2a}{a^2+1} + \\frac1a|\\]\\[= \\frac12 |\\frac{a^4-2a^2}{a(a^2+1)} + \\frac{a^2+1}{a(a^2+1)}| = \\frac12 \\frac{a^4-a^2+1}{a(a^2+1)}\\]Finally, we use the property that the ratio of areas equals $17$ \\[\\frac{\\frac12}{\\frac12} \\frac{\\frac{a^4-a^2+1}{a(a^2+1)}}{\\frac{a}{a^2+1}} = 17 \\Rightarrow \\frac{a^4-a^2+1}{a^2} = 17 \\Rightarrow a^4-18a^2+1 = 0\\]\\[a^2 = 9+4\\sqrt{5} = (2+\\sqrt{5})^2 \\Longrightarrow a = \\boxed{\\textbf{(D) } 2+\\sqrt{5}}\\]</p><p>~Zeric</p>",
         "<p>This solution involves proving $\\triangle AED \\sim \\triangle CEB$.</p><p>Let $E'$ be the intersection of $AC$ and $BD$. Label points $F$ and $G$ the same way as $\\textbf{Solution 3}$.</p><p><br/>$\\angle AE'D = \\angle CE'B = \\frac{\\pi}{2} = \\angle AFE$. Additionally, $\\frac{E'D}{FE} = \\frac{E'D}{E'G} = \\frac{AE'}{AF}$, so $\\triangle AFE \\sim \\triangle AE'D$ by SAS. Therefore, $\\angle BAC = \\angle FAE + \\angle EAE' = \\angle E'AD + \\angle EAE' = \\angle EAD$.</p><p><br/>Next, $\\angle AFE = \\frac{\\pi}{2} = \\angle EGD$ because $FG \\parallel BC$. Also, $\\pi = \\angle FEA + \\angle AED + \\angle DEG = \\angle FEA + \\angle AED + \\angle EAF = \\frac{\\pi}{2} + \\angle AED$, so $\\angle AED = \\frac{\\pi}{2}$. Therefore, $\\triangle AED \\sim \\triangle ABC$ by AA. Since $\\triangle CEB \\sim \\triangle ABC$, $\\triangle AED \\sim \\triangle CEB$.</p><p><br/>Given $\\frac{[AED]}{[CEB]} = 17$, we deduce that the ratio of corresponding side lengths of $AED$ to $CEB$ must be $\\sqrt{17}$. Now, we set $BC = 1$, $AB = x$, and $CD = \\frac{1}{x}$. Using the Pythagorean Theorem, $AD = \\sqrt{\\Big(x-\\frac{1}{x}\\Big)^2 + 1^2}$. Thus, $\\sqrt{17} = \\frac{AD}{CB} = \\frac{\\sqrt{\\Big(x-\\frac{1}{x}\\Big)^2 + 1^2}}{1}$. Solving gives $x = 2+\\sqrt{5}$.</p><p><br/>Finally, $\\frac{AB}{BC} = \\frac{2+\\sqrt{5}}{1} = \\boxed{\\textbf{(D) } 2+\\sqrt{5}}$.</p><p>~Zhixing</p>"
+      ],
+      "categorization": [
+        {
+          "category": "geometry",
+          "sub_category": "triangles"
+        }
       ]
     },
     {
@@ -449,6 +743,12 @@
       "solutions": [
         "<p>Let there be $T$ teams. For each team, there are ${n-5\\choose 4}$ different subsets of $9$ players that includes a given full team, so the total number of team-(group of 9) pairs is </p><p>\\[T{n-5\\choose 4}.\\]</p><p>Thus, the expected value of the number of full teams in a random set of $9$ players is</p><p>\\[\\frac{T{n-5\\choose 4}}{{n\\choose 9}}.\\]</p><p>Similarly, the expected value of the number of full teams in a random set of $8$ players is</p><p>\\[\\frac{T{n-5\\choose 3}}{{n\\choose 8}}.\\]</p><p>The condition is thus equivalent to the existence of a positive integer $T$ such that</p><p>\\[\\frac{T{n-5\\choose 4}}{{n\\choose 9}}\\frac{T{n-5\\choose 3}}{{n\\choose 8}} = 1.\\]</p><p>\\[T^2\\frac{(n-5)!(n-5)!8!9!(n-8)!(n-9)!}{n!n!(n-8)!(n-9)!3!4!} = 1\\]</p><p>\\[T^2 = \\big((n)(n-1)(n-2)(n-3)(n-4)\\big)^2 \\frac{3!4!}{8!9!}\\]</p><p>\\[T^2 = \\big((n)(n-1)(n-2)(n-3)(n-4)\\big)^2 \\frac{144}{7!7!8\\cdot8\\cdot9}\\]</p><p>\\[T^2 = \\big((n)(n-1)(n-2)(n-3)(n-4)\\big)^2 \\frac{1}{4\\cdot7!7!}\\]</p><p>\\[T = \\frac{(n)(n-1)(n-2)(n-3)(n-4)}{2^5\\cdot3^2\\cdot5\\cdot7}\\]</p><p>Note that this is always less than ${n\\choose 5}$, so as long as $T$ is integral, $n$ is a possibility. Thus, we have that this is equivalent to </p><p>\\[2^5\\cdot3^2\\cdot5\\cdot7\\big|(n)(n-1)(n-2)(n-3)(n-4).\\]</p><p>It is obvious that $5$ divides the RHS, and that $7$ does if $n\\equiv 0,1,2,3,4\\mod 7$. Also, $3^2$ divides it if $n\\not\\equiv 5,8\\mod 9$. One can also bash out that $2^5$ divides it in $16$ out of the $32$ possible residues $\\mod 32$. </p><p>Note that $2016 = 7*9*32$ so by using all numbers from $2$ to $2017$, inclusive, it is clear that each possible residue $\\mod 7,9,32$ is reached an equal number of times, so the total number of working $n$ in that range is $5\\cdot 7\\cdot 16 = 560$. However, we must subtract the number of \"working\" $2\\leq n\\leq 8$, which is $3$. Thus, the answer is $\\boxed{\\textbf{(D) } 557}$.</p><p>Alternatively, it is enough to approximate by finding the floor of $2017 \\cdot \\frac57 \\cdot \\frac79 \\cdot \\frac12 - 3$ to get $\\boxed{\\textbf{(D) } 557}$.</p>",
         "<p>Another way to find the average number of teams in a group of 9 or 8 people is as follows:</p><p>Let there be $T$ teams. There are $\\binom{n}{5}$ total possible teams. So, the probability of any 5 people being a team is $\\frac{T}{\\binom{n}{5}}$. There are $\\binom{9}{5}$ possible teams in a group of 9. So, on average, there will be \\[\\frac{T}{\\binom{n}{5}} \\binom{9}{5}\\]teams in any group of 9 people. Similarly, on average, there will be\\[\\frac{T}{\\binom{n}{5}} \\binom{8}{5}\\]teams in any group of 8 people. So,\\begin{align*}\\frac{T}{\\binom{n}{5}} \\binom{9}{5} = \\frac{1}{\\frac{T}{\\binom{n}{5}} \\binom{8}{5}} \\implies&amp; \\binom{9}{5}\\binom{8}{5} T^2 = \\binom{n}{5}^2 \\\\\\implies&amp; 84T = \\binom{n}{5}\\end{align*}Therefore $84 \\mid \\binom{n}{5}$ and proceed as shown in solution 1.</p><p>FYI, to find n such that $32 \\mid n(n-1)(n-2)(n-3)(n-4)$ without bashing everything:Clearly $n \\equiv 0, 1, 2, 3, 4 \\pmod{32}$ works. Then, do cases.</p><p>Case 1: $4 \\mid n$.This will always work, as $4 \\mid n$, $4 \\mid n-4$, and $2 \\mid n-2$, so $4 \\cdot 4 \\cdot 2 = 32 \\mid n(n-1)(n-2)(n-3)(n-4)$. So, \\[n \\equiv 0, 4, 8, 12, 16, 20, 24, 28 \\pmod{32}\\]are also solutions.</p><p>Case 2: $n \\equiv 2 \\pmod{4}$Then $n-4 \\equiv 2 \\pmod{4}$ as well. $n$ and $n-4$ can only contribute one 2 each, since $4 \\nmid n, n-4$. We need a factor of $2^3$ in $n-2$ then. So, $n \\equiv 2 \\pmod{8}$. Then, we get \\[n \\equiv 2, 10, 18, 26 \\pmod{32}\\].</p><p>Case 3: $4 \\nmid n$We can only get twos from $n-1$ and $n-3$. Note that one of them can only contribute a single factor of 2, because otherwise $4 \\mid n-1$ and $4 \\mid n-3$, so $n$ has a remainder of both 1 and 3 mod 4, which is impossible. So, one must have a factor of 16. We get $n \\equiv 1, 3 \\pmod{16}$ so \\[n \\equiv 1, 3, 17, 19 \\pmod{32}\\]</p><p>In all, we get the solutions\\[n \\equiv 0, 1, 2, 3, 4, 8, 10, 16, 17, 18, 19, 20, 24, 26, 28 \\pmod{32}\\]</p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Crazyvideogamez\" rel=\"nofollow\">CrazyVideoGamez</a></p>"
+      ],
+      "categorization": [
+        {
+          "category": "number_theory",
+          "sub_category": "divisibility"
+        }
       ]
     }
   ]
