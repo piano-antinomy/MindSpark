@@ -1,0 +1,2324 @@
+{
+  "competition_info": {
+    "name": "2006_AMC_8",
+    "group": "AMC_8",
+    "year": 2006,
+    "is_AJHSME": false,
+    "level": "8",
+    "suffix": "",
+    "fall_version": false,
+    "total_problems": 25,
+    "problem_number_override": null
+  },
+  "problems": [
+    {
+      "id": "amc_2006_8_1",
+      "question": {
+        "text": "<p>Mindy made three purchases for <INSERTION_INDEX_1> dollars, <INSERTION_INDEX_2> dollars, and <INSERTION_INDEX_3> dollars. What was her total, to the nearest dollar? </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/6/8/1/68168bcc4d01aa7aec743b633742b464519a242a.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 1.98$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/e/0/b/e0b506b83b576af8cf6e642d947fd2dfe10c66b3.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 5.04$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/2/a/8/2a8a525881ca3fd279d0e34b225d62495687339a.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 9.89$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/0/d/c/0dc0218ab8c8345f702c95d30436766c862d8a7d.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 10\\qquad\\textbf{(B)}\\ 15\\qquad\\textbf{(C)}\\ 16\\qquad\\textbf{(D)}\\ 17\\qquad\\textbf{(E)}\\ 18$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>The three prices round to <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, and <INSERTION_INDEX_3>, which have a sum of <INSERTION_INDEX_4>.</p><p>We know that there will not be a rounding error, as the total amount rounded is clearly less than <INSERTION_INDEX_5>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/8/3/a/83a516e98a86adf13eba3d17b158100eda8fc995.png",
+              "alt_type": "latex",
+              "alt_value": "$\\textdollar 2$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/8/6/3/863443646262ff9e58d2003b229724b3203af171.png",
+              "alt_type": "latex",
+              "alt_value": "$\\textdollar 5$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/e/0/7/e07acdb21ef213686516af033784fad961497677.png",
+              "alt_type": "latex",
+              "alt_value": "$\\textdollar 10$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/e/a/e/eae7886a25dcb8a32087f0c4fd9c6d7d8e38afb0.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(D)}\\ 17}$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/2/3/0/230119ff04ab14d8b644f6048dfec8a6f0b9f76a.png",
+              "alt_type": "latex",
+              "alt_value": "$\\textdollar 0.50$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_2",
+      "question": {
+        "text": "<p>On the AMC 8 contest Billy answers 13 questions correctly, answers 7 questions incorrectly and doesn't answer the last 5. What is his score?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/d/9/2/d920bc47e3d130710c80f8d1c8aacf3df0f70b39.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 1\\qquad\\textbf{(B)}\\ 6\\qquad\\textbf{(C)}\\ 13\\qquad\\textbf{(D)}\\ 19\\qquad\\textbf{(E)}\\ 26$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>As the AMC 8 only rewards 1 point for each correct answer, everything is irrelevant except the number Billy answered correctly, <INSERTION_INDEX_1>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/6/7/d/67d301c258b5b38398012b4663015b5e9429e0bc.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(C)}\\ 13}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_3",
+      "question": {
+        "text": "<p>Elisa swims laps in the pool. When she first started, she completed 10 laps in 25 minutes. Now, she can finish 12 laps in 24 minutes. By how many minutes has she improved her lap time?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/7/b/b/7bb06859dfdcf0a068fac7add61c5d3a4a2dcb2b.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ \\frac{1}{2}\\qquad\\textbf{(B)}\\ \\frac{3}{4}\\qquad\\textbf{(C)}\\ 1\\qquad\\textbf{(D)}\\ 2\\qquad\\textbf{(E)}\\ 3$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "A",
+      "solutions": [
+        {
+          "text": "<p>When Elisa started, she finished a lap in <INSERTION_INDEX_1> minutes. Now, she finishes a lap is <INSERTION_INDEX_2> minutes. The difference is <INSERTION_INDEX_3>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/8/d/5/8d5f767844bb46d34379256116d47841b0ced0b1.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{25}{10}=2.5$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/9/1/a/91ac50f0315fe3de666c7df5fc9a36c4bfe0caf6.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{24}{12}= 2$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/b/8/e/b8eb21399acd7a59b0cee39a024eff71cf199589.png",
+              "alt_type": "latex",
+              "alt_value": "$2.5-2=\\boxed{\\textbf{(A)}\\ \\frac{1}{2}}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_4",
+      "question": {
+        "text": "<p>Initially, a spinner points west. Chenille moves it clockwise <INSERTION_INDEX_1> revolutions and then counterclockwise <INSERTION_INDEX_2> revolutions. In what direction does the spinner point after the two moves?</p><p><INSERTION_INDEX_3></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/b/6/c/b6c1f128b6984cebccb828f839748e2c894485dc.png",
+            "alt_type": "latex",
+            "alt_value": "$2 \\dfrac{1}{4}$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/b/d/1/bd187a7fe0e2167ff693aab9c1a76cc2d7d4f44c.png",
+            "alt_type": "latex",
+            "alt_value": "$3 \\dfrac{3}{4}$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/3/9/f/39f6c3905c23037677847312e6fe6254d0dd9923.png",
+            "alt_type": "asy",
+            "alt_value": "[asy]size(96); draw(circle((0,0),1),linewidth(1)); draw((0,0.75)--(0,1.25),linewidth(1)); draw((0,-0.75)--(0,-1.25),linewidth(1)); draw((0.75,0)--(1.25,0),linewidth(1)); draw((-0.75,0)--(-1.25,0),linewidth(1)); label(\"$N$\",(0,1.25), N); label(\"$W$\",(-1.25,0), W); label(\"$E$\",(1.25,0), E); label(\"$S$\",(0,-1.25), S); draw((0,0)--(-0.5,0),EndArrow);[/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/f/f/f/fffc93ced8936cb62f505ed4344bb1e2df016c51.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ \\text{north} \\qquad  \\textbf{(B)}\\ \\text{east} \\qquad  \\textbf{(C)}\\ \\text{south} \\qquad  \\textbf{(D)}\\ \\text{west} \\qquad  \\textbf{(E)}\\ \\text{northwest}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>If the spinner goes clockwise <INSERTION_INDEX_1> revolutions and then counterclockwise <INSERTION_INDEX_2> revolutions, it ultimately goes counterclockwise <INSERTION_INDEX_3> which brings the spinner pointing <INSERTION_INDEX_4>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/b/6/c/b6c1f128b6984cebccb828f839748e2c894485dc.png",
+              "alt_type": "latex",
+              "alt_value": "$2 \\dfrac{1}{4}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/b/d/1/bd187a7fe0e2167ff693aab9c1a76cc2d7d4f44c.png",
+              "alt_type": "latex",
+              "alt_value": "$3 \\dfrac{3}{4}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/2/b/d/2bdb7edebcb4377bdfea8c666e1fac6b8dbf0ab2.png",
+              "alt_type": "latex",
+              "alt_value": "$1 \\dfrac{1}{2}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/e/5/7e55bb4c5a7825d78a46f347b7b5fe5af4422822.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(B)}\\ \\text{east}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Note that full revolutions do not matter, so this is equivalent to going clockwise <INSERTION_INDEX_1> revolutions and then counterclockwise <INSERTION_INDEX_2> revolutions, making it ultimately go counterclockwise <INSERTION_INDEX_3>, having the spinner point <INSERTION_INDEX_4>.</p><p>~JeffersonJ</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/4/1/5/415dd5722f2b57ce55e47766ccb11a0cdc4eb051.png",
+              "alt_type": "latex",
+              "alt_value": "$\\dfrac{1}{4}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/a/a/a/aaa608ff4fd7754c4ff82a2e8ac12c2fbf6ab80f.png",
+              "alt_type": "latex",
+              "alt_value": "$\\dfrac{3}{4}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/4/a/4/4a4a7df1100efe353cc612d5d1c289c22d5bf8c1.png",
+              "alt_type": "latex",
+              "alt_value": "$\\dfrac{1}{2}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/e/5/7e55bb4c5a7825d78a46f347b7b5fe5af4422822.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(B)}\\ \\text{east}}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_5",
+      "question": {
+        "text": "<p>Points <INSERTION_INDEX_1> and <INSERTION_INDEX_2> are midpoints of the sides of the larger square. If the larger square has area 60, what is the area of the smaller square?</p><p><INSERTION_INDEX_3></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/2/9/9/299ddf7c0f03ea46bf09f81f93adeea0756aa15c.png",
+            "alt_type": "latex",
+            "alt_value": "$A, B, C$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+            "alt_type": "latex",
+            "alt_value": "$D$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/e/7/8/e7899c538a174faf9963a60d09886b7fb12ae942.png",
+            "alt_type": "asy",
+            "alt_value": "[asy]size(100); draw((0,0)--(2,0)--(2,2)--(0,2)--cycle,linewidth(1)); draw((0,1)--(1,2)--(2,1)--(1,0)--cycle); label(\"$A$\", (1,2), N); label(\"$B$\", (2,1), E); label(\"$C$\", (1,0), S); label(\"$D$\", (0,1), W);[/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/d/1/7/d17916a494132c9d56d7a39c3b1af0ab0e3c3410.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 15 \\qquad  \\textbf{(B)}\\ 20 \\qquad  \\textbf{(C)}\\ 24 \\qquad  \\textbf{(D)}\\ 30 \\qquad  \\textbf{(E)}\\ 40$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>Drawing segments <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, the number of triangles outside square <INSERTION_INDEX_3> is the same as the number of triangles inside the square. Thus areas must be equal so the area of <INSERTION_INDEX_4> is half the area of the larger square which is <INSERTION_INDEX_5>.</p><p>If the side length of the larger square is <INSERTION_INDEX_6>, the side length of the smaller square is <INSERTION_INDEX_7>. Therefore the area of the smaller square is <INSERTION_INDEX_8>, half of the larger square's area, <INSERTION_INDEX_9>. </p><p>Thus, the area of the smaller square in the picture is <INSERTION_INDEX_10>.</p><p>The smaller square forms four congruent isosceles right triangles whose legs measure half of the larger square's side length. Since the larger square has an area of <INSERTION_INDEX_11>, its sides measure <INSERTION_INDEX_12>. Therefore, the legs of the right triangles measure <INSERTION_INDEX_13>. Now we can use the Pythagorean Theorem to find the length of the hypotenuses, or the smaller square's sides. We have<INSERTION_INDEX_14>Squaring this, the area of the smaller square is <INSERTION_INDEX_15>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png",
+              "alt_type": "latex",
+              "alt_value": "$AC$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png",
+              "alt_type": "latex",
+              "alt_value": "$BD$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
+              "alt_type": "latex",
+              "alt_value": "$ABCD$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
+              "alt_type": "latex",
+              "alt_value": "$ABCD$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/4/3/f/43f24d7ee7466cd6c3437835583dfa092f48558e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{60}{2}=\\boxed{\\textbf{(D)}\\ 30 }$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/6/d/d/6dd876d599cd6f7e03cfb5e660c91700674f9ada.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{\\sqrt{2} \\cdot x}{2}$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/8/8/7/8870002f74d967d2a79097db4cc974929017ab19.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{x^2}{2}$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/7/6/b/76b2878564ab19b80abb21ba964abe90fe120846.png",
+              "alt_type": "latex",
+              "alt_value": "$x^2$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/4/3/f/43f24d7ee7466cd6c3437835583dfa092f48558e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{60}{2}=\\boxed{\\textbf{(D)}\\ 30 }$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png",
+              "alt_type": "latex",
+              "alt_value": "$60$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/8/5/b/85b1a32fab18c3a6942ddc0e6a0427bf3b952f61.png",
+              "alt_type": "latex",
+              "alt_value": "$\\sqrt{60}=2\\sqrt{15}$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/c/7/f/c7f6d1e000d3e8c4cb552e4905ed41ad2fa540bb.png",
+              "alt_type": "latex",
+              "alt_value": "$\\sqrt{15}$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/0/0/a/00a0c00a3fddc8bbf26eba462d64744c0a5942b1.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\sqrt{{\\sqrt{15}}^2+{\\sqrt{15}}^2}=\\sqrt{15+15}=\\sqrt{30}.\\]"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/a/0/1/a019b30007d22707b340c72b8f89ed0358853c0d.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(D)}\\ 30 }$"
+            }
+          }
+        },
+        {
+          "text": "<p>Drawing segments <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, the number of triangles outside square <INSERTION_INDEX_3> is the same as the number of triangles inside the square. Thus areas must be equal so the area of <INSERTION_INDEX_4> is half the area of the larger square which is <INSERTION_INDEX_5>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/a/1/7/a179ff2638e4799cadd820db205c2beff6299ce9.png",
+              "alt_type": "latex",
+              "alt_value": "$AC$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/8/9/f/89fff82bb65d0215e49c8c91cb7c553da52205e2.png",
+              "alt_type": "latex",
+              "alt_value": "$BD$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
+              "alt_type": "latex",
+              "alt_value": "$ABCD$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
+              "alt_type": "latex",
+              "alt_value": "$ABCD$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/4/3/f/43f24d7ee7466cd6c3437835583dfa092f48558e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{60}{2}=\\boxed{\\textbf{(D)}\\ 30 }$"
+            }
+          }
+        },
+        {
+          "text": "<p>If the side length of the larger square is <INSERTION_INDEX_1>, the side length of the smaller square is <INSERTION_INDEX_2>. Therefore the area of the smaller square is <INSERTION_INDEX_3>, half of the larger square's area, <INSERTION_INDEX_4>. </p><p>Thus, the area of the smaller square in the picture is <INSERTION_INDEX_5>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/d/d/6dd876d599cd6f7e03cfb5e660c91700674f9ada.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{\\sqrt{2} \\cdot x}{2}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/8/8/7/8870002f74d967d2a79097db4cc974929017ab19.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{x^2}{2}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/6/b/76b2878564ab19b80abb21ba964abe90fe120846.png",
+              "alt_type": "latex",
+              "alt_value": "$x^2$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/4/3/f/43f24d7ee7466cd6c3437835583dfa092f48558e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{60}{2}=\\boxed{\\textbf{(D)}\\ 30 }$"
+            }
+          }
+        },
+        {
+          "text": "<p>The smaller square forms four congruent isosceles right triangles whose legs measure half of the larger square's side length. Since the larger square has an area of <INSERTION_INDEX_1>, its sides measure <INSERTION_INDEX_2>. Therefore, the legs of the right triangles measure <INSERTION_INDEX_3>. Now we can use the Pythagorean Theorem to find the length of the hypotenuses, or the smaller square's sides. We have<INSERTION_INDEX_4>Squaring this, the area of the smaller square is <INSERTION_INDEX_5>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/3/0/2/302e99c1c7cd91a6ae371139e5142ccef5977dca.png",
+              "alt_type": "latex",
+              "alt_value": "$60$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/8/5/b/85b1a32fab18c3a6942ddc0e6a0427bf3b952f61.png",
+              "alt_type": "latex",
+              "alt_value": "$\\sqrt{60}=2\\sqrt{15}$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/c/7/f/c7f6d1e000d3e8c4cb552e4905ed41ad2fa540bb.png",
+              "alt_type": "latex",
+              "alt_value": "$\\sqrt{15}$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/0/0/a/00a0c00a3fddc8bbf26eba462d64744c0a5942b1.png",
+              "alt_type": "latex",
+              "alt_value": "\\[\\sqrt{{\\sqrt{15}}^2+{\\sqrt{15}}^2}=\\sqrt{15+15}=\\sqrt{30}.\\]"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/a/0/1/a019b30007d22707b340c72b8f89ed0358853c0d.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(D)}\\ 30 }$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "polygons",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_6",
+      "question": {
+        "text": "<p>The letter T is formed by placing two <INSERTION_INDEX_1> inch rectangles next to each other, as shown. What is the perimeter of the T, in inches? </p><p><INSERTION_INDEX_2></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/3/c/3/3c357e004b6a219b581c96a89fe448077ca1cdb2.png",
+            "alt_type": "latex",
+            "alt_value": "$2 \\times 4$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/4/e/5/4e5ee969b5b05027d7b34dc893efcf56dfd272be.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] size(150); draw((0,6)--(4,6)--(4,4)--(3,4)--(3,0)--(1,0)--(1,4)--(0,4)--cycle, linewidth(1));[/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/f/6/b/f6b61db10d50cc84bf0d38569889f59824907d5b.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 12\\qquad\\textbf{(B)}\\ 16\\qquad\\textbf{(C)}\\ 20\\qquad\\textbf{(D)}\\ 22\\qquad\\textbf{(E)}\\ 24$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>If the two rectangles were seperate, the perimeter would be <INSERTION_INDEX_1>. It easy to see that their connection erases 2 from each of the rectangles, so the final perimeter is <INSERTION_INDEX_2>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/a/d/dad2edd4593d6e18195cfb532c399a0723e0b181.png",
+              "alt_type": "latex",
+              "alt_value": "$2(2(2+4)=24$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/c/9/7c9a620664e9c65df12ed0d6368bf0a4b01cf509.png",
+              "alt_type": "latex",
+              "alt_value": "$24-2 \\times 2 = \\boxed{\\textbf{(C)}\\ 20}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "polygons",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_7",
+      "question": {
+        "text": "<p>Circle <INSERTION_INDEX_1> has a radius of <INSERTION_INDEX_2>. Circle <INSERTION_INDEX_3> has a circumference of <INSERTION_INDEX_4>. Circle <INSERTION_INDEX_5> has an area of <INSERTION_INDEX_6>. List the circles in order from smallest to the largest radius. </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/6/a/4/6a47ca0fe7cb276abc022af6ac88ddae1a9d6894.png",
+            "alt_type": "latex",
+            "alt_value": "$X$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/f/2/c/f2ca003a7da0de4994b4733e203b74ff52d42553.png",
+            "alt_type": "latex",
+            "alt_value": "$\\pi$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png",
+            "alt_type": "latex",
+            "alt_value": "$Y$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/6/8/7/687f96b39c84e910c79ea3168d73c3f848ebf51b.png",
+            "alt_type": "latex",
+            "alt_value": "$8 \\pi$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/3/e/a/3ead47fb9fb4a4c273feee398f72ff2a09702b84.png",
+            "alt_type": "latex",
+            "alt_value": "$Z$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/4/e/e/4eecdd4830005f7b13a04a16c1019a4c3dac062e.png",
+            "alt_type": "latex",
+            "alt_value": "$9 \\pi$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/2/7/3/27334c7953966e3536ab9b6dcd912f903d1096ba.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ X, Y, Z\\qquad\\textbf{(B)}\\ Z, X, Y\\qquad\\textbf{(C)}\\ Y, X, Z\\qquad\\textbf{(D)}\\ Z, Y, X\\qquad\\textbf{(E)}\\ X, Z, Y$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>Using the formulas of circles, <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, we find that circle <INSERTION_INDEX_3> has a radius of <INSERTION_INDEX_4> and circle <INSERTION_INDEX_5> has a radius of <INSERTION_INDEX_6>. Also, circle X has a radius of <INSERTION_INDEX_7>. Thus, the order from smallest to largest radius is <INSERTION_INDEX_8>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/9/8/5/9851d4e4b945c2d66bc7208893309faca7fe4639.png",
+              "alt_type": "latex",
+              "alt_value": "$C=2 \\pi r$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/8/f/28fd4ada92122eb6c326643ac834eac604153366.png",
+              "alt_type": "latex",
+              "alt_value": "$A= \\pi r^2$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/c/e/5/ce58e4af225c93d08606c26554caaa5ae32edeba.png",
+              "alt_type": "latex",
+              "alt_value": "$Y$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/3/e/a/3ead47fb9fb4a4c273feee398f72ff2a09702b84.png",
+              "alt_type": "latex",
+              "alt_value": "$Z$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/f/2/c/f2ca003a7da0de4994b4733e203b74ff52d42553.png",
+              "alt_type": "latex",
+              "alt_value": "$\\pi$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/3/1/0/31036fb4bd260d86e8ec282cf64869a0a876b8f6.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(B)}\\ Z, X, Y}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "circles",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_8",
+      "question": {
+        "text": "<p>The table shows some of the results of a survey by radiostation KACL. What percentage of the males surveyed listen to the station?</p><p><INSERTION_INDEX_1></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/2/3/d/23d9ba67767b2d91d39ded5484600239340cfdf0.png",
+            "alt_type": "latex",
+            "alt_value": "$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males & ? & 26 & ?\\\\ \\hline Females & 58 & ? & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/a/3/7/a37a1d05972babde5d8afac1bee3150056ca8f7b.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 39\\qquad\\textbf{(B)}\\ 48\\qquad\\textbf{(C)}\\ 52\\qquad\\textbf{(D)}\\ 55\\qquad\\textbf{(E)}\\ 75$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p>Filling out the chart, it becomes</p><p><INSERTION_INDEX_1></p><p>Thus, the percentage of males surveyed that listen to the station is <INSERTION_INDEX_2>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/c/7/2/c72c27ae7e173c53d6e0d464c981c519a9e56307.png",
+              "alt_type": "latex",
+              "alt_value": "$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males & 78 & 26 & 104\\\\ \\hline Females & 58 & 38 & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/e/f/1/ef14277231da7c8500d22945b7fffef06932edff.png",
+              "alt_type": "latex",
+              "alt_value": "$100 \\cdot \\frac{78}{104} \\%= \\boxed{\\textbf{(E)}\\ 75 \\%}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Instead of filling out the entire chart, you can find the number of male listeners which is 200 - 96 = 104. Since we know the fraction of males that don't listen to the station is <INSERTION_INDEX_1>, we know that the percent of males that DO listen is much larger than 50%, so the only answer is <INSERTION_INDEX_2>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/a/2/2/a220cc7d491607652652daf240e8d7e30484e1a5.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{26}{104}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/d/5/d/d5d1ee55105e784d80343be4fad8de6fd6625218.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(E)}\\ 75 \\%}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_9",
+      "question": {
+        "text": "<p>What is the product of <INSERTION_INDEX_1> ?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/c/6/a/c6afca46c66b0378b58e9c3ea02cb9be64dfd394.png",
+            "alt_type": "latex",
+            "alt_value": "$\\frac{3}{2}\\times\\frac{4}{3}\\times\\frac{5}{4}\\times\\cdots\\times\\frac{2006}{2005}$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/8/2/9/829285f2269f697530ce7f2cc46ac2592c902740.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 1\\qquad\\textbf{(B)}\\ 1002\\qquad\\textbf{(C)}\\ 1003\\qquad\\textbf{(D)}\\ 2005\\qquad\\textbf{(E)}\\ 2006$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>The numerator in each fraction cancels out with the denominator of the next fraction. There are only two numbers that didn't cancel: <INSERTION_INDEX_1>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/c/7/3/c7328389db32812398e2ed641c9ba00955deea74.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{2006}{2}=\\boxed{\\textbf{(C)}\\ 1003}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_10",
+      "question": {
+        "text": "<p>Jorge's teacher asks him to plot all the ordered pairs <INSERTION_INDEX_1> of positive integers for which <INSERTION_INDEX_2> is the width and <INSERTION_INDEX_3> is the length of a rectangle with area 12. What should his graph look like?</p><p><INSERTION_INDEX_4> <INSERTION_INDEX_5></p><p><INSERTION_INDEX_6> <INSERTION_INDEX_7></p><p><INSERTION_INDEX_8> <INSERTION_INDEX_9></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/9/3/c/93c3bde5c63b2d89fa9c3b61f8af53f9f8083ea3.png",
+            "alt_type": "latex",
+            "alt_value": "$(w. l)$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/9/e/e/9ee4b825a2e36ae093ed7be5e4851ef453b34914.png",
+            "alt_type": "latex",
+            "alt_value": "$w$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/9/b/2/9b25f8e64b484493fda944d25cad453423041fe6.png",
+            "alt_type": "latex",
+            "alt_value": "$l$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/1/6/9/169b8d69bd74a91e72ec43123070d770633a340a.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textbf{(C)}$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/d/1/6/d16c6eb0a4feae2b575a49deae60ef5f2dc24924.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] size(75); draw((0,-1)--(0,13)); draw((-1,0)--(13,0)); dot((1,11)); dot((3,9)); dot((5,7)); dot((7,5)); dot((9,3)); dot((11,1)); label(\"$l$\", (0,6), W); label(\"$w$\", (6,0), S);[/asy]"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/b/3/0/b305929a95b53f14a0ad53eba1d8560626e1f28b.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textbf{(D)}$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/7/8/2/7822b4158ccde67dd21fb1750f181c9088a739f2.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] size(75); draw((0,-1)--(0,13)); draw((-1,0)--(13,0)); dot((1,6)); dot((3,6)); dot((5,6)); dot((7,6)); dot((9,6)); dot((11,6)); label(\"$l$\", (0,6), W); label(\"$w$\", (6,0), S);[/asy]"
+          },
+          "INSERTION_INDEX_8": {
+            "picture": "//latex.artofproblemsolving.com/7/5/e/75e41e3cd48cee2c6866cfbb4386a8e99d3482f5.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textbf{(E)}$"
+          },
+          "INSERTION_INDEX_9": {
+            "picture": "//latex.artofproblemsolving.com/2/8/6/286b49157b5fb1c448956dfccefe8e5ad2ff0cce.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] size(75); draw((0,-1)--(0,13)); draw((-1,0)--(13,0)); dot((6,1)); dot((6,3)); dot((6,5)); dot((6,7)); dot((6,9)); dot((6,11)); label(\"$l$\", (0,6), W); label(\"$w$\", (6,0), S);[/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/b/7/1/b7193f66028e13f331d53ff5e6942c4b05587465.png",
+          "//latex.artofproblemsolving.com/5/b/a/5bac0fbc6b424579dd878f2c9b6fd25e5fdc57bc.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(B)}$"
+        ],
+        "asy_choices": [
+          "[asy] size(75); draw((0,-1)--(0,13)); draw((-1,0)--(13,0)); dot((1,1)); dot((3,3)); dot((5,5)); dot((7,7)); dot((9,9)); dot((11,11)); label(\"$l$\", (0,6), W); label(\"$w$\", (6,0), S);[/asy]"
+        ]
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "A",
+      "solutions": [
+        {
+          "text": "<p>The length of the rectangle will relate invertly to the width, specifically using the theorem <INSERTION_INDEX_1>. The only graph that could represent a inverted relationship is <INSERTION_INDEX_2>. (The rest are linear graphs that represent direct relationships, therefore they are incorrect.)</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/1/e/e/1ee4b0830616f9d820669a33c01553497e3c3b8e.png",
+              "alt_type": "latex",
+              "alt_value": "$l=\\frac{12}{w}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/3/5/e/35e8ea2d16518197b5113002b8c0c7da6c311a3e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(A)}}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "coordinate_geometry",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_11",
+      "question": {
+        "text": "<p>How many two-digit numbers have digits whose sum is a perfect square? </p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/c/b/2/cb268b86385a7f17769560134cac65150ceff211.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 13\\qquad\\textbf{(B)}\\ 16\\qquad\\textbf{(C)}\\ 17\\qquad\\textbf{(D)}\\ 18\\qquad\\textbf{(E)}\\ 19$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>There is <INSERTION_INDEX_1> integer whose digits sum to <INSERTION_INDEX_2>: <INSERTION_INDEX_3>.</p><p>There are <INSERTION_INDEX_4> integers whose digits sum to <INSERTION_INDEX_5>: <INSERTION_INDEX_6>.</p><p>There are <INSERTION_INDEX_7> integers whose digits sum to <INSERTION_INDEX_8>: <INSERTION_INDEX_9>.</p><p>There are <INSERTION_INDEX_10> integers whose digits sum to <INSERTION_INDEX_11>: <INSERTION_INDEX_12>.</p><p>Two digits cannot sum to <INSERTION_INDEX_13> or any greater square since the greatest sum of digits of a two-digit number is <INSERTION_INDEX_14>.</p><p>Thus, the answer is <INSERTION_INDEX_15>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/c/6/fc606f7f1e530731ab4f1cc364c01dc64a4455ee.png",
+              "alt_type": "latex",
+              "alt_value": "$10$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/a/d/e/ade6dc417ca719422e1b186c8a181e795d38537d.png",
+              "alt_type": "latex",
+              "alt_value": "$13, 22, 31, \\text{and } 40$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/6/c/7/6c7b5929005e19fa463e917cd3ab285d0f8168f6.png",
+              "alt_type": "latex",
+              "alt_value": "$18, 27, 36, 45, 54, 63, 72, 81, \\text{and } 90$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/9/a/5/9a5b4928c8fe50ce3c2428da3bee3505e891b788.png",
+              "alt_type": "latex",
+              "alt_value": "$16$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/d/6/7/d6724d6b553c512ce7eec033c6a3d4582f38d69c.png",
+              "alt_type": "latex",
+              "alt_value": "$79, 88, \\text{and } 97$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/6/6/6/66644fd9f411299c3c1eabf151b5f601c9ef6c21.png",
+              "alt_type": "latex",
+              "alt_value": "$25$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/d/1/7/d17ebc4f23fcc9579bcab96f79fdbb942d9985f6.png",
+              "alt_type": "latex",
+              "alt_value": "$9 + 9 = 18$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/b/f/c/bfcbe8365459ebd24435866d61bc417d77617143.png",
+              "alt_type": "latex",
+              "alt_value": "$1 + 4 + 9 + 3 = \\boxed{\\textbf{(C)} 17}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "sub_category": "counting",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_12",
+      "question": {
+        "text": "<p>Antonette gets <INSERTION_INDEX_1> on a 10-problem test, <INSERTION_INDEX_2> on a 20-problem test and <INSERTION_INDEX_3> on a 30-problem test. If the three tests are combined into one 60-problem test, which percent is closest to her overall score? </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/a/a/4/aa4c1a3a8cac685385a2cb0b9459671466814a21.png",
+            "alt_type": "latex",
+            "alt_value": "$70 \\%$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/8/7/c/87cc18e719d1a8e2cf150e5e347aa7958f8035d3.png",
+            "alt_type": "latex",
+            "alt_value": "$80 \\%$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/1/6/f/16f96f13ccefc8551b345cf2752f88a2c1e37f13.png",
+            "alt_type": "latex",
+            "alt_value": "$90 \\%$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/3/c/6/3c6c266033be7b2ac9daea913ed1aef7ed3fc63d.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 40\\qquad\\textbf{(B)}\\ 77\\qquad\\textbf{(C)}\\ 80\\qquad\\textbf{(D)}\\ 83\\qquad\\textbf{(E)}\\ 87$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p><INSERTION_INDEX_1></p><p><INSERTION_INDEX_2></p><p><INSERTION_INDEX_3></p><p>Adding them up gets <INSERTION_INDEX_4>. The overall percentage correct would be <INSERTION_INDEX_5>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/f/1/4/f143efcb0f8bae68a672dbdcbbb8b76193de07e8.png",
+              "alt_type": "latex",
+              "alt_value": "$70 \\% \\cdot 10=7$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/6/6/266bcd854f54d27f867a716f738837c93645c62c.png",
+              "alt_type": "latex",
+              "alt_value": "$80 \\% \\cdot 20=16$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/d/2/c/d2ce826027267135e367c2487d760f72a5cbcbab.png",
+              "alt_type": "latex",
+              "alt_value": "$90 \\% \\cdot 30=27$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/5/5/f/55ffba184bab9d55d3e9a4b12c7a56f95671ecf3.png",
+              "alt_type": "latex",
+              "alt_value": "$7+16+27=50$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/d/a/6/da640ffa838a1145d8be818100bf7871a7ac485e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{50}{60}=\\frac{5}{6}=5 \\cdot 16.\\overline{6}=83.\\overline{3} \\approx \\boxed{\\textbf{(D)}\\ 83}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_13",
+      "question": {
+        "text": "<p>Cassie leaves Escanaba at 8:30 AM heading for Marquette on her bike. She bikes at a uniform rate of 12 miles per hour. Brian leaves Marquette at 9:00 AM heading for Escanaba on his bike. He bikes at a uniform rate of 16 miles per hour. They both bike on the same 62-mile route between Escanaba and Marquette. At what time in the morning do they meet? </p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/5/0/8/508d8be44157bc4df8499cd01ef41e16a053a98b.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 10: 00\\qquad\\textbf{(B)}\\ 10: 15\\qquad\\textbf{(C)}\\ 10: 30\\qquad\\textbf{(D)}\\ 11: 00\\qquad\\textbf{(E)}\\ 11: 30$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>If Cassie leaves <INSERTION_INDEX_1> an hour earlier then Brian, when Brian starts, the distance between them will be <INSERTION_INDEX_2>. Every hour, they will get <INSERTION_INDEX_3> miles closer. <INSERTION_INDEX_4>, so 2 hours from <INSERTION_INDEX_5> AM is when they meet, which is <INSERTION_INDEX_6>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/f/9/2f960094315d60883495f9b74148e17487ee9584.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{2}$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/e/e/7ee0ce218959a8183834c745a55ea5650d9fd9ce.png",
+              "alt_type": "latex",
+              "alt_value": "$62-\\frac{12}{2}=56$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/4/8/1/4812588be093b90c9fe9705f5348b4f8bce83cf0.png",
+              "alt_type": "latex",
+              "alt_value": "$12+16=28$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/9/8/0/98050623fe223b54b5b15ff6098cfed83bde8e10.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{56}{28}=2$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/3/8/1/3817efc5c25969d2068ac5c6774a1ae6ba3181cf.png",
+              "alt_type": "latex",
+              "alt_value": "$9:00$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/3/e/9/3e98595be46b5f5cdcdfed74d39b86ecc649cb99.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(D)}\\ 11: 00}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Let <INSERTION_INDEX_1> be the # of hours after Cassie leaves, when both of them meet. In that <INSERTION_INDEX_2> hours, Cassie will travel <INSERTION_INDEX_3> miles. But, Brian will travel <INSERTION_INDEX_4> miles as he starts <INSERTION_INDEX_5> hours after Cassie. These two distances sum to the total distance of <INSERTION_INDEX_6> miles as they meet here, yielding the equation, <INSERTION_INDEX_7>. After distribution <INSERTION_INDEX_8> we get <INSERTION_INDEX_9>. After combining like terms and adding <INSERTION_INDEX_10> to both sides we get <INSERTION_INDEX_11>, and <INSERTION_INDEX_12>. So they meet <INSERTION_INDEX_13> hours after 8:30 a.m. which is <INSERTION_INDEX_14>.</p><p>- LearnForEver</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/3/8/5/38588fafb659d83dc4c41024358d54ce788611d3.png",
+              "alt_type": "latex",
+              "alt_value": "$12x$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/e/6/6/e663cce45b0dc5824593241d41c2f8c09c17c805.png",
+              "alt_type": "latex",
+              "alt_value": "$16(x-1/2)$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/1/f/3/1f3cc0ad966b3e637cd199607cbf0d1befc0e491.png",
+              "alt_type": "latex",
+              "alt_value": "$1/2$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/3/e/6/3e67376d85a21889a01b76d7c9d8c765b2bac379.png",
+              "alt_type": "latex",
+              "alt_value": "$62$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/4/b/c/4bce506e4b2c9dc05dda6d3275547152ae9cf17c.png",
+              "alt_type": "latex",
+              "alt_value": "$12x+16(x-1/2)=62$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/9/a/5/9a5b4928c8fe50ce3c2428da3bee3505e891b788.png",
+              "alt_type": "latex",
+              "alt_value": "$16$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/9/c/c/9cc14160c6586817bc3d3bb4bfa76d59c91b8ad3.png",
+              "alt_type": "latex",
+              "alt_value": "$12x+16x-8=62$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/0/e/7/0e7d00a523cdff223c3cd2f1102cf66ff5960ecd.png",
+              "alt_type": "latex",
+              "alt_value": "$28x=70$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/d/8/5/d855323d65b0c5eef448319cf572be9e93aca89d.png",
+              "alt_type": "latex",
+              "alt_value": "$x=5/2$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/2/a/a/2aae3c8770ff05ef2072c00583640a2757187994.png",
+              "alt_type": "latex",
+              "alt_value": "$5/2$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/3/e/9/3e98595be46b5f5cdcdfed74d39b86ecc649cb99.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(D)}\\ 11: 00}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_14",
+      "question": {
+        "text": "<p>Problems 14, 15 and 16 involve Mrs. Reed's English assignment. </p><p>A Novel Assignment </p><p>The students in Mrs. Reed's English class are reading the same <INSERTION_INDEX_1>-page novel. Three friends, Alice, Bob and Chandra, are in the class. Alice reads a page in 20 seconds, Bob reads a page in <INSERTION_INDEX_2> seconds and Chandra reads a page in <INSERTION_INDEX_3> seconds. </p><p>If Bob and Chandra both read the whole book, Bob will spend how many more seconds reading than Chandra? </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/7/c/c/7cc00a2adcf90ad7e846dbd9ff0402294cd58742.png",
+            "alt_type": "latex",
+            "alt_value": "$760$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/f/2/7/f27da4fca6f3fecb215974023aad210b70ec3857.png",
+            "alt_type": "latex",
+            "alt_value": "$45$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/6/5/1/651ba418a810d971dbc8a326d49a71fe1541fae0.png",
+            "alt_type": "latex",
+            "alt_value": "$30$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/d/a/c/dacb8537cdd172d238d2d6ddc89f2799419e182f.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 7,600\\qquad\\textbf{(B)}\\ 11,400\\qquad\\textbf{(C)}\\ 12,500\\qquad\\textbf{(D)}\\ 15,200\\qquad\\textbf{(E)}\\ 22,800$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>The information is the same for Problems 14,15, and 16. Therefore, we shall only use the information we need. All we need for this problem is that there's 760 pages, Bob reads a page in 45 seconds and Chandra reads a page in 30 seconds. A lot of people will find how long it takes Bob to read the book, how long it takes Chandra to read the book, and then find the seconds. However, if we just set up the expression, we can find an easier way.</p><p><INSERTION_INDEX_1></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/a/b/5/ab54fdb7982f9e6c858b7d7dc9fbcc17f9aae991.png",
+              "alt_type": "latex",
+              "alt_value": "$760\\cdot45 - 760\\cdot30 = 760(45-30) = 760(15) = \\boxed{\\textbf{(B)}11,400}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_15",
+      "question": {
+        "text": "<p>Problems 14, 15 and 16 involve Mrs. Reed's English assignment. </p><p>A Novel Assignment </p><p>The students in Mrs. Reed's English class are reading the same 760-page novel. Three friends, Alice, Bob and Chandra, are in the class. Alice reads a page in 20 seconds, Bob reads a page in 45 seconds and Chandra reads a page in 30 seconds. </p><p>Chandra and Bob, who each have a copy of the book, decide that they can save time by \"team reading\" the novel. In this scheme, Chandra will read from page 1 to a certain page and Bob will read from the next page through page 760, finishing the book. When they are through they will tell each other about the part they read. What is the last page that Chandra should read so that she and Bob spend the same amount of time reading the novel?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/5/a/6/5a64158a9c4ad52cae18cc5fc01d5fe920c5b4f3.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 425\\qquad\\textbf{(B)}\\ 444\\qquad\\textbf{(C)}\\ 456\\qquad\\textbf{(D)}\\ 484\\qquad\\textbf{(E)}\\ 506$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>Same as the previous problem, we only use the information we need. Note that it's not just Chandra reads half of it and Bob reads the rest since they have different reading rates. In this case, we set up an equation and solve.</p><p>Let <INSERTION_INDEX_1> be the number of pages that Chandra reads.</p><p><INSERTION_INDEX_2> Distribute the <INSERTION_INDEX_3></p><p><INSERTION_INDEX_4> Add <INSERTION_INDEX_5> to both sides</p><p><INSERTION_INDEX_6> Divide both sides by <INSERTION_INDEX_7> to make it easier to solve</p><p><INSERTION_INDEX_8> Divide both sides by <INSERTION_INDEX_9></p><p><INSERTION_INDEX_10></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/c/f/9/cf93c214311a4acbc58bb52a7b2674fdeb8adc40.png",
+              "alt_type": "latex",
+              "alt_value": "$30x = 45(760-x)$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/f/2/7/f27da4fca6f3fecb215974023aad210b70ec3857.png",
+              "alt_type": "latex",
+              "alt_value": "$45$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/b/d/0/bd04b4922a937556256ab1dfa374e2cb39482164.png",
+              "alt_type": "latex",
+              "alt_value": "$30x = 45(760) - 45x$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/f/f/7ff0d17c33d337d50835d2127c2892dcaae77bda.png",
+              "alt_type": "latex",
+              "alt_value": "$45x$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/9/2/6/926573e8f277eb905f39c200754f1371e78c149f.png",
+              "alt_type": "latex",
+              "alt_value": "$75x = 45(760)$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/f/1/9/f1965fae079a9ba2c0726c307070c2355dfcb213.png",
+              "alt_type": "latex",
+              "alt_value": "$15$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/a/f/b/afb6fa1098a0e73d98ec7988590ab8fdb29848ee.png",
+              "alt_type": "latex",
+              "alt_value": "$5x = 3(760)$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/c/b/a/cbaf5413f1c3328b443e54efd949cbb059fc3044.png",
+              "alt_type": "latex",
+              "alt_value": "$x = 3(152) = \\boxed{\\textbf{(C)} 456}$"
+            }
+          }
+        },
+        {
+          "text": "<p>Chandra and Bob read at a rate of <INSERTION_INDEX_1> seconds per page, respectively. Simplifying that gets us Bob reads <INSERTION_INDEX_2> pages for every <INSERTION_INDEX_3> pages that Chandra reads. Therefore Chandra should read <INSERTION_INDEX_4> of the book. <INSERTION_INDEX_5>=<INSERTION_INDEX_6></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/b/26b7ff8a629ecb916b3fe4f3e082baa65f7d549f.png",
+              "alt_type": "latex",
+              "alt_value": "$30:45$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/8/e/b/8ebd904ee2fcf1ecd53fcb5b19449b3972dc89a0.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{3}{2+3}=\\frac{3}{5}$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/2/0/e/20ef0f8d8ca2731fc2583705f091b2dc7b1988ed.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{3}{5}\\cdot760$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/9/0/5/90553911b022052f04662e335dd851f7a0400af7.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(C)} 456}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_16",
+      "question": {
+        "text": "<p>Problems 14, 15 and 16 involve Mrs. Reed's English assignment. </p><p>A Novel Assignment </p><p>The students in Mrs. Reed's English class are reading the same 760-page novel. Three friends, Alice, Bob and Chandra, are in the class. Alice reads a page in 20 seconds, Bob reads a page in 45 seconds and Chandra reads a page in 30 seconds. </p><p>Before Chandra and Bob start reading, Alice says she would like to team read with them. If they divide the book into three sections so that each reads for the same length of time, how many seconds will each have to read? </p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/9/8/0/98020089373279a569df18e3b94bfca5ef3e616f.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 6400\\qquad\\textbf{(B)}\\ 6600\\qquad\\textbf{(C)}\\ 6800\\qquad\\textbf{(D)}\\ 7000\\qquad\\textbf{(E)}\\ 7200$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p>The amount of pages Bob, Chandra, and Alice will read is in the ratio 4:6:9. Therefore, Bob, Chandra, and Alice read 160, 240, and 360 pages respectively. They would also be reading for the same amount of time because the ratio of the pages read was based on the time it takes each of them to read a page. Therefore, the amount of seconds each person reads is simply <INSERTION_INDEX_1>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/7/3/8/738bf6dc12f7e7da88e3e66c7f34bde5b99fadc9.png",
+              "alt_type": "latex",
+              "alt_value": "$160 \\cdot 45 = \\boxed{\\textbf{(E)}\\ 7200}$"
+            }
+          }
+        },
+        {
+          "text": "<p>We can solve this using equations. Let Bob read <INSERTION_INDEX_1> pages and Chandra read <INSERTION_INDEX_2> pages. Then Alice would read <INSERTION_INDEX_3> pages. Then we can set up the equations using the time it takes them to read a page: <INSERTION_INDEX_4>. Since we only have two variables, we only need two equations. Let's use <INSERTION_INDEX_5> and <INSERTION_INDEX_6>. We can simplify <INSERTION_INDEX_7> down to <INSERTION_INDEX_8> and <INSERTION_INDEX_9> down to <INSERTION_INDEX_10>. We can then solve the equations accordingly: </p><p><INSERTION_INDEX_11><INSERTION_INDEX_12></p><p>From the equation <INSERTION_INDEX_13>, we know that <INSERTION_INDEX_14>.</p><p><INSERTION_INDEX_15><INSERTION_INDEX_16><INSERTION_INDEX_17></p><p>Now that we know <INSERTION_INDEX_18>, we can multiply it by <INSERTION_INDEX_19> (Bob's speed) to get the answer: <INSERTION_INDEX_20>=<INSERTION_INDEX_21></p><p>~Trex226</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
+              "alt_type": "latex",
+              "alt_value": "$y$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/e/6/4/e64e5ac7be66e702644713e64b26d21201ac0739.png",
+              "alt_type": "latex",
+              "alt_value": "$760-x-y$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/1/e/b/1eb40d7f44468967e3ffe0515715197a3d5ed0e5.png",
+              "alt_type": "latex",
+              "alt_value": "$45x=30y=20(760-x-y)$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/d/8/c/d8c0ec4d85edff538d24aaa1b74ebae1e60aa113.png",
+              "alt_type": "latex",
+              "alt_value": "$45x=30y$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/c/2/3/c236fe03ca896fd126abd38d983894ed96a56d89.png",
+              "alt_type": "latex",
+              "alt_value": "$45x=20(760-x-y)$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/d/8/c/d8c0ec4d85edff538d24aaa1b74ebae1e60aa113.png",
+              "alt_type": "latex",
+              "alt_value": "$45x=30y$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/1/6/0/160b32d39f9596339f4916ca74d4914996973f14.png",
+              "alt_type": "latex",
+              "alt_value": "$3x=2y$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/c/2/3/c236fe03ca896fd126abd38d983894ed96a56d89.png",
+              "alt_type": "latex",
+              "alt_value": "$45x=20(760-x-y)$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/7/4/e/74e46e4c2eb3debc6e96de15a59fbf5e1799c6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$9x=4(760-x-y)$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/c/0/7/c07dccc7f321809cc6cb5ded8988358c2761aba4.png",
+              "alt_type": "latex",
+              "alt_value": "\\[9x=3040-4x-4y\\]"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/7/9/4/794eb354e360b14bb7c2038d525de7b7adf3d10f.png",
+              "alt_type": "latex",
+              "alt_value": "\\[13x=3040-4y\\]"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/1/6/0/160b32d39f9596339f4916ca74d4914996973f14.png",
+              "alt_type": "latex",
+              "alt_value": "$3x=2y$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/9/9/6/996b77710325beb333efa4ad10eed9fdbbdff529.png",
+              "alt_type": "latex",
+              "alt_value": "$4y=6x$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/4/9/d/49d5e9078ec730976cb168e005ae6e26c38a121f.png",
+              "alt_type": "latex",
+              "alt_value": "\\[13x=3040-6x\\]"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/6/1/8/6180af00bdf6a4fe91c08ce402691297fb0eb4ea.png",
+              "alt_type": "latex",
+              "alt_value": "\\[19x=3040\\]"
+            },
+            "INSERTION_INDEX_17": {
+              "picture": "//latex.artofproblemsolving.com/5/9/4/594dbf6a7d88fa3f398597158d51ef77407d697b.png",
+              "alt_type": "latex",
+              "alt_value": "\\[x=160\\]"
+            },
+            "INSERTION_INDEX_18": {
+              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "alt_type": "latex",
+              "alt_value": "$x$"
+            },
+            "INSERTION_INDEX_19": {
+              "picture": "//latex.artofproblemsolving.com/f/2/7/f27da4fca6f3fecb215974023aad210b70ec3857.png",
+              "alt_type": "latex",
+              "alt_value": "$45$"
+            },
+            "INSERTION_INDEX_20": {
+              "picture": "//latex.artofproblemsolving.com/4/3/1/43109f9e03d05d4984c0f6cdd7ae9330f0916467.png",
+              "alt_type": "latex",
+              "alt_value": "$160\\times45$"
+            },
+            "INSERTION_INDEX_21": {
+              "picture": "//latex.artofproblemsolving.com/0/b/7/0b761300f58fc1895ca27a6136ad07f22a2a2304.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(E)}\\ 7200}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_17",
+      "question": {
+        "text": "<p>Jeff rotates spinners <INSERTION_INDEX_1>, <INSERTION_INDEX_2> and <INSERTION_INDEX_3> and adds the resulting numbers. What is the probability that his sum is an odd number? </p><p><INSERTION_INDEX_4></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png",
+            "alt_type": "latex",
+            "alt_value": "$P$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png",
+            "alt_type": "latex",
+            "alt_value": "$Q$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/e/f/f/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png",
+            "alt_type": "latex",
+            "alt_value": "$R$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/2/4/0/2402672f0bbb2b057f89b1a2623c46ea6f2d380c.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] size(200); path circle=circle((0,0),2); path r=(0,0)--(0,2); draw(circle,linewidth(1)); draw(shift(5,0)*circle,linewidth(1)); draw(shift(10,0)*circle,linewidth(1)); draw(r,linewidth(1)); draw(rotate(120)*r,linewidth(1)); draw(rotate(240)*r,linewidth(1)); draw(shift(5,0)*r,linewidth(1)); draw(shift(5,0)*rotate(90)*r,linewidth(1)); draw(shift(5,0)*rotate(180)*r,linewidth(1)); draw(shift(5,0)*rotate(270)*r,linewidth(1)); draw(shift(10,0)*r,linewidth(1)); draw(shift(10,0)*rotate(60)*r,linewidth(1)); draw(shift(10,0)*rotate(120)*r,linewidth(1)); draw(shift(10,0)*rotate(180)*r,linewidth(1)); draw(shift(10,0)*rotate(240)*r,linewidth(1)); draw(shift(10,0)*rotate(300)*r,linewidth(1)); label(\"$P$\", (-2,2)); label(\"$Q$\", shift(5,0)*(-2,2)); label(\"$R$\", shift(10,0)*(-2,2)); label(\"$1$\", (-1,sqrt(2)/2)); label(\"$2$\", (1,sqrt(2)/2)); label(\"$3$\", (0,-1)); label(\"$2$\", shift(5,0)*(-sqrt(2)/2,sqrt(2)/2)); label(\"$4$\", shift(5,0)*(sqrt(2)/2,sqrt(2)/2)); label(\"$6$\", shift(5,0)*(sqrt(2)/2,-sqrt(2)/2)); label(\"$8$\", shift(5,0)*(-sqrt(2)/2,-sqrt(2)/2)); label(\"$1$\", shift(10,0)*(-0.5,1)); label(\"$3$\", shift(10,0)*(0.5,1)); label(\"$5$\", shift(10,0)*(1,0)); label(\"$7$\", shift(10,0)*(0.5,-1)); label(\"$9$\", shift(10,0)*(-0.5,-1)); label(\"$11$\", shift(10,0)*(-1,0)); [/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/b/b/b/bbb02fa636752c578cd93932b5fb9e3443bbdc53.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ \\frac{1}{4}\\qquad\\textbf{(B)}\\ \\frac{1}{3}\\qquad\\textbf{(C)}\\ \\frac{1}{2}\\qquad\\textbf{(D)}\\ \\frac{2}{3}\\qquad\\textbf{(E)}\\ \\frac{3}{4}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>In order for Jeff to have an odd number sum, the numbers must either be Odd + Odd + Odd or Even + Even + Odd. We easily notice that we cannot obtain Odd + Odd + Odd because spinner <INSERTION_INDEX_1> contains only even numbers. Therefore we must work with Even + Even + Odd and spinner <INSERTION_INDEX_2> will give us one of our even numbers. We also see that spinner <INSERTION_INDEX_3> only contains odd, so spinner <INSERTION_INDEX_4> must give us our odd number. We still need one even number from spinner <INSERTION_INDEX_5>. There is only 1 even number: <INSERTION_INDEX_6>. Since spinning the required numbers are automatic on the other spinners, we only have to find the probability of spinning a <INSERTION_INDEX_7> in spinner <INSERTION_INDEX_8>, which is clearly <INSERTION_INDEX_9></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png",
+              "alt_type": "latex",
+              "alt_value": "$Q$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png",
+              "alt_type": "latex",
+              "alt_value": "$Q$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/e/f/f/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png",
+              "alt_type": "latex",
+              "alt_value": "$R$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/e/f/f/eff43e84f8a3bcf7b6965f0a3248bc4d3a9d0cd4.png",
+              "alt_type": "latex",
+              "alt_value": "$R$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png",
+              "alt_type": "latex",
+              "alt_value": "$P$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png",
+              "alt_type": "latex",
+              "alt_value": "$P$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/2/8/1/281aef6b09973e903b8468a12105e2c480294270.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(B)}\\ \\frac{1}{3}}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "sub_category": "probability",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_18",
+      "question": {
+        "text": "<p>A cube with 3-inch edges is made using 27 cubes with 1-inch edges. Nineteen of the smaller cubes are white and eight are black. If the eight black cubes are placed at the corners of the larger cube, what fraction of the surface area of the larger cube is white? </p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/d/c/d/dcd0dce46e7b29f74c167aeeac5429b0f2ee5ff2.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ \\frac{1}{9}\\qquad\\textbf{(B)}\\ \\frac{1}{4}\\qquad\\textbf{(C)}\\ \\frac{4}{9}\\qquad\\textbf{(D)}\\ \\frac{5}{9}\\qquad\\textbf{(E)}\\ \\frac{19}{27}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>The surface area of the cube is <INSERTION_INDEX_1>. Each of the eight black cubes has 3 faces on the outside, making <INSERTION_INDEX_2> black faces. Therefore there are <INSERTION_INDEX_3> white faces. To find the ratio, we evaluate <INSERTION_INDEX_4>.</p><p><br/></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/7/2/c/72cbf9947a985042ffa8fc12c894527f13f23bee.png",
+              "alt_type": "latex",
+              "alt_value": "$6(3)(3)=54$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/4/2/1/421f2542a79b4df522f740848a979a46ccbfc83f.png",
+              "alt_type": "latex",
+              "alt_value": "$3(8)=24$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/6/3/3/633798fdf5e79cf8a010f3277ecb83601a4f4b7c.png",
+              "alt_type": "latex",
+              "alt_value": "$54-24=30$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/9/9/0/990b94ddfcdcbd59c8946903dd2e8c9afac9fc37.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{30}{54}= \\boxed{\\textbf{(D)}\\ \\frac{5}{9}}$"
+            }
+          }
+        },
+        {
+          "text": "<p>We can notice that each face is the same, so each face is <INSERTION_INDEX_1> white.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/5/1/5/51511d5bc152e373ce0e61249cfa4299a59123bd.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(D)}\\ \\frac{5}{9}}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "solid_geometry",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_19",
+      "question": {
+        "text": "<p>Triangle <INSERTION_INDEX_1> is an isosceles triangle with <INSERTION_INDEX_2>. Point <INSERTION_INDEX_3> is the midpoint of both <INSERTION_INDEX_4> and <INSERTION_INDEX_5>, and <INSERTION_INDEX_6> is 11 units long. Triangle <INSERTION_INDEX_7> is congruent to triangle <INSERTION_INDEX_8>. What is the length of <INSERTION_INDEX_9>? </p><p><INSERTION_INDEX_10></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png",
+            "alt_type": "latex",
+            "alt_value": "$ABC$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/7/a/4/7a466c16eabfd85eaa3c5c5e1ed6cab3a27d200c.png",
+            "alt_type": "latex",
+            "alt_value": "$\\overline{AB}=\\overline{BC}$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+            "alt_type": "latex",
+            "alt_value": "$D$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/e/3/3/e33fe7d65facd8868f58b6e94ddc7f153a5a3f9f.png",
+            "alt_type": "latex",
+            "alt_value": "$\\overline{BC}$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/5/e/8/5e8bc36793a7c64d05fff20d519f0f72d9256fab.png",
+            "alt_type": "latex",
+            "alt_value": "$\\overline{AE}$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/9/5/e/95eaca439ccbf2863a43b05f4de566ccdabdc392.png",
+            "alt_type": "latex",
+            "alt_value": "$\\overline{CE}$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/a/6/a/a6adfd3ad27a2dddeb0af7131d73c33c86991e93.png",
+            "alt_type": "latex",
+            "alt_value": "$ABD$"
+          },
+          "INSERTION_INDEX_8": {
+            "picture": "//latex.artofproblemsolving.com/b/3/d/b3d74045abcfa098fd661ad0693fc7461570ad63.png",
+            "alt_type": "latex",
+            "alt_value": "$ECD$"
+          },
+          "INSERTION_INDEX_9": {
+            "picture": "//latex.artofproblemsolving.com/4/3/7/4373e7b4be983c0315e82e1fda1df66ed34dd7fb.png",
+            "alt_type": "latex",
+            "alt_value": "$\\overline{BD}$"
+          },
+          "INSERTION_INDEX_10": {
+            "picture": "//latex.artofproblemsolving.com/4/b/4/4b49c3097ed0eacc7cdb3ab3850b7fdf1f67d407.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] size(100); draw((0,0)--(2,4)--(4,0)--(6,4)--cycle--(4,0),linewidth(1)); label(\"$A$\", (0,0), SW); label(\"$B$\", (2,4), N); label(\"$C$\", (4,0), SE); label(\"$D$\", shift(0.2,0.1)*intersectionpoint((0,0)--(6,4),(2,4)--(4,0)), N); label(\"$E$\", (6,4), NE);[/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/3/f/a/3faeebd827a737fe303cfd780655ba68f0a1927e.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 4\\qquad\\textbf{(B)}\\ 4.5\\qquad\\textbf{(C)}\\ 5\\qquad\\textbf{(D)}\\ 5.5\\qquad\\textbf{(E)}\\ 6$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>Since triangle <INSERTION_INDEX_1> is congruent to triangle <INSERTION_INDEX_2> and <INSERTION_INDEX_3>, <INSERTION_INDEX_4>. Since <INSERTION_INDEX_5>, <INSERTION_INDEX_6>. Because point <INSERTION_INDEX_7> is the midpoint of <INSERTION_INDEX_8>, <INSERTION_INDEX_9>.</p><p><br/></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/a/6/a/a6adfd3ad27a2dddeb0af7131d73c33c86991e93.png",
+              "alt_type": "latex",
+              "alt_value": "$ABD$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/b/3/d/b3d74045abcfa098fd661ad0693fc7461570ad63.png",
+              "alt_type": "latex",
+              "alt_value": "$ECD$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/7/d/5/7d5f6b57cdeb9817d21ce9a78245eb685d27edc1.png",
+              "alt_type": "latex",
+              "alt_value": "$\\overline{CE} =11$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/9/a/8/9a8200762391e372bf0111baf76618d6bba846b6.png",
+              "alt_type": "latex",
+              "alt_value": "$\\overline{AB}=11$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/a/4/7a466c16eabfd85eaa3c5c5e1ed6cab3a27d200c.png",
+              "alt_type": "latex",
+              "alt_value": "$\\overline{AB}=\\overline{BC}$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/9/b/e/9be36f1db2ebc5a5bff7dfa0b15c78291e6aaf7e.png",
+              "alt_type": "latex",
+              "alt_value": "$\\overline{BC}=11$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+              "alt_type": "latex",
+              "alt_value": "$D$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/e/3/3/e33fe7d65facd8868f58b6e94ddc7f153a5a3f9f.png",
+              "alt_type": "latex",
+              "alt_value": "$\\overline{BC}$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/a/c/d/acd00009e9ce6ebf648dac581ab8ba030bad99e1.png",
+              "alt_type": "latex",
+              "alt_value": "$\\overline{BD}=\\frac{\\overline{BC}}{2}=\\frac{11}{2}=\\boxed{\\textbf{(D)}\\ 5.5}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "triangles",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_20",
+      "question": {
+        "text": "<p>A singles tournament had six players. Each player played every other player only once, with no ties. If Helen won 4 games, Ines won 3 games, Janet won 2 games, Kendra won 2 games and Lara won 2 games, how many games did Monica win?</p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/3/a/d/3ad07ba45d9a4dcd46fbd971320abb2585f7ce0e.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 0\\qquad\\textbf{(B)}\\ 1\\qquad\\textbf{(C)}\\ 2\\qquad\\textbf{(D)}\\ 3\\qquad\\textbf{(E)}\\ 4$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>Since there are 6 players, a total of <INSERTION_INDEX_1> games are played. So far, <INSERTION_INDEX_2> games finished (one person won from each game), so Monica needs to win <INSERTION_INDEX_3>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/2/d/d2d09b5ba297579ddf128dcc430f58eae639018c.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{6(6-1)}{2}=15$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/d/4/3/d43e6018be8e939b1f4e177905ec8ca91127bb58.png",
+              "alt_type": "latex",
+              "alt_value": "$4+3+2+2+2=13$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/e/1/3/e13073a13501edbec443cf923996f7845ca2b059.png",
+              "alt_type": "latex",
+              "alt_value": "$15-13 = \\boxed{\\textbf{(C)}\\ 2}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "sub_category": "counting",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_21",
+      "question": {
+        "text": "<p>An aquarium has a rectangular base that measures <INSERTION_INDEX_1> cm by <INSERTION_INDEX_2> cm and has a height of <INSERTION_INDEX_3> cm. The aquarium is filled with water to a depth of <INSERTION_INDEX_4> cm. A rock with volume <INSERTION_INDEX_5> is then placed in the aquarium and completely submerged. By how many centimeters does the water level rise? </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/e/5/9/e59e2c6e83eb78cca610a5fd4070ae01c8d4ae60.png",
+            "alt_type": "latex",
+            "alt_value": "$100$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/7/8/7/78792fe4680a164f537ea72a4f900e4471433c3b.png",
+            "alt_type": "latex",
+            "alt_value": "$40$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/9/0/6/906734e2f1010e9a171ffee8050cbc0649cea37c.png",
+            "alt_type": "latex",
+            "alt_value": "$50$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/7/8/9/78916550838bd31d66e4cdefbc366edb11fd00bd.png",
+            "alt_type": "latex",
+            "alt_value": "$37$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/1/a/0/1a0bcf5ce6f03b10fb560fd96a49a465a469f210.png",
+            "alt_type": "latex",
+            "alt_value": "$1000\\text{cm}^3$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/7/0/8/7085a05cf57807d64d769fc6b370d510d5d68e9d.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 0.25\\qquad\\textbf{(B)}\\ 0.5\\qquad\\textbf{(C)}\\ 1\\qquad\\textbf{(D)}\\ 1.25\\qquad\\textbf{(E)}\\ 2.5$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "A",
+      "solutions": [
+        {
+          "text": "<p>The water level will rise <INSERTION_INDEX_1>cm for every <INSERTION_INDEX_2>. Since <INSERTION_INDEX_3> is <INSERTION_INDEX_4> of <INSERTION_INDEX_5>, the water will rise <INSERTION_INDEX_6></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/f/9/a/f9a4857a5a4c5d5c77ea8e3186585797fa3b63a4.png",
+              "alt_type": "latex",
+              "alt_value": "$100 \\cdot 40 = 4000\\text{cm}^2$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/6/e/e/6ee927e1332358c96c62c277441c907c4f51057f.png",
+              "alt_type": "latex",
+              "alt_value": "$1000$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/3/3/c339afa03e060d959e4942be7522c0c992f4c41c.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{4}$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/0/9/2/0929ed034079c23455c385741744274c1f69b61b.png",
+              "alt_type": "latex",
+              "alt_value": "$4000$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/e/b/1/eb10b4551b924ea0a0053f32721f823a09bf1042.png",
+              "alt_type": "latex",
+              "alt_value": "$\\frac{1}{4}\\cdot1 = \\boxed{\\textbf{(A)}\\ 0.25}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "solid_geometry",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_22",
+      "question": {
+        "text": "<p>Three different one-digit positive integers are placed in the bottom row of cells. Numbers in adjacent cells are added and the sum is placed in the cell above them. In the second row, continue the same process to obtain a number in the top cell. What is the difference between the largest and smallest numbers possible in the top cell?</p><p><INSERTION_INDEX_1></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/5/7/0/570b0c91c3fb3ed033703f1831719e94604f7ae9.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] path cell=((0,0)--(1,0)--(1,1)--(0,1)--cycle); path sw=((0,0)--(1,sqrt(3))); path se=((5,0)--(4,sqrt(3))); draw(cell, linewidth(1)); draw(shift(2,0)*cell, linewidth(1)); draw(shift(4,0)*cell, linewidth(1)); draw(shift(1,3)*cell, linewidth(1)); draw(shift(3,3)*cell, linewidth(1)); draw(shift(2,6)*cell, linewidth(1)); draw(shift(0.45,1.125)*sw, EndArrow); draw(shift(2.45,1.125)*sw, EndArrow); draw(shift(1.45,4.125)*sw, EndArrow); draw(shift(-0.45,1.125)*se, EndArrow); draw(shift(-2.45,1.125)*se, EndArrow); draw(shift(-1.45,4.125)*se, EndArrow); label(\"$+$\", (1.5,1.5)); label(\"$+$\", (3.5,1.5)); label(\"$+$\", (2.5,4.5));[/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/f/a/7/fa7df16c8fbabdb3662776dc3d860fd9ec5c2492.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 16\\qquad\\textbf{(B)}\\ 24\\qquad\\textbf{(C)}\\ 25\\qquad\\textbf{(D)}\\ 26\\qquad\\textbf{(E)}\\ 35$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "D",
+      "solutions": [
+        {
+          "text": "<p>If the lower cells contain <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, then the second row will contain<INSERTION_INDEX_3> and <INSERTION_INDEX_4>, and the top cell will contain <INSERTION_INDEX_5>. To obtain thesmallest sum, place <INSERTION_INDEX_6> in the center cell and <INSERTION_INDEX_7> and <INSERTION_INDEX_8> in the outer ones. The topnumber will be <INSERTION_INDEX_9>. For the largest sum, place <INSERTION_INDEX_10> in the center cell and <INSERTION_INDEX_11> and <INSERTION_INDEX_12> inthe outer ones. This top number will be <INSERTION_INDEX_13>. The difference is <INSERTION_INDEX_14>.</p><p><br/></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/b/e/f/bef747a48a2a8d43c4841e12c89f2de2502a672e.png",
+              "alt_type": "latex",
+              "alt_value": "$A, B$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png",
+              "alt_type": "latex",
+              "alt_value": "$C$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/c/5/b/c5bf77c6740d00af2866f26718d628a60c667ef2.png",
+              "alt_type": "latex",
+              "alt_value": "$A + B$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/8/c/9/8c9d45b704ffb63f5e9284bb62220ddc955522e0.png",
+              "alt_type": "latex",
+              "alt_value": "$B + C$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/8/1/781afefd755ace73af3160cc62c155321de6bc38.png",
+              "alt_type": "latex",
+              "alt_value": "$A + 2B + C$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
+              "alt_type": "latex",
+              "alt_value": "$1$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
+              "alt_type": "latex",
+              "alt_value": "$2$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png",
+              "alt_type": "latex",
+              "alt_value": "$7$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/b/f/2/bf2c9074b396e3af0dea52d792660eea1c77f10f.png",
+              "alt_type": "latex",
+              "alt_value": "$9$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png",
+              "alt_type": "latex",
+              "alt_value": "$7$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/8/4/5/8455f3b5cb3b4880b8c9d782a5c1f0334db819eb.png",
+              "alt_type": "latex",
+              "alt_value": "$8$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/b/6/f/b6f3bccae16d5e31266370fced24edc41538d5da.png",
+              "alt_type": "latex",
+              "alt_value": "$33$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/4/f/a/4fa49f89f3a39779865ffac6ebfdc253c3545d83.png",
+              "alt_type": "latex",
+              "alt_value": "$33 - 7 = \\boxed{\\textbf{(D)}\\ 26 }$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "sub_category": "counting",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_23",
+      "question": {
+        "text": "<p>A box contains gold coins. If the coins are equally divided among six people, four coins are left over. If the coins are equally divided among five people, three coins are left over. If the box holds the smallest number of coins that meets these two conditions, how many coins are left when equally divided among seven people? </p>",
+        "insertions": {},
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/3/7/f/37ff611a879363cbf22f507a4f7f780ba184866e.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 0\\qquad\\textbf{(B)}\\ 1\\qquad\\textbf{(C)}\\ 2\\qquad\\textbf{(D)}\\ 3\\qquad\\textbf{(E)}\\ 5$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "A",
+      "solutions": [
+        {
+          "text": "<p>The counting numbers that leave a remainder of <INSERTION_INDEX_1> when divided by <INSERTION_INDEX_2> are<INSERTION_INDEX_3> The counting numbers that leave a remainder of <INSERTION_INDEX_4> whendivided by <INSERTION_INDEX_5> are <INSERTION_INDEX_6> So <INSERTION_INDEX_7> is the smallest possible numberof coins that meets both conditions. Because 28 is divisible by 7, there are <INSERTION_INDEX_8> coins leftwhen they are divided among seven people.</p><p>If there were two more coins in the box, the number of coins would be divisibleby both <INSERTION_INDEX_9> and <INSERTION_INDEX_10>. The smallest number that is divisible by <INSERTION_INDEX_11> and <INSERTION_INDEX_12> is <INSERTION_INDEX_13>, so thesmallest possible number of coins in the box is <INSERTION_INDEX_14> and the remainder when divided by <INSERTION_INDEX_15> is <INSERTION_INDEX_16>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/3/6/9/3694f8b45e73d3c228b82dc0acd0bcde5825f570.png",
+              "alt_type": "latex",
+              "alt_value": "$4, 10, 16, 22, 28, 34, \\cdots$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/d/6/c/d6c961b6187284ffdd196bcd89041eb113035dfd.png",
+              "alt_type": "latex",
+              "alt_value": "$3,8,13,18,23,28,33, \\cdots$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/9/2/6/9265f5dd6dade78136a6be158ace46bf7c0f8ce3.png",
+              "alt_type": "latex",
+              "alt_value": "$28$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/5/d/3/5d3da52b01338a780e88792a26c3f95dc74f44f3.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(A)}\\ 0}$"
+            },
+            "INSERTION_INDEX_9": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_10": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_11": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_12": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_13": {
+              "picture": "//latex.artofproblemsolving.com/6/5/1/651ba418a810d971dbc8a326d49a71fe1541fae0.png",
+              "alt_type": "latex",
+              "alt_value": "$30$"
+            },
+            "INSERTION_INDEX_14": {
+              "picture": "//latex.artofproblemsolving.com/9/2/6/9265f5dd6dade78136a6be158ace46bf7c0f8ce3.png",
+              "alt_type": "latex",
+              "alt_value": "$28$"
+            },
+            "INSERTION_INDEX_15": {
+              "picture": "//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png",
+              "alt_type": "latex",
+              "alt_value": "$7$"
+            },
+            "INSERTION_INDEX_16": {
+              "picture": "//latex.artofproblemsolving.com/5/d/3/5d3da52b01338a780e88792a26c3f95dc74f44f3.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(A)}\\ 0}$"
+            }
+          }
+        },
+        {
+          "text": "<p>The counting numbers that leave a remainder of <INSERTION_INDEX_1> when divided by <INSERTION_INDEX_2> are<INSERTION_INDEX_3> The counting numbers that leave a remainder of <INSERTION_INDEX_4> whendivided by <INSERTION_INDEX_5> are <INSERTION_INDEX_6> So <INSERTION_INDEX_7> is the smallest possible numberof coins that meets both conditions. Because 28 is divisible by 7, there are <INSERTION_INDEX_8> coins leftwhen they are divided among seven people.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "alt_type": "latex",
+              "alt_value": "$4$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/3/6/9/3694f8b45e73d3c228b82dc0acd0bcde5825f570.png",
+              "alt_type": "latex",
+              "alt_value": "$4, 10, 16, 22, 28, 34, \\cdots$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/d/6/c/d6c961b6187284ffdd196bcd89041eb113035dfd.png",
+              "alt_type": "latex",
+              "alt_value": "$3,8,13,18,23,28,33, \\cdots$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/9/2/6/9265f5dd6dade78136a6be158ace46bf7c0f8ce3.png",
+              "alt_type": "latex",
+              "alt_value": "$28$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/5/d/3/5d3da52b01338a780e88792a26c3f95dc74f44f3.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(A)}\\ 0}$"
+            }
+          }
+        },
+        {
+          "text": "<p>If there were two more coins in the box, the number of coins would be divisibleby both <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. The smallest number that is divisible by <INSERTION_INDEX_3> and <INSERTION_INDEX_4> is <INSERTION_INDEX_5>, so thesmallest possible number of coins in the box is <INSERTION_INDEX_6> and the remainder when divided by <INSERTION_INDEX_7> is <INSERTION_INDEX_8>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+              "alt_type": "latex",
+              "alt_value": "$6$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/6/5/1/651ba418a810d971dbc8a326d49a71fe1541fae0.png",
+              "alt_type": "latex",
+              "alt_value": "$30$"
+            },
+            "INSERTION_INDEX_6": {
+              "picture": "//latex.artofproblemsolving.com/9/2/6/9265f5dd6dade78136a6be158ace46bf7c0f8ce3.png",
+              "alt_type": "latex",
+              "alt_value": "$28$"
+            },
+            "INSERTION_INDEX_7": {
+              "picture": "//latex.artofproblemsolving.com/e/0/a/e0a0db32027a732ac57d37ef2ae9bb150f65b108.png",
+              "alt_type": "latex",
+              "alt_value": "$7$"
+            },
+            "INSERTION_INDEX_8": {
+              "picture": "//latex.artofproblemsolving.com/5/d/3/5d3da52b01338a780e88792a26c3f95dc74f44f3.png",
+              "alt_type": "latex",
+              "alt_value": "$\\boxed{\\textbf{(A)}\\ 0}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "sub_category": "modular_arithmetic",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_24",
+      "question": {
+        "text": "<p>In the multiplication problem below <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, <INSERTION_INDEX_4> are different digits. What is <INSERTION_INDEX_5>? </p><p><INSERTION_INDEX_6></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/0/1/9/019e9892786e493964e145e7c5cf7b700314e53b.png",
+            "alt_type": "latex",
+            "alt_value": "$A$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+            "alt_type": "latex",
+            "alt_value": "$B$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/c/3/3/c3355896da590fc491a10150a50416687626d7cc.png",
+            "alt_type": "latex",
+            "alt_value": "$C$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
+            "alt_type": "latex",
+            "alt_value": "$D$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/b/8/3/b831312585cb4ab6697896f86b72accbddbc4b45.png",
+            "alt_type": "latex",
+            "alt_value": "$A+B$"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/c/9/8/c98496cee54a981529919a464508835b9321f88e.png",
+            "alt_type": "latex",
+            "alt_value": "\\[\\begin{array}{cccc}& A & B & A\\\\ \\times & & C & D\\\\ \\hline C & D & C & D\\\\ \\end{array}\\]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/1/0/2/102989cd7c2a81c5bbef0ac5bbe5d6377cce6aa6.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 1\\qquad\\textbf{(B)}\\ 2\\qquad\\textbf{(C)}\\ 3\\qquad\\textbf{(D)}\\ 4\\qquad\\textbf{(E)}\\ 9$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "A",
+      "solutions": [
+        {
+          "text": "<p><INSERTION_INDEX_1>, so <INSERTION_INDEX_2>. Therefore, <INSERTION_INDEX_3> and <INSERTION_INDEX_4>, so <INSERTION_INDEX_5>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/2/4/a/24ade6ad4c25dd831f557cea511d43fc42c3b933.png",
+              "alt_type": "latex",
+              "alt_value": "$CDCD = CD \\cdot 101$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/e/3/d/e3de8fcd30f418ff04ccfdf27a58fdde7fa9b01c.png",
+              "alt_type": "latex",
+              "alt_value": "$ABA = 101$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/d/a/3/da3d600d21b2b1343040ecb85db0e354a60e96a5.png",
+              "alt_type": "latex",
+              "alt_value": "$A = 1$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/c/8/5/c85145af0b6431672968299c4d2f016270e22caf.png",
+              "alt_type": "latex",
+              "alt_value": "$B = 0$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/6/7/6/676dbd33bc90d38c93bb8278eaa43b69ec5c9215.png",
+              "alt_type": "latex",
+              "alt_value": "$A+B=1+0=\\boxed{\\textbf{(A)}\\ 1}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2006_8_25",
+      "question": {
+        "text": "<p>Barry wrote 6 different numbers, one on each side of 3 cards, and laid the cards on a table, as shown. The sums of the two numbers on each of the three cards are equal. The three numbers on the hidden sides are prime numbers. What is the average of the hidden prime numbers? </p><p><INSERTION_INDEX_1></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/9/9/d/99d5a887c5efe5e48596399d86a16a3f95fe9b35.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] path card=((0,0)--(0,3)--(2,3)--(2,0)--cycle); draw(card, linewidth(1)); draw(shift(2.5,0)*card, linewidth(1)); draw(shift(5,0)*card, linewidth(1)); label(\"$44$\", (1,1.5)); label(\"$59$\", shift(2.5,0)*(1,1.5)); label(\"$38$\", shift(5,0)*(1,1.5));[/asy]"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          "//latex.artofproblemsolving.com/c/9/3/c93357694305df9314ccb524a7952795d59901ca.png"
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 13\\qquad\\textbf{(B)}\\ 14\\qquad\\textbf{(C)}\\ 15\\qquad\\textbf{(D)}\\ 16\\qquad\\textbf{(E)}\\ 17$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>Notice that 44 and 38 are both even, while 59 is odd. If any odd prime is added to 59, an even number will be obtained. However, the only way to obtain this even number(common sum) would be to add another even number to 44, and a different one to 38. Since there is only one even prime (2), the middle card's hidden number cannot be an odd prime, and so must be even. Therefore, the middle card's hidden number must be 2, so the constant sum is <INSERTION_INDEX_1>. Thus, the first card's hidden number is <INSERTION_INDEX_2>, and the last card's hidden number is <INSERTION_INDEX_3>. </p><p>Since the sum of the hidden primes is <INSERTION_INDEX_4>, the average of the primes is <INSERTION_INDEX_5>.</p><p><br/></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/8/e/0/8e0921b25205c9cc02c0c0fd209b5aa37d1942b0.png",
+              "alt_type": "latex",
+              "alt_value": "$59+2=61$"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/1/4/8/148a1d4ccb6106a203af2d24d37d94769f89d79b.png",
+              "alt_type": "latex",
+              "alt_value": "$61-44=17$"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/6/2/8/62863a750bfff536435f2805fb8c87c1730d150f.png",
+              "alt_type": "latex",
+              "alt_value": "$61-38=23$"
+            },
+            "INSERTION_INDEX_4": {
+              "picture": "//latex.artofproblemsolving.com/4/8/6/486443ac5e8183945fcf4369f21afba47e62d600.png",
+              "alt_type": "latex",
+              "alt_value": "$2+17+23=42$"
+            },
+            "INSERTION_INDEX_5": {
+              "picture": "//latex.artofproblemsolving.com/c/1/6/c165d76d48bb0213f357381693fa50f976b8707a.png",
+              "alt_type": "latex",
+              "alt_value": "$\\dfrac{42}{3}=\\boxed{\\textbf{(B)} 14}$"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "sub_category": "primes",
+        "confidence": 0.95
+      }
+    }
+  ]
+}
