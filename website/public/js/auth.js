@@ -17,33 +17,23 @@ document.addEventListener('DOMContentLoaded', function() {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
         
-        try {
-            const response = await fetch(`${AUTH_CONFIG.baseUrl}/auth/login`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                credentials: 'include',
-                body: JSON.stringify({
-                    username: username,
-                    password: password
-                })
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                // Store user info in localStorage for client-side use
-                localStorage.setItem('currentUser', JSON.stringify(data.user));
-                
-                // Redirect to dashboard
-                window.location.href = 'dashboard.html';
-            } else {
-                showError(data.message);
-            }
-        } catch (error) {
-            console.error('Login error:', error);
-            showError('Connection error. Please make sure the backend server is running.');
+        // Pass-through authentication - accept any credentials
+        if (username.trim() && password.trim()) {
+            // Create dummy user data
+            const dummyUser = {
+                id: 1,
+                username: username,
+                email: `${username}@example.com`,
+                displayName: username
+            };
+            
+            // Store user info in localStorage for client-side use
+            localStorage.setItem('currentUser', JSON.stringify(dummyUser));
+            
+            // Redirect to dashboard
+            window.location.href = 'dashboard.html';
+        } else {
+            showError('Please enter both username and password');
         }
     });
 
@@ -64,60 +54,22 @@ function checkAuthStatus() {
     return currentUser ? JSON.parse(currentUser) : null;
 }
 
-// Logout function
+// Logout function - simplified for pass-through mode
 async function logout() {
-    try {
-        await fetch(`${AUTH_CONFIG.baseUrl}/auth/logout`, {
-            method: 'POST',
-            credentials: 'include'
-        });
-    } catch (error) {
-        console.error('Logout error:', error);
-    }
-    
     localStorage.removeItem('currentUser');
     window.location.href = 'login.html';
 }
 
-// Enhanced authentication functions for Java backend
+// Simplified authentication functions for pass-through mode
 async function checkServerAuthStatus() {
-    try {
-        const response = await fetch(`${AUTH_CONFIG.baseUrl}/auth/status`, {
-            credentials: 'include'
-        });
-        
-        if (response.ok) {
-            const data = await response.json();
-            if (data.success && data.authenticated) {
-                localStorage.setItem('currentUser', JSON.stringify(data.user));
-                return data.user;
-            }
-        }
-    } catch (error) {
-        console.error('Auth status check failed:', error);
-    }
-    
-    localStorage.removeItem('currentUser');
-    return null;
+    // In pass-through mode, just check localStorage
+    const currentUser = localStorage.getItem('currentUser');
+    return currentUser ? JSON.parse(currentUser) : null;
 }
 
-// Get user profile from server
+// Get user profile - simplified for pass-through mode
 async function getUserProfile() {
-    try {
-        const response = await fetch(`${AUTH_CONFIG.baseUrl}/auth/profile`, {
-            credentials: 'include'
-        });
-        
-        if (response.ok) {
-            const data = await response.json();
-            if (data.success) {
-                localStorage.setItem('currentUser', JSON.stringify(data.user));
-                return data.user;
-            }
-        }
-    } catch (error) {
-        console.error('Profile fetch failed:', error);
-    }
-    
-    return null;
+    // In pass-through mode, just return localStorage data
+    const currentUser = localStorage.getItem('currentUser');
+    return currentUser ? JSON.parse(currentUser) : null;
 } 

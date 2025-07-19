@@ -18,28 +18,26 @@ function checkAuthStatus() {
 }
 
 async function loadSubjects() {
-    const subjectsGrid = document.getElementById('subjectsGrid');
-    
-    try {
-        const response = await fetch(`${JAVA_API_BASE_URL}/subjects`, {
-            credentials: 'include'
-        });
-
-        if (response.ok) {
-            const data = await response.json();
-            if (data.success) {
-                displaySubjects(data.subjects);
-            } else {
-                showError('Failed to load subjects');
-            }
-        } else {
-            showError('Authentication required');
-            window.location.href = 'login.html';
+    // Hardcoded subjects - no backend API call needed
+    const subjects = [
+        {
+            id: 'math',
+            name: 'Mathematics',
+            available: true
+        },
+        {
+            id: 'music',
+            name: 'Music',
+            available: false
+        },
+        {
+            id: 'chess',
+            name: 'Chess',
+            available: false
         }
-    } catch (error) {
-        console.error('Error loading subjects:', error);
-        showError('Connection error. Please make sure the backend server is running.');
-    }
+    ];
+    
+    displaySubjects(subjects);
 }
 
 function displaySubjects(subjects) {
