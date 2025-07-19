@@ -1,0 +1,19 @@
+I am building a web application for my students to take math test.
+
+Each test has 25 multiple choice questinos. 
+I need to track student's test progress. So we will need to log the student's answer for every single question. 
+Thus there will be 25 service calls to complete one test. 
+
+Each student will take 1 test per day, and then review the answer. 
+You can expect on average, each student will have 50 interactions with the server
+
+Initially I have 500 students
+
+In the future I would expect 100000 students in total
+
+I don't want my server has cold start problem. So if I use something like aws lambda, then I will need snapstart. 
+
+give me a few options. What is the cheapest solution if I use AWS, if I use azure to start my business with 500 students
+and what will be the cheapest solution if I have 100000 students in the future
+
+give me infra cost breakdown, a few options

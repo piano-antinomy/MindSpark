@@ -86,7 +86,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_2",
@@ -111,7 +116,12 @@
           "text": "<p>We need to find which total value cannot be made with exactly 4 coins from pennies (1¢), nickels (5¢), dimes (10¢), and quarters (25¢).</p><p>Let's check each option:</p><p>A) 15¢: We need 4 coins that sum to 15. The maximum with 4 coins is 4 quarters = 100¢, so this is possible. But can we make 15¢ with exactly 4 coins? The smallest 4 coins would be 4 pennies = 4¢, which is too small. We need to use some larger coins. Let's try: 1 nickel + 3 pennies = 5 + 3 = 8¢ (too small), 2 nickels + 2 pennies = 10 + 2 = 12¢ (too small), 3 nickels + 1 penny = 15 + 1 = 16¢ (too large). We cannot make exactly 15¢ with 4 coins.</p><p>B) 25¢: 1 quarter = 25¢, but we need 4 coins. 1 quarter + 3 pennies = 25 + 3 = 28¢ (too large). 5 nickels = 25¢, but we need exactly 4 coins. 4 nickels + 1 penny = 20 + 1 = 21¢ (too small). 3 nickels + 2 pennies = 15 + 2 = 17¢ (too small). We cannot make exactly 25¢ with 4 coins either.</p><p>Wait, let me reconsider. The problem asks which total value could NOT be made. Let me check more carefully:</p><p>A) 15¢: Can we make 15¢ with exactly 4 coins? 1 dime + 1 nickel = 15¢, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 10 + 5 + 2 = 17¢ (too large). 3 nickels = 15¢, but that's only 3 coins. We cannot make exactly 15¢ with 4 coins.</p><p>B) 25¢: 1 quarter = 25¢, but we need 4 coins. 1 quarter + 3 pennies = 28¢ (too large). 5 nickels = 25¢, but we need exactly 4 coins. 4 nickels + 1 penny = 21¢ (too small). We cannot make exactly 25¢ with 4 coins.</p><p>C) 35¢: 1 quarter + 1 dime = 35¢, but that's only 2 coins. 1 quarter + 1 dime + 2 pennies = 37¢ (too large). 3 dimes + 1 nickel = 30 + 5 = 35¢, but that's only 4 coins. Wait, 3 dimes + 1 nickel = 30 + 5 = 35¢ with exactly 4 coins. This is possible.</p><p>D) 45¢: 1 quarter + 2 dimes = 25 + 20 = 45¢, but that's only 3 coins. 1 quarter + 2 dimes + 1 penny = 46¢ (too large). 4 dimes + 1 nickel = 40 + 5 = 45¢, but that's 5 coins. We cannot make exactly 45¢ with 4 coins.</p><p>E) 55¢: 2 quarters + 1 nickel = 50 + 5 = 55¢, but that's only 3 coins. 2 quarters + 1 nickel + 1 penny = 56¢ (too large). 1 quarter + 3 dimes = 25 + 30 = 55¢, but that's only 4 coins. Wait, 1 quarter + 3 dimes = 25 + 30 = 55¢ with exactly 4 coins. This is possible.</p><p>So the values that cannot be made with exactly 4 coins are: A (15¢), B (25¢), and D (45¢). But the problem asks for which one could NOT be made, implying only one answer. Let me check more carefully:</p><p>Actually, let me list all possible combinations of 4 coins and see what totals we can make:</p><p>4 pennies = 4¢</p><p>3 pennies + 1 nickel = 8¢</p><p>2 pennies + 2 nickels = 12¢</p><p>1 penny + 3 nickels = 16¢</p><p>4 nickels = 20¢</p><p>3 nickels + 1 dime = 25¢</p><p>2 nickels + 2 dimes = 30¢</p><p>1 nickel + 3 dimes = 35¢</p><p>4 dimes = 40¢</p><p>3 dimes + 1 quarter = 55¢</p><p>2 dimes + 2 quarters = 70¢</p><p>1 dime + 3 quarters = 85¢</p><p>4 quarters = 100¢</p><p>And combinations with pennies: 3 pennies + 1 dime = 13¢, 2 pennies + 1 nickel + 1 dime = 17¢, 1 penny + 2 nickels + 1 dime = 21¢, etc.</p><p>Looking at the options: A) 15¢ - not in our list, B) 25¢ - possible (3 nickels + 1 dime), C) 35¢ - possible (1 nickel + 3 dimes), D) 45¢ - not in our list, E) 55¢ - possible (3 dimes + 1 quarter).</p><p>So A (15¢) and D (45¢) cannot be made. But the problem asks for which one could NOT be made, implying only one answer. Let me check if I missed any combinations.</p><p>Actually, let me be more systematic. The problem is asking which total value could NOT be the total value of the four coins. Let me check each option:</p><p>A) 15¢: Can we make 15¢ with exactly 4 coins? Let's try: 1 dime + 1 nickel = 15¢, but that's only 2 coins. We need 4 coins. 1 dime + 1 nickel + 2 pennies = 17¢ (too large). 3 nickels = 15¢, but that's only 3 coins. 3 nickels + 1 penny = 16¢ (too large). 2 nickels + 2 pennies = 12¢ (too small). 1 nickel + 4 pennies = 9¢ (too small). We cannot make exactly 15¢ with 4 coins.</p><p>Therefore, the answer is A) 15¢.</p>",
           "insertions": {}
         }
-      ]
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "sub_category": "counting",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_3",
@@ -163,7 +173,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_4",
@@ -255,7 +270,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "linear_equations",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_5",
@@ -512,7 +532,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "sub_category": "sequences_patterns",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_6",
@@ -624,7 +649,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "circles",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_7",
@@ -721,7 +751,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "linear_equations",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_8",
@@ -808,7 +843,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "linear_equations",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_9",
@@ -915,7 +955,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "sub_category": "primes",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_10",
@@ -1457,7 +1502,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "triangles",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_11",
@@ -1549,7 +1599,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_12",
@@ -1641,7 +1696,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "triangles",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_13",
@@ -1693,7 +1753,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_14",
@@ -1865,7 +1930,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "polygons",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_15",
@@ -2172,7 +2242,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "sub_category": "counting",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_16",
@@ -2554,7 +2629,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_17",
@@ -3376,7 +3456,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "triangles",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_18",
@@ -3718,7 +3803,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "sub_category": "probability",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_19",
@@ -3885,7 +3975,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "sub_category": "divisibility",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_20",
@@ -4087,7 +4182,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "algebra",
+        "sub_category": "basic_operations",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_21",
@@ -4199,7 +4299,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "circles",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_22",
@@ -4446,7 +4551,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "sub_category": "probability",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_23",
@@ -4738,7 +4848,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "triangles",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_24",
@@ -5439,7 +5554,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "combinatorics",
+        "sub_category": "probability",
+        "confidence": 0.95
+      }
     },
     {
       "id": "amc_2009_10a_25",
@@ -6216,7 +6336,12 @@
             }
           }
         }
-      ]
+      ],
+      "categorization": {
+        "category": "number_theory",
+        "sub_category": "divisibility",
+        "confidence": 0.95
+      }
     }
   ]
 }
