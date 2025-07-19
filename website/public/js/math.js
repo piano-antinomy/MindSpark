@@ -359,21 +359,25 @@ function displayCurrentQuestion() {
     }
     
     // Get processed question text and choices
-    let questionText, choices;
+    let questionText, choices, hasLabels = false;
     
     if (typeof question.question === 'string') {
         // Old format - just text and choices array
         questionText = question.question;
         choices = question.choices || [];
+        hasLabels = false;
     } else {
         // New format - complex object with insertions
         const questionDetails = question.question;
         questionText = processQuestionText(questionDetails.text, questionDetails.insertions);
-        choices = extractQuestionChoices(questionDetails);
+        const choiceResult = extractQuestionChoices(questionDetails);
+        choices = choiceResult.choices;
+        hasLabels = choiceResult.hasLabels;
         
         // If no choices extracted from new format, fall back to simple choices array
         if (choices.length === 0 && question.choices) {
             choices = question.choices;
+            hasLabels = false;
         }
     }
     
@@ -394,15 +398,44 @@ function displayCurrentQuestion() {
     
     // Display answer choices
     if (answerChoices) {
-        const choicesHTML = choices.map((choice, index) => `
-            <label class="choice-label">
-                <input type="radio" name="answer" value="${String.fromCharCode(65 + index)}" 
-                       ${currentAnswers[currentQuestionIndex] === String.fromCharCode(65 + index) ? 'checked' : ''}>
-                <span class="choice-text">${String.fromCharCode(65 + index)}. ${choice}</span>
-            </label>
-        `).join('');
+        debugLog('Displaying choices:', choices);
+        debugLog('Has labels:', hasLabels);
+        debugLog('Number of choices:', choices.length);
         
+        const choicesHTML = choices.map((choice, index) => {
+            const choiceValue = String.fromCharCode(65 + index);
+            const isChecked = currentAnswers[currentQuestionIndex] === choiceValue;
+            
+            // Don't add letter prefix if choice already has labels
+            const choiceDisplay = hasLabels ? choice : `${choiceValue}. ${choice}`;
+            
+            debugLog(`Choice ${index}:`, choiceDisplay);
+            
+            return `
+                <label class="choice-label ${isChecked ? 'selected' : ''}">
+                    <input type="radio" name="answer" value="${choiceValue}" 
+                           ${isChecked ? 'checked' : ''}>
+                    <span class="choice-content">${choiceDisplay}</span>
+                </label>
+            `;
+        }).join('');
+        
+        debugLog('Generated HTML:', choicesHTML);
         answerChoices.innerHTML = choicesHTML;
+        
+        // Add click handlers to update selection styling
+        answerChoices.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Remove selected class from all labels
+                answerChoices.querySelectorAll('.choice-label').forEach(label => {
+                    label.classList.remove('selected');
+                });
+                // Add selected class to the parent label of checked radio
+                if (this.checked) {
+                    this.closest('.choice-label').classList.add('selected');
+                }
+            });
+        });
         
         // Render LaTeX content in choices as well
         setTimeout(() => {
@@ -563,17 +596,107 @@ function renderLatexContent(element) {
 function extractQuestionChoices(questionDetails) {
     // Priority: text_choices > latex_choices > picture_choices
     if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
-        return questionDetails.text_choices;
+        return { choices: questionDetails.text_choices, hasLabels: false };
     } else if (questionDetails.latex_choices && questionDetails.latex_choices.length > 0) {
-        return questionDetails.latex_choices;
+        return parseLatexChoices(questionDetails.latex_choices);
     } else if (questionDetails.picture_choices && questionDetails.picture_choices.length > 0) {
-        return questionDetails.picture_choices.map(url => {
+        const imageChoices = questionDetails.picture_choices.map(url => {
             const imageUrl = url.startsWith('//') ? 'https:' + url : url;
             return `<img src="${imageUrl}" alt="Choice" class="choice-image" />`;
         });
+        return { choices: imageChoices, hasLabels: false };
     }
     
-    return [];
+    return { choices: [], hasLabels: false };
+}
+
+/**
+ * Parse LaTeX choices that might be in a single string or multiple strings
+ */
+function parseLatexChoices(latexChoices) {
+    if (latexChoices.length === 1) {
+        // Single string containing all choices - need to split
+        const choiceString = latexChoices[0];
+        debugLog('Original choice string:', choiceString);
+        
+        // Check if it contains multiple choice labels like (A), (B), etc.
+        const textbfMatches = choiceString.match(/\\textbf\{[^}]*\([A-E]\)[^}]*\}/g);
+        debugLog('Found textbf matches:', textbfMatches);
+        
+        if (textbfMatches && textbfMatches.length > 1) {
+            // Split by qquad or similar separators, keeping textbf labels
+            const choices = [];
+            
+            // More robust splitting approach
+            let workingString = choiceString;
+            
+            // Remove outer $ delimiters if present
+            workingString = workingString.replace(/^\$/, '').replace(/\$$/, '');
+            
+            // Split by \\qquad but keep the textbf parts
+            const parts = workingString.split(/\\qquad/);
+            debugLog('Split parts:', parts);
+            
+            for (let part of parts) {
+                part = part.trim();
+                if (part && part.includes('textbf')) {
+                    // Wrap each part in $ delimiters for proper LaTeX rendering
+                    choices.push(`$${part}$`);
+                }
+            }
+            
+            debugLog('Extracted choices:', choices);
+            
+            if (choices.length > 1) {
+                return { choices, hasLabels: true };
+            }
+        }
+        
+        // Alternative approach: try splitting by the pattern (A), (B), etc.
+        const labelPattern = /\\textbf\{.*?\([A-E]\).*?\}/g;
+        const labelMatches = choiceString.match(labelPattern);
+        
+        if (labelMatches && labelMatches.length > 1) {
+            debugLog('Using label pattern approach:', labelMatches);
+            const choices = labelMatches.map(match => `$${match.replace(/\\qquad.*$/, '')}$`);
+            return { choices, hasLabels: true };
+        }
+        
+        // Third approach: manually split common AMC format
+        if (choiceString.includes('\\qquad') && choiceString.includes('textbf')) {
+            debugLog('Using manual AMC format splitting');
+            
+            // Remove outer $ delimiters
+            let content = choiceString.replace(/^\$/, '').replace(/\$$/, '');
+            
+            // Split by textbf but keep the textbf part with the following content
+            const choices = [];
+            const regex = /(\\textbf\{[^}]*\([A-E]\)[^}]*\}[^\\]*)/g;
+            let match;
+            
+            while ((match = regex.exec(content)) !== null) {
+                let choice = match[1].trim();
+                // Remove any trailing \\qquad
+                choice = choice.replace(/\\qquad\s*$/, '');
+                choices.push(`$${choice}$`);
+            }
+            
+            debugLog('Manual splitting result:', choices);
+            
+            if (choices.length > 1) {
+                return { choices, hasLabels: true };
+            }
+        }
+        
+        // If splitting failed, return as single choice
+        debugLog('Splitting failed, returning single choice');
+        return { choices: [choiceString], hasLabels: true };
+    } else {
+        // Multiple strings - assume each is a separate choice
+        const hasLabels = latexChoices.some(choice => 
+            choice.includes('textbf') && choice.match(/\([A-E]\)/));
+        return { choices: latexChoices, hasLabels };
+    }
 }
 
 /**

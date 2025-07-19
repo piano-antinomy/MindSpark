@@ -120,18 +120,49 @@
     box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
 }
 
+/* Radio Choice Labels */
 .choice-label {
-    font-weight: bold;
-    color: #666;
+    display: flex;
+    align-items: flex-start;
+    background: #ffffff;
+    border: 2px solid #e0e7ff;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.choice-label:hover {
+    background: #f0f8ff;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+}
+
+.choice-label.selected {
+    background: #ecfdf5;
+    border-color: #10b981;
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.2);
+}
+
+.choice-label input[type="radio"] {
+    width: 20px;
+    height: 20px;
     margin-right: 1rem;
-    min-width: 30px;
-    font-size: 1.1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    accent-color: #3b82f6;
 }
 
 .choice-content {
     flex: 1;
-    font-size: 1rem;
-    line-height: 1.4;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #1f2937;
+    font-weight: 500;
 }
 
 /* Choice Images */
@@ -144,7 +175,29 @@
 
 /* LaTeX Choice Rendering */
 .choice-content .mjx-chtml {
-    font-size: 1em !important;
+    font-size: 1.1em !important;
+    display: inline-block;
+}
+
+/* LaTeX Math in choices */
+.choice-content .MathJax {
+    font-size: 1.1em !important;
+}
+
+/* Choice text styling */
+.choice-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* Remove old choice-label styling conflict */
+label.choice-label {
+    font-weight: 500 !important;
+    color: #1f2937 !important;
+    min-width: unset !important;
+    font-size: 1.1rem !important;
 }
 
 /* Progress and Navigation */
