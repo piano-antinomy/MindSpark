@@ -358,19 +358,43 @@ function displayCurrentQuestion() {
         currentQuestionNum.textContent = currentQuestionIndex + 1;
     }
     
+    // Get processed question text and choices
+    let questionText, choices;
+    
+    if (typeof question.question === 'string') {
+        // Old format - just text and choices array
+        questionText = question.question;
+        choices = question.choices || [];
+    } else {
+        // New format - complex object with insertions
+        const questionDetails = question.question;
+        questionText = processQuestionText(questionDetails.text, questionDetails.insertions);
+        choices = extractQuestionChoices(questionDetails);
+        
+        // If no choices extracted from new format, fall back to simple choices array
+        if (choices.length === 0 && question.choices) {
+            choices = question.choices;
+        }
+    }
+    
     // Display question content
     if (questionDisplay) {
         questionDisplay.innerHTML = `
             <div class="question-content">
                 <h3>Problem ${currentQuestionIndex + 1}</h3>
-                <div class="question-text">${question.question || 'Question text not available'}</div>
+                <div class="question-text">${questionText || 'Question text not available'}</div>
             </div>
         `;
+        
+        // Render LaTeX content with a slight delay to ensure DOM is ready
+        setTimeout(() => {
+            renderLatexContent(questionDisplay);
+        }, 100);
     }
     
     // Display answer choices
-    if (answerChoices && question.choices) {
-        const choicesHTML = question.choices.map((choice, index) => `
+    if (answerChoices) {
+        const choicesHTML = choices.map((choice, index) => `
             <label class="choice-label">
                 <input type="radio" name="answer" value="${String.fromCharCode(65 + index)}" 
                        ${currentAnswers[currentQuestionIndex] === String.fromCharCode(65 + index) ? 'checked' : ''}>
@@ -379,6 +403,11 @@ function displayCurrentQuestion() {
         `).join('');
         
         answerChoices.innerHTML = choicesHTML;
+        
+        // Render LaTeX content in choices as well
+        setTimeout(() => {
+            renderLatexContent(answerChoices);
+        }, 100);
     }
     
     // Update navigation buttons
@@ -485,6 +514,112 @@ function resetPractice() {
 // =============================================================================
 // UTILITY FUNCTIONS
 // =============================================================================
+
+/**
+ * Process question text by replacing insertion markers with actual content
+ */
+function processQuestionText(questionText, insertions) {
+    if (!insertions) return questionText;
+    
+    let processedText = questionText;
+    
+    // Replace insertion markers like <INSERTION_INDEX_1> with actual content
+    Object.keys(insertions).forEach(key => {
+        const insertion = insertions[key];
+        const marker = `<${key}>`; // e.g., "<INSERTION_INDEX_1>"
+        
+        // Replace the marker with the appropriate content
+        if (insertion.alt_type === 'latex' && insertion.alt_value) {
+            // Use LaTeX content
+            processedText = processedText.replace(marker, insertion.alt_value);
+        } else if (insertion.picture) {
+            // Use picture URL with proper protocol
+            const imageUrl = insertion.picture.startsWith('//') ? 'https:' + insertion.picture : insertion.picture;
+            processedText = processedText.replace(marker, `<img src="${imageUrl}" alt="${insertion.alt_value || 'Question image'}" class="question-image" />`);
+        } else if (insertion.alt_value) {
+            // Use alternative text value
+            processedText = processedText.replace(marker, insertion.alt_value);
+        }
+    });
+    
+    return processedText;
+}
+
+/**
+ * Render LaTeX content using MathJax (if available) or fallback
+ */
+function renderLatexContent(element) {
+    // Check if MathJax is available
+    if (typeof MathJax !== 'undefined') {
+        MathJax.typesetPromise([element]).catch((err) => {
+            console.warn('MathJax rendering error:', err);
+        });
+    }
+}
+
+/**
+ * Extract choices from question object (text_choices, latex_choices, or picture_choices)
+ */
+function extractQuestionChoices(questionDetails) {
+    // Priority: text_choices > latex_choices > picture_choices
+    if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
+        return questionDetails.text_choices;
+    } else if (questionDetails.latex_choices && questionDetails.latex_choices.length > 0) {
+        return questionDetails.latex_choices;
+    } else if (questionDetails.picture_choices && questionDetails.picture_choices.length > 0) {
+        return questionDetails.picture_choices.map(url => {
+            const imageUrl = url.startsWith('//') ? 'https:' + url : url;
+            return `<img src="${imageUrl}" alt="Choice" class="choice-image" />`;
+        });
+    }
+    
+    return [];
+}
+
+/**
+ * Render a single question with proper formatting
+ */
+function renderQuestion(question, questionIndex) {
+    // Handle both old format (question.question as string) and new format (question.question as object)
+    let questionDetails, questionText, choices;
+    
+    if (typeof question.question === 'string') {
+        // Old format - just text and choices array
+        questionText = question.question;
+        choices = question.choices || [];
+    } else {
+        // New format - complex object with insertions
+        questionDetails = question.question;
+        questionText = processQuestionText(questionDetails.text, questionDetails.insertions);
+        choices = extractQuestionChoices(questionDetails);
+    }
+    
+    // If no choices extracted from new format, fall back to simple choices array
+    if (choices.length === 0 && question.choices) {
+        choices = question.choices;
+    }
+    
+    // Create question HTML
+    const questionHTML = `
+        <div class="question-card" data-question-id="${question.id || 'unknown'}">
+            <div class="question-title">
+                <h3>Problem ${questionIndex + 1}</h3>
+                <div class="question-text">${questionText || 'Question text not available'}</div>
+            </div>
+            <div class="choices-container">
+                ${choices.map((choice, choiceIndex) => `
+                    <label class="choice-label">
+                        <input type="radio" name="answer" value="${String.fromCharCode(65 + choiceIndex)}" 
+                               ${currentAnswers[currentQuestionIndex] === String.fromCharCode(65 + choiceIndex) ? 'checked' : ''}>
+                        <span class="choice-text">${String.fromCharCode(65 + choiceIndex)}. ${choice}</span>
+                    </label>
+                `).join('')}
+            </div>
+        </div>
+    `;
+    
+    return questionHTML;
+}
 
 function showError(message) {
     document.body.innerHTML = `
