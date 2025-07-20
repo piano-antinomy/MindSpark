@@ -314,12 +314,102 @@ label.choice-label {
     gap: 0.8rem;
 }
 
-/* Practice controls for all questions */
+/* Sticky header section - contains everything that should stick */
+.sticky-header-section {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    border: 2px solid #e5e7eb;
+    border-top: none;
+    margin-bottom: 2rem;
+}
+
+/* Practice controls organization */
 .questions-container.all-questions .practice-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.button-row {
     display: flex;
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.primary-actions {
+    margin-bottom: 0.5rem;
+}
+
+.button-row .btn {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+/* Sticky header content styling */
+.sticky-header-section .questions-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.sticky-header-section .questions-header h2 {
+    margin: 0 0 0.5rem 0;
+    color: #1f2937;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.sticky-header-section .practice-info {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.sticky-header-section .level-badge {
+    background: #7c3aed;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.sticky-header-section .question-counter {
+    background: #f3f4f6;
+    color: #374151;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.sticky-header-section .question-navigation {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.sticky-header-section .back-button {
+    background: #6b7280;
+    color: white;
+    border: 2px solid #6b7280;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.sticky-header-section .back-button:hover {
+    background: #4b5563;
+    border-color: #4b5563;
+    transform: translateY(-1px);
 }
 
 .questions-container.all-questions .practice-controls .btn {
@@ -327,6 +417,7 @@ label.choice-label {
     font-weight: 600;
     border-radius: 8px;
     transition: all 0.3s ease;
+    font-size: 0.95rem;
 }
 
 .btn-success {
@@ -353,6 +444,18 @@ label.choice-label {
     transform: translateY(-2px);
 }
 
+.btn-primary {
+    background: #3b82f6;
+    color: white;
+    border: 2px solid #3b82f6;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-2px);
+}
+
 /* Responsive design for all questions */
 @media (max-width: 768px) {
     .question-card {
@@ -366,13 +469,31 @@ label.choice-label {
         gap: 0.5rem;
     }
     
-    .questions-container.all-questions .practice-controls {
+    /* Sticky header mobile adjustments */
+    .sticky-header-section {
+        padding: 1rem;
+        border-radius: 0 0 12px 12px;
+    }
+    
+    .sticky-header-section .questions-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .button-row {
         flex-direction: column;
         align-items: center;
     }
     
-    .questions-container.all-questions .practice-controls .btn {
-        width: 200px;
+    .button-row .btn {
+        width: 100%;
+        max-width: 280px;
+        min-width: auto;
+    }
+    
+    .sticky-header-section .practice-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
     }
 }
 
@@ -655,5 +776,71 @@ label.choice-label {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 400px;
+    font-weight: 500;
+    animation: slideInFromRight 0.3s ease-out;
+}
+
+.notification-info {
+    background: #3b82f6;
+    color: white;
+}
+
+.notification-success {
+    background: #10b981;
+    color: white;
+}
+
+.notification-warning {
+    background: #f59e0b;
+    color: white;
+}
+
+.notification-error {
+    background: #ef4444;
+    color: white;
+}
+
+.notification > div {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.notification button {
+    background: none;
+    border: none;
+    color: white;
+    float: right;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.notification button:hover {
+    opacity: 1;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
     }
 } 
