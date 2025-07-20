@@ -1,3 +1,9 @@
+/**
+ * Math Practice Module
+ * Uses the QuestionRenderer module for consistent LaTeX rendering and question processing
+ * Requires: question-renderer.js to be loaded before this file
+ */
+
 // Java Backend API Configuration
 const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
@@ -7,7 +13,7 @@ const DEBUG_MODE = true;
 // Debug logging helper
 function debugLog(...args) {
     if (DEBUG_MODE) {
-        console.log(...args);
+        console.log('[MathPractice]', ...args);
     }
 }
 
@@ -275,7 +281,7 @@ async function loadQuestionsForLevelAndYear(level, year) {
 }
 
 /**
- * Display questions practice interface
+ * Display questions practice interface - All questions on one page
  */
 function displayQuestionsInterface(data) {
     const questionsHTML = `
@@ -285,37 +291,26 @@ function displayQuestionsInterface(data) {
             <div class="step active">3. Practice Questions</div>
         </div>
         
-        <div class="questions-container">
+        <div class="questions-container all-questions">
             <div class="questions-header">
                 <h2>${data.amcType} ${data.year} Practice</h2>
                 <div class="practice-info">
                     <span class="level-badge">Level ${data.level}</span>
-                    <span class="question-counter">Question <span id="currentQuestionNum">1</span> of ${data.count}</span>
+                    <span class="question-counter">All ${data.count} Questions</span>
                 </div>
             </div>
             
             <div class="question-navigation">
                 <button class="btn btn-secondary" onclick="backToYearSelection()">← Back to Years</button>
-                <div class="question-controls">
-                    <button id="prevQuestion" onclick="previousQuestion()" disabled>← Previous</button>
-                    <button id="nextQuestion" onclick="nextQuestion()">Next →</button>
+                <div class="practice-controls">
+                    <button class="btn btn-success" onclick="checkAllAnswers()">Check All Answers</button>
+                    <button class="btn btn-info" onclick="resetAllPractice()">Reset All</button>
+                    <button class="btn btn-warning" onclick="showAllSolutions()">Show All Solutions</button>
                 </div>
             </div>
             
-            <div id="questionDisplay" class="question-display">
-                <!-- Question content will be inserted here -->
-            </div>
-            
-            <div class="answer-section">
-                <div class="answer-choices" id="answerChoices">
-                    <!-- Answer choices will be inserted here -->
-                </div>
-            </div>
-            
-            <div class="practice-controls">
-                <button class="btn btn-primary" onclick="submitAnswer()">Submit Answer</button>
-                <button class="btn btn-secondary" onclick="showSolution()">Show Solution</button>
-                <button class="btn btn-info" onclick="resetPractice()">Reset Practice</button>
+            <div id="allQuestionsDisplay" class="all-questions-display">
+                <!-- All questions will be inserted here -->
             </div>
         </div>
     `;
@@ -335,139 +330,164 @@ function displayQuestionsInterface(data) {
         </div>
     `;
     
-    // Display the first question
-    displayCurrentQuestion();
+    // Display all questions
+    displayAllQuestions();
 }
 
 /**
- * Display the current question
+ * Display all questions on one page using the question renderer
  */
-function displayCurrentQuestion() {
-    if (currentQuestionIndex < 0 || currentQuestionIndex >= currentQuestions.length) {
-        showError('Invalid question index');
+async function displayAllQuestions() {
+    const allQuestionsDisplay = document.getElementById('allQuestionsDisplay');
+    if (!allQuestionsDisplay) {
+        showError('Questions display container not found');
         return;
     }
     
-    const question = currentQuestions[currentQuestionIndex];
-    const questionDisplay = document.getElementById('questionDisplay');
-    const answerChoices = document.getElementById('answerChoices');
-    const currentQuestionNum = document.getElementById('currentQuestionNum');
+    debugLog('Displaying all questions using question renderer:', currentQuestions.length);
     
-    // Update question counter
-    if (currentQuestionNum) {
-        currentQuestionNum.textContent = currentQuestionIndex + 1;
-    }
-    
-    // Hide content initially to prevent LaTeX flash
-    if (questionDisplay) questionDisplay.style.visibility = 'hidden';
-    if (answerChoices) answerChoices.style.visibility = 'hidden';
-    
-    // Get processed question text and choices
-    let questionText, choices, hasLabels = false;
-    
-    if (typeof question.question === 'string') {
-        // Old format - just text and choices array
-        questionText = question.question;
-        choices = question.choices || [];
-        hasLabels = false;
-    } else {
-        // New format - complex object with insertions
-        const questionDetails = question.question;
-        questionText = processQuestionText(questionDetails.text, questionDetails.insertions);
-        const choiceResult = extractQuestionChoices(questionDetails);
-        choices = choiceResult.choices;
-        hasLabels = choiceResult.hasLabels;
-        
-        // If no choices extracted from new format, fall back to simple choices array
-        if (choices.length === 0 && question.choices) {
-            choices = question.choices;
-            hasLabels = false;
-        }
-    }
-    
-    // Display question content
-    if (questionDisplay) {
-        questionDisplay.innerHTML = `
-            <div class="question-content">
-                <h3>Problem ${currentQuestionIndex + 1}</h3>
-                <div class="question-text">${questionText || 'Question text not available'}</div>
-            </div>
-        `;
-        
-        // Render LaTeX content and show when complete
-        setTimeout(() => {
-            renderLatexContent(questionDisplay).then(() => {
-                if (questionDisplay) questionDisplay.style.visibility = 'visible';
-            });
-        }, 100);
-    }
-    
-    // Display answer choices
-    if (answerChoices) {
-        debugLog('Displaying choices:', choices);
-        debugLog('Has labels:', hasLabels);
-        debugLog('Number of choices:', choices.length);
-        
-        const choicesHTML = choices.map((choice, index) => {
-            const choiceValue = String.fromCharCode(65 + index);
-            const isChecked = currentAnswers[currentQuestionIndex] === choiceValue;
-            
-            // Don't add letter prefix if choice already has labels
-            const choiceDisplay = hasLabels ? choice : `${choiceValue}. ${choice}`;
-            
-            debugLog(`Choice ${index}:`, choiceDisplay);
-            
-            return `
-                <label class="choice-label ${isChecked ? 'selected' : ''}">
-                    <input type="radio" name="answer" value="${choiceValue}" 
-                           ${isChecked ? 'checked' : ''}>
-                    <span class="choice-content">${choiceDisplay}</span>
-                </label>
-            `;
-        }).join('');
-        
-        debugLog('Generated HTML:', choicesHTML);
-        answerChoices.innerHTML = choicesHTML;
-        
-        // Add click handlers to update selection styling
-        answerChoices.querySelectorAll('input[type="radio"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                // Remove selected class from all labels
-                answerChoices.querySelectorAll('.choice-label').forEach(label => {
-                    label.classList.remove('selected');
-                });
-                // Add selected class to the parent label of checked radio
-                if (this.checked) {
-                    this.closest('.choice-label').classList.add('selected');
+    // Use the question renderer to process and display all questions
+    try {
+        const processedQuestions = await questionRenderer.renderMultipleQuestions(
+            currentQuestions, 
+            allQuestionsDisplay, 
+            {
+                inputNamePrefix: 'question',
+                cssClasses: {
+                    questionCard: 'math-question-card'
                 }
-            });
+            }
+        );
+        
+        // Add event listeners for answer changes
+        questionRenderer.addChoiceEventListeners(allQuestionsDisplay, (questionIndex, answerValue, element) => {
+            // Update answer in global array
+            currentAnswers[questionIndex] = answerValue;
+            
+            // Update question status
+            updateQuestionStatus(questionIndex);
         });
         
-        // Render LaTeX content in choices and show when complete
-        setTimeout(() => {
-            renderLatexContent(answerChoices).then(() => {
-                if (answerChoices) answerChoices.style.visibility = 'visible';
-            });
-        }, 100);
+        debugLog('Successfully rendered all questions using question renderer');
+        
+    } catch (error) {
+        console.error('Error rendering questions:', error);
+        showError('Failed to render questions properly');
     }
-    
-    // Update navigation buttons
-    updateNavigationButtons();
 }
 
 /**
- * Update navigation button states
+ * Update status for a specific question
  */
-function updateNavigationButtons() {
-    const prevButton = document.getElementById('prevQuestion');
-    const nextButton = document.getElementById('nextQuestion');
+function updateQuestionStatus(questionIndex) {
+    const statusElement = document.getElementById(`status_${questionIndex}`);
+    if (!statusElement) return;
     
-    if (prevButton) {
-        prevButton.disabled = currentQuestionIndex === 0;
+    const selectedAnswer = currentAnswers[questionIndex];
+    if (selectedAnswer) {
+        statusElement.innerHTML = '<span class="status-answered">Answered</span>';
+    } else {
+        statusElement.innerHTML = '';
     }
+}
+
+// =============================================================================
+// ALL QUESTIONS FUNCTIONS
+// =============================================================================
+
+/**
+ * Check all answers and show results
+ */
+function checkAllAnswers() {
+    let correct = 0;
+    let answered = 0;
     
-    if (nextButton) {
-        nextButton.disabled = currentQuestionIndex === currentQuestions.length - 1;
+    currentQuestions.forEach((question, index) => {
+        const selectedAnswer = currentAnswers[index];
+        const statusElement = document.getElementById(`status_${index}`);
+        const questionCard = document.querySelector(`[data-question-index="${index}"]`);
+        
+        if (selectedAnswer) {
+            answered++;
+            const isCorrect = selectedAnswer === question.answer;
+            
+            if (isCorrect) {
+                correct++;
+                statusElement.innerHTML = '<span class="status-correct">✅ Correct</span>';
+                questionCard.classList.add('correct');
+                questionCard.classList.remove('incorrect');
+            } else {
+                statusElement.innerHTML = `<span class="status-incorrect">❌ Incorrect (Answer: ${question.answer})</span>`;
+                questionCard.classList.add('incorrect');
+                questionCard.classList.remove('correct');
+            }
+        } else {
+            statusElement.innerHTML = '<span class="status-unanswered">Not answered</span>';
+            questionCard.classList.remove('correct', 'incorrect');
+        }
+    });
+    
+    // Show summary
+    const summary = `
+        Results Summary:
+        Answered: ${answered}/${currentQuestions.length}
+        Correct: ${correct}/${answered > 0 ? answered : currentQuestions.length}
+        Score: ${answered > 0 ? Math.round((correct/answered) * 100) : 0}%
+    `;
+    
+    alert(summary);
+    
+    // Scroll to top to see results
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/**
+ * Reset all practice answers
+ */
+function resetAllPractice() {
+    if (confirm('Are you sure you want to reset all answers? All progress will be lost.')) {
+        currentAnswers = new Array(currentQuestions.length).fill(null);
+        
+        // Clear all radio button selections
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.checked = false;
+        });
+        
+        // Clear all visual states
+        document.querySelectorAll('.choice-label').forEach(label => {
+            label.classList.remove('selected');
+        });
+        
+        document.querySelectorAll('.question-card').forEach(card => {
+            card.classList.remove('correct', 'incorrect');
+        });
+        
+        // Clear all status indicators
+        currentQuestions.forEach((_, index) => {
+            const statusElement = document.getElementById(`status_${index}`);
+            if (statusElement) statusElement.innerHTML = '';
+        });
+        
+        alert('All answers have been reset.');
+    }
+}
+
+/**
+ * Show solutions for all questions
+ */
+function showAllSolutions() {
+    if (confirm('This will show the correct answers for all questions. Continue?')) {
+        currentQuestions.forEach((question, index) => {
+            const statusElement = document.getElementById(`status_${index}`);
+            if (statusElement) {
+                const solutionText = question.solution ? 
+                    `Answer: ${question.answer} | Solution: ${question.solution}` :
+                    `Correct Answer: ${question.answer}`;
+                statusElement.innerHTML = `<span class="status-solution">${solutionText}</span>`;
+            }
+        });
+        
+        alert('All solutions are now displayed.');
     }
 }
 
@@ -493,265 +513,31 @@ function backToYearSelection() {
     }
 }
 
-function previousQuestion() {
-    if (currentQuestionIndex > 0) {
-        saveCurrentAnswer();
-        currentQuestionIndex--;
-        displayCurrentQuestion();
-    }
-}
-
-function nextQuestion() {
-    if (currentQuestionIndex < currentQuestions.length - 1) {
-        saveCurrentAnswer();
-        currentQuestionIndex++;
-        displayCurrentQuestion();
-    }
-}
-
-function saveCurrentAnswer() {
-    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-    if (selectedAnswer) {
-        currentAnswers[currentQuestionIndex] = selectedAnswer.value;
-    }
-}
-
-function submitAnswer() {
-    saveCurrentAnswer();
-    const selectedAnswer = currentAnswers[currentQuestionIndex];
-    const question = currentQuestions[currentQuestionIndex];
-    
-    if (!selectedAnswer) {
-        alert('Please select an answer before submitting.');
-        return;
-    }
-    
-    // Show feedback
-    const correct = selectedAnswer === question.answer;
-    const message = correct ? 
-        '✅ Correct! Well done.' : 
-        `❌ Incorrect. The correct answer is ${question.answer}.`;
-    
-    alert(message);
-}
-
-function showSolution() {
-    const question = currentQuestions[currentQuestionIndex];
-    if (question.solution) {
-        alert(`Solution: ${question.solution}`);
-    } else {
-        alert(`Correct Answer: ${question.answer}`);
-    }
-}
-
-function resetPractice() {
-    if (confirm('Are you sure you want to reset your practice? All answers will be lost.')) {
-        currentAnswers = new Array(currentQuestions.length).fill(null);
-        currentQuestionIndex = 0;
-        displayCurrentQuestion();
-    }
-}
-
 // =============================================================================
 // UTILITY FUNCTIONS
 // =============================================================================
 
 /**
- * Process question text by replacing insertion markers with actual content
+ * Render a single question using the question renderer module
+ * For compatibility with any code that needs individual question rendering
  */
-function processQuestionText(questionText, insertions) {
-    if (!insertions) return questionText;
+async function renderSingleQuestionWithRenderer(question, questionIndex, containerElement, selectedAnswer = null) {
+    const questionData = questionRenderer.processQuestion(question, questionIndex);
     
-    let processedText = questionText;
-    
-    // Replace insertion markers like <INSERTION_INDEX_1> with actual content
-    Object.keys(insertions).forEach(key => {
-        const insertion = insertions[key];
-        const marker = `<${key}>`; // e.g., "<INSERTION_INDEX_1>"
-        
-        // Replace the marker with the appropriate content
-        if (insertion.alt_type === 'latex' && insertion.alt_value) {
-            // Use LaTeX content
-            processedText = processedText.replace(marker, insertion.alt_value);
-        } else if (insertion.picture) {
-            // Use picture URL with proper protocol
-            const imageUrl = insertion.picture.startsWith('//') ? 'https:' + insertion.picture : insertion.picture;
-            processedText = processedText.replace(marker, `<img src="${imageUrl}" alt="${insertion.alt_value || 'Question image'}" class="question-image" />`);
-        } else if (insertion.alt_value) {
-            // Use alternative text value
-            processedText = processedText.replace(marker, insertion.alt_value);
+    const questionHTML = questionRenderer.renderQuestionHTML(questionData, questionIndex, {
+        selectedAnswer,
+        inputNamePrefix: 'question',
+        cssClasses: {
+            questionCard: 'math-question-card'
         }
     });
     
-    return processedText;
-}
-
-/**
- * Render LaTeX content using MathJax (if available) or fallback
- */
-function renderLatexContent(element) {
-    // Check if MathJax is available
-    if (typeof MathJax !== 'undefined') {
-        return MathJax.typesetPromise([element]).catch((err) => {
-            console.warn('MathJax rendering error:', err);
-        });
-    }
-    // Return resolved promise if MathJax not available
-    return Promise.resolve();
-}
-
-/**
- * Extract choices from question object (text_choices, latex_choices, or picture_choices)
- */
-function extractQuestionChoices(questionDetails) {
-    // Priority: text_choices > latex_choices > picture_choices
-    if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
-        return { choices: questionDetails.text_choices, hasLabels: false };
-    } else if (questionDetails.latex_choices && questionDetails.latex_choices.length > 0) {
-        return parseLatexChoices(questionDetails.latex_choices);
-    } else if (questionDetails.picture_choices && questionDetails.picture_choices.length > 0) {
-        const imageChoices = questionDetails.picture_choices.map(url => {
-            const imageUrl = url.startsWith('//') ? 'https:' + url : url;
-            return `<img src="${imageUrl}" alt="Choice" class="choice-image" />`;
-        });
-        return { choices: imageChoices, hasLabels: false };
-    }
+    containerElement.innerHTML = questionHTML;
     
-    return { choices: [], hasLabels: false };
-}
-
-/**
- * Parse LaTeX choices that might be in a single string or multiple strings
- */
-function parseLatexChoices(latexChoices) {
-    if (latexChoices.length === 1) {
-        // Single string containing all choices - need to split
-        const choiceString = latexChoices[0];
-        debugLog('Original choice string:', choiceString);
-        
-        // Check if it contains multiple choice labels like (A), (B), etc.
-        const textbfMatches = choiceString.match(/\\textbf\{[^}]*\([A-E]\)[^}]*\}/g);
-        debugLog('Found textbf matches:', textbfMatches);
-        
-        if (textbfMatches && textbfMatches.length > 1) {
-            // Split by qquad or similar separators, keeping textbf labels
-            const choices = [];
-            
-            // More robust splitting approach
-            let workingString = choiceString;
-            
-            // Remove outer $ delimiters if present
-            workingString = workingString.replace(/^\$/, '').replace(/\$$/, '');
-            
-            // Split by \\qquad but keep the textbf parts
-            const parts = workingString.split(/\\qquad/);
-            debugLog('Split parts:', parts);
-            
-            for (let part of parts) {
-                part = part.trim();
-                if (part && part.includes('textbf')) {
-                    // Wrap each part in $ delimiters for proper LaTeX rendering
-                    choices.push(`$${part}$`);
-                }
-            }
-            
-            debugLog('Extracted choices:', choices);
-            
-            if (choices.length > 1) {
-                return { choices, hasLabels: true };
-            }
-        }
-        
-        // Alternative approach: try splitting by the pattern (A), (B), etc.
-        const labelPattern = /\\textbf\{.*?\([A-E]\).*?\}/g;
-        const labelMatches = choiceString.match(labelPattern);
-        
-        if (labelMatches && labelMatches.length > 1) {
-            debugLog('Using label pattern approach:', labelMatches);
-            const choices = labelMatches.map(match => `$${match.replace(/\\qquad.*$/, '')}$`);
-            return { choices, hasLabels: true };
-        }
-        
-        // Third approach: manually split common AMC format
-        if (choiceString.includes('\\qquad') && choiceString.includes('textbf')) {
-            debugLog('Using manual AMC format splitting');
-            
-            // Remove outer $ delimiters
-            let content = choiceString.replace(/^\$/, '').replace(/\$$/, '');
-            
-            // Split by textbf but keep the textbf part with the following content
-            const choices = [];
-            const regex = /(\\textbf\{[^}]*\([A-E]\)[^}]*\}[^\\]*)/g;
-            let match;
-            
-            while ((match = regex.exec(content)) !== null) {
-                let choice = match[1].trim();
-                // Remove any trailing \\qquad
-                choice = choice.replace(/\\qquad\s*$/, '');
-                choices.push(`$${choice}$`);
-            }
-            
-            debugLog('Manual splitting result:', choices);
-            
-            if (choices.length > 1) {
-                return { choices, hasLabels: true };
-            }
-        }
-        
-        // If splitting failed, return as single choice
-        debugLog('Splitting failed, returning single choice');
-        return { choices: [choiceString], hasLabels: true };
-    } else {
-        // Multiple strings - assume each is a separate choice
-        const hasLabels = latexChoices.some(choice => 
-            choice.includes('textbf') && choice.match(/\([A-E]\)/));
-        return { choices: latexChoices, hasLabels };
-    }
-}
-
-/**
- * Render a single question with proper formatting
- */
-function renderQuestion(question, questionIndex) {
-    // Handle both old format (question.question as string) and new format (question.question as object)
-    let questionDetails, questionText, choices;
+    // Render LaTeX content
+    await questionRenderer.renderLatexContent(containerElement);
     
-    if (typeof question.question === 'string') {
-        // Old format - just text and choices array
-        questionText = question.question;
-        choices = question.choices || [];
-    } else {
-        // New format - complex object with insertions
-        questionDetails = question.question;
-        questionText = processQuestionText(questionDetails.text, questionDetails.insertions);
-        choices = extractQuestionChoices(questionDetails);
-    }
-    
-    // If no choices extracted from new format, fall back to simple choices array
-    if (choices.length === 0 && question.choices) {
-        choices = question.choices;
-    }
-    
-    // Create question HTML
-    const questionHTML = `
-        <div class="question-card" data-question-id="${question.id || 'unknown'}">
-            <div class="question-title">
-                <h3>Problem ${questionIndex + 1}</h3>
-                <div class="question-text">${questionText || 'Question text not available'}</div>
-            </div>
-            <div class="choices-container">
-                ${choices.map((choice, choiceIndex) => `
-                    <label class="choice-label">
-                        <input type="radio" name="answer" value="${String.fromCharCode(65 + choiceIndex)}" 
-                               ${currentAnswers[currentQuestionIndex] === String.fromCharCode(65 + choiceIndex) ? 'checked' : ''}>
-                        <span class="choice-text">${String.fromCharCode(65 + choiceIndex)}. ${choice}</span>
-                    </label>
-                `).join('')}
-            </div>
-        </div>
-    `;
-    
-    return questionHTML;
+    return questionData;
 }
 
 function showError(message) {
