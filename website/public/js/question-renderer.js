@@ -130,6 +130,26 @@ class QuestionRenderer {
         
         // Priority: text_choices > latex_choices > picture_choices
         if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
+            // Check if text_choices contain [mathjax] tags and convert them to LaTeX format
+            const mathjaxChoices = questionDetails.text_choices.filter(choice => 
+                choice.includes('[mathjax]') && choice.includes('[/mathjax]')
+            );
+            
+            if (mathjaxChoices.length > 0) {
+                // Convert [mathjax]...[/mathjax] to LaTeX format and treat as latex_choices
+                const convertedLatexChoices = mathjaxChoices.map(choice => {
+                    // Simple literal replacement: [mathjax] -> $, [/mathjax] -> $
+                    const converted = choice.replace('[mathjax]', '$').replace('[/mathjax]', '$');
+                    return converted;
+                });
+                
+                // Pass the converted choices in the same format as latex_choices
+                const result = this.parseLatexChoices(convertedLatexChoices);
+                
+                // Use the same return format as the latex_choices path
+                return { ...result, isImageChoice: false };
+            }
+            
             return { choices: questionDetails.text_choices, hasLabels: false, isImageChoice: false };
         } else if (questionDetails.latex_choices && questionDetails.latex_choices.length > 0) {
             const result = this.parseLatexChoices(questionDetails.latex_choices);
@@ -167,6 +187,14 @@ class QuestionRenderer {
                 return this.splitByQquad(choiceString);
             }
             
+            // Alternative: check for textbf patterns that might have content after the closing brace
+            const textbfWithContentMatches = choiceString.match(/\\textbf\{[^}]*\([A-E]\)[^}]*\}[^\\]*/g);
+            questionDebugLog('Found textbf with content matches:', textbfWithContentMatches);
+            
+            if (textbfWithContentMatches && textbfWithContentMatches.length > 1) {
+                return this.splitByQquad(choiceString);
+            }
+            
             // Alternative approach: try splitting by the pattern (A), (B), etc.
             const labelPattern = /\\textbf\{.*?\([A-E]\).*?\}/g;
             const labelMatches = choiceString.match(labelPattern);
@@ -179,6 +207,11 @@ class QuestionRenderer {
             
             // Third approach: manually split common AMC format
             if (choiceString.includes('\\qquad') && choiceString.includes('textbf')) {
+                return this.manualAmcSplit(choiceString);
+            }
+            
+            // Fourth approach: try manual split even without qquad if we have textbf patterns
+            if (choiceString.includes('textbf')) {
                 return this.manualAmcSplit(choiceString);
             }
             
