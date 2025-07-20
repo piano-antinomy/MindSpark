@@ -43,14 +43,11 @@ class QuestionRenderer {
         if (!insertions) return questionText;
         
         let processedText = questionText;
-        questionDebugLog('Processing question text with insertions:', insertions);
         
         // Replace insertion markers like <INSERTION_INDEX_1> with actual content
         Object.keys(insertions).forEach(key => {
             const insertion = insertions[key];
             const marker = `<${key}>`; // e.g., "<INSERTION_INDEX_1>"
-            
-            questionDebugLog(`Processing marker ${marker}:`, insertion);
             
             // Replace the marker with the appropriate content
             if (insertion.alt_type === 'latex' && insertion.alt_value) {
@@ -68,7 +65,6 @@ class QuestionRenderer {
             }
         });
         
-        questionDebugLog('Processed text result:', processedText);
         return processedText;
     }
 
@@ -104,7 +100,6 @@ class QuestionRenderer {
      * Extract choices from question object (text_choices, latex_choices, or picture_choices)
      */
     extractQuestionChoices(questionDetails) {
-        questionDebugLog('Extracting choices from question details:', questionDetails);
         
         // Priority: text_choices > latex_choices > picture_choices
         if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
@@ -236,7 +231,6 @@ class QuestionRenderer {
      * Process a complete question object and return formatted data
      */
     processQuestion(question, questionIndex = 0) {
-        questionDebugLog('Processing complete question:', question);
         
         let questionText, choices, hasLabels = false, isImageChoice = false;
         
@@ -273,6 +267,25 @@ class QuestionRenderer {
             solution: question.solution,
             originalQuestion: question
         };
+    }
+
+    /**
+     * Generate the base question HTML structure
+     */
+    generateQuestionBaseHTML(questionData, questionIndex, cssClasses) {
+        const questionText = questionData.questionText || 'Question text not available';
+        
+        return `
+            <div class="question-card ${cssClasses.questionCard || ''}" data-question-index="${questionIndex}">
+                <div class="question-header ${cssClasses.questionHeader || ''}">
+                    <h3>Problem ${questionIndex + 1}</h3>
+                    <div class="question-status" id="status_${questionIndex}"></div>
+                </div>
+                <div class="question-content ${cssClasses.questionContent || ''}">
+                    <div class="question-text">${questionText}</div>
+                </div>
+                <div class="answer-section ${cssClasses.answerSection || ''}">
+        `;
     }
 
     /**
@@ -322,16 +335,7 @@ class QuestionRenderer {
             }
         }).join('');
 
-        return `
-            <div class="question-card ${cssClasses.questionCard || ''}" data-question-index="${questionIndex}">
-                <div class="question-header ${cssClasses.questionHeader || ''}">
-                    <h3>Problem ${questionIndex + 1}</h3>
-                    <div class="question-status" id="status_${questionIndex}"></div>
-                </div>
-                <div class="question-content ${cssClasses.questionContent || ''}">
-                    <div class="question-text">${questionText}</div>
-                </div>
-                <div class="answer-section ${cssClasses.answerSection || ''}">
+        return this.generateQuestionBaseHTML(questionData, questionIndex, cssClasses) + `
                     <div class="answer-choices">
                         ${choicesHTML}
                     </div>
@@ -383,16 +387,7 @@ class QuestionRenderer {
             }
         }).join('');
 
-        return `
-            <div class="question-card ${cssClasses.questionCard || ''}" data-question-index="${questionIndex}">
-                <div class="question-header ${cssClasses.questionHeader || ''}">
-                    <h3>Problem ${questionIndex + 1}</h3>
-                    <div class="question-status" id="status_${questionIndex}"></div>
-                </div>
-                <div class="question-content ${cssClasses.questionContent || ''}">
-                    <div class="question-text">${questionText}</div>
-                </div>
-                <div class="answer-section ${cssClasses.answerSection || ''}">
+        return this.generateQuestionBaseHTML(questionData, questionIndex, cssClasses) + `
                     <div class="question-image-container" style="width: 100%; margin: 10px 0;">
                         ${fullWidthImageHTML}
                     </div>
