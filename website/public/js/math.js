@@ -358,6 +358,10 @@ function displayCurrentQuestion() {
         currentQuestionNum.textContent = currentQuestionIndex + 1;
     }
     
+    // Hide content initially to prevent LaTeX flash
+    if (questionDisplay) questionDisplay.style.visibility = 'hidden';
+    if (answerChoices) answerChoices.style.visibility = 'hidden';
+    
     // Get processed question text and choices
     let questionText, choices, hasLabels = false;
     
@@ -390,9 +394,11 @@ function displayCurrentQuestion() {
             </div>
         `;
         
-        // Render LaTeX content with a slight delay to ensure DOM is ready
+        // Render LaTeX content and show when complete
         setTimeout(() => {
-            renderLatexContent(questionDisplay);
+            renderLatexContent(questionDisplay).then(() => {
+                if (questionDisplay) questionDisplay.style.visibility = 'visible';
+            });
         }, 100);
     }
     
@@ -437,9 +443,11 @@ function displayCurrentQuestion() {
             });
         });
         
-        // Render LaTeX content in choices as well
+        // Render LaTeX content in choices and show when complete
         setTimeout(() => {
-            renderLatexContent(answerChoices);
+            renderLatexContent(answerChoices).then(() => {
+                if (answerChoices) answerChoices.style.visibility = 'visible';
+            });
         }, 100);
     }
     
@@ -584,10 +592,12 @@ function processQuestionText(questionText, insertions) {
 function renderLatexContent(element) {
     // Check if MathJax is available
     if (typeof MathJax !== 'undefined') {
-        MathJax.typesetPromise([element]).catch((err) => {
+        return MathJax.typesetPromise([element]).catch((err) => {
             console.warn('MathJax rendering error:', err);
         });
     }
+    // Return resolved promise if MathJax not available
+    return Promise.resolve();
 }
 
 /**
