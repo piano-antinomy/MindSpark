@@ -87,35 +87,57 @@ async function loadAvailableLevels() {
  */
 function displayLevelSelection(data) {
     const levelSelectionHTML = `
-        <div class="step-navigation">
-            <div class="step active">1. Select Level</div>
-            <div class="step">2. Select Year</div>
-            <div class="step">3. Practice Questions</div>
-        </div>
+        <div class="header-spacer" style="margin: 2rem 0;"></div>
         
-        <div class="level-selection-container">
-            <h2>Select Math Competition Level</h2>
-            <p>Choose your preferred AMC (American Mathematics Competitions) level:</p>
+        <div class="level-selection-container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 >Select the Math Competition Level</h2>
             
-            <div class="levels-grid">
+            <div class="levels-vertical" style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 5rem;">
                 ${data.levels.map(level => `
-                    <button class="level-button" onclick="selectLevel(${level})">
-                        <h3>${data.levelAMCTypes[level]}</h3>
-                        <p class="level-description">${getLevelDescription(level)}</p>
-                        <div class="level-stats">
-                            <span class="question-count">${data.levelCounts[level]} questions</span>
-                            <span class="year-count">${data.levelYearCounts[level]} years</span>
+                    <button class="level-button" onclick="selectLevel(${level})" 
+                            style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                                   border: none; 
+                                   border-radius: 16px; 
+                                   padding: 2rem; 
+                                   color: white; 
+                                   cursor: pointer; 
+                                   transition: all 0.3s ease; 
+                                   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.25);
+                                   font-family: 'Segoe UI', 'SF Pro Display', system-ui, sans-serif;"
+                            onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 35px rgba(102, 126, 234, 0.35)'"
+                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(102, 126, 234, 0.25)'">
+                        <h3 style="margin: 0 0 0.5rem 0; font-size: 2rem; font-weight: 600; letter-spacing: -0.5px;">${data.levelAMCTypes[level]}</h3>
+                        <p style="margin: 0 0 1rem 0; font-size: 1.1rem; opacity: 0.9; font-weight: 300;">${getLevelDescription(level)}</p>
+                        <div style="display: flex; justify-content: center; gap: 2rem; font-size: 0.95rem; opacity: 0.8;">
+                            <span style="background: rgba(255,255,255,0.2); padding: 0.4rem 1rem; border-radius: 20px;">${data.levelCounts[level]} questions</span>
                         </div>
                     </button>
                 `).join('')}
+                
+                <button class="quiz-button" onclick="startLevelQuiz()" 
+                        style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%); 
+                               border: 2px dashed rgba(255, 255, 255, 0.6);
+                               border-radius: 16px; 
+                               padding: 1.8rem; 
+                               color: #8b5a6b; 
+                               cursor: pointer; 
+                               transition: all 0.3s ease; 
+                               box-shadow: 0 6px 20px rgba(255, 154, 158, 0.2);
+                               font-family: 'Segoe UI', 'SF Pro Display', system-ui, sans-serif;
+                               margin-top: 1rem;"
+                        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(255, 154, 158, 0.3)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(255, 154, 158, 0.2)'">
+                    <span style="font-size: 1.8rem; margin-right: 0.5rem;">🤔</span>
+                    <span style="font-size: 1.1rem; font-weight: 500;">Not sure about your level? Do a quiz to find it out!</span>
+                </button>
             </div>
             
-            <div class="info-section">
-                <h4>About AMC Levels:</h4>
-                <ul>
-                    <li><strong>AMC 8:</strong> Middle school level (grades 6-8)</li>
-                    <li><strong>AMC 10:</strong> High school level (grades 9-10)</li>
-                    <li><strong>AMC 12:</strong> Advanced high school level (grades 11-12)</li>
+            <div class="info-section" style="background: #f8f9fa; border-radius: 12px; padding: 2rem; text-align: left; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <h4 style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin: 0 0 1.5rem 0;">About AMC Levels:</h4>
+                <ul style="font-family: 'Segoe UI', system-ui, sans-serif; font-size: 1rem; line-height: 1.8; color: #4a5568; margin: 0; padding-left: 1.5rem;">
+                    <li style="margin-bottom: 0.8rem;"><strong style="color: #2d3748;">AMC 8:</strong> Middle school level (grades 6-8)</li>
+                    <li style="margin-bottom: 0.8rem;"><strong style="color: #2d3748;">AMC 10:</strong> High school level (grades 9-10)</li>
+                    <li style="margin-bottom: 0;"><strong style="color: #2d3748;">AMC 12:</strong> Advanced high school level (grades 11-12)</li>
                 </ul>
             </div>
         </div>
@@ -564,6 +586,26 @@ This feature will include:
 • Progress tracking with detailed analytics
 
 For now, please select a specific competition year to practice with traditional AMC questions.`);
+}
+
+/**
+ * Handle level quiz button click
+ */
+function startLevelQuiz() {
+    alert(`🤔 Level Assessment Quiz - Coming Soon!
+
+This adaptive quiz will help determine your optimal AMC level by:
+• Presenting a mix of problems from different levels
+• Analyzing your problem-solving approach and accuracy
+• Recommending the best starting level for your skill
+• Providing personalized learning path suggestions
+
+For now, here's a quick guide:
+• New to competitive math? Start with AMC 8
+• Comfortable with algebra and geometry? Try AMC 10  
+• Advanced topics like trigonometry and calculus? Go with AMC 12
+
+Please select a level above to begin practicing!`);
 }
 
 function showError(message) {
