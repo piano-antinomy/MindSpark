@@ -41,7 +41,7 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
         
         // Detect environment and set appropriate paths
         this.isLocalMode = detectLocalMode();
-        this.questionsBasePath = isLocalMode ? "/resources/math/questions" : "/math/questions";
+        this.questionsBasePath = isLocalMode ? "resources/math/questions" : "/math/questions";
         
         logger.info("Initializing QuestionService in {} mode", isLocalMode ? "LOCAL" : "LAMBDA");
         logger.info("Questions base path: {}", questionsBasePath);
@@ -188,43 +188,119 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
      * Load questions from file system (local development)
      */
     private List<Question> loadQuestionsFromFile(String amcType, String year) {
-        String filePath = questionsBasePath + "/AMC/" + amcType + "/" + year + "_" + amcType + ".json";
-        File file = new File(filePath);
+        // Try combined file first (for AMC_8 or if combined files exist)
+        String combinedFilePath = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + ".json";
+        File combinedFile = new File(combinedFilePath);
         
-        if (!file.exists()) {
-            logger.debug("File not found: {}", filePath);
-            return Collections.emptyList();
+        if (combinedFile.exists()) {
+            try {
+                logger.debug("Loading questions from combined file: {}", combinedFilePath);
+                QuestionFile questionFile = objectMapper.readValue(combinedFile, QuestionFile.class);
+                return questionFile.getProblems() != null ? questionFile.getProblems() : Collections.emptyList();
+            } catch (IOException e) {
+                logger.error("Error loading questions from combined file: {}", combinedFilePath, e);
+                return Collections.emptyList();
+            }
         }
         
-        try {
-            logger.debug("Loading questions from file: {}", filePath);
-            QuestionFile questionFile = objectMapper.readValue(file, QuestionFile.class);
-            return questionFile.getProblems() != null ? questionFile.getProblems() : Collections.emptyList();
-        } catch (IOException e) {
-            logger.error("Error loading questions from file: {}", filePath, e);
-            return Collections.emptyList();
+        // For AMC_10 and AMC_12, try loading A and B versions separately
+        if ("AMC_10".equals(amcType) || "AMC_12".equals(amcType)) {
+            List<Question> allQuestions = new ArrayList<>();
+            
+            // Load A version
+            String filePathA = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + "A.json";
+            File fileA = new File(filePathA);
+            if (fileA.exists()) {
+                try {
+                    logger.debug("Loading questions from A file: {}", filePathA);
+                    QuestionFile questionFileA = objectMapper.readValue(fileA, QuestionFile.class);
+                    if (questionFileA.getProblems() != null) {
+                        allQuestions.addAll(questionFileA.getProblems());
+                    }
+                } catch (IOException e) {
+                    logger.error("Error loading questions from A file: {}", filePathA, e);
+                }
+            }
+            
+            // Load B version
+            String filePathB = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + "B.json";
+            File fileB = new File(filePathB);
+            if (fileB.exists()) {
+                try {
+                    logger.debug("Loading questions from B file: {}", filePathB);
+                    QuestionFile questionFileB = objectMapper.readValue(fileB, QuestionFile.class);
+                    if (questionFileB.getProblems() != null) {
+                        allQuestions.addAll(questionFileB.getProblems());
+                    }
+                } catch (IOException e) {
+                    logger.error("Error loading questions from B file: {}", filePathB, e);
+                }
+            }
+            
+            return allQuestions;
         }
+        
+        // If no files found
+        logger.debug("No files found for {} {}", amcType, year);
+        return Collections.emptyList();
     }
     
     /**
      * Load questions from classpath resources (Lambda/production)
      */
     private List<Question> loadQuestionsFromResource(String amcType, String year) {
-        String resourcePath = questionsBasePath + "/AMC/" + amcType + "/" + year + "_" + amcType + ".json";
+        // Try combined file first (for AMC_8 or if combined files exist)
+        String combinedResourcePath = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + ".json";
         
-        try (InputStream inputStream = getClass().getResourceAsStream(resourcePath)) {
+        try (InputStream inputStream = getClass().getResourceAsStream(combinedResourcePath)) {
             if (inputStream != null) {
-                logger.debug("Loading questions from classpath: {}", resourcePath);
+                logger.debug("Loading questions from combined classpath: {}", combinedResourcePath);
                 QuestionFile questionFile = objectMapper.readValue(inputStream, QuestionFile.class);
                 return questionFile.getProblems() != null ? questionFile.getProblems() : Collections.emptyList();
-            } else {
-                logger.debug("Resource not found: {}", resourcePath);
-                return Collections.emptyList();
             }
         } catch (IOException e) {
-            logger.error("Error loading questions from resource: {}", resourcePath, e);
+            logger.error("Error loading questions from combined resource: {}", combinedResourcePath, e);
             return Collections.emptyList();
         }
+        
+        // For AMC_10 and AMC_12, try loading A and B versions separately
+        if ("AMC_10".equals(amcType) || "AMC_12".equals(amcType)) {
+            List<Question> allQuestions = new ArrayList<>();
+            
+            // Load A version
+            String resourcePathA = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + "A.json";
+            try (InputStream inputStreamA = getClass().getResourceAsStream(resourcePathA)) {
+                if (inputStreamA != null) {
+                    logger.debug("Loading questions from A classpath: {}", resourcePathA);
+                    QuestionFile questionFileA = objectMapper.readValue(inputStreamA, QuestionFile.class);
+                    if (questionFileA.getProblems() != null) {
+                        allQuestions.addAll(questionFileA.getProblems());
+                    }
+                }
+            } catch (IOException e) {
+                logger.error("Error loading questions from A resource: {}", resourcePathA, e);
+            }
+            
+            // Load B version
+            String resourcePathB = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + "B.json";
+            try (InputStream inputStreamB = getClass().getResourceAsStream(resourcePathB)) {
+                if (inputStreamB != null) {
+                    logger.debug("Loading questions from B classpath: {}", resourcePathB);
+                    QuestionFile questionFileB = objectMapper.readValue(inputStreamB, QuestionFile.class);
+                    if (questionFileB.getProblems() != null) {
+                        allQuestions.addAll(questionFileB.getProblems());
+                    }
+                }
+            } catch (IOException e) {
+                logger.error("Error loading questions from B resource: {}", resourcePathB, e);
+            }
+            
+            return allQuestions;
+        }
+        
+        // If no resources found
+        logger.debug("No resources found for {} {}", amcType, year);
+        return Collections.emptyList();
     }
     
     /**
