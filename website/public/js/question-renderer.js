@@ -108,18 +108,19 @@ class QuestionRenderer {
         
         // Priority: text_choices > latex_choices > picture_choices
         if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
-            return { choices: questionDetails.text_choices, hasLabels: false };
+            return { choices: questionDetails.text_choices, hasLabels: false, isImageChoice: false };
         } else if (questionDetails.latex_choices && questionDetails.latex_choices.length > 0) {
-            return this.parseLatexChoices(questionDetails.latex_choices);
+            const result = this.parseLatexChoices(questionDetails.latex_choices);
+            return { ...result, isImageChoice: false };
         } else if (questionDetails.picture_choices && questionDetails.picture_choices.length > 0) {
             const imageChoices = questionDetails.picture_choices.map(url => {
                 const imageUrl = this.processImageUrl(url);
                 return `<img src="${imageUrl}" alt="Choice" class="choice-image" />`;
             });
-            return { choices: imageChoices, hasLabels: false };
+            return { choices: imageChoices, hasLabels: false, isImageChoice: true };
         }
         
-        return { choices: [], hasLabels: false };
+        return { choices: [], hasLabels: false, isImageChoice: false };
     }
 
     /**
@@ -237,13 +238,14 @@ class QuestionRenderer {
     processQuestion(question, questionIndex = 0) {
         questionDebugLog('Processing complete question:', question);
         
-        let questionText, choices, hasLabels = false;
+        let questionText, choices, hasLabels = false, isImageChoice = false;
         
         if (typeof question.question === 'string') {
             // Old format - just text and choices array
             questionText = question.question;
             choices = question.choices || [];
             hasLabels = false;
+            isImageChoice = false;
         } else {
             // New format - complex object with insertions
             const questionDetails = question.question;
@@ -251,11 +253,13 @@ class QuestionRenderer {
             const choiceResult = this.extractQuestionChoices(questionDetails);
             choices = choiceResult.choices;
             hasLabels = choiceResult.hasLabels;
+            isImageChoice = choiceResult.isImageChoice;
             
             // If no choices extracted from new format, fall back to simple choices array
             if (choices.length === 0 && question.choices) {
                 choices = question.choices;
                 hasLabels = false;
+                isImageChoice = false;
             }
         }
         
@@ -264,6 +268,7 @@ class QuestionRenderer {
             questionText,
             choices,
             hasLabels,
+            isImageChoice: isImageChoice || false,
             answer: question.answer,
             solution: question.solution,
             originalQuestion: question
@@ -284,8 +289,14 @@ class QuestionRenderer {
         const questionText = questionData.questionText || 'Question text not available';
         const choices = questionData.choices || [];
         const hasLabels = questionData.hasLabels || false;
+        const isImageChoice = questionData.isImageChoice || false;
 
-        // Generate choices HTML
+        // Handle image choices differently
+        if (isImageChoice && choices.length > 0) {
+            return this.renderImageChoiceQuestion(questionData, questionIndex, options);
+        }
+
+        // Generate choices HTML for regular choices
         const choicesHTML = choices.map((choice, choiceIndex) => {
             const choiceValue = String.fromCharCode(65 + choiceIndex);
             const isChecked = selectedAnswer === choiceValue;
@@ -323,6 +334,70 @@ class QuestionRenderer {
                 <div class="answer-section ${cssClasses.answerSection || ''}">
                     <div class="answer-choices">
                         ${choicesHTML}
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    /**
+     * Render question HTML specifically for image choices
+     */
+    renderImageChoiceQuestion(questionData, questionIndex, options = {}) {
+        const {
+            showAnswerInputs = true,
+            inputNamePrefix = 'question',
+            selectedAnswer = null,
+            cssClasses = {}
+        } = options;
+
+        const questionText = questionData.questionText || 'Question text not available';
+        const choices = questionData.choices || [];
+
+        // Display the image first with full-width styling
+        const imageHTML = choices[0] || '';
+        const fullWidthImageHTML = imageHTML.replace(
+            'class="choice-image"',
+            'class="choice-image full-width-image" style="width: 100%; height: auto; max-width: 100%; display: block;"'
+        );
+
+        // Generate letter choices in one line (A, B, C, D, E)
+        const letterChoicesHTML = ['A', 'B', 'C', 'D', 'E'].map((letter, index) => {
+            const isChecked = selectedAnswer === letter;
+            
+            if (showAnswerInputs) {
+                return `
+                    <label class="choice-label ${isChecked ? 'selected' : ''} ${cssClasses.choiceLabel || ''}">
+                        <input type="radio" name="${inputNamePrefix}_${questionIndex}" value="${letter}" 
+                               data-question-index="${questionIndex}"
+                               ${isChecked ? 'checked' : ''}>
+                        <span class="choice-content">${letter}</span>
+                    </label>
+                `;
+            } else {
+                return `
+                    <div class="choice-display ${cssClasses.choiceDisplay || ''}">
+                        <span class="choice-content">${letter}</span>
+                    </div>
+                `;
+            }
+        }).join('');
+
+        return `
+            <div class="question-card ${cssClasses.questionCard || ''}" data-question-index="${questionIndex}">
+                <div class="question-header ${cssClasses.questionHeader || ''}">
+                    <h3>Problem ${questionIndex + 1}</h3>
+                    <div class="question-status" id="status_${questionIndex}"></div>
+                </div>
+                <div class="question-content ${cssClasses.questionContent || ''}">
+                    <div class="question-text">${questionText}</div>
+                </div>
+                <div class="answer-section ${cssClasses.answerSection || ''}">
+                    <div class="question-image-container" style="width: 100%; margin: 10px 0;">
+                        ${fullWidthImageHTML}
+                    </div>
+                    <div class="answer-choices image-choice-letters">
+                        ${letterChoicesHTML}
                     </div>
                 </div>
             </div>
