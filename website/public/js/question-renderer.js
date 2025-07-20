@@ -40,7 +40,7 @@ class QuestionRenderer {
      * Process question text by replacing insertion markers with actual content
      */
     processQuestionText(questionText, insertions) {
-        if (!insertions) return questionText;
+        if (!insertions) return this.preprocessLatexText(questionText);
         
         let processedText = questionText;
         
@@ -57,8 +57,9 @@ class QuestionRenderer {
                 processedText = processedText.replace(marker, 
                     `<img src="${imageUrl}" alt="${altText}" class="question-image" />`);
             } else if (insertion.alt_type === 'latex' && insertion.alt_value) {
-                // Use LaTeX content
-                processedText = processedText.replace(marker, insertion.alt_value);
+                // Use LaTeX content (preprocess it first)
+                const preprocessedLatex = this.preprocessLatexText(insertion.alt_value);
+                processedText = processedText.replace(marker, preprocessedLatex);
             } else if (insertion.picture) {
                 // Fallback: Use picture URL with proper protocol (legacy support)
                 const imageUrl = this.processImageUrl(insertion.picture);
@@ -71,7 +72,8 @@ class QuestionRenderer {
             }
         });
         
-        return processedText;
+        // Preprocess the final text to handle any remaining LaTeX commands
+        return this.preprocessLatexText(processedText);
     }
 
     /**
@@ -82,6 +84,22 @@ class QuestionRenderer {
             return 'https:' + url;
         }
         return url;
+    }
+
+    /**
+     * Preprocess LaTeX text to replace unsupported commands
+     */
+    preprocessLatexText(text) {
+        if (!text) return text;
+        
+        let processedText = text;
+        
+        // Replace \textsc{...} with \text{...}
+        processedText = processedText.replace(/\\textsc\{([^}]*)\}/g, '\\text{$1}');
+        
+        questionDebugLog('Preprocessed LaTeX text:', processedText);
+        
+        return processedText;
     }
 
     /**
@@ -130,9 +148,12 @@ class QuestionRenderer {
     parseLatexChoices(latexChoices) {
         questionDebugLog('Parsing LaTeX choices:', latexChoices);
         
-        if (latexChoices.length === 1) {
+        // Preprocess all LaTeX choices first
+        const preprocessedChoices = latexChoices.map(choice => this.preprocessLatexText(choice));
+        
+        if (preprocessedChoices.length === 1) {
             // Single string containing all choices - need to split
-            const choiceString = latexChoices[0];
+            const choiceString = preprocessedChoices[0];
             questionDebugLog('Single choice string to parse:', choiceString);
             
             // Check if it contains multiple choice labels like (A), (B), etc.
@@ -163,9 +184,9 @@ class QuestionRenderer {
             return { choices: [choiceString], hasLabels: true };
         } else {
             // Multiple strings - assume each is a separate choice
-            const hasLabels = latexChoices.some(choice => 
+            const hasLabels = preprocessedChoices.some(choice => 
                 choice.includes('textbf') && choice.match(/\([A-E]\)/));
-            return { choices: latexChoices, hasLabels };
+            return { choices: preprocessedChoices, hasLabels };
         }
     }
 
