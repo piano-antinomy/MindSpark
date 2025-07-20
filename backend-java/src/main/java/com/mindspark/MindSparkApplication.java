@@ -8,6 +8,7 @@ import com.mindspark.config.MindSparkModule;
 import com.mindspark.controller.QuestionController;
 import com.mindspark.controller.AuthController;
 import com.mindspark.controller.SubjectController;
+import com.mindspark.controller.ProgressController;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.slf4j.Logger;
@@ -61,6 +62,14 @@ public class MindSparkApplication {
             logger.info("   GET  /api/questions/math/level/2  - Get math questions for level 2");
             logger.info("   GET  /api/questions/math/level/3  - Get math questions for level 3");
             logger.info("   GET  /api/questions/math/health   - Health check");
+            logger.info("   📈 Progress Tracking:");
+            logger.info("   POST /api/progress/track          - Track question answer");
+            logger.info("   GET  /api/progress/user/{userId}  - Get user progress");
+            logger.info("   GET  /api/progress/user/{userId}/quiz/{quizId} - Get quiz progress");
+            logger.info("   DELETE /api/progress/user/{userId} - Clear user progress");
+            logger.info("   DELETE /api/progress/user/{userId}/quiz/{quizId} - Reset quiz progress");
+            logger.info("   GET  /api/progress/admin/all      - Get all user progress (admin)");
+            logger.info("   GET  /api/progress/health         - Progress service health check");
             logger.info("Press Ctrl+C to stop the server");
             
             server.join();
@@ -84,6 +93,7 @@ public class MindSparkApplication {
                         serve("/api/questions/math/*").with(QuestionController.class);
                         serve("/api/auth/*").with(AuthController.class);
                         serve("/api/subjects").with(SubjectController.class);
+                        serve("/api/progress/*").with(ProgressController.class);
                     }
                 }
             );

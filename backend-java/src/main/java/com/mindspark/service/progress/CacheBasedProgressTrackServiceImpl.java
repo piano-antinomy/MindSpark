@@ -7,21 +7,32 @@ import com.mindspark.model.Question;
 import com.mindspark.service.QuestionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 
 /**
- * Local cache-based implementation of progress tracking service
- * Uses in-memory storage with thread-safe operations
+ * Cache-based implementation of progress tracking service
+ * Uses in-memory storage with thread-safe operations and persistence based on mode
  */
 @Singleton
-public class LocalCacheBasedProgressTrackServiceImpl implements ProgressTrackService {
+public class CacheBasedProgressTrackServiceImpl implements ProgressTrackService {
     
-    private static final Logger logger = LoggerFactory.getLogger(LocalCacheBasedProgressTrackServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(CacheBasedProgressTrackServiceImpl.class);
+    
+    private static final String LOCAL_PROGRESS_BASE_PATH = "/tmp";
+    private static final String PROGRESS_FILE_NAME = "progress.json";
     
     /**
      * In-memory cache of user progress data
@@ -37,17 +48,27 @@ public class LocalCacheBasedProgressTrackServiceImpl implements ProgressTrackSer
     
     private final QuestionService questionService;
     private final boolean isLocalMode;
+    private final ObjectMapper objectMapper;
     
     @Inject
-    public LocalCacheBasedProgressTrackServiceImpl(QuestionService questionService, @LocalMode Boolean isLocalMode) {
+    public CacheBasedProgressTrackServiceImpl(QuestionService questionService, @LocalMode Boolean isLocalMode) {
         this.questionService = questionService;
         this.isLocalMode = isLocalMode;
         
-        logger.info("Initializing LocalCacheBasedProgressTrackService in {} mode", 
+        // Initialize JSON mapper
+        this.objectMapper = new ObjectMapper();
+        this.objectMapper.registerModule(new JavaTimeModule());
+        this.objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        this.objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+        
+        logger.info("Initializing CacheBasedProgressTrackService in {} mode", 
                    isLocalMode ? "LOCAL" : "PRODUCTION");
         
         // Pre-populate quiz metadata cache
         initializeQuizMetadataCache();
+        
+        // Initialize progress cache from existing data
+        initializeProgressCache();
     }
     
     @Override
@@ -95,6 +116,9 @@ public class LocalCacheBasedProgressTrackServiceImpl implements ProgressTrackSer
         // Update user's last activity and recalculate aggregated stats
         userProgress.updateLastActivity();
         userProgress.recalculateAggregatedStats();
+        
+        // Persist progress based on mode
+        persistProgress(userId, userProgress);
         
         logger.debug("Progress updated for user {}: {} questions answered in quiz {}", 
                     userId, quizProgress.getQuestionsAnswered(), quizId);
@@ -173,6 +197,10 @@ public class LocalCacheBasedProgressTrackServiceImpl implements ProgressTrackSer
         if (userProgress != null) {
             userProgress.getQuizProgress().remove(quizId);
             userProgress.recalculateAggregatedStats();
+            
+            // Persist the updated progress
+            persistProgress(userId, userProgress);
+            
             logger.info("Reset quiz progress for user {} and quiz {}", userId, quizId);
         }
     }
@@ -183,6 +211,15 @@ public class LocalCacheBasedProgressTrackServiceImpl implements ProgressTrackSer
     public void clearUserProgress(String userId) {
         if (userId != null) {
             progressCache.remove(userId);
+            
+            // Remove persisted data
+            if (isLocalMode) {
+                deleteLocalProgressFile(userId);
+            } else {
+                // TODO: Implement S3 deletion when S3 support is added
+                logger.debug("TODO: Delete progress from S3 for user {}", userId);
+            }
+            
             logger.info("Cleared all progress for user {}", userId);
         }
     }
@@ -192,6 +229,114 @@ public class LocalCacheBasedProgressTrackServiceImpl implements ProgressTrackSer
      */
     public Map<String, Progress> getAllUserProgress() {
         return new ConcurrentHashMap<>(progressCache);
+    }
+    
+    /**
+     * Initialize progress cache by loading existing data based on mode
+     */
+    private void initializeProgressCache() {
+        if (isLocalMode) {
+            loadLocalProgressData();
+        } else {
+            // TODO: Implement S3 progress loading when S3 support is added
+            logger.info("TODO: Load progress data from S3 in production mode");
+        }
+    }
+    
+    /**
+     * Load progress data from local files
+     */
+    private void loadLocalProgressData() {
+        try {
+            Path basePath = Paths.get(LOCAL_PROGRESS_BASE_PATH);
+            if (!Files.exists(basePath)) {
+                logger.debug("Local progress base path {} does not exist, starting with empty cache", basePath);
+                return;
+            }
+            
+            Files.list(basePath)
+                .filter(Files::isDirectory)
+                .forEach(userDir -> {
+                    String userId = userDir.getFileName().toString();
+                    Path progressFile = userDir.resolve(PROGRESS_FILE_NAME);
+                    
+                    if (Files.exists(progressFile)) {
+                        try {
+                            Progress progress = loadProgressFromFile(progressFile);
+                            if (progress != null) {
+                                progressCache.put(userId, progress);
+                                logger.debug("Loaded progress for user {} from {}", userId, progressFile);
+                            }
+                        } catch (Exception e) {
+                            logger.warn("Failed to load progress for user {} from {}: {}", 
+                                      userId, progressFile, e.getMessage());
+                        }
+                    }
+                });
+            
+            logger.info("Loaded progress data for {} users from local files", progressCache.size());
+        } catch (Exception e) {
+            logger.error("Error loading local progress data: {}", e.getMessage(), e);
+        }
+    }
+    
+    /**
+     * Persist progress based on current mode
+     */
+    private void persistProgress(String userId, Progress progress) {
+        if (isLocalMode) {
+            saveProgressToLocalFile(userId, progress);
+        } else {
+            // TODO: Implement S3 progress saving when S3 support is added
+            logger.debug("TODO: Save progress to S3 for user {}", userId);
+        }
+    }
+    
+    /**
+     * Save progress to local file
+     */
+    private void saveProgressToLocalFile(String userId, Progress progress) {
+        try {
+            Path userDir = Paths.get(LOCAL_PROGRESS_BASE_PATH, userId);
+            Files.createDirectories(userDir);
+            
+            Path progressFile = userDir.resolve(PROGRESS_FILE_NAME);
+            objectMapper.writeValue(progressFile.toFile(), progress);
+            
+            logger.debug("Saved progress for user {} to {}", userId, progressFile);
+        } catch (Exception e) {
+            logger.error("Failed to save progress for user {} to local file: {}", userId, e.getMessage(), e);
+        }
+    }
+    
+    /**
+     * Load progress from a local file
+     */
+    private Progress loadProgressFromFile(Path progressFile) throws IOException {
+        return objectMapper.readValue(progressFile.toFile(), Progress.class);
+    }
+    
+    /**
+     * Delete local progress file for a user
+     */
+    private void deleteLocalProgressFile(String userId) {
+        try {
+            Path userDir = Paths.get(LOCAL_PROGRESS_BASE_PATH, userId);
+            Path progressFile = userDir.resolve(PROGRESS_FILE_NAME);
+            
+            if (Files.exists(progressFile)) {
+                Files.delete(progressFile);
+                logger.debug("Deleted progress file for user {} at {}", userId, progressFile);
+            }
+            
+            // Remove empty user directory
+            if (Files.exists(userDir) && Files.list(userDir).count() == 0) {
+                Files.delete(userDir);
+                logger.debug("Deleted empty user directory for user {} at {}", userId, userDir);
+            }
+        } catch (Exception e) {
+            logger.warn("Failed to delete local progress file for user {}: {}", userId, e.getMessage());
+        }
     }
     
     /**

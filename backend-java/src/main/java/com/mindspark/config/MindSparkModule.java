@@ -8,8 +8,8 @@ import com.mindspark.service.QuestionService;
 import com.mindspark.service.CacheBackedQuestionServiceImpl;
 import com.mindspark.service.LoginService;
 import com.mindspark.service.LoginServiceImpl;
+import com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl;
 import com.mindspark.service.progress.ProgressTrackService;
-import com.mindspark.service.progress.LocalCacheBasedProgressTrackServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +24,7 @@ public class MindSparkModule extends AbstractModule {
         // Bind services
         bind(QuestionService.class).to(CacheBackedQuestionServiceImpl.class);
         bind(LoginService.class).to(LoginServiceImpl.class);
-        bind(ProgressTrackService.class).to(LocalCacheBasedProgressTrackServiceImpl.class);
+        bind(ProgressTrackService.class).to(CacheBasedProgressTrackServiceImpl.class);
     }
     
     @Provides
