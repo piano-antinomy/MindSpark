@@ -41,7 +41,7 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
         
         // Detect environment and set appropriate paths
         this.isLocalMode = detectLocalMode();
-        this.questionsBasePath = isLocalMode ? "questions" : "/math/questions";
+        this.questionsBasePath = isLocalMode ? "/resources/math/questions" : "/math/questions";
         
         logger.info("Initializing QuestionService in {} mode", isLocalMode ? "LOCAL" : "LAMBDA");
         logger.info("Questions base path: {}", questionsBasePath);
@@ -68,25 +68,6 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
             logger.info("Lambda environment detected: LAMBDA_TASK_ROOT={}, AWS_EXECUTION_ENV={}", 
                        lambdaTaskRoot, awsExecutionEnv);
             return false;
-        }
-        
-        // Method 3: Check if questions directory exists in file system (local development)
-        File questionsDir = new File("questions");
-        if (questionsDir.exists() && questionsDir.isDirectory()) {
-            logger.info("Local questions directory found: {}", questionsDir.getAbsolutePath());
-            return true;
-        }
-        
-        // Method 4: Check if we can access classpath resources
-        InputStream testResource = getClass().getResourceAsStream("/math/questions/AMC/AMC_8/2024_AMC_8.json");
-        if (testResource != null) {
-            try {
-                testResource.close();
-                logger.info("Classpath resources detected - assuming Lambda/production mode");
-                return false;
-            } catch (IOException e) {
-                logger.warn("Error closing test resource stream", e);
-            }
         }
         
         // Default to local mode if uncertain
