@@ -50,11 +50,17 @@ class QuestionRenderer {
             const marker = `<${key}>`; // e.g., "<INSERTION_INDEX_1>"
             
             // Replace the marker with the appropriate content
-            if (insertion.alt_type === 'latex' && insertion.alt_value) {
+            if (insertion.alt_type === 'image' && insertion.picture) {
+                // Use picture URL with proper protocol for image type
+                const imageUrl = this.processImageUrl(insertion.picture);
+                const altText = insertion.alt_value || 'Question image';
+                processedText = processedText.replace(marker, 
+                    `<img src="${imageUrl}" alt="${altText}" class="question-image" />`);
+            } else if (insertion.alt_type === 'latex' && insertion.alt_value) {
                 // Use LaTeX content
                 processedText = processedText.replace(marker, insertion.alt_value);
             } else if (insertion.picture) {
-                // Use picture URL with proper protocol
+                // Fallback: Use picture URL with proper protocol (legacy support)
                 const imageUrl = this.processImageUrl(insertion.picture);
                 const altText = insertion.alt_value || 'Question image';
                 processedText = processedText.replace(marker, 
