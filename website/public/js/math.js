@@ -199,14 +199,22 @@ function displayYearSelection(data) {
         </div>
         
         <div class="year-selection-container">
-            <h2>${data.amcType} - Select Competition Year</h2>
-            <p>Choose a year to practice questions from the ${data.amcType} competition:</p>
+            <h2>${data.amcType} Level </h2>
             
-            <div class="selected-level-info">
-                <span class="level-badge">Level ${data.level}</span>
-                <span class="amc-type">${data.amcType}</span>
+            <!-- Personalized Training Option -->
+            <div class="personalized-training-section">
+                <button class="personalized-training-button" onclick="startPersonalizedTraining()">
+                    <span class="button-icon">🎯</span>
+                    <span class="button-title">Smart Practice Mode</span>
+                    <span class="button-subtitle">AI-curated questions tailored to your skill level</span>
+                </button>
             </div>
             
+            <div class="training-option-divider">
+                <span>OR</span>
+            </div>
+            
+            <p><strong>Practice by Competition Year:</strong></p>
             <div class="years-grid">
                 ${data.years.map(year => `
                     <button class="year-button" onclick="selectYear('${year}')">
@@ -285,13 +293,10 @@ async function loadQuestionsForLevelAndYear(level, year) {
  */
 function displayQuestionsInterface(data) {
     const questionsHTML = `
-        <div class="step-navigation">
-            <div class="step completed" onclick="backToLevelSelection()">1. Select Level</div>
-            <div class="step completed" onclick="backToYearSelection()">2. Select Year</div>
-            <div class="step active">3. Practice Questions</div>
-        </div>
         
         <div class="questions-container all-questions">
+            <div class="header-spacer" style="margin: 2rem 0;"></div>
+
             <div class="questions-header">
                 <h2>${data.amcType} ${data.year} Practice</h2>
                 <div class="practice-info">
@@ -299,9 +304,13 @@ function displayQuestionsInterface(data) {
                     <span class="question-counter">All ${data.count} Questions</span>
                 </div>
             </div>
-            
+
+            <div class="header-spacer" style="margin: 2rem 0;"></div>
+
             <div class="question-navigation">
-                <button class="btn btn-secondary" onclick="backToYearSelection()">← Back to Years</button>
+                <button class="btn btn-secondary" onclick="backToYearSelection()">← Back to Year selections</button>
+                <div class="header-spacer" style="margin: 2rem 0;"></div>
+
                 <div class="practice-controls">
                     <button class="btn btn-success" onclick="checkAllAnswers()">Check All Answers</button>
                     <button class="btn btn-info" onclick="resetAllPractice()">Reset All</button>
@@ -538,6 +547,23 @@ async function renderSingleQuestionWithRenderer(question, questionIndex, contain
     await questionRenderer.renderLatexContent(containerElement);
     
     return questionData;
+}
+
+/**
+ * Handle personalized training mode selection
+ */
+function startPersonalizedTraining() {
+    // For now, show a coming soon message with more details
+    alert(`🎯 Smart Practice Mode - Coming Soon!
+    
+This feature will include:
+• AI-powered question selection based on your skill level
+• Adaptive difficulty that learns from your performance  
+• Focus on your weak areas to accelerate improvement
+• Mixed questions from multiple years for comprehensive practice
+• Progress tracking with detailed analytics
+
+For now, please select a specific competition year to practice with traditional AMC questions.`);
 }
 
 function showError(message) {

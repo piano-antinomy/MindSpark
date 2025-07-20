@@ -457,6 +457,173 @@ label.choice-label {
     }
 }
 
+/* Year Selection Styles */
+.year-selection-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.year-selection-container h2 {
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.years-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.year-button {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.year-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.year-button:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.year-button:hover::before {
+    left: 100%;
+}
+
+.year-button h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.year-button .year-description {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Personalized Training Button */
+.personalized-training-section {
+    margin: 3rem auto 2rem;
+    max-width: 600px;
+    text-align: center;
+}
+
+.personalized-training-button {
+    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 2.5rem 3rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+    position: relative;
+    overflow: hidden;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    width: 100%;
+    max-width: 500px;
+    margin: 1rem auto;
+    display: block;
+}
+
+.personalized-training-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.personalized-training-button:hover {
+    background: linear-gradient(135deg, #6d28d9 0%, #9333ea 100%);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.5);
+}
+
+.personalized-training-button:hover::before {
+    left: 100%;
+}
+
+.personalized-training-button .button-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.personalized-training-button .button-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.personalized-training-button .button-subtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0.025em;
+}
+
+.training-option-divider {
+    margin: 2rem auto;
+    text-align: center;
+    position: relative;
+}
+
+.training-option-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+}
+
+.training-option-divider span {
+    background: white;
+    padding: 0 2rem;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 /* Loading and Error States */
 .loading-message {
     text-align: center;

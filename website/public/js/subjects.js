@@ -22,7 +22,7 @@ async function loadSubjects() {
     const subjects = [
         {
             id: 'math',
-            name: 'Mathematics',
+            name: 'Math Competition Training',
             available: true
         },
         {
