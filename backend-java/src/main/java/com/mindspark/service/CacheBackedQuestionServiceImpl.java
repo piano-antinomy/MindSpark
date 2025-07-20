@@ -2,6 +2,7 @@ package com.mindspark.service;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mindspark.config.LocalMode;
 import com.mindspark.model.Question;
 import com.mindspark.model.QuestionFile;
 import org.slf4j.Logger;
@@ -36,11 +37,11 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
     private final String questionsBasePath;
     
     @Inject
-    public CacheBackedQuestionServiceImpl(ObjectMapper objectMapper) {
+    public CacheBackedQuestionServiceImpl(ObjectMapper objectMapper, @LocalMode Boolean isLocalMode) {
         this.objectMapper = objectMapper;
+        this.isLocalMode = isLocalMode;
         
-        // Detect environment and set appropriate paths
-        this.isLocalMode = detectLocalMode();
+        // Set appropriate paths based on environment
         this.questionsBasePath = isLocalMode ? "resources/math/questions" : "/math/questions";
         
         logger.info("Initializing QuestionService in {} mode", isLocalMode ? "LOCAL" : "LAMBDA");
@@ -48,31 +49,6 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
         
         initializeLevelMappings();
         loadAllQuestions();
-    }
-    
-    /**
-     * Detect if running in local development mode vs Lambda/production
-     */
-    private boolean detectLocalMode() {
-        // Method 1: Check system property set by run.sh
-        String localModeProperty = System.getProperty("mindspark.local.mode");
-        if ("true".equals(localModeProperty)) {
-            logger.info("Local mode detected via system property");
-            return true;
-        }
-        
-        // Method 2: Check AWS Lambda environment variables
-        String lambdaTaskRoot = System.getenv("LAMBDA_TASK_ROOT");
-        String awsExecutionEnv = System.getenv("AWS_EXECUTION_ENV");
-        if (lambdaTaskRoot != null || awsExecutionEnv != null) {
-            logger.info("Lambda environment detected: LAMBDA_TASK_ROOT={}, AWS_EXECUTION_ENV={}", 
-                       lambdaTaskRoot, awsExecutionEnv);
-            return false;
-        }
-        
-        // Default to local mode if uncertain
-        logger.warn("Unable to determine environment, defaulting to local mode");
-        return true;
     }
     
     private void initializeLevelMappings() {
