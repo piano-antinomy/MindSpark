@@ -756,12 +756,32 @@
     {
       "id": "amc_2011_8_10",
       "question": {
-        "text": "<p>The taxi fare in Gotham City is $2.40 for the first <INSERTION_INDEX_1> mile and additional mileage charged at the rate $0.20 for each additional 0.1 mile. You plan to give the driver a $2 tip. How many miles can you ride for $10?</p>",
+        "text": "<p>The taxi fare in Gotham City is <INSERTION_INDEX_1> for the first <INSERTION_INDEX_2> mile and additional mileage charged at the rate <INSERTION_INDEX_3> for each additional 0.1 mile. You plan to give the driver a <INSERTION_INDEX_4> tip. How many miles can you ride for <INSERTION_INDEX_5>?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/placeholder.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 2.40$"
+          },
+          "INSERTION_INDEX_2": {
             "picture": "//latex.artofproblemsolving.com/b/d/c/bdc960c165b21ba43f7a90caa2893d40409d6944.png",
             "alt_type": "latex",
             "alt_value": "$\\frac12$"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/placeholder.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 0.20$"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/placeholder.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 2$"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/placeholder.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 10$"
           }
         },
         "type": "multiple-choice",
