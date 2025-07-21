@@ -1,4 +1,4 @@
-# MathJax Configuration Guide
+# MathJax Configuration & JSON Structure Guide
 
 ## Overview
 
@@ -31,6 +31,78 @@ window.MathJax = {
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 ```
 
+## JSON Question Structure
+
+### Expected JSON Format
+
+```json
+{
+  "id": "amc_2014_8_5",
+  "question": {
+    "text": "<p>Question text with <INSERTION_INDEX_1> placeholders for dynamic content.</p>",
+    "insertions": {
+      "INSERTION_INDEX_1": {
+        "picture": "//latex.artofproblemsolving.com/image.png",
+        "alt_type": "latex",
+        "alt_value": "$\\textdollar 150$"
+      }
+    },
+    "type": "multiple-choice",
+    "text_choices": [],
+    "picture_choices": [],
+    "latex_choices": [
+      "$\\textbf{(A) } \\mbox{choice text} \\qquad \\textbf{(B) } \\mbox{choice text} \\qquad \\textbf{(C) } \\mbox{choice text} \\qquad \\textbf{(D) } \\mbox{choice text} \\qquad \\textbf{(E) } \\mbox{choice text}$"
+    ],
+    "asy_choices": []
+  },
+  "answer": "B",
+  "solutions": [...]
+}
+```
+
+### Key JSON Fields
+
+- **`text`**: Question text with `<INSERTION_INDEX_N>` placeholders
+- **`insertions`**: Dynamic content (numbers, formulas, images) to insert into question text
+- **`latex_choices`**: Single string with all 5 multiple-choice options separated by `\qquad`
+- **`alt_type`**: "latex" for LaTeX content, "image" for images
+- **`alt_value`**: LaTeX content (e.g., `"$\\textdollar 150$"` for dollar amounts)
+
+## LaTeX Preprocessing
+
+### Where to Update Preprocessing
+
+**File**: `website/public/js/question-renderer.js`
+
+**Function**: `preprocessLatexText(text)`
+
+### Current Preprocessing Rules
+
+```javascript
+// Replace \textsc{...} with \text{...}
+processedText = processedText.replace(/\\textsc\{([^}]*)\}/g, '\\text{$1}');
+
+// Replace \emph{...} with \textit{...}
+processedText = processedText.replace(/\\emph\{([^}]*)\}/g, '\\textit{$1}');
+
+// Replace \overarc{...} with \overparen{...}
+processedText = processedText.replace(/\\overarc\{([^}]*)\}/g, '\\overparen{$1}');
+
+// Replace \textdollar with \text{\$} for proper dollar sign rendering
+processedText = processedText.replace(/\\textdollar/g, '\\text{\\$}');
+
+// Ensure \mbox{} preserves spaces by adding explicit space commands
+processedText = processedText.replace(/\\mbox\{([^}]*)\}/g, function(match, content) {
+    return '\\mbox{' + content.replace(/\s+/g, '\\ ') + '}';
+});
+```
+
+### Adding New Preprocessing Rules
+
+1. Add new regex replacement in `preprocessLatexText()` function
+2. Test with sample LaTeX content
+3. Update this documentation
+
 ## Configuration Details
 
 ### TeX Input Processor
@@ -39,30 +111,10 @@ window.MathJax = {
 - **Display Math**: `$$...$$` and `\[...\]`
 - **Process Escapes**: `true` - handles escaped characters
 - **Process Environments**: `true` - processes LaTeX environments
-- **Packages**: None currently - using basic configuration
 
 ### Options
 
 - **Skip HTML Tags**: Prevents MathJax from processing content in script, noscript, style, textarea, and pre tags
-
-## Extensions Used
-
-**None currently** - The project uses the basic MathJax configuration without additional extensions.
-
-### Note on textmacros Extension
-
-The textmacros extension was attempted but caused rendering errors. The basic `tex-mml-chtml.js` bundle doesn't include this extension by default, and loading it separately caused compatibility issues.
-
-**Current approach**: Manual preprocessing in JavaScript handles text formatting commands:
-- `\textsc{}` → `\text{}` (small caps to regular text)
-- `\emph{}` → `\textit{}` (emphasis to italic text)
-
-## Files with MathJax Configuration
-
-1. **`website/public/math.html`** - Main mathematics learning page
-2. **`website/public/math-simple.html`** - Simplified math page
-3. **`scripts/python/demo/json_to_html.py`** - Python script for generating HTML from JSON
-4. **`scripts/python/demo/output.html`** - Generated demo output
 
 ## JavaScript Integration
 
@@ -77,25 +129,12 @@ class QuestionRenderer {
         this.initializeMathJax();
     }
 
-    initializeMathJax() {
-        if (typeof MathJax !== 'undefined') {
-            this.mathJaxReady = true;
-            questionDebugLog('MathJax initialized successfully');
-        } else {
-            questionDebugLog('MathJax not available');
-        }
-    }
-
     async renderLatexContent(element) {
         if (!this.mathJaxReady || typeof MathJax === 'undefined') {
-            questionDebugLog('MathJax not available for rendering');
             return Promise.resolve();
         }
-
         try {
-            questionDebugLog('Rendering LaTeX content in element:', element);
             await MathJax.typesetPromise([element]);
-            questionDebugLog('LaTeX rendering completed successfully');
         } catch (error) {
             console.warn('MathJax rendering error:', error);
         }
@@ -103,60 +142,49 @@ class QuestionRenderer {
 }
 ```
 
-## Usage Examples
+## Common LaTeX Patterns
 
-### Inline Math
-```html
-<p>The formula $E = mc^2$ represents Einstein's mass-energy equivalence.</p>
+### Dollar Amounts
+```latex
+$\\textdollar 150$  // Renders as $150
 ```
 
-### Display Math
-```html
-<p>The quadratic formula is:</p>
-$$\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+### Multiple Choice Options
+```latex
+$\\textbf{(A) } \\mbox{option text} \\qquad \\textbf{(B) } \\mbox{option text}$
 ```
 
-### Text Formatting (with preprocessing)
-```html
-<p>Consider the set $\text{Real Numbers}$ and the subset $\textbf{Positive Integers}$.</p>
-<p>The $\textit{double factorial}$ is defined as $n!! = n \cdot (n-2) \cdot (n-4) \cdots$</p>
+### Fractions and Math
+```latex
+$\\frac{5}{19} < \\frac{7}{21} < \\frac{9}{23}$
 ```
 
 ## Best Practices
 
-1. **Consistent Configuration**: Use the same MathJax configuration across all files
-2. **Async Loading**: Always use `async` attribute when loading MathJax script
-3. **Error Handling**: Implement proper error handling for MathJax rendering
-4. **Debug Logging**: Use debug logging to track MathJax initialization and rendering
-5. **Preprocessing**: Minimize manual LaTeX preprocessing when extensions can handle it
+1. **JSON Structure**: Use single string for `latex_choices` with `\qquad` separators
+2. **Insertions**: Extract numbers/formulas from text into insertions for proper LaTeX handling
+3. **Preprocessing**: Add new LaTeX commands to `preprocessLatexText()` function
+4. **Spacing**: Use `\mbox{}` with explicit `\ ` spaces for text content
+5. **Debug**: Enable `QUESTION_RENDERER_DEBUG = true` for troubleshooting
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **MathJax not loading**: Check if the CDN URL is accessible
-2. **Rendering errors**: Verify LaTeX syntax and check browser console
-3. **Text formatting not working**: Check that preprocessing is converting `\textsc{}` to `\text{}`
-4. **Performance issues**: Consider lazy loading for large amounts of mathematical content
+1. **No spaces in text**: Use `\mbox{}` with explicit `\ ` spaces
+2. **Dollar signs not rendering**: Use `\\textdollar` in JSON, converts to `\\text{\\$}`
+3. **Choices not splitting**: Ensure `latex_choices` uses `\qquad` separators
+4. **MathJax errors**: Check browser console and LaTeX syntax
 
 ### Debug Mode
 
-Enable debug logging in `question-renderer.js`:
-
+Enable in `question-renderer.js`:
 ```javascript
 const QUESTION_RENDERER_DEBUG = true;
 ```
 
-## Future Enhancements
+## Files to Modify
 
-Potential extensions to consider:
-- **physics** - For physics notation
-- **color** - For colored mathematical expressions
-- **ams** - For additional AMS symbols and environments
-- **noerrors** - To suppress error messages
-
-## References
-
-- [MathJax 3.x Documentation](https://docs.mathjax.org/en/latest/)
-- [TeX Input Processor](https://docs.mathjax.org/en/latest/input/tex/index.html)
-- [Textmacros Extension](https://docs.mathjax.org/en/latest/input/tex/extensions/textmacros.html) 
+- **JSON Structure**: `backend-java/resources/math/questions/AMC_*/`
+- **LaTeX Preprocessing**: `website/public/js/question-renderer.js`
+- **MathJax Config**: `website/public/math.html`, `website/public/math-simple.html` 
