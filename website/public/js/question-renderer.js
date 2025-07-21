@@ -106,6 +106,13 @@ class QuestionRenderer {
         // Replace \textdollar with \text{\$} for proper dollar sign rendering
         processedText = processedText.replace(/\\textdollar/g, '\\text{\\$}');
         
+        // Replace \begin{tabular} with \begin{array} for better MathJax 3.x support
+        processedText = processedText.replace(/\\begin\{tabular\}/g, '\\begin{array}');
+        processedText = processedText.replace(/\\end\{tabular\}/g, '\\end{array}');
+        
+        // Also try converting to matrix format if array doesn't work
+        // processedText = processedText.replace(/\\begin\{array\}\{([^}]*)\}(.*?)\\end\{array\}/g, '\\begin{matrix}$2\\end{matrix}');
+        
         questionDebugLog('Preprocessed LaTeX text:', processedText);
         
         return processedText;

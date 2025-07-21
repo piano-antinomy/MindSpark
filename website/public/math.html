@@ -15,7 +15,7 @@
                 displayMath: [['$$', '$$'], ['\\[', '\\]']],
                 processEscapes: true,
                 processEnvironments: true,
-                packages: {'[+]': ['textmacros']}
+                packages: {'[+]': ['textmacros', 'ams', 'array', 'base', 'amsmath']}
             },
             options: {
                 skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
@@ -23,6 +23,8 @@
         };
     </script>
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Alternative: Try with full MathJax bundle if needed -->
+    <!-- <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script> -->
 </head>
 <body>
     <div class="math-layout">
