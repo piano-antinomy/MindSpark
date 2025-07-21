@@ -6,15 +6,13 @@ import javax.servlet.http.HttpServletResponse;
 public class CorsUtils {
     
     public static void setCorsHeaders(HttpServletRequest request, HttpServletResponse response) {
-        // Get the origin from the request
+        // Get the origin from the request and allow it dynamically
         String origin = request.getHeader("Origin");
-        
-        // Allow specific origins (localhost for development)
-        if (origin != null && (origin.startsWith("http://localhost:") || origin.startsWith("https://localhost:"))) {
+        if (origin != null) {
             response.setHeader("Access-Control-Allow-Origin", origin);
         } else {
-            // Fallback to localhost:3000 for development
-            response.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+            // Fallback for requests without origin header
+            response.setHeader("Access-Control-Allow-Origin", "*");
         }
         
         response.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");

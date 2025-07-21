@@ -7,6 +7,9 @@
 // Java Backend API Configuration
 const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
+// Debug logging for API URL
+console.log('[MathPractice] JAVA_API_BASE_URL:', JAVA_API_BASE_URL);
+
 // Debug mode - set to true to enable detailed console logging
 const DEBUG_MODE = true;
 
