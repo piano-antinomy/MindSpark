@@ -13,6 +13,11 @@ import javax.inject.Singleton;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -21,6 +26,11 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Stream;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 
 @Singleton
 public class CacheBackedQuestionServiceImpl implements QuestionService {
@@ -92,17 +102,24 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
     }
     
     @Override
-    public List<Question> getQuestionsByLevelAndYear(int level, String year) {
+    public List<Question> getQuestionsByLevelAndYear(int level, String yearVersion) {
         String amcType = levelToAMCType.get(String.valueOf(level));
         if (amcType == null) {
             logger.warn("Invalid level: {}", level);
             return Collections.emptyList();
         }
         
+        // Convert yearVersion back to filename format
+        String fileName = convertYearVersionToFileName(yearVersion, amcType);
+        if (fileName == null) {
+            logger.warn("Invalid year/version format: {}", yearVersion);
+            return Collections.emptyList();
+        }
+        
         if (isLocalMode) {
-            return loadQuestionsFromFile(amcType, year);
+            return loadQuestionsFromFile(amcType, fileName);
         } else {
-            return loadQuestionsFromResource(amcType, year);
+            return loadQuestionsFromResource(amcType, fileName);
         }
     }
     
@@ -131,26 +148,25 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
         List<Question> allQuestionsForLevel = new ArrayList<>();
         Set<String> yearsForLevel = new TreeSet<>();
         
-        // Common AMC file names
-        String[] years = {
-            "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009",
-            "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019",
-            "2020", "2021", "2022", "2023", "2024", "2025"
-        };
+        // Discover available files dynamically
+        List<String> availableFiles = scanAvailableFiles(amcType);
         
-        for (String year : years) {
-            List<Question> yearQuestions;
-            
-            if (isLocalMode) {
-                yearQuestions = loadQuestionsFromFile(amcType, year);
-            } else {
-                yearQuestions = loadQuestionsFromResource(amcType, year);
-            }
-            
-            if (!yearQuestions.isEmpty()) {
-                allQuestionsForLevel.addAll(yearQuestions);
-                yearsForLevel.add(year);
-                logger.debug("Loaded {} questions from {} {}", yearQuestions.size(), amcType, year);
+        for (String fileName : availableFiles) {
+            String yearVersion = extractYearVersionFromFileName(fileName, amcType);
+            if (yearVersion != null) {
+                List<Question> yearQuestions;
+                
+                if (isLocalMode) {
+                    yearQuestions = loadQuestionsFromFile(amcType, fileName);
+                } else {
+                    yearQuestions = loadQuestionsFromResource(amcType, fileName);
+                }
+                
+                if (!yearQuestions.isEmpty()) {
+                    allQuestionsForLevel.addAll(yearQuestions);
+                    yearsForLevel.add(yearVersion);
+                    logger.debug("Loaded {} questions from {} {}", yearQuestions.size(), amcType, yearVersion);
+                }
             }
         }
         
@@ -161,121 +177,152 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
     }
     
     /**
-     * Load questions from file system (local development)
+     * Scan available files for the given AMC type
      */
-    private List<Question> loadQuestionsFromFile(String amcType, String year) {
-        // Try combined file first (for AMC_8 or if combined files exist)
-        String combinedFilePath = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + ".json";
-        File combinedFile = new File(combinedFilePath);
+    private List<String> scanAvailableFiles(String amcType) {
+        List<String> files = new ArrayList<>();
         
-        if (combinedFile.exists()) {
+        if (isLocalMode) {
+            files = scanFilesystemForAMCFiles(amcType);
+        } else {
+            files = scanClasspathForAMCFiles(amcType);
+        }
+        
+        logger.debug("Found {} files for {}: {}", files.size(), amcType, files);
+        return files;
+    }
+    
+    /**
+     * Scan filesystem for AMC files
+     */
+    private List<String> scanFilesystemForAMCFiles(String amcType) {
+        List<String> files = new ArrayList<>();
+        String dirPath = questionsBasePath + "/" + amcType;
+        File directory = new File(dirPath);
+        
+        if (!directory.exists() || !directory.isDirectory()) {
+            logger.warn("Directory does not exist: {}", dirPath);
+            return files;
+        }
+        
+        try {
+            File[] jsonFiles = directory.listFiles((dir, name) -> name.endsWith(".json"));
+            if (jsonFiles != null) {
+                for (File file : jsonFiles) {
+                    files.add(file.getName());
+                }
+            }
+        } catch (Exception e) {
+            logger.error("Error scanning filesystem directory: {}", dirPath, e);
+        }
+        
+        return files;
+    }
+    
+    /**
+     * Scan classpath for AMC files
+     */
+    private List<String> scanClasspathForAMCFiles(String amcType) {
+        List<String> files = new ArrayList<>();
+        String resourcePath = questionsBasePath + "/" + amcType;
+        
+        try {
+            URL resourceUrl = getClass().getResource(resourcePath);
+            if (resourceUrl == null) {
+                logger.warn("Resource path not found: {}", resourcePath);
+                return files;
+            }
+            
+            if (resourceUrl.getProtocol().equals("file")) {
+                // Running from IDE or expanded classpath
+                Path path = Paths.get(resourceUrl.toURI());
+                try (Stream<Path> stream = Files.list(path)) {
+                    stream.filter(Files::isRegularFile)
+                          .filter(p -> p.toString().endsWith(".json"))
+                          .forEach(p -> files.add(p.getFileName().toString()));
+                }
+            } else if (resourceUrl.getProtocol().equals("jar")) {
+                // Running from JAR
+                String jarPath = resourceUrl.getPath().substring(5, resourceUrl.getPath().indexOf("!"));
+                try (JarFile jar = new JarFile(URLDecoder.decode(jarPath, "UTF-8"))) {
+                    String targetPath = resourcePath.startsWith("/") ? resourcePath.substring(1) : resourcePath;
+                    jar.stream()
+                       .filter(entry -> !entry.isDirectory())
+                       .filter(entry -> entry.getName().startsWith(targetPath + "/"))
+                       .filter(entry -> entry.getName().endsWith(".json"))
+                       .forEach(entry -> {
+                           String fileName = entry.getName().substring(entry.getName().lastIndexOf('/') + 1);
+                           files.add(fileName);
+                       });
+                }
+            }
+        } catch (Exception e) {
+            logger.error("Error scanning classpath for AMC files: {}", resourcePath, e);
+        }
+        
+        return files;
+    }
+    
+    /**
+     * Extract year and version from filename
+     * Examples:
+     * - "2020_AMC_8.json" -> "2020"
+     * - "2020_AMC_10A.json" -> "2020A"
+     * - "2020_AMC_12B.json" -> "2020B"
+     */
+    private String extractYearVersionFromFileName(String fileName, String amcType) {
+        // Pattern to match: YYYY_AMC_NN[A|B].json
+        Pattern pattern = Pattern.compile("(\\d{4})_" + amcType + "([AB]?)\\.json");
+        Matcher matcher = pattern.matcher(fileName);
+        
+        if (matcher.matches()) {
+            String year = matcher.group(1);
+            String version = matcher.group(2);
+            return year + (version != null ? version : "");
+        }
+        
+        return null;
+    }
+
+    /**
+     * Load questions from file system (local development) - updated to use filename
+     */
+    private List<Question> loadQuestionsFromFile(String amcType, String fileName) {
+        String filePath = questionsBasePath + "/" + amcType + "/" + fileName;
+        File file = new File(filePath);
+        
+        if (file.exists()) {
             try {
-                logger.debug("Loading questions from combined file: {}", combinedFilePath);
-                QuestionFile questionFile = objectMapper.readValue(combinedFile, QuestionFile.class);
+                logger.debug("Loading questions from file: {}", filePath);
+                QuestionFile questionFile = objectMapper.readValue(file, QuestionFile.class);
                 return questionFile.getProblems() != null ? questionFile.getProblems() : Collections.emptyList();
             } catch (IOException e) {
-                logger.error("Error loading questions from combined file: {}", combinedFilePath, e);
+                logger.error("Error loading questions from file: {}", filePath, e);
                 return Collections.emptyList();
             }
         }
         
-        // For AMC_10 and AMC_12, try loading A and B versions separately
-        if ("AMC_10".equals(amcType) || "AMC_12".equals(amcType)) {
-            List<Question> allQuestions = new ArrayList<>();
-            
-            // Load A version
-            String filePathA = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + "A.json";
-            File fileA = new File(filePathA);
-            if (fileA.exists()) {
-                try {
-                    logger.debug("Loading questions from A file: {}", filePathA);
-                    QuestionFile questionFileA = objectMapper.readValue(fileA, QuestionFile.class);
-                    if (questionFileA.getProblems() != null) {
-                        allQuestions.addAll(questionFileA.getProblems());
-                    }
-                } catch (IOException e) {
-                    logger.error("Error loading questions from A file: {}", filePathA, e);
-                }
-            }
-            
-            // Load B version
-            String filePathB = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + "B.json";
-            File fileB = new File(filePathB);
-            if (fileB.exists()) {
-                try {
-                    logger.debug("Loading questions from B file: {}", filePathB);
-                    QuestionFile questionFileB = objectMapper.readValue(fileB, QuestionFile.class);
-                    if (questionFileB.getProblems() != null) {
-                        allQuestions.addAll(questionFileB.getProblems());
-                    }
-                } catch (IOException e) {
-                    logger.error("Error loading questions from B file: {}", filePathB, e);
-                }
-            }
-            
-            return allQuestions;
-        }
-        
-        // If no files found
-        logger.debug("No files found for {} {}", amcType, year);
+        logger.debug("File not found: {}", filePath);
         return Collections.emptyList();
     }
     
     /**
-     * Load questions from classpath resources (Lambda/production)
+     * Load questions from classpath resources (Lambda/production) - updated to use filename
      */
-    private List<Question> loadQuestionsFromResource(String amcType, String year) {
-        // Try combined file first (for AMC_8 or if combined files exist)
-        String combinedResourcePath = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + ".json";
+    private List<Question> loadQuestionsFromResource(String amcType, String fileName) {
+        String resourcePath = questionsBasePath + "/" + amcType + "/" + fileName;
         
-        try (InputStream inputStream = getClass().getResourceAsStream(combinedResourcePath)) {
+        try (InputStream inputStream = getClass().getResourceAsStream(resourcePath)) {
             if (inputStream != null) {
-                logger.debug("Loading questions from combined classpath: {}", combinedResourcePath);
+                logger.debug("Loading questions from resource: {}", resourcePath);
                 QuestionFile questionFile = objectMapper.readValue(inputStream, QuestionFile.class);
                 return questionFile.getProblems() != null ? questionFile.getProblems() : Collections.emptyList();
             }
         } catch (IOException e) {
-            logger.error("Error loading questions from combined resource: {}", combinedResourcePath, e);
-            return Collections.emptyList();
+            logger.error("Error loading questions from resource: {}", resourcePath, e);
         }
         
-        // For AMC_10 and AMC_12, try loading A and B versions separately
-        if ("AMC_10".equals(amcType) || "AMC_12".equals(amcType)) {
-            List<Question> allQuestions = new ArrayList<>();
-            
-            // Load A version
-            String resourcePathA = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + "A.json";
-            try (InputStream inputStreamA = getClass().getResourceAsStream(resourcePathA)) {
-                if (inputStreamA != null) {
-                    logger.debug("Loading questions from A classpath: {}", resourcePathA);
-                    QuestionFile questionFileA = objectMapper.readValue(inputStreamA, QuestionFile.class);
-                    if (questionFileA.getProblems() != null) {
-                        allQuestions.addAll(questionFileA.getProblems());
-                    }
-                }
-            } catch (IOException e) {
-                logger.error("Error loading questions from A resource: {}", resourcePathA, e);
-            }
-            
-            // Load B version
-            String resourcePathB = questionsBasePath + "/" + amcType + "/" + year + "_" + amcType + "B.json";
-            try (InputStream inputStreamB = getClass().getResourceAsStream(resourcePathB)) {
-                if (inputStreamB != null) {
-                    logger.debug("Loading questions from B classpath: {}", resourcePathB);
-                    QuestionFile questionFileB = objectMapper.readValue(inputStreamB, QuestionFile.class);
-                    if (questionFileB.getProblems() != null) {
-                        allQuestions.addAll(questionFileB.getProblems());
-                    }
-                }
-            } catch (IOException e) {
-                logger.error("Error loading questions from B resource: {}", resourcePathB, e);
-            }
-            
-            return allQuestions;
-        }
-        
-        // If no resources found
-        logger.debug("No resources found for {} {}", amcType, year);
+        logger.debug("Resource not found: {}", resourcePath);
         return Collections.emptyList();
     }
     
@@ -290,13 +337,38 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
     }
     
     /**
-     * Get questions by AMC type and year (backward compatibility)
+     * Get questions by AMC type and year/version (backward compatibility)
      */
-    public List<Question> getQuestionsByAMCAndYear(String amcType, String year) {
-        if (isLocalMode) {
-            return loadQuestionsFromFile(amcType, year);
-        } else {
-            return loadQuestionsFromResource(amcType, year);
+    public List<Question> getQuestionsByAMCAndYear(String amcType, String yearVersion) {
+        String fileName = convertYearVersionToFileName(yearVersion, amcType);
+        if (fileName == null) {
+            logger.warn("Invalid year/version format: {}", yearVersion);
+            return Collections.emptyList();
         }
+        
+        if (isLocalMode) {
+            return loadQuestionsFromFile(amcType, fileName);
+        } else {
+            return loadQuestionsFromResource(amcType, fileName);
+        }
+    }
+
+    /**
+     * Convert year/version back to filename format
+     * Examples:
+     * - "2020" + "AMC_8" -> "2020_AMC_8.json"
+     * - "2020A" + "AMC_10" -> "2020_AMC_10A.json"
+     */
+    private String convertYearVersionToFileName(String yearVersion, String amcType) {
+        Pattern pattern = Pattern.compile("(\\d{4})([AB]?)");
+        Matcher matcher = pattern.matcher(yearVersion);
+        
+        if (matcher.matches()) {
+            String year = matcher.group(1);
+            String version = matcher.group(2);
+            return year + "_" + amcType + version + ".json";
+        }
+        
+        return null;
     }
 } 
