@@ -38,7 +38,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     initializeMathPage();
+    setupAsideNavigation();
 });
+
+// Helper function to update aside information
+function updateAsideInfo(title, description, additionalInfo = '') {
+    const asideInfo = document.getElementById('asideInfo');
+    if (asideInfo) {
+        asideInfo.innerHTML = `
+            <h3>${title}</h3>
+            <p>${description}</p>
+            ${additionalInfo}
+        `;
+    }
+}
+
+// Setup aside navigation buttons
+function setupAsideNavigation() {
+    const backToLevelsBtn = document.getElementById('backToLevelsBtn');
+    const backToYearsBtn = document.getElementById('backToYearsBtn');
+    
+    if (backToLevelsBtn) {
+        backToLevelsBtn.addEventListener('click', backToLevelSelection);
+    }
+    
+    if (backToYearsBtn) {
+        backToYearsBtn.addEventListener('click', backToYearSelection);
+    }
+}
 
 function checkAuthStatus() {
     const currentUser = localStorage.getItem('currentUser');
@@ -86,11 +113,13 @@ async function loadAvailableLevels() {
  * Display level selection interface
  */
 function displayLevelSelection(data) {
+    // Update aside info
+    updateAsideInfo('Select Math Level', 'Choose your competition level to get started');
+    
+    // Show level selection in main content
     const levelSelectionHTML = `
-        <div class="header-spacer" style="margin: 2rem 0;"></div>
-        
         <div class="level-selection-container" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2 >Select the Math Competition Level</h2>
+            <h2>Select the Math Competition Level</h2>
             
             <div class="levels-vertical" style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 5rem;">
                 ${data.levels.map(level => `
@@ -143,20 +172,11 @@ function displayLevelSelection(data) {
         </div>
     `;
     
-    document.body.innerHTML = `
-        <div class="container">
-            <header class="math-header">
-                <h1>Mathematics Practice</h1>
-                <nav class="math-nav">
-                    <a href="dashboard.html">← Back to Dashboard</a>
-                    <a href="subjects.html">All Subjects</a>
-                </nav>
-            </header>
-            <main class="math-main">
-                ${levelSelectionHTML}
-            </main>
-        </div>
-    `;
+    // Update main content
+    const mainContent = document.querySelector('.math-main-content');
+    if (mainContent) {
+        mainContent.innerHTML = levelSelectionHTML;
+    }
 }
 
 function getLevelDescription(level) {
@@ -213,15 +233,19 @@ async function loadAvailableYears(level) {
  * Display year selection interface
  */
 function displayYearSelection(data) {
+    // Update aside info
+    updateAsideInfo(`${data.amcType} Level`, `Selected: ${data.amcType}`, 
+        `<div class="level-badge">${data.amcType}</div>`);
+    
+    // Show back to levels button in aside
+    const backToLevelsBtn = document.getElementById('backToLevelsBtn');
+    if (backToLevelsBtn) {
+        backToLevelsBtn.style.display = 'block';
+    }
+    
     const yearSelectionHTML = `
-        <div class="step-navigation">
-            <div class="step completed" onclick="backToLevelSelection()">1. Select Level</div>
-            <div class="step active">2. Select Year</div>
-            <div class="step">3. Practice Questions</div>
-        </div>
-        
         <div class="year-selection-container">
-            <h2>${data.amcType} Level </h2>
+            <h2>${data.amcType} Level</h2>
             
             <!-- Personalized Training Option -->
             <div class="personalized-training-section">
@@ -245,27 +269,14 @@ function displayYearSelection(data) {
                     </button>
                 `).join('')}
             </div>
-            
-            <div class="navigation-buttons">
-                <button class="btn btn-secondary" onclick="backToLevelSelection()">← Back to Levels</button>
-            </div>
         </div>
     `;
     
-    document.body.innerHTML = `
-        <div class="container">
-            <header class="math-header">
-                <h1>Mathematics Practice</h1>
-                <nav class="math-nav">
-                    <a href="dashboard.html">← Back to Dashboard</a>
-                    <a href="subjects.html">All Subjects</a>
-                </nav>
-            </header>
-            <main class="math-main">
-                ${yearSelectionHTML}
-            </main>
-        </div>
-    `;
+    // Update main content
+    const mainContent = document.querySelector('.math-main-content');
+    if (mainContent) {
+        mainContent.innerHTML = yearSelectionHTML;
+    }
 }
 
 /**
@@ -314,30 +325,27 @@ async function loadQuestionsForLevelAndYear(level, year) {
  * Display questions practice interface - All questions on one page
  */
 function displayQuestionsInterface(data) {
+    // Update aside info
+    updateAsideInfo(`${data.amcType} ${data.year}`, `Level ${data.level} • ${data.count} Questions`, 
+        `<div class="level-badge">${data.amcType}</div>
+         <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Year: ${data.year}</div>`);
+    
+    // Show back to years button in aside
+    const backToYearsBtn = document.getElementById('backToYearsBtn');
+    if (backToYearsBtn) {
+        backToYearsBtn.style.display = 'block';
+    }
+    
     const questionsHTML = `
         <div class="questions-container all-questions">
-            <div class="sticky-header-section">
-                <div class="questions-header">
-                    <h2>${data.amcType} ${data.year} Practice</h2>
-                    <div class="practice-info">
-                        <span class="level-badge">Level ${data.level}</span>
-                        <span class="question-counter">All ${data.count} Questions</span>
-                    </div>
+            <div class="practice-controls">
+                <div class="button-row primary-actions">
+                    <button class="btn btn-primary" onclick="saveProgress()">💾 Save Progress</button>
+                    <button class="btn btn-success" onclick="saveAndCheckAllAnswers()">✅ Save and Check All Answers</button>
                 </div>
-
-                <div class="question-navigation">
-                    <button class="btn btn-secondary back-button" onclick="backToYearSelection()">← Back to Year selections</button>
-                </div>
-
-                <div class="practice-controls">
-                    <div class="button-row primary-actions">
-                        <button class="btn btn-primary" onclick="saveProgress()">💾 Save Progress</button>
-                        <button class="btn btn-success" onclick="saveAndCheckAllAnswers()">✅ Save and Check All Answers</button>
-                    </div>
-                    <div class="button-row secondary-actions">
-                        <button class="btn btn-info" onclick="resetAllPractice()">🔄 Reset All</button>
-                        <button class="btn btn-warning" onclick="showAllSolutions()">💡 Show All Solutions</button>
-                    </div>
+                <div class="button-row secondary-actions">
+                    <button class="btn btn-info" onclick="resetAllPractice()">🔄 Reset All</button>
+                    <button class="btn btn-warning" onclick="showAllSolutions()">💡 Show All Solutions</button>
                 </div>
             </div>
             
@@ -347,20 +355,11 @@ function displayQuestionsInterface(data) {
         </div>
     `;
     
-    document.body.innerHTML = `
-        <div class="container">
-            <header class="math-header">
-                <h1>Mathematics Practice</h1>
-                <nav class="math-nav">
-                    <a href="dashboard.html">← Back to Dashboard</a>
-                    <a href="subjects.html">All Subjects</a>
-                </nav>
-            </header>
-            <main class="math-main">
-                ${questionsHTML}
-            </main>
-        </div>
-    `;
+    // Update main content
+    const mainContent = document.querySelector('.math-main-content');
+    if (mainContent) {
+        mainContent.innerHTML = questionsHTML;
+    }
     
     // Display all questions
     displayAllQuestions();
@@ -776,6 +775,13 @@ function backToLevelSelection() {
     selectedLevel = null;
     selectedYear = null;
     selectedAMCType = null;
+    
+    // Hide navigation buttons
+    const backToLevelsBtn = document.getElementById('backToLevelsBtn');
+    const backToYearsBtn = document.getElementById('backToYearsBtn');
+    if (backToLevelsBtn) backToLevelsBtn.style.display = 'none';
+    if (backToYearsBtn) backToYearsBtn.style.display = 'none';
+    
     loadAvailableLevels();
 }
 
@@ -783,6 +789,11 @@ function backToYearSelection() {
     if (selectedLevel) {
         currentStep = 2;
         selectedYear = null;
+        
+        // Hide back to years button, show back to levels button
+        const backToYearsBtn = document.getElementById('backToYearsBtn');
+        if (backToYearsBtn) backToYearsBtn.style.display = 'none';
+        
         loadAvailableYears(selectedLevel);
     } else {
         backToLevelSelection();
@@ -854,23 +865,19 @@ Please select a level above to begin practicing!`);
 }
 
 function showError(message) {
-    document.body.innerHTML = `
-        <div class="container">
-            <header class="math-header">
-                <h1>Mathematics Practice</h1>
-                <nav class="math-nav">
-                    <a href="dashboard.html">← Back to Dashboard</a>
-                    <a href="subjects.html">All Subjects</a>
-                </nav>
-            </header>
-            <main class="math-main">
-                <div class="error-message">
-                    <h3>Error</h3>
-                    <p>${message}</p>
-                    <button onclick="initializeMathPage()" class="btn btn-primary">Try Again</button>
-                    <button onclick="location.href='dashboard.html'" class="btn btn-secondary">Back to Dashboard</button>
-                </div>
-            </main>
-        </div>
-    `;
+    // Update aside info
+    updateAsideInfo('Error', 'Something went wrong');
+    
+    // Update main content
+    const mainContent = document.querySelector('.math-main-content');
+    if (mainContent) {
+        mainContent.innerHTML = `
+            <div class="error-message">
+                <h3>Error</h3>
+                <p>${message}</p>
+                <button onclick="initializeMathPage()" class="btn btn-primary">Try Again</button>
+                <button onclick="location.href='dashboard.html'" class="btn btn-secondary">Back to Dashboard</button>
+            </div>
+        `;
+    }
 } 

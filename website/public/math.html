@@ -25,20 +25,34 @@
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <div class="math-container">
-        <header class="page-header">
-            <div class="header-content">
-                <h1>📊 Mathematics Learning</h1>
-                <p>Master math concepts at your own pace</p>
-                <nav class="breadcrumb">
-                    <a href="dashboard.html">Dashboard</a> > 
-                    <a href="subjects.html">Subjects</a> > 
-                    Mathematics
-                </nav>
+    <div class="math-layout">
+        <!-- Aside for header information -->
+        <aside class="math-aside">
+            <div class="aside-content">
+                <div class="aside-header">
+                    <h1>📊 Mathematics</h1>
+                    <nav class="breadcrumb">
+                        <a href="dashboard.html">Dashboard</a> > 
+                        <a href="subjects.html">Subjects</a> > 
+                        Mathematics
+                    </nav>
+                </div>
+                
+                <!-- Level and progress info will be moved here -->
+                <div id="asideInfo" class="aside-info">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+                
+                <!-- Navigation controls -->
+                <div class="aside-navigation">
+                    <button id="backToLevelsBtn" class="btn btn-secondary" style="display: none;">← Back to Levels</button>
+                    <button id="backToYearsBtn" class="btn btn-secondary" style="display: none;">← Back to Years</button>
+                </div>
             </div>
-        </header>
+        </aside>
 
-        <main class="math-main">
+        <!-- Main content area -->
+        <main class="math-main-content">
             <!-- Assessment Section -->
             <section id="assessmentSection" class="math-section">
                 <div class="section-card">
@@ -63,10 +77,6 @@
             <section id="topicsSection" class="math-section" style="display: none;">
                 <div class="section-card">
                     <h2>📚 Available Topics</h2>
-                    <div class="level-info">
-                        <span>Your Level: </span>
-                        <span id="currentLevel" class="level-badge">Beginner</span>
-                    </div>
                     <div id="topicsContainer" class="topics-grid">
                         <!-- Topics will be loaded here -->
                     </div>
@@ -78,7 +88,6 @@
                 <div class="section-card">
                     <div class="lesson-header">
                         <h2 id="lessonTitle">Lesson Title</h2>
-                        <button id="backToTopics" class="btn btn-secondary">← Back to Topics</button>
                     </div>
                     <div id="lessonContent" class="lesson-content">
                         <!-- Lesson content will be loaded here -->

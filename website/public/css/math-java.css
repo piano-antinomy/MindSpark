@@ -1,5 +1,166 @@
 /* Math Java Backend Integration Styles */
 
+/* New Aside Layout Styles */
+.math-layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+.math-aside {
+    width: 280px;
+    background: white;
+    border-right: 1px solid #e1e5e9;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.aside-content {
+    padding: 1.5rem;
+}
+
+.aside-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.aside-header .breadcrumb {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.aside-header .breadcrumb a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.aside-header .breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.aside-info {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.aside-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.aside-info .level-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.aside-navigation {
+    margin-top: auto;
+}
+
+.aside-navigation .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.math-main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+    max-width: calc(100vw - 280px);
+}
+
+.math-section {
+    margin-bottom: 2rem;
+}
+
+.section-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e5e9;
+}
+
+/* Questions container styles for new layout */
+.questions-container.all-questions {
+    margin-top: 1rem;
+}
+
+.practice-controls {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e5e9;
+}
+
+.button-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.button-row:last-child {
+    margin-bottom: 0;
+}
+
+.button-row .btn {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .math-layout {
+        flex-direction: column;
+    }
+    
+    .math-aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #e1e5e9;
+    }
+    
+    .math-main-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .aside-content {
+        padding: 1rem;
+    }
+    
+    .button-row {
+        flex-direction: column;
+    }
+    
+    .button-row .btn {
+        width: 100%;
+    }
+}
+
 .level-selection-container {
     text-align: center;
     padding: 2rem;
