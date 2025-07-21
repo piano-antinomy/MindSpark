@@ -3,6 +3,7 @@
 # git-sync-to-main.sh
 # Syncs current branch to match origin/main exactly
 # WARNING: This will overwrite local changes and force push!
+# test
 
 set -e  # Exit on any error
 
