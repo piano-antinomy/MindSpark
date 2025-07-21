@@ -103,6 +103,9 @@ class QuestionRenderer {
         // Replace \overarc{...} with \overparen{...}
         processedText = processedText.replace(/\\overarc\{([^}]*)\}/g, '\\overparen{$1}');
         
+        // Replace \textdollar with \text{\$} for proper dollar sign rendering
+        processedText = processedText.replace(/\\textdollar/g, '\\text{\\$}');
+        
         questionDebugLog('Preprocessed LaTeX text:', processedText);
         
         return processedText;
