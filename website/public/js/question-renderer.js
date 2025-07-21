@@ -100,6 +100,9 @@ class QuestionRenderer {
         // Replace \emph{...} with \textit{...}
         processedText = processedText.replace(/\\emph\{([^}]*)\}/g, '\\textit{$1}');
         
+        // Replace \overarc{...} with \overparen{...}
+        processedText = processedText.replace(/\\overarc\{([^}]*)\}/g, '\\overparen{$1}');
+        
         questionDebugLog('Preprocessed LaTeX text:', processedText);
         
         return processedText;
