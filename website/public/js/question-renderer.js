@@ -268,9 +268,16 @@ class QuestionRenderer {
                 questionDebugLog('Fallback split by qquad:', parts);
             }
         } else {
-            // No separators found, try \qquad as fallback
-            parts = workingString.split(/\\qquad/);
-            questionDebugLog('No separators found, fallback split:', parts);
+            // No \qquad or \quad found, try \\ as separator
+            const hasDoubleBackslash = workingString.includes('\\\\');
+            if (hasDoubleBackslash) {
+                parts = workingString.split(/\\\\/);
+                questionDebugLog('Split by \\\\:', parts);
+            } else {
+                // No separators found, try \qquad as fallback
+                parts = workingString.split(/\\qquad/);
+                questionDebugLog('No separators found, fallback split:', parts);
+            }
         }
         
         const choices = [];
