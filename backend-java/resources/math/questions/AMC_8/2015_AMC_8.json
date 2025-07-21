@@ -144,20 +144,20 @@
             "alt_value": "$\\overline{AB}.$"
           },
           "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/4/4/9/4493b4f5b54052764bf2459dd56c81a7e0bc7de2.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(A) }\\frac{11}{32} \\quad\\textbf{(B) }\\frac{3}{8} \\quad\\textbf{(C) }\\frac{13}{32} \\quad\\textbf{(D) }\\frac{7}{16}\\quad \\textbf{(E) }\\frac{15}{32}$"
+            "picture": "//latex.artofproblemsolving.com/0/6/6/06635650c87a3cbd84380b9105fc49cc48e3792e.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] pair A,B,C,D,E,F,G,H,O,X; A=dir(45); B=dir(90); C=dir(135); D=dir(180); E=dir(-135); F=dir(-90); G=dir(-45); H=dir(0); O=(0,0); X=midpoint(A--B);  fill(X--B--C--D--E--O--cycle,rgb(0.75,0.75,0.75)); draw(A--B--C--D--E--F--G--H--cycle);  dot(\"$A$\",A,dir(45)); dot(\"$B$\",B,dir(90)); dot(\"$C$\",C,dir(135)); dot(\"$D$\",D,dir(180)); dot(\"$E$\",E,dir(-135)); dot(\"$F$\",F,dir(-90)); dot(\"$G$\",G,dir(-45)); dot(\"$H$\",H,dir(0)); dot(\"$X$\",X,dir(135/2)); dot(\"$O$\",O,dir(0)); draw(E--O--X); [/asy]"
           }
         },
         "type": "multiple-choice",
         "text_choices": [],
         "picture_choices": [
-          "//latex.artofproblemsolving.com/0/6/6/06635650c87a3cbd84380b9105fc49cc48e3792e.png"
+          "//latex.artofproblemsolving.com/4/4/9/4493b4f5b54052764bf2459dd56c81a7e0bc7de2.png"
         ],
-        "latex_choices": [],
-        "asy_choices": [
-          "[asy] pair A,B,C,D,E,F,G,H,O,X; A=dir(45); B=dir(90); C=dir(135); D=dir(180); E=dir(-135); F=dir(-90); G=dir(-45); H=dir(0); O=(0,0); X=midpoint(A--B);  fill(X--B--C--D--E--O--cycle,rgb(0.75,0.75,0.75)); draw(A--B--C--D--E--F--G--H--cycle);  dot(\"$A$\",A,dir(45)); dot(\"$B$\",B,dir(90)); dot(\"$C$\",C,dir(135)); dot(\"$D$\",D,dir(180)); dot(\"$E$\",E,dir(-135)); dot(\"$F$\",F,dir(-90)); dot(\"$G$\",G,dir(-45)); dot(\"$H$\",H,dir(0)); dot(\"$X$\",X,dir(135/2)); dot(\"$O$\",O,dir(0)); draw(E--O--X); [/asy]"
-        ]
+        "latex_choices": [
+          "$\\textbf{(A) }\\frac{11}{32} \\qquad\\textbf{(B) }\\frac{3}{8} \\qquad\\textbf{(C) }\\frac{13}{32} \\qquad\\textbf{(D) }\\frac{7}{16}\\qquad \\textbf{(E) }\\frac{15}{32}$"
+        ],
+        "asy_choices": []
       },
       "tags": [],
       "sources": [],
@@ -1371,7 +1371,7 @@
     {
       "id": "amc_2015_8_10",
       "question": {
-        "text": "<p>problem 10</p><p><br/>How many integers between 1000 and 9999 have four distinct digits?</p>",
+        "text": "<p>How many integers between 1000 and 9999 have four distinct digits?</p>",
         "insertions": {},
         "type": "multiple-choice",
         "text_choices": [],
@@ -2791,20 +2791,18 @@
             "alt_value": "$X$"
           },
           "INSERTION_INDEX_7": {
-            "picture": "//latex.artofproblemsolving.com/9/e/2/9e2a56a58f7cc3f5d0f4adce873e6ecb5d1038b5.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(A) }21\\qquad\\textbf{(B) }31\\qquad\\textbf{(C) }36\\qquad\\textbf{(D) }40\\qquad \\textbf{(E) }42$"
+            "picture": "//latex.artofproblemsolving.com/a/5/e/a5e463abe580eaf777a86e44ccfbdd1acb90f714.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] size(3.85cm); label(\"$X$\",(2.5,2.1),N); for (int i=0; i<=5; ++i) draw((i,0)--(i,5), linewidth(.5));  for (int j=0; j<=5; ++j) draw((0,j)--(5,j), linewidth(.5)); void draw_num(pair ll_corner, int num)  { label(string(num), ll_corner + (0.5, 0.5), p = fontsize(19pt)); }  draw_num((0,0), 17); draw_num((4, 0), 81);  draw_num((0, 4), 1);  draw_num((4,4), 25);   void foo(int x, int y, string n) { label(n, (x+0.5,y+0.5), p = fontsize(19pt)); }  foo(2, 4, \" \"); foo(3, 4, \" \"); foo(0, 3, \" \"); foo(2, 3, \" \"); foo(1, 2, \" \"); foo(3, 2, \" \"); foo(1, 1, \" \"); foo(2, 1, \" \"); foo(3, 1, \" \"); foo(4, 1, \" \"); foo(2, 0, \" \"); foo(3, 0, \" \"); foo(0, 1, \" \"); foo(0, 2, \" \"); foo(1, 0, \" \"); foo(1, 3, \" \"); foo(1, 4, \" \"); foo(3, 3, \" \"); foo(4, 2, \" \"); foo(4, 3, \" \");   [/asy]"
           }
         },
         "type": "multiple-choice",
         "text_choices": [],
         "picture_choices": [
-          "//latex.artofproblemsolving.com/a/5/e/a5e463abe580eaf777a86e44ccfbdd1acb90f714.png"
+          "//latex.artofproblemsolving.com/9/e/2/9e2a56a58f7cc3f5d0f4adce873e6ecb5d1038b5.png"
         ],
-        "latex_choices": [],
-        "asy_choices": [
-          "[asy] size(3.85cm); label(\"$X$\",(2.5,2.1),N); for (int i=0; i<=5; ++i) draw((i,0)--(i,5), linewidth(.5));  for (int j=0; j<=5; ++j) draw((0,j)--(5,j), linewidth(.5)); void draw_num(pair ll_corner, int num)  { label(string(num), ll_corner + (0.5, 0.5), p = fontsize(19pt)); }  draw_num((0,0), 17); draw_num((4, 0), 81);  draw_num((0, 4), 1);  draw_num((4,4), 25);   void foo(int x, int y, string n) { label(n, (x+0.5,y+0.5), p = fontsize(19pt)); }  foo(2, 4, \" \"); foo(3, 4, \" \"); foo(0, 3, \" \"); foo(2, 3, \" \"); foo(1, 2, \" \"); foo(3, 2, \" \"); foo(1, 1, \" \"); foo(2, 1, \" \"); foo(3, 1, \" \"); foo(4, 1, \" \"); foo(2, 0, \" \"); foo(3, 0, \" \"); foo(0, 1, \" \"); foo(0, 2, \" \"); foo(1, 0, \" \"); foo(1, 3, \" \"); foo(1, 4, \" \"); foo(3, 3, \" \"); foo(4, 2, \" \"); foo(4, 3, \" \");   [/asy]"
-        ]
+        "latex_choices": ["$\\textbf{(A) }21\\qquad\\textbf{(B) }31\\qquad\\textbf{(C) }36\\qquad\\textbf{(D) }40\\qquad \\textbf{(E) }42$"],
+        "asy_choices": []
       },
       "tags": [],
       "sources": [],
@@ -2948,20 +2946,18 @@
             "alt_value": "$6\\times5$"
           },
           "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/1/d/3/1d3903da82cf00ba34eeffc477bd4a3f65339802.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(A) }\\frac{1}{6} \\qquad \\textbf{(B) }\\frac{1}{5} \\qquad \\textbf{(C) }\\frac{1}{4} \\qquad \\textbf{(D) }\\frac{1}{3} \\qquad \\textbf{(E) }\\frac{1}{2}$"
+            "picture": "//latex.artofproblemsolving.com/e/5/2/e52b5a181480dd60bedad1f91e8e9246b9f0c4fa.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] draw((1,0)--(1,5),linewidth(.5)); draw((2,0)--(2,5),linewidth(.5)); draw((3,0)--(3,5),linewidth(.5)); draw((4,0)--(4,5),linewidth(.5)); draw((5,0)--(5,5),linewidth(.5)); draw((6,0)--(6,5),linewidth(.5)); draw((0,1)--(6,1),linewidth(.5)); draw((0,2)--(6,2),linewidth(.5)); draw((0,3)--(6,3),linewidth(.5)); draw((0,4)--(6,4),linewidth(.5)); draw((0,5)--(6,5),linewidth(.5));  draw((0,0)--(0,6),EndArrow); draw((0,0)--(7,0),EndArrow); draw((1,3)--(4,4)--(5,1)--cycle); label(\"$y$\",(0,6),W); label(\"$x$\",(7,0),S); label(\"$A$\",(1,3),dir(210)); label(\"$B$\",(5,1),SE); label(\"$C$\",(4,4),dir(100)); [/asy]"
           }
         },
         "type": "multiple-choice",
         "text_choices": [],
         "picture_choices": [
-          "//latex.artofproblemsolving.com/e/5/2/e52b5a181480dd60bedad1f91e8e9246b9f0c4fa.png"
+          "//latex.artofproblemsolving.com/1/d/3/1d3903da82cf00ba34eeffc477bd4a3f65339802.png"
         ],
-        "latex_choices": [],
-        "asy_choices": [
-          "[asy] draw((1,0)--(1,5),linewidth(.5)); draw((2,0)--(2,5),linewidth(.5)); draw((3,0)--(3,5),linewidth(.5)); draw((4,0)--(4,5),linewidth(.5)); draw((5,0)--(5,5),linewidth(.5)); draw((6,0)--(6,5),linewidth(.5)); draw((0,1)--(6,1),linewidth(.5)); draw((0,2)--(6,2),linewidth(.5)); draw((0,3)--(6,3),linewidth(.5)); draw((0,4)--(6,4),linewidth(.5)); draw((0,5)--(6,5),linewidth(.5));  draw((0,0)--(0,6),EndArrow); draw((0,0)--(7,0),EndArrow); draw((1,3)--(4,4)--(5,1)--cycle); label(\"$y$\",(0,6),W); label(\"$x$\",(7,0),S); label(\"$A$\",(1,3),dir(210)); label(\"$B$\",(5,1),SE); label(\"$C$\",(4,4),dir(100)); [/asy]"
-        ]
+        "latex_choices": ["$\\textbf{(A) }\\frac{1}{6} \\qquad \\textbf{(B) }\\frac{1}{5} \\qquad \\textbf{(C) }\\frac{1}{4} \\qquad \\textbf{(D) }\\frac{1}{3} \\qquad \\textbf{(E) }\\frac{1}{2}$"],
+        "asy_choices": []
       },
       "tags": [],
       "sources": [],

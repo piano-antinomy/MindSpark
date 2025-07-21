@@ -230,10 +230,10 @@ class QuestionRenderer {
     }
 
     /**
-     * Split LaTeX choices by \\qquad separators
+     * Split LaTeX choices by \\qquad or \\quad separators
      */
     splitByQquad(choiceString) {
-        questionDebugLog('Splitting by qquad approach');
+        questionDebugLog('Splitting by qquad/qquad approach');
         
         // More robust splitting approach
         let workingString = choiceString;
@@ -241,9 +241,34 @@ class QuestionRenderer {
         // Remove outer $ delimiters if present
         workingString = workingString.replace(/^\$/, '').replace(/\$$/, '');
         
-        // Split by \\qquad but keep the textbf parts
-        const parts = workingString.split(/\\qquad/);
-        questionDebugLog('Split parts:', parts);
+        // Check if we have \qquad or \quad separators
+        const hasQquad = workingString.includes('\\qquad');
+        const hasQuad = workingString.includes('\\quad');
+        
+        let parts;
+        if (hasQquad) {
+            // Split by \\qquad
+            parts = workingString.split(/\\qquad/);
+            questionDebugLog('Split by qquad:', parts);
+        } else if (hasQuad) {
+            // Count the number of \quad occurrences
+            const quadCount = (workingString.match(/\\quad/g) || []).length;
+            questionDebugLog('Found quad count:', quadCount);
+            
+            // If we have exactly 4 \quad separators (which would create 5 choices), use \quad
+            if (quadCount === 4) {
+                parts = workingString.split(/\\quad/);
+                questionDebugLog('Split by quad (4 separators):', parts);
+            } else {
+                // Fall back to \qquad if we don't have exactly 4 \quad
+                parts = workingString.split(/\\qquad/);
+                questionDebugLog('Fallback split by qquad:', parts);
+            }
+        } else {
+            // No separators found, try \qquad as fallback
+            parts = workingString.split(/\\qquad/);
+            questionDebugLog('No separators found, fallback split:', parts);
+        }
         
         const choices = [];
         for (let part of parts) {
@@ -254,7 +279,7 @@ class QuestionRenderer {
             }
         }
         
-        questionDebugLog('Extracted choices by qquad:', choices);
+        questionDebugLog('Extracted choices:', choices);
         
         if (choices.length > 1) {
             return { choices, hasLabels: true };
@@ -279,8 +304,8 @@ class QuestionRenderer {
         
         while ((match = regex.exec(content)) !== null) {
             let choice = match[1].trim();
-            // Remove any trailing \\qquad
-            choice = choice.replace(/\\qquad\s*$/, '');
+            // Remove any trailing \\qquad or \\quad
+            choice = choice.replace(/\\qquad\s*$/, '').replace(/\\quad\s*$/, '');
             choices.push(`$${choice}$`);
         }
         
