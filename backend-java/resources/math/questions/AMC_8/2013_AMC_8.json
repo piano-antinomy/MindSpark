@@ -182,7 +182,7 @@
           "//latex.artofproblemsolving.com/9/0/9/909ebf0e741ef2ed8391de412dcc239ccb1d89e8.png"
         ],
         "latex_choices": [
-          "$\\textbf{(A)}\\ \\text{\\textdollar}120\\qquad\\textbf{(B)}\\ \\text{\\textdollar}128\\qquad\\textbf{(C)}\\ \\text{\\textdollar}140\\qquad\\textbf{(D)}\\ \\text{\\textdollar}144\\qquad\\textbf{(E)}\\ \\text{\\textdollar}160$"
+          "$\\textbf{(A)}\\ \\textdollar\\text{120}\\qquad\\textbf{(B)}\\ \\textdollar\\text{128}\\qquad\\textbf{(C)}\\ \\textdollar\\text{140}\\qquad\\textbf{(D)}\\ \\textdollar\\text{144}\\qquad\\textbf{(E)}\\ \\textdollar\\text{160}$"
         ],
         "asy_choices": []
       },
@@ -949,8 +949,19 @@
     {
       "id": "amc_2013_8_12",
       "question": {
-        "text": "<p>At the 2013 Winnebago County Fair a vendor is offering a \"fair special\" on sandals. If you buy one pair of sandals at the regular price of $50, you get a second pair at a 40% discount, and a third pair at half the regular price. Javier took advantage of the \"fair special\" to buy three pairs of sandals. What percentage of the $150 regular price did he save?</p>",
-        "insertions": {},
+        "text": "<p>At the 2013 Winnebago County Fair a vendor is offering a \"fair special\" on sandals. If you buy one pair of sandals at the regular price of <INSERTION_INDEX_1>, you get a second pair at a 40% discount, and a third pair at half the regular price. Javier took advantage of the \"fair special\" to buy three pairs of sandals. What percentage of the <INSERTION_INDEX_2> regular price did he save?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/placeholder.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 50$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/placeholder.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 150$"
+          }
+        },
         "type": "multiple-choice",
         "text_choices": [],
         "picture_choices": [
