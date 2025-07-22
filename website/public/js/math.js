@@ -343,8 +343,7 @@ function displayQuestionsInterface(data) {
         <div class="questions-container all-questions">
             <div class="practice-controls">
                 <div class="button-row primary-actions">
-                    <button class="btn btn-primary" onclick="saveProgress()">💾 Save Progress</button>
-                    <button class="btn btn-success" onclick="saveAndCheckAllAnswers()">✅ Save and Check All Answers</button>
+                    <button class="btn btn-success" onclick="checkAllAnswers()">✅ Check All Answers</button>
                 </div>
                 <div class="button-row secondary-actions">
                     <button class="btn btn-info" onclick="resetAllPractice()">🔄 Reset All</button>
@@ -366,9 +365,6 @@ function displayQuestionsInterface(data) {
     
     // Display all questions
     displayAllQuestions();
-    
-    // Load previous answers from backend
-    loadPreviousAnswers();
 }
 
 /**
@@ -432,249 +428,8 @@ function updateQuestionStatus(questionIndex) {
 // ALL QUESTIONS FUNCTIONS
 // =============================================================================
 
-// =============================================================================
-// PROGRESS TRACKING AND BACKEND INTEGRATION
-// =============================================================================
-
 /**
- * Get current user ID from session
- */
-function getCurrentUserId() {
-    const currentUser = checkAuthStatus();
-    return currentUser ? currentUser.username : null;
-}
-
-/**
- * Generate quiz ID from current selection
- */
-function getCurrentQuizId() {
-    if (selectedYear && selectedAMCType) {
-        return `${selectedYear}_${selectedAMCType}`;
-    }
-    return null;
-}
-
-/**
- * Track progress for a single question
- */
-async function trackQuestionProgress(questionId, answer) {
-    const userId = getCurrentUserId();
-    if (!userId) {
-        console.warn('No user ID available for progress tracking');
-        return false;
-    }
-
-    try {
-        const response = await fetch(`${JAVA_API_BASE_URL}/progress/track`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            credentials: 'include',
-            body: JSON.stringify({
-                userId: userId,
-                questionId: questionId,
-                answer: answer
-            })
-        });
-
-        if (response.ok) {
-            const data = await response.json();
-            debugLog('Progress tracked for question:', questionId, 'Answer:', answer);
-            return data.success;
-        } else {
-            console.error('Failed to track progress:', response.status);
-            return false;
-        }
-    } catch (error) {
-        console.error('Error tracking progress:', error);
-        return false;
-    }
-}
-
-/**
- * Save progress for all answered questions
- */
-async function saveProgressToBackend() {
-    const userId = getCurrentUserId();
-    if (!userId) {
-        alert('Please log in to save your progress.');
-        return false;
-    }
-
-    let savedCount = 0;
-    let totalAnswered = 0;
-    
-    // Show progress indicator
-    const progressDiv = document.createElement('div');
-    progressDiv.id = 'saving-progress';
-    progressDiv.innerHTML = `
-        <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-                    background: white; padding: 2rem; border-radius: 12px; 
-                    box-shadow: 0 8px 32px rgba(0,0,0,0.3); z-index: 1000; text-align: center;">
-            <h3>Saving Progress...</h3>
-            <p id="progress-text">Processing your answers...</p>
-            <div style="width: 100%; background: #f0f0f0; border-radius: 8px; height: 8px; margin: 1rem 0;">
-                <div id="progress-bar" style="width: 0%; background: #3b82f6; height: 100%; border-radius: 8px; transition: width 0.3s;"></div>
-            </div>
-        </div>
-    `;
-    document.body.appendChild(progressDiv);
-
-    for (let i = 0; i < currentQuestions.length; i++) {
-        const question = currentQuestions[i];
-        const answer = currentAnswers[i];
-        
-        if (answer) {
-            totalAnswered++;
-            const questionId = question.id || `${getCurrentQuizId()}_Q${i + 1}`;
-            const success = await trackQuestionProgress(questionId, answer);
-            
-            if (success) {
-                savedCount++;
-            }
-            
-            // Update progress
-            const progressPercent = ((i + 1) / currentQuestions.length) * 100;
-            document.getElementById('progress-bar').style.width = progressPercent + '%';
-            document.getElementById('progress-text').textContent = 
-                `Saving question ${i + 1} of ${currentQuestions.length}...`;
-            
-            // Small delay to show progress
-            await new Promise(resolve => setTimeout(resolve, 100));
-        }
-    }
-
-    // Remove progress indicator
-    document.body.removeChild(progressDiv);
-
-    // Show results
-    if (totalAnswered === 0) {
-        alert('No answers to save. Please answer some questions first.');
-        return false;
-    } else if (savedCount === totalAnswered) {
-        alert(`✅ Progress saved successfully!\nSaved ${savedCount} answers to the server.`);
-        return true;
-    } else {
-        alert(`⚠️ Partial save completed.\nSaved ${savedCount} out of ${totalAnswered} answers.\nSome answers may not have been saved due to connection issues.`);
-        return false;
-    }
-}
-
-/**
- * Load previous answers from backend
- */
-async function loadPreviousAnswers() {
-    const userId = getCurrentUserId();
-    const quizId = getCurrentQuizId();
-    
-    if (!userId || !quizId) {
-        debugLog('Cannot load previous answers: missing userId or quizId');
-        return;
-    }
-
-    try {
-        const response = await fetch(`${JAVA_API_BASE_URL}/progress/user/${userId}/quiz/${quizId}`, {
-            credentials: 'include'
-        });
-
-        if (response.ok) {
-            const data = await response.json();
-            if (data.success && data.quizProgress) {
-                const quizProgress = data.quizProgress;
-                debugLog('Loaded previous answers:', quizProgress);
-                
-                // Apply previous answers to the interface
-                let loadedCount = 0;
-                for (let i = 0; i < currentQuestions.length; i++) {
-                    const question = currentQuestions[i];
-                    const questionId = question.id || `${quizId}_Q${i + 1}`;
-                    
-                    // Check if user had answered this question before
-                    if (quizProgress.answers && quizProgress.answers[questionId]) {
-                        const previousAnswer = quizProgress.answers[questionId];
-                        currentAnswers[i] = previousAnswer;
-                        
-                        // Select the radio button in the UI
-                        const radioInput = document.querySelector(`input[name="question_${i}"][value="${previousAnswer}"]`);
-                        if (radioInput) {
-                            radioInput.checked = true;
-                            // Also update the visual state
-                            const choiceLabel = radioInput.closest('.choice-label');
-                            if (choiceLabel) {
-                                choiceLabel.classList.add('selected');
-                            }
-                        }
-                        
-                        // Update question status
-                        updateQuestionStatus(i);
-                        loadedCount++;
-                    }
-                }
-                
-                if (loadedCount > 0) {
-                    // Show notification about loaded answers
-                    showNotification(`📚 Welcome back! Loaded ${loadedCount} of your previous answers.`, 'info');
-                }
-            }
-        }
-    } catch (error) {
-        console.error('Error loading previous answers:', error);
-        debugLog('Failed to load previous answers, starting fresh');
-    }
-}
-
-/**
- * Show notification to user
- */
-function showNotification(message, type = 'info') {
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-        <div>
-            ${message}
-            <button onclick="this.parentElement.parentElement.remove()">×</button>
-        </div>
-    `;
-    document.body.appendChild(notification);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentElement) {
-            notification.remove();
-        }
-    }, 5000);
-}
-
-/**
- * Save progress without checking answers
- */
-async function saveProgress() {
-    const success = await saveProgressToBackend();
-    if (success) {
-        showNotification('✅ Your progress has been saved!', 'success');
-    }
-}
-
-/**
- * Save progress and check all answers
- */
-async function saveAndCheckAllAnswers() {
-    // First save progress
-    const saveSuccess = await saveProgressToBackend();
-    
-    // Then check answers (existing functionality)
-    checkAllAnswers();
-    
-    if (saveSuccess) {
-        showNotification('✅ Progress saved and answers checked!', 'success');
-    } else {
-        showNotification('⚠️ Answers checked, but progress save had issues.', 'warning');
-    }
-}
-
-/**
- * Check all answers and show results (original function, now without save)
+ * Check all answers and show results
  */
 function checkAllAnswers() {
     let correct = 0;
@@ -723,7 +478,7 @@ function checkAllAnswers() {
  * Reset all practice answers
  */
 function resetAllPractice() {
-    if (confirm('Are you sure you want to reset all answers? All progress will be lost.')) {
+    if (confirm('Are you sure you want to reset all answers?')) {
         currentAnswers = new Array(currentQuestions.length).fill(null);
         
         // Clear all radio button selections
