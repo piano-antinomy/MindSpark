@@ -28,111 +28,63 @@
 </head>
 <body>
     <div class="math-layout">
-        <!-- Aside for header information -->
-        <aside class="math-aside">
-            <div class="aside-content">
-                <div class="aside-header">
-                    <h1>📊 Mathematics</h1>
-                    <nav class="breadcrumb">
-                        <a href="dashboard.html">Dashboard</a> > 
-                        <a href="subjects.html">Subjects</a> > 
-                        Mathematics
-                    </nav>
-                </div>
-                
-                <!-- Level and progress info will be moved here -->
-                <div id="asideInfo" class="aside-info">
-                    <!-- Dynamic content will be inserted here -->
-                </div>
-                
-                <!-- Navigation controls -->
-                <div class="aside-navigation">
-                    <button id="backToLevelsBtn" class="btn btn-secondary" style="display: none;">← Back to Levels</button>
-                    <button id="backToYearsBtn" class="btn btn-secondary" style="display: none;">← Back to Years</button>
-                </div>
+        <!-- Left Menu Navigation -->
+        <nav class="math-left-menu">
+            <div class="menu-header">
+                <h1>📊 Mathematics</h1>
+                <nav class="breadcrumb">
+                    <a href="dashboard.html">Dashboard</a> > 
+                    <a href="subjects.html">Subjects</a> > 
+                    Mathematics
+                </nav>
             </div>
-        </aside>
+            
+            <div class="menu-tabs">
+                <button class="menu-tab" id="quizTab" onclick="switchToTab('quiz')">
+                    <span class="tab-icon">🎯</span>
+                    <span class="tab-text">Quiz</span>
+                </button>
+                <button class="menu-tab active" id="problemsTab" onclick="switchToTab('problems')">
+                    <span class="tab-icon">📚</span>
+                    <span class="tab-text">Problems</span>
+                </button>
+            </div>
+            
+            <!-- Context info moved here from aside -->
+            <div id="asideInfo" class="aside-info">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+            
+            <!-- Navigation controls moved here from aside -->
+            <div class="aside-navigation">
+                <button id="backToLevelsBtn" class="btn btn-secondary" style="display: none;">← Back to Levels</button>
+                <button id="backToYearsBtn" class="btn btn-secondary" style="display: none;">← Back to Years</button>
+            </div>
+        </nav>
 
         <!-- Main content area -->
         <main class="math-main-content">
-            <!-- Assessment Section -->
-            <section id="assessmentSection" class="math-section">
-                <div class="section-card">
-                    <h2>🎯 Let's Find Your Math Level</h2>
-                    <p>Take a quick assessment to personalize your learning experience</p>
-                    <button id="startAssessmentBtn" class="btn btn-primary">Start Assessment</button>
+            <!-- Quiz Tab Content -->
+            <div id="quizContent" class="tab-content" style="display: none;">
+                <div class="quiz-placeholder">
+                    <div class="placeholder-card">
+                        <h2>🎯 Quiz Mode</h2>
+                        <p>This feature is coming soon! Here you'll be able to:</p>
+                        <ul>
+                            <li>Take adaptive quizzes based on your skill level</li>
+                            <li>Get personalized question recommendations</li>
+                            <li>Track your progress over time</li>
+                            <li>Focus on your weak areas</li>
+                        </ul>
+                        <button class="btn btn-primary" onclick="switchToTab('problems')">Go to Problems</button>
+                    </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- Assessment Questions -->
-            <section id="assessmentQuestions" class="math-section" style="display: none;">
-                <div class="section-card">
-                    <h2>Assessment Questions</h2>
-                    <div id="questionsContainer">
-                        <!-- Questions will be loaded here -->
-                    </div>
-                    <button id="submitAssessmentBtn" class="btn btn-primary" style="display: none;">Submit Assessment</button>
-                </div>
-            </section>
-
-            <!-- Topics Section -->
-            <section id="topicsSection" class="math-section" style="display: none;">
-                <div class="section-card">
-                    <h2>📚 Available Topics</h2>
-                    <div id="topicsContainer" class="topics-grid">
-                        <!-- Topics will be loaded here -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- Lesson Section -->
-            <section id="lessonSection" class="math-section" style="display: none;">
-                <div class="section-card">
-                    <div class="lesson-header">
-                        <h2 id="lessonTitle">Lesson Title</h2>
-                    </div>
-                    <div id="lessonContent" class="lesson-content">
-                        <!-- Lesson content will be loaded here -->
-                    </div>
-                    <div class="lesson-actions">
-                        <button id="takeQuizBtn" class="btn btn-primary">Take Quiz</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Quiz Section -->
-            <section id="quizSection" class="math-section" style="display: none;">
-                <div class="section-card">
-                    <div class="quiz-header">
-                        <h2 id="quizTitle">Quiz: Topic Name</h2>
-                        <div class="quiz-progress">
-                            <span id="questionCounter">Question 1 of 5</span>
-                        </div>
-                    </div>
-                    <div id="quizContainer">
-                        <!-- Quiz questions will be loaded here -->
-                    </div>
-                    <div class="quiz-actions">
-                        <button id="nextQuestionBtn" class="btn btn-primary" style="display: none;">Next Question</button>
-                        <button id="submitQuizBtn" class="btn btn-primary" style="display: none;">Submit Quiz</button>
-                        <button id="backToLessonBtn" class="btn btn-secondary">← Back to Lesson</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Results Section -->
-            <section id="resultsSection" class="math-section" style="display: none;">
-                <div class="section-card">
-                    <h2>🎉 Quiz Results</h2>
-                    <div id="resultsContent" class="results-content">
-                        <!-- Results will be shown here -->
-                    </div>
-                    <div class="results-actions">
-                        <button id="backToTopicsFromResults" class="btn btn-primary">Continue Learning</button>
-                        <button id="retakeQuizBtn" class="btn btn-secondary">Retake Quiz</button>
-                    </div>
-                </div>
-            </section>
+            <!-- Problems Tab Content -->
+            <div id="problemsContent" class="tab-content">
+                <!-- Dynamic content will be loaded here by math.js -->
+            </div>
         </main>
     </div>
 

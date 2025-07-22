@@ -1,54 +1,104 @@
 /* Math Java Backend Integration Styles */
 
-/* New Aside Layout Styles */
+/* New Two-Column Layout Styles */
 .math-layout {
     display: flex;
     min-height: 100vh;
     background: #f8f9fa;
 }
 
-.math-aside {
-    width: 280px;
+/* Left Menu Navigation */
+.math-left-menu {
+    width: 320px;
     background: white;
     border-right: 1px solid #e1e5e9;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     height: 100vh;
     overflow-y: auto;
-    z-index: 100;
+    z-index: 200;
 }
 
-.aside-content {
+.menu-header {
     padding: 1.5rem;
+    border-bottom: 1px solid #e1e5e9;
 }
 
-.aside-header h1 {
+.menu-header h1 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: #2c3e50;
 }
 
-.aside-header .breadcrumb {
+.menu-header .breadcrumb {
     font-size: 0.85rem;
     color: #6c757d;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
 }
 
-.aside-header .breadcrumb a {
+.menu-header .breadcrumb a {
     color: #3498db;
     text-decoration: none;
 }
 
-.aside-header .breadcrumb a:hover {
+.menu-header .breadcrumb a:hover {
     text-decoration: underline;
 }
 
+.menu-tabs {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.menu-tab {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #6c757d;
+    border-left: 4px solid transparent;
+}
+
+.menu-tab:hover {
+    background: #f8f9fa;
+    color: #3498db;
+}
+
+.menu-tab.active {
+    background: #e3f2fd;
+    color: #1976d2;
+    border-left-color: #1976d2;
+}
+
+.menu-tab .tab-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.menu-tab .tab-text {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Context info moved to left menu */
 .aside-info {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem;
     padding: 1rem;
     background: #f8f9fa;
     border-radius: 8px;
     border-left: 4px solid #3498db;
+}
+
+/* Hide aside info when empty */
+.aside-info:empty {
+    display: none;
 }
 
 .aside-info h3 {
@@ -66,7 +116,9 @@
     margin-top: 0.5rem;
 }
 
+/* Navigation controls moved to left menu */
 .aside-navigation {
+    margin: 1.5rem;
     margin-top: auto;
 }
 
@@ -75,11 +127,60 @@
     margin-bottom: 0.5rem;
 }
 
+/* Main content area */
 .math-main-content {
     flex: 1;
-    margin-left: 280px;
+    margin-left: 320px;
     padding: 2rem;
-    max-width: calc(100vw - 280px);
+    max-width: calc(100vw - 320px);
+}
+
+/* Tab content styles */
+.tab-content {
+    width: 100%;
+}
+
+/* Quiz placeholder styles */
+.quiz-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.placeholder-card {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    border: 1px solid #e1e5e9;
+}
+
+.placeholder-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.placeholder-card p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.placeholder-card ul {
+    text-align: left;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.placeholder-card li {
+    margin-bottom: 0.75rem;
+    color: #4a5568;
+    font-size: 1rem;
 }
 
 .math-section {
@@ -134,7 +235,7 @@
         flex-direction: column;
     }
     
-    .math-aside {
+    .math-left-menu {
         width: 100%;
         height: auto;
         position: relative;
@@ -148,8 +249,9 @@
         padding: 1rem;
     }
     
-    .aside-content {
-        padding: 1rem;
+    .placeholder-card {
+        padding: 2rem;
+        margin: 1rem;
     }
     
     .button-row {
@@ -1003,5 +1105,77 @@ label.choice-label {
     to {
         transform: translateX(0);
         opacity: 1;
+    }
+} 
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .math-left-menu {
+        width: 280px;
+    }
+    
+    .math-main-content {
+        margin-left: 280px;
+        max-width: calc(100vw - 280px);
+    }
+}
+
+@media (max-width: 768px) {
+    .math-layout {
+        flex-direction: column;
+    }
+    
+    .math-left-menu {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 200;
+    }
+    
+    .menu-tabs {
+        display: flex;
+        padding: 0;
+        border-bottom: none;
+    }
+    
+    .menu-tab {
+        flex: 1;
+        padding: 1rem;
+        justify-content: center;
+        border-left: none;
+        border-bottom: 4px solid transparent;
+    }
+    
+    .menu-tab.active {
+        border-left-color: transparent;
+        border-bottom-color: #1976d2;
+    }
+    
+    .math-main-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 1rem;
+    }
+    
+    .placeholder-card {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    .button-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .button-row .btn {
+        width: 100%;
+    }
+    
+    .aside-info {
+        margin: 1rem;
+    }
+    
+    .aside-navigation {
+        margin: 1rem;
     }
 } 

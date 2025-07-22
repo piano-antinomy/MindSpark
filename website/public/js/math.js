@@ -40,9 +40,81 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    initializeMathPage();
+    // Initialize with Problems tab by default
+    switchToTab('problems');
     setupAsideNavigation();
 });
+
+// Tab switching functionality
+function switchToTab(tabName) {
+    // Update tab buttons
+    document.querySelectorAll('.menu-tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Hide all tab content
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.style.display = 'none';
+    });
+    
+    // Show selected tab content
+    if (tabName === 'quiz') {
+        document.getElementById('quizTab').classList.add('active');
+        document.getElementById('quizContent').style.display = 'block';
+        
+        // Clear aside info when switching to quiz
+        clearAsideInfo();
+    } else if (tabName === 'problems') {
+        document.getElementById('problemsTab').classList.add('active');
+        document.getElementById('problemsContent').style.display = 'block';
+        
+        // Always reset to step 1 (level selection) when clicking Problems tab
+        resetToLevelSelection();
+    }
+}
+
+// Helper function to reset to level selection
+function resetToLevelSelection() {
+    currentStep = 1;
+    selectedLevel = null;
+    selectedYear = null;
+    selectedAMCType = null;
+    currentQuestions = [];
+    currentAnswers = [];
+    currentQuestionIndex = 0;
+    
+    // Clear aside info
+    clearAsideInfo();
+    
+    // Hide navigation buttons
+    const backToLevelsBtn = document.getElementById('backToLevelsBtn');
+    const backToYearsBtn = document.getElementById('backToYearsBtn');
+    if (backToLevelsBtn) backToLevelsBtn.style.display = 'none';
+    if (backToYearsBtn) backToYearsBtn.style.display = 'none';
+    
+    // Load level selection
+    loadAvailableLevels();
+}
+
+// Helper function to clear aside information
+function clearAsideInfo() {
+    const asideInfo = document.getElementById('asideInfo');
+    if (asideInfo) {
+        asideInfo.innerHTML = '';
+    }
+}
+
+// Helper function to update context info based on current step
+function updateContextInfoForCurrentStep() {
+    if (currentStep === 2 && selectedLevel && selectedAMCType) {
+        updateAsideInfo(`${selectedAMCType} Level`, `Selected: ${selectedAMCType}`, 
+            `<div class="level-badge">${selectedAMCType}</div>`);
+    } else if (currentStep === 3 && selectedLevel && selectedYear && selectedAMCType) {
+        updateAsideInfo(`${selectedAMCType} ${selectedYear}`, `Level ${selectedLevel} • ${currentQuestions.length} Questions`, 
+            `<div class="level-badge">${selectedAMCType}</div>
+             <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Year: ${selectedYear}</div>`);
+    }
+}
 
 // Helper function to update aside information
 function updateAsideInfo(title, description, additionalInfo = '') {
@@ -116,9 +188,6 @@ async function loadAvailableLevels() {
  * Display level selection interface
  */
 function displayLevelSelection(data) {
-    // Update aside info
-    updateAsideInfo('Select Math Level', 'Choose your competition level to get started');
-    
     // Show level selection in main content
     const levelSelectionHTML = `
         <div class="level-selection-container" style="max-width: 800px; margin: 0 auto; text-align: center;">
@@ -176,7 +245,7 @@ function displayLevelSelection(data) {
     `;
     
     // Update main content
-    const mainContent = document.querySelector('.math-main-content');
+    const mainContent = document.getElementById('problemsContent');
     if (mainContent) {
         mainContent.innerHTML = levelSelectionHTML;
     }
@@ -236,7 +305,7 @@ async function loadAvailableYears(level) {
  * Display year selection interface
  */
 function displayYearSelection(data) {
-    // Update aside info
+    // Update aside info only when user has made a selection
     updateAsideInfo(`${data.amcType} Level`, `Selected: ${data.amcType}`, 
         `<div class="level-badge">${data.amcType}</div>`);
     
@@ -276,7 +345,7 @@ function displayYearSelection(data) {
     `;
     
     // Update main content
-    const mainContent = document.querySelector('.math-main-content');
+    const mainContent = document.getElementById('problemsContent');
     if (mainContent) {
         mainContent.innerHTML = yearSelectionHTML;
     }
@@ -328,7 +397,7 @@ async function loadQuestionsForLevelAndYear(level, year) {
  * Display questions practice interface - All questions on one page
  */
 function displayQuestionsInterface(data) {
-    // Update aside info
+    // Update aside info only when user has made selections
     updateAsideInfo(`${data.amcType} ${data.year}`, `Level ${data.level} • ${data.count} Questions`, 
         `<div class="level-badge">${data.amcType}</div>
          <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">Year: ${data.year}</div>`);
@@ -358,7 +427,7 @@ function displayQuestionsInterface(data) {
     `;
     
     // Update main content
-    const mainContent = document.querySelector('.math-main-content');
+    const mainContent = document.getElementById('problemsContent');
     if (mainContent) {
         mainContent.innerHTML = questionsHTML;
     }
@@ -534,6 +603,9 @@ function backToLevelSelection() {
     selectedYear = null;
     selectedAMCType = null;
     
+    // Clear aside info when going back to step 1
+    clearAsideInfo();
+    
     // Hide navigation buttons
     const backToLevelsBtn = document.getElementById('backToLevelsBtn');
     const backToYearsBtn = document.getElementById('backToYearsBtn');
@@ -627,7 +699,7 @@ function showError(message) {
     updateAsideInfo('Error', 'Something went wrong');
     
     // Update main content
-    const mainContent = document.querySelector('.math-main-content');
+    const mainContent = document.getElementById('problemsContent');
     if (mainContent) {
         mainContent.innerHTML = `
             <div class="error-message">
