@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mindspark.model.Progress;
 import com.mindspark.model.QuizProgress;
+import com.mindspark.service.progress.LocalCacheBasedProgressTrackServiceImpl;
 import com.mindspark.service.progress.ProgressTrackService;
 import com.mindspark.util.CorsUtils;
 import org.slf4j.Logger;
@@ -15,7 +16,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -199,17 +199,8 @@ public class ProgressController extends HttpServlet {
             return;
         }
         
-        // Check if the service implementation supports getQuizProgress method
-        QuizProgress quizProgress;
-        if (progressTrackService instanceof com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl) {
-            com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl cacheService = 
-                (com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl) progressTrackService;
-            quizProgress = cacheService.getQuizProgress(userId, quizId);
-        } else {
-            // Fallback: get overall progress and extract quiz progress
-            Progress userProgress = progressTrackService.getProgress(userId);
-            quizProgress = userProgress.getQuizProgress().getOrDefault(quizId, new QuizProgress(quizId));
-        }
+        // Get quiz progress using the standard interface method
+        QuizProgress quizProgress = progressTrackService.getProgress(userId, quizId);
         
         Map<String, Object> responseData = new HashMap<>();
         responseData.put("success", true);
@@ -290,9 +281,9 @@ public class ProgressController extends HttpServlet {
         }
         
         // Check if the service implementation supports resetQuizProgress method
-        if (progressTrackService instanceof com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl) {
-            com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl cacheService = 
-                (com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl) progressTrackService;
+        if (progressTrackService instanceof LocalCacheBasedProgressTrackServiceImpl) {
+            LocalCacheBasedProgressTrackServiceImpl cacheService =
+                (LocalCacheBasedProgressTrackServiceImpl) progressTrackService;
             cacheService.resetQuizProgress(userId, quizId);
         } else {
             sendErrorResponse(response, HttpServletResponse.SC_NOT_IMPLEMENTED, "Reset quiz progress not supported by current implementation");
@@ -317,9 +308,9 @@ public class ProgressController extends HttpServlet {
         }
         
         // Check if the service implementation supports clearUserProgress method
-        if (progressTrackService instanceof com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl) {
-            com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl cacheService = 
-                (com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl) progressTrackService;
+        if (progressTrackService instanceof LocalCacheBasedProgressTrackServiceImpl) {
+            LocalCacheBasedProgressTrackServiceImpl cacheService =
+                (LocalCacheBasedProgressTrackServiceImpl) progressTrackService;
             cacheService.clearUserProgress(userId);
         } else {
             sendErrorResponse(response, HttpServletResponse.SC_NOT_IMPLEMENTED, "Clear user progress not supported by current implementation");
@@ -341,9 +332,9 @@ public class ProgressController extends HttpServlet {
         
         // Check if the service implementation supports getAllUserProgress method
         Map<String, Progress> allProgress;
-        if (progressTrackService instanceof com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl) {
-            com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl cacheService = 
-                (com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl) progressTrackService;
+        if (progressTrackService instanceof LocalCacheBasedProgressTrackServiceImpl) {
+            LocalCacheBasedProgressTrackServiceImpl cacheService =
+                (LocalCacheBasedProgressTrackServiceImpl) progressTrackService;
             allProgress = cacheService.getAllUserProgress();
         } else {
             sendErrorResponse(response, HttpServletResponse.SC_NOT_IMPLEMENTED, "Get all user progress not supported by current implementation");

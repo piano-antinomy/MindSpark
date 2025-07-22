@@ -5,6 +5,7 @@ import com.mindspark.model.Progress;
 import com.mindspark.model.QuizProgress;
 import com.mindspark.model.Question;
 import com.mindspark.service.QuestionService;
+import com.mindspark.service.quiz.QuizService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -13,11 +14,11 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
@@ -27,9 +28,9 @@ import java.util.Map;
  * Uses in-memory storage with thread-safe operations and persistence based on mode
  */
 @Singleton
-public class CacheBasedProgressTrackServiceImpl implements ProgressTrackService {
+public class LocalCacheBasedProgressTrackServiceImpl implements ProgressTrackService {
     
-    private static final Logger logger = LoggerFactory.getLogger(CacheBasedProgressTrackServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(LocalCacheBasedProgressTrackServiceImpl.class);
     
     private static final String LOCAL_PROGRESS_BASE_PATH = "/tmp";
     private static final String PROGRESS_FILE_NAME = "progress.json";
@@ -49,11 +50,15 @@ public class CacheBasedProgressTrackServiceImpl implements ProgressTrackService 
     private final QuestionService questionService;
     private final boolean isLocalMode;
     private final ObjectMapper objectMapper;
+
+    private final QuizService quizService;
     
     @Inject
-    public CacheBasedProgressTrackServiceImpl(QuestionService questionService, @LocalMode Boolean isLocalMode) {
+    public LocalCacheBasedProgressTrackServiceImpl(
+        QuestionService questionService, @LocalMode Boolean isLocalMode, QuizService quizService) {
         this.questionService = questionService;
         this.isLocalMode = isLocalMode;
+        this.quizService = quizService;
         
         // Initialize JSON mapper
         this.objectMapper = new ObjectMapper();
@@ -77,111 +82,29 @@ public class CacheBasedProgressTrackServiceImpl implements ProgressTrackService 
             logger.warn("Cannot track progress: userId or questionId is null");
             return;
         }
-        
+
+        // just pass through for now and will deprecate later.
         logger.debug("Tracking progress for user: {}, question: {}, answer: {}", userId, questionId, answer);
-        
-        // Extract quizId from questionId (assuming format like "2016_AMC_8_Q1")
-        String quizId = extractQuizIdFromQuestionId(questionId);
-        if (quizId == null) {
-            logger.warn("Cannot extract quizId from questionId: {}", questionId);
-            return;
-        }
-        
-        // Get or create user progress
-        Progress userProgress = progressCache.computeIfAbsent(userId, Progress::new);
-        
-        // Get or create quiz progress
-        QuizProgress quizProgress = userProgress.getOrCreateQuizProgress(quizId);
-        
-        // Get correct answer for scoring
-        String correctAnswer = getCorrectAnswerForQuestion(questionId, quizId);
-        
-        // Add the answer to quiz progress
-        quizProgress.addAnswer(questionId, answer, correctAnswer);
-        
-        // Set total questions for the quiz if not already set
-        if (quizProgress.getTotalQuestions() == 0) {
-            int totalQuestions = getTotalQuestionsForQuiz(quizId);
-            quizProgress.setTotalQuestionsAndRecalculate(totalQuestions);
-        }
-        
-        // Check if quiz is completed (all questions answered)
-        if (!quizProgress.isCompleted() && 
-            quizProgress.getQuestionsAnswered() >= quizProgress.getTotalQuestions() &&
-            quizProgress.getTotalQuestions() > 0) {
-            quizProgress.markCompleted();
-            logger.info("Quiz {} completed by user {}", quizId, userId);
-        }
-        
-        // Update user's last activity and recalculate aggregated stats
-        userProgress.updateLastActivity();
-        userProgress.recalculateAggregatedStats();
-        
-        // Persist progress based on mode
-        persistProgress(userId, userProgress);
-        
-        logger.debug("Progress updated for user {}: {} questions answered in quiz {}", 
-                    userId, quizProgress.getQuestionsAnswered(), quizId);
     }
-    
+
+    @Override
+    public void trackProgress(String userId, String quizId, Map<String, String> questionIdToAnswer) {
+        quizService.updateQuizProgress(
+            userId, quizId, new QuizProgress(quizId, LocalDateTime.now(), questionIdToAnswer));
+    }
+
     @Override
     public Progress getProgress(String userId) {
-        if (userId == null) {
-            logger.warn("Cannot get progress: userId is null");
-            return new Progress();
-        }
-        
-        Progress userProgress = progressCache.get(userId);
-        if (userProgress == null) {
-            logger.debug("No progress found for user: {}, returning empty progress", userId);
-            return new Progress(userId);
-        }
-        
-        // Ensure aggregated stats are up to date
-        userProgress.recalculateAggregatedStats();
-        
-        logger.debug("Retrieved progress for user {}: {} total questions answered, {} quizzes completed", 
-                    userId, userProgress.getTotalQuestionsAnswered(), userProgress.getTotalQuizzesCompleted());
-        
-        return userProgress;
+        return new Progress(userId, quizService.listQuiz(userId));
     }
-    
-    /**
-     * Get progress for a specific quiz
-     */
-    public QuizProgress getQuizProgress(String userId, String quizId) {
+
+    @Override
+    public QuizProgress getProgress(String userId, String quizId) {
         if (userId == null || quizId == null) {
-            return new QuizProgress(quizId);
+            throw new IllegalArgumentException("user_id and quiz_id must be provided");
         }
-        
-        Progress userProgress = progressCache.get(userId);
-        if (userProgress != null) {
-            return userProgress.getQuizProgress().getOrDefault(quizId, new QuizProgress(quizId));
-        }
-        
-        return new QuizProgress(quizId);
-    }
-    
-    /**
-     * Check if user has answered a specific question
-     */
-    public boolean hasUserAnsweredQuestion(String userId, String questionId) {
-        String quizId = extractQuizIdFromQuestionId(questionId);
-        if (quizId == null) return false;
-        
-        QuizProgress quizProgress = getQuizProgress(userId, quizId);
-        return quizProgress.hasAnswered(questionId);
-    }
-    
-    /**
-     * Get user's answer for a specific question
-     */
-    public String getUserAnswerForQuestion(String userId, String questionId) {
-        String quizId = extractQuizIdFromQuestionId(questionId);
-        if (quizId == null) return null;
-        
-        QuizProgress quizProgress = getQuizProgress(userId, quizId);
-        return quizProgress.getUserAnswer(questionId);
+
+        return quizService.listQuiz(userId).get(quizId);
     }
     
     /**
@@ -192,36 +115,13 @@ public class CacheBasedProgressTrackServiceImpl implements ProgressTrackService 
             logger.warn("Cannot reset quiz progress: userId or quizId is null");
             return;
         }
-        
-        Progress userProgress = progressCache.get(userId);
-        if (userProgress != null) {
-            userProgress.getQuizProgress().remove(quizId);
-            userProgress.recalculateAggregatedStats();
-            
-            // Persist the updated progress
-            persistProgress(userId, userProgress);
-            
-            logger.info("Reset quiz progress for user {} and quiz {}", userId, quizId);
-        }
     }
     
     /**
      * Clear all progress for a user (useful for testing or user reset)
      */
     public void clearUserProgress(String userId) {
-        if (userId != null) {
-            progressCache.remove(userId);
-            
-            // Remove persisted data
-            if (isLocalMode) {
-                deleteLocalProgressFile(userId);
-            } else {
-                // TODO: Implement S3 deletion when S3 support is added
-                logger.debug("TODO: Delete progress from S3 for user {}", userId);
-            }
-            
-            logger.info("Cleared all progress for user {}", userId);
-        }
+
     }
     
     /**

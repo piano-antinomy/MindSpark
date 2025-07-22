@@ -46,4 +46,7 @@ public interface QuestionService {
      * @return AMC type name (e.g., "AMC_8")
      */
     String getAMCTypeByLevel(int level);
+
+
+    List<Question> getQuestionsByQuizId(String quizId);
 } 

@@ -127,7 +127,12 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
     public String getAMCTypeByLevel(int level) {
         return levelToAMCType.getOrDefault(String.valueOf(level), "Unknown");
     }
-    
+
+    @Override
+    public List<Question> getQuestionsByQuizId(String quizId) {
+        return null;
+    }
+
     private void loadAllQuestions() {
         logger.info("Loading all questions from {} using {} mode", questionsBasePath, isLocalMode ? "filesystem" : "classpath");
         

@@ -1,157 +1,116 @@
 package com.mindspark.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDateTime;
-import java.util.HashMap;
+import java.util.Collections;
 import java.util.Map;
 
 /**
  * Individual quiz progress tracking
  */
 public class QuizProgress {
-    
     @JsonProperty("quiz_id")
     private String quizId;
-    
-    @JsonProperty("questions_answered")
-    private int questionsAnswered;
-    
-    @JsonProperty("correct_answers")
-    private int correctAnswers;
-    
-    @JsonProperty("total_questions")
-    private int totalQuestions;
-    
-    @JsonProperty("is_completed")
-    private boolean isCompleted;
-    
-    @JsonProperty("start_time")
-    private LocalDateTime startTime;
-    
-    @JsonProperty("completion_time")
-    private LocalDateTime completionTime;
-    
-    @JsonProperty("score_percentage")
-    private int scorePercentage;
-    
+
+    @JsonProperty("quiz_type")
+    private String quizType;
+
+    @JsonProperty("question_set_id")
+    private String questionSetId;
+
+    @JsonProperty("last_activity")
+    private LocalDateTime lastActivity;
+
     /**
-     * Map of questionId to user's answer
+     * key set of this map contains all question ids within this quiz.
+     * when this quiz was initially created, this map has only keys and all values will default to null.
+     * value to each key is the user's Answer, we track this when user is working on the quiz.
      */
-    @JsonProperty("user_answers")
-    private Map<String, String> userAnswers;
-    
-    /**
-     * Map of questionId to correct answer (for scoring)
-     */
-    @JsonProperty("correct_answer_key")
-    private Map<String, String> correctAnswerKey;
-    
-    // Constructors
-    public QuizProgress() {
-        this.userAnswers = new HashMap<>();
-        this.correctAnswerKey = new HashMap<>();
-        this.startTime = LocalDateTime.now();
-    }
-    
-    public QuizProgress(String quizId) {
-        this();
+    @JsonProperty("question_id_to_answer")
+    private Map<String, String> questionIdToAnswer;
+
+    public QuizProgress(String quizId, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer) {
         this.quizId = quizId;
+        this.lastActivity = lastActivity;
+        this.questionIdToAnswer = questionIdToAnswer;
     }
-    
-    // Getters and Setters
-    public String getQuizId() { return quizId; }
-    public void setQuizId(String quizId) { this.quizId = quizId; }
-    
-    public int getQuestionsAnswered() { return questionsAnswered; }
-    public void setQuestionsAnswered(int questionsAnswered) { this.questionsAnswered = questionsAnswered; }
-    
-    public int getCorrectAnswers() { return correctAnswers; }
-    public void setCorrectAnswers(int correctAnswers) { this.correctAnswers = correctAnswers; }
-    
-    public int getTotalQuestions() { return totalQuestions; }
-    public void setTotalQuestions(int totalQuestions) { this.totalQuestions = totalQuestions; }
-    
-    public boolean isCompleted() { return isCompleted; }
-    public void setCompleted(boolean completed) { this.isCompleted = completed; }
-    
-    public LocalDateTime getStartTime() { return startTime; }
-    public void setStartTime(LocalDateTime startTime) { this.startTime = startTime; }
-    
-    public LocalDateTime getCompletionTime() { return completionTime; }
-    public void setCompletionTime(LocalDateTime completionTime) { this.completionTime = completionTime; }
-    
-    public int getScorePercentage() { return scorePercentage; }
-    public void setScorePercentage(int scorePercentage) { this.scorePercentage = scorePercentage; }
-    
-    public Map<String, String> getUserAnswers() { return userAnswers; }
-    public void setUserAnswers(Map<String, String> userAnswers) { this.userAnswers = userAnswers; }
-    
-    public Map<String, String> getCorrectAnswerKey() { return correctAnswerKey; }
-    public void setCorrectAnswerKey(Map<String, String> correctAnswerKey) { this.correctAnswerKey = correctAnswerKey; }
-    
-    // Helper methods
-    public void addAnswer(String questionId, String userAnswer, String correctAnswer) {
-        userAnswers.put(questionId, userAnswer);
-        correctAnswerKey.put(questionId, correctAnswer);
-        
-        recalculateProgress();
+
+    public QuizProgress(String quizId, String quizType, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer) {
+        this.quizId = quizId;
+        this.quizType = quizType;
+        this.lastActivity = lastActivity;
+        this.questionIdToAnswer = questionIdToAnswer;
     }
-    
-    public void setTotalQuestionsAndRecalculate(int totalQuestions) {
-        this.totalQuestions = totalQuestions;
-        recalculateProgress();
+
+    public QuizProgress(String quizId, String quizType, String questionSetId, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer) {
+        this.quizId = quizId;
+        this.quizType = quizType;
+        this.questionSetId = questionSetId;
+        this.lastActivity = lastActivity;
+        this.questionIdToAnswer = questionIdToAnswer;
     }
-    
-    public void markCompleted() {
-        this.isCompleted = true;
-        this.completionTime = LocalDateTime.now();
-        recalculateProgress();
+
+    public QuizProgress(String quizId) {
+        this.quizId = quizId;
+        this.lastActivity = LocalDateTime.now();
+        this.questionIdToAnswer = Collections.emptyMap();
     }
-    
+
+    public String getQuizId() {
+        return quizId;
+    }
+
+    public String getQuizType() {
+        return quizType;
+    }
+
+    public String getQuestionSetId() {
+        return questionSetId;
+    }
+
+    public LocalDateTime getLastActivity() {
+        return lastActivity;
+    }
+
+    public Map<String, String> getQuestionIdToAnswer() {
+        return questionIdToAnswer;
+    }
+
     /**
-     * Recalculate progress statistics based on current answers
+     * Get the count of questions that have been answered (non-null values)
      */
-    private void recalculateProgress() {
-        this.questionsAnswered = userAnswers.size();
-        
-        // Count correct answers
-        this.correctAnswers = 0;
-        for (Map.Entry<String, String> entry : userAnswers.entrySet()) {
-            String questionId = entry.getKey();
-            String userAnswer = entry.getValue();
-            String correctAnswer = correctAnswerKey.get(questionId);
-            
-            if (userAnswer != null && userAnswer.equals(correctAnswer)) {
-                this.correctAnswers++;
-            }
+    public int getQuestionsAnswered() {
+        if (questionIdToAnswer == null) {
+            return 0;
         }
-        
-        // Calculate score percentage
-        if (questionsAnswered > 0) {
-            this.scorePercentage = (correctAnswers * 100) / questionsAnswered;
-        } else {
-            this.scorePercentage = 0;
+        return (int) questionIdToAnswer.values().stream()
+            .filter(answer -> answer != null && !answer.trim().isEmpty())
+            .count();
+    }
+
+    /**
+     * Check if the quiz is completed (all questions have answers)
+     */
+    public boolean isCompleted() {
+        if (questionIdToAnswer == null || questionIdToAnswer.isEmpty()) {
+            return false;
         }
+        return questionIdToAnswer.values().stream()
+            .allMatch(answer -> answer != null && !answer.trim().isEmpty());
     }
-    
+
     /**
-     * Get progress as a fraction string (e.g., "5/25")
+     * Get the completion percentage (0-100)
+     * For now, this returns the percentage of questions answered.
+     * In the future, this could be enhanced to calculate actual score percentage.
      */
-    public String getProgressFraction() {
-        return questionsAnswered + "/" + (totalQuestions > 0 ? totalQuestions : questionsAnswered);
+    public int getScorePercentage() {
+        if (questionIdToAnswer == null || questionIdToAnswer.isEmpty()) {
+            return 0;
+        }
+        int totalQuestions = questionIdToAnswer.size();
+        int answeredQuestions = getQuestionsAnswered();
+        return (int) Math.round((double) answeredQuestions / totalQuestions * 100.0);
     }
-    
-    /**
-     * Check if user has answered a specific question
-     */
-    public boolean hasAnswered(String questionId) {
-        return userAnswers.containsKey(questionId);
-    }
-    
-    /**
-     * Get user's answer for a specific question
-     */
-    public String getUserAnswer(String questionId) {
-        return userAnswers.get(questionId);
-    }
-} 
+}

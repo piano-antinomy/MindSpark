@@ -2,14 +2,18 @@ package com.mindspark.config;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.mindspark.service.QuestionService;
 import com.mindspark.service.CacheBackedQuestionServiceImpl;
 import com.mindspark.service.LoginService;
 import com.mindspark.service.LoginServiceImpl;
-import com.mindspark.service.progress.CacheBasedProgressTrackServiceImpl;
+import com.mindspark.service.progress.LocalCacheBasedProgressTrackServiceImpl;
 import com.mindspark.service.progress.ProgressTrackService;
+import com.mindspark.service.quiz.LocalQuizServiceImpl;
+import com.mindspark.service.quiz.QuizService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,17 +28,26 @@ public class MindSparkModule extends AbstractModule {
         // Bind services
         bind(QuestionService.class).to(CacheBackedQuestionServiceImpl.class);
         bind(LoginService.class).to(LoginServiceImpl.class);
-        bind(ProgressTrackService.class).to(CacheBasedProgressTrackServiceImpl.class);
+        bind(ProgressTrackService.class).to(LocalCacheBasedProgressTrackServiceImpl.class);
+        bind(QuizService.class).to(LocalQuizServiceImpl.class);
     }
     
     @Provides
     @Singleton
     public ObjectMapper provideObjectMapper() {
         ObjectMapper mapper = new ObjectMapper();
-        // Configure the mapper as needed
-        mapper.findAndRegisterModules();
-
+        
+        // Register JavaTimeModule for LocalDateTime support
+        mapper.registerModule(new JavaTimeModule());
+        
+        // Configure serialization settings
+        mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
+        mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        
+        // Find and register other modules
+        mapper.findAndRegisterModules();
+        
         return mapper;
     }
     
