@@ -40,7 +40,7 @@ public class LocalQuizServiceImpl implements QuizService {
     }
     
     @Override
-    public QuizProgress createStandardQuiz(String userId, String quizQuestionSetId) {
+    public QuizProgress createStandardQuiz(String userId, String quizQuestionSetId, String quizId) {
         if (userId == null || userId.trim().isEmpty()) {
             throw new IllegalArgumentException("userId cannot be null or empty");
         }
@@ -62,7 +62,6 @@ public class LocalQuizServiceImpl implements QuizService {
             }
             
             // Generate unique quiz ID and create QuizProgress
-            String quizId = UUID.randomUUID().toString();
             String quizType = "standardAMC";
             
             QuizProgress quizProgress = new QuizProgress(
@@ -89,7 +88,7 @@ public class LocalQuizServiceImpl implements QuizService {
     }
 
     @Override
-    public QuizProgress createPersonalizedQuiz(String userId) {
+    public QuizProgress createPersonalizedQuiz(String userId, String quizId) {
         // Implementation for later
         throw new UnsupportedOperationException("Personalized quiz creation not yet implemented");
     }
