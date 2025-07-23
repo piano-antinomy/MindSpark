@@ -11,9 +11,9 @@ public interface QuizService {
      * @param userId
      * @return
      */
-    QuizProgress createStandardQuiz(String userId, String quizQuestionSetId, String quizID);
+    QuizProgress createStandardQuiz(String userId, String quizQuestionSetId, String quizId, String quizName);
 
-    QuizProgress createPersonalizedQuiz(String userId, String quizID);
+    QuizProgress createPersonalizedQuiz(String userId, String quizId, String quizName);
 
     Map<String, QuizProgress> listQuiz(String userId);
 

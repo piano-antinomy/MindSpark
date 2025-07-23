@@ -170,14 +170,15 @@ public class QuizController extends HttpServlet {
             String userId = getRequiredField(requestBody, "userId");
             String quizType = getRequiredField(requestBody, "quizType");
             String quizId = requestBody.has("quizId") ? requestBody.get("quizId").asText() : null;
+            String quizName = getRequiredField(requestBody, "quizName");
             
             QuizProgress quizProgress;
             
             if ("standard".equals(quizType)) {
                 String quizQuestionSetId = getRequiredField(requestBody, "quizQuestionSetId");
-                quizProgress = quizService.createStandardQuiz(userId, quizQuestionSetId, quizId);
+                quizProgress = quizService.createStandardQuiz(userId, quizQuestionSetId, quizId, quizName);
             } else if ("personalized".equals(quizType)) {
-                quizProgress = quizService.createPersonalizedQuiz(userId, quizId);
+                quizProgress = quizService.createPersonalizedQuiz(userId, quizId, quizName);
             } else {
                 sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Invalid quiz type");
                 return;

@@ -22,6 +22,9 @@ public class QuizProgress {
     @JsonProperty("last_activity")
     private LocalDateTime lastActivity;
 
+    @JsonProperty("quiz_name")
+    private String quizName;
+
     /**
      * key set of this map contains all question ids within this quiz.
      * when this quiz was initially created, this map has only keys and all values will default to null.
@@ -51,10 +54,20 @@ public class QuizProgress {
         this.questionIdToAnswer = questionIdToAnswer;
     }
 
-    public QuizProgress(String quizId) {
+    public QuizProgress(String quizId, String quizType, String questionSetId, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer, String quizName) {
+        this.quizId = quizId;
+        this.quizType = quizType;
+        this.questionSetId = questionSetId;
+        this.lastActivity = lastActivity;
+        this.questionIdToAnswer = questionIdToAnswer;
+        this.quizName = quizName;
+    }
+
+    public QuizProgress(String quizId, String quizName) {
         this.quizId = quizId;
         this.lastActivity = LocalDateTime.now();
         this.questionIdToAnswer = Collections.emptyMap();
+        this.quizName = quizName;
     }
 
     public String getQuizId() {
@@ -75,6 +88,10 @@ public class QuizProgress {
 
     public Map<String, String> getQuestionIdToAnswer() {
         return questionIdToAnswer;
+    }
+
+    public String getQuizName() {
+        return quizName;
     }
 
     /**

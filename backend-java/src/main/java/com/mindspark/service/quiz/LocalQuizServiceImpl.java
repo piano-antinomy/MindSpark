@@ -40,12 +40,15 @@ public class LocalQuizServiceImpl implements QuizService {
     }
     
     @Override
-    public QuizProgress createStandardQuiz(String userId, String quizQuestionSetId, String quizId) {
+    public QuizProgress createStandardQuiz(String userId, String quizQuestionSetId, String quizId, String quizName) {
         if (userId == null || userId.trim().isEmpty()) {
             throw new IllegalArgumentException("userId cannot be null or empty");
         }
         if (quizQuestionSetId == null || quizQuestionSetId.trim().isEmpty()) {
             throw new IllegalArgumentException("quizQuestionSetId cannot be null or empty");
+        }
+        if (quizName == null || quizName.trim().isEmpty()) {
+            throw new IllegalArgumentException("quizName cannot be null or empty");
         }
         
         try {
@@ -69,14 +72,15 @@ public class LocalQuizServiceImpl implements QuizService {
                 quizType,
                 quizQuestionSetId, // Store the original question set ID
                 LocalDateTime.now(), 
-                questionIdToAnswer
+                questionIdToAnswer,
+                quizName
             );
             
             // Save to file
             saveQuizProgress(userId, quizId, quizProgress);
             
-            logger.info("Created standard quiz {} for user {} with {} questions from {}", 
-                quizId, userId, questions.size(), quizQuestionSetId);
+            logger.info("Created standard quiz {} ({}) for user {} with {} questions from {}", 
+                quizId, quizName, userId, questions.size(), quizQuestionSetId);
             
             return quizProgress;
             
@@ -88,7 +92,7 @@ public class LocalQuizServiceImpl implements QuizService {
     }
 
     @Override
-    public QuizProgress createPersonalizedQuiz(String userId, String quizId) {
+    public QuizProgress createPersonalizedQuiz(String userId, String quizId, String quizName) {
         // Implementation for later
         throw new UnsupportedOperationException("Personalized quiz creation not yet implemented");
     }
@@ -156,7 +160,8 @@ public class LocalQuizServiceImpl implements QuizService {
                 quizProgress.getQuizType(),
                 quizProgress.getQuestionSetId(),
                 LocalDateTime.now(),
-                quizProgress.getQuestionIdToAnswer()
+                quizProgress.getQuestionIdToAnswer(),
+                quizProgress.getQuizName()
             );
             
             saveQuizProgress(userId, quizId, updatedProgress);
