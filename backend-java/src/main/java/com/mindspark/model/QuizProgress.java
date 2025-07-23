@@ -10,19 +10,19 @@ import java.util.Map;
  * Individual quiz progress tracking
  */
 public class QuizProgress {
-    @JsonProperty("quiz_id")
+    @JsonProperty("quizId")
     private String quizId;
 
-    @JsonProperty("quiz_type")
+    @JsonProperty("quizType")
     private String quizType;
 
-    @JsonProperty("question_set_id")
+    @JsonProperty("questionSetId")
     private String questionSetId;
 
-    @JsonProperty("last_activity")
+    @JsonProperty("lastActivity")
     private LocalDateTime lastActivity;
 
-    @JsonProperty("quiz_name")
+    @JsonProperty("quizName")
     private String quizName;
 
     /**
@@ -30,7 +30,7 @@ public class QuizProgress {
      * when this quiz was initially created, this map has only keys and all values will default to null.
      * value to each key is the user's Answer, we track this when user is working on the quiz.
      */
-    @JsonProperty("question_id_to_answer")
+    @JsonProperty("questionIdToAnswer")
     private Map<String, String> questionIdToAnswer;
 
     public QuizProgress(String quizId, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer) {
@@ -70,6 +70,11 @@ public class QuizProgress {
         this.quizName = quizName;
     }
 
+    // Default constructor for JSON deserialization
+    public QuizProgress() {
+        this.questionIdToAnswer = Collections.emptyMap();
+    }
+
     public String getQuizId() {
         return quizId;
     }
@@ -92,6 +97,31 @@ public class QuizProgress {
 
     public String getQuizName() {
         return quizName;
+    }
+
+    // Setter methods for JSON deserialization
+    public void setQuizId(String quizId) {
+        this.quizId = quizId;
+    }
+
+    public void setQuizType(String quizType) {
+        this.quizType = quizType;
+    }
+
+    public void setQuestionSetId(String questionSetId) {
+        this.questionSetId = questionSetId;
+    }
+
+    public void setLastActivity(LocalDateTime lastActivity) {
+        this.lastActivity = lastActivity;
+    }
+
+    public void setQuizName(String quizName) {
+        this.quizName = quizName;
+    }
+
+    public void setQuestionIdToAnswer(Map<String, String> questionIdToAnswer) {
+        this.questionIdToAnswer = questionIdToAnswer != null ? questionIdToAnswer : Collections.emptyMap();
     }
 
     /**

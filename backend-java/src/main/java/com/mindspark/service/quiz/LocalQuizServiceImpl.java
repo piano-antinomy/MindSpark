@@ -263,7 +263,7 @@ public class LocalQuizServiceImpl implements QuizService {
         Path quizProgressFile = quizDir.resolve(QUIZ_PROGRESS_FILE_NAME);
         objectMapper.writeValue(quizProgressFile.toFile(), quizProgress);
         
-        logger.debug("Saved quiz progress for user {} quiz {} to {}", userId, quizId, quizProgressFile);
+        logger.info("Saved quiz progress for user {} quiz {} to {}", userId, quizId, quizProgressFile);
     }
     
     /**

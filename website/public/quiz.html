@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Mode - MindSpark</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/math-java.css">
+    
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                packages: {'[+]': ['textmacros', 'ams', 'array', 'base', 'amsmath']}
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="math-layout">
+        <!-- Left Menu Navigation -->
+        <nav class="math-left-menu">
+            <div class="menu-header">
+                <h1>🎯 Quiz Mode</h1>
+                <nav class="breadcrumb">
+                    <a href="dashboard.html">Dashboard</a> > 
+                    <a href="subjects.html">Subjects</a> > 
+                    <a href="math.html">Mathematics</a> > 
+                    Quiz
+                </nav>
+            </div>
+            
+            <div class="menu-tabs">
+                <button class="menu-tab" id="yourQuizzesTab" onclick="switchToQuizTab('yourQuizzes')">
+                    <span class="tab-icon">📋</span>
+                    <span class="tab-text">Your Quizzes</span>
+                </button>
+                <button class="menu-tab" id="createQuizTab" onclick="switchToQuizTab('createQuiz')">
+                    <span class="tab-icon">➕</span>
+                    <span class="tab-text">Create Quiz</span>
+                </button>
+            </div>
+            
+            <!-- Context info -->
+            <div id="asideInfo" class="aside-info">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+            
+            <!-- Navigation controls -->
+            <div class="aside-navigation">
+                <button id="backToMathBtn" class="btn btn-secondary">← Back to Math</button>
+            </div>
+        </nav>
+
+        <!-- Main content area -->
+        <main class="math-main-content">
+            <!-- Your Quizzes Tab Content -->
+            <div id="yourQuizzesContent" class="tab-content">
+                <div class="quiz-list-container">
+                    <h2>Your Quizzes</h2>
+                    <div id="quizList" class="quiz-list">
+                        <!-- Dynamic content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Create Quiz Tab Content -->
+            <div id="createQuizContent" class="tab-content" style="display: none;">
+                <div class="create-quiz-container">
+                    <h2>Create New Quiz</h2>
+                    
+                    <!-- Step 1: Quiz Name -->
+                    <div id="step1" class="quiz-creation-step">
+                        <h3>Step 1: Name Your Quiz</h3>
+                        <div class="form-group">
+                            <label for="quizName">Quiz Name:</label>
+                            <input type="text" id="quizName" placeholder="Enter a name for your quiz" class="form-control">
+                        </div>
+                        <button class="btn btn-primary" onclick="proceedToStep2()">Next: Select Question Set</button>
+                    </div>
+                    
+                    <!-- Step 2: Select Level -->
+                    <div id="step2" class="quiz-creation-step" style="display: none;">
+                        <h3>Step 2: Select AMC Level</h3>
+                        <div id="levelSelection" class="level-selection">
+                            <!-- Dynamic content will be loaded here -->
+                        </div>
+                        <button class="btn btn-secondary" onclick="backToStep1()">← Back</button>
+                    </div>
+                    
+                    <!-- Step 3: Select Year -->
+                    <div id="step3" class="quiz-creation-step" style="display: none;">
+                        <h3>Step 3: Select Year</h3>
+                        <div id="yearSelection" class="year-selection">
+                            <!-- Dynamic content will be loaded here -->
+                        </div>
+                        <button class="btn btn-secondary" onclick="backToStep2()">← Back</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Taking Content -->
+            <div id="quizTakingContent" class="tab-content" style="display: none;">
+                <div class="quiz-taking-container">
+                    <div class="quiz-header">
+                        <h2 id="quizTitle">Quiz Title</h2>
+                        <div class="quiz-progress">
+                            <span id="quizProgressText">Question 1 of 25</span>
+                            <div class="progress-bar">
+                                <div id="progressFill" class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="quizQuestionsDisplay" class="quiz-questions-display">
+                        <!-- Questions will be loaded here -->
+                    </div>
+                    
+                    <div class="quiz-controls">
+                        <button id="prevQuestionBtn" class="btn btn-secondary" onclick="previousQuestion()">← Previous</button>
+                        <button id="nextQuestionBtn" class="btn btn-primary" onclick="nextQuestion()">Next →</button>
+                        <button id="submitQuizBtn" class="btn btn-success" onclick="submitQuiz()" style="display: none;">Submit Quiz</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Include question renderer module first -->
+    <script src="js/question-renderer.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html> 

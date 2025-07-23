@@ -59,11 +59,9 @@ function switchToTab(tabName) {
     
     // Show selected tab content
     if (tabName === 'quiz') {
-        document.getElementById('quizTab').classList.add('active');
-        document.getElementById('quizContent').style.display = 'block';
-        
-        // Clear aside info when switching to quiz
-        clearAsideInfo();
+        // Redirect to quiz.html page
+        window.location.href = 'quiz.html';
+        return;
     } else if (tabName === 'problems') {
         document.getElementById('problemsTab').classList.add('active');
         document.getElementById('problemsContent').style.display = 'block';
