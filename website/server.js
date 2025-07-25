@@ -4,28 +4,17 @@ const os = require('os');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files
-app.use(express.static('public'));
+// Serve static files from React build
+app.use(express.static(path.join(__dirname, 'build')));
 
-// Routes
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// API routes (if any)
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', message: 'MindSpark API is running' });
 });
 
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'login.html'));
-});
-
-app.get('/dashboard', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'dashboard.html'));
-});
-
-app.get('/subjects', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'subjects.html'));
-});
-
-app.get('/math', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'math.html'));
+// Handle React routing, return all requests to React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // Function to get local IP address
@@ -43,7 +32,7 @@ function getLocalIPAddress() {
 
 app.listen(PORT, '0.0.0.0', () => {
     const localIP = getLocalIPAddress();
-    console.log('🎉 MindSpark website server is running!');
+    console.log('🎉 MindSpark React website server is running!');
     console.log('==========================================');
     console.log(`🌐 Local access:    http://localhost:${PORT}`);
     console.log(`📱 Network access:  http://${localIP}:${PORT}`);
@@ -52,4 +41,6 @@ app.listen(PORT, '0.0.0.0', () => {
     console.log('');
     console.log('💡 Other devices on your network can access:');
     console.log(`   http://${localIP}:${PORT}`);
+    console.log('');
+    console.log('📝 Note: Make sure to run "npm run build" before starting the server');
 }); 
