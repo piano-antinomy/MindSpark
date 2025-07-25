@@ -1,6 +1,302 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
+// Question Renderer functionality (adapted from question-renderer.js)
+class QuestionRenderer {
+  constructor() {
+    this.mathJaxReady = false;
+    this.initializeMathJax();
+  }
+
+  initializeMathJax() {
+    if (typeof window.MathJax !== 'undefined') {
+      this.mathJaxReady = true;
+      console.log('[QuestionRenderer] MathJax initialized successfully');
+    } else {
+      console.log('[QuestionRenderer] MathJax not available');
+    }
+  }
+
+  processQuestionText(questionText, insertions) {
+    if (!insertions) return this.preprocessLatexText(questionText);
+    
+    let processedText = questionText;
+    
+    // Replace insertion markers like <INSERTION_INDEX_1> with actual content
+    Object.keys(insertions).forEach(key => {
+      const insertion = insertions[key];
+      const marker = `<${key}>`; // e.g., "<INSERTION_INDEX_1>"
+      
+      // Replace the marker with the appropriate content
+      if (insertion.alt_type === 'image' && insertion.picture) {
+        // Use picture URL with proper protocol for image type
+        const imageUrl = this.processImageUrl(insertion.picture);
+        const altText = insertion.alt_value || 'Question image';
+        processedText = processedText.replace(marker, 
+          `<img src="${imageUrl}" alt="${altText}" class="question-image" />`);
+      } else if (insertion.alt_type === 'latex' && insertion.alt_value) {
+        // Use LaTeX content (preprocess it first)
+        const preprocessedLatex = this.preprocessLatexText(insertion.alt_value);
+        processedText = processedText.replace(marker, preprocessedLatex);
+      } else if (insertion.picture) {
+        // Fallback: Use picture URL with proper protocol (legacy support)
+        const imageUrl = this.processImageUrl(insertion.picture);
+        const altText = insertion.alt_value || 'Question image';
+        processedText = processedText.replace(marker, 
+          `<img src="${imageUrl}" alt="${altText}" class="question-image" />`);
+      } else if (insertion.alt_value) {
+        // Use alternative text value
+        processedText = processedText.replace(marker, insertion.alt_value);
+      }
+    });
+    
+    // Preprocess the final text to handle any remaining LaTeX commands
+    return this.preprocessLatexText(processedText);
+  }
+
+  processImageUrl(url) {
+    if (url.startsWith('//')) {
+      return 'https:' + url;
+    }
+    return url;
+  }
+
+  preprocessLatexText(text) {
+    if (!text) return text;
+    
+    let processedText = text;
+    
+    // Replace \textsc{...} with \text{...}
+    processedText = processedText.replace(/\\textsc\{([^}]*)\}/g, '\\text{$1}');
+    
+    // Replace \emph{...} with \textit{...}
+    processedText = processedText.replace(/\\emph\{([^}]*)\}/g, '\\textit{$1}');
+    
+    // Replace \overarc{...} with \overparen{...}
+    processedText = processedText.replace(/\\overarc\{([^}]*)\}/g, '\\overparen{$1}');
+    
+    // Replace \textdollar with \text{\$} for proper dollar sign rendering
+    processedText = processedText.replace(/\\textdollar/g, '\\text{\\$}');
+    
+    // Replace \begin{tabular} with \begin{array} for better MathJax 3.x support
+    processedText = processedText.replace(/\\begin\{tabular\}/g, '\\begin{array}');
+    processedText = processedText.replace(/\\end\{tabular\}/g, '\\end{array}');
+    
+    console.log('[QuestionRenderer] Preprocessed LaTeX text:', processedText);
+    
+    return processedText;
+  }
+
+  async renderLatexContent(element) {
+    if (!this.mathJaxReady || typeof window.MathJax === 'undefined') {
+      console.log('[QuestionRenderer] MathJax not available for rendering');
+      return Promise.resolve();
+    }
+
+    try {
+      console.log('[QuestionRenderer] Rendering LaTeX content in element:', element);
+      await window.MathJax.typesetPromise([element]);
+      console.log('[QuestionRenderer] LaTeX rendering completed successfully');
+    } catch (error) {
+      console.warn('[QuestionRenderer] MathJax rendering error:', error);
+    }
+  }
+
+  extractQuestionChoices(questionDetails) {
+    // Priority: text_choices > latex_choices > picture_choices
+    if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
+      return { choices: questionDetails.text_choices, hasLabels: false, isImageChoice: false };
+    } else if (questionDetails.latex_choices && questionDetails.latex_choices.length > 0) {
+      const result = this.parseLatexChoices(questionDetails.latex_choices);
+      return { ...result, isImageChoice: false };
+    } else if (questionDetails.picture_choices && questionDetails.picture_choices.length > 0) {
+      const imageChoices = questionDetails.picture_choices.map(url => {
+        const imageUrl = this.processImageUrl(url);
+        return `<img src="${imageUrl}" alt="Choice" class="choice-image" />`;
+      });
+      return { choices: imageChoices, hasLabels: false, isImageChoice: true };
+    }
+    
+    return { choices: [], hasLabels: false, isImageChoice: false };
+  }
+
+  parseLatexChoices(latexChoices) {
+    console.log('[QuestionRenderer] Parsing LaTeX choices:', latexChoices);
+    
+    // Preprocess all LaTeX choices first
+    const preprocessedChoices = latexChoices.map(choice => this.preprocessLatexText(choice));
+    
+    if (preprocessedChoices.length === 1) {
+      // Single string containing all choices - need to split
+      const choiceString = preprocessedChoices[0];
+      console.log('[QuestionRenderer] Single choice string to parse:', choiceString);
+      
+      // Check if it contains multiple choice labels like (A), (B), etc.
+      const textbfMatches = choiceString.match(/\\textbf\{[^}]*\([A-E]\)[^}]*\}/g);
+      console.log('[QuestionRenderer] Found textbf matches:', textbfMatches);
+      
+      if (textbfMatches && textbfMatches.length > 1) {
+        return this.splitByQquad(choiceString);
+      }
+      
+      // Alternative approach: try splitting by the pattern (A), (B), etc.
+      const labelPattern = /\\textbf\{.*?\([A-E]\).*?\}/g;
+      const labelMatches = choiceString.match(labelPattern);
+      
+      if (labelMatches && labelMatches.length > 1) {
+        console.log('[QuestionRenderer] Using label pattern approach:', labelMatches);
+        const choices = labelMatches.map(match => `$${match.replace(/\\qquad.*$/, '')}$`);
+        return { choices, hasLabels: true };
+      }
+      
+      // Manual AMC format splitting
+      if (choiceString.includes('\\qquad') && choiceString.includes('textbf')) {
+        return this.manualAmcSplit(choiceString);
+      }
+      
+      // If splitting failed, return as single choice
+      console.log('[QuestionRenderer] Splitting failed, returning single choice');
+      return { choices: [choiceString], hasLabels: true };
+    } else {
+      // Multiple strings - assume each is a separate choice
+      const hasLabels = preprocessedChoices.some(choice => 
+        choice.includes('textbf') && choice.match(/\([A-E]\)/));
+      return { choices: preprocessedChoices, hasLabels };
+    }
+  }
+
+  splitByQquad(choiceString) {
+    console.log('[QuestionRenderer] Splitting by qquad/qquad approach');
+    
+    // More robust splitting approach
+    let workingString = choiceString;
+    
+    // Remove outer $ delimiters if present
+    workingString = workingString.replace(/^\$/, '').replace(/\$$/, '');
+    
+    // Check if we have \qquad or \quad separators
+    const hasQquad = workingString.includes('\\qquad');
+    const hasQuad = workingString.includes('\\quad');
+    
+    let parts;
+    if (hasQquad) {
+      // Split by \\qquad
+      parts = workingString.split(/\\qquad/);
+      console.log('[QuestionRenderer] Split by qquad:', parts);
+    } else if (hasQuad) {
+      // Count the number of \quad occurrences
+      const quadCount = (workingString.match(/\\quad/g) || []).length;
+      console.log('[QuestionRenderer] Found quad count:', quadCount);
+      
+      // If we have exactly 4 \quad separators (which would create 5 choices), use \quad
+      if (quadCount === 4) {
+        parts = workingString.split(/\\quad/);
+        console.log('[QuestionRenderer] Split by quad (4 separators):', parts);
+      } else {
+        // Fall back to \qquad if we don't have exactly 4 \quad
+        parts = workingString.split(/\\qquad/);
+        console.log('[QuestionRenderer] Fallback split by qquad:', parts);
+      }
+    } else {
+      // No \qquad or \quad found, try \\ as separator
+      const hasDoubleBackslash = workingString.includes('\\\\');
+      if (hasDoubleBackslash) {
+        parts = workingString.split(/\\\\/);
+        console.log('[QuestionRenderer] Split by \\\\:', parts);
+      } else {
+        // No separators found, try \qquad as fallback
+        parts = workingString.split(/\\qquad/);
+        console.log('[QuestionRenderer] No separators found, fallback split:', parts);
+      }
+    }
+    
+    const choices = [];
+    for (let part of parts) {
+      part = part.trim();
+      if (part && part.includes('textbf')) {
+        // Wrap each part in $ delimiters for proper LaTeX rendering
+        choices.push(`$${part}$`);
+      }
+    }
+    
+    console.log('[QuestionRenderer] Extracted choices:', choices);
+    
+    if (choices.length > 1) {
+      return { choices, hasLabels: true };
+    }
+    
+    return { choices: [], hasLabels: false };
+  }
+
+  manualAmcSplit(choiceString) {
+    console.log('[QuestionRenderer] Using manual AMC format splitting');
+    
+    // Remove outer $ delimiters
+    let content = choiceString.replace(/^\$/, '').replace(/\$$/, '');
+    
+    // Split by textbf but keep the textbf part with the following content
+    const choices = [];
+    const regex = /(\\textbf\{[^}]*\([A-E]\)[^}]*\}[^\\]*)/g;
+    let match;
+    
+    while ((match = regex.exec(content)) !== null) {
+      let choice = match[1].trim();
+      // Remove any trailing \\qquad or \\quad
+      choice = choice.replace(/\\qquad\s*$/, '').replace(/\\quad\s*$/, '');
+      choices.push(`$${choice}$`);
+    }
+    
+    console.log('[QuestionRenderer] Manual splitting result:', choices);
+    
+    if (choices.length > 1) {
+      return { choices, hasLabels: true };
+    }
+    
+    return { choices: [], hasLabels: false };
+  }
+
+  processQuestion(question, questionIndex = 0) {
+    let questionText, choices, hasLabels = false, isImageChoice = false;
+    
+    if (typeof question.question === 'string') {
+      // Old format - just text and choices array
+      questionText = question.question;
+      choices = question.choices || [];
+      hasLabels = false;
+      isImageChoice = false;
+    } else {
+      // New format - complex object with insertions
+      const questionDetails = question.question;
+      questionText = this.processQuestionText(questionDetails.text, questionDetails.insertions);
+      const choiceResult = this.extractQuestionChoices(questionDetails);
+      choices = choiceResult.choices;
+      hasLabels = choiceResult.hasLabels;
+      isImageChoice = choiceResult.isImageChoice;
+      
+      // If no choices extracted from new format, fall back to simple choices array
+      if (choices.length === 0 && question.choices) {
+        choices = question.choices;
+        hasLabels = false;
+        isImageChoice = false;
+      }
+    }
+    
+    return {
+      id: question.id || `question_${questionIndex}`,
+      questionText,
+      choices,
+      hasLabels,
+      isImageChoice: isImageChoice || false,
+      answer: question.answer,
+      solution: question.solution,
+      originalQuestion: question
+    };
+  }
+}
+
+// Create global instance
+const questionRenderer = new QuestionRenderer();
+
 function QuizTaking() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -9,12 +305,10 @@ function QuizTaking() {
   const [timeRemaining, setTimeRemaining] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [currentQuiz, setCurrentQuiz] = useState(null);
   const [questions, setQuestions] = useState([]);
   const navigate = useNavigate();
   const location = useLocation();
-
-  const quiz = location.state?.quiz;
-  const mode = location.state?.mode;
 
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
@@ -26,27 +320,30 @@ function QuizTaking() {
       return;
     }
 
-    // Check if quiz data is available
-    if (!quiz) {
-      navigate('/quiz');
-      return;
+    // Get quiz ID from URL parameters (like the original)
+    const urlParams = new URLSearchParams(location.search);
+    const quizId = urlParams.get('quizId');
+    
+    if (quizId) {
+      loadQuiz(quizId);
+    } else {
+      // Check if quiz data is available from location state (for new quizzes)
+      const quiz = location.state?.quiz;
+      if (quiz) {
+        setCurrentQuiz(quiz);
+        loadQuestionsFromQuiz(quiz);
+      } else {
+        setLoading(false);
+      }
     }
-
-    // Initialize MathJax
-    if (window.MathJax) {
-      window.MathJax.typesetPromise();
-    }
-
-    // Load questions from backend
-    loadQuestions();
-  }, [navigate, quiz]);
+  }, [navigate, location]);
 
   useEffect(() => {
     // Re-render MathJax when questions change
     if (window.MathJax && questions.length > 0) {
       window.MathJax.typesetPromise();
     }
-  }, [questions]);
+  }, [questions, currentQuestionIndex]);
 
   useEffect(() => {
     if (quizStarted && !quizCompleted) {
@@ -69,7 +366,77 @@ function QuizTaking() {
     return currentUser ? JSON.parse(currentUser) : null;
   };
 
-  const loadQuestions = async () => {
+  const loadQuiz = async (quizId) => {
+    setLoading(true);
+    setError(null);
+    try {
+      const currentUser = checkAuthStatus();
+      
+      // Get specific quiz data
+      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.username}/quiz/${quizId}`, {
+        credentials: 'include'
+      });
+      
+      if (response.ok) {
+        const quiz = await response.json();
+        console.log('Loaded quiz from backend:', quiz);
+        setCurrentQuiz(quiz);
+        
+        // Load quiz questions
+        await loadQuizQuestions(quizId);
+      } else if (response.status === 404) {
+        setError('Quiz not found. Please check the quiz ID or create a new quiz.');
+        setLoading(false);
+      } else {
+        setError(`Failed to load quiz: ${response.status} ${response.statusText}`);
+        setLoading(false);
+      }
+    } catch (error) {
+      console.error('Error loading quiz:', error);
+      setError('Failed to connect to the server. Please check your connection and try again.');
+      setLoading(false);
+    }
+  };
+
+  const loadQuizQuestions = async (quizId) => {
+    try {
+      const currentUser = checkAuthStatus();
+      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.username}/quiz/${quizId}/questions`, {
+        credentials: 'include'
+      });
+      
+      if (response.ok) {
+        const questions = await response.json();
+        console.log('Loaded questions from backend:', questions);
+        setQuestions(questions);
+        
+        // Initialize answers from quiz progress
+        const answers = {};
+        if (currentQuiz?.questionIdToAnswer) {
+          Object.keys(currentQuiz.questionIdToAnswer).forEach(questionId => {
+            const answer = currentQuiz.questionIdToAnswer[questionId];
+            if (answer) {
+              answers[questionId] = answer;
+            }
+          });
+        }
+        setSelectedAnswers(answers);
+        setLoading(false);
+      } else if (response.status === 404) {
+        setError('Quiz questions not found. The quiz may be corrupted or incomplete.');
+        setLoading(false);
+      } else {
+        setError(`Failed to load quiz questions: ${response.status} ${response.statusText}`);
+        setLoading(false);
+      }
+    } catch (error) {
+      console.error('Error loading quiz questions:', error);
+      setError('Failed to load quiz questions. Please check your connection and try again.');
+      setLoading(false);
+    }
+  };
+
+  const loadQuestionsFromQuiz = async (quiz) => {
     setLoading(true);
     setError(null);
     try {
@@ -146,11 +513,85 @@ function QuizTaking() {
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
   };
 
+  const renderNoQuizData = () => (
+    <div className="math-layout">
+      {/* Left Menu Navigation */}
+      <nav className="math-left-menu">
+        <div className="menu-header">
+          <h1>🎯 Quiz Taking</h1>
+          <nav className="breadcrumb">
+            <button onClick={() => navigate('/dashboard')} className="breadcrumb-link">
+              Dashboard
+            </button>
+            {' > '}
+            <button onClick={() => navigate('/subjects')} className="breadcrumb-link">
+              Subjects
+            </button>
+            {' > '}
+            <button onClick={() => navigate('/math')} className="breadcrumb-link">
+              Mathematics
+            </button>
+            {' > '}
+            Quiz Taking
+          </nav>
+        </div>
+        
+        <div className="menu-tabs">
+          <button className="menu-tab" onClick={() => navigate('/quiz')}>
+            <span className="tab-icon">📋</span>
+            <span className="tab-text">Quiz Management</span>
+          </button>
+          <button className="menu-tab active" onClick={() => navigate('/quiz-taking')}>
+            <span className="tab-icon">🎯</span>
+            <span className="tab-text">Quiz Taking</span>
+          </button>
+        </div>
+        
+        {/* Context info */}
+        <div className="aside-info">
+          <div>
+            <h3>No Quiz Selected</h3>
+            <p>Please select a quiz from the Quiz Management page to start taking it.</p>
+          </div>
+        </div>
+        
+        {/* Navigation controls */}
+        <div className="aside-navigation">
+          <button className="btn btn-primary" onClick={() => navigate('/quiz')}>
+            Go to Quiz Management
+          </button>
+          <button className="btn btn-secondary" onClick={() => navigate('/math')}>
+            ← Back to Math
+          </button>
+        </div>
+      </nav>
+
+      {/* Main content area */}
+      <main className="math-main-content">
+        <div className="quiz-taking-container">
+          <div className="empty-state">
+            <div className="empty-icon">🎯</div>
+            <h3>No Quiz Selected</h3>
+            <p>You need to select a quiz to start taking it. Please go to the Quiz Management page to create or select a quiz.</p>
+            <div className="empty-actions">
+              <button className="btn btn-primary" onClick={() => navigate('/quiz')}>
+                Go to Quiz Management
+              </button>
+              <button className="btn btn-secondary" onClick={() => navigate('/math')}>
+                Back to Math
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+
   const renderError = () => (
     <div className="error-message">
       <h3>Error</h3>
       <p>{error}</p>
-      <button onClick={loadQuestions} className="btn btn-primary">Try Again</button>
+      <button onClick={() => window.location.reload()} className="btn btn-primary">Try Again</button>
       <button onClick={() => navigate('/quiz')} className="btn btn-secondary">Back to Quiz Management</button>
     </div>
   );
@@ -158,9 +599,9 @@ function QuizTaking() {
   const renderStartScreen = () => (
     <div className="quiz-start-screen">
       <div className="quiz-info">
-        <h1>{quiz.name}</h1>
-        <p><strong>Level:</strong> {quiz.level}</p>
-        <p><strong>Year:</strong> {quiz.year}</p>
+        <h1>{currentQuiz?.quizName || 'Quiz'}</h1>
+        <p><strong>Level:</strong> {currentQuiz?.level || 'AMC'}</p>
+        <p><strong>Year:</strong> {currentQuiz?.year || '2024'}</p>
         <p><strong>Questions:</strong> {questions.length}</p>
         <p><strong>Time Limit:</strong> 30 minutes</p>
       </div>
@@ -180,75 +621,89 @@ function QuizTaking() {
     </div>
   );
 
-  const renderQuestion = (question) => (
-    <div className="question-container">
-      <div className="question-header">
-        <h2>Question {currentQuestionIndex + 1} of {questions.length}</h2>
-        <div className="timer">Time Remaining: {formatTime(timeRemaining)}</div>
-      </div>
-      
-      <div className="question-content">
-        <div 
-          className="question-text" 
-          dangerouslySetInnerHTML={{ __html: question.question.text || question.question }} 
-        />
+  const renderQuestion = (question) => {
+    console.log('Rendering question:', question);
+    
+    // Process the question using QuestionRenderer to handle the nested structure
+    const processedQuestion = questionRenderer.processQuestion(question, currentQuestionIndex);
+    console.log('Processed question:', processedQuestion);
+    
+    return (
+      <div className="question-container">
+        <div className="question-header">
+          <h2>Question {currentQuestionIndex + 1} of {questions.length}</h2>
+          <div className="timer">Time Remaining: {formatTime(timeRemaining)}</div>
+        </div>
         
-        <div className="choices">
-          {question.question.text_choices && question.question.text_choices.length > 0 ? (
-            question.question.text_choices.map((choice, index) => (
-              <label 
-                key={index} 
-                className={`choice ${selectedAnswers[question.id] === String.fromCharCode(65 + index) ? 'selected' : ''}`}
+        <div className="question-content">
+          <div 
+            className="question-text" 
+            dangerouslySetInnerHTML={{ __html: processedQuestion.questionText }} 
+          />
+          
+          <div className="choices">
+            {processedQuestion.choices && processedQuestion.choices.length > 0 ? (
+              processedQuestion.choices.map((choice, index) => {
+                const choiceKey = String.fromCharCode(65 + index); // A, B, C, D, E
+                return (
+                  <label 
+                    key={choiceKey} 
+                    className={`choice ${selectedAnswers[question.id] === choiceKey ? 'selected' : ''}`}
+                  >
+                    <input
+                      type="radio"
+                      name={`question-${question.id}`}
+                      value={choiceKey}
+                      checked={selectedAnswers[question.id] === choiceKey}
+                      onChange={() => selectAnswer(question.id, choiceKey)}
+                    />
+                    <span 
+                      className="choice-text" 
+                      dangerouslySetInnerHTML={{ __html: choice }}
+                    />
+                  </label>
+                );
+              })
+            ) : (
+              <p>No choices available for this question.</p>
+            )}
+          </div>
+        </div>
+        
+        <div className="question-navigation">
+          <button 
+            className="btn btn-secondary" 
+            onClick={previousQuestion}
+            disabled={currentQuestionIndex === 0}
+          >
+            ← Previous
+          </button>
+          
+          <div className="question-progress">
+            {questions.map((_, index) => (
+              <button
+                key={index}
+                className={`progress-dot ${index === currentQuestionIndex ? 'current' : ''} ${selectedAnswers[questions[index].id] ? 'answered' : ''}`}
+                onClick={() => setCurrentQuestionIndex(index)}
               >
-                <input
-                  type="radio"
-                  name={`question-${question.id}`}
-                  value={String.fromCharCode(65 + index)}
-                  checked={selectedAnswers[question.id] === String.fromCharCode(65 + index)}
-                  onChange={() => selectAnswer(question.id, String.fromCharCode(65 + index))}
-                />
-                <span className="choice-text">{choice}</span>
-              </label>
-            ))
+                {index + 1}
+              </button>
+            ))}
+          </div>
+          
+          {currentQuestionIndex === questions.length - 1 ? (
+            <button className="btn btn-primary" onClick={completeQuiz}>
+              Complete Quiz
+            </button>
           ) : (
-            <p>No choices available for this question.</p>
+            <button className="btn btn-primary" onClick={nextQuestion}>
+              Next →
+            </button>
           )}
         </div>
       </div>
-      
-      <div className="question-navigation">
-        <button 
-          className="btn btn-secondary" 
-          onClick={previousQuestion}
-          disabled={currentQuestionIndex === 0}
-        >
-          ← Previous
-        </button>
-        
-        <div className="question-progress">
-          {questions.map((_, index) => (
-            <button
-              key={index}
-              className={`progress-dot ${index === currentQuestionIndex ? 'current' : ''} ${selectedAnswers[questions[index].id] ? 'answered' : ''}`}
-              onClick={() => setCurrentQuestionIndex(index)}
-            >
-              {index + 1}
-            </button>
-          ))}
-        </div>
-        
-        {currentQuestionIndex === questions.length - 1 ? (
-          <button className="btn btn-primary" onClick={completeQuiz}>
-            Complete Quiz
-          </button>
-        ) : (
-          <button className="btn btn-primary" onClick={nextQuestion}>
-            Next →
-          </button>
-        )}
-      </div>
-    </div>
-  );
+    );
+  };
 
   const renderResults = () => {
     const score = calculateScore();
@@ -266,20 +721,23 @@ function QuizTaking() {
         
         <div className="question-review">
           <h3>Question Review</h3>
-          {questions.map((question, index) => (
-            <div key={question.id} className="review-item">
-              <h4>Question {index + 1}</h4>
-              <div 
-                className="question-text" 
-                dangerouslySetInnerHTML={{ __html: question.question.text || question.question }} 
-              />
-              <p><strong>Your Answer:</strong> {selectedAnswers[question.id] || 'Not answered'}</p>
-              <p><strong>Correct Answer:</strong> {question.answer}</p>
-              <div className={`result-indicator ${selectedAnswers[question.id] === question.answer ? 'correct' : 'incorrect'}`}>
-                {selectedAnswers[question.id] === question.answer ? '✓ Correct' : '✗ Incorrect'}
+          {questions.map((question, index) => {
+            const processedQuestion = questionRenderer.processQuestion(question, index);
+            return (
+              <div key={question.id} className="review-item">
+                <h4>Question {index + 1}</h4>
+                <div 
+                  className="question-text" 
+                  dangerouslySetInnerHTML={{ __html: processedQuestion.questionText }} 
+                />
+                <p><strong>Your Answer:</strong> {selectedAnswers[question.id] || 'Not answered'}</p>
+                <p><strong>Correct Answer:</strong> {question.answer}</p>
+                <div className={`result-indicator ${selectedAnswers[question.id] === question.answer ? 'correct' : 'incorrect'}`}>
+                  {selectedAnswers[question.id] === question.answer ? '✓ Correct' : '✗ Incorrect'}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
         
         <div className="results-actions">
@@ -294,16 +752,17 @@ function QuizTaking() {
     );
   };
 
+  // If no quiz data is provided, show the no quiz data screen
+  if (!currentQuiz && !loading) {
+    return renderNoQuizData();
+  }
+
   if (loading) {
     return <div className="loading">Loading quiz...</div>;
   }
 
   if (error) {
     return renderError();
-  }
-
-  if (!quiz) {
-    return <div>No quiz data available</div>;
   }
 
   if (questions.length === 0) {
@@ -314,7 +773,7 @@ function QuizTaking() {
     <div className="quiz-taking-container">
       <header className="quiz-header">
         <div className="quiz-title">
-          <h1>{quiz.name}</h1>
+          <h1>{currentQuiz?.quizName || 'Quiz'}</h1>
           <nav className="breadcrumb">
             <button onClick={() => navigate('/quiz')} className="breadcrumb-link">
               ← Back to Quiz Management

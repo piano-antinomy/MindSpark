@@ -47,30 +47,37 @@ function Quiz() {
   const loadQuizzes = async () => {
     setLoading(true);
     try {
-      // Mock data for now - in real implementation, fetch from API
-      const mockQuizzes = [
-        {
-          id: 1,
-          name: 'AMC 8 Practice Quiz',
-          level: 'AMC_8',
-          year: 2023,
-          questionCount: 25,
-          status: 'completed',
-          score: 85
-        },
-        {
-          id: 2,
-          name: 'AMC 10 Algebra Focus',
-          level: 'AMC_10',
-          year: 2022,
-          questionCount: 25,
-          status: 'in_progress',
-          score: null
-        }
-      ];
-      setQuizzes(mockQuizzes);
+      const currentUser = checkAuthStatus();
+      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.username}`, {
+        credentials: 'include'
+      });
+      
+      if (response.ok) {
+        const quizzesData = await response.json();
+        console.log('Loaded quizzes from backend:', quizzesData);
+        
+        // Convert the backend format to the expected format
+        const quizzesList = Object.entries(quizzesData).map(([quizId, quiz]) => ({
+          id: quizId,
+          name: quiz.quizName || 'Untitled Quiz',
+          level: quiz.questionSetId ? quiz.questionSetId.split('_')[2] : 'AMC',
+          year: quiz.questionSetId ? quiz.questionSetId.split('_')[0] : '2024',
+          questionCount: quiz.questionIdToAnswer ? Object.keys(quiz.questionIdToAnswer).length : 0,
+          status: quiz.isCompleted ? 'completed' : 'in_progress',
+          score: quiz.getScorePercentage ? quiz.getScorePercentage() : null
+        }));
+        
+        setQuizzes(quizzesList);
+      } else if (response.status === 404) {
+        // No quizzes found, set empty array
+        setQuizzes([]);
+      } else {
+        console.error('Error loading quizzes:', response.status, response.statusText);
+        setQuizzes([]);
+      }
     } catch (error) {
       console.error('Error loading quizzes:', error);
+      setQuizzes([]);
     } finally {
       setLoading(false);
     }
@@ -105,36 +112,51 @@ function Quiz() {
 
   const createQuiz = async () => {
     try {
-      // Mock quiz creation - in real implementation, call API
-      const newQuiz = {
-        id: Date.now(),
-        name: quizName,
-        level: selectedLevel,
-        year: selectedYear,
-        questionCount: 25,
-        status: 'created'
+      const currentUser = checkAuthStatus();
+      
+      // Generate quiz ID
+      const quizId = `quiz_${Date.now()}`;
+      
+      // Create quizQuestionSetId (format: year_AMC_level, e.g., "2023_AMC_8")
+      const quizQuestionSetId = `${selectedYear}_AMC_${selectedLevel.split('_')[1]}`;
+      
+      const requestBody = {
+        userId: currentUser.username,
+        quizType: "standard",
+        quizId: quizId,
+        quizName: quizName,
+        quizQuestionSetId: quizQuestionSetId
       };
       
-      // Navigate to quiz-taking with quiz data
-      navigate('/quiz-taking', { 
-        state: { 
-          quiz: newQuiz,
-          mode: 'new'
-        }
+      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/create`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        credentials: 'include',
+        body: JSON.stringify(requestBody)
       });
+      
+      if (response.ok) {
+        const quizProgress = await response.json();
+        console.log('Quiz created successfully:', quizProgress);
+        
+        // Navigate to quiz-taking with the new quiz ID
+        navigate(`/quiz-taking?quizId=${encodeURIComponent(quizId)}`);
+      } else {
+        const errorData = await response.json();
+        console.error('Failed to create quiz:', errorData);
+        alert(`Failed to create quiz: ${errorData.error || 'Unknown error'}`);
+      }
     } catch (error) {
       console.error('Error creating quiz:', error);
-      alert('Failed to create quiz. Please try again.');
+      alert('Failed to create quiz. Please check your connection and try again.');
     }
   };
 
   const startQuiz = (quiz) => {
-    navigate('/quiz-taking', { 
-      state: { 
-        quiz: quiz,
-        mode: 'existing'
-      }
-    });
+    // Use URL parameters like the original implementation
+    navigate(`/quiz-taking?quizId=${encodeURIComponent(quiz.id)}`);
   };
 
   const renderYourQuizzesContent = () => (
