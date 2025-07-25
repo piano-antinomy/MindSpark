@@ -1464,6 +1464,53 @@ label.choice-label {
     border-color: #3498db;
 }
 
+/* Fallback question styles */
+.quiz-question-card .question-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.quiz-question-card .question-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.quiz-question-card .choice-option {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.quiz-question-card .choice-option:hover {
+    border-color: #3498db;
+    background: #f8f9fa;
+}
+
+.quiz-question-card .choice-option input[type="radio"] {
+    margin-right: 0.75rem;
+    transform: scale(1.2);
+}
+
+.quiz-question-card .choice-option input[type="radio"]:checked + .choice-label {
+    font-weight: 600;
+    color: #1976d2;
+}
+
+.quiz-question-card .choice-label {
+    font-size: 1rem;
+    color: #2c3e50;
+    cursor: pointer;
+    flex: 1;
+}
+
 .quiz-controls {
     display: flex;
     justify-content: space-between;

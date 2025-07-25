@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taking Quiz - MindSpark</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/math-java.css">
+    
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                packages: {'[+]': ['textmacros', 'ams', 'array', 'base', 'amsmath']}
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="math-layout">
+        <!-- Left Menu Navigation -->
+        <nav class="math-left-menu">
+            <div class="menu-header">
+                <h1>🎯 Taking Quiz</h1>
+                <nav class="breadcrumb">
+                    <a href="dashboard.html">Dashboard</a> > 
+                    <a href="subjects.html">Subjects</a> > 
+                    <a href="math.html">Mathematics</a> > 
+                    <a href="quiz.html">Quiz</a> > 
+                    <span id="quizNameBreadcrumb">Quiz</span>
+                </nav>
+            </div>
+            
+            <!-- Context info -->
+            <div id="asideInfo" class="aside-info">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+            
+            <!-- Navigation controls -->
+            <div class="aside-navigation">
+                <button id="backToQuizzesBtn" class="btn btn-secondary">← Back to Quizzes</button>
+            </div>
+        </nav>
+
+        <!-- Main content area -->
+        <main class="math-main-content">
+            <!-- Quiz Taking Content -->
+            <div class="quiz-taking-container">
+                <div class="quiz-header">
+                    <h2 id="quizTitle">Quiz Title</h2>
+                    <div class="quiz-progress">
+                        <span id="quizProgressText">Question 1 of 25</span>
+                        <div class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="quizQuestionsDisplay" class="quiz-questions-display">
+                    <!-- Questions will be loaded here -->
+                </div>
+                
+                <div class="quiz-controls">
+                    <button id="prevQuestionBtn" class="btn btn-secondary" onclick="previousQuestion()">← Previous</button>
+                    <button id="nextQuestionBtn" class="btn btn-primary" onclick="nextQuestion()">Next →</button>
+                    <button id="submitQuizBtn" class="btn btn-success" onclick="submitQuiz()" style="display: none;">Submit Quiz</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Include question renderer module first -->
+    <script src="js/question-renderer.js"></script>
+    <script src="js/quiz-taking.js"></script>
+</body>
+</html> 
