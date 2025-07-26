@@ -107,10 +107,10 @@ function Quiz() {
   const selectYear = (year) => {
     setSelectedYear(year);
     // Create the quiz and navigate to quiz-taking
-    createQuiz();
+    createQuiz(year, selectedLevel);
   };
 
-  const createQuiz = async () => {
+  const createQuiz = async (year = selectedYear, level = selectedLevel) => {
     try {
       const currentUser = checkAuthStatus();
       
@@ -118,7 +118,12 @@ function Quiz() {
       const quizId = `quiz_${Date.now()}`;
       
       // Create quizQuestionSetId (format: year_AMC_level, e.g., "2023_AMC_8")
-      const quizQuestionSetId = `${selectedYear}_AMC_${selectedLevel.split('_')[1]}`;
+      if (!level) {
+        console.error('Level is null or undefined. Cannot create quiz.');
+        alert('Error: Level not selected. Please try again.');
+        return;
+      }
+      const quizQuestionSetId = `${year}_AMC_${level.split('_')[1]}`;
       
       const requestBody = {
         userId: currentUser.username,
