@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import QuestionRenderer, { questionRenderer } from './QuestionRenderer';
 
@@ -35,7 +35,23 @@ function MathQuestions() {
   useEffect(() => {
     // Re-render MathJax when questions change
     if (window.MathJax && processedQuestions.length > 0) {
-      window.MathJax.typesetPromise();
+      // Use setTimeout to ensure DOM is rendered before typesetting
+      setTimeout(() => {
+        window.MathJax.typesetPromise();
+      }, 0);
+    }
+  }, [processedQuestions]);
+
+  // Use useLayoutEffect for more reliable MathJax typesetting
+  useLayoutEffect(() => {
+    if (window.MathJax && processedQuestions.length > 0) {
+      // Try to typeset immediately after DOM updates
+      window.MathJax.typesetPromise().catch(() => {
+        // If it fails, retry after a short delay
+        setTimeout(() => {
+          window.MathJax.typesetPromise();
+        }, 50);
+      });
     }
   }, [processedQuestions]);
 
@@ -182,7 +198,7 @@ Score: ${answered > 0 ? Math.round((correct/answered) * 100) : 0}%
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex h-screen bg-gray-50 overflow-hidden">
       {/* Left Menu Navigation */}
       <nav className="w-80 bg-white border-r border-gray-200 shadow-soft fixed h-full overflow-y-auto z-20">
         <div className="p-6 border-b border-gray-200">
@@ -246,7 +262,7 @@ Score: ${answered > 0 ? Math.round((correct/answered) * 100) : 0}%
       </nav>
 
       {/* Main content area */}
-      <main className="flex-1 ml-80 p-6">
+      <main className="flex-1 ml-80 p-6 overflow-y-auto">
         <div className="max-w-4xl mx-auto">
           <div className="space-y-6">
             <div className="bg-white rounded-xl shadow-soft p-6">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { questionParser } from './QuestionParser';
 
@@ -57,9 +57,35 @@ function QuizTaking() {
   useEffect(() => {
     // Re-render MathJax when questions change
     if (window.MathJax && parsedQuestions.length > 0) {
-      window.MathJax.typesetPromise();
+      // Use setTimeout to ensure DOM is rendered before typesetting
+      setTimeout(() => {
+        window.MathJax.typesetPromise();
+      }, 0);
     }
   }, [parsedQuestions, currentQuestionIndex]);
+
+  // Additional effect to handle MathJax typesetting when quiz starts
+  useEffect(() => {
+    if (quizStarted && window.MathJax && parsedQuestions.length > 0) {
+      // Use a longer delay to ensure the quiz interface is fully rendered
+      setTimeout(() => {
+        window.MathJax.typesetPromise();
+      }, 100);
+    }
+  }, [quizStarted, parsedQuestions]);
+
+  // Use useLayoutEffect for more reliable MathJax typesetting
+  useLayoutEffect(() => {
+    if (quizStarted && window.MathJax && parsedQuestions.length > 0) {
+      // Try to typeset immediately after DOM updates
+      window.MathJax.typesetPromise().catch(() => {
+        // If it fails, retry after a short delay
+        setTimeout(() => {
+          window.MathJax.typesetPromise();
+        }, 50);
+      });
+    }
+  }, [quizStarted, currentQuestionIndex, parsedQuestions]);
 
   useEffect(() => {
     if (quizStarted && !quizCompleted) {

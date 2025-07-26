@@ -84,132 +84,73 @@ function QuestionRenderer({
           </div>
           <div className="grid grid-cols-5 gap-3">
             {['A', 'B', 'C', 'D', 'E'].map((letter, letterIndex) => (
-              <label 
+              <div 
                 key={letterIndex} 
-                className={`choice-label ${selectedAnswer === letter ? 'selected' : ''}`}
+                className="text-center font-semibold"
               >
-                <input
-                  type="radio"
-                  name={`question-${processedQuestion.id}`}
-                  value={letter}
-                  checked={selectedAnswer === letter}
-                  onChange={() => handleAnswerSelect(letter)}
-                  disabled={showAnswer}
-                  className="sr-only"
-                />
-                <span className="choice-text text-center font-semibold">{letter}</span>
-              </label>
+                <span className="choice-text">{letter}</span>
+              </div>
             ))}
           </div>
         </div>
       );
     } else {
-      // Handle regular choices
-      return processedQuestion.choices.map((choice, choiceIndex) => {
-        const choiceValue = String.fromCharCode(65 + choiceIndex);
-        const isCorrect = showAnswer && choiceValue === processedQuestion.answer;
-        const isSelected = selectedAnswer === choiceValue;
-        
-        return (
-          <label 
-            key={choiceIndex} 
-            className={`choice-label ${isSelected ? 'selected' : ''} ${showAnswer && isCorrect ? 'bg-success-50 border-success-500 text-success-900' : ''} ${showAnswer && isSelected && !isCorrect ? 'bg-danger-50 border-danger-500 text-danger-900' : ''}`}
-          >
-            <input
-              type="radio"
-              name={`question-${processedQuestion.id}`}
-              value={choiceValue}
-              checked={isSelected}
-              onChange={() => handleAnswerSelect(choiceValue)}
-              disabled={showAnswer}
-              className="mr-3 text-primary-600 focus:ring-primary-500"
-            />
-            <span 
-              className="choice-text" 
-              dangerouslySetInnerHTML={{ __html: choice }} 
-            />
-            {showAnswer && isCorrect && (
-              <span className="ml-2 inline-flex items-center justify-center w-5 h-5 rounded-full bg-success-500 text-white text-xs">
-                ✓
-              </span>
-            )}
-            {showAnswer && isSelected && !isCorrect && (
-              <span className="ml-2 inline-flex items-center justify-center w-5 h-5 rounded-full bg-danger-500 text-white text-xs">
-                ✗
-              </span>
-            )}
-          </label>
-        );
-      });
+      // Handle regular choices - simplified for viewing only
+      return (
+        <div className="space-y-2">
+          {processedQuestion.choices.map((choice, choiceIndex) => {
+            const choiceValue = String.fromCharCode(65 + choiceIndex);
+            
+            return (
+              <div 
+                key={choiceIndex} 
+                className="text-left"
+              >
+                <span className="choice-text" dangerouslySetInnerHTML={{ __html: choice }} />
+              </div>
+            );
+          })}
+        </div>
+      );
     }
   };
 
-  const renderQuestionContent = () => (
-    <div className="question-content">
-      <div 
-        className="question-text prose prose-lg max-w-none" 
-        dangerouslySetInnerHTML={{ __html: processedQuestion.questionText }} 
-      />
-      
-      {showAnswer && (
-        <div className="mt-6 p-4 bg-success-50 border border-success-200 rounded-lg">
-          <p className="text-success-800 font-medium">
-            <span className="font-semibold">Correct Answer:</span> {processedQuestion.answer}
-          </p>
-        </div>
-      )}
 
-      {showSolution && processedQuestion.solution && (
-        <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-          <h4 className="text-blue-900 font-semibold mb-2">Solution:</h4>
-          <div 
-            className="solution-text prose prose-sm text-blue-800" 
-            dangerouslySetInnerHTML={{ __html: processedQuestion.solution }} 
-          />
-        </div>
-      )}
-    </div>
-  );
-
-  const renderChoicesSection = () => (
-    <div className="choices-container">
-      {renderChoices()}
-    </div>
-  );
 
   return (
-    <div ref={questionRef} className={`question-container ${layout === 'side-by-side' ? 'question-container-side-by-side' : ''}`}>
-      <div className="question-header">
+    <div ref={questionRef} className="bg-white rounded-xl p-6 mb-6 border border-gray-200" style={{ boxShadow: 'none' }}>
+      <div className="question-header mb-4 pb-4 border-b border-gray-200">
         <h3 className="text-xl font-semibold text-gray-900">Problem {questionIndex + 1}</h3>
-        {mode === 'practice' && (
-          <div className="question-status">
-            {selectedAnswer ? 
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-success-100 text-success-800">
-                ✓ Answered
-              </span> : 
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                ○ Not answered
-              </span>
-            }
+      </div>
+
+      <div className="question-content text-left mb-6">
+        <div 
+          className="question-text prose prose-lg max-w-none text-left" 
+          dangerouslySetInnerHTML={{ __html: processedQuestion.questionText }} 
+        />
+        
+        {showAnswer && (
+          <div className="mt-6 p-4 bg-success-50 border border-success-200 rounded-lg">
+            <p className="text-success-800 font-medium">
+              <span className="font-semibold">Correct Answer:</span> {processedQuestion.answer}
+            </p>
+          </div>
+        )}
+
+        {showSolution && processedQuestion.solution && (
+          <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+            <h4 className="text-blue-900 font-semibold mb-2">Solution:</h4>
+            <div 
+              className="solution-text prose prose-sm text-blue-800" 
+              dangerouslySetInnerHTML={{ __html: processedQuestion.solution }} 
+            />
           </div>
         )}
       </div>
 
-      {layout === 'side-by-side' ? (
-        <div className="question-layout-side-by-side">
-          <div className="question-content-section">
-            {renderQuestionContent()}
-          </div>
-          <div className="choices-section">
-            {renderChoicesSection()}
-          </div>
-        </div>
-      ) : (
-        <div className="question-layout-stacked">
-          {renderQuestionContent()}
-          {renderChoicesSection()}
-        </div>
-      )}
+      <div className="choices-container text-left">
+        {renderChoices()}
+      </div>
     </div>
   );
 }
