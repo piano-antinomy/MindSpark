@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import QuestionRenderer, { questionRenderer } from './QuestionRenderer';
+import { questionParser } from './QuestionParser';
 
 function QuizTaking() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -12,6 +12,7 @@ function QuizTaking() {
   const [error, setError] = useState(null);
   const [currentQuiz, setCurrentQuiz] = useState(null);
   const [questions, setQuestions] = useState([]);
+  const [parsedQuestions, setParsedQuestions] = useState([]);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -44,11 +45,21 @@ function QuizTaking() {
   }, [navigate, location]);
 
   useEffect(() => {
+    // Parse questions when they change
+    if (questions.length > 0) {
+      const parsed = questions.map((question, index) => 
+        questionParser.parseQuestion(question, index)
+      );
+      setParsedQuestions(parsed);
+    }
+  }, [questions]);
+
+  useEffect(() => {
     // Re-render MathJax when questions change
-    if (window.MathJax && questions.length > 0) {
+    if (window.MathJax && parsedQuestions.length > 0) {
       window.MathJax.typesetPromise();
     }
-  }, [questions, currentQuestionIndex]);
+  }, [parsedQuestions, currentQuestionIndex]);
 
   useEffect(() => {
     if (quizStarted && !quizCompleted) {
@@ -184,7 +195,7 @@ function QuizTaking() {
   };
 
   const nextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
+    if (currentQuestionIndex < parsedQuestions.length - 1) {
       setCurrentQuestionIndex(prev => prev + 1);
     }
   };
@@ -204,12 +215,12 @@ function QuizTaking() {
 
   const calculateScore = () => {
     let correct = 0;
-    questions.forEach(question => {
+    parsedQuestions.forEach(question => {
       if (selectedAnswers[question.id] === question.answer) {
         correct++;
       }
     });
-    return Math.round((correct / questions.length) * 100);
+    return Math.round((correct / parsedQuestions.length) * 100);
   };
 
   const formatTime = (seconds) => {
@@ -218,22 +229,140 @@ function QuizTaking() {
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
   };
 
+  const renderChoices = (question) => {
+    if (!question.choices || question.choices.length === 0) {
+      return <p className="text-gray-500 italic">No choices available for this question.</p>;
+    }
+
+    if (question.isImageChoice) {
+      // Handle image choices
+      return (
+        <div className="space-y-4">
+          <div className="question-image-container">
+            <div dangerouslySetInnerHTML={{ __html: question.choices[0] }} />
+          </div>
+          <div className="grid grid-cols-5 gap-3">
+            {['A', 'B', 'C', 'D', 'E'].map((letter, letterIndex) => (
+              <label 
+                key={letterIndex} 
+                className={`choice-label ${selectedAnswers[question.id] === letter ? 'selected' : ''}`}
+              >
+                <input
+                  type="radio"
+                  name={`question-${question.id}`}
+                  value={letter}
+                  checked={selectedAnswers[question.id] === letter}
+                  onChange={() => selectAnswer(question.id, letter)}
+                  disabled={quizCompleted}
+                  className="sr-only"
+                />
+                <span className="choice-text text-center font-semibold">{letter}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+      );
+    } else {
+      // Handle regular choices with button-style layout
+      return question.choices.map((choice, choiceIndex) => {
+        const choiceValue = String.fromCharCode(65 + choiceIndex);
+        const isCorrect = quizCompleted && choiceValue === question.answer;
+        const isSelected = selectedAnswers[question.id] === choiceValue;
+        
+        return (
+          <label 
+            key={choiceIndex} 
+            className={`w-full p-3 border-2 rounded-lg cursor-pointer transition-all duration-200 flex items-start gap-3 ${
+              isSelected 
+                ? 'border-primary-500 bg-primary-50 text-primary-900' 
+                : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
+            } ${
+              quizCompleted && isCorrect 
+                ? 'border-success-500 bg-success-50 text-success-900' 
+                : ''
+            } ${
+              quizCompleted && isSelected && !isCorrect 
+                ? 'border-danger-500 bg-danger-50 text-danger-900' 
+                : ''
+            }`}
+          >
+            <input
+              type="radio"
+              name={`question-${question.id}`}
+              value={choiceValue}
+              checked={isSelected}
+              onChange={() => selectAnswer(question.id, choiceValue)}
+              disabled={quizCompleted}
+              className="mt-1 flex-shrink-0"
+            />
+            
+            {/* Choice text - left aligned */}
+            <span 
+              className="choice-text flex-1 text-left" 
+              dangerouslySetInnerHTML={{ __html: choice }} 
+            />
+            
+            {/* Correct/Incorrect indicators */}
+            {quizCompleted && isCorrect && (
+              <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-success-500 text-white text-xs">
+                ✓
+              </span>
+            )}
+            {quizCompleted && isSelected && !isCorrect && (
+              <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-danger-500 text-white text-xs">
+                ✗
+              </span>
+            )}
+          </label>
+        );
+      });
+    }
+  };
+
+  const renderQuestionContent = (question) => (
+    <div className="question-content" style={{ backgroundColor: 'transparent' }}>
+      <div 
+        className="question-text max-w-none" 
+        style={{ borderLeft: 'none', backgroundColor: 'transparent' }}
+        dangerouslySetInnerHTML={{ __html: question.questionText }} 
+      />
+      
+      {quizCompleted && (
+        <div className="mt-6 p-4 bg-success-50 border border-success-200 rounded-lg">
+          <p className="text-success-800 font-medium">
+            <span className="font-semibold">Correct Answer:</span> {question.answer}
+          </p>
+        </div>
+      )}
+
+      {quizCompleted && question.solution && (
+        <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <h4 className="text-blue-900 font-semibold mb-2">Solution:</h4>
+          <div 
+            className="solution-text text-blue-800" 
+            dangerouslySetInnerHTML={{ __html: question.solution }} 
+          />
+        </div>
+      )}
+    </div>
+  );
+
   const renderNoQuizData = () => (
-    <div className="math-layout">
+    <div className="flex min-h-screen bg-gray-50">
       {/* Left Menu Navigation */}
-      <nav className="math-left-menu">
-        <div className="menu-header">
-          <h1>🎯 Quiz Taking</h1>
-          <nav className="breadcrumb">
-            <button onClick={() => navigate('/dashboard')} className="breadcrumb-link">
+      <nav className="w-80 bg-white border-r border-gray-200 shadow-soft fixed h-full overflow-y-auto z-20">
+        <div className="p-6 border-b border-gray-200">
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">🎯 Quiz Taking</h1>
+          <nav className="text-sm text-gray-600">
+            <button onClick={() => navigate('/dashboard')} className="text-primary-600 hover:text-primary-700 hover:underline">
               Dashboard
             </button>
             {' > '}
-            <button onClick={() => navigate('/subjects')} className="breadcrumb-link">
+            <button onClick={() => navigate('/subjects')} className="text-primary-600 hover:text-primary-700 hover:underline">
               Subjects
             </button>
             {' > '}
-            <button onClick={() => navigate('/math')} className="breadcrumb-link">
+            <button onClick={() => navigate('/math')} className="text-primary-600 hover:text-primary-700 hover:underline">
               Mathematics
             </button>
             {' > '}
@@ -241,45 +370,55 @@ function QuizTaking() {
           </nav>
         </div>
         
-        <div className="menu-tabs">
-          <button className="menu-tab" onClick={() => navigate('/quiz')}>
-            <span className="tab-icon">📋</span>
-            <span className="tab-text">Quiz Management</span>
+        <div className="p-4 border-b border-gray-200">
+          <button 
+            className="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+            onClick={() => navigate('/quiz')}
+          >
+            <span className="text-xl">📋</span>
+            <span className="font-medium">Quiz Management</span>
           </button>
-          <button className="menu-tab active" onClick={() => navigate('/quiz-taking')}>
-            <span className="tab-icon">🎯</span>
-            <span className="tab-text">Quiz Taking</span>
+          <button 
+            className="w-full flex items-center gap-3 px-4 py-3 bg-primary-50 text-primary-700 border-l-4 border-primary-500 rounded-lg"
+            onClick={() => navigate('/quiz-taking')}
+          >
+            <span className="text-xl">🎯</span>
+            <span className="font-medium">Quiz Taking</span>
           </button>
         </div>
         
         {/* Context info */}
-        <div className="aside-info">
-          <div>
-            <h3>No Quiz Selected</h3>
-            <p>Please select a quiz from the Quiz Management page to start taking it.</p>
+        <div className="p-6">
+          <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-primary-500">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">No Quiz Selected</h3>
+            <p className="text-gray-600 text-sm">
+              Please select a quiz from the Quiz Management page to start taking it.
+            </p>
           </div>
         </div>
         
         {/* Navigation controls */}
-        <div className="aside-navigation">
-          <button className="btn btn-primary" onClick={() => navigate('/quiz')}>
+        <div className="p-6 space-y-3">
+          <button className="btn btn-primary w-full" onClick={() => navigate('/quiz')}>
             Go to Quiz Management
           </button>
-          <button className="btn btn-secondary" onClick={() => navigate('/math')}>
+          <button className="btn btn-secondary w-full" onClick={() => navigate('/math')}>
             ← Back to Math
           </button>
         </div>
       </nav>
 
       {/* Main content area */}
-      <main className="math-main-content">
-        <div className="quiz-taking-container">
-          <div className="empty-state">
-            <div className="empty-icon">🎯</div>
-            <h3>No Quiz Selected</h3>
-            <p>You need to select a quiz to start taking it. Please go to the Quiz Management page to create or select a quiz.</p>
-            <div className="empty-actions">
-              <button className="btn btn-primary" onClick={() => navigate('/quiz')}>
+      <main className="flex-1 ml-80 p-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-xl shadow-soft p-12 text-center">
+            <div className="text-6xl mb-6">🎯</div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">No Quiz Selected</h3>
+            <p className="text-gray-600 mb-8 max-w-md mx-auto">
+              You need to select a quiz to start taking it. Please go to the Quiz Management page to create or select a quiz.
+            </p>
+            <div className="space-y-3">
+              <button className="btn btn-primary btn-large" onClick={() => navigate('/quiz')}>
                 Go to Quiz Management
               </button>
               <button className="btn btn-secondary" onClick={() => navigate('/math')}>
@@ -293,33 +432,62 @@ function QuizTaking() {
   );
 
   const renderError = () => (
-    <div className="error-message">
-      <h3>Error</h3>
-      <p>{error}</p>
-      <button onClick={() => window.location.reload()} className="btn btn-primary">Try Again</button>
-      <button onClick={() => navigate('/quiz')} className="btn btn-secondary">Back to Quiz Management</button>
+    <div className="min-h-screen flex items-center justify-center p-6">
+      <div className="max-w-md w-full">
+        <div className="bg-white rounded-xl shadow-soft p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error</h3>
+          <p className="text-gray-600 mb-6">{error}</p>
+          <div className="space-y-3">
+            <button onClick={() => window.location.reload()} className="btn btn-primary w-full">
+              Try Again
+            </button>
+            <button onClick={() => navigate('/quiz')} className="btn btn-secondary w-full">
+              Back to Quiz Management
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 
   const renderStartScreen = () => (
-    <div className="quiz-start-screen">
-      <div className="quiz-info">
-        <h1>{currentQuiz?.quizName || 'Quiz'}</h1>
-        <p><strong>Level:</strong> {currentQuiz?.level || 'AMC'}</p>
-        <p><strong>Year:</strong> {currentQuiz?.year || '2024'}</p>
-        <p><strong>Questions:</strong> {questions.length}</p>
-        <p><strong>Time Limit:</strong> 30 minutes</p>
+    <div className="bg-white rounded-xl shadow-soft p-6 lg:p-8 text-center">
+      <div className="mb-6 lg:mb-8">
+        <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">{currentQuiz?.quizName || 'Quiz'}</h1>
+        <div className="space-y-2 text-gray-600 text-sm lg:text-base">
+          <p><strong>Level:</strong> {currentQuiz?.level || 'AMC'}</p>
+          <p><strong>Year:</strong> {currentQuiz?.year || '2024'}</p>
+          <p><strong>Questions:</strong> {parsedQuestions.length}</p>
+          <p><strong>Time Limit:</strong> 30 minutes</p>
+        </div>
       </div>
-      <div className="quiz-instructions">
-        <h3>Instructions:</h3>
-        <ul>
-          <li>You have 30 minutes to complete this quiz</li>
-          <li>Each question has 5 multiple choice answers</li>
-          <li>You can navigate between questions using the buttons</li>
-          <li>Your answers are saved automatically</li>
-          <li>You can review and change answers before submitting</li>
+      
+      <div className="bg-gray-50 rounded-lg p-4 lg:p-6 mb-6 lg:mb-8 text-left">
+        <h3 className="text-base lg:text-lg font-semibold text-gray-900 mb-3 lg:mb-4">Instructions:</h3>
+        <ul className="space-y-2 text-gray-600 text-sm lg:text-base">
+          <li className="flex items-start gap-2">
+            <span className="text-primary-600 mt-1">•</span>
+            You have 30 minutes to complete this quiz
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary-600 mt-1">•</span>
+            Each question has 5 multiple choice answers
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary-600 mt-1">•</span>
+            You can navigate between questions using the buttons
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary-600 mt-1">•</span>
+            Your answers are saved automatically
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="text-primary-600 mt-1">•</span>
+            You can review and change answers before submitting
+          </li>
         </ul>
       </div>
+      
       <button className="btn btn-primary btn-large" onClick={startQuiz}>
         Start Quiz
       </button>
@@ -328,52 +496,61 @@ function QuizTaking() {
 
   const renderQuestion = (question) => {
     return (
-      <div className="question-container">
-        <div className="question-header">
-          <h2>Question {currentQuestionIndex + 1} of {questions.length}</h2>
-          <div className="timer">Time Remaining: {formatTime(timeRemaining)}</div>
+      <div className="bg-white rounded-xl p-4 lg:p-6 flex flex-col h-full">
+        {/* Header section - fixed */}
+        <div className="mb-3 lg:mb-4 flex-shrink-0">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
+              Question {currentQuestionIndex + 1} of {parsedQuestions.length}
+            </h2>
+            <div className="text-base lg:text-lg font-semibold text-warning-600">
+              Time: {formatTime(timeRemaining)}
+            </div>
+          </div>
         </div>
         
-        <QuestionRenderer
-          question={question}
-          questionIndex={currentQuestionIndex}
-          selectedAnswer={selectedAnswers[question.id]}
-          onAnswerSelect={selectAnswer}
-          mode="quiz"
-          layout="side-by-side"
-        />
-        
-        <div className="question-navigation">
-          <div className="navigation-row">
-            <button 
-              className="btn btn-secondary" 
-              onClick={previousQuestion}
-              disabled={currentQuestionIndex === 0}
-            >
-              ← Previous
-            </button>
-            
-            {currentQuestionIndex === questions.length - 1 ? (
-              <button className="btn btn-primary" onClick={completeQuiz}>
-                Submit Quiz
-              </button>
-            ) : (
-              <button className="btn btn-primary" onClick={nextQuestion}>
-                Next →
-              </button>
-            )}
+        {/* Main content area - question and choices side by side */}
+        <div className="flex gap-3 lg:gap-4 flex-1 min-h-0">
+          {/* Left side - Question content only */}
+          <div className="flex-1 flex flex-col min-h-0">
+            {/* Question content section - scrollable with fixed height */}
+            <div className="flex-1 overflow-y-auto min-h-0">
+              <div className="question-content-section text-left">
+                {renderQuestionContent(question)}
+              </div>
+            </div>
           </div>
           
-          <div className="action-row">
-            <button className="btn btn-success" onClick={() => console.log('Save functionality to be implemented')}>
-              Save
-            </button>
-            {currentQuestionIndex === questions.length - 1 && (
-              <button className="btn btn-warning" onClick={completeQuiz}>
-                Submit Quiz
-              </button>
-            )}
+          {/* Right side - Choices section */}
+          <div className="w-1/3 lg:w-1/3 p-3 lg:p-6 flex-shrink-0">
+            <div className="choices-container space-y-2 lg:space-y-3 overflow-y-auto">
+              {renderChoices(question)}
+            </div>
           </div>
+        </div>
+        
+        {/* Navigation buttons - fixed at bottom, outside the scrollable area */}
+        <div className="flex gap-2 lg:gap-4 mt-3 lg:mt-4 pt-3 lg:pt-4 flex-shrink-0 border-t border-gray-100">
+          <button className="btn btn-secondary text-sm lg:text-base" onClick={() => console.log('Save functionality to be implemented')}>
+            Save
+          </button>
+          <button 
+            className="btn btn-secondary text-sm lg:text-base" 
+            onClick={previousQuestion}
+            disabled={currentQuestionIndex === 0}
+          >
+            ← Previous
+          </button>
+          
+          {currentQuestionIndex === parsedQuestions.length - 1 ? (
+            <button className="btn btn-primary text-sm lg:text-base" onClick={completeQuiz}>
+              Submit Quiz
+            </button>
+          ) : (
+            <button className="btn btn-primary text-sm lg:text-base" onClick={nextQuestion}>
+              Next →
+            </button>
+          )}
         </div>
       </div>
     );
@@ -381,42 +558,50 @@ function QuizTaking() {
 
   const renderResults = () => {
     const score = calculateScore();
-    const correctAnswers = questions.filter(q => 
+    const correctAnswers = parsedQuestions.filter(q => 
       selectedAnswers[q.id] === q.answer
     ).length;
 
     return (
-      <div className="quiz-results">
-        <h1>Quiz Complete!</h1>
-        <div className="score-summary">
-          <h2>Your Score: {score}%</h2>
-          <p>Correct Answers: {correctAnswers} out of {questions.length}</p>
+      <>
+        <div className="bg-white rounded-xl shadow-soft p-6 lg:p-8 text-center mb-6 lg:mb-8">
+          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Quiz Complete!</h1>
+          <div className="mb-6 lg:mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gradient mb-2">Your Score: {score}%</h2>
+            <p className="text-gray-600 text-base lg:text-lg">
+              Correct Answers: {correctAnswers} out of {parsedQuestions.length}
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-3 lg:gap-4">
+            <button className="btn btn-primary" onClick={() => navigate('/quiz')}>
+              Back to Quizzes
+            </button>
+            <button className="btn btn-secondary" onClick={() => navigate('/dashboard')}>
+              Go to Dashboard
+            </button>
+          </div>
         </div>
         
-        <div className="question-review">
-          <h3>Question Review</h3>
-          {questions.map((question, index) => (
-            <QuestionRenderer
-              key={question.id}
-              question={question}
-              questionIndex={index}
-              selectedAnswer={selectedAnswers[question.id]}
-              showAnswer={true}
-              mode="quiz"
-              layout="stacked"
-            />
-          ))}
+        <div className="bg-white rounded-xl shadow-soft p-4 lg:p-6">
+          <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">Question Review</h3>
+          <div className="space-y-4 lg:space-y-6">
+            {parsedQuestions.map((question, index) => (
+              <div key={question.id} className="question-container">
+                <div className="question-header">
+                  <h3 className="text-lg lg:text-xl font-semibold text-gray-900">Problem {index + 1}</h3>
+                </div>
+                <div className="question-layout-stacked">
+                  {renderQuestionContent(question)}
+                  <div className="choices-container">
+                    {renderChoices(question)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        
-        <div className="results-actions">
-          <button className="btn btn-primary" onClick={() => navigate('/quiz')}>
-            Back to Quizzes
-          </button>
-          <button className="btn btn-secondary" onClick={() => navigate('/dashboard')}>
-            Go to Dashboard
-          </button>
-        </div>
-      </div>
+      </>
     );
   };
 
@@ -426,35 +611,117 @@ function QuizTaking() {
   }
 
   if (loading) {
-    return <div className="loading">Loading quiz...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading quiz...</p>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
     return renderError();
   }
 
-  if (questions.length === 0) {
-    return <div>No questions available for this quiz.</div>;
+  if (parsedQuestions.length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center text-gray-600">
+          <p>No questions available for this quiz.</p>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="quiz-taking-container">
-      <header className="quiz-header">
-        <div className="quiz-title">
-          <h1>{currentQuiz?.quizName || 'Quiz'}</h1>
-          <nav className="breadcrumb">
-            <button onClick={() => navigate('/quiz')} className="breadcrumb-link">
-              ← Back to Quiz Management
-            </button>
-          </nav>
+    <div className="h-screen bg-gray-50 flex flex-col overflow-hidden">
+      {!quizStarted && (
+        <div className="flex-1 flex items-center justify-center p-4 lg:p-6">
+          <div className="max-w-2xl mx-auto w-full">
+            {renderStartScreen()}
+          </div>
         </div>
-      </header>
-
-      <main className="quiz-main">
-        {!quizStarted && renderStartScreen()}
-        {quizStarted && !quizCompleted && renderQuestion(questions[currentQuestionIndex])}
-        {quizCompleted && renderResults()}
-      </main>
+      )}
+      {quizStarted && !quizCompleted && (
+        <div className="flex-1 flex flex-col">
+          {/* Laptop layout - reduced padding and better height management */}
+          <div className="hidden lg:block lg:p-4 h-full">
+            <div className="max-w-6xl mx-auto h-full">
+              {renderQuestion(parsedQuestions[currentQuestionIndex])}
+            </div>
+          </div>
+          
+          {/* iPad/Mobile layout - full screen with minimal margins */}
+          <div className="lg:hidden h-full p-1">
+            <div className="bg-white rounded-xl flex flex-col h-full">
+              {/* Header section - fixed */}
+              <div className="p-3 pb-2 flex-shrink-0">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-xl font-bold text-gray-900">
+                    Question {currentQuestionIndex + 1} of {parsedQuestions.length}
+                  </h2>
+                  <div className="text-base font-semibold text-warning-600">
+                    Time: {formatTime(timeRemaining)}
+                  </div>
+                </div>
+              </div>
+              
+              {/* Main content area - question and choices side by side */}
+              <div className="flex gap-3 flex-1 px-3 min-h-0">
+                {/* Left side - Question content only */}
+                <div className="flex-1 flex flex-col min-h-0">
+                  {/* Question content section - scrollable with fixed height */}
+                  <div className="flex-1 overflow-y-auto min-h-0">
+                    <div className="question-content-section text-left">
+                      {renderQuestionContent(parsedQuestions[currentQuestionIndex])}
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Right side - Choices section */}
+                <div className="w-1/3 p-2 flex-shrink-0">
+                  <div className="choices-container space-y-2 overflow-y-auto">
+                    {renderChoices(parsedQuestions[currentQuestionIndex])}
+                  </div>
+                </div>
+              </div>
+              
+              {/* Navigation buttons - fixed at bottom, outside the scrollable area */}
+              <div className="flex gap-2 p-3 pt-2 flex-shrink-0 border-t border-gray-100">
+                <button className="btn btn-secondary text-sm" onClick={() => console.log('Save functionality to be implemented')}>
+                  Save
+                </button>
+                <button 
+                  className="btn btn-secondary text-sm" 
+                  onClick={previousQuestion}
+                  disabled={currentQuestionIndex === 0}
+                >
+                  ← Previous
+                </button>
+                
+                {currentQuestionIndex === parsedQuestions.length - 1 ? (
+                  <button className="btn btn-primary text-sm" onClick={completeQuiz}>
+                    Submit Quiz
+                  </button>
+                ) : (
+                  <button className="btn btn-primary text-sm" onClick={nextQuestion}>
+                    Next →
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {quizCompleted && (
+        <div className="flex-1 p-4 lg:p-6 overflow-y-auto">
+          <div className="max-w-4xl mx-auto">
+            {renderResults()}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

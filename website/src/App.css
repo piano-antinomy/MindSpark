@@ -1,10 +1,10 @@
 .App {
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
-/* Import the existing styles */
-@import url('./css/styles.css');
-@import url('./css/math-java.css'); 
+/* Import the new Tailwind-based styles */
+@import url('./index.css'); 

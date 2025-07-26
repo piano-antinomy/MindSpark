@@ -124,11 +124,21 @@ Score: ${answered > 0 ? Math.round((correct/answered) * 100) : 0}%
   };
 
   const renderError = () => (
-    <div className="error-message">
-      <h3>Error</h3>
-      <p>{error}</p>
-      <button onClick={loadQuestions} className="btn btn-primary">Try Again</button>
-      <button onClick={() => navigate('/math')} className="btn btn-secondary">Back to Math Selection</button>
+    <div className="min-h-screen flex items-center justify-center p-6">
+      <div className="max-w-md w-full">
+        <div className="bg-white rounded-xl shadow-soft p-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error</h3>
+          <p className="text-gray-600 mb-6">{error}</p>
+          <div className="space-y-3">
+            <button onClick={loadQuestions} className="btn btn-primary w-full">
+              Try Again
+            </button>
+            <button onClick={() => navigate('/math')} className="btn btn-secondary w-full">
+              Back to Math Selection
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 
@@ -147,7 +157,14 @@ Score: ${answered > 0 ? Math.round((correct/answered) * 100) : 0}%
   };
 
   if (loading) {
-    return <div className="loading">Loading questions...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading questions...</p>
+        </div>
+      </div>
+    );
   }
 
   if (error) {
@@ -155,84 +172,102 @@ Score: ${answered > 0 ? Math.round((correct/answered) * 100) : 0}%
   }
 
   if (!level || !year) {
-    return <div>No question data available</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center text-gray-600">
+          <p>No question data available</p>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="math-layout">
+    <div className="flex min-h-screen bg-gray-50">
       {/* Left Menu Navigation */}
-      <nav className="math-left-menu">
-        <div className="menu-header">
-          <h1>📊 Mathematics</h1>
-          <nav className="breadcrumb">
-            <button onClick={() => navigate('/dashboard')} className="breadcrumb-link">
+      <nav className="w-80 bg-white border-r border-gray-200 shadow-soft fixed h-full overflow-y-auto z-20">
+        <div className="p-6 border-b border-gray-200">
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">📊 Mathematics</h1>
+          <nav className="text-sm text-gray-600">
+            <button onClick={() => navigate('/dashboard')} className="text-primary-600 hover:text-primary-700 hover:underline">
               Dashboard
             </button>
             {' > '}
-            <button onClick={() => navigate('/subjects')} className="breadcrumb-link">
+            <button onClick={() => navigate('/subjects')} className="text-primary-600 hover:text-primary-700 hover:underline">
               Subjects
             </button>
             {' > '}
-            <button onClick={() => navigate('/math')} className="breadcrumb-link">
+            <button onClick={() => navigate('/math')} className="text-primary-600 hover:text-primary-700 hover:underline">
               Mathematics
             </button>
             {' > '}
-            {amcType} {year}
+            <span className="text-gray-900">{amcType} {year}</span>
           </nav>
         </div>
         
-        <div className="menu-tabs">
-          <button className="menu-tab" onClick={() => navigate('/quiz')}>
-            <span className="tab-icon">🎯</span>
-            <span className="tab-text">Quiz</span>
+        <div className="p-4 border-b border-gray-200">
+          <button 
+            className="w-full flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+            onClick={() => navigate('/quiz')}
+          >
+            <span className="text-xl">🎯</span>
+            <span className="font-medium">Quiz</span>
           </button>
-          <button className="menu-tab active" onClick={() => navigate('/math')}>
-            <span className="tab-icon">📚</span>
-            <span className="tab-text">Problems</span>
+          <button 
+            className="w-full flex items-center gap-3 px-4 py-3 bg-primary-50 text-primary-700 border-l-4 border-primary-500 rounded-lg"
+            onClick={() => navigate('/math')}
+          >
+            <span className="text-xl">📚</span>
+            <span className="font-medium">Problems</span>
           </button>
         </div>
         
         {/* Context info */}
-        <div className="aside-info">
-          <div>
-            <h3>{amcType} {year}</h3>
-            <p>Work through the problems at your own pace. Use the controls below to check answers and show solutions.</p>
-            <div className="level-badge">{amcType}</div>
-            <div style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: '#666' }}>
+        <div className="p-6">
+          <div className="bg-gray-50 rounded-lg p-4 border-l-4 border-primary-500">
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">{amcType} {year}</h3>
+            <p className="text-gray-600 text-sm mb-3">
+              Work through the problems at your own pace. Use the controls below to check answers and show solutions.
+            </p>
+            <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
+              {amcType}
+            </div>
+            <div className="mt-3 text-xs text-gray-500">
               Year: {year} • Questions: {processedQuestions.length}
             </div>
           </div>
         </div>
         
         {/* Navigation controls */}
-        <div className="aside-navigation">
-          <button className="btn btn-secondary" onClick={() => navigate('/math')}>
+        <div className="p-6">
+          <button className="btn btn-secondary w-full" onClick={() => navigate('/math')}>
             ← Back to Math Selection
           </button>
         </div>
       </nav>
 
       {/* Main content area */}
-      <main className="math-main-content">
-        <div className="tab-content">
-          <div className="questions-container all-questions">
-            <div className="practice-controls">
-              <div className="button-row primary-actions">
-                <button className="btn btn-success" onClick={checkAllAnswers}>
-                  ✅ Check All Answers
-                </button>
-              </div>
-              <div className="button-row secondary-actions">
-                <button className="btn btn-info" onClick={resetAllPractice}>
-                  🔄 Reset All
-                </button>
-                <button className="btn btn-warning" onClick={showAllSolutions}>
-                  💡 Show All Solutions
-                </button>
+      <main className="flex-1 ml-80 p-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-6">
+            <div className="bg-white rounded-xl shadow-soft p-6">
+              <div className="space-y-4">
+                <div className="flex justify-center">
+                  <button className="btn btn-success btn-large" onClick={checkAllAnswers}>
+                    ✅ Check All Answers
+                  </button>
+                </div>
+                <div className="flex justify-center gap-4">
+                  <button className="btn btn-secondary" onClick={resetAllPractice}>
+                    🔄 Reset All
+                  </button>
+                  <button className="btn btn-warning" onClick={showAllSolutions}>
+                    💡 Show All Solutions
+                  </button>
+                </div>
               </div>
             </div>
             
-            <div className="all-questions-display">
+            <div className="space-y-6">
               {processedQuestions.map((question, index) => renderQuestion(question, index))}
             </div>
           </div>
