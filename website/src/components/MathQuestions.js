@@ -141,6 +141,7 @@ Score: ${answered > 0 ? Math.round((correct/answered) * 100) : 0}%
         selectedAnswer={currentAnswers[question.id]}
         onAnswerSelect={selectAnswer}
         mode="practice"
+        layout="stacked"
       />
     );
   };

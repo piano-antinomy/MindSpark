@@ -340,38 +340,40 @@ function QuizTaking() {
           selectedAnswer={selectedAnswers[question.id]}
           onAnswerSelect={selectAnswer}
           mode="quiz"
+          layout="side-by-side"
         />
         
         <div className="question-navigation">
-          <button 
-            className="btn btn-secondary" 
-            onClick={previousQuestion}
-            disabled={currentQuestionIndex === 0}
-          >
-            ← Previous
-          </button>
-          
-          <div className="question-progress">
-            {questions.map((_, index) => (
-              <button
-                key={index}
-                className={`progress-dot ${index === currentQuestionIndex ? 'current' : ''} ${selectedAnswers[questions[index].id] ? 'answered' : ''}`}
-                onClick={() => setCurrentQuestionIndex(index)}
-              >
-                {index + 1}
+          <div className="navigation-row">
+            <button 
+              className="btn btn-secondary" 
+              onClick={previousQuestion}
+              disabled={currentQuestionIndex === 0}
+            >
+              ← Previous
+            </button>
+            
+            {currentQuestionIndex === questions.length - 1 ? (
+              <button className="btn btn-primary" onClick={completeQuiz}>
+                Submit Quiz
               </button>
-            ))}
+            ) : (
+              <button className="btn btn-primary" onClick={nextQuestion}>
+                Next →
+              </button>
+            )}
           </div>
           
-          {currentQuestionIndex === questions.length - 1 ? (
-            <button className="btn btn-primary" onClick={completeQuiz}>
-              Complete Quiz
+          <div className="action-row">
+            <button className="btn btn-success" onClick={() => console.log('Save functionality to be implemented')}>
+              Save
             </button>
-          ) : (
-            <button className="btn btn-primary" onClick={nextQuestion}>
-              Next →
-            </button>
-          )}
+            {currentQuestionIndex === questions.length - 1 && (
+              <button className="btn btn-warning" onClick={completeQuiz}>
+                Submit Quiz
+              </button>
+            )}
+          </div>
         </div>
       </div>
     );
@@ -401,6 +403,7 @@ function QuizTaking() {
               selectedAnswer={selectedAnswers[question.id]}
               showAnswer={true}
               mode="quiz"
+              layout="stacked"
             />
           ))}
         </div>

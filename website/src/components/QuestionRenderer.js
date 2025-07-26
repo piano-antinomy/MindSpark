@@ -304,7 +304,8 @@ function QuestionRenderer({
   onAnswerSelect = null,
   showAnswer = false,
   showSolution = false,
-  mode = 'practice' // 'practice' or 'quiz'
+  mode = 'practice', // 'practice' or 'quiz'
+  layout = 'stacked' // 'stacked' or 'side-by-side'
 }) {
   const questionRef = useRef(null);
   
@@ -388,8 +389,39 @@ function QuestionRenderer({
     }
   };
 
+  const renderQuestionContent = () => (
+    <div className="question-content">
+      <div 
+        className="question-text" 
+        dangerouslySetInnerHTML={{ __html: processedQuestion.questionText }} 
+      />
+      
+      {showAnswer && (
+        <div className="answer-section">
+          <p><strong>Correct Answer:</strong> {processedQuestion.answer}</p>
+        </div>
+      )}
+
+      {showSolution && processedQuestion.solution && (
+        <div className="solution-section">
+          <h4>Solution:</h4>
+          <div 
+            className="solution-text" 
+            dangerouslySetInnerHTML={{ __html: processedQuestion.solution }} 
+          />
+        </div>
+      )}
+    </div>
+  );
+
+  const renderChoicesSection = () => (
+    <div className="choices-container">
+      {renderChoices()}
+    </div>
+  );
+
   return (
-    <div ref={questionRef} className="question-container">
+    <div ref={questionRef} className={`question-container ${layout === 'side-by-side' ? 'question-container-side-by-side' : ''}`}>
       <div className="question-header">
         <h3>Problem {questionIndex + 1}</h3>
         {mode === 'practice' && (
@@ -402,32 +434,21 @@ function QuestionRenderer({
         )}
       </div>
 
-      <div className="question-content">
-        <div 
-          className="question-text" 
-          dangerouslySetInnerHTML={{ __html: processedQuestion.questionText }} 
-        />
-        
-        <div className="choices-container">
-          {renderChoices()}
+      {layout === 'side-by-side' ? (
+        <div className="question-layout-side-by-side">
+          <div className="question-content-section">
+            {renderQuestionContent()}
+          </div>
+          <div className="choices-section">
+            {renderChoicesSection()}
+          </div>
         </div>
-
-        {showAnswer && (
-          <div className="answer-section">
-            <p><strong>Correct Answer:</strong> {processedQuestion.answer}</p>
-          </div>
-        )}
-
-        {showSolution && processedQuestion.solution && (
-          <div className="solution-section">
-            <h4>Solution:</h4>
-            <div 
-              className="solution-text" 
-              dangerouslySetInnerHTML={{ __html: processedQuestion.solution }} 
-            />
-          </div>
-        )}
-      </div>
+      ) : (
+        <div className="question-layout-stacked">
+          {renderQuestionContent()}
+          {renderChoicesSection()}
+        </div>
+      )}
     </div>
   );
 }
