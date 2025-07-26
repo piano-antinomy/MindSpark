@@ -496,15 +496,25 @@ function QuizTaking() {
 
   const renderQuestion = (question) => {
     return (
-      <div className="bg-white rounded-xl p-4 lg:p-6 flex flex-col h-full">
+      <div className="bg-white rounded-xl p-4 lg:p-6 flex flex-col" style={{ height: 'calc(100vh - 32px)' }}>
         {/* Header section - fixed */}
         <div className="mb-3 lg:mb-4 flex-shrink-0">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
-              Question {currentQuestionIndex + 1} of {parsedQuestions.length}
-            </h2>
-            <div className="text-base lg:text-lg font-semibold text-warning-600">
-              Time: {formatTime(timeRemaining)}
+            <div className="flex items-center gap-3">
+              <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/dashboard')}>
+                🏠 Home
+              </button>
+              <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
+                Question {currentQuestionIndex + 1} of {parsedQuestions.length}
+              </h2>
+            </div>
+            <div className="flex items-center gap-3">
+              <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/quiz')}>
+                ← Back to Quizzes
+              </button>
+              <div className="text-base lg:text-lg font-semibold text-warning-600">
+                Time: {formatTime(timeRemaining)}
+              </div>
             </div>
           </div>
         </div>
@@ -530,27 +540,33 @@ function QuizTaking() {
         </div>
         
         {/* Navigation buttons - fixed at bottom, outside the scrollable area */}
-        <div className="flex gap-2 lg:gap-4 mt-3 lg:mt-4 pt-3 lg:pt-4 flex-shrink-0 border-t border-gray-100">
-          <button className="btn btn-secondary text-sm lg:text-base" onClick={() => console.log('Save functionality to be implemented')}>
-            Save
-          </button>
-          <button 
-            className="btn btn-secondary text-sm lg:text-base" 
-            onClick={previousQuestion}
-            disabled={currentQuestionIndex === 0}
-          >
-            ← Previous
-          </button>
-          
-          {currentQuestionIndex === parsedQuestions.length - 1 ? (
-            <button className="btn btn-primary text-sm lg:text-base" onClick={completeQuiz}>
+        <div className="flex justify-between items-center mt-3 lg:mt-4 pt-3 lg:pt-4 flex-shrink-0 border-t border-gray-100">
+          {/* Left side - Save and Submit */}
+          <div className="flex gap-2 lg:gap-4">
+            <button className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} onClick={() => console.log('Save functionality to be implemented')}>
+              Save
+            </button>
+            <button className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={completeQuiz}>
               Submit Quiz
             </button>
-          ) : (
-            <button className="btn btn-primary text-sm lg:text-base" onClick={nextQuestion}>
-              Next →
+          </div>
+          
+          {/* Right side - Previous and Next */}
+          <div className="flex gap-2 lg:gap-4">
+            <button 
+              className="btn btn-secondary text-sm lg:text-base" 
+              onClick={previousQuestion}
+              disabled={currentQuestionIndex === 0}
+            >
+              ← Previous
             </button>
-          )}
+            
+            {currentQuestionIndex < parsedQuestions.length - 1 && (
+              <button className="btn btn-primary text-sm lg:text-base" onClick={nextQuestion}>
+                Next →
+              </button>
+            )}
+          </div>
         </div>
       </div>
     );
@@ -647,23 +663,33 @@ function QuizTaking() {
       {quizStarted && !quizCompleted && (
         <div className="flex-1 flex flex-col">
           {/* Laptop layout - reduced padding and better height management */}
-          <div className="hidden lg:block lg:p-4 h-full">
+          <div className={`${(window.innerWidth >= 1024 && !navigator.userAgent.includes('iPad')) ? 'block' : 'hidden'} lg:p-4 h-full`}>
             <div className="max-w-6xl mx-auto h-full">
               {renderQuestion(parsedQuestions[currentQuestionIndex])}
             </div>
           </div>
           
           {/* iPad/Mobile layout - full screen with minimal margins */}
-          <div className="lg:hidden h-full p-1">
+          <div className={`${(window.innerWidth < 1024 || navigator.userAgent.includes('iPad')) ? 'block' : 'hidden'} p-3`} style={{ height: 'calc(100vh - 60px)' }}>
             <div className="bg-white rounded-xl flex flex-col h-full">
               {/* Header section - fixed */}
-              <div className="p-3 pb-2 flex-shrink-0">
+              <div className="p-3 pb-3 flex-shrink-0 border-b border-gray-200">
                 <div className="flex items-center justify-between">
-                  <h2 className="text-xl font-bold text-gray-900">
-                    Question {currentQuestionIndex + 1} of {parsedQuestions.length}
-                  </h2>
-                  <div className="text-base font-semibold text-warning-600">
-                    Time: {formatTime(timeRemaining)}
+                  <div className="flex items-center gap-3">
+                    <button className="btn btn-secondary text-sm" onClick={() => navigate('/dashboard')}>
+                      🏠 Home
+                    </button>
+                    <h2 className="text-xl font-bold text-gray-900">
+                      Question {currentQuestionIndex + 1} of {parsedQuestions.length}
+                    </h2>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <button className="btn btn-secondary text-sm" onClick={() => navigate('/quiz')}>
+                      ← Back to Quizzes
+                    </button>
+                    <div className="text-base font-semibold text-warning-600">
+                      Time: {formatTime(timeRemaining)}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -689,27 +715,33 @@ function QuizTaking() {
               </div>
               
               {/* Navigation buttons - fixed at bottom, outside the scrollable area */}
-              <div className="flex gap-2 p-3 pt-2 flex-shrink-0 border-t border-gray-100">
-                <button className="btn btn-secondary text-sm" onClick={() => console.log('Save functionality to be implemented')}>
-                  Save
-                </button>
-                <button 
-                  className="btn btn-secondary text-sm" 
-                  onClick={previousQuestion}
-                  disabled={currentQuestionIndex === 0}
-                >
-                  ← Previous
-                </button>
-                
-                {currentQuestionIndex === parsedQuestions.length - 1 ? (
-                  <button className="btn btn-primary text-sm" onClick={completeQuiz}>
+              <div className="flex justify-between items-center p-3 pt-2 flex-shrink-0 border-t border-gray-100">
+                {/* Left side - Save and Submit */}
+                <div className="flex gap-2">
+                  <button className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} onClick={() => console.log('Save functionality to be implemented')}>
+                    Save
+                  </button>
+                  <button className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={completeQuiz}>
                     Submit Quiz
                   </button>
-                ) : (
-                  <button className="btn btn-primary text-sm" onClick={nextQuestion}>
-                    Next →
+                </div>
+                
+                {/* Right side - Previous and Next */}
+                <div className="flex gap-2">
+                  <button 
+                    className="btn btn-secondary text-sm" 
+                    onClick={previousQuestion}
+                    disabled={currentQuestionIndex === 0}
+                  >
+                    ← Previous
                   </button>
-                )}
+                  
+                  {currentQuestionIndex < parsedQuestions.length - 1 && (
+                    <button className="btn btn-primary text-sm" onClick={nextQuestion}>
+                      Next →
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           </div>
