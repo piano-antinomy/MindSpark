@@ -783,7 +783,7 @@
           "//latex.artofproblemsolving.com/b/1/6/b16a027558bc235447b56d95a890bb243f1adb28.png"
         ],
         "latex_choices": [
-          "$\\mathrm{(A)}\\ 1 \\qquad \\mathrm{(B)}\\ 2 \\qquad \\mathrm{(C)}\\ 3 \\qquad \\mathrm{(D)}\\ 4 \\qquad\\textbf{(E)}\\ \\text{cannot be determined}$"
+          "$\\mathrm{(A)}\\ 1 \\qquad \\mathrm{(B)}\\ 2 \\qquad \\mathrm{(C)}\\ 3 \\qquad \\mathrm{(D)}\\ 4 \\qquad\\mathrm{(E)} \\ \\text{cannot be determined}$"
         ],
         "asy_choices": []
       },
@@ -957,7 +957,7 @@
           "//latex.artofproblemsolving.com/a/b/f/abfa9730b87de89c25ef163402f39ba9cbed3c33.png"
         ],
         "latex_choices": [
-          "$\\mathrm{(A)}\\ I \\qquad \\mathrm{(B)}\\ II \\qquad \\mathrm{(C)}\\ III \\qquad \\mathrm{(D)}\\ IV \\qquad \\mathrm{(E)}$"
+          "$\\mathrm{(A)}\\ I \\qquad \\mathrm{(B)}\\ II \\qquad \\mathrm{(C)}\\ III \\qquad \\mathrm{(D)}\\ IV \\qquad \\mathrm{(E)} \\ \\text{cannot be determined}$"
         ],
         "asy_choices": []
       },
@@ -1483,7 +1483,7 @@
     {
       "id": "amc_2007_8_16",
       "question": {
-        "text": "<p>Amanda Reckonwith draws five circles with radii <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. Then for each circle she plots the point <INSERTION_INDEX_3>,where <INSERTION_INDEX_4> is its circumference and <INSERTION_INDEX_5> is its area. Which of thefollowing could be her graph?</p><p><INSERTION_INDEX_6><INSERTION_INDEX_7></p><p><INSERTION_INDEX_8><INSERTION_INDEX_9></p><p><INSERTION_INDEX_10><INSERTION_INDEX_11></p>",
+        "text": "<p>Amanda Reckonwith draws five circles with radii <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. Then for each circle she plots the point <INSERTION_INDEX_3>,where <INSERTION_INDEX_4> is its circumference and <INSERTION_INDEX_5> is its area. Which of thefollowing could be her graph?</p><p><INSERTION_INDEX_6><INSERTION_INDEX_7></p><p><INSERTION_INDEX_8><INSERTION_INDEX_9></p><p><INSERTION_INDEX_10><INSERTION_INDEX_11></p><p><INSERTION_INDEX_12><INSERTION_INDEX_13></p><p><INSERTION_INDEX_14><INSERTION_INDEX_15></p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/3/e/e/3ee053d9a8e7ad423615a57686481ea4bcf4cc28.png",
@@ -1511,31 +1511,51 @@
             "alt_value": "$A$"
           },
           "INSERTION_INDEX_6": {
+            "picture": "////latex.artofproblemsolving.com/a/4/6/a46f6af01fcf3bb5f6cac2316bc4de9bb3906bec.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textbf{(A)}$"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/5/4/4/5441a586e3c38f07d4057cb9867265ca14fdeb6e.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] size(75); pair A= (1.5,2) , B= (3,4) , C= (4.5,7) , D= (6,11) , E= (7.5,16)&nbsp;; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(&quot;$A$&quot;, (0,8), W); label(&quot;$C$&quot;, (8,0), S);[/asy]"
+          },
+          "INSERTION_INDEX_8": {
+            "picture": "//latex.artofproblemsolving.com/b/7/1/b7193f66028e13f331d53ff5e6942c4b05587465.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textbf{(B)}$"
+          },
+          "INSERTION_INDEX_9": {
+            "picture": "//latex.artofproblemsolving.com/2/3/0/230f178f3cd06089682b3fe4a6a9ecf9580ef492.png",
+            "alt_type": "asy",
+            "alt_value": "[asy] size(75); pair A= (1.5,9) , B= (3,6) , C= (4.5,6) , D= (6,9) , E= (7.5,15) ; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(\"$A$\", (0,8), W); label(\"$C$\", (8,0), S);[/asy]"
+          },
+          "INSERTION_INDEX_10": {
             "picture": "//latex.artofproblemsolving.com/1/6/9/169b8d69bd74a91e72ec43123070d770633a340a.png",
             "alt_type": "latex",
             "alt_value": "$\\textbf{(C)}$"
           },
-          "INSERTION_INDEX_7": {
+          "INSERTION_INDEX_11": {
             "picture": "//latex.artofproblemsolving.com/9/5/d/95defaa77d8b1dd10283c438752810174f3e6d94.png",
             "alt_type": "asy",
             "alt_value": "[asy] size(75); pair A= (1.5,2) , B= (3,6) , C= (4.5,8) , D= (6,6) , E= (7.5,2) ; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(\"$A$\", (0,8), W); label(\"$C$\", (8,0), S);[/asy]"
           },
-          "INSERTION_INDEX_8": {
+          "INSERTION_INDEX_12": {
             "picture": "//latex.artofproblemsolving.com/b/3/0/b305929a95b53f14a0ad53eba1d8560626e1f28b.png",
             "alt_type": "latex",
             "alt_value": "$\\textbf{(D)}$"
           },
-          "INSERTION_INDEX_9": {
+          "INSERTION_INDEX_13": {
             "picture": "//latex.artofproblemsolving.com/9/d/4/9d43329cbcfb1249b7fcf1fc15cd2b90bc666ef4.png",
             "alt_type": "asy",
             "alt_value": "[asy] size(75); pair A= (1.5,2) , B= (3,5) , C= (4.5,8) , D= (6,11) , E= (7.5,14) ; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(\"$A$\", (0,8), W); label(\"$C$\", (8,0), S);[/asy]"
           },
-          "INSERTION_INDEX_10": {
+          "INSERTION_INDEX_14": {
             "picture": "//latex.artofproblemsolving.com/7/5/e/75e41e3cd48cee2c6866cfbb4386a8e99d3482f5.png",
             "alt_type": "latex",
             "alt_value": "$\\textbf{(E)}$"
           },
-          "INSERTION_INDEX_11": {
+          "INSERTION_INDEX_15": {
             "picture": "//latex.artofproblemsolving.com/5/7/d/57d2b3b4be42360bf68db966abbc090187b5cdb3.png",
             "alt_type": "asy",
             "alt_value": "[asy] size(75); pair A= (1.5,15) , B= (3,10) , C= (4.5,6) , D= (6,3) , E= (7.5,1) ; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(\"$A$\", (0,8), W); label(\"$C$\", (8,0), S);[/asy]"
@@ -1544,14 +1564,10 @@
         "type": "multiple-choice",
         "text_choices": [],
         "picture_choices": [
-          "//latex.artofproblemsolving.com/b/7/1/b7193f66028e13f331d53ff5e6942c4b05587465.png",
-          "//latex.artofproblemsolving.com/2/3/0/230f178f3cd06089682b3fe4a6a9ecf9580ef492.png"
         ],
         "latex_choices": [
-          "$\\textbf{(B)}$"
         ],
         "asy_choices": [
-          "[asy] size(75); pair A= (1.5,9) , B= (3,6) , C= (4.5,6) , D= (6,9) , E= (7.5,15) ; draw((0,-1)--(0,16)); draw((-1,0)--(16,0)); dot(A^^B^^C^^D^^E); label(\"$A$\", (0,8), W); label(\"$C$\", (8,0), S);[/asy]"
         ]
       },
       "tags": [],

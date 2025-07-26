@@ -1519,6 +1519,34 @@ label.choice-label {
     margin-bottom: 2rem;
 }
 
+/* Year selection with scrollbar */
+.year-selection {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.year-selection::-webkit-scrollbar {
+    width: 8px;
+}
+
+.year-selection::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.year-selection::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.year-selection::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
 .level-button, .year-button {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;

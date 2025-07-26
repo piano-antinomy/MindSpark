@@ -9,6 +9,8 @@ function Quiz() {
   const [selectedYear, setSelectedYear] = useState(null);
   const [quizzes, setQuizzes] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [availableYears, setAvailableYears] = useState([]);
+  const [yearsLoading, setYearsLoading] = useState(false);
   const navigate = useNavigate();
 
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
@@ -99,9 +101,42 @@ function Quiz() {
     setQuizCreationStep(2);
   };
 
-  const selectLevel = (level) => {
+  const selectLevel = async (level) => {
     setSelectedLevel(level);
     setQuizCreationStep(3);
+    await loadAvailableYears(level);
+  };
+
+  const loadAvailableYears = async (level) => {
+    setYearsLoading(true);
+    try {
+      // Convert AMC level to backend level number
+      const levelMap = { 'AMC_8': 1, 'AMC_10': 2, 'AMC_12': 3 };
+      const levelNumber = levelMap[level] || 1;
+      
+      const response = await fetch(`${JAVA_API_BASE_URL}/questions/math/level/${levelNumber}/years`, {
+        credentials: 'include'
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success && data.years) {
+          // Sort years in descending order (newest first)
+          const sortedYears = data.years.sort((a, b) => b - a);
+          setAvailableYears(sortedYears);
+        } else {
+          setAvailableYears([]);
+        }
+      } else {
+        console.error('Failed to load available years:', response.status);
+        setAvailableYears([]);
+      }
+    } catch (error) {
+      console.error('Error loading available years:', error);
+      setAvailableYears([]);
+    } finally {
+      setYearsLoading(false);
+    }
   };
 
   const selectYear = (year) => {
@@ -262,13 +297,19 @@ function Quiz() {
       {quizCreationStep === 3 && (
         <div className="quiz-creation-step">
           <h3>Step 3: Select Year</h3>
-          <div className="year-selection">
-            {[2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015].map(year => (
-              <div key={year} className="year-card" onClick={() => selectYear(year)}>
-                <h3>{year}</h3>
-              </div>
-            ))}
-          </div>
+          {yearsLoading ? (
+            <div className="loading">Loading available years...</div>
+          ) : availableYears.length === 0 ? (
+            <div className="error-message">No years available for this level.</div>
+          ) : (
+            <div className="year-selection">
+              {availableYears.map(year => (
+                <div key={year} className="year-card" onClick={() => selectYear(year)}>
+                  <h3>{year}</h3>
+                </div>
+              ))}
+            </div>
+          )}
           <button className="btn btn-secondary" onClick={backToStep2}>
             ← Back
           </button>

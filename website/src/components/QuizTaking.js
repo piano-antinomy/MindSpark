@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { questionParser } from './QuestionParser';
+import { questionParser } from '../utils/QuestionParser';
 
 function QuizTaking() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -121,7 +121,6 @@ function QuizTaking() {
       
       if (response.ok) {
         const quiz = await response.json();
-        console.log('Loaded quiz from backend:', quiz);
         setCurrentQuiz(quiz);
         
         // Load quiz questions
@@ -149,7 +148,6 @@ function QuizTaking() {
       
       if (response.ok) {
         const questions = await response.json();
-        console.log('Loaded questions from backend:', questions);
         setQuestions(questions);
         
         // Initialize answers from quiz progress
@@ -236,7 +234,6 @@ function QuizTaking() {
     setQuizCompleted(true);
     // Calculate score
     const score = calculateScore();
-    console.log('Quiz completed with score:', score);
   };
 
   const calculateScore = () => {
@@ -256,8 +253,71 @@ function QuizTaking() {
   };
 
   const renderChoices = (question) => {
-    if (!question.choices || question.choices.length === 0) {
+    console.log('[QuizTaking] renderChoices - isDummyChoices:', question.isDummyChoices, 'choices:', question.choices);
+    
+    if ((!question.choices || question.choices.length === 0) && !question.isDummyChoices) {
       return <p className="text-gray-500 italic">No choices available for this question.</p>;
+    }
+
+    // Handle dummy choices - show message but still display A, B, C, D, E as choices
+    if (question.isDummyChoices) {
+      return (
+        <div className="space-y-4">
+          <div className="space-y-2">
+            {question.choices.map((choice, choiceIndex) => {
+              const choiceValue = String.fromCharCode(65 + choiceIndex);
+              const isCorrect = quizCompleted && choiceValue === question.answer;
+              const isSelected = selectedAnswers[question.id] === choiceValue;
+              
+              return (
+                <label 
+                  key={choiceIndex} 
+                  className={`w-full p-3 border-2 rounded-lg cursor-pointer transition-all duration-200 flex items-start gap-3 ${
+                    isSelected 
+                      ? 'border-primary-500 bg-primary-50 text-primary-900' 
+                      : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
+                  } ${
+                    quizCompleted && isCorrect 
+                      ? 'border-success-500 bg-success-50 text-success-900' 
+                      : ''
+                  } ${
+                    quizCompleted && isSelected && !isCorrect 
+                      ? 'border-danger-500 bg-danger-50 text-danger-900' 
+                      : ''
+                  }`}
+                >
+                  <input
+                    type="radio"
+                    name={`question-${question.id}`}
+                    value={choiceValue}
+                    checked={isSelected}
+                    onChange={() => selectAnswer(question.id, choiceValue)}
+                    disabled={quizCompleted}
+                    className="mt-1 flex-shrink-0"
+                  />
+                  
+                  {/* Choice text - just the letter */}
+                  <span className="choice-text flex-1 text-left font-semibold">
+                    {choice}
+                  </span>
+                  
+                  {/* Correct/Incorrect indicators */}
+                  {quizCompleted && isCorrect && (
+                    <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-success-500 text-white text-xs">
+                      ✓
+                    </span>
+                  )}
+                  {quizCompleted && isSelected && !isCorrect && (
+                    <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-danger-500 text-white text-xs">
+                      ✗
+                    </span>
+                  )}
+                </label>
+              );
+            })}
+          </div>
+        </div>
+      );
     }
 
     if (question.isImageChoice) {

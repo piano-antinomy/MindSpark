@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { questionParser } from './QuestionParser';
+import { questionParser } from '../utils/QuestionParser';
 
 // Question Renderer functionality - focuses only on rendering parsed questions
 class QuestionRendererClass {
@@ -71,8 +71,13 @@ function QuestionRenderer({
   };
 
   const renderChoices = () => {
+    // Don't render anything for dummy_choices questions
+    if (processedQuestion.isDummyChoices) {
+      return null;
+    }
+
     if (!processedQuestion.choices || processedQuestion.choices.length === 0) {
-      return <p className="text-gray-500 italic">No choices available for this question.</p>;
+      return <></>;
     }
 
     if (processedQuestion.isImageChoice) {
