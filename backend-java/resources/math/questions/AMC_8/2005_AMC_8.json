@@ -909,8 +909,14 @@
     {
       "id": "amc_2005_8_11",
       "question": {
-        "text": "<p>The sales tax rate in Rubenenkoville is 6%. During a sale at the Bergville Coat Closet, the price of a coat is discounted 20% from its $90.00 price. Two clerks, Jack and Jill, calculate the bill independently. Jack rings up $90.00 and adds 6% sales tax, then subtracts 20% from this total. Jill rings up $90.00, subtracts 20% of the price, then adds 6% of the discounted price for sales tax. What is Jack's total minus Jill's total?</p>",
-        "insertions": {},
+        "text": "<p>The sales tax rate in Rubenenkoville is 6%. During a sale at the Bergville Coat Closet, the price of a coat is discounted 20% from its <INSERTION_INDEX_1> price. Two clerks, Jack and Jill, calculate the bill independently. Jack rings up <INSERTION_INDEX_1> and adds 6% sales tax, then subtracts 20% from this total. Jill rings up <INSERTION_INDEX_1>, subtracts 20% of the price, then adds 6% of the discounted price for sales tax. What is Jack's total minus Jill's total?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/placeholder.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 90.00$"
+          }
+        },
         "type": "multiple-choice",
         "text_choices": [],
         "picture_choices": [

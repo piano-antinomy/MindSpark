@@ -5,7 +5,7 @@ class QuestionParser {
     this.initializeMathJax();
     
     // Centralized list of label patterns for AMC questions
-    this.labelPatterns = ['textbf', 'mathrm'];
+    this.labelPatterns = ['textbf', 'mathrm', 'text'];
   }
 
   initializeMathJax() {
