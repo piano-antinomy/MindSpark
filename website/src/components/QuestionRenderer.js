@@ -81,22 +81,10 @@ function QuestionRenderer({
     }
 
     if (processedQuestion.isImageChoice) {
-      // Handle image choices
+      // Handle image choices - just show the image, no fake choices
       return (
-        <div className="space-y-4">
-          <div className="question-image-container">
-            <div dangerouslySetInnerHTML={{ __html: processedQuestion.choices[0] }} />
-          </div>
-          <div className="grid grid-cols-5 gap-3">
-            {['A', 'B', 'C', 'D', 'E'].map((letter, letterIndex) => (
-              <div 
-                key={letterIndex} 
-                className="text-center font-semibold"
-              >
-                <span className="choice-text">{letter}</span>
-              </div>
-            ))}
-          </div>
+        <div className="question-image-container">
+          <div dangerouslySetInnerHTML={{ __html: processedQuestion.choices[0] }} />
         </div>
       );
     } else {

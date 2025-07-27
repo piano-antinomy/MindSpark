@@ -321,31 +321,59 @@ function QuizTaking() {
     }
 
     if (question.isImageChoice) {
-      // Handle image choices
+      // For image choices, just show A, B, C, D, E as fake choices on the right
       return (
-        <div className="space-y-4">
-          <div className="question-image-container">
-            <div dangerouslySetInnerHTML={{ __html: question.choices[0] }} />
-          </div>
-          <div className="grid grid-cols-5 gap-3">
-            {['A', 'B', 'C', 'D', 'E'].map((letter, letterIndex) => (
+        <div className="space-y-2">
+          {['A', 'B', 'C', 'D', 'E'].map((letter, letterIndex) => {
+            const isCorrect = quizCompleted && letter === question.answer;
+            const isSelected = selectedAnswers[question.id] === letter;
+            
+            return (
               <label 
                 key={letterIndex} 
-                className={`choice-label ${selectedAnswers[question.id] === letter ? 'selected' : ''}`}
+                className={`w-full p-3 border-2 rounded-lg cursor-pointer transition-all duration-200 flex items-start gap-3 ${
+                  isSelected 
+                    ? 'border-primary-500 bg-primary-50 text-primary-900' 
+                    : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
+                } ${
+                  quizCompleted && isCorrect 
+                    ? 'border-success-500 bg-success-50 text-success-900' 
+                    : ''
+                } ${
+                  quizCompleted && isSelected && !isCorrect 
+                    ? 'border-danger-500 bg-danger-50 text-danger-900' 
+                    : ''
+                }`}
               >
                 <input
                   type="radio"
                   name={`question-${question.id}`}
                   value={letter}
-                  checked={selectedAnswers[question.id] === letter}
+                  checked={isSelected}
                   onChange={() => selectAnswer(question.id, letter)}
                   disabled={quizCompleted}
-                  className="sr-only"
+                  className="mt-1 flex-shrink-0"
                 />
-                <span className="choice-text text-center font-semibold">{letter}</span>
+                
+                {/* Choice text - just the letter */}
+                <span className="choice-text flex-1 text-left font-semibold">
+                  {letter}
+                </span>
+                
+                {/* Correct/Incorrect indicators */}
+                {quizCompleted && isCorrect && (
+                  <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-success-500 text-white text-xs">
+                    ✓
+                  </span>
+                )}
+                {quizCompleted && isSelected && !isCorrect && (
+                  <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-danger-500 text-white text-xs">
+                    ✗
+                  </span>
+                )}
               </label>
-            ))}
-          </div>
+            );
+          })}
         </div>
       );
     } else {
@@ -412,6 +440,13 @@ function QuizTaking() {
         style={{ borderLeft: 'none', backgroundColor: 'transparent' }}
         dangerouslySetInnerHTML={{ __html: question.questionText }} 
       />
+      
+      {/* Show image in question content for image choices */}
+      {question.isImageChoice && question.choices && question.choices.length > 0 && (
+        <div className="mt-6 question-image-container">
+          <div dangerouslySetInnerHTML={{ __html: question.choices[0] }} />
+        </div>
+      )}
       
       {quizCompleted && (
         <div className="mt-6 p-4 bg-success-50 border border-success-200 rounded-lg">
