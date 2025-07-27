@@ -252,39 +252,18 @@ class QuestionParser {
   }
 
   parseQuestion(question, questionIndex = 0) {
-    let questionText, choices, hasLabels = false, isImageChoice = false, isDummyChoices = false;
-    
-    if (typeof question.question === 'string') {
-      // Old format - just text and choices array
-      questionText = question.question;
-      choices = question.choices || [];
-      hasLabels = false;
-      isImageChoice = false;
-    } else {
-      // New format - complex object with insertions
-      const questionDetails = question.question;
-      questionText = this.processQuestionText(questionDetails.text, questionDetails.insertions);
-      const choiceResult = this.extractQuestionChoices(questionDetails);
-      choices = choiceResult.choices;
-      hasLabels = choiceResult.hasLabels;
-      isImageChoice = choiceResult.isImageChoice;
-      isDummyChoices = choiceResult.isDummyChoices || false;
-      
-      // If no choices extracted from new format, fall back to simple choices array
-      if (choices.length === 0 && question.choices) {
-        choices = question.choices;
-        hasLabels = false;
-        isImageChoice = false;
-      }
-    }
+    // New format - complex object with insertions
+    const questionDetails = question.question;
+    const questionText = this.processQuestionText(questionDetails.text, questionDetails.insertions);
+    const choiceResult = this.extractQuestionChoices(questionDetails);
     
     const result = {
       id: question.id || `question_${questionIndex}`,
       questionText,
-      choices,
-      hasLabels,
-      isImageChoice: isImageChoice || false,
-      isDummyChoices: isDummyChoices || false,
+      choices: choiceResult.choices,
+      hasLabels: choiceResult.hasLabels,
+      isImageChoice: choiceResult.isImageChoice || false,
+      isDummyChoices: choiceResult.isDummyChoices || false,
       answer: question.answer,
       solution: question.solution,
       originalQuestion: question

@@ -20,7 +20,7 @@
         "text_choices": [],
         "picture_choices": [],
         "latex_choices": [
-          "$\\text {(A)}\\ 22 \\qquad \\text {(B)}\\ 23 \\qquad {(C)}\\ 24 \\qquad {(D)}\\ 25 \\qquad {(E)}\\ 26$"
+          "$\\text{(A)}\\ 22 \\qquad \\text{(B)}\\ 23 \\qquad \\text{(C)}\\ 24 \\qquad \\text{(D)}\\ 25 \\qquad \\text{(E)}\\ 26$"
         ],
         "asy_choices": []
       },
@@ -1026,7 +1026,7 @@
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/c/d/c/cdc8a89cd6df6cb8b287f31f7fb78807b0dce07e.png",
             "alt_type": "latex",
-            "alt_value": "$\\setlength{\\tabcolsep}{0.5mm}\\begin{array}{cccc}&T & W & O\\\\ +&T & W & O\\\\ \\hline F& O & U & R\\end{array}$"
+            "alt_value": "$\\begin{array}{c@{\\hspace{0.5mm}}c@{\\hspace{0.5mm}}c@{\\hspace{0.5mm}}c}&T & W & O\\\\ +&T & W & O\\\\ \\hline F& O & U & R\\end{array}$"
           }
         },
         "type": "multiple-choice",
@@ -1202,17 +1202,12 @@
     {
       "id": "amc_2003_8_17",
       "question": {
-        "text": "<p>The six children listed below are from two families of three siblings each. Each child has blue or brown eyes and black or blond hair. Children from the same family have at least one of these characteristics in common. Which two children are Jim's siblings?</p><p><INSERTION_INDEX_1></p><p><INSERTION_INDEX_2></p>",
+        "text": "<p>The six children listed below are from two families of three siblings each. Each child has blue or brown eyes and black or blond hair. Children from the same family have at least one of these characteristics in common. Which two children are Jim's siblings?</p><p><INSERTION_INDEX_1></p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/0/a/e/0ae4f05da3c8e0d429452248f1039b98196d0c98.png",
             "alt_type": "latex",
             "alt_value": "\\[\\begin{array}{c|c|c}\\text{Child}&\\text{Eye Color}&\\text{Hair Color}\\\\ \\hline\\text{Benjamin}&\\text{Blue}&\\text{Black}\\\\ \\hline\\text{Jim}&\\text{Brown}&\\text{Blonde}\\\\ \\hline\\text{Nadeen}&\\text{Brown}&\\text{Black}\\\\ \\hline\\text{Austin}&\\text{Blue}&\\text{Blonde}\\\\ \\hline\\text{Tevyn}&\\text{Blue}&\\text{Black}\\\\ \\hline\\text{Sue}&\\text{Blue}&\\text{Blonde}\\\\ \\hline\\end{array}\\]"
-          },
-          "INSERTION_INDEX_2": {
-            "picture": "//latex.artofproblemsolving.com/b/a/f/baf4ed68cf37488f8502d1c303c00ac7995b12e2.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(E)}\\ \\text{Austin and Sue}$"
           }
         },
         "type": "multiple-choice",
@@ -1221,7 +1216,7 @@
           "//latex.artofproblemsolving.com/c/0/5/c05ca617390bfd3b20b1026e8621295989be9185.png"
         ],
         "latex_choices": [
-          "$\\textbf{(A)}\\ \\text{Nadeen and Austin}\\qquad\\textbf{(B)}\\ \\text{Benjamin and Sue}\\qquad\\textbf{(C)}\\ \\text{Benjamin and Austin}\\qquad\\textbf{(D)}\\ \\text{Nadeen and Tevyn}$"
+          "$\\textbf{(A)}\\ \\text{Nadeen and Austin}\\qquad\\textbf{(B)}\\ \\text{Benjamin and Sue}\\qquad\\textbf{(C)}\\ \\text{Benjamin and Austin}\\qquad\\textbf{(D)}\\ \\text{Nadeen and Tevyn} \\qquad \\textbf{(E)}\\ \\text{Austin and Sue}$"
         ],
         "asy_choices": []
       },
@@ -1672,11 +1667,19 @@
     {
       "id": "amc_2003_8_23",
       "question": {
-        "text": "<p>In the pattern below, the cat moves clockwise through the four squares, and the mouse moves counterclockwise through the eight exterior segments of the four squares.</p>",
-        "insertions": {},
-        "type": "free-response",
+        "text": "<p>In the pattern below, the cat moves clockwise through the four squares, and the mouse moves counterclockwise through the eight exterior segments of the four squares.</p><p><INSERTION_INDEX_1></p><p>If the pattern is continued, where would the cat and mouse be after the 247th move?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "https://wiki-images.artofproblemsolving.com//thumb/1/1a/2003amc8prob23a.png/1200px-2003amc8prob23a.png",
+            "alt_type": "image",
+            "alt_value": "2003amc8prob23a.png"
+          }
+        },
+        "type": "multiple-choice",
         "text_choices": [],
-        "picture_choices": [],
+        "picture_choices": [
+          "https://wiki-images.artofproblemsolving.com//thumb/e/ed/2003amc8prob23b.png/800px-2003amc8prob23b.png"
+        ],
         "latex_choices": [],
         "asy_choices": []
       },

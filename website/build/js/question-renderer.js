@@ -473,34 +473,9 @@ class QuestionRenderer {
             'class="choice-image full-width-image" style="width: 100%; height: auto; max-width: 100%; display: block;"'
         );
 
-        // Generate letter choices in one line (A, B, C, D, E)
-        const letterChoicesHTML = ['A', 'B', 'C', 'D', 'E'].map((letter, index) => {
-            const isChecked = selectedAnswer === letter;
-            
-            if (showAnswerInputs) {
-                return `
-                    <label class="choice-label ${isChecked ? 'selected' : ''} ${cssClasses.choiceLabel || ''}">
-                        <input type="radio" name="${inputNamePrefix}_${questionIndex}" value="${letter}" 
-                               data-question-index="${questionIndex}"
-                               ${isChecked ? 'checked' : ''}>
-                        <span class="choice-content">${letter}</span>
-                    </label>
-                `;
-            } else {
-                return `
-                    <div class="choice-display ${cssClasses.choiceDisplay || ''}">
-                        <span class="choice-content">${letter}</span>
-                    </div>
-                `;
-            }
-        }).join('');
-
         return this.generateQuestionBaseHTML(questionData, questionIndex, cssClasses) + `
                     <div class="question-image-container" style="width: 100%; margin: 10px 0;">
                         ${fullWidthImageHTML}
-                    </div>
-                    <div class="answer-choices image-choice-letters">
-                        ${letterChoicesHTML}
                     </div>
                 </div>
             </div>

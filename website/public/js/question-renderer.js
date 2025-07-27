@@ -140,6 +140,11 @@ class QuestionRenderer {
      * Extract choices from question object (text_choices, latex_choices, or picture_choices)
      */
     extractQuestionChoices(questionDetails) {
+        questionDebugLog('Extracting choices from:', {
+            text_choices: questionDetails.text_choices?.length || 0,
+            latex_choices: questionDetails.latex_choices?.length || 0,
+            picture_choices: questionDetails.picture_choices?.length || 0
+        });
         
         // Priority: text_choices > latex_choices > picture_choices
         if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
@@ -172,9 +177,11 @@ class QuestionRenderer {
                 const imageUrl = this.processImageUrl(url);
                 return `<img src="${imageUrl}" alt="Choice" class="choice-image" />`;
             });
+            questionDebugLog('Found picture choices, returning image choice:', imageChoices.length);
             return { choices: imageChoices, hasLabels: false, isImageChoice: true };
         }
         
+        questionDebugLog('No choices found, returning empty array');
         return { choices: [], hasLabels: false, isImageChoice: false };
     }
 
@@ -339,38 +346,17 @@ class QuestionRenderer {
      * Process a complete question object and return formatted data
      */
     processQuestion(question, questionIndex = 0) {
-        
-        let questionText, choices, hasLabels = false, isImageChoice = false;
-        
-        if (typeof question.question === 'string') {
-            // Old format - just text and choices array
-            questionText = question.question;
-            choices = question.choices || [];
-            hasLabels = false;
-            isImageChoice = false;
-        } else {
-            // New format - complex object with insertions
-            const questionDetails = question.question;
-            questionText = this.processQuestionText(questionDetails.text, questionDetails.insertions);
-            const choiceResult = this.extractQuestionChoices(questionDetails);
-            choices = choiceResult.choices;
-            hasLabels = choiceResult.hasLabels;
-            isImageChoice = choiceResult.isImageChoice;
-            
-            // If no choices extracted from new format, fall back to simple choices array
-            if (choices.length === 0 && question.choices) {
-                choices = question.choices;
-                hasLabels = false;
-                isImageChoice = false;
-            }
-        }
+        // New format - complex object with insertions
+        const questionDetails = question.question;
+        const questionText = this.processQuestionText(questionDetails.text, questionDetails.insertions);
+        const choiceResult = this.extractQuestionChoices(questionDetails);
         
         return {
             id: question.id || `question_${questionIndex}`,
             questionText,
-            choices,
-            hasLabels,
-            isImageChoice: isImageChoice || false,
+            choices: choiceResult.choices,
+            hasLabels: choiceResult.hasLabels,
+            isImageChoice: choiceResult.isImageChoice || false,
             answer: question.answer,
             solution: question.solution,
             originalQuestion: question
@@ -412,8 +398,15 @@ class QuestionRenderer {
         const hasLabels = questionData.hasLabels || false;
         const isImageChoice = questionData.isImageChoice || false;
 
+        questionDebugLog('Rendering question:', {
+            questionIndex,
+            choices: choices.length,
+            isImageChoice,
+            hasLabels
+        });
+
         // Handle image choices differently
-        if (isImageChoice && choices.length > 0) {
+        if (isImageChoice) {
             return this.renderImageChoiceQuestion(questionData, questionIndex, options);
         }
 
@@ -473,34 +466,9 @@ class QuestionRenderer {
             'class="choice-image full-width-image" style="width: 100%; height: auto; max-width: 100%; display: block;"'
         );
 
-        // Generate letter choices in one line (A, B, C, D, E)
-        const letterChoicesHTML = ['A', 'B', 'C', 'D', 'E'].map((letter, index) => {
-            const isChecked = selectedAnswer === letter;
-            
-            if (showAnswerInputs) {
-                return `
-                    <label class="choice-label ${isChecked ? 'selected' : ''} ${cssClasses.choiceLabel || ''}">
-                        <input type="radio" name="${inputNamePrefix}_${questionIndex}" value="${letter}" 
-                               data-question-index="${questionIndex}"
-                               ${isChecked ? 'checked' : ''}>
-                        <span class="choice-content">${letter}</span>
-                    </label>
-                `;
-            } else {
-                return `
-                    <div class="choice-display ${cssClasses.choiceDisplay || ''}">
-                        <span class="choice-content">${letter}</span>
-                    </div>
-                `;
-            }
-        }).join('');
-
         return this.generateQuestionBaseHTML(questionData, questionIndex, cssClasses) + `
                     <div class="question-image-container" style="width: 100%; margin: 10px 0;">
                         ${fullWidthImageHTML}
-                    </div>
-                    <div class="answer-choices image-choice-letters">
-                        ${letterChoicesHTML}
                     </div>
                 </div>
             </div>
