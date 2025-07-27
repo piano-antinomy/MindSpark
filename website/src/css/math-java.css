@@ -356,6 +356,92 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    overflow-y: auto;
+    max-height: 100%;
+    padding-right: 4px;
+}
+
+/* Custom scrollbar for choices container */
+.choices-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.choices-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.choices-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.choices-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Ensure choices container respects flex layout */
+.choices-container {
+    min-height: 0;
+    flex-shrink: 1;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+/* Ensure choice items don't shrink too much */
+.choices-container label {
+    flex-shrink: 0;
+    min-height: fit-content;
+}
+
+/* iPad/Mobile specific styles for choices container */
+@media (max-width: 1024px) {
+    .choices-container {
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        padding-right: 8px; /* Space for scrollbar */
+    }
+    
+    /* Force scrollbar to show on iPad */
+    .choices-container::-webkit-scrollbar {
+        width: 10px; /* Wider for better visibility on iPad */
+        -webkit-appearance: none;
+        background-color: transparent;
+    }
+    
+    .choices-container::-webkit-scrollbar-track {
+        background: #e2e8f0;
+        border-radius: 5px;
+        border: 1px solid #cbd5e1;
+    }
+    
+    .choices-container::-webkit-scrollbar-thumb {
+        background: #64748b;
+        border-radius: 5px;
+        border: 1px solid #475569;
+        min-height: 40px; /* Minimum thumb height for touch */
+    }
+    
+    .choices-container::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+    }
+    
+    .choices-container::-webkit-scrollbar-thumb:active {
+        background: #334155;
+    }
+    
+    /* Ensure the choices section container has proper height constraints */
+    .choices-section {
+        max-height: calc(100vh - 200px);
+        overflow: hidden;
+    }
+    
+    /* Force the choices container to take available space */
+    .choices-container {
+        height: 100%;
+        min-height: 0;
+    }
 }
 
 .choice-button {

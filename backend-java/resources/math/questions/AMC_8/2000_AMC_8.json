@@ -2839,41 +2839,26 @@
     {
       "id": "amc_2000_8_18",
       "question": {
-        "text": "<p>Consider these two geoboard quadrilaterals. Which of the following statements is true?</p><p><INSERTION_INDEX_1></p><p><INSERTION_INDEX_2></p><p><INSERTION_INDEX_3></p><p><INSERTION_INDEX_4></p><p><INSERTION_INDEX_5></p>",
+        "text": "<p>Consider these two geoboard quadrilaterals. Which of the following statements is true?</p><p><INSERTION_INDEX_1></p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/c/2/4/c24fa3e068172b2a2b206fc20b3e9e0abf107d5f.png",
             "alt_type": "asy",
             "alt_value": "[asy] for (int a = 0; a < 5; ++a) { for (int b = 0; b < 5; ++b) { dot((a,b)); } } draw((0,3)--(0,4)--(1,3)--(1,2)--cycle); draw((2,1)--(4,2)--(3,1)--(3,0)--cycle); label(\"I\",(0.4,3),E); label(\"II\",(2.9,1),W);[/asy]"
-          },
-          "INSERTION_INDEX_2": {
-            "picture": "//latex.artofproblemsolving.com/f/0/7/f07ebf8c822ca5c065b3e6fb3553e1d63683a155.png",
-            "alt_type": "latex",
-            "alt_value": "$\\text{(A)}\\ \\text{The area of quadrilateral I is more than the area of quadrilateral II.}$"
-          },
-          "INSERTION_INDEX_3": {
-            "picture": "//latex.artofproblemsolving.com/a/3/f/a3f767514e8eea7db2b536dad7d61c4d9c38f82f.png",
-            "alt_type": "latex",
-            "alt_value": "$\\text{(B)}\\ \\text{The area of quadrilateral I is less than the area of quadrilateral II.}$"
-          },
-          "INSERTION_INDEX_4": {
-            "picture": "//latex.artofproblemsolving.com/9/5/0/95060883d1f3272e180769ed8ea7fff9e358c0be.png",
-            "alt_type": "latex",
-            "alt_value": "$\\text{(C)}\\ \\text{The quadrilaterals have the same area and the same perimeter.}$"
-          },
-          "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/a/1/7/a174bb4abb39d369355ddf061c3e8f286d3737eb.png",
-            "alt_type": "latex",
-            "alt_value": "$\\text{(D)}\\ \\text{The quadrilaterals have the same area, but the perimeter of I is more than the perimeter of II.}$"
           }
         },
         "type": "multiple-choice",
-        "text_choices": [],
+        "text_choices": [
+          "(A) The area of quadrilateral I is more than the area of quadrilateral II.",
+          "(B) The area of quadrilateral I is less than the area of quadrilateral II.",
+          "(C) The quadrilaterals have the same area and the same perimeter.",
+          "(D) The quadrilaterals have the same area, but the perimeter of I is more than the perimeter of II.",
+          "(E) The quadrilaterals} have the same area, but the perimeter of I is less than the perimeter of II."
+        ],
         "picture_choices": [
           "//latex.artofproblemsolving.com/4/f/2/4f24ff43f2cca9926ea8ea040a33cae0f9b2c531.png"
         ],
         "latex_choices": [
-          "$\\text{(E)}\\ \\text{The quadrilaterals have the same area, but the perimeter of I is less than the perimeter of II.}$"
         ],
         "asy_choices": []
       },

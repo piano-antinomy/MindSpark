@@ -56,32 +56,32 @@ function QuizTaking() {
 
   useEffect(() => {
     // Re-render MathJax when questions change
-    if (window.MathJax && parsedQuestions.length > 0) {
+    if (parsedQuestions.length > 0) {
       // Use setTimeout to ensure DOM is rendered before typesetting
       setTimeout(() => {
-        window.MathJax.typesetPromise();
+        safeMathJaxTypeset();
       }, 0);
     }
   }, [parsedQuestions, currentQuestionIndex]);
 
   // Additional effect to handle MathJax typesetting when quiz starts
   useEffect(() => {
-    if (quizStarted && window.MathJax && parsedQuestions.length > 0) {
+    if (quizStarted && parsedQuestions.length > 0) {
       // Use a longer delay to ensure the quiz interface is fully rendered
       setTimeout(() => {
-        window.MathJax.typesetPromise();
+        safeMathJaxTypeset();
       }, 100);
     }
   }, [quizStarted, parsedQuestions]);
 
   // Use useLayoutEffect for more reliable MathJax typesetting
   useLayoutEffect(() => {
-    if (quizStarted && window.MathJax && parsedQuestions.length > 0) {
+    if (quizStarted && parsedQuestions.length > 0) {
       // Try to typeset immediately after DOM updates
-      window.MathJax.typesetPromise().catch(() => {
+      safeMathJaxTypeset().catch(() => {
         // If it fails, retry after a short delay
         setTimeout(() => {
-          window.MathJax.typesetPromise();
+          safeMathJaxTypeset();
         }, 50);
       });
     }
@@ -250,6 +250,16 @@ function QuizTaking() {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
     return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+  };
+
+  // Helper function to safely typeset MathJax
+  const safeMathJaxTypeset = () => {
+    if (window.MathJax && window.MathJax.typesetPromise) {
+      return window.MathJax.typesetPromise().catch(error => {
+        console.warn('MathJax typesetting error:', error);
+      });
+    }
+    return Promise.resolve();
   };
 
   const renderChoices = (question) => {
@@ -653,8 +663,8 @@ function QuizTaking() {
           </div>
           
           {/* Right side - Choices section */}
-          <div className="w-1/3 lg:w-1/3 p-3 lg:p-6 flex-shrink-0">
-            <div className="choices-container space-y-2 lg:space-y-3 overflow-y-auto">
+          <div className="w-1/3 lg:w-1/3 p-3 lg:p-6 flex-shrink-0 flex flex-col min-h-0">
+            <div className="choices-container space-y-2 lg:space-y-3 flex-1 overflow-y-auto">
               {renderChoices(question)}
             </div>
           </div>
@@ -828,7 +838,7 @@ function QuizTaking() {
                 </div>
                 
                 {/* Right side - Choices section */}
-                <div className="w-1/3 p-2 flex-shrink-0">
+                <div className="w-1/3 p-2 flex-shrink-0 flex flex-col min-h-0 choices-section">
                   <div className="choices-container space-y-2 overflow-y-auto">
                     {renderChoices(parsedQuestions[currentQuestionIndex])}
                   </div>
