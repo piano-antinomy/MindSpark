@@ -152,13 +152,45 @@ function Quiz() {
       // Generate quiz ID
       const quizId = `quiz_${Date.now()}`;
       
-      // Create quizQuestionSetId (format: year_AMC_level, e.g., "2023_AMC_8")
+      // Create quizQuestionSetId (format: year_AMC_level, e.g., "2023_AMC_8" or "2024_AMC_10A")
       if (!level) {
         console.error('Level is null or undefined. Cannot create quiz.');
         alert('Error: Level not selected. Please try again.');
         return;
       }
-      const quizQuestionSetId = `${year}_AMC_${level.split('_')[1]}`;
+      
+      // Extract the numeric year and any letter suffix (A/B)
+      const yearMatch = year.toString().match(/^(\d{4})([AB]?)$/);
+      if (!yearMatch) {
+        console.error('Invalid year format:', year);
+        alert('Error: Invalid year format. Please try again.');
+        return;
+      }
+      
+      const numericYear = yearMatch[1];
+      const yearSuffix = yearMatch[2] || ''; // A, B, or empty
+      
+      // Extract AMC level number (8, 10, or 12)
+      const levelMatch = level.match(/^AMC_(\d+)$/);
+      if (!levelMatch) {
+        console.error('Invalid level format:', level);
+        alert('Error: Invalid level format. Please try again.');
+        return;
+      }
+      
+      const amcLevel = levelMatch[1];
+      
+      // Construct quizQuestionSetId: year_AMC_level + optional suffix
+      const quizQuestionSetId = `${numericYear}_AMC_${amcLevel}${yearSuffix}`;
+      
+      console.log('Creating quiz with:', {
+        year,
+        level,
+        numericYear,
+        yearSuffix,
+        amcLevel,
+        quizQuestionSetId
+      });
       
       const requestBody = {
         userId: currentUser.username,
