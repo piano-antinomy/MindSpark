@@ -406,8 +406,19 @@
     {
       "id": "amc_2001_8_3",
       "question": {
-        "text": "<p>Granny Smith has $63. Elberta has $2 more than Anjou and Anjou has one-third as much as Granny Smith. How many dollars does Elberta have?</p>",
-        "insertions": {},
+        "text": "<p>Granny Smith has <INSERTION_INDEX_1>. Elberta has <INSERTION_INDEX_2> more than Anjou and Anjou has one-third as much as Granny Smith. How many dollars does Elberta have?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/8/4/c/84c099a494372777e14e59a4f952df7637762b6b.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 63$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/7/3/4/73410e94141fa0e04b94f34428811614ea32a403.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar 2$"
+          }
+        },
         "type": "multiple-choice",
         "text_choices": [],
         "picture_choices": [
@@ -1765,7 +1776,7 @@
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/f/7/2/f72d71240cdafc0531cc3a8916a28cacd345acdf.png",
-            "alt_type": "latex",
+            "alt_type": "image",
             "alt_value": "\\[\\begin{tabular}{rccccccccccccccc} \\text{Question} & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 \\\\ \\text{Value} & 100 & 200 & 300 & 500 & 1\\text{K} & 2\\text{K} & 4\\text{K} & 8\\text{K} & 16\\text{K} & 32\\text{K} & 64\\text{K} & 125\\text{K} & 250\\text{K} & 500\\text{K} & 1000\\text{K} \\end{tabular}\\]"
           }
         },
