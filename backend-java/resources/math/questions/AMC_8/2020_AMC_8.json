@@ -4841,37 +4841,107 @@
     {
       "id": "amc_2020_8_22",
       "question": {
-        "text": "<p>When a positive integer <INSERTION_INDEX_1> is fed into a machine, the output is a number calculated according to the rule shown below.</p>",
+        "text": "<p>When a positive integer <INSERTION_INDEX_1> is fed into a machine, the output is a number calculated according to the rule shown below.</p><p><INSERTION_INDEX_2></p><p>For example, starting with an input of <INSERTION_INDEX_14>, the machine will output <INSERTION_INDEX_15>. Then if the output is repeatedly inserted into the machine five more times, the final output is <INSERTION_INDEX_16>.</p><p><INSERTION_INDEX_6></p><p>When the same 6-step process is applied to a different starting value of <INSERTION_INDEX_17>, the final output is <INSERTION_INDEX_18>. What is the sum of all such integers <INSERTION_INDEX_19>?</p></p><p><INSERTION_INDEX_11></p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/f/c/9/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png",
+            "alt_type": "latex",
+            "alt_value": "$N$"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/e/8/7/e878d1d4459a47247d03d903a46441e85ec0a503.png",
+            "alt_type": "image",
+            "alt_value": "Choice A"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/5/e/3/5e3873c70c300e3ec4b63524055644844431adcf.png",
+            "alt_type": "image",
+            "alt_value": "Choice B"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/b/4/8/b48891506b80a9964c81c03caf05cc4dd69deb92.png",
+            "alt_type": "image",
+            "alt_value": "Choice C"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/0/4/9/0493cb27bc77732e314703377654d93b2b21160f.png",
+            "alt_type": "image",
+            "alt_value": "Choice D"
+          },
+          "INSERTION_INDEX_6": {
+            "picture": "//latex.artofproblemsolving.com/4/f/7/4f7a3ef049942c89a393ca7cf10d85cc7ddd0b8d.png",
+            "alt_type": "image",
+            "alt_value": "Choice E"
+          },
+          "INSERTION_INDEX_7": {
+            "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
+            "alt_type": "image",
+            "alt_value": "Choice F"
+          },
+          "INSERTION_INDEX_8": {
+            "picture": "//latex.artofproblemsolving.com/3/5/6/35672a19103f2ead1f02935bb8450addc3318b94.png",
+            "alt_type": "image",
+            "alt_value": "Choice G"
+          },
+          "INSERTION_INDEX_9": {
+            "picture": "//latex.artofproblemsolving.com/6/c/d/6cdd1b53e5faf7a118222e4b7571d1e9afa0cf56.png",
+            "alt_type": "image",
+            "alt_value": "Choice H"
+          },
+          "INSERTION_INDEX_10": {
+            "picture": "//latex.artofproblemsolving.com/8/5/c/85cf31acc4d19289fd14d58e39c17cff9fe2b0e4.png",
+            "alt_type": "image",
+            "alt_value": "Choice I"
+          },
+          "INSERTION_INDEX_11": {
+            "picture": "//latex.artofproblemsolving.com/c/8/9/c8914c251134025522a9009e8cdf1f898c2e9e08.png",
+            "alt_type": "image",
+            "alt_value": "Choice J"
+          },
+          "INSERTION_INDEX_12": {
+            "picture": "//latex.artofproblemsolving.com/2/8/b/28b85e18a5399ac1ecb0af9bf357d1864c0f61c1.png",
+            "alt_type": "image",
+            "alt_value": "Choice K"
+          },
+          "INSERTION_INDEX_13": {
+            "picture": "//latex.artofproblemsolving.com/3/5/6/35672a19103f2ead1f02935bb8450addc3318b94.png",
+            "alt_type": "image",
+            "alt_value": "Machine diagram"
+          },
+          "INSERTION_INDEX_14": {
+            "picture": "//latex.artofproblemsolving.com/e/8/7/e878d1d4459a47247d03d903a46441e85ec0a503.png",
+            "alt_type": "latex",
+            "alt_value": "$N=7$"
+          },
+          "INSERTION_INDEX_15": {
+            "picture": "//latex.artofproblemsolving.com/5/e/3/5e3873c70c300e3ec4b63524055644844431adcf.png",
+            "alt_type": "latex",
+            "alt_value": "$3 \\cdot 7 +1 = 22$"
+          },
+          "INSERTION_INDEX_16": {
+            "picture": "//latex.artofproblemsolving.com/b/4/8/b48891506b80a9964c81c03caf05cc4dd69deb92.png",
+            "alt_type": "latex",
+            "alt_value": "$26$"
+          },
+          "INSERTION_INDEX_17": {
+            "picture": "//latex.artofproblemsolving.com/0/4/9/0493cb27bc77732e314703377654d93b2b21160f.png",
+            "alt_type": "latex",
+            "alt_value": "$N$"
+          },
+          "INSERTION_INDEX_18": {
+            "picture": "//latex.artofproblemsolving.com/4/f/7/4f7a3ef049942c89a393ca7cf10d85cc7ddd0b8d.png",
+            "alt_type": "latex",
+            "alt_value": "$1$"
+          },
+          "INSERTION_INDEX_19": {
+            "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
             "alt_type": "latex",
             "alt_value": "$N$"
           }
         },
         "type": "multiple-choice",
         "text_choices": [],
-        "picture_choices": [
-          "//latex.artofproblemsolving.com/e/8/7/e878d1d4459a47247d03d903a46441e85ec0a503.png",
-          "//latex.artofproblemsolving.com/5/e/3/5e3873c70c300e3ec4b63524055644844431adcf.png",
-          "//latex.artofproblemsolving.com/b/4/8/b48891506b80a9964c81c03caf05cc4dd69deb92.png",
-          "//latex.artofproblemsolving.com/0/4/9/0493cb27bc77732e314703377654d93b2b21160f.png",
-          "//latex.artofproblemsolving.com/4/f/7/4f7a3ef049942c89a393ca7cf10d85cc7ddd0b8d.png",
-          "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
-          "//latex.artofproblemsolving.com/3/5/6/35672a19103f2ead1f02935bb8450addc3318b94.png",
-          "//latex.artofproblemsolving.com/6/c/d/6cdd1b53e5faf7a118222e4b7571d1e9afa0cf56.png",
-          "//latex.artofproblemsolving.com/8/5/c/85cf31acc4d19289fd14d58e39c17cff9fe2b0e4.png",
-          "//latex.artofproblemsolving.com/c/8/9/c8914c251134025522a9009e8cdf1f898c2e9e08.png",
-          "//latex.artofproblemsolving.com/2/8/b/28b85e18a5399ac1ecb0af9bf357d1864c0f61c1.png"
-        ],
         "latex_choices": [
-          "$N=7,$",
-          "$3 \\cdot 7 +1 = 22.$",
-          "$26.$",
-          "$6$",
-          "$N,$",
-          "$1.$",
-          "$N?$",
           "$\\textbf{(A) }73 \\qquad \\textbf{(B) }74 \\qquad \\textbf{(C) }75 \\qquad \\textbf{(D) }82 \\qquad \\textbf{(E) }83$"
         ],
         "asy_choices": [
