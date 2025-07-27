@@ -88,16 +88,20 @@ class QuestionParser {
   extractQuestionChoices(questionDetails) {
     // Priority: text_choices > latex_choices > picture_choices
     if (questionDetails.text_choices && questionDetails.text_choices.length > 0) {
-      return { choices: questionDetails.text_choices, hasLabels: false, isImageChoice: false };
+      // Escape dollar signs in text choices to prevent MathJax processing
+      const escapedTextChoices = questionDetails.text_choices.map(choice => 
+        choice.replace(/\$/g, '\\$')
+      );
+      return { choices: escapedTextChoices, hasLabels: false, isImageChoice: false, isTextChoice: true };
     } else if (questionDetails.latex_choices && questionDetails.latex_choices.length > 0) {
       const result = this.parseLatexChoices(questionDetails.latex_choices);
-      return { ...result, isImageChoice: false };
+      return { ...result, isImageChoice: false, isTextChoice: false };
     } else if (questionDetails.picture_choices && questionDetails.picture_choices.length > 0) {
       const imageChoices = questionDetails.picture_choices.map(url => {
         const imageUrl = this.processImageUrl(url);
         return `<img src="${imageUrl}" alt="Choice" class="choice-image" />`;
       });
-      return { choices: imageChoices, hasLabels: false, isImageChoice: true };
+      return { choices: imageChoices, hasLabels: false, isImageChoice: true, isTextChoice: false };
     }
     
     // If no choices found in any format, provide dummy choices
@@ -105,7 +109,8 @@ class QuestionParser {
       choices: ['A', 'B', 'C', 'D', 'E'], 
       hasLabels: false, 
       isImageChoice: false, 
-      isDummyChoices: true 
+      isDummyChoices: true,
+      isTextChoice: false
     };
   }
 
@@ -264,6 +269,7 @@ class QuestionParser {
       hasLabels: choiceResult.hasLabels,
       isImageChoice: choiceResult.isImageChoice || false,
       isDummyChoices: choiceResult.isDummyChoices || false,
+      isTextChoice: choiceResult.isTextChoice || false,
       answer: question.answer,
       solution: question.solution,
       originalQuestion: question

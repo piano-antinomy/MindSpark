@@ -263,7 +263,6 @@ function QuizTaking() {
   };
 
   const renderChoices = (question) => {
-    console.log('[QuizTaking] renderChoices - isDummyChoices:', question.isDummyChoices, 'choices:', question.choices);
     
     if ((!question.choices || question.choices.length === 0) && !question.isDummyChoices) {
       return <p className="text-gray-500 italic">No choices available for this question.</p>;
@@ -421,10 +420,18 @@ function QuizTaking() {
             />
             
             {/* Choice text - left aligned */}
-            <span 
-              className="choice-text flex-1 text-left" 
-              dangerouslySetInnerHTML={{ __html: choice }} 
-            />
+            {question.isTextChoice ? (
+              // For text choices, render as plain text (no LaTeX processing)
+              <span className="choice-text flex-1 text-left">
+                {choice}
+              </span>
+            ) : (
+              // For LaTeX choices, use dangerouslySetInnerHTML for MathJax processing
+              <span 
+                className="choice-text flex-1 text-left" 
+                dangerouslySetInnerHTML={{ __html: choice }} 
+              />
+            )}
             
             {/* Correct/Incorrect indicators */}
             {quizCompleted && isCorrect && (
