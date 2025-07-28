@@ -1508,7 +1508,7 @@
     {
       "id": "amc_2021_10a_7",
       "question": {
-        "text": "<p>Tom has a collection of <INSERTION_INDEX_1> snakes, <INSERTION_INDEX_2> of which are purple and <INSERTION_INDEX_3> of which are happy. He observes that</p><p>Which of these conclusions can be drawn about Tom's snakes?</p><p><INSERTION_INDEX_4> Snakes that can add are purple.</p><p><INSERTION_INDEX_5> Happy snakes are not purple.</p><p><INSERTION_INDEX_6> Happy snakes can't subtract.</p>",
+        "text": "<p>Tom has a collection of <INSERTION_INDEX_1> snakes, <INSERTION_INDEX_2> of which are purple and <INSERTION_INDEX_3> of which are happy. He observes that</p><ul><li>1) All of his happy snakes can add.</li><li>2) None of his purple snakes can subtract.</li><li>3) All of his snakes that can't subtract also can't add.</li></ul><p>Which of these conclusions can be drawn about Tom's snakes?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/0/3/0/030e19e4e2f1c074127cb50581e8496470c5419f.png",
@@ -1530,41 +1530,18 @@
             "alt_value": "$5$",
             "width": "8",
             "height": "12"
-          },
-          "INSERTION_INDEX_4": {
-            "picture": "//latex.artofproblemsolving.com/0/a/b/0ab3a9c13a5c376b1660f46d00b9007dbae240cb.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(C) }$",
-            "width": "27",
-            "height": "17"
-          },
-          "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/3/7/8/3787f1b7ce783a57c3a0d02ca4d485ccc950ff0a.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(D) }$",
-            "width": "28",
-            "height": "17"
-          },
-          "INSERTION_INDEX_6": {
-            "picture": "//latex.artofproblemsolving.com/8/1/d/81d05263c2e18459105296c8e3e06c9fddddb735.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(E) }$",
-            "width": "26",
-            "height": "17"
           }
         },
         "type": "multiple-choice",
-        "text_choices": [],
-        "picture_choices": [
-          {
-            "uri": "//latex.artofproblemsolving.com/5/0/6/506e909041d36bd739c8c959d341fcfbba3e9ad7.png",
-            "width": "27",
-            "height": "17"
-          }
+        "text_choices": [
+          "(A) Purple snakes can add.",
+          "(B) Purple snakes are happy.",
+          "(C) Snakes that can add are purple.",
+          "(D) Happy snakes are not purple.",
+          "(E) Happy snakes can't subtract."
         ],
-        "latex_choices": [
-          "$\\textbf{(B) }$"
-        ],
+        "picture_choices": [],
+        "latex_choices": [],
         "asy_choices": []
       },
       "tags": [],
@@ -5350,101 +5327,8 @@
     {
       "id": "amc_2021_10a_17",
       "question": {
-        "text": "<p>Trapezoid <INSERTION_INDEX_1> has <INSERTION_INDEX_2>, and <INSERTION_INDEX_3>. Let <INSERTION_INDEX_4> be the intersection of the diagonals <INSERTION_INDEX_5> and <INSERTION_INDEX_6>, and let <INSERTION_INDEX_7> be the midpoint of <INSERTION_INDEX_8>. Given that <INSERTION_INDEX_9>, the length of <INSERTION_INDEX_10> can be written in the form <INSERTION_INDEX_11>, where <INSERTION_INDEX_12> and <INSERTION_INDEX_13> are positive integers and <INSERTION_INDEX_14> is not divisible by the square of any prime. What is <INSERTION_INDEX_15>?</p>",
-        "insertions": {
-          "INSERTION_INDEX_1": {
-            "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
-            "alt_type": "latex",
-            "alt_value": "$ABCD$",
-            "width": "57",
-            "height": "13"
-          },
-          "INSERTION_INDEX_2": {
-            "picture": "//latex.artofproblemsolving.com/f/d/7/fd78cc5c1e99213589d4c2cb4003e8021a999f4e.png",
-            "alt_type": "latex",
-            "alt_value": "$\\overline{AB}\\parallel\\overline{CD},BC=CD=43$",
-            "width": "210",
-            "height": "20"
-          },
-          "INSERTION_INDEX_3": {
-            "picture": "//latex.artofproblemsolving.com/7/a/6/7a6d74961a0dbcdd0699e8a77642543f6b221fd1.png",
-            "alt_type": "latex",
-            "alt_value": "$\\overline{AD}\\perp\\overline{BD}$",
-            "width": "84",
-            "height": "15"
-          },
-          "INSERTION_INDEX_4": {
-            "picture": "//latex.artofproblemsolving.com/5/1/d/51da37d984564162c87710ca27bea422f657fb73.png",
-            "alt_type": "latex",
-            "alt_value": "$O$",
-            "width": "13",
-            "height": "12"
-          },
-          "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/1/2/5/12517bbc31cb9026c71299b7a0d232d07e60f284.png",
-            "alt_type": "latex",
-            "alt_value": "$\\overline{AC}$",
-            "width": "30",
-            "height": "18"
-          },
-          "INSERTION_INDEX_6": {
-            "picture": "//latex.artofproblemsolving.com/4/3/7/4373e7b4be983c0315e82e1fda1df66ed34dd7fb.png",
-            "alt_type": "latex",
-            "alt_value": "$\\overline{BD}$",
-            "width": "30",
-            "height": "15"
-          },
-          "INSERTION_INDEX_7": {
-            "picture": "//latex.artofproblemsolving.com/4/b/4/4b4cade9ca8a2c8311fafcf040bc5b15ca507f52.png",
-            "alt_type": "latex",
-            "alt_value": "$P$",
-            "width": "14",
-            "height": "12"
-          },
-          "INSERTION_INDEX_8": {
-            "picture": "//latex.artofproblemsolving.com/4/3/7/4373e7b4be983c0315e82e1fda1df66ed34dd7fb.png",
-            "alt_type": "latex",
-            "alt_value": "$\\overline{BD}$",
-            "width": "30",
-            "height": "15"
-          },
-          "INSERTION_INDEX_9": {
-            "picture": "//latex.artofproblemsolving.com/d/8/f/d8f489d0ceff5132ec421eff3312e3b37fe459f1.png",
-            "alt_type": "latex",
-            "alt_value": "$OP=11$",
-            "width": "70",
-            "height": "13"
-          },
-          "INSERTION_INDEX_10": {
-            "picture": "//latex.artofproblemsolving.com/b/c/5/bc56862b1fdb71204894da278e42ef75de73a40b.png",
-            "alt_type": "latex",
-            "alt_value": "$AD$",
-            "width": "28",
-            "height": "13"
-          },
-          "INSERTION_INDEX_11": {
-            "picture": "//latex.artofproblemsolving.com/a/2/f/a2f1dcbb9badfd3447d4e7351678b7d71ea9bff6.png",
-            "alt_type": "latex",
-            "alt_value": "$m\\sqrt{n}$",
-            "width": "44",
-            "height": "21"
-          },
-          "INSERTION_INDEX_12": {
-            "picture": "//latex.artofproblemsolving.com/f/5/0/f5047d1e0cbb50ec208923a22cd517c55100fa7b.png",
-            "alt_type": "latex",
-            "alt_value": "$m$",
-            "width": "15",
-            "height": "8"
-          },
-          "INSERTION_INDEX_13": {
-            "picture": "//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png",
-            "alt_type": "latex",
-            "alt_value": "$n$",
-            "width": "10",
-            "height": "8"
-          },
-          "INSERTION_INDEX_14": {
-            "picture": "//latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png",
+        "text": "<p>Ravon, Oscar, Aditi, Tyrone, and Kim play a card game. Each person is given 2 cards out of a set of 10 cards numbered 1, 2, 3, ..., 10. The score of a player is the sum of the numbers of their cards. The scores of the players are as follows: Ravon--11, Oscar--4, Aditi--7, Tyrone--16, Kim--17. Which of the following statements is true?</p>",
+        "insertions": {},
             "alt_type": "latex",
             "alt_value": "$n$",
             "width": "10",
@@ -5459,17 +5343,15 @@
           }
         },
         "type": "multiple-choice",
-        "text_choices": [],
-        "picture_choices": [
-          {
-            "uri": "//latex.artofproblemsolving.com/c/1/2/c12e7d75160373ad8cd094c4542df8aa1f5d7023.png",
-            "width": "434",
-            "height": "17"
-          }
+        "text_choices": [
+          "(A) Ravon was given card 3.",
+          "(B) Aditi was given card 3.",
+          "(C) Ravon was given card 4.",
+          "(D) Aditi was given card 4.",
+          "(E) Tyrone was given card 7."
         ],
-        "latex_choices": [
-          "$\\textbf{(A) }65 \\qquad \\textbf{(B) }132 \\qquad \\textbf{(C) }157 \\qquad \\textbf{(D) }194\\qquad \\textbf{(E) }215$"
-        ],
+        "picture_choices": [],
+        "latex_choices": [],
         "asy_choices": []
       },
       "tags": [],
@@ -5477,9 +5359,9 @@
       "answer": "D",
       "solutions": [
         {
-          "text": "<p>Angle chasing* reveals that <INSERTION_INDEX_1>, therefore <INSERTION_INDEX_2>or <INSERTION_INDEX_3>.</p><p>Additional angle chasing shows that <INSERTION_INDEX_4>, therefore<INSERTION_INDEX_5>or <INSERTION_INDEX_6> and <INSERTION_INDEX_7>.</p><p>Since <INSERTION_INDEX_8> is right, the Pythagorean theorem implies that<INSERTION_INDEX_9>The answer is <INSERTION_INDEX_10>.</p><ul><li>Angle Chasing: If we set <INSERTION_INDEX_11>, then we know that <INSERTION_INDEX_12> because <INSERTION_INDEX_13> is isosceles. Then, <INSERTION_INDEX_14>, so <INSERTION_INDEX_15> is a right angle. Because <INSERTION_INDEX_16> and <INSERTION_INDEX_17>, we conclude that <INSERTION_INDEX_18> too. Lastly, because <INSERTION_INDEX_19> and <INSERTION_INDEX_20> are both right triangles, they are similar by AA.</li></ul><p>~mn28407 (Solution)</p><p>~mm (Angle Chasing Remark)</p><p>~eagleye ~MRENTHUSIASM ~charyyu83 (Minor Edits)</p>",
-          "insertions": {
-            "INSERTION_INDEX_1": {
+                      "text": "<p>Let's analyze the possible card combinations for each player based on their scores:</p><p>Ravon (score 11): Possible pairs are (1,10), (2,9), (3,8), (4,7), (5,6)</p><p>Oscar (score 4): Only possible pair is (1,3)</p><p>Aditi (score 7): Possible pairs are (1,6), (2,5), (3,4)</p><p>Tyrone (score 16): Only possible pair is (6,10)</p><p>Kim (score 17): Only possible pair is (7,10)</p><p>Since Oscar has card 3 and Tyrone has card 6, and Kim has card 7, we can determine that Aditi must have card 4 (since she has score 7 and the only remaining combination is (3,4), but Oscar already has 3, so she must have (4,3) which gives her card 4).</p><p>Therefore, the correct answer is <strong>(D) Aditi was given card 4.</strong></p>",
+            "insertions": {}
+          }
               "picture": "//latex.artofproblemsolving.com/0/a/a/0aa6a7eab8ef130d5531efb40b8613d2d21465cf.png",
               "alt_type": "latex",
               "alt_value": "$\\triangle BPC\\sim\\triangle BDA$",
