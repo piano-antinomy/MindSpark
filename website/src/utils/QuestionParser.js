@@ -32,8 +32,11 @@ class QuestionParser {
         // Use picture URL with proper protocol for image type
         const imageUrl = this.processImageUrl(insertion.picture);
         const altText = insertion.alt_value || 'Question image';
+        const width = insertion.width || '';
+        const height = insertion.height || '';
+        const style = width && height ? `style="width: ${width}px; height: ${height}px;"` : '';
         processedText = processedText.replace(marker, 
-          `<img src="${imageUrl}" alt="${altText}" class="question-image" />`);
+          `<img src="${imageUrl}" alt="${altText}" class="question-image" ${style} />`);
       } else if (insertion.alt_type === 'latex' && insertion.alt_value) {
         // Use LaTeX content (preprocess it first)
         const preprocessedLatex = this.preprocessLatexText(insertion.alt_value);
@@ -42,8 +45,11 @@ class QuestionParser {
         // Fallback: Use picture URL with proper protocol (legacy support)
         const imageUrl = this.processImageUrl(insertion.picture);
         const altText = insertion.alt_value || 'Question image';
+        const width = insertion.width || '';
+        const height = insertion.height || '';
+        const style = width && height ? `style="width: ${width}px; height: ${height}px;"` : '';
         processedText = processedText.replace(marker, 
-          `<img src="${imageUrl}" alt="${altText}" class="question-image" />`);
+          `<img src="${imageUrl}" alt="${altText}" class="question-image" ${style} />`);
       } else if (insertion.alt_value) {
         // Use alternative text value
         processedText = processedText.replace(marker, insertion.alt_value);
@@ -97,9 +103,23 @@ class QuestionParser {
       const result = this.parseLatexChoices(questionDetails.latex_choices);
       return { ...result, isImageChoice: false, isTextChoice: false };
     } else if (questionDetails.picture_choices && questionDetails.picture_choices.length > 0) {
-      const imageChoices = questionDetails.picture_choices.map(url => {
-        const imageUrl = this.processImageUrl(url);
-        return `<img src="${imageUrl}" alt="Choice" class="choice-image" />`;
+      const imageChoices = questionDetails.picture_choices.map(choice => {
+        // Handle both old format (string) and new format (object with uri, width, height)
+        if (typeof choice === 'string') {
+          // Convert old format to new format
+          return {
+            uri: this.processImageUrl(choice),
+            width: '',
+            height: ''
+          };
+        } else {
+          // New format - return the object with processed URL
+          return {
+            uri: this.processImageUrl(choice.uri),
+            width: choice.width || '',
+            height: choice.height || ''
+          };
+        }
       });
       return { choices: imageChoices, hasLabels: false, isImageChoice: true, isTextChoice: false };
     }

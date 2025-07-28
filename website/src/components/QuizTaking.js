@@ -461,7 +461,20 @@ function QuizTaking() {
       {/* Show image in question content for image choices */}
       {question.isImageChoice && question.choices && question.choices.length > 0 && (
         <div className="mt-6 question-image-container">
-          <div dangerouslySetInnerHTML={{ __html: question.choices[0] }} />
+          {question.choices.map((choice, choiceIndex) => {
+            const style = choice.width && choice.height ? 
+              { width: `${choice.width}px`, height: `${choice.height}px` } : {};
+            
+            return (
+              <img 
+                key={choiceIndex}
+                src={choice.uri} 
+                alt="Question image" 
+                className="question-image"
+                style={style}
+              />
+            );
+          })}
         </div>
       )}
       

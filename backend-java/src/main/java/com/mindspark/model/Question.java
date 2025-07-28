@@ -60,7 +60,7 @@ public class Question {
         private List<String> textChoices;
         
         @JsonProperty("picture_choices")
-        private List<String> pictureChoices;
+        private List<PictureChoice> pictureChoices;
         
         @JsonProperty("latex_choices")
         private List<String> latexChoices;
@@ -81,8 +81,8 @@ public class Question {
         public List<String> getTextChoices() { return textChoices; }
         public void setTextChoices(List<String> textChoices) { this.textChoices = textChoices; }
 
-        public List<String> getPictureChoices() { return pictureChoices; }
-        public void setPictureChoices(List<String> pictureChoices) { this.pictureChoices = pictureChoices; }
+        public List<PictureChoice> getPictureChoices() { return pictureChoices; }
+        public void setPictureChoices(List<PictureChoice> pictureChoices) { this.pictureChoices = pictureChoices; }
 
         public List<String> getLatexChoices() { return latexChoices; }
         public void setLatexChoices(List<String> latexChoices) { this.latexChoices = latexChoices; }
@@ -100,6 +100,12 @@ public class Question {
         
         @JsonProperty("alt_value")
         private String altValue;
+        
+        @JsonProperty("width")
+        private String width;
+        
+        @JsonProperty("height")
+        private String height;
 
         // Getters and Setters
         public String getPicture() { return picture; }
@@ -110,6 +116,42 @@ public class Question {
 
         public String getAltValue() { return altValue; }
         public void setAltValue(String altValue) { this.altValue = altValue; }
+        
+        public String getWidth() { return width; }
+        public void setWidth(String width) { this.width = width; }
+        
+        public String getHeight() { return height; }
+        public void setHeight(String height) { this.height = height; }
+    }
+
+    public static class PictureChoice {
+        @JsonProperty("uri")
+        private String uri;
+        
+        @JsonProperty("width")
+        private String width;
+        
+        @JsonProperty("height")
+        private String height;
+
+        // Constructors
+        public PictureChoice() {}
+        
+        public PictureChoice(String uri, String width, String height) {
+            this.uri = uri;
+            this.width = width;
+            this.height = height;
+        }
+
+        // Getters and Setters
+        public String getUri() { return uri; }
+        public void setUri(String uri) { this.uri = uri; }
+
+        public String getWidth() { return width; }
+        public void setWidth(String width) { this.width = width; }
+
+        public String getHeight() { return height; }
+        public void setHeight(String height) { this.height = height; }
     }
 
     public static class Solution {

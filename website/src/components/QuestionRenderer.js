@@ -81,10 +81,23 @@ function QuestionRenderer({
     }
 
     if (processedQuestion.isImageChoice) {
-      // Handle image choices - just show the image, no fake choices
+      // Handle image choices - now returns complex objects with uri, width, height
       return (
         <div className="question-image-container">
-          <div dangerouslySetInnerHTML={{ __html: processedQuestion.choices[0] }} />
+          {processedQuestion.choices.map((choice, choiceIndex) => {
+            const style = choice.width && choice.height ? 
+              { width: `${choice.width}px`, height: `${choice.height}px` } : {};
+            
+            return (
+              <img 
+                key={choiceIndex}
+                src={choice.uri} 
+                alt="Choice" 
+                className="choice-image"
+                style={style}
+              />
+            );
+          })}
         </div>
       );
     } else {
