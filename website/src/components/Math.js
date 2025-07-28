@@ -276,7 +276,7 @@ Please select a level above to begin practicing!`);
   return (
     <div className="math-layout">
       {/* Left Menu Navigation */}
-      <nav className="math-left-menu">
+      <nav className="math-left-menu" style={{ overflowY: 'auto', height: '100vh' }}>
         <div className="menu-header">
           <h1>📊 Mathematics</h1>
           <nav className="breadcrumb">
@@ -336,7 +336,7 @@ Please select a level above to begin practicing!`);
       </nav>
 
       {/* Main content area */}
-      <main className="math-main-content">
+      <main className="math-main-content" style={{ overflowY: 'auto', height: '100vh' }}>
         <div className="tab-content">
           <div className="problems-content">
             {renderProblemsContent()}

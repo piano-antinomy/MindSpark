@@ -581,7 +581,7 @@
     {
       "id": "amc_2022_10b_4",
       "question": {
-        "text": "<p>A donkey suffers an attack of hiccups and the first hiccup happens at <INSERTION_INDEX_1> one afternoon. Suppose thatthe donkey hiccups regularly every <INSERTION_INDEX_2> seconds. At what time does the donkey\u2019s <INSERTION_INDEX_3>th hiccup occur?</p><p><INSERTION_INDEX_4></p><p><INSERTION_INDEX_5></p><p><INSERTION_INDEX_6></p>",
+        "text": "<p>A donkey suffers an attack of hiccups and the first hiccup happens at <INSERTION_INDEX_1> one afternoon. Suppose thatthe donkey hiccups regularly every <INSERTION_INDEX_2> seconds. At what time does the donkey\u2019s <INSERTION_INDEX_3>th hiccup occur?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/e/d/3/ed3ec6d16359b83b15754968b8fde8a9bad18553.png",
@@ -603,40 +603,13 @@
             "alt_value": "$700$",
             "width": "26",
             "height": "12"
-          },
-          "INSERTION_INDEX_4": {
-            "picture": "//latex.artofproblemsolving.com/7/a/8/7a8c9681498f3e18c75ba827d0839b1184b11940.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(C) }25 \\text{ seconds after } 4:58$",
-            "width": "202",
-            "height": "18"
-          },
-          "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/4/1/9/4190cdb3f3500b45771091c89ee053ae2b7606ae.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(D) }30 \\text{ seconds after } 4:58$",
-            "width": "203",
-            "height": "18"
-          },
-          "INSERTION_INDEX_6": {
-            "picture": "//latex.artofproblemsolving.com/d/2/9/d2943e0d9b86674f18c9beddeb690df5c65df6f6.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(E) }35 \\text{ seconds after } 4:58$",
-            "width": "201",
-            "height": "18"
           }
         },
         "type": "multiple-choice",
         "text_choices": [],
-        "picture_choices": [
-          {
-            "uri": "//latex.artofproblemsolving.com/0/1/a/01a7af7d95e8f0972ab6db2f4cabe8d33fb89a63.png",
-            "width": "202",
-            "height": "18"
-          }
-        ],
+        "picture_choices": [],
         "latex_choices": [
-          "$\\textbf{(B) }20 \\text{ seconds after } 4:58$"
+          "$\\textbf{(A) }15 \\text{ seconds after } 4:58 \\quad \\textbf{(B) }20 \\text{ seconds after } 4:58 \\quad \\textbf{(C) }25 \\text{ seconds after } 4:58 \\quad \\textbf{(D) }30 \\text{ seconds after } 4:58 \\quad \\textbf{(E) }35 \\text{ seconds after } 4:58$"
         ],
         "asy_choices": []
       },
@@ -3543,32 +3516,16 @@
     {
       "id": "amc_2022_10b_11",
       "question": {
-        "text": "<p>All the high schools in a large school district are involved in a fundraiser selling T-shirts. Which of the choices below is logically equivalent to the statement \"No school bigger than Euclid HS sold more T-shirts than Euclid HS\"?</p><p><INSERTION_INDEX_1> All schools bigger than Euclid HS sold fewer T-shirts than Euclid HS.</p><p><INSERTION_INDEX_2> All schools that sold fewer T-shirts than Euclid HS are smaller than Euclid HS.</p><p><INSERTION_INDEX_3> All schools smaller than Euclid HS sold more T-shirts than Euclid HS.</p>",
-        "insertions": {
-          "INSERTION_INDEX_1": {
-            "picture": "//latex.artofproblemsolving.com/0/a/b/0ab3a9c13a5c376b1660f46d00b9007dbae240cb.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(C) }$",
-            "width": "27",
-            "height": "17"
-          },
-          "INSERTION_INDEX_2": {
-            "picture": "//latex.artofproblemsolving.com/3/7/8/3787f1b7ce783a57c3a0d02ca4d485ccc950ff0a.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(D) }$",
-            "width": "28",
-            "height": "17"
-          },
-          "INSERTION_INDEX_3": {
-            "picture": "//latex.artofproblemsolving.com/8/1/d/81d05263c2e18459105296c8e3e06c9fddddb735.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(E) }$",
-            "width": "26",
-            "height": "17"
-          }
-        },
+        "text": "<p>All the high schools in a large school district are involved in a fundraiser selling T-shirts. Which of the choices below is logically equivalent to the statement \"No school bigger than Euclid HS sold more T-shirts than Euclid HS\"?</p>",
+        "insertions": {},
         "type": "multiple-choice",
-        "text_choices": [],
+        "text_choices": [
+          "(A) All schools smaller than Euclid HS sold fewer T-shirts than Euclid HS.",
+          "(B) No school that sold more T-shirts than Euclid HS is bigger than Euclid HS.",
+          "(C) All schools bigger than Euclid HS sold fewer T-shirts than Euclid HS.",
+          "(D) All schools that sold fewer T-shirts than Euclid HS are smaller than Euclid HS.",
+          "(E) All schools smaller than Euclid HS sold more T-shirts than Euclid HS."
+        ],
         "picture_choices": [
           {
             "uri": "//latex.artofproblemsolving.com/5/0/6/506e909041d36bd739c8c959d341fcfbba3e9ad7.png",
@@ -3577,7 +3534,6 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf{(B) }$"
         ],
         "asy_choices": []
       },
@@ -8778,7 +8734,7 @@
     {
       "id": "amc_2022_10b_19",
       "question": {
-        "text": "<p>Each square in a <INSERTION_INDEX_1> grid is either filled or empty, and has up to eight adjacent neighboring squares, where neighboring squares share either a side or a corner. The grid is transformed by the following rules:</p>",
+        "text": "<p>Each square in a <INSERTION_INDEX_1> grid is either filled or empty, and has up to eight adjacent neighboring squares, where neighboring squares share either a side or a corner. The grid is transformed by the following rules:</p><p>1) Any filled square with two or three filled neighbors remains filled.</p><p>2) Any empty square with exactly three filled neighbors becomes a filled square.</p><p>3) All other squares remain empty or become empty.</p><p>A sample transformation is shown in the figure below.</p><p><INSERTION_INDEX_2></p><p>Suppose the <INSERTION_INDEX_3> grid has a border of empty squares surrounding a <INSERTION_INDEX_4> subgrid. How many initial configurations will lead to a transformed grid consisting of a single filled square in the center after a single transformation? (Rotations and reflections of the same configuration are considered different.)</p><p><INSERTION_INDEX_5></p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/1/9/7/197151a067f49bd4daa1952d1a4fac322409f0a6.png",
@@ -8786,40 +8742,40 @@
             "alt_value": "$5 \\times 5$",
             "width": "40",
             "height": "12"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/0/0/3/00333423a7ddd483233c145023df02bdb469a3b9.png",
+            "alt_type": "image",
+            "alt_value": "Transformation rule diagram 1",
+            "width": "398",
+            "height": "182"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "//latex.artofproblemsolving.com/1/9/7/197151a067f49bd4daa1952d1a4fac322409f0a6.png",
+            "alt_type": "latex",
+            "alt_value": "$5 \\times 5$",
+            "width": "40",
+            "height": "12"
+          },
+          "INSERTION_INDEX_4": {
+            "picture": "//latex.artofproblemsolving.com/d/2/7/d278803d72fcc493afb1559174a483aa7f41d143.png",
+            "alt_type": "latex",
+            "alt_value": "$3 \\times 3$",
+            "width": "42",
+            "height": "15"
+          },
+          "INSERTION_INDEX_5": {
+            "picture": "//latex.artofproblemsolving.com/2/5/3/253c2691ed603d5d600e2b1becee941d5268c900.png",
+            "alt_type": "image",
+            "alt_value": "Transformation rule diagram 2",
+            "width": "398",
+            "height": "182"
           }
         },
         "type": "multiple-choice",
         "text_choices": [],
-        "picture_choices": [
-          {
-            "uri": "//latex.artofproblemsolving.com/0/0/3/00333423a7ddd483233c145023df02bdb469a3b9.png",
-            "width": "398",
-            "height": "182"
-          },
-          {
-            "uri": "//latex.artofproblemsolving.com/1/9/7/197151a067f49bd4daa1952d1a4fac322409f0a6.png",
-            "width": "40",
-            "height": "12"
-          },
-          {
-            "uri": "//latex.artofproblemsolving.com/d/2/7/d278803d72fcc493afb1559174a483aa7f41d143.png",
-            "width": "42",
-            "height": "15"
-          },
-          {
-            "uri": "//latex.artofproblemsolving.com/2/5/3/253c2691ed603d5d600e2b1becee941d5268c900.png",
-            "width": "398",
-            "height": "182"
-          },
-          {
-            "uri": "//latex.artofproblemsolving.com/c/c/0/cc04fa4d612e3cb256e4e121720b3fbfeb920e61.png",
-            "width": "397",
-            "height": "18"
-          }
-        ],
+        "picture_choices": [],
         "latex_choices": [
-          "$5 \\times 5$",
-          "$3 \\times 3$",
           "$\\textbf{(A)}\\ 14 \\qquad\\textbf{(B)}\\ 18 \\qquad\\textbf{(C)}\\ 22 \\qquad\\textbf{(D)}\\ 26 \\qquad\\textbf{(E)}\\ 30$"
         ],
         "asy_choices": [
