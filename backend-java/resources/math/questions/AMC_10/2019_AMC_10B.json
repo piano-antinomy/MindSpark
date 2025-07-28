@@ -1281,7 +1281,7 @@
     {
       "id": "amc_2019_10b_5",
       "question": {
-        "text": "<p>Triangle <INSERTION_INDEX_1> lies in the first quadrant. Points <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, and <INSERTION_INDEX_4> are reflected across the line <INSERTION_INDEX_5> to points <INSERTION_INDEX_6>, <INSERTION_INDEX_7>, and <INSERTION_INDEX_8>, respectively. Assume that none of the vertices of the triangle lie on the line <INSERTION_INDEX_9>. Which of the following statements is <i><u>not</u></i> always true?</p><p><INSERTION_INDEX_10> The slope of line <INSERTION_INDEX_11> is <INSERTION_INDEX_12>.</p><p><INSERTION_INDEX_13> The slopes of lines <INSERTION_INDEX_14> and <INSERTION_INDEX_15> are the same.</p><p><INSERTION_INDEX_16> Lines <INSERTION_INDEX_17> and <INSERTION_INDEX_18> are perpendicular to each other.</p>",
+        "text": "<p>Triangle <INSERTION_INDEX_1> lies in the first quadrant. Points <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, and <INSERTION_INDEX_4> are reflected across the line <INSERTION_INDEX_5> to points <INSERTION_INDEX_6>, <INSERTION_INDEX_7>, and <INSERTION_INDEX_8>, respectively. Assume that none of the vertices of the triangle lie on the line <INSERTION_INDEX_9>. Which of the following statements is <i><u>not</u></i> always true?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png",
@@ -1345,95 +1345,18 @@
             "alt_value": "$y=x$",
             "width": "44",
             "height": "11"
-          },
-          "INSERTION_INDEX_10": {
-            "picture": "//latex.artofproblemsolving.com/0/a/b/0ab3a9c13a5c376b1660f46d00b9007dbae240cb.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(C) }$",
-            "width": "27",
-            "height": "17"
-          },
-          "INSERTION_INDEX_11": {
-            "picture": "//latex.artofproblemsolving.com/d/5/9/d59f5d75cc27d504ede022aab803742e799709f4.png",
-            "alt_type": "latex",
-            "alt_value": "$AA'$",
-            "width": "30",
-            "height": "14"
-          },
-          "INSERTION_INDEX_12": {
-            "picture": "//latex.artofproblemsolving.com/b/a/e/bae5aba07d37ff6ff813107e76260fb31ad5794e.png",
-            "alt_type": "latex",
-            "alt_value": "$-1$",
-            "width": "22",
-            "height": "12"
-          },
-          "INSERTION_INDEX_13": {
-            "picture": "//latex.artofproblemsolving.com/3/7/8/3787f1b7ce783a57c3a0d02ca4d485ccc950ff0a.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(D) }$",
-            "width": "28",
-            "height": "17"
-          },
-          "INSERTION_INDEX_14": {
-            "picture": "//latex.artofproblemsolving.com/d/5/9/d59f5d75cc27d504ede022aab803742e799709f4.png",
-            "alt_type": "latex",
-            "alt_value": "$AA'$",
-            "width": "30",
-            "height": "14"
-          },
-          "INSERTION_INDEX_15": {
-            "picture": "//latex.artofproblemsolving.com/4/4/b/44b7058f8a28ca225136b284b337138a54e39e8c.png",
-            "alt_type": "latex",
-            "alt_value": "$CC'$",
-            "width": "32",
-            "height": "14"
-          },
-          "INSERTION_INDEX_16": {
-            "picture": "//latex.artofproblemsolving.com/8/1/d/81d05263c2e18459105296c8e3e06c9fddddb735.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(E) }$",
-            "width": "26",
-            "height": "17"
-          },
-          "INSERTION_INDEX_17": {
-            "picture": "//latex.artofproblemsolving.com/5/7/e/57ee5125358c0606c9b588580ddfa66f83e607b7.png",
-            "alt_type": "latex",
-            "alt_value": "$AB$",
-            "width": "27",
-            "height": "13"
-          },
-          "INSERTION_INDEX_18": {
-            "picture": "//latex.artofproblemsolving.com/4/e/3/4e39919f572d9421d9fe01d80321554dfafdeced.png",
-            "alt_type": "latex",
-            "alt_value": "$A'B'$",
-            "width": "36",
-            "height": "14"
           }
         },
         "type": "multiple-choice",
-        "text_choices": [],
-        "picture_choices": [
-          {
-            "uri": "//latex.artofproblemsolving.com/5/0/6/506e909041d36bd739c8c959d341fcfbba3e9ad7.png",
-            "width": "27",
-            "height": "17"
-          },
-          {
-            "uri": "//latex.artofproblemsolving.com/e/2/a/e2a559986ed5a0ffc5654bd367c29dfc92913c36.png",
-            "width": "42",
-            "height": "13"
-          },
-          {
-            "uri": "//latex.artofproblemsolving.com/0/2/2/022948689ac03ea1705a6af78b86d32ae2a369eb.png",
-            "width": "55",
-            "height": "14"
-          }
+        "text_choices": [
+          "Triangle A'B'C' lies in the first quadrant.",
+          "Triangles ABC and A'B'C' have the same area.",
+          "The slope of line AA' is -1.",
+          "The slopes of lines AA' and CC' are the same.",
+          "Lines AB and A'B' are perpendicular to each other."
         ],
-        "latex_choices": [
-          "$\\textbf{(B) }$",
-          "$ABC$",
-          "$A'B'C'$"
-        ],
+        "picture_choices": [],
+        "latex_choices": [],
         "asy_choices": []
       },
       "tags": [],
@@ -3043,7 +2966,13 @@
           }
         },
         "type": "multiple-choice",
-        "text_choices": [],
+        "text_choices": [
+          "(A) {-1, 0}",
+          "(B) The set of nonpositive integers",
+          "(C) {-1, 0, 1}",
+          "(D) {0}",
+          "(E) The set of nonnegative integers"
+        ],
         "picture_choices": [
           {
             "uri": "//latex.artofproblemsolving.com/d/5/f/d5fb5c6ba1529faa7d7b2434df76ed9f3112bd3d.png",
