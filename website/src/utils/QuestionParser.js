@@ -148,7 +148,7 @@ class QuestionParser {
       let matchedPattern = null;
       
       for (const pattern of this.labelPatterns) {
-        const regex = new RegExp(`\\\\${pattern}\\{[^}]*\\([A-E]\\)[^}]*\\}`, 'g');
+        const regex = new RegExp(`\\\\${pattern}\\s?\\{[^}]*\\([A-E]\\)[^}]*\\}`, 'g');
         const matches = choiceString.match(regex);
         
         if (matches && matches.length > 1) {
@@ -164,7 +164,7 @@ class QuestionParser {
       
       // Alternative approach: try splitting by the pattern (A), (B), etc.
       for (const pattern of this.labelPatterns) {
-        const labelPattern = new RegExp(`\\\\${pattern}\\{.*?\\([A-E]\\).*?\\}`, 'g');
+        const labelPattern = new RegExp(`\\\\${pattern}\\s?\\{.*?\\([A-E]\\).*?\\}`, 'g');
         const labelMatches = choiceString.match(labelPattern);
         
         if (labelMatches && labelMatches.length > 1) {
@@ -256,7 +256,8 @@ class QuestionParser {
     for (const pattern of this.labelPatterns) {
       if (foundMatches) break;
       
-      const regex = new RegExp(`(\\\\${pattern}\\{[^}]*\\([A-E]\\)[^}]*\\}[^\\\\]*)`, 'g');
+      // Allow optional single space between pattern and opening brace
+      const regex = new RegExp(`(\\\\${pattern}\\s?\\{[^}]*\\([A-E]\\)[^}]*\\}[^\\\\]*)`, 'g');
       let match;
       
       while ((match = regex.exec(content)) !== null) {

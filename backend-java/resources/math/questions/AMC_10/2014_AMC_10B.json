@@ -34,7 +34,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf {(A) } 33 \\qquad \\textbf {(B) } 35 \\qquad \\textbf {(C) } 37 \\qquad \\textbf {(D) } 39 \\qquad \\textbf {(E) } 41$"
+          "$\\textbf{(A) } 33 \\qquad \\textbf{(B) } 35 \\qquad \\textbf{(C) } 37 \\qquad \\textbf{(D) } 39 \\qquad \\textbf{(E) } 41$"
         ],
         "asy_choices": []
       },
@@ -133,7 +133,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf {(A) } 16 \\qquad \\textbf {(B) } 24 \\qquad \\textbf {(C) } 32 \\qquad \\textbf {(D) } 48 \\qquad \\textbf {(E) } 64$"
+          "$\\textbf{(A) } 16 \\qquad \\textbf{(B) } 24 \\qquad \\textbf{(C) } 32 \\qquad \\textbf{(D) } 48 \\qquad \\textbf{(E) } 64$"
         ],
         "asy_choices": []
       },
@@ -216,7 +216,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf {(A) } 30 \\qquad \\textbf {(B) } \\frac{400}{11} \\qquad \\textbf {(C) } \\frac{75}{2} \\qquad \\textbf {(D) } 40 \\qquad \\textbf {(E) } \\frac{300}{7}$"
+          "$\\textbf{(A) } 30 \\qquad \\textbf{(B) } \\frac{400}{11} \\qquad \\textbf{(C) } \\frac{75}{2} \\qquad \\textbf{(D) } 40 \\qquad \\textbf{(E) } \\frac{300}{7}$"
         ],
         "asy_choices": []
       },
@@ -390,7 +390,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf {(A) } \\frac{3}{2} \\qquad \\textbf {(B) } \\frac{5}{3} \\qquad \\textbf {(C) } \\frac{7}{4} \\qquad \\textbf {(D) } 2 \\qquad \\textbf {(E) } \\frac{13}{4}$"
+          "$\\textbf{(A) } \\frac{3}{2} \\qquad \\textbf{(B) } \\frac{5}{3} \\qquad \\textbf{(C) } \\frac{7}{4} \\qquad \\textbf{(D) } 2 \\qquad \\textbf{(E) } \\frac{13}{4}$"
         ],
         "asy_choices": []
       },
@@ -573,6 +573,75 @@
       }
     },
     {
+      "id": "amc_2014_10b_6",
+      "question": {
+        "text": "<p>Orvin went to the store with just enough money to buy <INSERTION_INDEX_1> balloons. When he arrived, he discovered that the store had a special sale on balloons: buy 1 balloon at the regular price and get a second at <INSERTION_INDEX_2> off the regular price. What is the greatest number of balloons Orvin could buy?</p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "alt_type": "latex",
+            "alt_value": "$30$"
+          },
+          "INSERTION_INDEX_2": {
+            "alt_type": "latex",
+            "alt_value": "$\\frac{1}{3}$"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [],
+        "latex_choices": [
+          "$\\textbf{(A) } 33 \\qquad \\textbf{(B) } 34 \\qquad \\textbf{(C) } 36 \\qquad \\textbf{(D) } 38 \\qquad \\textbf{(E) } 39$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "C",
+      "solutions": [
+        {
+          "text": "<p>Solution 1</p><p>Since he pays <INSERTION_INDEX_1> the price for every second balloon, the price for two balloons is <INSERTION_INDEX_2>. Thus, if he had enough money to buy <INSERTION_INDEX_3> balloons before, he now has enough to buy <INSERTION_INDEX_4>.</p><p>Solution 2</p><p>Suppose each balloon costs <INSERTION_INDEX_5> dollars. Therefore, Orvin brought <INSERTION_INDEX_6> dollars. Since every second balloon costs <INSERTION_INDEX_7> dollars, Orvin gets 2 balloons for <INSERTION_INDEX_8> dollars. Therefore, Orvin gets <INSERTION_INDEX_9>.</p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "alt_type": "latex",
+              "alt_value": "$\\frac{2}{3}$"
+            },
+            "INSERTION_INDEX_2": {
+              "alt_type": "latex",
+              "alt_value": "$\\frac{5}{3}$"
+            },
+            "INSERTION_INDEX_3": {
+              "alt_type": "latex",
+              "alt_value": "$30$"
+            },
+            "INSERTION_INDEX_4": {
+              "alt_type": "latex",
+              "alt_value": "$30 \\cdot \\frac{6}{5} = \\boxed{(C) 36}$"
+            },
+            "INSERTION_INDEX_5": {
+              "alt_type": "latex",
+              "alt_value": "$3$"
+            },
+            "INSERTION_INDEX_6": {
+              "alt_type": "latex",
+              "alt_value": "$90$"
+            },
+            "INSERTION_INDEX_7": {
+              "alt_type": "latex",
+              "alt_value": "$\\frac{2}{3} \\cdot 3 = 2$"
+            },
+            "INSERTION_INDEX_8": {
+              "alt_type": "latex",
+              "alt_value": "$5$"
+            },
+            "INSERTION_INDEX_9": {
+              "alt_type": "latex",
+              "alt_value": "$\\frac{2 \\cdot 90}{5} = \\boxed{(C) 36}$"
+            }
+          }
+        }
+      ]
+    },
+    {
       "id": "amc_2014_10b_7",
       "question": {
         "text": "<p>Suppose <INSERTION_INDEX_1> and A is <INSERTION_INDEX_2>% greater than <INSERTION_INDEX_3>. What is <INSERTION_INDEX_4>?</p>",
@@ -616,7 +685,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf {(A) } 100\\left(\\frac{A-B}{B}\\right) \\qquad \\textbf {(B) } 100\\left(\\frac{A+B}{B}\\right) \\qquad \\textbf {(C) } 100\\left(\\frac{A+B}{A}\\right)\\qquad \\textbf {(D) } 100\\left(\\frac{A-B}{A}\\right) \\qquad \\textbf {(E) } 100\\left(\\frac{A}{B}\\right)$"
+          "$\\textbf{(A) } 100\\left(\\frac{A-B}{B}\\right) \\qquad \\textbf{(B) } 100\\left(\\frac{A+B}{B}\\right) \\qquad \\textbf{(C) } 100\\left(\\frac{A+B}{A}\\right)\\qquad \\textbf{(D) } 100\\left(\\frac{A-B}{A}\\right) \\qquad \\textbf{(E) } 100\\left(\\frac{A}{B}\\right)$"
         ],
         "asy_choices": []
       },
@@ -865,7 +934,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf {(A) } \\frac{b}{1080t} \\qquad \\textbf {(B) } \\frac{30t}{b} \\qquad \\textbf {(C) } \\frac{30b}{t}\\qquad \\textbf {(D) } \\frac{10t}{b} \\qquad \\textbf {(E) } \\frac{10b}{t}$"
+          "$\\textbf{(A) } \\frac{b}{1080t} \\qquad \\textbf{(B) } \\frac{30t}{b} \\qquad \\textbf{(C) } \\frac{30b}{t}\\qquad \\textbf{(D) } \\frac{10t}{b} \\qquad \\textbf{(E) } \\frac{10b}{t}$"
         ],
         "asy_choices": []
       },
@@ -6063,11 +6132,11 @@
         "text": "<p>Eight semicircles line the inside of a square with side length 2 as shown. What is the radius of the circle tangent to all of these semicircles?</p><p><INSERTION_INDEX_1></p>",
         "insertions": {
           "INSERTION_INDEX_1": {
-            "picture": "//latex.artofproblemsolving.com/1/b/2/1b29aadcfb289d9056e0d9324532b3b175bc79c6.png",
-            "alt_type": "latex",
-            "alt_value": "$\\text{(A) } \\dfrac{1+\\sqrt2}4 \\quad \\text{(B) } \\dfrac{\\sqrt5-1}2 \\quad \\text{(C) } \\dfrac{\\sqrt3+1}4 \\quad \\text{(D) } \\dfrac{2\\sqrt3}5 \\quad \\text{(E) } \\dfrac{\\sqrt5}3$",
-            "width": "461",
-            "height": "41"
+            "picture": "//latex.artofproblemsolving.com/a/a/3/aa3449d7a1f5549a72c1e5be22ee89bd4499ee51.png",
+            "alt_type": "image",
+            "alt_value": "image",
+            "width": "252",
+            "height": "252"
           }
         },
         "type": "multiple-choice",
@@ -6079,7 +6148,9 @@
             "height": "252"
           }
         ],
-        "latex_choices": [],
+        "latex_choices": [
+          "$\\text{(A) } \\dfrac{1+\\sqrt2}4 \\quad \\text{(B) } \\dfrac{\\sqrt5-1}2 \\quad \\text{(C) } \\dfrac{\\sqrt3+1}4 \\quad \\text{(D) } \\dfrac{2\\sqrt3}5 \\quad \\text{(E) } \\dfrac{\\sqrt5}3$"
+        ],
         "asy_choices": [
           "[asy] scale(200); draw(scale(.5)*((-1,-1)--(1,-1)--(1,1)--(-1,1)--cycle)); path p = arc((.25,-.5),.25,0,180)--arc((-.25,-.5),.25,0,180); draw(p); p=rotate(90)*p; draw(p); p=rotate(90)*p; draw(p); p=rotate(90)*p; draw(p); draw(scale((sqrt(5)-1)/4)*unitcircle); [/asy]"
         ]
@@ -6148,11 +6219,11 @@
         "text": "<p>A sphere is inscribed in a truncated right circular cone as shown. The volume of the truncated cone is twice that of the sphere. What is the ratio of the radius of the bottom base of the truncated cone to the radius of the top base of the truncated cone?</p><p><INSERTION_INDEX_1></p>",
         "insertions": {
           "INSERTION_INDEX_1": {
-            "picture": "//latex.artofproblemsolving.com/6/e/d/6ed55192447af710c595ba632ef42c8a98251f94.png",
-            "alt_type": "latex",
-            "alt_value": "$\\text{(A) } \\dfrac32 \\quad \\text{(B) } \\dfrac{1+\\sqrt5}2 \\quad \\text{(C) } \\sqrt3 \\quad \\text{(D) } 2 \\quad \\text{(E) } \\dfrac{3+\\sqrt5}2$",
-            "width": "383",
-            "height": "41"
+            "picture": "//latex.artofproblemsolving.com/d/5/5/d550a2998878a03d332101fb45e4f4c2f2eea617.png",
+            "alt_type": "image",
+            "alt_value": "picture",
+            "width": "252",
+            "height": "188"
           }
         },
         "type": "multiple-choice",
@@ -6164,7 +6235,9 @@
             "height": "188"
           }
         ],
-        "latex_choices": [],
+        "latex_choices": [
+          "$\\text{(A) } \\dfrac32 \\quad \\text{(B) } \\dfrac{1+\\sqrt5}2 \\quad \\text{(C) } \\sqrt3 \\quad \\text{(D) } 2 \\quad \\text{(E) } \\dfrac{3+\\sqrt5}2$"
+        ],
         "asy_choices": [
           "[asy] real r=(3+sqrt(5))/2; real s=sqrt(r); real Brad=r; real brad=1; real Fht = 2*s; import graph3; import solids; currentprojection=orthographic(1,0,.2); currentlight=(10,10,5); revolution sph=sphere((0,0,Fht/2),Fht/2); //draw(surface(sph),green+white+opacity(0.5)); //triple f(pair t) {return (t.x*cos(t.y),t.x*sin(t.y),t.x^(1/n)*sin(t.y/n));} triple f(pair t) { triple v0 = Brad*(cos(t.x),sin(t.x),0); triple v1 = brad*(cos(t.x),sin(t.x),0)+(0,0,Fht); return (v0 + t.y*(v1-v0)); } triple g(pair t) { return (t.y*cos(t.x),t.y*sin(t.x),0); } surface sback=surface(f,(3pi/4,0),(7pi/4,1),80,2); surface sfront=surface(f,(7pi/4,0),(11pi/4,1),80,2); surface base = surface(g,(0,0),(2pi,Brad),80,2); draw(sback,gray(0.3)); draw(sfront,gray(0.5)); draw(base,gray(0.9)); draw(surface(sph),gray(0.4));[/asy]"
         ]
