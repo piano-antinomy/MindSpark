@@ -416,7 +416,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf{(A)}\\ -20\\qquad\\textbf{{(B)}}\\ -15\\qquad\\textbf{{(C)}}\\ -10\\qquad\\textbf{{(D)}}\\ 0\\qquad\\textbf{{(E)}}\\ 2$"
+          "$\\textbf{(A)}\\ -20\\qquad\\textbf{(B)}\\ -15\\qquad\\textbf{(C)}\\ -10\\qquad\\textbf{(D)}\\ 0\\qquad\\textbf{(E)}\\ 2$"
         ],
         "asy_choices": []
       },
@@ -1492,42 +1492,27 @@
     {
       "id": "amc_2013_10b_13",
       "question": {
-        "text": "<p>Jo and Blair take turns counting from <INSERTION_INDEX_1> to one more than the last number said by the other person. Jo starts by saying <INSERTION_INDEX_2>, so Blair follows by saying <INSERTION_INDEX_3>. Jo then says <INSERTION_INDEX_4>, and so on. What is the <INSERTION_INDEX_5> number said?<br/></p>",
+        "text": "Jo and Blair take turns counting from <INSERTION_INDEX_1> to one more than the last number said by the other person. Jo starts by saying \"1\", so Blair follows by saying \"1, 2\". Jo then says \"1, 2, 3\", and so on. What is the <INSERTION_INDEX_5> number said?",
         "insertions": {
           "INSERTION_INDEX_1": {
-            "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
             "alt_type": "latex",
-            "alt_value": "$1$",
-            "width": "11",
-            "height": "14"
+            "alt_value": "$1$"
           },
           "INSERTION_INDEX_2": {
-            "picture": "//latex.artofproblemsolving.com/7/b/1/7b19c547299a7e2865e9f5e86cac562ad0dd19a9.png",
             "alt_type": "latex",
-            "alt_value": "$``1\"$",
-            "width": "24",
-            "height": "12"
+            "alt_value": "$\"1\"$"
           },
           "INSERTION_INDEX_3": {
-            "picture": "//latex.artofproblemsolving.com/f/e/9/fe96d07d63c88bdc11d1777a9dd6a241f9a10a30.png",
             "alt_type": "latex",
-            "alt_value": "$``1, 2\"$",
-            "width": "42",
-            "height": "15"
+            "alt_value": "$\"1, 2\"$"
           },
           "INSERTION_INDEX_4": {
-            "picture": "//latex.artofproblemsolving.com/4/d/4/4d4dea176b4993fa4154e7968183c2ee4b577206.png",
             "alt_type": "latex",
-            "alt_value": "$``1, 2, 3\"$",
-            "width": "59",
-            "height": "16"
+            "alt_value": "$\"1, 2, 3\"$"
           },
           "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/2/4/1/241bf43d042307108e47540e16589e6d05898591.png",
             "alt_type": "latex",
-            "alt_value": "$53^{\\text{rd}}$",
-            "width": "30",
-            "height": "15"
+            "alt_value": "$53^{\\text{rd}}$"
           }
         },
         "type": "multiple-choice",
@@ -4540,7 +4525,7 @@
     {
       "id": "amc_2013_10b_20",
       "question": {
-        "text": "<p>The number <INSERTION_INDEX_1> is expressed in the form <br/> </p><p><br/>where <INSERTION_INDEX_2> and <INSERTION_INDEX_3> are positive integers and <INSERTION_INDEX_4> is as small as possible. What is <INSERTION_INDEX_5>?</p>",
+        "text": "<p>The number <INSERTION_INDEX_1> is expressed in the form <br/> <INSERTION_INDEX_2> </p><p>where <INSERTION_INDEX_2> and <INSERTION_INDEX_3> are positive integers and <INSERTION_INDEX_4> is as small as possible. What is <INSERTION_INDEX_5>?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/2/f/a/2fa725c98dfe19f98809033755b801810bc298aa.png",
@@ -4550,27 +4535,33 @@
             "height": "13"
           },
           "INSERTION_INDEX_2": {
+            "picture": "//latex.artofproblemsolving.com/6/6/9/6690a904c827dd9d3643929e24f32e7eea1074e5.png",
+            "alt_value": "$2013 = \\frac {a_1!a_2!...a_m!}{b_1!b_2!...b_n!}$",
+            "width": "149",
+            "height": "40" 
+          },
+          "INSERTION_INDEX_3": {
             "picture": "//latex.artofproblemsolving.com/a/5/4/a543bc5a4ffd9c3a3cc2f99457ac43773c6ea1be.png",
             "alt_type": "latex",
             "alt_value": "$a_1 \\ge a_2 \\ge \\cdots \\ge a_m$",
             "width": "152",
             "height": "16"
           },
-          "INSERTION_INDEX_3": {
+          "INSERTION_INDEX_4": {
             "picture": "//latex.artofproblemsolving.com/6/c/4/6c4beb6a0d1e8f3c7003c36a512e028207726409.png",
             "alt_type": "latex",
             "alt_value": "$b_1 \\ge b_2 \\ge \\cdots \\ge b_n$",
             "width": "140",
             "height": "15"
           },
-          "INSERTION_INDEX_4": {
+          "INSERTION_INDEX_5": {
             "picture": "//latex.artofproblemsolving.com/b/1/1/b11acdf75774ae941a2024408840e633e4f4eace.png",
             "alt_type": "latex",
             "alt_value": "$a_1 + b_1$",
             "width": "53",
             "height": "15"
           },
-          "INSERTION_INDEX_5": {
+          "INSERTION_INDEX_6": {
             "picture": "//latex.artofproblemsolving.com/e/6/a/e6a7172bf6e1cefe8c2375a530077a4d491ecb6a.png",
             "alt_type": "latex",
             "alt_value": "$|a_1 - b_1|$",

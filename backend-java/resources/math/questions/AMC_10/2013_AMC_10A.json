@@ -506,28 +506,31 @@
     {
       "id": "amc_2013_10a_5",
       "question": {
-        "text": "<p>Tom, Dorothy, and Sammy went on a vacation and agreed to split the costs evenly. During their trip Tom paid $105, Dorothy paid $125, and Sammy paid $175. In order to share costs equally, Tom gave Sammy <INSERTION_INDEX_1> dollars, and Dorothy gave Sammy <INSERTION_INDEX_2> dollars. What is <INSERTION_INDEX_3>?</p>",
+        "text": "<p>Tom, Dorothy, and Sammy went on a vacation and agreed to split the costs evenly. During their trip Tom paid <INSERTION_INDEX_1>, Dorothy paid <INSERTION_INDEX_2>, and Sammy paid <INSERTION_INDEX_3>. In order to share costs equally, Tom gave Sammy <INSERTION_INDEX_4> dollars, and Dorothy gave Sammy <INSERTION_INDEX_5> dollars. What is <INSERTION_INDEX_6>?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
-            "picture": "//latex.artofproblemsolving.com/e/0/d/e0d2bf360290fd61d1c1557e763f2622363b3d35.png",
             "alt_type": "latex",
-            "alt_value": "$t$",
-            "width": "6",
-            "height": "11"
+            "alt_value": "$\\textdollar 105$"
           },
           "INSERTION_INDEX_2": {
-            "picture": "//latex.artofproblemsolving.com/9/6/a/96ab646de7704969b91c76a214126b45f2b07b25.png",
             "alt_type": "latex",
-            "alt_value": "$d$",
-            "width": "9",
-            "height": "12"
+            "alt_value": "$\\textdollar 125$"
           },
           "INSERTION_INDEX_3": {
-            "picture": "//latex.artofproblemsolving.com/2/3/6/236c8b639a26e618cb78c2befb89f78fc61694cc.png",
             "alt_type": "latex",
-            "alt_value": "$t-d$",
-            "width": "38",
-            "height": "12"
+            "alt_value": "$\\textdollar 175$"
+          },
+          "INSERTION_INDEX_4": {
+            "alt_type": "latex",
+            "alt_value": "$x$"
+          },
+          "INSERTION_INDEX_5": {
+            "alt_type": "latex",
+            "alt_value": "$y$"
+          },
+          "INSERTION_INDEX_6": {
+            "alt_type": "latex",
+            "alt_value": "$x - y$"
           }
         },
         "type": "multiple-choice",
