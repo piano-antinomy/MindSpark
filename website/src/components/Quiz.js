@@ -252,21 +252,41 @@ function Quiz() {
             <div key={quiz.id} className="quiz-item">
               <div className="quiz-info">
                 <h3>{quiz.name}</h3>
-                <p>{quiz.level} - {quiz.year} ({quiz.questionCount} questions)</p>
-                <span className={`quiz-status ${quiz.status}`}>
+                <div className="quiz-details">
+                  <span className="quiz-level">{quiz.level}</span>
+                  <span className="quiz-year">{quiz.year}</span>
+                  <span className="quiz-questions">{quiz.questionCount} questions</span>
+                </div>
+                <div className={`quiz-status ${quiz.status}`}>
                   {quiz.status === 'completed' ? `Completed - ${quiz.score}%` : 'In Progress'}
-                </span>
+                </div>
               </div>
               <div className="quiz-actions">
                 {quiz.status === 'completed' ? (
-                  <button className="btn btn-secondary">Review</button>
+                  <>
+                    <button className="btn btn-secondary">Review</button>
+                    <button 
+                      className="btn btn-primary"
+                      onClick={() => navigate(`/solutions?quizId=${encodeURIComponent(quiz.id)}`)}
+                    >
+                      Show Solutions
+                    </button>
+                  </>
                 ) : (
-                  <button 
-                    className="btn btn-primary"
-                    onClick={() => startQuiz(quiz)}
-                  >
-                    Continue
-                  </button>
+                  <>
+                    <button 
+                      className="btn btn-primary"
+                      onClick={() => startQuiz(quiz)}
+                    >
+                      Continue
+                    </button>
+                    <button 
+                      className="btn btn-secondary"
+                      onClick={() => navigate(`/solutions?quizId=${encodeURIComponent(quiz.id)}`)}
+                    >
+                      Show Solutions
+                    </button>
+                  </>
                 )}
               </div>
             </div>
