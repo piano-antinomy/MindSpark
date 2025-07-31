@@ -160,24 +160,5 @@ public class Question {
         public void setHeight(String height) { this.height = height; }
     }
 
-    public static class Solution {
-        @JsonProperty("solution_id")
-        private int solutionId;
-        
-        @JsonProperty("type")
-        private String type;
-        
-        @JsonProperty("value")
-        private List<String> value;
 
-        // Getters and Setters
-        public int getSolutionId() { return solutionId; }
-        public void setSolutionId(int solutionId) { this.solutionId = solutionId; }
-
-        public String getType() { return type; }
-        public void setType(String type) { this.type = type; }
-
-        public List<String> getValue() { return value; }
-        public void setValue(List<String> value) { this.value = value; }
-    }
 } 

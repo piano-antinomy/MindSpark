@@ -89,6 +89,13 @@ function Solutions() {
         
         if (questionsResponse.ok) {
           const questionsData = await questionsResponse.json();
+          // Temporary debugging to understand the data structure
+          console.log('Questions data from API:', questionsData);
+          if (questionsData.length > 0) {
+            console.log('First question structure:', questionsData[0]);
+            console.log('First question solutions:', questionsData[0].solutions);
+            console.log('First question insertions:', questionsData[0].question?.insertions);
+          }
           setQuestions(questionsData);
         } else {
           throw new Error('Failed to load quiz questions');
@@ -104,36 +111,39 @@ function Solutions() {
     }
   };
 
-  const processSolutionText = (solutionValue) => {
-    if (!solutionValue) return '';
-    
-    // Join solution array if it's an array
-    const solutionText = Array.isArray(solutionValue) ? solutionValue.join('\n\n') : solutionValue;
-    
-    // Use the same preprocessing as questions
-    return questionParser.preprocessLatexText(solutionText);
-  };
+  // Note: Using shared processSolutionText method from QuestionParser
+  // This ensures solutions use exactly the same insertion and LaTeX processing as questions
 
   const renderSolution = (question) => {
-    if (!question.originalQuestion?.solutions || question.originalQuestion.solutions.length === 0) {
+    const solutions = question.originalQuestion?.solutions;
+    
+    if (!solutions || solutions.length === 0) {
       return <div className="solution-content">No solution available for this question.</div>;
     }
 
+    // Get insertions from the original question for processing solution text
+    const questionInsertions = question.originalQuestion?.question?.insertions;
+
     return (
       <div className="solution-content">
-        {question.originalQuestion.solutions.map((solution, index) => (
-          <div key={index} className="solution-item">
-            {question.originalQuestion.solutions.length > 1 && (
-              <h4>Solution {index + 1}:</h4>
-            )}
-            <div 
-              className="solution-text"
-              dangerouslySetInnerHTML={{
-                __html: `$${processSolutionText(solution.value)}$`
-              }}
-            />
-          </div>
-        ))}
+        {solutions.map((solution, index) => {
+          // Use the shared processSolutionText method from QuestionParser
+          const processedText = questionParser.processSolutionText(solution, questionInsertions);
+          
+          return (
+            <div key={index} className="solution-item">
+              {solutions.length > 1 && (
+                <h4>Solution {index + 1}:</h4>
+              )}
+              <div 
+                className="solution-text"
+                dangerouslySetInnerHTML={{
+                  __html: processedText
+                }}
+              />
+            </div>
+          );
+        })}
       </div>
     );
   };

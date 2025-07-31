@@ -299,6 +299,47 @@ class QuestionParser {
     
     return result;
   }
+
+  /**
+   * Process solution text with the same logic as questions
+   * @param {Object|string} solution - Solution object or string
+   * @param {Object} questionInsertions - Insertions from the parent question
+   * @param {Object} solutionInsertions - Insertions specific to the solution (if any)
+   * @returns {string} Processed solution HTML
+   */
+  processSolutionText(solution, questionInsertions = null, solutionInsertions = null) {
+    if (!solution) return '';
+    
+    let solutionText = '';
+    let insertions = null;
+    
+    // Extract solution text and insertions based on format
+    if (typeof solution === 'string') {
+      // Simple string format (from raw JSON)
+      solutionText = solution;
+      insertions = questionInsertions; // Use question's insertions
+    } else if (solution.text) {
+      // New format: Object with text field (preferred)
+      solutionText = solution.text;
+      // Prefer solution's own insertions, fallback to question's
+      insertions = solutionInsertions || solution.insertions || questionInsertions;
+    } else if (solution.value) {
+      // Legacy format: Object with value field
+      solutionText = Array.isArray(solution.value) ? solution.value.join('\n\n') : solution.value;
+      insertions = questionInsertions;
+    }
+    
+    if (!solutionText) return '';
+    
+    // Log for debugging insertion processing
+    if (solutionText.includes('<INSERTION_INDEX_')) {
+      console.log('Solution contains insertion markers:', solutionText.substring(0, 200) + '...');
+      console.log('Available insertions:', insertions);
+    }
+    
+    // Use the same processing logic as questions
+    return this.processQuestionText(solutionText, insertions);
+  }
 }
 
 // Create and export global instance
