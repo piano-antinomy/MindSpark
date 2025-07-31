@@ -65,6 +65,9 @@ public class Question {
         @JsonProperty("latex_choices")
         private List<String> latexChoices;
         
+        @JsonProperty("choice_space")
+        private Double choiceSpace;
+        
         @JsonProperty("asy_choices")
         private List<String> asyChoices;
 
@@ -86,6 +89,9 @@ public class Question {
 
         public List<String> getLatexChoices() { return latexChoices; }
         public void setLatexChoices(List<String> latexChoices) { this.latexChoices = latexChoices; }
+
+        public Double getChoiceSpace() { return choiceSpace; }
+        public void setChoiceSpace(Double choiceSpace) { this.choiceSpace = choiceSpace; }
 
         public List<String> getAsyChoices() { return asyChoices; }
         public void setAsyChoices(List<String> asyChoices) { this.asyChoices = asyChoices; }

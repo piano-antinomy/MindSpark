@@ -673,7 +673,12 @@ function QuizTaking() {
         {/* Main content area - question and choices side by side */}
         <div className="flex gap-3 lg:gap-4 flex-1 min-h-0">
           {/* Left side - Question content only */}
-          <div className="flex-1 flex flex-col min-h-0">
+          <div 
+            className="flex flex-col min-h-0"
+            style={{
+              width: question.choiceSpace ? `${(1 - question.choiceSpace) * 100}%` : '66.667%'
+            }}
+          >
             {/* Question content section - scrollable with fixed height */}
             <div className="flex-1 overflow-y-auto min-h-0">
               <div className="question-content-section text-left">
@@ -683,8 +688,13 @@ function QuizTaking() {
           </div>
           
           {/* Right side - Choices section */}
-          <div className="w-1/3 lg:w-1/3 p-3 lg:p-6 flex-shrink-0 flex flex-col min-h-0">
-            <div className="choices-container space-y-2 lg:space-y-3 flex-1 overflow-y-auto">
+          <div 
+            className="flex flex-col min-h-0"
+            style={{
+              width: question.choiceSpace ? `${question.choiceSpace * 100}%` : '33.333%'
+            }}
+          >
+            <div className="choices-container space-y-2 lg:space-y-3 flex-1 overflow-y-auto p-3 lg:p-6">
               {renderChoices(question)}
             </div>
           </div>
@@ -848,18 +858,28 @@ function QuizTaking() {
               {/* Main content area - question and choices side by side */}
               <div className="flex gap-3 flex-1 px-3 min-h-0">
                 {/* Left side - Question content only */}
-                <div className="flex-1 flex flex-col min-h-0">
+                <div 
+                  className="flex flex-col min-h-0"
+                  style={{
+                    width: parsedQuestions[currentQuestionIndex].choiceSpace ? `${(1 - parsedQuestions[currentQuestionIndex].choiceSpace) * 100}%` : '66.667%'
+                  }}
+                >
                   {/* Question content section - scrollable with fixed height */}
                   <div className="flex-1 overflow-y-auto min-h-0">
-                    <div className="question-content-section text-left">
+                    <div className="question-content-section text-left pt-2">
                       {renderQuestionContent(parsedQuestions[currentQuestionIndex])}
                     </div>
                   </div>
                 </div>
                 
                 {/* Right side - Choices section */}
-                <div className="w-1/3 p-2 flex-shrink-0 flex flex-col min-h-0 choices-section">
-                  <div className="choices-container space-y-2 overflow-y-auto">
+                <div 
+                  className="flex flex-col min-h-0 choices-section"
+                  style={{
+                    width: parsedQuestions[currentQuestionIndex].choiceSpace ? `${parsedQuestions[currentQuestionIndex].choiceSpace * 100}%` : '33.333%'
+                  }}
+                >
+                  <div className="choices-container space-y-2 overflow-y-auto p-2">
                     {renderChoices(parsedQuestions[currentQuestionIndex])}
                   </div>
                 </div>

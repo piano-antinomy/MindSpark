@@ -336,8 +336,30 @@
     {
       "id": "amc_2003_10a_2",
       "question": {
-        "text": "<p>Members of the Rockham Soccer League buy socks and T-shirts. Socks cost $4 per pair and each T-shirt costs $5 more than a pair of socks. Each member needs one pair of socks and a shirt for home games and another pair of socks and a shirt for away games. If the total cost is $2366, how many members are in the League? </p>",
-        "insertions": {},
+        "text": "<p>Members of the Rockham Soccer League buy socks and T-shirts. Socks cost <INSERTION_INDEX_1> per pair and each T-shirt costs <INSERTION_INDEX_2> more than a pair of socks. Each member needs one pair of socks and a shirt for home games and another pair of socks and a shirt for away games. If the total cost is <INSERTION_INDEX_3>, how many members are in the League? </p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "placeholder1.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar{4}$",
+            "width": "30",
+            "height": "20"
+          },
+          "INSERTION_INDEX_2": {
+            "picture": "placeholder2.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar{5}$",
+            "width": "30",
+            "height": "20"
+          },
+          "INSERTION_INDEX_3": {
+            "picture": "placeholder3.png",
+            "alt_type": "latex",
+            "alt_value": "$\\textdollar{2366}$",
+            "width": "80",
+            "height": "20"
+          }
+        },
         "type": "multiple-choice",
         "text_choices": [],
         "picture_choices": [
@@ -1008,7 +1030,7 @@
     {
       "id": "amc_2003_10a_6",
       "question": {
-        "text": "<p>Define <INSERTION_INDEX_1> to be <INSERTION_INDEX_2> for all real numbers <INSERTION_INDEX_3> and <INSERTION_INDEX_4>. Which of the following statements is not true? </p><p><INSERTION_INDEX_5> for all <INSERTION_INDEX_6> and <INSERTION_INDEX_7></p><p><INSERTION_INDEX_8> for all <INSERTION_INDEX_9> and <INSERTION_INDEX_10></p><p><INSERTION_INDEX_11> for all <INSERTION_INDEX_12></p><p><INSERTION_INDEX_13> for all <INSERTION_INDEX_14></p>",
+        "text": "<p>Define <INSERTION_INDEX_1> to be <INSERTION_INDEX_2> for all real numbers <INSERTION_INDEX_3> and <INSERTION_INDEX_4>. Which of the following statements is not true? </p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/9/6/b/96bb0f804b440012bd01f4817c73d144d9a64afb.png",
@@ -1037,76 +1059,6 @@
             "alt_value": "$y$",
             "width": "11",
             "height": "13"
-          },
-          "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/e/8/9/e893cc42869af0e204dc3433466d323786b56ee8.png",
-            "alt_type": "latex",
-            "alt_value": "$\\mathrm{(A) \\ } x \\heartsuit y = y \\heartsuit x$",
-            "width": "125",
-            "height": "18"
-          },
-          "INSERTION_INDEX_6": {
-            "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
-            "alt_type": "latex",
-            "alt_value": "$x$",
-            "width": "12",
-            "height": "10"
-          },
-          "INSERTION_INDEX_7": {
-            "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
-            "alt_type": "latex",
-            "alt_value": "$y$",
-            "width": "11",
-            "height": "13"
-          },
-          "INSERTION_INDEX_8": {
-            "picture": "//latex.artofproblemsolving.com/9/d/b/9db27a4b724d4ce90da2dccff39fc4a6074664b0.png",
-            "alt_type": "latex",
-            "alt_value": "$\\mathrm{(B) \\ } 2(x \\heartsuit y) = (2x) \\heartsuit (2y)$",
-            "width": "193",
-            "height": "18"
-          },
-          "INSERTION_INDEX_9": {
-            "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
-            "alt_type": "latex",
-            "alt_value": "$x$",
-            "width": "12",
-            "height": "10"
-          },
-          "INSERTION_INDEX_10": {
-            "picture": "//latex.artofproblemsolving.com/0/9/2/092e364e1d9d19ad5fffb0b46ef4cc7f2da02c1c.png",
-            "alt_type": "latex",
-            "alt_value": "$y$",
-            "width": "11",
-            "height": "13"
-          },
-          "INSERTION_INDEX_11": {
-            "picture": "//latex.artofproblemsolving.com/0/1/c/01c02547a5055b04751a6d951157bd0ca189310f.png",
-            "alt_type": "latex",
-            "alt_value": "$\\mathrm{(C) \\ } x \\heartsuit 0 = x$",
-            "width": "100",
-            "height": "18"
-          },
-          "INSERTION_INDEX_12": {
-            "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
-            "alt_type": "latex",
-            "alt_value": "$x$",
-            "width": "12",
-            "height": "10"
-          },
-          "INSERTION_INDEX_13": {
-            "picture": "//latex.artofproblemsolving.com/2/e/1/2e1c1a7abf7ac4ce50aeda86cded03bb2cfb22a5.png",
-            "alt_type": "latex",
-            "alt_value": "$\\mathrm{(D) \\ } x \\heartsuit x = 0$",
-            "width": "101",
-            "height": "18"
-          },
-          "INSERTION_INDEX_14": {
-            "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
-            "alt_type": "latex",
-            "alt_value": "$x$",
-            "width": "12",
-            "height": "10"
           }
         },
         "type": "multiple-choice",
@@ -1124,9 +1076,9 @@
           }
         ],
         "latex_choices": [
-          "$\\mathrm{(E) \\ } x \\heartsuit y > 0$",
-          "$x \\neq y$"
+          "$\\mathrm{(A) \\ } x \\heartsuit y = y \\heartsuit x \\text{ for all } x \\text{ and } y \\qquad \\mathrm{(B) \\ } 2(x \\heartsuit y) = (2x) \\heartsuit (2y) \\text{ for all } x \\text{ and } y \\qquad \\mathrm{(C) \\ } x \\heartsuit 0 = x \\text{ for all } x \\qquad \\mathrm{(D) \\ } x \\heartsuit x = 0 \\text{ for all } x \\qquad \\mathrm{(E) \\ } x \\heartsuit y > 0 \\text{ if } x \\neq y$"
         ],
+        "choice_space": 0.5,
         "asy_choices": []
       },
       "tags": [],
@@ -2055,7 +2007,7 @@
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "https://wiki-images.artofproblemsolving.com//b/b1/2003amc10a10.gif",
-            "alt_type": "latex",
+            "alt_type": "image",
             "alt_value": "2003amc10a10.gif"
           }
         },
@@ -3097,7 +3049,7 @@
           "INSERTION_INDEX_6": {
             "picture": "//latex.artofproblemsolving.com/0/b/4/0b4aee29876af28821f3a35178c09561adaf5a4a.png",
             "alt_type": "latex",
-            "alt_value": "$x<y$",
+            "alt_value": "$ x < y $",
             "width": "43",
             "height": "13"
           }

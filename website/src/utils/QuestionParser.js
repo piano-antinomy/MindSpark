@@ -291,6 +291,7 @@ class QuestionParser {
       isImageChoice: choiceResult.isImageChoice || false,
       isDummyChoices: choiceResult.isDummyChoices || false,
       isTextChoice: choiceResult.isTextChoice || false,
+      choiceSpace: questionDetails.choice_space || null, // Extract choice_space field
       answer: question.answer,
       solution: question.solution,
       originalQuestion: question

@@ -3518,7 +3518,7 @@
     {
       "id": "amc_2004_10b_19",
       "question": {
-        "text": "<p>In the sequence <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, <INSERTION_INDEX_4> , each term after the third is found by subtracting the previous term from the sum of the two terms that precede that term. For example, the fourth term is <INSERTION_INDEX_5>. What is the<INSERTION_INDEX_6> term in this sequence?</p>",
+        "text": "<p>In the sequence <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, <INSERTION_INDEX_4> , each term after the third is found by subtracting the previous term from the sum of the two terms that precede that term. For example, the fourth term is <INSERTION_INDEX_5>. What is the <INSERTION_INDEX_6> term in this sequence?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/d/e/7/de7e2da81334aad3aeeb09706fed72248196613b.png",
@@ -6288,11 +6288,11 @@
             "height": "13"
           },
           "INSERTION_INDEX_6": {
-            "picture": "//latex.artofproblemsolving.com/9/c/7/9c71ed5203afbf7cb570ec6618acbc5f6eec0b99.png",
-            "alt_type": "latex",
-            "alt_value": "$\\mathrm{(A) \\ } \\frac{5}{3} \\pi - 3\\sqrt 2 \\qquad  \\mathrm{(B) \\ } \\frac{5}{3} \\pi - 2\\sqrt 3 \\qquad  \\mathrm{(C) \\ } \\frac{8}{3} \\pi - 3\\sqrt 3 \\qquad  \\mathrm{(D) \\ } \\frac{8}{3} \\pi - 3\\sqrt 2 \\qquad  \\mathrm{(E) \\ } \\frac{8}{3} \\pi - 2\\sqrt 3$",
-            "width": "696",
-            "height": "37"
+            "picture": "//latex.artofproblemsolving.com/e/8/e/e8e24df11b3220b60a2c429135703825df20a242.png",
+            "alt_type": "image",
+            "alt_value": "image",
+            "width": "192",
+            "height": "285"
           }
         },
         "type": "multiple-choice",
@@ -6304,7 +6304,9 @@
             "height": "285"
           }
         ],
-        "latex_choices": [],
+        "latex_choices": [
+          "$\\mathrm{(A) \\ } \\frac{5}{3} \\pi - 3\\sqrt 2 \\qquad  \\mathrm{(B) \\ } \\frac{5}{3} \\pi - 2\\sqrt 3 \\qquad  \\mathrm{(C) \\ } \\frac{8}{3} \\pi - 3\\sqrt 3 \\qquad  \\mathrm{(D) \\ } \\frac{8}{3} \\pi - 3\\sqrt 2 \\qquad  \\mathrm{(E) \\ } \\frac{8}{3} \\pi - 2\\sqrt 3$"
+        ],
         "asy_choices": [
           "[asy] unitsize(1cm); defaultpen(0.8);  pair O=(0,0), A=(0,1), B=(0,-1); path bigc1 = Circle(A,2), bigc2 = Circle(B,2), smallc = Circle(O,1);  pair[] P = intersectionpoints(bigc1, bigc2); filldraw( arc(A,P[0],P[1])--arc(B,P[1],P[0])--cycle, lightgray, black ); draw(bigc1); draw(bigc2); unfill(smallc); draw(smallc);  dot(O); dot(A); dot(B); label(\"$A$\",A,N); label(\"$B$\",B,S); draw( O--dir(30) ); draw( A--(A+2*dir(30)) ); draw( B--(B+2*dir(210)) );  label(\"$1$\", O--dir(30), N ); label(\"$2$\", A--(A+2*dir(30)), N ); label(\"$2$\", B--(B+2*dir(210)), S );  [/asy]"
         ]
