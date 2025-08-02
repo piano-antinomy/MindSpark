@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { questionParser } from '../utils/QuestionParser';
 
@@ -13,8 +13,11 @@ function QuizTaking() {
   const [currentQuiz, setCurrentQuiz] = useState(null);
   const [questions, setQuestions] = useState([]);
   const [parsedQuestions, setParsedQuestions] = useState([]);
+  const [saving, setSaving] = useState(false);
+  const [lastSavedAnswers, setLastSavedAnswers] = useState({});
   const navigate = useNavigate();
   const location = useLocation();
+  const autoSaveTimeout = useRef(null);
 
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
@@ -87,6 +90,15 @@ function QuizTaking() {
     }
   }, [quizStarted, currentQuestionIndex, parsedQuestions]);
 
+  // Cleanup auto-save timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (autoSaveTimeout.current) {
+        clearTimeout(autoSaveTimeout.current);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     if (quizStarted && !quizCompleted) {
       const timer = setInterval(() => {
@@ -108,6 +120,24 @@ function QuizTaking() {
     return currentUser ? JSON.parse(currentUser) : null;
   };
 
+  /**
+   * Find the highest numbered question that has been answered
+   * @param {Array} questions - Array of question objects
+   * @param {Object} answers - Object mapping question IDs to answers
+   * @returns {number} - Index of highest answered question, or -1 if none found
+   */
+  const findHighestAnsweredQuestionIndex = (questions, answers) => {
+    let highestIndex = -1;
+    
+    questions.forEach((question, index) => {
+      if (answers[question.id]) {
+        highestIndex = Math.max(highestIndex, index);
+      }
+    });
+    
+    return highestIndex;
+  };
+
   const loadQuiz = async (quizId) => {
     setLoading(true);
     setError(null);
@@ -121,10 +151,11 @@ function QuizTaking() {
       
       if (response.ok) {
         const quiz = await response.json();
+        console.log('Loaded quiz progress:', quiz);
         setCurrentQuiz(quiz);
         
-        // Load quiz questions
-        await loadQuizQuestions(quizId);
+        // Load quiz questions and pass quiz data to load previous answers
+        await loadQuizQuestions(quizId, quiz);
       } else if (response.status === 404) {
         setError('Quiz not found. Please check the quiz ID or create a new quiz.');
         setLoading(false);
@@ -139,7 +170,7 @@ function QuizTaking() {
     }
   };
 
-  const loadQuizQuestions = async (quizId) => {
+  const loadQuizQuestions = async (quizId, quizData = null) => {
     try {
       const currentUser = checkAuthStatus();
       const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.username}/quiz/${quizId}/questions`, {
@@ -150,17 +181,47 @@ function QuizTaking() {
         const questions = await response.json();
         setQuestions(questions);
         
-        // Initialize answers from quiz progress
+        // Initialize answers from quiz progress (use passed quizData or fallback to currentQuiz)
+        const quiz = quizData || currentQuiz;
         const answers = {};
-        if (currentQuiz?.questionIdToAnswer) {
-          Object.keys(currentQuiz.questionIdToAnswer).forEach(questionId => {
-            const answer = currentQuiz.questionIdToAnswer[questionId];
+        
+        if (quiz?.questionIdToAnswer) {
+          console.log('Loading previous answers:', quiz.questionIdToAnswer);
+          
+          // Check for case mismatch and fix it
+          Object.keys(quiz.questionIdToAnswer).forEach(savedQuestionId => {
+            const answer = quiz.questionIdToAnswer[savedQuestionId];
             if (answer) {
-              answers[questionId] = answer;
+              // Try both the original ID and lowercase version
+              const lowerCaseId = savedQuestionId.toLowerCase();
+              
+              // Find matching question from loaded questions
+              const matchingQuestion = questions.find(q => 
+                q.id === savedQuestionId || q.id === lowerCaseId
+              );
+              
+              if (matchingQuestion) {
+                answers[matchingQuestion.id] = answer;
+              }
             }
           });
+          
+          console.log('Restored answers:', answers);
         }
+        
         setSelectedAnswers(answers);
+        setLastSavedAnswers(answers); // Track what was already saved
+        
+        // Jump to the highest answered question when quiz loads
+        if (Object.keys(answers).length > 0) {
+          const answeredQuestionIndex = findHighestAnsweredQuestionIndex(questions, answers);
+          
+          if (answeredQuestionIndex !== -1) {
+            console.log(`Jumping to question ${answeredQuestionIndex + 1} (highest answered)`);
+            setCurrentQuestionIndex(answeredQuestionIndex);
+          }
+        }
+        
         setLoading(false);
       } else if (response.status === 404) {
         setError('Quiz questions not found. The quiz may be corrupted or incomplete.');
@@ -216,6 +277,12 @@ function QuizTaking() {
       ...prev,
       [questionId]: answer
     }));
+    
+    // Auto-save progress when answer is selected (with debouncing)
+    clearTimeout(autoSaveTimeout.current);
+    autoSaveTimeout.current = setTimeout(() => {
+      saveProgress();
+    }, 2000); // Save 2 seconds after last answer selection
   };
 
   const nextQuestion = () => {
@@ -230,7 +297,90 @@ function QuizTaking() {
     }
   };
 
-  const completeQuiz = () => {
+
+
+  /**
+   * Save current quiz progress to backend
+   */
+  const saveProgress = async () => {
+    try {
+      setSaving(true);
+      const currentUser = checkAuthStatus();
+      if (!currentUser || !currentQuiz) {
+        console.error('No user or quiz available for progress tracking');
+        setSaving(false);
+        return;
+      }
+
+      // Get quiz ID from URL or currentQuiz
+      const urlParams = new URLSearchParams(location.search);
+      const quizId = urlParams.get('quizId') || currentQuiz.quizId;
+
+      if (!quizId) {
+        console.error('No quiz ID available for progress tracking');
+        return;
+      }
+
+      // Only send answers that have changed since last save
+      const questionIdToAnswer = {};
+      Object.keys(selectedAnswers).forEach(questionId => {
+        const currentAnswer = selectedAnswers[questionId];
+        const lastSavedAnswer = lastSavedAnswers[questionId];
+        
+        // Include if answer is new or different from last saved
+        if (currentAnswer && currentAnswer !== lastSavedAnswer) {
+          questionIdToAnswer[questionId] = currentAnswer;
+        }
+      });
+
+      // If no answers have changed, don't make API call
+      if (Object.keys(questionIdToAnswer).length === 0) {
+        console.log('No answers have changed since last save');
+        setSaving(false);
+        return;
+      }
+
+      console.log('Saving progress:', {
+        userId: currentUser.username,
+        quizId: quizId,
+        questionIdToAnswer: questionIdToAnswer
+      });
+
+      const response = await fetch(`${JAVA_API_BASE_URL}/progress/track`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        credentials: 'include',
+        body: JSON.stringify({
+          userId: currentUser.username,
+          quizId: quizId,
+          questionIdToAnswer: questionIdToAnswer
+        })
+      });
+
+      if (response.ok) {
+        console.log('Progress saved successfully');
+        
+        // Update lastSavedAnswers to track what we just saved
+        setLastSavedAnswers(prev => ({
+          ...prev,
+          ...questionIdToAnswer
+        }));
+      } else {
+        const errorData = await response.text();
+        console.error('Failed to save progress:', response.status, errorData);
+      }
+    } catch (error) {
+      console.error('Error saving progress:', error);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const completeQuiz = async () => {
+    // Save progress before completing
+    await saveProgress();
     setQuizCompleted(true);
     // Calculate score
     const score = calculateScore();
@@ -702,11 +852,19 @@ function QuizTaking() {
         
         {/* Navigation buttons - fixed at bottom, outside the scrollable area */}
         <div className="flex justify-between items-center mt-3 lg:mt-4 pt-3 lg:pt-4 flex-shrink-0 border-t border-gray-100">
-          {/* Left side - Save and Submit */}
-          <div className="flex gap-2 lg:gap-4">
-            <button className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} onClick={() => console.log('Save functionality to be implemented')}>
-              Save
-            </button>
+                      {/* Left side - Save and Submit */}
+            <div className="flex gap-2 lg:gap-4 items-center">
+              <button 
+                className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} 
+                onClick={() => {
+                  console.log('🖱️ Save button clicked!');
+                  saveProgress();
+                }}
+                disabled={saving}
+              >
+                {saving ? 'Saving...' : 'Save'}
+              </button>
+              {saving && <span className="text-blue-600 text-sm">💾 Saving progress...</span>}
             <button className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={completeQuiz}>
               Submit Quiz
             </button>
@@ -887,11 +1045,19 @@ function QuizTaking() {
               
               {/* Navigation buttons - fixed at bottom, outside the scrollable area */}
               <div className="flex justify-between items-center p-3 pt-2 flex-shrink-0 border-t border-gray-100">
-                {/* Left side - Save and Submit */}
-                <div className="flex gap-2">
-                  <button className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} onClick={() => console.log('Save functionality to be implemented')}>
-                    Save
-                  </button>
+                                  {/* Left side - Save and Submit */}
+                  <div className="flex gap-2 items-center">
+                    <button 
+                      className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} 
+                      onClick={() => {
+                        console.log('🖱️ Mobile Save button clicked!');
+                        saveProgress();
+                      }}
+                      disabled={saving}
+                    >
+                      {saving ? 'Saving...' : 'Save'}
+                    </button>
+                    {saving && <span className="text-blue-600 text-xs">💾</span>}
                   <button className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={completeQuiz}>
                     Submit Quiz
                   </button>

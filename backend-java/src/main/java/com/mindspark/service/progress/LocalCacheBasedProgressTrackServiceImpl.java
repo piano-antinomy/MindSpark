@@ -19,6 +19,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
@@ -89,8 +90,38 @@ public class LocalCacheBasedProgressTrackServiceImpl implements ProgressTrackSer
 
     @Override
     public void trackProgress(String userId, String quizId, Map<String, String> questionIdToAnswer) {
-        quizService.updateQuizProgress(
-            userId, quizId, new QuizProgress(quizId, LocalDateTime.now(), questionIdToAnswer));
+        // Get the existing quiz progress to preserve all fields
+        QuizProgress existingProgress = quizService.listQuiz(userId).get(quizId);
+        
+        if (existingProgress == null) {
+            logger.warn("No existing quiz progress found for user: {}, quiz: {}", userId, quizId);
+            return;
+        }
+        
+        // Merge new answers with existing ones (partial update)
+        Map<String, String> mergedAnswers = new HashMap<>();
+        
+        // Start with existing answers
+        if (existingProgress.getQuestionIdToAnswer() != null) {
+            mergedAnswers.putAll(existingProgress.getQuestionIdToAnswer());
+        }
+        
+        // Update only the questions that were submitted
+        mergedAnswers.putAll(questionIdToAnswer);
+        
+        // Create updated progress preserving all existing fields
+        QuizProgress updatedProgress = new QuizProgress(
+            existingProgress.getQuizId(),
+            existingProgress.getQuizType(),
+            existingProgress.getQuestionSetId(),
+            LocalDateTime.now(), // Update timestamp
+            mergedAnswers,        // Merged answers (partial update)
+            existingProgress.getQuizName()
+        );
+        
+        logger.info("Updating quiz progress for user: {}, quiz: {}, updating {} questions, total answers: {}", 
+                   userId, quizId, questionIdToAnswer.size(), mergedAnswers.size());
+        quizService.updateQuizProgress(userId, quizId, updatedProgress);
     }
 
     @Override

@@ -227,47 +227,58 @@ public class ProgressController extends HttpServlet {
             JsonNode jsonNode = objectMapper.readTree(requestBody.toString());
             
             String userId = jsonNode.get("userId").asText();
-            String questionId = jsonNode.get("questionId").asText();
-            String answer = jsonNode.get("answer").asText();
+            String quizId = jsonNode.get("quizId").asText();
+            JsonNode questionIdToAnswerNode = jsonNode.get("questionIdToAnswer");
             
             if (userId == null || userId.trim().isEmpty()) {
                 sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "User ID is required");
                 return;
             }
             
-            if (questionId == null || questionId.trim().isEmpty()) {
-                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Question ID is required");
+            if (quizId == null || quizId.trim().isEmpty()) {
+                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Quiz ID is required");
                 return;
             }
             
-            if (answer == null || answer.trim().isEmpty()) {
-                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Answer is required");
+            if (questionIdToAnswerNode == null || !questionIdToAnswerNode.isObject()) {
+                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Question ID to Answer mapping is required");
                 return;
             }
             
-            // Track the progress
-            progressTrackService.trackProgress(userId, questionId, answer);
+            // Convert JsonNode to Map
+            Map<String, String> questionIdToAnswer = new HashMap<>();
+            questionIdToAnswerNode.fields().forEachRemaining(entry -> {
+                questionIdToAnswer.put(entry.getKey(), entry.getValue().asText());
+            });
             
-            // Return updated progress
-            Progress updatedProgress = progressTrackService.getProgress(userId);
+            logger.info("Tracking progress for user: {}, quiz: {}, questions: {}", 
+                       userId, quizId, questionIdToAnswer.keySet());
+            
+            // Track the progress using batch method
+            progressTrackService.trackProgress(userId, quizId, questionIdToAnswer);
+            
+            // Return updated quiz progress
+            QuizProgress updatedQuizProgress = progressTrackService.getProgress(userId, quizId);
             
             Map<String, Object> responseData = new HashMap<>();
             responseData.put("success", true);
             responseData.put("message", "Progress tracked successfully");
             responseData.put("userId", userId);
-            responseData.put("questionId", questionId);
-            responseData.put("answer", answer);
-            responseData.put("updatedProgress", updatedProgress);
+            responseData.put("quizId", quizId);
+            responseData.put("questionsTracked", questionIdToAnswer.size());
+            responseData.put("updatedQuizProgress", updatedQuizProgress);
             responseData.put("timestamp", System.currentTimeMillis());
             
             sendJsonResponse(response, responseData);
-            logger.info("Tracked progress for user: {}, question: {}, answer: {}", userId, questionId, answer);
+            logger.info("Successfully tracked progress for user: {}, quiz: {}, {} questions", 
+                       userId, quizId, questionIdToAnswer.size());
             
         } catch (Exception e) {
-            logger.error("Error parsing track progress request", e);
-            sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Invalid request format");
+            logger.error("Error processing track progress request", e);
+            sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Error processing progress tracking");
         }
     }
+
     
     private void handleResetQuizProgress(String userId, String quizId, HttpServletResponse response) throws IOException {
         if (userId == null || userId.trim().isEmpty()) {
