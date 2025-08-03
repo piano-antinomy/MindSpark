@@ -63,7 +63,7 @@
     {
       "id": "amc_2021_12a_2",
       "question": {
-        "text": "<p>Under what conditions is <INSERTION_INDEX_1> true, where <INSERTION_INDEX_2> and <INSERTION_INDEX_3> are real numbers?</p><p><INSERTION_INDEX_4> It is true if and only if <INSERTION_INDEX_5>.</p><p><INSERTION_INDEX_6> It is true if and only if <INSERTION_INDEX_7> and <INSERTION_INDEX_8>.</p><p><INSERTION_INDEX_9> It is always true.</p>",
+        "text": "<p>Under what conditions is <INSERTION_INDEX_1> true, where <INSERTION_INDEX_2> and <INSERTION_INDEX_3> are real numbers?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/5/1/0/5105fc27d023cb1140d319deeccde474b7c0886e.png",
@@ -85,52 +85,11 @@
             "alt_value": "$b$",
             "width": "10",
             "height": "14"
-          },
-          "INSERTION_INDEX_4": {
-            "picture": "//latex.artofproblemsolving.com/0/a/b/0ab3a9c13a5c376b1660f46d00b9007dbae240cb.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(C) }$",
-            "width": "27",
-            "height": "17"
-          },
-          "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/7/4/7/747f006d342618b3973a2cd8a36eda62209ce857.png",
-            "alt_type": "latex",
-            "alt_value": "$a+b\\ge 0$",
-            "width": "72",
-            "height": "15"
-          },
-          "INSERTION_INDEX_6": {
-            "picture": "//latex.artofproblemsolving.com/3/7/8/3787f1b7ce783a57c3a0d02ca4d485ccc950ff0a.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(D) }$",
-            "width": "28",
-            "height": "17"
-          },
-          "INSERTION_INDEX_7": {
-            "picture": "//latex.artofproblemsolving.com/4/2/d/42d8661b2bdfd67d5efbd15b7a06ad95e06a4a93.png",
-            "alt_type": "latex",
-            "alt_value": "$ab=0$",
-            "width": "50",
-            "height": "12"
-          },
-          "INSERTION_INDEX_8": {
-            "picture": "//latex.artofproblemsolving.com/7/4/7/747f006d342618b3973a2cd8a36eda62209ce857.png",
-            "alt_type": "latex",
-            "alt_value": "$a+b\\ge 0$",
-            "width": "72",
-            "height": "15"
-          },
-          "INSERTION_INDEX_9": {
-            "picture": "//latex.artofproblemsolving.com/8/1/d/81d05263c2e18459105296c8e3e06c9fddddb735.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(E) }$",
-            "width": "26",
-            "height": "17"
           }
         },
         "type": "multiple-choice",
         "text_choices": [],
+        "choice_space": 0.5,
         "picture_choices": [
           {
             "uri": "//latex.artofproblemsolving.com/5/0/6/506e909041d36bd739c8c959d341fcfbba3e9ad7.png",
@@ -144,8 +103,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf{(B) }$",
-          "$ab=0$"
+          "$\\textbf{(A) }\\text{It is never true.} \\qquad \\textbf{(B) }\\text{It is true if and only if }ab=0. \\qquad \\textbf{(C) }\\text{It is true if and only if }a+b\\ge 0. \\qquad \\textbf{(D) }\\text{It is true if and only if }ab=0\\text{ and }a+b\\ge 0. \\qquad \\textbf{(E) }\\text{It is always true.}$"
         ],
         "asy_choices": []
       },
@@ -681,31 +639,16 @@
             "alt_value": "$5$",
             "width": "8",
             "height": "12"
-          },
-          "INSERTION_INDEX_4": {
-            "picture": "//latex.artofproblemsolving.com/0/a/b/0ab3a9c13a5c376b1660f46d00b9007dbae240cb.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(C) }$",
-            "width": "27",
-            "height": "17"
-          },
-          "INSERTION_INDEX_5": {
-            "picture": "//latex.artofproblemsolving.com/3/7/8/3787f1b7ce783a57c3a0d02ca4d485ccc950ff0a.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(D) }$",
-            "width": "28",
-            "height": "17"
-          },
-          "INSERTION_INDEX_6": {
-            "picture": "//latex.artofproblemsolving.com/8/1/d/81d05263c2e18459105296c8e3e06c9fddddb735.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(E) }$",
-            "width": "26",
-            "height": "17"
           }
         },
         "type": "multiple-choice",
-        "text_choices": [],
+        "text_choices": [
+          "(A) Purple snakes can add.",
+          "(B) Purple snakes are happy.",
+          "(C) Snakes that can add are purple.",
+          "(D) Happy snakes are not purple.",
+          "(E) Happy snakes can't subtract."
+        ],
         "picture_choices": [
           {
             "uri": "//latex.artofproblemsolving.com/5/0/6/506e909041d36bd739c8c959d341fcfbba3e9ad7.png",
@@ -2234,6 +2177,7 @@
         },
         "type": "multiple-choice",
         "text_choices": [],
+        "choice_space": 0.4,
         "picture_choices": [
           {
             "uri": "//latex.artofproblemsolving.com/5/3/b/53b90b1e7b70be6e0c254f7601cf5281f5aedbb6.png",
