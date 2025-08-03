@@ -68,6 +68,9 @@ public class Question {
         @JsonProperty("choice_space")
         private Double choiceSpace;
         
+        @JsonProperty("choice_vertical")
+        private Boolean choiceVertical;
+        
         @JsonProperty("asy_choices")
         private List<String> asyChoices;
 
@@ -92,6 +95,9 @@ public class Question {
 
         public Double getChoiceSpace() { return choiceSpace; }
         public void setChoiceSpace(Double choiceSpace) { this.choiceSpace = choiceSpace; }
+
+        public Boolean getChoiceVertical() { return choiceVertical; }
+        public void setChoiceVertical(Boolean choiceVertical) { this.choiceVertical = choiceVertical; }
 
         public List<String> getAsyChoices() { return asyChoices; }
         public void setAsyChoices(List<String> asyChoices) { this.asyChoices = asyChoices; }

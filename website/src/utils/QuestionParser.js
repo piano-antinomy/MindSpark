@@ -292,6 +292,7 @@ class QuestionParser {
       isDummyChoices: choiceResult.isDummyChoices || false,
       isTextChoice: choiceResult.isTextChoice || false,
       choiceSpace: questionDetails.choice_space || null, // Extract choice_space field
+      choiceVertical: questionDetails.choice_vertical || false, // Extract choice_vertical field
       answer: question.answer,
       solution: question.solution,
       originalQuestion: question

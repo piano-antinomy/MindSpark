@@ -174,11 +174,28 @@ if (questionDetails.picture_choices && questionDetails.picture_choices.length > 
   isDummyChoices: false,
   isTextChoice: false,
   choiceSpace: 0.4, // Dynamic layout allocation (null if not specified)
+  choiceVertical: false, // Layout direction flag (true = vertical, false = side-by-side)
   answer: "D",
   solution: "Solution text...",
   originalQuestion: question // Full original object
 }
 ```
+
+## Layout Control Fields
+
+### choice_space Field
+- **Type**: Double (nullable)
+- **Purpose**: Controls width allocation between question and choices in side-by-side layout
+- **Usage**: Only applies when `choice_vertical` is false
+- **Example**: `choice_space: 0.4` → question gets 60% width, choices get 40% width
+
+### choice_vertical Field
+- **Type**: Boolean (defaults to false)
+- **Purpose**: Controls layout direction (vertical stack vs side-by-side)
+- **Values**:
+  - `true`: Question content stacked above choices (full width for both)
+  - `false`: Question and choices side by side (uses `choice_space` for width allocation)
+- **Extraction**: `choiceVertical: questionDetails.choice_vertical || false`
 
 ## Critical Edge Cases
 

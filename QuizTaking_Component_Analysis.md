@@ -179,21 +179,70 @@ setTimeRemaining(prev => {
 onClick={() => console.log('Save functionality to be implemented')}
 ```
 
-## Layout Proportions
-- **Desktop**: Question body (66.7%) vs Multiple choice (33.3%) - width-based
-- **Mobile/Tablet**: Question body (66.7%) vs Multiple choice (33.3%) - width-based side-by-side
-- **Dynamic Layout**: Uses `choiceSpace` field for custom allocation
+## Layout Proportions & choice_vertical Flag
 
+### Layout Types
+- **Side-by-side**: Question body (66.7%) vs Multiple choice (33.3%) - width-based
+- **Vertical**: Question body stacked above choices - full width for both sections
+- **Dynamic Layout**: Uses `choiceSpace` field for custom allocation (only in side-by-side mode)
+
+### choice_vertical Flag
 ```javascript
-// Device detection
+// Layout decision based on choice_vertical flag
+{question.choiceVertical ? (
+  // Vertical layout: question content stacked above choices
+  <div className="flex flex-col gap-3 lg:gap-4 flex-1 min-h-0">
+    {/* Question content section - scrollable */}
+    <div className="flex-1 overflow-y-auto min-h-0">
+      {renderQuestionContent(question)}
+    </div>
+    
+    {/* Choices section - below question content */}
+    <div className="flex-shrink-0">
+      <div className="choices-container space-y-2 lg:space-y-3 p-3 lg:p-6">
+        {renderChoices(question)}
+      </div>
+    </div>
+  </div>
+) : (
+  // Side-by-side layout: question and choices side by side
+  <div className="flex gap-3 lg:gap-4 flex-1 min-h-0">
+    {/* Dynamic width allocation using choiceSpace */}
+    <div style={{ width: question.choiceSpace ? `${(1 - question.choiceSpace) * 100}%` : '66.667%' }}>
+      {renderQuestionContent(question)}
+    </div>
+    <div style={{ width: question.choiceSpace ? `${question.choiceSpace * 100}%` : '33.333%' }}>
+      {renderChoices(question)}
+    </div>
+  </div>
+)}
+```
+
+### Device Detection & Separate Layouts
+```javascript
+// Desktop layout (window.innerWidth >= 1024 && !iPad)
 const isDesktop = window.innerWidth >= 1024 && !navigator.userAgent.includes('iPad');
 
-// Dynamic layout allocation using percentage widths (both desktop and mobile)
-const questionWidth = question.choiceSpace ? `${(1 - question.choiceSpace) * 100}%` : '66.667%';
-const choiceWidth = question.choiceSpace ? `${question.choiceSpace * 100}%` : '33.333%';
+// Mobile/iPad layout (window.innerWidth < 1024 || iPad)
+const isMobile = window.innerWidth < 1024 || navigator.userAgent.includes('iPad');
 
-// Example: choiceSpace = 0.4 → question=60%, choices=40% width (both desktop and mobile)
+// Separate rendering paths for different devices
+{isDesktop ? (
+  <div className="lg:p-4 h-full">
+    {renderQuestion(parsedQuestions[currentQuestionIndex])}
+  </div>
+) : (
+  <div className="p-3" style={{ height: 'calc(100vh - 60px)' }}>
+    {/* Mobile-specific layout with different styling */}
+    {renderMobileQuestion(parsedQuestions[currentQuestionIndex])}
+  </div>
+)}
 ```
+
+### choiceSpace Field Usage
+- **Side-by-side mode**: `choiceSpace` controls width allocation between question and choices
+- **Vertical mode**: `choiceSpace` is ignored (both sections use full width)
+- **Example**: `choiceSpace = 0.4` → question=60%, choices=40% width (side-by-side only)
 
 ## Error Handling
 ```javascript
