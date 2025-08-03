@@ -318,7 +318,7 @@
     {
       "id": "amc_2019_12b_3",
       "question": {
-        "text": "<p>Which of the following rigid transformations (isometries) maps the line segment <INSERTION_INDEX_1> onto the line segment <INSERTION_INDEX_2> so that the image of <INSERTION_INDEX_3> is <INSERTION_INDEX_4> and the image of <INSERTION_INDEX_5> is <INSERTION_INDEX_6>?</p><p><INSERTION_INDEX_7> translation by 3 units to the right and 5 units down</p><p><INSERTION_INDEX_8> reflection in the <INSERTION_INDEX_9>-axis</p><p><INSERTION_INDEX_10> clockwise rotation about the origin by <INSERTION_INDEX_11></p>",
+        "text": "<p>Which of the following rigid transformations (isometries) maps the line segment <INSERTION_INDEX_1> onto the line segment <INSERTION_INDEX_2> so that the image of <INSERTION_INDEX_3> is <INSERTION_INDEX_4> and the image of <INSERTION_INDEX_5> is <INSERTION_INDEX_6>?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/8/4/0/840e2b592390eb6ec918fa6f3292716ce170de66.png",
@@ -361,45 +361,16 @@
             "alt_value": "$B'(1, -4)$",
             "width": "72",
             "height": "18"
-          },
-          "INSERTION_INDEX_7": {
-            "picture": "//latex.artofproblemsolving.com/0/a/b/0ab3a9c13a5c376b1660f46d00b9007dbae240cb.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(C) }$",
-            "width": "27",
-            "height": "17"
-          },
-          "INSERTION_INDEX_8": {
-            "picture": "//latex.artofproblemsolving.com/3/7/8/3787f1b7ce783a57c3a0d02ca4d485ccc950ff0a.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(D) }$",
-            "width": "28",
-            "height": "17"
-          },
-          "INSERTION_INDEX_9": {
-            "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
-            "alt_type": "latex",
-            "alt_value": "$x$",
-            "width": "12",
-            "height": "10"
-          },
-          "INSERTION_INDEX_10": {
-            "picture": "//latex.artofproblemsolving.com/8/1/d/81d05263c2e18459105296c8e3e06c9fddddb735.png",
-            "alt_type": "latex",
-            "alt_value": "$\\textbf{(E) }$",
-            "width": "26",
-            "height": "17"
-          },
-          "INSERTION_INDEX_11": {
-            "picture": "//latex.artofproblemsolving.com/3/f/0/3f0cd95f95238159d02dbcea0aca632c2928991c.png",
-            "alt_type": "latex",
-            "alt_value": "$180^{\\circ}$",
-            "width": "33",
-            "height": "13"
           }
         },
         "type": "multiple-choice",
-        "text_choices": [],
+        "text_choices": [
+          "(A) reflection in the y-axis",
+          "(B) counterclockwise rotation around the origin by 90°",
+          "(C) translation by 3 units to the right and 5 units down",
+          "(D) reflection in the x-axis",
+          "(E) clockwise rotation about the origin by 180°"
+        ],
         "picture_choices": [
           {
             "uri": "//latex.artofproblemsolving.com/5/0/6/506e909041d36bd739c8c959d341fcfbba3e9ad7.png",
@@ -413,8 +384,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf{(B) }$",
-          "$90^{\\circ}$"
+          "$\\textbf{(A) }$ reflection in the y-axis \\qquad \\textbf{(B) } \\text{counterclockwise rotation around the origin by 90°} \\qquad \\textbf{(C) } \\text{translation by 3 units to the right and 5 units down} \\qquad \\textbf{(D) } \\text{reflection in the x-axis} \\qquad \\textbf{(E) } \\text{clockwise rotation about the origin by 180°}$"
         ],
         "asy_choices": []
       },
