@@ -12,6 +12,7 @@ function Solutions() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [viewMode, setViewMode] = useState('quiz'); // 'quiz' or 'solution'
+  const [currentSolutionIndex, setCurrentSolutionIndex] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -145,11 +146,27 @@ function Solutions() {
 
   const toggleViewMode = () => {
     setViewMode(viewMode === 'quiz' ? 'solution' : 'quiz');
+    setCurrentSolutionIndex(0); // Reset to first solution when switching to solution view
+  };
+
+  const handlePreviousSolution = () => {
+    if (currentSolutionIndex > 0) {
+      setCurrentSolutionIndex(currentSolutionIndex - 1);
+    }
+  };
+
+  const handleNextSolution = () => {
+    const currentQuestion = parsedQuestions[currentQuestionIndex];
+    const solutions = currentQuestion?.originalQuestion?.solutions;
+    if (solutions && currentSolutionIndex < solutions.length - 1) {
+      setCurrentSolutionIndex(currentSolutionIndex + 1);
+    }
   };
 
   const handleQuestionSelect = (questionIndex) => {
     setCurrentQuestionIndex(questionIndex);
     setViewMode('quiz'); // Reset to quiz view when changing questions
+    setCurrentSolutionIndex(0); // Reset to first solution when changing questions
   };
 
   const renderSolution = (question) => {
@@ -162,89 +179,57 @@ function Solutions() {
     // Get insertions from the original question for processing solution text
     const questionInsertions = question.originalQuestion?.question?.insertions;
 
+    // Show only the current solution
+    const currentSolution = solutions[currentSolutionIndex];
+    const processedText = questionParser.processSolutionText(currentSolution, questionInsertions);
+    
     return (
       <div className="solution-content">
-        {solutions.map((solution, index) => {
-          // Use the shared processSolutionText method from QuestionParser
-          const processedText = questionParser.processSolutionText(solution, questionInsertions);
-          
-          return (
-            <div key={index} className="solution-item">
-              {solutions.length > 1 && (
-                <h4>Solution {index + 1}:</h4>
-              )}
-              <div 
-                className="solution-text"
-                dangerouslySetInnerHTML={{
-                  __html: processedText
-                }}
-              />
+        <div className="solution-item">
+          {solutions.length > 1 && (
+            <div className="text-lg font-semibold text-gray-800 mb-4">
+              Solution {currentSolutionIndex + 1} of {solutions.length}
             </div>
-          );
-        })}
+          )}
+          <div 
+            className="solution-text"
+            dangerouslySetInnerHTML={{
+              __html: processedText
+            }}
+          />
+        </div>
       </div>
     );
   };
 
   const renderSolutionContent = (question) => {
+    const solutions = question.originalQuestion?.solutions;
+    const hasMultipleSolutions = solutions && solutions.length > 1;
+    
     return (
       <div className="question-content-section text-left">
-        {/* Question text */}
-        <div className="question-text mb-4">
-          <h4 className="font-semibold mb-2">Question:</h4>
-          <div dangerouslySetInnerHTML={{ __html: question.questionText }} />
-        </div>
-
-        {/* Answer choices */}
-        {question.choices && question.choices.length > 0 && !question.isDummyChoices && (
-          <div className="choices-section mb-4">
-            <h4 className="font-semibold mb-2">Choices:</h4>
-            <div className="choices-container">
-              {question.isImageChoice ? (
-                <div className="image-choices">
-                  {question.choices.map((choice, choiceIndex) => (
-                    <div key={choiceIndex} className="image-choice mb-2">
-                      <strong>{String.fromCharCode(65 + choiceIndex)}:</strong>
-                      <img 
-                        src={choice.uri} 
-                        alt={`Choice ${String.fromCharCode(65 + choiceIndex)}`}
-                        className="choice-image ml-2"
-                        style={{
-                          width: choice.width ? `${choice.width}px` : 'auto',
-                          height: choice.height ? `${choice.height}px` : 'auto'
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="text-choices">
-                  {question.choices.map((choice, choiceIndex) => (
-                    <div key={choiceIndex} className="text-choice mb-1">
-                      {question.hasLabels ? (
-                        <div dangerouslySetInnerHTML={{ __html: choice }} />
-                      ) : (
-                        <div>
-                          <strong>{String.fromCharCode(65 + choiceIndex)}:</strong> 
-                          <span dangerouslySetInnerHTML={{ __html: choice }} />
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
+        {/* Solution only */}
+        <div>
+          {hasMultipleSolutions && (
+            <div className="flex justify-end mb-4">
+              <div className="flex gap-2">
+                <button 
+                  className="btn btn-secondary text-sm"
+                  onClick={handlePreviousSolution}
+                  disabled={currentSolutionIndex === 0}
+                >
+                  ← Previous
+                </button>
+                <button 
+                  className="btn btn-secondary text-sm"
+                  onClick={handleNextSolution}
+                  disabled={currentSolutionIndex === solutions.length - 1}
+                >
+                  Next →
+                </button>
+              </div>
             </div>
-          </div>
-        )}
-
-        {/* Correct Answer */}
-        <div className="answer-section mb-4">
-          <h4 className="font-semibold">Correct Answer: <span className="text-green-600">{question.answer}</span></h4>
-        </div>
-
-        {/* Solution */}
-        <div className="solution-section">
-          <h4 className="font-semibold mb-2">Solution:</h4>
+          )}
           {renderSolution(question)}
         </div>
       </div>
