@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { questionParser } from '../utils/QuestionParser';
+import solutionParser from '../utils/SolutionParser';
 import Question from './Question';
 
 function Solutions() {
@@ -13,6 +14,7 @@ function Solutions() {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [viewMode, setViewMode] = useState('quiz'); // 'quiz' or 'solution'
   const [currentSolutionIndex, setCurrentSolutionIndex] = useState(0);
+  const solutionRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -48,14 +50,35 @@ function Solutions() {
     }
   }, [questions]);
 
+  useEffect(() => {
+    // Trigger MathJax typesetting when solution content changes
+    if (solutionRef.current) {
+      safeMathJaxTypeset().catch(() => {
+        setTimeout(() => safeMathJaxTypeset(), 50);
+      });
+    }
+  }, [currentSolutionIndex]);
+
+  useEffect(() => {
+    // Trigger MathJax typesetting when switching to solution view
+    if (viewMode === 'solution' && solutionRef.current) {
+      // Add a small delay to ensure DOM is updated
+      setTimeout(() => {
+        safeMathJaxTypeset().catch(() => {
+          setTimeout(() => safeMathJaxTypeset(), 50);
+        });
+      }, 100);
+    }
+  }, [viewMode]);
+
   useLayoutEffect(() => {
-    // Re-render MathJax when questions change or view mode changes
+    // Re-render MathJax when questions change, view mode changes, or solution index changes
     if (parsedQuestions.length > 0) {
       safeMathJaxTypeset().catch(() => {
         setTimeout(() => safeMathJaxTypeset(), 50);
       });
     }
-  }, [parsedQuestions, currentQuestionIndex, viewMode]);
+  }, [parsedQuestions, currentQuestionIndex, viewMode, currentSolutionIndex]);
 
   const checkAuthStatus = () => {
     const currentUser = localStorage.getItem('currentUser');
@@ -176,15 +199,31 @@ function Solutions() {
       return <div className="solution-content">No solution available for this question.</div>;
     }
 
-    // Get insertions from the original question for processing solution text
-    const questionInsertions = question.originalQuestion?.question?.insertions;
-
     // Show only the current solution
     const currentSolution = solutions[currentSolutionIndex];
-    const processedText = questionParser.processSolutionText(currentSolution, questionInsertions);
+    
+    // Handle different solution formats
+    let solutionText = '';
+    let solutionInsertions = {};
+    
+    if (typeof currentSolution === 'string') {
+      solutionText = currentSolution;
+    } else if (currentSolution && typeof currentSolution === 'object') {
+      solutionText = currentSolution.text || currentSolution.content || JSON.stringify(currentSolution);
+      solutionInsertions = currentSolution.insertions || {};
+    } else {
+      solutionText = String(currentSolution || '');
+    }
+    
+    // Process the solution text using the solution's own insertions
+    const processedText = solutionParser.processSolutionText(solutionText, solutionInsertions);
+    
+    console.log('Solutions - Original solution text:', solutionText);
+    console.log('Solutions - Solution insertions:', solutionInsertions);
+    console.log('Solutions - Final processed text:', processedText);
     
     return (
-      <div className="solution-content">
+      <div className="solution-content" ref={solutionRef}>
         <div className="solution-item">
           {solutions.length > 1 && (
             <div className="text-lg font-semibold text-gray-800 mb-4">
