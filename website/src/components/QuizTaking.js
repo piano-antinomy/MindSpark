@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { questionParser } from '../utils/QuestionParser';
+import Question from './Question';
 
 function QuizTaking() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -412,242 +413,6 @@ function QuizTaking() {
     return Promise.resolve();
   };
 
-  const renderChoices = (question) => {
-    
-    if ((!question.choices || question.choices.length === 0) && !question.isDummyChoices) {
-      return <p className="text-gray-500 italic">No choices available for this question.</p>;
-    }
-
-    // Handle dummy choices - show message but still display A, B, C, D, E as choices
-    if (question.isDummyChoices) {
-      return (
-        <div className="space-y-4">
-          <div className="space-y-2">
-            {question.choices.map((choice, choiceIndex) => {
-              const choiceValue = String.fromCharCode(65 + choiceIndex);
-              const isCorrect = quizCompleted && choiceValue === question.answer;
-              const isSelected = selectedAnswers[question.id] === choiceValue;
-              
-              return (
-                <label 
-                  key={choiceIndex} 
-                  className={`w-full p-3 border-2 rounded-lg cursor-pointer transition-all duration-200 flex items-start gap-3 ${
-                    isSelected 
-                      ? 'border-primary-500 bg-primary-50 text-primary-900' 
-                      : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
-                  } ${
-                    quizCompleted && isCorrect 
-                      ? 'border-success-500 bg-success-50 text-success-900' 
-                      : ''
-                  } ${
-                    quizCompleted && isSelected && !isCorrect 
-                      ? 'border-danger-500 bg-danger-50 text-danger-900' 
-                      : ''
-                  }`}
-                >
-                  <input
-                    type="radio"
-                    name={`question-${question.id}`}
-                    value={choiceValue}
-                    checked={isSelected}
-                    onChange={() => selectAnswer(question.id, choiceValue)}
-                    disabled={quizCompleted}
-                    className="mt-1 flex-shrink-0"
-                  />
-                  
-                  {/* Choice text - just the letter */}
-                  <span className="choice-text flex-1 text-left font-semibold">
-                    {choice}
-                  </span>
-                  
-                  {/* Correct/Incorrect indicators */}
-                  {quizCompleted && isCorrect && (
-                    <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-success-500 text-white text-xs">
-                      ✓
-                    </span>
-                  )}
-                  {quizCompleted && isSelected && !isCorrect && (
-                    <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-danger-500 text-white text-xs">
-                      ✗
-                    </span>
-                  )}
-                </label>
-              );
-            })}
-          </div>
-        </div>
-      );
-    }
-
-    if (question.isImageChoice) {
-      // For image choices, just show A, B, C, D, E as fake choices on the right
-      return (
-        <div className="space-y-2">
-          {['A', 'B', 'C', 'D', 'E'].map((letter, letterIndex) => {
-            const isCorrect = quizCompleted && letter === question.answer;
-            const isSelected = selectedAnswers[question.id] === letter;
-            
-            return (
-              <label 
-                key={letterIndex} 
-                className={`w-full p-3 border-2 rounded-lg cursor-pointer transition-all duration-200 flex items-start gap-3 ${
-                  isSelected 
-                    ? 'border-primary-500 bg-primary-50 text-primary-900' 
-                    : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
-                } ${
-                  quizCompleted && isCorrect 
-                    ? 'border-success-500 bg-success-50 text-success-900' 
-                    : ''
-                } ${
-                  quizCompleted && isSelected && !isCorrect 
-                    ? 'border-danger-500 bg-danger-50 text-danger-900' 
-                    : ''
-                }`}
-              >
-                <input
-                  type="radio"
-                  name={`question-${question.id}`}
-                  value={letter}
-                  checked={isSelected}
-                  onChange={() => selectAnswer(question.id, letter)}
-                  disabled={quizCompleted}
-                  className="mt-1 flex-shrink-0"
-                />
-                
-                {/* Choice text - just the letter */}
-                <span className="choice-text flex-1 text-left font-semibold">
-                  {letter}
-                </span>
-                
-                {/* Correct/Incorrect indicators */}
-                {quizCompleted && isCorrect && (
-                  <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-success-500 text-white text-xs">
-                    ✓
-                  </span>
-                )}
-                {quizCompleted && isSelected && !isCorrect && (
-                  <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-danger-500 text-white text-xs">
-                    ✗
-                  </span>
-                )}
-              </label>
-            );
-          })}
-        </div>
-      );
-    } else {
-      // Handle regular choices with button-style layout
-      return question.choices.map((choice, choiceIndex) => {
-        const choiceValue = String.fromCharCode(65 + choiceIndex);
-        const isCorrect = quizCompleted && choiceValue === question.answer;
-        const isSelected = selectedAnswers[question.id] === choiceValue;
-        
-        return (
-          <label 
-            key={choiceIndex} 
-            className={`w-full p-3 border-2 rounded-lg cursor-pointer transition-all duration-200 flex items-start gap-3 ${
-              isSelected 
-                ? 'border-primary-500 bg-primary-50 text-primary-900' 
-                : 'border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50'
-            } ${
-              quizCompleted && isCorrect 
-                ? 'border-success-500 bg-success-50 text-success-900' 
-                : ''
-            } ${
-              quizCompleted && isSelected && !isCorrect 
-                ? 'border-danger-500 bg-danger-50 text-danger-900' 
-                : ''
-            }`}
-          >
-            <input
-              type="radio"
-              name={`question-${question.id}`}
-              value={choiceValue}
-              checked={isSelected}
-              onChange={() => selectAnswer(question.id, choiceValue)}
-              disabled={quizCompleted}
-              className="mt-1 flex-shrink-0"
-            />
-            
-            {/* Choice text - left aligned */}
-            {question.isTextChoice ? (
-              // For text choices, render as plain text (no LaTeX processing)
-              <span className="choice-text flex-1 text-left">
-                {choice}
-              </span>
-            ) : (
-              // For LaTeX choices, use dangerouslySetInnerHTML for MathJax processing
-              <span 
-                className="choice-text flex-1 text-left" 
-                dangerouslySetInnerHTML={{ __html: choice }} 
-              />
-            )}
-            
-            {/* Correct/Incorrect indicators */}
-            {quizCompleted && isCorrect && (
-              <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-success-500 text-white text-xs">
-                ✓
-              </span>
-            )}
-            {quizCompleted && isSelected && !isCorrect && (
-              <span className="flex-shrink-0 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-danger-500 text-white text-xs">
-                ✗
-              </span>
-            )}
-          </label>
-        );
-      });
-    }
-  };
-
-  const renderQuestionContent = (question) => (
-    <div className="question-content" style={{ backgroundColor: 'transparent' }}>
-      <div 
-        className="question-text max-w-none" 
-        style={{ borderLeft: 'none', backgroundColor: 'transparent' }}
-        dangerouslySetInnerHTML={{ __html: question.questionText }} 
-      />
-      
-      {/* Show image in question content for image choices */}
-      {question.isImageChoice && question.choices && question.choices.length > 0 && (
-        <div className="mt-6 question-image-container">
-          {question.choices.map((choice, choiceIndex) => {
-            const style = choice.width && choice.height ? 
-              { width: `${choice.width}px`, height: `${choice.height}px` } : {};
-            
-            return (
-              <img 
-                key={choiceIndex}
-                src={choice.uri} 
-                alt="Question image" 
-                className="question-image"
-                style={style}
-              />
-            );
-          })}
-        </div>
-      )}
-      
-      {quizCompleted && (
-        <div className="mt-6 p-4 bg-success-50 border border-success-200 rounded-lg">
-          <p className="text-success-800 font-medium">
-            <span className="font-semibold">Correct Answer:</span> {question.answer}
-          </p>
-        </div>
-      )}
-
-      {quizCompleted && question.solution && (
-        <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-          <h4 className="text-blue-900 font-semibold mb-2">Solution:</h4>
-          <div 
-            className="solution-text text-blue-800" 
-            dangerouslySetInnerHTML={{ __html: question.solution }} 
-          />
-        </div>
-      )}
-    </div>
-  );
-
   const renderNoQuizData = () => (
     <div className="flex min-h-screen bg-gray-50">
       {/* Left Menu Navigation */}
@@ -820,71 +585,31 @@ function QuizTaking() {
           </div>
         </div>
         
-        {/* Main content area - question and choices layout */}
-        {question.choiceVertical ? (
-          // Vertical layout: question content stacked above choices
-          <div className="flex flex-col gap-3 lg:gap-4 flex-1 min-h-0">
-            {/* Question content section - scrollable */}
-            <div className="flex-1 overflow-y-auto min-h-0">
-              <div className="question-content-section text-left">
-                {renderQuestionContent(question)}
-              </div>
-            </div>
-            
-            {/* Choices section - below question content */}
-            <div className="flex-shrink-0">
-              <div className="choices-container space-y-2 lg:space-y-3 p-3 lg:p-6">
-                {renderChoices(question)}
-              </div>
-            </div>
-          </div>
-        ) : (
-          // Side-by-side layout: question and choices side by side
-          <div className="flex gap-3 lg:gap-4 flex-1 min-h-0">
-            {/* Left side - Question content only */}
-            <div 
-              className="flex flex-col min-h-0"
-              style={{
-                width: question.choiceSpace ? `${(1 - question.choiceSpace) * 100}%` : '66.667%'
-              }}
-            >
-              {/* Question content section - scrollable with fixed height */}
-              <div className="flex-1 overflow-y-auto min-h-0">
-                <div className="question-content-section text-left">
-                  {renderQuestionContent(question)}
-                </div>
-              </div>
-            </div>
-            
-            {/* Right side - Choices section */}
-            <div 
-              className="flex flex-col min-h-0"
-              style={{
-                width: question.choiceSpace ? `${question.choiceSpace * 100}%` : '33.333%'
-              }}
-            >
-              <div className="choices-container space-y-2 lg:space-y-3 flex-1 overflow-y-auto p-3 lg:p-6">
-                {renderChoices(question)}
-              </div>
-            </div>
-          </div>
-        )}
+        {/* Main content area - use shared Question component */}
+        <div className="flex-1 min-h-0">
+          <Question
+            question={question}
+            quizCompleted={quizCompleted}
+            selectedAnswer={selectedAnswers[question.id]}
+            onAnswerSelect={(answer) => selectAnswer(question.id, answer)}
+          />
+        </div>
         
         {/* Navigation buttons - fixed at bottom, outside the scrollable area */}
         <div className="flex justify-between items-center mt-3 lg:mt-4 pt-3 lg:pt-4 flex-shrink-0 border-t border-gray-100">
-                      {/* Left side - Save and Submit */}
-            <div className="flex gap-2 lg:gap-4 items-center">
-              <button 
-                className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} 
-                onClick={() => {
-                  console.log('🖱️ Save button clicked!');
-                  saveProgress();
-                }}
-                disabled={saving}
-              >
-                {saving ? 'Saving...' : 'Save'}
-              </button>
-              {saving && <span className="text-blue-600 text-sm">💾 Saving progress...</span>}
+          {/* Left side - Save and Submit */}
+          <div className="flex gap-2 lg:gap-4 items-center">
+            <button 
+              className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} 
+              onClick={() => {
+                console.log('🖱️ Save button clicked!');
+                saveProgress();
+              }}
+              disabled={saving}
+            >
+              {saving ? 'Saving...' : 'Save'}
+            </button>
+            {saving && <span className="text-blue-600 text-sm">💾 Saving progress...</span>}
             <button className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={completeQuiz}>
               Submit Quiz
             </button>
@@ -947,10 +672,12 @@ function QuizTaking() {
                   <h3 className="text-lg lg:text-xl font-semibold text-gray-900">Problem {index + 1}</h3>
                 </div>
                 <div className="question-layout-stacked">
-                  {renderQuestionContent(question)}
-                  <div className="choices-container">
-                    {renderChoices(question)}
-                  </div>
+                  <Question
+                    question={question}
+                    quizCompleted={true}
+                    selectedAnswer={selectedAnswers[question.id]}
+                    onAnswerSelect={null}
+                  />
                 </div>
               </div>
             ))}
@@ -1033,71 +760,31 @@ function QuizTaking() {
                 </div>
               </div>
               
-              {/* Main content area - question and choices layout */}
-              {parsedQuestions[currentQuestionIndex].choiceVertical ? (
-                // Vertical layout: question content stacked above choices
-                <div className="flex flex-col gap-3 flex-1 px-3 min-h-0">
-                  {/* Question content section - scrollable */}
-                  <div className="flex-1 overflow-y-auto min-h-0">
-                    <div className="question-content-section text-left pt-2">
-                      {renderQuestionContent(parsedQuestions[currentQuestionIndex])}
-                    </div>
-                  </div>
-                  
-                  {/* Choices section - below question content */}
-                  <div className="flex-shrink-0">
-                    <div className="choices-container space-y-2 p-2">
-                      {renderChoices(parsedQuestions[currentQuestionIndex])}
-                    </div>
-                  </div>
-                </div>
-              ) : (
-                // Side-by-side layout: question and choices side by side
-                <div className="flex gap-3 flex-1 px-3 min-h-0">
-                  {/* Left side - Question content only */}
-                  <div 
-                    className="flex flex-col min-h-0"
-                    style={{
-                      width: parsedQuestions[currentQuestionIndex].choiceSpace ? `${(1 - parsedQuestions[currentQuestionIndex].choiceSpace) * 100}%` : '66.667%'
-                    }}
-                  >
-                    {/* Question content section - scrollable with fixed height */}
-                    <div className="flex-1 overflow-y-auto min-h-0">
-                      <div className="question-content-section text-left pt-2">
-                        {renderQuestionContent(parsedQuestions[currentQuestionIndex])}
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Right side - Choices section */}
-                  <div 
-                    className="flex flex-col min-h-0 choices-section"
-                    style={{
-                      width: parsedQuestions[currentQuestionIndex].choiceSpace ? `${parsedQuestions[currentQuestionIndex].choiceSpace * 100}%` : '33.333%'
-                    }}
-                  >
-                    <div className="choices-container space-y-2 overflow-y-auto p-2">
-                      {renderChoices(parsedQuestions[currentQuestionIndex])}
-                    </div>
-                  </div>
-                </div>
-              )}
+              {/* Main content area - use shared Question component */}
+              <div className="flex-1 min-h-0">
+                <Question
+                  question={parsedQuestions[currentQuestionIndex]}
+                  quizCompleted={quizCompleted}
+                  selectedAnswer={selectedAnswers[parsedQuestions[currentQuestionIndex].id]}
+                  onAnswerSelect={(answer) => selectAnswer(parsedQuestions[currentQuestionIndex].id, answer)}
+                />
+              </div>
               
               {/* Navigation buttons - fixed at bottom, outside the scrollable area */}
               <div className="flex justify-between items-center p-3 pt-2 flex-shrink-0 border-t border-gray-100">
-                                  {/* Left side - Save and Submit */}
-                  <div className="flex gap-2 items-center">
-                    <button 
-                      className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} 
-                      onClick={() => {
-                        console.log('🖱️ Mobile Save button clicked!');
-                        saveProgress();
-                      }}
-                      disabled={saving}
-                    >
-                      {saving ? 'Saving...' : 'Save'}
-                    </button>
-                    {saving && <span className="text-blue-600 text-xs">💾</span>}
+                {/* Left side - Save and Submit */}
+                <div className="flex gap-2 items-center">
+                  <button 
+                    className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} 
+                    onClick={() => {
+                      console.log('🖱️ Mobile Save button clicked!');
+                      saveProgress();
+                    }}
+                    disabled={saving}
+                  >
+                    {saving ? 'Saving...' : 'Save'}
+                  </button>
+                  {saving && <span className="text-blue-600 text-xs">💾</span>}
                   <button className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={completeQuiz}>
                     Submit Quiz
                   </button>

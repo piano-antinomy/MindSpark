@@ -218,10 +218,6 @@ function Solutions() {
     // Process the solution text using the solution's own insertions
     const processedText = solutionParser.processSolutionText(solutionText, solutionInsertions);
     
-    console.log('Solutions - Original solution text:', solutionText);
-    console.log('Solutions - Solution insertions:', solutionInsertions);
-    console.log('Solutions - Final processed text:', processedText);
-    
     return (
       <div className="solution-content" ref={solutionRef}>
         <div className="solution-item">
