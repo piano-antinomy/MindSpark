@@ -12,7 +12,7 @@ function Solutions() {
   const [currentQuiz, setCurrentQuiz] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [viewMode, setViewMode] = useState('quiz'); // 'quiz' or 'solution'
+  const [viewMode, setViewMode] = useState('solution'); // 'quiz' or 'solution'
   const [currentSolutionIndex, setCurrentSolutionIndex] = useState(0);
   const solutionRef = useRef(null);
   const navigate = useNavigate();
@@ -156,14 +156,12 @@ function Solutions() {
   const handlePreviousQuestion = () => {
     if (currentQuestionIndex > 0) {
       setCurrentQuestionIndex(currentQuestionIndex - 1);
-      setViewMode('quiz'); // Reset to quiz view when changing questions
     }
   };
 
   const handleNextQuestion = () => {
     if (currentQuestionIndex < parsedQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      setViewMode('quiz'); // Reset to quiz view when changing questions
     }
   };
 
@@ -188,7 +186,6 @@ function Solutions() {
 
   const handleQuestionSelect = (questionIndex) => {
     setCurrentQuestionIndex(questionIndex);
-    setViewMode('quiz'); // Reset to quiz view when changing questions
     setCurrentSolutionIndex(0); // Reset to first solution when changing questions
   };
 
