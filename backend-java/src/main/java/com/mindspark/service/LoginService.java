@@ -30,10 +30,10 @@ public interface LoginService {
     /**
      * Update user math level
      * @param username The username
-     * @param mathLevel The new math level
+     * @param mathLevel The new math level (1=beginner, 2=intermediate, 3=advanced)
      * @return true if update successful
      */
-    boolean updateUserMathLevel(String username, String mathLevel);
+    boolean updateUserMathLevel(String username, int mathLevel);
     
     /**
      * Check if user exists

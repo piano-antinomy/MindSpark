@@ -10,29 +10,32 @@ public class User {
     @JsonProperty("password")
     private String password;
     
+    @JsonProperty("userId")
+    private String userId;
+    
     @JsonProperty("score")
     private int score;
     
-    @JsonProperty("math_level")
-    private String mathLevel;
+    @JsonProperty("mathLevel")
+    private int mathLevel;
     
     @JsonProperty("email")
     private String email;
     
-    @JsonProperty("full_name")
+    @JsonProperty("fullName")
     private String fullName;
 
     // Constructors
     public User() {}
 
-    public User(String username, String password, int score, String mathLevel) {
+    public User(String username, String password, int score, int mathLevel) {
         this.username = username;
         this.password = password;
         this.score = score;
         this.mathLevel = mathLevel;
     }
 
-    public User(String username, String password, int score, String mathLevel, String email, String fullName) {
+    public User(String username, String password, int score, int mathLevel, String email, String fullName) {
         this.username = username;
         this.password = password;
         this.score = score;
@@ -48,11 +51,14 @@ public class User {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
+    public String getUserId() { return userId; }
+    public void setUserId(String userId) { this.userId = userId; }
+
     public int getScore() { return score; }
     public void setScore(int score) { this.score = score; }
 
-    public String getMathLevel() { return mathLevel; }
-    public void setMathLevel(String mathLevel) { this.mathLevel = mathLevel; }
+    public int getMathLevel() { return mathLevel; }
+    public void setMathLevel(int mathLevel) { this.mathLevel = mathLevel; }
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
@@ -64,6 +70,7 @@ public class User {
     public User withoutPassword() {
         User user = new User();
         user.username = this.username;
+        user.userId = this.userId;
         user.score = this.score;
         user.mathLevel = this.mathLevel;
         user.email = this.email;
@@ -75,8 +82,9 @@ public class User {
     public String toString() {
         return "User{" +
                 "username='" + username + '\'' +
+                ", userId='" + userId + '\'' +
                 ", score=" + score +
-                ", mathLevel='" + mathLevel + '\'' +
+                ", mathLevel=" + mathLevel +
                 ", email='" + email + '\'' +
                 ", fullName='" + fullName + '\'' +
                 '}';

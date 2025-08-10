@@ -8,6 +8,11 @@ function Dashboard() {
 
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
+  const levelLabelFromInt = (level) => {
+    const mapping = { 1: 'Beginner', 2: 'Intermediate', 3: 'Advanced' };
+    return mapping[level] || 'Not Assessed';
+  };
+
   useEffect(() => {
     // Check if user is logged in
     const currentUser = checkAuthStatus();
@@ -79,10 +84,10 @@ function Dashboard() {
   };
 
   const updateCurrentSubject = (user) => {
-    if (user.math_level) {
+    if (user.mathLevel) {
       return (
         <div className="current-subject-info">
-          <h5>Mathematics - {user.math_level} Level</h5>
+          <h5>Mathematics - {user.mathLevel} Level</h5>
           <p>Continue your math journey!</p>
           <Link to="/math" className="btn btn-primary">Continue Learning</Link>
         </div>
@@ -111,10 +116,10 @@ function Dashboard() {
     }
     
     // Add level assessment activity
-    if (user.math_level) {
+    if (user.mathLevel) {
       activities.push({
         type: 'assessment',
-        message: `Math level assessed as ${user.math_level}`,
+        message: `Math level assessed as ${user.mathLevel}`,
         date: new Date()
       });
     }
@@ -145,6 +150,8 @@ function Dashboard() {
     return null;
   }
 
+  const levelLabel = levelLabelFromInt(user.mathLevel);
+
   return (
     <div className="dashboard-container">
       <header className="dashboard-header">
@@ -169,8 +176,8 @@ function Dashboard() {
               </div>
               <div className="level-info">
                 <h4>Math Level</h4>
-                <span className={`level-badge ${(user.math_level || 'Not Assessed').toLowerCase()}`}>
-                  {user.math_level || 'Not Assessed'}
+                <span className={`level-badge ${levelLabel.toLowerCase()}`}>
+                  {levelLabel}
                 </span>
               </div>
             </div>

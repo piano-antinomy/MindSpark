@@ -25,10 +25,10 @@ public class LoginServiceImpl implements LoginService {
      */
     private void initializeTestUsers() {
         // Add demo users that match the original Python backend
-        users.put("demo", new User("demo", "demo123", 150, "intermediate", "demo@mindspark.com", "Demo User"));
-        users.put("student1", new User("student1", "password123", 200, "beginner", "student1@mindspark.com", "Student One"));
-        users.put("teacher", new User("teacher", "teacher123", 500, "advanced", "teacher@mindspark.com", "Teacher User"));
-        users.put("admin", new User("admin", "admin123", 1000, "advanced", "admin@mindspark.com", "Admin User"));
+        users.put("demo", new User("demo", "demo123", 150, 2, "demo@mindspark.com", "Demo User"));
+        users.put("student1", new User("student1", "password123", 200, 1, "student1@mindspark.com", "Student One"));
+        users.put("teacher", new User("teacher", "teacher123", 500, 3, "teacher@mindspark.com", "Teacher User"));
+        users.put("admin", new User("admin", "admin123", 1000, 3, "admin@mindspark.com", "Admin User"));
         
         logger.info("Initialized {} test users", users.size());
     }
@@ -77,8 +77,8 @@ public class LoginServiceImpl implements LoginService {
     }
     
     @Override
-    public boolean updateUserMathLevel(String username, String mathLevel) {
-        if (username == null || mathLevel == null) {
+    public boolean updateUserMathLevel(String username, int mathLevel) {
+        if (username == null) {
             return false;
         }
         
@@ -114,7 +114,7 @@ public class LoginServiceImpl implements LoginService {
             return false;
         }
         
-        User newUser = new User(username.toLowerCase(), password, 0, "beginner", email, fullName);
+        User newUser = new User(username.toLowerCase(), password, 0, 1, email, fullName);
         users.put(username.toLowerCase(), newUser);
         logger.info("Added new user: {}", username);
         return true;
