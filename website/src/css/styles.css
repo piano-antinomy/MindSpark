@@ -352,49 +352,16 @@ body {
     letter-spacing: 0.025em;
 }
 
-.level-caption {
-    font-size: 0.8rem;
-    color: #9ca3af;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-.level-info {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.level-description small {
-    margin-top: 0.1rem;
-}
-
 .level-badge {
     background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
     color: white;
-    padding: 0.35rem 0.75rem;
-    border-radius: 12px;
-    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
     font-weight: 700;
-    /* was uppercase; use natural casing for better readability */
-    text-transform: none;
-    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.level-description small {
-    display: block;
-    margin-top: 0.25rem;
-    color: #6b7280;
-    font-size: 0.95rem;
-    font-weight: 400;
-    line-height: 1.4;
-    max-width: 280px;
 }
 
 .stats-grid {
@@ -754,11 +721,5 @@ body {
     
     .options-grid {
         grid-template-columns: 1fr;
-    }
-
-    .score-display {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
     }
 } 
