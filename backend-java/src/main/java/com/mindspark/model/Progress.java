@@ -10,14 +10,14 @@ import java.util.Map;
  */
 public class Progress {
     
-    @JsonProperty("user_id")
+    @JsonProperty("userId")
     private String userId;
 
     /**
      * Map of quizId to individual quiz progress
      * QuizId format: "2016_AMC_8", "level_quiz_amc_10", etc.
      */
-    @JsonProperty("quiz_progress")
+    @JsonProperty("quizProgress")
     private Map<String, QuizProgress> quizProgress;
     
     // Constructors
