@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { getMathLevelInfo } from '../utils/levelMapping';
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -7,11 +8,6 @@ function Dashboard() {
   const navigate = useNavigate();
 
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
-
-  const levelLabelFromInt = (level) => {
-    const mapping = { 1: 'Beginner', 2: 'Intermediate', 3: 'Advanced' };
-    return mapping[level] || 'Not Assessed';
-  };
 
   useEffect(() => {
     // Check if user is logged in
@@ -68,26 +64,14 @@ function Dashboard() {
     }
   };
 
-  const updateRecentQuizzes = (quizScores) => {
-    if (!quizScores || quizScores.length === 0) {
-      return <p>No quiz results yet. Start learning to see your progress!</p>;
-    }
-    
-    const recentQuizzes = quizScores.slice(-3).reverse();
-    return recentQuizzes.map((quiz, index) => (
-      <div key={index} className="quiz-result">
-        <strong>{quiz.topic}</strong><br />
-        <span className="score">Score: {quiz.score.toFixed(1)}%</span><br />
-        <small>{new Date(quiz.date).toLocaleDateString()}</small>
-      </div>
-    ));
-  };
+
 
   const updateCurrentSubject = (user) => {
-    if (user.mathLevel) {
+    if (user.mathLevel || user.mathLevel === 0) {
+      const { title } = getMathLevelInfo(user.mathLevel);
       return (
         <div className="current-subject-info">
-          <h5>Mathematics - {user.mathLevel} Level</h5>
+          <h5>Mathematics — {title}</h5>
           <p>Continue your math journey!</p>
           <Link to="/math" className="btn btn-primary">Continue Learning</Link>
         </div>
@@ -116,10 +100,11 @@ function Dashboard() {
     }
     
     // Add level assessment activity
-    if (user.mathLevel) {
+    if (user.mathLevel || user.mathLevel === 0) {
+      const { title } = getMathLevelInfo(user.mathLevel);
       activities.push({
         type: 'assessment',
-        message: `Math level assessed as ${user.mathLevel}`,
+        message: `Math level assessed as ${title}`,
         date: new Date()
       });
     }
@@ -150,7 +135,7 @@ function Dashboard() {
     return null;
   }
 
-  const levelLabel = levelLabelFromInt(user.mathLevel);
+  const { title: levelTitle, description: levelDescription } = getMathLevelInfo(user.mathLevel);
 
   return (
     <div className="dashboard-container">
@@ -175,16 +160,13 @@ function Dashboard() {
                 <span className="score-number">{user.score || 0}</span>
               </div>
               <div className="level-info">
-                <h4>Math Level</h4>
-                <span className={`level-badge ${levelLabel.toLowerCase()}`}>
-                  {levelLabel}
+                <div className="level-caption">Math level</div>
+                <span className={`level-badge ${levelTitle.toLowerCase()}`}>
+                  {levelTitle}
                 </span>
-              </div>
-            </div>
-            <div className="progress-section">
-              <h4>Recent Progress</h4>
-              <div className="quiz-history">
-                {updateRecentQuizzes(user.quiz_scores)}
+                <div className="level-description">
+                  <small>{levelDescription}</small>
+                </div>
               </div>
             </div>
           </div>

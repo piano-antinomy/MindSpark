@@ -25,7 +25,7 @@ public class LoginServiceImpl implements LoginService {
      */
     private void initializeTestUsers() {
         // Add demo users that match the original Python backend
-        users.put("demo", new User("demo", "demo123", 150, 2, "demo@mindspark.com", "Demo User"));
+        users.put("demo", new User("demo", "demo123", 1500, 2, "demo@mindspark.com", "Demo User"));
         users.put("student1", new User("student1", "password123", 200, 1, "student1@mindspark.com", "Student One"));
         users.put("teacher", new User("teacher", "teacher123", 500, 3, "teacher@mindspark.com", "Teacher User"));
         users.put("admin", new User("admin", "admin123", 1000, 3, "admin@mindspark.com", "Admin User"));
