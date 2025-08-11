@@ -1,0 +1,26 @@
+this is an AMC math competition questions. 
+analyze each question, and give me a solution and explanation for your solution. 
+
+The returned format should be 
+{
+    "<problem_id>": {
+        "text": "<your solution>",
+        "answer": "<your choice>"
+    },
+    "<problem_id>": ...
+}
+
+problem id will be 1 to 25
+the solution can have html tag to make the solution rendering nice and clean. you can use any valid html tag, and you can use latex too. latex places you should do it like $\\<your latex>$ so that i can render latex on webpage
+
+here is an example
+
+{
+    "1": {
+      "text": "<p>The sequence of numbers Lucius is counting forms an arithmetic sequence. The first term is $a_1 = 100$.</p><p>He is counting backward by 7s, so the common difference of the sequence is $d = -7$.</p><p>We need to find the 10th number in this sequence, which corresponds to the 10th term, $a_{10}$. The formula for the n-th term of an arithmetic sequence is $a_n = a_1 + (n-1)d$.</p><p>Plugging in the values, we get: $a_{10} = 100 + (10-1)(-7) = 100 + 9(-7) = 100 - 63 = 37$.</p>",
+      "answer": "B"
+    }
+}
+
+
+you got incorrect answer for problem 7 and problem 17. do it again. but only return solution for those two problems. you don't need to redo everything

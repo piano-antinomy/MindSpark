@@ -13,7 +13,6 @@ function Solutions() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [viewMode, setViewMode] = useState('solution'); // 'quiz' or 'solution'
-  const [currentSolutionIndex, setCurrentSolutionIndex] = useState(0);
   const solutionRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -57,7 +56,7 @@ function Solutions() {
         setTimeout(() => safeMathJaxTypeset(), 50);
       });
     }
-  }, [currentSolutionIndex]);
+  }, [currentQuestionIndex]);
 
   useEffect(() => {
     // Trigger MathJax typesetting when switching to solution view
@@ -78,7 +77,7 @@ function Solutions() {
         setTimeout(() => safeMathJaxTypeset(), 50);
       });
     }
-  }, [parsedQuestions, currentQuestionIndex, viewMode, currentSolutionIndex]);
+  }, [parsedQuestions, currentQuestionIndex, viewMode]);
 
   const checkAuthStatus = () => {
     const currentUser = localStorage.getItem('currentUser');
@@ -167,26 +166,10 @@ function Solutions() {
 
   const toggleViewMode = () => {
     setViewMode(viewMode === 'quiz' ? 'solution' : 'quiz');
-    setCurrentSolutionIndex(0); // Reset to first solution when switching to solution view
-  };
-
-  const handlePreviousSolution = () => {
-    if (currentSolutionIndex > 0) {
-      setCurrentSolutionIndex(currentSolutionIndex - 1);
-    }
-  };
-
-  const handleNextSolution = () => {
-    const currentQuestion = parsedQuestions[currentQuestionIndex];
-    const solutions = currentQuestion?.originalQuestion?.solutions;
-    if (solutions && currentSolutionIndex < solutions.length - 1) {
-      setCurrentSolutionIndex(currentSolutionIndex + 1);
-    }
   };
 
   const handleQuestionSelect = (questionIndex) => {
     setCurrentQuestionIndex(questionIndex);
-    setCurrentSolutionIndex(0); // Reset to first solution when changing questions
   };
 
   const renderSolution = (question) => {
@@ -196,8 +179,8 @@ function Solutions() {
       return <div className="solution-content">No solution available for this question.</div>;
     }
 
-    // Show only the current solution
-    const currentSolution = solutions[currentSolutionIndex];
+    // Always show the first solution
+    const currentSolution = solutions[0];
     
     // Handle different solution formats
     let solutionText = '';
@@ -218,11 +201,6 @@ function Solutions() {
     return (
       <div className="solution-content" ref={solutionRef}>
         <div className="solution-item">
-          {solutions.length > 1 && (
-            <div className="text-lg font-semibold text-gray-800 mb-4">
-              Solution {currentSolutionIndex + 1} of {solutions.length}
-            </div>
-          )}
           <div 
             className="solution-text"
             dangerouslySetInnerHTML={{
@@ -236,33 +214,14 @@ function Solutions() {
 
   const renderSolutionContent = (question) => {
     const solutions = question.originalQuestion?.solutions;
-    const hasMultipleSolutions = solutions && solutions.length > 1;
     
     return (
-      <div className="question-content-section text-left">
+      <div className="question-content-section text-left h-full flex flex-col">
         {/* Solution only */}
-        <div>
-          {hasMultipleSolutions && (
-            <div className="flex justify-end mb-4">
-              <div className="flex gap-2">
-                <button 
-                  className="btn btn-secondary text-sm"
-                  onClick={handlePreviousSolution}
-                  disabled={currentSolutionIndex === 0}
-                >
-                  ← Previous
-                </button>
-                <button 
-                  className="btn btn-secondary text-sm"
-                  onClick={handleNextSolution}
-                  disabled={currentSolutionIndex === solutions.length - 1}
-                >
-                  Next →
-                </button>
-              </div>
-            </div>
-          )}
-          {renderSolution(question)}
+        <div className="flex-1 min-h-0 flex flex-col">
+          <div className="flex-1 min-h-0 overflow-y-auto">
+            {renderSolution(question)}
+          </div>
         </div>
       </div>
     );
@@ -287,20 +246,16 @@ function Solutions() {
       );
     } else {
       return (
-        <div className="solution-view h-full">
+        <div className="solution-view h-full flex flex-col">
           {currentQuestion.choiceVertical ? (
             // Vertical layout: solution content only
-            <div className="flex flex-col gap-3 lg:gap-4 flex-1 min-h-0">
-              <div className="flex-1 overflow-y-auto min-h-0">
-                {renderSolutionContent(currentQuestion)}
-              </div>
+            <div className="flex-1 min-h-0 flex flex-col">
+              {renderSolutionContent(currentQuestion)}
             </div>
           ) : (
             // Side-by-side layout: solution content takes full width
-            <div className="flex gap-3 lg:gap-4 flex-1 min-h-0">
-              <div className="flex-1 overflow-y-auto min-h-0">
-                {renderSolutionContent(currentQuestion)}
-              </div>
+            <div className="flex-1 min-h-0 flex flex-col">
+              {renderSolutionContent(currentQuestion)}
             </div>
           )}
         </div>
