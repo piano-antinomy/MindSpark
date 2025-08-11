@@ -1,4 +1,5 @@
-this is an AMC math competition questions. 
+let's read the pdf 
+
 analyze each question, and give me a solution and explanation for your solution. 
 
 The returned format should be 
@@ -13,6 +14,10 @@ The returned format should be
 problem id will be 1 to 25
 the solution can have html tag to make the solution rendering nice and clean. you can use any valid html tag, and you can use latex too. latex places you should do it like $\\<your latex>$ so that i can render latex on webpage
 
+do not use cite_start or cite_end in the response. i want valid json. 
+
+
+
 here is an example
 
 {
@@ -22,5 +27,8 @@ here is an example
     }
 }
 
+do not show thinking. just give me the result
+
 
 you got incorrect answer for problem 7 and problem 17. do it again. but only return solution for those two problems. you don't need to redo everything
+return the result in html and latex, and put it in json

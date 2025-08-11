@@ -12,7 +12,7 @@ function Solutions() {
   const [currentQuiz, setCurrentQuiz] = useState(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
-  const [viewMode, setViewMode] = useState('solution'); // 'quiz' or 'solution'
+  const [viewMode, setViewMode] = useState('quiz'); // 'quiz' or 'solution'
   const solutionRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();

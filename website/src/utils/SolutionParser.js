@@ -178,6 +178,9 @@ class SolutionParser {
     // Handle common LaTeX patterns that might need preprocessing
     // This can be expanded based on specific needs
 
+    // Replace \textdollar with \text{\$} for proper dollar sign rendering
+    processedText = processedText.replace(/\\textdollar/g, '\\text{\\$}');
+
     // Ensure proper spacing around LaTeX delimiters
     processedText = processedText.replace(/([^\\])\$/g, '$1 $');
     processedText = processedText.replace(/\$([^\\])/g, '$ $1');
