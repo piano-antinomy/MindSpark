@@ -33,6 +33,7 @@ function Quiz() {
 
   const checkAuthStatus = () => {
     const currentUser = localStorage.getItem('currentUser');
+    console.log('currentUser', currentUser);
     return currentUser ? JSON.parse(currentUser) : null;
   };
 
@@ -50,7 +51,7 @@ function Quiz() {
     setLoading(true);
     try {
       const currentUser = checkAuthStatus();
-      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.username}`, {
+      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}`, {
         credentials: 'include'
       });
       
@@ -193,7 +194,7 @@ function Quiz() {
       });
       
       const requestBody = {
-        userId: currentUser.username,
+        userId: currentUser.userId,
         quizType: "standard",
         quizId: quizId,
         quizName: quizName,

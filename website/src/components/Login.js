@@ -14,7 +14,7 @@ function Login() {
     if (username.trim() && password.trim()) {
       // Create dummy user data
       const dummyUser = {
-        id: 1,
+        userId: (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : `user-${Date.now()}`,
         username: username,
         email: `${username}@example.com`,
         displayName: username

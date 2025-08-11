@@ -146,7 +146,7 @@ function QuizTaking() {
       const currentUser = checkAuthStatus();
       
       // Get specific quiz data
-      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.username}/quiz/${quizId}`, {
+      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}`, {
         credentials: 'include'
       });
       
@@ -174,7 +174,7 @@ function QuizTaking() {
   const loadQuizQuestions = async (quizId, quizData = null) => {
     try {
       const currentUser = checkAuthStatus();
-      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.username}/quiz/${quizId}/questions`, {
+      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}/questions`, {
         credentials: 'include'
       });
       
@@ -342,7 +342,7 @@ function QuizTaking() {
       }
 
       console.log('Saving progress:', {
-        userId: currentUser.username,
+        userId: currentUser.userId,
         quizId: quizId,
         questionIdToAnswer: questionIdToAnswer
       });
@@ -354,7 +354,7 @@ function QuizTaking() {
         },
         credentials: 'include',
         body: JSON.stringify({
-          userId: currentUser.username,
+          userId: currentUser.userId,
           quizId: quizId,
           questionIdToAnswer: questionIdToAnswer
         })
