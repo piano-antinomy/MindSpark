@@ -30,6 +30,8 @@ public class MindSparkModule extends AbstractModule {
         bind(LoginService.class).to(LoginServiceImpl.class);
         bind(ProgressTrackService.class).to(LocalCacheBasedProgressTrackServiceImpl.class);
         bind(QuizService.class).to(LocalQuizServiceImpl.class);
+
+        install(new DDBDAOModule());
     }
     
     @Provides
