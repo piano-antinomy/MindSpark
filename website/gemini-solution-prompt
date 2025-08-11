@@ -14,11 +14,11 @@ The returned format should be
 problem id will be 1 to 25
 the solution can have html tag to make the solution rendering nice and clean. you can use any valid html tag, and you can use latex too. latex places you should do it like $\\<your latex>$ so that i can render latex on webpage
 
-do not use cite_start or cite_end in the response. i want valid json. 
+do not use [cite_start] or [cite_end] in the response. i want valid json. 
 
 
 
-here is an example
+here is a valid example
 
 {
     "1": {
@@ -27,10 +27,18 @@ here is an example
     }
 }
 
+here is an invalid example because it uses [cite_start] and [cite_end]
+{
+    "1": {
+        [cite_start]"text": "<p>The goal is to buy as many sandwiches as possible first, then spend the rest on soft drinks. [cite: 7]</p><p><b>1. [cite_start]Calculate the number of sandwiches:</b><br>Ike and Mike have \\$30.00. [cite: 5] [cite_start]Sandwiches cost \\$4.50 each. [cite: 6]<br>Number of sandwiches = \\$\\lfloor 30.00 / 4.50 \\rfloor = \\lfloor 6.66... \\rfloor = 6\\$ sandwiches.</p><p><b>2. Calculate the cost of sandwiches and remaining money:</b><br>Cost of 6 sandwiches = 6 * \\$4.50 = \\$27.00.<br>Remaining money = \\$30.00 - \\$27.00 = \\$3.00.</p><p><b>3. [cite_start]Calculate the number of soft drinks:</b><br>Soft drinks cost \\$1.00 each. [cite: 6]<br>Number of soft drinks = \\$3.00 / \\$1.00 = 3\\$ soft drinks.</p><p><b>4. [cite_start]Calculate the total number of items:</b><br>Total items = (Number of sandwiches) + (Number of soft drinks) = 6 + 3 = 9. [cite: 8]</p>",
+      "answer": "B"
+    }
+}
+
 do not show thinking. just give me the result
 
 
-you got incorrect answer for problem 7 and problem 17. do it again. but only return solution for those two problems. you don't need to redo everything
+you got incorrect answer for problem 7 and problem 17. do it again. but only return solution for those two problems. you don't need to redo everything else
 return the result in html and latex, and put it in json
 
 
