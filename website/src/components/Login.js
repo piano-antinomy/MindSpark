@@ -7,6 +7,14 @@ function Login() {
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
 
+  // Simple UUID v4 generator (fallback if crypto.randomUUID is unavailable)
+  const generateUuidV4 = () =>
+    'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+      const r = (Math.random() * 16) | 0;
+      const v = c === 'x' ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -14,7 +22,7 @@ function Login() {
     if (username.trim() && password.trim()) {
       // Create dummy user data
       const dummyUser = {
-        userId: (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : `user-${Date.now()}`,
+        userId: (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : generateUuidV4(),
         username: username,
         email: `${username}@example.com`,
         displayName: username

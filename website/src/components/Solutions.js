@@ -100,7 +100,7 @@ function Solutions() {
       const currentUser = checkAuthStatus();
       
       // Get quiz data
-      const quizResponse = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.username}/quiz/${quizId}`, {
+      const quizResponse = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}`, {
         credentials: 'include'
       });
       
@@ -121,7 +121,7 @@ function Solutions() {
         }
         
         // Load quiz questions with solutions
-        const questionsResponse = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.username}/quiz/${quizId}/questions`, {
+        const questionsResponse = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}/questions`, {
           credentials: 'include'
         });
         
