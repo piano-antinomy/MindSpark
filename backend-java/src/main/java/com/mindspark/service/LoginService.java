@@ -41,4 +41,14 @@ public interface LoginService {
      * @return true if user exists
      */
     boolean userExists(String username);
+
+    /**
+     * Create or update a user profile using the provided {@link User} schema.
+     * Implementations should ensure sensible defaults (e.g., score defaults to 0).
+     * Returns the created/updated user without the password field populated.
+     *
+     * @param user the user payload
+     * @return the stored user without password, or null if the payload is invalid
+     */
+    User createOrUpdateUser(User user);
 } 

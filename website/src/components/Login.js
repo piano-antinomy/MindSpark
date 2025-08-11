@@ -6,14 +6,7 @@ function Login() {
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
-
-  // Simple UUID v4 generator (fallback if crypto.randomUUID is unavailable)
-  const generateUuidV4 = () =>
-    'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-      const r = (Math.random() * 16) | 0;
-      const v = c === 'x' ? r : (r & 0x3) | 0x8;
-      return v.toString(16);
-    });
+  const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,14 +15,38 @@ function Login() {
     if (username.trim() && password.trim()) {
       // Create dummy user data
       const dummyUser = {
-        userId: (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : generateUuidV4(),
+        userId: 'LocalUser-' + username + '-' + Date.now(),
         username: username,
         email: `${username}@example.com`,
         displayName: username
       };
       
-      // Store user info in localStorage for client-side use
-      localStorage.setItem('currentUser', JSON.stringify(dummyUser));
+      // Store user in backend via POST /api/auth/profile
+      try {
+        const resp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({
+            username: username.toLowerCase(),
+            password: password,
+            userId: dummyUser.userId,
+            score: 0,
+            mathLevel: 1,
+            email: dummyUser.email,
+            fullName: username
+          })
+        });
+        if (resp.ok) {
+          const data = await resp.json();
+          const storedUser = data && data.user ? data.user : dummyUser;
+          localStorage.setItem('currentUser', JSON.stringify(storedUser));
+        } else {
+          localStorage.setItem('currentUser', JSON.stringify(dummyUser));
+        }
+      } catch (err) {
+        localStorage.setItem('currentUser', JSON.stringify(dummyUser));
+      }
       
       // Redirect to dashboard
       navigate('/dashboard');

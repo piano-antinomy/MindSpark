@@ -53,7 +53,7 @@ public class AuthController extends HttpServlet {
             } else if (pathInfo.equals("/logout")) {
                 handleLogout(request, response);
             } else if (pathInfo.equals("/profile")) {
-                handleGetProfile(request, response);
+                handleCreateOrUpdateProfile(request, response);
             } else {
                 sendErrorResponse(response, HttpServletResponse.SC_NOT_FOUND, "Endpoint not found");
             }
@@ -118,7 +118,7 @@ public class AuthController extends HttpServlet {
             if (authenticatedUser != null) {
                 // Create session
                 HttpSession session = request.getSession(true);
-                session.setAttribute("username", username);
+                session.setAttribute("username", username.toLowerCase());
                 session.setAttribute("user", authenticatedUser);
                 
                 Map<String, Object> responseData = new HashMap<>();
@@ -176,6 +176,49 @@ public class AuthController extends HttpServlet {
             sendJsonResponse(response, responseData);
         } else {
             sendErrorResponse(response, HttpServletResponse.SC_NOT_FOUND, "User not found");
+        }
+    }
+
+    private void handleCreateOrUpdateProfile(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        // Read request body
+        StringBuilder requestBody = new StringBuilder();
+        try (BufferedReader reader = request.getReader()) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                requestBody.append(line);
+            }
+        }
+        try {
+            User payload = objectMapper.readValue(requestBody.toString(), User.class);
+            if (payload == null || payload.getUsername() == null) {
+                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "username is required");
+                return;
+            }
+            // Ensure default score is 0 if not present
+            if (payload.getScore() <= 0) {
+                payload.setScore(0);
+            }
+            if (payload.getMathLevel() <= 0) {
+                payload.setMathLevel(1);
+            }
+            User stored = loginService.createOrUpdateUser(payload);
+            if (stored == null) {
+                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Invalid user payload");
+                return;
+            }
+
+            // Attach to session if caller wants to set login state
+            HttpSession session = request.getSession(true);
+            session.setAttribute("username", stored.getUsername());
+            session.setAttribute("user", stored);
+
+            Map<String, Object> responseData = new HashMap<>();
+            responseData.put("success", true);
+            responseData.put("user", stored);
+            sendJsonResponse(response, responseData);
+        } catch (Exception e) {
+            logger.error("Error parsing profile request", e);
+            sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Invalid request format");
         }
     }
     
