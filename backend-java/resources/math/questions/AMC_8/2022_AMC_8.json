@@ -43,7 +43,7 @@
       "answer": "A",
       "solutions": [
         {
-          "text": "<p>We can see that there are 4 whole squares, since the area of each square will be 1, 4 * 1 = 4. Next, there are 12 half squares, and 2 half squares are 1 whole square, so 12/2 = 6 whole squares. The area of this will be 6 * 1 = 6. Finally, we can add the 2 numbers. 4 + 6 = <INSERTION_INDEX_1>.</p><p>~~Brainiacs77~~</p>",
+          "text": "<p>To find the area of the logo, we can break it down into simpler geometric shapes and count their areas systematically.</p><p><b>Step 1: Count the full squares</b></p><p>Looking at the logo, we can identify 4 complete 1×1 squares. Each of these squares has an area of 1 square inch, so the total area from full squares is 4 × 1 = 4 square inches.</p><p><b>Step 2: Count the half-squares (triangles)</b></p><p>There are 12 triangular regions that are each half of a 1×1 square. Since 2 half-squares make 1 whole square, we can convert these to whole square equivalents: 12 ÷ 2 = 6 whole squares. The area from these triangles is 6 × 1 = 6 square inches.</p><p><b>Step 3: Calculate the total area</b></p><p>The total area of the logo is the sum of the areas from full squares and triangles:</p><p>Total Area = Area of full squares + Area of triangles = 4 + 6 = <INSERTION_INDEX_1> square inches.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/6/3/4/634389fae552241617e2ab87f1e791f58b888585.png",
@@ -298,6 +298,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>We are asked to evaluate the expression $(5 \\bullet 3) * 6$ using the given operations:</p><p>$a \\bullet b = a^2 - b^2$</p><p>$a * b = (a-b)^2$</p><p>First, we solve the part in the parentheses, $5 \\bullet 3$:</p><p>$5 \\bullet 3 = 5^2 - 3^2 = 25 - 9 = 16$.</p><p>Now, we substitute this result back into the main expression:</p><p>$(5 \\bullet 3) * 6$ becomes $16 * 6$.</p><p>Next, we apply the second operation, $a * b = (a-b)^2$, to $16 * 6$:</p><p>$16 * 6 = (16 - 6)^2 = 10^2 = 100$.</p>"
+        },
+        {
           "text": "<p>We can find a general solution to any <INSERTION_INDEX_1>.<INSERTION_INDEX_2><INSERTION_INDEX_3><INSERTION_INDEX_4><INSERTION_INDEX_5><INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8></p><p>~megaboy6679</p><p>~algebraic_algorithmic \"This is very time wasting\"</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -424,6 +427,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>We need to find the number of ways to write 100 as a product of three distinct positive integers $a, b, c$ such that $a < b < c$.</p><p>First, find the prime factorization of 100:</p><p>$100 = 2^2 \\cdot 5^2 = 2 \\cdot 2 \\cdot 5 \\cdot 5$.</p><p>Now, we need to group these prime factors into three distinct integers $a, b, c$. Let's list the possibilities systematically, starting with the smallest possible value for $a$.</p><ol><li>If $a=1$, then $b \\cdot c = 100$. We need to find pairs of distinct factors $(b, c)$ of 100 where $1 < b < c$.<ul><li>If $b=2$, then $c=50$. This gives the set $\\{1, 2, 50\\}$.</li><li>If $b=4$, then $c=25$. This gives the set $\\{1, 4, 25\\}$.</li><li>If $b=5$, then $c=20$. This gives the set $\\{1, 5, 20\\}$.</li></ul>(If $b=10$, then $c=10$, which is not distinct, so we stop here).</li><li>If $a=2$, then $b \\cdot c = 50$. We need $2 < b < c$.<ul><li>The factors of 50 are 1, 2, 5, 10, 25, 50. We need $b > 2$.</li><li>If $b=5$, then $c=10$. This gives the set $\\{2, 5, 10\\}$.</li></ul>(If $b$ is the next factor, 10, then $c=5$, which violates $b<c$).</li></ol><p>If we try a larger value for $a$ (like $a=4$), we would have $b \\cdot c = 25$. We would need $4 < b < c$. The only factors of 25 are 1, 5, 25. The only factor greater than 4 is 5. If $b=5$, $c=5$, which are not distinct. Thus, there are no more solutions.</p><p>The sets are $\\{1, 2, 50\\}$, $\\{1, 4, 25\\}$, $\\{1, 5, 20\\}$, and $\\{2, 5, 10\\}$. There are <b>4</b> such ways.</p>"
+        },
         {
           "text": "<p>The positive divisors of <INSERTION_INDEX_1> are <INSERTION_INDEX_2>It is clear that <INSERTION_INDEX_3> so we apply casework to <INSERTION_INDEX_4></p><ul><li>If <INSERTION_INDEX_5> then <INSERTION_INDEX_6></li></ul><ul><li>If <INSERTION_INDEX_7> then <INSERTION_INDEX_8></li></ul><ul><li>If <INSERTION_INDEX_9> then <INSERTION_INDEX_10></li></ul><ul><li>If <INSERTION_INDEX_11> then <INSERTION_INDEX_12></li></ul><p>Together, the numbers <INSERTION_INDEX_13> and <INSERTION_INDEX_14> can be chosen in <INSERTION_INDEX_15> ways.</p><p>~MRENTHUSIASM</p>",
           "insertions": {
@@ -683,7 +689,7 @@
       "answer": "E",
       "solutions": [
         {
-          "text": "<p>When <b>M</b> is first reflected over the line <INSERTION_INDEX_1> we obtain the following diagram:<INSERTION_INDEX_2>When <b>M</b> is then reflected over the line <INSERTION_INDEX_3> we obtain the following diagram:<INSERTION_INDEX_4>Therefore, the answer is <INSERTION_INDEX_5></p><p>~MRENTHUSIASM</p>",
+          "text": "<p>To solve this reflection problem, we need to carefully track the position and orientation of the letter <b>M</b> through two consecutive reflections.</p><p><b>Step 1: First Reflection over line q</b></p><p>When the letter <b>M</b> is reflected over the line $q,$ (which is the horizontal axis), it undergoes a vertical flip. The reflection transforms the M into a W shape and moves it from the top-right quadrant to the bottom-right quadrant.</p><p><b>Step 2: Second Reflection over line p</b></p><p>When the resulting W is then reflected over the line $p,$ (which is the vertical axis), it undergoes a horizontal flip. Since a W is symmetrical about a vertical line, the horizontal reflection doesn't change its appearance, but it does move the shape from the bottom-right quadrant to the bottom-left quadrant.</p><p><b>Final Result</b></p><p>After both reflections, the original M has been transformed into a W located in the bottom-left quadrant. This is equivalent to a 180-degree rotation about the intersection point of the two reflection lines.</p><p>Therefore, the answer is $\\boxed{\\textbf{(E)}}.$</p><p>~MRENTHUSIASM</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/3/4/b/34b2864f06b4e50859a0bea1a812d50a2154547b.png",
@@ -767,6 +773,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Let's determine the current age of Bella and the kitten first.</p><ul><li><b>Bella's age:</b> Five years ago, Bella was 6 years old. So, her current age is $6 + 5 = 11$ years.</li><li><b>Kitten's age:</b> The kitten was a newborn five years ago, so its age was 0. Its current age is $0 + 5 = 5$ years.</li></ul><p>Now, let Anna's current age be $A$. The sum of the current ages of Anna, Bella, and the kitten is 30.</p><p>$A + \\text{Bella's age} + \\text{Kitten's age} = 30$</p><p>$A + 11 + 5 = 30$</p><p>$A + 16 = 30$</p><p>$A = 30 - 16 = 14$</p><p>Anna's current age is 14. The question asks for the age difference between Anna and Bella.</p><p>Age difference = Anna's age - Bella's age = $14 - 11 = 3$ years.</p>"
+        },
         {
           "text": "<p>Five years ago, Bella was <INSERTION_INDEX_1> years old, and the kitten was <INSERTION_INDEX_2> years old.</p><p>Today, Bella is <INSERTION_INDEX_3> years old, and the kitten is <INSERTION_INDEX_4> years old. It follows that Anna is <INSERTION_INDEX_5> years old.</p><p>Therefore, Anna is <INSERTION_INDEX_6> years older than Bella.</p><p>~MRENTHUSIASM</p>",
           "insertions": {
@@ -859,6 +868,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Let the three equally spaced positive integers be $s$ (smallest), $m$ (middle), and $l$ (largest).</p><p>Because the numbers are equally spaced, they form an arithmetic sequence. This means the middle number is the average of the smallest and largest numbers.</p><p>We are given that the middle number, $m$, is 15.</p><p>$m = \\frac{s + l}{2}$</p><p>$15 = \\frac{s + l}{2} \\implies s + l = 30$</p><p>We are also given that the largest number is 4 times the smallest number.</p><p>$l = 4s$</p><p>Now we have a system of two equations. We can substitute the second equation into the first:</p><p>$s + (4s) = 30$</p><p>$5s = 30$</p><p>$s = 6$</p><p>The smallest of the three numbers is 6.</p>"
+        },
         {
           "text": "<p>Let the smallest number be <INSERTION_INDEX_1> It follows that the largest number is <INSERTION_INDEX_2></p><p>Since <INSERTION_INDEX_3> and <INSERTION_INDEX_4> are equally spaced on a number line, we have<INSERTION_INDEX_5>~MRENTHUSIASM</p>",
           "insertions": {
@@ -1100,6 +1112,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>First, we need to find the total size of the song in kilobits.</p><p>Size in megabytes = 4.2 MB.</p><p>Given conversion: 1 megabyte = 8000 kilobits.</p><p>Total size in kilobits = $4.2 \\times 8000 = 33,600$ kilobits.</p><p>Next, we calculate the download time in seconds using the given speed.</p><p>Download speed = 56 kilobits per second.</p><p>Time (in seconds) = $\\frac{\\text{Total size}}{\\text{Speed}} = \\frac{33600 \\text{ kilobits}}{56 \\text{ kilobits/second}} = 600$ seconds.</p><p>Finally, we convert the time from seconds to minutes.</p><p>Time (in minutes) = $\\frac{600 \\text{ seconds}}{60 \\text{ seconds/minute}} = 10$ minutes.</p>"
+        },
+        {
           "text": "<p>Notice that the number of kilobits in this song is <INSERTION_INDEX_1></p><p>We must divide this by <INSERTION_INDEX_2> in order to find out how many seconds this song would take to download: <INSERTION_INDEX_3></p><p>Finally, we divide this number by <INSERTION_INDEX_4> because this is the number of <i><b>seconds</b></i> to get the answer <INSERTION_INDEX_5></p><p>~wamofan</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1211,6 +1226,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>We need to evaluate the product:</p><p>$P = \\frac{1}{3} \\cdot \\frac{2}{4} \\cdot \\frac{3}{5} \\cdot \\ldots \\cdot \\frac{18}{20} \\cdot \\frac{19}{21} \\cdot \\frac{20}{22}$</p><p>This is a telescoping product where many terms cancel out. Let's write the product by grouping the numerators and denominators:</p><p>$P = \\frac{1 \\cdot 2 \\cdot 3 \\cdot \\ldots \\cdot 19 \\cdot 20}{3 \\cdot 4 \\cdot 5 \\cdot \\ldots \\cdot 21 \\cdot 22}$</p><p>We can see that the terms from 3 to 20 in the numerator will cancel with the terms from 3 to 20 in the denominator.</p><p>$P = \\frac{1 \\cdot 2 \\cdot (3 \\cdot 4 \\cdot \\ldots \\cdot 20)}{(3 \\cdot 4 \\cdot \\ldots \\cdot 20) \\cdot 21 \\cdot 22}$</p><p>After canceling the common part, we are left with:</p><p>$P = \\frac{1 \\cdot 2}{21 \\cdot 22} = \\frac{2}{462}$</p><p>Simplifying the fraction gives:</p><p>$P = \\frac{1}{231}$</p>"
+        },
+        {
           "text": "<p>Note that common factors (from <INSERTION_INDEX_1> to <INSERTION_INDEX_2> inclusive) of the numerator and the denominator cancel. Therefore, the original expression becomes <INSERTION_INDEX_3></p><p>~MRENTHUSIASM</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1308,6 +1326,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>This problem describes Newton's law of cooling.</p><p>First, find the initial temperature difference between the water and the room.</p><p>Initial water temperature = $212^\\circ F$.</p><p>Room temperature = $68^\\circ F$.</p><p>Initial difference = $212 - 68 = 144^\\circ F$.</p><p>The problem states that this temperature difference is halved every 5 minutes. We need to find the temperature after 15 minutes, which is three 5-minute intervals.</p><ul><li><b>After 5 minutes:</b> The difference is halved. New difference = $144 / 2 = 72^\\circ F$.</li><li><b>After 10 minutes:</b> The difference is halved again. New difference = $72 / 2 = 36^\\circ F$.</li><li><b>After 15 minutes:</b> The difference is halved a third time. New difference = $36 / 2 = 18^\\circ F$.</li></ul><p>This final difference is the water temperature minus the room temperature. To find the final water temperature:</p><p>Final water temperature = Room temperature + Final difference</p><p>Final water temperature = $68 + 18 = 86^\\circ F$.</p>"
+        },
+        {
           "text": "<p>Initially, the difference between the water temperature and the room temperature is <INSERTION_INDEX_1> degrees Fahrenheit.</p><p>After <INSERTION_INDEX_2> minutes, the difference between the temperatures is <INSERTION_INDEX_3> degrees Fahrenheit.</p><p>After <INSERTION_INDEX_4> minutes, the difference between the temperatures is <INSERTION_INDEX_5> degrees Fahrenheit.</p><p>After <INSERTION_INDEX_6> minutes, the difference between the temperatures is <INSERTION_INDEX_7> degrees Fahrenheit. At this point, the water temperature is <INSERTION_INDEX_8> degrees Fahrenheit.</p><p><u><b>Remark</b></u></p><p>Alternatively, we can condense the solution above into the following equation: <INSERTION_INDEX_9>~MRENTHUSIASM ~MathFun1000</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1385,7 +1406,7 @@
     {
       "id": "amc_2022_8_10",
       "question": {
-        "text": "<p>One sunny day, Ling decided to take a hike in the mountains. She left her house at <INSERTION_INDEX_1>, drove at a constant speed of <INSERTION_INDEX_2> miles per hour, and arrived at the hiking trail at <INSERTION_INDEX_3>. After hiking for <INSERTION_INDEX_4> hours, Ling drove home at a constant speed of <INSERTION_INDEX_5> miles per hour. Which of the following graphs best illustrates the distance between Ling\u2019s car and her house over the course of her trip?</p>",
+        "text": "<p>One sunny day, Ling decided to take a hike in the mountains. She left her house at <INSERTION_INDEX_1>, drove at a constant speed of <INSERTION_INDEX_2> miles per hour, and arrived at the hiking trail at <INSERTION_INDEX_3>. After hiking for <INSERTION_INDEX_4> hours, Ling drove home at a constant speed of <INSERTION_INDEX_5> miles per hour. Which of the following graphs best illustrates the distance between Ling’s car and her house over the course of her trip?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/5/4/9/54941816956f9af3d1a673a0b257101d3941f1bb.png",
@@ -1442,7 +1463,7 @@
       "answer": "E",
       "solutions": [
         {
-          "text": "<p>Note that:</p><ul style=\"list-style-type:square;\"><li><b>At <INSERTION_INDEX_1> Ling's car was <INSERTION_INDEX_2> miles from her house.</b></li><p class=\"mw-empty-elt\"></p><li>From <INSERTION_INDEX_3> to <INSERTION_INDEX_4> Ling drove to the hiking trail at a constant speed of <INSERTION_INDEX_5> miles per hour. <p><b>It follows that at <INSERTION_INDEX_6> Ling's car was <INSERTION_INDEX_7> miles from her house.</b></p></li><p class=\"mw-empty-elt\"></p><li>From <INSERTION_INDEX_8> to <INSERTION_INDEX_9> Ling did not move her car. <p><b>It follows that at <INSERTION_INDEX_10> Ling's car was still <INSERTION_INDEX_11> miles from her house.</b></p></li><p class=\"mw-empty-elt\"></p><li>From <INSERTION_INDEX_12> Ling drove home at a constant speed of <INSERTION_INDEX_13> miles per hour. So, she arrived home <INSERTION_INDEX_14> hour later. <p><b>It follows that at <INSERTION_INDEX_15> Ling's car was <INSERTION_INDEX_16> miles from her house.</b></p></li><p class=\"mw-empty-elt\"></p></ul><p>Therefore, the answer is <INSERTION_INDEX_17></p><p>~MRENTHUSIASM</p>",
+          "text": "At $8$ AM, Ling's car was $0$ miles from her house. From $8$ AM to $10$ AM, Ling drove to the hiking trail at a constant speed of $45$ miles per hour. It follows that at $10$ AM, Ling's car was $45 \\times 2 = 90$ miles from her house. From $10$ AM to $1$ PM, Ling did not move her car. It follows that at $1$ PM, Ling's car was still $90$ miles from her house. From $1$ PM, Ling drove home at a constant speed of $60$ miles per hour. So, she arrived home $90 \\div 60 = 1.5$ hours later. It follows that at $2:30$ PM, Ling's car was $0$ miles from her house. Therefore, the answer is (E).",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/7/f/c/7fccb2d0ba0d4a0f26e936e0fa7d3083dda5e2cc.png",
@@ -1803,6 +1824,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>Let's analyze what happens with each bite Henry takes.</p><p>He starts with 1 piece of pasta. When he takes a 3-inch bite from the middle of a piece, he does two things:</p><ol><li>He eats 3 inches of pasta.</li><li>He turns one piece of pasta into two smaller pieces, increasing the total number of pieces by one.</li></ol><p>Henry started with 1 piece and ended with 10 pieces. The net increase in the number of pieces is $10 - 1 = 9$. Since each bite increases the piece count by one, Henry must have taken <b>9 bites</b>.</p><p>For each of the 9 bites, he ate 3 inches of pasta. So, the total length of pasta eaten is:</p><p>Length eaten = $9 \\text{ bites} \\times 3 \\text{ inches/bite} = 27$ inches.</p><p>The total length of the pasta remaining is given as 17 inches.</p><p>The original length of the pasta was the sum of the remaining length and the eaten length:</p><p>Original Length = Length remaining + Length eaten = $17 + 27 = 44$ inches.</p>"
+        },
+        {
           "text": "<p>Let's say that the first strand of pasta he had is x. The first time he takes a bite of this strand will make it 2 pieces. This is x - 3. The second time he takes the bites of EACH strand will become (x - 3) * 3(2). The 2 is for the two bites he took, 1 for each strand. This equation is showing that for every bite that he is taking, he is taking off 3 inches. This is being showed in the 3(2). He took 2 bites, each taking off 3 inches. Now, the problem is stating that their are 10 pieces of pasta and the TOTAL length is 17 inches. We have to plug in the total number of bites to the equation (x - 3) * 3( ). To find this out, we can see that for the number of strands there are, he took 1 less bite than that number. For example, if there are 2 pieces, he took 1 bite to get those. Since there are 10 pieces, he took 9 bites. The equation then becomes, (x - 3) * 3(9) = 17. To solve this, x = 44. Therefore, the answer is <INSERTION_INDEX_1>.</p><p>~~Brainiacs77~~</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1934,6 +1958,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>First, let's determine the possible outcomes and the total number of outcomes.</p><ul><li>Spinner A has 4 equally likely outcomes: {5, 6, 7, 8}.</li><li>Spinner B has 4 equally likely outcomes: {1, 2, 3, 4}.</li></ul><p>The total number of possible pairs of outcomes is $4 \\times 4 = 16$.</p><p>The number N is calculated as $N = 10 \\times (\\text{Spinner A}) + (\\text{Spinner B})$. This means the result from Spinner A is the tens digit and the result from Spinner B is the units digit. Let's list all 16 possible values of N:</p><ul><li>If A=5, N can be 51, 52, 53, 54.</li><li>If A=6, N can be 61, 62, 63, 64.</li><li>If A=7, N can be 71, 72, 73, 74.</li><li>If A=8, N can be 81, 82, 83, 84.</li></ul><p>Next, we need to find how many of these possible values of N are perfect squares.</p><p>Let's check the perfect squares in the range of our possible N values (51 to 84):</p><ul><li>$7^2 = 49$ (too small)</li><li>$8^2 = 64$ (This is a possible outcome, from A=6 and B=4)</li><li>$9^2 = 81$ (This is a possible outcome, from A=8 and B=1)</li><li>$10^2 = 100$ (too large)</li></ul><p>There are 2 favorable outcomes (64 and 81) out of 16 total possible outcomes.</p><p>The probability is the ratio of favorable outcomes to total outcomes:</p><p>Probability = $\\frac{\\text{Favorable Outcomes}}{\\text{Total Outcomes}} = \\frac{2}{16} = \\frac{1}{8}$.</p>"
+        },
         {
           "text": "<p>First, we calculate that there are a total of <INSERTION_INDEX_1> possibilities. Now, we list all of two-digit perfect squares. <INSERTION_INDEX_2> and <INSERTION_INDEX_3> are the only ones that can be made using the spinner. Consequently, there is a <INSERTION_INDEX_4> probability that the number formed by the two spinners is a perfect square.</p><p>~MathFun1000</p>",
           "insertions": {
@@ -2092,7 +2119,7 @@
     {
       "id": "amc_2022_8_13",
       "question": {
-        "text": "<p>How many positive integers can fill the blank in the sentence below?</p><p>\u201cOne positive integer is _____ more than twice another, and the sum of the two numbers is <INSERTION_INDEX_1>.\u201d</p>",
+        "text": "<p>How many positive integers can fill the blank in the sentence below?</p><p>“One positive integer is _____ more than twice another, and the sum of the two numbers is <INSERTION_INDEX_1>.”</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/9/2/6/9265f5dd6dade78136a6be158ace46bf7c0f8ce3.png",
@@ -2120,6 +2147,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Let the two positive integers be $x$ and $y$. Let the integer in the blank be $k$, which must also be a positive integer.</p><p>From the sentence, we can form two equations:</p><ol><li>$x = 2y + k$</li><li>$x + y = 28$</li></ol><p>We need to find how many positive integer values of $k$ allow for positive integer solutions for $x$ and $y$.</p><p>From the second equation, we can write $x = 28 - y$. Substitute this into the first equation:</p><p>$28 - y = 2y + k$</p><p>$28 - k = 3y$</p><p>$y = \\frac{28 - k}{3}$</p><p>Since $y$ must be a positive integer, $y > 0$. This implies $\\frac{28-k}{3} > 0$, so $28-k > 0$, which means $k < 28$. Also, $(28-k)$ must be divisible by 3.</p><p>The condition that $(28-k)$ is a multiple of 3 means $28-k \\equiv 0 \\pmod{3}$. Since $28 \\equiv 1 \\pmod{3}$, we have $1 - k \\equiv 0 \\pmod{3}$, or $k \\equiv 1 \\pmod{3}$.</p><p>So, $k$ must be a positive integer less than 28 that leaves a remainder of 1 when divided by 3. Let's list the possible values for $k$:</p><p>$k \\in \\{1, 4, 7, 10, 13, 16, 19, 22, 25\\}$</p><p>For each of these values, $y$ will be a positive integer. We must also ensure $x$ is a positive integer. $x = 28-y$. Since $y$ is a positive integer, the smallest $y$ can be is when $k$ is largest ($k=25$), giving $y=(28-25)/3=1$. This gives $x=27$, which is positive. All other values of $k$ will give larger values for $y$ and thus smaller, but still positive, values for $x$.</p><p>There are <b>9</b> possible integer values for the blank.</p>"
+        },
         {
           "text": "<p>Let <INSERTION_INDEX_1> and <INSERTION_INDEX_2> be positive integers such that <INSERTION_INDEX_3> and <INSERTION_INDEX_4> It follows that <INSERTION_INDEX_5> for some positive integer <INSERTION_INDEX_6> We wish to find the number of possible values for <INSERTION_INDEX_7></p><p>By substitution, we have <INSERTION_INDEX_8> from which <INSERTION_INDEX_9> Note that <INSERTION_INDEX_10> each generate a positive integer for <INSERTION_INDEX_11> so there are <INSERTION_INDEX_12> possible values for <INSERTION_INDEX_13></p><p>~MRENTHUSIASM</p>",
           "insertions": {
@@ -2262,6 +2292,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>The problem asks for the number of arrangements of the letters in BEEKEEPER where no two E's are together.</p><p>First, let's count the letters in BEEKEEPER:</p><ul><li>Non-E letters: B, K, P, R (4 letters)</li><li>E's: E, E, E, E, E (5 letters)</li></ul><p>The strategy is to first arrange the letters that are not E, and then place the E's in the spaces created.</p><p><b>Step 1: Arrange the non-E letters.</b></p><p>We have 4 distinct letters: B, K, P, R. The number of ways to arrange them is:</p><p>$4! = 4 \\times 3 \\times 2 \\times 1 = 24$ ways.</p><p><b>Step 2: Place the E's.</b></p><p>An arrangement of the non-E letters (e.g., B K P R) creates spaces where the E's can be placed so that they are not adjacent to each other:</p><p>_ B _ K _ P _ R _</p><p>There are 5 such spaces (indicated by underscores). We have 5 E's to place into these 5 spaces. To ensure no two E's are together, we must place exactly one E in each space. Since all the E's are identical, there is only 1 way to do this for any given arrangement of the consonants.</p><p><b>Step 3: Calculate the total number of arrangements.</b></p><p>Total ways = (Ways to arrange non-E's) $\\times$ (Ways to place E's)</p><p>Total ways = $24 \\times 1 = 24$.</p>"
+        },
+        {
           "text": "<p>All valid arrangements of the letters must be of the form <INSERTION_INDEX_1>The problem is equivalent to counting the arrangements of <INSERTION_INDEX_2> and <INSERTION_INDEX_3> into the four blanks, in which there are <INSERTION_INDEX_4> ways.</p><p>~MRENTHUSIASM</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2332,6 +2365,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We are looking for the pepper option with the lowest price per ounce. On the given scatter plot, the price per ounce for any point (Weight, Price) is the ratio $\\frac{\\text{Price}}{\\text{Weight}}$.</p><p>This ratio, $\\frac{y}{x}$, corresponds to the slope of the line connecting the origin (0,0) to the point $(x, y)$ on the graph. To find the lowest price per ounce, we need to find the data point that lies on the line with the smallest positive slope from the origin.</p><p>We can visually inspect the slopes or calculate the ratio for the most likely candidates (the lowest points for each weight):</p><ul><li><b>Weight 1 oz:</b> The lowest price is about \\$1.20. Price per ounce = $\\frac{1.20}{1} = 1.20$.</li><li><b>Weight 2 oz:</b> The lowest price is \\$2.00. Price per ounce = $\\frac{2.00}{2} = 1.00$.</li><li><b>Weight 3 oz:</b> The lowest price is about \\$2.50. Price per ounce = $\\frac{2.50}{3} \\approx 0.83$.</li><li><b>Weight 4 oz:</b> The lowest price is about \\$3.90. Price per ounce = $\\frac{3.90}{4} \\approx 0.98$.</li><li><b>Weight 5 oz:</b> The lowest price is \\$4.50. Price per ounce = $\\frac{4.50}{5} = 0.90$.</li></ul><p>Comparing these values, the lowest price per ounce is approximately \\$0.83, which corresponds to the option with a weight of <b>3 ounces</b>.</p>"
+        },
         {
           "text": "<p><INSERTION_INDEX_1></p><p>We are looking for a black point, that when connected to the origin, yields the lowest slope. The slope represents the price per ounce. We can visually find that the point with the lowest slope is the blue point. Furthermore, it is the only one with a price per ounce significantly less than <INSERTION_INDEX_2>. Finally, we see that the blue point is in the category with a weight of <INSERTION_INDEX_3> ounces.</p><p>~MathFun1000</p>",
           "insertions": {
@@ -2546,6 +2582,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Let the four numbers in the row be $a, b, c,$ and $d$.</p><p>We are given the following information:</p><ol><li>The average of the first two is 21: $\\frac{a+b}{2} = 21 \\implies a+b=42$.</li><li>The average of the middle two is 26: $\\frac{b+c}{2} = 26 \\implies b+c=52$.</li><li>The average of the last two is 30: $\\frac{c+d}{2} = 30 \\implies c+d=60$.</li></ol><p>We need to find the average of the first and last numbers, which is $\\frac{a+d}{2}$.</p><p>We can manipulate these equations to find the sum $a+d$. Let's subtract the second equation from the first, and add the third equation to the result:</p><p>$(a+b) - (b+c) = 42 - 52 = -10 \\implies a-c = -10$.</p><p>Now add $(c+d)=60$ to this result:</p><p>$(a-c)+(c+d) = -10+60 \\implies a+d=50$.</p><p>Now we can find the average of the first and last numbers:</p><p>Average = $\\frac{a+d}{2} = \\frac{50}{2} = 25$.</p>"
+        },
         {
           "text": "<p>Note that the sum of the first two numbers is <INSERTION_INDEX_1> the sum of the middle two numbers is <INSERTION_INDEX_2> and the sum of the last two numbers is <INSERTION_INDEX_3></p><p>It follows that the sum of the four numbers is <INSERTION_INDEX_4> so the sum of the first and last numbers is <INSERTION_INDEX_5> Therefore, the average of the first and last numbers is <INSERTION_INDEX_6></p><p>~MRENTHUSIASM</p>",
           "insertions": {
@@ -2869,6 +2908,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>The double factorial $n!!$ for an even $n$ is the product of all even integers from 2 to $n$. We need to find the units digit of the sum $S = 2!! + 4!! + 6!! + \\ldots + 2022!!$.</p><p>The units digit of a sum is determined by the sum of the units digits of its terms. Let's find the units digit of the first few terms:</p><ul><li>$2!! = 2$. Units digit is <b>2</b>.</li><li>$4!! = 2 \\cdot 4 = 8$. Units digit is <b>8</b>.</li><li>$6!! = 4!! \\cdot 6 = 8 \\cdot 6 = 48$. Units digit is <b>8</b>.</li><li>$8!! = 6!! \\cdot 8 = 48 \\cdot 8 = 384$. Units digit is <b>4</b>.</li><li>$10!! = 8!! \\cdot 10 = 384 \\cdot 10 = 3840$. Units digit is <b>0</b>.</li></ul><p>For any even integer $n \\ge 10$, the product for $n!!$ will include the factor 10. Any integer multiplied by 10 has a units digit of 0. Therefore, every term in the sum from $10!!$ onwards has a units digit of 0.</p><p>$10!!, 12!!, \\ldots, 2022!!$ all end in 0.</p><p>To find the units digit of the total sum, we only need to add the units digits of the first four terms:</p><p>Units digit of S = Units digit of $(2 + 8 + 8 + 4 + 0 + 0 + \\ldots + 0)$</p><p>Units digit of S = Units digit of $(22)$</p><p>The units digit of the sum is <b>2</b>.</p>"
+        },
+        {
           "text": "<p>Notice that once <INSERTION_INDEX_1> the units digit of <INSERTION_INDEX_2> will be <INSERTION_INDEX_3> because there will be a factor of <INSERTION_INDEX_4> Thus, we only need to calculate the units digit of <INSERTION_INDEX_5> We only care about units digits, so we have <INSERTION_INDEX_6> which has the same units digit as <INSERTION_INDEX_7> The answer is <INSERTION_INDEX_8></p><p>~wamofan</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -3035,6 +3077,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Let the rectangle be $PQRS$. The midpoints of its sides form a quadrilateral, which is always a parallelogram (this is known as Varignon's Theorem). In the specific case of a rectangle, the midpoints form a rhombus.</p><p>A key property is that the area of the parallelogram formed by the midpoints is half the area of the original quadrilateral. So, if we find the area of the rhombus formed by the given midpoints, we can find the area of the rectangle.</p><p>The given midpoints are M1=(-3,0), M2=(2,0), M3=(5,4), and M4=(0,4). The diagonals of the rhombus connect opposite midpoints. We can identify the opposite pairs by finding the common midpoint of the diagonals.</p><ul><li>Midpoint of M1M3: $(\\frac{-3+5}{2}, \\frac{0+4}{2}) = (1,2)$.</li><li>Midpoint of M2M4: $(\\frac{2+0}{2}, \\frac{0+4}{2}) = (1,2)$.</li></ul><p>Since they share a midpoint, the diagonals are M1M3 and M2M4. Let's calculate their lengths ($d_1, d_2$):</p><p>$d_1 = \\text{length(M1M3)} = \\sqrt{(5 - (-3))^2 + (4 - 0)^2} = \\sqrt{8^2 + 4^2} = \\sqrt{64 + 16} = \\sqrt{80}$.</p><p>$d_2 = \\text{length(M2M4)} = \\sqrt{(0 - 2)^2 + (4 - 0)^2} = \\sqrt{(-2)^2 + 4^2} = \\sqrt{4 + 16} = \\sqrt{20}$.</p><p>The area of the rhombus is half the product of its diagonals:</p><p>Area of rhombus = $\\frac{1}{2} d_1 d_2 = \\frac{1}{2} \\sqrt{80} \\sqrt{20} = \\frac{1}{2} \\sqrt{1600} = \\frac{1}{2}(40) = 20$.</p><p>The area of the original rectangle is twice the area of this rhombus.</p><p>Area of rectangle = $2 \\times 20 = 40$.</p>"
+        },
         {
           "text": "<p>The midpoints of the four sides of every rectangle are the vertices of a rhombus whose area is half the area of the rectangle: Note that the diagonals of the rhombus have the same lengths as the sides of the rectangle.</p><p>Let <INSERTION_INDEX_1> and <INSERTION_INDEX_2> Note that <INSERTION_INDEX_3> and <INSERTION_INDEX_4> are the vertices of a rhombus whose diagonals have lengths <INSERTION_INDEX_5> and <INSERTION_INDEX_6> It follows that the dimensions of the rectangle are <INSERTION_INDEX_7> and <INSERTION_INDEX_8> so the area of the rectangle is <INSERTION_INDEX_9></p><p>~MRENTHUSIASM</p>",
           "insertions": {
@@ -3294,6 +3339,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p><b>Step 1: Find the original median score.</b></p><p>There are 20 students in the class. The median score is the average of the 10th and 11th scores when arranged in order. Let's list the frequencies of the scores from the dot plot:</p><ul><li>65: 2 students</li><li>70: 2 students</li><li>75: 4 students</li><li>80: 5 students</li><li>85: 2 students</li><li>90: 3 students</li><li>95: 1 student</li><li>100: 1 student</li></ul><p>Let's find the positions: Scores 1-2 are 65. Scores 3-4 are 70. Scores 5-8 are 75. Scores 9-13 are 80. Thus, both the 10th and 11th scores are 80. The original median is $\\frac{80+80}{2} = 80$.</p><p><b>Step 2: Determine the requirement for the new median.</b></p><p>The median increased to 85. This means the average of the new 10th and 11th scores is 85. The most efficient way to achieve this is to make both the 10th and 11th scores equal to 85.</p><p><b>Step 3: Find the minimum number of students who need points.</b></p><p>The scores are increased by 5 points for some students. To change the 10th and 11th scores from 80 to 85, we must give 5 extra points to students who originally scored 80. There are 5 such students, in positions 9 through 13.</p><ul><li>Original scores near the median: ..., 75 (8th), 80 (9th), <b>80 (10th)</b>, <b>80 (11th)</b>, 80 (12th), 80 (13th), 85 (14th), ...</li><li>If we give points to 1, 2, or 3 students with a score of 80, their scores become 85. However, there will still be students with a score of 80 at the 10th and 11th positions. For instance, after giving points to 3 students, we have 2 students left with 80. The 9th and 10th scores are now 80. The 11th score is 85. The median is $\\frac{80+85}{2}=82.5$.</li><li>If we give points to <b>4</b> students with a score of 80, their scores become 85. Now, only one student is left with a score of 80 (the 9th position). The original two students with 85 plus these four now make a group of six students with 85. The 10th and 11th scores are now both 85.</li></ul><p>The new median is $\\frac{85+85}{2} = 85$. Thus, a minimum of 4 students must receive extra points.</p>"
+        },
+        {
           "text": "<p>We notice that <INSERTION_INDEX_1> students have scores under <INSERTION_INDEX_2> currently and only <INSERTION_INDEX_3> have scores over <INSERTION_INDEX_4>. We find the median of these two numbers, getting:</p><p><INSERTION_INDEX_5><INSERTION_INDEX_6><INSERTION_INDEX_7></p><p>Thus, we realize that <INSERTION_INDEX_8> students must have their score increased by <INSERTION_INDEX_9>.</p><p>So, the correct answer is <INSERTION_INDEX_10>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -3421,7 +3469,7 @@
       "answer": "D",
       "solutions": [
         {
-          "text": "<p>The sum of the numbers in each row is <INSERTION_INDEX_1>. Consider the second row. In order for the sum of the numbers in this row to equal <INSERTION_INDEX_2>, the two shaded numbers must add up to <INSERTION_INDEX_3>:<INSERTION_INDEX_4>If two numbers add up to <INSERTION_INDEX_5>, one of them must be at least <INSERTION_INDEX_6>: If both shaded numbers are no more than <INSERTION_INDEX_7>, their sum can be at most <INSERTION_INDEX_8>. Therefore, for <INSERTION_INDEX_9> to be larger than the three missing numbers, <INSERTION_INDEX_10> must be at least <INSERTION_INDEX_11>. We can construct a working scenario where <INSERTION_INDEX_12>:<INSERTION_INDEX_13>So, our answer is <INSERTION_INDEX_14>.</p><p>~ihatemath123</p>",
+          "text": "<p>To solve this grid problem, we need to find the minimum value of $x$ that satisfies the given conditions.</p><p><b>Step 1: Determine the Row Sum</b></p><p>The sum of the numbers in each row is $12$. Consider the second row. In order for the sum of the numbers in this row to equal $12$, the two shaded numbers must add up to $13$.</p><p><b>Step 2: Analyze the Constraint</b></p><p>If two numbers add up to $13$, one of them must be at least $7$: If both shaded numbers are no more than $6$, their sum can be at most $12$. Therefore, for $x$ to be larger than the three missing numbers, $x$ must be at least $8$.</p><p><b>Step 3: Verify the Solution</b></p><p>We can construct a working scenario where $x=8$:</p><p>This configuration satisfies all the given conditions, with each row and column summing to 12, and $x=8$ being larger than the other missing numbers.</p><p>So, our answer is $\\boxed{\\textbf{(D) } 8}$.</p><p>~ihatemath123</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/e/d/f/edf074831eb5bc9e61d6d6e09f525a86e3068f6a.png",
@@ -4016,6 +4064,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>This problem is an example of Simpson's Paradox. Let's analyze the data for both players.</p><p><b>Steph's Performance:</b></p><ul><li>First Half: $\\frac{15}{20} = 75\\%$.</li><li>Second Half: $\\frac{10}{10} = 100\\%$.</li><li>Overall: $\\frac{15+10}{20+10} = \\frac{25}{30} = \\frac{5}{6} \\approx 83.3\\%$.</li></ul><p><b>Candace's Performance:</b></p><ul><li>Let $C_1$ be baskets made in the first half (12 attempts).</li><li>Let $C_2$ be baskets made in the second half (18 attempts).</li></ul><p><b>Conditions:</b></p><ol><li><b>Candace's percentage is lower than Steph's in each half:</b><ul><li>First Half: $\\frac{C_1}{12} < \\frac{15}{20} = \\frac{3}{4} \\implies C_1 < 9$. Since $C_1$ is an integer, $C_1 \\le 8$.</li><li>Second Half: $\\frac{C_2}{18} < \\frac{10}{10} = 1 \\implies C_2 < 18$. Since $C_2$ is an integer, $C_2 \\le 17$.</li></ul></li><li><b>Overall percentages are the same:</b><ul><li>Candace's overall: $\\frac{C_1+C_2}{12+18} = \\frac{C_1+C_2}{30}$.</li><li>Steph's overall: $\\frac{25}{30}$.</li><li>So, $C_1 + C_2 = 25$.</li></ul></li></ol><p>We have $C_1 \\le 8$ and $C_2 = 25 - C_1$. Substituting this into the inequality for $C_2$:</p><p>$25 - C_1 \\le 17 \\implies 8 \\le C_1$.</p><p>Combining our conditions for $C_1$ ($C_1 \\le 8$ and $C_1 \\ge 8$), we find that $C_1$ must be exactly 8.</p><p>If $C_1 = 8$, then $C_2 = 25 - 8 = 17$. These values satisfy all conditions.</p><p>The question asks for how many more baskets Candace scored in the second half than in the first:</p><p>Difference = $C_2 - C_1 = 17 - 8 = 9$.</p>"
+        },
+        {
           "text": "<p>Let <INSERTION_INDEX_1> be the number of shots that Candace made in the first half, and let <INSERTION_INDEX_2> be the number of shots Candace made in the second half. Since Candace and Steph took the same number of attempts, with an equal percentage of baskets scored, we have <INSERTION_INDEX_3> In addition, we have the following inequalities: <INSERTION_INDEX_4> and <INSERTION_INDEX_5> Pairing this up with <INSERTION_INDEX_6> we see the <i><b>only</b></i> possible solution is <INSERTION_INDEX_7> for an answer of <INSERTION_INDEX_8></p><p>~wamofan</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -4166,6 +4217,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>Let's track the positions of Zia and the bus over time. Let bus stops be numbered $S_0, S_1, S_2, \\ldots$.</p><p><b>Initial State (t=0):</b></p><ul><li>Zia is at stop $S_3$.</li><li>The bus starts from stop $S_0$ (3 stops behind Zia).</li></ul><p>We need to determine Zia's action at each stop she reaches based on her rule: wait if the bus is at or past her previous stop, otherwise walk.</p><p>Let's create a timeline for the bus arrivals and departures:</p><ul><li>Bus travel time stop-to-stop: 2 min drive + 1 min wait = 3 min cycle.</li><li>Bus leaves $S_0$ at t=0.</li><li>Bus arrives at $S_1$ at t=2, leaves at t=3.</li><li>Bus arrives at $S_2$ at t=5, leaves at t=6.</li><li>Bus arrives at $S_3$ at t=8, leaves at t=9.</li><li>Bus arrives at $S_4$ at t=11, leaves at t=12.</li><li>Bus arrives at $S_5$ at t=14, leaves at t=15.</li><li>Bus arrives at $S_6$ at t=17.</li></ul><p>Now let's track Zia's progress. She walks from one stop to the next in 5 minutes.</p><ul><li><b>t=0, Zia at $S_3$:</b> Her previous stop is $S_2$. The bus will not leave $S_2$ until t=6. So, she starts walking to $S_4$.</li><li><b>t=5, Zia arrives at $S_4$:</b> Her previous stop is $S_3$. The bus will not leave $S_3$ until t=9. So, she walks to $S_5$.</li><li><b>t=10, Zia arrives at $S_5$:</b> Her previous stop is $S_4$. The bus will not leave $S_4$ until t=12. So, she walks to $S_6$.</li><li><b>t=15, Zia arrives at $S_6$:</b> Her previous stop is $S_5$. At t=15, the bus is just leaving $S_5$. Since the bus has left her previous stop, she decides to wait at $S_6$.</li></ul><p>Zia starts waiting at $S_6$ at t=15. The bus left $S_5$ at t=15 and takes 2 minutes to drive to the next stop. The bus will arrive at $S_6$ at $t=15+2=17$ minutes.</p><p>Zia will board the bus at <b>17 minutes</b>.</p>"
+        },
         {
           "text": "<p>Initially, suppose that the bus is at Stop <INSERTION_INDEX_1> (starting point) and Zia is at Stop <INSERTION_INDEX_2></p><p>We construct the following table of <INSERTION_INDEX_3>-minute intervals:<INSERTION_INDEX_4>Note that Zia will wait for the bus after <INSERTION_INDEX_5> minutes, and the bus will arrive <INSERTION_INDEX_6> minutes later.</p><p>Therefore, the answer is <INSERTION_INDEX_7></p><p>~MRENTHUSIASM</p>",
           "insertions": {
@@ -4361,6 +4415,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We are counting the number of 3x3 grids containing triangles ($\\\triangle$) and circles ($\\\bigcirc$) that have at least one line of three $\\\triangle$s and at least one line of three $\\\bigcirc$s. A line can be a row, column, or diagonal.</p><p>Let a line of three $\\\triangle$s be a T-line and a line of three $\\\bigcirc$s be an O-line. A grid must have both a T-line and an O-line.</p><p>Consider any two lines on the grid. If they intersect, they share a cell. It's impossible for this cell to be both a $\\\triangle$ and a $\\\bigcirc$. Therefore, the T-line and the O-line must be parallel.</p><p>The only parallel lines on a 3x3 grid are sets of rows or sets of columns. The two main diagonals are not parallel to any other lines.</p><p>This simplifies the problem to two disjoint cases:</p><p><b>Case 1: The lines are two rows.</b></p><p>We need to have at least one row of $\\\triangle$s and one row of $\\\bigcirc$s. Let's count the number of ways to fill the grid's rows to satisfy this.</p><ul><li>Ways with exactly 1 T-row, 1 O-row, and 1 mixed row:<ul><li>Choose position for T-row (3 ways), O-row (2 ways). The mixed row has $2^3-2=6$ patterns (not all-T or all-O). Total: $3 \\times 2 \\times 6 = 36$.</li></ul></li><li>Ways with 2 T-rows and 1 O-row:<ul><li>Choose position for the O-row (3 ways). The other two are T-rows. Total: 3.</li></ul></li><li>Ways with 1 T-row and 2 O-rows:<ul><li>Choose position for the T-row (3 ways). Total: 3.</li></ul></li></ul><p>Total for Case 1 = $36 + 3 + 3 = 42$.</p><p><b>Case 2: The lines are two columns.</b></p><p>By symmetry with the rows, the logic is identical. There are 42 ways to have a T-column and an O-column.</p><p><b>Total Configurations:</b></p><p>The total number of valid configurations is the sum of the possibilities from the two disjoint cases:</p><p>Total = (Row-based ways) + (Column-based ways) = $42 + 42 = 84$.</p>"
+        },
         {
           "text": "<p>Notice that diagonals and a vertical-horizontal pair can never work, so the only possibilities are if all lines are vertical or if all lines are horizontal. These are essentially the same, so we'll count up how many work with all lines of shapes vertical, and then multiply by 2 at the end.</p><p>We take casework:</p><p><b>Case 1: 3 lines</b>:In this case, the lines would need to be <INSERTION_INDEX_1> of one shape and <INSERTION_INDEX_2> of another, so there are <INSERTION_INDEX_3> ways to arrange the lines and <INSERTION_INDEX_4> ways to pick which shape has only one line. In total, this is <INSERTION_INDEX_5></p><p><b>Case 2: 2 lines</b>:In this case, the lines would be one line of triangles, one line of circles, and the last one can be anything that includes both shapes. There are <INSERTION_INDEX_6> ways to arrange the lines and <INSERTION_INDEX_7> ways to choose the last line. (We subtract <INSERTION_INDEX_8> from the last line because one arrangement of the last line is all triangles and the other arrangement of the last line is all circles, which causes Case 2 to overlap with Case 1 and further complicating the solution.) In total, this is <INSERTION_INDEX_9></p><p>Finally, we add and multiply: <INSERTION_INDEX_10>.</p><p>~wamofan</p>",
           "insertions": {
@@ -4578,6 +4635,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>This problem is known to be ambiguous and potentially has a typo in its statement. Different interpretations lead to different answers. One common interpretation that leads to one of the answer choices is as follows:</p><p>The volume of a prism is $V = \\text{Area of base} \\times \\text{Height}$.</p><p>Let's assume the <b>height of the prism is 8</b>. This could happen if the piece ABGH is a side panel and, when folded, the length AH=8 becomes the vertical height of the prism.</p><p>Now, we need the area of the base. Let's assume the base is a right triangle whose legs are 6 and 8. The reason for these specific numbers is not directly derivable from the problem statement without further assumptions, but they are a common Pythagorean triple.</p><p>If the legs are 6 and 8, the area of the base is:</p><p>Area = $\\frac{1}{2} \\times 6 \\times 8 = 24$.</p><p>With a base area of 24 and a height of 8, the volume would be:</p><p>$V = 24 \\times 8 = 192$.</p><p>This matches option (C). It is important to note that this solution relies on assumptions to resolve the ambiguity in the problem's diagram and given values.</p>"
+        },
+        {
           "text": "<p>While imagining the folding, <INSERTION_INDEX_1> goes on <INSERTION_INDEX_2> <INSERTION_INDEX_3> goes on <INSERTION_INDEX_4> and <INSERTION_INDEX_5> goes on <INSERTION_INDEX_6> So, <INSERTION_INDEX_7> and <INSERTION_INDEX_8> Also, <INSERTION_INDEX_9> becomes an edge parallel to <INSERTION_INDEX_10> so that means <INSERTION_INDEX_11></p><p>Since <INSERTION_INDEX_12> then <INSERTION_INDEX_13> So, the area of <INSERTION_INDEX_14> is <INSERTION_INDEX_15> If we let <INSERTION_INDEX_16> be the base, then the height is <INSERTION_INDEX_17> So, the volume is <INSERTION_INDEX_18></p><p>~aops-g5-gethsemanea2</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -4760,6 +4820,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>Let the four leaves be $L_0, L_1, L_2, L_3$. Assume the cricket starts at $L_0$. On each hop, it moves to one of the other 3 leaves with a probability of $\\frac{1}{3}$. We want to find the probability that the cricket is back at $L_0$ after 4 hops.</p><p>Let $P_n$ be the probability that the cricket is at the starting leaf $L_0$ after $n$ hops.</p><ul><li><b>$n=0$:</b> The cricket is at $L_0$. $P_0 = 1$.</li><li><b>$n=1$:</b> The cricket must hop away from $L_0$. $P_1 = 0$.</li></ul><p>We can find a recurrence relation for $P_n$. For the cricket to be at $L_0$ at step $n$, it must have been at a different leaf ($L_1, L_2,$ or $L_3$) at step $n-1$. The probability of not being at $L_0$ is $1-P_{n-1}$. From any of these 3 other leaves, the probability of jumping to $L_0$ is $\\frac{1}{3}$.</p><p>So, the probability of being at $L_0$ at step $n$ is:</p><p>$P_n = (1 - P_{n-1}) \\times \\frac{1}{3}$.</p><p>Now we can calculate the probabilities step-by-step:</p><ul><li>$P_0 = 1$</li><li>$P_1 = \\frac{1-P_0}{3} = \\frac{1-1}{3} = 0$.</li><li>$P_2 = \\frac{1-P_1}{3} = \\frac{1-0}{3} = \\frac{1}{3}$.</li><li>$P_3 = \\frac{1-P_2}{3} = \\frac{1 - 1/3}{3} = \\frac{2/3}{3} = \\frac{2}{9}$.</li><li>$P_4 = \\frac{1-P_3}{3} = \\frac{1 - 2/9}{3} = \\frac{7/9}{3} = \\frac{7}{27}$.</li></ul><p>The probability that the cricket has returned to the starting leaf after 4 hops is $\\frac{7}{27}$.</p>"
+        },
         {
           "text": "<p>Let <INSERTION_INDEX_1> denote the leaf where the cricket starts and <INSERTION_INDEX_2> denote one of the other <INSERTION_INDEX_3> leaves. Note that:</p><ul><li>If the cricket is at <INSERTION_INDEX_4> then the probability that it hops to <INSERTION_INDEX_5> next is <INSERTION_INDEX_6></li></ul><ul><li>If the cricket is at <INSERTION_INDEX_7> then the probability that it hops to <INSERTION_INDEX_8> next is <INSERTION_INDEX_9></li></ul><ul><li>If the cricket is at <INSERTION_INDEX_10> then the probability that it hops to <INSERTION_INDEX_11> next is <INSERTION_INDEX_12></li></ul><p>We apply casework to the possible paths of the cricket:</p><p>Together, the probability that the cricket returns to <INSERTION_INDEX_13> after <INSERTION_INDEX_14> hops is <INSERTION_INDEX_15></p><p>~MRENTHUSIASM</p>",
           "insertions": {
