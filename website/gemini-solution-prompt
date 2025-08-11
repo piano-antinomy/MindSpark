@@ -17,7 +17,6 @@ the solution can have html tag to make the solution rendering nice and clean. yo
 if you use cite_start and cite_end as internal sticky notes. remove those in your final output
 
 
-
 here is a valid example
 
 {
@@ -27,13 +26,7 @@ here is a valid example
     }
 }
 
-here is an invalid example because it uses [cite_start] and [cite_end]
-{
-    "1": {
-        [cite_start]"text": "<p>The goal is to buy as many sandwiches as possible first, then spend the rest on soft drinks. [cite: 7]</p><p><b>1. [cite_start]Calculate the number of sandwiches:</b><br>Ike and Mike have \\$30.00. [cite: 5] [cite_start]Sandwiches cost \\$4.50 each. [cite: 6]<br>Number of sandwiches = \\$\\lfloor 30.00 / 4.50 \\rfloor = \\lfloor 6.66... \\rfloor = 6\\$ sandwiches.</p><p><b>2. Calculate the cost of sandwiches and remaining money:</b><br>Cost of 6 sandwiches = 6 * \\$4.50 = \\$27.00.<br>Remaining money = \\$30.00 - \\$27.00 = \\$3.00.</p><p><b>3. [cite_start]Calculate the number of soft drinks:</b><br>Soft drinks cost \\$1.00 each. [cite: 6]<br>Number of soft drinks = \\$3.00 / \\$1.00 = 3\\$ soft drinks.</p><p><b>4. [cite_start]Calculate the total number of items:</b><br>Total items = (Number of sandwiches) + (Number of soft drinks) = 6 + 3 = 9. [cite: 8]</p>",
-      "answer": "B"
-    }
-}
+this is invalid [cite_start]"text":
 
 do not show thinking. just give me the result
 
