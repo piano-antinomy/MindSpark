@@ -318,8 +318,8 @@ body {
 
 .score-display {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -335,6 +335,19 @@ body {
     letter-spacing: 0.025em;
 }
 
+.score-line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.score-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6b7280;
+    min-width: 120px;
+}
+
 .score-number {
     display: block;
     font-size: 3.5rem;
@@ -342,6 +355,13 @@ body {
     color: #4f46e5;
     line-height: 1;
     text-shadow: 0 2px 4px rgba(79, 70, 229, 0.1);
+}
+
+.level-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4f46e5;
+    white-space: nowrap;
 }
 
 .level-info h4 {

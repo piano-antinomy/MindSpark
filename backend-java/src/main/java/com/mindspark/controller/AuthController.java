@@ -54,6 +54,8 @@ public class AuthController extends HttpServlet {
                 handleLogout(request, response);
             } else if (pathInfo.equals("/profile")) {
                 handleCreateOrUpdateProfile(request, response);
+            } else if (pathInfo.equals("/update-scores")) {
+                handleUpdateScores(request, response);
             } else {
                 sendErrorResponse(response, HttpServletResponse.SC_NOT_FOUND, "Endpoint not found");
             }
@@ -240,6 +242,96 @@ public class AuthController extends HttpServlet {
         
         responseData.put("success", true);
         sendJsonResponse(response, responseData);
+    }
+    
+    private void handleUpdateScores(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        // Check authentication first
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Not authenticated");
+            return;
+        }
+        
+        String userId = (String) session.getAttribute("userId");
+        if (userId == null) {
+            sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Not authenticated");
+            return;
+        }
+        
+        // Read request body
+        StringBuilder requestBody = new StringBuilder();
+        try (BufferedReader reader = request.getReader()) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                requestBody.append(line);
+            }
+        }
+        
+        try {
+            JsonNode jsonNode = objectMapper.readTree(requestBody.toString());
+            
+            // Extract score and mathLevel from request
+            Integer score = null;
+            Integer mathLevel = null;
+            
+            if (jsonNode.has("score")) {
+                score = jsonNode.get("score").asInt();
+            }
+            
+            if (jsonNode.has("mathLevel")) {
+                mathLevel = jsonNode.get("mathLevel").asInt();
+            }
+            
+            // Validate that at least one field is provided
+            if (score == null && mathLevel == null) {
+                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "At least one of 'score' or 'mathLevel' must be provided");
+                return;
+            }
+            
+            boolean updateSuccess = true;
+            String updateMessage = "Progress updated successfully";
+            
+            // Update score if provided
+            if (score != null) {
+                if (score < 0) {
+                    sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Score cannot be negative");
+                    return;
+                }
+                boolean scoreUpdated = loginService.updateUserScore(userId, score);
+                if (!scoreUpdated) {
+                    updateSuccess = false;
+                    updateMessage = "Failed to update score";
+                }
+            }
+            
+            // Update math level if provided
+            if (mathLevel != null && updateSuccess) {
+                boolean mathLevelUpdated = loginService.updateUserMathLevel(userId, mathLevel);
+                if (!mathLevelUpdated) {
+                    updateSuccess = false;
+                    updateMessage = "Failed to update math level";
+                }
+            }
+            
+            if (updateSuccess) {
+                // Get updated user profile
+                User updatedUser = loginService.getUserProfile(userId);
+                
+                Map<String, Object> responseData = new HashMap<>();
+                responseData.put("success", true);
+                responseData.put("message", updateMessage);
+                responseData.put("user", updatedUser);
+                
+                sendJsonResponse(response, responseData);
+                logger.info("Progress updated for user: {} - score: {}, mathLevel: {}", userId, score, mathLevel);
+            } else {
+                sendErrorResponse(response, HttpServletResponse.SC_INTERNAL_SERVER_ERROR, updateMessage);
+            }
+            
+        } catch (Exception e) {
+            logger.error("Error parsing update progress request", e);
+            sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Invalid request format");
+        }
     }
     
     private void sendJsonResponse(HttpServletResponse response, Object data) throws IOException {

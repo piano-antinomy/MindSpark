@@ -9,8 +9,19 @@ function Dashboard() {
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
   const levelLabelFromInt = (level) => {
-    const mapping = { 1: 'Beginner', 2: 'Intermediate', 3: 'Advanced' };
-    return mapping[level] || 'Not Assessed';
+    // Map level numbers to labels based on ranges
+    if (level < 2) return '🍼 Number Nibbler';
+    if (level >= 2 && level <= 9) return '🐣 Counting Kid';
+    if (level >= 10 && level <= 19) return '🦄 Math Explorer';
+    if (level >= 20 && level <= 39) return '🚀 Addition Adventurer';
+    if (level >= 40 && level <= 59) return '🧙 Subtraction Sorcerer';
+    if (level >= 60 && level <= 79) return '🦸 Multiplication Hero';
+    if (level >= 80 && level <= 99) return '🧩 Division Detective';
+    if (level >= 100 && level <= 149) return '🏆 Fraction Master';
+    if (level >= 150 && level <= 199) return '🧠 Algebra Ace';
+    if (level >= 200) return '🔬 Number Scientist';
+    
+    return 'Not Assessed';
   };
 
   useEffect(() => {
@@ -169,16 +180,14 @@ function Dashboard() {
           {/* Scoreboard Section */}
           <div className="dashboard-card scoreboard-card">
             <h2>📊 Your Scoreboard</h2>
-            <div className="score-display">
-              <div className="total-score">
-                <h3>Total Score</h3>
-                <span className="score-number">{user.score || 0}</span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '2rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <span style={{ fontSize: '1.1rem', fontWeight: '600', color: '#6b7280' }}>Total Score:</span>
+                <span style={{ fontSize: '3.5rem', fontWeight: '800', color: '#4f46e5', marginLeft: '1rem' }}>{user.score || 0}</span>
               </div>
-              <div className="level-info">
-                <h4>Math Level</h4>
-                <span className={`level-badge ${levelLabel.toLowerCase()}`}>
-                  {levelLabel}
-                </span>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                <span style={{ fontSize: '1.1rem', fontWeight: '600', color: '#6b7280' }}>Math Level:</span>
+                <span style={{ fontSize: '1.2rem', fontWeight: '600', color: '#4f46e5', marginLeft: '1rem', whiteSpace: 'nowrap' }}>{levelLabel}</span>
               </div>
             </div>
             <div className="progress-section">
