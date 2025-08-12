@@ -3,11 +3,12 @@ package com.mindspark.config;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.mindspark.local.ddb.LocalHostDynamoDB;
-import com.mindspark.service.dao.DDBBackedUserMetadataDAO;
+import com.mindspark.service.dao.EnhancedUserDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
+import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
 import software.amazon.awssdk.http.urlconnection.UrlConnectionHttpClient;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
@@ -17,9 +18,10 @@ import java.net.URI;
 
 public class DDBDAOModule extends AbstractModule {
     private static final Logger logger = LoggerFactory.getLogger(DDBDAOModule.class);
+    
     @Override
     protected void configure() {
-        bind(DDBBackedUserMetadataDAO.class).asEagerSingleton();
+        bind(EnhancedUserDAO.class);
     }
 
     @Provides
@@ -45,5 +47,12 @@ public class DDBDAOModule extends AbstractModule {
                     .httpClient(UrlConnectionHttpClient.builder().build())
                     .build();
         }
+    }
+    
+    @Provides
+    public DynamoDbEnhancedClient provideDynamoDBEnhancedClient(DynamoDbClient dynamoDbClient) {
+        return DynamoDbEnhancedClient.builder()
+                .dynamoDbClient(dynamoDbClient)
+                .build();
     }
 }

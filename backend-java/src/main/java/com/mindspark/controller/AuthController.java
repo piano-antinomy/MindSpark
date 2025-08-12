@@ -110,15 +110,15 @@ public class AuthController extends HttpServlet {
         
         try {
             JsonNode jsonNode = objectMapper.readTree(requestBody.toString());
-            String username = jsonNode.get("username").asText();
+            String userId = jsonNode.get("userId").asText();
             String password = jsonNode.get("password").asText();
             
-            User authenticatedUser = loginService.authenticate(username, password);
+            User authenticatedUser = loginService.authenticate(userId, password);
             
             if (authenticatedUser != null) {
                 // Create session
                 HttpSession session = request.getSession(true);
-                session.setAttribute("username", username.toLowerCase());
+                session.setAttribute("userId", userId.toLowerCase());
                 session.setAttribute("user", authenticatedUser);
                 
                 Map<String, Object> responseData = new HashMap<>();
@@ -127,7 +127,7 @@ public class AuthController extends HttpServlet {
                 responseData.put("user", authenticatedUser);
                 
                 sendJsonResponse(response, responseData);
-                logger.info("Successful login for user: {}", username);
+                logger.info("Successful login for user: {}", userId);
                 
             } else {
                 sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Invalid credentials");
@@ -142,9 +142,9 @@ public class AuthController extends HttpServlet {
     private void handleLogout(HttpServletRequest request, HttpServletResponse response) throws IOException {
         HttpSession session = request.getSession(false);
         if (session != null) {
-            String username = (String) session.getAttribute("username");
+            String userId = (String) session.getAttribute("userId");
             session.invalidate();
-            logger.info("User logged out: {}", username);
+            logger.info("User logged out: {}", userId);
         }
         
         Map<String, Object> responseData = new HashMap<>();
@@ -161,13 +161,15 @@ public class AuthController extends HttpServlet {
             return;
         }
         
-        String username = (String) session.getAttribute("username");
-        if (username == null) {
+        String userId = (String) session.getAttribute("userId");
+
+        logger.info("Getting profile for userId = {}", userId);
+        if (userId == null) {
             sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Not authenticated");
             return;
         }
         
-        User user = loginService.getUserProfile(username);
+        User user = loginService.getUserProfile(userId);
         if (user != null) {
             Map<String, Object> responseData = new HashMap<>();
             responseData.put("success", true);
@@ -190,8 +192,8 @@ public class AuthController extends HttpServlet {
         }
         try {
             User payload = objectMapper.readValue(requestBody.toString(), User.class);
-            if (payload == null || payload.getUsername() == null) {
-                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "username is required");
+            if (payload == null || payload.getUserId() == null) {
+                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "userId is required");
                 return;
             }
             // Ensure default score is 0 if not present
@@ -209,7 +211,7 @@ public class AuthController extends HttpServlet {
 
             // Attach to session if caller wants to set login state
             HttpSession session = request.getSession(true);
-            session.setAttribute("username", stored.getUsername());
+            session.setAttribute("userId", stored.getUserId());
             session.setAttribute("user", stored);
 
             Map<String, Object> responseData = new HashMap<>();
@@ -226,9 +228,9 @@ public class AuthController extends HttpServlet {
         HttpSession session = request.getSession(false);
         
         Map<String, Object> responseData = new HashMap<>();
-        if (session != null && session.getAttribute("username") != null) {
-            String username = (String) session.getAttribute("username");
-            User user = loginService.getUserProfile(username);
+        if (session != null && session.getAttribute("userId") != null) {
+            String userId = (String) session.getAttribute("userId");
+            User user = loginService.getUserProfile(userId);
             
             responseData.put("authenticated", true);
             responseData.put("user", user);

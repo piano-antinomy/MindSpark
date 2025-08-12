@@ -2,12 +2,11 @@ package com.mindspark.service;
 
 import com.google.inject.Inject;
 import com.mindspark.model.User;
-import com.mindspark.service.dao.DDBBackedUserMetadataDAO;
+import com.mindspark.service.dao.EnhancedUserDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Singleton;
-import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 
@@ -16,14 +15,14 @@ public class LoginServiceImpl implements LoginService {
     
     private static final Logger logger = LoggerFactory.getLogger(LoginServiceImpl.class);
     
-    private final DDBBackedUserMetadataDAO userDAO;
+    private final EnhancedUserDAO userDAO;
     
     // In-memory user storage for backward compatibility and caching
     // This will be gradually migrated to DynamoDB
     private final Map<String, User> users = new ConcurrentHashMap<>();
     
     @Inject
-    public LoginServiceImpl(DDBBackedUserMetadataDAO userDAO) {
+    public LoginServiceImpl(EnhancedUserDAO userDAO) {
         this.userDAO = userDAO;
         initializeTestUsers();
     }
@@ -73,58 +72,18 @@ public class LoginServiceImpl implements LoginService {
             return null;
         }
         
-        final String normalized = username.toLowerCase();
-        
-        // First try to get from DynamoDB
-        try {
-            User ddbUser = userDAO.getUserByUsername(normalized);
-            if (ddbUser != null) {
-                logger.info("Authenticated user from DynamoDB: {}", normalized);
-                return ddbUser.withoutPassword();
-            }
-        } catch (Exception e) {
-            logger.warn("Failed to retrieve user from DynamoDB: {}", e.getMessage());
-        }
-        
-        // Fallback to in-memory storage
-        User existing = users.get(normalized);
-        if (existing == null) {
-            // Create a new user with default fields
-            User newUser = new User();
-            newUser.setUserId(normalized); // Use username as userId for consistency
-            newUser.setUsername(normalized);
-            newUser.setPassword(password);
-            newUser.setScore(0);
-            newUser.setMathLevel(1);
-            
-            // Store in both places
-            users.put(normalized, newUser);
-            try {
-                userDAO.createUser(newUser);
-                logger.info("Created new user in DynamoDB: {}", normalized);
-            } catch (Exception e) {
-                logger.warn("Failed to store new user in DynamoDB: {}", e.getMessage());
-            }
-            
-            logger.info("Pass-through created new user: {}", normalized);
-            return newUser.withoutPassword();
-        }
-        
-        logger.info("Pass-through authenticated existing user: {}", normalized);
-        return existing.withoutPassword();
+        return null;
     }
     
     @Override
-    public User getUserProfile(String username) {
-        if (username == null) {
+    public User getUserProfile(String userId) {
+        if (userId == null) {
             return null;
         }
         
-        final String normalized = username.toLowerCase();
-        
         // First try to get from DynamoDB
         try {
-            User ddbUser = userDAO.getUserByUsername(normalized);
+            User ddbUser = userDAO.getUser(userId);
             if (ddbUser != null) {
                 return ddbUser.withoutPassword();
             }
@@ -133,97 +92,78 @@ public class LoginServiceImpl implements LoginService {
         }
         
         // Fallback to in-memory storage
-        User user = users.get(normalized);
+        User user = users.get(userId);
         return user != null ? user.withoutPassword() : null;
     }
     
     @Override
-    public boolean updateUserScore(String username, int score) {
-        if (username == null) {
+    public boolean updateUserScore(String userId, int score) {
+        if (userId == null) {
             return false;
         }
-        
-        final String normalized = username.toLowerCase();
+
         boolean updated = false;
-        
         // Update in DynamoDB
         try {
-            User ddbUser = userDAO.getUserByUsername(normalized);
+            User ddbUser = userDAO.getUser(userId);
             if (ddbUser != null) {
                 ddbUser.setScore(score);
                 userDAO.updateUser(ddbUser);
                 updated = true;
-                logger.info("Updated score in DynamoDB for user {}: {}", username, score);
+                logger.info("Updated score in DynamoDB for user {}: {}", userId, score);
             }
         } catch (Exception e) {
             logger.warn("Failed to update score in DynamoDB: {}", e.getMessage());
         }
         
         // Update in-memory cache
-        User user = users.get(normalized);
+        User user = users.get(userId);
         if (user != null) {
             user.setScore(score);
             updated = true;
-            logger.info("Updated score in cache for user {}: {}", username, score);
+            logger.info("Updated score in cache for user {}: {}", userId, score);
         }
         
         return updated;
     }
     
     @Override
-    public boolean updateUserMathLevel(String username, int mathLevel) {
-        if (username == null) {
+    public boolean updateUserMathLevel(String userId, int mathLevel) {
+        if (userId == null) {
             return false;
         }
-        
-        final String normalized = username.toLowerCase();
+
         boolean updated = false;
         
         // Update in DynamoDB
         try {
-            User ddbUser = userDAO.getUserByUsername(normalized);
+            User ddbUser = userDAO.getUser(userId);
             if (ddbUser != null) {
                 ddbUser.setMathLevel(mathLevel);
                 userDAO.updateUser(ddbUser);
                 updated = true;
-                logger.info("Updated math level in DynamoDB for user {}: {}", username, mathLevel);
+                logger.info("Updated math level in DynamoDB for user {}: {}", userId, mathLevel);
             }
         } catch (Exception e) {
             logger.warn("Failed to update math level in DynamoDB: {}", e.getMessage());
         }
         
         // Update in-memory cache
-        User user = users.get(normalized);
+        User user = users.get(userId);
         if (user != null) {
             user.setMathLevel(mathLevel);
             updated = true;
-            logger.info("Updated math level in cache for user {}: {}", username, mathLevel);
+            logger.info("Updated math level in cache for user {}: {}", userId, mathLevel);
         }
         
         return updated;
     }
-    
+
     @Override
-    public boolean userExists(String username) {
-        if (username == null) {
-            return false;
-        }
-        
-        final String normalized = username.toLowerCase();
-        
-        // Check DynamoDB first
-        try {
-            if (userDAO.userExistsByUsername(normalized)) {
-                return true;
-            }
-        } catch (Exception e) {
-            logger.warn("Failed to check user existence in DynamoDB: {}", e.getMessage());
-        }
-        
-        // Fallback to in-memory storage
-        return users.containsKey(normalized);
+    public boolean userExists(String userId) {
+        return users.containsKey(userId);
     }
-    
+
     /**
      * Get all users (for admin purposes - without passwords)
      */
@@ -237,7 +177,7 @@ public class LoginServiceImpl implements LoginService {
      * Add a new user (for registration functionality)
      */
     public boolean addUser(String username, String password, String email, String fullName) {
-        if (username == null || password == null || userExists(username)) {
+        if (username == null || password == null) {
             return false;
         }
         
@@ -274,7 +214,7 @@ public class LoginServiceImpl implements LoginService {
         // Check if user exists in DynamoDB
         boolean userExistsInDDB = false;
         try {
-            userExistsInDDB = userDAO.userExistsByUsername(userPayload.getUsername());
+            userExistsInDDB = userDAO.getUser(userPayload.getUserId()) != null;
         } catch (Exception e) {
             logger.warn("Failed to check user existence in DynamoDB: {}", e.getMessage());
         }
@@ -304,7 +244,7 @@ public class LoginServiceImpl implements LoginService {
         } else {
             // Update existing user
             try {
-                User existingUser = userDAO.getUserByUsername(userPayload.getUsername());
+                User existingUser = userDAO.getUser(userPayload.getUserId());
                 if (existingUser != null) {
                     // Update selective fields
                     if (userPayload.getPassword() != null) existingUser.setPassword(userPayload.getPassword());
