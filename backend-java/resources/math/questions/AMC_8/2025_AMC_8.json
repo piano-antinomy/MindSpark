@@ -567,6 +567,100 @@
       }
     },
     {
+      "id": "amc_2025_8_9",
+      "question": {
+        "text": "<p>Ningli looks at the $6$ pairs of numbers directly across from each other on a clock. She takes the average of each pair of numbers. What is the average of the resulting $6$ numbers?</p><p><INSERTION_INDEX_1></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "https://latex.artofproblemsolving.com/9/9/0/99001c7dcfdbf1478b5739a3d267579d2220b112.png",
+            "alt_type": "image",
+            "alt_value": "image",
+            "width": "235",
+            "height": "238"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [
+          "(A) 5",
+          "(B) 6.5",
+          "(C) 8",
+          "(D) 9.5",
+          "(E) 12"
+        ],
+        "picture_choices": [
+          {
+            "uri": "//latex.artofproblemsolving.com/6/e/b/6eb987568ec1e51b2bb117ac19792739ca31a785.png",
+            "width": "424",
+            "height": "23"
+          }
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}~3\\sqrt{3} \\qquad \\textbf{(B)}~6 \\qquad \\textbf{(C)}~9 \\qquad \\textbf{(D)}~6\\sqrt{3} \\qquad \\textbf{(E)}~9\\sqrt{3}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>We use a systematic approach by examining all the opposite number pairs on a clock face: $(12,6)$, $(1,7)$, $(2,8)$, $(3,9)$, $(4,10)$, and $(5,11)$. The order of these pairs is irrelevant. Computing the average of each pair gives us $9, 4, 5, 6, 7,$ and $8$ respectively. The overall average of these six values is $\\frac{9+4+5+6+7+8}{6}=6.5$</p>"
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "invalid_category",
+        "confidence": 0.95
+      }
+    },
+    {
+      "id": "amc_2025_8_10",
+      "question": {
+        "text": "<p>In the figure below, $ABCD$ is a rectangle with sides of length $AB = 5$ inches and $AD = 3$ inches. Rectangle $ABCD$ is rotated $90^\\circ$ clockwise around the midpoint of side $DC$ to give a second rectangle. What is the total area, in square inches, covered by the two overlapping rectangles?</p><p><INSERTION_INDEX_1></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "localimage",
+            "alt_type": "image",
+            "alt_value": "image",
+            "width": "235",
+            "height": "238"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [
+          "(A) 21",
+          "(B) 22.25",
+          "(C) 23",
+          "(D) 23.75",
+          "(E) 25"
+        ],
+        "picture_choices": [
+          {
+            "uri": "//latex.artofproblemsolving.com/6/e/b/6eb987568ec1e51b2bb117ac19792739ca31a785.png",
+            "width": "424",
+            "height": "23"
+          }
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}~3\\sqrt{3} \\qquad \\textbf{(B)}~6 \\qquad \\textbf{(C)}~9 \\qquad \\textbf{(D)}~6\\sqrt{3} \\qquad \\textbf{(E)}~9\\sqrt{3}$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "B",
+      "solutions": [
+        {
+          "text": "<p>Each rectangle has an area of $5 \\cdot 3 = 15$. The total area of the two regions equals the combined area of both rectangles, minus the overlapping portion. The overlap forms a square with sides measuring $2.5$ units (since each side is created by connecting a midpoint of a long edge to a corner). Therefore, the solution is $15+15-2.5^2=23.75$</p>"
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "invalid_category",
+        "confidence": 0.95
+      }
+    },
+    {
       "id": "amc_2025_8_11",
       "question": {
         "text": "<p>A <INSERTION_INDEX_1> consists of four squares connected along their edges. There are five possible tetromino shapes, <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, <INSERTION_INDEX_4>, <INSERTION_INDEX_5>, and <INSERTION_INDEX_6>, shown below, which can be rotated or flipped over. Three tetrominoes are used to completely cover a <INSERTION_INDEX_7> rectangle. At least one of the tiles is an <INSERTION_INDEX_8> tile. What are the other two tiles?</p><p><INSERTION_INDEX_9></p>",
