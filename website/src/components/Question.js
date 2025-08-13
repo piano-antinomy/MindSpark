@@ -4,7 +4,7 @@ function Question({ question, quizCompleted = false, selectedAnswer = null, onAn
   const renderQuestionContent = (question) => {
     return (
       <div className="question-content-section overflow-y-auto min-h-0 p-3 lg:p-6">
-        {/* Question text with insertions */}
+        {/* Question text with processed insertions */}
         <div 
           className="question-text mb-4"
           dangerouslySetInnerHTML={{ __html: question.questionText }}

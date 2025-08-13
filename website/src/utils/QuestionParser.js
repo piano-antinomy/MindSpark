@@ -37,6 +37,15 @@ class QuestionParser {
         const style = width && height ? `style="width: ${width}px; height: ${height}px;"` : '';
         processedText = processedText.replace(marker, 
           `<img src="${imageUrl}" alt="${altText}" class="question-image" ${style} />`);
+      } else if (insertion.alt_type === 'local_image' && insertion.picture) {
+        // Handle local images stored in the resources folder
+        const imagePath = `/resources/images/${insertion.picture}`;
+        const altText = insertion.alt_value || 'Question image';
+        const width = insertion.width || '';
+        const height = insertion.height || '';
+        const style = width && height ? `style="width: ${width}px; height: ${height}px;"` : '';
+        processedText = processedText.replace(marker, 
+          `<img src="${imagePath}" alt="${altText}" class="question-image" ${style} />`);
       } else if (insertion.alt_type === 'latex' && insertion.alt_value) {
         // Use LaTeX content (preprocess it first)
         const preprocessedLatex = this.preprocessLatexText(insertion.alt_value);
