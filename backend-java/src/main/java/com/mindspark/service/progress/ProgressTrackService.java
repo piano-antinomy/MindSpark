@@ -6,10 +6,6 @@ import com.mindspark.model.QuizProgress;
 import java.util.Map;
 
 public interface ProgressTrackService {
-    /**
-     * Track the progress of a user for a given question
-     */
-    void trackProgress(String userId, String questionId, String answer);
 
     void trackProgress(String userId, String quizId, Map<String, String> questionIdToAnswer);
 

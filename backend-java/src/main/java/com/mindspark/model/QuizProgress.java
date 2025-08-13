@@ -1,6 +1,10 @@
 package com.mindspark.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbAttribute;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
@@ -9,94 +13,100 @@ import java.util.Map;
 /**
  * Individual quiz progress tracking
  */
+@DynamoDbBean
 public class QuizProgress {
-    @JsonProperty("quizId")
+    
+    private String userId;
     private String quizId;
-
-    @JsonProperty("quizType")
     private String quizType;
-
-    @JsonProperty("questionSetId")
     private String questionSetId;
-
-    @JsonProperty("lastActivity")
     private LocalDateTime lastActivity;
-
-    @JsonProperty("quizName")
     private String quizName;
-
-    /**
-     * key set of this map contains all question ids within this quiz.
-     * when this quiz was initially created, this map has only keys and all values will default to null.
-     * value to each key is the user's Answer, we track this when user is working on the quiz.
-     */
-    @JsonProperty("questionIdToAnswer")
     private Map<String, String> questionIdToAnswer;
+    private int quizScore;
 
-    public QuizProgress(String quizId, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer) {
-        this.quizId = quizId;
-        this.lastActivity = lastActivity;
-        this.questionIdToAnswer = questionIdToAnswer;
-    }
-
-    public QuizProgress(String quizId, String quizType, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer) {
-        this.quizId = quizId;
-        this.quizType = quizType;
-        this.lastActivity = lastActivity;
-        this.questionIdToAnswer = questionIdToAnswer;
-    }
-
-    public QuizProgress(String quizId, String quizType, String questionSetId, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer) {
+    // Primary constructor with all fields including userId
+    public QuizProgress(String userId, String quizId, String quizType, String questionSetId, String quizName, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer, int quizScore) {
+        this.userId = userId;
         this.quizId = quizId;
         this.quizType = quizType;
         this.questionSetId = questionSetId;
-        this.lastActivity = lastActivity;
-        this.questionIdToAnswer = questionIdToAnswer;
-    }
-
-    public QuizProgress(String quizId, String quizType, String questionSetId, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer, String quizName) {
-        this.quizId = quizId;
-        this.quizType = quizType;
-        this.questionSetId = questionSetId;
-        this.lastActivity = lastActivity;
-        this.questionIdToAnswer = questionIdToAnswer;
         this.quizName = quizName;
+        this.lastActivity = lastActivity;
+        this.questionIdToAnswer = questionIdToAnswer != null ? questionIdToAnswer : Collections.emptyMap();
+        this.quizScore = quizScore;
     }
 
-    public QuizProgress(String quizId, String quizName) {
+    // Constructor for creating new quiz progress
+    public QuizProgress(String userId, String quizId, String quizName) {
+        this.userId = userId;
         this.quizId = quizId;
+        this.quizName = quizName;
         this.lastActivity = LocalDateTime.now();
         this.questionIdToAnswer = Collections.emptyMap();
-        this.quizName = quizName;
+        this.quizScore = 0;
     }
 
     // Default constructor for JSON deserialization
     public QuizProgress() {
         this.questionIdToAnswer = Collections.emptyMap();
+        this.quizScore = 0;
     }
 
+    // DynamoDB Key attributes
+    @DynamoDbPartitionKey
+    @DynamoDbAttribute("userId")
+    @JsonProperty("userId")
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    @DynamoDbSortKey
+    @DynamoDbAttribute("sortKey")
+    @JsonProperty("quizId")
     public String getQuizId() {
         return quizId;
     }
 
+    // Regular attributes
+    @DynamoDbAttribute("quizType")
+    @JsonProperty("quizType")
     public String getQuizType() {
         return quizType;
     }
 
+    @DynamoDbAttribute("questionSetId")
+    @JsonProperty("questionSetId")
     public String getQuestionSetId() {
         return questionSetId;
     }
 
+    @DynamoDbAttribute("lastActivity")
+    @JsonProperty("lastActivity")
     public LocalDateTime getLastActivity() {
         return lastActivity;
     }
 
+    @DynamoDbAttribute("quizName")
+    @JsonProperty("quizName")
+    public String getQuizName() {
+        return quizName;
+    }
+
+    @DynamoDbAttribute("questionIdToAnswer")
+    @JsonProperty("questionIdToAnswer")
     public Map<String, String> getQuestionIdToAnswer() {
         return questionIdToAnswer;
     }
 
-    public String getQuizName() {
-        return quizName;
+    @DynamoDbAttribute("quizScore")
+    @JsonProperty("quizScore")
+    public int getQuizScore() {
+        return quizScore;
     }
 
     // Setter methods for JSON deserialization
@@ -122,6 +132,10 @@ public class QuizProgress {
 
     public void setQuestionIdToAnswer(Map<String, String> questionIdToAnswer) {
         this.questionIdToAnswer = questionIdToAnswer != null ? questionIdToAnswer : Collections.emptyMap();
+    }
+
+    public void setQuizScore(int quizScore) {
+        this.quizScore = quizScore;
     }
 
     /**

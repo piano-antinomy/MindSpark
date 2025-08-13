@@ -186,7 +186,7 @@ function Dashboard() {
                 <span style={{ fontSize: '3.5rem', fontWeight: '800', color: '#4f46e5', marginLeft: '1rem' }}>{user.score || 0}</span>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <span style={{ fontSize: '1.1rem', fontWeight: '600', color: '#6b7280' }}>Math Level:</span>
+                <span style={{ fontSize: '1.1rem', fontWeight: '600', color: '#6b7280' }}>Math Level Title:</span>
                 <span style={{ fontSize: '1.2rem', fontWeight: '600', color: '#4f46e5', marginLeft: '1rem', whiteSpace: 'nowrap' }}>{levelLabel}</span>
               </div>
             </div>

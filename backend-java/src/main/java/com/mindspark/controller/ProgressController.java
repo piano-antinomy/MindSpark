@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mindspark.model.Progress;
 import com.mindspark.model.QuizProgress;
-import com.mindspark.service.progress.LocalCacheBasedProgressTrackServiceImpl;
 import com.mindspark.service.progress.ProgressTrackService;
 import com.mindspark.util.CorsUtils;
 import org.slf4j.Logger;
@@ -292,15 +291,10 @@ public class ProgressController extends HttpServlet {
         }
         
         // Check if the service implementation supports resetQuizProgress method
-        if (progressTrackService instanceof LocalCacheBasedProgressTrackServiceImpl) {
-            LocalCacheBasedProgressTrackServiceImpl cacheService =
-                (LocalCacheBasedProgressTrackServiceImpl) progressTrackService;
-            cacheService.resetQuizProgress(userId, quizId);
-        } else {
-            sendErrorResponse(response, HttpServletResponse.SC_NOT_IMPLEMENTED, "Reset quiz progress not supported by current implementation");
-            return;
-        }
-        
+        sendErrorResponse(response, HttpServletResponse.SC_NOT_IMPLEMENTED, "Reset quiz progress not supported by current implementation");
+
+        /*
+         * for future reference, if we implement resetQuizProgress:
         Map<String, Object> responseData = new HashMap<>();
         responseData.put("success", true);
         responseData.put("message", "Quiz progress reset successfully");
@@ -310,6 +304,7 @@ public class ProgressController extends HttpServlet {
         
         sendJsonResponse(response, responseData);
         logger.info("Reset quiz progress for user: {}, quiz: {}", userId, quizId);
+         */
     }
     
     private void handleClearUserProgress(String userId, HttpServletResponse response) throws IOException {
@@ -318,49 +313,13 @@ public class ProgressController extends HttpServlet {
             return;
         }
         
-        // Check if the service implementation supports clearUserProgress method
-        if (progressTrackService instanceof LocalCacheBasedProgressTrackServiceImpl) {
-            LocalCacheBasedProgressTrackServiceImpl cacheService =
-                (LocalCacheBasedProgressTrackServiceImpl) progressTrackService;
-            cacheService.clearUserProgress(userId);
-        } else {
-            sendErrorResponse(response, HttpServletResponse.SC_NOT_IMPLEMENTED, "Clear user progress not supported by current implementation");
-            return;
-        }
-        
-        Map<String, Object> responseData = new HashMap<>();
-        responseData.put("success", true);
-        responseData.put("message", "User progress cleared successfully");
-        responseData.put("userId", userId);
-        responseData.put("timestamp", System.currentTimeMillis());
-        
-        sendJsonResponse(response, responseData);
-        logger.info("Cleared all progress for user: {}", userId);
+        sendErrorResponse(response, HttpServletResponse.SC_NOT_IMPLEMENTED, "Clear user progress not supported by current implementation");
     }
     
     private void handleGetAllUserProgress(HttpServletResponse response) throws IOException {
         // This is an admin endpoint - in a real application, you'd check for admin privileges
-        
-        // Check if the service implementation supports getAllUserProgress method
-        Map<String, Progress> allProgress;
-        if (progressTrackService instanceof LocalCacheBasedProgressTrackServiceImpl) {
-            LocalCacheBasedProgressTrackServiceImpl cacheService =
-                (LocalCacheBasedProgressTrackServiceImpl) progressTrackService;
-            allProgress = cacheService.getAllUserProgress();
-        } else {
-            sendErrorResponse(response, HttpServletResponse.SC_NOT_IMPLEMENTED, "Get all user progress not supported by current implementation");
-            return;
-        }
-        
-        Map<String, Object> responseData = new HashMap<>();
-        responseData.put("success", true);
-        responseData.put("message", "Retrieved all user progress");
-        responseData.put("userCount", allProgress.size());
-        responseData.put("allProgress", allProgress);
-        responseData.put("timestamp", System.currentTimeMillis());
-        
-        sendJsonResponse(response, responseData);
-        logger.info("Retrieved progress for {} users (admin request)", allProgress.size());
+
+        sendErrorResponse(response, HttpServletResponse.SC_NOT_IMPLEMENTED, "Get all user progress not supported by current implementation");
     }
     
     private void handleHealthCheck(HttpServletResponse response) throws IOException {

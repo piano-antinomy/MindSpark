@@ -53,16 +53,20 @@ public class MindSparkApplication {
             logger.info("✅ MindSpark Java Backend started successfully!");
             logger.info("🌐 Server running on: http://localhost:{}", PORT);
             logger.info("📚 Available endpoints:");
+            logger.info("   🔐 Authentication & User Management:");
             logger.info("   POST /api/auth/login              - User login");
             logger.info("   POST /api/auth/logout             - User logout");
             logger.info("   GET  /api/auth/profile            - Get user profile");
+            logger.info("   POST /api/auth/profile            - Create/update user profile");
             logger.info("   GET  /api/auth/status             - Check authentication status");
+            logger.info("   POST /api/auth/update-scores      - Update user scores");
+            logger.info("   📖 Subjects & Content:");
             logger.info("   GET  /api/subjects                - Get available subjects");
             logger.info("   GET  /api/questions/math          - Get available levels for math");
-            logger.info("   GET  /api/questions/math/level/1  - Get math questions for level 1");
-            logger.info("   GET  /api/questions/math/level/2  - Get math questions for level 2");
-            logger.info("   GET  /api/questions/math/level/3  - Get math questions for level 3");
-            logger.info("   GET  /api/questions/math/health   - Health check");
+            logger.info("   GET  /api/questions/math/level/{level} - Get math questions for level");
+            logger.info("   GET  /api/questions/math/level/{level}/years - Get available years for level");
+            logger.info("   GET  /api/questions/math/level/{level}/year/{year} - Get questions for level and year");
+            logger.info("   GET  /api/questions/math/health   - Math service health check");
             logger.info("   📈 Progress Tracking:");
             logger.info("   POST /api/progress/track          - Track question answer");
             logger.info("   GET  /api/progress/user/{userId}  - Get user progress");
@@ -78,6 +82,10 @@ public class MindSparkApplication {
             logger.info("   GET  /api/quiz/user/{userId}/quiz/{quizId} - Get specific quiz");
             logger.info("   GET  /api/quiz/user/{userId}/quiz/{quizId}/questions - Get quiz questions");
             logger.info("   GET  /api/quiz/health             - Quiz service health check");
+            logger.info("   🔧 System:");
+            logger.info("   All endpoints support CORS and OPTIONS preflight requests");
+            logger.info("   JSON responses with UTF-8 encoding");
+            logger.info("   Session-based authentication");
             logger.info("Press Ctrl+C to stop the server");
             
             server.join();

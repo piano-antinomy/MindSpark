@@ -1,42 +1,44 @@
 package com.mindspark.service.quiz;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mindspark.config.AppConfig;
 import com.mindspark.model.Question;
 import com.mindspark.model.QuizProgress;
 import com.mindspark.service.QuestionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
+import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
+import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
+import software.amazon.awssdk.enhanced.dynamodb.model.QueryConditional;
+import software.amazon.awssdk.enhanced.dynamodb.model.QueryEnhancedRequest;
 
 import javax.inject.Inject;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.LocalDateTime;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LocalQuizServiceImpl implements QuizService {
-    private static final Logger logger = LoggerFactory.getLogger(LocalQuizServiceImpl.class);
-    private static final String QUIZ_BASE_PATH = "/tmp";
-    private static final String QUIZ_PROGRESS_FILE_NAME = "QuizProgress.json";
+public class DDBBackedQuizServiceImpl implements QuizService {
+    private static final Logger logger = LoggerFactory.getLogger(DDBBackedQuizServiceImpl.class);
     
     // Pattern to parse quiz question set IDs like "2015_AMC_8" or "2004_AMC_10B"
     private static final Pattern QUIZ_SET_PATTERN = Pattern.compile("(\\d{4})_AMC_(\\d+)([AB]?)");
     
-    private final ObjectMapper objectMapper;
     private final QuestionService questionService;
+    private final DynamoDbTable<QuizProgress> userProgressTable;
     
     @Inject
-    public LocalQuizServiceImpl(ObjectMapper objectMapper, QuestionService questionService) {
-        this.objectMapper = objectMapper;
+    public DDBBackedQuizServiceImpl(
+            final DynamoDbEnhancedClient dynamoDbEnhancedClient,
+            final QuestionService questionService) {
+        this.userProgressTable = dynamoDbEnhancedClient.table(
+                AppConfig.UNIFIED_DDB_TABLE_NAME, TableSchema.fromBean(QuizProgress.class));
         this.questionService = questionService;
         
-        logger.info("Initialized LocalQuizServiceImpl with file-based storage at {}", QUIZ_BASE_PATH);
+        logger.info("Initialized DDBBackedQuizServiceImpl with DynamoDB storage");
     }
     
     @Override
@@ -52,32 +54,40 @@ public class LocalQuizServiceImpl implements QuizService {
         }
         
         try {
+            // Check if quiz already exists
+            QuizProgress existingQuiz = userProgressTable.getItem(
+                    r -> r.key(k -> k.partitionValue(userId).sortValue(quizId)));
+            
+            if (existingQuiz != null) {
+                logger.warn("Quiz {} already exists for user {}", quizId, userId);
+                return existingQuiz;
+            }
+            
             // Load questions using the refactored method
             List<Question> questions = getQuestionsByQuestionSetId(quizQuestionSetId);
             if (questions.isEmpty()) {
                 throw new RuntimeException("No questions found for " + quizQuestionSetId);
             }
             
-            // Initialize questionIdToAnswer map with question IDs as keys and null values
-            Map<String, String> questionIdToAnswer = new HashMap<>();
-            for (Question question : questions) {
-                questionIdToAnswer.put(question.getId(), null);
-            }
+            // Initialize questionIdToAnswer to an empty map
+            Map<String, String> questionIdToAnswer = Collections.emptyMap();
             
             // Generate unique quiz ID and create QuizProgress
             String quizType = "standardAMC";
             
             QuizProgress quizProgress = new QuizProgress(
+                userId,
                 quizId, 
                 quizType,
                 quizQuestionSetId, // Store the original question set ID
+                quizName,
                 LocalDateTime.now(), 
                 questionIdToAnswer,
-                quizName
+                0 // Initial score
             );
             
-            // Save to file
-            saveQuizProgress(userId, quizId, quizProgress);
+            // Save to DynamoDB
+            userProgressTable.putItem(quizProgress);
             
             logger.info("Created standard quiz {} ({}) for user {} with {} questions from {}", 
                 quizId, quizName, userId, questions.size(), quizQuestionSetId);
@@ -103,42 +113,28 @@ public class LocalQuizServiceImpl implements QuizService {
             throw new IllegalArgumentException("userId cannot be null or empty");
         }
         
-        Map<String, QuizProgress> quizzes = new HashMap<>();
-        Path userDir = Paths.get(QUIZ_BASE_PATH, userId);
-        
-        if (!Files.exists(userDir)) {
-            logger.debug("No quiz directory found for user {}, returning empty map", userId);
-            return quizzes;
-        }
-        
         try {
-            Files.list(userDir)
-                .filter(Files::isDirectory)
-                .forEach(quizDir -> {
-                    String quizId = quizDir.getFileName().toString();
-                    Path quizProgressFile = quizDir.resolve(QUIZ_PROGRESS_FILE_NAME);
-                    
-                    if (Files.exists(quizProgressFile)) {
-                        try {
-                            QuizProgress quizProgress = loadQuizProgress(quizProgressFile);
-                            if (quizProgress != null) {
-                                quizzes.put(quizId, quizProgress);
-                                logger.debug("Loaded quiz {} for user {}", quizId, userId);
-                            }
-                        } catch (Exception e) {
-                            logger.warn("Failed to load quiz {} for user {}: {}", 
-                                      quizId, userId, e.getMessage());
-                        }
-                    }
-                });
+            // Query all quiz progress records for the user
+            QueryEnhancedRequest queryRequest = QueryEnhancedRequest.builder()
+                    .queryConditional(QueryConditional.keyEqualTo(k -> k.partitionValue(userId)))
+                    .build();
+
+            Map<String, QuizProgress> quizzes = new HashMap<>();
             
+            userProgressTable.query(queryRequest)
+                    .stream()
+                    .forEach(page -> page.items()
+                    .forEach(quizProgress -> {
+                        quizzes.put(quizProgress.getQuizId(), quizProgress);
+                    }));
+
             logger.debug("Found {} quizzes for user {}", quizzes.size(), userId);
+            return quizzes;
+            
         } catch (Exception e) {
             logger.error("Failed to list quizzes for user {}: {}", userId, e.getMessage(), e);
             throw new RuntimeException("Failed to list quizzes", e);
         }
-        
-        return quizzes;
     }
 
     @Override
@@ -154,18 +150,22 @@ public class LocalQuizServiceImpl implements QuizService {
         }
         
         try {
-            // Create updated QuizProgress with current timestamp
-            QuizProgress updatedProgress = new QuizProgress(
-                quizProgress.getQuizId(),
-                quizProgress.getQuizType(),
-                quizProgress.getQuestionSetId(),
-                LocalDateTime.now(),
-                quizProgress.getQuestionIdToAnswer(),
-                quizProgress.getQuizName()
-            );
+            // Check if quiz exists
+            QuizProgress existingQuiz = userProgressTable.getItem(
+                    r -> r.key(k -> k.partitionValue(userId).sortValue(quizId)));
             
-            saveQuizProgress(userId, quizId, updatedProgress);
+            if (existingQuiz == null) {
+                throw new RuntimeException("Quiz not found: " + quizId + " for user: " + userId);
+            }
+            
+            // Update the existing quiz progress
+            existingQuiz.setQuestionIdToAnswer(quizProgress.getQuestionIdToAnswer());
+            existingQuiz.setLastActivity(LocalDateTime.now());
+            existingQuiz.setQuizScore(quizProgress.getQuizScore());
+            
+            userProgressTable.updateItem(existingQuiz);
             logger.debug("Updated quiz progress for user {} quiz {}", userId, quizId);
+            
         } catch (Exception e) {
             logger.error("Failed to update quiz progress for user {} quiz {}: {}", 
                         userId, quizId, e.getMessage(), e);
@@ -176,6 +176,7 @@ public class LocalQuizServiceImpl implements QuizService {
     /**
      * Get questions for an existing quiz by loading the quiz progress and reconstructing the question set
      */
+    @Override
     public List<Question> getQuestionsByQuizId(String userId, String quizId) {
         if (userId == null || userId.trim().isEmpty()) {
             throw new IllegalArgumentException("userId cannot be null or empty");
@@ -185,13 +186,13 @@ public class LocalQuizServiceImpl implements QuizService {
         }
         
         try {
-            // Load the quiz progress from file
-            Path quizProgressFile = Paths.get(QUIZ_BASE_PATH, userId, quizId, QUIZ_PROGRESS_FILE_NAME);
-            if (!Files.exists(quizProgressFile)) {
+            // Load the quiz progress from DynamoDB
+            QuizProgress quizProgress = userProgressTable.getItem(
+                    r -> r.key(k -> k.partitionValue(userId).sortValue(quizId)));
+            
+            if (quizProgress == null) {
                 throw new RuntimeException("Quiz not found: " + quizId + " for user: " + userId);
             }
-            
-            QuizProgress quizProgress = loadQuizProgress(quizProgressFile);
             
             // Use the stored question set ID to reload questions
             if (quizProgress.getQuestionSetId() != null) {
@@ -251,25 +252,5 @@ public class LocalQuizServiceImpl implements QuizService {
             default:
                 throw new IllegalArgumentException("Unsupported AMC level: " + amcLevel);
         }
-    }
-    
-    /**
-     * Save quiz progress to file
-     */
-    private void saveQuizProgress(String userId, String quizId, QuizProgress quizProgress) throws IOException {
-        Path quizDir = Paths.get(QUIZ_BASE_PATH, userId, quizId);
-        Files.createDirectories(quizDir);
-        
-        Path quizProgressFile = quizDir.resolve(QUIZ_PROGRESS_FILE_NAME);
-        objectMapper.writeValue(quizProgressFile.toFile(), quizProgress);
-        
-        logger.info("Saved quiz progress for user {} quiz {} to {}", userId, quizId, quizProgressFile);
-    }
-    
-    /**
-     * Load quiz progress from file
-     */
-    private QuizProgress loadQuizProgress(Path quizProgressFile) throws IOException {
-        return objectMapper.readValue(quizProgressFile.toFile(), QuizProgress.class);
     }
 }

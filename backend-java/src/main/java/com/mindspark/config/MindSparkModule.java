@@ -6,13 +6,13 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
-import com.mindspark.service.QuestionService;
 import com.mindspark.service.CacheBackedQuestionServiceImpl;
 import com.mindspark.service.LoginService;
 import com.mindspark.service.LoginServiceImpl;
-import com.mindspark.service.progress.LocalCacheBasedProgressTrackServiceImpl;
+import com.mindspark.service.QuestionService;
+import com.mindspark.service.progress.DDBBackedProgressTrackingServiceImpl;
 import com.mindspark.service.progress.ProgressTrackService;
-import com.mindspark.service.quiz.LocalQuizServiceImpl;
+import com.mindspark.service.quiz.DDBBackedQuizServiceImpl;
 import com.mindspark.service.quiz.QuizService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,8 +28,8 @@ public class MindSparkModule extends AbstractModule {
         // Bind services
         bind(QuestionService.class).to(CacheBackedQuestionServiceImpl.class);
         bind(LoginService.class).to(LoginServiceImpl.class);
-        bind(ProgressTrackService.class).to(LocalCacheBasedProgressTrackServiceImpl.class);
-        bind(QuizService.class).to(LocalQuizServiceImpl.class);
+        bind(ProgressTrackService.class).to(DDBBackedProgressTrackingServiceImpl.class);
+        bind(QuizService.class).to(DDBBackedQuizServiceImpl.class);
 
         install(new DDBDAOModule());
     }

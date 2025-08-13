@@ -1,6 +1,7 @@
 package com.mindspark.service.dao;
 
 import com.google.inject.Inject;
+import com.mindspark.config.AppConfig;
 import com.mindspark.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,8 +10,6 @@ import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
 import software.amazon.awssdk.enhanced.dynamodb.Key;
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 import software.amazon.awssdk.enhanced.dynamodb.model.PageIterable;
-import software.amazon.awssdk.enhanced.dynamodb.model.QueryConditional;
-import software.amazon.awssdk.enhanced.dynamodb.model.QueryEnhancedRequest;
 import software.amazon.awssdk.services.dynamodb.model.ResourceNotFoundException;
 
 import javax.inject.Singleton;
@@ -22,11 +21,10 @@ import java.util.List;
 public class EnhancedUserDAO {
     private static final Logger logger = LoggerFactory.getLogger(EnhancedUserDAO.class);
     private final DynamoDbTable<User> userTable;
-    private static final String TABLE_NAME = "MindSparkUsers";
 
     @Inject
     public EnhancedUserDAO(final DynamoDbEnhancedClient enhancedClient) {
-        this.userTable = enhancedClient.table(TABLE_NAME, TableSchema.fromBean(User.class));
+        this.userTable = enhancedClient.table(AppConfig.UNIFIED_DDB_TABLE_NAME, TableSchema.fromBean(User.class));
         initializeTable();
     }
     
@@ -37,12 +35,12 @@ public class EnhancedUserDAO {
         try {
             // Check if table exists by trying to describe it
             userTable.describeTable();
-            logger.info("Table {} already exists", TABLE_NAME);
+            logger.info("Table {} already exists", AppConfig.UNIFIED_DDB_TABLE_NAME);
         } catch (ResourceNotFoundException e) {
-            logger.info("Table {} does not exist, creating it...", TABLE_NAME);
+            logger.info("Table {} does not exist, creating it...", AppConfig.UNIFIED_DDB_TABLE_NAME);
             createTable();
         } catch (Exception e) {
-            logger.error("Error initializing table {}: {}", TABLE_NAME, e.getMessage(), e);
+            logger.error("Error initializing table {}: {}", AppConfig.UNIFIED_DDB_TABLE_NAME, e.getMessage(), e);
             throw new RuntimeException("Failed to initialize DynamoDB table", e);
         }
     }
@@ -55,7 +53,7 @@ public class EnhancedUserDAO {
                         .writeCapacityUnits(5L)
                         .build())
                 .build());
-        logger.info("Table {} created successfully", TABLE_NAME);
+        logger.info("Table {} created successfully", AppConfig.UNIFIED_DDB_TABLE_NAME);
     }
     
     /**

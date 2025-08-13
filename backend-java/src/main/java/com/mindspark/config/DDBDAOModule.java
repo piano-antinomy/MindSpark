@@ -2,8 +2,8 @@ package com.mindspark.config;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
+import com.google.inject.Singleton;
 import com.mindspark.local.ddb.LocalHostDynamoDB;
-import com.mindspark.service.dao.EnhancedUserDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
@@ -21,10 +21,10 @@ public class DDBDAOModule extends AbstractModule {
     
     @Override
     protected void configure() {
-        bind(EnhancedUserDAO.class);
     }
 
     @Provides
+    @Singleton
     public DynamoDbClient provideDynamoDBClient(@LocalMode Boolean localMode) {
         if (localMode) {
             logger.info("Using local DynamoDB client for testing");
@@ -50,6 +50,7 @@ public class DDBDAOModule extends AbstractModule {
     }
     
     @Provides
+    @Singleton
     public DynamoDbEnhancedClient provideDynamoDBEnhancedClient(DynamoDbClient dynamoDbClient) {
         return DynamoDbEnhancedClient.builder()
                 .dynamoDbClient(dynamoDbClient)
