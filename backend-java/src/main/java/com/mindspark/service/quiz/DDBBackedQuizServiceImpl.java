@@ -125,10 +125,14 @@ public class DDBBackedQuizServiceImpl implements QuizService {
                     .stream()
                     .forEach(page -> page.items()
                     .forEach(quizProgress -> {
-                        quizzes.put(quizProgress.getQuizId(), quizProgress);
+                        if (quizProgress.getQuizId() == null || !quizProgress.getQuizId().contains("quiz")) {
+                            logger.info("user {} has no quizId", userId);
+                        } else {
+                            quizzes.put(quizProgress.getQuizId(), quizProgress);
+                        }
                     }));
 
-            logger.debug("Found {} quizzes for user {}", quizzes.size(), userId);
+            logger.info("Found {} quizzes for user {}", quizzes.size(), userId);
             return quizzes;
             
         } catch (Exception e) {
