@@ -50,6 +50,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>To find the total number of minutes, we need to convert the hours to minutes and add the remaining minutes. </p><p>There are 60 minutes in an hour.</p><ul><li>Convert 11 hours to minutes: $11 \\text{ hours} \\times 60 \\frac{\\text{minutes}}{\\text{hour}} = 660 \\text{ minutes}$.</li><li>Add the remaining 5 minutes: $660 \\text{ minutes} + 5 \\text{ minutes} = 665 \\text{ minutes}$.</li></ul><p>The total duration of the match was 665 minutes. </p>"
+        },
+        {
           "text": "<p>It is best to split 11 hours and 5 minutes into 2 parts, one of 11 hours and another of 5 minutes. We know that there is <INSERTION_INDEX_1> minutes in a hour. Therefore, there are <INSERTION_INDEX_2> minutes in 11 hours. Adding the second part(the 5 minutes) we get <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -186,6 +189,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>Let the vertices of the rectangle be A, B, C, and D. The side lengths are given as $AB=6$ and $AD=8$. </p><p>Point M is the midpoint of side $\\overline{AD}$. This means the length of the segment $\\overline{AM}$ is half the length of $\\overline{AD}$.</p><p>$AM = \\frac{AD}{2} = \\frac{8}{2} = 4$.</p><p>To find the area of $\\triangle AMC$, we can use the formula for the area of a triangle, which is $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.</p><p>Let's consider $\\overline{AM}$ as the base of the triangle. The height of the triangle corresponding to this base is the perpendicular distance from vertex C to the line containing the base $\\overline{AD}$. In a rectangle, this height is equal to the length of the side $\\overline{AB}$.</p><ul><li>Base = $AM = 4$.</li><li>Height = $AB = 6$.</li></ul><p>Area of $\\triangle AMC = \\frac{1}{2} \\times AM \\times AB = \\frac{1}{2} \\times 4 \\times 6 = 12$.</p>"
+        },
         {
           "text": "<p>Using the triangle area formula for triangles: <INSERTION_INDEX_1> where <INSERTION_INDEX_2> is the area, <INSERTION_INDEX_3> is the base, and <INSERTION_INDEX_4> is the height. This equation gives us <INSERTION_INDEX_5>.</p>",
           "insertions": {
@@ -354,6 +360,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>The average of a set of numbers is their sum divided by the count of the numbers. </p><p>Let the four scores be $s_1, s_2, s_3, s_4$. We are given three scores: 70, 80, and 90. Let the unknown fourth score be $x$.</p><p>The average of the four scores is 70.</p><p>Using the formula for the average:</p><p>$\\text{Average} = \\frac{s_1 + s_2 + s_3 + s_4}{4}$</p><p>$70 = \\frac{70 + 80 + 90 + x}{4}$</p><p>First, sum the known scores: $70 + 80 + 90 = 240$.</p><p>$70 = \\frac{240 + x}{4}$</p><p>To solve for $x$, multiply both sides by 4:</p><p>$70 \\times 4 = 240 + x$</p><p>$280 = 240 + x$</p><p>Subtract 240 from both sides:</p><p>$x = 280 - 240 = 40$.</p><p>The remaining score is 40.</p>"
+        },
         {
           "text": "<p>Let <INSERTION_INDEX_1> be the remaining student's score. We know that the average, 70, is equal to <INSERTION_INDEX_2>. We can use basic algebra to solve for <INSERTION_INDEX_3>: <INSERTION_INDEX_4> <INSERTION_INDEX_5> <INSERTION_INDEX_6> <INSERTION_INDEX_7> giving us the answer of <INSERTION_INDEX_8>.</p>",
           "insertions": {
@@ -557,6 +566,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>This problem requires calculating the time per mile for two different scenarios and then finding the difference. </p><p><b>1. Cheenu as a boy:</b></p><ul><li>He ran 15 miles in 3 hours and 30 minutes. </li><li>First, convert the total time to minutes: $3 \\text{ hours} \\times 60 \\frac{\\text{min}}{\\text{hr}} + 30 \\text{ min} = 180 + 30 = 210 \\text{ minutes}$.</li><li>Calculate time per mile: $\\frac{210 \\text{ minutes}}{15 \\text{ miles}} = 14 \\text{ minutes per mile}$.</li></ul><p><b>2. Cheenu as an old man:</b></p><ul><li>He walks 10 miles in 4 hours. </li><li>Convert the total time to minutes: $4 \\text{ hours} \\times 60 \\frac{\\text{min}}{\\text{hr}} = 240 \\text{ minutes}$.</li><li>Calculate time per mile: $\\frac{240 \\text{ minutes}}{10 \\text{ miles}} = 24 \\text{ minutes per mile}$.</li></ul><p><b>3. Find the difference:</b></p><ul><li>Difference = (Time per mile now) - (Time per mile as a boy)</li><li>Difference = $24 - 14 = 10$ minutes.</li></ul><p>It takes him 10 minutes longer to travel a mile now.</p>"
+        },
+        {
           "text": "<p>When Cheenu was a boy, he could run <INSERTION_INDEX_1> miles in <INSERTION_INDEX_2> hours and <INSERTION_INDEX_3> minutes <INSERTION_INDEX_4> minutes <INSERTION_INDEX_5> minutes, thus running <INSERTION_INDEX_6> minutes per mile. Now that he is an old man, he can walk <INSERTION_INDEX_7> miles in <INSERTION_INDEX_8> hours <INSERTION_INDEX_9> minutes <INSERTION_INDEX_10> minutes, thus walking <INSERTION_INDEX_11> minutes per mile. Therefore, it takes him <INSERTION_INDEX_12> minutes longer to walk a mile now compared to when he was a boy.</p><p>~CHECKMATE2021</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -655,7 +667,7 @@
     {
       "id": "amc_2016_8_5",
       "question": {
-        "text": "<p>The number <INSERTION_INDEX_1> is a two-digit number.</p><p>\u2022 When <INSERTION_INDEX_2> is divided by <INSERTION_INDEX_3>, the remainder is <INSERTION_INDEX_4>.</p><p>\u2022 When <INSERTION_INDEX_5> is divided by <INSERTION_INDEX_6>, the remainder is <INSERTION_INDEX_7>.</p><p>What is the remainder when <INSERTION_INDEX_8> is divided by <INSERTION_INDEX_9>?</p>",
+        "text": "<p>The number <INSERTION_INDEX_1> is a two-digit number.</p><p>• When <INSERTION_INDEX_2> is divided by <INSERTION_INDEX_3>, the remainder is <INSERTION_INDEX_4>.</p><p>• When <INSERTION_INDEX_5> is divided by <INSERTION_INDEX_6>, the remainder is <INSERTION_INDEX_7>.</p><p>What is the remainder when <INSERTION_INDEX_8> is divided by <INSERTION_INDEX_9>?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/f/c/9/fc97ef67268cd4e91bacdf12b8901d7036c9a056.png",
@@ -739,6 +751,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>We are looking for a two-digit number N that satisfies two conditions. </p><p><b>Condition 1:</b> When N is divided by 10, the remainder is 3. </p><p>This means N must have a units digit of 3. The possible values for N are 13, 23, 33, 43, 53, 63, 73, 83, 93.</p><p><b>Condition 2:</b> When N is divided by 9, the remainder is 1. </p><p>Now we test the numbers from our list:</p><ul><li>$13 \\div 9 = 1$ remainder 4</li><li>$23 \\div 9 = 2$ remainder 5</li><li>$33 \\div 9 = 3$ remainder 6</li><li>$43 \\div 9 = 4$ remainder 7</li><li>$53 \\div 9 = 5$ remainder 8</li><li>$63 \\div 9 = 7$ remainder 0</li><li>$73 \\div 9 = 8$ remainder 1. This matches the condition.</li></ul><p>So, the number N is 73.</p><p><b>Final Question:</b> What is the remainder when N is divided by 11? </p><p>$73 \\div 11$</p><p>$73 = 11 \\times 6 + 7$</p><p>The remainder is 7.</p>"
+        },
         {
           "text": "<p>From the second bullet point, we know that the second digit must be <INSERTION_INDEX_1>, for a number divisible by <INSERTION_INDEX_2> ends in zero. Since there is a remainder of <INSERTION_INDEX_3> when <INSERTION_INDEX_4> is divided by <INSERTION_INDEX_5>, the multiple of <INSERTION_INDEX_6> must end in a <INSERTION_INDEX_7> for it to have the desired remainder<INSERTION_INDEX_8> We now look for this one: </p><p><INSERTION_INDEX_9></p><p>The number <INSERTION_INDEX_10> satisfies both conditions. We subtract the biggest multiple of <INSERTION_INDEX_11> less than <INSERTION_INDEX_12> to get the remainder. Thus, <INSERTION_INDEX_13>.</p><p>~CHECKMATE2021</p>",
           "insertions": {
@@ -998,6 +1013,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>The median is the middle value in an ordered set of data. The bar graph shows the frequency of names of certain lengths for 19 people. </p><p>First, find the position of the median value. With 19 people (an odd number), the median position is at $\\frac{19+1}{2} = 10$. We need to find the name length of the 10th person when they are ordered by name length.</p><p>Let's list the data from the bar graph: </p><ul><li>Name length 3: 7 people </li><li>Name length 4: 3 people </li><li>Name length 5: 1 person </li><li>Name length 6: 4 people </li><li>Name length 7: 4 people </li></ul><p>Now, let's find where the 10th person falls:</p><ul><li>The first 7 people (positions 1-7) have a name length of 3.</li><li>The next 3 people (positions 8, 9, 10) have a name length of 4.</li></ul><p>The 10th person falls into the group with a name length of 4. Therefore, the median length is 4. </p>"
+        },
+        {
           "text": "<p>We first notice that the median name will be the <INSERTION_INDEX_1> name. The <INSERTION_INDEX_2> name is <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1115,6 +1133,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>A perfect square is an integer that can be expressed as the square of another integer. A number of the form $x^y$ is a perfect square if its exponent $y$ is an even number (or if the base $x$ is a perfect square). We can check each option. </p><ul><li><b>(A) $1^{2016}$</b>: $1$ to any power is $1$, and $1 = 1^2$. This is a perfect square. </li><li><b>(B) $2^{2017}$</b>: The base is 2 (not a perfect square) and the exponent 2017 is odd. This cannot be written as $(z)^2$ where z is an integer. Thus, it is not a perfect square. </li><li><b>(C) $3^{2018}$</b>: The exponent 2018 is even. We can write this as $(3^{1009})^2$. This is a perfect square. </li><li><b>(D) $4^{2019}$</b>: The base 4 is a perfect square ($4 = 2^2$). So, $4^{2019} = (2^2)^{2019} = 2^{4038}$. Since 4038 is an even exponent, this is a perfect square ($(2^{2019})^2$). </li><li><b>(E) $5^{2020}$</b>: The exponent 2020 is even. We can write this as $(5^{1010})^2$. This is a perfect square. </li></ul><p>The number that is not a perfect square is $2^{2017}$.</p>"
+        },
+        {
           "text": "<p>Our answer must have an odd exponent in order for it to not be a square. Because <INSERTION_INDEX_1> is a perfect square, <INSERTION_INDEX_2> is also a perfect square, so our answer is <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1178,6 +1199,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We need to evaluate the expression $100-98+96-94+92-90+\\cdot\\cdot\\cdot+8-6+4-2$. </p><p>Let's group the terms in pairs:</p><p>$(100-98) + (96-94) + (92-90) + \\cdot\\cdot\\cdot + (8-6) + (4-2)$</p><p>Each pair evaluates to 2:</p><p>$2 + 2 + 2 + \\cdot\\cdot\\cdot + 2 + 2$</p><p>To find the total sum, we need to determine how many pairs there are. The expression consists of a sequence of even numbers from 100 down to 2. The number of terms is $\\frac{100-2}{2} + 1 = \\frac{98}{2} + 1 = 49 + 1 = 50$ terms.</p><p>Since there are 50 terms in total, there are $50 \\div 2 = 25$ pairs.</p><p>The total sum is the value of each pair (2) multiplied by the number of pairs (25).</p><p>Total Sum = $25 \\times 2 = 50$.</p>"
+        },
         {
           "text": "<p>We can group each subtracting pair together:<INSERTION_INDEX_1>After subtracting, we have:<INSERTION_INDEX_2>There are <INSERTION_INDEX_3> even numbers, therefore there are <INSERTION_INDEX_4> even pairs. Therefore the sum is <INSERTION_INDEX_5></p>",
           "insertions": {
@@ -1351,6 +1375,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>To find the sum of the distinct prime integer divisors of 2016, we first need to find the prime factorization of 2016.</p><p>Let's break down 2016 into its prime factors:</p><p>$2016 = 2 \\times 1008$</p><p>$1008 = 2 \\times 504$</p><p>$504 = 2 \\times 252$</p><p>$252 = 2 \\times 126$</p><p>$126 = 2 \\times 63$</p><p>$63 = 3 \\times 21$</p><p>$21 = 3 \\times 7$</p><p>So, the prime factorization of 2016 is $2^5 \\times 3^2 \\times 7$.</p><p>The distinct (unique) prime divisors are 2, 3, and 7.</p><p>Now, we find their sum:</p><p>Sum = $2 + 3 + 7 = 12$.</p>"
+        },
+        {
           "text": "<p>The prime factorization is <INSERTION_INDEX_1>. Since the problem is only asking us for the distinct prime factors, we have <INSERTION_INDEX_2>. Their desired sum is then <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1435,6 +1462,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>The problem defines a binary operation $a*b = 3a-b$. We need to solve the equation $2*(5*x)=1$ for x. </p><p>We solve this equation from the inside out.</p><p><b>Step 1:</b> Evaluate the expression inside the parentheses, $(5*x)$.</p><p>Using the definition with $a=5$ and $b=x$:</p><p>$5*x = 3(5) - x = 15 - x$.</p><p><b>Step 2:</b> Substitute this result back into the main equation.</p><p>The equation becomes $2*(15-x)=1$.</p><p><b>Step 3:</b> Apply the operation again. This time, $a=2$ and $b=(15-x)$.</p><p>$3(2) - (15-x) = 1$</p><p>$6 - 15 + x = 1$</p><p>$-9 + x = 1$</p><p><b>Step 4:</b> Solve for x.</p><p>$x = 1 + 9$</p><p>$x = 10$.</p>"
+        },
         {
           "text": "<p>Let us plug in <INSERTION_INDEX_1> into <INSERTION_INDEX_2>. Thus it would be <INSERTION_INDEX_3>. Now we have <INSERTION_INDEX_4>. Plugging <INSERTION_INDEX_5> into <INSERTION_INDEX_6>, we have <INSERTION_INDEX_7>. Solving for <INSERTION_INDEX_8> we have <INSERTION_INDEX_9><INSERTION_INDEX_10></p>",
           "insertions": {
@@ -1596,6 +1626,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>We are looking for the number of two-digit numbers that satisfy a specific property. </p><p>Let the two-digit number be represented as $10a+b$, where $a$ is the tens digit ($a \\in \\{1, ..., 9\\}$) and $b$ is the units digit ($b \\in \\{0, ..., 9\\}$).</p><p>The number obtained by reversing its digits is $10b+a$.</p><p>The problem states that the sum of the number and its reverse is 132:</p><p>$(10a+b) + (10b+a) = 132$</p><p>Combine like terms:</p><p>$11a + 11b = 132$</p><p>Factor out 11:</p><p>$11(a+b) = 132$</p><p>Divide by 11 to find the sum of the digits:</p><p>$a+b = \\frac{132}{11} = 12$.</p><p>Now we need to find all pairs of digits $(a,b)$ such that their sum is 12, keeping in mind that $a$ cannot be 0.</p><ul><li>If $a=3$, $b=9$ (Number 39)</li><li>If $a=4$, $b=8$ (Number 48)</li><li>If $a=5$, $b=7$ (Number 57)</li><li>If $a=6$, $b=6$ (Number 66)</li><li>If $a=7$, $b=5$ (Number 75)</li><li>If $a=8$, $b=4$ (Number 84)</li><li>If $a=9$, $b=3$ (Number 93)</li></ul><p>There are a total of 7 such numbers.</p>"
+        },
+        {
           "text": "<p>We can see that the original number can be written as <INSERTION_INDEX_1>, where <INSERTION_INDEX_2> represents the tens digit and <INSERTION_INDEX_3> represents the units digit. When this number is added to the number obtained by reversing its digits, which is <INSERTION_INDEX_4>, the sum would be <INSERTION_INDEX_5>. From this, we can construct the equation <INSERTION_INDEX_6>, which simplifies to <INSERTION_INDEX_7>. Since there are 7 pairs of such digits <INSERTION_INDEX_8> and <INSERTION_INDEX_9>, <INSERTION_INDEX_10>, the answer would be <INSERTION_INDEX_11></p><p>~Aqf243</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1722,6 +1755,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Let B be the number of boys and G be the number of girls. The school has the same number of boys and girls, so $B = G$. </p><p>To make the calculations easier, let's pick a number for B and G that is a multiple of the denominators 4 and 3. Let's say there are 12 boys and 12 girls.</p><ul><li>Number of girls on the field trip = $\\frac{3}{4}$ of $G = \\frac{3}{4} \\times 12 = 9$ girls. </li><li>Number of boys on the field trip = $\\frac{2}{3}$ of $B = \\frac{2}{3} \\times 12 = 8$ boys. </li></ul><p>Now, let's find the total number of students on the field trip:</p><p>Total students on trip = (girls on trip) + (boys on trip) = $9 + 8 = 17$.</p><p>The question asks for the fraction of the students on the field trip who were girls. </p><p>Fraction of girls = $\\frac{\\text{Number of girls on trip}}{\\text{Total students on trip}} = \\frac{9}{17}$.</p>"
+        },
         {
           "text": "<p>Let there be <INSERTION_INDEX_1> boys and <INSERTION_INDEX_2> girls in the school. We see <INSERTION_INDEX_3>, which means <INSERTION_INDEX_4> kids went on the trip and <INSERTION_INDEX_5> kids are girls. So, the answer is <INSERTION_INDEX_6>, which is <INSERTION_INDEX_7>.</p><p>~CHECKMATE2021</p>",
           "insertions": {
@@ -1879,6 +1915,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>The problem asks for the probability that the product of two different randomly selected numbers from the set \\{-2, -1, 0, 3, 4, 5\\} is 0. </p><p><b>Step 1: Find the total number of possible outcomes.</b></p><p>The set has 6 numbers. We are choosing 2 different numbers. The total number of ways to do this is given by the combination formula $C(n, k) = \\frac{n!}{k!(n-k)!}$.</p><p>Total combinations = $C(6, 2) = \\frac{6!}{2!(6-2)!} = \\frac{6 \\times 5}{2 \\times 1} = 15$.</p><p>So there are 15 possible pairs of numbers we can select.</p><p><b>Step 2: Find the number of favorable outcomes.</b></p><p>For the product of two numbers to be 0, one of the numbers must be 0.</p><p>This means we must select the number 0, and one other number from the remaining 5 non-zero numbers ({-2, -1, 3, 4, 5}).</p><p>The number of ways to choose one number from these 5 is 5. So, there are 5 pairs whose product is 0: (0, -2), (0, -1), (0, 3), (0, 4), and (0, 5).</p><p><b>Step 3: Calculate the probability.</b></p><p>Probability = $\\frac{\\text{Favorable Outcomes}}{\\text{Total Outcomes}} = \\frac{5}{15} = \\frac{1}{3}$.</p>"
+        },
+        {
           "text": "<p>1. Identify the total number of ways to select two different numbers from the set:</p><p>The set has 6 elements. The number of ways to choose 2 different numbers from 6 is given by the combination formula: <INSERTION_INDEX_1>.</p><p>2. Identify the favorable outcomes:</p><p>For the product to be zero, one of the chosen numbers must be zero. The set contains one zero (0). To have a product of zero, we need to choose 0 and any other number from the remaining five numbers <INSERTION_INDEX_2>.</p><p>The number of ways to choose 0 and one other number from the remaining five is 5.</p><p>3. Calculate the probability:</p><p>The probability is the number of favorable outcomes divided by the total number of outcomes: <INSERTION_INDEX_3>.</p><p>Thus, the probability that the product is <INSERTION_INDEX_4> is <INSERTION_INDEX_5></p><p>~GeometryMystery</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2018,6 +2057,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>Let's track the amount of gas in Karl's tank throughout his trip. The tank holds 14 gallons and the car's efficiency is 35 miles per gallon. </p><p><b>1. Start of the trip:</b></p><ul><li>Karl starts with a full tank: 14 gallons. </li></ul><p><b>2. First leg of the drive:</b></p><ul><li>He drives 350 miles. </li><li>Gas used: $\\frac{350 \\text{ miles}}{35 \\text{ miles/gallon}} = 10$ gallons.</li><li>Gas remaining: $14 - 10 = 4$ gallons.</li></ul><p><b>3. Refueling:</b></p><ul><li>He buys 8 gallons of gas. </li><li>Gas in tank now: $4 + 8 = 12$ gallons.</li></ul><p><b>4. Second leg of the drive:</b></p><ul><li>He drives to his destination and the tank is half full upon arrival. </li><li>Half full means $\\frac{14}{2} = 7$ gallons remaining.</li><li>Gas used on the second leg: $12 \\text{ (start)} - 7 \\text{ (end)} = 5$ gallons.</li><li>Distance of second leg: $5 \\text{ gallons} \\times 35 \\text{ miles/gallon} = 175$ miles.</li></ul><p><b>5. Total Distance:</b></p><ul><li>Total miles driven = (distance of first leg) + (distance of second leg)</li><li>Total miles = $350 + 175 = 525$ miles. </li></ul>"
+        },
+        {
           "text": "<p>Since he uses a gallon of gas every <INSERTION_INDEX_1> miles, he had used <INSERTION_INDEX_2> gallons after <INSERTION_INDEX_3> miles. Therefore, after the first leg of his trip he had <INSERTION_INDEX_4> gallons of gas left. Then, he bought <INSERTION_INDEX_5> gallons of gas, which brought him up to <INSERTION_INDEX_6> gallons of gas in his gas tank. When he arrived, he had <INSERTION_INDEX_7> gallons of gas. So he used <INSERTION_INDEX_8> gallons of gas on the second leg of his trip. Therefore,                        the second part of his trip covered <INSERTION_INDEX_9> miles. Adding this to the <INSERTION_INDEX_10> miles, we see that he drove <INSERTION_INDEX_11> miles.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2144,6 +2186,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We want to find the largest power of 2 that divides $13^4 - 11^4$. </p><p>We can solve this by factoring the expression using the difference of squares formula, $a^2 - b^2 = (a-b)(a+b)$.</p><p>$13^4 - 11^4 = (13^2)^2 - (11^2)^2$</p><p>Applying the formula with $a=13^2$ and $b=11^2$:</p><p>$(13^2 - 11^2)(13^2 + 11^2)$</p><p>We can apply the formula again to the first term, $(13^2 - 11^2)$:</p><p>$(13 - 11)(13 + 11)(13^2 + 11^2)$</p><p>Now, let's calculate the value of each factor:</p><ul><li>$(13 - 11) = 2$</li><li>$(13 + 11) = 24$</li><li>$(13^2 + 11^2) = 169 + 121 = 290$</li></ul><p>So, the expression is equal to $2 \\times 24 \\times 290$.</p><p>To find the largest power of 2 that divides this product, we find the powers of 2 in the prime factorization of each factor:</p><ul><li>$2 = 2^1$</li><li>$24 = 8 \\times 3 = 2^3 \\times 3$</li><li>$290 = 10 \\times 29 = 2 \\times 5 \\times 29 = 2^1 \\times 5 \\times 29$</li></ul><p>The total power of 2 is the sum of the exponents: $1 + 3 + 1 = 5$.</p><p>The largest power of 2 is $2^5 = 32$.</p>"
+        },
         {
           "text": "<p>First, we use difference of squares on <INSERTION_INDEX_1> to get <INSERTION_INDEX_2>. Using difference of squares again and simplifying, we get <INSERTION_INDEX_3>. Realizing that we don't need the right-hand side because it doesn't contain any factor of 2, we see that the greatest power of <INSERTION_INDEX_4> that is a divisor <INSERTION_INDEX_5> is <INSERTION_INDEX_6>.</p><p>~CHECKMATE2021</p>",
           "insertions": {
@@ -2469,6 +2514,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>Let Bonnie's speed be $v_B$ and Annie's speed be $v_A$.</p><p>Annie runs 25% faster than Bonnie, so $v_A = v_B + 0.25v_B = 1.25v_B = \\frac{5}{4}v_B$. </p><p>Annie first passes Bonnie when she has completed exactly one more lap than Bonnie. Let $L_A$ be the number of laps Annie has run and $L_B$ be the number of laps Bonnie has run. </p><p>$L_A = L_B + 1$</p><p>Since they run for the same amount of time ($t$) to reach this point, and $\\text{time} = \\frac{\\text{distance}}{\\text{speed}}$, we can set their times equal. The distance is the number of laps.</p><p>$t = \\frac{L_A}{v_A} = \\frac{L_B}{v_B}$</p><p>Substitute the relationships for $L_A$ and $v_A$:</p><p>$\\frac{L_B + 1}{\\frac{5}{4}v_B} = \\frac{L_B}{v_B}$</p><p>We can cancel $v_B$ from both sides:</p><p>$\\frac{L_B + 1}{\\frac{5}{4}} = L_B$</p><p>$L_B + 1 = \\frac{5}{4}L_B$</p><p>Subtract $L_B$ from both sides:</p><p>$1 = \\frac{5}{4}L_B - L_B = \\frac{1}{4}L_B$</p><p>$L_B = 4$.</p><p>This means Bonnie has run 4 laps. The question asks how many laps Annie has run. </p><p>$L_A = L_B + 1 = 4 + 1 = 5$.</p><p>Annie will have run 5 laps.</p>"
+        },
+        {
           "text": "<p>Each lap Bonnie runs, Annie runs another quarter lap, so Bonnie will run four laps before she is overtaken. This means that Annie and Bonnie are equal so that Annie needs to run another lap to overtake Bonnie. That means Annie will have run <INSERTION_INDEX_1> laps.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2532,6 +2580,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We need to find the total number of possible 4-digit ATM passwords and subtract the number of forbidden passwords. </p><p><b>1. Total possible passwords:</b></p><ul><li>There are 4 digits in the password.</li><li>For each digit, there are 10 choices (0 through 9), and digits can be repeated.</li><li>Total possibilities = $10 \\times 10 \\times 10 \\times 10 = 10^4 = 10,000$.</li></ul><p><b>2. Forbidden passwords:</b></p><ul><li>The problem states that no password may begin with the sequence 9, 1, 1. </li><li>This means any password of the form 9-1-1-x is forbidden.</li><li>The first three digits are fixed as 9, 1, and 1.</li><li>The fourth digit (x) can be any of the 10 digits from 0 to 9.</li><li>So, there are 10 forbidden passwords (from 9110 to 9119).</li></ul><p><b>3. Calculate the number of allowed passwords:</b></p><ul><li>Allowed passwords = (Total passwords) - (Forbidden passwords)</li><li>Allowed passwords = $10,000 - 10 = 9,990$.</li></ul>"
+        },
         {
           "text": "<p>For the first three digits, there are <INSERTION_INDEX_1> combinations since <INSERTION_INDEX_2> is not allowed. For the final digit, any of the <INSERTION_INDEX_3> numbers are allowed. <INSERTION_INDEX_4>.</p><p>~CHECKMATE2021</p>",
           "insertions": {
@@ -2636,6 +2687,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We need to determine the total number of races required to find a single champion from 216 sprinters. </p><p>In each race, there are 6 sprinters, and 5 are eliminated while 1 winner advances. </p><p>A direct way to solve this is to consider the number of eliminations required. To get 1 champion from 216 sprinters, we must eliminate $216 - 1 = 215$ sprinters.</p><p>Since each race eliminates exactly 5 sprinters, we can find the number of races by dividing the total eliminations needed by the number of eliminations per race.</p><p>Number of races = $\\frac{\\text{Total eliminations needed}}{\\text{Eliminations per race}} = \\frac{215}{5} = 43$.</p><p>Alternatively, we can simulate the rounds:</p><ul><li><b>Round 1:</b> 216 sprinters race in groups of 6. This requires $216 \\div 6 = 36$ races. There are 36 winners.</li><li><b>Round 2:</b> The 36 winners race. This requires $36 \\div 6 = 6$ races. There are 6 winners.</li><li><b>Final Round:</b> The final 6 winners race. This is 1 race.</li></ul><p>Total races = $36 + 6 + 1 = 43$.</p>"
+        },
         {
           "text": "<p>From any <INSERTION_INDEX_1>th race, only <INSERTION_INDEX_2> will continue on. Since we wish to find the total number of races, a column representing the races over time is ideal.Starting with the first race:<INSERTION_INDEX_3><INSERTION_INDEX_4><INSERTION_INDEX_5>Adding all of the numbers in the second column yields <INSERTION_INDEX_6></p><p>Every race eliminates <INSERTION_INDEX_7> players. The winner is decided when there is only <INSERTION_INDEX_8> runner left. You can construct the equation: <INSERTION_INDEX_9> - <INSERTION_INDEX_10> = <INSERTION_INDEX_11>. Thus, <INSERTION_INDEX_12> players have to be eliminated. Therefore, we need <INSERTION_INDEX_13> games to decide the winner, or <INSERTION_INDEX_14></p>",
           "insertions": {
@@ -2878,6 +2932,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>The sum of 25 consecutive even integers is 10,000. </p><p>For any set of numbers in an arithmetic sequence, the sum is equal to the average of the numbers multiplied by the count of the numbers.</p><p><b>Step 1: Find the average of the integers.</b></p><p>Average = $\\frac{\\text{Sum}}{\\text{Count}} = \\frac{10,000}{25} = 400$.</p><p><b>Step 2: Relate the average to the middle term.</b></p><p>For a sequence with an odd number of terms (like 25), the average is equal to the middle term. The middle term is the $\\frac{25+1}{2} = 13^{\\text{th}}$ term.</p><p>So, the 13th even integer in the sequence is 400.</p><p><b>Step 3: Find the largest integer.</b></p><p>We want to find the 25th (largest) integer. We need to go from the 13th term to the 25th term, which is a jump of $25 - 13 = 12$ terms.</p><p>Since the numbers are consecutive even integers, the common difference between terms is 2.</p><p>Largest integer = (Middle integer) + (Number of jumps $\\times$ Difference)</p><p>Largest integer = $400 + (12 \\times 2) = 400 + 24 = 424$. </p>"
+        },
+        {
           "text": "<p>Let <INSERTION_INDEX_1> be the 13th consecutive even integer that's being added up. By doing this, we can see that the sum of all 25 even numbers will simplify to <INSERTION_INDEX_2> since <INSERTION_INDEX_3>. Now, <INSERTION_INDEX_4>. Remembering that this is the 13th integer, we wish to find the 25th, which is <INSERTION_INDEX_5>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -3059,6 +3116,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>We are given the least common multiple (lcm) of two pairs of variables and need to find the least possible lcm of a third pair.</p><p>Let's use prime factorization:</p><ul><li>lcm(a, b) = 12 = $2^2 \\times 3^1$.  This implies that the prime factors of 'a' and 'b' are among {2, 3}. The highest power of 2 in either a or b is $2^2$, and the highest power of 3 is $3^1$.</li><li>lcm(b, c) = 15 = $3^1 \\times 5^1$.  This implies that the prime factors of 'b' and 'c' are among {3, 5}. The highest power of 3 is $3^1$, and the highest power of 5 is $5^1$.</li></ul><p>From these two facts, we can deduce information about 'b'. The variable 'b' must be a divisor of both 12 and 15. Therefore, 'b' must be a divisor of their greatest common divisor, gcd(12, 15) = 3. So, 'b' can be 1 or 3.</p><p>To find the *least possible value* of lcm(a, c), we should choose values for a, b, and c that minimize the result. This often involves assigning as many prime factors as possible to the shared variable 'b'.</p><p>Let's set $b=3$.</p><ul><li>From lcm(a, 3) = $12 = 2^2 \\times 3$, we know that 'a' must provide the $2^2$ factor. The minimal value for 'a' is $a = 2^2 = 4$.</li><li>From lcm(3, c) = $15 = 3 \\times 5$, we know that 'c' must provide the $5^1$ factor. The minimal value for 'c' is $c = 5$.</li></ul><p>With these minimal values, let's find lcm(a, c):</p><p>lcm(a, c) = lcm(4, 5) = 20.</p><p>If we had chosen b=1, then a=12 and c=15, making lcm(a,c) = lcm(12,15) = 60. Comparing the results, 20 is the least possible value.</p>"
+        },
+        {
           "text": "<p>We wish to find possible values of <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, and <INSERTION_INDEX_3>. By finding the greatest common factor of <INSERTION_INDEX_4> and <INSERTION_INDEX_5>, we can find that <INSERTION_INDEX_6> is 3. Moving on to <INSERTION_INDEX_7> and <INSERTION_INDEX_8>, in order to minimize them, we wish to find the least such that the least common multiple of <INSERTION_INDEX_9> and <INSERTION_INDEX_10> is <INSERTION_INDEX_11>, <INSERTION_INDEX_12>. Similarly, with <INSERTION_INDEX_13> and <INSERTION_INDEX_14>, we obtain <INSERTION_INDEX_15>. The least common multiple of <INSERTION_INDEX_16> and <INSERTION_INDEX_17> is <INSERTION_INDEX_18></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -3219,6 +3279,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>A box contains 3 red (R) and 2 green (G) chips. The game stops when either all 3 reds are drawn or both 2 greens are drawn. We want the probability that the 3 reds are drawn. </p><p>This is a classic problem that can be simplified by thinking about which color is *not* completely drawn. The event 'the 3 reds are drawn' means that the 3rd red chip is drawn before the 2nd green chip is drawn.</p><p>Consider what happens if we were to draw all 5 chips from the box. There would be a sequence of 3 R's and 2 G's. The game ends as soon as one color runs out.</p><ul><li>If the sequence of draws ends with a Green chip being the last one remaining in the box, it means that all 3 Red chips must have been drawn. In this case, the 'Red team' wins.</li><li>If the sequence of draws ends with a Red chip being the last one remaining in the box, it means that both Green chips must have been drawn (along with 2 Reds). In this case, the 'Green team' wins.</li></ul><p>Therefore, the probability that the 3 reds are drawn is the same as the probability that the last chip left in the box is Green.</p><p>Since any of the 5 initial chips has an equal chance of being the last one left, we can calculate the probability directly:</p><p>P(last chip is Green) = $\\frac{\\text{Number of Green Chips}}{\\text{Total Number of Chips}} = \\frac{2}{5}$.</p>"
+        },
         {
           "text": "<p>We put five chips randomly in order and then pick the chips from the left to the right. To find the number of ways to rearrange the three red chips and two green chips, we solve for <INSERTION_INDEX_1>. However, we notice that whenever the last chip we draw is red, we pick both green chips before we pick the last red chip. Similarly, when the last chip is green, we pick all three red chips before the last green chip. This means that the last chip must be green in all the situations that work. This means we are left with finding the number of ways to rearrange three red chips and one green chip, which is <INSERTION_INDEX_2>. Because a green chip will be last <INSERTION_INDEX_3> out of the <INSERTION_INDEX_4> situations, our answer is <INSERTION_INDEX_5>.</p>",
           "insertions": {
@@ -3457,6 +3520,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>The problem asks for the area of the shaded 'bat wings' inside a rectangle DEFA. </p><p>From the diagram, we can deduce the dimensions of the rectangle and the location of the points.</p><ul><li>The rectangle has a height of 3 and a width of 4. The vertices are D, E, F, A. Let's place them on a coordinate plane: A=(0,0), D=(0,3), F=(4,0), E=(4,3). The diagram is labeled a bit unusually, let's follow its visual structure. Let's assume the base is 4 and height is 3. Top edge has vertices D, A. Bottom edge has E, F. D=(0,3), A=(4,3), E=(0,0), F=(4,0).</li><li>The points C and B are on the top edge DA. The labels indicate segments DC=1 and BA=1.  This means point C is 1 unit from D, and point B is 1 unit from A.</li><li>So, C=(1,3) and B=(3,3).</li></ul><p>The shaded 'bat wings' are the two triangles $\\triangle FDC$ and $\\triangle EAB$.</p><p><b>Area of the left wing ($\\triangle FDC$):</b></p><ul><li>The base of the triangle is the segment DC, which has length 1.</li><li>The height of the triangle is the perpendicular distance from vertex F to the line containing the base DC. This is the height of the rectangle, which is 3.</li><li>Area($\\triangle FDC$) = $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 1 \\times 3 = 1.5$.</li></ul><p><b>Area of the right wing ($\\triangle EAB$):</b></p><ul><li>The base of the triangle is the segment BA, which has length 1.</li><li>The height of the triangle is the perpendicular distance from vertex E to the line containing the base BA. This is also the height of the rectangle, 3.</li><li>Area($\\triangle EAB$) = $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 1 \\times 3 = 1.5$.</li></ul><p>The total area of the shaded region is the sum of the areas of the two wings.</p><p>Total Area = $1.5 + 1.5 = 3$.</p>"
+        },
+        {
           "text": "<p>The area of trapezoid <INSERTION_INDEX_1> is <INSERTION_INDEX_2>. Next, we find the height of each triangle to calculate their area. The two non-colored isosceles triangles are similar, and are in a <INSERTION_INDEX_3> ratio by AA similarity (alternate interior and vertical angles) so the height of the larger is <INSERTION_INDEX_4> while the height of the smaller one is <INSERTION_INDEX_5> Thus, their areas are <INSERTION_INDEX_6> and <INSERTION_INDEX_7>. Subtracting these areas from the trapezoid, we get <INSERTION_INDEX_8>. Therefore, the answer to this problem is <INSERTION_INDEX_9>.</p><p>~23orimy412uc3478</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -3611,6 +3677,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Let the radius of the two congruent circles be $r$. Since each circle passes through the other's center, the distance between their centers, A and B, is equal to the radius, $r$. </p><p>Let's place the centers on the x-axis for simplicity. Let $A=(0,0)$ and $B=(r,0)$.</p><ul><li>The equation for the circle centered at A is $x^2 + y^2 = r^2$.</li><li>The equation for the circle centered at B is $(x-r)^2 + y^2 = r^2$.</li></ul><p>The line containing A and B is the x-axis. This line intersects the circles at points C and D. </p><ul><li>Circle A intersects the x-axis at $x = r$ (point B) and $x = -r$. So, $C=(-r, 0)$.</li><li>Circle B intersects the x-axis at $x = 0$ (point A) and $x = 2r$. So, $D=(2r, 0)$.</li></ul><p>Point E is one of the intersection points of the two circles.  We find its coordinates by setting the circle equations equal or by noting that $\\triangle ABE$ must be equilateral (since $AE=AB=BE=r$). The x-coordinate of E is halfway between A and B, at $x=r/2$. Plugging this into the first circle's equation:</p><p>$(\\frac{r}{2})^2 + y^2 = r^2 \\implies \\frac{r^2}{4} + y^2 = r^2 \\implies y^2 = \\frac{3r^2}{4} \\implies y = \\frac{r\\sqrt{3}}{2}$.</p><p>So, $E = (\\frac{r}{2}, \\frac{r\\sqrt{3}}{2})$.</p><p>We need to find the measure of $\\angle CED$. The vertices of this triangle are $C(-r, 0)$, $E(\\frac{r}{2}, \\frac{r\\sqrt{3}}{2})$, and $D(2r, 0)$.</p><p>Let's find the slopes of the lines EC and ED.</p><ul><li>Slope of EC: $m_{EC} = \\frac{\\frac{r\\sqrt{3}}{2} - 0}{\\frac{r}{2} - (-r)} = \\frac{\\frac{r\\sqrt{3}}{2}}{\\frac{3r}{2}} = \\frac{\\sqrt{3}}{3}$.</li><li>Slope of ED: $m_{ED} = \\frac{\\frac{r\\sqrt{3}}{2} - 0}{\\frac{r}{2} - 2r} = \\frac{\\frac{r\\sqrt{3}}{2}}{-\\frac{3r}{2}} = -\\frac{\\sqrt{3}}{3}$.</li></ul><p>Let $\\alpha$ be the angle the line EC makes with the positive x-axis. $\\tan(\\alpha) = \\frac{\\sqrt{3}}{3}$, so $\\alpha = 30^\\circ$. This is $\\angle ECD$.</p><p>Let $\\beta$ be the angle the line ED makes with the positive x-axis. $\\tan(\\beta) = -\\frac{\\sqrt{3}}{3}$, so $\\beta = 150^\\circ$. The angle inside the triangle, $\\angle EDC$, is $180^\\circ - 150^\\circ = 30^\\circ$.</p><p>In $\\triangle CED$, the sum of angles is $180^\\circ$.</p><p>$\\angle CED = 180^\\circ - \\angle ECD - \\angle EDC = 180^\\circ - 30^\\circ - 30^\\circ = 120^\\circ$.</p>"
+        },
         {
           "text": "<p>Observe that <INSERTION_INDEX_1> is equilateral (all are radii of congruent circles). Therefore, <INSERTION_INDEX_2>. Since <INSERTION_INDEX_3> is a straight line, we conclude that <INSERTION_INDEX_4>. Since <INSERTION_INDEX_5> (both are radii of the same circle), <INSERTION_INDEX_6> is isosceles, meaning that <INSERTION_INDEX_7>. Similarly, <INSERTION_INDEX_8>. </p><p>Now, <INSERTION_INDEX_9>. Therefore, the answer is <INSERTION_INDEX_10>.</p>",
           "insertions": {
@@ -3808,6 +3877,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>We are forming a five-digit number PQRST using the digits 1, 2, 3, 4, and 5 exactly once. We have three divisibility conditions. </p><p><b>1. QRS is divisible by 5:</b></p><p>A number is divisible by 5 if its last digit is 0 or 5. Since our available digits are {1, 2, 3, 4, 5}, the digit S must be 5.<b>S = 5</b>. The remaining digits for P, Q, R, T are {1, 2, 3, 4}.</p><p><b>2. PQR is divisible by 4:</b></p><p>A number is divisible by 4 if the number formed by its last two digits is divisible by 4. So, the two-digit number QR must be divisible by 4. Q and R must be chosen from {1, 2, 3, 4}, and they must be distinct.Possible pairs for QR are: 12, 24, 32.</p><p><b>3. RST is divisible by 3:</b></p><p>A number is divisible by 3 if the sum of its digits is divisible by 3. So, R + S + T must be a multiple of 3. Since S=5, we need R + 5 + T to be a multiple of 3.</p><p>Let's test the possible cases for QR:</p><ul><li><b>Case 1: QR = 12.</b> Then Q=1, R=2. The remaining digits for P and T are {3, 4}.Check the divisibility by 3 rule: $R+5+T = 2+5+T = 7+T$ must be a multiple of 3. If T=3, $7+3=10$ (not a multiple of 3). If T=4, $7+4=11$ (not a multiple of 3). This case is impossible.</li><li><b>Case 2: QR = 24.</b> Then Q=2, R=4. The remaining digits for P and T are {1, 3}. Check the divisibility by 3 rule: $R+5+T = 4+5+T = 9+T$ must be a multiple of 3. If T=1, $9+1=10$ (not a multiple of 3). If T=3, $9+3=12$ (is a multiple of 3). This case works. We have T=3. The only digit left for P is 1. So, <b>P=1</b>.</li><li><b>Case 3: QR = 32.</b> Then Q=3, R=2. The remaining digits for P and T are {1, 4}. Check the divisibility by 3 rule: $R+5+T = 2+5+T = 7+T$ must be a multiple of 3. If T=1, $7+1=8$ (not a multiple of 3). If T=4, $7+4=11$ (not a multiple of 3). This case is also impossible.</li></ul><p>Since only Case 2 works, the value of <b>P must be 1</b>.</p>"
+        },
         {
           "text": "<p>We see that since <INSERTION_INDEX_1> is divisible by <INSERTION_INDEX_2>, <INSERTION_INDEX_3> must equal either <INSERTION_INDEX_4> or <INSERTION_INDEX_5>, but it cannot equal <INSERTION_INDEX_6>, so <INSERTION_INDEX_7>. We notice that since <INSERTION_INDEX_8> must be even, <INSERTION_INDEX_9> must be either <INSERTION_INDEX_10> or <INSERTION_INDEX_11>. However, when <INSERTION_INDEX_12>, we see that <INSERTION_INDEX_13>, which cannot happen because <INSERTION_INDEX_14> and <INSERTION_INDEX_15> are already used up; so <INSERTION_INDEX_16>. This gives <INSERTION_INDEX_17>, meaning <INSERTION_INDEX_18>. Now, we see that <INSERTION_INDEX_19> could be either <INSERTION_INDEX_20> or <INSERTION_INDEX_21>, but <INSERTION_INDEX_22> is not divisible by <INSERTION_INDEX_23>, but <INSERTION_INDEX_24> is. This means that <INSERTION_INDEX_25> and <INSERTION_INDEX_26>.</p><p>~CHECKMATE2021</p>",
           "insertions": {
@@ -4366,7 +4438,10 @@
       "answer": "B",
       "solutions": [
         {
-          "text": "<p><INSERTION_INDEX_1></p><p>First, we drop a perpendicular, shown above, to the base of the triangle, cutting the triangle into two congruent right triangles. This triangle is isosceles, which means perpendiculars are medians and vice versa. The base of the resulting right triangle is <INSERTION_INDEX_2> for both sides, and the height is <INSERTION_INDEX_3> as given. Using the Pythagorean theorem, we can find the length of the hypotenuse, or <INSERTION_INDEX_4> Using the two legs of the right triangle, we find the area of the right triangle, <INSERTION_INDEX_5>. <INSERTION_INDEX_6> times <INSERTION_INDEX_7> results in the radius, which is the height of the right triangle when using the hypotenuse as the base. Hence, the answer is <INSERTION_INDEX_8>.</p><ul><li>Note \u2014 There are several other following solutions below that use similar methods of finding the area two different ways shown in this solution. Try to eliminate any words (such as 'can' or 'would be') that make your solution less concise. Try to write 'sure of yourself.'</li></ul>",
+          "text": "<p>We have an isosceles triangle with base 16 and height 15. A semicircle is inscribed with its diameter on the base. We need to find the semicircle's radius, $r$. </p><p><b>Step 1: Visualize and define the triangle.</b></p><p>Let the vertices of the triangle be A, B, C, with the base being AC = 16. Let B be the top vertex. Draw the altitude from B to the base AC, and let it meet the base at point M. M is the midpoint of AC, so AM = MC = 8. The height is BM = 15. The center of the semicircle is at M.</p><p><b>Step 2: Find the length of the triangle's legs.</b></p><p>Consider the right-angled triangle $\\triangle BMA$. Using the Pythagorean theorem:</p><p>$AB^2 = BM^2 + AM^2 = 15^2 + 8^2 = 225 + 64 = 289$.</p><p>$AB = \\sqrt{289} = 17$. The length of the leg is 17.</p><p><b>Step 3: Use similar triangles to find the radius.</b></p><p>Let T be the point where the semicircle is tangent to the leg AB. The radius MT is perpendicular to the tangent leg AB. This creates a new, smaller right-angled triangle, $\\triangle MTA$.</p><p>The large triangle $\\triangle BMA$ and the small triangle $\\triangle MTA$ share $\\angle BAM$. Both are right-angled triangles ($\\angle BMA = 90^\\circ$ and $\\angle MTA = 90^\\circ$). Therefore, they are similar triangles ($\triangle BMA \\sim \\triangle TMA$).</p><p>Because the triangles are similar, the ratio of their corresponding sides is equal:</p><p>$\\frac{\\text{height}}{\\text{hypotenuse}} = \\frac{BM}{BA} = \\frac{MT}{AM}$</p><p>We know the lengths: BM=15, BA=17, AM=8. The radius of the semicircle is MT=$r$.</p><p>$\\frac{15}{17} = \\frac{r}{8}$</p><p>Solve for $r$:</p><p>$r = \\frac{15 \\times 8}{17} = \\frac{120}{17}$.</p>"
+        },
+        {
+          "text": "<p><INSERTION_INDEX_1></p><p>First, we drop a perpendicular, shown above, to the base of the triangle, cutting the triangle into two congruent right triangles. This triangle is isosceles, which means perpendiculars are medians and vice versa. The base of the resulting right triangle is <INSERTION_INDEX_2> for both sides, and the height is <INSERTION_INDEX_3> as given. Using the Pythagorean theorem, we can find the length of the hypotenuse, or <INSERTION_INDEX_4> Using the two legs of the right triangle, we find the area of the right triangle, <INSERTION_INDEX_5>. <INSERTION_INDEX_6> times <INSERTION_INDEX_7> results in the radius, which is the height of the right triangle when using the hypotenuse as the base. Hence, the answer is <INSERTION_INDEX_8>.</p><ul><li>Note — There are several other following solutions below that use similar methods of finding the area two different ways shown in this solution. Try to eliminate any words (such as 'can' or 'would be') that make your solution less concise. Try to write 'sure of yourself.'</li></ul>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/e/6/b/e6b4f5943e0db2c3486a03b4322d42d491bd660f.png",
@@ -4794,7 +4869,7 @@
           }
         },
         {
-          "text": "<p>Noting that we have a 8-15-17 triangle, we can find <INSERTION_INDEX_1> and <INSERTION_INDEX_2> Let <INSERTION_INDEX_3>, <INSERTION_INDEX_4> Then by similar triangles (or \"Altitude on Hypotenuse\") we have <INSERTION_INDEX_5> Thus, <INSERTION_INDEX_6> Now again by \"Altitude on Hypotenuse\u201d, <INSERTION_INDEX_7> Therefore <INSERTION_INDEX_8>.</p>",
+          "text": "<p>Noting that we have a 8-15-17 triangle, we can find <INSERTION_INDEX_1> and <INSERTION_INDEX_2> Let <INSERTION_INDEX_3>, <INSERTION_INDEX_4> Then by similar triangles (or \"Altitude on Hypotenuse\") we have <INSERTION_INDEX_5> Thus, <INSERTION_INDEX_6> Now again by \"Altitude on Hypotenuse”, <INSERTION_INDEX_7> Therefore <INSERTION_INDEX_8>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/9/a/6/9a65c05bd85d2609bea5db2b109ed5f556463511.png",
