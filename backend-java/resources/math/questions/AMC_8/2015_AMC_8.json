@@ -50,6 +50,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>To find the area of the rectangular floor in square yards, we first calculate the area in square feet and then convert it to square yards. </p><p>1. <b>Calculate the area in square feet:</b><br>   Area = Length × Width<br>   Area = 12 feet × 9 feet = 108 square feet.</p><p>2. <b>Convert square feet to square yards:</b><br>   We know that 3 feet = 1 yard. <br>   Therefore, 1 square yard = 3 feet × 3 feet = 9 square feet.</p><p>3. <b>Find the area in square yards:</b><br>   Area in square yards = $\\frac{\\text{Area in square feet}}{9} = \\frac{108}{9} = 12$ square yards.</p><p>So, 12 square yards of carpet are required.</p>"
+        },
+        {
           "text": "<p>We need <INSERTION_INDEX_1> square feet of carpet to cover the floor. Since there are <INSERTION_INDEX_2> square feet in a square yard, we divide this by <INSERTION_INDEX_3> to get <INSERTION_INDEX_4> square yards.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -209,6 +212,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>A regular octagon can be divided into 8 congruent isosceles triangles with their common vertex at the center O.  Let the area of one such triangle, for example $\\triangle OAB$, be denoted by $A$. The total area of the octagon is $8A$.</p><p>The shaded region is the polygon XBCDEO, which is composed of several of these triangles or parts of them.</p><p>1. The shaded area includes the full triangles $\\triangle OBC$, $\\triangle OCD$, and $\\triangle ODE$. Their combined area is $A + A + A = 3A$.</p><p>2. Point X is the midpoint of the side $\\overline{AB}$.  The line segment $\\overline{OX}$ is a median of $\\triangle OAB$. A median divides a triangle into two triangles of equal area. Therefore, the area of $\\triangle OXB$ is half the area of $\\triangle OAB$.<br>   Area($\\triangle OXB$) = $\\frac{1}{2} \\times \\text{Area}(\\triangle OAB) = \\frac{A}{2}$.</p><p>3. The total shaded area is the sum of these parts: Area($\\triangle OBC$) + Area($\\triangle OCD$) + Area($\\triangle ODE$) + Area($\\triangle OXB$).<br>   Total shaded area = $A + A + A + \\frac{A}{2} = 3.5A$.</p><p>4. To find the fraction of the octagon's area that is shaded, we divide the shaded area by the total area:<br>   Fraction = $\\frac{\\text{Shaded Area}}{\\text{Total Area}} = \\frac{3.5A}{8A} = \\frac{3.5}{8}$.</p><p>To simplify the fraction, we can multiply the numerator and denominator by 2:<br>   Fraction = $\\frac{3.5 \\times 2}{8 \\times 2} = \\frac{7}{16}$.</p>"
+        },
         {
           "text": "<p>Since octagon <INSERTION_INDEX_1> is a regular octagon, it is split into <INSERTION_INDEX_2> equal parts, such as triangles <INSERTION_INDEX_3>, etc. These parts, since they are all equal, are <INSERTION_INDEX_4> of the octagon each. The shaded region consists of <INSERTION_INDEX_5> of these equal parts plus half of another, so the fraction of the octagon that is shaded is <INSERTION_INDEX_6></p>",
           "insertions": {
@@ -511,6 +517,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>We need to calculate the time it took for both Jack and Jill to reach the pool and then find the difference. The distance is 1 mile. </p><p>The formula relating time, distance, and speed is: Time = $\\frac{\\text{Distance}}{\\text{Speed}}$.</p><p>1. <b>Calculate Jill's travel time:</b><br>   Jill's speed is 10 miles per hour. <br>   Jill's time = $\\frac{1 \\text{ mile}}{10 \\text{ mph}} = 0.1$ hours.</p><p>2. <b>Calculate Jack's travel time:</b><br>   Jack's speed is 4 miles per hour. <br>   Jack's time = $\\frac{1 \\text{ mile}}{4 \\text{ mph}} = 0.25$ hours.</p><p>3. <b>Convert the times to minutes:</b><br>   There are 60 minutes in an hour.<br>   Jill's time in minutes = $0.1 \\text{ hours} \\times 60 \\frac{\\text{min}}{\\text{hr}} = 6$ minutes.<br>   Jack's time in minutes = $0.25 \\text{ hours} \\times 60 \\frac{\\text{min}}{\\text{hr}} = 15$ minutes.</p><p>4. <b>Find the difference in arrival time:</b><br>   Difference = Jack's time - Jill's time = 15 minutes - 6 minutes = 9 minutes.</p><p>Jill arrives 9 minutes before Jack.</p>"
+        },
+        {
           "text": "<p>Using <INSERTION_INDEX_1>, we can set up an equation for when Jill arrives at the swimming pool:</p><p><INSERTION_INDEX_2></p><p>Solving for <INSERTION_INDEX_3>, we get that Jill gets to the pool in <INSERTION_INDEX_4> of an hour, which is <INSERTION_INDEX_5> minutes. Doing the same for Jack, we get that </p><p>Jack arrives at the pool in <INSERTION_INDEX_6> of an hour, which in turn is <INSERTION_INDEX_7> minutes. Thus, Jill has to wait <INSERTION_INDEX_8></p><p>minutes for Jack to arrive at the pool.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -614,6 +623,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>The problem asks for the number of possible seating arrangements for the chess team, which consists of two boys and three girls.  The arrangement requires a boy at each end of the row and the three girls in the middle. </p><p>We can determine the total number of arrangements by considering the choices for each position sequentially.</p><p>1. <b>Arrange the boys:</b><br>   There are two end positions to be filled by the two boys. <br>   - For the first end position, there are 2 choices of boys.<br>   - After placing one boy, there is only 1 boy left for the second end position.<br>   The number of ways to arrange the boys is $2 \\times 1 = 2! = 2$.</p><p>2. <b>Arrange the girls:</b><br>   There are three middle positions to be filled by the three girls.<br>   - For the first middle position, there are 3 choices of girls.<br>   - For the second middle position, there are 2 remaining girls.<br>   - For the last middle position, there is 1 girl left.<br>   The number of ways to arrange the girls is $3 \\times 2 \\times 1 = 3! = 6$.</p><p>3. <b>Calculate the total number of arrangements:</b><br>   To find the total number of possible arrangements for the entire team, we multiply the number of ways to arrange the boys by the number of ways to arrange the girls.<br>   Total arrangements = (Ways to arrange boys) $\\times$ (Ways to arrange girls) = $2 \\times 6 = 12$.</p><p>There are 12 such arrangements possible.</p>"
+        },
+        {
           "text": "<p>There are <INSERTION_INDEX_1> ways to order the boys on the ends, and there are <INSERTION_INDEX_2> ways to order the girls in the middle. We get the answer to be <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -698,6 +710,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>First, let's analyze the initial dataset of 11 scores: 42, 47, 53, 53, 58, 58, 58, 61, 64, 65, 73.  The data is already sorted.</p><p>Let's calculate the initial statistics:</p><ul>    <li><b>Range:</b> Max - Min = $73 - 42 = 31$.</li>    <li><b>Median:</b> The middle value in a sorted list. With 11 items, the median is the 6th value, which is 58.</li>    <li><b>Mean:</b> The sum of scores divided by the number of games. Sum = $42+47+53+53+58+58+58+61+64+65+73 = 632$. Mean = $632 / 11 \\approx 57.45$.</li>    <li><b>Mode:</b> The value that appears most frequently. The score 58 appears 3 times, which is more than any other score. So, the mode is 58.</li></ul><p>Now, let's see what happens when a 12th score of 40 is added.  The new sorted dataset is: 40, 42, 47, 53, 53, 58, 58, 58, 61, 64, 65, 73.</p><p>Let's calculate the new statistics:</p><ul>    <li><b>Range:</b> New Max - New Min = $73 - 40 = 33$. The range increased from 31 to 33.</li>    <li><b>Median:</b> With 12 items, the median is the average of the 6th and 7th values. Both are 58, so the median is $(58+58)/2 = 58$. The median did not change.</li>    <li><b>Mean:</b> New Sum = $632 + 40 = 672$. New Mean = $672 / 12 = 56$. The mean decreased from approx. 57.45 to 56.</li>    <li><b>Mode:</b> The mode is still 58, as it appears 3 times. The mode did not change.</li></ul><p>Comparing the new statistics with the old ones, only the <b>range</b> showed an increase.</p>"
+        },
         {
           "text": "<p>When they score a <INSERTION_INDEX_1> on the next game, the range increases from <INSERTION_INDEX_2> to <INSERTION_INDEX_3>. This means the <INSERTION_INDEX_4> increased.</p><p>Note: The range is defined to be the difference of the largest element and the smallest element of a set.</p>",
           "insertions": {
@@ -810,6 +825,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>The triangle $\\triangle ABC$ is an isosceles triangle because two of its sides are equal in length ($AB = BC = 29$).  The third side, the base, is $AC = 42$.</p><p>To find the area of the triangle, we can use the formula: Area = $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.</p><p>1. <b>Identify the base and find the height:</b><br>   Let the base be the side $AC$. The height is the perpendicular line segment from vertex B to the base $AC$. Let's call the point of intersection D.</p><p>2. <b>Use properties of an isosceles triangle:</b><br>   In an isosceles triangle, the altitude (height) to the base also bisects the base. This means that D is the midpoint of $AC$.<br>   Therefore, $AD = DC = \\frac{AC}{2} = \\frac{42}{2} = 21$.</p><p>3. <b>Calculate the height using the Pythagorean theorem:</b><br>   The altitude $\\overline{BD}$ divides $\\triangle ABC$ into two congruent right-angled triangles, $\\triangle BDA$ and $\\triangle BDC$.<br>   In $\\triangle BDC$, we have a hypotenuse $BC = 29$ and one leg $DC = 21$. The other leg is the height $BD$.<br>   According to the Pythagorean theorem ($a^2 + b^2 = c^2$):<br>   $BD^2 + DC^2 = BC^2$<br>   $BD^2 + 21^2 = 29^2$<br>   $BD^2 + 441 = 841$<br>   $BD^2 = 841 - 441 = 400$<br>   $BD = \\sqrt{400} = 20$.</p><p>4. <b>Calculate the area of $\\triangle ABC$:</b><br>   Area = $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times AC \\times BD$<br>   Area = $\\frac{1}{2} \\times 42 \\times 20 = 21 \\times 20 = 420$.</p><p>The area of $\\triangle ABC$ is 420.</p>"
+        },
+        {
           "text": "<p>We know the semi-perimeter of <INSERTION_INDEX_1> is <INSERTION_INDEX_2>. Next, we use Heron's Formula to find that the area of the triangle is just <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -920,6 +938,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>We have two boxes, each containing three chips numbered 1, 2, and 3.  A chip is drawn from each box, and the numbers are multiplied.</p><p>1. <b>Determine the total number of outcomes:</b><br>   There are 3 possible outcomes from the first box and 3 possible outcomes from the second box. The total number of possible pairs of chips is $3 \\times 3 = 9$.</p><p>2. <b>Identify the condition for an even product:</b><br>   The product of two integers is even if at least one of the integers is even. The product is odd only if both integers are odd.</p><p>3. <b>Calculate the probability of the complementary event (odd product):</b><br>   It's often easier to calculate the probability of the opposite event and subtract it from 1.<br>   - The odd numbers in each box are {1, 3}. The probability of drawing an odd number from one box is $\\frac{2}{3}$.<br>   - The probability that the chip from the first box is odd AND the chip from the second box is odd is:<br>     P(Odd) = P(Odd from Box 1) $\\times$ P(Odd from Box 2) = $\\frac{2}{3} \\times \\frac{2}{3} = \\frac{4}{9}$.</p><p>4. <b>Calculate the probability of an even product:</b><br>   The probability of the product being even is 1 minus the probability of the product being odd.<br>   P(Even) = 1 - P(Odd) = $1 - \\frac{4}{9} = \\frac{5}{9}$.</p><p>Alternatively, we can list all 9 possible outcomes and count how many result in an even product:<br>(1,1)=1 (Odd)<br>(1,2)=2 (Even)<br>(1,3)=3 (Odd)<br>(2,1)=2 (Even)<br>(2,2)=4 (Even)<br>(2,3)=6 (Even)<br>(3,1)=3 (Odd)<br>(3,2)=6 (Even)<br>(3,3)=9 (Odd)<br>There are 5 outcomes with an even product, so the probability is $\\frac{5}{9}$.</p>"
+        },
         {
           "text": "<p>(This solution is similar to Solution 2.)Let's make this a problem with boxes. </p><p>In total, there are 9 products derived from these numbers (because 3 numbers per box). This would be our denominator. </p><p>Every time a spinner lands on 2, we get an even product. These are <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, <INSERTION_INDEX_4>, and finally <INSERTION_INDEX_5>. </p><p>Going back, we see there are <INSERTION_INDEX_6> possible combinations, and we have <INSERTION_INDEX_7> evens, the final answer is </p><p><INSERTION_INDEX_8>.</p>",
           "insertions": {
@@ -1305,7 +1326,7 @@
           }
         },
         {
-          "text": "<p>This might take longer to solve, but you definitely will have the right answer.You first list out all the possible combinations regardless if the product is even or odd.<INSERTION_INDEX_1><INSERTION_INDEX_2><INSERTION_INDEX_3><INSERTION_INDEX_4><INSERTION_INDEX_5><INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8><INSERTION_INDEX_9>  There are 9 possible combinations and <INSERTION_INDEX_10> of the combinations\u2019 products are even. So, our answer is <INSERTION_INDEX_11>.</p><p>~MiracleMaths</p>",
+          "text": "<p>This might take longer to solve, but you definitely will have the right answer.You first list out all the possible combinations regardless if the product is even or odd.<INSERTION_INDEX_1><INSERTION_INDEX_2><INSERTION_INDEX_3><INSERTION_INDEX_4><INSERTION_INDEX_5><INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8><INSERTION_INDEX_9>  There are 9 possible combinations and <INSERTION_INDEX_10> of the combinations’ products are even. So, our answer is <INSERTION_INDEX_11>.</p><p>~MiracleMaths</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/9/4/9/9497bc36c6b643d69ea1f7692960c2263a3b9a53.png",
@@ -1479,6 +1500,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>We have a triangle with two sides of length 5 and 19.  Let the lengths of the sides be $a=5$, $b=19$, and $c$. We need to find the smallest whole number that is larger than any possible perimeter of this triangle.</p><p>1. <b>Apply the Triangle Inequality Theorem:</b><br>   The theorem states that the sum of the lengths of any two sides of a triangle must be greater than the length of the third side.<br>   - $a + b > c \\implies 5 + 19 > c \\implies 24 > c$<br>   - $a + c > b \\implies 5 + c > 19 \\implies c > 14$<br>   - $b + c > a \\implies 19 + c > 5$, which is always true since c must be a positive length.</p><p>2. <b>Determine the range for the third side c:</b><br>   From the inequalities, we know that $14 < c < 24$.</p><p>3. <b>Determine the range for the perimeter:</b><br>   The perimeter $P$ of the triangle is the sum of its side lengths: $P = a + b + c = 5 + 19 + c = 24 + c$.<br>   To find the maximum possible perimeter, we use the maximum possible value for $c$. Since $c$ must be strictly less than 24, the perimeter $P$ must be strictly less than $24 + 24 = 48$.<br>   So, $P < 48$.</p><p>4. <b>Find the smallest whole number larger than the perimeter:</b><br>   The perimeter can be any value in the interval $(24+14, 24+24)$, which is $(38, 48)$. No matter what the third side is, the perimeter will always be less than 48. The smallest whole number that is strictly larger than any possible value in this interval is 48.</p>"
+        },
+        {
           "text": "<p>We know from the <a href=\"/wiki/index.php/Triangle_Inequality\" title=\"Triangle Inequality\">Triangle Inequality</a> that the last side, <INSERTION_INDEX_1>, fulfills <INSERTION_INDEX_2>. Adding <INSERTION_INDEX_3> to both sides of the inequality, we get <INSERTION_INDEX_4>, and because <INSERTION_INDEX_5> is the perimeter of our triangle, <INSERTION_INDEX_6> is our answer.</p><p><br/></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1589,6 +1613,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>The number of widgets Janabel sells each day forms an arithmetic sequence. [cite: 55, 56]</p><p>The sequence of daily sales is: 1, 3, 5, 7, ...</p><p>1. <b>Identify the properties of the arithmetic sequence:</b><br>   - The first term is $a_1 = 1$.<br>   - The common difference (the number of additional widgets sold each day) is $d = 3 - 1 = 2$.<br>   - The number of terms (days worked) is $n = 20$. </p><p>2. <b>Calculate the total number of widgets sold:</b><br>   We need to find the sum of the first 20 terms of this sequence, denoted as $S_{20}$.<br>   The formula for the sum of an arithmetic sequence is $S_n = \\frac{n}{2}(2a_1 + (n-1)d)$.<br>   Plugging in the values:<br>   $S_{20} = \\frac{20}{2}(2(1) + (20-1)2)$<br>   $S_{20} = 10(2 + (19)2)$<br>   $S_{20} = 10(2 + 38)$<br>   $S_{20} = 10(40) = 400$.</p><p>Alternatively, the sequence 1, 3, 5, ... is the sequence of the first $n$ odd numbers. The sum of the first $n$ odd numbers is given by the simple formula $n^2$. For $n=20$, the sum is $20^2 = 400$.</p><p>In total, Janabel sold 400 widgets after working 20 days.</p>"
+        },
         {
           "text": "<p>First, we recognize that the number of widgets Janabel sells each day forms an arithmetic sequence. On day 1, she sells 1 widget, on day 2, she sells 3 widgets, on day 3, she sells 5 widgets, and so on. This sequence can be described by the first term \\( a = 1 \\) and the common difference \\( d = 2 \\).</p><p>Step 1: Find the number of widgets sold on day 20</p><p>The formula for the \\( n \\)-th term of an arithmetic sequence is:<INSERTION_INDEX_1>For \\( n = 20 \\):<INSERTION_INDEX_2></p><p>So, Janabel sells 39 widgets on day 20.</p><p>Step 2: Calculate the total number of widgets sold in 20 days}</p><p>The sum \\( S_n \\) of the first \\( n \\) terms of an arithmetic sequence is given by:<INSERTION_INDEX_3></p><p>For \\( n = 20 \\):<INSERTION_INDEX_4></p><p>Therefore, the total number of widgets sold after 20 days is:<INSERTION_INDEX_5></p><p>~ GeometryMystery</p>",
           "insertions": {
@@ -1822,6 +1849,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>We need to count the number of integers between 1000 and 9999 that have four distinct (different) digits. This means we are forming 4-digit numbers where no digit is repeated.</p><p>Let's consider the number of choices for each of the four positions (thousands, hundreds, tens, and units).</p><p>1. <b>Thousands digit:</b><br>   This digit cannot be 0 (otherwise it would be a 3-digit number). So, there are 9 possible choices (1 through 9).</p><p>2. <b>Hundreds digit:</b><br>   This digit can be any digit from 0 to 9, but it must be different from the thousands digit. Since one digit has already been used, there are 9 remaining choices.</p><p>3. <b>Tens digit:</b><br>   This digit must be different from the first two digits. Since two distinct digits have been used, there are now 8 remaining choices.</p><p>4. <b>Units digit:</b><br>   This digit must be different from the first three digits. Since three distinct digits have been used, there are 7 remaining choices.</p><p>To find the total number of such integers, we multiply the number of choices for each position:<br>Total number = $9 \\times 9 \\times 8 \\times 7$<br>Total number = $81 \\times 56$<br>Total number = 4536.</p><p>There are 4536 integers between 1000 and 9999 with four distinct digits.</p>"
+        },
+        {
           "text": "<p>There are <INSERTION_INDEX_1> choices for the first number, since it cannot be <INSERTION_INDEX_2>, there are only <INSERTION_INDEX_3> choices left for the second number since it must differ from the first, <INSERTION_INDEX_4> choices for the third number, since it must differ from the first two, and <INSERTION_INDEX_5> choices for the fourth number, since it must differ from all three. This means there are <INSERTION_INDEX_6> integers between <INSERTION_INDEX_7> and <INSERTION_INDEX_8> with four distinct digits.</p><p><br/>If you're too lazy to do <INSERTION_INDEX_9>, we can notice <INSERTION_INDEX_10> and <INSERTION_INDEX_11> The unit digit must be 6. Therefore the answer is the only answer with a a unit digit of 6. <INSERTION_INDEX_12>)</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1940,6 +1970,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>First, we determine the total number of possible license plates according to the given rules. The plate has four symbols. </p><p>1. <b>Calculate total possible plates:</b><br>   - <b>First symbol:</b> Must be a vowel (A, E, I, O, U). There are 5 choices. <br>   - <b>Second symbol:</b> Must be one of the 21 non-vowels. There are 21 choices. <br>   - <b>Third symbol:</b> Must be a different non-vowel from the second symbol. Since one non-vowel is used, there are 20 choices left. <br>   - <b>Fourth symbol:</b> Must be a digit (0 through 9). There are 10 choices. <br>   The total number of unique license plates is the product of the choices for each position:<br>   Total plates = $5 \\times 21 \\times 20 \\times 10 = 21,000$.</p><p>2. <b>Calculate the probability of the plate being 'AMC8':</b><br>   The specific plate 'AMC8' is one single outcome among all the possibilities. <br>   - 'A' is a vowel.<br>   - 'M' is a non-vowel.<br>   - 'C' is a different non-vowel.<br>   - '8' is a digit.<br>   The plate 'AMC8' follows all the rules, so it is a valid plate.</p><p>The probability of a specific event is the number of favorable outcomes divided by the total number of possible outcomes.<br>   P('AMC8') = $\\frac{1}{\\text{Total plates}} = \\frac{1}{21,000}$.</p>"
+        },
         {
           "text": "<p>There is one favorable case, which is the license plate says \"AMC8.\" We must now find how many total cases there are. There are <INSERTION_INDEX_1> choices for the first letter (since it must be a vowel), <INSERTION_INDEX_2> choices for the second letter (since it must be of <INSERTION_INDEX_3> consonants), <INSERTION_INDEX_4> choices for the third letter (since it must differ from the second letter), and <INSERTION_INDEX_5> choices for the digit. This leads to <INSERTION_INDEX_6> total possible license plates. Therefore, the probability of a license plate saying \"AMC8\" is <INSERTION_INDEX_7>.</p>",
           "insertions": {
@@ -2121,6 +2154,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>A cube has 12 edges. We need to find the number of pairs of edges that are parallel to each other. </p><p>1. <b>Identify sets of parallel edges:</b><br>   In a cube, the edges can be grouped into sets of mutually parallel edges. There are 3 such sets, corresponding to the three spatial dimensions (length, width, height).<br>   - <b>Set 1 (e.g., vertical):</b> The four edges going up/down are parallel to each other (e.g., $\\overline{AE}, \\overline{BF}, \\overline{CG}, \\overline{DH}$).<br>   - <b>Set 2 (e.g., horizontal, front-to-back):</b> The four edges going front-to-back are parallel to each other (e.g., $\\overline{AD}, \\overline{BC}, \\overline{FG}, \\overline{EH}$).<br>   - <b>Set 3 (e.g., horizontal, left-to-right):</b> The four edges going left-to-right are parallel to each other (e.g., $\\overline{AB}, \\overline{DC}, \\overline{HG}, \\overline{EF}$).</p><p>2. <b>Count the pairs within each set:</b><br>   Each set contains 4 parallel edges. We need to find how many pairs can be formed from these 4 edges.<br>   This is a combination problem, \"4 choose 2\".<br>   The number of pairs in one set is given by the formula $C(n, k) = \\frac{n!}{k!(n-k)!}$.<br>   Number of pairs = $C(4, 2) = \\frac{4!}{2!(4-2)!} = \\frac{4 \\times 3}{2 \\times 1} = 6$.<br>   So, there are 6 pairs of parallel edges within each set.</p><p>3. <b>Calculate the total number of pairs:</b><br>   Since there are 3 such sets, the total number of parallel pairs is:<br>   Total pairs = (Number of sets) $\\times$ (Pairs per set) = $3 \\times 6 = 18$.</p>"
+        },
         {
           "text": "<p>We first count the number of pairs of parallel lines that are in the same direction as <INSERTION_INDEX_1>. The pairs of parallel lines are <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, <INSERTION_INDEX_4>, <INSERTION_INDEX_5>, <INSERTION_INDEX_6>, and <INSERTION_INDEX_7>. These are <INSERTION_INDEX_8> pairs total. We can do the same for the lines in the same direction as <INSERTION_INDEX_9> and <INSERTION_INDEX_10>. This means there are <INSERTION_INDEX_11> total pairs of parallel lines.</p>",
           "insertions": {
@@ -2324,7 +2360,7 @@
             "INSERTION_INDEX_4": {
               "picture": "//latex.artofproblemsolving.com/9/b/9/9b9bdaaaf5c9d3661f6703d29ff348982a133e14.png",
               "alt_type": "latex",
-              "alt_value": "$12+6\u00a0= \\boxed{\\textbf{(C) } 18}$",
+              "alt_value": "$12+6 = \\boxed{\\textbf{(C) } 18}$",
               "width": "146",
               "height": "30"
             }
@@ -2368,6 +2404,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We start with the set S = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}.  We remove a subset of two elements, leaving nine numbers.  The mean of these nine remaining numbers is 6. </p><p>1. <b>Find the sum of the remaining numbers:</b><br>   If the mean (average) of nine numbers is 6, their sum is:<br>   Sum of remaining numbers = Mean $\\times$ Number of items = $6 \\times 9 = 54$.</p><p>2. <b>Find the sum of the original set:</b><br>   The original set is an arithmetic sequence. The sum can be calculated using the formula $S_n = \\frac{n}{2}(a_1 + a_n)$.<br>   Sum of original set = $\\frac{11}{2}(1 + 11) = \\frac{11}{2}(12) = 66$.</p><p>3. <b>Find the sum of the two removed numbers:</b><br>   Let the two removed numbers be $x$ and $y$. The sum of the original set is equal to the sum of the remaining numbers plus the sum of the removed numbers.<br>   66 = 54 + ($x+y$)<br>   $x + y = 66 - 54 = 12$.</p><p>4. <b>Find the pairs of numbers from the original set that sum to 12:</b><br>   We need to find pairs of distinct elements {x, y} from the set S such that their sum is 12. We can list them systematically:<br>   - {1, 11}<br>   - {2, 10}<br>   - {3, 9}<br>   - {4, 8}<br>   - {5, 7}<br>   The pair {6, 6} is not possible because the elements in the subset must be distinct (as they are removed from a set of unique numbers).</p><p>There are 5 such pairs (subsets). Each pair represents one possible subset of two elements that could be removed.</p>"
+        },
         {
           "text": "<p>Since there will be <INSERTION_INDEX_1> elements after removal, and their mean is <INSERTION_INDEX_2>, we know their sum is <INSERTION_INDEX_3>. We also know that the sum of the set pre-removal is <INSERTION_INDEX_4>. Thus, the sum of the <INSERTION_INDEX_5> elements removed is <INSERTION_INDEX_6>. There are only <INSERTION_INDEX_7> subsets of <INSERTION_INDEX_8> elements that sum to <INSERTION_INDEX_9>: <INSERTION_INDEX_10>.</p>",
           "insertions": {
@@ -2513,6 +2552,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We want to find which of the given integers cannot be written as the sum of four consecutive odd integers. [cite: 92, 93]</p><p>1. <b>Represent the sum algebraically:</b><br>   Let the first odd integer be represented by $2n+1$, where $n$ is an integer. The next three consecutive odd integers are $2n+3$, $2n+5$, and $2n+7$.<br>   Their sum, $S$, is:<br>   $S = (2n+1) + (2n+3) + (2n+5) + (2n+7)$<br>   $S = 8n + (1+3+5+7)$<br>   $S = 8n + 16$</p><p>2. <b>Analyze the result:</b><br>   The sum can be factored as $S = 8(n+2)$. This shows that any sum of four consecutive odd integers must be a multiple of 8.</p><p>3. <b>Check the given options:</b><br>   We now test which of the options is not a multiple of 8.<br>   - (A) 16: $16 = 8 \\times 2$. This is a multiple of 8. (Corresponds to $n=0$, integers 1,3,5,7).<br>   - (B) 40: $40 = 8 \\times 5$. This is a multiple of 8. (Corresponds to $n=3$, integers 7,9,11,13).<br>   - (C) 72: $72 = 8 \\times 9$. This is a multiple of 8. (Corresponds to $n=7$, integers 15,17,19,21).<br>   - (D) 100: $100 \\div 8 = 12.5$. This is not an integer, so 100 is not a multiple of 8.<br>   - (E) 200: $200 = 8 \\times 25$. This is a multiple of 8. (Corresponds to $n=23$, integers 47,49,51,53).</p><p>The integer that cannot be written as the sum of four consecutive odd integers is 100.</p>"
+        },
         {
           "text": "<p>Let our <INSERTION_INDEX_1> numbers be <INSERTION_INDEX_2>, where <INSERTION_INDEX_3> is odd. Then, our sum is <INSERTION_INDEX_4>. The only answer choice that cannot be written as <INSERTION_INDEX_5>, where <INSERTION_INDEX_6> is odd, is <INSERTION_INDEX_7>.</p>",
           "insertions": {
@@ -2878,6 +2920,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>This is a problem involving the Principle of Inclusion-Exclusion for sets. Let's define the sets based on the 198 students who voted. </p><p>- Let $U$ be the set of all students who voted, so $|U| = 198$.<br>- Let $A$ be the set of students who voted in favor of the first issue, so $|A| = 149$. <br>- Let $B$ be the set of students who voted in favor of the second issue, so $|B| = 119$. </p><p>We are asked to find the number of students who voted in favor of both issues, which is the size of the intersection of A and B, denoted as $|A \\cap B|$.</p><p>1. <b>Find the number of students who voted for at least one issue:</b><br>   We are told that 29 students voted against both issues.  These are the students who are in neither set A nor set B. The number of students who voted for at least one issue (i.e., are in the union of A and B, $|A \\cup B|$) is the total number of voters minus those who voted against both.<br>   $|A \\cup B| = |U| - \\text{(Number who voted against both)}$<br>   $|A \\cup B| = 198 - 29 = 169$.</p><p>2. <b>Apply the Principle of Inclusion-Exclusion:</b><br>   The formula is: $|A \\cup B| = |A| + |B| - |A \\cap B|$.<br>   We can rearrange this to solve for $|A \\cap B|$:<br>   $|A \\cap B| = |A| + |B| - |A \\cup B|$.</p><p>3. <b>Calculate the number of students who voted for both issues:</b><br>   $|A \\cap B| = 149 + 119 - 169$<br>   $|A \\cap B| = 268 - 169$<br>   $|A \\cap B| = 99$.</p><p>Therefore, 99 students voted in favor of both issues.</p>"
+        },
+        {
           "text": "<p>We can see that this is a Venn Diagram Problem.</p><p>First, we analyze the information given. There are <INSERTION_INDEX_1> students. Let's use A as the first issue and B as the second issue. </p><p><INSERTION_INDEX_2> students were for A, and <INSERTION_INDEX_3> students were for B. There were also <INSERTION_INDEX_4> students against both A and B. </p><p>Solving this without a Venn Diagram, we subtract <INSERTION_INDEX_5> away from the total, <INSERTION_INDEX_6>. Out of the remaining <INSERTION_INDEX_7> , we have <INSERTION_INDEX_8> people for A and </p><p><INSERTION_INDEX_9> people for B. We add this up to get <INSERTION_INDEX_10> . Since that is more than what we need, we subtract <INSERTION_INDEX_11> from <INSERTION_INDEX_12> to get </p><p><INSERTION_INDEX_13>.</p><p><INSERTION_INDEX_14></p><p>Note: One could use the Principle of Inclusion-Exclusion in a similar way to achieve the same result.</p><p>~ cxsmi (note)</p><p><br/></p><p><br/></p><p>There are 198-149=49 students who voted against the first issue. Out of these, 49-29=20 voted for the second issue. We also find that 50 students voted against the second issue but in favor of the first in a similar way. This means that 149-50=119-20=<INSERTION_INDEX_15> students voted in favor of both issues.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -3033,6 +3078,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>Let $S$ be the number of sixth graders and $N$ be the number of ninth graders. Let $P$ be the number of pairs (buddies).</p><p>Since each pair consists of one sixth grader and one ninth grader, the number of paired sixth graders is equal to the number of paired ninth graders, which is $P$. </p><p>1. <b>Set up equations from the problem statement:</b><br>   - The number of paired ninth graders is $\\frac{1}{3}$ of all ninth graders: $P = \\frac{1}{3}N$. [cite: 108, 109]<br>   - The number of paired sixth graders is $\\frac{2}{5}$ of all sixth graders: $P = \\frac{2}{5}S$. [cite: 108, 109]</p><p>2. <b>Express the total number of students in terms of P:</b><br>   - From the equations above, we can write $N$ and $S$ in terms of $P$:<br>     $N = 3P$<br>     $S = \\frac{5}{2}P$<br>   - The total number of students is $S + N$.<br>     Total Students = $\\frac{5}{2}P + 3P = (\\frac{5}{2} + \\frac{6}{2})P = \\frac{11}{2}P$.</p><p>3. <b>Calculate the required fraction:</b><br>   - We want to find the fraction of the total number of students who have a buddy. The total number of students with a buddy is the number of paired sixth graders plus the number of paired ninth graders, which is $P + P = 2P$.<br>   - The fraction is $\\frac{\\text{Number of students with a buddy}}{\\text{Total number of students}}$.<br>     Fraction = $\\frac{2P}{\\frac{11}{2}P}$<br>   - The $P$ terms cancel out:<br>     Fraction = $\\frac{2}{11/2} = 2 \\times \\frac{2}{11} = \\frac{4}{11}$.</p><p>So, $\\frac{4}{11}$ of the total number of students have a buddy.</p>"
+        },
+        {
           "text": "<p>Let the number of sixth graders be <INSERTION_INDEX_1>, and the number of ninth graders be <INSERTION_INDEX_2>. Thus, <INSERTION_INDEX_3>, which simplifies to <INSERTION_INDEX_4>. Since we are trying to find the value of <INSERTION_INDEX_5>, we can just substitute <INSERTION_INDEX_6> for <INSERTION_INDEX_7> into the equation. We then get a value of <INSERTION_INDEX_8>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -3184,6 +3232,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Let $d$ be the distance to school in miles, and let $v$ be Jeremy's father's normal speed in rush hour traffic in miles per hour (mph).</p><p>We can use the formula: Distance = Speed $\\times$ Time.</p><p>First, we need to convert the travel times from minutes to hours, since the speed is in mph.<br>- 20 minutes = $\\frac{20}{60} = \\frac{1}{3}$ hours. <br>- 12 minutes = $\\frac{12}{60} = \\frac{1}{5}$ hours. </p><p>Now we can set up two equations based on the two scenarios:</p><p>1. <b>Rush hour trip:</b><br>   The speed is $v$ and the time is $\\frac{1}{3}$ hour.<br>   $d = v \\times \\frac{1}{3}$</p><p>2. <b>No traffic trip:</b><br>   The speed is 18 mph faster, so it is $v+18$. The time is $\\frac{1}{5}$ hour. <br>   $d = (v+18) \\times \\frac{1}{5}$</p><p>Since the distance $d$ is the same in both cases, we can set the two expressions for $d$ equal to each other:<br>$\\frac{v}{3} = \\frac{v+18}{5}$</p><p>Now, we solve for $v$:<br>$5v = 3(v+18)$<br>$5v = 3v + 54$<br>$2v = 54$<br>$v = 27$ mph.</p><p>The question asks for the distance to school, $d$. We can plug the value of $v$ back into either of the original equations.<br>$d = \\frac{v}{3} = \\frac{27}{3} = 9$ miles.</p><p>The distance to school is 9 miles.</p>"
+        },
         {
           "text": "<p>For starters, we identify d as distance and v as velocity (speed)</p><p>Writing the equation gives us: <INSERTION_INDEX_1> and <INSERTION_INDEX_2>.</p><p>This gives <INSERTION_INDEX_3>, which gives <INSERTION_INDEX_4>, which then gives <INSERTION_INDEX_5>.</p>",
           "insertions": {
@@ -3511,7 +3562,7 @@
           }
         },
         {
-          "text": "<p>(Ratios)<INSERTION_INDEX_1></p><p>In rush hour traffic, we can create this ratio for each distance we are going to try supposing the distance is <INSERTION_INDEX_2>:</p><p><INSERTION_INDEX_3>\u00a0: <INSERTION_INDEX_4> hours</p><p>In no traffic, we can do the same:</p><p><INSERTION_INDEX_5>\u00a0: <INSERTION_INDEX_6> minutes</p><p>We want the ratio to be the distance to <INSERTION_INDEX_7> minutes:</p><p><INSERTION_INDEX_8>\u00a0: <INSERTION_INDEX_9> minutes = <INSERTION_INDEX_10>d\u00a0: <INSERTION_INDEX_11> minutes </p><p><INSERTION_INDEX_12>\u00a0: <INSERTION_INDEX_13> minutes = <INSERTION_INDEX_14>d\u00a0: <INSERTION_INDEX_15> minutes</p><p>This shows the speed in miles per hour. This means that the speed in the 2nd ratio has to be 18 faster than the first ratio. We get</p><p><INSERTION_INDEX_16>, or <INSERTION_INDEX_17>.</p>",
+          "text": "<p>(Ratios)<INSERTION_INDEX_1></p><p>In rush hour traffic, we can create this ratio for each distance we are going to try supposing the distance is <INSERTION_INDEX_2>:</p><p><INSERTION_INDEX_3> : <INSERTION_INDEX_4> hours</p><p>In no traffic, we can do the same:</p><p><INSERTION_INDEX_5> : <INSERTION_INDEX_6> minutes</p><p>We want the ratio to be the distance to <INSERTION_INDEX_7> minutes:</p><p><INSERTION_INDEX_8> : <INSERTION_INDEX_9> minutes = <INSERTION_INDEX_10>d : <INSERTION_INDEX_11> minutes </p><p><INSERTION_INDEX_12> : <INSERTION_INDEX_13> minutes = <INSERTION_INDEX_14>d : <INSERTION_INDEX_15> minutes</p><p>This shows the speed in miles per hour. This means that the speed in the 2nd ratio has to be 18 faster than the first ratio. We get</p><p><INSERTION_INDEX_16>, or <INSERTION_INDEX_17>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/9/b/c/9bcade71af11c007418a7dec14f27f9aa4c02d91.png",
@@ -3714,6 +3765,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>The problem states that every row and every column of the $5 \\times 5$ array is an arithmetic sequence.  Let's denote the element in row $i$ and column $j$ as $A_{ij}$. We need to find the value of X, which is $A_{33}$. </p><p>We are given four corner values: $A_{11}=1$, $A_{15}=25$, $A_{51}=17$, and $A_{55}=81$. [cite: 130, 133, 131, 134]</p><p>We can find X by first determining the properties of the row and column it belongs to.</p><p>1. <b>Analyze Row 1:</b><br>   This is an arithmetic sequence of 5 terms starting with $A_{11}=1$ and ending with $A_{15}=25$.<br>   Let the common difference be $d_{r1}$. Then $A_{15} = A_{11} + (5-1)d_{r1}$.<br>   $25 = 1 + 4d_{r1} \\implies 24 = 4d_{r1} \\implies d_{r1} = 6$.<br>   So, Row 1 is: 1, 7, 13, 19, 25. This tells us that $A_{13} = 13$.</p><p>2. <b>Analyze Column 1:</b><br>   This is an arithmetic sequence from $A_{11}=1$ to $A_{51}=17$.<br>   Let the common difference be $d_{c1}$. Then $A_{51} = A_{11} + (5-1)d_{c1}$.<br>   $17 = 1 + 4d_{c1} \\implies 16 = 4d_{c1} \\implies d_{c1} = 4$.<br>   So, Column 1 is: 1, 5, 9, 13, 17. This tells us that $A_{31} = 9$.</p><p>3. <b>Analyze Column 3 (the column containing X):</b><br>   The elements in any column form an arithmetic sequence. This also applies to the common differences of the rows. Let's find the common difference of Row 5: $A_{55} = A_{51} + 4d_{r5} \\implies 81 = 17 + 4d_{r5} \\implies 64 = 4d_{r5} \\implies d_{r5}=16$. The row common differences ($d_{r1}, d_{r2}, d_{r3}, d_{r4}, d_{r5}$) form an arithmetic sequence: 6, ..., 16. The common difference of these differences is $(16-6)/4=2.5$. So $d_{r3} = 6 + 2(2.5) = 11$.<br>   Row 3 starts with $A_{31}=9$ and has a common difference of 11. <br>   $A_{33} = A_{31} + (3-1)d_{r3} = 9 + 2(11) = 9 + 22 = 31$.</p><p><b>Alternative Method (using columns):</b></p><p>1. Find $A_{13}$ (as above), which is 13.</p><p>2. The common differences of the columns ($d_{c1}, d_{c2}, d_{c3}, ...$) also form an arithmetic sequence. We found $d_{c1} = 4$. Let's find $d_{c5}$ from Column 5 ($A_{15}=25$ to $A_{55}=81$).<br>   $81 = 25 + 4d_{c5} \\implies 56 = 4d_{c5} \\implies d_{c5} = 14$.<br>   The sequence of column differences is an arithmetic sequence from 4 to 14. The common difference of this sequence is $(14-4)/4 = 2.5$.</p><p>3. The common difference for Column 3 is $d_{c3} = d_{c1} + (3-1)(2.5) = 4 + 2(2.5) = 4+5=9$.</p><p>4. Now we can find X ($A_{33}$) using the values in Column 3. The first term is $A_{13}=13$ and the common difference is $d_{c3}=9$.<br>   $A_{33} = A_{13} + (3-1)d_{c3} = 13 + 2(9) = 13 + 18 = 31$.</p><p>Both methods yield X = 31.</p>"
+        },
         {
           "text": "<p>We begin filling in the table. The top row has a first term <INSERTION_INDEX_1> and a fifth term <INSERTION_INDEX_2>, so we have the common difference is <INSERTION_INDEX_3>. This means we can fill in the first row of the table:<INSERTION_INDEX_4></p><p>The fifth row has a first term of <INSERTION_INDEX_5> and a fifth term of <INSERTION_INDEX_6>, so the common difference is <INSERTION_INDEX_7>. We can fill in the fifth row of the table as shown:<INSERTION_INDEX_8></p><p>We must find the third term of the arithmetic sequence with a first term of <INSERTION_INDEX_9> and a fifth term of <INSERTION_INDEX_10>. The common difference of this sequence is <INSERTION_INDEX_11>, so the third term is <INSERTION_INDEX_12>.</p>",
           "insertions": {
@@ -3921,6 +3975,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>We need to find the fraction of a $6 \\times 5$ grid that is covered by a triangle with vertices at A=(1,3), B=(5,1), and C=(4,4). </p><p>1. <b>Calculate the total area of the grid:</b><br>   The grid has dimensions $6 \times 5$, so its total area is $6 \\times 5 = 30$ square units.</p><p>2. <b>Calculate the area of the triangle:</b><br>   We can find the area of $\\triangle ABC$ by enclosing it in a rectangle and subtracting the areas of the three right-angled triangles at the corners. This is often called the 'box method'.<br>   - The minimum x-coordinate of the vertices is 1 and the maximum is 5. <br>   - The minimum y-coordinate is 1 and the maximum is 4.<br>   - This defines a bounding box with corners at (1,1) and (5,4).<br>   - The dimensions of the box are: width = $5-1=4$ and height = $4-1=3$.<br>   - The area of the bounding box is $4 \\times 3 = 12$ square units.<br><br>   Now, we find the areas of the three right-angled triangles outside $\\triangle ABC$ but inside the box:<br>   - <b>Triangle 1 (top left):</b> Vertices at A(1,3), C(4,4), and the box corner (1,4). Base = $4-1=3$, Height = $4-3=1$. Area = $\\frac{1}{2} \\times 3 \\times 1 = 1.5$.<br>   - <b>Triangle 2 (top right):</b> Vertices at C(4,4), B(5,1), and the box corner (5,4). Base = $5-4=1$, Height = $4-1=3$. Area = $\\frac{1}{2} \\times 1 \\times 3 = 1.5$.<br>   - <b>Triangle 3 (bottom):</b> Vertices at A(1,3), B(5,1), and the box corner (1,1) and (5,1). Base = $5-1=4$, Height = $3-1=2$. Area = $\\frac{1}{2} \\times 4 \\times 2 = 4$.<br><br>   The area of $\\triangle ABC$ is the area of the box minus the sum of the areas of these three triangles:<br>   Area($\\triangle ABC$) = $12 - (1.5 + 1.5 + 4) = 12 - 7 = 5$ square units.</p><p>3. <b>Calculate the fraction of the grid covered:</b><br>   Fraction = $\\frac{\\text{Area of Triangle}}{\\text{Area of Grid}} = \\frac{5}{30} = \\frac{1}{6}$.</p>"
+        },
         {
           "text": "<p>The area of <INSERTION_INDEX_1> is equal to half the product of its base and height. By the Pythagorean Theorem, we find its height is <INSERTION_INDEX_2>, and its base is <INSERTION_INDEX_3>. We multiply these and divide by <INSERTION_INDEX_4> to find the area of the triangle is <INSERTION_INDEX_5>. Since the grid has an area of <INSERTION_INDEX_6>, the fraction of the grid covered by the triangle is <INSERTION_INDEX_7>.</p>",
           "insertions": {
@@ -4232,6 +4289,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Let $x$, $y$, and $z$ be the number of pairs of socks Ralph bought at \\$1, \\$3, and \\$4, respectively. </p><p>From the problem statement, we can form a system of two linear equations with three variables:</p><p>1. <b>Equation for the number of pairs:</b><br>   $x + y + z = 12$ </p><p>2. <b>Equation for the total cost:</b><br>   $1x + 3y + 4z = 24$ </p><p>We are also told that he bought at least one pair of each type, which means $x \\ge 1$, $y \\ge 1$, and $z \\ge 1$ must be integers. </p><p>We can solve this system by elimination. Let's multiply the first equation by 1 and subtract it from the second equation:<br>   $(x + 3y + 4z) - (x + y + z) = 24 - 12$<br>   $2y + 3z = 12$</p><p>Now we need to find integer solutions for $y$ and $z$ that satisfy $y \\ge 1$ and $z \\ge 1$. Since $2y$ and 12 are even, $3z$ must also be even, which implies that $z$ must be an even number.</p><p>Let's test possible even values for $z$ (where $z \\ge 1$):</p><p>- If $z = 2$:<br>  $2y + 3(2) = 12$<br>  $2y + 6 = 12$<br>  $2y = 6$<br>  $y = 3$. This is a valid solution ($y=3 \\ge 1$).</p><p>- If $z = 4$:<br>  $2y + 3(4) = 12$<br>  $2y + 12 = 12$<br>  $2y = 0$<br>  $y = 0$. This is not a valid solution, as we need $y \\ge 1$.</p><p>Any larger even value for $z$ would result in a negative value for $y$. So, the only possible solution is $y=3$ and $z=2$.</p><p>Now we can find $x$ using the first equation:<br>$x + y + z = 12$<br>$x + 3 + 2 = 12$<br>$x + 5 = 12$<br>$x = 7$.</p><p>This satisfies the condition $x \\ge 1$. So, Ralph bought 7 pairs of \\$1 socks.</p>"
+        },
         {
           "text": "<p>So, let there be <INSERTION_INDEX_1> pairs of <INSERTION_INDEX_2> socks, <INSERTION_INDEX_3> pairs of <INSERTION_INDEX_4> socks, and <INSERTION_INDEX_5> pairs of <INSERTION_INDEX_6> socks.</p><p>We have <INSERTION_INDEX_7>, <INSERTION_INDEX_8>, and <INSERTION_INDEX_9>.</p><p>Now, we subtract to find <INSERTION_INDEX_10>, and <INSERTION_INDEX_11>.It follows that <INSERTION_INDEX_12> is a multiple of <INSERTION_INDEX_13> and <INSERTION_INDEX_14> is a multiple of <INSERTION_INDEX_15>. Since sum of 2 multiples of 3 = multiple of 3, so we must have <INSERTION_INDEX_16>.</p><p>Therefore, <INSERTION_INDEX_17>, and it follows that <INSERTION_INDEX_18>. Now, <INSERTION_INDEX_19>, as desired.</p>",
           "insertions": {
@@ -5099,6 +5159,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>We are given information about a figure containing an equiangular hexagon ABCDEF, two squares, and an equilateral triangle. We need to find the area of $\\triangle KBC$. </p><p>1. <b>Analyze the properties of the shapes:</b><br>   - <b>Hexagon ABCDEF:</b> Equiangular means each interior angle is $(6-2) \\times 180 / 6 = 120^\\circ$. So, $\\angle ABC = 120^\\circ$.<br>   - <b>Square ABJI:</b> Area is 18, so side length $AB = JB = \\sqrt{18} = 3\\sqrt{2}$. All angles are $90^\\circ$, so $\\angle ABJ = 90^\\circ$. <br>   - <b>Square FEHG:</b> Area is 32, so side length $FE = \\sqrt{32} = 4\\sqrt{2}$. <br>   - <b>Equilateral $\\triangle JBK$</b>: All sides are equal to JB, so $BK = JB = 3\\sqrt{2}$. All angles are $60^\\circ$, so $\\angle JBK = 60^\\circ$. </p><p>2. <b>Determine the side lengths of $\\triangle KBC$:</b><br>   - We found side $BK = 3\\sqrt{2}$.<br>   - We are given that $BC = FE$. Since $FE = 4\\sqrt{2}$, we have $BC = 4\\sqrt{2}$. </p><p>3. <b>Determine the angle $\\angle KBC$:</b><br>   The shapes are built around the vertex B. Assuming they are built externally without overlap, the angles around point B sum to $360^\\circ$.<br>   The angles around B are $\\angle ABC$, $\\angle ABJ$, and $\\angle JBK$. Let's examine the figure. The figure implies a complete circle of angles around point B is formed by $\\angle ABC$, $\\angle ABJ$, $\\angle JBK$ and the angle in question $\\angle KBC$.<br>   $\\_angle KBC = 360^\\circ - \\angle ABC - \\angle ABJ - \\angle JBK$<br>   $\\_angle KBC = 360^\\circ - 120^\\circ - 90^\\circ - 60^\\circ$<br>   $\\_angle KBC = 360^\\circ - 270^\\circ = 90^\\circ$.</p><p>4. <b>Calculate the area of $\\triangle KBC$:</b><br>   We now know two sides ($BK=3\\sqrt{2}$, $BC=4\\sqrt{2}$) and the included angle ($\\_angle KBC = 90^\\circ$).<br>   The area of a triangle is given by the formula Area = $\\frac{1}{2}ab\\sin{C}$.<br>   Area($\\triangle KBC$) = $\\frac{1}{2} \\times (BK) \\times (BC) \\times \\sin(\\angle KBC)$<br>   Area = $\\frac{1}{2} \\times (3\\sqrt{2}) \\times (4\\sqrt{2}) \\times \\sin(90^\\circ)$<br>   Area = $\\frac{1}{2} \\times (12 \\times 2) \\times 1$<br>   Area = $\\frac{1}{2} \\times 24 = 12$.</p><p>The area of $\\triangle KBC$ is 12.</p>"
+        },
+        {
           "text": "<p>Clearly, since <INSERTION_INDEX_1> is a side of a square with area <INSERTION_INDEX_2>, <INSERTION_INDEX_3>. Now, since <INSERTION_INDEX_4>, we have <INSERTION_INDEX_5>.</p><p>We know that <INSERTION_INDEX_6> is a side of a square with area <INSERTION_INDEX_7>, so <INSERTION_INDEX_8>. Since <INSERTION_INDEX_9> is equilateral, <INSERTION_INDEX_10>.</p><p>Lastly, <INSERTION_INDEX_11> is a right triangle. We see that <INSERTION_INDEX_12>, so <INSERTION_INDEX_13> is a right triangle with legs <INSERTION_INDEX_14> and <INSERTION_INDEX_15>. Now, its area is <INSERTION_INDEX_16>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -5355,6 +5418,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Let $N$ be the total number of students in the group.</p><p>The problem describes different ways of arranging the students in rows. If there are $k$ students in each row, it means $k$ must be a divisor (or factor) of $N$.</p><p>1. <b>Identify the known factors of N:</b><br>   - On June 1, there are 15 students per row, so 15 is a factor of $N$. <br>   - On June 2, they are in one long row, meaning $N$ students per row, so $N$ is a factor of $N$. <br>   - On June 3, there is one student per row, so 1 is a factor of $N$. <br>   - On June 4, there are 6 students per row, so 6 is a factor of $N$. </p><p>2. <b>Determine the total number of factors:</b><br>   The process continues with a different number of students per row each day from June 1 to June 12. This means $N$ has at least 12 distinct factors. <br>   On June 13, they cannot find a new way, which implies that $N$ has exactly 12 factors. </p><p>3. <b>Find the smallest possible value for N:</b><br>   - $N$ must be a multiple of both 15 and 6. Therefore, $N$ must be a multiple of their least common multiple, lcm(15, 6).<br>     $15 = 3 \\times 5$<br>     $6 = 2 \\times 3$<br>     lcm(15, 6) = $2 \\times 3 \\times 5 = 30$.<br>   - So, $N$ is a multiple of 30 and has exactly 12 factors. We need to find the smallest such number.<br><br>   Let's check the multiples of 30 and count their factors. The number of factors of a number $N = p_1^{a_1}p_2^{a_2}...$ is given by $d(N) = (a_1+1)(a_2+1)...$<br>   - <b>N = 30:</b> $30 = 2^1 \\times 3^1 \\times 5^1$. Number of factors = $(1+1)(1+1)(1+1) = 8$. Not enough factors.<br>   - <b>N = 60:</b> $60 = 2^2 \\times 3^1 \\times 5^1$. Number of factors = $(2+1)(1+1)(1+1) = 3 \\times 2 \\times 2 = 12$. This is a candidate.<br>   - <b>N = 90:</b> $90 = 2^1 \\times 3^2 \\times 5^1$. Number of factors = $(1+1)(2+1)(1+1) = 2 \\times 3 \\times 2 = 12$. This is also a candidate.<br>   - <b>N = 120:</b> $120 = 2^3 \\times 3^1 \\times 5^1$. Number of factors = $(3+1)(1+1)(1+1) = 16$. Too many factors.</p><p>We have two candidates, 60 and 90. The question asks for the smallest possible number of students. Between 60 and 90, the smallest is 60.</p>"
+        },
         {
           "text": "<p>Since we know the number must be a multiple of <INSERTION_INDEX_1>, we can eliminate <INSERTION_INDEX_2>. We also know that after <INSERTION_INDEX_3> days, the students can't find any more arrangements, meaning the number has <INSERTION_INDEX_4> factors. Now, we just list the factors of every number, starting with <INSERTION_INDEX_5>:<INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8> has <INSERTION_INDEX_9> factors, so the answer is <INSERTION_INDEX_10>.</p><p>Note - A faster way to find the factors of a number is really helpful in competitions, as you don't want to waste time listing them all.What we can do is find the prime factorization of a number. We'll use <INSERTION_INDEX_11> as an example here, so we take <INSERTION_INDEX_12> or <INSERTION_INDEX_13>. Now, we just add one to the power of each factor. So since we have powers of <INSERTION_INDEX_14>, <INSERTION_INDEX_15>, and <INSERTION_INDEX_16>, we turn those into <INSERTION_INDEX_17>, <INSERTION_INDEX_18>, and <INSERTION_INDEX_19>. Finally, we just multiply them together to get <INSERTION_INDEX_20> as the amount of factors in 60.</p>",
           "insertions": {
@@ -5634,6 +5700,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>Let the integer sums in the five cups A, B, C, D, E be $S_A, S_B, S_C, S_D, S_E$.</p><p>1. <b>Determine the sums for each cup:</b><br>   - The sums are five consecutive integers, increasing from A to E. Let them be $k, k+1, k+2, k+3, k+4$. <br>   - The total sum of the numbers on all 12 slips is the sum of the sums in the cups.<br>   - Slips: {2, 2, 2, 2.5, 2.5, 3, 3, 3, 3, 3.5, 4, 4.5}. <br>   - Total sum = $3(2) + 2(2.5) + 4(3) + 3.5 + 4 + 4.5 = 6 + 5 + 12 + 3.5 + 4 + 4.5 = 35$.<br>   - The sum of the cup totals is $k + (k+1) + (k+2) + (k+3) + (k+4) = 5k + 10$.<br>   - $5k + 10 = 35 \\implies 5k = 25 \\implies k=5$.<br>   - So, the required sums are: A=5, B=6, C=7, D=8, E=9.</p><p>2. <b>Analyze the constraints:</b><br>   - The sum in each cup must be an integer. The slips with decimal parts are {2.5, 2.5, 3.5, 4.5}. All have a .5 decimal part. To make an integer sum, a cup must contain an even number of these .5-slips (0, 2, or 4).<br>   - We are given that a '2' slip is in cup E and a '3' slip is in cup B. </p><p>3. <b>Determine the placement of the .5-slips:</b><br>   - There are four .5-slips. They can be paired up to make integer sums: {2.5, 2.5} (sum=5) and {3.5, 4.5} (sum=8).<br>   - This is a perfect fit for two of the cups:<br>     - Cup A requires a sum of 5. The two 2.5 slips achieve this: {2.5, 2.5}.<br>     - Cup D requires a sum of 8. The 3.5 and 4.5 slips achieve this: {3.5, 4.5}.</p><p>4. <b>Confirm the placement:</b><br>   - This arrangement places the 3.5 slip into cup D. Let's verify if the remaining slips can fill the other cups according to the rules.<br>   - Slips used: {2.5, 2.5, 3.5, 4.5}.<br>   - Slips remaining: {2, 2, 2, 3, 3, 3, 3, 4}.<br>   - Cup B (sum=6): Has a '3', needs 3 more. Can take one of the remaining '3' slips. So, B = {3, 3}.<br>   - Cup E (sum=9): Has a '2', needs 7 more. Can take a '3' and a '4'. So, E = {2, 3, 4}.<br>   - Cup C (sum=7): Remaining slips are {2, 2, 3}. Their sum is $2+2+3=7$. So, C = {2, 2, 3}.<br>   - The arrangement works.</p><p>Therefore, the slip with 3.5 must go into cup D.</p>"
+        },
+        {
           "text": "<p>The numbers have a sum of <INSERTION_INDEX_1>, which averages to <INSERTION_INDEX_2>, which means <INSERTION_INDEX_3> and<INSERTION_INDEX_4> will have the values <INSERTION_INDEX_5> and <INSERTION_INDEX_6>, respectively. Now, it's the process of elimination: Cup <INSERTION_INDEX_7>will have a sum of <INSERTION_INDEX_8>, so putting a <INSERTION_INDEX_9> slip in the cup will leave <INSERTION_INDEX_10>; however,all of our slips are bigger than <INSERTION_INDEX_11>, so this is impossible. Cup <INSERTION_INDEX_12> has a sum of <INSERTION_INDEX_13>, but we are told that it already has a <INSERTION_INDEX_14> slip, leaving <INSERTION_INDEX_15>, which is too small for the<INSERTION_INDEX_16> slip. Cup <INSERTION_INDEX_17> is a little bit trickier but still manageable. It must have a value of <INSERTION_INDEX_18>, so adding the <INSERTION_INDEX_19> slip leaves room for <INSERTION_INDEX_20>. This looks good at first as we have slips smaller than that, but upon closer inspection, we see that no slip fits exactly. And the smallest sum of two slips is <INSERTION_INDEX_21>, which is too big, so this case is also impossible. Cup <INSERTION_INDEX_22> has a sum of <INSERTION_INDEX_23>, but we are told it already has a <INSERTION_INDEX_24> slip. So, weare left with <INSERTION_INDEX_25>, which is identical to Cup C and thus also impossible.With all other choices removed, we are left with the answer: Cup <INSERTION_INDEX_26>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -5886,6 +5955,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Let's analyze the 76-game schedule for a single team. The league has two four-team divisions. [cite: 195, 196]</p><p>1. <b>Games within its own division:</b><br>   - A team's division has 3 other teams.<br>   - The team plays each of these 3 teams $N$ times. <br>   - Total games within the division = $3 \\times N$.</p><p>2. <b>Games against the other division:</b><br>   - The other division has 4 teams.<br>   - The team plays each of these 4 teams $M$ times. <br>   - Total games against the other division = $4 \\times M$.</p><p>3. <b>Set up the equation for the schedule:</b><br>   - The total number of games is 76.<br>   - So, $3N + 4M = 76$.</p><p>4. <b>Use the given constraints to solve for N and M:</b><br>   - We are given that $N > 2M$ and $M > 4$.  Since $M$ is a number of games, it must be an integer. So $M$ can be 5, 6, 7, ...<br>   - Let's substitute the first inequality into the equation to narrow down the possibilities for M. Since $N > 2M$, then $3N > 6M$.<br>   - Replace $3N$ in the equation: $3N + 4M = 76 \\implies 3N = 76 - 4M$.<br>   - So, $76 - 4M > 6M$.<br>   - $76 > 10M$.<br>   - $7.6 > M$.<br>   - We now have combined constraints for M: $4 < M < 7.6$. Since M must be an integer, the possible values for M are 5, 6, and 7.</p><p>5. <b>Test the integer values for M:</b><br>   - <b>If M = 5:</b> $3N + 4(5) = 76 \\implies 3N + 20 = 76 \\implies 3N = 56$. 56 is not divisible by 3.<br>   - <b>If M = 6:</b> $3N + 4(6) = 76 \\implies 3N + 24 = 76 \\implies 3N = 52$. 52 is not divisible by 3.<br>   - <b>If M = 7:</b> $3N + 4(7) = 76 \\implies 3N + 28 = 76 \\implies 3N = 48 \\implies N = 16$.<br>     Let's check if this solution satisfies $N > 2M$: Is $16 > 2(7)$? Yes, $16 > 14$. This is the correct solution.</p><p>6. <b>Answer the question:</b><br>   - The question asks for the number of games a team plays within its own division, which is $3N$.<br>   - Number of games = $3 \\times 16 = 48$.</p>"
+        },
         {
           "text": "<p>On one team they play <INSERTION_INDEX_1> games in their division and <INSERTION_INDEX_2> games in the other. This gives <INSERTION_INDEX_3>.</p><p>Since <INSERTION_INDEX_4> we start by trying M=5. This doesn't work because <INSERTION_INDEX_5> is not divisible by <INSERTION_INDEX_6>.</p><p>Next, <INSERTION_INDEX_7> does not work because <INSERTION_INDEX_8> is not divisible by <INSERTION_INDEX_9>.</p><p>We try <INSERTION_INDEX_10> does work by giving <INSERTION_INDEX_11> ,<INSERTION_INDEX_12> and thus <INSERTION_INDEX_13> games in their division.</p><p><INSERTION_INDEX_14> seems to work, until we realize this gives <INSERTION_INDEX_15>, but <INSERTION_INDEX_16> so this will not work.</p>",
           "insertions": {
@@ -6374,147 +6446,84 @@
       "answer": "C",
       "solutions": [
         {
-          "text": "<p>We can draw a diagram as shown:<INSERTION_INDEX_1> Let us focus on the <INSERTION_INDEX_2> big triangles that, together with the inscribed square, fill in the large square. If we zoom in on one of the four triangles, we can see that it is composed of a small unit square in the corner of the large square and two triangles, one smaller than the other. We are going to focus specifically on the smaller of the two triangles. This triangle is similar to the big triangle itself by <INSERTION_INDEX_3> similarity (because the two sides of a square are parallel. To prove this fact, draw a diagonal of the square and find congruent triangles). Let the shorter leg of the big triangle be <INSERTION_INDEX_4>; then <INSERTION_INDEX_5>.<INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8><INSERTION_INDEX_9>Thus, <INSERTION_INDEX_10>, because by symmetry, <INSERTION_INDEX_11>. Note that the other solution we got, namely, <INSERTION_INDEX_12>, is the length of the segment <INSERTION_INDEX_13>. <INSERTION_INDEX_14> and <INSERTION_INDEX_15> together sum to <INSERTION_INDEX_16>, the side of the length of the large square, and similarly, the sum of the solutions is <INSERTION_INDEX_17>. This solution is a result of the symmetry of the problem; if we had set the longer leg of the big triangle to be <INSERTION_INDEX_18>, then we would solve the same quadratic to find the same roots, the only difference being that we take the other root.</p><p>This means the area of each triangle is <INSERTION_INDEX_19>.Thus, the area of the square is <INSERTION_INDEX_20>.</p><p>Don't use this in a contest scenario, and only use it when practicing math skills.\u00a0:)</p><p><br/></p>",
+          "text": "<p>To solve this problem, we begin by drawing a line segment connecting points <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. </p><p><INSERTION_INDEX_3></p><p>Upon examination, we observe that <INSERTION_INDEX_4> forms a 3-4-5 right triangle. Additionally, <INSERTION_INDEX_5> constitutes a right triangle, which we can verify using the 5-12-13 Pythagorean triple. Armed with these measurements, we can proceed with the calculation. The area of <INSERTION_INDEX_6> equals <INSERTION_INDEX_7>, while <INSERTION_INDEX_8> has an area of <INSERTION_INDEX_9>. Therefore, the total area of quadrilateral <INSERTION_INDEX_10> equals 30 minus 6, which gives us <INSERTION_INDEX_11></p><p>~CHECKMATE2021</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
-              "picture": "//latex.artofproblemsolving.com/2/f/3/2f3c48a29012ff643c122bc29fed89b069d59e9c.png",
-              "alt_type": "asy",
-              "alt_value": "[asy] size(75); draw((0,0)--(0,5)--(5,5)--(5,0)--cycle); filldraw((0,4)--(1,4)--(1,5)--(0,5)--cycle, gray); filldraw((0,0)--(1,0)--(1,1)--(0,1)--cycle, gray); filldraw((4,0)--(4,1)--(5,1)--(5,0)--cycle, gray); filldraw((4,4)--(4,5)--(5,5)--(5,4)--cycle, gray); path arc = arc((2.5,4),1.5,0,90); pair P = intersectionpoint(arc,(0,5)--(5,5)); pair Pp=rotate(90,(2.5,2.5))*P, Ppp = rotate(90,(2.5,2.5))*Pp, Pppp=rotate(90,(2.5,2.5))*Ppp; draw(P--Pp--Ppp--Pppp--cycle); [/asy]",
-              "width": "125",
-              "height": "125"
+              "picture": "//latex.artofproblemsolving.com/f/f/5/ff5fb3d775862e2123b007eb4373ff6cc1a34d4e.png",
+              "alt_type": "latex",
+              "alt_value": "$B$",
+              "width": "14",
+              "height": "12"
             },
             "INSERTION_INDEX_2": {
-              "picture": "//latex.artofproblemsolving.com/c/7/c/c7cab1a05e1e0c1d51a6a219d96577a16b7abf9d.png",
+              "picture": "//latex.artofproblemsolving.com/9/f/f/9ffb448918db29f2a72f8f87f421b3b3cad18f95.png",
               "alt_type": "latex",
-              "alt_value": "$4$",
-              "width": "9",
-              "height": "12"
+              "alt_value": "$D$",
+              "width": "17",
+              "height": "14"
             },
             "INSERTION_INDEX_3": {
-              "picture": "//latex.artofproblemsolving.com/e/d/7/ed7b97f90f271cacdec9cdb730fdadf133407acb.png",
-              "alt_type": "latex",
-              "alt_value": "$\\mathrm{AA}$",
-              "width": "27",
-              "height": "13"
+              "picture": "//latex.artofproblemsolving.com/d/6/6/d66f241a2e30d6733c30bc1e3c4236af99f628ce.png",
+              "alt_type": "asy",
+              "alt_value": "[asy]draw((0,0)--(2.4,3.6)--(0,5)--(12,0)--(0,0)); draw((0,0)--(0,5)); label(\"$B$\", (0, 0), SW); label(\"$A$\", (12, 0), ESE); label(\"$C$\", (2.4, 3.6), SE); label(\"$D$\", (0, 5), N);[/asy]",
+              "width": "252",
+              "height": "128"
             },
             "INSERTION_INDEX_4": {
-              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
+              "picture": "//latex.artofproblemsolving.com/1/2/f/12f372757d55c2d07adc720932c6d6e1396aa389.png",
               "alt_type": "latex",
-              "alt_value": "$x$",
-              "width": "12",
-              "height": "10"
+              "alt_value": "$\\triangle BCD$",
+              "width": "60",
+              "height": "13"
             },
             "INSERTION_INDEX_5": {
-              "picture": "//latex.artofproblemsolving.com/7/d/4/7d43b34249e23b01bb9cc89befec7517bb614378.png",
+              "picture": "//latex.artofproblemsolving.com/d/a/e/dae57734732e77d0de15f999bd1f4f9ee814d8a3.png",
               "alt_type": "latex",
-              "alt_value": "$\\dfrac{x}{x-1}=\\dfrac{5-x}{1}$",
-              "width": "114",
-              "height": "38"
+              "alt_value": "$\\triangle BDA$",
+              "width": "60",
+              "height": "13"
             },
             "INSERTION_INDEX_6": {
-              "picture": "//latex.artofproblemsolving.com/c/7/7/c77d96e62cdcd23bf81e073e0148887e1bf01d80.png",
+              "picture": "//latex.artofproblemsolving.com/d/a/e/dae57734732e77d0de15f999bd1f4f9ee814d8a3.png",
               "alt_type": "latex",
-              "alt_value": "\\[x=-x^2+6x-5\\]",
-              "width": "138",
-              "height": "16"
+              "alt_value": "$\\triangle BDA$",
+              "width": "60",
+              "height": "13"
             },
             "INSERTION_INDEX_7": {
-              "picture": "//latex.artofproblemsolving.com/0/f/2/0f26da441af2f91c38eb4fb47b5886d5da9775b0.png",
+              "picture": "//latex.artofproblemsolving.com/3/3/a/33a7676fa540fa7a49121c32ec0c926dc78fd023.png",
               "alt_type": "latex",
-              "alt_value": "\\[x^2-5x+5=0\\]",
-              "width": "123",
-              "height": "16"
+              "alt_value": "$\\frac{5\\cdot 12}{2}$",
+              "width": "42",
+              "height": "37"
             },
             "INSERTION_INDEX_8": {
-              "picture": "//latex.artofproblemsolving.com/9/4/6/946c0be301e9cbfa5e5802f3eaa1f29d4083b560.png",
+              "picture": "//latex.artofproblemsolving.com/1/2/f/12f372757d55c2d07adc720932c6d6e1396aa389.png",
               "alt_type": "latex",
-              "alt_value": "\\[x=\\dfrac{5\\pm \\sqrt{(-5)^2-(4)(1)(5)}}{2}\\]",
-              "width": "222",
-              "height": "41"
+              "alt_value": "$\\triangle BCD$",
+              "width": "60",
+              "height": "13"
             },
             "INSERTION_INDEX_9": {
-              "picture": "//latex.artofproblemsolving.com/6/1/3/61327043a82f4aa7c550aee56bbea0ba47e9a91e.png",
+              "picture": "//latex.artofproblemsolving.com/6/7/a/67af5e69ca5cd7d3883db2b345ee2cab700b1b4a.png",
               "alt_type": "latex",
-              "alt_value": "\\[x=\\dfrac{5\\pm \\sqrt{5}}{2}\\]",
-              "width": "92",
-              "height": "41"
+              "alt_value": "$\\frac{3\\cdot 4}{2}$",
+              "width": "33",
+              "height": "37"
             },
             "INSERTION_INDEX_10": {
-              "picture": "//latex.artofproblemsolving.com/2/9/7/2978530493b8758d858726ebe653c0a75846f4ab.png",
+              "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
               "alt_type": "latex",
-              "alt_value": "$x=\\dfrac{5-\\sqrt{5}}{2}$",
-              "width": "96",
-              "height": "43"
+              "alt_value": "$ABCD$",
+              "width": "57",
+              "height": "13"
             },
             "INSERTION_INDEX_11": {
-              "picture": "//latex.artofproblemsolving.com/8/1/3/813e12ee527f4b85c857468734aca5b27d51d1a6.png",
+              "picture": "//latex.artofproblemsolving.com/1/7/3/17349e82f19ff0b9193d24284ed1288b7b61b3e9.png",
               "alt_type": "latex",
-              "alt_value": "$x < \\dfrac52$",
-              "width": "46",
-              "height": "37"
-            },
-            "INSERTION_INDEX_12": {
-              "picture": "//latex.artofproblemsolving.com/3/7/e/37e1852312a1386ade3b1ba24ab337e458454191.png",
-              "alt_type": "latex",
-              "alt_value": "$x=\\dfrac{5+\\sqrt 5} 2$",
-              "width": "92",
-              "height": "41"
-            },
-            "INSERTION_INDEX_13": {
-              "picture": "//latex.artofproblemsolving.com/c/4/4/c445a843f7b9a5ae5e089d62c7a3d22d55a9bee6.png",
-              "alt_type": "latex",
-              "alt_value": "$5-x$",
-              "width": "41",
-              "height": "12"
-            },
-            "INSERTION_INDEX_14": {
-              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
-              "alt_type": "latex",
-              "alt_value": "$x$",
-              "width": "12",
-              "height": "10"
-            },
-            "INSERTION_INDEX_15": {
-              "picture": "//latex.artofproblemsolving.com/c/4/4/c445a843f7b9a5ae5e089d62c7a3d22d55a9bee6.png",
-              "alt_type": "latex",
-              "alt_value": "$5-x$",
-              "width": "41",
-              "height": "12"
-            },
-            "INSERTION_INDEX_16": {
-              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
-              "alt_type": "latex",
-              "alt_value": "$5$",
-              "width": "8",
-              "height": "12"
-            },
-            "INSERTION_INDEX_17": {
-              "picture": "//latex.artofproblemsolving.com/7/9/0/79069377f91364c2f87a64e5f9f562a091c8a6c1.png",
-              "alt_type": "latex",
-              "alt_value": "$5$",
-              "width": "8",
-              "height": "12"
-            },
-            "INSERTION_INDEX_18": {
-              "picture": "//latex.artofproblemsolving.com/2/6/e/26eeb5258ca5099acf8fe96b2a1049c48c89a5e6.png",
-              "alt_type": "latex",
-              "alt_value": "$x$",
-              "width": "12",
-              "height": "10"
-            },
-            "INSERTION_INDEX_19": {
-              "picture": "//latex.artofproblemsolving.com/d/8/e/d8eef00b53278b8b811972e5567708f943d9f8fb.png",
-              "alt_type": "latex",
-              "alt_value": "$\\dfrac{5-\\sqrt{5}}{2}*(5-\\dfrac{5-\\sqrt{5}}{2})*\\dfrac{1}{2}=\\dfrac{5}{2}$",
-              "width": "247",
-              "height": "41"
-            },
-            "INSERTION_INDEX_20": {
-              "picture": "//latex.artofproblemsolving.com/8/d/1/8d152ca7c4faca8127bad65fe33773890fff3f0e.png",
-              "alt_type": "latex",
-              "alt_value": "$25-(4*\\dfrac{5}{2})=15\\implies \\boxed{\\textbf{(C)}}$",
-              "width": "226",
-              "height": "37"
+              "alt_value": "$30-6 = \\boxed{\\textbf{(B)}\\ 24}.$",
+              "width": "140",
+              "height": "28"
             }
           }
         },

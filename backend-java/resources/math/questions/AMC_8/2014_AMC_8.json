@@ -71,6 +71,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>The problem asks for the value of H - T.  First, we need to calculate the values of H and T based on the given expressions.</p><p>Harry's calculation follows the standard order of operations, including the parentheses. \n$H = 8 - (2 + 5) = 8 - 7 = 1$.</p><p>Terry ignores the parentheses and calculates the expression as $8 - 2 + 5$.  When dealing with only addition and subtraction, the calculation is performed from left to right.\n$T = (8 - 2) + 5 = 6 + 5 = 11$.</p><p>Finally, we calculate H - T:\n$H - T = 1 - 11 = -10$.</p><p>There appears to be an error in the provided options, as -10 is not listed.  However, if the question had asked for T - H, the answer would be $11 - 1 = 10$, which corresponds to options (A) and (E).</p>"
+        },
+        {
           "text": "<p>We have <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. Clearly <INSERTION_INDEX_3>, so our answer is <INSERTION_INDEX_4>.</p><p><br/></p><p><br/></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -175,6 +178,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>Paul needs to pay Paula 35 cents using 5-cent, 10-cent, and 25-cent coins.  We need to find the difference between the largest and smallest number of coins he can use. </p><p><b>To find the smallest number of coins</b>, we should use the coins with the highest value first.\n<ul><li>Start with a 25-cent coin. Remaining amount: $35 - 25 = 10$ cents.</li><li>Use a 10-cent coin to pay the rest.</li></ul>\nThis gives a total of $1 + 1 = 2$ coins.</p><p><b>To find the largest number of coins</b>, we should use the coins with the lowest value.\n<ul><li>Use only 5-cent coins.</li><li>Number of coins = $35 \\div 5 = 7$ coins.</li></ul></p><p>The difference between the largest and smallest number of coins is $7 - 2 = 5$.</p>"
+        },
+        {
           "text": "<p>The fewest amount of coins that can be used is <INSERTION_INDEX_1> (a quarter and a dime). The greatest amount is <INSERTION_INDEX_2>, if he only uses nickels. Therefore we have <INSERTION_INDEX_3>.</p><p><br/></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -252,6 +258,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>We need to calculate the total number of pages in the book Isabella read over a week (7 days). </p><p>For the first three days, she read an average of 36 pages per day. \nTotal pages for the first three days = $3 \\times 36 = 108$ pages.</p><p>For the next three days, she read an average of 44 pages per day. \nTotal pages for the next three days = $3 \\times 44 = 132$ pages.</p><p>On the last (seventh) day, she read 10 pages. \n</p><p>The total number of pages in the book is the sum of the pages read each day:\nTotal pages = $108 + 132 + 10 = 250$ pages.</p>"
+        },
         {
           "text": "<p>Isabella read <INSERTION_INDEX_1> pages in the first 6 days. Although this can be calculated directly, it is simpler to calculate it as <INSERTION_INDEX_2>, which gives that she read <INSERTION_INDEX_3> pages. On her last day, she read <INSERTION_INDEX_4> more pages for a total of <INSERTION_INDEX_5> pages.</p>",
           "insertions": {
@@ -331,6 +340,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>The sum of two prime numbers is 85.  Let the two prime numbers be $p_1$ and $p_2$.</p><p>$p_1 + p_2 = 85$.</p><p>The sum, 85, is an odd number. The sum of two integers is odd only if one is even and the other is odd.</p><p>The only even prime number is 2. Therefore, one of the primes must be 2. Let's say $p_1 = 2$.</p><p>Substituting this into the equation:\n$2 + p_2 = 85$\n$p_2 = 83$.</p><p>We must check if 83 is a prime number. It is not divisible by 2, 3 (since 8+3=11), or 5. Checking 7, $83 = 7 \\times 11 + 6$. Since $\\sqrt{83} \\approx 9.1$, we only need to check primes up to 7. Thus, 83 is prime.</p><p>The two prime numbers are 2 and 83. The problem asks for their product. \nProduct = $2 \\times 83 = 166$.</p>"
+        },
+        {
           "text": "<p>Since the two prime numbers sum to an odd number, one of them must be even. The only even prime number is <INSERTION_INDEX_1>. The other prime number is <INSERTION_INDEX_2>, and the product of these two numbers is <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -409,6 +421,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>We want to find out how many miles Margie can drive on $20 worth of gas. </p><p>First, let's determine how many gallons of gas she can buy. Gas costs $4 per gallon. \nNumber of gallons = Total cost / Cost per gallon = $20 / $4 = 5$ gallons.</p><p>Next, we calculate the distance she can travel with these gallons. Her car gets 32 miles per gallon. \nDistance = Number of gallons $\\times$ Miles per gallon = $5 \\times 32 = 160$ miles.</p><p>So, Margie can drive 160 miles on $20 worth of gas.</p>"
+        },
+        {
           "text": "<p>Margie can afford <INSERTION_INDEX_1> gallons of gas. She can go <INSERTION_INDEX_2> miles on this amount of gas.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -479,6 +494,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We need to find the sum of the areas of six rectangles.  Each rectangle has a width of 2.  The lengths are given as 1, 4, 9, 16, 25, and 36. </p><p>The area of a rectangle is calculated as width $\\times$ length.</p><p>We can calculate the area of each rectangle and then sum them up:\n<ul><li>Area 1: $2 \\times 1 = 2$</li>\n<li>Area 2: $2 \\times 4 = 8$</li>\n<li>Area 3: $2 \\times 9 = 18$</li>\n<li>Area 4: $2 \\times 16 = 32$</li>\n<li>Area 5: $2 \\times 25 = 50$</li>\n<li>Area 6: $2 \\times 36 = 72$</li></ul></p><p>Sum of areas = $2 + 8 + 18 + 32 + 50 + 72 = 182$.</p><p>Alternatively, we can factor out the common width:\nSum = $2 \\times (1 + 4 + 9 + 16 + 25 + 36) = 2 \\times 91 = 182$.</p>"
+        },
         {
           "text": "<p>The sum of the areas is equal to <INSERTION_INDEX_1>. This is equal to <INSERTION_INDEX_2>, which is equal to <INSERTION_INDEX_3>. This is equal to our final answer of <INSERTION_INDEX_4>.</p><p><br/></p>",
           "insertions": {
@@ -594,7 +612,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf{(A) }3\u00a0: 4\\qquad\\textbf{(B) }4\u00a0: 3\\qquad\\textbf{(C) }3\u00a0: 2\\qquad\\textbf{(D) }7\u00a0: 4\\qquad \\textbf{(E) }2\u00a0: 1$"
+          "$\\textbf{(A) }3 : 4\\qquad\\textbf{(B) }4 : 3\\qquad\\textbf{(C) }3 : 2\\qquad\\textbf{(D) }7 : 4\\qquad \\textbf{(E) }2 : 1$"
         ],
         "asy_choices": []
       },
@@ -602,6 +620,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>The class has 28 students in total.  There are 4 more girls than boys.  Let G be the number of girls and B be the number of boys.</p><p>We can set up a system of two equations:\n1) $G + B = 28$\n2) $G = B + 4$</p><p>Substitute the second equation into the first:\n$(B + 4) + B = 28$\n$2B + 4 = 28$\n$2B = 24$\n$B = 12$</p><p>So, there are 12 boys. The number of girls is:\n$G = 12 + 4 = 16$.</p><p>The question asks for the ratio of the number of girls to the number of boys (G:B). \nRatio = $16:12$.</p><p>To simplify the ratio, divide both numbers by their greatest common divisor, which is 4:\n$16/4 : 12/4 \\implies 4:3$.</p>"
+        },
         {
           "text": "<p>Let <INSERTION_INDEX_1> being the number of girls in the class. The number of boys in the class is equal to <INSERTION_INDEX_2>. Since the total number of students is equal to <INSERTION_INDEX_3>, we get <INSERTION_INDEX_4>. Solving this equation, we get <INSERTION_INDEX_5>. There are <INSERTION_INDEX_6> boys in our class, and our answer is <INSERTION_INDEX_7>.</p>",
           "insertions": {
@@ -657,7 +678,7 @@
           }
         },
         {
-          "text": "<p>To make the amount of boys and girls equal, 28 - 4 = 24. 24/2 = 12. The girls would need to be 12 + the 4 that we subtracted = 16. The boys would be 12. The ratio of girls to boys would be 16\u00a0: 12, but simplified would be 4\u00a0: 3. Thus, the answer is 4\u00a0: 3.</p><p>~MiracleMaths</p>",
+          "text": "<p>To make the amount of boys and girls equal, 28 - 4 = 24. 24/2 = 12. The girls would need to be 12 + the 4 that we subtracted = 16. The boys would be 12. The ratio of girls to boys would be 16 : 12, but simplified would be 4 : 3. Thus, the answer is 4 : 3.</p><p>~MiracleMaths</p>",
           "insertions": {}
         }
       ],
@@ -712,6 +733,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Eleven math club members paid the same amount, and the total was $\\$1A2. This means the number 1A2 must be divisible by 11.</p><p>A number is divisible by 11 if the alternating sum of its digits is a multiple of 11. For a 3-digit number `xyz`, the test is $z - y + x$ should be a multiple of 11.</p><p>For the number 1A2, the alternating sum is:\n$2 - A + 1 = 3 - A$.</p><p>Since A is a single digit from 0 to 9, the expression $3 - A$ can range from $3 - 9 = -6$ to $3 - 0 = 3$. The only multiple of 11 in this range is 0.</p><p>So, we set $3 - A = 0$, which gives $A = 3$.</p><p>The total amount paid was $132. We can check this: $132 \\div 11 = 12$. Each member paid $12, which is a whole dollar amount.</p>"
+        },
         {
           "text": "<p>Since all the eleven members paid the same amount, that means that the total must be divisible by <INSERTION_INDEX_1>. We can do some trial-and-error to get <INSERTION_INDEX_2>, so our answer is <INSERTION_INDEX_3>~SparklyFlowers</p>",
           "insertions": {
@@ -927,6 +951,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>In $\\triangle ABC$, D is a point on side $\\overline{AC}$.  We are given that $BD = DC$, which means $\\triangle BDC$ is an isosceles triangle.  We are also given that $\\angle BCD = 70^{\\circ}$. </p><p>In an isosceles triangle, the angles opposite the equal sides are equal. Therefore, $\\angle DBC = \\angle BCD = 70^{\\circ}$.</p><p>The sum of angles in a triangle is $180^{\\circ}$. For $\\triangle BDC$:\n$\\angle BDC = 180^{\\circ} - (\\angle DBC + \\angle BCD) = 180^{\\circ} - (70^{\\circ} + 70^{\\circ}) = 180^{\\circ} - 140^{\\circ} = 40^{\\circ}$.</p><p>The angles $\\angle ADB$ and $\\angle BDC$ are adjacent angles on the straight line segment AC, so they are supplementary. Their sum is $180^{\\circ}$.\n$\\angle ADB + \\angle BDC = 180^{\\circ}$\n$\\angle ADB + 40^{\\circ} = 180^{\\circ}$\n$\\angle ADB = 140^{\\circ}$.</p>"
+        },
+        {
           "text": "<p>Using angle chasing is a good way to solve this problem. <INSERTION_INDEX_1>, so <INSERTION_INDEX_2>, because it is an isosceles triangle. Then <INSERTION_INDEX_3>. Since <INSERTION_INDEX_4> and <INSERTION_INDEX_5> are supplementary, <INSERTION_INDEX_6>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1033,6 +1060,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>The first AMC 8 was held in 1985 and has occurred annually since then.  Samantha took the seventh AMC 8. </p><p>The year of the $n$-th AMC 8 can be calculated as $1985 + (n-1)$.\nFor the seventh AMC 8, the year was $1985 + (7 - 1) = 1985 + 6 = 1991$.</p><p>Samantha turned 12 years old in the year she took the test, which was 1991. </p><p>To find her birth year, we subtract her age from that year:\nBirth Year = $1991 - 12 = 1979$.</p>"
+        },
+        {
           "text": "<p>The seventh AMC 8 would have been given in <INSERTION_INDEX_1>. If Samantha was 12 then, that means she was born 12 years ago, so she was born in <INSERTION_INDEX_2>.</p><p>Our answer is <INSERTION_INDEX_3>corrections made by DrDominic</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1107,6 +1137,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>Jack's house is at a starting point, let's call it (0,0). Jill's house is 3 blocks east and 2 blocks north, at (3,2).  Jack must avoid the intersection at 1 block east and 1 block north, which is (1,1). </p><p>This is a pathfinding problem on a grid. We can solve this by subtracting the number of 'bad' paths (those going through (1,1)) from the total number of paths.</p><p><b>Total number of paths</b> from (0,0) to (3,2) requires 3 'East' moves and 2 'North' moves, a total of 5 moves. The number of unique paths is given by the combination formula:\nTotal Paths = $\\binom{5}{2} = \\frac{5!}{2!(5-2)!} = \\frac{5 \\times 4}{2 \\times 1} = 10$.</p><p><b>Number of 'bad' paths</b> that go through (1,1). This is a two-part path:\n<ol><li>Paths from (0,0) to (1,1): Requires 1 'East' and 1 'North' move. Number of paths = $\\binom{2}{1} = 2$.</li>\n<li>Paths from (1,1) to (3,2): Requires (3-1)=2 'East' and (2-1)=1 'North' moves. Number of paths = $\\binom{3}{1} = 3$.</li></ol>\nTotal 'bad' paths = (Paths to (1,1)) $\\times$ (Paths from (1,1)) = $2 \\times 3 = 6$.</p><p><b>Number of allowed paths</b> = Total Paths - 'Bad' Paths = $10 - 6 = 4$.</p>"
+        },
         {
           "text": "<p>We can apply complementary counting and count the paths that DO go through the blocked intersection, which is <INSERTION_INDEX_1>. There are a total of <INSERTION_INDEX_2> paths, so there are <INSERTION_INDEX_3> paths possible. <INSERTION_INDEX_4> is the correct answer.</p>",
           "insertions": {
@@ -1217,6 +1250,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>There are three celebrities and three corresponding baby pictures.  We want to find the probability that a random guess matches all three correctly. </p><p>Let's determine the total number of ways a reader can match the pictures. This is a permutation problem.</p><ul><li>For the first celebrity, there are 3 possible baby pictures to choose from.</li><li>After choosing one, there are 2 remaining pictures for the second celebrity.</li><li>Finally, there is only 1 picture left for the third celebrity.</li></ul><p>The total number of possible ways to match the pictures is the product of the choices: $3 \\times 2 \\times 1 = 3! = 6$.</p><p>Only one of these 6 possible arrangements is the correct one. The probability of guessing correctly is the ratio of correct outcomes to total outcomes:\nProbability = $\\frac{1}{6}$.</p>"
+        },
         {
           "text": "<p>Let's call the celebrities A, B, and C. There is a <INSERTION_INDEX_1> chance that celebrity A's picture will be selected, and a <INSERTION_INDEX_2> chance that his baby picture will be selected. That means there are two celebrities left. There is now a <INSERTION_INDEX_3> chance that celebrity B's picture will be selected, and another <INSERTION_INDEX_4> chance that his baby picture will be selected. This leaves a <INSERTION_INDEX_5> chance for the last celebrity, so the total probability is <INSERTION_INDEX_6>. However, the order of the celebrities doesn't matter, so the final probability will be <INSERTION_INDEX_7></p>",
           "insertions": {
@@ -1422,6 +1458,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>We are given that n and m are integers and $n^2 + m^2$ is an even number.  We need to determine which of the given statements is impossible.</p><p>Let's analyze the parity of a squared integer:\n<ul><li>If an integer is even (e.g., $2k$), its square is $(2k)^2 = 4k^2$, which is even.</li>\n<li>If an integer is odd (e.g., $2k+1$), its square is $(2k+1)^2 = 4k^2 + 4k + 1$, which is odd.</li></ul></p><p>So, $n^2$ has the same parity as $n$. The condition is that $n^2 + m^2$ is even. This can happen in two ways:\n<ol><li><b>Even + Even = Even</b>: This means $n^2$ is even and $m^2$ is even. This implies that both n and m are even. This makes statement (A) possible.</li>\n<li><b>Odd + Odd = Even</b>: This means $n^2$ is odd and $m^2$ is odd. This implies that both n and m are odd. This makes statement (B) possible.</li></ol></p><p>The case where one is even and one is odd would result in $n^2 + m^2$ being odd (Even + Odd = Odd), which contradicts the given information. Thus, n and m must have the same parity.</p><p>Now let's check the parity of $n+m$:\n<ul><li>If n and m are both even, $n+m$ is even.</li>\n<li>If n and m are both odd, $n+m$ is even.</li></ul></p><p>In both possible scenarios, $n+m$ must be even. Therefore, statement (C) is always true. Statement (D), that $n+m$ is odd, can only happen if one is even and one is odd, a case we've ruled out. Thus, it is impossible for $n+m$ to be odd. </p>"
+        },
+        {
           "text": "<p>Since <INSERTION_INDEX_1> is even, either both <INSERTION_INDEX_2> and <INSERTION_INDEX_3> are even, or they are both odd. Therefore, <INSERTION_INDEX_4> and <INSERTION_INDEX_5> are either both even or both odd, since the square of an even number is even and the square of an odd number is odd. As a result, <INSERTION_INDEX_6> must be even. The answer, then, is <INSERTION_INDEX_7> <INSERTION_INDEX_8> is odd.</p><p><br/></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1574,6 +1613,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>The figure shown is a trapezoid formed by a rectangle ABCD and a right triangle DCE that have the same area.  From the figure, the rectangle's dimensions are height AB=5 and width AD=6. </p><p>First, calculate the area of the rectangle ABCD:\nArea = width $\\times$ height = $6 \\times 5 = 30$ square units.</p><p>The area of the right triangle DCE is the same, so Area$_{DCE} = 30$.  The triangle is a right triangle with the right angle at C.  Its base is DC and its height is CE. From the rectangle, we know the length of side DC is the same as AB, so $DC = 5$.</p><p>The area of a triangle is given by the formula $\\frac{1}{2} \\times \\text{base} \\times \\text{height}$.\n$30 = \\frac{1}{2} \\times DC \\times CE$\n$30 = \\frac{1}{2} \\times 5 \\times CE$\n$60 = 5 \\times CE$\n$CE = 12$.</p><p>The question asks for the length of DE, which is the hypotenuse of the right triangle DCE.  We can use the Pythagorean theorem:\n$DE^2 = DC^2 + CE^2$\n$DE^2 = 5^2 + 12^2$\n$DE^2 = 25 + 144 = 169$\n$DE = \\sqrt{169} = 13$.</p>"
+        },
         {
           "text": "<p>The area of <INSERTION_INDEX_1> is <INSERTION_INDEX_2>. The area of <INSERTION_INDEX_3> is <INSERTION_INDEX_4>, which also must be equal to the area of <INSERTION_INDEX_5>, which, since <INSERTION_INDEX_6>, must in turn equal <INSERTION_INDEX_7>. Through transitivity, then, <INSERTION_INDEX_8>, and <INSERTION_INDEX_9>. Then, using the Pythagorean Theorem, you should be able to figure out that <INSERTION_INDEX_10> is a <INSERTION_INDEX_11> triangle, so <INSERTION_INDEX_12> , or <INSERTION_INDEX_13>.</p>",
           "insertions": {
@@ -1746,7 +1788,7 @@
           }
         },
         {
-          "text": "<p>This problem can be solved with the Pythagorean Theorem (<INSERTION_INDEX_1>). We know <INSERTION_INDEX_2>, so <INSERTION_INDEX_3>. <INSERTION_INDEX_4> is twice the length of <INSERTION_INDEX_5>, so <INSERTION_INDEX_6>. <INSERTION_INDEX_7>. <INSERTION_INDEX_8>. <INSERTION_INDEX_9>. <INSERTION_INDEX_10>. <INSERTION_INDEX_11> has a square root of <INSERTION_INDEX_12>, so the hypotenuse or <INSERTION_INDEX_13> is <INSERTION_INDEX_14>. The answer is <INSERTION_INDEX_15>.</p><p>\u2014\u2014MiracleMaths</p><p>Note: Another way to find out that CE is 12 is by using logic. Since DC = 5, we can reason that the triangle is a 5 - 12 - 13 triangle, because the only Pythagorean Triple with 5 as a leg(not hypotenuse, as that would be the case for a 3 - 4 - 5 right triangle), is 5 - 12 - 13. We know DE is the hypotenuse, so it can\u2019t be 12, which means CE has to be 12, which, in turn, means that DE has to be: 13 <INSERTION_INDEX_16>.</p>",
+          "text": "<p>This problem can be solved with the Pythagorean Theorem (<INSERTION_INDEX_1>). We know <INSERTION_INDEX_2>, so <INSERTION_INDEX_3>. <INSERTION_INDEX_4> is twice the length of <INSERTION_INDEX_5>, so <INSERTION_INDEX_6>. <INSERTION_INDEX_7>. <INSERTION_INDEX_8>. <INSERTION_INDEX_9>. <INSERTION_INDEX_10>. <INSERTION_INDEX_11> has a square root of <INSERTION_INDEX_12>, so the hypotenuse or <INSERTION_INDEX_13> is <INSERTION_INDEX_14>. The answer is <INSERTION_INDEX_15>.</p><p>——MiracleMaths</p><p>Note: Another way to find out that CE is 12 is by using logic. Since DC = 5, we can reason that the triangle is a 5 - 12 - 13 triangle, because the only Pythagorean Triple with 5 as a leg(not hypotenuse, as that would be the case for a 3 - 4 - 5 right triangle), is 5 - 12 - 13. We know DE is the hypotenuse, so it can’t be 12, which means CE has to be 12, which, in turn, means that DE has to be: 13 <INSERTION_INDEX_16>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/7/f/b/7fbd4264fbec874b1c14992abd59ea22d4daf604.png",
@@ -1943,6 +1985,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>The circle is divided into 12 equal arcs, which means the angle between consecutive letters from the center O is $360^{\\circ} / 12 = 30^{\\circ}$.  We need to find the sum of angles x and y, where x is $\\angle AEO$ and y is $\\angle OGI$.</p><p><b>For angle x in $\\triangle AOE$:</b>\n<ul><li>OA and OE are radii of the circle, so $OA=OE$. This makes $\\triangle AOE$ an isosceles triangle.</li><li>The central angle $\\angle AOE$ spans 4 arcs (A to B, B to C, C to D, D to E). So, $\\angle AOE = 4 \\times 30^{\\circ} = 120^{\\circ}$.</li><li>In an isosceles triangle, the base angles are equal: $\\angle OAE = \\angle OEA = x$.</li><li>The sum of angles in a triangle is $180^{\\circ}$: $x + x + 120^{\\circ} = 180^{\\circ} \\implies 2x = 60^{\\circ} \\implies x = 30^{\\circ}$.</li></ul></p><p><b>For angle y in $\\triangle OGI$:</b>\n<ul><li>OG and OI are radii, so $OG=OI$. This makes $\\triangle OGI$ an isosceles triangle.</li><li>The central angle $\\angle GOI$ spans 2 arcs (G to H, H to I). So, $\\angle GOI = 2 \\times 30^{\\circ} = 60^{\\circ}$.</li><li>The base angles are equal: $\\angle OGI = \\angle OIG = y$.</li><li>Sum of angles: $y + y + 60^{\\circ} = 180^{\\circ} \\implies 2y = 120^{\\circ} \\implies y = 60^{\\circ}$.</li></ul></p><p>The sum of the angles is $x + y = 30^{\\circ} + 60^{\\circ} = 90^{\\circ}$.</p>"
+        },
+        {
           "text": "<p>The measure of an inscribed angle is half the measure of its corresponding central angle. Since each unit arc is <INSERTION_INDEX_1> of the circle's circumference, each unit central angle measures <INSERTION_INDEX_2>. From this, <INSERTION_INDEX_3>, so <INSERTION_INDEX_4>. Also, <INSERTION_INDEX_5>, so <INSERTION_INDEX_6>. The number of degrees in the sum of both angles is <INSERTION_INDEX_7></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2096,6 +2141,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>We need to find the total number of basketball games played in a season by the 8 teams in the conference. </p><p>The games can be divided into two types: conference games and non-conference games. </p><p><b>Conference Games:</b>\n<ul><li>There are 8 teams, and each team plays every other team. The number of pairs of teams is $\\binom{8}{2} = \\frac{8 \\times 7}{2} = 28$ pairs.</li>\n<li>Each pair plays twice (home and away). </li>\n<li>Total conference games = $28 \\times 2 = 56$ games.</li></ul></p><p><b>Non-Conference Games:</b>\n<ul><li>Each of the 8 teams plays 4 games against non-conference opponents. </li>\n<li>Total non-conference games = $8 \\text{ teams} \\times 4 \\text{ games/team} = 32$ games.</li></ul></p><p>The total number of games is the sum of these two types:\nTotal Games = $56 + 32 = 88$ games.</p>"
+        },
+        {
           "text": "<p>Within the conference, there are 8 teams, so there are <INSERTION_INDEX_1> pairings of teams, and each pair must play two games, for a total of <INSERTION_INDEX_2> games within the conference.</p><p>Each team also plays 4 games outside the conference, and there are 8 teams, so there are a total of <INSERTION_INDEX_3> games outside the conference.</p><p>Therefore, the total number of games is <INSERTION_INDEX_4>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2199,6 +2247,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>George walks 1 mile to school. His normal speed is 3 mph.  We can calculate his usual travel time.</p><p>Time = Distance / Speed\nNormal time = $1 \\text{ mile} / 3 \\text{ mph} = 1/3$ hour.\n$1/3$ hour is equal to 20 minutes.</p><p>Today, he walked the first 1/2 mile at a slower speed of 2 mph. \nTime for the first half = $(1/2 \\text{ mile}) / (2 \\text{ mph}) = 1/4$ hour.\n$1/4$ hour is equal to 15 minutes.</p><p>To arrive on time, his total journey must still take 20 minutes. He has already used 15 minutes.\nTime remaining = $20 - 15 = 5$ minutes.\nWe need to convert this back to hours: 5 minutes = $5/60 = 1/12$ hour.</p><p>The distance remaining is the last 1/2 mile.  He must cover this distance in $1/12$ hour. We can now calculate the required speed.\nRequired Speed = Distance / Time = $(1/2 \\text{ mile}) / (1/12 \\text{ hour}) = \\frac{1}{2} \\times 12 = 6$ mph.</p>"
+        },
+        {
           "text": "<p>Note that on a normal day, it takes him <INSERTION_INDEX_1> hour to get to school. However, today it took <INSERTION_INDEX_2> hour to walk the first <INSERTION_INDEX_3> mile. That means that he has <INSERTION_INDEX_4> hours left to get to school, and <INSERTION_INDEX_5> mile left to go. Therefore, his speed must be <INSERTION_INDEX_6>, so <INSERTION_INDEX_7> is the answer.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2280,7 +2331,7 @@
       "answer": "D",
       "solutions": [
         {
-          "text": "<p>We'll just start by breaking cases down. The probability of A occurring is <INSERTION_INDEX_1>. The probability of B occurring is <INSERTION_INDEX_2>.</p><p>The probability of C occurring is <INSERTION_INDEX_3>, because we need to choose 2 of the 4 slots to be girls. </p><p>For D, there are two possible cases, 3 girls and 1 boy or 3 boys and 1 girl. The probability of the first case is <INSERTION_INDEX_4> because we need to choose 1 of the 4 slots to be a boy. However, the second case has the same probability because we are choosing 1 of the 4 children to be a girl, so the total probability is <INSERTION_INDEX_5>.</p><p><br/>So out of the four fractions, D is the largest. So our answer is <INSERTION_INDEX_6></p>",
+          "text": "<p>We'll begin by analyzing the different scenarios. The probability of event A occurring is <INSERTION_INDEX_1>. The probability of event B occurring is <INSERTION_INDEX_2>.</p><p>The probability of event C occurring is <INSERTION_INDEX_3>, since we must select 2 out of the 4 positions to be occupied by girls. </p><p>For event D, there exist two distinct possibilities: either 3 girls and 1 boy, or 3 boys and 1 girl. The probability of the first scenario is <INSERTION_INDEX_4> because we need to choose 1 out of the 4 positions to be occupied by a boy. However, the second scenario possesses identical probability since we are selecting 1 out of the 4 children to be a girl, thus the combined probability equals <INSERTION_INDEX_5>.</p><p><br/>Therefore, among the four fractions, D represents the largest value. Consequently, our answer is <INSERTION_INDEX_6></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/2/2/5/2256004ade091f969a0da9aa19a6911238a21cd8.png",
@@ -2304,7 +2355,7 @@
               "height": "53"
             },
             "INSERTION_INDEX_4": {
-              "picture": "//latex.artofproblemsolving.com/c/8/0/c80c385a37a4a26ba4b1527e657876b1b0bcb99d.png",
+              "picture": "//latex.artofproblemsolving.com/c/8/0/c80c385a37a4a26ba4b1527e6578761b0bcb99d.png",
               "alt_type": "latex",
               "alt_value": "$\\dbinom{4}{1}\\cdot\\left(\\frac{1}{2}\\right)^4 = \\frac{1}{4}$",
               "width": "133",
@@ -2392,6 +2443,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>We are constructing a 3x3x3 cube from 27 1x1x1 cubes.  There are 21 red cubes and 6 white cubes.  We want to minimize the visible white surface area. </p><p>To minimize the exposed surface area of the white cubes, we must place them in the most central positions within the larger cube.</p><p>The positions of the 27 smaller cubes can be categorized by how many faces are exposed on the surface of the large cube:\n<ul><li><b>Core (center):</b> 1 cube, 0 faces exposed.</li>\n<li><b>Face centers:</b> 6 cubes, 1 face exposed each.</li>\n<li><b>Edge centers:</b> 12 cubes, 2 faces exposed each.</li>\n<li><b>Corners:</b> 8 cubes, 3 faces exposed each.</li></ul></p><p>We have 6 white cubes to place. To hide as much of their surface as possible:\n<ol><li>Place the first white cube in the single core position. This cube contributes 0 to the white surface area.</li>\n<li>Place the remaining 5 white cubes in 5 of the 6 face-center positions. Each of these cubes will show exactly one 1x1 face on the surface of the large cube.</li></ol></p><p>The total white surface area shown is the sum of the exposed faces:\nWhite Area = (1 cube $\\times$ 0 faces) + (5 cubes $\\times$ 1 face) = 5 square inches.</p><p>The total surface area of the 3x3x3 cube is $6 \\times (3 \\times 3) = 54$ square inches.</p><p>The fraction of the surface area that is white is:\nFraction = $\\frac{\\text{White Surface Area}}{\\text{Total Surface Area}} = \\frac{5}{54}$.</p>"
+        },
         {
           "text": "<p>For the least possible surface area that is white, we should have 1 cube in the center, and the other 5 with only 1 face exposed. This gives 5 square inches of white, surface area. Since the cube has a surface area of 54 square inches, our answer is <INSERTION_INDEX_1>.</p>",
           "insertions": {
@@ -2506,6 +2560,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>We need to find the area inside a rectangle but outside three circles centered at its vertices.  The rectangle ABCD has sides DA=5 and CD=3. Its area is $5 \\times 3 = 15$.  The circles are centered at vertices A, B, and C with radii 1, 2, and 3, respectively. </p><p>The portion of each circle that lies inside the rectangle is a quarter-circle, because the angle at each vertex of a rectangle is $90^{\\circ}$.</p><p>The area of a quarter-circle is $\\frac{1}{4}\\pi r^2$. We calculate the area for each of the three circles and sum them:\n<ul><li><b>Circle at A (r=1):</b> Area = $\\frac{1}{4}\\pi (1)^2 = \\frac{\\pi}{4}$.</li>\n<li><b>Circle at B (r=2):</b> Area = $\\frac{1}{4}\\pi (2)^2 = \\frac{4\\pi}{4} = \\pi$.</li>\n<li><b>Circle at C (r=3):</b> Area = $\\frac{1}{4}\\pi (3)^2 = \\frac{9\\pi}{4}$.</li></ul></p><p>Total area of the circles inside the rectangle = $\\frac{\\pi}{4} + \\pi + \\frac{9\\pi}{4} = \\frac{\\pi}{4} + \\frac{4\\pi}{4} + \\frac{9\\pi}{4} = \\frac{14\\pi}{4} = \\frac{7\\pi}{2}$.</p><p>To find the required area, we subtract the total circle area from the rectangle's area:\nArea = $15 - \\frac{7\\pi}{2}$.</p><p>Using the approximation $\\pi \\approx 3.1416$:\nArea $\\approx 15 - \\frac{7 \\times 3.1416}{2} = 15 - \\frac{21.9912}{2} = 15 - 10.9956 = 4.0044$.</p><p>This value is closest to 4.0.</p>"
+        },
+        {
           "text": "<p>The area in the rectangle but outside the circles is the area of the rectangle minus the area of all three of the quarter circles in the rectangle.</p><p>The area of the rectangle is <INSERTION_INDEX_1>. The area of all 3 quarter circles is <INSERTION_INDEX_2>. Therefore the area in the rectangle but outside the circles is <INSERTION_INDEX_3>. <INSERTION_INDEX_4> is approximately <INSERTION_INDEX_5> and substituting that in will give <INSERTION_INDEX_6></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2619,7 +2676,10 @@
       "answer": "A",
       "solutions": [
         {
-          "text": "<p>Since both numbers are divisible by 3, the sum of their digits has to be divisible by three. <INSERTION_INDEX_1>. To be a multiple of <INSERTION_INDEX_2>, <INSERTION_INDEX_3> has to be either <INSERTION_INDEX_4> or <INSERTION_INDEX_5> or <INSERTION_INDEX_6>... and so on. We add up the numerical digits in the second number; <INSERTION_INDEX_7>. We then add two of the selected values, <INSERTION_INDEX_8> to <INSERTION_INDEX_9>, to get <INSERTION_INDEX_10>. We then see that C = <INSERTION_INDEX_11> or <INSERTION_INDEX_12>... and so on, otherwise the number will not be divisible by three. We then add <INSERTION_INDEX_13> to <INSERTION_INDEX_14>, to get <INSERTION_INDEX_15>, which shows us that C = <INSERTION_INDEX_16> or <INSERTION_INDEX_17> or <INSERTION_INDEX_18>... and so on. To be a multiple of three, we select a few of the common numbers we got from both these equations, which could be <INSERTION_INDEX_19> and <INSERTION_INDEX_20>. However, in the answer choices, there is no <INSERTION_INDEX_21> or <INSERTION_INDEX_22> or anything greater than <INSERTION_INDEX_23>, but there is a <INSERTION_INDEX_24>, so <INSERTION_INDEX_25> is our answer. Also, you could just look up the answer. It\u2019s much easier and totally isn\u2019t wrong in any way.\u00a0:)</p>",
+          "text": "<p>We have two 7-digit numbers, 74A52B1 and 326AB4C, that are both multiples of 3.  A number is divisible by 3 if the sum of its digits is divisible by 3.</p><p><b>For the first number, 74A52B1:</b>\nSum of digits = $7+4+A+5+2+B+1 = 19 + A + B$.\nFor this to be a multiple of 3, $19 + A + B \\equiv 0 \\pmod{3}$.\nSince $19 \\equiv 1 \\pmod{3}$, the condition simplifies to $1 + A + B \\equiv 0 \\pmod{3}$.</p><p><b>For the second number, 326AB4C:</b>\nSum of digits = $3+2+6+A+B+4+C = 15 + A + B + C$.\nFor this to be a multiple of 3, $15 + A + B + C \\equiv 0 \\pmod{3}$.\nSince $15 \\equiv 0 \\pmod{3}$, the condition simplifies to $A + B + C \\equiv 0 \\pmod{3}$.</p><p>From the first condition, we know $A+B \\equiv -1 \\pmod{3}$, or $A+B \\equiv 2 \\pmod{3}$.\nSubstitute this into the second condition:\n$(A+B) + C \\equiv 0 \\pmod{3}$\n$2 + C \\equiv 0 \\pmod{3}$\n$C \\equiv -2 \\pmod{3}$\n$C \\equiv 1 \\pmod{3}$.</p><p>This means C must be a digit that leaves a remainder of 1 when divided by 3. The possible values for C are 1, 4, and 7. Looking at the options provided, the only possible value for C is 1. </p>"
+        },
+        {
+          "text": "<p>Since both numbers are divisible by 3, the sum of their digits has to be divisible by three. <INSERTION_INDEX_1>. To be a multiple of <INSERTION_INDEX_2>, <INSERTION_INDEX_3> has to be either <INSERTION_INDEX_4> or <INSERTION_INDEX_5> or <INSERTION_INDEX_6>... and so on. We add up the numerical digits in the second number; <INSERTION_INDEX_7>. We then add two of the selected values, <INSERTION_INDEX_8> to <INSERTION_INDEX_9>, to get <INSERTION_INDEX_10>. We then see that C = <INSERTION_INDEX_11> or <INSERTION_INDEX_12>... and so on, otherwise the number will not be divisible by three. We then add <INSERTION_INDEX_13> to <INSERTION_INDEX_14>, to get <INSERTION_INDEX_15>, which shows us that C = <INSERTION_INDEX_16> or <INSERTION_INDEX_17> or <INSERTION_INDEX_18>... and so on. To be a multiple of three, we select a few of the common numbers we got from both these equations, which could be <INSERTION_INDEX_19> and <INSERTION_INDEX_20>. However, in the answer choices, there is no <INSERTION_INDEX_21> or <INSERTION_INDEX_22> or anything greater than <INSERTION_INDEX_23>, but there is a <INSERTION_INDEX_24>, so <INSERTION_INDEX_25> is our answer. Also, you could just look up the answer. It’s much easier and totally isn’t wrong in any way. :)</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/e/f/8/ef8ac7075b4bb63121521d688b6c3e5beec70cb9.png",
@@ -2905,6 +2965,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>Let the 2-digit number be represented by its tens digit 't' and its units digit 'u'. The value of the number is $10t + u$. The digits t and u are integers, with $t \\in \\{1, ..., 9\\}$ and $u \\in \\{0, ..., 9\\}$.</p><p>The problem states that the product of the digits plus the sum of the digits equals the number itself. \n$(\\text{product}) + (\\text{sum}) = \\text{number}$\n$(t \\times u) + (t + u) = 10t + u$.</p><p>We can solve this equation for one of the digits:\nSubtract $u$ from both sides: $t \\times u + t = 10t$.\nSubtract $t$ from both sides: $t \\times u = 9t$.</p><p>Since 't' is the tens digit of a 2-digit number, we know $t \\neq 0$. Therefore, we can safely divide both sides by $t$:\n$u = 9$.</p><p>The units digit of the number must be 9. </p>"
+        },
+        {
           "text": "<p>We can think of the number as <INSERTION_INDEX_1>, where a is the tens digit and b is the unit digit. Since the number is equal to the product of the digits (<INSERTION_INDEX_2>) plus the sum of the digits (<INSERTION_INDEX_3>), we can say that <INSERTION_INDEX_4>. We can simplify this to <INSERTION_INDEX_5>, which factors to <INSERTION_INDEX_6>. Dividing by <INSERTION_INDEX_7>, we have that <INSERTION_INDEX_8>. Therefore, the units digit, <INSERTION_INDEX_9>, is <INSERTION_INDEX_10></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2989,7 +3052,7 @@
     {
       "id": "amc_2014_8_23",
       "question": {
-        "text": "<p>Three members of the Euclid Middle School girls' softball team had the following conversation.</p><p>Ashley: I just realized that our uniform numbers are all <INSERTION_INDEX_1>-digit primes.</p><p>Bethany\u00a0: And the sum of your two uniform numbers is the date of my birthday earlier this month.</p><p>Caitlin: That's funny. The sum of your two uniform numbers is the date of my birthday later this month.</p><p>Ashley: And the sum of your two uniform numbers is today's date.</p><p>What number does Caitlin wear?</p>",
+        "text": "<p>Three members of the Euclid Middle School girls' softball team had the following conversation.</p><p>Ashley: I just realized that our uniform numbers are all <INSERTION_INDEX_1>-digit primes.</p><p>Bethany : And the sum of your two uniform numbers is the date of my birthday earlier this month.</p><p>Caitlin: That's funny. The sum of your two uniform numbers is the date of my birthday later this month.</p><p>Ashley: And the sum of your two uniform numbers is today's date.</p><p>What number does Caitlin wear?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/4/1/c/41c544263a265ff15498ee45f7392c5f86c6d151.png",
@@ -3017,6 +3080,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>Let the uniform numbers of Ashley, Bethany, and Caitlin be A, B, and C, respectively. These are all 2-digit prime numbers. </p><p>Let's decipher the conversation to establish relationships between the numbers:\n<ol><li>Bethany: $A+C = \\text{her birthday (past)}$ </li>\n<li>Caitlin: $A+B = \\text{her birthday (future)}$ </li>\n<li>Ashley: $B+C = \\text{today's date}$ </li></ol></p><p>This gives us an ordering of the dates, and thus the sums: $A+C < B+C < A+B$. All sums must be valid dates (1-31).</p><p>From the inequality $A+C < B+C$, we can subtract C to get $A < B$.\nFrom the inequality $B+C < A+B$, we can subtract B to get $C < A$.\nCombining these gives us the order of their uniform numbers: $C < A < B$.</p><p>We need to find three 2-digit primes C, A, B that satisfy this order and whose sums are valid, ordered dates. Let's try the smallest 2-digit primes.\n<ul><li>Let's start with the smallest 2-digit prime for C, so $C=11$.</li>\n<li>The next prime for A must be greater than 11. Let's try $A=13$.</li>\n<li>The prime for B must be greater than 13. Let's try $B=17$.</li></ul></p><p>Now let's check the sums with this set of numbers {11, 13, 17}:\n<ul><li>Bethany's birthday: $A+C = 13 + 11 = 24$. (Valid date)</li>\n<li>Today's date: $B+C = 17 + 11 = 28$. (Valid date)</li>\n<li>Caitlin's birthday: $A+B = 13 + 17 = 30$. (Valid date)</li></ul></p><p>The dates 24, 28, 30 are in the correct order ($24 < 28 < 30$). This is a valid solution. If we tried a larger prime for B (e.g., 19), the sum A+B would be $13+19=32$, which is not a valid date.</p><p>Thus, the uniform numbers must be Ashley (A)=13, Bethany (B)=17, and Caitlin (C)=11. The question asks for Caitlin's number. </p>"
+        },
         {
           "text": "<p>The maximum amount of days any given month can have is <INSERTION_INDEX_1>, and the smallest two-digit primes are <INSERTION_INDEX_2> and <INSERTION_INDEX_3>. There are a few different sums that can be deduced from the following numbers, which are <INSERTION_INDEX_4> and <INSERTION_INDEX_5>, all of which represent the three days. Therefore, since Bethany says that the other two people's uniform numbers are earlier, so that means Caitlin and Ashley's numbers must add up to <INSERTION_INDEX_6>. Similarly, Caitlin says that the other two people's uniform numbers are later, so the sum must add up to <INSERTION_INDEX_7>. This leaves <INSERTION_INDEX_8> as today's date. From this, Caitlin was referring to the uniform wearers <INSERTION_INDEX_9> and <INSERTION_INDEX_10>, telling us that her number is <INSERTION_INDEX_11>, giving our solution as <INSERTION_INDEX_12>.</p>",
           "insertions": {
@@ -3151,6 +3217,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>There are 100 customers and 252 cans of soda sold.  Every customer bought at least one can.  We want to maximize the median number of cans. </p><p>The median of 100 data points is the average of the 50th and 51st values when they are arranged in non-decreasing order. Let the sorted list of cans be $c_1, c_2, ..., c_{100}$.\nMedian = $(c_{50} + c_{51}) / 2$.</p><p>To maximize the median, we need to make $c_{50}$ and $c_{51}$ as large as possible. This is achieved by making the other values as small as possible.</p><p>The smallest values are the first 49 ($c_1$ to $c_{49}$). Since each customer bought at least one can, the minimum value for each is 1.\nLet $c_1 = c_2 = ... = c_{49} = 1$.\nCans used by these 49 customers = $49 \\times 1 = 49$.</p><p>Cans remaining for the other 51 customers ($c_{50}$ to $c_{100}$) = $252 - 49 = 203$.</p><p>We have the constraint $c_{50} \\le c_{51} \\le ... \\le c_{100}$. To maximize $c_{50}$, we should assume the 51 customers bought as close to the same number of cans as possible. If they all bought $k$ cans, then $51k \\le 203$, so $k \\le 203/51 \\approx 3.98$. Since k must be an integer, the maximum possible value for $c_{50}$ is 3.</p><p>Let's set $c_{50}=3$. Now we have $203-3 = 200$ cans left for the 50 customers from $c_{51}$ to $c_{100}$.\nTo maximize $c_{51}$, we use a similar logic. Let all these 50 customers buy $j$ cans. They must all be at least $c_{51}$. Let's say they all bought exactly $c_{51}$ cans. Then $50 \\times c_{51} \\le 200$, so $c_{51} \\le 4$. The maximum integer value for $c_{51}$ is 4.</p><p>Let's see if we can construct a valid distribution with $c_{50}=3$ and $c_{51}=4$. \n<ul><li>49 customers buy 1 can (49 cans).</li>\n<li>1 customer (the 50th) buys 3 cans (3 cans).</li>\n<li>50 customers (the 51st to 100th) buy 4 cans each ($50 \\times 4 = 200$ cans).</li></ul>\nTotal cans = $49+3+200=252$. This works. The list is sorted, and the median is $(c_{50} + c_{51})/2 = (3+4)/2 = 3.5$.</p>"
+        },
         {
           "text": "<p>In order to maximize the median, we need to make the first half of the numbers as small as possible. Since there are <INSERTION_INDEX_1> people, the median will be the average of the <INSERTION_INDEX_2> and <INSERTION_INDEX_3> largest amount of cans per person. To minimize the first <INSERTION_INDEX_4>, they would each have one can. Subtracting these <INSERTION_INDEX_5> cans from the <INSERTION_INDEX_6> cans gives us <INSERTION_INDEX_7> cans left to divide among <INSERTION_INDEX_8> people. Taking <INSERTION_INDEX_9> gives us <INSERTION_INDEX_10> and a remainder of <INSERTION_INDEX_11>. Seeing this, the largest number of cans the <INSERTION_INDEX_12>th person could have is <INSERTION_INDEX_13>, which leaves <INSERTION_INDEX_14> to the rest of the people. The average of <INSERTION_INDEX_15> and <INSERTION_INDEX_16> is <INSERTION_INDEX_17>. Thus our answer is <INSERTION_INDEX_18>.</p>",
           "insertions": {
@@ -3320,6 +3389,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Robert rides his bike on a path of semicircles over a one-mile stretch of highway.  We need to find the total time his journey takes.</p><p>First, let's gather the key numbers and convert them to consistent units (feet).\n<ul><li>Highway length = 1 mile = 5280 feet. </li>\n<li>Highway width = 40 feet. This is the diameter of each semicircle. </li></ul></p><p>The path consists of a series of semicircles lined up diameter-to-diameter along the one-mile stretch. The number of semicircles is:\nNumber of semicircles = $\\\\frac{\\\\text{Total highway length}}{\\\\text{Diameter of one semicircle}} = \\\\frac{5280 \\\\text{ feet}}{40 \\\\text{ feet}} = 132$.</p><p>Next, we find the distance Robert travels. This is the total arc length of the 132 semicircles. The length of one semicircle's arc is half the circumference of a full circle ($\\\\pi d$).\nArc length of one semicircle = $\\\\frac{1}{2} \\\\pi d = \\\\frac{1}{2} \\\\pi (40) = 20\\\\pi$ feet.</p><p>Total distance traveled = $132 \\\\times 20\\\\pi = 2640\\\\pi$ feet.</p><p>Robert's speed is 5 miles per hour.  To calculate the time, we need the distance in miles.\nDistance in miles = $\\\\frac{2640\\\\pi \\\\text{ feet}}{5280 \\\\text{ feet/mile}} = \\\\frac{1}{2}\\\\pi = \\\\frac{\\\\pi}{2}$ miles.</p><p>Finally, we calculate the time in hours:\nTime = $\\\\frac{\\\\text{Distance}}{\\\\text{Speed}} = \\\\frac{\\\\pi/2 \\\\text{ miles}}{5 \\\\text{ mph}} = \\\\frac{\\\\pi}{10}$ hours.</p>"
+        },
         {
           "text": "<p>There are two possible interpretations of the problem: that the road as a whole is <INSERTION_INDEX_1> feet wide, or that each lane is <INSERTION_INDEX_2> feet wide. Both interpretations will arrive at the same result. However, let us stick with the first interpretation for simplicity. Each lane must then be <INSERTION_INDEX_3> feet wide, so Robert must be riding his bike in semicircles with radius <INSERTION_INDEX_4> feet and diameter <INSERTION_INDEX_5> feet. Since the road is <INSERTION_INDEX_6> feet long, over the whole mile, Robert rides <INSERTION_INDEX_7> semicircles in total. Were the semicircles full circles, their circumference would be <INSERTION_INDEX_8> feet; as it is, the circumference of each is half that, or <INSERTION_INDEX_9> feet. Therefore, over the stretch of highway, Robert rides a total of <INSERTION_INDEX_10> feet, equivalent to <INSERTION_INDEX_11> miles. Robert rides at 5 miles per hour, so divide the <INSERTION_INDEX_12> miles by <INSERTION_INDEX_13> mph (because <INSERTION_INDEX_14> and time = distance/rate) to arrive at <INSERTION_INDEX_15> hours.</p>",
           "insertions": {
