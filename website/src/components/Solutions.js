@@ -320,38 +320,38 @@ function Solutions() {
         </div>
       </nav>
 
-      {/* Main content area - matching QuizTaking layout */}
-      <main className="math-main-content">
-        <div className="bg-white rounded-xl p-4 lg:p-6 flex flex-col" style={{ height: 'calc(100vh - 32px)' }}>
-          {/* Header section - fixed (different from QuizTaking) */}
-          <div className="mb-3 lg:mb-4 flex-shrink-0">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/dashboard')}>
-                  🏠 Home
-                </button>
-                <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
-                  Question {currentQuestionIndex + 1} of {parsedQuestions.length}
-                </h2>
-              </div>
-              <div className="flex items-center gap-3">
-                <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/quiz')}>
-                  ← Back to Quizzes
-                </button>
-                <button 
-                  className={`btn text-sm lg:text-base ${viewMode === 'quiz' ? 'btn-primary' : 'btn-secondary'}`}
-                  onClick={toggleViewMode}
-                >
-                  {viewMode === 'quiz' ? 'View Solution' : 'View Quiz'}
-                </button>
+              {/* Main content area - matching QuizTaking layout */}
+        <main className="math-main-content">
+          <div className="bg-white rounded-xl p-4 lg:p-6 flex flex-col" style={{ height: 'calc(100vh - 32px)' }}>
+            {/* Header section - fixed (different from QuizTaking) */}
+            <div className="mb-3 lg:mb-4 flex-shrink-0">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/dashboard')}>
+                    🏠 Home
+                  </button>
+                  <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
+                    Question {currentQuestionIndex + 1} of {parsedQuestions.length}
+                  </h2>
+                </div>
+                <div className="flex items-center gap-3">
+                  <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/quiz')}>
+                    ← Back to Quizzes
+                  </button>
+                  <button 
+                    className={`btn text-sm lg:text-base ${viewMode === 'quiz' ? 'btn-primary' : 'btn-secondary'}`}
+                    onClick={toggleViewMode}
+                  >
+                    {viewMode === 'quiz' ? 'View Solution' : 'View Quiz'}
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          
-          {/* Main content area - question and choices layout (same as QuizTaking) */}
-          <div className="flex-1 min-h-0">
-            {renderCurrentQuestion()}
-          </div>
+            
+            {/* Main content area - question and choices layout (same as QuizTaking) */}
+            <div className="flex-1 min-h-0">
+              {renderCurrentQuestion()}
+            </div>
           
           {/* Navigation buttons - fixed at bottom (different from QuizTaking) */}
           <div className="flex justify-between items-center mt-3 lg:mt-4 pt-3 lg:pt-4 flex-shrink-0 border-t border-gray-100">

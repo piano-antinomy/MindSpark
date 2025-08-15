@@ -203,12 +203,22 @@ function Question({ question, quizCompleted = false, selectedAnswer = null, onAn
       return (
         <div className="flex gap-3 lg:gap-4 flex-1 min-h-0">
           {/* Dynamic width allocation using choiceSpace */}
-          <div style={{ width: question.choiceSpace ? `${(1 - question.choiceSpace) * 100}%` : '66.667%' }}>
-            {renderQuestionContent(question)}
+          <div 
+            style={{ width: question.choiceSpace ? `${(1 - question.choiceSpace) * 100}%` : '66.667%' }}
+            className="overflow-y-auto min-h-0 flex flex-col"
+          >
+            <div className="flex-1 min-h-0">
+              {renderQuestionContent(question)}
+            </div>
           </div>
-          <div style={{ width: question.choiceSpace ? `${question.choiceSpace * 100}%` : '33.333%' }}>
-            <div className="choices-container space-y-2 lg:space-y-3 p-3 lg:p-6">
-              {renderChoices(question)}
+          <div 
+            style={{ width: question.choiceSpace ? `${question.choiceSpace * 100}%` : '33.333%' }}
+            className="overflow-y-auto min-h-0 flex flex-col"
+          >
+            <div className="flex-1 min-h-0">
+              <div className="choices-container space-y-2 lg:space-y-3 p-3 lg:p-6">
+                {renderChoices(question)}
+              </div>
             </div>
           </div>
         </div>
@@ -217,7 +227,7 @@ function Question({ question, quizCompleted = false, selectedAnswer = null, onAn
   };
 
   return (
-    <div className="h-full">
+    <div className="h-full flex flex-col">
       {renderQuestion(question)}
     </div>
   );
