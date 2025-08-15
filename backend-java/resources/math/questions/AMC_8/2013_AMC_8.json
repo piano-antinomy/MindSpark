@@ -35,6 +35,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>Danica wants to arrange her cars in rows of exactly 6.  This means the total number of cars must be a multiple of 6. She currently has 23 cars.  We need to find the next multiple of 6 after 23. The multiples of 6 are 6, 12, 18, 24, 30, ... The smallest multiple of 6 that is greater than 23 is 24. To get 24 cars, she needs to buy $24 - 23 = 1$ additional car. </p>"
+        },
+        {
           "text": "<p>The least multiple of 6 greater than 23 is 24. So she will need to add <INSERTION_INDEX_1> more model car.~avamarora</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -96,6 +99,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>A half-pound package costs \\$3 after a 50% discount.  This means \\$3 is 50% of the regular price for a half-pound package. Let R be the regular price for a half-pound. Then $0.50 \\times R = \\$3$, so $R = \\$6$. The regular price for a full pound of fish is twice the regular price for a half-pound. Therefore, the regular price for a full pound is $2 \\times \\$6 = \\$12$. </p>"
+        },
         {
           "text": "<p>50% off the price of half a pound of fish is $3, so 100%, the regular price, of a half pound of fish is $6. If half a pound of fish costs $6, then a whole pound of fish is <INSERTION_INDEX_1> dollars.</p>",
           "insertions": {
@@ -180,6 +186,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>We need to evaluate the expression $4 \\cdot (-1+2-3+4-5+6-7+\\dots+1000)$.  Let's look at the sum inside the parentheses. We can group the terms in pairs: $(-1+2) + (-3+4) + (-5+6) + \\dots + (-999+1000)$. Each pair sums to 1. Since there are 1000 terms, there are $1000/2 = 500$ such pairs. The total sum inside the parentheses is $500 \\times 1 = 500$. Therefore, the value of the entire expression is $4 \\times 500 = 2000$. </p>"
+        },
+        {
           "text": "<p>We group the addends inside the parentheses two at a time: <INSERTION_INDEX_1>Then the desired answer is <INSERTION_INDEX_2>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -228,6 +237,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>There are 8 friends in total.  Judi forgot her money, so her 7 friends paid her share.  Each of the 7 friends paid an extra \\$2.50.  The total extra amount paid by the friends is $7 \\times \\$2.50 = \\$17.50$. This extra amount is Judi's share of the bill. Since everyone agreed to share the bill equally, each person's share is \\$17.50. The total bill is the sum of the shares of all 8 friends, which is $8 \\times \\$17.50 = \\$140$. </p>"
+        },
         {
           "text": "<p>Since Judi's 7 friends had to pay $2.50 extra each to cover the total amount that Judi should have paid, we multiply <INSERTION_INDEX_1> is the bill Judi would have paid if she had money. Hence, to calculate the total amount, we multiply <INSERTION_INDEX_2> to find the total the 8 friends paid.</p>",
           "insertions": {
@@ -361,6 +373,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>We have five children with weights 106, 5, 5, 6, and 8 pounds. First, let's calculate the average (mean) weight. The sum of the weights is $106 + 5 + 5 + 6 + 8 = 130$ pounds. The average weight is the sum divided by the number of children: $\\frac{130}{5} = 26$ pounds. Next, let's find the median weight. To find the median, we first need to arrange the weights in order: 5, 5, 6, 8, 106. The median is the middle value, which is 6. The average weight is 26 and the median weight is 6. The average is greater than the median. The difference is $26 - 6 = 20$ pounds. </p>"
+        },
+        {
           "text": "<p>Listing the elements from least to greatest, we have <INSERTION_INDEX_1>, we see that the median weight is 6 pounds.The average weight of the five kids is <INSERTION_INDEX_2>.</p><p>Hence,<INSERTION_INDEX_3></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -431,6 +446,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Let the missing number in the top row be $x$. The top row has numbers 6, 5, and $x$. The second row is formed by the product of the numbers in the two boxes above it.  The first box in the second row is $6 \\times 5 = 30$.  The second box in the second row is $5 \\times x = 5x$. The bottom box is the product of the two boxes in the second row, which is $30 \\times 5x = 150x$. We are given that the number in the bottom box is 600.  So, $150x = 600$. Dividing both sides by 150, we get $x = \\frac{600}{150} = 4$. </p>"
+        },
         {
           "text": "<p>Let the value in the empty box in the middle row be <INSERTION_INDEX_1>, and the value in the empty box in the top row be <INSERTION_INDEX_2>. <INSERTION_INDEX_3> is the answer we're looking for.</p><p><INSERTION_INDEX_4></p><p>From the diagram, <INSERTION_INDEX_5>, making <INSERTION_INDEX_6>.</p><p><INSERTION_INDEX_7></p><p>It follows that <INSERTION_INDEX_8>, so <INSERTION_INDEX_9>.</p>",
           "insertions": {
@@ -576,6 +594,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Trey counted 6 cars in the first 10 seconds.  The train took 2 minutes and 45 seconds to pass at a constant speed.  Let's convert the total time to seconds. 2 minutes is $2 \\times 60 = 120$ seconds. So the total time is $120 + 45 = 165$ seconds. The rate of cars passing is 6 cars per 10 seconds. We can set up a proportion to find the total number of cars, $N$: $\\frac{6 \\text{ cars}}{10 \\text{ seconds}} = \\frac{N \\text{ cars}}{165 \\text{ seconds}}$. Solving for $N$, we get $N = \\frac{6 \\times 165}{10} = \\frac{990}{10} = 99$. The most likely number of cars in the train from the options is 100. </p>"
+        },
         {
           "text": "<p>Clearly, for every <INSERTION_INDEX_1> seconds, <INSERTION_INDEX_2> cars pass. It's more convenient to have everything in seconds: <INSERTION_INDEX_3> minutes and <INSERTION_INDEX_4> seconds<INSERTION_INDEX_5> seconds. We then set up a ratio: <INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8></p><p>~megaboy6679 ~MiracleMaths</p>",
           "insertions": {
@@ -736,6 +757,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>When a fair coin is tossed 3 times, there are $2^3 = 8$ possible outcomes: HHH, HHT, HTH, THH, HTT, THT, TTH, TTT.  We are looking for the probability of at least two consecutive heads. The outcomes with at least two consecutive heads are HHH, HHT, and THH. There are 3 such outcomes. The probability is the number of favorable outcomes divided by the total number of outcomes, which is $\\frac{3}{8}$. </p>"
+        },
+        {
           "text": "<p>There are <INSERTION_INDEX_1> ways to flip the coins, in order.There are two ways to get exactly two consecutive heads: HHT and THH.There is only one way to get three consecutive heads: HHH.Therefore, the probability of flipping at least two consecutive heads is <INSERTION_INDEX_2>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -837,6 +861,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>The Hulk's jumps follow a geometric progression. The first jump is 1 meter, the second is 2 meters, the third is 4 meters, and so on.  The distance of the n-th jump is given by the formula $2^{n-1}$ meters. We want to find the first jump that is more than 1 kilometer, which is 1000 meters. So we need to find the smallest integer $n$ such that $2^{n-1} > 1000$. We can test powers of 2: $2^9 = 512$, $2^{10} = 1024$. So, we need $n-1 = 10$, which means $n = 11$. On the 11th jump, he will jump $2^{10} = 1024$ meters, which is more than 1 kilometer. </p>"
+        },
+        {
           "text": "<p>This is a geometric sequence in which the common ratio is 2. To find the jump that would be over a 1000 meters, we note that <INSERTION_INDEX_1>.</p><p>However, because the first term is <INSERTION_INDEX_2> and not <INSERTION_INDEX_3>, the solution to the problem is <INSERTION_INDEX_4></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -899,6 +926,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We need to find the ratio of the least common multiple (LCM) to the greatest common factor (GCF) of 180 and 594.  First, let's find the prime factorization of each number. $180 = 18 \\times 10 = 2 \\times 9 \\times 2 \\times 5 = 2^2 \\times 3^2 \\times 5$. $594 = 2 \\times 297 = 2 \\times 3 \\times 99 = 2 \\times 3 \\times 9 \\times 11 = 2 \\times 3^3 \\times 11$. The GCF is the product of the lowest powers of common primes: $GCF(180, 594) = 2^1 \\times 3^2 = 18$. The LCM is the product of the highest powers of all primes: $LCM(180, 594) = 2^2 \\times 3^3 \\times 5 \\times 11 = 4 \\times 27 \\times 5 \\times 11 = 5940$. The ratio of the LCM to the GCF is $\\frac{5940}{18} = 330$. </p>"
+        },
         {
           "text": "<p>To find either the LCM or the GCF of two numbers, always prime factorize first.</p><p>The prime factorization of <INSERTION_INDEX_1>.</p><p>The prime factorization of <INSERTION_INDEX_2>.</p><p>Then, to find the LCM, we have to find the greatest power of all the numbers there are; if one number is one but not the other, use it (this is <INSERTION_INDEX_3>). Multiply all of these to get 5940. </p><p>For the GCF of 180 and 594, use the least power of all of the numbers that are in both factorizations and multiply. <INSERTION_INDEX_4> = 18.</p><p>Thus the answer = <INSERTION_INDEX_5> = <INSERTION_INDEX_6>.</p>",
           "insertions": {
@@ -1063,6 +1093,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Ted's grandfather went 2 miles each of the 3 days.  On Monday, he jogged at 5 mph, so the time taken was $\\frac{2 \\text{ miles}}{5 \\text{ mph}} = 0.4$ hours.  On Wednesday, he walked at 3 mph, so the time taken was $\\frac{2 \\text{ miles}}{3 \\text{ mph}} = \\frac{2}{3}$ hours.  On Friday, he walked at 4 mph, so the time taken was $\\frac{2 \\text{ miles}}{4 \\text{ mph}} = 0.5$ hours.  The total time spent is $0.4 + \\frac{2}{3} + 0.5 = 0.9 + \\frac{2}{3} = \\frac{9}{10} + \\frac{2}{3} = \\frac{27+20}{30} = \\frac{47}{30}$ hours. If he had always walked at 4 mph, he would have traveled a total of $2+2+2 = 6$ miles. The time taken would have been $\\frac{6 \\text{ miles}}{4 \\text{ mph}} = 1.5$ hours, which is $\\frac{3}{2}$ or $\\frac{45}{30}$ hours.  The time difference is $\\frac{47}{30} - \\frac{45}{30} = \\frac{2}{30}$ hours. To convert this to minutes, we multiply by 60: $\\frac{2}{30} \\times 60 = 4$ minutes. </p>"
+        },
         {
           "text": "<p>We use that fact that <INSERTION_INDEX_1>. Let d= distance, r= rate or speed, and t=time. In this case, let <INSERTION_INDEX_2> represent the time.</p><p>On Monday, he was at a rate of <INSERTION_INDEX_3>. So, <INSERTION_INDEX_4>. </p><p>For Wednesday, he walked at a rate of <INSERTION_INDEX_5>. Therefore, <INSERTION_INDEX_6>. </p><p>On Friday, he walked at a rate of <INSERTION_INDEX_7>. So, <INSERTION_INDEX_8>. </p><p>Adding up the hours yields <INSERTION_INDEX_9> + <INSERTION_INDEX_10> + <INSERTION_INDEX_11> = <INSERTION_INDEX_12>.</p><p>We now find the amount of time Grandfather would have taken if he walked at <INSERTION_INDEX_13> per day. Set up the equation, <INSERTION_INDEX_14>.</p><p>To find the amount of time saved, subtract the two amounts: <INSERTION_INDEX_15> - <INSERTION_INDEX_16> = <INSERTION_INDEX_17>. To convert this to minutes, we multiply by <INSERTION_INDEX_18>.</p><p>Thus, the solution to this problem is <INSERTION_INDEX_19></p>",
           "insertions": {
@@ -1243,6 +1276,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>Javier bought three pairs of sandals.  The first pair was at the regular price of \\$50.  The second pair had a 40% discount, so he paid $50 \\times (1-0.40) = 50 \\times 0.60 = \\$30$.  The third pair was half price, so he paid $50 / 2 = \\$25$.  The total amount he paid is $50 + 30 + 25 = \\$105$. The regular price for three pairs would have been $3 \\times 50 = \\$150$.  The amount he saved is $150 - 105 = \\$45$. The percentage saving is $\\frac{\\text{savings}}{\\text{regular price}} \\times 100 = \\frac{45}{150} \\times 100 = \\frac{3}{10} \\times 100 = 30\\%$. </p>"
+        },
+        {
           "text": "<p>First, find the amount of money one will pay for three sandals without the discount. We have <INSERTION_INDEX_1>.</p><p>Then, find the amount of money using the discount: <INSERTION_INDEX_2>.</p><p>Finding the percentage yields <INSERTION_INDEX_3>.</p><p>To find the percent saved, we have <INSERTION_INDEX_4></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1306,7 +1342,10 @@
       "answer": "A",
       "solutions": [
         {
-          "text": "<p>We can simply test out numbers to see which one works. We can see that Clara\u2019s score can\u2019t be a multiple of ten because the reverse of the score is a one digit number, to small for the answer choices. After testing multiples, the answer should be <INSERTION_INDEX_1>.</p>",
+          "text": "<p>Let the original score with the reversed digits be represented by $10t + u$, where $t$ is the tens digit and $u$ is the units digit. When Clara reversed the digits, the incorrect score became $10u + t$.  The difference between the correct and incorrect score is $(10t + u) - (10u + t) = 9t - 9u = 9(t-u)$ or $(10u + t) - (10t + u) = 9u - 9t = 9(u-t)$. In either case, the difference must be a multiple of 9. Looking at the options, the only multiple of 9 is 45. </p>"
+        },
+        {
+          "text": "<p>We can simply test out numbers to see which one works. We can see that Clara’s score can’t be a multiple of ten because the reverse of the score is a one digit number, to small for the answer choices. After testing multiples, the answer should be <INSERTION_INDEX_1>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/d/d/b/ddb4a074aa63e40e19bc3a03ec7374b4dccd0c43.png",
@@ -1347,6 +1386,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Abe has 1 green and 1 red jelly bean.  The probability he picks a green bean is $\\frac{1}{2}$, and the probability he picks a red bean is $\\frac{1}{2}$. Bea has 1 green, 1 yellow, and 2 red jelly beans, for a total of 4 jelly beans. The probability she picks a green bean is $\\frac{1}{4}$, a yellow is $\\frac{1}{4}$, and a red is $\\frac{2}{4}=\\frac{1}{2}$. The colors can match if they both pick green or both pick red. The probability they both pick green is $P(\\text{Abe green}) \\times P(\\text{Bea green}) = \\frac{1}{2} \\times \\frac{1}{4} = \\frac{1}{8}$. The probability they both pick red is $P(\\text{Abe red}) \\times P(\\text{Bea red}) = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}$. The total probability that the colors match is the sum of these probabilities: $\\frac{1}{8} + \\frac{1}{4} = \\frac{1}{8} + \\frac{2}{8} = \\frac{3}{8}$. </p>"
+        },
         {
           "text": "<p>The favorable responses are either they both show a green bean or they both show a red bean. The probability that both show a green bean is <INSERTION_INDEX_1>. The probability that both show a red bean is <INSERTION_INDEX_2>. Therefore the probability is <INSERTION_INDEX_3></p>",
           "insertions": {
@@ -1465,6 +1507,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>We are given three equations to solve for p, r, and s. \nFirst equation: $3^p + 3^4 = 90$. We know $3^4 = 81$. So, $3^p + 81 = 90$, which gives $3^p = 9$. Since $9=3^2$, we have $p=2$.\nSecond equation: $2^r + 44 = 76$. Subtracting 44 from both sides gives $2^r = 32$. Since $32=2^5$, we have $r=5$.\nThird equation: $5^3 + 6^s = 1421$. We know $5^3 = 125$. So, $125 + 6^s = 1421$. Subtracting 125 from both sides gives $6^s = 1296$. We know $6^1=6, 6^2=36, 6^3=216, 6^4=1296$. So, $s=4$. The product of p, r, and s is $p \\times r \\times s = 2 \\times 5 \\times 4 = 40$. </p>"
+        },
         {
           "text": "<p>First, we're going to solve for <INSERTION_INDEX_1>. Start with <INSERTION_INDEX_2>. Then, change <INSERTION_INDEX_3> to <INSERTION_INDEX_4>. Subtract <INSERTION_INDEX_5> from both sides to get <INSERTION_INDEX_6> and see that <INSERTION_INDEX_7> is <INSERTION_INDEX_8>. Now, solve for <INSERTION_INDEX_9>. Since <INSERTION_INDEX_10>, <INSERTION_INDEX_11> must equal <INSERTION_INDEX_12>, so <INSERTION_INDEX_13>. Now, solve for <INSERTION_INDEX_14>. <INSERTION_INDEX_15> can be simplified to <INSERTION_INDEX_16> which simplifies further to <INSERTION_INDEX_17>. Therefore, <INSERTION_INDEX_18>. <INSERTION_INDEX_19> equals <INSERTION_INDEX_20> which equals <INSERTION_INDEX_21>. So, the answer is <INSERTION_INDEX_22>.</p><p>First, we solve for <INSERTION_INDEX_23>. As Solution 1 perfectly states, <INSERTION_INDEX_24> can be simplified to <INSERTION_INDEX_25> which simplifies further to <INSERTION_INDEX_26>. Therefore, <INSERTION_INDEX_27>. We know that you cannot take a root of any of the numbers raised to <INSERTION_INDEX_28>, <INSERTION_INDEX_29>, or <INSERTION_INDEX_30> and get a rational answer, and none of the answer choices are irrational, so that rules out the possibility that <INSERTION_INDEX_31>, <INSERTION_INDEX_32>, or <INSERTION_INDEX_33> is a fraction. The only answer choice that is divisible by <INSERTION_INDEX_34> is <INSERTION_INDEX_35>.</p>",
           "insertions": {
@@ -2044,6 +2089,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>Let E, S, and X be the number of 8th, 6th, and 7th graders, respectively. We are given the ratios E:S = 5:3 and E:X = 8:5.  To find the smallest total number of students, we need to find a common number for the 8th graders in both ratios. The least common multiple of 5 and 8 is 40. We can rewrite the ratios with 40 for the number of 8th graders. For the first ratio, E:S = 5:3 = 40:24. For the second ratio, E:X = 8:5 = 40:25. So, the ratio of 8th to 6th to 7th graders is 40:24:25. The smallest number of students would be the sum of these numbers in the ratio: $40 + 24 + 25 = 89$. </p>"
+        },
+        {
           "text": "<p>We multiply the first ratio by 8 on both sides, and the second ratio by 5 to get the same number for 8th graders, in order that we can put the two ratios together:</p><p><INSERTION_INDEX_1></p><p><INSERTION_INDEX_2></p><p>Therefore, the ratio of 8th graders to 7th graders to 6th graders is <INSERTION_INDEX_3>. Since the ratio is in lowest terms, the smallest number of students participating in the project is <INSERTION_INDEX_4>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2132,6 +2180,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Let the six consecutive positive integers be $n, n+1, n+2, n+3, n+4, n+5$. Their sum is 2013.  So, $n + (n+1) + (n+2) + (n+3) + (n+4) + (n+5) = 2013$. This simplifies to $6n + 15 = 2013$. Subtracting 15 from both sides gives $6n = 1998$. Dividing by 6, we get $n = 333$. The six integers are 333, 334, 335, 336, 337, and 338. The largest of these integers is 338. </p>"
+        },
         {
           "text": "<p>The arithmetic mean of these numbers is <INSERTION_INDEX_1>. Therefore the numbers are <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, <INSERTION_INDEX_4>, <INSERTION_INDEX_5>, <INSERTION_INDEX_6>, <INSERTION_INDEX_7>, so the answer is <INSERTION_INDEX_8>.</p>",
           "insertions": {
@@ -2413,6 +2464,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>The fort is a rectangular prism with outer dimensions 12 feet long, 10 feet wide, and 5 feet high.  The walls and floor are one foot thick.  We can calculate the total volume of the outer prism and subtract the volume of the empty inner space. The total volume of the outer prism is $12 \\times 10 \\times 5 = 600$ cubic feet. The inner dimensions will be reduced by the thickness of the walls. The inner length is $12 - 2 = 10$ feet. The inner width is $10 - 2 = 8$ feet. The inner height is $5 - 1 = 4$ feet (since there is a floor but no roof). The volume of the empty inner space is $10 \\times 8 \\times 4 = 320$ cubic feet. The number of blocks in the fort is the difference between the outer and inner volumes: $600 - 320 = 280$. </p>"
+        },
+        {
           "text": "<p>There are <INSERTION_INDEX_1> cubes on the base of the box. Then, for each of the 4 layers above the bottom (as since each cube is 1 foot by 1 foot by 1 foot and the box is 5 feet tall, there are 4 feet left), there are <INSERTION_INDEX_2> cubes. Hence, the answer is <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2526,6 +2580,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>Let's denote the scores of Bridget, Cassie, and Hannah as B, C, and H. Cassie says, \"I didn't get the lowest score.\" This means C is not the lowest.  Bridget says, \"I didn't get the highest score.\" This means B is not the highest.  We are given that Hannah shows her test, which implies her score is known, and the others are making statements relative to it. Let's consider the possible rankings from highest to lowest. Of the three, someone must be highest, someone middle, and someone lowest. Since B is not highest, the highest must be C or H. Since C is not lowest, the lowest must be B or H. If C is highest, then B cannot be highest (which is consistent). The order would be C, H, B or C, B, H. The second is not possible since C is not lowest. So C, H, B is a possibility. If H is highest, then B is not highest (consistent). The order could be H, C, B or H, B, C. C is not the lowest, so H, B, C is not possible. Thus, the only possible ranking is from highest to lowest: Cassie, Hannah, Bridget. </p>"
+        },
+        {
           "text": "<p>If Hannah did better than Cassie, there would be no way she could know for sure that she didn't get the lowest score in the class. Therefore, Hannah did worse than Cassie. Similarly, if Hannah did worse than Bridget, there is no way Bridget could have known that she didn't get the highest in the class. Therefore, Hannah did better than Bridget, so our order is <INSERTION_INDEX_1></p><p><br/></p><p>Note: It could be said that Cassie did better than Hannah, and Bridget knew this, and she had the same score as Hannah, so Bridget didn't get the highest score. This may be a reason that MAA didn't put this answer choice in.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2575,6 +2632,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>A $1\\times2$ rectangle is inscribed in a semicircle with the longer side on the diameter.  Let the radius of the semicircle be $r$. The center of the diameter is the center of the semicircle. The longer side of the rectangle, of length 2, lies on the diameter. Let the vertices of the rectangle be on the x-axis at $(-1,0)$ and $(1,0)$ and the other two vertices on the semicircle at $(-1,1)$ and $(1,1)$. The distance from the center of the semicircle $(0,0)$ to a corner of the rectangle on the semicircle, say $(1,1)$, is the radius $r$. Using the distance formula, $r = \\sqrt{(1-0)^2 + (1-0)^2} = \\sqrt{1^2 + 1^2} = \\sqrt{2}$. The area of the semicircle is $\\frac{1}{2}\\pi r^2 = \\frac{1}{2}\\pi (\\sqrt{2})^2 = \\frac{1}{2}\\pi(2) = \\pi$. </p>"
+        },
         {
           "text": "<p><INSERTION_INDEX_1></p><p>A semicircle has symmetry, so the center is exactly at the midpoint of the 2 side on the rectangle, making the radius, by the Pythagorean Theorem, <INSERTION_INDEX_2>. The area is <INSERTION_INDEX_3>.</p>",
           "insertions": {
@@ -2631,6 +2691,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>Let the southwest corner of City Park be at the origin (0,0). Samantha lives at (-2, -1).  The school is 2 blocks east and 2 blocks north of the northeast corner.  The path through the park is diagonal. Let the dimensions of the park be $w$ (width, east-west) and $h$ (height, north-south). The northeast corner is at $(w,h)$. The school is at $(w+2, h+2)$. She bikes from (-2, -1) to (0,0). The number of ways to do this is the number of paths on a grid, moving only up and right. To go from (-2,-1) to (0,0), she must move 2 blocks east and 1 block north. The number of routes is $\\binom{2+1}{1} = \\binom{3}{1} = 3$. Then she takes the diagonal path through the park. After the park, she bikes from $(w,h)$ to $(w+2, h+2)$. This requires moving 2 blocks east and 2 blocks north. The number of routes is $\\binom{2+2}{2} = \\binom{4}{2} = \\frac{4 \\times 3}{2} = 6$. The total number of different routes is the product of the number of routes for each segment: $3 \\times 1 \\times 6 = 18$. </p>"
+        },
         {
           "text": "<p><INSERTION_INDEX_1></p><p>Using <a class=\"mw-redirect\" href=\"/wiki/index.php/Combinations\" title=\"Combinations\">combinations</a>, we get that the number of ways to get from Samantha's house to City Park is <INSERTION_INDEX_2>, and the number of ways to get from City Park to school is <INSERTION_INDEX_3>. Since there's one way to go through City Park (just walking straight through), the number of different ways to go from Samantha's house to City Park to school <INSERTION_INDEX_4>.</p><p>~Note by Theraccoon: The person who posted this did not include their name.</p>",
           "insertions": {
@@ -2716,6 +2779,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>The grid is 60 toothpicks long and 32 toothpicks high.  This means there are 60 columns of vertical toothpicks and 32 rows of horizontal toothpicks. In a grid of this nature, there are 60 horizontal toothpicks in each of the 33 rows (32 high means 33 horizontal lines of toothpicks). So, the number of horizontal toothpicks is $60 \\times 33 = 1980$. There are 32 vertical toothpicks in each of the 61 columns (60 long means 61 vertical lines of toothpicks). So, the number of vertical toothpicks is $32 \\times 61 = 1952$. The total number of toothpicks is the sum of the horizontal and vertical toothpicks: $1980 + 1952 = 3932$. </p>"
+        },
         {
           "text": "<p>There are <INSERTION_INDEX_1> vertical columns with a length of <INSERTION_INDEX_2> toothpicks, and there are <INSERTION_INDEX_3> horizontal rows with a length of <INSERTION_INDEX_4> toothpicks, because <INSERTION_INDEX_5> and <INSERTION_INDEX_6> are the number of intervals. You can verify this by trying a smaller case, i.e. a <INSERTION_INDEX_7> grid of toothpicks, with <INSERTION_INDEX_8> and <INSERTION_INDEX_9>.</p><p>Thus, our answer is <INSERTION_INDEX_10>.</p><p>~Note by Theraccoon: The person who posted this answer did not include their name. Minor edit by ~NXC</p>",
           "insertions": {
@@ -2904,6 +2970,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Let the sides of the right triangle $\\triangle ABC$ be $a, b, c$, where $c$ is the hypotenuse. The sides are the diameters of semicircles.  The area of a semicircle with diameter $d$ is $\\frac{1}{2}\\pi(\\frac{d}{2})^2 = \\frac{\\pi d^2}{8}$. The area of the semicircle on $\\overline{AB}$ is $8\\pi$.  Let the length of $\\overline{AB}$ be $d_{AB}$. Then $\\frac{\\pi d_{AB}^2}{8} = 8\\pi$, which gives $d_{AB}^2 = 64$, so $d_{AB} = 8$. The arc length of the semicircle on $\\overline{AC}$ is $8.5\\pi$.  The arc length of a semicircle is $\\frac{1}{2}\\pi d$. Let the length of $\\overline{AC}$ be $d_{AC}$. Then $\\frac{1}{2}\\pi d_{AC} = 8.5\\pi$, which gives $d_{AC} = 17$. Since $\\triangle ABC$ is a right triangle with hypotenuse $\\overline{AC}$, by the Pythagorean theorem, $d_{AB}^2 + d_{BC}^2 = d_{AC}^2$. So, $8^2 + d_{BC}^2 = 17^2$, which is $64 + d_{BC}^2 = 289$. Thus, $d_{BC}^2 = 225$, and $d_{BC} = 15$. The radius of the semicircle on $\\overline{BC}$ is half of its diameter, so the radius is $15/2 = 7.5$. </p>"
+        },
         {
           "text": "<p>If the semicircle on <INSERTION_INDEX_1> were a full circle, the area would be <INSERTION_INDEX_2>. </p><p><INSERTION_INDEX_3>, therefore the diameter of the first circle is <INSERTION_INDEX_4>. </p><p>The arc of the largest semicircle is <INSERTION_INDEX_5>, so if it were a full circle, the circumference would be <INSERTION_INDEX_6>. So the <INSERTION_INDEX_7>.</p><p><br/></p><p>By the Pythagorean theorem, the other side has length <INSERTION_INDEX_8>, so the radius is <INSERTION_INDEX_9></p><p>~Edited by Theraccoon to correct typos.</p>",
           "insertions": {
@@ -3107,7 +3176,7 @@
       "answer": "C",
       "solutions": [
         {
-          "text": "<p>We notice that ABCX is a trapezoid with the bases AB and CX. Assuming AB is 1, we find that CX is 0.25 since it is half of CH which is 0.5. Using the area of the trapezoid formula, we calculate the area of ABCX to be 0.625 and XCIJ to be 0.375. The combined areas equal 1. Therefore, the ratio of the area of the hexagon to the three squares is 1:3 because the area of the three squares is 3. The answer is <INSERTION_INDEX_1>-~TheNerdwhoIsNerdy. (I don't know if this is correct, pls check).</p>",
+          "text": "<p>Observing that ABCX forms a trapezoid with bases AB and CX, we can determine that if AB equals 1, then CX equals 0.25 (as it's half of CH which is 0.5). Applying the trapezoid area formula, we compute the area of ABCX as 0.625 and XCIJ as 0.375. The total combined area equals 1. Consequently, the hexagon's area ratio to the three squares is 1:3, since the three squares have a combined area of 3. The correct answer is <INSERTION_INDEX_1></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/e/6/0/e60f3a6d0a96f2d2661058caddb24ee044da6a83.png",
@@ -3189,6 +3258,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>A ball with diameter 4 inches (so radius 2 inches) rolls along a track of three semicircular arcs.  The center of the ball will trace a path parallel to the track, at a distance of its radius (2 inches) from the track. The track consists of three semicircles with radii $R_1=100$, $R_2=60$, and $R_3=80$ inches.  For the first arc, the ball is on the inside, so the center of the ball travels along a semicircular path with radius $R_1 - 2 = 100 - 2 = 98$ inches. The distance is $\\pi \\times 98 = 98\\pi$. For the second arc, the ball is on the outside, so the center of the ball travels along a semicircular path with radius $R_2 + 2 = 60 + 2 = 62$ inches. The distance is $\\pi \\times 62 = 62\\pi$. For the third arc, the ball is on the inside, so the center of the ball travels along a semicircular path with radius $R_3 - 2 = 80 - 2 = 78$ inches. The distance is $\\pi \\times 78 = 78\\pi$. The total distance traveled by the center of the ball is the sum of these distances: $98\\pi + 62\\pi + 78\\pi = (98+62+78)\\pi = 238\\pi$ inches. </p>"
+        },
         {
           "text": "<p>The total length of all of the arcs is <INSERTION_INDEX_1>. Since we want the path from the center, the actual distance will be subtracted by <INSERTION_INDEX_2> because it's already half the circumference through semicircle A, which needs to go half the circumference extra through semicircle B, and it's already half the circumference through semicircle C, and the circumference is <INSERTION_INDEX_3> Therefore, the answer is <INSERTION_INDEX_4>.</p><p>~<a href=\"/wiki/index.php/User:PowerQualimit\" title=\"User:PowerQualimit\">PowerQualimit</a></p><p>Video Solution:<a class=\"external free\" href=\"https://www.youtube.com/watch?v=zZGuBFyiQrk\" rel=\"nofollow\">https://www.youtube.com/watch?v=zZGuBFyiQrk</a> by WhyMath</p>",
           "insertions": {
