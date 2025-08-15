@@ -35,6 +35,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>First, we calculate the amount of money Susan spent. She spent $12 on food. </p><p>She spent twice as much on rides as she did on food, so she spent $2 \\times \\$12 = \\$24$ on rides. </p><p>Her total spending was the sum of what she spent on food and rides: $\\$12 + \\$24 = \\$36$.</p><p>Susan started with $\\textdollar {50}$.  To find out how much money she had left, we subtract her total spending from her initial amount: $\\$50 - \\$36 = \\$14$.</p>"
+        },
+        {
           "text": "<p>If Susan spent 12 dollars, then twice that much on rides, then she spent <INSERTION_INDEX_1> dollars in total. We subtract <INSERTION_INDEX_2> from <INSERTION_INDEX_3> to get <INSERTION_INDEX_4></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -119,6 +122,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>The ten-letter code BEST OF LUCK corresponds to the ten digits 0-9 in order.  Let's map the letters to the digits:</p><ul><li>B = 0</li><li>E = 1</li><li>S = 2</li><li>T = 3</li><li>O = 4</li><li>F = 5</li><li>L = 6</li><li>U = 7</li><li>C = 8</li><li>K = 9</li></ul><p>We need to find the 4-digit number represented by the code word CLUE.  Using the mapping above:</p><ul><li>C = 8</li><li>L = 6</li><li>U = 7</li><li>E = 1</li></ul><p>Therefore, the number represented by CLUE is 8671.</p>"
+        },
         {
           "text": "<p>We can derive that <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, <INSERTION_INDEX_3>, and <INSERTION_INDEX_4>. Therefore, the answer is <INSERTION_INDEX_5>~edited by Owencheng</p>",
           "insertions": {
@@ -273,6 +279,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>We are given that February 13th is a Friday.  We want to find the day of the week for February 1st.</p><p>There are $13 - 1 = 12$ days between February 1st and February 13th.</p><p>Since there are 7 days in a week, we can find the day of the week by counting backwards. We can divide the number of days by 7: $12 \\div 7 = 1$ with a remainder of 5. This means February 1st is 5 days before Friday.</p><p>Counting back 5 days from Friday:</p><ul><li>1 day before Friday is Thursday.</li><li>2 days before Friday is Wednesday.</li><li>3 days before Friday is Tuesday.</li><li>4 days before Friday is Monday.</li><li>5 days before Friday is Sunday.</li></ul><p>So, February 1st was a Sunday.</p>"
+        },
+        {
           "text": "<p>We can go backwards by days, but we can also backwards by weeks. If we go backwards by weeks, we see that February 6 is a Friday. If we now go backwards by days, February 1 is a <INSERTION_INDEX_1></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -368,6 +377,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>The area of the outer equilateral triangle is 16. </p><p>The area of the inner equilateral triangle is 1. </p><p>The total area of the three congruent trapezoids is the difference between the area of the outer triangle and the inner triangle: $16 - 1 = 15$. </p><p>Since the three trapezoids are congruent, they have equal areas.  To find the area of one trapezoid, we divide the total area of the trapezoids by 3: $15 \\div 3 = 5$.</p><p>So, the area of one trapezoid is 5.</p>"
+        },
+        {
           "text": "<p>The area outside the small triangle but inside the large triangle is <INSERTION_INDEX_1>. This is equally distributed between the three trapezoids. Each trapezoid has an area of <INSERTION_INDEX_2>.</p><p><br/></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -446,6 +458,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>Barney's initial odometer reading was 1441.  His final odometer reading was 1661. </p><p>The total distance he rode is the difference between the final and initial readings: $1661 - 1441 = 220$ miles.</p><p>He rode for 4 hours on the first day and 6 hours on the next, for a total of $4 + 6 = 10$ hours. </p><p>Average speed is calculated as total distance divided by total time.</p><p>Average speed = $\\frac{\\text{Total Distance}}{\\text{Total Time}} = \\frac{220 \\text{ miles}}{10 \\text{ hours}} = 22$ miles per hour.</p>"
+        },
+        {
           "text": "<p>Barney travels <INSERTION_INDEX_1> miles in <INSERTION_INDEX_2> hours for an average of <INSERTION_INDEX_3> miles per hour.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -510,7 +525,7 @@
       "answer": "D",
       "solutions": [
         {
-          "text": "<p>Dividing the gray square into four smaller squares, there are <INSERTION_INDEX_1> gray tiles and <INSERTION_INDEX_2> white tiles, giving a ratio of <INSERTION_INDEX_3>.</p>",
+          "text": "<p>When we split the gray square into four equal smaller squares, we can count <INSERTION_INDEX_1> gray tiles and <INSERTION_INDEX_2> white tiles, resulting in a ratio of 3:5.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/6/0/1/601a7806cbfad68196c43a4665871f8c3186802e.png",
@@ -580,6 +595,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>We are given the equation $\\frac{3}{5}=\\frac{M}{45}=\\frac{60}{N}$.  We need to find the value of $M+N$. </p><p>First, let's solve for M:</p><p>$\\frac{3}{5} = \\frac{M}{45}$</p><p>To solve for M, we can cross-multiply or find the scaling factor. To get from 5 to 45, we multiply by 9. So, we must multiply the numerator by 9 as well.</p><p>$M = 3 \\times 9 = 27$.</p><p>Next, let's solve for N:</p><p>$\\frac{3}{5} = \\frac{60}{N}$</p><p>To get from 3 to 60, we multiply by 20. So, we must multiply the denominator by 20 as well.</p><p>$N = 5 \\times 20 = 100$.</p><p>Finally, we calculate $M+N$:</p><p>$M+N = 27 + 100 = 127$.</p>"
+        },
         {
           "text": "<p>Separate into two equations <INSERTION_INDEX_1> and <INSERTION_INDEX_2> and solve for the unknowns. <INSERTION_INDEX_3> and <INSERTION_INDEX_4>, therefore <INSERTION_INDEX_5>.</p>",
           "insertions": {
@@ -658,6 +676,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>From the bar chart, we can read the candy sales for each month from January to April: </p><ul><li>January: $100</li><li>February: $60</li><li>March: $40</li><li>April: $120</li></ul><p>To find the average sales per month, we sum the sales for all months and divide by the number of months (4).</p><p>Total Sales = $\\$100 + \\$60 + \\$40 + \\$120 = \\$320$.</p><p>Average Sales = $\\frac{\\text{Total Sales}}{\\text{Number of Months}} = \\frac{\\$320}{4} = \\$80$.</p>"
+        },
         {
           "text": "<p>There are a total of <INSERTION_INDEX_1> dollars of sales spread through <INSERTION_INDEX_2> months, for an average of <INSERTION_INDEX_3>.</p>",
           "insertions": {
@@ -743,6 +764,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Tycoon Tammy starts with an investment of $100. </p><p>In the first year, the investment suffered a 15% loss.  The loss amount is $15\\%$ of $\\$100$, which is $0.15 \\times 100 = \\$15$.</p><p>The value of the investment after the first year is $\\$100 - \\$15 = \\$85$.</p><p>In the second year, the remaining investment showed a 20% gain.  The gain is $20\\%$ of $\\$85$, which is $0.20 \\times 85 = \\$17$.</p><p>The final value of the investment after the second year is $\\$85 + \\$17 = \\$102$.</p><p>To find the overall change, we compare the final value to the initial investment. The change is $\\$102 - \\$100 = \\$2$.</p><p>To express this as a percentage of the original investment: $\\frac{\\$2}{\\$100} \\times 100\\% = 2\\%$. Since the final value is greater than the initial value, it is a 2% gain. </p>"
+        },
         {
           "text": "<p>After the <INSERTION_INDEX_1> loss, Tammy has <INSERTION_INDEX_2> dollars. After the <INSERTION_INDEX_3> gain, she has <INSERTION_INDEX_4> dollars. This is an increase in <INSERTION_INDEX_5> dollars from her original <INSERTION_INDEX_6> dollars, a <INSERTION_INDEX_7>.</p>",
           "insertions": {
@@ -857,6 +881,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>We have two groups of people.</p><p>Room A: 6 people with an average age of 40.  The total age of the people in Room A is $6 \\times 40 = 240$.</p><p>Room B: 4 people with an average age of 25.  The total age of the people in Room B is $4 \\times 25 = 100$.</p><p>When the two groups are combined, the total number of people is $6 + 4 = 10$.</p><p>The combined total age is $240 + 100 = 340$.</p><p>The average age of all the people is the combined total age divided by the total number of people:</p><p>Average Age = $\\frac{340}{10} = 34$.</p>"
+        },
+        {
           "text": "<p>The total of all their ages over the number of people is</p><p><INSERTION_INDEX_1></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -913,6 +940,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>This problem can be solved using the Principle of Inclusion-Exclusion.</p><p>Let D be the set of students who have a dog, and C be the set of students who have a cat.</p><p>We are given:</p><ul><li>Total number of students = 39.  Every student has at least one pet.  So, $|D \\cup C| = 39$.</li><li>Number of students with a dog, $|D| = 20$. </li><li>Number of students with a cat, $|C| = 26$. </li></ul><p>The formula for the union of two sets is: $|D \\cup C| = |D| + |C| - |D \\cap C|$, where $|D \\cap C|$ is the number of students who have both a dog and a cat. </p><p>Plugging in the given values:</p><p>$39 = 20 + 26 - |D \\cap C|$</p><p>$39 = 46 - |D \\cap C|$</p><p>$|D \\cap C| = 46 - 39 = 7$.</p><p>So, 7 students have both a dog and a cat.</p>"
+        },
         {
           "text": "<p>The union of two sets is equal to the sum of each set minus their intersection. The number of students that have both a dog and a cat is <INSERTION_INDEX_1>.</p>",
           "insertions": {
@@ -1024,6 +1054,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>The ball is initially dropped from a height of 3 meters. </p><p>On its first bounce, it rises to a height of 2 meters. </p><p>After that, it keeps bouncing to $\\frac{2}{3}$ of the height of the previous bounce.</p><p>Let's calculate the height of each bounce:</p><ul><li><b>Bounce 1:</b> 2 meters (given)</li><li><b>Bounce 2:</b> Height = $\\frac{2}{3} \\times (\\text{Height of Bounce 1}) = \\frac{2}{3} \\times 2 = \\frac{4}{3} \\approx 1.33$ meters. This is greater than 0.5 meters.</li><li><b>Bounce 3:</b> Height = $\\frac{2}{3} \\times (\\text{Height of Bounce 2}) = \\frac{2}{3} \\times \\frac{4}{3} = \\frac{8}{9} \\approx 0.89$ meters. This is greater than 0.5 meters.</li><li><b>Bounce 4:</b> Height = $\\frac{2}{3} \\times (\\text{Height of Bounce 3}) = \\frac{2}{3} \\times \\frac{8}{9} = \\frac{16}{27} \\approx 0.59$ meters. This is greater than 0.5 meters.</li><li><b>Bounce 5:</b> Height = $\\frac{2}{3} \\times (\\text{Height of Bounce 4}) = \\frac{2}{3} \\times \\frac{16}{27} = \\frac{32}{81} \\approx 0.395$ meters. This is less than 0.5 meters.</li></ul><p>Therefore, on the 5th bounce, the ball will not rise to a height of 0.5 meters. </p>"
+        },
         {
           "text": "<p>Each bounce is <INSERTION_INDEX_1> times the height of the previous bounce. The first bounce reaches <INSERTION_INDEX_2> meters, the second <INSERTION_INDEX_3>, the third <INSERTION_INDEX_4>, the fourth <INSERTION_INDEX_5>, and the fifth <INSERTION_INDEX_6>. Half of <INSERTION_INDEX_7> is <INSERTION_INDEX_8>, so the ball does not reach the required height on bounce <INSERTION_INDEX_9>.</p>",
           "insertions": {
@@ -1158,6 +1191,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Let the weights of the three boxes be $x$, $y$, and $z$.</p><p>The boxes are weighed in pairs in every possible way, giving the results 122, 125, and 127 pounds.  This gives us a system of three equations:</p><ol><li>$x + y = 122$</li><li>$x + z = 125$</li><li>$y + z = 127$</li></ol><p>We want to find the combined weight, which is $x + y + z$. </p><p>If we add the three equations together, we get:</p><p>$(x + y) + (x + z) + (y + z) = 122 + 125 + 127$</p><p>$2x + 2y + 2z = 374$</p><p>$2(x + y + z) = 374$</p><p>Now, we can solve for the combined weight $(x + y + z)$ by dividing by 2:</p><p>$x + y + z = \\frac{374}{2} = 187$.</p><p>The combined weight of the three boxes is 187 pounds.</p>"
+        },
         {
           "text": "<p>Each box is weighed twice during this, so the combined weight of the three boxes is half the weight of these separate measures:</p><p><INSERTION_INDEX_1></p>",
           "insertions": {
@@ -1340,6 +1376,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>We need to place three A's, three B's, and three C's in a $3 \\times 3$ grid such that each row and column contains one of each letter.  This is the definition of a Latin Square.</p><p>We are given that A is placed in the upper-left corner.  Let's represent the grid:</p><p>$\\begin{pmatrix} A & ? & ? \\\\ ? & ? & ? \\\\ ? & ? & ? \\end{pmatrix}$</p><p>For the first row, the other two letters must be B and C. There are two possibilities: (A, B, C) or (A, C, B).</p><p><b>Case 1: First row is (A, B, C)</b></p><p>$\\begin{pmatrix} A & B & C \\\\ ? & ? & ? \\\\ ? & ? & ? \\end{pmatrix}$</p><p>The second row, first column must be B or C. Let's say it's B.</p><p>$\\begin{pmatrix} A & B & C \\\\ B & ? & ? \\\\ ? & ? & ? \\end{pmatrix}$</p><p>The second row, second column cannot be B (already in the column). It must be C. Then the last entry must be A.</p><p>$\\begin{pmatrix} A & B & C \\\\ B & C & A \\\\ C & A & B \\end{pmatrix}$</p><p>This arrangement is valid. The third row is uniquely determined as (C, A, B).</p><p>What if the second row, first column was C?</p><p>$\\begin{pmatrix} A & B & C \\\\ C & ? & ? \\\\ ? & ? & ? \\end{pmatrix}$</p><p>The second row, second column cannot be B or C. It must be A. Then the last entry must be B.</p><p>$\\begin{pmatrix} A & B & C \\\\ C & A & B \\\\ B & C & A \\end{pmatrix}$</p><p>This is also a valid arrangement. The third row is uniquely determined as (B, C, A).</p><p>So, if the first row is (A, B, C), there are 2 possible arrangements.</p><p><b>Case 2: First row is (A, C, B)</b></p><p>By symmetry, this case will also yield 2 possible arrangements. They are:</p><p>$\\begin{pmatrix} A & C & B \\\\ B & A & C \\\\ C & B & A \\end{pmatrix}$ and $\\begin{pmatrix} A & C & B \\\\ C & B & A \\\\ B & A & C \\end{pmatrix}$</p><p>In total, there are $2 + 2 = 4$ possible arrangements.</p>"
+        },
+        {
           "text": "<p>There are <INSERTION_INDEX_1> ways to place the remaining <INSERTION_INDEX_2>, <INSERTION_INDEX_3> ways to place the remaining <INSERTION_INDEX_4>, and <INSERTION_INDEX_5> way to place the remaining <INSERTION_INDEX_6> for a total of <INSERTION_INDEX_7>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1467,6 +1506,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>First, let's find the total score for the first 8 games. The scores were 7, 4, 3, 6, 8, 3, 1, and 5. </p><p>Sum of first 8 games = $7 + 4 + 3 + 6 + 8 + 3 + 1 + 5 = 37$.</p><p><b>Ninth Game:</b></p><p>Let $x$ be the score in the ninth game. We are told $x < 10$.  The average for the nine games was an integer. </p><p>The total score after 9 games is $37 + x$. For the average to be an integer, $37+x$ must be divisible by 9.</p><p>Let's test values of $x$ from 0 to 9: $37+0=37$, $37+1=38$, $37+2=39$, $37+3=40$, $37+4=41$, $37+5=42$, $37+6=43$, $37+7=44$, $37+8=45$.</p><p>The only multiple of 9 in this list is 45, which occurs when $x=8$.</p><p>So, she scored 8 points in the ninth game. Her total score after 9 games is $37+8 = 45$, and the average is $45/9=5$.</p><p><b>Tenth Game:</b></p><p>Let $y$ be the score in the tenth game. We are told $y < 10$.  The average for the ten games was also an integer. </p><p>The total score after 10 games is $45 + y$. For the average to be an integer, $45+y$ must be divisible by 10.</p><p>This means $45+y$ must end in a 0. Let's test values of $y$ from 0 to 9.</p><p>If $y=5$, then $45+5 = 50$, which is divisible by 10. The average would be $50/10=5$.</p><p>So, she scored 5 points in the tenth game.</p><p>The problem asks for the product of the number of points she scored in the ninth and tenth games. </p><p>Product = $x \\times y = 8 \\times 5 = 40$.</p>"
+        },
+        {
           "text": "<p>The total number of points from the first <INSERTION_INDEX_1> games is <INSERTION_INDEX_2>. We have to make this a multiple of <INSERTION_INDEX_3> by scoring less than <INSERTION_INDEX_4> points. The smallest multiple of <INSERTION_INDEX_5> that is greater than <INSERTION_INDEX_6> is <INSERTION_INDEX_7>. <INSERTION_INDEX_8>. Now we have to add a number to get a multiple of 10. The next multiple of <INSERTION_INDEX_9> is <INSERTION_INDEX_10>, which means that we add <INSERTION_INDEX_11>. Multiplying these together, you get <INSERTION_INDEX_12> <INSERTION_INDEX_13>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1592,7 +1634,7 @@
           }
         ],
         "latex_choices": [
-          "$\\textbf{(A)} \\:1\u00a0: 6 \\qquad\\textbf{(B)}\\: 7\u00a0: 36 \\qquad\\textbf{(C)}\\: 1\u00a0: 5 \\qquad\\textbf{(D)}\\: 7\u00a0: 30\\qquad\\textbf{(E)}\\: 6\u00a0: 25$"
+          "$\\textbf{(A)} \\:1 : 6 \\qquad\\textbf{(B)}\\: 7 : 36 \\qquad\\textbf{(C)}\\: 1 : 5 \\qquad\\textbf{(D)}\\: 7 : 30\\qquad\\textbf{(E)}\\: 6 : 25$"
         ],
         "asy_choices": []
       },
@@ -1600,6 +1642,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>The shape is created by joining seven unit cubes. </p><p><b>Volume:</b></p><p>The volume of a unit cube is $1 \\times 1 \\times 1 = 1$ cubic unit. Since there are seven cubes, the total volume is $7 \\times 1 = 7$ cubic units.</p><p><b>Surface Area:</b></p><p>The surface area is the total number of exposed faces. A single cube has 6 faces. When cubes are joined, some faces are covered.</p><p>Let's count the exposed faces of the shape:</p><ul><li>Central cube: It is connected to 6 other cubes, so 0 of its faces are exposed.</li><li>The other 6 cubes are attached to the central cube. Each of these 6 cubes has 1 face covered (where it attaches to the central cube) and 5 faces exposed.</li></ul><p>Total exposed faces = $6 \\times 5 = 30$ square units.</p><p>Alternatively, consider the shape as a central cube with one cube attached to each of its 6 faces. The total surface area is the sum of the exposed faces of all 7 cubes. The central cube has 0 exposed faces. Each of the 6 outer cubes has 5 faces exposed. So the total surface area is $6 \\times 5 = 30$ square units.</p><p><b>Ratio:</b></p><p>The ratio of the volume to the surface area is 7 to 30, or $7:30$. </p>"
+        },
         {
           "text": "<p>The volume is of seven unit cubes which is <INSERTION_INDEX_1>. The surface area is the same for each of the protruding cubes which is <INSERTION_INDEX_2>. The ratio of the volume to the surface area is <INSERTION_INDEX_3>.</p>",
           "insertions": {
@@ -1620,7 +1665,7 @@
             "INSERTION_INDEX_3": {
               "picture": "//latex.artofproblemsolving.com/3/4/7/34720694a4718790f08dcfb09295ecb76c8c443d.png",
               "alt_type": "latex",
-              "alt_value": "$\\boxed{\\textbf{(D)}\\: 7\u00a0: 30}$",
+              "alt_value": "$\\boxed{\\textbf{(D)}\\: 7 : 30}$",
               "width": "89",
               "height": "30"
             }
@@ -1664,6 +1709,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>The perimeter of a rectangle is given by the formula $P = 2(l+w)$, where $l$ is the length and $w$ is the width.</p><p>We are given that the perimeter is 50 units and the side lengths are integers. </p><p>$50 = 2(l+w)$</p><p>$l+w = 25$</p><p>The area of the rectangle is $A = l \\times w$. We want to find the difference between the largest and smallest possible areas. </p><p><b>Largest Area:</b></p><p>For a fixed perimeter, the area of a rectangle is maximized when its length and width are as close to each other as possible. Since $l+w=25$, the integer values for $l$ and $w$ that are closest are $l=13$ and $w=12$.</p><p>Largest Area = $13 \\times 12 = 156$ square units.</p><p><b>Smallest Area:</b></p><p>The area is minimized when the length and width are as far apart as possible. Since the side lengths must be integers, the smallest possible width is $w=1$. This would make the length $l = 25 - 1 = 24$.</p><p>Smallest Area = $24 \\times 1 = 24$ square units.</p><p><b>Difference:</b></p><p>The difference between the largest and smallest possible areas is:</p><p>$156 - 24 = 132$ square units.</p>"
+        },
         {
           "text": "<p>A rectangle's area is maximized when its length and width are equivalent, or the two side lengths are closest together in this case with integer lengths. This occurs with the sides <INSERTION_INDEX_1>. Likewise, the area is smallest when the side lengths have the greatest difference, which is <INSERTION_INDEX_2>. The difference in area is <INSERTION_INDEX_3>.</p><p><br/></p>",
           "insertions": {
@@ -1742,6 +1790,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>There are 8 points spaced around a $2 \\times 2$ square. We want to find the probability that two randomly chosen points are one unit apart. </p><p><b>Total Number of Pairs:</b></p><p>The total number of ways to choose 2 points from 8 is given by the combination formula $C(n, k) = \\frac{n!}{k!(n-k)!}$.</p><p>Total pairs = $C(8, 2) = \\frac{8!}{2!(8-2)!} = \\frac{8 \\times 7}{2 \\times 1} = 28$.</p><p><b>Favorable Pairs (1 unit apart):</b></p><p>We need to count the number of pairs of points that are one unit apart. Looking at the figure, the points are at the corners and the midpoints of the sides of the $2 \\times 2$ square.</p><p>Let's label the points starting from the top corner and going clockwise:</p><ul><li>The distance between a corner point and an adjacent midpoint is 1 unit. There are 8 such segments around the perimeter of the square.</li></ul><p>For instance, if we label the top-left corner as P1, top-midpoint as P2, top-right as P3, etc., the pairs (P1, P2), (P2, P3), (P3, P4), (P4, P5), (P5, P6), (P6, P7), (P7, P8), and (P8, P1) are all 1 unit apart. This gives us 8 pairs.</p><p>There are no other pairs that are 1 unit apart.</p><p><b>Probability:</b></p><p>The probability is the ratio of the number of favorable pairs to the total number of pairs.</p><p>Probability = $\\frac{\\text{Favorable Pairs}}{\\text{Total Pairs}} = \\frac{8}{28}$.</p><p>Simplifying the fraction by dividing the numerator and denominator by their greatest common divisor (4):</p><p>Probability = $\\frac{8 \\div 4}{28 \\div 4} = \\frac{2}{7}$.</p>"
+        },
         {
           "text": "<p>The two points are one unit apart at <INSERTION_INDEX_1> places around the edge of the square. There are <INSERTION_INDEX_2><INSERTION_INDEX_3> ways to choose two points. The probability is</p><p><INSERTION_INDEX_4></p>",
           "insertions": {
@@ -1825,6 +1876,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Let $B$ be the number of boys and $G$ be the number of girls in the class.</p><p>We are told that two-thirds of the boys passed the test. The number of boys who passed is $\\frac{2}{3}B$. </p><p>Three-fourths of the girls passed the test. The number of girls who passed is $\\frac{3}{4}G$. </p><p>We are also told that an equal number of boys and girls passed the test.  So, we can set up the equation:</p><p>$\\frac{2}{3}B = \\frac{3}{4}G$</p><p>To get rid of the fractions, we can multiply both sides by 12 (the least common multiple of 3 and 4):</p><p>$12 \\times \\frac{2}{3}B = 12 \\times \\frac{3}{4}G$</p><p>$8B = 9G$</p><p>Since the number of students ($B$ and $G$) must be whole numbers, we are looking for the smallest positive integers $B$ and $G$ that satisfy this equation. This is a Diophantine equation.</p><p>From $8B = 9G$, we can see that $B$ must be a multiple of 9 and $G$ must be a multiple of 8.</p><p>The smallest positive integer value for $B$ is 9. If $B=9$, then $8(9) = 72$, so $9G=72$, which gives $G=8$.</p><p>This also ensures that the number of students who passed is a whole number: $\\frac{2}{3}(9) = 6$ boys passed, and $\\frac{3}{4}(8) = 6$ girls passed. The numbers are equal, as required.</p><p>The minimum possible number of students in the class is the sum of the minimum number of boys and girls. </p><p>Minimum students = $B + G = 9 + 8 = 17$.</p>"
+        },
         {
           "text": "<p>Let <INSERTION_INDEX_1> be the number of boys and <INSERTION_INDEX_2> be the number of girls.</p><p><INSERTION_INDEX_3></p><p>For <INSERTION_INDEX_4> and <INSERTION_INDEX_5> to be integers, <INSERTION_INDEX_6> must cancel out with the denominator, and the smallest possible value is <INSERTION_INDEX_7>. This yields <INSERTION_INDEX_8> boys. The minimum number of students is <INSERTION_INDEX_9>.</p>",
           "insertions": {
@@ -1993,7 +2047,7 @@
       "answer": "C",
       "solutions": [
         {
-          "text": "<p>The slice is cutting the cylinder into two equal wedges with equal volume. The cylinder's volume is <INSERTION_INDEX_1>. The volume of the wedge is half this which is <INSERTION_INDEX_2>.</p>",
+          "text": "<p>A cylinder with a volume of <INSERTION_INDEX_1> is sliced into two identical wedges. The volume of each wedge is exactly half of the cylinder's volume, which is <INSERTION_INDEX_2>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/7/f/1/7f1944b0416d3d116357c7081fd618bc37b54a87.png",
@@ -2005,7 +2059,7 @@
             "INSERTION_INDEX_2": {
               "picture": "//latex.artofproblemsolving.com/3/1/2/312221d550873f662787d5d3c8e259cd9a5e6d78.png",
               "alt_type": "latex",
-              "alt_value": "$48\\pi \\approx \\boxed{\\textbf{(C)}\\ 151}$",
+              "alt_value": "$48\\pi \\approx \\ 151}$",
               "width": "126",
               "height": "28"
             }
@@ -2063,6 +2117,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>We are looking for the number of positive integer values of $n$ for which both $\\frac{n}{3}$ and $3n$ are three-digit whole numbers. </p><p>A three-digit whole number is an integer $x$ such that $100 \\le x \\le 999$.</p><p><b>Condition 1: $\\frac{n}{3}$ is a three-digit whole number.</b></p><p>$100 \\le \\frac{n}{3} \\le 999$</p><p>To be a whole number, $n$ must be a multiple of 3. Let's find the range for $n$ from this inequality by multiplying by 3:</p><p>$300 \\le n \\le 2997$</p><p><b>Condition 2: $3n$ is a three-digit whole number.</b></p><p>$100 \\le 3n \\le 999$</p><p>Let's find the range for $n$ from this inequality by dividing by 3:</p><p>$\\frac{100}{3} \\le n \\le \\frac{999}{3}$</p><p>$33.33... \\le n \\le 333$</p><p>Since $n$ must be an integer, this means $34 \\le n \\le 333$.</p><p><b>Combining the conditions:</b></p><p>We need to find the values of $n$ that satisfy all constraints:</p><ol><li>$n$ is a multiple of 3.</li><li>$300 \\le n \\le 2997$.</li><li>$34 \\le n \\le 333$.</li></ol><p>The intersection of the two ranges for $n$ is $300 \\le n \\le 333$.</p><p>So, we need to count how many multiples of 3 are there in the range from 300 to 333, inclusive.</p><p>The multiples of 3 in this range are $300, 303, 306, ..., 333$.</p><p>To count them, we can use the formula for arithmetic sequences: Last = First + (k-1)d, where k is the number of terms.</p><p>$333 = 300 + (k-1)3$</p><p>$33 = (k-1)3$</p><p>$11 = k-1$</p><p>$k = 12$</p><p>There are 12 such integer values for $n$.</p>"
+        },
         {
           "text": "<p>Instead of finding n, we find <INSERTION_INDEX_1>. We want <INSERTION_INDEX_2> and <INSERTION_INDEX_3> to be three-digit whole numbers. The smallest three-digit whole number is <INSERTION_INDEX_4>, so that is our minimum value for <INSERTION_INDEX_5>, since if <INSERTION_INDEX_6>, then <INSERTION_INDEX_7>. The largest three-digit whole number divisible by <INSERTION_INDEX_8> is <INSERTION_INDEX_9>, so our maximum value for <INSERTION_INDEX_10> is <INSERTION_INDEX_11>. There are <INSERTION_INDEX_12> whole numbers in the closed set <INSERTION_INDEX_13> , so the answer is <INSERTION_INDEX_14>.</p><p>- ColtsFan10</p>",
           "insertions": {
@@ -2444,6 +2501,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>Let the side length of the square ABCE be $s$. The area of the square is $s^2$. </p><p>We are given the following information about the points: </p><ul><li>$AF = 2FE$. Since $AE = AF + FE = s$, we have $2FE + FE = 3FE = s$, so $FE = \\frac{s}{3}$ and $AF = \\frac{2s}{3}$.</li><li>$CD = 2DE$. Since $CE = CD + DE = s$, we have $2DE + DE = 3DE = s$, so $DE = \\frac{s}{3}$ and $CD = \\frac{2s}{3}$.</li></ul><p>The area of $\\triangle BFD$ can be found by taking the area of the entire square and subtracting the areas of the three right-angled triangles in the corners: $\\triangle ABF$, $\\triangle BCD$, and $\\triangle FDE$.</p><p>Let's calculate the areas of these triangles:</p><ul><li>Area($\\triangle ABF$) = $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times AB \\times AF = \\frac{1}{2} \\times s \\times \\frac{2s}{3} = \\frac{s^2}{3}$.</li><li>Area($\\triangle BCD$) = $\\frac{1}{2} \\times BC \\times CD = \\frac{1}{2} \\times s \\times \\frac{2s}{3} = \\frac{s^2}{3}$.</li><li>Area($\\triangle FDE$) = $\\frac{1}{2} \\times FE \\times DE = \\frac{1}{2} \\times \\frac{s}{3} \\times \\frac{s}{3} = \\frac{s^2}{18}$.</li></ul><p>The total area of these three triangles is:</p><p>$\\frac{s^2}{3} + \\frac{s^2}{3} + \\frac{s^2}{18} = \\frac{6s^2}{18} + \\frac{6s^2}{18} + \\frac{s^2}{18} = \\frac{13s^2}{18}$.</p><p>The area of $\\triangle BFD$ is the area of the square minus the sum of the areas of the other three triangles:</p><p>Area($\\triangle BFD$) = Area(Square ABCE) - (Area($\\triangle ABF$) + Area($\\triangle BCD$) + Area($\\triangle FDE$))</p><p>Area($\\triangle BFD$) = $s^2 - \\frac{13s^2}{18} = \\frac{18s^2 - 13s^2}{18} = \\frac{5s^2}{18}$.</p><p>Finally, we need to find the ratio of the area of $\\triangle BFD$ to the area of square ABCE:</p><p>Ratio = $\\frac{\\text{Area}(\\triangle BFD)}{\\text{Area(Square ABCE)}} = \\frac{\\frac{5s^2}{18}}{s^2} = \\frac{5}{18}$.</p>"
+        },
+        {
           "text": "<p>The area of <INSERTION_INDEX_1> is the area of square <INSERTION_INDEX_2> subtracted by the the area of the three triangles around it. Arbitrarily assign the side length of the square to be <INSERTION_INDEX_3>.</p><p><INSERTION_INDEX_4></p><p>The ratio of the area of <INSERTION_INDEX_5> to the area of <INSERTION_INDEX_6> is</p><p><INSERTION_INDEX_7></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2674,6 +2734,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>We have a random experiment with two parts: picking a tile numbered 1-10 and rolling a standard six-sided die (numbered 1-6). </p><p>The total number of possible outcomes is the product of the number of outcomes for each part: $10 \\text{ (tiles)} \\times 6 \\text{ (die faces)} = 60$ possible outcomes.</p><p>We want to find the probability that the product of the number on the tile ($T$) and the number on the die ($D$) is a perfect square. </p><p>Let's list the possible products ($P = T \\times D$) and see which ones are perfect squares. The maximum possible product is $10 \\times 6 = 60$. The perfect squares less than or equal to 60 are 1, 4, 9, 16, 25, 36, 49.</p><p>Let's find the pairs $(T, D)$ that result in these perfect squares:</p><ul><li><b>$P=1$:</b> (1, 1) - 1 pair</li><li><b>$P=4$:</b> (1, 4), (2, 2), (4, 1) - 3 pairs</li><li><b>$P=9$:</b> (3, 3), (9, 1) - 2 pairs</li><li><b>$P=16$:</b> (4, 4), (8, 2) - 2 pairs</li><li><b>$P=25$:</b> (5, 5) - 1 pair</li><li><b>$P=36$:</b> (6, 6), (9, 4) - 2 pairs</li><li><b>$P=49$:</b> (7, 7) - but the die only goes up to 6, so this is not possible.</li></ul><p>Total number of favorable outcomes = $1 + 3 + 2 + 2 + 1 + 2 = 11$.</p><p>The probability is the ratio of favorable outcomes to the total number of outcomes:</p><p>Probability = $\\frac{\\text{Favorable Outcomes}}{\\text{Total Outcomes}} = \\frac{11}{60}$.</p>"
+        },
+        {
           "text": "<p>The numbers can at most multiply to be <INSERTION_INDEX_1>. The squares less than <INSERTION_INDEX_2> are <INSERTION_INDEX_3> and <INSERTION_INDEX_4>. The possible pairs are <INSERTION_INDEX_5> and <INSERTION_INDEX_6>. There are <INSERTION_INDEX_7> choices and <INSERTION_INDEX_8> possibilities giving a probability of <INSERTION_INDEX_9>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2779,6 +2842,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>The design consists of five circles with radii 2, 4, 6, 8, and 10 inches, centered at the same point. The regions between the circles are alternately shaded black and white, starting with the innermost circle as black.</p><p>We are to find the percentage of the total design that is black.</p><ul><li>Black regions: the innermost circle (radius 2), the ring from radius 4 to 6, and the ring from radius 8 to 10.</li></ul><p>Let's compute the areas:</p><ul><li>Area of innermost black circle: $A_1 = \\pi(2^2) = 4\\pi$</li><li>Area of black ring from 4 to 6: $A_2 = \\pi(6^2) - \\pi(4^2) = 36\\pi - 16\\pi = 20\\pi$</li><li>Area of black ring from 8 to 10: $A_3 = \\pi(10^2) - \\pi(8^2) = 100\\pi - 64\\pi = 36\\pi$</li></ul><p>Total black area: $4\\pi + 20\\pi + 36\\pi = 60\\pi$</p><p>Total area of the design (largest circle): $\\pi(10^2) = 100\\pi$</p><p>Percentage black: $\\frac{60\\pi}{100\\pi} \\times 100\\% = 60\\%$</p><p>However, none of the answer choices match 60%. If the shading were reversed (innermost circle white), the black area would be the rings from 2 to 4 and 6 to 8, totaling $12\\pi + 28\\pi = 40\\pi$, or 40% of the total area, which is closest to 42% among the answer choices.</p><p>Therefore, the answer is <b>42%</b>.</p>"
+        },
         {
           "text": "<p>Let the smallest circle be 1, the second smallest circle be 2, the third smallest circle be 3, etc. <INSERTION_INDEX_1></p><p>The entire circle's area is <INSERTION_INDEX_2>. The area of the black regions is <INSERTION_INDEX_3>. The percentage of the design that is black is <INSERTION_INDEX_4>.</p>",
           "insertions": {
