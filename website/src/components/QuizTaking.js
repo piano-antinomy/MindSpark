@@ -281,9 +281,12 @@ function QuizTaking() {
     
     // Auto-save progress when answer is selected (with debouncing)
     clearTimeout(autoSaveTimeout.current);
-    autoSaveTimeout.current = setTimeout(() => {
-      saveProgress();
-    }, 2000); // Save 2 seconds after last answer selection
+    
+    // uncomment this to auto save progress every 2 seconds if we want: 
+    // for now, only save progress when user clicks on save. 
+    // autoSaveTimeout.current = setTimeout(() => {
+    //   saveProgress();
+    // }, 2000); // Save 2 seconds after last answer selection
   };
 
   const nextQuestion = () => {
