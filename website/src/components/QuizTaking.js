@@ -380,60 +380,27 @@ function QuizTaking() {
   };
 
   const completeQuiz = async () => {
-    // Save progress before completing
     await saveProgress();
-    setQuizCompleted(true);
-    
-    // Calculate new score
-    const newScore = calculateScore();
-    
     try {
-      // Get current user
       const currentUser = checkAuthStatus();
-      if (!currentUser) {
-        console.error('User not authenticated');
-        return;
+      if (!currentUser) { setQuizCompleted(true); return; }
+      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}`, { credentials: 'include' });
+      if (response.ok) {
+        const quizzes = await response.json();
+        const totalScore = Object.values(quizzes).reduce((sum, qp) => sum + (qp.quizScore || 0), 0);
+        console.log('totalScore', totalScore);
+        await fetch(`${JAVA_API_BASE_URL}/auth/update-scores`, 
+          { method: 'POST', 
+            headers: { 'Content-Type': 'application/json' }, 
+            credentials: 'include', 
+            body: JSON.stringify({ score: totalScore, mathLevel: totalScore }) 
+          }
+        );
       }
-      
-      // Fetch user's current profile to get current score
-      const profileResponse = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
-        credentials: 'include'
-      });
-      
-      if (profileResponse.ok) {
-        const userProfile = await profileResponse.json();
-        const currentScore = userProfile.user?.score || 0;
-        
-        // Calculate total score: new score + current score
-        const totalScore = newScore + currentScore;
-        // todo: concrete math level calculation based on question difficulty
-        var mathLevel = totalScore;
-        
-        // Update score via API
-        const updateResponse = await fetch(`${JAVA_API_BASE_URL}/auth/update-scores`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          credentials: 'include',
-          body: JSON.stringify({
-            score: totalScore,
-            mathLevel: mathLevel
-          })
-        });
-        
-        if (updateResponse.ok) {
-          const result = await updateResponse.json();
-          console.log('Score updated successfully:', result);
-        } else {
-          console.error('Failed to update score:', updateResponse.status, updateResponse.statusText);
-        }
-      } else {
-        console.error('Failed to fetch user profile:', profileResponse.status, profileResponse.statusText);
-      }
-    } catch (error) {
-      console.error('Error updating score:', error);
+    } catch (e) {
+      console.error('Error updating total score:', e);
     }
+    setQuizCompleted(true);
   };
 
   const calculateScore = () => {

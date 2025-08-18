@@ -1,0 +1,1 @@
+AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy AWS_REGION=us-east-1 DYNAMO_ENDPOINT=http://127.0.0.1:7076 npx dynamodb-admin
