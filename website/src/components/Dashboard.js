@@ -233,6 +233,13 @@ function Dashboard() {
               {updateRecentActivity(user)}
             </div>
           </div>
+
+          {/* Leaderboard Link */}
+          <div className="dashboard-card leaderboard-card">
+            <h2>🏅 Leaderboard</h2>
+            <p>See how you stack up against others.</p>
+            <Link to="/leaderboard" className="btn btn-primary">see leaderboard</Link>
+          </div>
         </div>
       </main>
     </div>

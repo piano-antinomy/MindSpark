@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Singleton;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 
@@ -167,10 +168,9 @@ public class LoginServiceImpl implements LoginService {
     /**
      * Get all users (for admin purposes - without passwords)
      */
-    public Map<String, User> getAllUsers() {
-        Map<String, User> result = new ConcurrentHashMap<>();
-        users.forEach((key, user) -> result.put(key, user.withoutPassword()));
-        return result;
+    @Override
+    public List<User> getAllUsers() {
+        return userDAO.getAllUsers();
     }
     
     /**

@@ -10,6 +10,7 @@ import Quiz from './components/Quiz';
 import QuizTaking from './components/QuizTaking';
 import Solutions from './components/Solutions';
 import './App.css';
+import Leaderboard from './components/Leaderboard';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/quiz-taking" element={<QuizTaking />} />
         <Route path="/solutions" element={<Solutions />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
     </div>
   );

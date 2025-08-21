@@ -2,6 +2,8 @@ package com.mindspark.service;
 
 import com.mindspark.model.User;
 
+import java.util.List;
+
 public interface LoginService {
     
     /**
@@ -51,4 +53,6 @@ public interface LoginService {
      * @return the stored user without password, or null if the payload is invalid
      */
     User createOrUpdateUser(User user);
+
+    List<User> getAllUsers();
 } 

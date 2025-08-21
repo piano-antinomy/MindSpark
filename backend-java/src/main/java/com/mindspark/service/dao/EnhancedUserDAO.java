@@ -11,6 +11,11 @@ import software.amazon.awssdk.enhanced.dynamodb.Key;
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
 import software.amazon.awssdk.enhanced.dynamodb.model.PageIterable;
 import software.amazon.awssdk.services.dynamodb.model.ResourceNotFoundException;
+import software.amazon.awssdk.enhanced.dynamodb.Expression;
+import software.amazon.awssdk.enhanced.dynamodb.model.ScanEnhancedRequest;
+import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.inject.Singleton;
 import java.time.Instant;
@@ -183,9 +188,25 @@ public class EnhancedUserDAO {
      */
     public List<User> getAllUsers() {
         try {
-            PageIterable<User> results = userTable.scan();
+            Map<String, String> expressionNames = new HashMap<>();
+            expressionNames.put("#sk", "sortKey");
+
+            Map<String, AttributeValue> expressionValues = new HashMap<>();
+            expressionValues.put(":skVal", AttributeValue.builder().s("userMetadata").build());
+
+            Expression filterExpression = Expression.builder()
+                    .expression("#sk = :skVal")
+                    .expressionNames(expressionNames)
+                    .expressionValues(expressionValues)
+                    .build();
+
+            ScanEnhancedRequest request = ScanEnhancedRequest.builder()
+                    .filterExpression(filterExpression)
+                    .build();
+
+            PageIterable<User> results = userTable.scan(request);
             List<User> users = new ArrayList<>();
-            results.items().forEach(users::add);
+            results.items().stream().forEach(users::add);
             
             logger.info("Retrieved {} users from DynamoDB", users.size());
             return users;

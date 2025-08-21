@@ -18,8 +18,11 @@ import javax.servlet.http.HttpSession;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 @Singleton
 public class AuthController extends HttpServlet {
@@ -83,6 +86,8 @@ public class AuthController extends HttpServlet {
                 handleGetProfile(request, response);
             } else if (pathInfo.equals("/status")) {
                 handleAuthStatus(request, response);
+            } else if (pathInfo.equals("/profile/get-all-users")) {
+                handleGetAllUsers(request, response);
             } else {
                 sendErrorResponse(response, HttpServletResponse.SC_NOT_FOUND, "Endpoint not found");
             }
@@ -332,6 +337,30 @@ public class AuthController extends HttpServlet {
             logger.error("Error parsing update progress request", e);
             sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Invalid request format");
         }
+    }
+    
+    private void handleGetAllUsers(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        HttpSession session = request.getSession(false);
+        if (session == null || session.getAttribute("userId") == null) {
+            sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Not authenticated");
+            return;
+        }
+
+        List<User> users = loginService.getAllUsers();
+        Map<String, Object> responseData = new HashMap<>();
+        responseData.put("success", true);
+        if (users == null) {
+            responseData.put("users", Collections.emptyList());
+        } else {
+            List<User> sanitized = new ArrayList<>();
+            for (User u : users) {
+                if (u != null) {
+                    sanitized.add(u.withoutPassword());
+                }
+            }
+            responseData.put("users", sanitized);
+        }
+        sendJsonResponse(response, responseData);
     }
     
     private void sendJsonResponse(HttpServletResponse response, Object data) throws IOException {
