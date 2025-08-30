@@ -35,6 +35,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>To find the largest possible number of intersection points, we need to maximize the intersections between each pair of figures.</p><p>The three figures are a circle and two distinct lines.</p><ul><li><b>Two lines:</b> Two distinct lines can intersect at a maximum of 1 point.</li><li><b>A line and a circle:</b> A line can intersect a circle at a maximum of 2 points.</li></ul><p>To maximize the total number of unique intersection points:</p><ol><li>The two lines intersect each other at 1 point.</li><li>The first line intersects the circle at 2 distinct points.</li><li>The second line intersects the circle at 2 other distinct points.</li></ol><p>For this to happen, the lines must not be parallel, neither line should be tangent to the circle, and the intersection point of the two lines must be outside the circle. The total number of intersection points is the sum of these maximums: $1 + 2 + 2 = 5$.</p>"
+        },
+        {
           "text": "<p>The two <a href=\"/wiki/index.php/Line\" title=\"Line\">lines</a> can both <a href=\"/wiki/index.php/Intersection\" title=\"Intersection\">intersect</a> the <a href=\"/wiki/index.php/Circle\" title=\"Circle\">circle</a> twice, and can intersect each other once, so <INSERTION_INDEX_1></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -91,6 +94,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>Let $x$ be the number of $5$ bills and $y$ be the number of $2$ bills. We are looking for the number of non-negative integer solutions to the equation:</p><p>$5x + 2y = 17$</p><p>Since $2y$ is always even, $5x$ must be odd for the sum to be the odd number $17$. $5x$ is odd only when $x$ is odd. Also, $5x$ must be less than or equal to $17$, so possible values for $x$ are $1$ and $3$.</p><ul><li><b>If $x = 1$:</b><br>$5 \\times 1 + 2y = 17$<br>$2y = 12$<br>$y = 6$<br>This gives the combination of one $5$ bill and six $2$ bills.</li><li><b>If $x = 3$:</b><br>$5 \\times 3 + 2y = 17$<br>$15 + 2y = 17$<br>$2y = 2$<br>$y = 1$<br>This gives the combination of three $5$ bills and one $2$ bill.</li></ul><p>There are $2$ different combinations.</p>"
+        },
         {
           "text": "<p><a class=\"external free\" href=\"https://youtu.be/Zhsb5lv6jCI?t=701\" rel=\"nofollow\">https://youtu.be/Zhsb5lv6jCI?t=701</a></p>",
           "insertions": {}
@@ -201,6 +207,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>To find the smallest possible average of four distinct positive even integers, we must choose the four smallest distinct positive even integers. </p><p>The positive even integers are 2, 4, 6, 8, 10, ...</p><p>The four smallest distinct ones are 2, 4, 6, and 8.</p><p>Their sum is:<br>$2 + 4 + 6 + 8 = 20$</p><p>The average is the sum divided by the count of the integers:</p><p>$Average = \\frac{20}{4} = 5$</p>"
+        },
+        {
           "text": "<p>In order to get the smallest possible average, we want the 4 even numbers to be as small as possible. The first 4 positive even numbers are 2, 4, 6, and 8. Their average is <INSERTION_INDEX_1>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -242,6 +251,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>A palindrome is a number that reads the same forwards and backward.  The starting year is 2002.</p><p>We are looking for the next palindrome after 2002. Four-digit palindromes have the form $ABBA$.</p><p>The current palindrome is 2002, so $A=2$ and $B=0$. To find the next palindrome starting with 2, we need to increment the inner digits, represented by $B$.</p><p>The next value for $B$ after 0 is 1. This gives the year 2112.</p><p>Now, we find the product of the digits of 2112:</p><p>$2 \\times 1 \\times 1 \\times 2 = 4$</p>"
+        },
         {
           "text": "<p>The palindrome right after 2002 is 2112. The product of the digits of 2112 is <INSERTION_INDEX_1>.</p>",
           "insertions": {
@@ -296,6 +308,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Carlos was born on a Saturday.  We need to find the day of the week 706 days later.</p><p>The days of the week form a cycle of 7. To find the day, we need to find the remainder when 706 is divided by 7.</p><p>$706 \\div 7$</p><p>We know that $700$ is a multiple of 7 ($700 = 7 \\times 100$).</p><p>So, $706 = 700 + 6$. The remainder is 6.</p><p>The day of the week will be 6 days after Saturday.</p><p>Saturday + 6 days = Friday.</p>"
+        },
         {
           "text": "<p>Days of the week have a cycle that repeats every <INSERTION_INDEX_1> days. Thus, after <INSERTION_INDEX_2> cycles, or <INSERTION_INDEX_3> days, it will be Saturday again. Six more days will make it <INSERTION_INDEX_4></p>",
           "insertions": {
@@ -415,6 +430,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>The problem describes the volume of water in a birdbath over time, involving a filling phase and an overflow phase. </p><ul><li><b>Filling phase:</b> Water flows into the birdbath. Assuming it starts empty, the volume of water increases over time. Since the flow rate is constant, the volume should increase linearly. This corresponds to a line with a positive slope on the volume-time graph.</li><li><b>Overflow phase:</b> Once the birdbath is full, it starts to overflow. This means it has reached its maximum capacity. Any additional water that flows in immediately spills out. Therefore, the volume of water in the birdbath remains constant at its maximum level. This corresponds to a horizontal line on the graph.</li></ul><p>Graph A is the only graph that shows the volume increasing linearly and then becoming constant.  The specific rates (20 ml/min in, 18 ml/min out) might imply that the net filling rate is 2 ml/min, but the overall behavior of filling then staying full is represented by Graph A.</p>"
+        },
+        {
           "text": "<p>The change in the water volume has a net gain of <INSERTION_INDEX_1> millimeters per minute. The birdbath's volume increases at a constant rate until it reaches its maximum and starts overflowing to keep a constant volume. This is best represented by graph <INSERTION_INDEX_2>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -471,6 +489,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>First, we need to determine the total number of students in the class by summing the number of students who chose each type of candy from the bar graph. </p><ul><li>Candy A: 6 students</li><li>Candy B: 8 students</li><li>Candy C: 4 students</li><li>Candy D: 2 students</li><li>Candy E: 5 students</li></ul><p>Total number of students = $6 + 8 + 4 + 2 + 5 = 25$.</p><p>Next, we find the percentage of students who chose candy E. </p><p>$\\text{Percentage} = \\frac{\\text{Number of students who chose E}}{\\text{Total number of students}} \\times 100\\%$</p><p>$\\text{Percentage} = \\frac{5}{25} \\times 100\\% = \\frac{1}{5} \\times 100\\% = 20\\%$</p>"
+        },
         {
           "text": "<p>From the bar graph, we can see that <INSERTION_INDEX_1> students chose candy E. There are <INSERTION_INDEX_2> total students in Mrs. Sawyers class. The percent that chose E is <INSERTION_INDEX_3>.</p>",
           "insertions": {
@@ -536,6 +557,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>The problem asks for the total number of European stamps issued in the '80s. </p><p>From the introductory text, the European countries in the collection are France and Spain. </p><p>We use the table to find the number of stamps for these countries in the '80s column: </p><ul><li>Number of stamps from France in the '80s: 15</li><li>Number of stamps from Spain in the '80s: 9</li></ul><p>The total number is the sum of these two amounts:</p><p>$15 + 9 = 24$</p><p>Juan has 24 European stamps from the '80s.</p>"
+        },
+        {
           "text": "<p>France and Spain are European countries. The number of '80s stamps from France is <INSERTION_INDEX_1> and the number of '80s stamps from Spain is <INSERTION_INDEX_2>. The total number of stamps is <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -571,7 +595,7 @@
     {
       "id": "amc_2002_8_9",
       "question": {
-        "text": "<p>Problems 8,9 and 10 use the data found in the accompanying paragraph and table:</p><p><INSERTION_INDEX_1></p><p>In dollars and cents, how much did his South American stamps issued before the \u201970s cost him?</p>",
+        "text": "<p>Problems 8,9 and 10 use the data found in the accompanying paragraph and table:</p><p><INSERTION_INDEX_1></p><p>In dollars and cents, how much did his South American stamps issued before the ’70s cost him?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/f/6/7/f679bb00d960506089f9cd632a80bd218347de4e.png",
@@ -599,6 +623,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>We need to find the total cost of South American stamps issued before the '70s. </p><p>The South American countries are Brazil and Peru.  'Before the '70s' refers to the '50s and '60s.</p><p>First, let's find the number of stamps from the table: </p><ul><li>Brazil ('50s + '60s): $4 + 7 = 11$ stamps</li><li>Peru ('50s + '60s): $6 + 4 = 10$ stamps</li></ul><p>Next, we use the cost information: </p><ul><li>Brazil stamps cost 6¢ each.</li><li>Peru stamps cost 4¢ each.</li></ul><p>Now, calculate the total cost:</p><ul><li>Cost of Brazil stamps: $11 \\text{ stamps} \\times 6¢/\\text{stamp} = 66¢$</li><li>Cost of Peru stamps: $10 \\text{ stamps} \\times 4¢/\\text{stamp} = 40¢$</li></ul><p>Total cost = $66¢ + 40¢ = 106¢$, which is equal to $1.06.</p>"
+        },
         {
           "text": "<p>Brazil 50s and 60s total 11 stamps with each 6 cents, Peru 50s and 60s total 10 stamps with each 4 cents. So total <INSERTION_INDEX_1></p>",
           "insertions": {
@@ -650,6 +677,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>To find the average price of the '70s stamps, we first need the total number of stamps from that decade and their total cost. </p><p><b>1. Total number of '70s stamps</b> (from the table): </p><ul><li>Brazil: 12</li><li>France: 12</li><li>Peru: 6</li><li>Spain: 13</li></ul><p>Total stamps = $12 + 12 + 6 + 13 = 43$ stamps.</p><p><b>2. Total cost of '70s stamps</b> (using prices from the text): </p><ul><li>Brazil: $12 \\times 6¢ = 72¢$</li><li>France: $12 \\times 6¢ = 72¢$</li><li>Peru: $6 \\times 4¢ = 24¢$</li><li>Spain: $13 \\times 5¢ = 65¢$</li></ul><p>Total cost = $72 + 72 + 24 + 65 = 233¢$.</p><p><b>3. Average price:</b></p><p>$\\text{Average Price} = \\frac{\\text{Total Cost}}{\\text{Total Stamps}} = \\frac{233¢}{43} \\approx 5.4186¢$</p><p>Comparing this value to the options, 5.4186¢ is closest to 5.5¢.</p>"
+        },
+        {
           "text": "<p>The price of all the stamps in the '70s together over the total number of stamps is equal to the average price.</p><p><INSERTION_INDEX_1></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -697,6 +727,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>The problem describes a sequence of squares where the side length of the n-th square is $n$ tiles.  The number of tiles in the n-th square is therefore $n^2$.</p><p>We need to find how many more tiles the seventh square requires than the sixth.  This is the difference between the number of tiles in the 7th square and the 6th square.</p><p>Number of tiles in the 7th square ($T_7$) = $7^2 = 49$.</p><p>Number of tiles in the 6th square ($T_6$) = $6^2 = 36$.</p><p>The difference is:</p><p>$T_7 - T_6 = 49 - 36 = 13$</p>"
+        },
         {
           "text": "<p>The first square has a sidelength of <INSERTION_INDEX_1>, the second square <INSERTION_INDEX_2>, and so on. The seventh square has <INSERTION_INDEX_3> and is made of <INSERTION_INDEX_4> unit tiles. The sixth square has <INSERTION_INDEX_5> and is made of <INSERTION_INDEX_6> unit tiles. The seventh square has <INSERTION_INDEX_7> more tiles than the sixth square.</p>",
           "insertions": {
@@ -898,6 +931,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>For any probability experiment, the sum of the probabilities of all possible outcomes must be 1.</p><p>In this case, the spinner can stop on region A, B, or C. So, the sum of their probabilities is 1:</p><p>$P(A) + P(B) + P(C) = 1$</p><p>We are given the probabilities for regions A and B: </p><ul><li>$P(A) = \\frac{1}{3}$</li><li>$P(B) = \\frac{1}{2}$</li></ul><p>We can solve for $P(C)$:</p><p>$P(C) = 1 - P(A) - P(B)$</p><p>$P(C) = 1 - \\frac{1}{3} - \\frac{1}{2}$</p><p>To subtract the fractions, we find a common denominator, which is 6.</p><p>$P(C) = \\frac{6}{6} - \\frac{2}{6} - \\frac{3}{6} = \\frac{6 - 2 - 3}{6} = \\frac{1}{6}$</p><p>Although option (B) is not printed in the provided document, the calculated answer is $1/6$, which corresponds to option (B) in the original test.</p>"
+        },
+        {
           "text": "<p>Since the arrow must land in one of the three regions, the sum of the probabilities must be 1. Thus the answer is <INSERTION_INDEX_1>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -939,6 +975,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>The number of jellybeans a box can hold is proportional to its volume.</p><p>Let the length, width, and height of Bert's box be $L$, $W$, and $H$, respectively. Its volume is $V_{Bert} = LWH$.</p><p>Carrie's box is twice as long, twice as wide, and twice as high.  Its dimensions are $2L$, $2W$, and $2H$.</p><p>The volume of Carrie's box is:</p><p>$V_{Carrie} = (2L)(2W)(2H) = 8(LWH) = 8 \\times V_{Bert}$</p><p>Carrie's box has 8 times the volume of Bert's box. Therefore, it can hold approximately 8 times as many jellybeans.</p><p>Number of jellybeans for Carrie = $8 \\times (\\text{Number of jellybeans for Bert})$</p><p>$8 \\times 125 = 1000$</p><p>Carrie got approximately 1000 jellybeans. </p>"
+        },
         {
           "text": "<p>Since the volume ratio is equal to the sides ratio cubed, then the ratio of the larger box's volume to the smaller one is 2 cubed.</p><p><INSERTION_INDEX_1></p><p>Now multiply 125 (the number of jellybeans that Bert's box can hold) by 8.</p><p><INSERTION_INDEX_2>.</p>",
           "insertions": {
@@ -1003,6 +1042,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>This is a problem about successive percentage discounts. Let the original price be $P$.</p><p><b>First discount:</b> 30% off. </p><p>The sale price is $P - 0.30P = 0.70P$.</p><p><b>Second discount:</b> 20% off the sale price. </p><p>The discount amount is $20\\%$ of $0.70P$, which is $0.20 \\times 0.70P = 0.14P$.</p><p>The final price is the sale price minus this second discount:</p><p>$Final Price = 0.70P - 0.14P = 0.56P$</p><p>To find the total discount, we compare the final price to the original price:</p><p>$Total Discount = \\frac{\\text{Original Price} - \\text{Final Price}}{\\text{Original Price}} = \\frac{P - 0.56P}{P} = \\frac{0.44P}{P} = 0.44$</p><p>The total discount is 44%. </p>"
+        },
         {
           "text": "<p>Let's assume that each item is <INSERTION_INDEX_1> dollars. First we take off <INSERTION_INDEX_2> off of <INSERTION_INDEX_3> dollars. <INSERTION_INDEX_4></p><p>Next, we take off the extra <INSERTION_INDEX_5> as asked by the problem. <INSERTION_INDEX_6></p><p>So the final price of an item is $56. We have to do <INSERTION_INDEX_7> because <INSERTION_INDEX_8> was the final price and we wanted the discount. So the final answer is <INSERTION_INDEX_9>, which is answer choice <INSERTION_INDEX_10>.</p>",
           "insertions": {
@@ -1171,6 +1213,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>To find the polygon with the largest area, we can calculate the area of each shape by treating the grid squares as unit squares. The shoelace formula or Pick's Theorem can be used, but careful decomposition or counting squares also works.</p><p>Let's use the shoelace formula by assigning coordinates to the vertices of each polygon. Let the bottom-left dot of each grid be (0,0).</p><ul><li><b>Area A:</b> Vertices at (1,0), (4,0), (4,1), (3,1), (3,3), (2,3), (2,1), (1,1). Area = 5.</li><li><b>Area B:</b> Vertices at (0,0), (3,0), (3,1), (2,2), (1,2), (0,1). Area = 5.</li><li><b>Area C:</b> Vertices at (0,1), (2,0), (3,2), (2,4), (1,4), (1,2). Area = 6.5.</li><li><b>Area D:</b> Vertices at (0,1), (1,0), (2,0), (3,1), (3,2), (2,3), (1,3), (0,2). Area = 4.</li><li><b>Area E:</b> Vertices at (0,2), (2,0), (3,1), (3,4), (1,4), (1,3). Area = 8.</li></ul><p>Comparing the calculated areas: A=5, B=5, C=6.5, D=4, E=8. Polygon E has the largest area.</p>"
+        },
+        {
           "text": "<p>Each polygon can be partitioned into unit squares and right triangles with sidelength <INSERTION_INDEX_1>. Count the number of boxes enclosed by each polygon, with the unit square being <INSERTION_INDEX_2>, and the triangle being <INSERTION_INDEX_3>. A has 5, B has 5, C has 5, D has 4.5, and E has 5.5. Therefore, the polygon with the largest area is <INSERTION_INDEX_4>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1294,6 +1339,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>The problem involves a 3-4-5 right triangle and right isosceles triangles constructed on each of its sides.  The letter in each triangle represents its area. </p><p>A general extension of the Pythagorean theorem, known as the Law of Cosines on areas, states that for any shapes that are similar to one another built on the sides of a right triangle, the sum of the areas of the shapes on the two legs equals the area of the shape on the hypotenuse.</p><p>In this problem, all the constructed triangles (X, Y, Z) are right isosceles triangles, so they are all similar to each other. They are constructed on the sides of the 3-4-5 right triangle, where 3 and 4 are the legs and 5 is the hypotenuse.</p><p>Therefore, we can directly apply the principle:</p><p>$\\text{Area on leg}_1 + \\text{Area on leg}_2 = \\text{Area on hypotenuse}$</p><p>$X + Y = Z$</p><p>Alternatively, we can calculate each area:</p><ul><li>For a right isosceles triangle with hypotenuse $h$, the legs are $s = h/\\sqrt{2}$. The area is $\\frac{1}{2}s^2 = \\frac{1}{2} \\frac{h^2}{2} = \\frac{h^2}{4}$.</li><li>Area X (hypotenuse 3): $X = \\frac{3^2}{4} = \\frac{9}{4} = 2.25$</li><li>Area Y (hypotenuse 4): $Y = \\frac{4^2}{4} = 4$</li><li>Area Z (hypotenuse 5): $Z = \\frac{5^2}{4} = \\frac{25}{4} = 6.25$</li></ul><p>Checking the option (E) $X+Y=Z$:</p><p>$2.25 + 4 = 6.25$</p><p>This is true.</p>"
+        },
+        {
           "text": "<p>The area of a right triangle can be found by using the legs of triangle as the base and height. In the three isosceles triangles, the length of their second leg is the same as the side that is connected to the <INSERTION_INDEX_1> triangle. </p><p><INSERTION_INDEX_2></p><p>Plugging into the answer choices, the only that works is <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1375,6 +1423,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Let $c$ be the number of correct answers and $i$ be the number of incorrect answers.</p><p>Olivia answered all 10 problems, so: </p><p>$c + i = 10$</p><p>The scoring is +5 for a correct answer and -2 for an incorrect answer. Her total score was 29: </p><p>$5c - 2i = 29$</p><p>From the first equation, we can write $i = 10 - c$. Substitute this into the second equation:</p><p>$5c - 2(10 - c) = 29$</p><p>$5c - 20 + 2c = 29$</p><p>$7c = 49$</p><p>$c = 7$</p><p>Olivia had 7 correct answers.</p>"
+        },
         {
           "text": "<p>We can try to guess and check to find the answer. If she got five right, her score would be <INSERTION_INDEX_1>. If she got six right her score would be <INSERTION_INDEX_2>. That's close, but it's still not right! If she got 7 right, her score would be <INSERTION_INDEX_3>. Thus, our answer is <INSERTION_INDEX_4>. ~avamarora</p>",
           "insertions": {
@@ -1623,6 +1674,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>First, calculate the total time Gage has already skated in the first 8 days. It's best to work in minutes.</p><ul><li><b>First 5 days:</b> 1 hr 15 min per day. This is $60 + 15 = 75$ minutes per day.  Total = $5 \\times 75 = 375$ minutes.</li><li><b>Next 3 days:</b> 1 hr 30 min per day. This is $60 + 30 = 90$ minutes per day.  Total = $3 \\times 90 = 270$ minutes.</li></ul><p>Total time for 8 days = $375 + 270 = 645$ minutes.</p><p>Next, calculate the total time needed to average 85 minutes over 9 days: </p><p>Total desired time = $9 \\text{ days} \\times 85 \\text{ min/day} = 765$ minutes.</p><p>The time needed on the ninth day is the difference between the desired total time and the time already skated:</p><p>Time on 9th day = $765 - 645 = 120$ minutes.</p><p>Finally, convert 120 minutes to hours:</p><p>$120 \\text{ minutes} = 2 \\text{ hours}$</p>"
+        },
+        {
           "text": "<p>Converting into minutes and adding, we get that she skated <INSERTION_INDEX_1> minutes total, where <INSERTION_INDEX_2> is the amount she skated on day <INSERTION_INDEX_3>. Dividing by <INSERTION_INDEX_4> to get the average, we get <INSERTION_INDEX_5>. Solving for <INSERTION_INDEX_6>, <INSERTION_INDEX_7> <INSERTION_INDEX_8> Now we convert back into hours and minutes to get <INSERTION_INDEX_9>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1795,6 +1849,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We are looking for three-digit whole numbers (from 100 to 999) that contain exactly one zero. </p><p>We can consider two cases based on the position of the zero.</p><p><b>Case 1: The zero is in the tens place.</b></p><p>The number has the form $H0U$.</p><ul><li>The hundreds digit ($H$) can be any digit from 1 to 9 (9 choices). It cannot be 0.</li><li>The units digit ($U$) can be any digit from 1 to 9 (9 choices). It cannot be 0, because we need exactly one 0.</li></ul><p>Number of possibilities = $9 \\times 9 = 81$.</p><p><b>Case 2: The zero is in the units place.</b></p><p>The number has the form $HD0$.</p><ul><li>The hundreds digit ($H$) can be any digit from 1 to 9 (9 choices).</li><li>The tens digit ($D$) can be any digit from 1 to 9 (9 choices).</li></ul><p>Number of possibilities = $9 \\times 9 = 81$.</p><p>The total number of such whole numbers is the sum of the possibilities from both cases:</p><p>$Total = 81 + 81 = 162$</p>"
+        },
         {
           "text": "<p>Numbers with exactly one zero have the form <INSERTION_INDEX_1> or <INSERTION_INDEX_2>, where the <INSERTION_INDEX_3>. There are <INSERTION_INDEX_4> such numbers, hence our answer is <INSERTION_INDEX_5>.</p>",
           "insertions": {
@@ -2040,7 +2097,7 @@
       "answer": "D",
       "solutions": [
         {
-          "text": "<p>We know the area of triangle <INSERTION_INDEX_1> is <INSERTION_INDEX_2> square inches. The area of a triangle can also be represented as <INSERTION_INDEX_3> or in this problem <INSERTION_INDEX_4>. By solving, we have <INSERTION_INDEX_5> <INSERTION_INDEX_6></p><p>With SAS congruence, triangles <INSERTION_INDEX_7> and <INSERTION_INDEX_8> are congruent. Hence, triangle <INSERTION_INDEX_9>. (Let's say point <INSERTION_INDEX_10> is the intersection between line segments <INSERTION_INDEX_11> and <INSERTION_INDEX_12>.) We can find the area of the trapezoid <INSERTION_INDEX_13> by subtracting the area of triangle <INSERTION_INDEX_14> from <INSERTION_INDEX_15>. </p><p>We find the area of triangle <INSERTION_INDEX_16> by the <INSERTION_INDEX_17> formula- <INSERTION_INDEX_18>. <INSERTION_INDEX_19> is <INSERTION_INDEX_20> of <INSERTION_INDEX_21> from solution 1. The area of <INSERTION_INDEX_22> is <INSERTION_INDEX_23>.</p><p>Therefore, the area of the shaded area- trapezoid <INSERTION_INDEX_24> has area <INSERTION_INDEX_25>. </p><p><br/>- sarah07</p>",
+          "text": "<p>We are aware that the area of triangle <INSERTION_INDEX_1> equals <INSERTION_INDEX_2> square inches. The area of a triangle can also be expressed as <INSERTION_INDEX_3> or in this particular problem <INSERTION_INDEX_4>. Upon solving, we obtain <INSERTION_INDEX_5> <INSERTION_INDEX_6></p><p>Through SAS congruence, triangles <INSERTION_INDEX_7> and <INSERTION_INDEX_8> are congruent. Thus, triangle <INSERTION_INDEX_9>. (Let's designate point <INSERTION_INDEX_10> as the intersection between line segments <INSERTION_INDEX_11> and <INSERTION_INDEX_12>.) We can determine the area of the trapezoid <INSERTION_INDEX_13> by subtracting the area of triangle <INSERTION_INDEX_14> from <INSERTION_INDEX_15>.</p><p>We calculate the area of triangle <INSERTION_INDEX_16> using the <INSERTION_INDEX_17> formula- <INSERTION_INDEX_18>. <INSERTION_INDEX_19> equals <INSERTION_INDEX_20> of <INSERTION_INDEX_21> from solution 1. The area of <INSERTION_INDEX_22> is <INSERTION_INDEX_23>.</p><p>Consequently, the area of the shaded region- trapezoid <INSERTION_INDEX_24> possesses area <INSERTION_INDEX_25>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/0/5/2/0526e1f5ad1412706cf938657f754604e672a671.png",
@@ -2250,6 +2307,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>Harold tosses a nickel four times. There are $2^4 = 16$ possible outcomes. We want the probability that he gets at least as many heads as tails, i.e., $H \\geq T$ where $H+T=4$.</p><ul><li>4 heads: $\\binom{4}{4} = 1$ way</li><li>3 heads, 1 tail: $\\binom{4}{3} = 4$ ways</li><li>2 heads, 2 tails: $\\binom{4}{2} = 6$ ways</li></ul><p>Total favorable outcomes: $1+4+6=11$.</p><p>Probability: $\\frac{11}{16}$.</p>"
+        },
+        {
           "text": "<p>Case 1: There are two heads and two tails. There are <INSERTION_INDEX_1> ways to choose which two tosses are heads, and the other two must be tails.</p><p>Case 2: There are three heads, one tail. There are <INSERTION_INDEX_2> ways to choose which of the four tosses is a tail.</p><p>Case 3: There are four heads and no tails. This can only happen <INSERTION_INDEX_3> way.</p><p>There are a total of <INSERTION_INDEX_4> possible configurations, giving a probability of <INSERTION_INDEX_5>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2327,6 +2387,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>There are two common methods to solve this: subtracting internal faces or counting external faces.</p><p><b>Method 1: Subtracting Internal Faces</b></p><p>1. Calculate the total surface area of six separate cubes. Each cube is 1 inch on an edge, so its surface area is $6 \\times (1 \\text{ in})^2 = 6 \\text{ in}^2$. For six cubes, the total area would be $6 \\times 6 = 36 \\text{ in}^2$.</p><p>2. Count the number of places where cubes are fastened together. Each connection hides two faces (one from each cube). From the figure, we can count 5 such connections (joins).</p><p>3. Subtract the area of the hidden faces: $5 \\text{ joins} \\times 2 \\text{ faces/join} \\times 1 \\text{ in}^2/\\text{face} = 10 \\text{ in}^2$.</p><p>4. The total surface area is $36 - 10 = 26$ square inches.</p><p><b>Method 2: Counting Exposed Faces</b></p><p>Count the number of exposed 1x1 faces on the entire structure.</p><ul><li>Bottom cube of the stack: 5 faces exposed (bottom and 4 sides).</li><li>Middle cube of the stack: 2 faces exposed (front and back).</li><li>Top cube of the stack: 5 faces exposed (top and 4 sides).</li><li>Cube to the left: 5 faces exposed.</li><li>Cube adjacent to the right of the stack: 4 faces exposed.</li><li>Far right cube: 5 faces exposed.</li></ul><p>Total exposed faces = $5 + 2 + 5 + 5 + 4 + 5 = 26$. The total surface area is 26 square inches. </p>"
+        },
         {
           "text": "<p>Count the number of sides that are not exposed, where a cube is connected to another cube and subtract it from the total number of faces. There are <INSERTION_INDEX_1> places with two adjacent cubes, covering <INSERTION_INDEX_2> sides, and <INSERTION_INDEX_3> faces. The exposed surface area is <INSERTION_INDEX_4>.</p>",
           "insertions": {
@@ -2439,7 +2502,7 @@
       "answer": "B",
       "solutions": [
         {
-          "text": "<p>The same pattern is repeated for every <INSERTION_INDEX_1> tile. Looking closer, there is also symmetry of the top <INSERTION_INDEX_2> square, so the fraction of the entire floor in dark tiles is the same as the fraction in the square. Counting the tiles, there are <INSERTION_INDEX_3> dark tiles, and <INSERTION_INDEX_4> total tiles, giving a fraction of <INSERTION_INDEX_5>.</p>",
+          "text": "<p>This identical pattern recurs for every <INSERTION_INDEX_1> tile. Upon closer examination, there exists symmetry within the top <INSERTION_INDEX_2> square, so the proportion of the entire floor covered in dark tiles equals the proportion within the square. Upon counting the tiles, we discover <INSERTION_INDEX_3> dark tiles, and <INSERTION_INDEX_4> total tiles, yielding a fraction of <INSERTION_INDEX_5>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/3/d/f/3df735414ed74b5fb2bd45fea452f9907f34bee3.png",
@@ -2508,6 +2571,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>First, let's determine the amount of juice extracted per fruit.</p><ul><li><b>Pears:</b> 8 ounces of juice from 3 pears $\\implies \\frac{8}{3}$ ounces per pear. </li><li><b>Oranges:</b> 8 ounces of juice from 2 oranges $\\implies \\frac{8}{2} = 4$ ounces per orange. </li></ul><p>Miki makes a blend from an equal number of pears and oranges. Let's assume she uses 1 pear and 1 orange to determine the ratio (the actual number doesn't matter). </p><ul><li>Pear juice from 1 pear = $\\frac{8}{3}$ oz.</li><li>Orange juice from 1 orange = 4 oz.</li></ul><p>The total volume of the blend from one of each fruit is:</p><p>$V_{total} = \\frac{8}{3} + 4 = \\frac{8}{3} + \\frac{12}{3} = \\frac{20}{3} \\text{ oz}$</p><p>The percentage of pear juice in the blend is the ratio of the volume of pear juice to the total volume, multiplied by 100.</p><p>$\\% \\text{Pear Juice} = \\frac{\\text{Volume of Pear Juice}}{V_{total}} \\times 100$</p><p>$\\% \\text{Pear Juice} = \\frac{8/3}{20/3} \\times 100 = \\frac{8}{20} \\times 100 = \\frac{2}{5} \\times 100 = 40\\%$</p>"
+        },
         {
           "text": "<p>A pear gives <INSERTION_INDEX_1> ounces of juice per pear. An orange gives <INSERTION_INDEX_2> ounces of juice per orange. If the pear-orange juice blend used one pear and one orange each, the percentage of pear juice would be</p><p><INSERTION_INDEX_3></p>",
           "insertions": {
@@ -2632,6 +2698,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Let M, L, and N be the initial amounts of money held by Moe, Loki, and Nick, respectively. Ott starts with 0. </p><p>Each of them gave Ott the same amount of money. Let's call this amount $x$. </p><ul><li>Moe gave $1/5$ of his money: $x = \\frac{1}{5}M \\implies M = 5x$.</li><li>Loki gave $1/4$ of his money: $x = \\frac{1}{4}L \\implies L = 4x$.</li><li>Nick gave $1/3$ of his money: $x = \\frac{1}{3}N \\implies N = 3x$.</li></ul><p>The total amount of money in the group remains constant. The initial total amount was:</p><p>$Total Money = M + L + N = 5x + 4x + 3x = 12x$</p><p>Ott received $x$ from each of the three friends, so Ott now has:</p><p>$Ott's Money = x + x + x = 3x$</p><p>The fractional part of the group's money that Ott now has is the ratio of Ott's money to the total money:</p><p>$Fraction = \\frac{\\text{Ott's Money}}{\\text{Total Money}} = \\frac{3x}{12x} = \\frac{3}{12} = \\frac{1}{4}$</p>"
+        },
         {
           "text": "<p>Since Ott gets equal amounts of money from each friend, we can say that he gets <INSERTION_INDEX_1> dollars from each friend. This means that Moe has <INSERTION_INDEX_2> dollars, Loki has <INSERTION_INDEX_3> dollars, and Nick has <INSERTION_INDEX_4> dollars. The total amount is <INSERTION_INDEX_5> dollars, and since Ott gets <INSERTION_INDEX_6> dollars total, <INSERTION_INDEX_7>.</p>",
           "insertions": {
