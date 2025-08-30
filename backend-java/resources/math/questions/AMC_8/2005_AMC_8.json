@@ -57,6 +57,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>Let the unknown number be $x$.</p><p>Connie multiplies the number by 2 and gets 60, so we have the equation: $2x = 60$.</p><p>Solving for $x$, we find the number is $x = \\frac{60}{2} = 30$.</p><p>She should have divided the number by 2. The correct answer is $\\frac{30}{2} = 15$.</p>"
+        },
+        {
           "text": "<p>If <INSERTION_INDEX_1> is the number, then <INSERTION_INDEX_2> and <INSERTION_INDEX_3>. Dividing the number by <INSERTION_INDEX_4> yields <INSERTION_INDEX_5>.</p><p>A second way to do it is to divide the number by <INSERTION_INDEX_6>, as you multiplied by <INSERTION_INDEX_7> when you were supposed to divide by <INSERTION_INDEX_8>. So, <INSERTION_INDEX_9>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -162,6 +165,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>First, calculate the total cost of the purchase.</p><p>Total cost = 5 folders $\\times \\textdollar{2.50}/folder = \\textdollar {12.50}$.</p><p>The next day, there was a 20%-off sale. The savings would be 20% of the total cost.</p><p>Savings = 20% of $\\textdollar {12.50} = 0.20 \\times 12.50 = \\textdollar {2.50}$.</p><p>So, Karl could have saved $\\textdollar {2.50}$ by waiting a day.</p>"
+        },
         {
           "text": "<p>Karl paid <INSERTION_INDEX_1>. <INSERTION_INDEX_2> of this cost that he saved is <INSERTION_INDEX_3>.</p>",
           "insertions": {
@@ -349,7 +355,7 @@
       "answer": "D",
       "solutions": [
         {
-          "text": "<p>Rotating square <INSERTION_INDEX_1> counterclockwise <INSERTION_INDEX_2> so that the line of symmetry <INSERTION_INDEX_3> is a vertical line makes it easier to see that <INSERTION_INDEX_4> squares need to be colored to match its corresponding square.</p>",
+          "text": "<p>By rotating square <INSERTION_INDEX_1> in a counterclockwise direction by <INSERTION_INDEX_2> such that the line of symmetry <INSERTION_INDEX_3> becomes vertical, it becomes more apparent that <INSERTION_INDEX_4> squares require coloring to match their corresponding counterparts.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
@@ -411,6 +417,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>First, find the perimeter of the triangle.</p><p>Perimeter of triangle = 6.1 cm + 8.2 cm + 9.7 cm = 24.0 cm.</p><p>The problem states that the square has an equal perimeter, so the perimeter of the square is also 24.0 cm.</p><p>A square has four equal sides. Let the side length be $s$.</p><p>Perimeter of square = $4s = 24.0$ cm.</p><p>Solving for $s$, we get $s = \\frac{24.0}{4} = 6$ cm.</p><p>The area of the square is $s^2$.</p><p>Area = $6^2 = 36$ square centimeters.</p>"
+        },
         {
           "text": "<p>The perimeter of the triangle is <INSERTION_INDEX_1> cm. A square's perimeter is four times its sidelength, since all its sidelengths are equal. If the square's perimeter is <INSERTION_INDEX_2>, the sidelength is <INSERTION_INDEX_3>, and the area is <INSERTION_INDEX_4>.</p>",
           "insertions": {
@@ -474,6 +483,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>To minimize the number of packs to get exactly 90 cans, we should use as many of the largest packs as possible.</p><p>The pack sizes are 6, 12, and 24.</p><p>Start with the largest pack (24 cans):</p><p>$\\frac{90}{24} = 3$ with a remainder of $90 - (3 \\times 24) = 90 - 72 = 18$.</p><p>So, we can use <strong>3 packs of 24</strong>. We still need to get 18 cans.</p><p>Next, use the 12-can packs for the remaining 18 cans:</p><p>$\\frac{18}{12} = 1$ with a remainder of $18 - 12 = 6$.</p><p>So, we can use <strong>1 pack of 12</strong>. We still need to get 6 cans.</p><p>Finally, use the 6-can packs:</p><p>$\\frac{6}{6} = 1$.</p><p>So, we can use <strong>1 pack of 6</strong>.</p><p>The minimum number of packs is the sum of the packs used: $3 + 1 + 1 = 5$ packs.</p>"
+        },
         {
           "text": "<p>Start by buying the largest packs first. After three <INSERTION_INDEX_1>-packs, <INSERTION_INDEX_2> cans are left. After one <INSERTION_INDEX_3>-pack, <INSERTION_INDEX_4> cans are left. Then buy one more <INSERTION_INDEX_5>-pack. The total number of packs is <INSERTION_INDEX_6>.</p>",
           "insertions": {
@@ -574,6 +586,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>We need to find the number of possible integer values for the digit $d$ such that the inequality $2.00d5 > 2.005$ is true.</p><p>Let's compare the two numbers place by place from left to right.</p><ul><li>The units, tenths, and hundredths digits are the same (2, 0, and 0).</li><li>The comparison depends on the thousandths digit. The first number has $d$ and the second has 5.</li><li>For $2.00d5$ to be greater than $2.005$, the digit $d$ must be greater than or equal to 5.</li></ul><p>If $d > 5$, the inequality holds (e.g., $2.0065 > 2.005$).</p><p>If $d = 5$, the number is $2.0055$, which is greater than $2.0050$. So $d=5$ is also a solution.</p><p>If $d < 5$, the inequality would not hold (e.g., $2.0045 < 2.005$).</p><p>Thus, $d$ can be any digit from 5 to 9. The possible values for $d$ are {5, 6, 7, 8, 9}.</p><p>There are 5 such values.</p>"
+        },
+        {
           "text": "<p>We see that <INSERTION_INDEX_1> works but <INSERTION_INDEX_2> does not. The digit <INSERTION_INDEX_3> can be from <INSERTION_INDEX_4> through <INSERTION_INDEX_5>, which is <INSERTION_INDEX_6> values.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -673,6 +688,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>Let's break down the total displacement in the north-south and east-west directions.</p><ul><li>Total southward displacement: $\\frac{1}{2}$ mile + $\\frac{1}{2}$ mile = 1 mile south.</li><li>Total eastward displacement: $\\frac{3}{4}$ mile east.</li></ul><p>These two displacements form the legs of a right triangle, with the direct distance from the starting point as the hypotenuse.</p><p>By the Pythagorean theorem:</p><p>Distance$^2 = (1)^2 + (\\frac{3}{4})^2 = 1 + \\frac{9}{16} = \\frac{25}{16}$</p><p>Distance $= \\sqrt{\\frac{25}{16}} = \\frac{5}{4}$ miles.</p><p>As a mixed number, $\\frac{5}{4} = 1\\frac{1}{4}$ miles.</p>"
+        },
+        {
           "text": "<p>We have a right-angle triangle with sides 3/4 and 1. We can divide the simple pythagorean theorem identity 3,4,5 by 4 to get 3/4, 1, 5/4. This shows us the answer is B, or 1 1/4.</p>",
           "insertions": {}
         }
@@ -706,6 +724,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>Let $m$ and $n$ be positive odd integers. Let's analyze the parity (odd/even) of each expression:</p><ul><li>Odd + odd = even</li><li>Odd - odd = even</li><li>Odd × odd = odd</li><li>Odd × even = even</li><li>Even + even = even</li></ul><p>Now, check each option:</p><p><b>(A) $m + 3n$:</b> $3n$ is odd, so odd + odd = even.</p><p><b>(B) $3m - n$:</b> $3m$ is odd, so odd - odd = even.</p><p><b>(C) $3m^2 + 3n^2$:</b> $m^2$ and $n^2$ are odd, so $3m^2$ and $3n^2$ are odd, and odd + odd = even.</p><p><b>(D) $(nm + 3)^2$:</b> $nm$ is odd, so $nm + 3$ is even, and the square of an even number is even.</p><p><b>(E) $3mn$:</b> $3$, $m$, and $n$ are all odd, so their product is odd.</p><p>Thus, only option (E) must be odd.</p>"
+        },
         {
           "text": "<p>Assume <a class=\"mw-redirect\" href=\"/wiki/index.php/WLOG\" title=\"WLOG\">WLOG</a> that <INSERTION_INDEX_1> and <INSERTION_INDEX_2> are both <INSERTION_INDEX_3>. Plugging into each of the choices, we get <INSERTION_INDEX_4> and <INSERTION_INDEX_5>. The only odd integer is <INSERTION_INDEX_6>.</p>",
           "insertions": {
@@ -847,6 +868,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We are given a quadrilateral $ABCD$ with $AB = BC = 10$, $CD = DA = 17$, and $\\angle ADC = 60^\\circ$. We are to find the length of diagonal $\\overline{AC}$.</p><p>Consider $\\triangle ADC$. We know $AD = 17$, $CD = 17$, and $\\angle ADC = 60^\\circ$.</p><p>Since $AD = CD$, $\\triangle ADC$ is isosceles with $\\angle DAC = \\angle DCA$.</p><p>The sum of the angles in a triangle is $180^\\circ$:</p><p>$\\angle DAC + \\angle DCA + 60^\\circ = 180^\\circ$</p><p>$2x + 60^\\circ = 180^\\circ$</p><p>$2x = 120^\\circ$</p><p>$x = 60^\\circ$</p><p>So all three angles are $60^\\circ$, making $\\triangle ADC$ equilateral. Thus, $AC = AD = CD = 17$.</p>"
+        },
         {
           "text": "<p>Because <INSERTION_INDEX_1>, <INSERTION_INDEX_2> is an isosceles triangle with <INSERTION_INDEX_3>. Angles in a triangle add up to <INSERTION_INDEX_4>, and since <INSERTION_INDEX_5>, the other two angles are also <INSERTION_INDEX_6>, and <INSERTION_INDEX_7> is an equilateral triangle. Therefore <INSERTION_INDEX_8>.</p>",
           "insertions": {
@@ -1004,6 +1028,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Let the total distance from home to school be $D$.</p><p>Joe walked the first half ($D/2$) at speed $v_w$ in 6 minutes: $D/2 = v_w \\times 6$.</p><p>He ran the second half ($D/2$) at speed $v_r = 3v_w$ in $t_r$ minutes: $D/2 = 3v_w \\times t_r$.</p><p>Set the two expressions for $D/2$ equal: $v_w \\times 6 = 3v_w \\times t_r$.</p><p>Divide both sides by $v_w$ (since $v_w \\neq 0$): $6 = 3t_r$.</p><p>So $t_r = 2$ minutes.</p><p>Total time = $6 + 2 = 8$ minutes.</p>"
+        },
         {
           "text": "<p>We can use the equation <INSERTION_INDEX_1> where <INSERTION_INDEX_2> is the distance, <INSERTION_INDEX_3> is the rate, and <INSERTION_INDEX_4> is the time. The distances he ran and walked are equal, so <INSERTION_INDEX_5>, where <INSERTION_INDEX_6> is the rate at which he ran, <INSERTION_INDEX_7> is the time for which he ran, <INSERTION_INDEX_8> is the rate at which he walked, and <INSERTION_INDEX_9> is the time for which he walked. Because he runs three times faster than he walks, <INSERTION_INDEX_10>. We want to find the time he ran, <INSERTION_INDEX_11> minutes. He traveled for a total of <INSERTION_INDEX_12> minutes.</p>",
           "insertions": {
@@ -1198,6 +1225,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>Let's calculate the final bill for both Jack and Jill from the original price of $\\textdollar {90.00}$.</p><p><b>Jack's Calculation:</b></p><ol><li>Add 6% sales tax to the original price: $\\textdollar {90.00} \\times 1.06 = \\textdollar {95.40}$.</li><li>Subtract the 20% discount from this total: $\\textdollar {95.40} \\times (1 - 0.20) = \\textdollar {95.40} \\times 0.80 = \\textdollar {76.32}$.</li></ol><p><b>Jill's Calculation:</b></p><ol><li>Subtract the 20% discount from the original price: $\\textdollar {90.00} \\times (1 - 0.20) = \\textdollar {90.00} \\times 0.80 = \\textdollar {72.00}$.</li><li>Add 6% sales tax to the discounted price: $\\textdollar {72.00} \\times 1.06 = \\textdollar {76.32}$.</li></ol><p>Both calculations result in the same final price. This is because multiplication is commutative: $(90 \\times 1.06) \\times 0.80 = 90 \\times (1.06 \\times 0.80) = (90 \\times 0.80) \\times 1.06$.</p><p>The difference is Jack's total minus Jill's total:</p><p>$\\textdollar {76.32} - \\textdollar {76.32} = \\textdollar {0}$.</p>"
+        },
+        {
           "text": "<p>The price Jack rings up is <INSERTION_INDEX_1>. The price Jill rings up is <INSERTION_INDEX_2>. By the commutative property of multiplication, these quantities are the same, and the difference is <INSERTION_INDEX_3>.</p><p><br/>Reminder: Commutative states abc = bac= acb =..... and is the same in any order. This only works for addition and multiplication.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1253,6 +1283,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>The number of bananas eaten each day forms an arithmetic sequence over 5 days (from May 1 to May 5).</p><p>Let the number of bananas eaten on May 1 be $x$.</p><p>The common difference is 6, as he ate six more bananas each day.</p><p>The number of bananas eaten on the five days are:</p><ul><li>May 1: $x$</li><li>May 2: $x+6$</li><li>May 3: $x+12$</li><li>May 4: $x+18$</li><li>May 5: $x+24$</li></ul><p>The total number of bananas eaten is 100. So, we sum the terms:</p><p>$x + (x+6) + (x+12) + (x+18) + (x+24) = 100$</p><p>$5x + (6+12+18+24) = 100$</p><p>$5x + 60 = 100$</p><p>$5x = 40$</p><p>$x = 8$.</p><p>The question asks for the number of bananas eaten on May 5, which is $x+24$.</p><p>Bananas on May 5 = $8 + 24 = 32$.</p>"
+        },
         {
           "text": "<p>There are <INSERTION_INDEX_1> days from May 1 to May 5. The number of bananas he eats each day is an arithmetic sequence. He eats <INSERTION_INDEX_2> bananas on May 5, and <INSERTION_INDEX_3> bananas on May 1. The sum of this arithmetic sequence is equal to <INSERTION_INDEX_4>.</p><p><INSERTION_INDEX_5></p>",
           "insertions": {
@@ -1475,6 +1508,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>The polygon ABCDEF is a rectilinear polygon (all angles are 90 or 270 degrees). We can place it on a coordinate plane to find the unknown lengths.</p><p>Let vertex F be at the origin (0,0).</p><ul><li>Since $FA=5$ and $\\angle F$ is a right angle, A is at (0,5).</li><li>Since $AB=8$ and $\\angle A$ is a right angle, B is at (8,5).</li><li>Since $BC=9$ and $\\angle B$ is a right angle, C is at (8,-4).</li><li>E is on the x-axis, so $y_E=0$. Let E be at $(x_E, 0)$.</li><li>D is vertically below E, so D is at $(x_E, -4)$.</li></ul><p>We can divide the polygon into two rectangles by drawing a vertical line through E and D.</p><ul><li>Rectangle 1 (left): vertices (0,0), (0,5), $(x_E,5)$, $(x_E,0)$. Area: $5x_E$.</li><li>Rectangle 2 (right): vertices $(x_E,5)$, (8,5), (8,-4), $(x_E,-4)$. Area: $(8-x_E)\\times9$.</li></ul><p>Total area: $5x_E + 9(8-x_E)$.</p><p>Given total area is 52:</p><p>$52 = 5x_E + 72 - 9x_E$</p><p>$52 = 72 - 4x_E$</p><p>$4x_E = 20 \\implies x_E = 5$</p><p>Now, $EF$ is the distance from F(0,0) to E(5,0): $EF=5$.</p><p>$DE$ is the distance from D(5,-4) to E(5,0): $DE=4$.</p><p>The required sum is $DE + EF = 4 + 5 = 9$.</p>"
+        },
+        {
           "text": "<p>Notice that <INSERTION_INDEX_1>, so <INSERTION_INDEX_2>. Let <INSERTION_INDEX_3> be the intersection of the extensions of <INSERTION_INDEX_4> and <INSERTION_INDEX_5>, which makes rectangle <INSERTION_INDEX_6>. The area of the polygon is the area of <INSERTION_INDEX_7> subtracted from the area of <INSERTION_INDEX_8>.</p><p><INSERTION_INDEX_9></p><p>Solving for the unknown, <INSERTION_INDEX_10>, therefore <INSERTION_INDEX_11>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1655,6 +1691,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>The conference has two divisions, with 6 teams in each.</p><p><b>1. Games within each division:</b></p><ul><li>In one division of 6 teams, the number of pairings is $C(6,2) = 15$.</li><li>Each pair plays twice, so games in one division: $15 \\times 2 = 30$.</li><li>Two divisions: $30 \\times 2 = 60$ games within divisions.</li></ul><p><b>2. Games between divisions:</b></p><ul><li>Each of the 6 teams in the first division plays each of the 6 teams in the second division once: $6 \\times 6 = 36$ games.</li></ul><p><b>3. Total conference games:</b></p><ul><li>Total games = $60 + 36 = 96$.</li></ul>"
+        },
+        {
           "text": "<p>Within each division, there are <INSERTION_INDEX_1> pairings, and each of these games happens twice. The same goes for the other division so that there are <INSERTION_INDEX_2> games within their own divisions. The number of games between the two divisions is <INSERTION_INDEX_3>. Together there are <INSERTION_INDEX_4> conference games.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1729,6 +1768,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>An isosceles triangle has at least two sides of equal length, and all side lengths are integers. Let the triangle have sides $(a, a, b)$, with perimeter $2a + b = 23$.</p><p>By the Triangle Inequality, the sum of the lengths of any two sides must be greater than the third side:</p><ul><li>$a + a > b \\implies 2a > b$</li><li>$a + b > a \\implies b > 0$ (since all sides are positive)</li></ul><p>From the perimeter, $b = 23 - 2a$.</p><p>Substitute into the first inequality: $2a > 23 - 2a \\implies 4a > 23 \\implies a > 5.75$.</p><p>Since $a$ is an integer, $a \\geq 6$.</p><p>Also, $b > 0 \\implies 23 - 2a > 0 \\implies a < 11.5$ so $a \\leq 11$.</p><p>Thus, possible integer values for $a$ are $6, 7, 8, 9, 10, 11$.</p><p>For each $a$:</p><ul><li>$a=6$: $b=11$; sides $(6,6,11)$</li><li>$a=7$: $b=9$; sides $(7,7,9)$</li><li>$a=8$: $b=7$; sides $(8,8,7)$</li><li>$a=9$: $b=5$; sides $(9,9,5)$</li><li>$a=10$: $b=3$; sides $(10,10,3)$</li><li>$a=11$: $b=1$; sides $(11,11,1)$</li></ul><p>All satisfy $2a > b$ and $b > 0$.</p><p>Equilateral triangles are not possible since $3s=23$ has no integer solution.</p><p>Therefore, there are <b>6</b> distinct isosceles triangles possible.</p>"
+        },
         {
           "text": "<p>Let <INSERTION_INDEX_1> be the base of the isosceles triangles, and let <INSERTION_INDEX_2> be the lengths of the other legs. From this, <INSERTION_INDEX_3> and <INSERTION_INDEX_4>. From triangle inequality, <INSERTION_INDEX_5>, then plug in the value from the previous equation to get <INSERTION_INDEX_6> or <INSERTION_INDEX_7>. The maximum value of <INSERTION_INDEX_8> occurs when <INSERTION_INDEX_9>, in which from the first equation <INSERTION_INDEX_10>. Thus, <INSERTION_INDEX_11> can have integer side lengths from <INSERTION_INDEX_12> to <INSERTION_INDEX_13>, and there are <INSERTION_INDEX_14> triangles.</p>",
           "insertions": {
@@ -1863,6 +1905,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>This is a Pigeonhole Principle problem.</p><p>There are 3 colors of socks: red, white, and blue. The Martian wants to be certain of having 5 socks of the same color.</p><p>In the worst case, the Martian could pick 4 socks of each color (4 red, 4 white, 4 blue), for a total of 12 socks, and still not have 5 of any color.</p><p>The next sock (the 13th) must be the 5th of some color.</p><p>Therefore, the Martian must remove <b>13</b> socks to be certain of having 5 of the same color.</p>"
+        },
+        {
           "text": "<p>The Martian can pull out <INSERTION_INDEX_1> socks, <INSERTION_INDEX_2> of each color, without having <INSERTION_INDEX_3> of the same kind yet. However, the next one he pulls out must be the fifth of one of the colors so he must remove <INSERTION_INDEX_4> socks.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1934,6 +1979,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>Average speed is calculated as total distance divided by total time: $Speed = \\frac{Distance}{Time}$.</p><p>On the given distance-time graph, the origin (0,0) represents the start of the run. Each student's performance is represented by a point (time, distance).</p><p>The average speed of each student is the slope of the line connecting the origin to their respective point. A steeper slope indicates a greater speed.</p><p>Visually inspecting the graph:</p><ul><li>Imagine a line from the origin to each labeled point.</li><li>The line to Angela's point is the least steep.</li><li>The line to Evelyn's point is the steepest, as it goes up the most (distance) in the shortest amount of horizontal travel (time).</li></ul><p>Therefore, Evelyn has the greatest average speed.</p>"
+        },
+        {
           "text": "<p>Average speed is distance over time, or the slope of the line through the point and the origin. <INSERTION_INDEX_1> has the steepest line, and runs the greatest distance for the shortest amount of time.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1975,6 +2023,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We are asked how many integers between 100 and 999 (inclusive) are divisible by 13.</p><p>First, find the smallest three-digit multiple of 13:</p><p>Divide 100 by 13: $100 \\div 13 \\approx 7.69$. $13 \\times 7 = 91$ (too small), $13 \\times 8 = 104$ (first three-digit multiple).</p><p>Next, find the largest three-digit multiple of 13:</p><p>Divide 999 by 13: $999 \\div 13 \\approx 76.85$. $13 \\times 76 = 988$ (largest three-digit multiple).</p><p>So, the three-digit multiples of 13 are $13 \\times 8, 13 \\times 9, \\ldots, 13 \\times 76$.</p><p>To count how many such numbers there are, count the integers from 8 to 76, inclusive:</p><p>Number of terms = $76 - 8 + 1 = 69$.</p><p>Therefore, there are <b>69</b> three-digit numbers divisible by 13.</p>"
+        },
         {
           "text": "<p>Let <INSERTION_INDEX_1> be any positive integer so that <INSERTION_INDEX_2> is a multiple of <INSERTION_INDEX_3>. For the smallest three-digit number, <INSERTION_INDEX_4> and <INSERTION_INDEX_5>. For the greatest three-digit number, <INSERTION_INDEX_6> and <INSERTION_INDEX_7>. The number <INSERTION_INDEX_8> can range from <INSERTION_INDEX_9> to <INSERTION_INDEX_10> so there are <INSERTION_INDEX_11> three-digit numbers.</p><p><br/></p>",
           "insertions": {
@@ -2103,6 +2154,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>The perimeter of trapezoid $ABCD$ is the sum of its four sides: $P = AB + BC + CD + DA$.</p><p>Given: $AB=30$, $BC=50$, $CD=25$, and the height is $24$.</p><p>To find $DA$, drop perpendiculars from $A$ and $C$ to $DA$, meeting at $E$ and $F$ respectively. This divides $DA$ into three segments: $AE$, $EF$, and $FD$.</p><ol><li><b>Left triangle $ABE$:</b> $AB=30$ (hypotenuse), height $BE=24$. By Pythagoras: $AE^2 + 24^2 = 30^2 \\implies AE^2 = 900 - 576 = 324 \\implies AE = 18$.</li><li><b>Rectangle $BCFE$:</b> $EF = BC = 50$.</li><li><b>Right triangle $CFD$:</b> $CD=25$ (hypotenuse), height $CF=24$. By Pythagoras: $DF^2 + 24^2 = 25^2 \\implies DF^2 = 625 - 576 = 49 \\implies DF = 7$.</li></ol><p>So, $DA = AE + EF + DF = 18 + 50 + 7 = 75$.</p><p>Now, the perimeter is $P = 30 + 50 + 25 + 75 = 180$.</p>"
+        },
+        {
           "text": "<p>Draw altitudes from <INSERTION_INDEX_1> and <INSERTION_INDEX_2> to base <INSERTION_INDEX_3> to create a rectangle and two right triangles. The side opposite <INSERTION_INDEX_4> is equal to <INSERTION_INDEX_5>. The bases of the right triangles can be found using Pythagorean or special triangles to be <INSERTION_INDEX_6> and <INSERTION_INDEX_7>. Add it together to get <INSERTION_INDEX_8>. The perimeter is <INSERTION_INDEX_9>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2200,6 +2254,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>Label the 12 points on the circle as 0 through 11 (with point 12 as 0 for convenience). Both Alice and Bob start at point 0.</p><p>Each turn:</p><ul><li>Alice moves 5 points clockwise: her position after $n$ turns is $5n \\pmod{12}$.</li><li>Bob moves 9 points counterclockwise, which is the same as moving $3$ points clockwise (since $12-9=3$): his position after $n$ turns is $3n \\pmod{12}$.</li></ul><p>They meet when their positions are equal, so $5n \\equiv 3n \\pmod{12}$, or $2n \\equiv 0 \\pmod{12}$.</p><p>This means $n$ must be a multiple of 6. The smallest positive $n$ is $6$.</p><p>Therefore, it will take <b>6 turns</b> for Alice and Bob to land on the same point again.</p>"
+        },
         {
           "text": "<p>Alice moves <INSERTION_INDEX_1> steps and Bob moves <INSERTION_INDEX_2> steps, where <INSERTION_INDEX_3> is the turn they are on. Alice and Bob coincide when the number of steps they move collectively, <INSERTION_INDEX_4>, is a multiple of <INSERTION_INDEX_5>. Since this number must be a multiple of <INSERTION_INDEX_6>, as stated in the previous sentence, <INSERTION_INDEX_7> has a factor <INSERTION_INDEX_8>, <INSERTION_INDEX_9> must have a factor of <INSERTION_INDEX_10>. The smallest number of turns that is a multiple of <INSERTION_INDEX_11> is <INSERTION_INDEX_12>.</p>",
           "insertions": {
@@ -2328,6 +2385,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>We have 6 dots arranged in two rows of three (a 2x3 grid). To form a triangle, we must choose 3 dots that are not all in a straight line.</p><p>Total ways to choose 3 dots: $\\binom{6}{3} = 20$.</p><p>However, two sets of 3 dots are collinear (the top row and the bottom row). So, subtract these 2 cases:</p><p>$20 - 2 = 18$</p><p>Therefore, there are <b>18</b> distinct triangles that can be formed by connecting 3 of the 6 dots in a 2x3 grid.</p>"
+        },
+        {
           "text": "<p>The number of ways to choose three points to make a triangle is <INSERTION_INDEX_1>. However, two* of these are a straight line so we subtract <INSERTION_INDEX_2> to get <INSERTION_INDEX_3>.</p><ul><li>Note: We are assuming that there are no degenerate triangles in this problem, and that is why we subtract two.</li></ul>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2430,6 +2490,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>To find the best buy, we compare the price per unit for each size of detergent.</p><p>Let the small (S) box have content $C_S = 1$ unit and price $P_S = \\$1$.</p><ul><li>Large (L): Contains twice as much as small, so $C_L = 2$ units. Medium (M): Contains 20% less than large, so $C_M = 2 \\times 0.8 = 1.6$ units.</li><li>Medium costs 50% more than small: $P_M = 1.5$. Large costs 30% more than medium: $P_L = 1.5 \\times 1.3 = 1.95$.</li></ul><p>Unit prices:</p><ul><li>Small: $1/1 = 1.00$</li><li>Medium: $1.5/1.6 = 0.9375$</li><li>Large: $1.95/2 = 0.975$</li></ul><p>Lowest unit price is Medium, then Large, then Small. So the order from best to worst buy is Medium, Large, Small (MLS).</p>"
+        },
         {
           "text": "<p>Suppose the small size costs <INSERTION_INDEX_1> and has <INSERTION_INDEX_2> oz. The medium size then costs <INSERTION_INDEX_3> and has <INSERTION_INDEX_4> oz. The large size costs <INSERTION_INDEX_5> and has 10 oz. The small, medium, and large size cost respectively, <INSERTION_INDEX_6> dollars per oz. The sizes from best to worst buy are <INSERTION_INDEX_7>.</p>",
           "insertions": {
@@ -2586,6 +2649,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>The area of the semicircle is $2\\pi$. The formula is $\\frac{1}{2}\\pi r^2 = 2\\pi$, so $r^2 = 4$ and $r = 2$.</p><p>Let the isosceles right triangle have legs $AC = BC = s$. Place $C$ at $(0,0)$, $A$ at $(0,s)$, $B$ at $(s,0)$. The center of the semicircle tangent to both axes is at $(2,2)$, so $s = 4$.</p><p>The area of triangle $ABC$ is $\\frac{1}{2} \\times 4 \\times 4 = 8$.</p>"
+        },
+        {
           "text": "<p>We can figure out the radius of the semicircle from the question states that the area of the semicircle is <INSERTION_INDEX_1> and we can multiply it by 2 to complete the circle to get <INSERTION_INDEX_2> which we can find the radius of 2. Draw line segment OD such that it is the midsegment of triangle ABC, using the midsegment theorem we can see that line segment AC = <INSERTION_INDEX_3>. Since triangle ABC is an isosceles right triangle we can calculate the area to be <INSERTION_INDEX_4> = <INSERTION_INDEX_5></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2655,6 +2721,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>To find the fewest number of keystrokes to get from 1 to 200 using the keys [+1] and [x2], it's most efficient to work backward from 200 to 1.</p><p>The inverse operations are [-1] and [/2]. When working backward, we should prioritize the [/2] operation whenever the number is even, as this corresponds to the more 'powerful' [x2] operation in the forward direction.</p><p>Let's start at 200:</p><ol><li>200 is even: $200 \\div 2 = 100$. (1 keystroke)</li><li>100 is even: $100 \\div 2 = 50$. (1 keystroke)</li><li>50 is even: $50 \\div 2 = 25$. (1 keystroke)</li><li>25 is odd, so we must use the [-1] operation: $25 - 1 = 24$. (1 keystroke)</li><li>24 is even: $24 \\div 2 = 12$. (1 keystroke)</li><li>12 is even: $12 \\div 2 = 6$. (1 keystroke)</li><li>6 is even: $6 \\div 2 = 3$. (1 keystroke)</li><li>3 is odd: $3 - 1 = 2$. (1 keystroke)</li><li>2 is even: $2 \\div 2 = 1$. (1 keystroke)</li></ol><p>We have reached 1. The total number of operations is the sum of the keystrokes, which is 9.</p><p>The sequence of operations in the forward direction is:</p><p>1 $\\xrightarrow{\\times2}$ 2 $\\xrightarrow{+1}$ 3 $\\xrightarrow{\\times2}$ 6 $\\xrightarrow{\\times2}$ 12 $\\xrightarrow{\\times2}$ 24 $\\xrightarrow{+1}$ 25 $\\xrightarrow{\\times2}$ 50 $\\xrightarrow{\\times2}$ 100 $\\xrightarrow{\\times2}$ 200</p><p>This takes 9 keystrokes.</p>"
+        },
         {
           "text": "<p>We can start at <INSERTION_INDEX_1> and work our way down to <INSERTION_INDEX_2>. We want to press the button that multiplies by <INSERTION_INDEX_3> the most, but since we are going down instead of up, we divide by <INSERTION_INDEX_4> instead. If we come across an odd number, then we will subtract that number by <INSERTION_INDEX_5>. Notice</p><p>Since we've reached <INSERTION_INDEX_6>, it's clear that the answer should be <INSERTION_INDEX_7>- <INSERTION_INDEX_8>. Because we only subtracted <INSERTION_INDEX_9> when we had to, this is optimal. ~Roy2020</p>",
           "insertions": {
@@ -2836,6 +2905,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>Let $A_C$ be the area of the circle and $A_S$ be the area of the square. Let $A_I$ be the area of their intersection (the region inside both the square and the circle).</p><p>The problem states:</p><ul><li>The area of the regions inside the circle and outside the square is $A_C - A_I$.</li><li>The area of the regions outside the circle and inside the square is $A_S - A_I$.</li></ul><p>These two areas are equal:</p><p>$A_C - A_I = A_S - A_I$</p><p>Adding $A_I$ to both sides of the equation, we get:</p><p>$A_C = A_S$</p><p>This means the area of the circle is equal to the area of the square.</p><p>The square has a side length of 2. Its area is:</p><p>$A_S = \\text{side}^2 = 2^2 = 4$.</p><p>The area of the circle is given by the formula $A_C = \\pi r^2$, where $r$ is the radius.</p><p>Setting the areas equal:</p><p>$\\pi r^2 = 4$</p><p>$r^2 = \\frac{4}{\\pi}$</p><p>$r = \\sqrt{\\frac{4}{\\pi}} = \\frac{2}{\\sqrt{\\pi}}$</p><p>The radius of the circle is $\\frac{2}{\\sqrt{\\pi}}$.</p>"
+        },
         {
           "text": "<p>Let the region within the circle and square be <INSERTION_INDEX_1>. In other words, it is the area inside the circle <INSERTION_INDEX_2> the square. Let <INSERTION_INDEX_3> be the radius. We know that the area of the circle minus <INSERTION_INDEX_4> is equal to the area of the square, minus <INSERTION_INDEX_5> . </p><p>We get:</p><p><INSERTION_INDEX_6></p><p><INSERTION_INDEX_7></p><p><INSERTION_INDEX_8></p><p>So the answer is <INSERTION_INDEX_9>.</p>",
           "insertions": {
