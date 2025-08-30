@@ -29,6 +29,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>To find the sum, we first need to determine the number of edges, corners (vertices), and faces of a cube.</p><ul><li>A cube has <b>12 edges</b>.</li><li>A cube has <b>8 corners</b> (vertices).</li><li>A cube has <b>6 faces</b>.</li></ul><p>The sum of these three numbers is the total counted by Jamie, Jimmy, and Judy.</p><p>Sum = Edges + Corners + Faces = $12 + 8 + 6 = 26$.</p>"
+        },
+        {
           "text": "<p>On a cube, there are <INSERTION_INDEX_1> edges, <INSERTION_INDEX_2> corners, and <INSERTION_INDEX_3> faces. Adding them up gets <INSERTION_INDEX_4>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -91,6 +94,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We need to find the smallest prime factor for each of the given numbers.</p><ul><li><b>55:</b> $55 = 5 \\times 11$. The smallest prime factor is 5.</li><li><b>57:</b> $57 = 3 \\times 19$. The smallest prime factor is 3.</li><li><b>58:</b> $58 = 2 \\times 29$. The smallest prime factor is 2.</li><li><b>59:</b> 59 is a prime number, so its smallest prime factor is 59.</li><li><b>61:</b> 61 is a prime number, so its smallest prime factor is 61.</li></ul><p>Comparing the smallest prime factors {5, 3, 2, 59, 61}, the smallest one is 2, which corresponds to the number 58.</p>"
+        },
         {
           "text": "<p>The smallest prime factor is <INSERTION_INDEX_1>, and since <INSERTION_INDEX_2> is the only multiple of <INSERTION_INDEX_3>, the answer is <INSERTION_INDEX_4>.</p>",
           "insertions": {
@@ -170,6 +176,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>The total weight of the burger is 120 grams, and the weight of the filler is 30 grams.</p><p>First, we calculate the weight of the burger that is not filler:</p><p>Non-filler weight = Total weight - Filler weight = $120 \\text{ g} - 30 \\text{ g} = 90 \\text{ g}$.</p><p>Next, we find what percentage of the total weight is not filler:</p><p>Percentage = $\\frac{\\text{Non-filler weight}}{\\text{Total weight}} \\times 100\\%$</p><p>Percentage = $\\frac{90}{120} \\times 100\\% = \\frac{3}{4} \\times 100\\% = 75\\%$.</p>"
+        },
+        {
           "text": "<p>There are <INSERTION_INDEX_1> grams of filler, so there are <INSERTION_INDEX_2> grams that aren't filler. <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -240,6 +249,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Let $t$ be the number of tricycles and $b$ be the number of bicycles.</p><p>Billy Bob counted 7 children in total, so:</p><p>$t + b = 7$</p><p>He also counted 19 wheels. Tricycles have 3 wheels and bicycles have 2 wheels, so:</p><p>$3t + 2b = 19$</p><p>From the first equation, we can express $b$ in terms of $t$: $b = 7 - t$.</p><p>Now, substitute this into the second equation:</p><p>$3t + 2(7 - t) = 19$</p><p>$3t + 14 - 2t = 19$</p><p>$t + 14 = 19$</p><p>$t = 19 - 14 = 5$</p><p>So, there were <b>5 tricycles</b>.</p>"
+        },
         {
           "text": "<p>If all the children were riding bicycles, there would be <INSERTION_INDEX_1> wheels. Each tricycle adds an extra wheel and <INSERTION_INDEX_2> extra wheels are needed, so there are <INSERTION_INDEX_3> tricycles.</p><p>Setting up an equation, we have <INSERTION_INDEX_4> children and <INSERTION_INDEX_5>. Solving for the variables, we get, <INSERTION_INDEX_6> tricycles.</p><p>~AllezW</p>",
           "insertions": {
@@ -392,6 +404,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>Let the number be $x$.</p><p>We are given that 20% of the number is 12. We can write this as an equation:</p><p>$0.20x = 12$</p><p>To find the number $x$, we can divide by 0.20:</p><p>$x = \\frac{12}{0.20} = \\frac{12}{1/5} = 12 \\times 5 = 60$.</p><p>Now we need to find 30% of this number, 60:</p><p>$30\\% \\text{ of } 60 = 0.30 \\times 60 = 18$.</p><p><b>Alternatively:</b></p><p>If 20% of a number is 12, then 10% of the number is half of that, which is $12 / 2 = 6$.</p><p>Since 10% is 6, then 30% (which is $3 \\times 10\\%$) must be $3 \\times 6 = 18$.</p>"
+        },
+        {
           "text": "<p><INSERTION_INDEX_1> of a number is equal to <INSERTION_INDEX_2> of that number. Let <INSERTION_INDEX_3>=the number</p><p><INSERTION_INDEX_4> Multiply both sides by 5</p><p><INSERTION_INDEX_5></p><p><INSERTION_INDEX_6> of <INSERTION_INDEX_7> is equal to <INSERTION_INDEX_8></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -490,6 +505,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>The figure illustrates the Pythagorean theorem, which applies to right-angled triangles. The areas of the squares built on the sides of the triangle are given as 25, 144, and 169.</p><p>The lengths of the sides of the triangle are the square roots of these areas.</p><ul><li>Side $a = \\sqrt{25} = 5$</li><li>Side $b = \\sqrt{144} = 12$</li><li>Side $c = \\sqrt{169} = 13$</li></ul><p>To confirm it's a right triangle, we check if the sides satisfy the Pythagorean theorem, $a^2 + b^2 = c^2$:</p><p>$5^2 + 12^2 = 25 + 144 = 169 = 13^2$.</p><p>Since it is a right triangle, its area can be calculated using the two shorter sides (the legs) as the base and height.</p><p>Area = $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 5 \\times 12 = 30$.</p>"
+        },
         {
           "text": "<p>The sides of the squares are <INSERTION_INDEX_1> and <INSERTION_INDEX_2> for the square with area <INSERTION_INDEX_3> and <INSERTION_INDEX_4>, respectively. The legs of the interior triangle are <INSERTION_INDEX_5> and <INSERTION_INDEX_6>, so the area is <INSERTION_INDEX_7></p><p>(note: the ab/2 area method only works because the converse Pythagorean theorem holds for the triple [<INSERTION_INDEX_8>, <INSERTION_INDEX_9>, <INSERTION_INDEX_10>]. Therefore, we can find the solution this way because we know the triangle is right ~megaboy6679)</p>",
           "insertions": {
@@ -631,6 +649,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>We can find the difference in the averages by calculating the total difference in scores and dividing by the number of tests.</p><p>Let's find the total difference between Jenny's scores and Blake's scores across the four tests:</p><ul><li>Test 1: Jenny scored 10 points higher (+10).</li><li>Test 2: Jenny scored 10 points lower (-10).</li><li>Test 3: Jenny scored 20 points higher (+20).</li><li>Test 4: Jenny scored 20 points higher (+20).</li></ul><p>Total difference in points = $10 - 10 + 20 + 20 = 40$ points.</p><p>Jenny scored a total of 40 points more than Blake over four tests. To find the difference in their average scores, we divide this total difference by the number of tests (4).</p><p>Difference in average = $\\frac{40}{4} = 10$ points.</p><p>Jenny's average is 10 points higher than Blake's average.</p>"
+        },
         {
           "text": "<p>Blake scored a total of <INSERTION_INDEX_1> points. Jenny scored <INSERTION_INDEX_2> points higher than Blake, so her average is <INSERTION_INDEX_3>. the difference is <INSERTION_INDEX_4>.</p><p>The total point difference between Blake's and Jenny's scores is <INSERTION_INDEX_5>. The average of it is <INSERTION_INDEX_6>.</p>",
           "insertions": {
@@ -821,6 +842,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>To solve this set of problems, we first need to calculate the area of one of each type of cookie. Since each friend uses the same amount of dough and the cookies have the same thickness, the total area of cookies made by each friend is the same.</p><p><b>1. Calculate the area of Art's cookie:</b></p><p>Art's cookies are trapezoids with parallel sides 3 in and 5 in, and height 3 in.</p><p>Area of Trapezoid = $\\frac{1}{2}(b_1 + b_2)h = \\frac{1}{2}(3 + 5)(3) = \\frac{1}{2}(8)(3) = 12$ in².</p><p><b>2. Calculate the total dough area:</b></p><p>Art makes 12 cookies. Total Area = $12 \\text{ cookies} \\times 12 \\text{ in}²/\\text{cookie} = 144$ in².</p><p><b>3. Calculate the number of cookies for each friend:</b></p><ul><li><b>Roger (Rectangle):</b> Area = $4 \\times 2 = 8$ in². Number of cookies = $\\frac{144}{8} = 18$.</li><li><b>Paul (Parallelogram):</b> Area = base $\\times$ height = $3 \\times 2 = 6$ in². Number of cookies = $\\frac{144}{6} = 24$.</li><li><b>Trisha (Triangle):</b> Area = $\\frac{1}{2} \\times$ base $\\times$ height = $\\frac{1}{2} \\times 3 \\times 4 = 6$ in². Number of cookies = $\\frac{144}{6} = 24$.</li></ul><p>Comparing the number of cookies each friend makes:</p><ul><li>Art: 12</li><li>Roger: 18</li><li>Paul: 24</li><li>Trisha: 24</li></ul><p><b>Art</b> gets the fewest cookies.</p>"
+        },
+        {
           "text": "<p>Out of all the cookies, Art's has an area of <INSERTION_INDEX_1>, which was the greatest area out of all the cookies' areas. Roger's cookie had an area of <INSERTION_INDEX_2>, and both Paul and Trisha's cookies had an area of <INSERTION_INDEX_3>. This means <INSERTION_INDEX_4> makes the fewest cookies, since his cookie area is the greatest. The answer is not that there is a tie between Paul and Trisha because they can make the most cookies with a given amount of cookie dough, not the least.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -954,6 +978,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>This problem continues from the setup in problem 8. We need to find the price of one of Roger's cookies so that his total earnings from a batch match Art's.</p><p><b>1. Calculate Art's total earnings from one batch:</b></p><p>Art makes 12 cookies and sells them for 60¢ each.</p><p>Total Earnings (Art) = $12 \\text{ cookies} \\times 60¢/\\text{cookie} = 720¢$.</p><p><b>2. Calculate the required price for one of Roger's cookies:</b></p><p>From problem 8, we know Roger makes 18 cookies in a batch. To earn the same amount (720¢), we divide the total earnings by the number of cookies Roger makes.</p><p>Price per cookie (Roger) = $\\frac{\\text{Total Earnings}}{\\text{Number of cookies}} = \\frac{720¢}{18} = 40¢$.</p>"
+        },
         {
           "text": "<p>The area of one of Art's cookies is <INSERTION_INDEX_1>. As he has <INSERTION_INDEX_2> cookies in a batch, the amount of dough each person used is <INSERTION_INDEX_3>. Roger's cookies have an area of <INSERTION_INDEX_4> cookies in a batch. In total, the amount of money Art will earn is <INSERTION_INDEX_5>. Thus, the amount Roger would need to charge per cookie is <INSERTION_INDEX_6>.</p>",
           "insertions": {
@@ -1089,6 +1116,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>This question asks for the number of cookies in one batch of Trisha's cookies, based on the information provided for problems 8, 9, and 10.</p><p>From the work done for problem 8, we established the following:</p><ol><li>The total area of dough for any batch is 144 in².</li><li>The area of one of Trisha's triangular cookies is $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times 3 \\times 4 = 6$ in².</li></ol><p>To find the number of cookies Trisha can make, we divide the total dough area by the area of a single cookie:</p><p>Number of cookies (Trisha) = $\\frac{\\text{Total Area}}{\\text{Area per cookie}} = \\frac{144 \\text{ in}²}{6 \\text{ in}²} = 24$.</p>"
+        },
+        {
           "text": "<p>Art's cookies have areas of <INSERTION_INDEX_1>. There are 12 cookies in one of Art's batches so everyone used <INSERTION_INDEX_2> of dough. Trisha's cookies have an area of <INSERTION_INDEX_3> so she has <INSERTION_INDEX_4> cookies per batch.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1167,6 +1197,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>Let's track the price of the shoes step-by-step.</p><p><b>1. Thursday's Price:</b></p><p>The initial price of the shoes is $40.</p><p><b>2. Friday's Price Increase:</b></p><p>On Friday, Lou increases the price by 10%.</p><p>Increase amount = $10\\% \\text{ of } \\$40 = 0.10 \\times 40 = \\$4$.</p><p>Friday's price = $\\$40 + \\$4 = \\$44$.</p><p><b>3. Monday's Sale Price:</b></p><p>The weekend sale offers \"Ten percent off the listed price.\" The listed price is Friday's price of $44.</p><p>Discount amount = $10\\% \\text{ of } \\$44 = 0.10 \\times 44 = \\$4.40$.</p><p>Monday's price = $\\$44 - \\$4.40 = \\$39.60$.</p>"
+        },
+        {
           "text": "<p>On Friday, the shoes would cost <INSERTION_INDEX_1> dollars. Then on Monday, the shoes would cost <INSERTION_INDEX_2>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1224,7 +1257,10 @@
       "answer": "E",
       "solutions": [
         {
-          "text": "<p>We have six cases: each different case, every one where a different number cannot be seen. The rolls that omit numbers one through five are all something times six: an example would be where the number you cannot see is one, so the product should be 2 x 3 x 4 x 5 x 6, and so product should be divisible by six. The roll that omits six on the other hand is 1 x 2 x 3 x 4 x 5, which has 2 x 3, also equal to six. We can see that all of them have a factor of 6 and therefore are divisible by six, so the solution should be <INSERTION_INDEX_1>.</p><p>These problems are copyrighted \u00a9 by the <a class=\"external text\" href=\"https://www.maa.org\" rel=\"nofollow\">Mathematical Association of America</a>, as part of the <a class=\"external text\" href=\"https://maa.org/student-programs/amc/\" rel=\"nofollow\">American Mathematics Competitions</a>. <a class=\"image\" href=\"/wiki/index.php/File:AMC_logo.png\"><INSERTION_INDEX_2></a></p>",
+          "text": "<p>A number is divisible by 6 if it is divisible by both 2 and 3.</p><p>The numbers on the six faces of a die are {1, 2, 3, 4, 5, 6}.</p><p>The product of all six numbers is $1 \\times 2 \\times 3 \\times 4 \\times 5 \\times 6 = 720$.</p><p>Let $b$ be the number on the bottom face, which cannot be seen. The product of the five visible faces is $P = \\frac{720}{b}$.</p><p>We want to find the probability that $P$ is divisible by 6. Let's check this for each possible value of $b$ (from 1 to 6):</p><ul><li>If $b=1$, $P = 720/1 = 720$. $720$ is divisible by 6.</li><li>If $b=2$, $P = 720/2 = 360$. $360$ is divisible by 6.</li><li>If $b=3$, $P = 720/3 = 240$. $240$ is divisible by 6.</li><li>If $b=4$, $P = 720/4 = 180$. $180$ is divisible by 6.</li><li>If $b=5$, $P = 720/5 = 144$. $144$ is divisible by 6.</li><li>If $b=6$, $P = 720/6 = 120$. $120$ is divisible by 6.</li></ul><p>In every possible case, the product of the five visible faces is divisible by 6. Since this is true for all 6 possible outcomes, the event is certain.</p><p>Therefore, the probability is $\\frac{6}{6} = 1$.</p>"
+        },
+        {
+          "text": "<p>We have six cases: each different case, every one where a different number cannot be seen. The rolls that omit numbers one through five are all something times six: an example would be where the number you cannot see is one, so the product should be 2 x 3 x 4 x 5 x 6, and so product should be divisible by six. The roll that omits six on the other hand is 1 x 2 x 3 x 4 x 5, which has 2 x 3, also equal to six. We can see that all of them have a factor of 6 and therefore are divisible by six, so the solution should be <INSERTION_INDEX_1>.</p><p>These problems are copyrighted © by the <a class=\"external text\" href=\"https://www.maa.org\" rel=\"nofollow\">Mathematical Association of America</a>, as part of the <a class=\"external text\" href=\"https://maa.org/student-programs/amc/\" rel=\"nofollow\">American Mathematics Competitions</a>. <a class=\"image\" href=\"/wiki/index.php/File:AMC_logo.png\"><INSERTION_INDEX_2></a></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/8/d/b/8db9403c7ba17dbf524f9d94d2bff6d42c9d17d0.png",
@@ -1281,7 +1317,7 @@
       "answer": "B",
       "solutions": [
         {
-          "text": "<p>This is the number cubes that are adjacent to another cube on exactly two sides. The bottom corner cubes are connected on three sides, and the top corner cubes are connected on one. The number we are looking for is the number of middle cubes, which is <INSERTION_INDEX_1>.</p>",
+          "text": "<p>This represents the count of cubes that are adjacent to another cube on precisely two sides. The bottom corner cubes are connected on three sides, while the top corner cubes are connected on one side. The quantity we seek is the number of middle cubes, which equals <INSERTION_INDEX_1>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/a/c/8/ac8a9cb7dadbb8ebe7303b5b5e8214059fbb7efd.png",
@@ -1330,6 +1366,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We are given the addition problem:</p><p>$\\begin{array}{@{}c@{\\;}c@{}c@{}c} & T & W & O \\\\ + & T & W & O \\\\ \\hline F & O & U & R \\end{array}$</p><p>We are given that $T=7$ and O is an even number. Each letter represents a different digit.</p><p>$\\begin{array}{@{}c@{\\;}c@{}c@{}c} & 7 & W & O \\\\ + & 7 & W & O \\\\ \\hline F & O & U & R \\end{array}$</p><p>From the hundreds column, $7+7+c_2 = 14+c_2$, where $c_2$ is the carry-over from the tens column ($c_2$ can be 0 or 1). This sum results in the two-digit number $FO$. This means $F$ must be 1. The equation becomes:</p><p>$14+c_2 = 10 \\times F + O = 10 \\times 1 + O = 10 + O$</p><p>$4+c_2 = O$</p><p>Since O must be an even digit, we test the possible values for $c_2$:</p><ul><li>If $c_2=0$, then $O=4$. This is an even digit, so this is possible.</li><li>If $c_2=1$, then $O=5$. This is not an even digit, so this case is impossible.</li></ul><p>Therefore, we must have $c_2=0$ (no carry from the tens column) and $O=4$.</p><p>Now let's look at the other columns:</p><ul><li><b>Units column:</b> $O+O = 4+4=8$. So, $R=8$. There is no carry-over to the tens column ($c_1=0$).</li><li><b>Tens column:</b> $W+W+c_1 = U$. Since $c_1=0$, we have $2W=U$. Since we found that the carry-over to the hundreds column ($c_2$) is 0, we know that $2W$ must be less than 10. So $W$ must be 0, 1, 2, 3, or 4.</li></ul><p>The letters must represent different digits. The digits used so far are $T=7, O=4, F=1, R=8$.</p><p>Let's check the possible values for W:</p><ul><li>If $W=0$, then $U=2 \\times 0 = 0$. W and U would be the same digit, which is not allowed.</li><li>If $W=1$, this digit is already used by F.</li><li>If $W=2$, then $U=2 \\times 2 = 4$. This digit is already used by O.</li><li>If $W=3$, then $U=2 \\times 3 = 6$. This digit is not used yet. This is a possible solution.</li><li>If $W=4$, this digit is already used by O.</li></ul><p>The only possible value for W is 3.</p>"
+        },
         {
           "text": "<p>Since both T's are 7, then O has to equal 4, because 7 + 7 = 14. Then, F has to equal 1. To get R, we do 4 + 4 (since O = 4) to get R = 8. The value for W then has to be a number less than 5, otherwise it will change the value of O, and can't be a number that has already been used, like 4 or 1. The only other possibilities are 2 and 3. 2 doesn't work because it makes U = 4, which is what O already equals. So, the only possible value of W is 3 <INSERTION_INDEX_1></p>",
           "insertions": {
@@ -1380,6 +1419,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>We need to find the minimum number of unit cubes required to create a 3D figure that produces the given FRONT and SIDE views. The condition is that all cubes must be connected (share at least one face).</p><p>Let's analyze the views to determine the dimensions and required heights.</p><ul><li><b>FRONT view:</b> This view shows a base of 2 units wide. The left column is 2 units high, and the right column is 1 unit high. This tells us:</li><ul><li>The maximum height in the first column (from the left) is 2.</li><li>The maximum height in the second column is 1.</li></ul><li><b>SIDE view (Right):</b> This view shows a base of 2 units wide (this represents the depth of the figure). The front column (left side of this view) is 1 unit high, and the back column (right side of this view) is 2 units high. This tells us:</li><ul><li>The maximum height in the front row is 1.</li><li>The maximum height in the back row is 2.</li></ul></ul><p>Let's use a coordinate system (column, row) for the base, and place the number of cubes (height) in each position.</p><ul><li>To get a height of 2 in the front view's left column AND a height of 2 in the side view's back row, we must place a stack of 2 cubes at position (Left, Back). This uses 2 cubes.</li><li>To get a height of 1 in the front view's right column AND satisfy the side view's constraint for the front row (max height 1), we can place a single cube at (Right, Front). This uses 1 cube.</li></ul><p>So far, we have a stack of 2 at (Left, Back) and a single cube at (Right, Front). Total cubes = 3. The views are satisfied. However, these two structures only touch at an edge, not a face. The problem states that \"Each cube shares at least one face with another cube.\"</p><p>To connect them, we need to add at least one more cube. Let's place a cube at (Left, Front). This cube will touch the bottom cube of the stack at (Left, Back) and the cube at (Right, Front).</p><p>Our configuration is now:</p><ul><li>A stack of 2 at (Left, Back)</li><li>A single cube at (Left, Front)</li><li>A single cube at (Right, Front)</li></ul><p>Total cubes = $2 + 1 + 1 = 4$. All cubes are connected, and the front and side views remain correct. Therefore, the minimum number of cubes is 4.</p>"
+        },
         {
           "text": "<p>In order to minimize the amount of cubes needed, we must match up as many squares of our given figures with each other to make different sides of the same cube. One example of the solution with <INSERTION_INDEX_1> cubes. Notice the corner cube cannot be removed for a figure of 3 cubes because at least one face of a cube must be touching another face.</p><p><INSERTION_INDEX_2></p>",
           "insertions": {
@@ -1458,6 +1500,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We need to find the total number of possible seating arrangements for 4 people in a car with 4 seats.</p><p>The people are Ali, Bonnie, Carlo, and Dianna.</p><p>The seats are: driver, front passenger, back seat 1, back seat 2.</p><p>The constraint is that only Bonnie and Carlo can drive.</p><p>We can solve this by considering two separate cases based on who is driving.</p><p><b>Case 1: Bonnie is the driver.</b></p><ul><li>The driver's seat must be occupied by Bonnie (1 choice).</li><li>The remaining 3 people (Ali, Carlo, Dianna) can be seated in the remaining 3 seats (front passenger and two back seats).</li><li>The number of ways to arrange 3 people in 3 distinct seats is $3!$ (3 factorial).</li><li>$3! = 3 \\times 2 \\times 1 = 6$ arrangements.</li></ul><p><b>Case 2: Carlo is the driver.</b></p><ul><li>The driver's seat must be occupied by Carlo (1 choice).</li><li>The remaining 3 people (Ali, Bonnie, Dianna) can be seated in the remaining 3 seats.</li><li>The number of ways to arrange these 3 people is also $3!$.</li><li>$3! = 3 \\times 2 \\times 1 = 6$ arrangements.</li></ul><p>To find the total number of possible arrangements, we add the possibilities from the two cases:</p><p>Total arrangements = (Arrangements with Bonnie driving) + (Arrangements with Carlo driving) = $6 + 6 = 12$.</p>"
+        },
         {
           "text": "<p>There are only <INSERTION_INDEX_1> people who can go in the driver's seat--Bonnie and Carlo. Any of the <INSERTION_INDEX_2> remaining people can go in the front passenger seat. There are <INSERTION_INDEX_3> people who can go in the first back passenger seat, and the remaining person must go in the last seat. Thus, there are <INSERTION_INDEX_4> or <INSERTION_INDEX_5> ways. The answer is then <INSERTION_INDEX_6>.</p>",
           "insertions": {
@@ -1556,6 +1601,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>We have 6 children from two families of three. Children from the same family share at least one characteristic (eye color or hair color). We need to find Jim's two siblings.</p><p>Let's list the characteristics of each child:</p><ul><li><b>Benjamin:</b> Blue eyes, Black hair</li><li><b>Jim:</b> Brown eyes, Blond hair</li><li><b>Nadeen:</b> Brown eyes, Black hair</li><li><b>Austin:</b> Blue eyes, Blond hair</li><li><b>Tevyn:</b> Blue eyes, Black hair</li><li><b>Sue:</b> Blue eyes, Blond hair</li></ul><p>We can test each option to see if it forms a valid family with Jim.</p><p><b>(E) Austin and Sue:</b></p><p>Let's assume Jim's family consists of {Jim, Austin, Sue}.</p><ul><li>Jim: (Brown, Blond)</li><li>Austin: (Blue, Blond)</li><li>Sue: (Blue, Blond)</li></ul><p>Now, let's check if every pair in this group has at least one common trait:</p><ul><li><b>Jim and Austin:</b> Both have Blond hair. (✓ Common trait)</li><li><b>Jim and Sue:</b> Both have Blond hair. (✓ Common trait)</li><li><b>Austin and Sue:</b> Both have Blue eyes AND Blond hair. (✓ Common trait)</li></ul><p>This group satisfies the condition. To be certain, let's check if the remaining three children also form a valid family.</p><p>The other family would be {Benjamin, Nadeen, Tevyn}.</p><ul><li>Benjamin: (Blue, Black)</li><li>Nadeen: (Brown, Black)</li><li>Tevyn: (Blue, Black)</li></ul><p>Let's check the pairs in this second group:</p><ul><li><b>Benjamin and Nadeen:</b> Both have Black hair. (✓ Common trait)</li><li><b>Benjamin and Tevyn:</b> Both have Blue eyes AND Black hair. (✓ Common trait)</li><li><b>Nadeen and Tevyn:</b> Both have Black hair. (✓ Common trait)</li></ul><p>This group also satisfies the condition. Therefore, the division is correct, and Jim's siblings are Austin and Sue.</p>"
+        },
+        {
           "text": "<p>Jim has brown eyes and blonde hair. If you look for anybody who has brown eyes <b>or</b> blonde hair, you find that Nadeen, Austin, and Sue are Jim's possible siblings. However, the children have at least one common characteristics. Since Austin and Sue both have blonde hair, Nadeen is ruled out and therefore <INSERTION_INDEX_1> are his siblings. You can also see that in the hair color column, there are three black haired people and three blond haired people. Since Jim has blond hair, all his siblings must be the other two with blond hair.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1606,7 +1654,7 @@
       "answer": "D",
       "solutions": [
         {
-          "text": "<p>There are <INSERTION_INDEX_1> people who are friends with only each other who won't be invited, plus <INSERTION_INDEX_2> person who has no friends, and <INSERTION_INDEX_3> people who are friends of friends of friends who won\u2019t be invited. So the answer is <INSERTION_INDEX_4>.</p>",
+          "text": "<p>We have <INSERTION_INDEX_1> individuals who are exclusively friends with one another and consequently won't receive invitations, along with <INSERTION_INDEX_2> person who lacks any friends, and <INSERTION_INDEX_3> people who are friends of friends of friends and therefore won't be invited. Thus, the solution is <INSERTION_INDEX_4>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/7/c/d/7cde695f2e4542fd01f860a89189f47a27143b66.png",
@@ -1668,6 +1716,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We are looking for the number of integers between 1000 and 2000 that are divisible by 15, 20, and 25.</p><p>An integer that is a multiple of 15, 20, and 25 must also be a multiple of their least common multiple (LCM).</p><p><b>Step 1: Find the LCM of 15, 20, and 25.</b></p><p>First, find the prime factorization of each number:</p><ul><li>$15 = 3 \\times 5$</li><li>$20 = 2^2 \\times 5$</li><li>$25 = 5^2$</li></ul><p>The LCM is the product of the highest power of each prime factor present in the numbers:</p><p>LCM(15, 20, 25) = $2^2 \\times 3^1 \\times 5^2 = 4 \\times 3 \\times 25 = 12 \\times 25 = 300$.</p><p><b>Step 2: Find the multiples of 300 between 1000 and 2000.</b></p><p>We need to find how many integers $k$ satisfy the inequality:</p><p>$1000 < 300k < 2000$</p><p>Divide the inequality by 300:</p><p>$\\frac{1000}{300} < k < \\frac{2000}{300}$</p><p>$3.33... < k < 6.66...$</p><p>The integer values for $k$ that fall within this range are 4, 5, and 6.</p><p>Let's check the corresponding numbers:</p><ul><li>$k=4: 300 \\times 4 = 1200$</li><li>$k=5: 300 \\times 5 = 1500$</li><li>$k=6: 300 \\times 6 = 1800$</li></ul><p>There are <b>3</b> such integers.</p>"
+        },
         {
           "text": "<p>Find the least common multiple of <INSERTION_INDEX_1> by turning the numbers into their prime factorization. <INSERTION_INDEX_2> Gather all necessary multiples <INSERTION_INDEX_3> when multiplied gets <INSERTION_INDEX_4>. The multiples of <INSERTION_INDEX_5>. The number of multiples between 1000 and 2000 is <INSERTION_INDEX_6>.</p>",
           "insertions": {
@@ -1745,6 +1796,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We can find the angle between the hands of a clock using a couple of methods.</p><p><b>Method 1: Using a formula</b></p><p>The acute angle $\\theta$ between the hour hand and the minute hand at a time $h:m$ is given by the formula:</p><p>$\\theta = |30h - 5.5m|$</p><p>For the time 4:20, we have $h=4$ and $m=20$.</p><p>$\\theta = |30(4) - 5.5(20)| = |120 - 110| = |10| = 10^{\\circ}$.</p><p><b>Method 2: Calculating hand positions</b></p><p>We calculate the position of each hand in degrees clockwise from the 12 o'clock position.</p><ul><li><b>Minute Hand:</b> The minute hand moves $360^{\\circ}$ in 60 minutes, which is $6^{\\circ}$ per minute. At 4:20, its position is $20 \\text{ min} \\times 6^{\\circ}/\\text{min} = 120^{\\circ}$.</li><li><b>Hour Hand:</b> The hour hand moves $360^{\\circ}$ in 12 hours, which is $30^{\\circ}$ per hour or $0.5^{\\circ}$ per minute. At 4:20, its position is calculated from the 4 o'clock mark plus the movement in 20 minutes.</li><p>Position = $(4 \\text{ hours} \\times 30^{\\circ}/\\text{hour}) + (20 \\text{ min} \\times 0.5^{\\circ}/\\text{min}) = 120^{\\circ} + 10^{\\circ} = 130^{\\circ}$.</p></ul><p>The angle between the hands is the absolute difference between their positions:</p><p>Angle = $|130^{\\circ} - 120^{\\circ}| = 10^{\\circ}$.</p>"
+        },
         {
           "text": "<p>Imagine the clock as a circle. The minute hand will be at the 4 at 20 minutes past the hour. The central angle formed between <INSERTION_INDEX_1> and <INSERTION_INDEX_2> is <INSERTION_INDEX_3> degrees (since it is 1/12 of a full circle, 360). By <INSERTION_INDEX_4>, the hour hand would have moved <INSERTION_INDEX_5> way from 4 to 5 since <INSERTION_INDEX_6> is reducible to <INSERTION_INDEX_7>. One third of the way from 4 to 5 is one third of 30 degrees, which is 10 degrees past the 4. Recall that the minute hand is at the 4, so the angle between them is <INSERTION_INDEX_8>.</p>",
           "insertions": {
@@ -1879,6 +1933,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>We are given a trapezoid ABCD with area 164 cm², altitude (height) $h=8$ cm, and non-parallel side lengths $AB=10$ cm and $CD=17$ cm. We need to find the length of the base BC.</p><p>Let the parallel bases be $AD$ and $BC$. The formula for the area of a trapezoid is:</p><p>Area = $\\frac{1}{2}(AD + BC)h$</p><p>$164 = \\frac{1}{2}(AD + BC)(8)$</p><p>$164 = 4(AD + BC)$</p><p>$AD + BC = \\frac{164}{4} = 41$</p><p>To find BC, we need another equation relating AD and BC. We can find this by drawing altitudes from B and C down to the base AD. Let's call the points where they meet AD, E and F respectively. This creates a central rectangle with width EF (which is equal to BC) and two right triangles, $\\triangle ABE$ and $\\triangle DFC$.</p><p>In right $\\triangle ABE$:</p><p>$AE^2 + BE^2 = AB^2 \\implies AE^2 + 8^2 = 10^2 \\implies AE^2 + 64 = 100 \\implies AE^2 = 36 \\implies AE = 6$ cm.</p><p>In right $\\triangle DFC$:</p><p>$DF^2 + CF^2 = CD^2 \\implies DF^2 + 8^2 = 17^2 \\implies DF^2 + 64 = 289 \\implies DF^2 = 225 \\implies DF = 15$ cm.</p><p>The length of the base AD is the sum of the segments: $AD = AE + EF + DF$. Since $EF=BC$, we have:</p><p>$AD = 6 + BC + 15 = BC + 21$.</p><p>Now we have a system of two equations:</p><ol><li>$AD + BC = 41$</li><li>$AD = BC + 21$</li></ol><p>Substitute the second equation into the first:</p><p>$(BC + 21) + BC = 41$</p><p>$2BC + 21 = 41$</p><p>$2BC = 20$</p><p>$BC = 10$ cm.</p>"
+        },
         {
           "text": "<p>Using the formula for the area of a trapezoid, we have <INSERTION_INDEX_1>. Thus <INSERTION_INDEX_2>. Drop perpendiculars from <INSERTION_INDEX_3> to <INSERTION_INDEX_4> and from <INSERTION_INDEX_5> to <INSERTION_INDEX_6> and let them hit <INSERTION_INDEX_7> at <INSERTION_INDEX_8> and <INSERTION_INDEX_9> respectively. Note that each of these perpendiculars has length <INSERTION_INDEX_10>. From the Pythagorean Theorem, <INSERTION_INDEX_11> and <INSERTION_INDEX_12> thus <INSERTION_INDEX_13>. Substituting back into our original equation we have <INSERTION_INDEX_14> thus <INSERTION_INDEX_15></p>",
           "insertions": {
@@ -2028,6 +2085,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>We need to compare the areas of the shaded regions in the three figures.</p><p><b>Figure A:</b></p><p>This is a square with side length 2 cm, containing one large inscribed circle. The diameter of the circle is 2 cm, so its radius is $r=1$ cm.</p><ul><li>Area of square = $2 \\times 2 = 4$ cm².</li><li>Area of circle = $\\pi r^2 = \\pi (1)^2 = \\pi$ cm².</li><li>Shaded Area A = Area of square - Area of circle = $4 - \\pi$.</li></ul><p><b>Figure B:</b></p><p>This is a square with side length 2 cm, containing four small identical circles. Each small circle must have a diameter of 1 cm, so its radius is $r=0.5$ cm.</p><ul><li>Area of square = $2 \\times 2 = 4$ cm².</li><li>Area of one small circle = $\\pi r^2 = \\pi (0.5)^2 = 0.25\\pi$ cm².</li><li>Total area of four small circles = $4 \\times 0.25\\pi = \\pi$ cm².</li><li>Shaded Area B = Area of square - Total area of circles = $4 - \\pi$.</li></ul><p><b>Figure C:</b></p><p>This is a large circle with a diameter of 2 cm, containing an inscribed square. The circle's radius is $r=1$ cm.</p><ul><li>Area of circle = $\\pi r^2 = \\pi (1)^2 = \\pi$ cm².</li><li>The diagonal of the inscribed square is equal to the diameter of the circle, so the diagonal $d=2$ cm.</li><li>The area of a square can be calculated as $\\frac{d^2}{2}$. Area of square = $\\frac{2^2}{2} = \\frac{4}{2} = 2$ cm².</li><li>Shaded Area C = Area of circle - Area of square = $\\pi - 2$.</li></ul><p><b>Comparison:</b></p><p>Using the approximation $\\pi \\approx 3.14$:</p><ul><li>Area A = $4 - \\pi \\approx 4 - 3.14 = 0.86$ cm².</li><li>Area B = $4 - \\pi \\approx 4 - 3.14 = 0.86$ cm².</li><li>Area C = $\\pi - 2 \\approx 3.14 - 2 = 1.14$ cm².</li></ul><p>The shaded area of Figure C is the largest.</p>"
+        },
+        {
           "text": "<p>First we have to find the area of the shaded region in each of the figures. In figure <INSERTION_INDEX_1> the area of the shaded region is the area of the circle subtracted from the area of the square. That is <INSERTION_INDEX_2>. In figure <INSERTION_INDEX_3> the area of the shaded region is the sum of the areas of the 4 circles subtracted from the area of the square. That is <INSERTION_INDEX_4>. In figure <INSERTION_INDEX_5> the area of the shaded region is the area of the square subtracted from the area of the circle. The diameter of the circle and the diagonal of the square are equal to 2. We can easily find the area of the square using the area formula <INSERTION_INDEX_6>. So the area of the shaded region is <INSERTION_INDEX_7>. Clearly the largest area that we found among the three shaded regions is <INSERTION_INDEX_8>. Thus the answer is <INSERTION_INDEX_9>.</p><ul><li>Note - If you don't know the diagonal formula, you can also find the length of the square using the Pythagorean Theorem (set up an equation and solve for <INSERTION_INDEX_10>), which is <INSERTION_INDEX_11>, and get that the area is <INSERTION_INDEX_12>, and continute as shown in the solution.</li></ul>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2151,7 +2211,7 @@
       "answer": "A",
       "solutions": [
         {
-          "text": "<p>Break this problem into two parts: where the cat will be after the <INSERTION_INDEX_1> move, and where the mouse will be.</p><p>The cat has four possible positions in 1 cycle which are repeated every four moves. <INSERTION_INDEX_2> has a remainder of <INSERTION_INDEX_3> when divided by <INSERTION_INDEX_4>. This corresponds to the position the cat has after the 3rd move, which is the bottom right corner.</p><p>Similarly, the mouse has eight possible positions in 1 cycle that repeat every eight moves. <INSERTION_INDEX_5> has a remainder of <INSERTION_INDEX_6> when divided by <INSERTION_INDEX_7>. This corresponds to the position the mouse has after the 7th move which is bottom left corner. </p><p>The only arrangement with the mouse in that position and the cat in the bottom right square is <INSERTION_INDEX_8>.</p>",
+          "text": "<p>Divide this problem into two components: determining the cat's location after the <INSERTION_INDEX_1> move, and establishing the mouse's position.</p><p>The cat possesses four possible positions in one cycle that repeat every four moves. <INSERTION_INDEX_2> yields a remainder of <INSERTION_INDEX_3> when divided by <INSERTION_INDEX_4>. This indicates the position the cat occupies after the 3rd move, specifically the bottom right corner.</p><p>Likewise, the mouse has eight possible positions in one cycle that repeat every eight moves. <INSERTION_INDEX_5> produces a remainder of <INSERTION_INDEX_6> when divided by <INSERTION_INDEX_7>. This corresponds to the position the mouse occupies after the 7th move, which is the bottom left corner.</p><p>The sole configuration with the mouse in that position and the cat in the bottom right square is <INSERTION_INDEX_8>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/0/f/9/0f9aeb6fed7e8972fc371b5dfebf60d96c5d539f.png",
@@ -2285,7 +2345,7 @@
       "answer": "B",
       "solutions": [
         {
-          "text": "<p>The distance from Island <INSERTION_INDEX_1> to any point on the semicircle will always be constant. On the graph, this will represent a straight line. The distance between Island <INSERTION_INDEX_2> and line <INSERTION_INDEX_3> will not be constant though. We can easily prove that the distance between <INSERTION_INDEX_4> and line <INSERTION_INDEX_5> will represent a curve. As the ship travels from <INSERTION_INDEX_6> to <INSERTION_INDEX_7>, the distance between the ship and Island <INSERTION_INDEX_8> will first decrease until it reaches the point <INSERTION_INDEX_9> so that <INSERTION_INDEX_10> is perpendicular to <INSERTION_INDEX_11>, and then increase afterwards. Hence the answer choice that fits them all is <INSERTION_INDEX_12>.</p>",
+          "text": "<p>The distance from Island <INSERTION_INDEX_1> to any point on the semicircle remains constant. On the graph, this will manifest as a straight line. However, the distance between Island <INSERTION_INDEX_2> and line <INSERTION_INDEX_3> will not remain constant. We can readily demonstrate that the distance between <INSERTION_INDEX_4> and line <INSERTION_INDEX_5> will represent a curve. As the ship journeys from <INSERTION_INDEX_6> to <INSERTION_INDEX_7>, the distance between the ship and Island <INSERTION_INDEX_8> will initially decrease until it reaches the point <INSERTION_INDEX_9> such that <INSERTION_INDEX_10> is perpendicular to <INSERTION_INDEX_11>, and then increase thereafter. Therefore, the answer choice that accommodates all these conditions is <INSERTION_INDEX_12>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/4/a/e/4ae5f1c3bb5ee22198c136ad4cc3dda97286f0d4.png",
@@ -2482,7 +2542,7 @@
       "answer": "C",
       "solutions": [
         {
-          "text": "<p>We see that <INSERTION_INDEX_1>, the vertical distance between <INSERTION_INDEX_2> and <INSERTION_INDEX_3> is <INSERTION_INDEX_4>, and the vertical distance between <INSERTION_INDEX_5> and <INSERTION_INDEX_6> is <INSERTION_INDEX_7>. Therefore, <INSERTION_INDEX_8>. We are given that the length of the altitude of <INSERTION_INDEX_9> is equal to the distance between <INSERTION_INDEX_10> and <INSERTION_INDEX_11>, which is <INSERTION_INDEX_12>. So the area of <INSERTION_INDEX_13> is <INSERTION_INDEX_14>, which is <INSERTION_INDEX_15>.</p><p>~sidkris</p>",
+          "text": "<p>We observe that <INSERTION_INDEX_1>, the vertical distance between <INSERTION_INDEX_2> and <INSERTION_INDEX_3> equals <INSERTION_INDEX_4>, and the vertical distance between <INSERTION_INDEX_5> and <INSERTION_INDEX_6> equals <INSERTION_INDEX_7>. Consequently, <INSERTION_INDEX_8>. We are informed that the length of the altitude of <INSERTION_INDEX_9> is equivalent to the distance between <INSERTION_INDEX_10> and <INSERTION_INDEX_11>, which equals <INSERTION_INDEX_12>. Therefore, the area of <INSERTION_INDEX_13> is <INSERTION_INDEX_14>, which equals <INSERTION_INDEX_15>.</p><p>~sidkris</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/c/5/3/c53abe86595a36cddb3cc6632040e0e565a7213b.png",
@@ -2586,7 +2646,7 @@
               "picture": "//latex.artofproblemsolving.com/f/f/b/ffbdd38cd4e38a68ac90264273b91611360d20b6.png",
               "alt_type": "latex",
               "alt_value": "$\\boxed{\\textbf{(C)} \\ \\frac{27}{4}}$",
-              "width": "69",
+              "width": "56",
               "height": "49"
             }
           }
