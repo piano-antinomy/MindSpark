@@ -57,6 +57,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>To find Mindy's total, we add the amounts of her three purchases.</p><p>Total = $\\textdollar {1.98} + \\textdollar {5.04} + \\textdollar {9.89}$</p><p>Total = $\\textdollar {16.91}$</p><p>The question asks for the total to the nearest dollar. Since the decimal part, 0.91, is greater than or equal to 0.50, we round up to the next whole dollar.</p><p>So, $\\textdollar {16.91}$ rounded to the nearest dollar is $\\textdollar {17}$.</p>"
+        },
+        {
           "text": "<p>The three prices round to <INSERTION_INDEX_1>, <INSERTION_INDEX_2>, and <INSERTION_INDEX_3>, which have a sum of <INSERTION_INDEX_4>.</p><p>We know that there will not be a rounding error, as the total amount rounded is clearly less than <INSERTION_INDEX_5>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -127,6 +130,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>The scoring for the AMC 8 contest is 1 point for each correct answer, and 0 points for each incorrect or unanswered question. There is no penalty for wrong answers.</p><p>Billy's score is calculated as follows:</p><ul><li>13 correct answers: $13 \\times 1 = 13$ points</li><li>7 incorrect answers: $7 \\times 0 = 0$ points</li><li>5 unanswered questions: $5 \\times 0 = 0$ points</li></ul><p>Total score = $13 + 0 + 0 = 13$.</p>"
+        },
+        {
           "text": "<p>As the AMC 8 only rewards 1 point for each correct answer, everything is irrelevant except the number Billy answered correctly, <INSERTION_INDEX_1>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -168,6 +174,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>First, calculate Elisa's initial time per lap and her new time per lap.</p><p><b>Initial Lap Time:</b></p><p>She completed 10 laps in 25 minutes. </p><p>Time per lap = $\\frac{25 \\text{ minutes}}{10 \\text{ laps}} = 2.5$ minutes per lap.</p><p><b>New Lap Time:</b></p><p>She can now finish 12 laps in 24 minutes.</p><p>Time per lap = $\\frac{24 \\text{ minutes}}{12 \\text{ laps}} = 2$ minutes per lap.</p><p><b>Improvement:</b></p><p>To find her improvement, subtract her new lap time from her initial lap time.</p><p>Improvement = $2.5 \\text{ minutes} - 2 \\text{ minutes} = 0.5$ minutes.</p><p>This is equal to $\\frac{1}{2}$ of a minute.</p>"
+        },
         {
           "text": "<p>When Elisa started, she finished a lap in <INSERTION_INDEX_1> minutes. Now, she finishes a lap is <INSERTION_INDEX_2> minutes. The difference is <INSERTION_INDEX_3>.</p>",
           "insertions": {
@@ -246,6 +255,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>We can determine the final direction by calculating the net revolution of the spinner. Let's define clockwise as the positive direction and counterclockwise as the negative direction.</p><p>The first move is $2\\frac{1}{4}$ revolutions clockwise ($+2.25$).</p><p>The second move is $3\\frac{3}{4}$ revolutions counterclockwise ($-3.75$).</p><p>Net revolution = $+2.25 - 3.75 = -1.5$ revolutions.</p><p>A net revolution of -1.5 means the spinner makes $1\\frac{1}{2}$ revolutions counterclockwise from its starting position.</p><p>The spinner starts pointing West.</p><ul><li>One full counterclockwise revolution brings it back to West.</li><li>Another half ($\\frac{1}{2}$) revolution counterclockwise from West will point it to the opposite direction, which is East.</li></ul><p>Thus, the spinner points East after the two moves.</p>"
+        },
         {
           "text": "<p>If the spinner goes clockwise <INSERTION_INDEX_1> revolutions and then counterclockwise <INSERTION_INDEX_2> revolutions, it ultimately goes counterclockwise <INSERTION_INDEX_3> which brings the spinner pointing <INSERTION_INDEX_4>.</p>",
           "insertions": {
@@ -364,6 +376,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Let the side length of the larger square be $s$. Its area is $s^2 = 60$.</p><p>The vertices of the smaller square (A, B, C, D) are the midpoints of the sides of the larger square. When the midpoints of a square are connected, they form a new square whose area is half the area of the original square.</p><p>To see why, consider the larger square. Connecting the midpoints divides the larger square into the smaller central square and four identical right-angled triangles at the corners. </p><p></p><p>The legs of each corner triangle are half the side length of the large square ($\\frac{s}{2}$). The area of one such triangle is $\\frac{1}{2} \\times \\text{base} \\times \\text{height} = \\frac{1}{2} \\times \\frac{s}{2} \\times \\frac{s}{2} = \\frac{s^2}{8}$.</p><p>The total area of the four corner triangles is $4 \\times \\frac{s^2}{8} = \\frac{s^2}{2}$.</p><p>The area of the smaller square is the area of the larger square minus the area of the four triangles:</p><p>Area_small = $s^2 - \\frac{s^2}{2} = \\frac{s^2}{2}$.</p><p>Since the area of the larger square is 60, the area of the smaller square is $\\frac{60}{2} = 30$.</p>"
+        },
         {
           "text": "<p>Drawing segments <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, the number of triangles outside square <INSERTION_INDEX_3> is the same as the number of triangles inside the square. Thus areas must be equal so the area of <INSERTION_INDEX_4> is half the area of the larger square which is <INSERTION_INDEX_5>.</p><p>If the side length of the larger square is <INSERTION_INDEX_6>, the side length of the smaller square is <INSERTION_INDEX_7>. Therefore the area of the smaller square is <INSERTION_INDEX_8>, half of the larger square's area, <INSERTION_INDEX_9>. </p><p>Thus, the area of the smaller square in the picture is <INSERTION_INDEX_10>.</p><p>The smaller square forms four congruent isosceles right triangles whose legs measure half of the larger square's side length. Since the larger square has an area of <INSERTION_INDEX_11>, its sides measure <INSERTION_INDEX_12>. Therefore, the legs of the right triangles measure <INSERTION_INDEX_13>. Now we can use the Pythagorean Theorem to find the length of the hypotenuses, or the smaller square's sides. We have<INSERTION_INDEX_14>Squaring this, the area of the smaller square is <INSERTION_INDEX_15>.</p>",
           "insertions": {
@@ -640,6 +655,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>The letter T is formed by two $2 \\times 4$ inch rectangles. Let's analyze the perimeter based on the provided image.</p><p>One rectangle is placed vertically (let's call it the stem), and the other horizontally on top of it (the crossbar).</p><ul><li>The crossbar is $4$ inches wide and $2$ inches high.</li><li>The stem is $2$ inches wide and $4$ inches high.</li></ul><p>The total perimeter is the sum of the lengths of all the outer edges:</p><ul><li>The top edge of the crossbar: 4 inches.</li><li>The left and right vertical edges of the crossbar: $2 + 2 = 4$ inches.</li><li>The two bottom horizontal edges of the crossbar (to the left and right of the stem): The total width is 4 inches, and the stem is 2 inches wide, so the remaining parts are $\\frac{4 - 2}{2} = 1$ inch each. Total is $1+1=2$ inches.</li><li>The two vertical edges of the stem: 4 + 4 = 8 inches. But a part of the stem is covered by the crossbar. The diagram implies the stem is placed under the crossbar. So the exposed vertical sides are $4$ inches each, totaling $8$ inches.</li><li>The bottom edge of the stem: 2 inches.</li></ul><p>A simpler way is to sum the perimeters of the two rectangles and subtract the length of the interface where they are joined, which is counted twice.</p><p>Perimeter of one rectangle = $2 \\times (2+4) = 12$ inches.</p><p>Total perimeter of two separate rectangles = $12 + 12 = 24$ inches.</p><p>The length of the boundary where the two rectangles are joined is 2 inches. We must subtract twice this length.</p><p>Perimeter of T = $24 - 2 \\times 2 = 24 - 4 = 20$ inches.</p>"
+        },
+        {
           "text": "<p>If the two rectangles were seperate, the perimeter would be <INSERTION_INDEX_1>. It easy to see that their connection erases 2 from each of the rectangles, so the final perimeter is <INSERTION_INDEX_2>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -732,6 +750,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>We need to find the radius of each circle and then compare them.</p><p><b>Circle X:</b></p><p>The radius is given as $r_X = \\pi$. Since $\\pi \\approx 3.14159$, $r_X \\approx 3.14$.</p><p><b>Circle Y:</b></p><p>The circumference is $8\\pi$. The formula for circumference is $C = 2\\pi r$.</p><p>$8\\pi = 2\\pi r_Y$</p><p>$r_Y = \\frac{8\\pi}{2\\pi} = 4$.</p><p><b>Circle Z:</b></p><p>The area is $9\\pi$. The formula for area is $A = \\pi r^2$.</p><p>$9\\pi = \\pi r_Z^2$</p><p>$r_Z^2 = 9$</p><p>$r_Z = 3$ (radius must be positive).</p><p><b>Comparison:</b></p><p>Now we compare the radii:</p><ul><li>$r_Z = 3$</li><li>$r_X = \\pi \\approx 3.14$</li><li>$r_Y = 4$</li></ul><p>Listing them in order from smallest to largest radius gives Z, X, Y.</p>"
+        },
+        {
           "text": "<p>Using the formulas of circles, <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, we find that circle <INSERTION_INDEX_3> has a radius of <INSERTION_INDEX_4> and circle <INSERTION_INDEX_5> has a radius of <INSERTION_INDEX_6>. Also, circle X has a radius of <INSERTION_INDEX_7>. Thus, the order from smallest to largest radius is <INSERTION_INDEX_8>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -807,7 +828,7 @@
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/2/3/d/23d9ba67767b2d91d39ded5484600239340cfdf0.png",
             "alt_type": "latex",
-            "alt_value": "$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males &\u00a0? & 26 &\u00a0?\\\\ \\hline Females & 58 &\u00a0? & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$",
+            "alt_value": "$\\begin{tabular}{|c|c|c|c|}\\hline & Listen & Don't Listen & Total\\\\ \\hline Males & ? & 26 & ?\\\\ \\hline Females & 58 & ? & 96\\\\ \\hline Total & 136 & 64 & 200\\\\ \\hline\\end{tabular}$",
             "width": "312",
             "height": "83"
           }
@@ -830,6 +851,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>To find the percentage of males surveyed who listen to the station, we first need to find the total number of males and the number of males who listen.</p><p>Let's complete the table using the given totals:</p><ul><li><b>Total Males:</b> Total People - Total Females = $200 - 96 = 104$.</li><li><b>Males Who Listen:</b> Total Listeners - Female Listeners = $136 - 58 = 78$.</li><li><b>Females Who Don't Listen:</b> Total Females - Females Who Listen = $96 - 58 = 38$.</li><li><b>Check:</b> Males Who Don't Listen = Total Don't Listen - Females Who Don't Listen = $64 - 38 = 26$. This matches the table.</li></ul><p>The completed table is:</p><style>table, th, td {border:1px solid black; border-collapse: collapse; padding: 5px; text-align: center;}</style><table><tr><th></th><th>Listen</th><th>Don't Listen</th><th>Total</th></tr><tr><td><b>Male</b></td><td>78</td><td>26</td><td>104</td></tr><tr><td><b>Female</b></td><td>58</td><td>38</td><td>96</td></tr><tr><td><b>Total</b></td><td>136</td><td>64</td><td>200</td></tr></table><p>Now, calculate the percentage of males who listen:</p><p>Percentage = $(\\frac{\\text{Number of males who listen}}{\\text{Total number of males}}) \\times 100\\%$</p><p>Percentage = $(\\frac{78}{104}) \\times 100\\%$</p><p>Simplifying the fraction: $\\frac{78}{104} = \\frac{39}{52} = \\frac{3}{4}$.</p><p>Percentage = $\\frac{3}{4} \\times 100\\% = 75\\%$.</p>"
+        },
         {
           "text": "<p>Filling out the chart, it becomes</p><p><INSERTION_INDEX_1></p><p>Thus, the percentage of males surveyed that listen to the station is <INSERTION_INDEX_2>.</p>",
           "insertions": {
@@ -878,7 +902,7 @@
     {
       "id": "amc_2006_8_9",
       "question": {
-        "text": "<p>What is the product of <INSERTION_INDEX_1>\u00a0?</p>",
+        "text": "<p>What is the product of <INSERTION_INDEX_1> ?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/c/6/a/c6afca46c66b0378b58e9c3ea02cb9be64dfd394.png",
@@ -906,6 +930,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We are asked to find the product of the sequence of fractions:</p><p>$P = \\frac{3}{2} \\times \\frac{4}{3} \\times \\frac{5}{4} \\times \\dots \\times \\frac{2006}{2005}$</p><p>This is a telescoping product. We can see that the numerator of each fraction cancels out the denominator of the following fraction.</p><p>$P = \\frac{\\enclose{horizontalstrike}{3}}{2} \\times \\frac{\\enclose{horizontalstrike}{4}}{\\enclose{horizontalstrike}{3}} \\times \\frac{\\enclose{horizontalstrike}{5}}{\\enclose{horizontalstrike}{4}} \\times \\dots \\times \\frac{2006}{\\enclose{horizontalstrike}{2005}}$</p><p>After all the cancellations, we are left with the denominator of the very first fraction and the numerator of the very last fraction.</p><p>$P = \\frac{2006}{2}$</p><p>$P = 1003$</p>"
+        },
         {
           "text": "<p>The numerator in each fraction cancels out with the denominator of the next fraction. There are only two numbers that didn't cancel: <INSERTION_INDEX_1>.</p>",
           "insertions": {
@@ -1020,6 +1047,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>Jorge needs to plot ordered pairs of positive integers $(w, l)$ where $w$ is the width and $l$ is the length of a rectangle with an area of 12.</p><p>The formula for the area of a rectangle is Area = $w \\times l$.</p><p>So, we have the equation $w \\times l = 12$.</p><p>Since $w$ and $l$ must be positive integers, we need to find all the integer factor pairs of 12. These pairs are:</p><ul><li>(1, 12)</li><li>(2, 6)</li><li>(3, 4)</li><li>(4, 3)</li><li>(6, 2)</li><li>(12, 1)</li></ul><p>The graph should consist of only these discrete points. These points lie on the hyperbola defined by the equation $l = \\frac{12}{w}$. This relationship is not linear; as $w$ increases, $l$ decreases, and the curve is concave up.</p><p>Looking at the options:</p><ul><li>Graph (A) shows a set of discrete points that lie on a curve that is decreasing and concave up.</li><li>Graphs (B) and (C) show linear arrangements of points.</li><li>Graphs (D) and (E) show points where one variable is constant.</li></ul><p>Therefore, graph (A) is the correct representation.</p>"
+        },
+        {
           "text": "<p>The length of the rectangle will relate invertly to the width, specifically using the theorem <INSERTION_INDEX_1>. The only graph that could represent a inverted relationship is <INSERTION_INDEX_2>. (The rest are linear graphs that represent direct relationships, therefore they are incorrect.)</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1068,6 +1098,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>We need to find the number of two-digit integers whose digits sum to a perfect square.</p><p>A two-digit number can be written as $10a + b$, where the first digit $a \\in \\{1, 2, ..., 9\\}$ and the second digit $b \\in \\{0, 1, ..., 9\\}$.</p><p>The sum of the digits is $S = a + b$. The minimum possible sum is $1+0=1$, and the maximum possible sum is $9+9=18$.</p><p>We need to find the perfect squares between 1 and 18, which are 1, 4, 9, and 16.</p><p>Now we count the number of pairs $(a, b)$ for each perfect square sum:</p><p><b>Case 1: Sum = 1</b></p><ul><li>$a+b=1$: The only pair is (1, 0). This gives the number 10. (1 number)</li></ul><p><b>Case 2: Sum = 4</b></p><ul><li>$a+b=4$: Pairs are (1, 3), (2, 2), (3, 1), (4, 0). This gives the numbers 13, 22, 31, 40. (4 numbers)</li></ul><p><b>Case 3: Sum = 9</b></p><ul><li>$a+b=9$: Pairs are (1, 8), (2, 7), (3, 6), (4, 5), (5, 4), (6, 3), (7, 2), (8, 1), (9, 0). (9 numbers)</li></ul><p><b>Case 4: Sum = 16</b></p><ul><li>$a+b=16$: Pairs are (7, 9), (8, 8), (9, 7). (3 numbers)</li></ul><p>The total number of such two-digit numbers is the sum of the counts from each case: $1 + 4 + 9 + 3 = 17$.</p>"
+        },
         {
           "text": "<p>There is <INSERTION_INDEX_1> integer whose digits sum to <INSERTION_INDEX_2>: <INSERTION_INDEX_3>.</p><p>There are <INSERTION_INDEX_4> integers whose digits sum to <INSERTION_INDEX_5>: <INSERTION_INDEX_6>.</p><p>There are <INSERTION_INDEX_7> integers whose digits sum to <INSERTION_INDEX_8>: <INSERTION_INDEX_9>.</p><p>There are <INSERTION_INDEX_10> integers whose digits sum to <INSERTION_INDEX_11>: <INSERTION_INDEX_12>.</p><p>Two digits cannot sum to <INSERTION_INDEX_13> or any greater square since the greatest sum of digits of a two-digit number is <INSERTION_INDEX_14>.</p><p>Thus, the answer is <INSERTION_INDEX_15>.</p>",
           "insertions": {
@@ -1231,6 +1264,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>To find Antonette's overall score, we need to calculate the total number of problems she answered correctly and divide it by the total number of problems across all three tests.</p><p><b>Test 1:</b></p><ul><li>Problems: 10</li><li>Score: 70%</li><li>Correct answers: $0.70 \\times 10 = 7$</li></ul><p><b>Test 2:</b></p><ul><li>Problems: 20</li><li>Score: 80%</li><li>Correct answers: $0.80 \\times 20 = 16$</li></ul><p><b>Test 3:</b></p><ul><li>Problems: 30</li><li>Score: 90%</li><li>Correct answers: $0.90 \\times 30 = 27$</li></ul><p><b>Combined Test:</b></p><ul><li>Total problems = $10 + 20 + 30 = 60$</li><li>Total correct answers = $7 + 16 + 27 = 50$</li></ul><p><b>Overall Score:</b></p><p>Overall percent score = $(\\frac{\\text{Total correct answers}}{\\text{Total problems}}) \\times 100\\%$</p><p>Overall percent score = $(\\frac{50}{60}) \\times 100\\% = \\frac{5}{6} \\times 100\\% = 83.333...\\%$</p><p>The question asks which percent is closest to her overall score. $83.333...\\%$ is closest to 83%.</p>"
+        },
+        {
           "text": "<p><INSERTION_INDEX_1></p><p><INSERTION_INDEX_2></p><p><INSERTION_INDEX_3></p><p>Adding them up gets <INSERTION_INDEX_4>. The overall percentage correct would be <INSERTION_INDEX_5>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1300,6 +1336,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>This is a relative speed problem. We need to find the time it takes for Cassie and Brian to meet.</p><p><b>Information:</b></p><ul><li>Total distance: 62 miles.</li><li>Cassie's speed: 12 mph. Starts at 8:30 AM.</li><li>Brian's speed: 16 mph. Starts at 9:00 AM.</li></ul><p><b>Step 1: Calculate Cassie's head start.</b></p><p>Brian starts at 9:00 AM, which is 30 minutes (0.5 hours) after Cassie. In that time, Cassie has already covered some distance.</p><p>Distance covered by Cassie by 9:00 AM = Speed $\\times$ Time = $12 \\text{ mph} \\times 0.5 \\text{ h} = 6$ miles.</p><p><b>Step 2: Calculate the remaining distance.</b></p><p>At 9:00 AM, the distance between Cassie and Brian is $62 - 6 = 56$ miles.</p><p><b>Step 3: Calculate the time to meet.</b></p><p>From 9:00 AM onwards, they are traveling towards each other. We can use their combined (relative) speed to find how long it takes for them to cover the remaining distance.</p><p>Relative speed = Cassie's speed + Brian's speed = $12 \\text{ mph} + 16 \\text{ mph} = 28$ mph.</p><p>Time to meet = $\\frac{\\text{Remaining distance}}{\\text{Relative speed}} = \\frac{56 \\text{ miles}}{28 \\text{ mph}} = 2$ hours.</p><p><b>Step 4: Determine the meeting time.</b></p><p>They will meet 2 hours after 9:00 AM.</p><p>Meeting Time = 9:00 AM + 2 hours = 11:00 AM.</p>"
+        },
         {
           "text": "<p>If Cassie leaves <INSERTION_INDEX_1> an hour earlier then Brian, when Brian starts, the distance between them will be <INSERTION_INDEX_2>. Every hour, they will get <INSERTION_INDEX_3> miles closer. <INSERTION_INDEX_4>, so 2 hours from <INSERTION_INDEX_5> AM is when they meet, which is <INSERTION_INDEX_6>.</p>",
           "insertions": {
@@ -1503,6 +1542,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>We need to calculate the total time each person spent reading the 760-page book and then find the difference.</p><p><b>Bob's Reading Time:</b></p><ul><li>Reading speed: 45 seconds per page.</li><li>Total pages: 760.</li><li>Total time for Bob = $760 \\text{ pages} \\times 45 \\frac{\\text{seconds}}{\\text{page}} = 34,200$ seconds.</li></ul><p><b>Chandra's Reading Time:</b></p><ul><li>Reading speed: 30 seconds per page.</li><li>Total pages: 760.</li><li>Total time for Chandra = $760 \\text{ pages} \\times 30 \\frac{\\text{seconds}}{\\text{page}} = 22,800$ seconds.</li></ul><p><b>Difference in Time:</b></p><p>The difference is Bob's time minus Chandra's time.</p><p>Difference = $34,200 - 22,800 = 11,400$ seconds.</p><p>Bob will spend 11,400 more seconds reading than Chandra.</p>"
+        },
+        {
           "text": "<p>The information is the same for Problems 14,15, and 16. Therefore, we shall only use the information we need. All we need for this problem is that there's 760 pages, Bob reads a page in 45 seconds and Chandra reads a page in 30 seconds. A lot of people will find how long it takes Bob to read the book, how long it takes Chandra to read the book, and then find the seconds. However, if we just set up the expression, we can find an easier way.</p><p><INSERTION_INDEX_1></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1544,6 +1586,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>In the team reading scheme, Chandra and Bob read for the same amount of time. Let $P$ be the last page number Chandra reads.</p><ul><li>Chandra reads pages 1 to $P$. The total number of pages she reads is $P$.</li><li>Bob reads from page $P+1$ to 760. The total number of pages he reads is $760 - P$.</li></ul><p>We can set up an equation where their reading times are equal.</p><p>Time = Number of pages $\\times$ Time per page</p><p><b>Chandra's Time:</b> $P \\times 30$ seconds</p><p><b>Bob's Time:</b> $(760 - P) \\times 45$ seconds</p><p>Set the times equal to each other:</p><p>$30P = 45(760 - P)$</p><p>To simplify, divide both sides by 15:</p><p>$2P = 3(760 - P)$</p><p>$2P = 2280 - 3P$</p><p>Add $3P$ to both sides:</p><p>$5P = 2280$</p><p>Solve for $P$:</p><p>$P = \\frac{2280}{5} = 456$</p><p>So, the last page that Chandra should read is page 456.</p>"
+        },
         {
           "text": "<p>Same as the previous problem, we only use the information we need. Note that it's not just Chandra reads half of it and Bob reads the rest since they have different reading rates. In this case, we set up an equation and solve.</p><p>Let <INSERTION_INDEX_1> be the number of pages that Chandra reads.</p><p><INSERTION_INDEX_2> Distribute the <INSERTION_INDEX_3></p><p><INSERTION_INDEX_4> Add <INSERTION_INDEX_5> to both sides</p><p><INSERTION_INDEX_6> Divide both sides by <INSERTION_INDEX_7> to make it easier to solve</p><p><INSERTION_INDEX_8> Divide both sides by <INSERTION_INDEX_9></p><p><INSERTION_INDEX_10></p>",
           "insertions": {
@@ -1696,6 +1741,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>Alice, Bob, and Chandra divide the 760-page book so that each reads for the same amount of time. Let $T$ be this amount of time in seconds.</p><p>We can find out how many pages each person reads in time $T$.</p><ul><li>Alice's speed: 20 seconds/page $\\implies$ Pages read = $\\frac{T}{20}$</li><li>Bob's speed: 45 seconds/page $\\implies$ Pages read = $\\frac{T}{45}$</li><li>Chandra's speed: 30 seconds/page $\\implies$ Pages read = $\\frac{T}{30}$</li></ul><p>The sum of the pages read by all three must equal the total number of pages in the book, which is 760.</p><p>$\\frac{T}{20} + \\frac{T}{30} + \\frac{T}{45} = 760$</p><p>To solve for $T$, we find a common denominator for 20, 30, and 45. The least common multiple is 180.</p><p>$\\frac{9T}{180} + \\frac{6T}{180} + \\frac{4T}{180} = 760$</p><p>$\\frac{9T + 6T + 4T}{180} = 760$</p><p>$\\frac{19T}{180} = 760$</p><p>Divide both sides by 19:</p><p>$\\frac{T}{180} = \\frac{760}{19} = 40$</p><p>$T = 40 \\times 180 = 7200$</p><p>Each person will have to read for 7200 seconds.</p>"
+        },
         {
           "text": "<p>The amount of pages Bob, Chandra, and Alice will read is in the ratio 4:6:9. Therefore, Bob, Chandra, and Alice read 160, 240, and 360 pages respectively. They would also be reading for the same amount of time because the ratio of the pages read was based on the time it takes each of them to read a page. Therefore, the amount of seconds each person reads is simply <INSERTION_INDEX_1>.</p>",
           "insertions": {
@@ -1920,7 +1968,7 @@
       "answer": "B",
       "solutions": [
         {
-          "text": "<p>In order for Jeff to have an odd number sum, the numbers must either be Odd + Odd + Odd or Even + Even + Odd. We easily notice that we cannot obtain Odd + Odd + Odd because spinner <INSERTION_INDEX_1> contains only even numbers. Therefore we must work with Even + Even + Odd and spinner <INSERTION_INDEX_2> will give us one of our even numbers. We also see that spinner <INSERTION_INDEX_3> only contains odd, so spinner <INSERTION_INDEX_4> must give us our odd number. We still need one even number from spinner <INSERTION_INDEX_5>. There is only 1 even number: <INSERTION_INDEX_6>. Since spinning the required numbers are automatic on the other spinners, we only have to find the probability of spinning a <INSERTION_INDEX_7> in spinner <INSERTION_INDEX_8>, which is clearly <INSERTION_INDEX_9></p>",
+          "text": "<p>For Jeff to achieve an odd sum, the three numbers must follow either Odd + Odd + Odd or Even + Even + Odd. We immediately observe that Odd + Odd + Odd is impossible since spinner <INSERTION_INDEX_1> exclusively contains even numbers. Hence, we must utilize the Even + Even + Odd combination, where spinner <INSERTION_INDEX_2> provides one of our even numbers. We also observe that spinner <INSERTION_INDEX_3> contains solely odd numbers, so spinner <INSERTION_INDEX_4> must supply our odd number. We still require one even number from spinner <INSERTION_INDEX_5>. There exists only one even number: <INSERTION_INDEX_6>. Given that the required numbers are guaranteed on the other spinners, we merely need to determine the probability of spinning a <INSERTION_INDEX_7> on spinner <INSERTION_INDEX_8>, which is evidently <INSERTION_INDEX_9></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/9/8/6/9866e3a998d628ba0941eb4fea0666ac391d149a.png",
@@ -2017,6 +2065,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>First, let's determine the total surface area of the larger cube.</p><p>The larger cube has 3-inch edges. A cube has 6 faces.</p><p>Area of one face = $3 \\text{ inches} \\times 3 \\text{ inches} = 9$ square inches.</p><p>Total surface area = $6 \\text{ faces} \\times 9 \\frac{\\text{in}^2}{\\text{face}} = 54$ square inches.</p><p>Next, let's find the surface area that is black. The eight black cubes are placed at the corners of the larger cube.</p><p>A small cube placed at a corner of a larger cube exposes exactly 3 of its 6 faces to the outside. Each face of a small 1-inch cube has an area of $1 \\times 1 = 1$ square inch.</p><p>So, each black corner cube contributes $3 \\times 1 \\text{ in}^2 = 3$ square inches to the surface area of the larger cube.</p><p>Since there are 8 black cubes at the 8 corners:</p><p>Total black surface area = $8 \\text{ cubes} \\times 3 \\frac{\\text{in}^2}{\\text{cube}} = 24$ square inches.</p><p>The white surface area is the total surface area minus the black surface area:</p><p>White surface area = $54 \\text{ in}^2 - 24 \\text{ in}^2 = 30$ square inches.</p><p>Finally, the fraction of the surface area that is white is:</p><p>Fraction White = $\\frac{\\text{White surface area}}{\\text{Total surface area}} = \\frac{30}{54}$</p><p>Simplifying the fraction by dividing the numerator and denominator by their greatest common divisor, 6:</p><p>Fraction White = $\\frac{5}{9}$</p>"
+        },
         {
           "text": "<p>The surface area of the cube is <INSERTION_INDEX_1>. Each of the eight black cubes has 3 faces on the outside, making <INSERTION_INDEX_2> black faces. Therefore there are <INSERTION_INDEX_3> white faces. To find the ratio, we evaluate <INSERTION_INDEX_4>.</p><p><br/></p>",
           "insertions": {
@@ -2164,6 +2215,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>We are given several pieces of information:</p><ol><li>Triangle ABC is isosceles with $AB = BC$.</li><li>Point D is the midpoint of segment BC. This means $BD = DC$.</li><li>Point D is also the midpoint of segment AE. This means $AD = DE$.</li><li>The length of segment CE is 11 units.</li><li>Triangle ABD is congruent to triangle ECD ($\triangle ABD \\cong \triangle ECD$).</li></ol><p>From the congruence of the triangles, we know that their corresponding sides are equal in length.</p><p>$\triangle ABD \\cong \triangle ECD$ implies:</p><ul><li>$AB = EC$</li><li>$BD = CD$</li><li>$AD = ED$</li></ul><p>We are given that $CE = 11$. Since $AB = EC$, it follows that $AB = 11$.</p><p>We are also given that triangle ABC is isosceles with the sides $AB$ and $BC$ being equal. Therefore, $BC = AB = 11$.</p><p>The problem asks for the length of $\\overline{BD}$. Since D is the midpoint of BC, it divides BC into two equal segments.</p><p>$BD = \\frac{1}{2}BC$</p><p>$BD = \\frac{1}{2}(11) = 5.5$</p><p>The length of $\\overline{BD}$ is 5.5 units.</p>"
+        },
+        {
           "text": "<p>Since triangle <INSERTION_INDEX_1> is congruent to triangle <INSERTION_INDEX_2> and <INSERTION_INDEX_3>, <INSERTION_INDEX_4>. Since <INSERTION_INDEX_5>, <INSERTION_INDEX_6>. Because point <INSERTION_INDEX_7> is the midpoint of <INSERTION_INDEX_8>, <INSERTION_INDEX_9>.</p><p><br/></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2262,6 +2316,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>In a tournament with 6 players where each player plays every other player exactly once, the total number of games played can be calculated using the combination formula $C(n, k) = \\frac{n!}{k!(n-k)!}$, where $n=6$ and $k=2$.</p><p>Total games = $C(6, 2) = \\frac{6!}{2!(6-2)!} = \\frac{6 \times 5}{2 \times 1} = 15$ games.</p><p>Since there are no ties, in each game there is one winner and one loser. This means the total number of wins across all players must be equal to the total number of games played.</p><p>Total wins = 15.</p><p>We are given the number of wins for five of the six players:</p><ul><li>Helen: 4 wins</li><li>Ines: 3 wins</li><li>Janet: 2 wins</li><li>Kendra: 2 wins</li><li>Lara: 2 wins</li></ul><p>The sum of the wins for these five players is $4 + 3 + 2 + 2 + 2 = 13$ wins.</p><p>To find the number of games Monica won, we subtract this sum from the total number of wins:</p><p>Monica's wins = Total wins - Sum of others' wins</p><p>Monica's wins = $15 - 13 = 2$</p><p>Monica won 2 games.</p>"
+        },
+        {
           "text": "<p>Since there are 6 players, a total of <INSERTION_INDEX_1> games are played. So far, <INSERTION_INDEX_2> games finished (one person won from each game), so Monica needs to win <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2354,6 +2411,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>When the rock is completely submerged in the aquarium, it displaces a volume of water equal to its own volume.</p><p>Volume of the rock = $1000 \\text{ cm}^3$.</p><p>This displaced volume of water will cause the water level in the aquarium to rise. The volume of the rise can be thought of as a rectangular prism with the same base as the aquarium and a height equal to the water level rise.</p><p>The base of the aquarium is a rectangle measuring 100 cm by 40 cm.</p><p>Area of the base = $100 \\text{ cm} \\times 40 \\text{ cm} = 4000 \\text{ cm}^2$.</p><p>The volume of displaced water is also equal to the base area times the rise in water level.</p><p>Displaced Volume = Base Area $\\times$ Water Level Rise</p><p>We can rearrange this formula to solve for the water level rise:</p><p>Water Level Rise = $\\frac{\\text{Displaced Volume}}{\\text{Base Area}}$</p><p>Water Level Rise = $\\frac{1000 \\text{ cm}^3}{4000 \\text{ cm}^2} = \\frac{1}{4} \\text{ cm} = 0.25$ cm.</p><p>The initial water depth and the height of the aquarium are extra information, used only to confirm that the rock can be fully submerged without water spilling.</p>"
+        },
+        {
           "text": "<p>The water level will rise <INSERTION_INDEX_1>cm for every <INSERTION_INDEX_2>. Since <INSERTION_INDEX_3> is <INSERTION_INDEX_4> of <INSERTION_INDEX_5>, the water will rise <INSERTION_INDEX_6></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2438,6 +2498,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Let the three different one-digit positive integers in the bottom row be $x, y, z$, where $x, y, z$ are distinct and chosen from $\\{1,2,3,4,5,6,7,8,9\\}$.</p><p>The second row contains the sums of adjacent numbers: $x+y$ and $y+z$.</p><p>The top cell is the sum of the second row: $(x+y)+(y+z) = x+2y+z$.</p><p>We are to find the difference between the largest and smallest possible values of $x+2y+z$.</p><p><b>Largest value:</b> Assign the largest available digit to $y$ (since it has coefficient 2), and the next two largest to $x$ and $z$.</p><p>So, $y=9$, $x=8$, $z=7$ (or $x=7$, $z=8$): $x+2y+z = 8+2\\times9+7 = 8+18+7=33$.</p><p><b>Smallest value:</b> Assign the smallest available digit to $y$, and the next two smallest to $x$ and $z$.</p><p>So, $y=1$, $x=2$, $z=3$ (or $x=3$, $z=2$): $x+2y+z = 2+2\\times1+3=2+2+3=7$.</p><p><b>Difference:</b> $33-7=26$.</p>"
+        },
         {
           "text": "<p>If the lower cells contain <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, then the second row will contain<INSERTION_INDEX_3> and <INSERTION_INDEX_4>, and the top cell will contain <INSERTION_INDEX_5>. To obtain thesmallest sum, place <INSERTION_INDEX_6> in the center cell and <INSERTION_INDEX_7> and <INSERTION_INDEX_8> in the outer ones. The topnumber will be <INSERTION_INDEX_9>. For the largest sum, place <INSERTION_INDEX_10> in the center cell and <INSERTION_INDEX_11> and <INSERTION_INDEX_12> inthe outer ones. This top number will be <INSERTION_INDEX_13>. The difference is <INSERTION_INDEX_14>.</p><p><br/></p>",
           "insertions": {
@@ -2571,6 +2634,9 @@
       "sources": [],
       "answer": "A",
       "solutions": [
+        {
+          "text": "<p>Let $N$ be the number of gold coins. We are told:</p><ul><li>$N$ leaves a remainder of 4 when divided by 6: $N \\equiv 4 \\pmod{6}$</li><li>$N$ leaves a remainder of 3 when divided by 5: $N \\equiv 3 \\pmod{5}$</li></ul><p>List numbers of the form $N=5k+3$: 3, 8, 13, 18, 23, 28, ...</p><p>Check which of these leaves remainder 4 when divided by 6:</p><ul><li>3 mod 6 = 3</li><li>8 mod 6 = 2</li><li>13 mod 6 = 1</li><li>18 mod 6 = 0</li><li>23 mod 6 = 5</li><li>28 mod 6 = 4 ✓</li></ul><p>So $N=28$ is the smallest such number.</p><p>When 28 coins are divided among 7 people, $28 \\div 7 = 4$ with remainder 0.</p><p><b>Answer:</b> 0 coins are left over.</p>"
+        },
         {
           "text": "<p>The counting numbers that leave a remainder of <INSERTION_INDEX_1> when divided by <INSERTION_INDEX_2> are<INSERTION_INDEX_3> The counting numbers that leave a remainder of <INSERTION_INDEX_4> whendivided by <INSERTION_INDEX_5> are <INSERTION_INDEX_6> So <INSERTION_INDEX_7> is the smallest possible numberof coins that meets both conditions. Because 28 is divisible by 7, there are <INSERTION_INDEX_8> coins leftwhen they are divided among seven people.</p><p>If there were two more coins in the box, the number of coins would be divisibleby both <INSERTION_INDEX_9> and <INSERTION_INDEX_10>. The smallest number that is divisible by <INSERTION_INDEX_11> and <INSERTION_INDEX_12> is <INSERTION_INDEX_13>, so thesmallest possible number of coins in the box is <INSERTION_INDEX_14> and the remainder when divided by <INSERTION_INDEX_15> is <INSERTION_INDEX_16>.</p>",
           "insertions": {
@@ -2884,6 +2950,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>The multiplication problem is structured as:</p><p>$\\begin{array}{@{}c@{\\,}c@{}c} & A & B & A \\\\ \\times & & C & D \\\\ \\hline C & D & C & D \\end{array}$</p><p>This means $(ABA) \\times (CD) = CDCD$.</p><p>Let's analyze the number $CDCD$. It can be written as $CD \\times 100 + CD$.</p><p>$CDCD = CD \\times (100 + 1) = CD \\times 101$.</p><p>So, the equation is $(ABA) \\times (CD) = (CD) \\times 101$.</p><p>Since CD is a two-digit number, $CD \\neq 0$. We can divide both sides of the equation by $CD$:</p><p>$ABA = 101$.</p><p>By comparing the digits, we can determine the values of A and B.</p><ul><li>$A = 1$</li><li>$B = 0$</li></ul><p>The problem states that A, B, C, and D are different digits. We have found $A=1$ and $B=0$. C and D can be any other distinct digits that form a two-digit number (so $C \\neq D$, $C \\neq 1$, $C \\neq 0$, $D \\neq 1$, $D \\neq 0$). For example, CD could be 23, making the problem $101 \\times 23 = 2323$.</p><p>The question asks for the value of $A+B$.</p><p>$A+B = 1 + 0 = 1$.</p>"
+        },
+        {
           "text": "<p><INSERTION_INDEX_1>, so <INSERTION_INDEX_2>. Therefore, <INSERTION_INDEX_3> and <INSERTION_INDEX_4>, so <INSERTION_INDEX_5>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2961,6 +3030,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Let the numbers on the visible sides of the three cards be $F_1=44, F_2=59, F_3=38$.</p><p>Let the numbers on the hidden sides be $H_1, H_2, H_3$.</p><p>We are told that the sums of the two numbers on each card are equal. Let this sum be $S$.</p><p>$44 + H_1 = S$</p><p>$59 + H_2 = S$</p><p>$38 + H_3 = S$</p><p>From these equations, we can express the hidden numbers in terms of $S$:</p><p>$H_1 = S - 44$</p><p>$H_2 = S - 59$</p><p>$H_3 = S - 38$</p><p>We are also told that the hidden numbers $H_1, H_2, H_3$ are prime numbers.</p><p>Let's look at the differences between these primes:</p><p>$H_1 - H_2 = (S - 44) - (S - 59) = 15$</p><p>$H_3 - H_1 = (S - 38) - (S - 44) = 6$</p><p>$H_3 - H_2 = (S - 38) - (S - 59) = 21$</p><p>So we are looking for three prime numbers $H_1, H_2, H_3$ such that $H_1=H_2+15$ and $H_3=H_1+6=H_2+21$.</p><p>Let's test prime numbers for $H_2$. If $H_2$ is any odd prime (3, 5, 7, ...), then $H_1 = H_2 + 15$ would be an even number (odd+odd=even) greater than 2, and therefore not prime. The same applies to $H_3 = H_2+21$.</p><p>This means $H_2$ must be the only even prime number, which is 2.</p><p>Let's check if this works:</p><ul><li>If $H_2 = 2$ (prime)</li><li>Then $H_1 = 2 + 15 = 17$ (which is prime)</li><li>And $H_3 = 17 + 6 = 23$ (which is also prime)</li></ul><p>The three hidden prime numbers are 2, 17, and 23. The problem states all 6 numbers are different, which they are: {44, 59, 38, 17, 2, 23}.</p><p>The question asks for the average of the hidden prime numbers.</p><p>Average = $\\frac{H_1 + H_2 + H_3}{3} = \\frac{17 + 2 + 23}{3} = \\frac{42}{3} = 14$.</p>"
+        },
         {
           "text": "<p>Notice that 44 and 38 are both even, while 59 is odd. If any odd prime is added to 59, an even number will be obtained. However, the only way to obtain this even number(common sum) would be to add another even number to 44, and a different one to 38. Since there is only one even prime (2), the middle card's hidden number cannot be an odd prime, and so must be even. Therefore, the middle card's hidden number must be 2, so the constant sum is <INSERTION_INDEX_1>. Thus, the first card's hidden number is <INSERTION_INDEX_2>, and the last card's hidden number is <INSERTION_INDEX_3>. </p><p>Since the sum of the hidden primes is <INSERTION_INDEX_4>, the average of the primes is <INSERTION_INDEX_5>.</p><p><br/></p>",
           "insertions": {
