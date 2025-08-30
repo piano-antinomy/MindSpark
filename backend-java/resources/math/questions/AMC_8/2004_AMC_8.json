@@ -57,6 +57,9 @@
       "answer": "B",
       "solutions": [
         {
+           "text": "<p>The problem provides a scale on a map where 12 centimeters represent 72 kilometers. We first need to find the unit rate of kilometers per centimeter.</p><p><b>Step 1: Find the unit rate.</b></p><p>Divide the total kilometers by the total centimeters to find out how many kilometers are represented by one centimeter.</p><p>$ \\frac{72 \\text{ km}}{12 \\text{ cm}} = 6 \\text{ km/cm} $</p><p>This means that each centimeter on the map corresponds to 6 kilometers in actual distance.</p><p><b>Step 2: Calculate the distance for 17 centimeters.</b></p><p>Now, multiply the new length in centimeters by this unit rate to find the corresponding actual distance.</p><p>$ 17 \\text{ cm} \\times 6 \\text{ km/cm} = 102 \\text{ km} $</p><p>Thus, a 17-centimeter length on the map represents 102 kilometers.</p>"
+        },
+        {
           "text": "<p>We set up the proportion <INSERTION_INDEX_1>. Thus <INSERTION_INDEX_2></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -174,6 +177,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>We need to find the number of distinct four-digit numbers that can be formed by rearranging the digits of 2004. The digits available are 2, 0, 0, and 4.</p><p>A four-digit number cannot begin with the digit 0. So, the first digit must be either 2 or 4.</p><p><b>Case 1: The first digit is 2.</b></p><p>If the first digit is 2, the remaining three digits to be arranged are 0, 0, and 4. The number of permutations of these three digits is given by the formula for permutations with repetitions: $\\frac{n!}{n_1! n_2! ...} = \\frac{3!}{2!} = \\frac{3 \\times 2 \\times 1}{2 \\times 1} = 3$ The possible arrangements are 004, 040, and 400. This gives the numbers 2004, 2040, and 2400.</p><p><b>Case 2: The first digit is 4.</b></p><p>If the first digit is 4, the remaining three digits to be arranged are 2, 0, and 0. Similar to the first case, the number of permutations is:</p><p>$\\frac{3!}{2!} = 3$ The possible arrangements are 200, 020, and 002. This gives the numbers 4200, 4020, and 4002.</p><p><b>Total Number of Arrangements:</b></p><p>The total number of different four-digit numbers is the sum of the numbers of possibilities from both cases:</p><p>$3 + 3 = 6$</p>"
+        },
         {
           "text": "<p>We can solve this problem easily, just by calculating how many choices there are for each of the four digits.First off, we know there are only <INSERTION_INDEX_1> choices for the first digit, because <INSERTION_INDEX_2> isn't a valid choice, or the number would a 3-digit number, which is not what we want. We have <INSERTION_INDEX_3> choices for the second digit, since we already used up one of the digits, and <INSERTION_INDEX_4> choices for the third, and finally just <INSERTION_INDEX_5> choices for the fourth and final one. <INSERTION_INDEX_6> is 12, but there are 2 zeros that have been counted as different numbers, so divide by 2 to get <INSERTION_INDEX_7>.</p>",
           "insertions": {
@@ -389,6 +395,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>The problem states that 12 meals were enough food for 18 people. We need to find out how many meals are needed for 12 people.</p><p><b>Step 1: Establish the ratio of food.</b></p><p>The given information provides a ratio of meals to people. Let M be the number of meals and P be the number of people. The ratio is:</p><p>$ \\frac{12 \\text{ meals}}{18 \\text{ people}} $</p><p><b>Step 2: Set up a proportion.</b></p><p>We want to find the number of meals, let's call it $x$, required for 12 people. We can set up a proportion to solve for $x$:</p><p>$ \\frac{12 \\text{ meals}}{18 \\text{ people}} = \\frac{x \\text{ meals}}{12 \\text{ people}} $</p><p><b>Step 3: Solve for x.</b></p><p>To solve for $x$, we can cross-multiply:</p><p>$ 18 \\times x = 12 \\times 12 $</p><p>$ 18x = 144 $</p><p>$ x = \\frac{144}{18} $</p><p>$ x = 8 $</p><p>So, 8 meals should have been ordered for the 12 friends.</p>"
+        },
+        {
           "text": "<p>Set up the proportion <INSERTION_INDEX_1>. Solving for <INSERTION_INDEX_2> gives us <INSERTION_INDEX_3>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -424,7 +433,7 @@
     {
       "id": "amc_2004_8_4",
       "question": {
-        "text": "<p>Ms. Hamilton\u2019s eighth-grade class wants to participate in the annual three-person-team basketball tournament.</p><p>Lance, Sally, Joy, and Fred are chosen for the team. In how many ways can the three starters be chosen?</p>",
+        "text": "<p>Ms. Hamilton’s eighth-grade class wants to participate in the annual three-person-team basketball tournament.</p><p>Lance, Sally, Joy, and Fred are chosen for the team. In how many ways can the three starters be chosen?</p>",
         "insertions": {},
         "type": "multiple-choice",
         "text_choices": [],
@@ -444,6 +453,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>There are four players available: Lance, Sally, Joy, and Fred. We need to choose a group of three starters for the basketball team.</p><p>This is a combination problem because the order in which the starters are chosen does not matter. We are choosing 3 players from a set of 4.</p><p>The number of ways to choose $k$ items from a set of $n$ items is given by the combination formula:</p><p>$ \\binom{n}{k} = \\frac{n!}{k!(n-k)!} $</p><p>In this case, $n=4$ (total players) and $k=3$ (starters to choose).</p><p>$ \\binom{4}{3} = \\frac{4!}{3!(4-3)!} = \\frac{4!}{3!1!} = \\frac{4 \\times 3 \\times 2 \\times 1}{(3 \\times 2 \\times 1)(1)} = 4 $</p><p>Alternatively, choosing 3 starters is equivalent to choosing 1 player to not start. Since there are 4 players, there are 4 ways to choose the person who will not be a starter. Therefore, there are 4 possible ways to choose the three starters.</p>"
+        },
         {
           "text": "<p>There are <INSERTION_INDEX_1> ways to choose three starters. Thus the answer is <INSERTION_INDEX_2>.</p>",
           "insertions": {
@@ -526,6 +538,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>The tournament is a single-elimination format, which means a team is out of the tournament after one loss. There are 16 teams competing.</p><p>In a single-elimination tournament, there can be only one winner. This means that every other team must lose exactly one game to be eliminated.</p><p>If there are 16 teams, there will be one champion and 15 teams that are eliminated.</p><p>Since each game results in exactly one loser, to have 15 losers, there must be exactly 15 games played.</p><p><b>Alternative Method (by rounds):</b></p><ul><li><b>Round 1:</b> 16 teams play, resulting in 8 games. 8 teams are eliminated, 8 advance.</li><li><b>Round 2 (Quarterfinals):</b> 8 teams play, resulting in 4 games. 4 teams are eliminated, 4 advance.</li><li><b>Round 3 (Semifinals):</b> 4 teams play, resulting in 2 games. 2 teams are eliminated, 2 advance to the final.</li><li><b>Round 4 (Finals):</b> 2 teams play, resulting in 1 game to determine the winner.</li></ul><p>Total games = $8 + 4 + 2 + 1 = 15$.</p>"
+        },
         {
           "text": "<p>Note that the winning team will the be the only team that wins all of the games. Therefore, to find the total number of games to determine the winner has a 1:1 correspondence to the number of ways to determine the losers. ( Think of it this way: If you want to select two balls from a bag of 6 balls, it is analogous to selecting the 4 balls that you don't want to select, both are 6 choose 2.). There are 15 losing teams, and since each round is unique, there are 15 total rounds. </p><p>~Brackie1331</p>",
           "insertions": {}
@@ -644,6 +659,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>Let's break down Sally's shooting performance step by step.</p><p><b>Step 1: Calculate shots made initially.</b></p><p>Initially, Sally took 20 shots and made 55% of them .</p><p>Number of shots made = $20 \\times 0.55 = 11$.</p><p><b>Step 2: Calculate total shots made after 5 more attempts.</b></p><p>She takes 5 more shots, so the total number of shots taken is $20 + 5 = 25$ .</p><p>Her new success rate is 56% .</p><p>Total number of shots made = $25 \\times 0.56 = 14$.</p><p><b>Step 3: Find how many of the last 5 shots were made.</b></p><p>The number of shots she made in the last 5 attempts is the difference between her new total of made shots and her initial total.</p><p>Shots made in the last 5 = (Total shots made) - (Initial shots made)</p><p>Shots made in the last 5 = $14 - 11 = 3$.</p><p>So, Sally made 3 of her last 5 shots.</p>"
+        },
+        {
           "text": "<p>Sally made <INSERTION_INDEX_1> shots originally. Letting <INSERTION_INDEX_2> be the number of shots she made, we have <INSERTION_INDEX_3>. Solving for <INSERTION_INDEX_4> gives us <INSERTION_INDEX_5></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -736,6 +754,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>The problem asks for the target heart rate of a 26-year-old athlete, which involves two calculations.</p><p><b>Step 1: Calculate the maximum heart rate.</b></p><p>The maximum heart rate is found by subtracting the athlete's age from 220. The athlete's age is 26.</p><p>Maximum heart rate = $220 - 26 = 194$ beats per minute.</p><p><b>Step 2: Calculate the target heart rate.</b></p><p>The target heart rate is 80% of the maximum heart rate .</p><p>Target heart rate = $80\\% \\text{ of } 194 = 0.80 \\times 194$.</p><p>Target heart rate = $155.2$ beats per minute.</p><p><b>Step 3: Round to the nearest whole number.</b></p><p>The question asks for the answer to the nearest whole number.</p><p>Rounding 155.2 to the nearest whole number gives 155.</p>"
+        },
+        {
           "text": "<p>The maximum heart rate is <INSERTION_INDEX_1> beats per minute. The target heart rate is then <INSERTION_INDEX_2> beats per minute.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -792,6 +813,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>We are looking for the number of two-digit positive integers where the sum of the two digits is 7.</p><p>Let the two-digit number be represented by $10a + b$, where $a$ is the tens digit and $b$ is the units digit.</p><p>The conditions are:</p><ul><li>The number is positive and has two digits, so $a$ must be an integer from 1 to 9, and $b$ must be an integer from 0 to 9.</li><li>The sum of the digits is 7: $a + b = 7$.</li></ul><p>We can list the pairs of digits $(a, b)$ that satisfy these conditions:</p><ul><li>If $a=1$, then $b=6$. (Number: 16)</li><li>If $a=2$, then $b=5$. (Number: 25)</li><li>If $a=3$, then $b=4$. (Number: 34)</li><li>If $a=4$, then $b=3$. (Number: 43)</li><li>If $a=5$, then $b=2$. (Number: 52)</li><li>If $a=6$, then $b=1$. (Number: 61)</li><li>If $a=7$, then $b=0$. (Number: 70)</li></ul><p>If $a$ were 8 or greater, $b$ would have to be negative, which is not possible for a digit. Since $a$ cannot be 0, we have found all possible numbers.</p><p>Counting the pairs, we find there are <b>7</b> such numbers.</p>"
+        },
         {
           "text": "<p>The numbers are <INSERTION_INDEX_1> which gives us a total of <INSERTION_INDEX_2>.</p>",
           "insertions": {
@@ -856,6 +880,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>This problem involves averages. The key is to work with sums.</p><p><b>Step 1: Find the sum of all five numbers.</b></p><p>The average of the five numbers is 54 .</p><p>Sum of five numbers = Average $\\times$ (Number of items) = $54 \\times 5 = 270$.</p><p><b>Step 2: Find the sum of the first two numbers.</b></p><p>The average of the first two numbers is 48 .</p><p>Sum of first two numbers = $48 \\times 2 = 96$.</p><p><b>Step 3: Find the sum of the last three numbers.</b></p><p>The sum of the last three numbers is the total sum minus the sum of the first two numbers.</p><p>Sum of last three numbers = $270 - 96 = 174$.</p><p><b>Step 4: Find the average of the last three numbers.</b></p><p>To find the average of the last three numbers, we divide their sum by 3.</p><p>Average of last three numbers = $\\frac{174}{3} = 58$.</p>"
+        },
         {
           "text": "<p>Let the <INSERTION_INDEX_1> numbers be <INSERTION_INDEX_2>, and <INSERTION_INDEX_3>. Thus <INSERTION_INDEX_4> and <INSERTION_INDEX_5>. Since <INSERTION_INDEX_6>, <INSERTION_INDEX_7>. Substituting back into our original equation, we have <INSERTION_INDEX_8> and <INSERTION_INDEX_9>. Dividing by <INSERTION_INDEX_10> gives the average of <INSERTION_INDEX_11>.</p>",
           "insertions": {
@@ -991,6 +1018,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>To find Aaron's total earnings, we first need to calculate the total time he worked in hours and then multiply by his hourly wage of \\$3.</p><p><b>Step 1: Calculate the time worked each day in minutes.</b></p><ul><li><b>Monday:</b> $1\\frac{1}{4}$ hours. Since 1 hour = 60 minutes, $\\frac{1}{4}$ hour = 15 minutes. So, he worked 60 + 15 = 75 minutes .</li><li><b>Tuesday:</b> 50 minutes.</li><li><b>Wednesday:</b> From 8:20 AM to 10:45 AM. This is 2 hours and 25 minutes. Total minutes = $(2 \\times 60) + 25 = 120 + 25 = 145$ minutes .</li><li><b>Friday:</b> A half-hour, which is 30 minutes.</li></ul><p><b>Step 2: Calculate the total time worked for the week.</b></p><p>Total minutes = 75 (Mon) + 50 (Tue) + 145 (Wed) + 30 (Fri) = 300 minutes.</p><p><b>Step 3: Convert total minutes to hours.</b></p><p>Total hours = $\\frac{300 \\text{ minutes}}{60 \\text{ minutes/hour}} = 5$ hours.</p><p><b>Step 4: Calculate total earnings.</b></p><p>Earnings = Total hours $\\times$ Hourly rate = $5 \\text{ hours} \\times \\$3/\\text{hour} = \\$15$.</p>"
+        },
+        {
           "text": "<p>Let's convert everything to minutes and add them together. On Monday he worked for <INSERTION_INDEX_1> minutes. On Tuesday he worked <INSERTION_INDEX_2> minutes. On Wednesday he worked for <INSERTION_INDEX_3> hours <INSERTION_INDEX_4> minutes, or <INSERTION_INDEX_5> minutes. On Friday he worked <INSERTION_INDEX_6> minutes. This adds up to <INSERTION_INDEX_7> minutes, or <INSERTION_INDEX_8> hours and <INSERTION_INDEX_9>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1104,6 +1134,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>We are given five numbers: -2, 4, 6, 9, 12, and three rules for arranging them in five positions [cite: 75-78]. Let's identify the key numbers: The smallest is -2, the largest is 12, and the median is 6.</p><p>Let the five positions be P1, P2, P3, P4, P5.</p><p><b>Rule 1:</b> The largest (12) isn't first, but it is in one of the first three places. So, 12 must be in P2 or P3.</p><p><b>Rule 2:</b> The smallest (-2) isn't last, but it is in one of the last three places. So, -2 must be in P3 or P4.</p><p><b>Rule 3:</b> The median (6) isn't first or last. So, 6 can be in P2, P3, or P4.</p><p>Let's analyze the positions of 12 and -2. They cannot both be in P3. </p><ul><li>If 12 is in P3, then -2 must be in P4 (from Rule 2). The arrangement looks like: __ __ 12 -2 __. Now, where can 6 go? From Rule 3, it can be in P2, P3, or P4. P3 and P4 are taken, so 6 must be in P2. The arrangement is: __ 6 12 -2 __.</li><li>If 12 is in P2, then -2 can be in P3 or P4. This leads to further sub-cases, but the first case is very constrained and might be the only possibility.</li></ul><p>Let's proceed with the arrangement: __ 6 12 -2 __.</p><p>The numbers left to place are 4 and 9. They must go in the first (P1) and last (P5) positions. It doesn't matter which goes where, the first and last numbers will be 4 and 9.</p><p>Let's check if this arrangement is valid. One possibility is 9, 6, 12, -2, 4.<li>Largest (12) is in P3 (ok with Rule 1).</li><li>Smallest (-2) is in P4 (ok with Rule 2).</li><li>Median (6) is in P2 (ok with Rule 3).</li>All rules are satisfied.</p><p>The first and last numbers are 9 and 4. We need to find their average.</p><p>$ \\text{Average} = \\frac{9 + 4}{2} = \\frac{13}{2} = 6.5 $</p>"
+        },
+        {
           "text": "<p>From rule 1, the largest number, <INSERTION_INDEX_1>, can be second or third. From rule 2, because there are five places, the smallest number <INSERTION_INDEX_2> can either be third or fourth. The median, <INSERTION_INDEX_3> can be second, third, or fourth. Because we know the middle three numbers, the first and last numbers are <INSERTION_INDEX_4> and <INSERTION_INDEX_5>, disregarding their order. Their average is <INSERTION_INDEX_6>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1160,7 +1193,7 @@
     {
       "id": "amc_2004_8_12",
       "question": {
-        "text": "<p>Niki usually leaves her cell phone on. If her cell phone is on butshe is not actually using it, the battery will last for <INSERTION_INDEX_1> hours. Ifshe is using it constantly, the battery will last for only <INSERTION_INDEX_2> hours.Since the last recharge, her phone has been on <INSERTION_INDEX_3> hours, and duringthat time she has used it for <INSERTION_INDEX_4> minutes. If she doesn\u2019t use it anymore but leaves the phone on, how many more hours will the battery last?</p>",
+        "text": "<p>Niki usually leaves her cell phone on. If her cell phone is on butshe is not actually using it, the battery will last for <INSERTION_INDEX_1> hours. Ifshe is using it constantly, the battery will last for only <INSERTION_INDEX_2> hours.Since the last recharge, her phone has been on <INSERTION_INDEX_3> hours, and duringthat time she has used it for <INSERTION_INDEX_4> minutes. If she doesn’t use it anymore but leaves the phone on, how many more hours will the battery last?</p>",
         "insertions": {
           "INSERTION_INDEX_1": {
             "picture": "//latex.artofproblemsolving.com/e/2/9/e290f2cba0ba0e11c0b91630da15a408da2fcf1c.png",
@@ -1209,6 +1242,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>This problem is about battery consumption rates. Let's think of the battery as having a total capacity, and different activities drain it at different rates.</p><p><b>Step 1: Determine the consumption rates.</b></p><p>Let the total battery capacity be $B$.</p><ul><li><b>Standby (On but not in use):</b> The battery lasts 24 hours. The standby consumption rate is $R_s = \\frac{B}{24}$ per hour.</li><li><b>Constant Use:</b> The battery lasts 3 hours. The usage consumption rate is $R_u = \\frac{B}{3}$ per hour .</li></ul><p><b>Step 2: Calculate the amount of battery used so far.</b></p><p>The phone has been on for 9 hours, and during that time it was used for 60 minutes (which is 1 hour). This means it was on standby for the other $9 - 1 = 8$ hours.</p><p>Battery consumed = (Time in use $\\times R_u$) + (Time on standby $\\times R_s$)</p><p>Battery consumed = $(1 \\text{ hr} \\times \\frac{B}{3}) + (8 \\text{ hrs} \\times \\frac{B}{24}) = \\frac{B}{3} + \\frac{8B}{24} = \\frac{B}{3} + \\frac{B}{3} = \\frac{2B}{3}$.</p><p>So, two-thirds of the battery has been used.</p><p><b>Step 3: Calculate the remaining battery life on standby.</b></p><p>The remaining battery capacity is $B - \\frac{2B}{3} = \\frac{B}{3}$.</p><p>The question asks how many more hours the battery will last if left on standby. We need to find how long the remaining capacity ($\\frac{B}{3}$) can sustain the standby rate ($R_s = \\frac{B}{24}$).</p><p>Time = $\\frac{\\text{Remaining Capacity}}{\\text{Consumption Rate}} = \\frac{B/3}{B/24} = \\frac{B}{3} \\times \\frac{24}{B} = \\frac{24}{3} = 8$ hours.</p>"
+        },
         {
           "text": "<p>When not being used, the cell phone uses up <INSERTION_INDEX_1> of its battery per hour. When being used, the cell phone uses up <INSERTION_INDEX_2> of its battery per hour. Since Niki's phone has been on for <INSERTION_INDEX_3> hours, of those <INSERTION_INDEX_4> simply on and <INSERTION_INDEX_5> with Niki using her phone, <INSERTION_INDEX_6> of its battery has been used up. To drain the remaining <INSERTION_INDEX_7> the phone can last for <INSERTION_INDEX_8> more hours without being used.</p>",
           "insertions": {
@@ -1301,6 +1337,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>We are given three statements about the ages of Amy, Bill, and Celine, and we know that exactly one of these statements is true. Let's test each statement as the single true one.</p><p>The statements are:</p><p><b>I.</b> Bill is the oldest. </p><p><b>II.</b> Amy is not the oldest. </p><p><b>III.</b> Celine is not the youngest. </p><br><p><b>Case 1: Assume Statement I is TRUE.</b></p><p>If \"Bill is the oldest\" is true, then Statement II, \"Amy is not the oldest,\" must also be true. This contradicts the condition that *exactly one* statement is true. So, this case is impossible.</p><br><p><b>Case 2: Assume Statement II is TRUE.</b></p><p>If \"Amy is not the oldest\" is true, then statements I and III must be false.</p><ul><li>I is false $\\implies$ Bill is NOT the oldest.</li><li>III is false $\\implies$ Celine IS the youngest.</li></ul><p>From these deductions, we know that neither Amy nor Bill is the oldest. If there are only three people, this means Celine must be the oldest. However, we also deduced that Celine is the youngest. This is a contradiction. So, this case is also impossible.</p><br><p><b>Case 3: Assume Statement III is TRUE.</b></p><p>If \"Celine is not the youngest\" is true, then statements I and II must be false.</p><ul><li>I is false $\\implies$ Bill is NOT the oldest.</li><li>II is false $\\implies$ Amy IS the oldest.</li></ul><p>Let's assemble the ranking (Oldest, Middle, Youngest):</p><ul><li>We know Amy is the oldest. The order is (Amy, __, __).</li><li>We know Celine is not the youngest. Since Amy is the oldest, Celine must be in the middle position.</li><li>This leaves Bill to be the youngest.</li></ul><p>The resulting order from oldest to youngest is: <b>Amy, Celine, Bill</b>.</p><p>Let's check this order against the original statements:</p><ul><li>I. Bill is the oldest. (False, Amy is oldest).</li><li>II. Amy is not the oldest. (False, Amy is oldest).</li><li>III. Celine is not the youngest. (True, Bill is youngest).</li></ul><p>This matches the condition that exactly one statement is true. Therefore, the correct ranking is Amy, Celine, Bill.</p>"
+        },
+        {
           "text": "<p>If Bill is the oldest, then Amy is not the oldest, and both statements I and II are true, so statement I is not the true one.</p><p>If Amy is not the oldest, and we know Bill cannot be the oldest, then Celine is the oldest. This would mean she is not the youngest, and both statements II and III are true, so statement II is not the true one.</p><p>Therefore, statement III is the true statement, and both I and II are false. From this, Amy is the oldest, Celine is in the middle, and lastly Bill is the youngest. This order is <INSERTION_INDEX_1>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1363,7 +1402,7 @@
       "answer": "C",
       "solutions": [
         {
-          "text": "<p><INSERTION_INDEX_1></p><p>Divide the shape up as above. <INSERTION_INDEX_2></p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>",
+          "text": "<p><INSERTION_INDEX_1></p><p>Partition the figure as illustrated above. <INSERTION_INDEX_2></p><p>~<a class=\"external text\" href=\"https://artofproblemsolving.com/wiki/index.php/User:Isabelchen\" rel=\"nofollow\">isabelchen</a></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/0/0/5/005f9f59d2c18f343506c5ccec951cf72f6aa5aa.png",
@@ -1479,6 +1518,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>This problem asks for the difference between the number of white and black tiles after adding a new border. First, let's understand the initial configuration of tiles described.</p><p><b>Step 1: Determine the structure of the initial figure.</b></p><p>The problem states there are 13 black and 6 white hexagonal tiles. A common structure for this number of tiles (19 total) is a central tile, a first ring of 6 tiles, and a second ring of 12 tiles. Let's see how the colors can be assigned:</p><ul><li>A central <b>black</b> tile (1B).</li><li>A surrounding ring of 6 <b>white</b> tiles (6W).</li><li>An outer layer of 12 <b>black</b> tiles placed in the 'valleys' of the white ring (12B).</li></ul><p>This configuration uses $1 + 12 = 13$ black tiles and 6 white tiles, which matches the problem's description.</p><p><b>Step 2: Calculate the number of new white tiles in the border.</b></p><p>A new border of white tiles is attached to the existing figure. The number of tiles in this new border will be equal to the number of exposed sides on the outer perimeter of the current figure. The perimeter is formed by the 12 outermost black tiles.</p><p>These 12 black tiles form 6 'points' or arms, with each arm consisting of two black tiles. For each arm:</p><ul><li>The black tile nestled between two white tiles has 2 sides exposed to the outside.</li><li>The outermost black tile at the tip of the arm has 4 sides exposed.</li></ul><p>The total number of exposed sides for one arm is $2 + 4 = 6$. Since there are 6 such arms, the total number of new white tiles needed for the border is:</p><p>New white tiles = $6 \\times 6 = 36$.</p><p>Wait, my analysis of the structure of the 12 outer tiles seems overly complex. Let's try a simpler interpretation that also fits the 13B/6W count: A ring of 6 white tiles creates a hexagon shape with a hole in the center. Fill the center with 1 black tile. Fill the 6 exterior 'valleys' with 6 black tiles, and the 6 interior 'valleys' with another 6 black tiles. Total: 13 black, 6 white. The outer perimeter is formed by the 6 exterior black tiles. Each is tucked between two white tiles, leaving 3 sides exposed. So, the number of new tiles is $6 \\times 3 = 18$.</p><p><b>Step 3: Calculate the new tile counts and their difference.</b></p><p>Let's use the number of new tiles N=18.</p><ul><li>Initial black tiles: $B = 13$.</li><li>Initial white tiles: $W = 6$.</li><li>New white tiles added: 18.</li></ul><p>The new counts are:</p><ul><li>Total black tiles: $B_{new} = 13$.</li><li>Total white tiles: $W_{new} = 6 + 18 = 24$.</li></ul><p>The new difference is the absolute difference between the total number of white and black tiles:</p><p>$ |W_{new} - B_{new}| = |24 - 13| = 11 $</p>"
+        },
+        {
           "text": "<p>The first ring around the middle tile has <INSERTION_INDEX_1> tiles, and the second has <INSERTION_INDEX_2>. From this pattern, the third ring has <INSERTION_INDEX_3> tiles. Of these, <INSERTION_INDEX_4> are white and <INSERTION_INDEX_5> are black, with a difference of <INSERTION_INDEX_6>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1578,6 +1620,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>The problem involves mixing the contents of two pitchers and finding the final concentration of orange juice.</p><p><b>Step 1: Calculate the initial amount of orange juice in each pitcher.</b></p><p>Both pitchers have a capacity of 600 ml.</p><ul><li><b>Pitcher 1:</b> It is $\\frac{1}{3}$ full of orange juice .<br>Juice in Pitcher 1 = $\\frac{1}{3} \\times 600 \\text{ ml} = 200 \\text{ ml}$.</li><li><b>Pitcher 2:</b> It is $\\frac{2}{5}$ full of orange juice .<br>Juice in Pitcher 2 = $\\frac{2}{5} \\times 600 \\text{ ml} = 240 \\text{ ml}$.</li></ul><p><b>Step 2: Calculate the total amount of orange juice and the total volume of the mixture.</b></p><p>First, water is added to fill each pitcher completely. This means both pitchers now contain 600 ml of liquid each.</p><p>The contents are then poured into one large container .</p><ul><li><b>Total orange juice:</b> $200 \\text{ ml} + 240 \\text{ ml} = 440 \\text{ ml}$.</li><li><b>Total volume of mixture:</b> Since both full pitchers are combined, the total volume is $600 \\text{ ml} + 600 \\text{ ml} = 1200 \\text{ ml}$.</li></ul><p><b>Step 3: Find the fraction of the mixture that is orange juice.</b></p><p>The fraction is the ratio of the total volume of orange juice to the total volume of the mixture.</p><p>$ \\text{Fraction} = \\frac{\\text{Total Orange Juice}}{\\text{Total Mixture}} = \\frac{440 \\text{ ml}}{1200 \\text{ ml}} $</p><p>Now, simplify the fraction:</p><p>$ \\frac{440}{1200} = \\frac{44}{120} = \\frac{11}{30} $</p><p>So, $\\frac{11}{30}$ of the mixture in the large container is orange juice.</p>"
+        },
+        {
           "text": "<p>The first pitcher contains <INSERTION_INDEX_1> mL of orange juice. The second pitcher contains <INSERTION_INDEX_2> mL of orange juice. In the large pitcher, there is a total of <INSERTION_INDEX_3> mL of orange juice and <INSERTION_INDEX_4> mL of fluids, giving a fraction of <INSERTION_INDEX_5>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -1655,6 +1700,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We need to find the number of ways to distribute 6 identical pencils to 3 distinct friends, with the condition that each friend receives at least one pencil.</p><p>This is a classic stars and bars problem. Let the number of pencils each friend gets be $x_1, x_2, x_3$.</p><p>We are looking for the number of integer solutions to the equation:</p><p>$ x_1 + x_2 + x_3 = 6 $</p><p>with the constraint that $x_1 \\ge 1, x_2 \\ge 1, x_3 \\ge 1$.</p><p><b>Method 1: Substitution</b></p><p>To handle the 'at least one' constraint, we can give one pencil to each friend first. This uses up 3 pencils. We are then left with $6 - 3 = 3$ pencils to distribute among the 3 friends with no restrictions.</p><p>Let $y_1, y_2, y_3$ be the number of *additional* pencils each friend gets. The equation becomes:</p><p>$ y_1 + y_2 + y_3 = 3 $</p><p>where $y_i \\ge 0$. The number of solutions to this equation can be found using the stars and bars formula: $\\binom{n+k-1}{k-1}$, where $n$ is the number of items to distribute (stars, 3) and $k$ is the number of bins (friends, 3).</p><p>$ \\text{Ways} = \\binom{3+3-1}{3-1} = \\binom{5}{2} = \\frac{5!}{2!(5-2)!} = \\frac{5 \\times 4}{2 \\times 1} = 10 $</p><p><b>Method 2: Listing the possibilities</b></p><p>We can list the possible combinations of pencils $(x_1, x_2, x_3)$ that sum to 6, where each $x_i \\ge 1$.</p><ul><li>(1, 1, 4) - can be arranged in 3 ways (4,1,1), (1,4,1), (1,1,4).</li><li>(1, 2, 3) - can be arranged in $3! = 6$ ways (1,2,3), (1,3,2), (2,1,3), (2,3,1), (3,1,2), (3,2,1).</li><li>(2, 2, 2) - can be arranged in 1 way.</li></ul><p>Total ways = $3 + 6 + 1 = 10$.</p>"
+        },
         {
           "text": "<p>For each person to have at least one pencil, assign one pencil to each of the three friends so that you have <INSERTION_INDEX_1> left. In partitioning the remaining <INSERTION_INDEX_2> pencils into <INSERTION_INDEX_3> distinct groups, use <a href=\"/wiki/index.php/Ball-and-urn\" title=\"Ball-and-urn\">Ball-and-urn</a> to find the number of possibilities is <INSERTION_INDEX_4>.</p><p>Solution by <a href=\"/wiki/index.php/User:Phoenixfire\" title=\"User:Phoenixfire\">phoenixfire</a>Minor Edit by <a href=\"/wiki/index.php/User:Yuvag\" title=\"User:Yuvag\">Yuvag</a></p>",
           "insertions": {
@@ -2057,6 +2105,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>Five friends each throw two darts, and each dart hits a different-valued region from 1 to 10. Each person's score is the sum of their two dart values. We need to find out who hit the region worth 6 points.</p><p>The scores are:</p><ul><li>Alice: 16</li><li>Ben: 4</li><li>Cindy: 7</li><li>Dave: 11</li><li>Ellen: 17</li></ul><p>Let's find the pairs of two different numbers from 1 to 10 that add up to each score.</p><ul><li><b>Alice (16):</b> The pairs that sum to 16 are (6,10) and (7,9).</li><li><b>Ben (4):</b> The only pair of different numbers is (1,3).</li><li><b>Cindy (7):</b> Pairs are (1,6), (2,5), (3,4).</li><li><b>Dave (11):</b> Pairs are (1,10), (2,9), (3,8), (4,7), (5,6).</li><li><b>Ellen (17):</b> The only pair is (7,10). (Or 8,9). Let me check. $8+9=17$. Yes. So (7,10) or (8,9).</li></ul><p>Let's recheck the pairs carefully. Numbers are distinct, from 1 to 10.</p><ul><li>Alice (16): (6,10), (7,9).</li><li>Ben (4): (1,3).</li><li>Cindy (7): (1,6), (2,5), (3,4).</li><li>Dave (11): (1,10), (2,9), (3,8), (4,7), (5,6).</li><li>Ellen (17): (7,10), (8,9).</li></ul><p>Since each of the $5 \\times 2 = 10$ darts hits a region with a different value, all the numbers from 1 to 10 must be used exactly once across all the friends' scores.</p><p>Let's try to assign the pairs. </p><ul><li>Ben must have thrown a 1 and a 3. So the numbers 1 and 3 are used.</li><li>Now look at Cindy (score 7). Her possible pairs are (1,6), (2,5), (3,4). Since 1 and 3 are taken by Ben, Cindy cannot have thrown (1,6) or (3,4). Therefore, Cindy must have thrown a 2 and a 5. So, numbers 2 and 5 are used.</li><li>Used numbers so far: {1, 3, 2, 5}.</li><li>Now look at Dave (score 11). Possible pairs: (1,10), (2,9), (3,8), (4,7), (5,6). We eliminate pairs with used numbers: (1,10), (2,9), (3,8), (5,6) are impossible. So Dave must have thrown a 4 and a 7.</li><li>Used numbers so far: {1, 3, 2, 5, 4, 7}.</li><li>Now look at Ellen (score 17). Possible pairs: (7,10), (8,9). Since 7 is taken by Dave, Ellen cannot have thrown (7,10). Therefore, Ellen must have thrown an 8 and a 9.</li><li>Used numbers so far: {1, 3, 2, 5, 4, 7, 8, 9}.</li><li>Finally, let's look at Alice (score 16). Possible pairs: (6,10), (7,9). Since 7 and 9 are taken, she cannot have thrown (7,9). Therefore, Alice must have thrown a 6 and a 10.</li></ul><p>The question asks who hits the region worth 6 points. Based on our deduction, Alice threw the pair (6,10).</p>"
+        },
+        {
           "text": "<p>The only way to get Ben's score is with <INSERTION_INDEX_1>. Cindy's score can be made of <INSERTION_INDEX_2> or <INSERTION_INDEX_3>, but since Ben already hit the <INSERTION_INDEX_4>, Cindy hit <INSERTION_INDEX_5>. Similarly, Dave's darts were in the region <INSERTION_INDEX_6>. Lastly, because there is no <INSERTION_INDEX_7> left, <INSERTION_INDEX_8> must have hit the regions <INSERTION_INDEX_9> and Ellen <INSERTION_INDEX_10>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2132,7 +2183,7 @@
           }
         },
         {
-          "text": "<p>Taking the 2 largest scores to narrow out the points we get</p><p>Ellen with either <INSERTION_INDEX_1> or <INSERTION_INDEX_2> and Alice with either <INSERTION_INDEX_3> or <INSERTION_INDEX_4>, the 2 pairs that work areAlice=<INSERTION_INDEX_5>Ellen=<INSERTION_INDEX_6>, therefore Alice scored the <INSERTION_INDEX_7>.</p><p>This way, we don\u2019t need to check anyway if anyone else got <INSERTION_INDEX_8>.</p>",
+          "text": "<p>Taking the 2 largest scores to narrow out the points we get</p><p>Ellen with either <INSERTION_INDEX_1> or <INSERTION_INDEX_2> and Alice with either <INSERTION_INDEX_3> or <INSERTION_INDEX_4>, the 2 pairs that work areAlice=<INSERTION_INDEX_5>Ellen=<INSERTION_INDEX_6>, therefore Alice scored the <INSERTION_INDEX_7>.</p><p>This way, we don’t need to check anyway if anyone else got <INSERTION_INDEX_8>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/a/a/8/aa810a27a0649db3f1f6f0bd54cf43719fca90c6.png",
@@ -2252,6 +2303,9 @@
       "answer": "B",
       "solutions": [
         {
+          "text": "<p>We are looking for a whole number, let's call it $N$, that is larger than 2. When $N$ is divided by 3, 4, 5, or 6, the remainder is always 2 .</p><p>This can be expressed mathematically as:</p><ul><li>$N \\equiv 2 \\pmod{3}$</li><li>$N \\equiv 2 \\pmod{4}$</li><li>$N \\equiv 2 \\pmod{5}$</li><li>$N \\equiv 2 \\pmod{6}$</li></ul><p>This means that if we subtract 2 from $N$, the resulting number ($N-2$) will be perfectly divisible by 3, 4, 5, and 6. In other words, $N-2$ must be a common multiple of these four numbers.</p><p>To find the smallest such number $N$, we first need to find the <b>least common multiple (LCM)</b> of 3, 4, 5, and 6.</p><p><b>Step 1: Find the LCM of 3, 4, 5, and 6.</b></p><p>We can use prime factorization:</p><ul><li>$3 = 3$</li><li>$4 = 2^2$</li><li>$5 = 5$</li><li>$6 = 2 \\times 3$</li></ul><p>The LCM is the product of the highest powers of all prime factors that appear in any of the numbers.</p><p>$ \\text{LCM}(3, 4, 5, 6) = 2^2 \\times 3 \\times 5 = 4 \\times 3 \\times 5 = 60 $</p><p><b>Step 2: Find the smallest number N.</b></p><p>We know that $N-2$ must be a common multiple of 3, 4, 5, and 6. The smallest positive common multiple is the LCM, which is 60.</p><p>So, the smallest value for $N-2$ is 60.</p><p>$ N - 2 = 60 $</p><p>$ N = 62 $</p><p>Let's check: $62 > 2$.</p><ul><li>$62 \\div 3 = 20$ R 2</li><li>$62 \\div 4 = 15$ R 2</li><li>$62 \\div 5 = 12$ R 2</li><li>$62 \\div 6 = 10$ R 2</li></ul><p>The number 62 satisfies all conditions.</p><p><b>Step 3: Determine which range the number lies in.</b></p><p>We need to find which of the given ranges contains the number 62.</p><ul><li>(A) 40 and 49</li><li>(B) 60 and 79 </li><li>(C) 100 and 129</li><li>(D) 210 and 249</li><li>(E) 320 and 369</li></ul><p>The number 62 lies between 60 and 79.</p>"
+        },
+        {
           "text": "<p>The smallest number divisible by <INSERTION_INDEX_1> and <INSERTION_INDEX_2>, or their least common multiple, can be found to be <INSERTION_INDEX_3>. When <INSERTION_INDEX_4> is added to a multiple of number, its remainder when divided by that number is <INSERTION_INDEX_5>. The number we are looking for is therefore <INSERTION_INDEX_6>, and between <INSERTION_INDEX_7>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2343,6 +2397,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Let's use variables to represent the number of people and chairs in the room.</p><p>Let $P$ be the total number of people in the room.</p><p>Let $C$ be the total number of chairs in the room.</p><p>The problem gives us two key pieces of information:</p><p>1. Two-thirds of the people are seated in three-fourths of the chairs.</p><p>This tells us the number of seated people is $\\frac{2}{3}P$, and the number of occupied chairs is $\\frac{3}{4}C$. Since each seated person occupies one chair, these two quantities must be equal:</p><p>$ \\frac{2}{3}P = \\frac{3}{4}C $</p><p>2. There are 6 empty chairs.</p><p>The number of empty chairs is the total number of chairs minus the number of occupied chairs.</p><p>$ C - \\frac{3}{4}C = 6 $</p><p>Now we can solve for the unknowns.</p><p><b>Step 1: Solve for the total number of chairs (C).</b></p><p>From the second piece of information:</p><p>$ \\frac{1}{4}C = 6 $</p><p>$ C = 6 \\times 4 = 24 $</p><p>So there are 24 chairs in total.</p><p><b>Step 2: Solve for the total number of people (P).</b></p><p>Now we can use the first equation and substitute the value of C:</p><p>$ \\frac{2}{3}P = \\frac{3}{4}C $</p><p>$ \\frac{2}{3}P = \\frac{3}{4}(24) $</p><p>$ \\frac{2}{3}P = 18 $</p><p>$ P = 18 \\times \\frac{3}{2} $</p><p>$ P = 27 $</p><p>There are 27 people in the room.</p>"
+        },
         {
           "text": "<p>Working backwards, if <INSERTION_INDEX_1> of the chairs are taken and <INSERTION_INDEX_2> are empty, then there are three times as many taken chairs as empty chairs, or <INSERTION_INDEX_3>. If <INSERTION_INDEX_4> is the number of people in the room and <INSERTION_INDEX_5> are seated, then <INSERTION_INDEX_6> and <INSERTION_INDEX_7>.</p>",
           "insertions": {
@@ -2450,7 +2507,7 @@
       "answer": "D",
       "solutions": [
         {
-          "text": "<p>An even number comes from multiplying an even and even, even and odd, or odd and even. Since an odd number only comes from multiplying an odd and odd, there are less cases and it would be easier to find the probability of spinning two odd numbers from <INSERTION_INDEX_1>. Multiply the independent probabilities of each spinner getting an odd number together and subtract it from <INSERTION_INDEX_2>.</p><p><INSERTION_INDEX_3></p>",
+          "text": "<p>An even result arises from multiplying even with even, even with odd, or odd with even. Given that an odd outcome solely results from multiplying odd with odd, there are fewer scenarios to consider, making it more straightforward to calculate the probability of spinning two odd numbers from <INSERTION_INDEX_1>. Multiply the independent probabilities of each spinner yielding an odd number together and subtract this product from <INSERTION_INDEX_2>.</p><p><INSERTION_INDEX_3></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/d/c/e/dce34f4dfb2406144304ad0d6106c5382ddd1446.png",
@@ -2551,6 +2608,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>This problem involves understanding the composition of a group of people at a party.</p><p>Let $S$ be the number of single women.</p><p>Let $M$ be the number of married men.</p><p>Since the married men are with their wives, the number of married women is also $M$.</p><p><b>Step 1: Set up expressions for the number of different groups.</b></p><ul><li>Total number of women: $W = S + M$ (single women + married women)</li><li>Total number of men: $M$</li><li>Total number of people in the room: $P = S + M + M = S + 2M$</li></ul><p><b>Step 2: Use the given probability to establish a relationship between S and M.</b></p><p>We are told that the probability that a randomly selected woman is single is $\\frac{2}{5}$ .</p><p>$ P(\\text{woman is single}) = \\frac{\\text{Number of single women}}{\\text{Total number of women}} = \\frac{S}{S+M} $</p><p>So, we have the equation:</p><p>$ \\frac{S}{S+M} = \\frac{2}{5} $</p><p>Cross-multiply to solve for $S$ in terms of $M$:</p><p>$ 5S = 2(S+M) $</p><p>$ 5S = 2S + 2M $</p><p>$ 3S = 2M $</p><p>$ S = \\frac{2}{3}M $</p><p><b>Step 3: Calculate the required fraction.</b></p><p>We need to find the fraction of people in the room who are married men. This fraction is $\\frac{\\text{Number of married men}}{\\text{Total number of people}}$.</p><p>$ \\text{Fraction} = \\frac{M}{P} = \\frac{M}{S + 2M} $</p><p>Now substitute the expression we found for $S$ into this fraction:</p><p>$ \\text{Fraction} = \\frac{M}{(\\frac{2}{3}M) + 2M} = \\frac{M}{M(\\frac{2}{3} + 2)} = \\frac{1}{\\frac{2}{3} + \\frac{6}{3}} = \\frac{1}{\\frac{8}{3}} = \\frac{3}{8} $</p><p>So, $\\frac{3}{8}$ of the people in the room are married men.</p>"
+        },
         {
           "text": "<p>Assume arbitrarily (and WLOG) there are <INSERTION_INDEX_1> women in the room, of which <INSERTION_INDEX_2> are single and <INSERTION_INDEX_3> are married. Each married woman came with her husband, so there are <INSERTION_INDEX_4> married men in the room as well for a total of <INSERTION_INDEX_5> people. The fraction of the people that are married men is <INSERTION_INDEX_6>.</p>",
           "insertions": {
@@ -2808,6 +2868,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Tess starts at corner J and runs counterclockwise around a rectangular block JKLM. We need to find the graph that represents her straight-line distance from her starting point (home, at J) over time.</p><p></p><p>Let's analyze how her distance from J changes as she runs along the four sides of the rectangle:</p><p>1.  <b>From J to K:</b> Tess is moving directly away from J along the side JK. Her straight-line distance from J is simply the distance she has run. This distance increases linearly from 0 at a constant rate. So the graph should start with a straight line sloping upwards.</p><p>2.  <b>From K to L:</b> As she runs from K to L, she is moving along a side perpendicular to JK. Her distance from J is the hypotenuse of a right triangle with legs JK and the distance she has traveled from K. By the Pythagorean theorem, distance $d = \\sqrt{|JK|^2 + (distance from K)^2}$. This distance continues to increase, but the rate of increase slows down. The graph will be a curve that is still rising but becoming less steep. The maximum distance from J will be at corner L, which is the length of the diagonal JL.</p><p>3.  <b>From L to M:</b> Now she is running towards the side JM. Her distance from J will start to decrease. The relationship will be similar to the K to L segment but in reverse. The graph will be a curve sloping downwards, and the rate of decrease will accelerate as she gets closer to M.</p><p>4.  <b>From M to J:</b> Tess is on the final side, running directly back towards her starting point J. Her distance from J decreases linearly until it reaches 0 when she gets back home.</p><p><b>Summary of the graph's shape:</b></p><ul><li>Section 1: Straight line, increasing slope.</li><li>Section 2: Curve, increasing, slope decreases. Reaches maximum distance at the end of this section.</li><li>Section 3: Curve, decreasing, slope becomes more negative.</li><li>Section 4: Straight line, decreasing slope, back to zero.</li></ul><p>Now let's examine the given graphs [cite: 181-198]. Graph (D) shows this exact pattern: a linear increase, followed by a curved increase to a maximum, then a curved decrease, and finally a linear decrease back to the starting distance of zero.</p>"
+        },
         {
           "text": "<p>For her distance to be represented as a constant horizontal line, Tess would have to be running in a circular shape with her home as the center. Since she is running around a rectangle, this is not possible, ruling out <INSERTION_INDEX_1> and <INSERTION_INDEX_2> with straight lines. Because <INSERTION_INDEX_3> is the diagonal of the rectangle, and <INSERTION_INDEX_4> is at the middle distance around the perimeter, her maximum distance should be in the middle of her journey. The maximum in <INSERTION_INDEX_5> is at the end, and <INSERTION_INDEX_6> has two maximums, ruling both out. Thus the answer is <INSERTION_INDEX_7>.</p>",
           "insertions": {
@@ -3130,7 +3193,10 @@
       "answer": "C",
       "solutions": [
         {
-          "text": "<p>The area of the parallelogram can be found in two ways. The first is by taking rectangle <INSERTION_INDEX_1> and subtracting the areas of the triangles cut out to create parallelogram <INSERTION_INDEX_2>. This is <INSERTION_INDEX_3>The second way is by multiplying the base of the parallelogram such as <INSERTION_INDEX_4> with its altitude <INSERTION_INDEX_5>, which is perpendicular to both bases. <INSERTION_INDEX_6> is a <INSERTION_INDEX_7> triangle so <INSERTION_INDEX_8>. Set these two representations of the area together.<INSERTION_INDEX_9>\u00a0:) </p><p>~Ak~Smiley face by Shreyansh Medatati</p>",
+          "text": "<p>The problem asks for the length of the segment $d$, which is the perpendicular distance between the parallel sides $\\overline{HE}$ and $\\overline{FG}$ of the parallelogram EFGH. This distance $d$ is also the altitude of the parallelogram with base $\\overline{HE}$ or $\\overline{FG}$.</p><p>A useful property is that the area of a parallelogram is given by the formula: Area = base $\\times$ altitude.</p><p>$ \\text{Area(EFGH)} = \\text{length}(\\overline{HE}) \\times d $</p><p>We can find the area of the parallelogram and the length of the base $\\overline{HE}$ from the given information in the figure.</p><p><b>Step 1: Calculate the area of the parallelogram EFGH.</b></p><p>We can find the area of the parallelogram by taking the area of the large rectangle ABCD and subtracting the areas of the four corner right triangles ($\triangle AEH$, $\triangle EBF$, $\triangle FCG$, $\triangle GDH$).</p><ul><li>Area of rectangle ABCD = length $\\times$ width = $(AE+EB) \\times (AH+HD) = (4+6) \\times (3+5) = 10 \\times 8 = 80$.</li><li>Area($\triangle AEH$) = $\\frac{1}{2} \\times AE \\times AH = \\frac{1}{2} \\times 4 \\times 3 = 6$.</li><li>Area($\triangle EBF$) = $\\frac{1}{2} \\times EB \\times BF = \\frac{1}{2} \\times 6 \\times 5 = 15$.</li><li>Area($\triangle FCG$) = $\\frac{1}{2} \\times FC \\times CG = \\frac{1}{2} \\times 3 \\times 4 = 6$.</li><li>Area($\triangle GDH$) = $\\frac{1}{2} \\times GD \\times DH = \\frac{1}{2} \\times 6 \\times 5 = 15$.</li></ul><p>Area(EFGH) = Area(ABCD) - (Sum of triangle areas)</p><p>Area(EFGH) = $80 - (6 + 15 + 6 + 15) = 80 - 42 = 38$.</p><p><b>Step 2: Calculate the length of the base HE.</b></p><p>We can find the length of the segment $\\overline{HE}$ using the Pythagorean theorem on the right triangle $\triangle AEH$.</p><p>$ HE^2 = AE^2 + AH^2 $</p><p>$ HE^2 = 4^2 + 3^2 = 16 + 9 = 25 $</p><p>$ HE = \\sqrt{25} = 5 $</p><p><b>Step 3: Calculate the altitude d.</b></p><p>Now we use the area formula for the parallelogram:</p><p>$ \\text{Area(EFGH)} = HE \\times d $</p><p>$ 38 = 5 \\times d $</p><p>$ d = \\frac{38}{5} = 7.6 $</p>"
+        },
+        {
+          "text": "<p>The area of the parallelogram can be found in two ways. The first is by taking rectangle <INSERTION_INDEX_1> and subtracting the areas of the triangles cut out to create parallelogram <INSERTION_INDEX_2>. This is <INSERTION_INDEX_3>The second way is by multiplying the base of the parallelogram such as <INSERTION_INDEX_4> with its altitude <INSERTION_INDEX_5>, which is perpendicular to both bases. <INSERTION_INDEX_6> is a <INSERTION_INDEX_7> triangle so <INSERTION_INDEX_8>. Set these two representations of the area together.<INSERTION_INDEX_9> :) </p><p>~Ak~Smiley face by Shreyansh Medatati</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
               "picture": "//latex.artofproblemsolving.com/f/9/e/f9efaf9474c5658c4089523e2aff4e11488f8603.png",
@@ -3242,6 +3308,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>We are asked to find the area of the shaded region formed by two $4 \\times 4$ squares intersecting at right angles, with a circle removed from the center.</p><p><b>Step 1: Find the area of the union of the two squares.</b></p><p>Each square has area $4 \\times 4 = 16$. The two squares overlap in a central region, which is a square of side $2$ (since the intersection bisects the sides). The area of the overlap is $2 \\times 2 = 4$.</p><p>So, the total area of the union is:</p><p>$ 16 + 16 - 4 = 28 $</p><p><b>Step 2: Find the area of the circle to be removed.</b></p><p>The circle's diameter is the distance between two opposite intersection points, which is the diagonal of the $2 \\times 2$ overlap square. The diagonal is $\\sqrt{2^2 + 2^2} = 2\\sqrt{2}$, so the radius is $\\sqrt{2}$.</p><p>The area of the circle is:</p><p>$ \\pi r^2 = \\pi (\\sqrt{2})^2 = 2\\pi $</p><p><b>Step 3: Subtract the area of the circle from the union of the squares.</b></p><p>Shaded area = $28 - 2\\pi$.</p><p><b>Final Answer:</b> $\\boxed{28 - 2\\pi}$</p>"
+        },
         {
           "text": "<p>If the circle was shaded in, the intersection of the two squares would be a smaller square with half the sidelength, <INSERTION_INDEX_1>. The area of this region would be the two larger squares minus the area of the intersection, the smaller square. This is <INSERTION_INDEX_2>.</p><p>The diagonal of this smaller square created by connecting the two points of intersection of the squares is the diameter of the circle. This value can be found with Pythagorean or a <INSERTION_INDEX_3> circle to be <INSERTION_INDEX_4>. The radius is half the diameter, <INSERTION_INDEX_5>. The area of the circle is <INSERTION_INDEX_6>.</p><p>The area of the shaded region is the area of the two squares minus the area of the circle which is <INSERTION_INDEX_7>.</p>",
           "insertions": {
