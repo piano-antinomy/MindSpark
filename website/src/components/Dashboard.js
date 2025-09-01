@@ -130,7 +130,7 @@ function Dashboard() {
     if (user.mathLevel) {
       activities.push({
         type: 'assessment',
-        message: `Math level assessed as ${user.mathLevel}`,
+        message: `Math level assessed as ${user.mathLevel} as of `,
         date: new Date()
       });
     }
@@ -176,7 +176,8 @@ function Dashboard() {
       </header>
 
       <main className="dashboard-main">
-        <div className="dashboard-grid">
+        {/* Top grid with only the scoreboard */}
+        <div className="dashboard-grid" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem' }}>
           {/* Scoreboard Section */}
           <div className="dashboard-card scoreboard-card">
             <h2>📊 Your Scoreboard</h2>
@@ -190,14 +191,11 @@ function Dashboard() {
                 <span style={{ fontSize: '1.2rem', fontWeight: '600', color: '#4f46e5', marginLeft: '1rem', whiteSpace: 'nowrap' }}>{levelLabel}</span>
               </div>
             </div>
-            <div className="progress-section">
-              <h4>Recent Progress</h4>
-              <div className="quiz-history">
-                {updateRecentQuizzes(user.quiz_scores)}
-              </div>
-            </div>
           </div>
+        </div>
 
+        {/* Bottom grid with remaining cards in a 4-column layout */}
+        <div className="dashboard-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '1.5rem' }}>
           {/* Quick Stats */}
           <div className="dashboard-card stats-card">
             <h2>📈 Quick Stats</h2>
