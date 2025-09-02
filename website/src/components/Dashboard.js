@@ -24,6 +24,28 @@ function Dashboard() {
     return 'Not Assessed';
   };
 
+  // Helper: given a level, return the next title tier (next label value)
+  const LEVEL_LABELS_ASC = [
+    '🍼 Number Nibbler',
+    '🐣 Counting Kid',
+    '🦄 Math Explorer',
+    '🚀 Addition Adventurer',
+    '🧙 Subtraction Sorcerer',
+    '🦸 Multiplication Hero',
+    '🧩 Division Detective',
+    '🏆 Fraction Master',
+    '🧠 Algebra Ace',
+    '🔬 Number Scientist'
+  ];
+
+  const getNextLevelLabel = (level) => {
+    const currentLabel = levelLabelFromInt(typeof level === 'number' ? level : 0);
+    const idx = LEVEL_LABELS_ASC.indexOf(currentLabel);
+    if (idx === -1) return LEVEL_LABELS_ASC[0];
+    // If already at top tier, keep showing the top title
+    return LEVEL_LABELS_ASC[Math.min(idx + 1, LEVEL_LABELS_ASC.length - 1)];
+  };
+
   useEffect(() => {
     // Check if user is logged in
     const currentUser = checkAuthStatus();
@@ -162,6 +184,7 @@ function Dashboard() {
   }
 
   const levelLabel = levelLabelFromInt(user.mathLevel);
+  const nextTitle = getNextLevelLabel(user && typeof user.mathLevel === 'number' ? user.mathLevel : 0);
 
   return (
     <div className="dashboard-container">
@@ -189,6 +212,12 @@ function Dashboard() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                 <span style={{ fontSize: '1.1rem', fontWeight: '600', color: '#6b7280' }}>Math Level Title:</span>
                 <span style={{ fontSize: '1.2rem', fontWeight: '600', color: '#4f46e5', marginLeft: '1rem', whiteSpace: 'nowrap' }}>{levelLabel}</span>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginLeft: 0, textAlign: 'center' }}>
+                <span style={{ color: '#6b7280' }}>
+                  do more quizs to unlock your next title: <strong>{nextTitle}</strong>
+                </span>
+                <Link to="/quiz" className="btn btn-primary">take quizs</Link>
               </div>
             </div>
           </div>
