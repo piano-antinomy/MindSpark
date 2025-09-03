@@ -1746,6 +1746,73 @@
       }
     },
     {
+      "id": "amc_2008_8_18",
+      "question": {
+        "text": "<p>Two circles that share the same center have radii 10 meters and 20 meters. An aardvark runs along the path shown, starting at $A$ and ending at $K$. How many meters does the aardvark run?</p><p><INSERTION_INDEX_1></p>",
+        "insertions": {
+          "INSERTION_INDEX_1": {
+            "picture": "//latex.artofproblemsolving.com/2/1/0/210387e06e9467a3ab329cbdf9e43ff63316fb45.png",
+            "alt_type": "image",
+            "alt_value": "$50$",
+            "width": "252",
+            "height": "235"
+          }
+        },
+        "type": "multiple-choice",
+        "text_choices": [],
+        "picture_choices": [
+          {
+            "uri": "//latex.artofproblemsolving.com/8/6/6/866fd43079e8800c21075dd2c3358075fa2bc421.png",
+            "width": "430",
+            "height": "17"
+          }
+        ],
+        "latex_choices": [
+          "$\\textbf{(A)}\\ 10\\pi+20\\qquad\\textbf{(B)}\\ 10\\pi+30\\qquad\\textbf{(C)}\\ 10\\pi+40\\qquad\\textbf{(D)}\\ 20\\pi+20\\qquad \\ \\textbf{(E)}\\ 20\\pi+40$"
+        ],
+        "asy_choices": []
+      },
+      "tags": [],
+      "sources": [],
+      "answer": "E",
+      "solutions": [
+        {
+          "text": "<p>We will calculate the total length part by part: <br/>Part 1: 1/4 circumference of big circle= $\\frac{2\\pi r}{4}=\\frac{\\pi r}{2}=\\frac{20\\pi}{2}=10\\pi$ <br/>Part 2: Big radius minus small radius= $20-10=10$ <br/>Part 3: 1/4 circumference of small circle= $\\frac{\\pi r}{2}=\\frac{10\\pi}{2}=5\\pi$ <br/>Part 4: Diameter of small circle: $2*10=20$ <br/>Part 5: Same as part 3: $5\\pi$ <br/>Part 6: Same as part 2: $10$ </p><p>Total: $10\\pi + 10 + 5\\pi + 20 + 5\\pi + 10 = 20\\pi + 40$</p>"
+        },
+        {
+          "text": "<p>A rectangle's area is maximized when its length and width are equivalent, or the two side lengths are closest together in this case with integer lengths. This occurs with the sides <INSERTION_INDEX_1>. Likewise, the area is smallest when the side lengths have the greatest difference, which is <INSERTION_INDEX_2>. The difference in area is <INSERTION_INDEX_3>.</p><p><br/></p>",
+          "insertions": {
+            "INSERTION_INDEX_1": {
+              "picture": "//latex.artofproblemsolving.com/9/e/3/9e33d50d436a67391a0acfaff087798b27a48c4e.png",
+              "alt_type": "latex",
+              "alt_value": "$12 \\times 13 = 156$",
+              "width": "109",
+              "height": "13"
+            },
+            "INSERTION_INDEX_2": {
+              "picture": "//latex.artofproblemsolving.com/5/9/b/59bc644fe886f634391dd1134d009b4a97a9ea18.png",
+              "alt_type": "latex",
+              "alt_value": "$1 \\times 24 = 24$",
+              "width": "91",
+              "height": "12"
+            },
+            "INSERTION_INDEX_3": {
+              "picture": "//latex.artofproblemsolving.com/7/0/8/70863b2a9502fb4c2e4ce8d627ff90ebaacbc658.png",
+              "alt_type": "latex",
+              "alt_value": "$156-24=\\boxed{\\textbf{(D)}\\ 132}$",
+              "width": "166",
+              "height": "28"
+            }
+          }
+        }
+      ],
+      "categorization": {
+        "category": "geometry",
+        "sub_category": "polygons",
+        "confidence": 0.95
+      }
+    },
+    {
       "id": "amc_2008_8_19",
       "question": {
         "text": "<p>Eight points are spaced around at intervals of one unit around a <INSERTION_INDEX_1> square, as shown. Two of the <INSERTION_INDEX_2> points are chosen at random. What is the probability that the two points are one unit apart?<INSERTION_INDEX_3></p>",
@@ -2059,7 +2126,7 @@
             "INSERTION_INDEX_2": {
               "picture": "//latex.artofproblemsolving.com/3/1/2/312221d550873f662787d5d3c8e259cd9a5e6d78.png",
               "alt_type": "latex",
-              "alt_value": "$48\\pi \\approx \\ 151}$",
+              "alt_value": "$48\\pi \\approx \\ 151$",
               "width": "126",
               "height": "28"
             }
