@@ -134,6 +134,15 @@ function Math() {
     return descriptions[level] || "Mathematics competition";
   };
 
+  const getYearRange = (level) => {
+    const yearRanges = {
+      1: "2000 to 2025",  // AMC 8
+      2: "2002 to 2024",  // AMC 10
+      3: "2002 to 2024"   // AMC 12
+    };
+    return yearRanges[level] || "Available years";
+  };
+
   const startPersonalizedTraining = () => {
     alert(`🎯 Smart Practice Mode - Coming Soon!
     
@@ -178,23 +187,60 @@ Please select a level above to begin practicing!`);
 
     return (
       <div className="level-selection-container">
-        <h2>Choose Your AMC Level</h2>
-        <p>Select the difficulty level that matches your current skills</p>
+        <div className="flex items-start justify-between mb-6">
+          <button 
+            onClick={() => navigate('/')} 
+            className="p-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-lg transition-colors duration-200 mt-2"
+            title="Home"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            </svg>
+          </button>
+          <div className="text-center">
+            <h2>Choose Your AMC Level</h2>
+            <p>Select the difficulty level that matches your current skills</p>
+          </div>
+          <div className="w-14"></div>
+        </div>
         
         <div className="levels-grid">
-          {levelsData.levels.map(level => (
-            <button
-              key={level}
-              className="level-button"
-              onClick={() => selectLevel(level)}
-            >
-              <h3>{levelsData.levelAMCTypes[level]}</h3>
-              <p>{getLevelDescription(level)}</p>
-              <div className="question-count">
-                {levelsData.levelCounts[level]} Questions • {levelsData.levelYearCounts[level]} Years
-              </div>
-            </button>
-          ))}
+          {levelsData.levels.map((level, index) => {
+            const colors = [
+              'bg-gradient-to-br from-indigo-200 to-indigo-400',
+              'bg-gradient-to-br from-green-200 to-green-300', 
+              'bg-gradient-to-br from-yellow-200 to-yellow-300'
+            ];
+            return (
+              <button
+                key={level}
+                className={`level-button ${colors[index % colors.length]} text-gray-800 hover:shadow-lg transition-all duration-300 relative overflow-hidden`}
+                onClick={() => selectLevel(level)}
+              >
+                {/* Fun wavy pattern inside each box */}
+                <div className="absolute inset-0 opacity-50">
+                  <svg className="w-full h-full" viewBox="0 0 400 200" fill="none" preserveAspectRatio="none">
+                    <path d="M0,80 Q100,20 200,80 Q300,140 400,80 L400,0 L0,0 Z" fill={`url(#waveGradient${level})`}/>
+                    <defs>
+                      <linearGradient id={`waveGradient${level}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.6"/>
+                        <stop offset="100%" stopColor="#3730a3" stopOpacity="0.4"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                
+                {/* Content */}
+                <div className="relative z-10">
+                  <h3>{levelsData.levelAMCTypes[level]}</h3>
+                  <p>{getLevelDescription(level)}</p>
+                  <div className="question-count">
+                    {levelsData.levelCounts[level]} Questions • {getYearRange(level)}
+                  </div>
+                </div>
+              </button>
+            );
+          })}
         </div>
 
         <div className="training-option-divider">
@@ -202,36 +248,16 @@ Please select a level above to begin practicing!`);
         </div>
 
         <div className="personalized-training-section">
-          <button className="personalized-training-button" onClick={startPersonalizedTraining}>
+          <button 
+            className="personalized-training-button bg-gradient-to-br from-indigo-600 to-indigo-800 text-white hover:from-indigo-700 hover:to-indigo-900 transition-all duration-300 shadow-lg hover:shadow-xl" 
+            onClick={() => navigate('/quiz')}
+          >
             <span className="button-icon">🎯</span>
-            <span className="button-title">Smart Practice Mode</span>
-            <span className="button-subtitle">AI-curated questions tailored to your skill level</span>
+            <span className="button-title">Take a Quiz</span>
+            <span className="button-subtitle">Start practicing with timed quizzes</span>
           </button>
         </div>
 
-        <div className="quiz-section" style={{ textAlign: 'center', marginTop: '2rem' }}>
-          <button
-            className="quiz-button"
-            onClick={startLevelQuiz}
-            style={{
-              background: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%)',
-              border: 'none',
-              borderRadius: '12px',
-              padding: '1rem 2rem',
-              color: 'white',
-              fontSize: '1rem',
-              fontWeight: '600',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              boxShadow: '0 4px 15px rgba(255, 154, 158, 0.3)'
-            }}
-          >
-            🤔 Level Assessment Quiz
-          </button>
-          <p style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: '#666' }}>
-            Not sure which level? Take our adaptive assessment!
-          </p>
-        </div>
       </div>
     );
   };
@@ -241,8 +267,21 @@ Please select a level above to begin practicing!`);
 
     return (
       <div className="year-selection-container">
-        <h2>{yearsData.amcType} Level</h2>
-        <p>Choose a competition year to practice with</p>
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <h2>{yearsData.amcType} Level</h2>
+            <p>Choose a competition year to practice with</p>
+          </div>
+          <button 
+            onClick={backToLevelSelection}
+            className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            <span>Back to Levels</span>
+          </button>
+        </div>
         
         <div className="years-grid">
           {yearsData.years.map(year => (
@@ -274,74 +313,50 @@ Please select a level above to begin practicing!`);
   };
 
   return (
-    <div className="math-layout">
-      {/* Left Menu Navigation */}
-      <nav className="math-left-menu" style={{ overflowY: 'auto', height: '100vh' }}>
-        <div className="menu-header">
-          <h1>📊 Mathematics</h1>
-          <nav className="breadcrumb">
-            <button onClick={() => navigate('/dashboard')} className="breadcrumb-link">
-              Dashboard
-            </button>
-            {' > '}
-            <button onClick={() => navigate('/subjects')} className="breadcrumb-link">
-              Subjects
-            </button>
-            {' > '}
-            Mathematics
-          </nav>
-        </div>
+    <div className="min-h-screen bg-white relative overflow-hidden">
+      {/* Playful Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Math Symbols */}
+        <div className="absolute top-20 left-10 text-6xl text-indigo-100 animate-bounce" style={{animationDelay: '0s'}}>π</div>
+        <div className="absolute top-40 right-20 text-5xl text-indigo-100 animate-pulse" style={{animationDelay: '1s'}}>∑</div>
+        <div className="absolute top-60 left-1/4 text-4xl text-indigo-100 animate-ping" style={{animationDelay: '2s'}}>√</div>
+        <div className="absolute top-80 right-1/3 text-5xl text-indigo-100 animate-bounce" style={{animationDelay: '3s'}}>∞</div>
+        <div className="absolute top-32 right-10 text-4xl text-indigo-100 animate-pulse" style={{animationDelay: '4s'}}>∫</div>
+        <div className="absolute top-96 left-20 text-3xl text-indigo-100 animate-bounce" style={{animationDelay: '5s'}}>x²</div>
+        <div className="absolute top-48 left-1/2 text-4xl text-indigo-100 animate-pulse" style={{animationDelay: '6s'}}>α</div>
+        <div className="absolute top-72 right-1/4 text-3xl text-indigo-100 animate-ping" style={{animationDelay: '7s'}}>β</div>
         
-        <div className="menu-tabs">
-          <button className="menu-tab" onClick={() => switchToTab('quiz')}>
-            <span className="tab-icon">🎯</span>
-            <span className="tab-text">Quiz</span>
-          </button>
-          <button className="menu-tab active" onClick={() => switchToTab('problems')}>
-            <span className="tab-icon">📚</span>
-            <span className="tab-text">Problems</span>
-          </button>
-        </div>
+        {/* Geometric Shapes */}
+        <div className="absolute top-24 left-1/3 w-8 h-8 border-4 border-indigo-200 rounded-full animate-spin" style={{animationDelay: '8s'}}></div>
+        <div className="absolute top-48 right-1/4 w-6 h-6 bg-indigo-200 transform rotate-45 animate-pulse" style={{animationDelay: '9s'}}></div>
+        <div className="absolute top-72 left-1/5 w-0 h-0 border-l-8 border-r-8 border-b-12 border-l-transparent border-r-transparent border-b-indigo-200 animate-bounce" style={{animationDelay: '10s'}}></div>
+        <div className="absolute top-40 left-1/2 w-4 h-4 bg-indigo-200 rounded-full animate-ping" style={{animationDelay: '11s'}}></div>
         
-        {/* Context info */}
-        <div className="aside-info">
-          {error && (
-            <div>
-              <h3>Error</h3>
-              <p>Something went wrong</p>
-            </div>
-          )}
-          {currentStep === 1 && !error && (
-            <div>
-              <h3>Level Selection</h3>
-              <p>Choose the difficulty level that matches your current skills.</p>
-            </div>
-          )}
-          {currentStep === 2 && selectedLevel && !error && (
-            <div>
-              <h3>{levelsData?.levelAMCTypes[selectedLevel]} Level</h3>
-              <p>Select a competition year to practice with real AMC problems.</p>
-            </div>
-          )}
-        </div>
+        {/* Wavy Lines */}
+        <svg className="absolute top-0 left-0 w-full h-full opacity-10" viewBox="0 0 1200 800" fill="none">
+          <path d="M0,200 Q300,100 600,200 T1200,200 L1200,0 L0,0 Z" fill="url(#gradient1)"/>
+          <path d="M0,400 Q400,300 800,400 T1200,400 L1200,200 L0,200 Z" fill="url(#gradient2)"/>
+          <defs>
+            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.1"/>
+              <stop offset="100%" stopColor="#7c3aed" stopOpacity="0.1"/>
+            </linearGradient>
+            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#7c3aed" stopOpacity="0.1"/>
+              <stop offset="100%" stopColor="#4f46e5" stopOpacity="0.1"/>
+            </linearGradient>
+          </defs>
+        </svg>
         
-        {/* Navigation controls */}
-        <div className="aside-navigation">
-          {currentStep > 1 && !error && (
-            <button className="btn btn-secondary" onClick={backToLevelSelection}>
-              ← Back to Levels
-            </button>
-          )}
-        </div>
-      </nav>
+        {/* Floating Dots */}
+        <div className="absolute top-16 right-1/2 w-3 h-3 bg-indigo-300 rounded-full animate-ping" style={{animationDelay: '12s'}}></div>
+        <div className="absolute top-64 left-1/2 w-2 h-2 bg-indigo-300 rounded-full animate-bounce" style={{animationDelay: '13s'}}></div>
+        <div className="absolute top-96 right-1/5 w-4 h-4 bg-indigo-300 rounded-full animate-pulse" style={{animationDelay: '14s'}}></div>
+      </div>
 
       {/* Main content area */}
-      <main className="math-main-content" style={{ overflowY: 'auto', height: '100vh' }}>
-        <div className="tab-content">
-          <div className="problems-content">
-            {renderProblemsContent()}
-          </div>
-        </div>
+      <main className="container mx-auto px-6 pt-1 relative z-10">
+        {renderProblemsContent()}
       </main>
     </div>
   );
