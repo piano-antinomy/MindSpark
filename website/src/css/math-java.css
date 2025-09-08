@@ -294,8 +294,9 @@
 }
 
 .level-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 15px rgba(124, 58, 237, 0.4);
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%) !important;
 }
 
 .level-button h3 {
@@ -975,9 +976,9 @@ label.choice-label {
 }
 
 .year-button:hover {
-    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
 }
 
 .year-button:hover::before {
@@ -1642,8 +1643,9 @@ label.choice-label {
 }
 
 .level-button:hover, .year-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%) !important;
 }
 
 .level-button h3, .year-button h3 {

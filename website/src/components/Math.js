@@ -190,7 +190,7 @@ Please select a level above to begin practicing!`);
         <div className="flex items-start justify-between mb-6">
           <button 
             onClick={() => navigate('/')} 
-            className="p-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-lg transition-colors duration-200 mt-2"
+            className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200 mt-2"
             title="Home"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -249,7 +249,7 @@ Please select a level above to begin practicing!`);
 
         <div className="personalized-training-section">
           <button 
-            className="personalized-training-button bg-gradient-to-br from-indigo-600 to-indigo-800 text-white hover:from-indigo-700 hover:to-indigo-900 transition-all duration-300 shadow-lg hover:shadow-xl" 
+            className="personalized-training-button bg-gradient-to-br from-indigo-600 to-indigo-800 text-white transition-all duration-300 shadow-lg hover:shadow-xl" 
             onClick={() => navigate('/quiz')}
           >
             <span className="button-icon">🎯</span>
@@ -274,7 +274,7 @@ Please select a level above to begin practicing!`);
           </div>
           <button 
             onClick={backToLevelSelection}
-            className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-indigo-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+            className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>

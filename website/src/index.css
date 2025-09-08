@@ -23,6 +23,45 @@
     @apply inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
   }
   
+  /* Global purple hover system for all buttons */
+  button:hover, .btn:hover, [role="button"]:hover, a[class*="btn"]:hover {
+    @apply transform scale-105 transition-all duration-300;
+  }
+  
+  /* Purple hover for solid colored buttons - more specific selectors */
+  button.bg-indigo-600:hover, button.bg-indigo-500:hover, button.bg-indigo-700:hover,
+  button.bg-blue-600:hover, button.bg-blue-500:hover, button.bg-blue-700:hover,
+  button.bg-green-600:hover, button.bg-green-500:hover, button.bg-green-700:hover,
+  button.bg-yellow-600:hover, button.bg-yellow-500:hover, button.bg-yellow-700:hover,
+  button.bg-pink-600:hover, button.bg-pink-500:hover, button.bg-pink-700:hover,
+  button.bg-red-600:hover, button.bg-red-500:hover, button.bg-red-700:hover {
+    @apply bg-purple-600 !important;
+  }
+  
+  /* Purple hover for outlined/white buttons */
+  button.bg-white:hover, button.bg-gray-50:hover, button.bg-gray-100:hover,
+  button.border-indigo-600:hover, button.border-gray-300:hover {
+    @apply bg-purple-50 border-purple-600 text-purple-600 !important;
+  }
+  
+  /* Purple hover for gradient buttons */
+  button.from-indigo-600:hover, button.from-indigo-500:hover, button.from-indigo-700:hover,
+  button.from-blue-600:hover, button.from-blue-500:hover, button.from-blue-700:hover,
+  button.from-green-600:hover, button.from-green-500:hover, button.from-green-700:hover,
+  button.from-yellow-600:hover, button.from-yellow-500:hover, button.from-yellow-700:hover {
+    @apply from-purple-600 to-purple-800 !important;
+  }
+  
+  /* Purple hover for Link components that act as buttons */
+  a.bg-indigo-600:hover, a.bg-indigo-500:hover, a.bg-indigo-700:hover,
+  a.bg-blue-600:hover, a.bg-blue-500:hover, a.bg-blue-700:hover {
+    @apply bg-purple-600 !important;
+  }
+  
+  a.bg-white:hover, a.border-indigo-600:hover {
+    @apply bg-purple-50 border-purple-600 text-purple-600 !important;
+  }
+  
   .btn-primary {
     @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 shadow-soft;
   }
