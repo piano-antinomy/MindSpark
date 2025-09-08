@@ -999,6 +999,30 @@ label.choice-label {
     font-weight: 500;
 }
 
+/* Small year buttons for decade view */
+.year-button-small {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    text-align: center;
+    font-weight: 600;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.year-button-small:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+}
+
 /* Personalized Training Button */
 .personalized-training-section {
     margin: 3rem auto 2rem;

@@ -9,6 +9,7 @@ function Math() {
   const [error, setError] = useState(null);
   const [levelsData, setLevelsData] = useState(null);
   const [yearsData, setYearsData] = useState(null);
+  const [selectedVersion, setSelectedVersion] = useState('A');
   const navigate = useNavigate();
 
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
@@ -43,6 +44,7 @@ function Math() {
     setCurrentStep(1);
     setSelectedLevel(null);
     setSelectedYear(null);
+    setSelectedVersion('A');
     setError(null);
     loadAvailableLevels();
   };
@@ -51,6 +53,7 @@ function Math() {
     setCurrentStep(1);
     setSelectedLevel(null);
     setSelectedYear(null);
+    setSelectedVersion('A');
     setError(null);
     loadAvailableLevels();
   };
@@ -114,11 +117,12 @@ function Math() {
 
   const selectYear = (year) => {
     setSelectedYear(year);
-    // Navigate to the questions page with the selected level and year
+    // Navigate to the questions page with the selected level, year, and version
     navigate('/math-questions', { 
       state: { 
         level: selectedLevel, 
         year: year,
+        version: selectedVersion,
         amcType: yearsData?.amcType,
         levelDescription: getLevelDescription(selectedLevel)
       } 
@@ -142,6 +146,17 @@ function Math() {
     };
     return yearRanges[level] || "Available years";
   };
+
+  const formatAMCType = (amcType) => {
+    if (!amcType) return "AMC";
+    return amcType.replace(/_/g, " ");
+  };
+
+  const needsVersionTabs = (level) => {
+    // AMC 10 and AMC 12 have version A and B, AMC 8 doesn't
+    return level === 2 || level === 3; // AMC 10 and AMC 12
+  };
+
 
   const startPersonalizedTraining = () => {
     alert(`🎯 Smart Practice Mode - Coming Soon!
@@ -198,7 +213,7 @@ Please select a level above to begin practicing!`);
             </svg>
           </button>
           <div className="text-center">
-            <h2>Choose Your AMC Level</h2>
+            <h2>Click to view AMC problems</h2>
             <p>Select the difficulty level that matches your current skills</p>
           </div>
           <div className="w-14"></div>
@@ -232,7 +247,7 @@ Please select a level above to begin practicing!`);
                 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3>{levelsData.levelAMCTypes[level]}</h3>
+                  <h3>{formatAMCType(levelsData.levelAMCTypes[level])}</h3>
                   <p>{getLevelDescription(level)}</p>
                   <div className="question-count">
                     {levelsData.levelCounts[level]} Questions • {getYearRange(level)}
@@ -265,35 +280,98 @@ Please select a level above to begin practicing!`);
   const renderYearSelection = () => {
     if (!yearsData) return <div className="loading">Loading years...</div>;
 
+    const years = yearsData.years || [];
+    const showVersionTabs = needsVersionTabs(selectedLevel);
+    
+    // Filter years based on selected version for AMC 10 and AMC 12
+    let filteredYears = years;
+    if (showVersionTabs) {
+      filteredYears = years.filter(year => {
+        const yearStr = year.toString();
+        return yearStr.endsWith(selectedVersion);
+      });
+    }
+    
+    const sortedYears = filteredYears.sort((a, b) => parseInt(b) - parseInt(a)); // Most recent first
+
     return (
       <div className="year-selection-container">
         <div className="flex items-center justify-between mb-6">
-          <div>
-            <h2>{yearsData.amcType} Level</h2>
-            <p>Choose a competition year to practice with</p>
+          <div className="flex items-center space-x-4">
+            <button 
+              onClick={() => navigate('/')} 
+              className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+              title="Home"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+              </svg>
+            </button>
+            <button 
+              onClick={backToLevelSelection}
+              className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              <span>Back to Levels</span>
+            </button>
           </div>
-          <button 
-            onClick={backToLevelSelection}
-            className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-            <span>Back to Levels</span>
-          </button>
+          <div className="text-center">
+            <h2>{formatAMCType(yearsData.amcType)}</h2>
+          </div>
+          <div className="w-32"></div>
         </div>
         
-        <div className="years-grid">
-          {yearsData.years.map(year => (
-            <button
-              key={year}
-              className="year-button"
-              onClick={() => selectYear(year)}
-            >
-              <h3>{year}</h3>
-              <p className="year-description">{yearsData.amcType} {year}</p>
-            </button>
-          ))}
+        {/* Version Tabs for AMC 10 and AMC 12 */}
+        {showVersionTabs && (
+          <div className="mb-8">
+            <div className="flex justify-center space-x-8 border-b border-gray-200">
+              <button
+                onClick={() => setSelectedVersion('A')}
+                className={`pb-4 px-4 text-xl font-bold transition-colors duration-200 ${
+                  selectedVersion === 'A'
+                    ? 'text-indigo-600 border-b-2 border-indigo-600'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                Version A
+              </button>
+              <button
+                onClick={() => setSelectedVersion('B')}
+                className={`pb-4 px-4 text-xl font-bold transition-colors duration-200 ${
+                  selectedVersion === 'B'
+                    ? 'text-indigo-600 border-b-2 border-indigo-600'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                Version B
+              </button>
+            </div>
+          </div>
+        )}
+        
+        {/* Year Selection List */}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-2xl font-bold text-gray-800 mb-8 text-center">
+            Choose a Competition Year{showVersionTabs ? ` - Version ${selectedVersion}` : ''}
+          </h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {sortedYears.map((year, index) => (
+              <button
+                key={year}
+                onClick={() => selectYear(year)}
+                className="bg-white text-indigo-600 px-6 py-4 rounded-lg font-semibold text-lg border-2 border-indigo-600 transition duration-300 inline-flex items-center justify-center space-x-3 shadow-lg hover:shadow-xl"
+              >
+                {/* Math Icon */}
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                </svg>
+                <span>{year}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     );
