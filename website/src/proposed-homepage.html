@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpark - Personalized Learning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom Colors matching MindSpark theme */
+        .bg-primary { background-color: #4f46e5; }
+        .text-primary { color: #4f46e5; }
+        .border-primary { border-color: #4f46e5; }
+        .bg-secondary { background-color: #7c3aed; }
+        .text-secondary { color: #7c3aed; }
+        .hover\:bg-secondary-dark:hover { background-color: #6d28d9; }
+        .bg-background { background-color: #f9fafb; }
+        .text-dark-gray { color: #1f2937; }
+
+        /* Modal styles */
+        .modal {
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+        
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #00529B;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-background text-dark-gray">
+
+    <!-- Header & Navigation Bar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">MathChamps</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#" class="text-gray-600 hover:text-primary">Quizzes</a>
+                <a href="#" class="text-gray-600 hover:text-primary">Problem Sets</a>
+                <a href="#" class="text-gray-600 hover:text-primary">Competitions</a>
+                <a href="#" class="text-gray-600 hover:text-primary">About</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#" class="text-gray-600 hover:text-primary">Log In</a>
+                <a href="#" class="bg-secondary text-white px-4 py-2 rounded-lg font-semibold hover:bg-secondary-dark transition duration-300">Sign Up</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#" class="block text-gray-600 hover:text-primary py-2">Quizzes</a>
+            <a href="#" class="block text-gray-600 hover:text-primary py-2">Problem Sets</a>
+            <a href="#" class="block text-gray-600 hover:text-primary py-2">Competitions</a>
+            <a href="#" class="block text-gray-600 hover:text-primary py-2">About</a>
+            <hr class="my-2"/>
+            <a href="#" class="block text-gray-600 hover:text-primary py-2">Log In</a>
+            <a href="#" class="block bg-secondary text-white text-center mt-2 px-4 py-2 rounded-lg font-semibold hover:bg-secondary-dark transition duration-300">Sign Up</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="text-center md:text-left">
+                        <h1 class="text-4xl md:text-6xl font-bold text-dark-gray mb-4 leading-tight">Unlock Your Math Superpowers</h1>
+                        <p class="text-lg md:text-xl text-gray-600 mb-8">From tricky puzzles to competition prep, we make learning math an adventure. Ready to level up?</p>
+                        <a href="#" class="bg-primary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 transition duration-300 inline-block">Explore Challenges</a>
+                    </div>
+                    <!-- Image -->
+                    <div class="mt-8 md:mt-0">
+                         <img src="https://images.unsplash.com/photo-1501862702633-3C53a15ABA7c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="An imaginative depiction of mathematical formulas and shapes against a cosmic background" class="mx-auto rounded-lg shadow-2xl w-full"  onerror="this.onerror=null;this.src='https://placehold.co/600x400/00529B/FFFFFF?text=Math+Adventure';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gemini Features Section -->
+        <section id="gemini-features" class="bg-background py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark-gray">AI-Powered Learning Tools</h2>
+                    <p class="text-gray-600 mt-2">Supercharge your studies with a little help from AI.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Feature 1: Generate Practice Problem -->
+                    <div class="bg-white p-8 border border-gray-200 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-3 text-primary">Practice Problem Generator</h3>
+                        <p class="text-gray-600 mb-4">Need a new challenge? Generate a unique math problem on any topic.</p>
+                        <div class="flex flex-col sm:flex-row gap-2">
+                             <input type="text" id="problem-topic" placeholder="e.g., Quadratic Equations" class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                             <button id="generate-problem-btn" class="bg-secondary text-white px-6 py-2 rounded-lg font-semibold hover:bg-secondary-dark transition duration-300">✨ Generate Problem</button>
+                        </div>
+                    </div>
+                     <!-- Feature 2: Get a Concept Explained -->
+                    <div class="bg-white p-8 border border-gray-200 rounded-lg shadow-md">
+                         <h3 class="text-2xl font-semibold mb-3 text-primary">Concept Explainer</h3>
+                         <p class="text-gray-600 mb-4">Stuck on a tricky concept? Get a simple, clear explanation.</p>
+                         <div class="flex flex-col sm:flex-row gap-2">
+                            <input type="text" id="concept-topic" placeholder="e.g., Pythagorean Theorem" class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            <button id="explain-concept-btn" class="bg-secondary text-white px-6 py-2 rounded-lg font-semibold hover:bg-secondary-dark transition duration-300">✨ Explain Concept</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Features Section -->
+        <section class="bg-white py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark-gray">Everything You Need to Succeed</h2>
+                    <p class="text-gray-600 mt-2">Core features to boost your math abilities.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Feature 1: Interactive Quizzes -->
+                    <div class="p-8 border border-gray-200 rounded-lg">
+                        <div class="flex items-center justify-center h-16 w-16 bg-blue-100 text-primary rounded-full mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Interactive Quizzes</h3>
+                        <p class="text-gray-600">Test your knowledge with fun, interactive quizzes covering a wide range of math topics, from algebra to calculus.</p>
+                    </div>
+                    <!-- Feature 2: Competition Problems -->
+                    <div class="p-8 border border-gray-200 rounded-lg">
+                        <div class="flex items-center justify-center h-16 w-16 bg-orange-100 text-secondary rounded-full mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Competition Problems</h3>
+                        <p class="text-gray-600">Prepare for your next math competition with our extensive library of challenging, real-world problems.</p>
+                    </div>
+                    <!-- Feature 3: Progress Tracking -->
+                    <div class="p-8 border border-gray-200 rounded-lg">
+                        <div class="flex items-center justify-center h-16 w-16 bg-green-100 text-green-600 rounded-full mx-auto mb-4">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Progress Tracking</h3>
+                        <p class="text-gray-600">Track your scores, identify your strengths, and see where you can improve with our detailed performance analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call-to-Action Section -->
+        <section class="py-16">
+            <div class="container mx-auto px-6 text-center">
+                 <div class="bg-primary text-white rounded-lg p-12 max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Become a Math Champion?</h2>
+                    <p class="text-lg text-blue-100 mb-8">Join thousands of students and start your journey to the top today.</p>
+                    <a href="#" class="bg-secondary text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-secondary-dark transition duration-300 inline-block">Sign Up for Free</a>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Gemini Modal -->
+    <div id="gemini-modal" class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+        <div class="modal-content bg-white rounded-lg shadow-2xl p-6 md:p-8 w-full max-w-2xl transform scale-95">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="modal-title" class="text-2xl font-bold text-primary">AI Generated Content</h2>
+                <button id="close-modal-btn" class="text-gray-500 hover:text-gray-800">&times;</button>
+            </div>
+            <div id="modal-body" class="text-gray-700 space-y-4 max-h-[60vh] overflow-y-auto">
+                <!-- Loader -->
+                <div id="loader" class="flex justify-center items-center py-8">
+                    <div class="loader"></div>
+                </div>
+                <!-- Content will be injected here -->
+                <div id="modal-result"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-white border-t">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-sm text-gray-500">&copy; 2025 MathChamps. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-primary">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-primary">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gemini API Logic
+        const generateProblemBtn = document.getElementById('generate-problem-btn');
+        const explainConceptBtn = document.getElementById('explain-concept-btn');
+        const problemTopicInput = document.getElementById('problem-topic');
+        const conceptTopicInput = document.getElementById('concept-topic');
+
+        const modal = document.getElementById('gemini-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalResult = document.getElementById('modal-result');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const loader = document.getElementById('loader');
+
+        const apiKey = ""; // Leave empty, will be handled by the environment
+
+        async function callGemini(prompt, systemInstruction) {
+            modal.classList.remove('hidden');
+            modal.classList.add('opacity-100');
+            modal.querySelector('.modal-content').classList.add('scale-100');
+            loader.style.display = 'flex';
+            modalResult.innerHTML = '';
+            
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: prompt }] }],
+                systemInstruction: { parts: [{ text: systemInstruction }] }
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (text) {
+                    // Basic markdown to HTML conversion
+                    let htmlContent = text.replace(/\n/g, '<br>');
+                    htmlContent = htmlContent.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    htmlContent = htmlContent.replace(/\*(.*?)\*/g, '<em>$1</em>');
+                    modalResult.innerHTML = htmlContent;
+                } else {
+                    modalResult.innerHTML = '<p class="text-red-500">Sorry, something went wrong. Could not generate content.</p>';
+                }
+            } catch (error) {
+                console.error('Gemini API Error:', error);
+                modalResult.innerHTML = `<p class="text-red-500">An error occurred while fetching data. Please check the console for details.</p>`;
+            } finally {
+                loader.style.display = 'none';
+            }
+        }
+
+
+        generateProblemBtn.addEventListener('click', () => {
+            const topic = problemTopicInput.value.trim();
+            if (!topic) {
+                alert('Please enter a math topic.');
+                return;
+            }
+            modalTitle.textContent = `Practice Problem: ${topic}`;
+            const systemPrompt = "You are a math teacher creating practice problems for students aged 8-18. The problems should be challenging but solvable, and appropriate for competition practice. Provide the problem first, then a detailed step-by-step solution separately under a 'Solution' heading.";
+            const userPrompt = `Generate a unique and interesting math practice problem about "${topic}".`;
+            callGemini(userPrompt, systemPrompt);
+        });
+
+        explainConceptBtn.addEventListener('click', () => {
+            const topic = conceptTopicInput.value.trim();
+            if (!topic) {
+                alert('Please enter a math concept.');
+                return;
+            }
+            modalTitle.textContent = `Explanation: ${topic}`;
+            const systemPrompt = "You are a friendly and encouraging math tutor explaining concepts to students aged 8-18. Your explanations should be clear, simple, and use analogies or real-world examples where possible. Avoid overly technical jargon.";
+            const userPrompt = `Please explain the mathematical concept of "${topic}" in a simple way.`;
+            callGemini(userPrompt, systemPrompt);
+        });
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modal.querySelector('.modal-content').classList.remove('scale-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('opacity-0'); 
+            }, 300);
+        }
+
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
+
