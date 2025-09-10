@@ -1,7 +1,106 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    async function handleAuthCallback() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        const state = params.get('state');
+        const storedState = sessionStorage.getItem('oauth_state');
+        if (!code) {
+          // If already logged in, optionally redirect to dashboard
+          const existing = localStorage.getItem('currentUser');
+          if (existing) {
+            navigate('/dashboard');
+          }
+          return;
+        }
+        if (storedState && state && storedState !== state) {
+          // State mismatch; ignore for safety
+          return;
+        }
+
+        const codeVerifier = sessionStorage.getItem('pkce_code_verifier');
+        // Config
+        const COGNITO_DOMAIN = process.env.REACT_APP_COGNITO_DOMAIN || 'https://us-east-1kfqvyjnce.auth.us-east-1.amazoncognito.com';
+        const COGNITO_CLIENT_ID = process.env.REACT_APP_COGNITO_CLIENT_ID || '2f1oo2lsuhc1lfivgpivkdk914';
+        const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI || 'http://localhost:3000';
+
+        const tokenUrl = `${COGNITO_DOMAIN}/oauth2/token`;
+        const body = new URLSearchParams({
+          grant_type: 'authorization_code',
+          client_id: COGNITO_CLIENT_ID,
+          code,
+          redirect_uri: REDIRECT_URI,
+          code_verifier: codeVerifier || ''
+        });
+
+        const tokenResp = await fetch(tokenUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body
+        });
+        if (!tokenResp.ok) return;
+        const tokenData = await tokenResp.json();
+        const idToken = tokenData.id_token;
+        if (!idToken) return;
+
+        // Parse JWT (no validation here; backend session is authoritative)
+        const parts = idToken.split('.');
+        const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+        const sub = payload.sub;
+        const email = payload.email || '';
+        const preferredUsername = payload.preferred_username || '';
+        const givenName = payload.given_name || '';
+        const familyName = payload.family_name || '';
+        const name = payload.name || `${givenName}${givenName && familyName ? ' ' : ''}${familyName}`;
+
+        const usernameFromEmail = email && email.includes('@') ? email.split('@')[0] : '';
+        const username = preferredUsername || usernameFromEmail || `user_${(sub || '').slice(0,8)}`;
+        const userId = `CognitoUser-${sub}`;
+
+        const userPayload = {
+          username: username.toLowerCase(),
+          password: '',
+          userId,
+          score: 0,
+          mathLevel: 1,
+          email,
+          fullName: name || username
+        };
+
+        // Persist to backend and localStorage
+        const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
+        const resp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify(userPayload)
+        });
+        if (resp.ok) {
+          const data = await resp.json();
+          const storedUser = data && data.user ? data.user : userPayload;
+          localStorage.setItem('currentUser', JSON.stringify(storedUser));
+        } else {
+          localStorage.setItem('currentUser', JSON.stringify(userPayload));
+        }
+
+        // Cleanup URL
+        const newUrl = window.location.origin + window.location.pathname;
+        window.history.replaceState(null, '', newUrl);
+
+        // Redirect to dashboard
+        navigate('/dashboard');
+      } catch (e) {
+        // Silent failure; stay on home
+      }
+    }
+    handleAuthCallback();
+  }, [navigate]);
 
   return (
     <div className="bg-gray-50">
