@@ -57,7 +57,7 @@ function Login() {
     } catch (err) {
       // Fallback to Implicit flow to ensure we still reach Cognito Hosted UI for troubleshooting
       const fallbackState = String(Date.now());
-      const implicitUrl = `${COGNITO_DOMAIN}/login?client_id=${encodeURIComponent(COGNITO_CLIENT_ID)}&response_type=token&scope=${encodeURIComponent('openid email profile')}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&state=${encodeURIComponent(fallbackState)}`;
+      const implicitUrl = `${COGNITO_DOMAIN}/login?client_id=${encodeURIComponent(COGNITO_CLIENT_ID)}&response_type=code&scope=${encodeURIComponent('openid email profile')}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&state=${encodeURIComponent(fallbackState)}`;
       try {
         window.location.assign(implicitUrl);
       } catch (_) {
@@ -72,7 +72,7 @@ function Login() {
       await startPkceFlow('/signup');
     } catch (err) {
       const fallbackState = String(Date.now());
-      const implicitUrl = `${COGNITO_DOMAIN}/signup?client_id=${encodeURIComponent(COGNITO_CLIENT_ID)}&response_type=token&scope=${encodeURIComponent('openid email profile')}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&state=${encodeURIComponent(fallbackState)}`;
+      const implicitUrl = `${COGNITO_DOMAIN}/signup?client_id=${encodeURIComponent(COGNITO_CLIENT_ID)}&response_type=code&scope=${encodeURIComponent('openid email profile')}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&state=${encodeURIComponent(fallbackState)}`;
       try {
         window.location.assign(implicitUrl);
       } catch (_) {
