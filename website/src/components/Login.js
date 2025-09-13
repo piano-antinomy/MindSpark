@@ -36,7 +36,7 @@ function Login() {
     return base64UrlEncode(digest);
   }
 
-  const startPkceFlow = async (path) => {
+  const startPkceFlow = async (path, extraParams = {}) => {
     const codeVerifier = generateRandomString(64);
     const codeChallenge = await pkceChallengeFromVerifier(codeVerifier);
     const state = generateRandomString(32);
@@ -44,8 +44,20 @@ function Login() {
     sessionStorage.setItem('pkce_code_verifier', codeVerifier);
     sessionStorage.setItem('oauth_state', state);
 
-    const authorizeUrl = `${COGNITO_DOMAIN}${path}?client_id=${encodeURIComponent(COGNITO_CLIENT_ID)}&response_type=code&scope=${encodeURIComponent('openid email profile')}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&code_challenge=${encodeURIComponent(codeChallenge)}&code_challenge_method=S256&state=${encodeURIComponent(state)}`;
+    const search = new URLSearchParams({
+      client_id: COGNITO_CLIENT_ID,
+      response_type: 'code',
+      scope: 'openid email profile',
+      redirect_uri: REDIRECT_URI,
+      code_challenge: codeChallenge,
+      code_challenge_method: 'S256',
+      state
+    });
+    for (const [k, v] of Object.entries(extraParams)) {
+      search.set(k, v);
+    }
 
+    const authorizeUrl = `${COGNITO_DOMAIN}${path}?${search.toString()}`;
     window.location.assign(authorizeUrl);
   };
 
@@ -55,7 +67,6 @@ function Login() {
     try {
       await startPkceFlow('/oauth2/authorize');
     } catch (err) {
-      // Fallback to Implicit flow to ensure we still reach Cognito Hosted UI for troubleshooting
       const fallbackState = String(Date.now());
       const implicitUrl = `${COGNITO_DOMAIN}/login?client_id=${encodeURIComponent(COGNITO_CLIENT_ID)}&response_type=code&scope=${encodeURIComponent('openid email profile')}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&state=${encodeURIComponent(fallbackState)}`;
       try {
@@ -71,14 +82,17 @@ function Login() {
     try {
       await startPkceFlow('/signup');
     } catch (err) {
-      const fallbackState = String(Date.now());
-      const implicitUrl = `${COGNITO_DOMAIN}/signup?client_id=${encodeURIComponent(COGNITO_CLIENT_ID)}&response_type=code&scope=${encodeURIComponent('openid email profile')}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&state=${encodeURIComponent(fallbackState)}`;
-      try {
-        window.location.assign(implicitUrl);
-      } catch (_) {
-        setErrorMessage('Unable to open signup. Please try again.');
-        setTimeout(() => setErrorMessage(''), 5000);
-      }
+      setErrorMessage('Unable to open signup. Please verify callback URL and try again.');
+      setTimeout(() => setErrorMessage(''), 5000);
+    }
+  };
+
+  const handleGoogle = async () => {
+    try {
+      await startPkceFlow('/oauth2/authorize', { identity_provider: 'Google' });
+    } catch (err) {
+      setErrorMessage('Unable to start Google sign-in.');
+      setTimeout(() => setErrorMessage(''), 5000);
     }
   };
 
@@ -117,6 +131,7 @@ function Login() {
           
           <button type="button" onClick={handleSubmit} className="btn btn-primary btn-full">Sign In</button>
           <button type="button" onClick={handleSignup} className="btn btn-secondary btn-full" style={{ marginTop: '10px' }}>Create Account</button>
+          <button type="button" onClick={handleGoogle} className="btn btn-secondary btn-full" style={{ marginTop: '10px' }}>Sign in with Google</button>
           
           {errorMessage && (
             <div className="error-message">{errorMessage}</div>
