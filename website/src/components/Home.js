@@ -98,12 +98,8 @@ function Home() {
           }
         }
 
-        // No code: if already logged in, go to dashboard; otherwise do nothing
+        // No code: just return, let user see the homepage
         if (!code) {
-          const existing = localStorage.getItem('currentUser');
-          if (existing) {
-            navigate('/dashboard');
-          }
           return;
         }
 
