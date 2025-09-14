@@ -15,6 +15,7 @@ import software.amazon.awssdk.enhanced.dynamodb.model.QueryEnhancedRequest;
 
 import javax.inject.Inject;
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -74,13 +75,15 @@ public class DDBBackedQuizServiceImpl implements QuizService {
             Map<String, String> questionIdToAnswer = Collections.emptyMap();
             
             // Generate unique quiz ID and create QuizProgress
+            LocalDateTime now = LocalDateTime.now(ZoneOffset.UTC);
             QuizProgress quizProgress = new QuizProgress(
                 userId,
                 quizId, 
                 QuizType.STANDARD_AMC,
                 quizQuestionSetId, // Store the original question set ID
                 quizName,
-                LocalDateTime.now(), 
+                now, // startTime
+                now, // lastActivity
                 questionIdToAnswer,
                 0 // Initial score
             );
@@ -166,7 +169,7 @@ public class DDBBackedQuizServiceImpl implements QuizService {
             
             // Update the existing quiz progress
             existingQuiz.setQuestionIdToAnswer(quizProgress.getQuestionIdToAnswer());
-            existingQuiz.setLastActivity(LocalDateTime.now());
+            existingQuiz.setLastActivity(LocalDateTime.now(ZoneOffset.UTC));
             existingQuiz.setQuizScore(quizProgress.getQuizScore());
             existingQuiz.setCompleted(quizProgress.isCompleted());
             existingQuiz.setTotalQuestions(quizProgress.getTotalQuestions());

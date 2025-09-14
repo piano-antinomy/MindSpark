@@ -15,6 +15,7 @@ import software.amazon.awssdk.enhanced.dynamodb.model.QueryConditional;
 import software.amazon.awssdk.enhanced.dynamodb.model.QueryEnhancedRequest;
 
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -51,7 +52,7 @@ public class DDBBackedProgressTrackingServiceImpl implements ProgressTrackServic
             updatedQuestionIdToAnswer.putAll(questionIdToAnswer);
 
             existingProgress.setQuestionIdToAnswer(updatedQuestionIdToAnswer);
-            existingProgress.setLastActivity(LocalDateTime.now());
+            existingProgress.setLastActivity(LocalDateTime.now(ZoneOffset.UTC));
 
             existingProgress.setQuizScore(figureQuizScore(userId, quizId, updatedQuestionIdToAnswer));
             userProgressTable.updateItem(existingProgress);

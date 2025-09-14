@@ -13,6 +13,7 @@ function Quiz() {
   const [yearsLoading, setYearsLoading] = useState(false);
   const [levelsData, setLevelsData] = useState(null);
   const [error, setError] = useState(null);
+  const [activeCategory, setActiveCategory] = useState('in_progress');
   const navigate = useNavigate();
 
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
@@ -156,7 +157,12 @@ function Quiz() {
 
       // Generate quiz name based on level and year
       const amcType = levelsData?.levelAMCTypes[selectedLevel];
-      const quizName = `${formatAMCType(amcType)} ${year} Quiz`;
+      // Parse year and variant for proper display format
+      const displayYearMatch = year.match(/^(\d{4})([AB]?)$/);
+      const displayBaseYear = displayYearMatch ? displayYearMatch[1] : year;
+      const displayVariant = displayYearMatch ? displayYearMatch[2] : '';
+      const amcLevel = amcType?.replace('AMC_', '') || '8';
+      const quizName = `${displayBaseYear} AMC ${amcLevel}${displayVariant} Quiz`;
       
       // Generate quiz ID
       const quizId = `quiz_${selectedLevel}_${year}_${Date.now()}`;
@@ -224,14 +230,46 @@ function Quiz() {
         const quizzesList = Object.entries(quizzesData).map(([quizId, quiz]) => {
           console.log(`Quiz ${quizId} data:`, quiz);
           console.log(`Quiz ${quizId} completed field:`, quiz.completed);
+          console.log(`Quiz ${quizId} startTime:`, quiz.startTime);
+          // Parse questionSetId to get proper level and year format
+          const parseQuestionSetId = (questionSetId) => {
+            if (!questionSetId) return { level: 'AMC', year: '2024', amcLevel: '8', variant: '' };
+            const match = questionSetId.match(/^(\d{4})_AMC_(\d+)([AB]?)$/);
+            if (match) {
+              const year = match[1];
+              const amcLevel = match[2];
+              const variant = match[3] || '';
+              return {
+                level: `AMC ${amcLevel}${variant}`,
+                year: year,
+                amcLevel: amcLevel,
+                variant: variant
+              };
+            }
+            return { level: 'AMC', year: '2024', amcLevel: '8', variant: '' };
+          };
+          
+          const { level, year, amcLevel, variant } = parseQuestionSetId(quiz.questionSetId);
+          
+          // Calculate answered questions and correct answers
+          const answeredQuestions = quiz.questionIdToAnswer ? 
+            Object.values(quiz.questionIdToAnswer).filter(answer => answer && answer.trim() !== '').length : 0;
+          const totalQuestions = quiz.totalQuestions || 25;
+          const correctAnswers = quiz.quizScore || 0;
+          
           return {
             id: quizId,
             name: quiz.quizName || 'Untitled Quiz',
-            level: quiz.questionSetId ? quiz.questionSetId.split('_')[2] : 'AMC',
-            year: quiz.questionSetId ? quiz.questionSetId.split('_')[0] : '2024',
-            questionCount: quiz.questionIdToAnswer ? Object.keys(quiz.questionIdToAnswer).length : 0,
+            level: level,
+            year: year,
+            amcLevel: amcLevel,
+            variant: variant,
+            questionCount: totalQuestions,
+            answeredQuestions: answeredQuestions,
+            correctAnswers: correctAnswers,
             status: quiz.completed ? 'completed' : 'in_progress',
-            score: quiz.scorePercentage || 0
+            score: quiz.scorePercentage || 0,
+            startTime: quiz.startTime
           };
         });
         
@@ -260,62 +298,182 @@ function Quiz() {
     navigate(`/quiz-taking?quizId=${encodeURIComponent(quiz.id)}`);
   };
 
-  const renderYourQuizzesContent = () => (
-    <div className="quiz-list-container">
-      <h2>Your Quizzes</h2>
-      {loading ? (
-        <div className="loading">Loading quizzes...</div>
-      ) : quizzes.length === 0 ? (
-        <div className="empty-state">
-          <p>No quizzes yet. Create your first quiz to get started!</p>
+  const renderYourQuizzesContent = () => {
+    // Separate quizzes into categories
+    const inProgressQuizzes = quizzes.filter(quiz => quiz.status === 'in_progress');
+    const completedQuizzes = quizzes.filter(quiz => quiz.status === 'completed');
+    
+    // Determine which tabs to show
+    const showTabs = inProgressQuizzes.length > 0 && completedQuizzes.length > 0;
+    
+    // Update active category if current one is empty
+    if (activeCategory === 'in_progress' && inProgressQuizzes.length === 0 && completedQuizzes.length > 0) {
+      setActiveCategory('completed');
+    } else if (activeCategory === 'completed' && completedQuizzes.length === 0 && inProgressQuizzes.length > 0) {
+      setActiveCategory('in_progress');
+    }
+    
+    const currentQuizzes = activeCategory === 'in_progress' ? inProgressQuizzes : completedQuizzes;
+    
+    const renderQuizCard = (quiz) => {
+      const formatDate = (dateString) => {
+        if (!dateString) return 'N/A';
+        
+        try {
+          // Handle different date formats
+          let date;
+          if (typeof dateString === 'string') {
+            // If it's already a string, try parsing it directly
+            if (dateString.includes('T')) {
+              // ISO format with time
+              date = new Date(dateString);
+            } else {
+              // Just date, add time
+              date = new Date(dateString + 'T00:00:00Z');
+            }
+          } else {
+            // If it's an object (LocalDateTime), convert to string first
+            date = new Date(dateString.toString());
+          }
+          
+          if (isNaN(date.getTime())) {
+            return 'N/A';
+          }
+          
+          return date.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+          });
+        } catch (error) {
+          console.error('Error formatting date:', dateString, error);
+          return 'N/A';
+        }
+      };
+
+      return (
+        <div key={quiz.id} className="bg-white rounded-xl shadow-soft p-6 hover:shadow-md transition-shadow">
+          {/* Tags row with score */}
+          <div className="flex flex-wrap gap-2 mb-4 justify-between items-center">
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                AMC {quiz.amcLevel}
+              </span>
+              <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                {quiz.year}
+              </span>
+              {(quiz.amcLevel === '10' || quiz.amcLevel === '12') && quiz.variant && (
+                <span className="px-3 py-1 bg-purple-100 text-purple-800 text-sm font-medium rounded-full">
+                  {quiz.variant}
+                </span>
+              )}
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="text-sm text-gray-500">
+                {quiz.questionCount} questions
+              </div>
+              {quiz.status === 'completed' && quiz.score > 0 && (
+                <div className="text-lg font-bold text-green-600">
+                  {quiz.score}%
+                </div>
+              )}
+            </div>
+          </div>
+          
+          {/* Progress info */}
+          <div className="text-sm text-gray-600 mb-3 flex justify-between items-center">
+            <div><strong>Answered:</strong> {quiz.answeredQuestions}</div>
+            {quiz.status === 'completed' && (
+              <div><strong>Score:</strong> {quiz.correctAnswers}</div>
+            )}
+          </div>
+          
+          {/* Quiz time and button in one line */}
+          <div className="flex items-center justify-between">
+            <div className="text-sm text-gray-600">
+              Quiz Time: {formatDate(quiz.startTime)}
+            </div>
+            <div>
+              {quiz.status === 'completed' ? (
+                <button 
+                  className="btn btn-primary text-sm px-4 py-2"
+                  onClick={() => navigate(`/solutions?quizId=${encodeURIComponent(quiz.id)}`)}
+                >
+                  Review
+                </button>
+              ) : (
+                <button 
+                  className="btn btn-primary text-sm px-4 py-2"
+                  onClick={() => startQuiz(quiz)}
+                >
+                  Continue
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    };
+    
+    if (loading) {
+      return (
+        <div className="flex justify-center items-center py-12">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
+        </div>
+      );
+    }
+    
+    if (quizzes.length === 0) {
+      return (
+        <div className="text-center py-12">
+          <div className="text-gray-400 text-6xl mb-4">📝</div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">No Quizzes Yet</h3>
+          <p className="text-gray-600 mb-6">Create your first quiz to get started!</p>
           <button 
-            className="btn btn-primary" 
+            className="btn btn-primary"
             onClick={() => switchToQuizTab('createQuiz')}
           >
-            Create Quiz
+            Create Your First Quiz
           </button>
         </div>
-      ) : (
-        <div className="quiz-list">
-          {quizzes.map(quiz => (
-            <div key={quiz.id} className="quiz-item">
-              <div className="quiz-info">
-                <h3>{quiz.name}</h3>
-                <div className="quiz-details">
-                  <span className="quiz-level">{quiz.level}</span>
-                  <span className="quiz-year">{quiz.year}</span>
-                  <span className="quiz-questions">{quiz.questionCount} questions</span>
-                </div>
-                <div className={`quiz-status ${quiz.status}`}>
-                  {quiz.status === 'completed' ? `Completed - ${quiz.score}%` : 'In Progress'}
-                </div>
-              </div>
-              <div className="quiz-actions">
-                {quiz.status === 'completed' ? (
-                  <>
-                    <button className="btn btn-secondary">Review</button>
-                    <button 
-                      className="btn btn-primary"
-                      onClick={() => navigate(`/solutions?quizId=${encodeURIComponent(quiz.id)}`)}
-                    >
-                      Show Solutions
-                    </button>
-                  </>
-                ) : (
-                  <button 
-                    className="btn btn-primary"
-                    onClick={() => startQuiz(quiz)}
-                  >
-                    Continue
-                  </button>
-                )}
-              </div>
-            </div>
-          ))}
+      );
+    }
+    
+    return (
+      <div className="space-y-6">
+        {/* Tabs (only show if both categories have quizzes) */}
+        {showTabs && (
+          <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg">
+            <button
+              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+                activeCategory === 'in_progress'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+              onClick={() => setActiveCategory('in_progress')}
+            >
+              In Progress ({inProgressQuizzes.length})
+            </button>
+            <button
+              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+                activeCategory === 'completed'
+                  ? 'bg-white text-gray-900 shadow-sm'
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+              onClick={() => setActiveCategory('completed')}
+            >
+              Completed ({completedQuizzes.length})
+            </button>
+          </div>
+        )}
+        
+        {/* Quiz Grid - 3 per row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {currentQuizzes.map(renderQuizCard)}
         </div>
-      )}
-    </div>
-  );
+      </div>
+    );
+  };
 
   const renderCreateQuizContent = () => {
     if (error) {

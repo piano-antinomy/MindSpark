@@ -277,7 +277,7 @@ function QuizTaking() {
   };
 
   const parseQuestionSetId = (questionSetId) => {
-    if (!questionSetId) return { level: null, year: null };
+    if (!questionSetId) return { level: null, year: null, variant: null };
     
     // Parse questionSetId like "2015_AMC_8" or "2004_AMC_10B"
     const match = questionSetId.match(/^(\d{4})_AMC_(\d+)([AB]?)$/);
@@ -287,13 +287,14 @@ function QuizTaking() {
       const variant = match[3] || '';
       
       return {
-        level: `AMC_${amcLevel}`,
-        year: year + variant,
+        level: `AMC ${amcLevel}${variant}`,
+        year: year,
+        variant: variant,
         amcLevel: parseInt(amcLevel)
       };
     }
     
-    return { level: null, year: null, amcLevel: null };
+    return { level: null, year: null, variant: null, amcLevel: null };
   };
 
   const getTimeLimit = (quiz) => {
@@ -764,20 +765,20 @@ function QuizTaking() {
             <p className="text-gray-600 text-base lg:text-lg">
               Correct Answers: {correctAnswers} out of {parsedQuestions.length}
             </p>
+            {currentQuiz?.startTime && (
+              <div className="mt-4 text-sm text-gray-500">
+                <p>Started: {new Date(currentQuiz.startTime + 'Z').toLocaleString()}</p>
+                <p>Completed: {new Date().toLocaleString()}</p>
+              </div>
+            )}
           </div>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-3 lg:gap-4">
+          <div className="flex justify-center">
             <button 
               className="btn btn-primary" 
               onClick={() => navigate(`/solutions?quizId=${currentQuiz.quizId}`)}
             >
-              View Solutions
-            </button>
-            <button className="btn btn-secondary" onClick={() => navigate('/quiz')}>
-              Back to Quizzes
-            </button>
-            <button className="btn btn-secondary" onClick={() => navigate('/dashboard')}>
-              Go to Dashboard
+              Review
             </button>
           </div>
         </div>

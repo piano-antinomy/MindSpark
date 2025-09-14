@@ -331,7 +331,19 @@ function Solutions() {
           {currentQuiz && (
             <div>
               <h3>{currentQuiz.quizName}</h3>
-              <p>{currentQuiz.questionSetId}</p>
+              <p>{(() => {
+                // Parse questionSetId to get proper display format
+                const questionSetId = currentQuiz.questionSetId;
+                if (!questionSetId) return 'AMC';
+                const match = questionSetId.match(/^(\d{4})_AMC_(\d+)([AB]?)$/);
+                if (match) {
+                  const year = match[1];
+                  const amcLevel = match[2];
+                  const variant = match[3] || '';
+                  return `${year} AMC ${amcLevel}${variant}`;
+                }
+                return questionSetId;
+              })()}</p>
               <p>{parsedQuestions.length} questions</p>
             </div>
           )}

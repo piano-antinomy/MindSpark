@@ -7,6 +7,7 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbParti
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
 import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.Collections;
 import java.util.Map;
 
@@ -20,6 +21,7 @@ public class QuizProgress {
     private String quizId;
     private QuizType quizType;
     private String questionSetId;
+    private LocalDateTime startTime;
     private LocalDateTime lastActivity;
     private String quizName;
     private Map<String, String> questionIdToAnswer;
@@ -28,12 +30,13 @@ public class QuizProgress {
     private int totalQuestions;
 
     // Primary constructor with all fields including userId
-    public QuizProgress(String userId, String quizId, QuizType quizType, String questionSetId, String quizName, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer, int quizScore) {
+    public QuizProgress(String userId, String quizId, QuizType quizType, String questionSetId, String quizName, LocalDateTime startTime, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer, int quizScore) {
         this.userId = userId;
         this.quizId = quizId;
         this.quizType = quizType;
         this.questionSetId = questionSetId;
         this.quizName = quizName;
+        this.startTime = startTime;
         this.lastActivity = lastActivity;
         this.questionIdToAnswer = questionIdToAnswer != null ? questionIdToAnswer : Collections.emptyMap();
         this.quizScore = quizScore;
@@ -46,7 +49,8 @@ public class QuizProgress {
         this.userId = userId;
         this.quizId = quizId;
         this.quizName = quizName;
-        this.lastActivity = LocalDateTime.now();
+        this.startTime = LocalDateTime.now(ZoneOffset.UTC);
+        this.lastActivity = LocalDateTime.now(ZoneOffset.UTC);
         this.questionIdToAnswer = Collections.emptyMap();
         this.quizScore = 0;
         this.completed = false;
@@ -91,6 +95,12 @@ public class QuizProgress {
     @JsonProperty("questionSetId")
     public String getQuestionSetId() {
         return questionSetId;
+    }
+
+    @DynamoDbAttribute("startTime")
+    @JsonProperty("startTime")
+    public LocalDateTime getStartTime() {
+        return startTime;
     }
 
     @DynamoDbAttribute("lastActivity")
@@ -167,6 +177,10 @@ public class QuizProgress {
 
     public void setQuestionSetId(String questionSetId) {
         this.questionSetId = questionSetId;
+    }
+
+    public void setStartTime(LocalDateTime startTime) {
+        this.startTime = startTime;
     }
 
     public void setLastActivity(LocalDateTime lastActivity) {
