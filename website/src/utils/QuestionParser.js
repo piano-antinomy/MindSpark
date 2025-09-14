@@ -292,6 +292,12 @@ class QuestionParser {
     const questionText = this.processQuestionText(questionDetails.text, questionDetails.insertions);
     const choiceResult = this.extractQuestionChoices(questionDetails);
     
+    // Extract answer from solution text if not explicitly provided
+    let answer = question.answer;
+    if (!answer && question.solutions && question.solutions.length > 0) {
+      answer = this.extractAnswerFromSolution(question.solutions[0]);
+    }
+    
     const result = {
       id: question.id || `question_${questionIndex}`,
       questionText,
@@ -302,12 +308,49 @@ class QuestionParser {
       isTextChoice: choiceResult.isTextChoice || false,
       choiceSpace: questionDetails.choice_space || null, // Extract choice_space field
       choiceVertical: questionDetails.choice_vertical || false, // Extract choice_vertical field
-      answer: question.answer,
+      answer: answer,
       solution: question.solution,
       originalQuestion: question
     };
     
     return result;
+  }
+
+  /**
+   * Extract answer from solution text by looking for \boxed{} patterns
+   * @param {string|Object} solution - Solution text or object
+   * @returns {string|null} Extracted answer or null if not found
+   */
+  extractAnswerFromSolution(solution) {
+    if (!solution) return null;
+    
+    let solutionText = '';
+    if (typeof solution === 'string') {
+      solutionText = solution;
+    } else if (solution.text) {
+      solutionText = solution.text;
+    } else if (solution.value) {
+      solutionText = Array.isArray(solution.value) ? solution.value.join('\n\n') : solution.value;
+    }
+    
+    if (!solutionText) return null;
+    
+    // Look for \boxed{...} patterns in the solution text
+    const boxedMatch = solutionText.match(/\\boxed\{([^}]+)\}/);
+    if (boxedMatch) {
+      const answerText = boxedMatch[1];
+      
+      // Extract letter from patterns like \textbf{(A)}, \text{(B)}, etc.
+      const letterMatch = answerText.match(/\\textbf\{\(([A-E])\)\}|\\text\{\(([A-E])\)\}|\(([A-E])\)|^([A-E])$/);
+      if (letterMatch) {
+        return letterMatch[1] || letterMatch[2] || letterMatch[3] || letterMatch[4];
+      }
+      
+      // If no letter pattern found, return the raw text (might be a number)
+      return answerText.trim();
+    }
+    
+    return null;
   }
 
   /**

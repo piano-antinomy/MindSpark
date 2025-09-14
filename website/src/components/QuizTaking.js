@@ -242,11 +242,18 @@ function QuizTaking() {
     setLoading(true);
     setError(null);
     try {
-      // Convert AMC type to level number
-      const levelMap = { 'AMC_8': 1, 'AMC_10': 2, 'AMC_12': 3 };
-      const level = levelMap[quiz.level] || 1;
+      // Parse the questionSetId to get level and year
+      const { amcLevel, year } = parseQuestionSetId(quiz.questionSetId);
       
-      const response = await fetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${quiz.year}`, {
+      if (!amcLevel || !year) {
+        throw new Error('Invalid quiz data: cannot parse level and year from questionSetId');
+      }
+      
+      // Convert AMC level to level number
+      const levelMap = { 8: 1, 10: 2, 12: 3 };
+      const level = levelMap[amcLevel] || 1;
+      
+      const response = await fetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${year}`, {
         credentials: 'include'
       });
       
@@ -263,14 +270,67 @@ function QuizTaking() {
       }
     } catch (error) {
       console.error('Error loading questions:', error);
-      setError(`Failed to load questions for ${quiz.level} ${quiz.year}. Please check your connection.`);
+      const { level, year } = parseQuestionSetId(quiz.questionSetId);
+      setError(`Failed to load questions for ${level} ${year}. Please check your connection.`);
       setLoading(false);
     }
   };
 
+  const parseQuestionSetId = (questionSetId) => {
+    if (!questionSetId) return { level: null, year: null };
+    
+    // Parse questionSetId like "2015_AMC_8" or "2004_AMC_10B"
+    const match = questionSetId.match(/^(\d{4})_AMC_(\d+)([AB]?)$/);
+    if (match) {
+      const year = match[1];
+      const amcLevel = match[2];
+      const variant = match[3] || '';
+      
+      return {
+        level: `AMC_${amcLevel}`,
+        year: year + variant,
+        amcLevel: parseInt(amcLevel)
+      };
+    }
+    
+    return { level: null, year: null, amcLevel: null };
+  };
+
+  const getTimeLimit = (quiz) => {
+    if (!quiz || !quiz.questionSetId) return 1800; // Default to 30 minutes
+    
+    const { amcLevel } = parseQuestionSetId(quiz.questionSetId);
+    if (!amcLevel) return 1800; // Default to 30 minutes if parsing fails
+    
+    // AMC 8: 45 minutes, AMC 10/12: 75 minutes
+    if (amcLevel === 8) {
+      return 45 * 60; // 45 minutes in seconds
+    } else if (amcLevel === 10 || amcLevel === 12) {
+      return 75 * 60; // 75 minutes in seconds
+    }
+    
+    return 1800; // Default to 30 minutes if level not recognized
+  };
+
+  const getTimeLimitText = (quiz) => {
+    if (!quiz || !quiz.questionSetId) return "30 minutes";
+    
+    const { amcLevel } = parseQuestionSetId(quiz.questionSetId);
+    if (!amcLevel) return "30 minutes";
+    
+    if (amcLevel === 8) {
+      return "45 minutes";
+    } else if (amcLevel === 10 || amcLevel === 12) {
+      return "75 minutes";
+    }
+    
+    return "30 minutes";
+  };
+
   const startQuiz = () => {
     setQuizStarted(true);
-    setTimeRemaining(1800); // 30 minutes in seconds
+    const timeLimit = getTimeLimit(currentQuiz);
+    setTimeRemaining(timeLimit);
   };
 
   const selectAnswer = (questionId, answer) => {
@@ -574,10 +634,10 @@ function QuizTaking() {
       <div className="mb-6 lg:mb-8">
         <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">{currentQuiz?.quizName || 'Quiz'}</h1>
         <div className="space-y-2 text-gray-600 text-sm lg:text-base">
-          <p><strong>Level:</strong> {currentQuiz?.level || 'AMC'}</p>
-          <p><strong>Year:</strong> {currentQuiz?.year || '2024'}</p>
+          <p><strong>Level:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).level || 'AMC' : 'AMC'}</p>
+          <p><strong>Year:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).year || '2024' : '2024'}</p>
           <p><strong>Questions:</strong> {parsedQuestions.length}</p>
-          <p><strong>Time Limit:</strong> 30 minutes</p>
+          <p><strong>Time Limit:</strong> {getTimeLimitText(currentQuiz)}</p>
         </div>
       </div>
       
@@ -586,7 +646,7 @@ function QuizTaking() {
         <ul className="space-y-2 text-gray-600 text-sm lg:text-base">
           <li className="flex items-start gap-2">
             <span className="text-primary-600 mt-1">•</span>
-            You have 30 minutes to complete this quiz
+            You have {getTimeLimitText(currentQuiz)} to complete this quiz
           </li>
           <li className="flex items-start gap-2">
             <span className="text-primary-600 mt-1">•</span>
@@ -707,33 +767,18 @@ function QuizTaking() {
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center gap-3 lg:gap-4">
-            <button className="btn btn-primary" onClick={() => navigate('/quiz')}>
+            <button 
+              className="btn btn-primary" 
+              onClick={() => navigate(`/solutions?quizId=${currentQuiz.quizId}`)}
+            >
+              View Solutions
+            </button>
+            <button className="btn btn-secondary" onClick={() => navigate('/quiz')}>
               Back to Quizzes
             </button>
             <button className="btn btn-secondary" onClick={() => navigate('/dashboard')}>
               Go to Dashboard
             </button>
-          </div>
-        </div>
-        
-        <div className="bg-white rounded-xl shadow-soft p-4 lg:p-6">
-          <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">Question Review</h3>
-          <div className="space-y-4 lg:space-y-6">
-            {parsedQuestions.map((question, index) => (
-              <div key={question.id} className="question-container">
-                <div className="question-header">
-                  <h3 className="text-lg lg:text-xl font-semibold text-gray-900">Problem {index + 1}</h3>
-                </div>
-                <div className="question-layout-stacked">
-                  <Question
-                    question={question}
-                    quizCompleted={true}
-                    selectedAnswer={selectedAnswers[question.id]}
-                    onAnswerSelect={null}
-                  />
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </>

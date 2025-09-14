@@ -161,8 +161,18 @@ function Quiz() {
       // Generate quiz ID
       const quizId = `quiz_${selectedLevel}_${year}_${Date.now()}`;
       
-      // Create question set ID
-      const quizQuestionSetId = `${year}_${amcType}`;
+      // Parse year and variant for proper question set ID format
+      // year might be "2019" or "2019B", we need "2019_AMC_10B" format
+      const yearMatch = year.match(/^(\d{4})([AB]?)$/);
+      if (!yearMatch) {
+        throw new Error('Invalid year format');
+      }
+      
+      const baseYear = yearMatch[1];
+      const variant = yearMatch[2] || '';
+      
+      // Create question set ID in the correct format: YYYY_AMC_NN[AB]
+      const quizQuestionSetId = `${baseYear}_${amcType}${variant}`;
       
       const requestBody = {
         userId: currentUser.userId,

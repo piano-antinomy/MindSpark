@@ -59,8 +59,8 @@ function Solutions() {
   }, [currentQuestionIndex]);
 
   useEffect(() => {
-    // Trigger MathJax typesetting when switching to solution view
-    if (viewMode === 'solution' && solutionRef.current) {
+    // Trigger MathJax typesetting when switching views
+    if (solutionRef.current) {
       // Add a small delay to ensure DOM is updated
       setTimeout(() => {
         safeMathJaxTypeset().catch(() => {
@@ -79,6 +79,17 @@ function Solutions() {
     }
   }, [parsedQuestions, currentQuestionIndex, viewMode]);
 
+  useEffect(() => {
+    // Trigger MathJax typesetting when in quiz mode (for choices with MathJax)
+    if (viewMode === 'quiz' && parsedQuestions.length > 0) {
+      setTimeout(() => {
+        forceMathJaxRerender().catch(() => {
+          setTimeout(() => forceMathJaxRerender(), 50);
+        });
+      }, 150);
+    }
+  }, [viewMode, currentQuestionIndex, parsedQuestions]);
+
   const checkAuthStatus = () => {
     const currentUser = localStorage.getItem('currentUser');
     return currentUser ? JSON.parse(currentUser) : null;
@@ -86,6 +97,19 @@ function Solutions() {
 
   const safeMathJaxTypeset = () => {
     if (window.MathJax && window.MathJax.typesetPromise) {
+      return window.MathJax.typesetPromise().catch(error => {
+        console.warn('MathJax typesetting error:', error);
+      });
+    }
+    return Promise.resolve();
+  };
+
+  const forceMathJaxRerender = () => {
+    if (window.MathJax && window.MathJax.typesetPromise) {
+      // Clear any existing MathJax processing
+      if (window.MathJax.startup && window.MathJax.startup.document) {
+        window.MathJax.startup.document.state(0);
+      }
       return window.MathJax.typesetPromise().catch(error => {
         console.warn('MathJax typesetting error:', error);
       });
@@ -239,9 +263,10 @@ function Solutions() {
       return (
         <Question
           question={currentQuestion}
-          quizCompleted={true}
+          quizCompleted={false}
           selectedAnswer={selectedAnswer}
           onAnswerSelect={handleAnswerSelect}
+          showAnswerStates={true}
         />
       );
     } else {

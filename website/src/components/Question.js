@@ -1,6 +1,8 @@
 import React from 'react';
 
-function Question({ question, quizCompleted = false, selectedAnswer = null, onAnswerSelect = null }) {
+function Question({ question, quizCompleted = false, selectedAnswer = null, onAnswerSelect = null, showAnswerStates = false }) {
+  // Check if user answered this specific question
+  const hasUserAnswer = Boolean(selectedAnswer);
   const renderQuestionContent = (question) => {
     return (
       <div className="question-content-section overflow-y-auto min-h-0 p-3 lg:p-6">
@@ -55,37 +57,73 @@ function Question({ question, quizCompleted = false, selectedAnswer = null, onAn
         const isSelected = selectedAnswer === choiceValue;
         const isCorrect = question.answer === choiceValue;
         
+        // Determine styling and text based on answer states
+        let choiceClass = '';
+        let statusText = '';
+        
+        if (showAnswerStates) {
+          if (isCorrect) {
+            if (hasUserAnswer && isSelected) {
+              // User answered correctly
+              choiceClass = 'bg-green-100 border-green-500';
+              statusText = '✓ Correct Answer';
+            } else if (hasUserAnswer && !isSelected) {
+              // Correct answer but user chose wrong answer
+              choiceClass = 'bg-green-100 border-green-500';
+              statusText = 'Correct Answer';
+            } else {
+              // Correct answer but user didn't answer this question
+              choiceClass = 'bg-gray-50 border-gray-300';
+              statusText = 'Correct Answer';
+            }
+          } else if (isSelected && !isCorrect) {
+            // User answered incorrectly
+            choiceClass = 'bg-red-100 border-red-500';
+            statusText = '✗ Your Answer';
+          } else {
+            // Other incorrect choices
+            choiceClass = 'bg-gray-50 border-gray-300';
+            statusText = '';
+          }
+        } else if (quizCompleted) {
+          choiceClass = isCorrect 
+            ? 'bg-green-100 border-green-500' 
+            : isSelected && !isCorrect 
+              ? 'bg-red-100 border-red-500' 
+              : 'bg-gray-50 border-gray-300';
+          statusText = isCorrect ? '✓ Correct' : isSelected && !isCorrect ? '✗ Incorrect' : '';
+        } else {
+          choiceClass = isSelected 
+            ? 'bg-blue-100 border-blue-500' 
+            : 'hover:bg-gray-50 border-gray-300';
+        }
+        
         return (
           <label 
             key={choiceIndex}
-            className={`choice-item block p-3 border rounded cursor-pointer transition-colors ${
-              quizCompleted 
-                ? isCorrect 
-                  ? 'bg-green-100 border-green-500' 
-                  : isSelected && !isCorrect 
-                    ? 'bg-red-100 border-red-500' 
-                    : 'bg-gray-50 border-gray-300'
-                : isSelected 
-                  ? 'bg-blue-100 border-blue-500' 
-                  : 'hover:bg-gray-50 border-gray-300'
-            }`}
+            className={`choice-item block p-3 border rounded cursor-pointer transition-colors text-left ${choiceClass}`}
           >
-            <input 
-              type="radio" 
-              name={`question-${question.id}`}
-              value={choiceValue}
-              checked={isSelected}
-              onChange={() => onAnswerSelect && onAnswerSelect(choiceValue)}
-              disabled={quizCompleted}
-              className="mr-2"
-            />
-            <span className="font-medium">{choiceValue}:</span> {choice}
-            {quizCompleted && isCorrect && (
-              <span className="ml-2 text-green-600">✓ Correct</span>
-            )}
-            {quizCompleted && isSelected && !isCorrect && (
-              <span className="ml-2 text-red-600">✗ Incorrect</span>
-            )}
+            <div className="flex items-start">
+              <input 
+                type="radio" 
+                name={`question-${question.id}`}
+                value={choiceValue}
+                checked={isSelected}
+                onChange={() => onAnswerSelect && onAnswerSelect(choiceValue)}
+                disabled={quizCompleted || showAnswerStates}
+                className="mr-2 mt-1"
+              />
+              <div className="flex-1">
+                <div>
+                  <span className="font-medium">{choiceValue}:</span> {choice}
+                </div>
+                {statusText && (
+                  <div className={`mt-1 text-sm ${isCorrect ? 'text-green-600' : 'text-red-600'}`}>
+                    {statusText}
+                  </div>
+                )}
+              </div>
+            </div>
           </label>
         );
       });
@@ -97,37 +135,73 @@ function Question({ question, quizCompleted = false, selectedAnswer = null, onAn
         const isSelected = selectedAnswer === letter;
         const isCorrect = question.answer === letter;
         
+        // Determine styling and text based on answer states
+        let choiceClass = '';
+        let statusText = '';
+        
+        if (showAnswerStates) {
+          if (isCorrect) {
+            if (hasUserAnswer && isSelected) {
+              // User answered correctly
+              choiceClass = 'bg-green-100 border-green-500';
+              statusText = '✓ Correct Answer';
+            } else if (hasUserAnswer && !isSelected) {
+              // Correct answer but user chose wrong answer
+              choiceClass = 'bg-green-100 border-green-500';
+              statusText = 'Correct Answer';
+            } else {
+              // Correct answer but user didn't answer this question
+              choiceClass = 'bg-gray-50 border-gray-300';
+              statusText = 'Correct Answer';
+            }
+          } else if (isSelected && !isCorrect) {
+            // User answered incorrectly
+            choiceClass = 'bg-red-100 border-red-500';
+            statusText = '✗ Your Answer';
+          } else {
+            // Other incorrect choices
+            choiceClass = 'bg-gray-50 border-gray-300';
+            statusText = '';
+          }
+        } else if (quizCompleted) {
+          choiceClass = isCorrect 
+            ? 'bg-green-100 border-green-500' 
+            : isSelected && !isCorrect 
+              ? 'bg-red-100 border-red-500' 
+              : 'bg-gray-50 border-gray-300';
+          statusText = isCorrect ? '✓ Correct' : isSelected && !isCorrect ? '✗ Incorrect' : '';
+        } else {
+          choiceClass = isSelected 
+            ? 'bg-blue-100 border-blue-500' 
+            : 'hover:bg-gray-50 border-gray-300';
+        }
+        
         return (
           <label 
             key={index}
-            className={`choice-item block p-3 border rounded cursor-pointer transition-colors ${
-              quizCompleted 
-                ? isCorrect 
-                  ? 'bg-green-100 border-green-500' 
-                  : isSelected && !isCorrect 
-                    ? 'bg-red-100 border-red-500' 
-                    : 'bg-gray-50 border-gray-300'
-                : isSelected 
-                  ? 'bg-blue-100 border-blue-500' 
-                  : 'hover:bg-gray-50 border-gray-300'
-            }`}
+            className={`choice-item block p-3 border rounded cursor-pointer transition-colors text-left ${choiceClass}`}
           >
-            <input 
-              type="radio" 
-              name={`question-${question.id}`}
-              value={letter}
-              checked={isSelected}
-              onChange={() => onAnswerSelect && onAnswerSelect(letter)}
-              disabled={quizCompleted}
-              className="mr-2"
-            />
-            <span className="font-medium">{letter}</span>
-            {quizCompleted && isCorrect && (
-              <span className="ml-2 text-green-600">✓ Correct</span>
-            )}
-            {quizCompleted && isSelected && !isCorrect && (
-              <span className="ml-2 text-red-600">✗ Incorrect</span>
-            )}
+            <div className="flex items-start">
+              <input 
+                type="radio" 
+                name={`question-${question.id}`}
+                value={letter}
+                checked={isSelected}
+                onChange={() => onAnswerSelect && onAnswerSelect(letter)}
+                disabled={quizCompleted || showAnswerStates}
+                className="mr-2 mt-1"
+              />
+              <div className="flex-1">
+                <div>
+                  <span className="font-medium">{letter}</span>
+                </div>
+                {statusText && (
+                  <div className={`mt-1 text-sm ${isCorrect ? 'text-green-600' : 'text-red-600'}`}>
+                    {statusText}
+                  </div>
+                )}
+              </div>
+            </div>
           </label>
         );
       });
@@ -139,41 +213,77 @@ function Question({ question, quizCompleted = false, selectedAnswer = null, onAn
       const isSelected = selectedAnswer === choiceValue;
       const isCorrect = question.answer === choiceValue;
       
+      // Determine styling and text based on answer states
+      let choiceClass = '';
+      let statusText = '';
+      
+      if (showAnswerStates) {
+        if (isCorrect) {
+          if (hasUserAnswer && isSelected) {
+            // User answered correctly
+            choiceClass = 'bg-green-100 border-green-500';
+            statusText = '✓ Correct Answer';
+          } else if (hasUserAnswer && !isSelected) {
+            // Correct answer but user chose wrong answer
+            choiceClass = 'bg-green-100 border-green-500';
+            statusText = 'Correct Answer';
+          } else {
+            // Correct answer but user didn't answer this question
+            choiceClass = 'bg-gray-50 border-gray-300';
+            statusText = 'Correct Answer';
+          }
+        } else if (isSelected && !isCorrect) {
+          // User answered incorrectly
+          choiceClass = 'bg-red-100 border-red-500';
+          statusText = '✗ Your Answer';
+        } else {
+          // Other incorrect choices
+          choiceClass = 'bg-gray-50 border-gray-300';
+          statusText = '';
+        }
+      } else if (quizCompleted) {
+        choiceClass = isCorrect 
+          ? 'bg-green-100 border-green-500' 
+          : isSelected && !isCorrect 
+            ? 'bg-red-100 border-red-500' 
+            : 'bg-gray-50 border-gray-300';
+        statusText = isCorrect ? '✓ Correct' : isSelected && !isCorrect ? '✗ Incorrect' : '';
+      } else {
+        choiceClass = isSelected 
+          ? 'bg-blue-100 border-blue-500' 
+          : 'hover:bg-gray-50 border-gray-300';
+      }
+      
       return (
         <label 
           key={choiceIndex}
-          className={`choice-item block p-3 border rounded cursor-pointer transition-colors ${
-            quizCompleted 
-              ? isCorrect 
-                ? 'bg-green-100 border-green-500' 
-                : isSelected && !isCorrect 
-                  ? 'bg-red-100 border-red-500' 
-                  : 'bg-gray-50 border-gray-300'
-              : isSelected 
-                ? 'bg-blue-100 border-blue-500' 
-                : 'hover:bg-gray-50 border-gray-300'
-          }`}
+          className={`choice-item block p-3 border rounded cursor-pointer transition-colors text-left ${choiceClass}`}
         >
-          <input 
-            type="radio" 
-            name={`question-${question.id}`}
-            value={choiceValue}
-            checked={isSelected}
-            onChange={() => onAnswerSelect && onAnswerSelect(choiceValue)}
-            disabled={quizCompleted}
-            className="mr-2"
-          />
-          {question.isTextChoice ? (
-            <span>{choice}</span>
-          ) : (
-            <span dangerouslySetInnerHTML={{ __html: choice }} />
-          )}
-          {quizCompleted && isCorrect && (
-            <span className="ml-2 text-green-600">✓ Correct</span>
-          )}
-          {quizCompleted && isSelected && !isCorrect && (
-            <span className="ml-2 text-red-600">✗ Incorrect</span>
-          )}
+          <div className="flex items-start">
+            <input 
+              type="radio" 
+              name={`question-${question.id}`}
+              value={choiceValue}
+              checked={isSelected}
+              onChange={() => onAnswerSelect && onAnswerSelect(choiceValue)}
+              disabled={quizCompleted || showAnswerStates}
+              className="mr-2 mt-1"
+            />
+            <div className="flex-1">
+              <div>
+                {question.isTextChoice ? (
+                  <span>{choice}</span>
+                ) : (
+                  <span dangerouslySetInnerHTML={{ __html: choice }} />
+                )}
+              </div>
+              {statusText && (
+                <div className={`mt-1 text-sm ${isCorrect ? 'text-green-600' : 'text-red-600'}`}>
+                  {statusText}
+                </div>
+              )}
+            </div>
+          </div>
         </label>
       );
     });
