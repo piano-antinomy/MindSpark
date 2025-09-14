@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mindspark.model.Question;
 import com.mindspark.model.QuizProgress;
+import com.mindspark.model.QuizType;
 import com.mindspark.service.quiz.QuizService;
 import com.mindspark.util.CorsUtils;
 import org.slf4j.Logger;
@@ -168,19 +169,25 @@ public class QuizController extends HttpServlet {
             JsonNode requestBody = readRequestBody(request);
             
             String userId = getRequiredField(requestBody, "userId");
-            String quizType = getRequiredField(requestBody, "quizType");
+            String quizTypeStr = getRequiredField(requestBody, "quizType");
             String quizId = requestBody.has("quizId") ? requestBody.get("quizId").asText() : null;
             String quizName = getRequiredField(requestBody, "quizName");
             
+            QuizType quizType = QuizType.fromValue(quizTypeStr);
+            if (quizType == null) {
+                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Invalid quiz type: " + quizTypeStr);
+                return;
+            }
+            
             QuizProgress quizProgress;
             
-            if ("standard".equals(quizType)) {
+            if (quizType == QuizType.STANDARD_AMC) {
                 String quizQuestionSetId = getRequiredField(requestBody, "quizQuestionSetId");
                 quizProgress = quizService.createStandardQuiz(userId, quizQuestionSetId, quizId, quizName);
-            } else if ("personalized".equals(quizType)) {
+            } else if (quizType == QuizType.PERSONALIZED) {
                 quizProgress = quizService.createPersonalizedQuiz(userId, quizId, quizName);
             } else {
-                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Invalid quiz type");
+                sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "Unsupported quiz type: " + quizTypeStr);
                 return;
             }
             

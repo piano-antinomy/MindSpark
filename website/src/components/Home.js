@@ -11,7 +11,6 @@ function Home() {
           <Link to="/" className="text-2xl font-bold text-indigo-600">MindSpark</Link>
           <div className="hidden md:flex space-x-8 items-center">
             <Link to="/math-questions" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">AMC Problems</Link>
-            <Link to="/math" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">AMC Practice</Link>
             <Link to="/quiz" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Quizzes</Link>
             <Link to="/leaderboard" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Leaderboard</Link>
             <Link to="/dashboard" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Dashboard</Link>

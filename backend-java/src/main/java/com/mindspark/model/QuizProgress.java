@@ -18,15 +18,17 @@ public class QuizProgress {
     
     private String userId;
     private String quizId;
-    private String quizType;
+    private QuizType quizType;
     private String questionSetId;
     private LocalDateTime lastActivity;
     private String quizName;
     private Map<String, String> questionIdToAnswer;
     private int quizScore;
+    private boolean completed;
+    private int totalQuestions;
 
     // Primary constructor with all fields including userId
-    public QuizProgress(String userId, String quizId, String quizType, String questionSetId, String quizName, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer, int quizScore) {
+    public QuizProgress(String userId, String quizId, QuizType quizType, String questionSetId, String quizName, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer, int quizScore) {
         this.userId = userId;
         this.quizId = quizId;
         this.quizType = quizType;
@@ -35,6 +37,8 @@ public class QuizProgress {
         this.lastActivity = lastActivity;
         this.questionIdToAnswer = questionIdToAnswer != null ? questionIdToAnswer : Collections.emptyMap();
         this.quizScore = quizScore;
+        this.completed = false;
+        this.totalQuestions = 25; // Default for AMC quizzes
     }
 
     // Constructor for creating new quiz progress
@@ -45,12 +49,16 @@ public class QuizProgress {
         this.lastActivity = LocalDateTime.now();
         this.questionIdToAnswer = Collections.emptyMap();
         this.quizScore = 0;
+        this.completed = false;
+        this.totalQuestions = 25; // Default for AMC quizzes
     }
 
     // Default constructor for JSON deserialization
     public QuizProgress() {
         this.questionIdToAnswer = Collections.emptyMap();
         this.quizScore = 0;
+        this.completed = false;
+        this.totalQuestions = 25; // Default for AMC quizzes
     }
 
     // DynamoDB Key attributes
@@ -76,7 +84,7 @@ public class QuizProgress {
     @DynamoDbAttribute("quizType")
     @JsonProperty("quizType")
     public String getQuizType() {
-        return quizType;
+        return quizType != null ? quizType.getValue() : null;
     }
 
     @DynamoDbAttribute("questionSetId")
@@ -109,12 +117,51 @@ public class QuizProgress {
         return quizScore;
     }
 
+    @DynamoDbAttribute("completed")
+    @JsonProperty("completed")
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    @DynamoDbAttribute("totalQuestions")
+    @JsonProperty("totalQuestions")
+    public int getTotalQuestions() {
+        return totalQuestions;
+    }
+
+    public void setTotalQuestions(int totalQuestions) {
+        this.totalQuestions = totalQuestions;
+    }
+
+    @JsonProperty("scorePercentage")
+    public int getScorePercentage() {
+        if (questionIdToAnswer == null || questionIdToAnswer.isEmpty()) {
+            return 0;
+        }
+        
+        int actualTotalQuestions;
+        if (quizType == QuizType.STANDARD_AMC) {
+            // For standard AMC quizzes, use the stored totalQuestions (25)
+            actualTotalQuestions = totalQuestions;
+        } else {
+            // For personalized quizzes, use the number of questions in the map
+            actualTotalQuestions = questionIdToAnswer.size();
+        }
+        
+        int answeredQuestions = getQuestionsAnswered();
+        return (int) Math.round((double) answeredQuestions / actualTotalQuestions * 100.0);
+    }
+
     // Setter methods for JSON deserialization
     public void setQuizId(String quizId) {
         this.quizId = quizId;
     }
 
     public void setQuizType(String quizType) {
+        this.quizType = QuizType.fromValue(quizType);
+    }
+    
+    public void setQuizType(QuizType quizType) {
         this.quizType = quizType;
     }
 
@@ -138,6 +185,10 @@ public class QuizProgress {
         this.quizScore = quizScore;
     }
 
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
     /**
      * Get the count of questions that have been answered (non-null values)
      */
@@ -151,27 +202,10 @@ public class QuizProgress {
     }
 
     /**
-     * Check if the quiz is completed (all questions have answers)
+     * Check if the quiz is completed (user has submitted the quiz)
      */
-    public boolean isCompleted() {
-        if (questionIdToAnswer == null || questionIdToAnswer.isEmpty()) {
-            return false;
-        }
-        return questionIdToAnswer.values().stream()
-            .allMatch(answer -> answer != null && !answer.trim().isEmpty());
+    public boolean isQuizCompleted() {
+        return completed;
     }
 
-    /**
-     * Get the completion percentage (0-100)
-     * For now, this returns the percentage of questions answered.
-     * In the future, this could be enhanced to calculate actual score percentage.
-     */
-    public int getScorePercentage() {
-        if (questionIdToAnswer == null || questionIdToAnswer.isEmpty()) {
-            return 0;
-        }
-        int totalQuestions = questionIdToAnswer.size();
-        int answeredQuestions = getQuestionsAnswered();
-        return (int) Math.round((double) answeredQuestions / totalQuestions * 100.0);
-    }
 }

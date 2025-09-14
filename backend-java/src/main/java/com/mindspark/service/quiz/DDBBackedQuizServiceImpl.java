@@ -3,6 +3,7 @@ package com.mindspark.service.quiz;
 import com.mindspark.config.AppConfig;
 import com.mindspark.model.Question;
 import com.mindspark.model.QuizProgress;
+import com.mindspark.model.QuizType;
 import com.mindspark.service.QuestionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -73,18 +74,19 @@ public class DDBBackedQuizServiceImpl implements QuizService {
             Map<String, String> questionIdToAnswer = Collections.emptyMap();
             
             // Generate unique quiz ID and create QuizProgress
-            String quizType = "standardAMC";
-            
             QuizProgress quizProgress = new QuizProgress(
                 userId,
                 quizId, 
-                quizType,
+                QuizType.STANDARD_AMC,
                 quizQuestionSetId, // Store the original question set ID
                 quizName,
                 LocalDateTime.now(), 
                 questionIdToAnswer,
                 0 // Initial score
             );
+            
+            // Set the total number of questions to 25 for standard AMC quizzes
+            quizProgress.setTotalQuestions(25);
             
             // Save to DynamoDB
             userProgressTable.putItem(quizProgress);
@@ -166,6 +168,8 @@ public class DDBBackedQuizServiceImpl implements QuizService {
             existingQuiz.setQuestionIdToAnswer(quizProgress.getQuestionIdToAnswer());
             existingQuiz.setLastActivity(LocalDateTime.now());
             existingQuiz.setQuizScore(quizProgress.getQuizScore());
+            existingQuiz.setCompleted(quizProgress.isCompleted());
+            existingQuiz.setTotalQuestions(quizProgress.getTotalQuestions());
             
             userProgressTable.updateItem(existingQuiz);
             logger.debug("Updated quiz progress for user {} quiz {}", userId, quizId);

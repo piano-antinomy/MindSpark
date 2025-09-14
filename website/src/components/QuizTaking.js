@@ -387,6 +387,40 @@ function QuizTaking() {
     try {
       const currentUser = checkAuthStatus();
       if (!currentUser) { setQuizCompleted(true); return; }
+      
+      // Update the quiz progress to mark it as completed
+      if (currentQuiz) {
+        const updatedQuiz = {
+          ...currentQuiz,
+          questionIdToAnswer: selectedAnswers,
+          lastActivity: new Date().toISOString(),
+          completed: true
+        };
+        
+        // Only set totalQuestions for personalized quizzes
+        if (currentQuiz.quizType === 'personalized') {
+          updatedQuiz.totalQuestions = parsedQuestions.length;
+        }
+        
+        const updateResponse = await fetch(`${JAVA_API_BASE_URL}/quiz/update`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({
+            userId: currentUser.userId,
+            quizId: currentQuiz.quizId,
+            quizProgress: updatedQuiz
+          })
+        });
+        
+        if (updateResponse.ok) {
+          console.log('Quiz marked as completed successfully');
+        } else {
+          console.error('Failed to update quiz completion status');
+        }
+      }
+      
+      // Update user's total score
       const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}`, { credentials: 'include' });
       if (response.ok) {
         const quizzes = await response.json();
@@ -401,7 +435,7 @@ function QuizTaking() {
         );
       }
     } catch (e) {
-      console.error('Error updating total score:', e);
+      console.error('Error updating quiz completion:', e);
     }
     setQuizCompleted(true);
   };
