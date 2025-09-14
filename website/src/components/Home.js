@@ -1,7 +1,165 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
+
+  // Helper: map Cognito claims to our User payload
+  function mapClaimsToUser(payload) {
+    const sub = payload.sub;
+    const email = payload.email || '';
+    const preferredUsername = payload.preferred_username || '';
+    const givenName = payload.given_name || '';
+    const familyName = payload.family_name || '';
+    const name = payload.name || `${givenName}${givenName && familyName ? ' ' : ''}${familyName}`;
+
+    const usernameFromEmail = email && email.includes('@') ? email.split('@')[0] : '';
+    const username = (preferredUsername || usernameFromEmail || `user_${(sub || '').slice(0,8)}`).toLowerCase();
+    const userId = `CognitoUser-${sub}`;
+
+    return {
+      username,
+      password: '',
+      userId,
+      score: 0,
+      mathLevel: 1,
+      email,
+      fullName: name || username
+    };
+  }
+
+  // Helper: persist user to backend and localStorage
+  async function persistAndRedirect(userPayload) {
+    try {
+      const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
+      const resp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify(userPayload)
+      });
+      if (resp.ok) {
+        const data = await resp.json();
+        const storedUser = data && data.user ? data.user : userPayload;
+        localStorage.setItem('currentUser', JSON.stringify(storedUser));
+      } else {
+        console.warn('Persist profile failed:', resp.status);
+        localStorage.setItem('currentUser', JSON.stringify(userPayload));
+      }
+    } catch (err) {
+      console.error('Persist profile error:', err);
+      localStorage.setItem('currentUser', JSON.stringify(userPayload));
+    }
+
+    // Cleanup URL and redirect
+    const newUrl = window.location.origin + window.location.pathname;
+    window.history.replaceState(null, '', newUrl);
+    navigate('/dashboard');
+  }
+
+  React.useEffect(() => {
+    async function handleAuthCallback() {
+      try {
+        // Local mode bypass
+        if (process.env.REACT_APP_LOCAL_MODE === 'true') {
+          const demoUser = {
+            username: 'demo',
+            password: '',
+            userId: 'demo',
+            score: 0,
+            mathLevel: 1,
+            email: 'demo@example.com',
+            fullName: 'Demo User'
+          };
+          await persistAndRedirect(demoUser);
+          return;
+        }
+
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        const state = params.get('state');
+        const storedState = sessionStorage.getItem('oauth_state');
+
+        // Fallback: check hash for implicit tokens (id_token/access_token)
+        const hash = window.location.hash || '';
+        if (!code && hash.startsWith('#')) {
+          const hashParams = new URLSearchParams(hash.substring(1));
+          const idTokenFromHash = hashParams.get('id_token');
+          if (idTokenFromHash) {
+            try {
+              const parts = idTokenFromHash.split('.');
+              const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+              const userPayload = mapClaimsToUser(payload);
+              await persistAndRedirect(userPayload);
+              return;
+            } catch (e) {
+              console.error('Failed to parse id_token from hash:', e);
+            }
+          }
+        }
+
+        // No code: if already logged in, go to dashboard; otherwise do nothing
+        if (!code) {
+          const existing = localStorage.getItem('currentUser');
+          if (existing) {
+            navigate('/dashboard');
+          }
+          return;
+        }
+
+        if (storedState && state && storedState !== state) {
+          console.warn('OAuth state mismatch. Ignoring callback.');
+          return;
+        }
+
+        const codeVerifier = sessionStorage.getItem('pkce_code_verifier');
+        if (!codeVerifier) {
+          console.error('Missing PKCE code_verifier in sessionStorage.');
+          return;
+        }
+
+        // Config
+        const COGNITO_DOMAIN = process.env.REACT_APP_COGNITO_DOMAIN || 'https://us-east-1kfqvyjnce.auth.us-east-1.amazoncognito.com';
+        const COGNITO_CLIENT_ID = process.env.REACT_APP_COGNITO_CLIENT_ID || '2f1oo2lsuhc1lfivgpivkdk914';
+        const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI || 'http://localhost:3000';
+
+        const tokenUrl = `${COGNITO_DOMAIN}/oauth2/token`;
+        const body = new URLSearchParams({
+          grant_type: 'authorization_code',
+          client_id: COGNITO_CLIENT_ID,
+          code,
+          redirect_uri: REDIRECT_URI,
+          code_verifier: codeVerifier
+        });
+
+        const tokenResp = await fetch(tokenUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body
+        });
+        if (!tokenResp.ok) {
+          const errText = await tokenResp.text().catch(() => '');
+          console.error('Token exchange failed', tokenResp.status, errText);
+          return;
+        }
+        const tokenData = await tokenResp.json();
+        const idToken = tokenData.id_token;
+        if (!idToken) {
+          console.error('No id_token in token response');
+          return;
+        }
+
+        // Parse JWT payload
+        const parts = idToken.split('.');
+        const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+        const userPayload = mapClaimsToUser(payload);
+        await persistAndRedirect(userPayload);
+      } catch (e) {
+        console.error('Auth callback error:', e);
+      }
+    }
+    handleAuthCallback();
+  }, [navigate]);
 
   return (
     <div className="bg-gray-50">

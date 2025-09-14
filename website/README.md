@@ -12,7 +12,7 @@ npm install
 ### 2. Development Mode
 To run the React app in development mode:
 ```bash
-npm run react-start
+npm run build && npm run react-start
 ```
 This will start the React development server on port 3000.
 
