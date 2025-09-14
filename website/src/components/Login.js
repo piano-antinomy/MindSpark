@@ -12,6 +12,7 @@ function Login() {
   const COGNITO_DOMAIN = process.env.REACT_APP_COGNITO_DOMAIN || 'https://us-east-1kfqvyjnce.auth.us-east-1.amazoncognito.com';
   const COGNITO_CLIENT_ID = process.env.REACT_APP_COGNITO_CLIENT_ID || '2f1oo2lsuhc1lfivgpivkdk914';
   const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI || 'http://localhost:3000';
+  console.log('REACT_APP_LOCAL_MODE === true ?', process.env.REACT_APP_LOCAL_MODE === 'true', 'value:', process.env.REACT_APP_LOCAL_MODE);
 
   function base64UrlEncode(buffer) {
     let binary = '';

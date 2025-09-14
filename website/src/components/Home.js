@@ -60,6 +60,21 @@ function Home() {
   React.useEffect(() => {
     async function handleAuthCallback() {
       try {
+        // Local mode bypass
+        if (process.env.REACT_APP_LOCAL_MODE === 'true') {
+          const demoUser = {
+            username: 'demo',
+            password: '',
+            userId: 'demo',
+            score: 0,
+            mathLevel: 1,
+            email: 'demo@example.com',
+            fullName: 'Demo User'
+          };
+          await persistAndRedirect(demoUser);
+          return;
+        }
+
         const params = new URLSearchParams(window.location.search);
         const code = params.get('code');
         const state = params.get('state');
