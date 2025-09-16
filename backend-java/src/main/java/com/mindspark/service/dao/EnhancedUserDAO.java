@@ -68,7 +68,12 @@ public class EnhancedUserDAO {
         if (user == null || user.getUserId() == null) {
             throw new IllegalArgumentException("User and userId cannot be null");
         }
-        
+
+        if (getUser(user.getUserId()) != null) {
+            logger.info("user id found, skip creation: " + user.getUserId());
+            return;
+        }
+
         try {
             // Set default values
             if (user.getSortKey() == null) {

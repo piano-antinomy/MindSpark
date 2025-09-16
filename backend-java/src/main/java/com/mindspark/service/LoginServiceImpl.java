@@ -37,10 +37,16 @@ public class LoginServiceImpl implements LoginService {
         User demoUser = new User("demo", "demo123", 150, 2, "demo@mindspark.com", "Demo User");
         demoUser.setUserId("demo");
         
-        User student1User = new User("student1", "password123", 200, 1, "student1@mindspark.com", "Student One");
+        User student1User = new User("Charles_Liu", "password123", 200, 1, "student1@mindspark.com", "Student One");
         student1User.setUserId("student1");
+
+        User student2User = new User("MathWolf", "password123", 200, 1, "student2@mindspark.com", "Student Two");
+        student2User.setUserId("student2");
+
+        User student3User = new User("BecauseIamHappy", "password123", 200, 1, "student3@mindspark.com", "Student 3");
+        student3User.setUserId("student3");
         
-        User teacherUser = new User("teacher", "teacher123", 500, 3, "teacher@mindspark.com", "Teacher User");
+        User teacherUser = new User("Wenyue_Zhang", "teacher123", 500, 3, "teacher@mindspark.com", "Teacher User");
         teacherUser.setUserId("teacher");
         
         User adminUser = new User("admin", "admin123", 1000, 3, "admin@mindspark.com", "Admin User");
@@ -49,6 +55,8 @@ public class LoginServiceImpl implements LoginService {
         // Store in both in-memory cache and DynamoDB
         users.put("demo", demoUser);
         users.put("student1", student1User);
+        users.put("student2", student2User);
+        users.put("student3", student3User);
         users.put("teacher", teacherUser);
         users.put("admin", adminUser);
         
@@ -56,6 +64,8 @@ public class LoginServiceImpl implements LoginService {
         try {
             userDAO.createUser(demoUser);
             userDAO.createUser(student1User);
+            userDAO.createUser(student2User);
+            userDAO.createUser(student3User);
             userDAO.createUser(teacherUser);
             userDAO.createUser(adminUser);
             logger.info("Initialized {} test users in DynamoDB", users.size());
