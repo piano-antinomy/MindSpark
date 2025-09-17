@@ -28,6 +28,9 @@ public class QuizProgress {
     private int quizScore;
     private boolean completed;
     private int totalQuestions;
+    private boolean hasTimer;
+    private int timeLimit; // in minutes
+    private int timeSpent; // in minutes (rounded down)
 
     // Primary constructor with all fields including userId
     public QuizProgress(String userId, String quizId, QuizType quizType, String questionSetId, String quizName, LocalDateTime startTime, LocalDateTime lastActivity, Map<String, String> questionIdToAnswer, int quizScore) {
@@ -42,6 +45,9 @@ public class QuizProgress {
         this.quizScore = quizScore;
         this.completed = false;
         this.totalQuestions = 25; // Default for AMC quizzes
+        this.hasTimer = true; // Default to timed quiz
+        this.timeLimit = 45; // Default 45 minutes for AMC 8
+        this.timeSpent = 0;
     }
 
     // Constructor for creating new quiz progress
@@ -55,6 +61,9 @@ public class QuizProgress {
         this.quizScore = 0;
         this.completed = false;
         this.totalQuestions = 25; // Default for AMC quizzes
+        this.hasTimer = true; // Default to timed quiz
+        this.timeLimit = 45; // Default 45 minutes for AMC 8
+        this.timeSpent = 0;
     }
 
     // Default constructor for JSON deserialization
@@ -63,6 +72,9 @@ public class QuizProgress {
         this.quizScore = 0;
         this.completed = false;
         this.totalQuestions = 25; // Default for AMC quizzes
+        this.hasTimer = false; // Default to untimed quiz for existing quizzes
+        this.timeLimit = 0; // Default to no time limit
+        this.timeSpent = 0;
     }
 
     // DynamoDB Key attributes
@@ -201,6 +213,36 @@ public class QuizProgress {
 
     public void setCompleted(boolean completed) {
         this.completed = completed;
+    }
+
+    @DynamoDbAttribute("hasTimer")
+    @JsonProperty("hasTimer")
+    public boolean isHasTimer() {
+        return hasTimer;
+    }
+
+    public void setHasTimer(boolean hasTimer) {
+        this.hasTimer = hasTimer;
+    }
+
+    @DynamoDbAttribute("timeLimit")
+    @JsonProperty("timeLimit")
+    public int getTimeLimit() {
+        return timeLimit;
+    }
+
+    public void setTimeLimit(int timeLimit) {
+        this.timeLimit = timeLimit;
+    }
+
+    @DynamoDbAttribute("timeSpent")
+    @JsonProperty("timeSpent")
+    public int getTimeSpent() {
+        return timeSpent;
+    }
+
+    public void setTimeSpent(int timeSpent) {
+        this.timeSpent = timeSpent;
     }
 
     /**

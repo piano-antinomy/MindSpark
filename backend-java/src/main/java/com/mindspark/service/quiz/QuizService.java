@@ -12,6 +12,7 @@ public interface QuizService {
      * @return
      */
     QuizProgress createStandardQuiz(String userId, String quizQuestionSetId, String quizId, String quizName);
+    QuizProgress createStandardQuiz(String userId, String quizQuestionSetId, String quizId, String quizName, boolean hasTimer, int timeLimit);
 
     QuizProgress createPersonalizedQuiz(String userId, String quizId, String quizName);
 

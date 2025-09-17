@@ -183,7 +183,9 @@ public class QuizController extends HttpServlet {
             
             if (quizType == QuizType.STANDARD_AMC) {
                 String quizQuestionSetId = getRequiredField(requestBody, "quizQuestionSetId");
-                quizProgress = quizService.createStandardQuiz(userId, quizQuestionSetId, quizId, quizName);
+                boolean hasTimer = requestBody.has("hasTimer") ? requestBody.get("hasTimer").asBoolean() : true;
+                int timeLimit = requestBody.has("timeLimit") ? requestBody.get("timeLimit").asInt() : 45;
+                quizProgress = quizService.createStandardQuiz(userId, quizQuestionSetId, quizId, quizName, hasTimer, timeLimit);
             } else if (quizType == QuizType.PERSONALIZED) {
                 quizProgress = quizService.createPersonalizedQuiz(userId, quizId, quizName);
             } else {

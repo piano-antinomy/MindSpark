@@ -228,6 +228,7 @@ public class ProgressController extends HttpServlet {
             String userId = jsonNode.get("userId").asText();
             String quizId = jsonNode.get("quizId").asText();
             JsonNode questionIdToAnswerNode = jsonNode.get("questionIdToAnswer");
+            int timeSpent = jsonNode.has("timeSpent") ? jsonNode.get("timeSpent").asInt() : 0;
             
             if (userId == null || userId.trim().isEmpty()) {
                 sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "User ID is required");
@@ -254,7 +255,7 @@ public class ProgressController extends HttpServlet {
                        userId, quizId, questionIdToAnswer.keySet());
             
             // Track the progress using batch method
-            progressTrackService.trackProgress(userId, quizId, questionIdToAnswer);
+            progressTrackService.trackProgress(userId, quizId, questionIdToAnswer, timeSpent);
             
             // Return updated quiz progress
             QuizProgress updatedQuizProgress = progressTrackService.getProgress(userId, quizId);

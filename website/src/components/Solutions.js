@@ -312,54 +312,13 @@ function Solutions() {
   }
 
   return (
-    <div className="math-layout">
-      {/* Left Menu Navigation */}
-      <nav className="math-left-menu">
-        <div className="menu-header">
-          <h1>📚 Solutions</h1>
-          <nav className="breadcrumb">
-            <Link to="/dashboard">Dashboard</Link> {'>'} 
-            <Link to="/subjects">Subjects</Link> {'>'} 
-            <Link to="/math">Mathematics</Link> {'>'} 
-            <Link to="/quiz">Quiz</Link> {'>'} 
-            Solutions
-          </nav>
-        </div>
-        
-        {/* Quiz Info */}
-        <div className="aside-info">
-          {currentQuiz && (
-            <div>
-              <h3>{currentQuiz.quizName}</h3>
-              <p>{(() => {
-                // Parse questionSetId to get proper display format
-                const questionSetId = currentQuiz.questionSetId;
-                if (!questionSetId) return 'AMC';
-                const match = questionSetId.match(/^(\d{4})_AMC_(\d+)([AB]?)$/);
-                if (match) {
-                  const year = match[1];
-                  const amcLevel = match[2];
-                  const variant = match[3] || '';
-                  return `${year} AMC ${amcLevel}${variant}`;
-                }
-                return questionSetId;
-              })()}</p>
-              <p>{parsedQuestions.length} questions</p>
-            </div>
-          )}
-        </div>
-        
-        {/* Navigation controls */}
-        <div className="aside-navigation">
-          <button className="btn btn-secondary" onClick={() => navigate('/quiz')}>
-            ← Back to Quizzes
-          </button>
-        </div>
-      </nav>
-
-              {/* Main content area - matching QuizTaking layout */}
-        <main className="math-main-content">
-          <div className="bg-white rounded-xl p-4 lg:p-6 flex flex-col" style={{ height: 'calc(100vh - 32px)' }}>
+    <div className="h-screen bg-gray-50 flex flex-col overflow-hidden">
+      {/* Main content area */}
+      <main className="flex-1 flex flex-col">
+        {/* Laptop layout - centered with max width */}
+        <div className={`${(window.innerWidth >= 1024 && !navigator.userAgent.includes('iPad')) ? 'block' : 'hidden'} lg:p-4 h-full`}>
+          <div className="max-w-6xl mx-auto h-full">
+            <div className="bg-white rounded-xl p-4 lg:p-6 flex flex-col h-full">
             {/* Header section - fixed (different from QuizTaking) */}
             <div className="mb-3 lg:mb-4 flex-shrink-0">
               <div className="flex items-center justify-between">
@@ -411,6 +370,54 @@ function Solutions() {
             
             {/* Right side - Empty for now, can be used for future features */}
             <div></div>
+          </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* iPad/Mobile layout - full screen with minimal margins */}
+        <div className={`${(window.innerWidth < 1024 || navigator.userAgent.includes('iPad')) ? 'block' : 'hidden'} p-3`} style={{ height: 'calc(100vh - 60px)' }}>
+          <div className="bg-white rounded-xl flex flex-col h-full">
+            {/* Mobile layout content - same as laptop but with different container */}
+            <div className="p-3 pb-3 flex-shrink-0 border-b border-gray-200">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <button className="btn btn-secondary text-sm" onClick={() => navigate('/dashboard')}>
+                    🏠 Home
+                  </button>
+                  <h2 className="text-lg font-bold text-gray-900">
+                    Question {currentQuestionIndex + 1} of {parsedQuestions.length}
+                  </h2>
+                </div>
+                <div className="flex items-center gap-2">
+                  <button className="btn btn-secondary text-sm" onClick={() => navigate('/quiz')}>
+                    ← Back to Quizzes
+                  </button>
+                  <button 
+                    className="btn btn-primary text-sm"
+                    onClick={() => setViewMode(viewMode === 'quiz' ? 'solution' : 'quiz')}
+                  >
+                    {viewMode === 'quiz' ? 'VIEW SOLUTION' : 'VIEW QUESTION'}
+                  </button>
+                </div>
+              </div>
+            </div>
+            
+            {/* Mobile question content */}
+            <div className="flex-1 overflow-y-auto p-3">
+              {parsedQuestions[currentQuestionIndex] && (
+                <Question
+                  question={parsedQuestions[currentQuestionIndex]}
+                  selectedAnswer={selectedAnswers[parsedQuestions[currentQuestionIndex].id]}
+                  onAnswerSelect={(answer) => setSelectedAnswers(prev => ({
+                    ...prev,
+                    [parsedQuestions[currentQuestionIndex].id]: answer
+                  }))}
+                  showSolution={viewMode === 'solution'}
+                  solution={parsedQuestions[currentQuestionIndex].solution}
+                />
+              )}
+            </div>
           </div>
         </div>
       </main>

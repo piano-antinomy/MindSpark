@@ -105,6 +105,74 @@ public class DDBBackedQuizServiceImpl implements QuizService {
             throw new RuntimeException("Failed to create standard quiz", e);
         }
     }
+    
+    @Override
+    public QuizProgress createStandardQuiz(String userId, String quizQuestionSetId, String quizId, String quizName, boolean hasTimer, int timeLimit) {
+        if (userId == null || userId.trim().isEmpty()) {
+            throw new IllegalArgumentException("userId cannot be null or empty");
+        }
+        if (quizQuestionSetId == null || quizQuestionSetId.trim().isEmpty()) {
+            throw new IllegalArgumentException("quizQuestionSetId cannot be null or empty");
+        }
+        if (quizName == null || quizName.trim().isEmpty()) {
+            throw new IllegalArgumentException("quizName cannot be null or empty");
+        }
+        
+        try {
+            // Check if quiz already exists
+            QuizProgress existingQuiz = userProgressTable.getItem(
+                    r -> r.key(k -> k.partitionValue(userId).sortValue(quizId)));
+            
+            if (existingQuiz != null) {
+                logger.warn("Quiz {} already exists for user {}", quizId, userId);
+                return existingQuiz;
+            }
+            
+            // Load questions using the refactored method
+            List<Question> questions = getQuestionsByQuestionSetId(quizQuestionSetId);
+            if (questions.isEmpty()) {
+                throw new RuntimeException("No questions found for " + quizQuestionSetId);
+            }
+            
+            // Initialize questionIdToAnswer to an empty map
+            Map<String, String> questionIdToAnswer = Collections.emptyMap();
+            
+            // Generate unique quiz ID and create QuizProgress
+            LocalDateTime now = LocalDateTime.now(ZoneOffset.UTC);
+            QuizProgress quizProgress = new QuizProgress(
+                userId,
+                quizId, 
+                QuizType.STANDARD_AMC,
+                quizQuestionSetId, // Store the original question set ID
+                quizName,
+                now, // startTime
+                now, // lastActivity
+                questionIdToAnswer,
+                0 // Initial score
+            );
+            
+            // Set the total number of questions to 25 for standard AMC quizzes
+            quizProgress.setTotalQuestions(25);
+            
+            // Set timer settings
+            quizProgress.setHasTimer(hasTimer);
+            quizProgress.setTimeLimit(timeLimit);
+            quizProgress.setTimeSpent(0);
+            
+            // Save to DynamoDB
+            userProgressTable.putItem(quizProgress);
+            
+            logger.info("Created standard quiz {} ({}) for user {} with {} questions from {} (hasTimer: {}, timeLimit: {})", 
+                quizId, quizName, userId, questions.size(), quizQuestionSetId, hasTimer, timeLimit);
+            
+            return quizProgress;
+            
+        } catch (Exception e) {
+            logger.error("Failed to create standard quiz for user {} with set {}: {}", 
+                userId, quizQuestionSetId, e.getMessage(), e);
+            throw new RuntimeException("Failed to create standard quiz", e);
+        }
+    }
 
     @Override
     public QuizProgress createPersonalizedQuiz(String userId, String quizId, String quizName) {

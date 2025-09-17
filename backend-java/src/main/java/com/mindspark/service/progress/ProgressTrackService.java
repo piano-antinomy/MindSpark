@@ -7,7 +7,7 @@ import java.util.Map;
 
 public interface ProgressTrackService {
 
-    void trackProgress(String userId, String quizId, Map<String, String> questionIdToAnswer);
+    void trackProgress(String userId, String quizId, Map<String, String> questionIdToAnswer, int timeSpent);
 
     /**
      * Get the progress of a user

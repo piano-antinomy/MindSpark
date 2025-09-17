@@ -16,6 +16,8 @@ function QuizTaking() {
   const [parsedQuestions, setParsedQuestions] = useState([]);
   const [saving, setSaving] = useState(false);
   const [lastSavedAnswers, setLastSavedAnswers] = useState({});
+  const [hasTimer, setHasTimer] = useState(true);
+  const [isResumingQuiz, setIsResumingQuiz] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const autoSaveTimeout = useRef(null);
@@ -30,7 +32,7 @@ function QuizTaking() {
       return;
     }
 
-    // Get quiz ID from URL parameters (like the original)
+    // Get quiz ID from URL parameters
     const urlParams = new URLSearchParams(location.search);
     const quizId = urlParams.get('quizId');
     
@@ -57,6 +59,21 @@ function QuizTaking() {
       setParsedQuestions(parsed);
     }
   }, [questions]);
+
+  // Auto-start quiz if resuming
+  useEffect(() => {
+    console.log('Auto-start effect triggered:', {
+      isResumingQuiz,
+      parsedQuestionsLength: parsedQuestions.length,
+      quizStarted,
+      quizCompleted
+    });
+    
+    if (isResumingQuiz && parsedQuestions.length > 0 && !quizStarted && !quizCompleted) {
+      console.log('Auto-starting resumed quiz');
+      startQuiz();
+    }
+  }, [isResumingQuiz, parsedQuestions.length, quizStarted, quizCompleted]);
 
   useEffect(() => {
     // Re-render MathJax when questions change
@@ -101,7 +118,7 @@ function QuizTaking() {
   }, []);
 
   useEffect(() => {
-    if (quizStarted && !quizCompleted) {
+    if (quizStarted && !quizCompleted && hasTimer) {
       const timer = setInterval(() => {
         setTimeRemaining(prev => {
           if (prev <= 1) {
@@ -114,7 +131,7 @@ function QuizTaking() {
 
       return () => clearInterval(timer);
     }
-  }, [quizStarted, quizCompleted]);
+  }, [quizStarted, quizCompleted, hasTimer]);
 
   const checkAuthStatus = () => {
     const currentUser = localStorage.getItem('currentUser');
@@ -154,6 +171,22 @@ function QuizTaking() {
         const quiz = await response.json();
         console.log('Loaded quiz progress:', quiz);
         setCurrentQuiz(quiz);
+        
+        // Set timer settings from loaded quiz
+        setHasTimer(quiz.hasTimer !== false); // Default to true if not set
+        
+        // Check if this is a resumed quiz (has existing answers or time spent)
+        const hasExistingProgress = (quiz.questionIdToAnswer && Object.keys(quiz.questionIdToAnswer).length > 0) || 
+                                   (quiz.timeSpent && quiz.timeSpent > 0) || 
+                                   quiz.completed;
+        console.log('Quiz resume check:', {
+          questionIdToAnswer: quiz.questionIdToAnswer,
+          questionIdToAnswerKeys: quiz.questionIdToAnswer ? Object.keys(quiz.questionIdToAnswer).length : 0,
+          timeSpent: quiz.timeSpent,
+          completed: quiz.completed,
+          hasExistingProgress
+        });
+        setIsResumingQuiz(hasExistingProgress);
         
         // Load quiz questions and pass quiz data to load previous answers
         await loadQuizQuestions(quizId, quiz);
@@ -298,10 +331,12 @@ function QuizTaking() {
   };
 
   const getTimeLimit = (quiz) => {
-    if (!quiz || !quiz.questionSetId) return 1800; // Default to 30 minutes
+    if (!quiz) return 45 * 60; // Default to 45 minutes in seconds
+    
+    if (!quiz.questionSetId) return 45 * 60; // Default to 45 minutes
     
     const { amcLevel } = parseQuestionSetId(quiz.questionSetId);
-    if (!amcLevel) return 1800; // Default to 30 minutes if parsing fails
+    if (!amcLevel) return 45 * 60; // Default to 45 minutes if parsing fails
     
     // AMC 8: 45 minutes, AMC 10/12: 75 minutes
     if (amcLevel === 8) {
@@ -310,14 +345,25 @@ function QuizTaking() {
       return 75 * 60; // 75 minutes in seconds
     }
     
-    return 1800; // Default to 30 minutes if level not recognized
+    return 45 * 60; // Default to 45 minutes if level not recognized
+  };
+
+  const getStandardTimeLimit = (amcLevel) => {
+    const timeLimits = {
+      8: 45,   // AMC 8: 45 minutes
+      10: 75,  // AMC 10: 75 minutes
+      12: 75   // AMC 12: 75 minutes
+    };
+    return timeLimits[amcLevel] || 45;
   };
 
   const getTimeLimitText = (quiz) => {
-    if (!quiz || !quiz.questionSetId) return "30 minutes";
+    if (!quiz) return "45 minutes";
+    
+    if (!quiz.questionSetId) return "45 minutes";
     
     const { amcLevel } = parseQuestionSetId(quiz.questionSetId);
-    if (!amcLevel) return "30 minutes";
+    if (!amcLevel) return "45 minutes";
     
     if (amcLevel === 8) {
       return "45 minutes";
@@ -325,13 +371,52 @@ function QuizTaking() {
       return "75 minutes";
     }
     
-    return "30 minutes";
+    return "45 minutes";
   };
 
-  const startQuiz = () => {
+  const startQuiz = async () => {
     setQuizStarted(true);
-    const timeLimit = getTimeLimit(currentQuiz);
-    setTimeRemaining(timeLimit);
+    
+    // Update quiz with timer settings (for new quizzes only)
+    if (currentQuiz && !isResumingQuiz) {
+      const standardTimeLimit = getTimeLimit(currentQuiz) / 60; // Convert to minutes
+      const updatedQuiz = {
+        ...currentQuiz,
+        hasTimer: hasTimer,
+        timeLimit: hasTimer ? standardTimeLimit : 0
+      };
+      setCurrentQuiz(updatedQuiz);
+      
+      // Save timer settings to backend
+      try {
+        const currentUser = checkAuthStatus();
+        const urlParams = new URLSearchParams(location.search);
+        const quizId = urlParams.get('quizId') || currentQuiz.quizId;
+        
+        await fetch(`${JAVA_API_BASE_URL}/quiz/update`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'include',
+          body: JSON.stringify({
+            userId: currentUser.userId,
+            quizId: quizId,
+            quizProgress: updatedQuiz
+          })
+        });
+      } catch (error) {
+        console.error('Error updating quiz timer settings:', error);
+      }
+    }
+    
+    // Set up timer based on quiz settings (for both new and resumed quizzes)
+    if (currentQuiz?.hasTimer) {
+      const timeLimitInSeconds = getTimeLimit(currentQuiz);
+      const timeSpentInSeconds = (currentQuiz?.timeSpent || 0) * 60; // Convert minutes to seconds
+      const remainingTime = Math.max(0, timeLimitInSeconds - timeSpentInSeconds);
+      setTimeRemaining(remainingTime);
+    } else {
+      setTimeRemaining(0); // No timer mode
+    }
   };
 
   const selectAnswer = (questionId, answer) => {
@@ -411,6 +496,14 @@ function QuizTaking() {
         questionIdToAnswer: questionIdToAnswer
       });
 
+      // Calculate time spent if this is a timed quiz
+      let timeSpent = 0;
+      if (hasTimer && currentQuiz) {
+        const timeLimitInSeconds = getTimeLimit(currentQuiz);
+        const timeSpentInSeconds = timeLimitInSeconds - timeRemaining;
+        timeSpent = Math.floor(timeSpentInSeconds / 60); // Round down to minutes
+      }
+
       const response = await fetch(`${JAVA_API_BASE_URL}/progress/track`, {
         method: 'POST',
         headers: {
@@ -420,7 +513,8 @@ function QuizTaking() {
         body: JSON.stringify({
           userId: currentUser.userId,
           quizId: quizId,
-          questionIdToAnswer: questionIdToAnswer
+          questionIdToAnswer: questionIdToAnswer,
+          timeSpent: timeSpent
         })
       });
 
@@ -630,49 +724,114 @@ function QuizTaking() {
     </div>
   );
 
-  const renderStartScreen = () => (
-    <div className="bg-white rounded-xl shadow-soft p-6 lg:p-8 text-center">
-      <div className="mb-6 lg:mb-8">
-        <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">{currentQuiz?.quizName || 'Quiz'}</h1>
-        <div className="space-y-2 text-gray-600 text-sm lg:text-base">
-          <p><strong>Level:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).level || 'AMC' : 'AMC'}</p>
-          <p><strong>Year:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).year || '2024' : '2024'}</p>
-          <p><strong>Questions:</strong> {parsedQuestions.length}</p>
-          <p><strong>Time Limit:</strong> {getTimeLimitText(currentQuiz)}</p>
+  const renderStartScreen = () => {
+    // If resuming a quiz, show a different screen
+    if (isResumingQuiz) {
+      return (
+        <div className="bg-white rounded-xl shadow-soft p-6 lg:p-8 text-center">
+          <div className="mb-6 lg:mb-8">
+            <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Resuming Quiz</h1>
+            <div className="space-y-2 text-gray-600 text-sm lg:text-base">
+              <p><strong>Quiz:</strong> {currentQuiz?.quizName || 'Quiz'}</p>
+              <p><strong>Level:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).level || 'AMC' : 'AMC'}</p>
+              <p><strong>Year:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).year || '2024' : '2024'}</p>
+              <p><strong>Questions:</strong> {parsedQuestions.length}</p>
+              <p><strong>Time Limit:</strong> {hasTimer ? getTimeLimitText(currentQuiz) : 'No time limit'}</p>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 rounded-lg p-4 lg:p-6 mb-6 lg:mb-8 text-left">
+            <h3 className="text-base lg:text-lg font-semibold text-gray-900 mb-3 lg:mb-4">Resuming Your Quiz</h3>
+            <div className="space-y-2 text-gray-600 text-sm lg:text-base">
+              <p>• Your previous progress has been loaded</p>
+              <p>• You can continue from where you left off</p>
+              {hasTimer && (
+                <p>• Your remaining time will be calculated based on time already spent</p>
+              )}
+              <p>• Click "Continue Quiz" to resume</p>
+            </div>
+          </div>
+          
+          <button className="btn btn-primary btn-large" onClick={startQuiz}>
+            Continue Quiz
+          </button>
         </div>
+      );
+    }
+
+    // New quiz start screen
+    return (
+      <div className="bg-white rounded-xl shadow-soft p-6 lg:p-8 text-center">
+        <div className="mb-6 lg:mb-8">
+          <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">{currentQuiz?.quizName || 'Quiz'}</h1>
+          <div className="space-y-2 text-gray-600 text-sm lg:text-base">
+            <p><strong>Level:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).level || 'AMC' : 'AMC'}</p>
+            <p><strong>Year:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).year || '2024' : '2024'}</p>
+            <p><strong>Questions:</strong> {parsedQuestions.length}</p>
+            <p><strong>Time Limit:</strong> {hasTimer ? getTimeLimitText(currentQuiz) : 'No time limit'}</p>
+          </div>
+        </div>
+        
+        {/* Timer Options */}
+        <div className="bg-gray-50 rounded-lg p-4 lg:p-6 mb-6 lg:mb-8 text-left">
+          <h3 className="text-base lg:text-lg font-semibold text-gray-900 mb-3 lg:mb-4">Quiz Type:</h3>
+          <div className="space-y-3">
+            <div className="flex items-center space-x-3">
+              <input
+                type="checkbox"
+                id="hasTimer"
+                checked={hasTimer}
+                onChange={(e) => setHasTimer(e.target.checked)}
+                className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+              />
+              <label htmlFor="hasTimer" className="text-sm lg:text-base text-gray-700">
+                Timed quiz ({getTimeLimitText(currentQuiz)})
+              </label>
+            </div>
+            <div className="ml-7 text-sm text-gray-600">
+              {hasTimer ? (
+                <p>Quiz will have a {getTimeLimitText(currentQuiz)} time limit</p>
+              ) : (
+                <p>Quiz will have no time limit - take as much time as you need</p>
+              )}
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-gray-50 rounded-lg p-4 lg:p-6 mb-6 lg:mb-8 text-left">
+          <h3 className="text-base lg:text-lg font-semibold text-gray-900 mb-3 lg:mb-4">Instructions:</h3>
+          <ul className="space-y-2 text-gray-600 text-sm lg:text-base">
+            {hasTimer && (
+              <li className="flex items-start gap-2">
+                <span className="text-primary-600 mt-1">•</span>
+                You have {getTimeLimitText(currentQuiz)} to complete this quiz
+              </li>
+            )}
+            <li className="flex items-start gap-2">
+              <span className="text-primary-600 mt-1">•</span>
+              Each question has 5 multiple choice answers
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-600 mt-1">•</span>
+              You can navigate between questions using the buttons
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-600 mt-1">•</span>
+              Your answers are saved automatically
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary-600 mt-1">•</span>
+              You can review and change answers before submitting
+            </li>
+          </ul>
+        </div>
+        
+        <button className="btn btn-primary btn-large" onClick={startQuiz}>
+          Start Quiz
+        </button>
       </div>
-      
-      <div className="bg-gray-50 rounded-lg p-4 lg:p-6 mb-6 lg:mb-8 text-left">
-        <h3 className="text-base lg:text-lg font-semibold text-gray-900 mb-3 lg:mb-4">Instructions:</h3>
-        <ul className="space-y-2 text-gray-600 text-sm lg:text-base">
-          <li className="flex items-start gap-2">
-            <span className="text-primary-600 mt-1">•</span>
-            You have {getTimeLimitText(currentQuiz)} to complete this quiz
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-primary-600 mt-1">•</span>
-            Each question has 5 multiple choice answers
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-primary-600 mt-1">•</span>
-            You can navigate between questions using the buttons
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-primary-600 mt-1">•</span>
-            Your answers are saved automatically
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="text-primary-600 mt-1">•</span>
-            You can review and change answers before submitting
-          </li>
-        </ul>
-      </div>
-      
-      <button className="btn btn-primary btn-large" onClick={startQuiz}>
-        Start Quiz
-      </button>
-    </div>
-  );
+    );
+  };
 
   const renderQuestion = (question) => {
     return (
@@ -692,9 +851,11 @@ function QuizTaking() {
               <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/quiz')}>
                 ← Back to Quizzes
               </button>
-              <div className="text-base lg:text-lg font-semibold text-warning-600">
-                Time: {formatTime(timeRemaining)}
-              </div>
+              {hasTimer && (
+                <div className="text-base lg:text-lg font-semibold text-warning-600">
+                  Time: {formatTime(timeRemaining)}
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -852,9 +1013,11 @@ function QuizTaking() {
                     <button className="btn btn-secondary text-sm" onClick={() => navigate('/quiz')}>
                       ← Back to Quizzes
                     </button>
-                    <div className="text-base font-semibold text-warning-600">
-                      Time: {formatTime(timeRemaining)}
-                    </div>
+                    {hasTimer && (
+                      <div className="text-base font-semibold text-warning-600">
+                        Time: {formatTime(timeRemaining)}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

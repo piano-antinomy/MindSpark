@@ -102,17 +102,9 @@ function Question({ question, quizCompleted = false, selectedAnswer = null, onAn
           <label 
             key={choiceIndex}
             className={`choice-item block p-3 border rounded cursor-pointer transition-colors text-left ${choiceClass}`}
+            onClick={() => onAnswerSelect && onAnswerSelect(choiceValue)}
           >
             <div className="flex items-start">
-              <input 
-                type="radio" 
-                name={`question-${question.id}`}
-                value={choiceValue}
-                checked={isSelected}
-                onChange={() => onAnswerSelect && onAnswerSelect(choiceValue)}
-                disabled={quizCompleted || showAnswerStates}
-                className="mr-2 mt-1"
-              />
               <div className="flex-1">
                 <div>
                   <span className="font-medium">{choiceValue}:</span> {choice}
@@ -180,17 +172,9 @@ function Question({ question, quizCompleted = false, selectedAnswer = null, onAn
           <label 
             key={index}
             className={`choice-item block p-3 border rounded cursor-pointer transition-colors text-left ${choiceClass}`}
+            onClick={() => onAnswerSelect && onAnswerSelect(letter)}
           >
             <div className="flex items-start">
-              <input 
-                type="radio" 
-                name={`question-${question.id}`}
-                value={letter}
-                checked={isSelected}
-                onChange={() => onAnswerSelect && onAnswerSelect(letter)}
-                disabled={quizCompleted || showAnswerStates}
-                className="mr-2 mt-1"
-              />
               <div className="flex-1">
                 <div>
                   <span className="font-medium">{letter}</span>
@@ -258,17 +242,9 @@ function Question({ question, quizCompleted = false, selectedAnswer = null, onAn
         <label 
           key={choiceIndex}
           className={`choice-item block p-3 border rounded cursor-pointer transition-colors text-left ${choiceClass}`}
+          onClick={() => onAnswerSelect && onAnswerSelect(choiceValue)}
         >
           <div className="flex items-start">
-            <input 
-              type="radio" 
-              name={`question-${question.id}`}
-              value={choiceValue}
-              checked={isSelected}
-              onChange={() => onAnswerSelect && onAnswerSelect(choiceValue)}
-              disabled={quizCompleted || showAnswerStates}
-              className="mr-2 mt-1"
-            />
             <div className="flex-1">
               <div>
                 {question.isTextChoice ? (

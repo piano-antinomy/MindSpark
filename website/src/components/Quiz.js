@@ -14,6 +14,7 @@ function Quiz() {
   const [levelsData, setLevelsData] = useState(null);
   const [error, setError] = useState(null);
   const [activeCategory, setActiveCategory] = useState('in_progress');
+  const [hasTimer, setHasTimer] = useState(true);
   const navigate = useNavigate();
 
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
@@ -60,6 +61,7 @@ function Quiz() {
       setSelectedLevel(null);
       setSelectedYear(null);
       setError(null);
+      setHasTimer(true);
       loadAvailableLevels();
     } else if (tabName === 'yourQuizzes') {
       // Refresh quiz list when switching to "Your Quizzes" tab
@@ -147,6 +149,27 @@ function Quiz() {
     return amcType.replace(/_/g, " ");
   };
 
+  const getStandardTimeLimit = (amcLevel) => {
+    const timeLimits = {
+      8: 45,   // AMC 8: 45 minutes
+      10: 75,  // AMC 10: 75 minutes
+      12: 75   // AMC 12: 75 minutes
+    };
+    return timeLimits[amcLevel] || 45;
+  };
+
+  const calculateRemainingTime = (quiz) => {
+    if (!quiz.hasTimer || quiz.completed === true) {
+      return null; // No timer or quiz completed
+    }
+    
+    const timeLimit = getStandardTimeLimit(parseInt(quiz.amcLevel));
+    const timeSpent = quiz.timeSpent || 0;
+    const remaining = timeLimit - timeSpent;
+    
+    return Math.max(0, remaining); // Don't show negative time
+  };
+
   const selectYear = async (year) => {
     try {
       const currentUser = checkAuthStatus();
@@ -185,7 +208,9 @@ function Quiz() {
         quizType: "standardAMC",
         quizId: quizId,
         quizName: quizName,
-        quizQuestionSetId: quizQuestionSetId
+        quizQuestionSetId: quizQuestionSetId,
+        hasTimer: false, // Default to untimed, user can change to timed
+        timeLimit: 0 // Default to no time limit
       };
       
       const response = await fetch(`${JAVA_API_BASE_URL}/quiz/create`, {
@@ -269,7 +294,9 @@ function Quiz() {
             correctAnswers: correctAnswers,
             status: quiz.completed ? 'completed' : 'in_progress',
             score: quiz.scorePercentage || 0,
-            startTime: quiz.startTime
+            startTime: quiz.startTime,
+            hasTimer: quiz.hasTimer === true && quiz.timeLimit > 0, // Only true if explicitly set to true AND has time limit
+            timeSpent: quiz.timeSpent || 0
           };
         });
         
@@ -383,9 +410,23 @@ function Quiz() {
           {/* Progress info */}
           <div className="text-sm text-gray-600 mb-3 flex justify-between items-center">
             <div><strong>Answered:</strong> {quiz.answeredQuestions}</div>
-            {quiz.status === 'completed' && (
-              <div><strong>Score:</strong> {quiz.correctAnswers}</div>
-            )}
+            <div className="flex items-center gap-4">
+              {(() => {
+                const remainingTime = calculateRemainingTime(quiz);
+                if (remainingTime !== null) {
+                  const isLowTime = remainingTime <= 10; // Less than 10 minutes remaining
+                  return (
+                    <div className={`font-medium ${isLowTime ? 'text-red-600' : 'text-orange-600'}`}>
+                      <strong>Remaining:</strong> {remainingTime} min
+                    </div>
+                  );
+                }
+                return null;
+              })()}
+              {quiz.status === 'completed' && (
+                <div><strong>Score:</strong> {quiz.correctAnswers}</div>
+              )}
+            </div>
           </div>
           
           {/* Quiz time and button in one line */}
@@ -640,6 +681,32 @@ function Quiz() {
           </div>
           
           <div className="max-w-4xl mx-auto">
+            {/* Timer Settings */}
+            <div className="bg-gray-50 rounded-lg p-6 mb-8">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Quiz Type</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    id="hasTimer"
+                    checked={hasTimer}
+                    onChange={(e) => setHasTimer(e.target.checked)}
+                    className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+                  />
+                  <label htmlFor="hasTimer" className="text-sm font-medium text-gray-700">
+                    Timed quiz ({getStandardTimeLimit(selectedLevel)} minutes)
+                  </label>
+                </div>
+                <div className="ml-7 text-sm text-gray-600">
+                  {hasTimer ? (
+                    <p>Quiz will have a {getStandardTimeLimit(selectedLevel)}-minute time limit</p>
+                  ) : (
+                    <p>Quiz will have no time limit - take as much time as you need</p>
+                  )}
+                </div>
+              </div>
+            </div>
+            
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {sortedYears.map((year, index) => (
                 <button
