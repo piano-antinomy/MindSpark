@@ -5,17 +5,7 @@
   <artifactId>MindSpark-backend-java</artifactId>
   <version>1.0.0</version>
   <build>
-    <resources>
-      <resource>
-        <directory>${project.basedir}/resources</directory>
-        <includes>
-          <include>**/*</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>src/main/resources</directory>
-      </resource>
-    </resources>
+    <finalName>MindSpark-backend-java-${project.version}</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -32,6 +22,28 @@
         <configuration>
           <mainClass>com.mindspark.MindSparkApplication</mainClass>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>cdk</id>
+            <goals>
+              <goal>java</goal>
+            </goals>
+            <configuration>
+              <mainClass>com.mindspark.aws.cdk.MindSparkCdkApp</mainClass>
+              <systemProperties>
+                <systemProperty>
+                  <key>mindspark.local.mode</key>
+                  <value>false</value>
+                </systemProperty>
+              </systemProperties>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>

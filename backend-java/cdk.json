@@ -1,3 +1,3 @@
 {
-  "app": "mvn -q -DskipTests compile exec:java -Dmindspark.local.mode=false -Dexec.mainClass=com.mindspark.aws.cdk.MindSparkCdkApp"
+  "app": "mvn -q -DskipTests exec:java@cdk"
 }
