@@ -4,9 +4,12 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 import com.google.inject.Singleton;
 import com.mindspark.local.ddb.LocalHostDynamoDB;
+import org.apache.http.impl.client.SystemDefaultCredentialsProvider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
+import software.amazon.awssdk.auth.credentials.AwsCredentials;
+import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
 import software.amazon.awssdk.http.urlconnection.UrlConnectionHttpClient;
@@ -43,8 +46,7 @@ public class DDBDAOModule extends AbstractModule {
                     .build();
         } else {
             logger.info("Using production DynamoDB client");
-            return DynamoDbClient.builder()
-                    .httpClient(UrlConnectionHttpClient.builder().build())
+            return DynamoDbClient.builder().region(Region.US_EAST_1)
                     .build();
         }
     }

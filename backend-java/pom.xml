@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mindspark</groupId>
-    <artifactId>backend-java</artifactId>
+    <artifactId>MindSpark-backend-java</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
@@ -17,6 +17,8 @@
         <jetty.version>9.4.51.v20230217</jetty.version>
         <guice.version>5.1.0</guice.version>
         <jackson.version>2.15.2</jackson.version>
+        <!-- AWS CDK v2 version -->
+        <cdk.version>2.150.0</cdk.version>
     </properties>
 
     <dependencies>
@@ -125,6 +127,18 @@
             <groupId>software.amazon.awssdk</groupId>
             <artifactId>url-connection-client</artifactId>
             <version>2.21.0</version>
+        </dependency>
+
+        <!-- AWS CDK (v2) for infrastructure code -->
+        <dependency>
+            <groupId>software.amazon.awscdk</groupId>
+            <artifactId>aws-cdk-lib</artifactId>
+            <version>${cdk.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>software.constructs</groupId>
+            <artifactId>constructs</artifactId>
+            <version>10.3.0</version>
         </dependency>
     </dependencies>
 

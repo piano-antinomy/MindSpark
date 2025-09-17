@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Parse arguments
-LOCAL_MODE=false
+LOCAL_MODE=true
 while [[ $# -gt 0 ]]; do
     case $1 in
         --local)
