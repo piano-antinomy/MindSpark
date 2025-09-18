@@ -4,12 +4,28 @@ package com.mindspark.aws.cdk;
 import software.amazon.awscdk.Duration;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
-import software.amazon.awscdk.services.apigateway.*;
+import software.amazon.awscdk.services.apigateway.AccessLogFormat;
+import software.amazon.awscdk.services.apigateway.AuthorizationType;
+import software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer;
+import software.amazon.awscdk.services.apigateway.Cors;
+import software.amazon.awscdk.services.apigateway.CorsOptions;
+import software.amazon.awscdk.services.apigateway.LambdaIntegration;
+import software.amazon.awscdk.services.apigateway.LogGroupLogDestination;
+import software.amazon.awscdk.services.apigateway.MethodLoggingLevel;
+import software.amazon.awscdk.services.apigateway.MethodOptions;
+import software.amazon.awscdk.services.apigateway.ProxyResourceOptions;
+import software.amazon.awscdk.services.apigateway.RestApi;
+import software.amazon.awscdk.services.apigateway.StageOptions;
 import software.amazon.awscdk.services.cognito.UserPool;
-import software.amazon.awscdk.services.lambda.*;
+import software.amazon.awscdk.services.lambda.Alias;
+import software.amazon.awscdk.services.lambda.Code;
+import software.amazon.awscdk.services.lambda.Function;
+import software.amazon.awscdk.services.lambda.Version;
 import software.amazon.awscdk.services.logs.LogGroup;
 import software.amazon.awscdk.services.logs.RetentionDays;
 import software.constructs.Construct;
+
+import java.util.Arrays;
 
 public class MindSparkStack extends Stack {
 
@@ -62,6 +78,12 @@ public class MindSparkStack extends Stack {
             .defaultMethodOptions(MethodOptions.builder()
                 .authorizationType(AuthorizationType.COGNITO)
                 .authorizer(authorizer)
+                .build())
+            .defaultCorsPreflightOptions(CorsOptions.builder()
+                .allowOrigins(Cors.ALL_ORIGINS)
+                .allowMethods(Cors.ALL_METHODS)
+                .allowHeaders(Arrays.asList("Content-Type", "Authorization", "X-Amz-Date", "X-Api-Key", "X-Amz-Security-Token"))
+                .allowCredentials(true)
                 .build())
             .build();
 

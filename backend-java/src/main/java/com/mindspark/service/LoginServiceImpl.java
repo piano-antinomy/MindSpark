@@ -3,6 +3,7 @@ package com.mindspark.service;
 import com.google.inject.Inject;
 import com.mindspark.model.User;
 import com.mindspark.service.dao.EnhancedUserDAO;
+import com.mindspark.util.TestUserUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,47 +34,21 @@ public class LoginServiceImpl implements LoginService {
      * These will be stored in both in-memory cache and DynamoDB
      */
     private void initializeTestUsers() {
-        // Add demo users that match the original Python backend
-        User demoUser = new User("demo", "demo123", 150, 2, "demo@mindspark.com", "Demo User");
-        demoUser.setUserId("demo");
-        
-        User student1User = new User("Charles_Liu", "password123", 200, 1, "student1@mindspark.com", "Student One");
-        student1User.setUserId("student1");
-
-        User student2User = new User("MathWolf", "password123", 200, 1, "student2@mindspark.com", "Student Two");
-        student2User.setUserId("student2");
-
-        User student3User = new User("BecauseIamHappy", "password123", 200, 1, "student3@mindspark.com", "Student 3");
-        student3User.setUserId("student3");
-        
-        User teacherUser = new User("Wenyue_Zhang", "teacher123", 500, 3, "teacher@mindspark.com", "Teacher User");
-        teacherUser.setUserId("teacher");
-        
-        User adminUser = new User("admin", "admin123", 1000, 3, "admin@mindspark.com", "Admin User");
-        adminUser.setUserId("admin");
+        List<User> testUsers = TestUserUtils.generateTestUsers();
         
         // Store in both in-memory cache and DynamoDB
-        users.put("demo", demoUser);
-        users.put("student1", student1User);
-        users.put("student2", student2User);
-        users.put("student3", student3User);
-        users.put("teacher", teacherUser);
-        users.put("admin", adminUser);
-        
-        // Store in DynamoDB
-        try {
-            userDAO.createUser(demoUser);
-            userDAO.createUser(student1User);
-            userDAO.createUser(student2User);
-            userDAO.createUser(student3User);
-            userDAO.createUser(teacherUser);
-            userDAO.createUser(adminUser);
-            logger.info("Initialized {} test users in DynamoDB", users.size());
-        } catch (Exception e) {
-            logger.warn("Failed to initialize test users in DynamoDB: {}", e.getMessage());
+        for (User user : testUsers) {
+            users.put(user.getUserId(), user);
+            
+            try {
+                userDAO.createUser(user);
+            } catch (Exception e) {
+                logger.warn("Failed to create user {} in DynamoDB: {}", user.getUserId(), e.getMessage());
+            }
         }
         
-        logger.info("Initialized {} test users", users.size());
+        logger.info("Initialized {} test users in DynamoDB", testUsers.size());
+        logger.info("Initialized {} test users in cache", users.size());
     }
     
     @Override
