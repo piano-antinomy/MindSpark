@@ -746,7 +746,7 @@ function Quiz() {
             </div>
             
             <div className="text-center">
-              <h1 className="text-2xl font-bold text-gray-900">🎯 Quiz</h1>
+              <h1 className="text-2xl font-bold text-gray-900">Quizzes</h1>
             </div>
             
             <div className="flex items-center space-x-3">

@@ -267,7 +267,6 @@ Please select a level above to begin practicing!`);
             className="personalized-training-button bg-gradient-to-br from-indigo-600 to-indigo-800 text-white transition-all duration-300 shadow-lg hover:shadow-xl" 
             onClick={() => navigate('/quiz')}
           >
-            <span className="button-icon">🎯</span>
             <span className="button-title">Take a Quiz</span>
             <span className="button-subtitle">Start practicing with timed quizzes</span>
           </button>
