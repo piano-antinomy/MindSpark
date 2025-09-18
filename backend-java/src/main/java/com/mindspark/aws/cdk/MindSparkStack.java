@@ -41,7 +41,8 @@ public class MindSparkStack extends Stack {
         Alias alias = Alias.Builder.create(this, "MindSparkLambdaLive")
             .aliasName("live")
             .version(version)
-            .provisionedConcurrentExecutions(2)
+            //.provisionedConcurrentExecutions(2)
+            //.snapStart(software.amazon.awscdk.services.lambda.SnapStartConf.ON_PUBLISHED_VERSIONS)
             .build();
 
         LogGroup apiLogs = LogGroup.Builder.create(this, "MindSparkApiLogs")
@@ -66,9 +67,8 @@ public class MindSparkStack extends Stack {
 
         LambdaIntegration integration = new LambdaIntegration(alias);
 
-        // Proxy resource under /api to cover all existing controller paths
-        Resource apiResource = api.getRoot().addResource("api");
-        apiResource.addProxy(ProxyResourceOptions.builder()
+        // Root proxy to cover all existing controller paths
+        api.getRoot().addProxy(ProxyResourceOptions.builder()
             .defaultIntegration(integration)
             .anyMethod(true)
             .defaultMethodOptions(MethodOptions.builder()

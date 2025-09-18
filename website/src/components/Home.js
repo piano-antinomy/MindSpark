@@ -32,9 +32,17 @@ function Home() {
   async function persistAndRedirect(userPayload) {
     try {
       const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
+      const isProdApi = process.env.REACT_APP_LOCAL_MODE === 'false';
+      const headers = { 'Content-Type': 'application/json' };
+      if (isProdApi) {
+        const idToken = localStorage.getItem('idToken');
+        if (idToken) {
+          headers['Authorization'] = `Bearer ${idToken}`;
+        }
+      }
       const resp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
         credentials: 'include',
         body: JSON.stringify(userPayload)
       });
@@ -89,6 +97,7 @@ function Home() {
             try {
               const parts = idTokenFromHash.split('.');
               const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+              localStorage.setItem('idToken', idTokenFromHash);
               const userPayload = mapClaimsToUser(payload);
               await persistAndRedirect(userPayload);
               return;
@@ -148,6 +157,7 @@ function Home() {
         // Parse JWT payload
         const parts = idToken.split('.');
         const payload = JSON.parse(atob(parts[1].replace(/-/g, '+').replace(/_/g, '/')));
+        localStorage.setItem('idToken', idToken);
         const userPayload = mapClaimsToUser(payload);
         await persistAndRedirect(userPayload);
       } catch (e) {
