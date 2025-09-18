@@ -3,6 +3,29 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Home() {
   const navigate = useNavigate();
+  
+  // Check if user is logged in
+  const [user, setUser] = React.useState(null);
+  
+  React.useEffect(() => {
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+      try {
+        setUser(JSON.parse(currentUser));
+      } catch (e) {
+        console.error('Failed to parse currentUser from localStorage:', e);
+      }
+    }
+  }, []);
+
+  // Logout function
+  const logout = () => {
+    localStorage.removeItem('currentUser');
+    localStorage.removeItem('idToken');
+    setUser(null);
+    // Redirect to home page
+    navigate('/');
+  };
 
   // Helper: map Cognito claims to our User payload
   function mapClaimsToUser(payload) {
@@ -50,13 +73,16 @@ function Home() {
         const data = await resp.json();
         const storedUser = data && data.user ? data.user : userPayload;
         localStorage.setItem('currentUser', JSON.stringify(storedUser));
+        setUser(storedUser);
       } else {
         console.warn('Persist profile failed:', resp.status);
         localStorage.setItem('currentUser', JSON.stringify(userPayload));
+        setUser(userPayload);
       }
     } catch (err) {
       console.error('Persist profile error:', err);
       localStorage.setItem('currentUser', JSON.stringify(userPayload));
+      setUser(userPayload);
     }
 
     // Cleanup URL and redirect
@@ -180,7 +206,14 @@ function Home() {
             <Link to="/dashboard" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Dashboard</Link>
           </div>
           <div className="hidden md:flex items-center">
-            <Link to="/login" className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">Log In</Link>
+            {user ? (
+              <div className="flex items-center space-x-4">
+                <span className="text-gray-700 font-semibold">Welcome, {user.username}!</span>
+                <button onClick={logout} className="bg-gray-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-700 transition duration-300">Logout</button>
+              </div>
+            ) : (
+              <Link to="/login" className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">Log In</Link>
+            )}
           </div>
         </nav>
       </header>
