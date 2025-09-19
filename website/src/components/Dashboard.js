@@ -6,7 +6,7 @@ function Dashboard() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
+  const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
 
   const levelLabelFromInt = (level) => {
     // Map level numbers to labels based on ranges

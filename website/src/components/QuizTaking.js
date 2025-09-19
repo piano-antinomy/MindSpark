@@ -22,7 +22,7 @@ function QuizTaking() {
   const location = useLocation();
   const autoSaveTimeout = useRef(null);
 
-  const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
+  const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
 
   useEffect(() => {
     // Check if user is logged in
