@@ -32,7 +32,7 @@ public class LeaderboardController extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+    public void doGet(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         CorsUtils.setCorsHeaders(request, response);
         
@@ -52,7 +52,7 @@ public class LeaderboardController extends HttpServlet {
     }
     
     @Override
-    protected void doOptions(HttpServletRequest request, HttpServletResponse response) 
+    public void doOptions(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
         // Handle preflight CORS request
         CorsUtils.setCorsHeaders(request, response);

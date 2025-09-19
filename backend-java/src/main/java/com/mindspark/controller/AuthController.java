@@ -124,7 +124,7 @@ public class AuthController extends HttpServlet {
             if (authenticatedUser != null) {
                 // Create session
                 HttpSession session = request.getSession(true);
-                session.setAttribute("userId", userId.toLowerCase());
+                session.setAttribute("userId", userId);
                 session.setAttribute("user", authenticatedUser);
                 
                 Map<String, Object> responseData = new HashMap<>();
@@ -252,13 +252,13 @@ public class AuthController extends HttpServlet {
         // Check authentication first
         HttpSession session = request.getSession(false);
         if (session == null) {
-            sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Not authenticated");
+            sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Not authenticated - no user session");
             return;
         }
         
         String userId = (String) session.getAttribute("userId");
         if (userId == null) {
-            sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Not authenticated");
+            sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Not authenticated - no user info");
             return;
         }
         

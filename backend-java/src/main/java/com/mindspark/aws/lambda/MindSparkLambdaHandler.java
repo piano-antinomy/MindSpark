@@ -14,6 +14,7 @@ import com.mindspark.controller.ProgressController;
 import com.mindspark.controller.QuestionController;
 import com.mindspark.controller.QuizController;
 import com.mindspark.controller.SubjectController;
+import com.mindspark.controller.LeaderboardController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,7 +47,7 @@ public class MindSparkLambdaHandler implements RequestHandler<APIGatewayProxyReq
     @Override
     public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent apiGatewayProxyRequestEvent, Context context) {
         try {
-            logger.info("Processing request: {} {}", apiGatewayProxyRequestEvent.getHttpMethod(), apiGatewayProxyRequestEvent.getPath());
+            logger.info("Processing request: {}", apiGatewayProxyRequestEvent);
 
             // Create mock HttpServletRequest
             HttpServletRequest request;
@@ -88,6 +89,12 @@ public class MindSparkLambdaHandler implements RequestHandler<APIGatewayProxyReq
                     quizController.doPost(request, response);
                 } else if ("GET".equals(method)) {
                     quizController.doGet(request, response);
+                }
+            } else if (path.startsWith("/leaderboard")) {
+                request = APIGatewayProxyRequestEventMapper.createHttpServletRequest(apiGatewayProxyRequestEvent, "/leaderboard");
+                LeaderboardController leaderboardController = injector.getInstance(LeaderboardController.class);
+                if ("GET".equals(method)) {
+                    leaderboardController.doGet(request, response);
                 }
             } else if (path.startsWith("/subjects")) {
                 request = APIGatewayProxyRequestEventMapper.createHttpServletRequest(apiGatewayProxyRequestEvent, "/subjects");

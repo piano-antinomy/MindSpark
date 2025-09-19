@@ -71,6 +71,7 @@ public class APIGatewayProxyRequestEventMapper {
         }
 
         final InMemoryHttpSession session = new InMemoryHttpSession();
+        session.setAttribute("userId", event.getRequestContext().getIdentity().getCognitoIdentityId());
 
         return new HttpServletRequest() {
             @Override
@@ -174,7 +175,7 @@ public class APIGatewayProxyRequestEventMapper {
 
             @Override
             public HttpSession getSession(boolean create) {
-                return create ? session : null;
+                return session;
             }
 
             @Override
