@@ -89,74 +89,10 @@ public class LeaderboardController extends HttpServlet {
         List<User> sortedUsers = new ArrayList<>(allUsers);
         sortedUsers.sort((a, b) -> Integer.compare(b.getScore(), a.getScore()));
 
-        // Find current user index
-        int currentUserIndex = -1;
+        // Calculate ranks for all users first
+        List<Map<String, Object>> usersWithRanks = new ArrayList<>();
         for (int i = 0; i < sortedUsers.size(); i++) {
-            if (userId.equals(sortedUsers.get(i).getUserId())) {
-                currentUserIndex = i;
-                break;
-            }
-        }
-        
-        logger.info("LeaderboardController: Looking for userId={}, found at index={}", userId, currentUserIndex);
-
-        List<User> focusedUsers;
-        int currentRank = currentUserIndex + 1; // Declare currentRank outside the if-else blocks
-        
-        if (currentUserIndex == -1) {
-            // User not found, return top 10
-            focusedUsers = sortedUsers.subList(0, Math.min(10, sortedUsers.size()));
-        } else if (currentRank <= 6) {
-            // Current user is in top 6, show top 10
-            focusedUsers = sortedUsers.subList(0, Math.min(10, sortedUsers.size()));
-        } else {
-            // Current user is rank 7 or lower
-            // Show: top 3 + 3 above current + current + 3 below = 10 total
-            int usersAboveCurrent = Math.min(3, currentRank - 1 - 3); // 3 users above current (excluding top 3)
-            int usersBelowCurrent = Math.min(3, sortedUsers.size() - currentRank);
-            
-            int startIndex, endIndex;
-            
-            if (usersAboveCurrent < 3) {
-                // Less than 3 users above current (after top 3), show more below
-                int remainingSlots = 10 - 3 - usersAboveCurrent - 1; // -1 for current user
-                startIndex = 0; // Always start from top 3
-                endIndex = Math.min(sortedUsers.size(), currentRank + remainingSlots);
-            } else if (usersBelowCurrent < 3) {
-                // Less than 3 users below current, show more above
-                int remainingSlots = 10 - 3 - usersBelowCurrent - 1; // -1 for current user
-                startIndex = 0; // Always start from top 3
-                endIndex = Math.min(sortedUsers.size(), currentRank + usersBelowCurrent);
-            } else {
-                // Normal case: top 3 + 3 above current + current + 3 below
-                startIndex = 0; // Always start from top 3
-                endIndex = Math.min(sortedUsers.size(), currentRank + 3);
-            }
-            
-            focusedUsers = sortedUsers.subList(startIndex, endIndex);
-        }
-
-        // Sanitize users and add rank information
-        List<Map<String, Object>> sanitizedUsers = new ArrayList<>();
-        int startIndex = 0; // Initialize startIndex for rank calculation
-        if (currentUserIndex != -1 && currentRank > 6) {
-            // Calculate startIndex for rank 7+ case
-            int usersAboveCurrent = Math.min(3, currentRank - 1 - 3);
-            int usersBelowCurrent = Math.min(3, sortedUsers.size() - currentRank);
-            
-            if (usersAboveCurrent < 3) {
-                int remainingSlots = 10 - 3 - usersAboveCurrent - 1;
-                startIndex = 0;
-            } else if (usersBelowCurrent < 3) {
-                int remainingSlots = 10 - 3 - usersBelowCurrent - 1;
-                startIndex = 0;
-            } else {
-                startIndex = 0;
-            }
-        }
-        
-        for (int i = 0; i < focusedUsers.size(); i++) {
-            User user = focusedUsers.get(i);
+            User user = sortedUsers.get(i);
             if (user != null) {
                 Map<String, Object> userData = new HashMap<>();
                 userData.put("userId", user.getUserId());
@@ -167,16 +103,78 @@ public class LeaderboardController extends HttpServlet {
                 userData.put("fullName", user.getFullName());
                 userData.put("createdAt", user.getCreatedAt());
                 userData.put("updatedAt", user.getUpdatedAt());
-                userData.put("rank", startIndex + i + 1); // Add rank information
-                sanitizedUsers.add(userData);
+                userData.put("rank", i + 1); // Global rank based on sorted position
+                usersWithRanks.add(userData);
             }
         }
 
-        logger.info("LeaderboardController: Returning {} focused users for userId={}", sanitizedUsers.size(), userId);
+        // Find current user index
+        int currentUserIndex = -1;
+        for (int i = 0; i < usersWithRanks.size(); i++) {
+            if (userId.equals(usersWithRanks.get(i).get("userId"))) {
+                currentUserIndex = i;
+                break;
+            }
+        }
+        
+        logger.info("LeaderboardController: Looking for userId={}, found at index={}", userId, currentUserIndex);
+
+        List<Map<String, Object>> focusedUsers = new ArrayList<>();
+        int currentRank = currentUserIndex + 1;
+        
+        if (currentUserIndex == -1) {
+            // User not found, return top 10
+            focusedUsers = usersWithRanks.subList(0, Math.min(10, usersWithRanks.size()));
+        } else if (currentRank <= 6) {
+            // Current user is in top 6, show top 10
+            focusedUsers = usersWithRanks.subList(0, Math.min(10, usersWithRanks.size()));
+        } else {
+            // Current user is rank 7 or lower
+            // Build focused list: top 3 + 3 above current + current + 3 below = 10 total
+            
+            // 1. Always add top 3 users first
+            for (int i = 0; i < Math.min(3, usersWithRanks.size()); i++) {
+                focusedUsers.add(usersWithRanks.get(i));
+            }
+            
+            // 2. Add 3 users immediately above current user (after top 3)
+            int usersAboveCurrent = Math.min(3, currentRank - 1 - 3); // 3 users above current (excluding top 3)
+            int startAbove = Math.max(3, currentRank - 1 - usersAboveCurrent); // Start from rank 4 or higher
+            for (int i = startAbove; i < currentRank - 1 && focusedUsers.size() < 10; i++) {
+                focusedUsers.add(usersWithRanks.get(i));
+            }
+            
+            // 3. Add current user
+            if (focusedUsers.size() < 10) {
+                focusedUsers.add(usersWithRanks.get(currentUserIndex));
+            }
+            
+            // 4. Add 3 users immediately below current user
+            int usersBelowCurrent = Math.min(3, usersWithRanks.size() - currentRank);
+            for (int i = currentRank; i < currentRank + usersBelowCurrent && focusedUsers.size() < 10; i++) {
+                focusedUsers.add(usersWithRanks.get(i));
+            }
+            
+            // 5. If we still have slots and there are more users below, fill them
+            while (focusedUsers.size() < 10 && currentRank + usersBelowCurrent < usersWithRanks.size()) {
+                focusedUsers.add(usersWithRanks.get(currentRank + usersBelowCurrent));
+                usersBelowCurrent++;
+            }
+            
+            // 6. If we still have slots and there are more users above (after top 3), fill them
+            while (focusedUsers.size() < 10 && startAbove > 3) {
+                startAbove--;
+                focusedUsers.add(usersWithRanks.get(startAbove));
+            }
+        }
+
+        logger.info("LeaderboardController: Returning {} focused users for userId={}", focusedUsers.size(), userId);
         
         Map<String, Object> responseData = new HashMap<>();
         responseData.put("success", true);
-        responseData.put("users", sanitizedUsers);
+        responseData.put("users", focusedUsers);
+        responseData.put("totalUsers", usersWithRanks.size());
+        responseData.put("currentUserRank", currentUserIndex != -1 ? currentRank : null);
         sendJsonResponse(response, responseData);
     }
     
