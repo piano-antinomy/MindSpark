@@ -10,6 +10,7 @@ import com.mindspark.controller.AuthController;
 import com.mindspark.controller.SubjectController;
 import com.mindspark.controller.ProgressController;
 import com.mindspark.controller.QuizController;
+import com.mindspark.controller.LeaderboardController;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.slf4j.Logger;
@@ -111,6 +112,7 @@ public class MindSparkApplication {
                         serve("/api/subjects").with(SubjectController.class);
                         serve("/api/progress/*").with(ProgressController.class);
                         serve("/api/quiz/*").with(QuizController.class);
+                        serve("/api/leaderboard/*").with(LeaderboardController.class);
                     }
                 }
             );

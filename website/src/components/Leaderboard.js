@@ -9,31 +9,45 @@ function Leaderboard() {
   const JAVA_API_BASE_URL = `http://${window.location.hostname}:4072/api`;
 
   useEffect(() => {
-    const fetchUsers = async () => {
+    const fetchLeaderboard = async () => {
       try {
-        const res = await fetch(`${JAVA_API_BASE_URL}/auth/profile/get-all-users`, {
-          credentials: 'include'
-        });
-        if (res.status === 401) {
-          navigate('/login');
-          return;
-        }
-        if (!res.ok) {
-          throw new Error('Failed to fetch users');
-        }
-        const data = await res.json();
-        const list = Array.isArray(data.users) ? data.users : [];
-        list.sort((a, b) => (b.score || 0) - (a.score || 0));
-        setUsers(list);
-        
-        // Get current user info
+        // First get current user info
         const currentUserRes = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
           credentials: 'include'
         });
-        if (currentUserRes.ok) {
-          const currentUserData = await currentUserRes.json();
-          setCurrentUser(currentUserData);
+        if (currentUserRes.status === 401) {
+          navigate('/login');
+          return;
         }
+        if (!currentUserRes.ok) {
+          throw new Error('Failed to fetch current user');
+        }
+        const currentUserData = await currentUserRes.json();
+        setCurrentUser(currentUserData);
+        
+        // Then get focused leaderboard data with current user ID
+        const userId = currentUserData.user?.userId;
+        if (!userId) {
+          throw new Error('No user ID found');
+        }
+        
+        console.log('Fetching leaderboard for userId:', userId);
+        console.log('API URL:', `${JAVA_API_BASE_URL}/leaderboard/get-focused-leaderboard?userId=${encodeURIComponent(userId)}`);
+        
+        const res = await fetch(`${JAVA_API_BASE_URL}/leaderboard/get-focused-leaderboard?userId=${encodeURIComponent(userId)}`, {
+          credentials: 'include'
+        });
+        
+        console.log('Leaderboard API response status:', res.status);
+        
+        if (!res.ok) {
+          const errorText = await res.text();
+          console.error('Leaderboard API error:', errorText);
+          throw new Error(`Failed to fetch focused leaderboard: ${res.status} ${errorText}`);
+        }
+        const data = await res.json();
+        const list = Array.isArray(data.users) ? data.users : [];
+        setUsers(list);
       } catch (e) {
         console.error('Error fetching leaderboard:', e);
       } finally {
@@ -41,7 +55,7 @@ function Leaderboard() {
       }
     };
 
-    fetchUsers();
+    fetchLeaderboard();
   }, [JAVA_API_BASE_URL, navigate]);
 
   const getMedalIcon = (rank) => {
@@ -52,8 +66,16 @@ function Leaderboard() {
   };
 
   const isCurrentUser = (user) => {
-    return currentUser && (user.userId === currentUser.userId || user.username === currentUser.username);
+    if (!currentUser || !currentUser.user) return false;
+    
+    // Access the nested user object
+    const actualCurrentUser = currentUser.user;
+    const userIdMatch = user.userId === actualCurrentUser.userId;
+    const usernameMatch = user.username === actualCurrentUser.username;
+    
+    return userIdMatch || usernameMatch;
   };
+
 
   if (loading) {
     return (
@@ -110,8 +132,10 @@ function Leaderboard() {
                   </tr>
                 )}
                 {users.map((u, idx) => {
-                  const rank = idx + 1;
-                  const medalIcon = getMedalIcon(rank);
+                  // The backend should provide the rank, but fallback to index + 1
+                  const actualRank = u.rank || (idx + 1);
+                  
+                  const medalIcon = getMedalIcon(actualRank);
                   const name = u.username || u.userId || 'Unknown';
                   const isCurrent = isCurrentUser(u);
                   
@@ -125,12 +149,12 @@ function Leaderboard() {
                           {medalIcon && (
                             <span className="text-lg">{medalIcon}</span>
                           )}
-                          <span className="text-gray-700 font-medium">{rank}</span>
+                          <span className="text-gray-700 font-medium">{actualRank}</span>
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center space-x-3">
-                          {rank === 1 && (
+                          {actualRank === 1 && (
                             <span className="text-lg">🥈</span>
                           )}
                           <div>

@@ -214,6 +214,15 @@ public class EnhancedUserDAO {
             results.items().stream().forEach(users::add);
             
             logger.info("Retrieved {} users from DynamoDB", users.size());
+            
+            // Debug: Log first few users to see what we're getting
+            if (users.size() > 0) {
+                logger.info("First user details: userId={}, sortKey={}, username={}", 
+                    users.get(0).getUserId(), users.get(0).getSortKey(), users.get(0).getUsername());
+            } else {
+                logger.warn("No users found in DynamoDB scan");
+            }
+            
             return users;
             
         } catch (Exception e) {

@@ -35,6 +35,10 @@ public class LoginServiceImpl implements LoginService {
      */
     private void initializeTestUsers() {
         List<User> testUsers = TestUserUtils.generateTestUsers();
+        int successCount = 0;
+        int failureCount = 0;
+        
+        logger.info("Starting to initialize {} test users", testUsers.size());
         
         // Store in both in-memory cache and DynamoDB
         for (User user : testUsers) {
@@ -42,13 +46,24 @@ public class LoginServiceImpl implements LoginService {
             
             try {
                 userDAO.createUser(user);
+                successCount++;
+                logger.debug("Successfully created user {} in DynamoDB", user.getUserId());
             } catch (Exception e) {
-                logger.warn("Failed to create user {} in DynamoDB: {}", user.getUserId(), e.getMessage());
+                failureCount++;
+                logger.error("Failed to create user {} in DynamoDB: {}", user.getUserId(), e.getMessage(), e);
             }
         }
         
-        logger.info("Initialized {} test users in DynamoDB", testUsers.size());
+        logger.info("Initialized {} test users in DynamoDB ({} success, {} failures)", testUsers.size(), successCount, failureCount);
         logger.info("Initialized {} test users in cache", users.size());
+        
+        // Test retrieval
+        try {
+            List<User> retrievedUsers = userDAO.getAllUsers();
+            logger.info("Test retrieval: Found {} users in DynamoDB", retrievedUsers.size());
+        } catch (Exception e) {
+            logger.error("Failed to retrieve users from DynamoDB: {}", e.getMessage(), e);
+        }
     }
     
     @Override
