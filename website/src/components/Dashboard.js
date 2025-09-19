@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { apiFetch } from '../utils/api';
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -66,9 +67,8 @@ function Dashboard() {
 
   const logout = async () => {
     try {
-      await fetch(`${JAVA_API_BASE_URL}/auth/logout`, {
-        method: 'POST',
-        credentials: 'include'
+      await apiFetch(`${JAVA_API_BASE_URL}/auth/logout`, {
+        method: 'POST'
       });
     } catch (error) {
       console.error('Logout error:', error);
@@ -80,9 +80,7 @@ function Dashboard() {
 
   const loadUserProfile = async () => {
     try {
-      const response = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/auth/profile`);
 
       if (response.ok) {
         const data = await response.json();

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import QuestionRenderer, { questionRenderer } from './QuestionRenderer';
+import { apiFetch } from '../utils/api';
 
 function MathQuestions() {
   const [loading, setLoading] = useState(true);
@@ -65,9 +66,7 @@ function MathQuestions() {
     try {
       const url = `${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${year}`;
       console.log('Fetching from URL:', url);
-      const response = await fetch(url, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(url);
       
       console.log('Response status:', response.status);
       console.log('Response ok:', response.ok);

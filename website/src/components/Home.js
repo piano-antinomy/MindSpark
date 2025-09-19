@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { buildApiHeaders } from '../utils/api';
 
 function Home() {
   const navigate = useNavigate();
@@ -56,13 +57,7 @@ function Home() {
     try {
       const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
       const isProdApi = process.env.REACT_APP_LOCAL_MODE === 'false';
-      const headers = { 'Content-Type': 'application/json' };
-      if (isProdApi) {
-        const idToken = localStorage.getItem('idToken');
-        if (idToken) {
-          headers['Authorization'] = `Bearer ${idToken}`;
-        }
-      }
+      const headers = buildApiHeaders({ 'Content-Type': 'application/json' });
       const resp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
         method: 'POST',
         headers,

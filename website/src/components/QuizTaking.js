@@ -2,6 +2,7 @@ import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { questionParser } from '../utils/QuestionParser';
 import Question from './Question';
+import { apiFetch, buildApiHeaders } from '../utils/api';
 
 function QuizTaking() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -163,9 +164,7 @@ function QuizTaking() {
       const currentUser = checkAuthStatus();
       
       // Get specific quiz data
-      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}`, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}`);
       
       if (response.ok) {
         const quiz = await response.json();
@@ -207,9 +206,7 @@ function QuizTaking() {
   const loadQuizQuestions = async (quizId, quizData = null) => {
     try {
       const currentUser = checkAuthStatus();
-      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}/questions`, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}/questions`);
       
       if (response.ok) {
         const questions = await response.json();
@@ -286,9 +283,7 @@ function QuizTaking() {
       const levelMap = { 8: 1, 10: 2, 12: 3 };
       const level = levelMap[amcLevel] || 1;
       
-      const response = await fetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${year}`, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${year}`);
       
       if (response.ok) {
         const data = await response.json();
@@ -393,10 +388,9 @@ function QuizTaking() {
         const urlParams = new URLSearchParams(location.search);
         const quizId = urlParams.get('quizId') || currentQuiz.quizId;
         
-        await fetch(`${JAVA_API_BASE_URL}/quiz/update`, {
+        await apiFetch(`${JAVA_API_BASE_URL}/quiz/update`, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          credentials: 'include',
+          headers: buildApiHeaders({ 'Content-Type': 'application/json' }),
           body: JSON.stringify({
             userId: currentUser.userId,
             quizId: quizId,
@@ -504,12 +498,11 @@ function QuizTaking() {
         timeSpent = Math.floor(timeSpentInSeconds / 60); // Round down to minutes
       }
 
-      const response = await fetch(`${JAVA_API_BASE_URL}/progress/track`, {
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/progress/track`, {
         method: 'POST',
-        headers: {
+        headers: buildApiHeaders({
           'Content-Type': 'application/json'
-        },
-        credentials: 'include',
+        }),
         body: JSON.stringify({
           userId: currentUser.userId,
           quizId: quizId,
@@ -557,10 +550,9 @@ function QuizTaking() {
           updatedQuiz.totalQuestions = parsedQuestions.length;
         }
         
-        const updateResponse = await fetch(`${JAVA_API_BASE_URL}/quiz/update`, {
+        const updateResponse = await apiFetch(`${JAVA_API_BASE_URL}/quiz/update`, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          credentials: 'include',
+          headers: buildApiHeaders({ 'Content-Type': 'application/json' }),
           body: JSON.stringify({
             userId: currentUser.userId,
             quizId: currentQuiz.quizId,
@@ -576,15 +568,14 @@ function QuizTaking() {
       }
       
       // Update user's total score
-      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}`, { credentials: 'include' });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}`);
       if (response.ok) {
         const quizzes = await response.json();
         const totalScore = Object.values(quizzes).reduce((sum, qp) => sum + (qp.quizScore || 0), 0);
         console.log('totalScore', totalScore);
-        await fetch(`${JAVA_API_BASE_URL}/auth/update-scores`, 
+        await apiFetch(`${JAVA_API_BASE_URL}/auth/update-scores`, 
           { method: 'POST', 
-            headers: { 'Content-Type': 'application/json' }, 
-            credentials: 'include', 
+            headers: buildApiHeaders({ 'Content-Type': 'application/json' }), 
             body: JSON.stringify({ score: totalScore, mathLevel: totalScore }) 
           }
         );

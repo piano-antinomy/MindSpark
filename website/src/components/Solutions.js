@@ -3,6 +3,7 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { questionParser } from '../utils/QuestionParser';
 import solutionParser from '../utils/SolutionParser';
 import Question from './Question';
+import { apiFetch } from '../utils/api';
 
 function Solutions() {
   const [questions, setQuestions] = useState([]);
@@ -124,9 +125,7 @@ function Solutions() {
       const currentUser = checkAuthStatus();
       
       // Get quiz data
-      const quizResponse = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}`, {
-        credentials: 'include'
-      });
+      const quizResponse = await apiFetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}`);
       
       if (quizResponse.ok) {
         const quiz = await quizResponse.json();
@@ -145,9 +144,7 @@ function Solutions() {
         }
         
         // Load quiz questions with solutions
-        const questionsResponse = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}/questions`, {
-          credentials: 'include'
-        });
+        const questionsResponse = await apiFetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}/quiz/${quizId}/questions`);
         
         if (questionsResponse.ok) {
           const questionsData = await questionsResponse.json();

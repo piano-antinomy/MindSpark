@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { apiFetch } from '../utils/api';
 
 function Leaderboard() {
   const [users, setUsers] = useState([]);
@@ -14,9 +15,7 @@ function Leaderboard() {
     const fetchLeaderboard = async () => {
       try {
         // First get current user info
-        const currentUserRes = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
-          credentials: 'include'
-        });
+        const currentUserRes = await apiFetch(`${JAVA_API_BASE_URL}/auth/profile`);
         if (currentUserRes.status === 401) {
           navigate('/login');
           return;
@@ -36,9 +35,7 @@ function Leaderboard() {
         console.log('Fetching leaderboard for userId:', userId);
         console.log('API URL:', `${JAVA_API_BASE_URL}/leaderboard/get-focused-leaderboard?userId=${encodeURIComponent(userId)}`);
         
-        const res = await fetch(`${JAVA_API_BASE_URL}/leaderboard/get-focused-leaderboard?userId=${encodeURIComponent(userId)}`, {
-          credentials: 'include'
-        });
+        const res = await apiFetch(`${JAVA_API_BASE_URL}/leaderboard/get-focused-leaderboard?userId=${encodeURIComponent(userId)}`);
         
         console.log('Leaderboard API response status:', res.status);
         

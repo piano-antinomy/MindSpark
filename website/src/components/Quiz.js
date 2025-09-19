@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { apiFetch, buildApiHeaders } from '../utils/api';
 
 function Quiz() {
   const [activeTab, setActiveTab] = useState('yourQuizzes');
@@ -73,9 +74,7 @@ function Quiz() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${JAVA_API_BASE_URL}/questions/math/`, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/`);
       
       if (response.ok) {
         const data = await response.json();
@@ -105,9 +104,7 @@ function Quiz() {
     setYearsLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/years`, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/years`);
       
       if (response.ok) {
         const data = await response.json();
@@ -213,12 +210,9 @@ function Quiz() {
         timeLimit: 0 // Default to no time limit
       };
       
-      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/create`, {
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/quiz/create`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        credentials: 'include',
+        headers: buildApiHeaders({ 'Content-Type': 'application/json' }),
         body: JSON.stringify(requestBody)
       });
       
@@ -243,9 +237,7 @@ function Quiz() {
     setLoading(true);
     try {
       const currentUser = checkAuthStatus();
-      const response = await fetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}`, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/quiz/user/${currentUser.userId}`);
       
       if (response.ok) {
         const quizzesData = await response.json();

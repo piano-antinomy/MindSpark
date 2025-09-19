@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { apiFetch } from '../utils/api';
 
 function Math() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -62,9 +63,7 @@ function Math() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${JAVA_API_BASE_URL}/questions/math/`, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/`);
       
       if (response.ok) {
         const data = await response.json();
@@ -94,9 +93,7 @@ function Math() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/years`, {
-        credentials: 'include'
-      });
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/years`);
       
       if (response.ok) {
         const data = await response.json();
