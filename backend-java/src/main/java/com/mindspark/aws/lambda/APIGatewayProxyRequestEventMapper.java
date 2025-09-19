@@ -12,15 +12,66 @@ import java.util.Collections;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 public class APIGatewayProxyRequestEventMapper {
     /**
-     * Creates a mock HttpServletRequest from an APIGatewayProxyRequestEvent
-     *
-     * @param event the API Gateway proxy request event
-     * @return a mock HttpServletRequest implementation
+     * Simple in-memory HttpSession for the lifetime of a single Lambda invocation.
+     */
+    private static class InMemoryHttpSession implements HttpSession {
+        private final String id = UUID.randomUUID().toString();
+        private final long creationTime = System.currentTimeMillis();
+        private long lastAccessedTime = creationTime;
+        private final Map<String, Object> attributes = new HashMap<>();
+        private boolean invalidated = false;
+
+        @Override public long getCreationTime() { return creationTime; }
+        @Override public String getId() { return id; }
+        @Override public long getLastAccessedTime() { return lastAccessedTime; }
+        @Override public javax.servlet.ServletContext getServletContext() { return null; }
+        @Override public void setMaxInactiveInterval(int interval) {}
+        @Override public int getMaxInactiveInterval() { return -1; }
+        @Override public javax.servlet.http.HttpSessionContext getSessionContext() { return null; }
+        @Override public Object getAttribute(String name) { return attributes.get(name); }
+        @Override public Object getValue(String name) { return getAttribute(name); }
+        @Override public Enumeration<String> getAttributeNames() { return Collections.enumeration(attributes.keySet()); }
+        @Override public String[] getValueNames() { return attributes.keySet().toArray(new String[0]); }
+        @Override public void setAttribute(String name, Object value) { attributes.put(name, value); lastAccessedTime = System.currentTimeMillis(); }
+        @Override public void putValue(String name, Object value) { setAttribute(name, value); }
+        @Override public void removeAttribute(String name) { attributes.remove(name); }
+        @Override public void removeValue(String name) { removeAttribute(name); }
+        @Override public void invalidate() { invalidated = true; attributes.clear(); }
+        @Override public boolean isNew() { return true; }
+    }
+
+    /**
+     * Creates a mock HttpServletRequest from an APIGatewayProxyRequestEvent using no base path.
      */
     static HttpServletRequest createHttpServletRequest(APIGatewayProxyRequestEvent event) {
+        return createHttpServletRequest(event, "");
+    }
+
+    /**
+     * Creates a mock HttpServletRequest from an APIGatewayProxyRequestEvent
+     * and computes servletPath/pathInfo relative to the provided basePath.
+     *
+     * @param event the API Gateway proxy request event
+     * @param basePath the base servlet path (e.g., "/auth"). Use empty string for root.
+     * @return a mock HttpServletRequest implementation
+     */
+    static HttpServletRequest createHttpServletRequest(APIGatewayProxyRequestEvent event, String basePath) {
+        final String fullPath = event.getPath() == null ? "" : event.getPath();
+        final String normalizedBase = (basePath == null || basePath.isEmpty()) ? "" : (basePath.startsWith("/") ? basePath : "/" + basePath);
+        final String computedPathInfo;
+        if (!normalizedBase.isEmpty() && fullPath.startsWith(normalizedBase)) {
+            String sub = fullPath.substring(normalizedBase.length());
+            computedPathInfo = sub.isEmpty() ? null : sub;
+        } else {
+            computedPathInfo = normalizedBase.isEmpty() ? fullPath : null;
+        }
+
+        final InMemoryHttpSession session = new InMemoryHttpSession();
+
         return new HttpServletRequest() {
             @Override
             public String getMethod() {
@@ -29,7 +80,7 @@ public class APIGatewayProxyRequestEventMapper {
 
             @Override
             public String getPathInfo() {
-                return event.getPath();
+                return computedPathInfo;
             }
 
             @Override
@@ -68,7 +119,7 @@ public class APIGatewayProxyRequestEventMapper {
 
             @Override
             public String getRequestedSessionId() {
-                return "";
+                return session.getId();
             }
 
             @Override
@@ -116,29 +167,29 @@ public class APIGatewayProxyRequestEventMapper {
             }
 
             // Implement other required methods with default/empty implementations
-            @Override public String getRequestURI() { return event.getPath(); }
-            @Override public StringBuffer getRequestURL() { return new StringBuffer(event.getPath()); }
+            @Override public String getRequestURI() { return fullPath; }
+            @Override public StringBuffer getRequestURL() { return new StringBuffer(fullPath); }
             @Override public String getContextPath() { return ""; }
-            @Override public String getServletPath() { return event.getPath(); }
+            @Override public String getServletPath() { return normalizedBase; }
 
             @Override
-            public HttpSession getSession(boolean b) {
-                return null;
+            public HttpSession getSession(boolean create) {
+                return create ? session : null;
             }
 
             @Override
             public HttpSession getSession() {
-                return null;
+                return session;
             }
 
             @Override
             public String changeSessionId() {
-                return "";
+                return session.getId();
             }
 
             @Override
             public boolean isRequestedSessionIdValid() {
-                return false;
+                return true;
             }
 
             @Override

@@ -1,6 +1,7 @@
 package com.mindspark.service;
 
 import com.google.inject.Inject;
+import com.mindspark.config.LocalMode;
 import com.mindspark.model.User;
 import com.mindspark.service.dao.EnhancedUserDAO;
 import com.mindspark.util.TestUserUtils;
@@ -24,9 +25,14 @@ public class LoginServiceImpl implements LoginService {
     private final Map<String, User> users = new ConcurrentHashMap<>();
     
     @Inject
-    public LoginServiceImpl(EnhancedUserDAO userDAO) {
+    public LoginServiceImpl(
+        @LocalMode final Boolean isLocalMode,
+        EnhancedUserDAO userDAO) {
         this.userDAO = userDAO;
-        initializeTestUsers();
+        // only initialize test users in local env
+        if (isLocalMode) {
+            initializeTestUsers();
+        }
     }
     
     /**
@@ -56,14 +62,6 @@ public class LoginServiceImpl implements LoginService {
         
         logger.info("Initialized {} test users in DynamoDB ({} success, {} failures)", testUsers.size(), successCount, failureCount);
         logger.info("Initialized {} test users in cache", users.size());
-        
-        // Test retrieval
-        try {
-            List<User> retrievedUsers = userDAO.getAllUsers();
-            logger.info("Test retrieval: Found {} users in DynamoDB", retrievedUsers.size());
-        } catch (Exception e) {
-            logger.error("Failed to retrieve users from DynamoDB: {}", e.getMessage(), e);
-        }
     }
     
     @Override

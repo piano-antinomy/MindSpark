@@ -47,6 +47,7 @@ public class DDBDAOModule extends AbstractModule {
         } else {
             logger.info("Using production DynamoDB client");
             return DynamoDbClient.builder().region(Region.US_EAST_1)
+                    .httpClient(UrlConnectionHttpClient.builder().build())
                     .build();
         }
     }

@@ -26,6 +26,8 @@ import software.amazon.awscdk.services.logs.RetentionDays;
 import software.constructs.Construct;
 
 import java.util.Arrays;
+import software.amazon.awscdk.services.iam.Effect;
+import software.amazon.awscdk.services.iam.PolicyStatement;
 
 public class MindSparkStack extends Stack {
 
@@ -61,6 +63,45 @@ public class MindSparkStack extends Stack {
             //.snapStart(software.amazon.awscdk.services.lambda.SnapStartConf.ON_PUBLISHED_VERSIONS)
             .build();
 
+        // Grant DynamoDB permissions to Lambda role
+        String account = this.getAccount();
+        String region = props.getRegion();
+        String tableName = "MindSparkUsers-prod";
+        String tableArn = String.format("arn:aws:dynamodb:%s:%s:table/%s", region, account, tableName);
+
+        PolicyStatement ddbAccess = PolicyStatement.Builder.create()
+            .effect(Effect.ALLOW)
+            .actions(Arrays.asList(
+                "dynamodb:DescribeTable",
+                "dynamodb:UpdateTable",
+                "dynamodb:PutItem",
+                "dynamodb:GetItem",
+                "dynamodb:UpdateItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:Query",
+                "dynamodb:Scan",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:BatchGetItem"
+            ))
+            .resources(Arrays.asList(tableArn))
+            .build();
+
+        // Actions that require wildcard resource scope in DynamoDB IAM
+        PolicyStatement ddbGlobalAccess = PolicyStatement.Builder.create()
+            .effect(Effect.ALLOW)
+            .actions(Arrays.asList(
+                "dynamodb:CreateTable",
+                "dynamodb:ListTables",
+                "dynamodb:DescribeLimits"
+            ))
+            .resources(Arrays.asList("*"))
+            .build();
+
+        if (lambda.getRole() != null) {
+            lambda.getRole().addToPrincipalPolicy(ddbAccess);
+            lambda.getRole().addToPrincipalPolicy(ddbGlobalAccess);
+        }
+
         LogGroup apiLogs = LogGroup.Builder.create(this, "MindSparkApiLogs")
             .retention(RetentionDays.SIX_MONTHS)
             .build();
@@ -80,7 +121,7 @@ public class MindSparkStack extends Stack {
                 .authorizer(authorizer)
                 .build())
             .defaultCorsPreflightOptions(CorsOptions.builder()
-                .allowOrigins(Cors.ALL_ORIGINS)
+                .allowOrigins(Arrays.asList("https://main.d1e5wuvsqvmyqw.amplifyapp.com", "http://localhost:3000"))
                 .allowMethods(Cors.ALL_METHODS)
                 .allowHeaders(Arrays.asList("Content-Type", "Authorization", "X-Amz-Date", "X-Api-Key", "X-Amz-Security-Token"))
                 .allowCredentials(true)

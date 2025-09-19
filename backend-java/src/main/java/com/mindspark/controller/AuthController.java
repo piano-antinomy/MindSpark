@@ -38,8 +38,7 @@ public class AuthController extends HttpServlet {
     }
     
     @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
@@ -48,7 +47,7 @@ public class AuthController extends HttpServlet {
         CorsUtils.setCorsHeaders(request, response);
         
         String pathInfo = request.getPathInfo();
-        logger.debug("Processing POST request for path: {}", pathInfo);
+        logger.info("Processing POST request for path: {}", pathInfo);
         
         try {
             if (pathInfo == null || pathInfo.equals("/login")) {
