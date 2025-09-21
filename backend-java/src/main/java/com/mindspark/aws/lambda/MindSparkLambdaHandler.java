@@ -76,8 +76,8 @@ public class MindSparkLambdaHandler implements RequestHandler<APIGatewayProxyReq
                 } else if ("GET".equals(method)) {
                     progressController.doGet(request, response);
                 }
-            } else if (path.startsWith("/questions")) {
-                request = APIGatewayProxyRequestEventMapper.createHttpServletRequest(apiGatewayProxyRequestEvent, "/questions");
+            } else if (path.startsWith("/questions/math")) {
+                request = APIGatewayProxyRequestEventMapper.createHttpServletRequest(apiGatewayProxyRequestEvent, "/questions/math");
                 QuestionController questionController = injector.getInstance(QuestionController.class);
                 if ("GET".equals(method)) {
                     questionController.doGet(request, response);
