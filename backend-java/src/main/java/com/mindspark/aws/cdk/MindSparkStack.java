@@ -102,6 +102,29 @@ public class MindSparkStack extends Stack {
             lambda.getRole().addToPrincipalPolicy(ddbGlobalAccess);
         }
 
+        // S3 permissions - wide access as requested
+        PolicyStatement s3ListAllBuckets = PolicyStatement.Builder.create()
+            .effect(Effect.ALLOW)
+            .actions(Arrays.asList(
+                "s3:ListAllMyBuckets",
+                "s3:ListBucket"
+            ))
+            .resources(Arrays.asList("*"))
+            .build();
+
+        PolicyStatement s3GetAnyObject = PolicyStatement.Builder.create()
+            .effect(Effect.ALLOW)
+            .actions(Arrays.asList(
+                "s3:GetObject"
+            ))
+            .resources(Arrays.asList("arn:aws:s3:::*/*"))
+            .build();
+
+        if (lambda.getRole() != null) {
+            lambda.getRole().addToPrincipalPolicy(s3ListAllBuckets);
+            lambda.getRole().addToPrincipalPolicy(s3GetAnyObject);
+        }
+
         LogGroup apiLogs = LogGroup.Builder.create(this, "MindSparkApiLogs")
             .retention(RetentionDays.SIX_MONTHS)
             .build();
