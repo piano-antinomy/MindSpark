@@ -71,7 +71,12 @@ public class APIGatewayProxyRequestEventMapper {
         }
 
         final InMemoryHttpSession session = new InMemoryHttpSession();
-        session.setAttribute("userId", event.getRequestContext().getIdentity().getCognitoIdentityId());
+
+        Map<String, String> claimsMap = new HashMap<>();
+        claimsMap = (HashMap<String, String>) event.getRequestContext().getAuthorizer().get("claims");
+        String cognitoId = claimsMap.get("sub");
+
+        session.setAttribute("userId", "CognitoUser-" + cognitoId);
 
         return new HttpServletRequest() {
             @Override

@@ -10,6 +10,7 @@ import com.mindspark.service.CacheBackedQuestionServiceImpl;
 import com.mindspark.service.LoginService;
 import com.mindspark.service.LoginServiceImpl;
 import com.mindspark.service.QuestionService;
+import com.mindspark.service.S3BackedQuestionServiceImpl;
 import com.mindspark.service.progress.DDBBackedProgressTrackingServiceImpl;
 import com.mindspark.service.progress.ProgressTrackService;
 import com.mindspark.service.quiz.DDBBackedQuizServiceImpl;
@@ -19,6 +20,12 @@ import org.slf4j.LoggerFactory;
 
 import javax.inject.Singleton;
 
+// AWS SDK v2 S3 imports
+import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
+import software.amazon.awssdk.http.urlconnection.UrlConnectionHttpClient;
+import software.amazon.awssdk.regions.Region;
+import software.amazon.awssdk.services.s3.S3Client;
+
 public class MindSparkModule extends AbstractModule {
     
     private static final Logger logger = LoggerFactory.getLogger(MindSparkModule.class);
@@ -26,12 +33,20 @@ public class MindSparkModule extends AbstractModule {
     @Override
     protected void configure() {
         // Bind services
-        bind(QuestionService.class).to(CacheBackedQuestionServiceImpl.class);
         bind(LoginService.class).to(LoginServiceImpl.class);
         bind(ProgressTrackService.class).to(DDBBackedProgressTrackingServiceImpl.class);
         bind(QuizService.class).to(DDBBackedQuizServiceImpl.class);
 
         install(new DDBDAOModule());
+    }
+
+    @Provides
+    @Singleton
+    QuestionService provideQuestionService(
+        final @LocalMode Boolean isLocalMode, final ObjectMapper objectMapper, final S3Client s3Client) {
+        return isLocalMode
+            ? new CacheBackedQuestionServiceImpl(objectMapper, true)
+            : new S3BackedQuestionServiceImpl(objectMapper, s3Client, "mindspark-questions-prod", "math/questions");
     }
     
     @Provides
@@ -76,5 +91,16 @@ public class MindSparkModule extends AbstractModule {
         // Default to local mode if uncertain
         logger.warn("Unable to determine environment, defaulting to local mode");
         return true;
+    }
+
+    @Provides
+    @Singleton
+    S3Client provideAmazonS3() {
+        // Region us-east-1 as requested; credentials via default provider chain
+        return S3Client.builder()
+            .region(Region.US_EAST_1)
+            .httpClient(UrlConnectionHttpClient.builder().build())
+            .credentialsProvider(DefaultCredentialsProvider.create())
+            .build();
     }
 } 

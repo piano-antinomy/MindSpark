@@ -45,15 +45,14 @@ public class CacheBackedQuestionServiceImpl implements QuestionService {
     // Environment detection
     private final boolean isLocalMode;
     private final String questionsBasePath;
-    
-    @Inject
+
     public CacheBackedQuestionServiceImpl(ObjectMapper objectMapper, @LocalMode Boolean isLocalMode) {
         this.objectMapper = objectMapper;
         this.isLocalMode = isLocalMode;
         
         // Set appropriate paths based on environment
         this.questionsBasePath = isLocalMode ? "resources/math/questions" : "/math/questions";
-        
+
         logger.info("Initializing QuestionService in {} mode", isLocalMode ? "LOCAL" : "LAMBDA");
         logger.info("Questions base path: {}", questionsBasePath);
         
