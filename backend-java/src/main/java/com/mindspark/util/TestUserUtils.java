@@ -56,27 +56,27 @@ public class TestUserUtils {
     private static List<User> getOriginalDemoUsers() {
         List<User> originalUsers = new ArrayList<>();
         
-        User demoUser = new User("demo", "demo123", 150, 2, "demo@mindspark.com", "Demo User");
+        User demoUser = new User("demo", 150, 2, "1");
         demoUser.setUserId("demo");
         originalUsers.add(demoUser);
         
-        User student1User = new User("Charles_Liu", "password123", 200, 1, "student1@mindspark.com", "Student One");
+        User student1User = new User("Charles_Liu", 200, 1, "1");
         student1User.setUserId("student1");
         originalUsers.add(student1User);
         
-        User student2User = new User("MathWolf", "password123", 200, 1, "student2@mindspark.com", "Student Two");
+        User student2User = new User("MathWolf", 200, 1, "1");
         student2User.setUserId("student2");
         originalUsers.add(student2User);
         
-        User student3User = new User("BecauseIamHappy", "password123", 200, 1, "student3@mindspark.com", "Student 3");
+        User student3User = new User("BecauseIamHappy", 200, 1, "1");
         student3User.setUserId("student3");
         originalUsers.add(student3User);
         
-        User teacherUser = new User("Wenyue_Zhang", "teacher123", 500, 3, "teacher@mindspark.com", "Teacher User");
+        User teacherUser = new User("Wenyue_Zhang", 500, 3, "1");
         teacherUser.setUserId("teacher");
         originalUsers.add(teacherUser);
         
-        User adminUser = new User("admin", "admin123", 1000, 3, "admin@mindspark.com", "Admin User");
+        User adminUser = new User("admin", 1000, 3, "1");
         adminUser.setUserId("admin");
         originalUsers.add(adminUser);
         
@@ -89,16 +89,13 @@ public class TestUserUtils {
     private static User generateRandomUser(int index) {
         String firstName = FIRST_NAMES[random.nextInt(FIRST_NAMES.length)];
         String lastName = LAST_NAMES[random.nextInt(LAST_NAMES.length)];
-        String fullName = firstName + " " + lastName;
         String username = firstName.toLowerCase() + "_" + lastName.toLowerCase() + index;
-        String email = username + "@mindspark.com";
-        String password = "password123";
         
         // Generate varied scores and math levels
         int score = random.nextInt(1000) + 50; // Score between 50-1050
         int mathLevel = random.nextInt(3) + 1; // Math level 1-3
         
-        User user = new User(username, password, score, mathLevel, email, fullName);
+        User user = new User(username, score, mathLevel, "1");
         user.setUserId(username);
         
         return user;

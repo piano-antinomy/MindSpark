@@ -40,15 +40,13 @@ function Home() {
     const usernameFromEmail = email && email.includes('@') ? email.split('@')[0] : '';
     const username = (preferredUsername || usernameFromEmail || `user_${(sub || '').slice(0,8)}`).toLowerCase();
     const userId = `CognitoUser-${sub}`;
-
+    
     return {
       username,
-      password: '',
       userId,
       score: 0,
       mathLevel: 1,
-      email,
-      fullName: name || username
+      avatarLink: "1"
     };
   }
 
@@ -93,12 +91,10 @@ function Home() {
         if (process.env.REACT_APP_LOCAL_MODE === 'true') {
           const demoUser = {
             username: 'demo',
-            password: '',
             userId: 'demo',
             score: 0,
             mathLevel: 1,
-            email: 'demo@example.com',
-            fullName: 'Demo User'
+            avatarLink: "1"
           };
           await persistAndRedirect(demoUser);
           return;
@@ -198,13 +194,50 @@ function Home() {
             <Link to="/math-questions" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">AMC Problems</Link>
             <Link to="/quiz" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Quizzes</Link>
             <Link to="/leaderboard" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Leaderboard</Link>
-            <Link to="/dashboard" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Dashboard</Link>
+            <Link to="/profile" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Profile</Link>
           </div>
           <div className="hidden md:flex items-center">
             {user ? (
-              <div className="flex items-center space-x-4">
-                <span className="text-gray-700 font-semibold">Welcome, {user.username}!</span>
-                <button onClick={logout} className="bg-gray-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-700 transition duration-300">Logout</button>
+              <div className="relative group">
+                <button className="flex items-center space-x-2 hover:opacity-80 transition duration-200">
+                  <img 
+                    src={`/resources/images/avaters/${user.avatarLink || '1'}.png`}
+                    alt={`${user.username} avatar`}
+                    className="w-8 h-8 rounded-full object-cover border-2 border-gray-200"
+                    onError={(e) => {
+                      e.target.src = '/resources/images/avaters/1.png';
+                    }}
+                  />
+                  <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-3">
+                    {/* Username Display */}
+                    <div className="px-4 py-3 text-base font-semibold text-gray-800 border-b border-gray-100 text-left truncate" title={user.username}>
+                      {user.username}
+                    </div>
+                    
+                    {/* Edit Profile Link */}
+                    <Link 
+                      to="/profile" 
+                      className="block w-full text-left px-4 py-3 text-base text-indigo-600 hover:bg-indigo-50 hover:text-indigo-700 transition duration-150 font-medium"
+                    >
+                      Edit Profile
+                    </Link>
+                    
+                    {/* Logout Button */}
+                    <button 
+                      onClick={logout}
+                      className="block w-full text-left px-4 py-3 text-base text-indigo-600 hover:bg-indigo-50 hover:text-indigo-700 transition duration-150 font-medium"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                </div>
               </div>
             ) : (
               <Link to="/login" className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300">Log In</Link>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+import Profile from './components/Profile';
 import Subjects from './components/Subjects';
 import Math from './components/Math';
 import MathQuestions from './components/MathQuestions';
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/subjects" element={<Subjects />} />
         <Route path="/math" element={<Math />} />
         <Route path="/math-questions" element={<MathQuestions />} />

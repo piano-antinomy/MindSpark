@@ -91,7 +91,7 @@ function Subjects() {
           <h1>Choose Your Learning Subject</h1>
           <p>Select what you'd like to learn today</p>
           <nav className="breadcrumb">
-            <Link to="/dashboard">Dashboard</Link> {'>'} Subjects
+            <Link to="/profile">Profile</Link> {'>'} Subjects
           </nav>
         </div>
       </header>

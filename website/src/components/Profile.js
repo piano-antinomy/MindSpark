@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { apiFetch } from '../utils/api';
 
-function Dashboard() {
+function Profile() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -188,9 +188,8 @@ function Dashboard() {
     <div className="dashboard-container">
       <header className="dashboard-header">
         <div className="header-content">
-          <h1>MindSpark Dashboard</h1>
+          <h1>Profile</h1>
           <div className="user-info">
-            <span>Welcome, {user.username}!</span>
             <button onClick={logout} className="btn btn-secondary">Logout</button>
           </div>
         </div>
@@ -271,4 +270,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard; 
+export default Profile;

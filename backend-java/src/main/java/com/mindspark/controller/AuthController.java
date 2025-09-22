@@ -117,9 +117,8 @@ public class AuthController extends HttpServlet {
         try {
             JsonNode jsonNode = objectMapper.readTree(requestBody.toString());
             String userId = jsonNode.get("userId").asText();
-            String password = jsonNode.get("password").asText();
             
-            User authenticatedUser = loginService.authenticate(userId, password);
+            User authenticatedUser = loginService.authenticate(userId, null);
             
             if (authenticatedUser != null) {
                 // Create session
@@ -354,7 +353,7 @@ public class AuthController extends HttpServlet {
             List<User> sanitized = new ArrayList<>();
             for (User u : users) {
                 if (u != null) {
-                    sanitized.add(u.withoutPassword());
+                    sanitized.add(u.copy());
                 }
             }
             responseData.put("users", sanitized);

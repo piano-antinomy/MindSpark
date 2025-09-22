@@ -3,7 +3,6 @@ import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
   const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
@@ -118,17 +117,6 @@ function Login() {
             />
           </div>
           
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input 
-              type="password" 
-              id="password" 
-              name="password" 
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required 
-            />
-          </div>
           
           <button type="button" onClick={handleSubmit} className="btn btn-primary btn-full">Sign In</button>
           <button type="button" onClick={handleSignup} className="btn btn-secondary btn-full" style={{ marginTop: '10px' }}>Create Account</button>

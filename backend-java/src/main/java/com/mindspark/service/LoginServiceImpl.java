@@ -84,7 +84,7 @@ public class LoginServiceImpl implements LoginService {
         try {
             User ddbUser = userDAO.getUser(userId);
             if (ddbUser != null) {
-                return ddbUser.withoutPassword();
+                return ddbUser.copy();
             }
         } catch (Exception e) {
             logger.warn("Failed to retrieve user from DynamoDB: {}", e.getMessage());
@@ -92,7 +92,7 @@ public class LoginServiceImpl implements LoginService {
         
         // Fallback to in-memory storage
         User user = users.get(userId);
-        return user != null ? user.withoutPassword() : null;
+        return user != null ? user.copy() : null;
     }
     
     @Override
@@ -171,30 +171,6 @@ public class LoginServiceImpl implements LoginService {
         return userDAO.getAllUsers();
     }
     
-    /**
-     * Add a new user (for registration functionality)
-     */
-    public boolean addUser(String username, String password, String email, String fullName) {
-        if (username == null || password == null) {
-            return false;
-        }
-        
-        final String normalized = username.toLowerCase();
-        User newUser = new User(normalized, password, 0, 1, email, fullName);
-        newUser.setUserId(normalized);
-        
-        // Store in both places
-        users.put(normalized, newUser);
-        try {
-            userDAO.createUser(newUser);
-            logger.info("Added new user in DynamoDB: {}", username);
-        } catch (Exception e) {
-            logger.warn("Failed to store new user in DynamoDB: {}", e.getMessage());
-        }
-        
-        logger.info("Added new user: {}", username);
-        return true;
-    }
 
     @Override
     public User createOrUpdateUser(User userPayload) {
@@ -222,11 +198,9 @@ public class LoginServiceImpl implements LoginService {
             User toStore = new User();
             toStore.setUserId(userPayload.getUserId());
             toStore.setUsername(normalized);
-            toStore.setPassword(userPayload.getPassword());
             toStore.setScore(userPayload.getScore() > 0 ? userPayload.getScore() : 0);
             toStore.setMathLevel(userPayload.getMathLevel() > 0 ? userPayload.getMathLevel() : 1);
-            toStore.setEmail(userPayload.getEmail());
-            toStore.setFullName(userPayload.getFullName());
+            toStore.setAvatarLink(userPayload.getAvatarLink());
             
             // Store in DynamoDB
             try {
@@ -238,16 +212,14 @@ public class LoginServiceImpl implements LoginService {
             
             // Store in cache
             users.put(normalized, toStore);
-            return toStore.withoutPassword();
+            return toStore.copy();
         } else {
             // Update existing user
             try {
                 User existingUser = userDAO.getUser(userPayload.getUserId());
                 if (existingUser != null) {
                     // Update selective fields
-                    if (userPayload.getPassword() != null) existingUser.setPassword(userPayload.getPassword());
-                    if (userPayload.getEmail() != null) existingUser.setEmail(userPayload.getEmail());
-                    if (userPayload.getFullName() != null) existingUser.setFullName(userPayload.getFullName());
+                    if (userPayload.getAvatarLink() != null) existingUser.setAvatarLink(userPayload.getAvatarLink());
                     if (userPayload.getMathLevel() > 0) existingUser.setMathLevel(userPayload.getMathLevel());
                     // score is controlled via updateUserScore; do not overwrite unless explicitly set
                     
@@ -256,7 +228,7 @@ public class LoginServiceImpl implements LoginService {
                     
                     // Update cache
                     users.put(normalized, existingUser);
-                    return existingUser.withoutPassword();
+                    return existingUser.copy();
                 }
             } catch (Exception e) {
                 logger.warn("Failed to update user in DynamoDB: {}", e.getMessage());
@@ -265,12 +237,10 @@ public class LoginServiceImpl implements LoginService {
             // Fallback to in-memory update
             User existing = users.get(normalized);
             if (existing != null) {
-                if (userPayload.getPassword() != null) existing.setPassword(userPayload.getPassword());
-                if (userPayload.getEmail() != null) existing.setEmail(userPayload.getEmail());
-                if (userPayload.getFullName() != null) existing.setFullName(userPayload.getFullName());
+                if (userPayload.getAvatarLink() != null) existing.setAvatarLink(userPayload.getAvatarLink());
                 if (userPayload.getMathLevel() > 0) existing.setMathLevel(userPayload.getMathLevel());
                 logger.info("Updated user profile in cache for: {}", normalized);
-                return existing.withoutPassword();
+                return existing.copy();
             }
         }
         

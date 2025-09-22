@@ -99,8 +99,7 @@ public class LeaderboardController extends HttpServlet {
                 userData.put("username", user.getUsername());
                 userData.put("score", user.getScore());
                 userData.put("mathLevel", user.getMathLevel());
-                userData.put("email", user.getEmail());
-                userData.put("fullName", user.getFullName());
+                userData.put("avatarLink", user.getAvatarLink());
                 userData.put("createdAt", user.getCreatedAt());
                 userData.put("updatedAt", user.getUpdatedAt());
                 userData.put("rank", i + 1); // Global rank based on sorted position

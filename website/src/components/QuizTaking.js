@@ -619,8 +619,8 @@ function QuizTaking() {
         <div className="p-6 border-b border-gray-200">
           <h1 className="text-2xl font-bold text-gray-900 mb-2">🎯 Quiz Taking</h1>
           <nav className="text-sm text-gray-600">
-            <button onClick={() => navigate('/dashboard')} className="text-primary-600 hover:text-primary-700 hover:underline">
-              Dashboard
+            <button onClick={() => navigate('/profile')} className="text-primary-600 hover:text-primary-700 hover:underline">
+              Profile
             </button>
             {' > '}
             <button onClick={() => navigate('/subjects')} className="text-primary-600 hover:text-primary-700 hover:underline">

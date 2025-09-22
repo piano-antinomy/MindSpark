@@ -190,7 +190,7 @@ Please select a level above to begin practicing!`);
       <h3>Error</h3>
       <p>{error}</p>
       <button onClick={resetToLevelSelection} className="btn btn-primary">Try Again</button>
-      <button onClick={() => navigate('/dashboard')} className="btn btn-secondary">Back to Dashboard</button>
+      <button onClick={() => navigate('/profile')} className="btn btn-secondary">Back to Profile</button>
     </div>
   );
 
