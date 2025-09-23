@@ -34,6 +34,7 @@ public class MindSparkLambdaHandler implements RequestHandler<APIGatewayProxyReq
 
     private static final Set<String> ALLOWED_ORIGINS = new HashSet<>() {{
         add("https://main.d1e5wuvsqvmyqw.amplifyapp.com");
+        add("https://www.sparksio.com");
         add("http://localhost:3000");
     }};
 

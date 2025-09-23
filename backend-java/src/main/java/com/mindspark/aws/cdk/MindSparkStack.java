@@ -144,7 +144,10 @@ public class MindSparkStack extends Stack {
                 .authorizer(authorizer)
                 .build())
             .defaultCorsPreflightOptions(CorsOptions.builder()
-                .allowOrigins(Arrays.asList("https://main.d1e5wuvsqvmyqw.amplifyapp.com", "http://localhost:3000"))
+                .allowOrigins(Arrays.asList(
+                    "https://main.d1e5wuvsqvmyqw.amplifyapp.com",
+                    "https://www.sparksio.com",
+                    "http://localhost:3000"))
                 .allowMethods(Cors.ALL_METHODS)
                 .allowHeaders(Arrays.asList("Content-Type", "Authorization", "X-Amz-Date", "X-Api-Key", "X-Amz-Security-Token"))
                 .allowCredentials(true)
