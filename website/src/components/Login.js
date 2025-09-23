@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Login() {
-  const [username, setUsername] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const navigate = useNavigate();
   const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
 
   // Cognito config (prefer env vars, with safe defaults)
@@ -61,32 +59,6 @@ function Login() {
     window.location.assign(authorizeUrl);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      await startPkceFlow('/oauth2/authorize');
-    } catch (err) {
-      const fallbackState = String(Date.now());
-      const implicitUrl = `${COGNITO_DOMAIN}/login?client_id=${encodeURIComponent(COGNITO_CLIENT_ID)}&response_type=code&scope=${encodeURIComponent('openid email profile')}&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&state=${encodeURIComponent(fallbackState)}`;
-      try {
-        window.location.assign(implicitUrl);
-      } catch (_) {
-        setErrorMessage('Unable to start login. Please try again.');
-        setTimeout(() => setErrorMessage(''), 5000);
-      }
-    }
-  };
-
-  const handleSignup = async () => {
-    try {
-      await startPkceFlow('/signup');
-    } catch (err) {
-      setErrorMessage('Unable to open signup. Please verify callback URL and try again.');
-      setTimeout(() => setErrorMessage(''), 5000);
-    }
-  };
-
   const handleGoogle = async () => {
     try {
       await startPkceFlow('/oauth2/authorize', { identity_provider: 'Google' });
@@ -104,23 +76,33 @@ function Login() {
           <p>Sign in to continue your learning journey</p>
         </div>
         
-        <form onSubmit={handleSubmit} className="login-form">
-          <div className="form-group">
-            <label htmlFor="username">Username</label>
-            <input 
-              type="text" 
-              id="username" 
-              name="username" 
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required 
-            />
-          </div>
-          
-          
-          <button type="button" onClick={handleSubmit} className="btn btn-primary btn-full">Sign In</button>
-          <button type="button" onClick={handleSignup} className="btn btn-secondary btn-full" style={{ marginTop: '10px' }}>Create Account</button>
-          <button type="button" onClick={handleGoogle} className="btn btn-secondary btn-full" style={{ marginTop: '10px' }}>Sign in with Google</button>
+        <form className="login-form">
+          <button
+            type="button"
+            onClick={handleGoogle}
+            className="btn btn-secondary btn-full"
+            style={{
+              marginTop: '10px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '12px',
+              padding: '14px 18px',
+              borderRadius: '12px',
+              border: '1px solid rgba(255,255,255,0.15)',
+              backgroundColor: '#121212',
+              color: '#fff'
+            }}
+            aria-label="Continue with Google"
+          >
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 48 48">
+              <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.64 4.657-6.086 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.156 7.961 3.039l5.657-5.657C34.869 6.053 29.692 4 24 4 12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20c0-1.341-.138-2.651-.389-3.917z"/>
+              <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.702 16.316 18.994 13.8 24 13.8c3.059 0 5.842 1.156 7.961 3.039l5.657-5.657C34.869 6.053 29.692 4 24 4 16.318 4 9.499 8.337 6.306 14.691z"/>
+              <path fill="#4CAF50" d="M24 44c5.565 0 10.63-2.138 14.39-5.61l-6.636-5.602C29.6 34.865 26.94 36 24 36c-5.196 0-9.63-3.317-11.265-7.957l-6.56 5.056C9.34 39.648 16.116 44 24 44z"/>
+              <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.759 2.147-2.148 3.995-3.942 5.317l.003-.002 6.636 5.602C39.56 40.056 44 32 44 24c0-1.341-.138-2.651-.389-3.917z"/>
+            </svg>
+            <span>Continue with Google</span>
+          </button>
           
           {errorMessage && (
             <div className="error-message">{errorMessage}</div>
