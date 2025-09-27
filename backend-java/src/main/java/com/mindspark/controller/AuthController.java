@@ -2,6 +2,7 @@ package com.mindspark.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mindspark.model.ActivityType;
 import com.mindspark.model.User;
 import com.mindspark.service.LoginService;
 import com.mindspark.util.CorsUtils;
@@ -118,9 +119,20 @@ public class AuthController extends HttpServlet {
             JsonNode jsonNode = objectMapper.readTree(requestBody.toString());
             String userId = jsonNode.get("userId").asText();
             
-            User authenticatedUser = loginService.authenticate(userId, null);
+            // Get existing user from database instead of using authenticate
+            User authenticatedUser = loginService.getUserProfile(userId);
             
             if (authenticatedUser != null) {
+                // Add login activity
+                try {
+                    String currentTimestamp = java.time.Instant.now().toString();
+                    authenticatedUser.addActivity(currentTimestamp, ActivityType.LOGIN);
+                    loginService.updateUserActivities(userId, authenticatedUser);
+                    logger.info("Added login activity for user: {}", userId);
+                } catch (Exception e) {
+                    logger.warn("Failed to add login activity for user {}: {}", userId, e.getMessage());
+                }
+                
                 // Create session
                 HttpSession session = request.getSession(true);
                 session.setAttribute("userId", userId);
@@ -148,6 +160,22 @@ public class AuthController extends HttpServlet {
         HttpSession session = request.getSession(false);
         if (session != null) {
             String userId = (String) session.getAttribute("userId");
+            
+            // Add logout activity before invalidating session
+            if (userId != null) {
+                try {
+                    User user = loginService.getUserProfile(userId);
+                    if (user != null) {
+                        String currentTimestamp = java.time.Instant.now().toString();
+                        user.addActivity(currentTimestamp, ActivityType.LOGOUT);
+                        loginService.updateUserActivities(userId, user);
+                        logger.info("Added logout activity for user: {}", userId);
+                    }
+                } catch (Exception e) {
+                    logger.warn("Failed to add logout activity for user {}: {}", userId, e.getMessage());
+                }
+            }
+            
             session.invalidate();
             logger.info("User logged out: {}", userId);
         }

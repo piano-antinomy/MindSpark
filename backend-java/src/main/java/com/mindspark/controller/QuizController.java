@@ -2,9 +2,12 @@ package com.mindspark.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mindspark.model.ActivityType;
 import com.mindspark.model.Question;
 import com.mindspark.model.QuizProgress;
 import com.mindspark.model.QuizType;
+import com.mindspark.model.User;
+import com.mindspark.service.LoginService;
 import com.mindspark.service.quiz.QuizService;
 import com.mindspark.util.CorsUtils;
 import org.slf4j.Logger;
@@ -29,11 +32,13 @@ public class QuizController extends HttpServlet {
     private static final Logger logger = LoggerFactory.getLogger(QuizController.class);
     private final QuizService quizService;
     private final ObjectMapper objectMapper;
+    private final LoginService loginService;
     
     @Inject
-    public QuizController(QuizService quizService, ObjectMapper objectMapper) {
+    public QuizController(QuizService quizService, ObjectMapper objectMapper, LoginService loginService) {
         this.quizService = quizService;
         this.objectMapper = objectMapper;
+        this.loginService = loginService;
     }
     
     @Override
@@ -213,7 +218,25 @@ public class QuizController extends HttpServlet {
             
             QuizProgress quizProgress = objectMapper.treeToValue(requestBody.get("quizProgress"), QuizProgress.class);
             
+            // Check if quiz is being completed
+            boolean isCompleting = quizProgress.isCompleted();
+            
             quizService.updateQuizProgress(userId, quizId, quizProgress);
+            
+            // Add complete quiz activity if quiz is being completed
+            if (isCompleting) {
+                try {
+                    User user = loginService.getUserProfile(userId);
+                    if (user != null) {
+                        String currentTimestamp = java.time.Instant.now().toString();
+                        user.addActivity(quizId, currentTimestamp, ActivityType.COMPLETE_QUIZ);
+                        loginService.updateUserActivities(userId, user);
+                        logger.info("Added complete quiz activity for user {} with quiz {}", userId, quizId);
+                    }
+                } catch (Exception e) {
+                    logger.warn("Failed to add complete quiz activity for user {}: {}", userId, e.getMessage());
+                }
+            }
             
             Map<String, String> result = new HashMap<>();
             result.put("message", "Quiz progress updated successfully");

@@ -54,23 +54,60 @@ function Home() {
   async function persistAndRedirect(userPayload) {
     try {
       const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
-      const isProdApi = process.env.REACT_APP_LOCAL_MODE === 'false';
       const headers = buildApiHeaders({ 'Content-Type': 'application/json' });
-      const resp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
-        method: 'POST',
+      
+      // First, try to get existing user from backend
+      const getResp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
+        method: 'GET',
         headers,
-        credentials: 'include',
-        body: JSON.stringify(userPayload)
+        credentials: 'include'
       });
-      if (resp.ok) {
-        const data = await resp.json();
-        const storedUser = data && data.user ? data.user : userPayload;
-        localStorage.setItem('currentUser', JSON.stringify(storedUser));
-        setUser(storedUser);
+      
+      if (getResp.ok) {
+        const getData = await getResp.json();
+        if (getData.success && getData.user) {
+          // User exists, use the stored user data (with custom username)
+          localStorage.setItem('currentUser', JSON.stringify(getData.user));
+          setUser(getData.user);
+          console.log('Loaded existing user:', getData.user.username);
+        } else {
+          // User doesn't exist, create new user with email-based username
+          const createResp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
+            method: 'POST',
+            headers,
+            credentials: 'include',
+            body: JSON.stringify(userPayload)
+          });
+          if (createResp.ok) {
+            const createData = await createResp.json();
+            const storedUser = createData && createData.user ? createData.user : userPayload;
+            localStorage.setItem('currentUser', JSON.stringify(storedUser));
+            setUser(storedUser);
+            console.log('Created new user:', storedUser.username);
+          } else {
+            console.warn('Create profile failed:', createResp.status);
+            localStorage.setItem('currentUser', JSON.stringify(userPayload));
+            setUser(userPayload);
+          }
+        }
       } else {
-        console.warn('Persist profile failed:', resp.status);
-        localStorage.setItem('currentUser', JSON.stringify(userPayload));
-        setUser(userPayload);
+        // GET failed, try to create new user
+        const createResp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
+          method: 'POST',
+          headers,
+          credentials: 'include',
+          body: JSON.stringify(userPayload)
+        });
+        if (createResp.ok) {
+          const createData = await createResp.json();
+          const storedUser = createData && createData.user ? createData.user : userPayload;
+          localStorage.setItem('currentUser', JSON.stringify(storedUser));
+          setUser(storedUser);
+        } else {
+          console.warn('Create profile failed:', createResp.status);
+          localStorage.setItem('currentUser', JSON.stringify(userPayload));
+          setUser(userPayload);
+        }
       }
     } catch (err) {
       console.error('Persist profile error:', err);

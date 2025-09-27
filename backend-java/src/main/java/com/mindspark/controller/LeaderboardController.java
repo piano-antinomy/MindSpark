@@ -42,6 +42,8 @@ public class LeaderboardController extends HttpServlet {
         try {
             if (pathInfo == null || pathInfo.equals("/get-focused-leaderboard")) {
                 handleGetFocusedLeaderboard(request, response);
+            } else if (pathInfo.equals("/rank")) {
+                handleGetUserRank(request, response);
             } else {
                 sendErrorResponse(response, HttpServletResponse.SC_NOT_FOUND, "Endpoint not found");
             }
@@ -174,6 +176,50 @@ public class LeaderboardController extends HttpServlet {
         responseData.put("users", focusedUsers);
         responseData.put("totalUsers", usersWithRanks.size());
         responseData.put("currentUserRank", currentUserIndex != -1 ? currentRank : null);
+        sendJsonResponse(response, responseData);
+    }
+    
+    private void handleGetUserRank(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        HttpSession session = request.getSession(false);
+        if (session == null || session.getAttribute("userId") == null) {
+            sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Not authenticated");
+            return;
+        }
+
+        String userId = (String) session.getAttribute("userId");
+        logger.info("LeaderboardController: Getting rank for userId={}", userId);
+
+        List<User> allUsers = loginService.getAllUsers();
+        logger.info("LeaderboardController: Retrieved {} users from service", allUsers != null ? allUsers.size() : 0);
+        
+        if (allUsers == null || allUsers.isEmpty()) {
+            logger.warn("LeaderboardController: No users found, returning rank N/A");
+            Map<String, Object> responseData = new HashMap<>();
+            responseData.put("success", true);
+            responseData.put("rank", "N/A");
+            sendJsonResponse(response, responseData);
+            return;
+        }
+
+        // Sort users by score (descending)
+        List<User> sortedUsers = new ArrayList<>(allUsers);
+        sortedUsers.sort((a, b) -> Integer.compare(b.getScore(), a.getScore()));
+
+        // Find current user's rank
+        int rank = -1;
+        for (int i = 0; i < sortedUsers.size(); i++) {
+            User user = sortedUsers.get(i);
+            if (user != null && userId.equals(user.getUserId())) {
+                rank = i + 1; // Rank is 1-based
+                break;
+            }
+        }
+        
+        logger.info("LeaderboardController: User {} rank is {}", userId, rank);
+        
+        Map<String, Object> responseData = new HashMap<>();
+        responseData.put("success", true);
+        responseData.put("rank", rank != -1 ? rank : "N/A");
         sendJsonResponse(response, responseData);
     }
     

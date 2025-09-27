@@ -54,5 +54,21 @@ public interface LoginService {
      */
     User createOrUpdateUser(User user);
 
+    /**
+     * Update user activities
+     * @param userId The user ID
+     * @param user The updated user object with activities
+     * @return true if update successful
+     */
+    boolean updateUserActivities(String userId, User user);
+    
+    /**
+     * Update user math level based on points
+     * @param userId the user ID
+     * @param points the user's current points
+     * @return true if successful, false otherwise
+     */
+    boolean updateUserMathLevelFromPoints(String userId, int points);
+
     List<User> getAllUsers();
 } 

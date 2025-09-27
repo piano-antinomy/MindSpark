@@ -1,9 +1,12 @@
 package com.mindspark.service.quiz;
 
 import com.mindspark.config.AppConfig;
+import com.mindspark.model.ActivityType;
 import com.mindspark.model.Question;
 import com.mindspark.model.QuizProgress;
 import com.mindspark.model.QuizType;
+import com.mindspark.model.User;
+import com.mindspark.service.LoginService;
 import com.mindspark.service.QuestionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,14 +34,17 @@ public class DDBBackedQuizServiceImpl implements QuizService {
     
     private final QuestionService questionService;
     private final DynamoDbTable<QuizProgress> userProgressTable;
+    private final LoginService loginService;
     
     @Inject
     public DDBBackedQuizServiceImpl(
             final DynamoDbEnhancedClient dynamoDbEnhancedClient,
-            final QuestionService questionService) {
+            final QuestionService questionService,
+            final LoginService loginService) {
         this.userProgressTable = dynamoDbEnhancedClient.table(
                 AppConfig.UNIFIED_DDB_TABLE_NAME, TableSchema.fromBean(QuizProgress.class));
         this.questionService = questionService;
+        this.loginService = loginService;
         
         logger.info("Initialized DDBBackedQuizServiceImpl with DynamoDB storage");
     }
@@ -93,6 +99,20 @@ public class DDBBackedQuizServiceImpl implements QuizService {
             
             // Save to DynamoDB
             userProgressTable.putItem(quizProgress);
+            
+            // Add start quiz activity to user
+            try {
+                User user = loginService.getUserProfile(userId);
+                if (user != null) {
+                    String currentTimestamp = java.time.Instant.now().toString();
+                    user.addActivity(quizId, currentTimestamp, ActivityType.START_QUIZ);
+                    // Update user activities in database
+                    loginService.updateUserActivities(userId, user);
+                    logger.info("Added start quiz activity for user {} with quiz {}", userId, quizId);
+                }
+            } catch (Exception e) {
+                logger.warn("Failed to add start quiz activity for user {}: {}", userId, e.getMessage());
+            }
             
             logger.info("Created standard quiz {} ({}) for user {} with {} questions from {}", 
                 quizId, quizName, userId, questions.size(), quizQuestionSetId);
@@ -161,6 +181,20 @@ public class DDBBackedQuizServiceImpl implements QuizService {
             
             // Save to DynamoDB
             userProgressTable.putItem(quizProgress);
+            
+            // Add start quiz activity to user
+            try {
+                User user = loginService.getUserProfile(userId);
+                if (user != null) {
+                    String currentTimestamp = java.time.Instant.now().toString();
+                    user.addActivity(quizId, currentTimestamp, ActivityType.START_QUIZ);
+                    // Update user activities in database
+                    loginService.updateUserActivities(userId, user);
+                    logger.info("Added start quiz activity for user {} with quiz {}", userId, quizId);
+                }
+            } catch (Exception e) {
+                logger.warn("Failed to add start quiz activity for user {}: {}", userId, e.getMessage());
+            }
             
             logger.info("Created standard quiz {} ({}) for user {} with {} questions from {} (hasTimer: {}, timeLimit: {})", 
                 quizId, quizName, userId, questions.size(), quizQuestionSetId, hasTimer, timeLimit);

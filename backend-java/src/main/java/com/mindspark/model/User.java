@@ -6,6 +6,9 @@ import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbSortKey;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @DynamoDbBean
 public class User {
     
@@ -17,6 +20,7 @@ public class User {
     private String sortKey; // For composite key
     private String createdAt;
     private String updatedAt;
+    private List<Activity> recentActivities; // Most recent 10 activities
 
     // Constructors
     public User() {}
@@ -72,6 +76,61 @@ public class User {
     public String getUpdatedAt() { return updatedAt; }
     public void setUpdatedAt(String updatedAt) { this.updatedAt = updatedAt; }
 
+    @DynamoDbAttribute("recentActivities")
+    @JsonProperty("recentActivities")
+    public List<Activity> getRecentActivities() { 
+        return recentActivities != null ? recentActivities : new ArrayList<>(); 
+    }
+    public void setRecentActivities(List<Activity> recentActivities) { 
+        this.recentActivities = recentActivities; 
+    }
+    
+    /**
+     * Add a new activity to the recent activities list
+     * Maintains a maximum of 10 activities (removes oldest if exceeded)
+     * @param activity the activity to add
+     */
+    public void addActivity(Activity activity) {
+        if (recentActivities == null) {
+            recentActivities = new ArrayList<>();
+        }
+        
+        // Add the new activity at the beginning (most recent first)
+        recentActivities.add(0, activity);
+        
+        // Keep only the most recent 10 activities
+        if (recentActivities.size() > 10) {
+            recentActivities = recentActivities.subList(0, 10);
+        }
+    }
+    
+    /**
+     * Add a new activity with reference ID
+     * @param referenceId the reference ID (can be null)
+     * @param timestamp the local timestamp from client
+     * @param type the activity type
+     */
+    public void addActivity(String referenceId, String timestamp, ActivityType type) {
+        addActivity(new Activity(referenceId, timestamp, type));
+    }
+    
+    /**
+     * Add a new activity without reference ID
+     * @param timestamp the local timestamp from client
+     * @param type the activity type
+     */
+    public void addActivity(String timestamp, ActivityType type) {
+        addActivity(new Activity(timestamp, type));
+    }
+    
+    /**
+     * Get the most recent activities (up to 10)
+     * @return list of recent activities, most recent first
+     */
+    public List<Activity> getRecentActivitiesList() {
+        return getRecentActivities();
+    }
+
     // Helper method to create user copy for responses
     public User copy() {
         User user = new User();
@@ -83,6 +142,7 @@ public class User {
         user.sortKey = this.sortKey;
         user.createdAt = this.createdAt;
         user.updatedAt = this.updatedAt;
+        user.recentActivities = this.recentActivities != null ? new ArrayList<>(this.recentActivities) : new ArrayList<>();
         return user;
     }
 
