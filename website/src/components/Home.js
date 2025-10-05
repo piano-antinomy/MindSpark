@@ -4,6 +4,7 @@ import { buildApiHeaders } from '../utils/api';
 
 function Home() {
   const navigate = useNavigate();
+  const hasHandledAuth = React.useRef(false);
   
   // Check if user is logged in
   const [user, setUser] = React.useState(null);
@@ -56,7 +57,19 @@ function Home() {
       const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
       const headers = buildApiHeaders({ 'Content-Type': 'application/json' });
       
-      // First, try to get existing user from backend
+      // Step 1: Establish server session (treat fresh visit or after logout the same)
+      try {
+        await fetch(`${JAVA_API_BASE_URL}/auth/login`, {
+          method: 'POST',
+          headers,
+          credentials: 'include',
+          body: JSON.stringify({ userId: userPayload.userId })
+        });
+      } catch (e) {
+        console.warn('Login to establish session failed (continuing):', e);
+      }
+
+      // Step 2: Try to get existing user from backend
       const getResp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
         method: 'GET',
         headers,
@@ -71,27 +84,10 @@ function Home() {
           setUser(getData.user);
           console.log('Loaded existing user:', getData.user.username);
         } else {
-          // User doesn't exist, create new user with email-based username
-          const createResp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
-            method: 'POST',
-            headers,
-            credentials: 'include',
-            body: JSON.stringify(userPayload)
-          });
-          if (createResp.ok) {
-            const createData = await createResp.json();
-            const storedUser = createData && createData.user ? createData.user : userPayload;
-            localStorage.setItem('currentUser', JSON.stringify(storedUser));
-            setUser(storedUser);
-            console.log('Created new user:', storedUser.username);
-          } else {
-            console.warn('Create profile failed:', createResp.status);
-            localStorage.setItem('currentUser', JSON.stringify(userPayload));
-            setUser(userPayload);
-          }
+          console.warn('Profile GET ok but payload missing user; skipping create');
         }
-      } else {
-        // GET failed, try to create new user
+      } else if (getResp.status === 404) {
+        // User doesn't exist, create new user with email-based username
         const createResp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
           method: 'POST',
           headers,
@@ -103,11 +99,17 @@ function Home() {
           const storedUser = createData && createData.user ? createData.user : userPayload;
           localStorage.setItem('currentUser', JSON.stringify(storedUser));
           setUser(storedUser);
+          console.log('Created new user:', storedUser.username);
         } else {
           console.warn('Create profile failed:', createResp.status);
           localStorage.setItem('currentUser', JSON.stringify(userPayload));
           setUser(userPayload);
         }
+      } else {
+        // Unauthorized or other errors — do not create to avoid overwriting existing profile
+        console.warn('Profile GET failed:', getResp.status);
+        localStorage.setItem('currentUser', JSON.stringify(userPayload));
+        setUser(userPayload);
       }
     } catch (err) {
       console.error('Persist profile error:', err);
@@ -122,9 +124,14 @@ function Home() {
   }
 
   React.useEffect(() => {
+    if (hasHandledAuth.current) {
+      return;
+    }
+    hasHandledAuth.current = true;
     async function handleAuthCallback() {
       try {
         // Local mode bypass
+        /**  local bypass
         if (process.env.REACT_APP_LOCAL_MODE === 'true') {
           const demoUser = {
             username: 'demo',
@@ -136,6 +143,7 @@ function Home() {
           await persistAndRedirect(demoUser);
           return;
         }
+        */
 
         const params = new URLSearchParams(window.location.search);
         const code = params.get('code');
@@ -196,6 +204,7 @@ function Home() {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body
         });
+        
         if (!tokenResp.ok) {
           const errText = await tokenResp.text().catch(() => '');
           console.error('Token exchange failed', tokenResp.status, errText);
