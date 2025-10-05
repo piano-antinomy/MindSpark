@@ -93,37 +93,37 @@ function Leaderboard() {
         {/* Congratulatory Message with Home Button */}
         {currentUserRank && totalUsers > 0 ? (
           <div className="max-w-4xl mx-auto mb-8">
-            <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-              <div className="flex items-center justify-between mb-4">
-                <button 
-                  onClick={() => navigate('/')}
-                  className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                  <span className="font-medium">Home</span>
-                </button>
-                <h2 className="text-xl font-semibold text-gray-800">
-                  🎉 Congratulations!
-                </h2>
-                <div className="w-20"></div>
-              </div>
-              <p className="text-gray-700 text-center">
-                You rank <span className="font-bold text-blue-600">#{currentUserRank}</span> among <span className="font-bold text-blue-600">{totalUsers}</span> users. Keep up the great work! 🚀
-              </p>
+            <div className="flex items-center justify-between mb-4">
+              <button 
+                onClick={() => navigate('/')}
+                className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <img 
+                  src="/resources/sparksio.png" 
+                  alt="Home" 
+                  className="h-6 w-auto"
+                />
+              </button>
+              <h2 className="text-xl font-semibold text-gray-800">
+                🎉 Congratulations!
+              </h2>
+              <div className="w-20"></div>
             </div>
+            <p className="text-gray-700 text-center">
+              You rank <span className="font-bold text-blue-600">#{currentUserRank}</span> among <span className="font-bold text-blue-600">{totalUsers}</span> users. Keep up the great work! 🚀
+            </p>
           </div>
         ) : (
           <div className="mb-8">
             <button 
               onClick={() => navigate('/')}
-              className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
+              className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-              <span className="font-medium">Home</span>
+              <img 
+                src="/resources/sparksio.png" 
+                alt="Home" 
+                className="h-6 w-auto"
+              />
             </button>
           </div>
         )}
@@ -131,15 +131,15 @@ function Leaderboard() {
         {/* Leaderboard Card */}
         <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead className="bg-gray-50">
+            <table className="w-full bg-white">
+              <thead className="bg-indigo-600">
                 <tr>
-                  <th className="text-left text-sm font-semibold text-gray-600 uppercase tracking-wider px-6 py-3">RANK</th>
-                  <th className="text-left text-sm font-semibold text-gray-600 uppercase tracking-wider px-6 py-3">USER</th>
-                  <th className="text-left text-sm font-semibold text-gray-600 uppercase tracking-wider px-6 py-3">SCORE</th>
+                  <th className="text-left text-sm font-semibold text-white uppercase tracking-wider px-6 py-3">RANK</th>
+                  <th className="text-left text-sm font-semibold text-white uppercase tracking-wider px-6 py-3">USER</th>
+                  <th className="text-left text-sm font-semibold text-white uppercase tracking-wider px-6 py-3">SCORE</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-200">
+              <tbody className="divide-y divide-gray-200 bg-white">
                 {users.length === 0 && (
                   <tr>
                     <td colSpan={3} className="px-6 py-8 text-center text-gray-500">No users yet.</td>

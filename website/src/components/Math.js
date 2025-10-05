@@ -202,12 +202,14 @@ Please select a level above to begin practicing!`);
         <div className="flex items-start justify-between mb-6">
           <button 
             onClick={() => navigate('/')} 
-            className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200 mt-2"
+            className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 mt-2"
             title="Home"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-            </svg>
+            <img 
+              src="/resources/sparksio.png" 
+              alt="Home" 
+              className="h-6 w-auto"
+            />
           </button>
           <div className="text-center">
             <h2>Click to view AMC problems</h2>
@@ -296,12 +298,14 @@ Please select a level above to begin practicing!`);
           <div className="flex items-center space-x-4">
             <button 
               onClick={() => navigate('/')} 
-              className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors duration-200"
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
               title="Home"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-              </svg>
+              <img 
+                src="/resources/sparksio.png" 
+                alt="Home" 
+                className="h-6 w-auto"
+              />
             </button>
             <button 
               onClick={backToLevelSelection}

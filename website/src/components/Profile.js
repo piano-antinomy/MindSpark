@@ -478,10 +478,13 @@ function Profile() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <Link 
             to="/" 
-            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-all duration-200"
+            className="flex items-center px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-all duration-200"
           >
-            <span className="text-lg">🏠</span>
-            Home
+            <img 
+              src="/resources/sparksio.png" 
+              alt="Home" 
+              className="h-6 w-auto"
+            />
           </Link>
           <button 
             onClick={logout} 

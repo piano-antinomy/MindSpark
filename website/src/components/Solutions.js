@@ -321,7 +321,12 @@ function Solutions() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/dashboard')}>
-                    🏠 Home
+                    <img 
+                      src="/resources/sparksio.png" 
+                      alt="Home" 
+                      className="h-4 w-auto inline mr-1"
+                    />
+                    Home
                   </button>
                   <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
                     Question {currentQuestionIndex + 1} of {parsedQuestions.length}
@@ -380,7 +385,12 @@ function Solutions() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <button className="btn btn-secondary text-sm" onClick={() => navigate('/dashboard')}>
-                    🏠 Home
+                    <img 
+                      src="/resources/sparksio.png" 
+                      alt="Home" 
+                      className="h-4 w-auto inline mr-1"
+                    />
+                    Home
                   </button>
                   <h2 className="text-lg font-bold text-gray-900">
                     Question {currentQuestionIndex + 1} of {parsedQuestions.length}

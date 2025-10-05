@@ -226,7 +226,13 @@ function Home() {
       {/* Header & Navigation */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <Link to="/" className="text-2xl font-bold text-indigo-600">MindSpark</Link>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/resources/sparksio.png" 
+              alt="MindSpark" 
+              className="h-8 w-auto"
+            />
+          </Link>
           <div className="hidden md:flex space-x-8 items-center">
             <Link to="/math-questions" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">AMC Problems</Link>
             <Link to="/quiz" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Quizzes</Link>
