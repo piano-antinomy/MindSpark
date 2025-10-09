@@ -673,32 +673,6 @@ function Quiz() {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            {/* Timer Settings */}
-            <div className="bg-gray-50 rounded-lg p-6 mb-8">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Quiz Type</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <input
-                    type="checkbox"
-                    id="hasTimer"
-                    checked={hasTimer}
-                    onChange={(e) => setHasTimer(e.target.checked)}
-                    className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="hasTimer" className="text-sm font-medium text-gray-700">
-                    Timed quiz ({getStandardTimeLimit(selectedLevel)} minutes)
-                  </label>
-                </div>
-                <div className="ml-7 text-sm text-gray-600">
-                  {hasTimer ? (
-                    <p>Quiz will have a {getStandardTimeLimit(selectedLevel)}-minute time limit</p>
-                  ) : (
-                    <p>Quiz will have no time limit - take as much time as you need</p>
-                  )}
-                </div>
-              </div>
-            </div>
-            
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {sortedYears.map((year, index) => (
                 <button

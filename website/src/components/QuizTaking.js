@@ -4,6 +4,19 @@ import { questionParser } from '../utils/QuestionParser';
 import Question from './Question';
 import { apiFetch, buildApiHeaders } from '../utils/api';
 
+// TIME LIMIT CONFIGURATION (in minutes)
+const TIME_LIMITS = {
+  AMC_8: 45,   // AMC 8: 45 minutes
+  AMC_10: 75,  // AMC 10: 75 minutes  
+  AMC_12: 75   // AMC 12: 75 minutes
+};
+
+// WARNING AND COUNTDOWN CONFIGURATION (in seconds)
+const TIMER_CONFIG = {
+  WARNING_TIME: 30,  // Show warning when this many seconds remain
+  COUNTDOWN_TIME: 3  // Start countdown when this many seconds remain
+};
+
 function QuizTaking() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
@@ -19,6 +32,9 @@ function QuizTaking() {
   const [lastSavedAnswers, setLastSavedAnswers] = useState({});
   const [hasTimer, setHasTimer] = useState(true);
   const [isResumingQuiz, setIsResumingQuiz] = useState(false);
+  const [showTimeWarning, setShowTimeWarning] = useState(false);
+  const [showCountdown, setShowCountdown] = useState(false);
+  const [countdownSeconds, setCountdownSeconds] = useState(3);
   const navigate = useNavigate();
   const location = useLocation();
   const autoSaveTimeout = useRef(null);
@@ -63,15 +79,7 @@ function QuizTaking() {
 
   // Auto-start quiz if resuming
   useEffect(() => {
-    console.log('Auto-start effect triggered:', {
-      isResumingQuiz,
-      parsedQuestionsLength: parsedQuestions.length,
-      quizStarted,
-      quizCompleted
-    });
-    
     if (isResumingQuiz && parsedQuestions.length > 0 && !quizStarted && !quizCompleted) {
-      console.log('Auto-starting resumed quiz');
       startQuiz();
     }
   }, [isResumingQuiz, parsedQuestions.length, quizStarted, quizCompleted]);
@@ -122,17 +130,39 @@ function QuizTaking() {
     if (quizStarted && !quizCompleted && hasTimer) {
       const timer = setInterval(() => {
         setTimeRemaining(prev => {
-          if (prev <= 1) {
-            completeQuiz();
+          // Show warning at configured time remaining
+          if (prev === TIMER_CONFIG.WARNING_TIME && !showTimeWarning) {
+            setShowTimeWarning(true);
+          }
+          
+          // Start countdown at configured time remaining
+          if (prev === TIMER_CONFIG.COUNTDOWN_TIME && !showCountdown) {
+            setShowTimeWarning(false);
+            setShowCountdown(true);
+            setCountdownSeconds(TIMER_CONFIG.COUNTDOWN_TIME);
+          }
+          
+          // Update countdown display
+          if (showCountdown) {
+            setCountdownSeconds(prev);
+          }
+          
+          // Time's up - save and complete quiz
+          if (prev <= 0) {
+            setShowCountdown(false);
+            saveProgress().then(() => {
+              completeQuiz();
+            });
             return 0;
           }
+          
           return prev - 1;
         });
       }, 1000);
 
       return () => clearInterval(timer);
     }
-  }, [quizStarted, quizCompleted, hasTimer]);
+  }, [quizStarted, quizCompleted, hasTimer, showTimeWarning, showCountdown]);
 
   const checkAuthStatus = () => {
     const currentUser = localStorage.getItem('currentUser');
@@ -168,23 +198,38 @@ function QuizTaking() {
       
       if (response.ok) {
         const quiz = await response.json();
-        console.log('Loaded quiz progress:', quiz);
         setCurrentQuiz(quiz);
         
-        // Set timer settings from loaded quiz
-        setHasTimer(quiz.hasTimer !== false); // Default to true if not set
-        
-        // Check if this is a resumed quiz (has existing answers or time spent)
+        // Check if this is a resumed quiz (has existing answers, time spent, or was explicitly started)
+        // A quiz is considered "started" if:
+        // 1. Has answered questions
+        // 2. Has time spent (for timed quizzes)  
+        // 3. Is completed
+        // 4. Has timer settings AND has a startTime that's different from creation time (indicating user started it)
         const hasExistingProgress = (quiz.questionIdToAnswer && Object.keys(quiz.questionIdToAnswer).length > 0) || 
                                    (quiz.timeSpent && quiz.timeSpent > 0) || 
                                    quiz.completed;
-        console.log('Quiz resume check:', {
-          questionIdToAnswer: quiz.questionIdToAnswer,
-          questionIdToAnswerKeys: quiz.questionIdToAnswer ? Object.keys(quiz.questionIdToAnswer).length : 0,
-          timeSpent: quiz.timeSpent,
-          completed: quiz.completed,
-          hasExistingProgress
-        });
+        
+        // Set timer settings from loaded quiz
+        // Priority order for determining if quiz should be timed:
+        // 1. Explicit hasTimer field in quiz data
+        // 2. If timeLimit exists and > 0, assume it was timed
+        // 3. If timeSpent > 0, assume it was timed (user was tracking time)
+        // 4. Default to untimed for safety
+        
+        let quizHasTimer = false;
+        
+        if (quiz.hasTimer !== undefined) {
+          quizHasTimer = quiz.hasTimer;
+        } else if (quiz.timeLimit && quiz.timeLimit > 0) {
+          quizHasTimer = true;
+        } else if (quiz.timeSpent && quiz.timeSpent > 0) {
+          quizHasTimer = true;
+        } else {
+          quizHasTimer = false;
+        }
+            
+        setHasTimer(quizHasTimer);
         setIsResumingQuiz(hasExistingProgress);
         
         // Load quiz questions and pass quiz data to load previous answers
@@ -326,54 +371,56 @@ function QuizTaking() {
   };
 
   const getTimeLimit = (quiz) => {
-    if (!quiz) return 45 * 60; // Default to 45 minutes in seconds
+    if (!quiz) return TIME_LIMITS.AMC_8 * 60; // Default to AMC 8 time limit in seconds
     
-    if (!quiz.questionSetId) return 45 * 60; // Default to 45 minutes
+    if (!quiz.questionSetId) return TIME_LIMITS.AMC_8 * 60; // Default to AMC 8 time limit
     
     const { amcLevel } = parseQuestionSetId(quiz.questionSetId);
-    if (!amcLevel) return 45 * 60; // Default to 45 minutes if parsing fails
+    if (!amcLevel) return TIME_LIMITS.AMC_8 * 60; // Default to AMC 8 time limit if parsing fails
     
-    // AMC 8: 45 minutes, AMC 10/12: 75 minutes
+    // Use configuration constants
     if (amcLevel === 8) {
-      return 45 * 60; // 45 minutes in seconds
-    } else if (amcLevel === 10 || amcLevel === 12) {
-      return 75 * 60; // 75 minutes in seconds
+      return TIME_LIMITS.AMC_8 * 60; // Convert minutes to seconds
+    } else if (amcLevel === 10) {
+      return TIME_LIMITS.AMC_10 * 60; // Convert minutes to seconds
+    } else if (amcLevel === 12) {
+      return TIME_LIMITS.AMC_12 * 60; // Convert minutes to seconds
     }
     
-    return 45 * 60; // Default to 45 minutes if level not recognized
+    return TIME_LIMITS.AMC_8 * 60; // Default to AMC 8 time limit if level not recognized
   };
 
   const getStandardTimeLimit = (amcLevel) => {
-    const timeLimits = {
-      8: 45,   // AMC 8: 45 minutes
-      10: 75,  // AMC 10: 75 minutes
-      12: 75   // AMC 12: 75 minutes
-    };
-    return timeLimits[amcLevel] || 45;
+    if (amcLevel === 8) return TIME_LIMITS.AMC_8;
+    if (amcLevel === 10) return TIME_LIMITS.AMC_10;
+    if (amcLevel === 12) return TIME_LIMITS.AMC_12;
+    return TIME_LIMITS.AMC_8; // Default to AMC 8
   };
 
   const getTimeLimitText = (quiz) => {
-    if (!quiz) return "45 minutes";
+    if (!quiz) return `${TIME_LIMITS.AMC_8} minutes`;
     
-    if (!quiz.questionSetId) return "45 minutes";
+    if (!quiz.questionSetId) return `${TIME_LIMITS.AMC_8} minutes`;
     
     const { amcLevel } = parseQuestionSetId(quiz.questionSetId);
-    if (!amcLevel) return "45 minutes";
+    if (!amcLevel) return `${TIME_LIMITS.AMC_8} minutes`;
     
     if (amcLevel === 8) {
-      return "45 minutes";
-    } else if (amcLevel === 10 || amcLevel === 12) {
-      return "75 minutes";
+      return `${TIME_LIMITS.AMC_8} minutes`;
+    } else if (amcLevel === 10) {
+      return `${TIME_LIMITS.AMC_10} minutes`;
+    } else if (amcLevel === 12) {
+      return `${TIME_LIMITS.AMC_12} minutes`;
     }
     
-    return "45 minutes";
+    return `${TIME_LIMITS.AMC_8} minutes`;
   };
 
   const startQuiz = async () => {
     setQuizStarted(true);
     
-    // Update quiz with timer settings (for new quizzes only)
-    if (currentQuiz && !isResumingQuiz) {
+    // Update quiz with timer settings (for both new and resumed quizzes)
+    if (currentQuiz) {
       const standardTimeLimit = getTimeLimit(currentQuiz) / 60; // Convert to minutes
       const updatedQuiz = {
         ...currentQuiz,
@@ -382,7 +429,7 @@ function QuizTaking() {
       };
       setCurrentQuiz(updatedQuiz);
       
-      // Save timer settings to backend
+      // Save timer settings to backend (for both new and resumed quizzes)
       try {
         const currentUser = checkAuthStatus();
         const urlParams = new URLSearchParams(location.search);
@@ -397,19 +444,26 @@ function QuizTaking() {
             quizProgress: updatedQuiz
           })
         });
+        
+        // Also save progress to ensure timer settings are persisted via progress tracking
+        setTimeout(() => {
+          saveProgress();
+        }, 1000); // Small delay to ensure quiz state is fully updated
+        
       } catch (error) {
         console.error('Error updating quiz timer settings:', error);
       }
     }
     
     // Set up timer based on quiz settings (for both new and resumed quizzes)
-    if (currentQuiz?.hasTimer) {
+    if (hasTimer) {
       const timeLimitInSeconds = getTimeLimit(currentQuiz);
-      const timeSpentInSeconds = (currentQuiz?.timeSpent || 0) * 60; // Convert minutes to seconds
+      const timeSpentInSeconds = (currentQuiz?.timeSpent || 0) * 60;
       const remainingTime = Math.max(0, timeLimitInSeconds - timeSpentInSeconds);
+      
       setTimeRemaining(remainingTime);
     } else {
-      setTimeRemaining(0); // No timer mode
+      setTimeRemaining(0);
     }
   };
 
@@ -477,9 +531,11 @@ function QuizTaking() {
         }
       });
 
-      // If no answers have changed, don't make API call
-      if (Object.keys(questionIdToAnswer).length === 0) {
-        console.log('No answers have changed since last save');
+      // If no answers have changed, still save if we need to persist timer settings
+      // or if this is the first time saving progress for a timed quiz
+      if (Object.keys(questionIdToAnswer).length === 0 && 
+          currentQuiz?.hasTimer === hasTimer && 
+          currentQuiz?.timeLimit !== undefined) {
         setSaving(false);
         return;
       }
@@ -494,9 +550,24 @@ function QuizTaking() {
       let timeSpent = 0;
       if (hasTimer && currentQuiz) {
         const timeLimitInSeconds = getTimeLimit(currentQuiz);
-        const timeSpentInSeconds = timeLimitInSeconds - timeRemaining;
-        timeSpent = Math.floor(timeSpentInSeconds / 60); // Round down to minutes
+        // Only calculate time spent if timeRemaining has been properly initialized (> 0)
+        // If timeRemaining is 0 but we haven't actually started the timer, don't calculate time spent
+        if (timeRemaining > 0) {
+          const timeSpentInSeconds = timeLimitInSeconds - timeRemaining;
+          timeSpent = Math.floor(timeSpentInSeconds / 60); // Round down to minutes
+        } else {
+          // For a new quiz or if timer hasn't started, use existing timeSpent from quiz
+          timeSpent = currentQuiz?.timeSpent || 0;
+        }
       }
+
+      console.log('Time calculation debug:', {
+        hasTimer,
+        timeRemaining,
+        timeLimitInSeconds: hasTimer ? getTimeLimit(currentQuiz) : 0,
+        calculatedTimeSpent: timeSpent,
+        existingTimeSpent: currentQuiz?.timeSpent || 0
+      });
 
       const response = await apiFetch(`${JAVA_API_BASE_URL}/progress/track`, {
         method: 'POST',
@@ -507,8 +578,20 @@ function QuizTaking() {
           userId: currentUser.userId,
           quizId: quizId,
           questionIdToAnswer: questionIdToAnswer,
-          timeSpent: timeSpent
+          timeSpent: timeSpent,
+          // Also save timer settings to ensure they persist
+          hasTimer: hasTimer,
+          timeLimit: hasTimer ? getTimeLimit(currentQuiz) / 60 : 0 // Convert to minutes
         })
+      });
+
+      console.log('Saving progress with timer settings:', {
+        userId: currentUser.userId,
+        quizId: quizId,
+        questionIdToAnswer: questionIdToAnswer,
+        timeSpent: timeSpent,
+        hasTimer: hasTimer,
+        timeLimit: hasTimer ? getTimeLimit(currentQuiz) / 60 : 0
       });
 
       if (response.ok) {
@@ -817,7 +900,10 @@ function QuizTaking() {
           </ul>
         </div>
         
-        <button className="btn btn-primary btn-large" onClick={startQuiz}>
+        <button 
+          className="btn btn-primary btn-large" 
+          onClick={startQuiz}
+        >
           Start Quiz
         </button>
       </div>
@@ -831,14 +917,6 @@ function QuizTaking() {
         <div className="mb-3 lg:mb-4 flex-shrink-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/dashboard')}>
-                <img 
-                  src="/resources/sparksio.png" 
-                  alt="Home" 
-                  className="h-4 w-auto inline mr-1"
-                />
-                Home
-              </button>
               <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
                 Question {currentQuestionIndex + 1} of {parsedQuestions.length}
               </h2>
@@ -1078,6 +1156,40 @@ function QuizTaking() {
         <div className="flex-1 p-4 lg:p-6 overflow-y-auto">
           <div className="max-w-4xl mx-auto">
             {renderResults()}
+          </div>
+        </div>
+      )}
+      
+      {/* Time Warning Popup */}
+      {showTimeWarning && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-8 max-w-md mx-4 text-center shadow-2xl">
+            <div className="text-6xl mb-4">⏰</div>
+            <h2 className="text-2xl font-bold text-red-600 mb-4">Time Warning!</h2>
+            <p className="text-gray-700 mb-6">
+              Only <span className="font-bold text-red-600">{TIMER_CONFIG.WARNING_TIME} seconds</span> remaining!
+              <br />
+              Please finish up your current question.
+            </p>
+            <button 
+              className="btn btn-primary"
+              onClick={() => setShowTimeWarning(false)}
+            >
+              Continue Quiz
+            </button>
+          </div>
+        </div>
+      )}
+      
+      {/* Countdown Popup */}
+      {showCountdown && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-12 max-w-lg mx-4 text-center shadow-2xl">
+            <div className="text-8xl mb-6">⏱️</div>
+            <h2 className="text-3xl font-bold text-red-600 mb-6">Time's Up!</h2>
+            <div className="text-6xl font-bold text-red-600 mb-4 animate-pulse">
+              {countdownSeconds}
+            </div>
           </div>
         </div>
       )}

@@ -35,7 +35,7 @@ public class DDBBackedProgressTrackingServiceImpl implements ProgressTrackServic
     }
 
     @Override
-    public void trackProgress(String userId, String quizId, Map<String, String> questionIdToAnswer, int timeSpent) {
+    public void trackProgress(String userId, String quizId, Map<String, String> questionIdToAnswer, int timeSpent, boolean hasTimer, int timeLimit) {
         try {
             // Try to get existing progress for this user and quiz
             QuizProgress existingProgress = userProgressTable.getItem(
@@ -54,10 +54,15 @@ public class DDBBackedProgressTrackingServiceImpl implements ProgressTrackServic
             existingProgress.setQuestionIdToAnswer(updatedQuestionIdToAnswer);
             existingProgress.setLastActivity(LocalDateTime.now(ZoneOffset.UTC));
             existingProgress.setTimeSpent(timeSpent);
+            
+            // Update timer settings
+            existingProgress.setHasTimer(hasTimer);
+            existingProgress.setTimeLimit(timeLimit);
 
             existingProgress.setQuizScore(figureQuizScore(userId, quizId, updatedQuestionIdToAnswer));
             userProgressTable.updateItem(existingProgress);
-            logger.info("Updated progress for user: {} quiz: {} timeSpent: {}", userId, quizId, timeSpent);
+            logger.info("Updated progress for user: {} quiz: {} timeSpent: {} hasTimer: {} timeLimit: {}", 
+                       userId, quizId, timeSpent, hasTimer, timeLimit);
             
         } catch (Exception e) {
             logger.error("Error tracking progress for user: {} quiz: {}", userId, quizId, e);

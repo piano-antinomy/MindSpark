@@ -229,6 +229,8 @@ public class ProgressController extends HttpServlet {
             String quizId = jsonNode.get("quizId").asText();
             JsonNode questionIdToAnswerNode = jsonNode.get("questionIdToAnswer");
             int timeSpent = jsonNode.has("timeSpent") ? jsonNode.get("timeSpent").asInt() : 0;
+            boolean hasTimer = jsonNode.has("hasTimer") ? jsonNode.get("hasTimer").asBoolean() : false;
+            int timeLimit = jsonNode.has("timeLimit") ? jsonNode.get("timeLimit").asInt() : 0;
             
             if (userId == null || userId.trim().isEmpty()) {
                 sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "User ID is required");
@@ -251,11 +253,11 @@ public class ProgressController extends HttpServlet {
                 questionIdToAnswer.put(entry.getKey(), entry.getValue().asText());
             });
             
-            logger.info("Tracking progress for user: {}, quiz: {}, questions: {}", 
-                       userId, quizId, questionIdToAnswer.keySet());
+            logger.info("Tracking progress for user: {}, quiz: {}, questions: {}, hasTimer: {}, timeLimit: {}", 
+                       userId, quizId, questionIdToAnswer.keySet(), hasTimer, timeLimit);
             
             // Track the progress using batch method
-            progressTrackService.trackProgress(userId, quizId, questionIdToAnswer, timeSpent);
+            progressTrackService.trackProgress(userId, quizId, questionIdToAnswer, timeSpent, hasTimer, timeLimit);
             
             // Return updated quiz progress
             QuizProgress updatedQuizProgress = progressTrackService.getProgress(userId, quizId);

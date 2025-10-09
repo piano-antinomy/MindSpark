@@ -343,9 +343,6 @@ function Home() {
                   Prepare for AMC 8, 10, and 12 with personalized practice and intelligent explanations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to="/math" className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-block text-center shadow-lg">
-                    Start Practicing
-                  </Link>
                   <Link to="/quiz" className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-indigo-600 transition duration-300 inline-block text-center shadow-lg">
                     Take a Quiz
                   </Link>
