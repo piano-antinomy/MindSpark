@@ -277,7 +277,7 @@ public class DDBBackedQuizServiceImpl implements QuizService {
             existingQuiz.setTotalQuestions(quizProgress.getTotalQuestions());
             
             userProgressTable.updateItem(existingQuiz);
-            logger.debug("Updated quiz progress for user {} quiz {}", userId, quizId);
+            logger.info("Updated quiz progress for user from QuizAPI {} quiz {}", userId, quizId);
             
         } catch (Exception e) {
             logger.error("Failed to update quiz progress for user {} quiz {}: {}", 

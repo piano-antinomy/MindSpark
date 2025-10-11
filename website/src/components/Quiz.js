@@ -283,6 +283,7 @@ function Quiz() {
             variant: variant,
             questionCount: totalQuestions,
             answeredQuestions: answeredQuestions,
+            quizScore: quiz.quizScore || 0,
             correctAnswers: correctAnswers,
             status: quiz.completed ? 'completed' : 'in_progress',
             score: quiz.scorePercentage || 0,
@@ -416,7 +417,7 @@ function Quiz() {
                 return null;
               })()}
               {quiz.status === 'completed' && (
-                <div><strong>Score:</strong> {quiz.correctAnswers}</div>
+                <div><strong>Score:</strong> {quiz.quizScore || 0}</div>
               )}
             </div>
           </div>

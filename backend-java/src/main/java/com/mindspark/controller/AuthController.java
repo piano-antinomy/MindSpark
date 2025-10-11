@@ -147,7 +147,7 @@ public class AuthController extends HttpServlet {
                 logger.info("Successful login for user: {}", userId);
                 
             } else {
-                sendErrorResponse(response, HttpServletResponse.SC_UNAUTHORIZED, "Invalid credentials");
+                sendErrorResponse(response, HttpServletResponse.SC_NOT_FOUND, "User not found");
             }
             
         } catch (Exception e) {

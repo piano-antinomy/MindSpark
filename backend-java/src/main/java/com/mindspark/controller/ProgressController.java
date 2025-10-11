@@ -231,6 +231,7 @@ public class ProgressController extends HttpServlet {
             int timeSpent = jsonNode.has("timeSpent") ? jsonNode.get("timeSpent").asInt() : 0;
             boolean hasTimer = jsonNode.has("hasTimer") ? jsonNode.get("hasTimer").asBoolean() : false;
             int timeLimit = jsonNode.has("timeLimit") ? jsonNode.get("timeLimit").asInt() : 0;
+            Boolean completed = jsonNode.has("completed") ? jsonNode.get("completed").asBoolean() : false;
             
             if (userId == null || userId.trim().isEmpty()) {
                 sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "User ID is required");
@@ -257,7 +258,7 @@ public class ProgressController extends HttpServlet {
                        userId, quizId, questionIdToAnswer.keySet(), hasTimer, timeLimit);
             
             // Track the progress using batch method
-            progressTrackService.trackProgress(userId, quizId, questionIdToAnswer, timeSpent, hasTimer, timeLimit);
+            progressTrackService.trackProgress(userId, quizId, questionIdToAnswer, completed, timeSpent, hasTimer, timeLimit);
             
             // Return updated quiz progress
             QuizProgress updatedQuizProgress = progressTrackService.getProgress(userId, quizId);

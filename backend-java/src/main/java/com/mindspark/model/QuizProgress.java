@@ -264,4 +264,24 @@ public class QuizProgress {
         return completed;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("QuizProgress{");
+        sb.append("userId='").append(userId).append('\'');
+        sb.append(", quizId='").append(quizId).append('\'');
+        sb.append(", quizType=").append(quizType != null ? quizType.getValue() : null);
+        sb.append(", questionSetId='").append(questionSetId).append('\'');
+        sb.append(", startTime=").append(startTime);
+        sb.append(", lastActivity=").append(lastActivity);
+        sb.append(", quizName='").append(quizName).append('\'');
+        sb.append(", questionIdToAnswer=").append(questionIdToAnswer);
+        sb.append(", quizScore=").append(quizScore);
+        sb.append(", completed=").append(completed);
+        sb.append(", totalQuestions=").append(totalQuestions);
+        sb.append(", hasTimer=").append(hasTimer);
+        sb.append(", timeLimit=").append(timeLimit);
+        sb.append(", timeSpent=").append(timeSpent);
+        sb.append('}');
+        return sb.toString();
+    }
 }

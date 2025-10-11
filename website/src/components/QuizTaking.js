@@ -150,7 +150,7 @@ function QuizTaking() {
           // Time's up - save and complete quiz
           if (prev <= 0) {
             setShowCountdown(false);
-            saveProgress().then(() => {
+            saveProgress(true).then(() => {
               completeQuiz();
             });
             return 0;
@@ -447,7 +447,7 @@ function QuizTaking() {
         
         // Also save progress to ensure timer settings are persisted via progress tracking
         setTimeout(() => {
-          saveProgress();
+          saveProgress(false);
         }, 1000); // Small delay to ensure quiz state is fully updated
         
       } catch (error) {
@@ -500,7 +500,7 @@ function QuizTaking() {
   /**
    * Save current quiz progress to backend
    */
-  const saveProgress = async () => {
+  const saveProgress = async (isCompleted = false) => {
     try {
       setSaving(true);
       const currentUser = checkAuthStatus();
@@ -543,7 +543,8 @@ function QuizTaking() {
       console.log('Saving progress:', {
         userId: currentUser.userId,
         quizId: quizId,
-        questionIdToAnswer: questionIdToAnswer
+        questionIdToAnswer: questionIdToAnswer,
+        completed: isCompleted
       });
 
       // Calculate time spent if this is a timed quiz
@@ -577,6 +578,7 @@ function QuizTaking() {
         body: JSON.stringify({
           userId: currentUser.userId,
           quizId: quizId,
+          completed: isCompleted,
           questionIdToAnswer: questionIdToAnswer,
           timeSpent: timeSpent,
           // Also save timer settings to ensure they persist
@@ -614,7 +616,8 @@ function QuizTaking() {
   };
 
   const completeQuiz = async () => {
-    await saveProgress();
+    
+    await saveProgress(true);
     try {
       const currentUser = checkAuthStatus();
       if (!currentUser) { setQuizCompleted(true); return; }
@@ -952,7 +955,7 @@ function QuizTaking() {
               className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} 
               onClick={() => {
                 console.log('🖱️ Save button clicked!');
-                saveProgress();
+                saveProgress(false);
               }}
               disabled={saving}
             >
@@ -1119,7 +1122,7 @@ function QuizTaking() {
                     className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-secondary' : 'btn-primary'}`} 
                     onClick={() => {
                       console.log('🖱️ Mobile Save button clicked!');
-                      saveProgress();
+                      saveProgress(false);
                     }}
                     disabled={saving}
                   >

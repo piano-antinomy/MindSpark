@@ -35,7 +35,7 @@ public class DDBBackedProgressTrackingServiceImpl implements ProgressTrackServic
     }
 
     @Override
-    public void trackProgress(String userId, String quizId, Map<String, String> questionIdToAnswer, int timeSpent, boolean hasTimer, int timeLimit) {
+    public void trackProgress(String userId, String quizId, Map<String, String> questionIdToAnswer, Boolean completed, int timeSpent, boolean hasTimer, int timeLimit) {
         try {
             // Try to get existing progress for this user and quiz
             QuizProgress existingProgress = userProgressTable.getItem(
@@ -54,15 +54,17 @@ public class DDBBackedProgressTrackingServiceImpl implements ProgressTrackServic
             existingProgress.setQuestionIdToAnswer(updatedQuestionIdToAnswer);
             existingProgress.setLastActivity(LocalDateTime.now(ZoneOffset.UTC));
             existingProgress.setTimeSpent(timeSpent);
+            existingProgress.setCompleted(completed);
             
             // Update timer settings
             existingProgress.setHasTimer(hasTimer);
             existingProgress.setTimeLimit(timeLimit);
 
             existingProgress.setQuizScore(figureQuizScore(userId, quizId, updatedQuestionIdToAnswer));
-            userProgressTable.updateItem(existingProgress);
-            logger.info("Updated progress for user: {} quiz: {} timeSpent: {} hasTimer: {} timeLimit: {}", 
-                       userId, quizId, timeSpent, hasTimer, timeLimit);
+
+            userProgressTable.putItem(existingProgress);
+
+            logger.info("Updated progress {}", existingProgress);
             
         } catch (Exception e) {
             logger.error("Error tracking progress for user: {} quiz: {}", userId, quizId, e);
@@ -77,7 +79,7 @@ public class DDBBackedProgressTrackingServiceImpl implements ProgressTrackServic
         for (Question question : questions) {
             String userAnswer = updatedQuestionIdToAnswer.get(question.getId());
             if (userAnswer != null && userAnswer.equals(question.getAnswer())) {
-                score += 4;
+                score += 1;
             }
         }
 

@@ -221,7 +221,8 @@ public class QuizController extends HttpServlet {
             // Check if quiz is being completed
             boolean isCompleting = quizProgress.isCompleted();
             
-            quizService.updateQuizProgress(userId, quizId, quizProgress);
+            // no need to update quizProgress as this is tracked by the progress api
+            // quizService.updateQuizProgress(userId, quizId, quizProgress);
             
             // Add complete quiz activity if quiz is being completed
             if (isCompleting) {
