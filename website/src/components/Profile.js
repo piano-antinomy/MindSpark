@@ -115,7 +115,8 @@ function Profile() {
   const logout = async () => {
     try {
       await apiFetch(`${JAVA_API_BASE_URL}/auth/logout`, {
-        method: 'POST'
+        method: 'POST',
+        credentials: 'include'
       });
     } catch (error) {
       console.error('Logout error:', error);
@@ -142,6 +143,7 @@ function Profile() {
       // Update backend
       const response = await apiFetch(`${JAVA_API_BASE_URL}/auth/profile`, {
         method: 'POST',
+        credentials: 'include',
         body: JSON.stringify(updatedUser)
       });
 
@@ -184,6 +186,7 @@ function Profile() {
       // Update backend
       const response = await apiFetch(`${JAVA_API_BASE_URL}/auth/profile`, {
         method: 'POST',
+        credentials: 'include',
         body: JSON.stringify(updatedUser)
       });
 
@@ -239,7 +242,7 @@ function Profile() {
 
   const loadUserProfile = async () => {
     try {
-      const response = await apiFetch(`${JAVA_API_BASE_URL}/auth/profile`);
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/auth/profile`, { credentials: 'include' });
 
       if (response.ok) {
         const data = await response.json();
@@ -261,7 +264,7 @@ function Profile() {
   const loadLeaderboardRank = async () => {
     try {
       console.log('Loading leaderboard rank from:', `${JAVA_API_BASE_URL}/leaderboard/rank`);
-      const response = await apiFetch(`${JAVA_API_BASE_URL}/leaderboard/rank`);
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/leaderboard/rank`, { credentials: 'include' });
       console.log('Leaderboard rank response status:', response.status);
       if (response.ok) {
         const data = await response.json();
@@ -283,7 +286,7 @@ function Profile() {
       if (!currentUser) return;
 
       console.log('Loading quiz stats for user:', currentUser.userId);
-      const response = await apiFetch(`${JAVA_API_BASE_URL}/progress/user/${currentUser.userId}`);
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/progress/user/${currentUser.userId}`, { credentials: 'include' });
       
       if (response.ok) {
         const data = await response.json();

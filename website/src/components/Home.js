@@ -57,16 +57,23 @@ function Home() {
       const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
       const headers = buildApiHeaders({ 'Content-Type': 'application/json' });
       
-      // Step 1: Establish server session (treat fresh visit or after logout the same)
-      try {
-        await fetch(`${JAVA_API_BASE_URL}/auth/login`, {
+      // Step 1: Establish server session by logging in; if user not found (404), create profile
+      const loginResp = await fetch(`${JAVA_API_BASE_URL}/auth/login`, {
+        method: 'POST',
+        headers,
+        credentials: 'include',
+        body: JSON.stringify({ userId: userPayload.userId })
+      });
+      if (loginResp.status === 404) {
+        const createResp = await fetch(`${JAVA_API_BASE_URL}/auth/profile`, {
           method: 'POST',
           headers,
           credentials: 'include',
-          body: JSON.stringify({ userId: userPayload.userId })
+          body: JSON.stringify(userPayload)
         });
-      } catch (e) {
-        console.warn('Login to establish session failed (continuing):', e);
+        if (!createResp.ok) {
+          console.warn('Create profile after 404 login failed:', createResp.status);
+        }
       }
 
       // Step 2: Try to get existing user from backend
