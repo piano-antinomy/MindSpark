@@ -137,9 +137,8 @@ function Home() {
     hasHandledAuth.current = true;
     async function handleAuthCallback() {
       try {
-        // Local mode bypass
-        /**  local bypass
-        if (process.env.REACT_APP_LOCAL_MODE === 'true') {
+        // Ipad Local mode bypass
+        if (process.env.REACT_APP_IPAD_TEST === 'true') {
           const demoUser = {
             username: 'demo',
             userId: 'demo',
@@ -150,7 +149,7 @@ function Home() {
           await persistAndRedirect(demoUser);
           return;
         }
-        */
+        
 
         const params = new URLSearchParams(window.location.search);
         const code = params.get('code');
