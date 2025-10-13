@@ -9,12 +9,14 @@ import MathQuestions from './components/MathQuestions';
 import Quiz from './components/Quiz';
 import QuizTaking from './components/QuizTaking';
 import Solutions from './components/Solutions';
-import './App.css';
 import Leaderboard from './components/Leaderboard';
+import OrientationLock from './components/OrientationLock';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <OrientationLock />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

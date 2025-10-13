@@ -584,8 +584,8 @@ function Profile() {
                 </p>
               )}
               
-              {/* Stats Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+              {/* Stats Grid - Responsive layout */}
+              <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-6">
                 {/* Score */}
                 <div className="bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl p-6 text-white shadow-lg">
                   <div className="text-sm font-medium opacity-90 mb-1">Total Points</div>
@@ -617,8 +617,8 @@ function Profile() {
                   )}
                 </div>
 
-                {/* Quizzes */}
-                <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white shadow-lg">
+                {/* Quizzes - Hidden on iPad, shown on laptop */}
+                <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white shadow-lg xl:block hidden">
                   <div className="text-sm font-medium opacity-90 mb-1">Quizzes</div>
                   {quizStats.inProgress > 0 ? (
                     <div className="space-y-1">
