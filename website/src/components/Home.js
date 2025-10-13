@@ -389,8 +389,8 @@ function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Progress Tracking</h3>
-                <p className="text-gray-600">Track your performance, identify weak areas, and see your improvement over time with detailed analytics.</p>
+                <h3 className="text-xl font-semibold mb-2">Performance Tracking</h3>
+                <p className="text-gray-600">Track your performance, identify weak areas through AI, and see your improvement over time with detailed analytics.</p>
               </div>
               <div className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
                 <div className="flex items-center justify-center h-16 w-16 bg-green-100 text-green-600 rounded-full mx-auto mb-4">
