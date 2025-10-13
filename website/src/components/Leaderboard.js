@@ -46,7 +46,24 @@ function Leaderboard() {
         }
         const data = await res.json();
         const list = Array.isArray(data.users) ? data.users : [];
-        setUsers(list);
+        // Ensure rows are displayed in correct ascending rank order.
+        // If rank is missing, fall back to score (desc), then name to stabilize ordering.
+        const sortedList = list.slice().sort((a, b) => {
+          const rankA = Number(a?.rank);
+          const rankB = Number(b?.rank);
+          const hasRankA = Number.isFinite(rankA);
+          const hasRankB = Number.isFinite(rankB);
+          if (hasRankA && hasRankB) return rankA - rankB;
+          if (hasRankA) return -1;
+          if (hasRankB) return 1;
+          const scoreA = Number(a?.score) || 0;
+          const scoreB = Number(b?.score) || 0;
+          if (scoreA !== scoreB) return scoreB - scoreA;
+          const nameA = (a?.username || a?.userId || '').toString().toLowerCase();
+          const nameB = (b?.username || b?.userId || '').toString().toLowerCase();
+          return nameA.localeCompare(nameB);
+        });
+        setUsers(sortedList);
         setTotalUsers(data.totalUsers || 0);
         setCurrentUserRank(data.currentUserRank || null);
       } catch (e) {

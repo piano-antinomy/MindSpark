@@ -20,12 +20,12 @@ public class TestUserUtils {
     };
     
     private static final String[] LAST_NAMES = {
-        "Anderson", "Brown", "Clark", "Davis", "Evans", "Foster", "Garcia", "Harris",
-        "Johnson", "King", "Lee", "Miller", "Nelson", "O'Connor", "Parker", "Quinn",
-        "Roberts", "Smith", "Taylor", "Underwood", "Vargas", "Williams", "Xu", "Young",
-        "Zhang", "Adams", "Baker", "Carter", "Diaz", "Edwards", "Flores", "Green",
-        "Hall", "Jackson", "Kim", "Lopez", "Martinez", "Nguyen", "Perez", "Reed",
-        "Scott", "Thompson", "White", "Wilson", "Wright", "Yang", "Zhou", "Chen"
+        "Anderson", "Brown", "Gu", "Takahashi", "Evans", "Ding", "Garcia", "Xie",
+        "Jin", "King", "Lee", "Meng", "Nelson", "O'Connor", "Park", "Wen",
+        "Hsu", "Chang", "Taylor", "Han", "Hu", "Wong", "Xu", "Young",
+        "Zhang", "Feng", "Lyu", "Suzuki", "Diaz", "Liu", "Lu", "Ge",
+        "Wang", "Cho", "Kim", "Lopez", "Martinez", "Nguyen", "Perez", "Reed",
+        "Scott", "Zhao", "Bai", "Li", "Wright", "Yang", "Zhou", "Chen"
     };
     
     private static final String[] MATH_LEVELS = {"1", "2", "3"};
@@ -56,28 +56,28 @@ public class TestUserUtils {
     private static List<User> getOriginalDemoUsers() {
         List<User> originalUsers = new ArrayList<>();
         
-        User demoUser = new User("demo", 150, 2, "1");
-        demoUser.setUserId("demo");
+        User demoUser = new User("DeKingLe", 0, 1, "1");
+        demoUser.setUserId("DeKingLe");
         originalUsers.add(demoUser);
         
-        User student1User = new User("Charles_Liu", 200, 1, "1");
+        User student1User = new User("Charles_Liu", 1, 1, "1");
         student1User.setUserId("student1");
         originalUsers.add(student1User);
         
-        User student2User = new User("MathWolf", 200, 1, "1");
+        User student2User = new User("MathWolf", 1, 1, "1");
         student2User.setUserId("student2");
         originalUsers.add(student2User);
         
-        User student3User = new User("BecauseIamHappy", 200, 1, "1");
+        User student3User = new User("BecauseIamHappy", 1, 1, "1");
         student3User.setUserId("student3");
         originalUsers.add(student3User);
         
-        User teacherUser = new User("Wenyue_Zhang", 500, 3, "1");
+        User teacherUser = new User("Wenyue_Zhang", 3, 3, "1");
         teacherUser.setUserId("teacher");
         originalUsers.add(teacherUser);
         
-        User adminUser = new User("admin", 1000, 3, "1");
-        adminUser.setUserId("admin");
+        User adminUser = new User("LionKing", 0, 3, "6");
+        adminUser.setUserId("LionKing");
         originalUsers.add(adminUser);
         
         return originalUsers;
