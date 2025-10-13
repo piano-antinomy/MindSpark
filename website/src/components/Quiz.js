@@ -200,7 +200,9 @@ function Quiz() {
       // Create question set ID in the correct format: YYYY_AMC_NN[AB]
       const quizQuestionSetId = `${baseYear}_${amcType}${variant}`;
       
-      const requestBody = {
+      // Don't create quiz in backend yet - pass data via navigation state
+      // Quiz will be created when user clicks "Start Quiz" in QuizTaking component
+      const quizData = {
         userId: currentUser.userId,
         quizType: "standardAMC",
         quizId: quizId,
@@ -210,23 +212,8 @@ function Quiz() {
         timeLimit: 0 // Default to no time limit
       };
       
-      const response = await apiFetch(`${JAVA_API_BASE_URL}/quiz/create`, {
-        method: 'POST',
-        headers: buildApiHeaders({ 'Content-Type': 'application/json' }),
-        body: JSON.stringify(requestBody)
-      });
-      
-      if (response.ok) {
-        const quizProgress = await response.json();
-        console.log('Quiz created successfully:', quizProgress);
-        
-        // Navigate to quiz taking page with quizId in URL
-        navigate(`/quiz-taking?quizId=${encodeURIComponent(quizProgress.quizId)}`);
-      } else {
-        const errorData = await response.json();
-        console.error('Failed to create quiz:', errorData);
-        alert(`Failed to create quiz: ${errorData.message || 'Unknown error'}`);
-      }
+      // Navigate to quiz taking page with quiz data in state
+      navigate(`/quiz-taking`, { state: { quizData: quizData } });
     } catch (error) {
       console.error('Error creating quiz:', error);
       alert('Failed to create quiz. Please try again.');
@@ -425,7 +412,7 @@ function Quiz() {
           {/* Quiz time and button in one line */}
           <div className="flex items-center justify-between">
             <div className="text-sm text-gray-600">
-              Quiz Time: {formatDate(quiz.startTime)}
+              {formatDate(quiz.startTime)}
             </div>
             <div>
               {quiz.status === 'completed' ? (

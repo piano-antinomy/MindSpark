@@ -49,21 +49,21 @@ function QuizTaking() {
       return;
     }
 
-    // Get quiz ID from URL parameters
+    // Get quiz ID from URL parameters OR quiz data from navigation state
     const urlParams = new URLSearchParams(location.search);
     const quizId = urlParams.get('quizId');
+    const quizData = location.state?.quizData;
     
     if (quizId) {
+      // Loading existing quiz from backend (resumed quiz)
       loadQuiz(quizId);
+    } else if (quizData) {
+      // New quiz data passed via navigation state (brand new quiz)
+      setCurrentQuiz(quizData);
+      loadQuestionsFromQuizData(quizData);
     } else {
-      // Check if quiz data is available from location state (for new quizzes)
-      const quiz = location.state?.quiz;
-      if (quiz) {
-        setCurrentQuiz(quiz);
-        loadQuestionsFromQuiz(quiz);
-      } else {
-        setLoading(false);
-      }
+      // No quiz data available
+      setLoading(false);
     }
   }, [navigate, location]);
 
@@ -77,10 +77,10 @@ function QuizTaking() {
     }
   }, [questions]);
 
-  // Auto-start quiz if resuming
+  // Auto-start quiz if resuming (backup in case immediate start doesn't work)
   useEffect(() => {
     if (isResumingQuiz && parsedQuestions.length > 0 && !quizStarted && !quizCompleted) {
-      startQuiz();
+      setQuizStarted(true);
     }
   }, [isResumingQuiz, parsedQuestions.length, quizStarted, quizCompleted]);
 
@@ -200,15 +200,9 @@ function QuizTaking() {
         const quiz = await response.json();
         setCurrentQuiz(quiz);
         
-        // Check if this is a resumed quiz (has existing answers, time spent, or was explicitly started)
-        // A quiz is considered "started" if:
-        // 1. Has answered questions
-        // 2. Has time spent (for timed quizzes)  
-        // 3. Is completed
-        // 4. Has timer settings AND has a startTime that's different from creation time (indicating user started it)
-        const hasExistingProgress = (quiz.questionIdToAnswer && Object.keys(quiz.questionIdToAnswer).length > 0) || 
-                                   (quiz.timeSpent && quiz.timeSpent > 0) || 
-                                   quiz.completed;
+        // Simple logic: if we can load a quiz from backend, it means user has started it
+        // Skip start screen for resumed quizzes
+        const hasExistingProgress = true; // If we got here, quiz exists in backend
         
         // Set timer settings from loaded quiz
         // Priority order for determining if quiz should be timed:
@@ -231,6 +225,21 @@ function QuizTaking() {
             
         setHasTimer(quizHasTimer);
         setIsResumingQuiz(hasExistingProgress);
+        
+        // If resuming, set quiz as started immediately and set up timer
+        if (hasExistingProgress) {
+          setQuizStarted(true);
+          
+          // Set up timer for resumed quiz
+          if (quizHasTimer) {
+            const timeLimitInSeconds = getTimeLimit(quiz);
+            const timeSpentInSeconds = (quiz?.timeSpent || 0) * 60;
+            const remainingTime = Math.max(0, timeLimitInSeconds - timeSpentInSeconds);
+            setTimeRemaining(remainingTime);
+          } else {
+            setTimeRemaining(0);
+          }
+        }
         
         // Load quiz questions and pass quiz data to load previous answers
         await loadQuizQuestions(quizId, quiz);
@@ -309,6 +318,42 @@ function QuizTaking() {
     } catch (error) {
       console.error('Error loading quiz questions:', error);
       setError('Failed to load quiz questions. Please check your connection and try again.');
+      setLoading(false);
+    }
+  };
+
+  const loadQuestionsFromQuizData = async (quizData) => {
+    setLoading(true);
+    setError(null);
+    try {
+      // Parse the questionSetId to get level and year
+      const { amcLevel, year } = parseQuestionSetId(quizData.quizQuestionSetId);
+      
+      if (!amcLevel || !year) {
+        throw new Error('Invalid quiz data: cannot parse level and year from questionSetId');
+      }
+      
+      // Convert AMC level to level number
+      const levelMap = { 8: 1, 10: 2, 12: 3 };
+      const level = levelMap[amcLevel] || 1;
+      
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${year}`);
+      
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          setQuestions(data.questions);
+          setLoading(false);
+        } else {
+          throw new Error('Failed to load questions');
+        }
+      } else {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+    } catch (error) {
+      console.error('Error loading questions:', error);
+      const { level, year } = parseQuestionSetId(quizData.quizQuestionSetId);
+      setError(`Failed to load questions for ${level} ${year}. Please check your connection.`);
       setLoading(false);
     }
   };
@@ -418,6 +463,39 @@ function QuizTaking() {
 
   const startQuiz = async () => {
     setQuizStarted(true);
+    
+    // If this is a new quiz (no quizId in URL), create it in the backend first
+    const urlParams = new URLSearchParams(location.search);
+    const existingQuizId = urlParams.get('quizId');
+    
+    if (!existingQuizId && currentQuiz) {
+      // Create new quiz in backend
+      try {
+        const currentUser = checkAuthStatus();
+        const quizToCreate = {
+          ...currentQuiz,
+          hasTimer: hasTimer,
+          timeLimit: hasTimer ? getTimeLimit(currentQuiz) / 60 : 0
+        };
+        
+        const response = await apiFetch(`${JAVA_API_BASE_URL}/quiz/create`, {
+          method: 'POST',
+          headers: buildApiHeaders({ 'Content-Type': 'application/json' }),
+          body: JSON.stringify(quizToCreate)
+        });
+        
+        if (response.ok) {
+          const createdQuiz = await response.json();
+          setCurrentQuiz(createdQuiz);
+          // Update URL to include quizId for future navigation
+          window.history.replaceState({}, '', `/quiz-taking?quizId=${encodeURIComponent(createdQuiz.quizId)}`);
+        } else {
+          console.error('Failed to create quiz in backend');
+        }
+      } catch (error) {
+        console.error('Error creating quiz:', error);
+      }
+    }
     
     // Update quiz with timer settings (for both new and resumed quizzes)
     if (currentQuiz) {
@@ -809,9 +887,6 @@ function QuizTaking() {
           <div className="mb-6 lg:mb-8">
             <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Resuming Quiz</h1>
             <div className="space-y-2 text-gray-600 text-sm lg:text-base">
-              <p><strong>Quiz:</strong> {currentQuiz?.quizName || 'Quiz'}</p>
-              <p><strong>Level:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).level || 'AMC' : 'AMC'}</p>
-              <p><strong>Year:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).year || '2024' : '2024'}</p>
               <p><strong>Questions:</strong> {parsedQuestions.length}</p>
               <p><strong>Time Limit:</strong> {hasTimer ? getTimeLimitText(currentQuiz) : 'No time limit'}</p>
             </div>
@@ -842,17 +917,7 @@ function QuizTaking() {
         <div className="mb-6 lg:mb-8">
           <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">{currentQuiz?.quizName || 'Quiz'}</h1>
           <div className="space-y-2 text-gray-600 text-sm lg:text-base">
-            <p><strong>Level:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).level || 'AMC' : 'AMC'}</p>
-            <p><strong>Year:</strong> {currentQuiz?.questionSetId ? parseQuestionSetId(currentQuiz.questionSetId).year || '2024' : '2024'}</p>
             <p><strong>Questions:</strong> {parsedQuestions.length}</p>
-            <p><strong>Time Limit:</strong> {hasTimer ? getTimeLimitText(currentQuiz) : 'No time limit'}</p>
-          </div>
-        </div>
-        
-        {/* Timer Options */}
-        <div className="bg-gray-50 rounded-lg p-4 lg:p-6 mb-6 lg:mb-8 text-left">
-          <h3 className="text-base lg:text-lg font-semibold text-gray-900 mb-3 lg:mb-4">Quiz Type:</h3>
-          <div className="space-y-3">
             <div className="flex items-center space-x-3">
               <input
                 type="checkbox"
@@ -862,15 +927,8 @@ function QuizTaking() {
                 className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
               />
               <label htmlFor="hasTimer" className="text-sm lg:text-base text-gray-700">
-                Timed quiz ({getTimeLimitText(currentQuiz)})
+                <strong>Timed quiz:</strong> {hasTimer ? getTimeLimitText(currentQuiz) : 'No time limit'}
               </label>
-            </div>
-            <div className="ml-7 text-sm text-gray-600">
-              {hasTimer ? (
-                <p>Quiz will have a {getTimeLimitText(currentQuiz)} time limit</p>
-              ) : (
-                <p>Quiz will have no time limit - take as much time as you need</p>
-              )}
             </div>
           </div>
         </div>
@@ -1057,9 +1115,11 @@ function QuizTaking() {
   return (
     <div className="h-screen bg-gray-50 flex flex-col overflow-hidden">
       {!quizStarted && (
-        <div className="flex-1 flex items-center justify-center p-4 lg:p-6">
-          <div className="max-w-2xl mx-auto w-full">
-            {renderStartScreen()}
+        <div className="flex-1 overflow-y-auto">
+          <div className="min-h-full flex items-center justify-center p-4 lg:p-6">
+            <div className="max-w-2xl mx-auto w-full">
+              {renderStartScreen()}
+            </div>
           </div>
         </div>
       )}
@@ -1079,14 +1139,6 @@ function QuizTaking() {
               <div className="p-3 pb-3 flex-shrink-0 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <button className="btn btn-secondary text-sm" onClick={() => navigate('/dashboard')}>
-                      <img 
-                        src="/resources/sparksio.png" 
-                        alt="Home" 
-                        className="h-4 w-auto inline mr-1"
-                      />
-                      Home
-                    </button>
                     <h2 className="text-xl font-bold text-gray-900">
                       Question {currentQuestionIndex + 1} of {parsedQuestions.length}
                     </h2>
