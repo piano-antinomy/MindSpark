@@ -319,19 +319,9 @@ function Solutions() {
             {/* Header section - fixed (different from QuizTaking) */}
             <div className="mb-3 lg:mb-4 flex-shrink-0">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/dashboard')}>
-                    <img 
-                      src="/resources/sparksio.png" 
-                      alt="Home" 
-                      className="h-4 w-auto inline mr-1"
-                    />
-                    Home
-                  </button>
-                  <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
-                    Question {currentQuestionIndex + 1} of {parsedQuestions.length}
-                  </h2>
-                </div>
+                <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
+                  Question {currentQuestionIndex + 1} of {parsedQuestions.length}
+                </h2>
                 <div className="flex items-center gap-3">
                   <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/quiz')}>
                     ← Back to Quizzes
@@ -383,26 +373,16 @@ function Solutions() {
             {/* Mobile layout content - same as laptop but with different container */}
             <div className="p-3 pb-3 flex-shrink-0 border-b border-gray-200">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <button className="btn btn-secondary text-sm" onClick={() => navigate('/dashboard')}>
-                    <img 
-                      src="/resources/sparksio.png" 
-                      alt="Home" 
-                      className="h-4 w-auto inline mr-1"
-                    />
-                    Home
-                  </button>
-                  <h2 className="text-lg font-bold text-gray-900">
-                    Question {currentQuestionIndex + 1} of {parsedQuestions.length}
-                  </h2>
-                </div>
+                <h2 className="text-lg font-bold text-gray-900">
+                  Question {currentQuestionIndex + 1} of {parsedQuestions.length}
+                </h2>
                 <div className="flex items-center gap-2">
                   <button className="btn btn-secondary text-sm" onClick={() => navigate('/quiz')}>
                     ← Back to Quizzes
                   </button>
                   <button 
-                    className="btn btn-primary text-sm"
-                    onClick={() => setViewMode(viewMode === 'quiz' ? 'solution' : 'quiz')}
+                    className={`btn text-sm ${viewMode === 'quiz' ? 'btn-primary' : 'btn-secondary'}`}
+                    onClick={toggleViewMode}
                   >
                     {viewMode === 'quiz' ? 'VIEW SOLUTION' : 'VIEW QUESTION'}
                   </button>
@@ -411,19 +391,8 @@ function Solutions() {
             </div>
             
             {/* Mobile question content */}
-            <div className="flex-1 overflow-y-auto p-3">
-              {parsedQuestions[currentQuestionIndex] && (
-                <Question
-                  question={parsedQuestions[currentQuestionIndex]}
-                  selectedAnswer={selectedAnswers[parsedQuestions[currentQuestionIndex].id]}
-                  onAnswerSelect={(answer) => setSelectedAnswers(prev => ({
-                    ...prev,
-                    [parsedQuestions[currentQuestionIndex].id]: answer
-                  }))}
-                  showSolution={viewMode === 'solution'}
-                  solution={parsedQuestions[currentQuestionIndex].solution}
-                />
-              )}
+            <div className="flex-1 min-h-0 p-3 overflow-y-auto">
+              {renderCurrentQuestion()}
             </div>
           </div>
         </div>
