@@ -413,7 +413,10 @@ function Home() {
         <div className="container mx-auto px-6 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-sm text-gray-500">&copy; 2024 MindSpark. All rights reserved.</p>
+              <p className="text-sm text-gray-500">&copy; 2024 Sparksio. All rights reserved.</p>
+            </div>
+            <div className="flex gap-6">
+              <Link to="/feedback" className="text-sm text-indigo-600 hover:text-indigo-700 transition duration-200">Feedback</Link>
             </div>
           </div>
         </div>

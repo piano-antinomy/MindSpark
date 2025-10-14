@@ -10,6 +10,7 @@ import Quiz from './components/Quiz';
 import QuizTaking from './components/QuizTaking';
 import Solutions from './components/Solutions';
 import Leaderboard from './components/Leaderboard';
+import Feedback from './components/Feedback';
 import OrientationLock from './components/OrientationLock';
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/quiz-taking" element={<QuizTaking />} />
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
+        <Route path="/feedback" element={<Feedback />} />
       </Routes>
     </div>
   );

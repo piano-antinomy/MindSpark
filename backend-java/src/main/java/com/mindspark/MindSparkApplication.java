@@ -11,6 +11,7 @@ import com.mindspark.controller.SubjectController;
 import com.mindspark.controller.ProgressController;
 import com.mindspark.controller.QuizController;
 import com.mindspark.controller.LeaderboardController;
+import com.mindspark.controller.FeedbackController;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.slf4j.Logger;
@@ -83,6 +84,8 @@ public class MindSparkApplication {
             logger.info("   GET  /api/quiz/user/{userId}/quiz/{quizId} - Get specific quiz");
             logger.info("   GET  /api/quiz/user/{userId}/quiz/{quizId}/questions - Get quiz questions");
             logger.info("   GET  /api/quiz/health             - Quiz service health check");
+            logger.info("   💬 Feedback:");
+            logger.info("   POST /api/feedback/submit         - Submit user feedback");
             logger.info("   🔧 System:");
             logger.info("   All endpoints support CORS and OPTIONS preflight requests");
             logger.info("   JSON responses with UTF-8 encoding");
@@ -113,6 +116,7 @@ public class MindSparkApplication {
                         serve("/api/progress/*").with(ProgressController.class);
                         serve("/api/quiz/*").with(QuizController.class);
                         serve("/api/leaderboard/*").with(LeaderboardController.class);
+                        serve("/api/feedback/*").with(FeedbackController.class);
                     }
                 }
             );
