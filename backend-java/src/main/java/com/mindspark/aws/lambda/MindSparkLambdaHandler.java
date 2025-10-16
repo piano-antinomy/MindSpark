@@ -15,6 +15,7 @@ import com.mindspark.controller.QuestionController;
 import com.mindspark.controller.QuizController;
 import com.mindspark.controller.SubjectController;
 import com.mindspark.controller.LeaderboardController;
+import com.mindspark.controller.FeedbackController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -96,6 +97,12 @@ public class MindSparkLambdaHandler implements RequestHandler<APIGatewayProxyReq
                 LeaderboardController leaderboardController = injector.getInstance(LeaderboardController.class);
                 if ("GET".equals(method)) {
                     leaderboardController.doGet(request, response);
+                }
+            } else if (path.startsWith("/feedback")) {
+                request = APIGatewayProxyRequestEventMapper.createHttpServletRequest(apiGatewayProxyRequestEvent, "/feedback");
+                FeedbackController feedbackController = injector.getInstance(FeedbackController.class);
+                if ("POST".equals(method)) {
+                    feedbackController.doPost(request, response);
                 }
             } else if (path.startsWith("/subjects")) {
                 request = APIGatewayProxyRequestEventMapper.createHttpServletRequest(apiGatewayProxyRequestEvent, "/subjects");

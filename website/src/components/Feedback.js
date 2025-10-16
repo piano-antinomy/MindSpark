@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { buildApiHeaders } from '../utils/api';
 
 function Feedback() {
   const navigate = useNavigate();
@@ -7,6 +8,7 @@ function Feedback() {
   const [feedback, setFeedback] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   React.useEffect(() => {
     const currentUser = localStorage.getItem('currentUser');
@@ -33,6 +35,12 @@ function Feedback() {
       return;
     }
 
+    if (feedback.length > 2000) {
+      setError('Feedback must be 2000 characters or less.');
+      return;
+    }
+
+    setError('');
     setIsSubmitting(true);
 
     try {
@@ -43,9 +51,12 @@ function Feedback() {
         userId: user?.userId || 'anonymous'
       };
 
+      const headers = buildApiHeaders({ 'Content-Type': 'application/json' });
+
       const response = await fetch(`${JAVA_API_BASE_URL}/feedback/submit`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers,
+        credentials: 'include',
         body: JSON.stringify(feedbackData)
       });
 
@@ -70,6 +81,7 @@ function Feedback() {
   const handleNewFeedback = () => {
     setIsSubmitted(false);
     setFeedback('');
+    setError('');
   };
 
   return (
@@ -171,10 +183,22 @@ function Feedback() {
                       value={feedback}
                       onChange={(e) => setFeedback(e.target.value)}
                       rows="8"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 resize-none"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 resize-none ${
+                        feedback.length > 2000 ? 'border-red-500' : 'border-gray-300'
+                      }`}
                       placeholder="Please share your thoughts, suggestions, or concerns..."
                       required
                     ></textarea>
+                    <div className="flex justify-between items-center mt-2">
+                      <div>
+                        {error && (
+                          <p className="text-sm text-red-600">{error}</p>
+                        )}
+                      </div>
+                      <p className={`text-sm ${feedback.length > 2000 ? 'text-red-600' : 'text-gray-500'}`}>
+                        {feedback.length}/2000
+                      </p>
+                    </div>
                   </div>
 
                   <div className="flex items-center justify-between">
@@ -187,7 +211,7 @@ function Feedback() {
                     </button>
                     <button
                       type="submit"
-                      disabled={isSubmitting || !feedback.trim()}
+                      disabled={isSubmitting || !feedback.trim() || feedback.length > 2000}
                       className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? 'Submitting...' : 'Submit Feedback'}
