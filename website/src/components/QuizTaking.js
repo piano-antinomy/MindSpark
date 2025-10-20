@@ -609,11 +609,13 @@ function QuizTaking() {
         }
       });
 
-      // If no answers have changed, still save if we need to persist timer settings
-      // or if this is the first time saving progress for a timed quiz
+      // If no answers have changed and it's not a timed quiz, skip saving
+      // For timed quizzes, we always need to save to update timeSpent
       if (Object.keys(questionIdToAnswer).length === 0 && 
           currentQuiz?.hasTimer === hasTimer && 
-          currentQuiz?.timeLimit !== undefined) {
+          currentQuiz?.timeLimit !== undefined &&
+          !hasTimer) {
+        console.log('No changes to save and no timer tracking needed, skipping save');
         setSaving(false);
         return;
       }
@@ -640,38 +642,38 @@ function QuizTaking() {
         }
       }
 
-      console.log('Time calculation debug:', {
-        hasTimer,
-        timeRemaining,
-        timeLimitInSeconds: hasTimer ? getTimeLimit(currentQuiz) : 0,
-        calculatedTimeSpent: timeSpent,
-        existingTimeSpent: currentQuiz?.timeSpent || 0
-      });
+      console.log('=================================================');
+      console.log('📤 SENDING PROGRESS TO BACKEND');
+      console.log('=================================================');
+      console.log('Has Timer:', hasTimer);
+      console.log('Time Remaining (seconds):', timeRemaining);
+      console.log('Time Limit (seconds):', hasTimer ? getTimeLimit(currentQuiz) : 0);
+      console.log('Time Spent Calculation:');
+      console.log('  - Time Limit (seconds):', hasTimer ? getTimeLimit(currentQuiz) : 0);
+      console.log('  - Time Remaining (seconds):', timeRemaining);
+      console.log('  - Time Used (seconds):', hasTimer ? getTimeLimit(currentQuiz) - timeRemaining : 0);
+      console.log('  - Time Spent (minutes, rounded down):', timeSpent);
+      console.log('Existing Time Spent (from quiz):', currentQuiz?.timeSpent || 0);
+      console.log('=================================================');
+
+      const payload = {
+        userId: currentUser.userId,
+        quizId: quizId,
+        completed: isCompleted,
+        questionIdToAnswer: questionIdToAnswer,
+        timeSpent: timeSpent,
+        hasTimer: hasTimer,
+        timeLimit: hasTimer ? getTimeLimit(currentQuiz) / 60 : 0
+      };
+
+      console.log('📦 PAYLOAD BEING SENT:', JSON.stringify(payload, null, 2));
 
       const response = await apiFetch(`${JAVA_API_BASE_URL}/progress/track`, {
         method: 'POST',
         headers: buildApiHeaders({
           'Content-Type': 'application/json'
         }),
-        body: JSON.stringify({
-          userId: currentUser.userId,
-          quizId: quizId,
-          completed: isCompleted,
-          questionIdToAnswer: questionIdToAnswer,
-          timeSpent: timeSpent,
-          // Also save timer settings to ensure they persist
-          hasTimer: hasTimer,
-          timeLimit: hasTimer ? getTimeLimit(currentQuiz) / 60 : 0 // Convert to minutes
-        })
-      });
-
-      console.log('Saving progress with timer settings:', {
-        userId: currentUser.userId,
-        quizId: quizId,
-        questionIdToAnswer: questionIdToAnswer,
-        timeSpent: timeSpent,
-        hasTimer: hasTimer,
-        timeLimit: hasTimer ? getTimeLimit(currentQuiz) / 60 : 0
+        body: JSON.stringify(payload)
       });
 
       if (response.ok) {
@@ -983,7 +985,10 @@ function QuizTaking() {
               </h2>
             </div>
             <div className="flex items-center gap-3">
-              <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/quiz')}>
+              <button className="btn btn-secondary text-sm lg:text-base" onClick={async () => {
+                await saveProgress(false);
+                navigate('/quiz');
+              }}>
                 ← Back to Quizzes
               </button>
               {hasTimer && (
@@ -1069,12 +1074,18 @@ function QuizTaking() {
             )}
           </div>
           
-          <div className="flex justify-center">
+          <div className="flex justify-center gap-4">
             <button 
               className="btn btn-primary" 
               onClick={() => navigate(`/solutions?quizId=${currentQuiz.quizId}`)}
             >
               Review
+            </button>
+            <button 
+              className="btn btn-secondary" 
+              onClick={() => navigate('/quiz')}
+            >
+              Back to Quizzes
             </button>
           </div>
         </div>
@@ -1144,7 +1155,10 @@ function QuizTaking() {
                     </h2>
                   </div>
                   <div className="flex items-center gap-3">
-                    <button className="btn btn-secondary text-sm" onClick={() => navigate('/quiz')}>
+                    <button className="btn btn-secondary text-sm" onClick={async () => {
+                      await saveProgress(false);
+                      navigate('/quiz');
+                    }}>
                       ← Back to Quizzes
                     </button>
                     {hasTimer && (

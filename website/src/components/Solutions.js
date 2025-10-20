@@ -394,6 +394,29 @@ function Solutions() {
             <div className="flex-1 min-h-0 p-3 overflow-y-auto">
               {renderCurrentQuestion()}
             </div>
+            
+            {/* Navigation buttons - fixed at bottom */}
+            <div className="flex justify-between items-center p-3 pt-2 flex-shrink-0 border-t border-gray-100">
+              {/* Left side - Question Number Navigation */}
+              <div className="flex gap-1 flex-wrap">
+                {parsedQuestions.map((_, index) => (
+                  <button 
+                    key={index}
+                    className={`w-8 h-8 rounded-full text-xs font-medium flex items-center justify-center transition-colors ${
+                      currentQuestionIndex === index 
+                        ? 'bg-blue-600 text-white' 
+                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                    }`}
+                    onClick={() => handleQuestionSelect(index)}
+                  >
+                    {index + 1}
+                  </button>
+                ))}
+              </div>
+              
+              {/* Right side - Empty for now, can be used for future features */}
+              <div></div>
+            </div>
           </div>
         </div>
       </main>
