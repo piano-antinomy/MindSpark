@@ -233,6 +233,18 @@ public class ProgressController extends HttpServlet {
             int timeLimit = jsonNode.has("timeLimit") ? jsonNode.get("timeLimit").asInt() : 0;
             Boolean completed = jsonNode.has("completed") ? jsonNode.get("completed").asBoolean() : false;
             
+            logger.info("=================================================");
+            logger.info("📊 RECEIVED PROGRESS TRACKING REQUEST");
+            logger.info("=================================================");
+            logger.info("User ID: {}", userId);
+            logger.info("Quiz ID: {}", quizId);
+            logger.info("Time Spent (received): {} minutes", timeSpent);
+            logger.info("Has Timer: {}", hasTimer);
+            logger.info("Time Limit: {} minutes", timeLimit);
+            logger.info("Completed: {}", completed);
+            logger.info("Questions being tracked: {}", questionIdToAnswerNode.size());
+            logger.info("=================================================");
+            
             if (userId == null || userId.trim().isEmpty()) {
                 sendErrorResponse(response, HttpServletResponse.SC_BAD_REQUEST, "User ID is required");
                 return;
