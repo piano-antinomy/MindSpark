@@ -120,9 +120,22 @@ public class MindSparkStack extends Stack {
             .resources(Arrays.asList("arn:aws:s3:::*/*"))
             .build();
 
+        PolicyStatement s3PutFeedbackObjects = PolicyStatement.Builder.create()
+            .effect(Effect.ALLOW)
+            .actions(Arrays.asList(
+                "s3:PutObject",
+                "s3:AbortMultipartUpload",
+                "s3:ListMultipartUploadParts"
+            ))
+            .resources(Arrays.asList(
+                "arn:aws:s3:::mindspark-user-feedbacks/*"
+            ))
+            .build();
+
         if (lambda.getRole() != null) {
             lambda.getRole().addToPrincipalPolicy(s3ListAllBuckets);
             lambda.getRole().addToPrincipalPolicy(s3GetAnyObject);
+            lambda.getRole().addToPrincipalPolicy(s3PutFeedbackObjects);
         }
 
         LogGroup apiLogs = LogGroup.Builder.create(this, "MindSparkApiLogs")
