@@ -9,18 +9,32 @@ export function buildApiHeaders(initHeaders = {}) {
   return headers;
 }
 
+function handleAuthFailure() {
+  localStorage.removeItem('idToken');
+  localStorage.removeItem('currentUser');
+
+  if (window.location.pathname !== '/' && window.location.pathname !== '/login') {
+    window.location.href = '/';
+  }
+}
+
 export async function apiFetch(url, options = {}) {
   const headers = buildApiHeaders(options.headers || {});
-  const response = await fetch(url, { credentials: 'include', ...options, headers });
+  const isLocalMode = process.env.REACT_APP_LOCAL_MODE === 'true';
 
-  if (response.status === 401 && process.env.REACT_APP_LOCAL_MODE === 'false') {
-    localStorage.removeItem('idToken');
-    localStorage.removeItem('currentUser');
+  try {
+    const response = await fetch(url, { credentials: 'include', ...options, headers });
 
-    if (window.location.pathname !== '/' && window.location.pathname !== '/login') {
-      window.location.href = '/';
+    if (!isLocalMode && response.status === 401) {
+      handleAuthFailure();
     }
-  }
 
-  return response;
+    return response;
+  } catch (error) {
+    if (!isLocalMode) {
+      handleAuthFailure();
+    }
+    console.error('apiFetch error:', error);
+    throw error;
+  }
 } 
