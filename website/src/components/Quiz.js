@@ -156,7 +156,7 @@ function Quiz() {
   };
 
   const calculateRemainingTime = (quiz) => {
-    if (!quiz.hasTimer || quiz.completed === true) {
+    if (!quiz.hasTimer || quiz.status === 'completed') {
       return null; // No timer or quiz completed
     }
     
