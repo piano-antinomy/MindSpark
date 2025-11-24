@@ -9,7 +9,18 @@ export function buildApiHeaders(initHeaders = {}) {
   return headers;
 }
 
-export function apiFetch(url, options = {}) {
+export async function apiFetch(url, options = {}) {
   const headers = buildApiHeaders(options.headers || {});
-  return fetch(url, { credentials: 'include', ...options, headers });
+  const response = await fetch(url, { credentials: 'include', ...options, headers });
+
+  if (response.status === 401 && process.env.REACT_APP_LOCAL_MODE === 'false') {
+    localStorage.removeItem('idToken');
+    localStorage.removeItem('currentUser');
+
+    if (window.location.pathname !== '/' && window.location.pathname !== '/login') {
+      window.location.href = '/';
+    }
+  }
+
+  return response;
 } 
