@@ -35,6 +35,7 @@ function QuizTaking() {
   const [showTimeWarning, setShowTimeWarning] = useState(false);
   const [showCountdown, setShowCountdown] = useState(false);
   const [countdownSeconds, setCountdownSeconds] = useState(3);
+  const [showSubmitWarning, setShowSubmitWarning] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const autoSaveTimeout = useRef(null);
@@ -695,7 +696,23 @@ function QuizTaking() {
     }
   };
 
+  const handleSubmitQuiz = () => {
+    // Check if all questions are answered
+    const answeredCount = Object.keys(selectedAnswers).length;
+    const totalQuestions = parsedQuestions.length;
+    
+    if (answeredCount < totalQuestions) {
+      // Show warning modal if not all questions are answered
+      setShowSubmitWarning(true);
+    } else {
+      // Complete quiz directly if all questions are answered
+      completeQuiz();
+    }
+  };
+
   const completeQuiz = async () => {
+    // Close warning modal if it's open
+    setShowSubmitWarning(false);
     
     await saveProgress(true);
     try {
@@ -989,7 +1006,7 @@ function QuizTaking() {
                 await saveProgress(false);
                 navigate('/quiz');
               }}>
-                ← Back to Quizzes
+                {quizCompleted ? '← Back to Quizzes' : '← Pause Quiz'}
               </button>
               {hasTimer && (
                 <div className="text-base lg:text-lg font-semibold text-warning-600">
@@ -1025,7 +1042,7 @@ function QuizTaking() {
               {saving ? 'Saving...' : 'Save'}
             </button>
             {saving && <span className="text-blue-600 text-sm">💾 Saving progress...</span>}
-            <button className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={completeQuiz}>
+            <button className={`btn text-sm lg:text-base ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={handleSubmitQuiz}>
               Submit Quiz
             </button>
           </div>
@@ -1159,7 +1176,7 @@ function QuizTaking() {
                       await saveProgress(false);
                       navigate('/quiz');
                     }}>
-                      ← Back to Quizzes
+                      {quizCompleted ? '← Back to Quizzes' : '← Pause Quiz'}
                     </button>
                     {hasTimer && (
                       <div className="text-base font-semibold text-warning-600">
@@ -1195,7 +1212,7 @@ function QuizTaking() {
                     {saving ? 'Saving...' : 'Save'}
                   </button>
                   {saving && <span className="text-blue-600 text-xs">💾</span>}
-                  <button className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={completeQuiz}>
+                  <button className={`btn text-sm ${currentQuestionIndex === parsedQuestions.length - 1 ? 'btn-primary' : 'btn-secondary'}`} onClick={handleSubmitQuiz}>
                     Submit Quiz
                   </button>
                 </div>
@@ -1258,6 +1275,35 @@ function QuizTaking() {
             <h2 className="text-3xl font-bold text-red-600 mb-6">Time's Up!</h2>
             <div className="text-6xl font-bold text-red-600 mb-4 animate-pulse">
               {countdownSeconds}
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {/* Submit Warning Popup */}
+      {showSubmitWarning && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-8 max-w-md mx-4 text-center shadow-2xl">
+            <h2 className="text-2xl font-bold text-amber-600 mb-4">Incomplete Quiz</h2>
+            <p className="text-gray-700 mb-4">
+              You have answered <span className="font-bold text-blue-600">{Object.keys(selectedAnswers).length}</span> out of <span className="font-bold text-blue-600">{parsedQuestions.length}</span> questions.
+            </p>
+            <p className="text-gray-700 mb-6">
+              By submitting this quiz, you will <span className="font-bold text-red-600">no longer be able to work on it</span>. Unanswered questions will be marked as incorrect.
+            </p>
+            <div className="flex gap-3 justify-center">
+              <button 
+                className="btn btn-secondary"
+                onClick={() => setShowSubmitWarning(false)}
+              >
+                Cancel
+              </button>
+              <button 
+                className="btn btn-primary"
+                onClick={completeQuiz}
+              >
+                Submit Anyway
+              </button>
             </div>
           </div>
         </div>
