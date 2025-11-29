@@ -391,8 +391,10 @@ function Solutions() {
             </div>
             
             {/* Mobile question content */}
-            <div className="flex-1 min-h-0 p-3 overflow-y-auto">
-              {renderCurrentQuestion()}
+            <div className="flex-1 min-h-0 overflow-hidden">
+              <div className="h-full overflow-y-auto p-3">
+                {renderCurrentQuestion()}
+              </div>
             </div>
             
             {/* Navigation buttons - fixed at bottom */}

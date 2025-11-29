@@ -89,9 +89,8 @@ function Leaderboard() {
     // Access the nested user object
     const actualCurrentUser = currentUser.user;
     const userIdMatch = user.userId === actualCurrentUser.userId;
-    const usernameMatch = user.username === actualCurrentUser.username;
     
-    return userIdMatch || usernameMatch;
+    return userIdMatch;
   };
 
 

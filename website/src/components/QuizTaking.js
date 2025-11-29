@@ -1002,7 +1002,7 @@ function QuizTaking() {
               </h2>
             </div>
             <div className="flex items-center gap-3">
-              <button className="btn btn-secondary text-sm lg:text-base" onClick={async () => {
+              <button className="btn btn-primary text-sm lg:text-base" onClick={async () => {
                 await saveProgress(false);
                 navigate('/quiz');
               }}>
@@ -1172,7 +1172,7 @@ function QuizTaking() {
                     </h2>
                   </div>
                   <div className="flex items-center gap-3">
-                    <button className="btn btn-secondary text-sm" onClick={async () => {
+                    <button className="btn btn-primary text-sm" onClick={async () => {
                       await saveProgress(false);
                       navigate('/quiz');
                     }}>
