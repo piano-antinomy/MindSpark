@@ -71,8 +71,8 @@ function Feedback() {
         alert('Failed to submit feedback. Please try again.');
       }
     } catch (error) {
-      console.error('Error submitting feedback:', error);
-      alert('An error occurred while submitting feedback. Please try again.');
+      console.error('Error submitting feedback, user not logged in.', error);
+      alert('Please log in to submit feedback!');
     } finally {
       setIsSubmitting(false);
     }
