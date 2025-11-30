@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 function Login() {
   const [errorMessage, setErrorMessage] = useState('');
+  const [showInAppBrowserWarning, setShowInAppBrowserWarning] = useState(false);
+  const [oauthUrl, setOauthUrl] = useState('');
   const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
 
   // Cognito config (prefer env vars, with safe defaults)
@@ -10,6 +12,24 @@ function Login() {
   const COGNITO_CLIENT_ID = process.env.REACT_APP_COGNITO_CLIENT_ID || '2f1oo2lsuhc1lfivgpivkdk914';
   const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI || 'http://localhost:3000';
   console.log('REACT_APP_LOCAL_MODE === true ?', process.env.REACT_APP_LOCAL_MODE === 'true', 'value:', process.env.REACT_APP_LOCAL_MODE);
+
+  // Detect if user is in an in-app browser (WeChat, Facebook, etc.)
+  function isInAppBrowser() {
+    const ua = navigator.userAgent.toLowerCase();
+    // Check for common in-app browser patterns
+    return (
+      ua.includes('micromessenger') || // WeChat
+      ua.includes('weibo') || // Weibo
+      ua.includes('qq/') || // QQ Browser
+      ua.includes('mqqbrowser') || // QQ Browser (mobile)
+      ua.includes('fbios') || // Facebook iOS
+      ua.includes('fban') || // Facebook Android
+      ua.includes('fba') || // Facebook App
+      ua.includes('line/') || // LINE
+      ua.includes('wv') || // WebView (generic)
+      (ua.includes('android') && ua.includes('wv')) // Android WebView
+    );
+  }
 
   function base64UrlEncode(buffer) {
     let binary = '';
@@ -61,10 +81,70 @@ function Login() {
 
   const handleGoogle = async () => {
     try {
+      // Check if user is in an in-app browser
+      if (isInAppBrowser()) {
+        // Generate the OAuth URL first
+        const codeVerifier = generateRandomString(64);
+        const codeChallenge = await pkceChallengeFromVerifier(codeVerifier);
+        const state = generateRandomString(32);
+
+        sessionStorage.setItem('pkce_code_verifier', codeVerifier);
+        sessionStorage.setItem('oauth_state', state);
+
+        const search = new URLSearchParams({
+          client_id: COGNITO_CLIENT_ID,
+          response_type: 'code',
+          scope: 'openid email profile',
+          redirect_uri: REDIRECT_URI,
+          code_challenge: codeChallenge,
+          code_challenge_method: 'S256',
+          state,
+          identity_provider: 'Google'
+        });
+
+        const authorizeUrl = `${COGNITO_DOMAIN}/oauth2/authorize?${search.toString()}`;
+        setOauthUrl(authorizeUrl);
+        setShowInAppBrowserWarning(true);
+        return;
+      }
+
+      // Normal flow for regular browsers
       await startPkceFlow('/oauth2/authorize', { identity_provider: 'Google' });
     } catch (err) {
       setErrorMessage('Unable to start Google sign-in.');
       setTimeout(() => setErrorMessage(''), 5000);
+    }
+  };
+
+  const handleOpenInExternalBrowser = () => {
+    if (oauthUrl) {
+      // Try to open in external browser
+      // On mobile, this may prompt the user to open in their default browser
+      window.open(oauthUrl, '_blank');
+    }
+  };
+
+  const handleCopyLink = () => {
+    if (oauthUrl) {
+      navigator.clipboard.writeText(oauthUrl).then(() => {
+        setErrorMessage('Link copied! Please paste it into your browser.');
+        setTimeout(() => setErrorMessage(''), 5000);
+      }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = oauthUrl;
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+          document.execCommand('copy');
+          setErrorMessage('Link copied! Please paste it into your browser.');
+          setTimeout(() => setErrorMessage(''), 5000);
+        } catch (err) {
+          setErrorMessage('Please copy the link manually and open it in your browser.');
+          setTimeout(() => setErrorMessage(''), 5000);
+        }
+        document.body.removeChild(textArea);
+      });
     }
   };
 
@@ -113,6 +193,101 @@ function Login() {
           <Link to="/">← Back to Home</Link>
         </div>
       </div>
+
+      {/* In-App Browser Warning Modal */}
+      {showInAppBrowserWarning && (
+        <div 
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 1000,
+            padding: '20px'
+          }}
+          onClick={() => setShowInAppBrowserWarning(false)}
+        >
+          <div 
+            style={{
+              backgroundColor: '#1a1a1a',
+              borderRadius: '16px',
+              padding: '24px',
+              maxWidth: '500px',
+              width: '100%',
+              border: '1px solid rgba(255,255,255,0.1)',
+              color: '#fff'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 style={{ marginTop: 0, marginBottom: '16px', fontSize: '20px', fontWeight: 'bold' }}>
+              Open in External Browser
+            </h3>
+            <p style={{ marginBottom: '16px', lineHeight: '1.6', color: '#ccc' }}>
+              Google sign-in doesn't work in in-app browsers (like WeChat). Please open this link in your device's default browser (Safari, Chrome, etc.).
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <button
+                onClick={handleOpenInExternalBrowser}
+                style={{
+                  padding: '12px 18px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  backgroundColor: '#4285f4',
+                  color: '#fff',
+                  cursor: 'pointer',
+                  fontSize: '16px',
+                  fontWeight: '500'
+                }}
+              >
+                Open in Browser
+              </button>
+              <button
+                onClick={handleCopyLink}
+                style={{
+                  padding: '12px 18px',
+                  borderRadius: '8px',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  backgroundColor: 'transparent',
+                  color: '#fff',
+                  cursor: 'pointer',
+                  fontSize: '16px'
+                }}
+              >
+                Copy Link
+              </button>
+              <button
+                onClick={() => setShowInAppBrowserWarning(false)}
+                style={{
+                  padding: '12px 18px',
+                  borderRadius: '8px',
+                  border: 'none',
+                  backgroundColor: 'transparent',
+                  color: '#999',
+                  cursor: 'pointer',
+                  fontSize: '14px',
+                  marginTop: '8px'
+                }}
+              >
+                Cancel
+              </button>
+            </div>
+            <div style={{ marginTop: '16px', padding: '12px', backgroundColor: 'rgba(255,255,255,0.05)', borderRadius: '8px', fontSize: '12px', color: '#999' }}>
+              <strong style={{ color: '#fff' }}>Instructions:</strong>
+              <ol style={{ marginTop: '8px', paddingLeft: '20px', lineHeight: '1.8' }}>
+                <li>Tap "Open in Browser" or "Copy Link"</li>
+                <li>If copying, paste the link into Safari, Chrome, or your default browser</li>
+                <li>Complete the Google sign-in in your browser</li>
+                <li>You'll be redirected back to MindSpark after signing in</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
