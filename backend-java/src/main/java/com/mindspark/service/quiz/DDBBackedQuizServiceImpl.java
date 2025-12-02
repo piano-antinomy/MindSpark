@@ -327,6 +327,9 @@ public class DDBBackedQuizServiceImpl implements QuizService {
      * Load questions by question set ID (refactored from createStandardQuiz)
      */
     private List<Question> getQuestionsByQuestionSetId(String quizQuestionSetId) {
+
+        logger.info("creating quiz using setId: " + quizQuestionSetId);
+
         // Parse the quiz question set ID to extract year and type
         Matcher matcher = QUIZ_SET_PATTERN.matcher(quizQuestionSetId);
         if (!matcher.matches()) {

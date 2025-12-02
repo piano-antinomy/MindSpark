@@ -327,8 +327,8 @@ function QuizTaking() {
     setLoading(true);
     setError(null);
     try {
-      // Parse the questionSetId to get level and year
-      const { amcLevel, year } = parseQuestionSetId(quizData.quizQuestionSetId);
+      // Parse the questionSetId to get level, year, and variant (A/B for AMC 10/12)
+      const { amcLevel, year, variant } = parseQuestionSetId(quizData.quizQuestionSetId);
       
       if (!amcLevel || !year) {
         throw new Error('Invalid quiz data: cannot parse level and year from questionSetId');
@@ -337,8 +337,9 @@ function QuizTaking() {
       // Convert AMC level to level number
       const levelMap = { 8: 1, 10: 2, 12: 3 };
       const level = levelMap[amcLevel] || 1;
-      
-      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${year}`);
+      // For AMC 10/12, the backend expects year with variant suffix (e.g., 2019A / 2019B)
+      const yearVersion = `${year}${variant || ''}`;
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${yearVersion}`);
       
       if (response.ok) {
         const data = await response.json();
@@ -363,8 +364,8 @@ function QuizTaking() {
     setLoading(true);
     setError(null);
     try {
-      // Parse the questionSetId to get level and year
-      const { amcLevel, year } = parseQuestionSetId(quiz.questionSetId);
+      // Parse the questionSetId to get level, year, and variant (A/B for AMC 10/12)
+      const { amcLevel, year, variant } = parseQuestionSetId(quiz.questionSetId);
       
       if (!amcLevel || !year) {
         throw new Error('Invalid quiz data: cannot parse level and year from questionSetId');
@@ -373,8 +374,9 @@ function QuizTaking() {
       // Convert AMC level to level number
       const levelMap = { 8: 1, 10: 2, 12: 3 };
       const level = levelMap[amcLevel] || 1;
-      
-      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${year}`);
+      // For AMC 10/12, the backend expects year with variant suffix (e.g., 2019A / 2019B)
+      const yearVersion = `${year}${variant || ''}`;
+      const response = await apiFetch(`${JAVA_API_BASE_URL}/questions/math/level/${level}/year/${yearVersion}`);
       
       if (response.ok) {
         const data = await response.json();
