@@ -8,6 +8,8 @@ function Home() {
   
   // Check if user is logged in
   const [user, setUser] = React.useState(null);
+  // Track authentication loading state
+  const [isLoadingAuth, setIsLoadingAuth] = React.useState(false);
   
   React.useEffect(() => {
     const currentUser = localStorage.getItem('currentUser');
@@ -17,6 +19,16 @@ function Home() {
       } catch (e) {
         console.error('Failed to parse currentUser from localStorage:', e);
       }
+    }
+    
+    // Check if we're processing an OAuth callback
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+    const hash = window.location.hash || '';
+    const hasIdToken = hash.startsWith('#') && hash.includes('id_token');
+    
+    if (code || hasIdToken) {
+      setIsLoadingAuth(true);
     }
   }, []);
 
@@ -54,6 +66,7 @@ function Home() {
   // Helper: persist user to backend and localStorage
   async function persistAndRedirect(userPayload) {
     try {
+      setIsLoadingAuth(true);
       const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
       const headers = buildApiHeaders({ 'Content-Type': 'application/json' });
       
@@ -122,6 +135,8 @@ function Home() {
       console.error('Persist profile error:', err);
       localStorage.setItem('currentUser', JSON.stringify(userPayload));
       setUser(userPayload);
+    } finally {
+      setIsLoadingAuth(false);
     }
 
     // Cleanup URL and redirect
@@ -171,23 +186,27 @@ function Home() {
               return;
             } catch (e) {
               console.error('Failed to parse id_token from hash:', e);
+              setIsLoadingAuth(false);
             }
           }
         }
 
         // No code: just return, let user see the homepage
         if (!code) {
+          setIsLoadingAuth(false);
           return;
         }
 
         if (storedState && state && storedState !== state) {
           console.warn('OAuth state mismatch. Ignoring callback.');
+          setIsLoadingAuth(false);
           return;
         }
 
         const codeVerifier = sessionStorage.getItem('pkce_code_verifier');
         if (!codeVerifier) {
           console.error('Missing PKCE code_verifier in sessionStorage.');
+          setIsLoadingAuth(false);
           return;
         }
 
@@ -214,12 +233,14 @@ function Home() {
         if (!tokenResp.ok) {
           const errText = await tokenResp.text().catch(() => '');
           console.error('Token exchange failed', tokenResp.status, errText);
+          setIsLoadingAuth(false);
           return;
         }
         const tokenData = await tokenResp.json();
         const idToken = tokenData.id_token;
         if (!idToken) {
           console.error('No id_token in token response');
+          setIsLoadingAuth(false);
           return;
         }
 
@@ -231,6 +252,7 @@ function Home() {
         await persistAndRedirect(userPayload);
       } catch (e) {
         console.error('Auth callback error:', e);
+        setIsLoadingAuth(false);
       }
     }
     handleAuthCallback();
@@ -255,7 +277,12 @@ function Home() {
             <Link to="/profile" className="text-gray-700 hover:text-indigo-600 font-semibold text-lg transition-colors duration-200">Profile</Link>
           </div>
           <div className="hidden md:flex items-center">
-            {user ? (
+            {isLoadingAuth ? (
+              <div className="flex items-center space-x-2 px-6 py-2">
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-indigo-600"></div>
+                <span className="text-gray-600 text-sm">Signing in...</span>
+              </div>
+            ) : user ? (
               <div className="relative group">
                 <button className="flex items-center space-x-2 hover:opacity-80 transition duration-200">
                   <img 
