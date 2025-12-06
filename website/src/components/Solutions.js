@@ -14,6 +14,7 @@ function Solutions() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [viewMode, setViewMode] = useState('quiz'); // 'quiz' or 'solution'
+  const [filterMode, setFilterMode] = useState('all'); // 'all' or 'filtered'
   const solutionRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -57,7 +58,7 @@ function Solutions() {
         setTimeout(() => safeMathJaxTypeset(), 50);
       });
     }
-  }, [currentQuestionIndex]);
+  }, [currentQuestionIndex, filterMode]);
 
   useEffect(() => {
     // Trigger MathJax typesetting when switching views
@@ -69,7 +70,7 @@ function Solutions() {
         });
       }, 100);
     }
-  }, [viewMode]);
+  }, [viewMode, filterMode]);
 
   useLayoutEffect(() => {
     // Re-render MathJax when questions change, view mode changes, or solution index changes
@@ -78,7 +79,7 @@ function Solutions() {
         setTimeout(() => safeMathJaxTypeset(), 50);
       });
     }
-  }, [parsedQuestions, currentQuestionIndex, viewMode]);
+  }, [parsedQuestions, currentQuestionIndex, viewMode, filterMode]);
 
   useEffect(() => {
     // Trigger MathJax typesetting when in quiz mode (for choices with MathJax)
@@ -89,7 +90,7 @@ function Solutions() {
         });
       }, 150);
     }
-  }, [viewMode, currentQuestionIndex, parsedQuestions]);
+  }, [viewMode, currentQuestionIndex, parsedQuestions, filterMode]);
 
   const checkAuthStatus = () => {
     const currentUser = localStorage.getItem('currentUser');
@@ -189,6 +190,34 @@ function Solutions() {
     setViewMode(viewMode === 'quiz' ? 'solution' : 'quiz');
   };
 
+  const toggleFilterMode = () => {
+    const newMode = filterMode === 'all' ? 'filtered' : 'all';
+    setFilterMode(newMode);
+    // Reset to first question when toggling filter
+    setCurrentQuestionIndex(0);
+  };
+
+  // Get filtered questions (incorrect or unanswered)
+  const getFilteredQuestions = () => {
+    if (filterMode === 'all') {
+      return parsedQuestions.map((q, index) => ({ question: q, originalIndex: index }));
+    }
+    
+    return parsedQuestions
+      .map((q, index) => ({ question: q, originalIndex: index }))
+      .filter(({ question }) => {
+        const userAnswer = selectedAnswers[question.id];
+        const correctAnswer = question.originalQuestion?.answer;
+        
+        // Include if unanswered or incorrect
+        return !userAnswer || userAnswer !== correctAnswer;
+      });
+  };
+
+  const filteredQuestions = getFilteredQuestions();
+  const currentFilteredQuestion = filteredQuestions[currentQuestionIndex];
+  const currentQuestion = currentFilteredQuestion?.question;
+
   const handleQuestionSelect = (questionIndex) => {
     setCurrentQuestionIndex(questionIndex);
   };
@@ -253,7 +282,22 @@ function Solutions() {
       return <div className="empty-state">No questions found for this quiz.</div>;
     }
 
-    const currentQuestion = parsedQuestions[currentQuestionIndex];
+    if (filteredQuestions.length === 0) {
+      return (
+        <div className="flex items-center justify-center h-full">
+          <div className="text-center">
+            <div className="text-6xl mb-4">🎉</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Great job!</h3>
+            <p className="text-gray-600">You answered all questions correctly!</p>
+          </div>
+        </div>
+      );
+    }
+
+    if (!currentQuestion) {
+      return <div className="empty-state">No question available.</div>;
+    }
+
     const selectedAnswer = selectedAnswers[currentQuestion.id];
 
     if (viewMode === 'quiz') {
@@ -319,10 +363,29 @@ function Solutions() {
             {/* Header section - fixed (different from QuizTaking) */}
             <div className="mb-3 lg:mb-4 flex-shrink-0">
               <div className="flex items-center justify-between">
-                <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
-                  Question {currentQuestionIndex + 1} of {parsedQuestions.length}
-                </h2>
                 <div className="flex items-center gap-3">
+                  <h2 className="text-xl lg:text-2xl font-bold text-gray-900">
+                    {currentQuestionIndex + 1} of {filteredQuestions.length}
+                  </h2>
+                  {currentQuestion?.originalQuestion?.categorization?.category && (
+                    <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                      {currentQuestion.originalQuestion.categorization.category.charAt(0).toUpperCase() + 
+                       currentQuestion.originalQuestion.categorization.category.slice(1).replace(/_/g, ' ')}
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center gap-3">
+                  {/* Filter toggle checkbox */}
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={filterMode === 'filtered'}
+                      onChange={toggleFilterMode}
+                      className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                    />
+                    <span className="text-base text-gray-700 font-medium">Only show incorrect</span>
+                  </label>
+                  
                   <button className="btn btn-secondary text-sm lg:text-base" onClick={() => navigate('/quiz')}>
                     ← Back to Quizzes
                   </button>
@@ -345,9 +408,9 @@ function Solutions() {
           <div className="flex justify-between items-center mt-3 lg:mt-4 pt-3 lg:pt-4 flex-shrink-0 border-t border-gray-100">
             {/* Left side - Question Number Navigation */}
             <div className="flex gap-1 flex-wrap">
-              {parsedQuestions.map((_, index) => (
+              {filteredQuestions.map((item, index) => (
                 <button 
-                  key={index}
+                  key={item.originalIndex}
                   className={`w-8 h-8 lg:w-10 lg:h-10 rounded-full text-xs lg:text-sm font-medium flex items-center justify-center transition-colors ${
                     currentQuestionIndex === index 
                       ? 'bg-blue-600 text-white' 
@@ -355,7 +418,7 @@ function Solutions() {
                   }`}
                   onClick={() => handleQuestionSelect(index)}
                 >
-                  {index + 1}
+                  {item.originalIndex + 1}
                 </button>
               ))}
             </div>
@@ -372,11 +435,29 @@ function Solutions() {
           <div className="bg-white rounded-xl flex flex-col h-full">
             {/* Mobile layout content - same as laptop but with different container */}
             <div className="p-3 pb-3 flex-shrink-0 border-b border-gray-200">
-              <div className="flex items-center justify-between">
-                <h2 className="text-lg font-bold text-gray-900">
-                  Question {currentQuestionIndex + 1} of {parsedQuestions.length}
-                </h2>
+              <div className="flex items-center justify-between gap-3">
                 <div className="flex items-center gap-2">
+                  <h2 className="text-lg font-bold text-gray-900">
+                    {currentQuestionIndex + 1}/{filteredQuestions.length}
+                  </h2>
+                  {currentQuestion?.originalQuestion?.categorization?.category && (
+                    <span className="px-2 py-0.5 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+                      {currentQuestion.originalQuestion.categorization.category.charAt(0).toUpperCase() + 
+                       currentQuestion.originalQuestion.categorization.category.slice(1).replace(/_/g, ' ')}
+                    </span>
+                  )}
+                </div>
+                <div className="flex items-center gap-2">
+                  {/* Filter toggle checkbox */}
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={filterMode === 'filtered'}
+                      onChange={toggleFilterMode}
+                      className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
+                    />
+                    <span className="text-sm text-gray-700 font-medium">Only show incorrect</span>
+                  </label>
                   <button className="btn btn-secondary text-sm" onClick={() => navigate('/quiz')}>
                     ← Back to Quizzes
                   </button>
@@ -384,7 +465,7 @@ function Solutions() {
                     className={`btn text-sm ${viewMode === 'quiz' ? 'btn-primary' : 'btn-secondary'}`}
                     onClick={toggleViewMode}
                   >
-                    {viewMode === 'quiz' ? 'VIEW SOLUTION' : 'VIEW QUESTION'}
+                    {viewMode === 'quiz' ? 'View Solution' : 'View Question'}
                   </button>
                 </div>
               </div>
@@ -401,9 +482,9 @@ function Solutions() {
             <div className="flex justify-between items-center p-3 pt-2 flex-shrink-0 border-t border-gray-100">
               {/* Left side - Question Number Navigation */}
               <div className="flex gap-1 flex-wrap">
-                {parsedQuestions.map((_, index) => (
+                {filteredQuestions.map((item, index) => (
                   <button 
-                    key={index}
+                    key={item.originalIndex}
                     className={`w-8 h-8 rounded-full text-xs font-medium flex items-center justify-center transition-colors ${
                       currentQuestionIndex === index 
                         ? 'bg-blue-600 text-white' 
@@ -411,7 +492,7 @@ function Solutions() {
                     }`}
                     onClick={() => handleQuestionSelect(index)}
                   >
-                    {index + 1}
+                    {item.originalIndex + 1}
                   </button>
                 ))}
               </div>
