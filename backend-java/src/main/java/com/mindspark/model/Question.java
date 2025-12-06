@@ -23,6 +23,9 @@ public class Question {
     
     @JsonProperty("solutions")
     private List<Solution> solutions;
+    
+    @JsonProperty("categorization")
+    private Categorization categorization;
 
     // Constructors
     public Question() {}
@@ -45,6 +48,9 @@ public class Question {
 
     public List<Solution> getSolutions() { return solutions; }
     public void setSolutions(List<Solution> solutions) { this.solutions = solutions; }
+    
+    public Categorization getCategorization() { return categorization; }
+    public void setCategorization(Categorization categorization) { this.categorization = categorization; }
 
     public static class QuestionDetails {
         @JsonProperty("text")
@@ -166,5 +172,34 @@ public class Question {
         public void setHeight(String height) { this.height = height; }
     }
 
+    public static class Categorization {
+        @JsonProperty("category")
+        private String category;
+        
+        @JsonProperty("sub_category")
+        private String subCategory;
+        
+        @JsonProperty("confidence")
+        private Double confidence;
+        
+        // Constructors
+        public Categorization() {}
+        
+        public Categorization(String category, String subCategory, Double confidence) {
+            this.category = category;
+            this.subCategory = subCategory;
+            this.confidence = confidence;
+        }
+        
+        // Getters and Setters
+        public String getCategory() { return category; }
+        public void setCategory(String category) { this.category = category; }
+        
+        public String getSubCategory() { return subCategory; }
+        public void setSubCategory(String subCategory) { this.subCategory = subCategory; }
+        
+        public Double getConfidence() { return confidence; }
+        public void setConfidence(Double confidence) { this.confidence = confidence; }
+    }
 
 } 
