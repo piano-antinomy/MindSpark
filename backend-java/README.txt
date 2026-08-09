@@ -6,6 +6,25 @@ For an overview of DynamoDB Local please refer to the documentation at http://do
 
 Release Notes
 -----------------------------
+2026-05-28 (3.3.1)
+     * Adding PartiQL Dependencies in pom.xml
+     * Updating SDK Java version to the latest public version to 2.48.3
+
+2026-01-16 (3.3.0)
+	 * Adding multi-key support for Global Secondary Indexes
+
+2026-01-07 (3.2.0)
+     * Updating SDK Java version to the latest public version from 2.33.0 to 2.41.0
+	 * Adding Support from ShardFilter param on DescribeStream API
+	 * Excluding Kotlin Classes from DDBLocal Jar
+	 * Fixing DeletionProtection bug on UpdateTable
+
+2025-09-09 (3.1.0)
+     * Updating SDK Java version to the latest public version from 2.25.50 to 2.33.0
+     * Including Joda-time dependency inside Pom.xml file
+     * Improving Performance for PartiQL Queries
+     * Upgrading Dependencies to fix  multiple CVE Vulnerability issues
+
  2025-06-26 (3.0.0)
      * Migrating from AWS SDK Java V1 to V2
      * Updated package structure from com.amazonaws.services.dynamodbv2 to software.amazon.dynamodb.services
