@@ -29,7 +29,7 @@ function Quiz() {
     }
 
     // Initialize MathJax
-    if (window.MathJax) {
+    if (window.MathJax?.typesetPromise) {
       window.MathJax.typesetPromise();
     }
 

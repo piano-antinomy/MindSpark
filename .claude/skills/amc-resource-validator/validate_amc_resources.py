@@ -299,6 +299,22 @@ def simulate_latex_choice_count(choice_string: str) -> int:
     return count
 
 
+def rendered_choice_count(question: dict[str, Any]) -> int:
+    text_choices = question.get("text_choices") or []
+    latex_choices = question.get("latex_choices") or []
+    picture_choices = question.get("picture_choices") or []
+
+    if is_nonempty_list(text_choices):
+        return len(text_choices)
+    if is_nonempty_list(latex_choices):
+        if len(latex_choices) == 1:
+            return simulate_latex_choice_count(latex_choices[0]) or 1
+        return len(latex_choices)
+    if is_nonempty_list(picture_choices):
+        return len(picture_choices)
+    return 0
+
+
 def validate_insertion_payload(
     insertion: dict[str, Any],
     context: str,
@@ -399,11 +415,10 @@ def validate_question_choices(
     report: FileReport,
     repo_root: Path,
 ) -> None:
-    q = question.get("question") if isinstance(question.get("question"), dict) else question
-    text_choices = q.get("text_choices") or []
-    latex_choices = q.get("latex_choices") or []
-    picture_choices = q.get("picture_choices") or []
-    asy_choices = q.get("asy_choices") or []
+    text_choices = question.get("text_choices") or []
+    latex_choices = question.get("latex_choices") or []
+    picture_choices = question.get("picture_choices") or []
+    asy_choices = question.get("asy_choices") or []
 
     present = [name for name, value in (("text_choices", text_choices), ("latex_choices", latex_choices), ("picture_choices", picture_choices)) if is_nonempty_list(value)]
     if len(present) > 1:
@@ -487,6 +502,16 @@ def validate_question_choices(
         report.issues.append(
             Issue("ERROR", "missing-choices", f"{problem_id}: no renderable choice payload was found", rel(report.path, repo_root), problem_id)
         )
+    elif (choice_count := rendered_choice_count(question)) != 5:
+        report.issues.append(
+            Issue(
+                "ERROR",
+                "wrong-choice-count",
+                f"{problem_id}: expected exactly 5 renderable choices (A-E), found {choice_count}",
+                rel(report.path, repo_root),
+                problem_id,
+            )
+        )
 
 
 def validate_solution(
@@ -498,6 +523,7 @@ def validate_solution(
     check_urls: bool,
     timeout: float,
     problem_index: int,
+    answer: str,
 ) -> None:
     solution_obj = solution if isinstance(solution, dict) else {"text": solution}
     text = flatten_text(solution_obj.get("text") or solution_obj.get("content") or solution_obj.get("value"))
@@ -536,7 +562,10 @@ def validate_solution(
         report.issues.append(
             Issue("WARN", "thin-solution", f"{context}: solution text is almost empty after markup removal", rel(report.path, repo_root), problem_id, problem_index)
         )
-
+    elif len(rendered_plain) < 40:
+        report.issues.append(
+            Issue("WARN", "solution-needs-explanation", f"{context}: solution is too short to clearly explain its answer", rel(report.path, repo_root), problem_id, problem_index)
+        )
 
 def validate_question(
     problem: dict[str, Any],
@@ -585,9 +614,12 @@ def validate_question(
                 report.issues.append(
                     Issue("WARN", "question-latex-suspicious", f"{problem_id}: {problem_name} in question text", rel(file_path, repo_root), problem_id)
                 )
+        if len(strip_html(INSERTION_RE.sub(" ", qtext))) < 15:
+            report.issues.append(
+                Issue("WARN", "thin-question", f"{problem_id}: question text is very short; review for completeness", rel(file_path, repo_root), problem_id)
+            )
 
     question_markers = extract_markers(qtext)
-    all_insertion_text = [qtext]
     solutions = problem.get("solutions") or []
     if not isinstance(solutions, list):
         report.issues.append(
@@ -595,11 +627,14 @@ def validate_question(
         )
         solutions = []
     else:
-        for solution in solutions:
-            if isinstance(solution, dict):
-                all_insertion_text.append(flatten_text(solution.get("text") or solution.get("content") or solution.get("value")))
-            else:
-                all_insertion_text.append(flatten_text(solution))
+        primary_solution = solutions[:1]
+
+    all_insertion_text = [qtext]
+    for solution in primary_solution if isinstance(solutions, list) else []:
+        if isinstance(solution, dict):
+            all_insertion_text.append(flatten_text(solution.get("text") or solution.get("content") or solution.get("value")))
+        else:
+            all_insertion_text.append(flatten_text(solution))
 
     insertions = question.get("insertions") if isinstance(question.get("insertions"), dict) else {}
     marker_refs = extract_markers(*all_insertion_text)
@@ -652,22 +687,22 @@ def validate_question(
             Issue("WARN", "bad-choice-vertical", f"{problem_id}: choice_vertical should be boolean", rel(file_path, repo_root), problem_id)
         )
 
-    validate_question_choices(problem, problem_id, report, repo_root)
+    validate_question_choices(question, problem_id, report, repo_root)
 
     if not solutions:
         report.issues.append(
             Issue("ERROR", "missing-solutions", f"{problem_id}: solutions array is empty", rel(file_path, repo_root), problem_id)
         )
     else:
-        for idx, solution in enumerate(solutions):
-            validate_solution(solution, insertions, problem_id, report, repo_root, check_urls, timeout, idx)
+        for idx, solution in enumerate(solutions[:1]):
+            validate_solution(solution, insertions, problem_id, report, repo_root, check_urls, timeout, idx, answer)
 
     if competition_group and expected_group and competition_group != expected_group:
         report.issues.append(
             Issue("WARN", "group-mismatch", f"{problem_id}: competition_info.group={competition_group!r} does not match folder group {expected_group!r}", rel(file_path, repo_root), problem_id)
         )
 
-    if re.match(r"^amc_\d{4}_(?:8|10|12)_\d+", problem_id) is None:
+    if re.match(r"^amc_\d{4}_(?:8|10|12(?:[AaBb])?)_\d+", problem_id) is None:
         report.issues.append(
             Issue("WARN", "unexpected-problem-id", f"{problem_id}: id does not follow the usual amc_YYYY_LEVEL_N pattern", rel(file_path, repo_root), problem_id)
         )

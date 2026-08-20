@@ -60,6 +60,8 @@ npm start
 
 Frontend runs on `http://localhost:3000`.
 
+- Sign-in on `localhost` uses a local review session and must stay on the local site. Do not use the production Cognito redirect while reviewing a worktree.
+
 ## 5) Local DDB admin UI (optional)
 
 Current helper script:
