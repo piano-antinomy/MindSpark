@@ -671,6 +671,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>$2024=2^3\\cdot11\\cdot23$. For $n!$ to be divisible by $2024$, it must contain a factor of $23$, so $n\\ge23$. Also, $23!$ contains $23$, $11$, and at least three factors of $2$. Thus the least value is $23$, choice $\\boxed{\\textbf{(D)}\\ 23}$.</p>"
+        },
+        {
           "text": "<p>Note that <INSERTION_INDEX_1> in the prime factorization. Since <INSERTION_INDEX_2> is a multiple of <INSERTION_INDEX_3> and <INSERTION_INDEX_4> we conclude that <INSERTION_INDEX_5> is a multiple of <INSERTION_INDEX_6> Therefore, we have <INSERTION_INDEX_7></p><p><u><b>Remark</b></u></p><p>Memorizing the prime factorization of the current year is useful for the AMC 8/10/12 Exams.</p><p>~MRENTHUSIASM</p><p><u><b>Remark</b></u></p><p>Note that <INSERTION_INDEX_8> is <INSERTION_INDEX_9>, which is <INSERTION_INDEX_10>.</p><p>~WISETIGERJ2</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -803,6 +806,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>The original total is $20\\cdot45=900$. If $k$ entries equal $6$, removing them leaves total $900-6k$ among $20-k$ entries, whose mean is $66$. Thus $900-6k=66(20-k)$, so $60k=420$ and $k=7$. The answer is $\\boxed{\\textbf{(D)}\\ 7}$.</p>"
+        },
         {
           "text": "<p>Because the set has <INSERTION_INDEX_1> numbers and mean <INSERTION_INDEX_2>, the sum of the terms in the set is <INSERTION_INDEX_3>.</p><p>Let there be <INSERTION_INDEX_4> sixes in the set.</p><p>Then, the mean of the set without the sixes is <INSERTION_INDEX_5>. Equating this expression to <INSERTION_INDEX_6> and solving yields <INSERTION_INDEX_7>, so we choose answer choice <INSERTION_INDEX_8>.</p>",
           "insertions": {
@@ -995,6 +1001,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>The product is positive, so either all three integers are positive or exactly two are negative. Three positive factors of $60$ have sum at least $3+4+5=12$. In the other case, write the integers as $-u,-v,w$, where $u,v,w$ are positive and $uvw=60$. Their sum is $w-u-v$. If $w\\le6$, then $uv\\ge10$, so $u+v\\ge2\\sqrt{10}>6\\ge w$; the sum is not positive. The next possible divisor is $w=10$, where $uv=6$ and $(u,v)=(1,6)$, giving $10-1-6=3$. If $w\\ge12$, then $uv\\le5$, so $u+v\\le6$ and $w-u-v\\ge12-6=6$. Thus the least positive sum is $\\boxed{\\textbf{(B)}\\ 3}$.</p>"
+        },
         {
           "text": "<p>We notice that the optimal solution involves two negative numbers and a positive number. Thus we may split <INSERTION_INDEX_1> into three factors and choose negativity. We notice that <INSERTION_INDEX_2>, and trying other combinations does not yield lesser results so the answer is <INSERTION_INDEX_3>.</p><p>~eevee9406</p>",
           "insertions": {
@@ -1404,6 +1413,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Place $B$ at the origin, $A=(\\sqrt2,0)$, and $C=(0,\\sqrt2)$. The $2024$ interior division points of $AC$ occur in symmetric pairs about the midpoint of $AC$, so their vector sum is $2024\\left(\\frac{\\sqrt2}{2},\\frac{\\sqrt2}{2}\\right)=(1012\\sqrt2,1012\\sqrt2)$. Its length is $\\sqrt{2(1012\\sqrt2)^2}=2024$. The answer is $\\boxed{\\textbf{(D)}\\ 2024}$.</p>"
+        },
         {
           "text": "<p>Let us find an expression for the <INSERTION_INDEX_1>- and <INSERTION_INDEX_2>-components of <INSERTION_INDEX_3>. Note that <INSERTION_INDEX_4>, so <INSERTION_INDEX_5>. All of the vectors <INSERTION_INDEX_6> and so on up to <INSERTION_INDEX_7> are equal; moreover, they equal <INSERTION_INDEX_8>. </p><p>We now note that <INSERTION_INDEX_9> (<INSERTION_INDEX_10> copies of <INSERTION_INDEX_11> added together). Furthermore, note that <INSERTION_INDEX_12></p><p>We want <INSERTION_INDEX_13>'s length, which can be determined from the <INSERTION_INDEX_14>- and <INSERTION_INDEX_15>-components. Note that the two values should actually be the same - in this problem, everything is symmetric with respect to the line <INSERTION_INDEX_16>, so the magnitudes of the <INSERTION_INDEX_17>- and <INSERTION_INDEX_18>-components should be identical. The <INSERTION_INDEX_19>-component is easier to calculate. </p><p><INSERTION_INDEX_20></p><p>One can similarly evaulate the <INSERTION_INDEX_21>-component and obtain an identical answer; thus, our desired length is <INSERTION_INDEX_22>. </p><p>~Technodoggo</p>",
           "insertions": {
@@ -2016,6 +2028,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>The logarithms require $\\sin(3\\theta)>0$ and $\\cos(2\\theta)>0$. Their equation is equivalent to $\\sin(3\\theta)\\cos(2\\theta)=1$. Each factor is at most $1$, so both must equal $1$. Then $\\cos(2\\theta)=1$ gives $\\theta=k\\pi$, but $\\sin(3\\theta)=0$, a contradiction. There are no such angles, so the answer is $\\boxed{\\textbf{(A)}\\ 0}$.</p>"
+        },
+        {
           "text": "<p>Note that this is equivalent to <INSERTION_INDEX_1>, which is clearly only possible when <INSERTION_INDEX_2>. (If either one is between <INSERTION_INDEX_3> and <INSERTION_INDEX_4>, the other one must be greater than <INSERTION_INDEX_5> or less than <INSERTION_INDEX_6> to offset the product, which is impossible for sine and cosine.) They cannot be both <INSERTION_INDEX_7> since we cannot take logarithms of negative numbers, so they are both <INSERTION_INDEX_8>. Then <INSERTION_INDEX_9> is <INSERTION_INDEX_10> more than a multiple of <INSERTION_INDEX_11> and <INSERTION_INDEX_12> is a multiple of <INSERTION_INDEX_13>, so <INSERTION_INDEX_14> is <INSERTION_INDEX_15> more than a multiple of <INSERTION_INDEX_16> and also a multiple of <INSERTION_INDEX_17>. However, a multiple of <INSERTION_INDEX_18> will always have a denominator of <INSERTION_INDEX_19> or <INSERTION_INDEX_20>, and never <INSERTION_INDEX_21>; it can thus never add with <INSERTION_INDEX_22> to form an integral multiple of <INSERTION_INDEX_23>. Thus, there are <INSERTION_INDEX_24> solutions. </p><p>~Technodoggo</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -2521,6 +2536,9 @@
       "answer": "E",
       "solutions": [
         {
+          "text": "<p>Let $M+3773=u^2$ and $M+1213=v^2$. Then $(u-v)(u+v)=2560$. Let $a=u-v$ and $b=u+v$, so $ab=2560$ and $u=(a+b)/2$. The factors $a$ and $b$ have the same parity; since their product is even, both are even. For a fixed positive product, $a+b$ is largest when the smaller factor is as small as possible, so $a=2$ and $b=1280$. Thus $u=641$ and $M=641^2-3773=407108$. Its units digit is $8$, so the answer is $\\boxed{\\textbf{(E)}\\ 8}$.</p>"
+        },
+        {
           "text": "<p>Let <INSERTION_INDEX_1> and <INSERTION_INDEX_2> for some positive integers <INSERTION_INDEX_3> and <INSERTION_INDEX_4> We subtract the first equation from the second, then apply the difference of squares: <INSERTION_INDEX_5> Note that <INSERTION_INDEX_6> and <INSERTION_INDEX_7> have the same parity, and <INSERTION_INDEX_8></p><p>We wish to maximize both <INSERTION_INDEX_9> and <INSERTION_INDEX_10> so we maximize <INSERTION_INDEX_11> and minimize <INSERTION_INDEX_12> It follows that<INSERTION_INDEX_13>from which <INSERTION_INDEX_14></p><p>Finally, we get <INSERTION_INDEX_15> so the units digit of <INSERTION_INDEX_16> is <INSERTION_INDEX_17></p><p>~MRENTHUSIASM ~Tacos_are_yummy_1</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -3018,6 +3036,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>For the $3$-$4$-$5$ triangle, $\\sin\\alpha=3/5$ and $\\cos\\alpha=4/5$. Thus $\\cos(2\\alpha)=1-2(3/5)^2=7/25$ and $\\sin(2\\alpha)=2(3/5)(4/5)=24/25$. In the $7$-$24$-$25$ triangle, $\\sin\\beta=7/25$ and $\\cos\\beta=24/25$. Therefore $\\beta=\\frac\\pi2-2\\alpha$, so the answer is $\\boxed{\\textbf{(C)}\\ \\frac\\pi2-2\\alpha}$.</p>"
+        },
         {
           "text": "<p>From the question,<INSERTION_INDEX_1><INSERTION_INDEX_2><INSERTION_INDEX_3><INSERTION_INDEX_4><INSERTION_INDEX_5><INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8></p><p>~lptoggled</p>",
           "insertions": {
@@ -3857,6 +3878,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>The base-$b$ number is $2b^3+2b+4=2(b^3+b+2)$. It is divisible by $16$ exactly when $b^3+b+2\\equiv0\\pmod8$. For $b\\equiv0,1,\\ldots,7\\pmod8$, the values of $b^3+b+2\\pmod8$ are $2,4,4,0,6,4,0,0$, so $b\\equiv3,6,7\\pmod8$. Since $b\\ge5$, the bases $3+8k$ have $k=1,\\ldots,252$, while the bases $6+8k$ and $7+8k$ each have $k=0,\\ldots,252$. Thus $K=252+253+253=758$. The digit sum is $7+5+8=20$, so the answer is $\\boxed{\\textbf{(D)}\\ 20}$.</p>"
+        },
+        {
           "text": "<p><INSERTION_INDEX_1>, if <INSERTION_INDEX_2> even then <INSERTION_INDEX_3>. If <INSERTION_INDEX_4> odd then <INSERTION_INDEX_5> so <INSERTION_INDEX_6>. Now <INSERTION_INDEX_7> so <INSERTION_INDEX_8> but one of the answers we got from that, <INSERTION_INDEX_9>, is too small, so <INSERTION_INDEX_10>.</p><p>~OronSH ~<a href=\"/wiki/index.php/User:Mathkiddus\" title=\"User:Mathkiddus\">mathkiddus</a> ~andliu766 ~megaboy6679 ~trevian1(minor edit for clarity)</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -4487,6 +4511,9 @@
       "sources": [],
       "answer": "E",
       "solutions": [
+        {
+          "text": "<p>For consecutive terms $a,720,b$ of a geometric sequence, $720/a=b/720$, so $ab=720^2$. To minimize $b=720^2/a$, maximize a divisor $a<720$ of $720^2=2^8\\cdot3^4\\cdot5^2$. Write $a=5^kd$, where $d$ has only factors $2$ and $3$. If $k=0$, the largest such divisor below $720$ is $648$. If $k=1$, then $d<144$, so $d\\le128$ and $a\\le640$. If $k=2$, then $d<28.8$, so $d\\le27$ and $a\\le675$. Thus the greatest possible $a$ is $675$, and $b=720^2/675=768$. Its digit sum is $7+6+8=21$, so the answer is $\\boxed{\\textbf{(E)}\\ 21}$.</p>"
+        },
         {
           "text": "<p>For a geometric sequence, we have <INSERTION_INDEX_1>, and we can test values for <INSERTION_INDEX_2>. We find that <INSERTION_INDEX_3> and <INSERTION_INDEX_4> works, and we can test multiples of <INSERTION_INDEX_5> in between the two values. Finding that none of the multiples of 5 divide <INSERTION_INDEX_6> besides <INSERTION_INDEX_7> itself, we know that the answer is <INSERTION_INDEX_8>.</p><p>(Note: To find the value of <INSERTION_INDEX_9> without bashing, we can observe that <INSERTION_INDEX_10>, and that multiplying it by <INSERTION_INDEX_11> gives us <INSERTION_INDEX_12>, which is really close to <INSERTION_INDEX_13>. ~ YTH)</p><p>Note: The reason why <INSERTION_INDEX_14> is because <INSERTION_INDEX_15>. Rearranging this gives <INSERTION_INDEX_16></p><p>~eevee9406</p><p>Note: Another reason that <INSERTION_INDEX_17> is because the <INSERTION_INDEX_18> (as the middle term in a geometric series is always the geometric mean [the geometric mean is the square root of the product of the first and last terms of the series]) and squaring on both sides results in <INSERTION_INDEX_19>.</p><p>~ThatPrimePunnyGuy</p>",
           "insertions": {
@@ -5171,6 +5198,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>Let $t=x+\\frac12$. Then $e^{x+1}+e^{-x}=e^{1/2}(e^t+e^{-t})$, which is unchanged when $t$ is replaced by $-t$. Thus the symmetry axis is $x=-\\frac12$. Reflecting $x=-1$ across this line gives $x'=2\\left(-\\frac12\\right)-(-1)=0$, with the same $y$-coordinate. The image is $\\boxed{\\textbf{(D)}\\left(0,\\frac12\\right)}$.</p>"
+        },
+        {
           "text": "<p>The line of symmetry is probably of the form <INSERTION_INDEX_1> for some constant <INSERTION_INDEX_2>. A vertical line of symmetry at <INSERTION_INDEX_3> for a function <INSERTION_INDEX_4> exists if and only if <INSERTION_INDEX_5>; we substitute <INSERTION_INDEX_6> and <INSERTION_INDEX_7> into our given function and see that we must have </p><p><INSERTION_INDEX_8></p><p>for all real <INSERTION_INDEX_9>. Simplifying: </p><p>\\begin{align*}e^{a-b+1}+e^{-(a-b)}-2&amp;=e^{a+b+1}+e^{-(a+b)}-2 \\\\e^{a-b+1}+e^{b-a}&amp;=e^{a+b+1}+e^{-a-b} \\\\e^{a-b+1}-e^{-a-b}&amp;=e^{a+b+1}-e^{b-a} \\\\e^{-b}\\left(e^{a+1}-e^{-a}\\right)&amp;=e^b\\left(e^{a+1}-e^{-a}\\right). \\\\\\end{align*}</p><p>If <INSERTION_INDEX_10>, then <INSERTION_INDEX_11> for all real <INSERTION_INDEX_12>; this is clearly impossible, so let <INSERTION_INDEX_13>. Thus, our line of symmetry is <INSERTION_INDEX_14>, and reflecting <INSERTION_INDEX_15> over this line gives <INSERTION_INDEX_16></p><p>~Technodoggo</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -5783,6 +5813,9 @@
       "sources": [],
       "answer": "C",
       "solutions": [
+        {
+          "text": "<p>Because every row and column is an arithmetic progression, the entry in row $i$, column $j$ has the form $A+B(i-1)+C(j-1)+D(i-1)(j-1)$. The four given entries yield $A+4B+4C+16D=0$, $A+B+3C+3D=48$, $A+3B+2C+6D=16$, and $A+2B=12$. Subtracting the third equation from the first after simplifying gives $D=-5$; then the middle two equations give $B+2C=34$ and $-B+3C=51$. Thus $C=17$, $B=0$, and $A=12$. The entry in row $1$, column $2$ is $A+C=29$, so the answer is $\\boxed{\\textbf{(C)}\\ 29}$.</p>"
+        },
         {
           "text": "<p>Start from the <INSERTION_INDEX_1>. Going up, let the common difference be <INSERTION_INDEX_2>, and going left, let the common difference be <INSERTION_INDEX_3>. Therefore, we have <INSERTION_INDEX_4> Looking at the third column, we can see that the common difference going up is <INSERTION_INDEX_5>. We fill this in: <INSERTION_INDEX_6> Looking at the second row, <INSERTION_INDEX_7> has two values beside it, so we can write <INSERTION_INDEX_8> and we can do the same with the third row, which gives <INSERTION_INDEX_9> Now we have the system of equations <INSERTION_INDEX_10><INSERTION_INDEX_11> and solving it gives <INSERTION_INDEX_12>, therefore we can now fill in the grid with actual numbers. But before doing that, note that we're only looking for a value in the first row, and because we already have two known values in that row, we can find the common difference for that row and not focus on anything else. </p><p>Focusing only on the first row yields <INSERTION_INDEX_13> This means that the common difference from right to left is <INSERTION_INDEX_14>. Therefore, the desired value is <INSERTION_INDEX_15> ~Tacos_are_yummy_1</p>",
           "insertions": {
@@ -6483,6 +6516,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>Let $P(x)=x^3+2x^2-x+3$. Since its roots are $p,q,r$, $(p^2+4)(q^2+4)(r^2+4)=P(2i)P(-2i)$. Directly, $P(2i)=-5-10i$ and $P(-2i)=-5+10i$. Their product is $(-5)^2+10^2=125$. The answer is $\\boxed{\\textbf{(D)}\\ 125}$.</p>"
+        },
+        {
           "text": "<p>You can factor <INSERTION_INDEX_1> as <INSERTION_INDEX_2>.</p><p>For any polynomial <INSERTION_INDEX_3>, you can create a new polynomial <INSERTION_INDEX_4>, which will have roots that instead have the value subtracted.</p><p>Substituting <INSERTION_INDEX_5> and <INSERTION_INDEX_6> into <INSERTION_INDEX_7> for the first polynomial, gives you <INSERTION_INDEX_8> and <INSERTION_INDEX_9> as <INSERTION_INDEX_10> for both equations. Multiplying <INSERTION_INDEX_11> and <INSERTION_INDEX_12> together gives you <INSERTION_INDEX_13>.</p><p>-ev2028</p><p>~Latex by eevee9406</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -7033,6 +7069,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>There are $12!/(4!)^3=34650$ equally likely allocations of the individual tokens. Choose the players receiving all red, all white, and the blue token in $3!=6$ ways. The red player also receives one black token in $6$ ways, and the white player receives two of the remaining five black tokens in $\\binom52=10$ ways. Thus the probability is $6\\cdot6\\cdot10/34650=4/385$, so $m+n=389$. The answer is $\\boxed{\\textbf{(C)}\\ 389}$.</p>"
+        },
+        {
           "text": "<p>We have <INSERTION_INDEX_1> ways to handle the red/white/blue balls distribution on the denominator.Now we simply <INSERTION_INDEX_2> <INSERTION_INDEX_3> <INSERTION_INDEX_4> for the numerator in order to handle the black balls and distinguishable persons. The solution is therefore <INSERTION_INDEX_5> or <INSERTION_INDEX_6></p><p>Remarks - Notice we let balls and persons be distinguishable to increase ease of calculations</p><p>~polya_mouse</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -7526,6 +7565,9 @@
       "sources": [],
       "answer": "D",
       "solutions": [
+        {
+          "text": "<p>Subtracting $bc+a=87$ from $ab+c=100$ gives $(a-c)(b-1)=13$. Hence $b-1$ is a divisor of $13$, so $b$ is one of $2,14,0,-12$. Let $r=a-c=13/(b-1)$. From $bc+a=87$, we get $c(b+1)=87-r$. For $b=2$, this gives $3c=74$; for $b=14$, it gives $15c=86$; and for $b=0$, it gives $c=100$, which fails $ca+b=60$. Thus $b=-12$, so $r=-1$ and $-11c=88$, giving $c=-8$ and $a=-9$. Therefore $ab+bc+ca=108+96+72=276$, so the answer is $\\boxed{\\textbf{(D)}\\ 276}$.</p>"
+        },
         {
           "text": "<p>Subtracting the first two equations yields <INSERTION_INDEX_1>. Notice that both factors are integers, so <INSERTION_INDEX_2> could equal one of <INSERTION_INDEX_3> and <INSERTION_INDEX_4>. We consider each case separately:3For <INSERTION_INDEX_5>, from the second equation, we see that <INSERTION_INDEX_6>. Then <INSERTION_INDEX_7>, which is not possible as <INSERTION_INDEX_8> is an integer, so this case is invalid.</p><p>For <INSERTION_INDEX_9>, we have <INSERTION_INDEX_10> and <INSERTION_INDEX_11>, which by experimentation on the factors of <INSERTION_INDEX_12> has no solution, so this is also invalid.</p><p>For <INSERTION_INDEX_13>, we have <INSERTION_INDEX_14> and <INSERTION_INDEX_15>, which by experimentation on the factors of <INSERTION_INDEX_16> has no solution, so this is also invalid.</p><p>Thus, we must have <INSERTION_INDEX_17>, so <INSERTION_INDEX_18> and <INSERTION_INDEX_19>. Thus <INSERTION_INDEX_20>, so <INSERTION_INDEX_21>. We can simply trial and error this to find that <INSERTION_INDEX_22> so then <INSERTION_INDEX_23>. The answer is then <INSERTION_INDEX_24>.</p><p>~eevee9406</p>",
           "insertions": {
@@ -8048,6 +8090,9 @@
       "answer": "A",
       "solutions": [
         {
+          "text": "<p>Let $P$ be the midpoint of diagonal $AC$. Every new card is obtained by rotating the previous card about $P$. Since $AP^2=(1/2)^2+(1+\\sqrt3/2)^2=2+\\sqrt3$, the law of cosines in isosceles triangle $APB$ gives $1=2(2+\\sqrt3)(1-\\cos\\angle APB)$. Hence $\\cos\\angle APB=\\sqrt3/2$, so each card rotates by $30^\\circ$. The angle from $C$ to $B$ in the required direction is $150^\\circ$, so after $150^\\circ/30^\\circ=5$ rotations, the sixth card has a vertex at $B$. Thus the answer is $\\boxed{\\textbf{(A)}\\ 6}$.</p>"
+        },
+        {
           "text": "<p>Let the midpoint of <INSERTION_INDEX_1> be <INSERTION_INDEX_2>.</p><p>We see that no matter how many moves we do, <INSERTION_INDEX_3> stays where it is.</p><p>Now we can find the angle of rotation (<INSERTION_INDEX_4>) per move with the following steps:</p><p><INSERTION_INDEX_5><INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8><INSERTION_INDEX_9><INSERTION_INDEX_10><INSERTION_INDEX_11>Since Vertex <INSERTION_INDEX_12> is the closest one and <INSERTION_INDEX_13></p><p>Vertex C will land on Vertex B when <INSERTION_INDEX_14> cards are placed.</p><p>(someone insert diagram maybe)</p><p>~lptoggled, minor Latex edits by eevee9406</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -8540,6 +8585,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>In $\\triangle CDA$, the Law of Cosines gives $AC^2=3^2+5^2-2(3)(5)\\cos120^\\circ=49$, so $AC=7$. Opposite angles in the cyclic quadrilateral are supplementary, so $\\angle CBA=60^\\circ$. In $\\triangle ABC$, $49=AB^2+9-3AB$, giving $AB=8$. Ptolemy's theorem gives $7\\cdot BD=8\\cdot3+3\\cdot5=39$, so $BD=39/7<7$. The shorter diagonal is $\\boxed{\\textbf{(D)}\\ \\frac{39}{7}}$.</p>"
+        },
+        {
           "text": "<p><INSERTION_INDEX_1>~diagram by erics118</p><p>First, <INSERTION_INDEX_2> by properties of cyclic quadrilaterals.</p><p>Let <INSERTION_INDEX_3>. Apply the <a href=\"/wiki/index.php/Law_of_Cosines\" title=\"Law of Cosines\">Law of Cosines</a> on <INSERTION_INDEX_4>:<INSERTION_INDEX_5><INSERTION_INDEX_6></p><p>Let <INSERTION_INDEX_7>. Apply the Law of Cosines on <INSERTION_INDEX_8>:<INSERTION_INDEX_9><INSERTION_INDEX_10><INSERTION_INDEX_11></p><p>By <a class=\"mw-redirect\" href=\"/wiki/index.php/Ptolemy%E2%80%99s_Theorem\" title=\"Ptolemy\u2019s Theorem\">Ptolemy\u2019s Theorem</a>,<INSERTION_INDEX_12><INSERTION_INDEX_13><INSERTION_INDEX_14>Since <INSERTION_INDEX_15>,The answer is <INSERTION_INDEX_16>.</p><p><br/>~lptoggled,eevee9406, meh494</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -9019,6 +9067,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>Set $x=AP/AB$ and $y=AQ/AC$. These are independent uniform variables on $[0,1]$, and the area ratio $[APQ]/[ABC]$ equals $xy$. Thus $P(xy<1/2)=\\int_0^{1/2}1\\,dx+\\int_{1/2}^1\\frac{1}{2x}\\,dx=\\frac12+\\frac12\\ln2\\approx0.8466$. This lies in $(\\frac34,\\frac78]$, so the answer is $\\boxed{\\textbf{(D)}\\left(\\frac34,\\frac78\\right]}$.</p>"
+        },
+        {
           "text": "<p>Let <INSERTION_INDEX_1> and <INSERTION_INDEX_2>. Applying the sine formula for a triangle's area, we see that <INSERTION_INDEX_3></p><p>Without loss of generality, we let <INSERTION_INDEX_4>, and thus <INSERTION_INDEX_5>; we therefore require <INSERTION_INDEX_6> for <INSERTION_INDEX_7>. (Note: You can skip most of this by using triangle area ratios ~A_MatheMagician.)</p><p>A quick rough sketch of <INSERTION_INDEX_8> on the square given by <INSERTION_INDEX_9> reveals that the curve intersects the boundaries at <INSERTION_INDEX_10> and <INSERTION_INDEX_11>, and it is actually quite (very) obvious that the area bounded by the inequality <INSERTION_INDEX_12> and the aforementioned unit square is more than <INSERTION_INDEX_13> but less than <INSERTION_INDEX_14> (cf. the diagram below). Thus, our answer is <INSERTION_INDEX_15>. </p><p>~Technodoggo</p><p><INSERTION_INDEX_16></p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -9357,6 +9408,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Multiplying the recurrence by $n(n-1)$ gives $na_n=(n-1)a_{n-1}+2n-1$. Letting $b_n=na_n$, we get $b_n=b_{n-1}+2n-1$ with $b_1=2$, so $b_n=n^2+1$ and $a_n=n+1/n$. Thus $\\sum_{n=1}^{100}a_n^2=\\sum_{n=1}^{100}n^2+200+\\sum_{n=1}^{100}1/n^2=338350+200+\\sum_{n=1}^{100}1/n^2$. The last sum is greater than $1$ and, since $1/n^2<1/(n(n-1))$ for $n\\ge2$, it is less than $1+\\sum_{n=2}^{100}1/(n(n-1))<2$. Therefore the floor is $338551$, choice $\\boxed{\\textbf{(B)}\\ 338551}$.</p>"
+        },
         {
           "text": "<p>Multiply both sides of the recurrence to find that <INSERTION_INDEX_1>.</p><p>Let <INSERTION_INDEX_2>. Then the previous relation becomes<INSERTION_INDEX_3></p><p>We can rewrite this relation for values of <INSERTION_INDEX_4> until <INSERTION_INDEX_5> and use telescoping to derive an explicit formula:</p><p><INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8><INSERTION_INDEX_9><INSERTION_INDEX_10><INSERTION_INDEX_11><INSERTION_INDEX_12></p><p>Summing the equations yields:</p><p><INSERTION_INDEX_13><INSERTION_INDEX_14><INSERTION_INDEX_15><INSERTION_INDEX_16></p><p>Now we can substitute <INSERTION_INDEX_17> back into our equation:</p><p><INSERTION_INDEX_18><INSERTION_INDEX_19><INSERTION_INDEX_20><INSERTION_INDEX_21></p><p>Thus the sum becomes</p><p><INSERTION_INDEX_22></p><p>We know that <INSERTION_INDEX_23>, and we also know that <INSERTION_INDEX_24>, so the requested sum is equivalent to <INSERTION_INDEX_25>. All that remains is to calculate <INSERTION_INDEX_26>, and we know that this value lies between <INSERTION_INDEX_27> and <INSERTION_INDEX_28> (see the note below for a proof). Thus,</p><p><INSERTION_INDEX_29><INSERTION_INDEX_30></p><p>so</p><p><INSERTION_INDEX_31></p><p>and thus the answer is <INSERTION_INDEX_32>.</p><p>~eevee9406</p><p><b>Note:</b> <INSERTION_INDEX_33>. It is obvious that the sum is greater than 1 (since it contains <INSERTION_INDEX_34> as one of its terms).</p><p>If you forget this and have to derive this on the exam, here is how:</p><p><INSERTION_INDEX_35></p><p><INSERTION_INDEX_36></p><p><INSERTION_INDEX_37></p><p><INSERTION_INDEX_38></p><p>and it is clear that <INSERTION_INDEX_39>. ~eevee9406</p><p><br/></p>",
           "insertions": {
@@ -10008,6 +10062,9 @@
       "answer": "C",
       "solutions": [
         {
+          "text": "<p>First consider loops that meet the middle row. Tracing the forced boundary from the labeled cells shows that its left and right ends can enclose exactly one of four consecutive blocks: all $8$ columns, the leftmost $7$, the rightmost $7$, or the central $6$. In these cases there are respectively $6,5,5,4$ interior middle-row cells. At each such cell, the required toothpick can be placed on either its top or bottom side, independently, and these choices determine one nonintersecting loop. Thus these cases contribute $2^6+2^5+2^5+2^4=144$ loops. The only loops that avoid the middle row are the two rectangles entirely above or entirely below it. Therefore there are $144+2=146$ loops, so the answer is $\\boxed{\\textbf{(C)}\\ 146}$.</p>"
+        },
+        {
           "text": "<p>Notice that for any case where the closed loop does not connect from the top side of the ones and bottom side of the ones, there are two of these cases. A cheese solution can be found from this; noting that B and C are the only two options to each other, and, being two apart, with people likely to forget this case, <INSERTION_INDEX_1> is likely to be the correct answer.Cheese solution done by <a href=\"/wiki/index.php/User:Juwushu\" title=\"User:Juwushu\">juwushu</a>.</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -10096,6 +10153,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Let $x=\\tan^2(\\pi/16)$, $y=\\tan^2(3\\pi/16)$, $z=\\tan^2(5\\pi/16)$, and $w=\\tan^2(7\\pi/16)$. The requested expression is $(x+w)(y+z)$. For any angle $t$, $\\tan^2t+\\cot^2t=4\\cot^2(2t)+2$. Hence $x+w=4\\cot^2(\\pi/8)+2$ and $y+z=4\\tan^2(\\pi/8)+2$. Writing $r=\\tan(\\pi/8)$, their product is $16+8(r^2+r^{-2})+4$. Applying the same identity at $t=\\pi/8$ gives $r^2+r^{-2}=4\\cot^2(\\pi/4)+2=6$. Therefore the value is $16+8\\cdot6+4=68$, so the answer is $\\boxed{\\textbf{(B)}\\ 68}$.</p>"
+        },
         {
           "text": "<p>First, notice that</p><p><INSERTION_INDEX_1></p><p><br/><INSERTION_INDEX_2></p><p><br/>Here, we make use of the fact that</p><p><INSERTION_INDEX_3><INSERTION_INDEX_4><INSERTION_INDEX_5><INSERTION_INDEX_6><INSERTION_INDEX_7><INSERTION_INDEX_8><INSERTION_INDEX_9><INSERTION_INDEX_10></p><p>Hence,</p><p><INSERTION_INDEX_11><INSERTION_INDEX_12></p><p>Note that </p><p><INSERTION_INDEX_13></p><p><br/><INSERTION_INDEX_14></p><p>Hence,</p><p><INSERTION_INDEX_15></p><p><INSERTION_INDEX_16></p><p><INSERTION_INDEX_17></p><p><INSERTION_INDEX_18></p><p>Therefore, the answer is <INSERTION_INDEX_19>.</p><p>~tsun26</p>",
           "insertions": {
@@ -10946,6 +11006,9 @@
       "answer": "D",
       "solutions": [
         {
+          "text": "<p>If a disphenoid has face side lengths $p,q,r$, it can be modeled using positive box-edge squares $(q^2+r^2-p^2)/2$, $(p^2+r^2-q^2)/2$, and $(p^2+q^2-r^2)/2$. Thus each face must be acute; conversely, every acute triangle gives positive values and hence a disphenoid. Every scalene integer triangle with sides smaller than $4,5,6$ is among $(2,3,4)$, $(2,4,5)$, $(2,5,6)$, $(3,4,5)$, $(3,4,6)$, and $(3,5,6)$; each is right or obtuse. Thus the least possible acute face is the $4$-$5$-$6$ triangle. Its semiperimeter is $15/2$, so Heron's formula gives area $\\sqrt{(15/2)(7/2)(5/2)(3/2)}=15\\sqrt7/4$. Four congruent faces have total area $15\\sqrt7$, so the answer is $\\boxed{\\textbf{(D)}\\ 15\\sqrt7}$.</p>"
+        },
+        {
           "text": "<p>Notice that any scalene <INSERTION_INDEX_1> triangle can be the faces of a <INSERTION_INDEX_2>. (See proof in Solution 2.) </p><p>As a result, we simply have to find the smallest area a scalene acute triangle with integer side lengths can take on. This occurs with a <INSERTION_INDEX_3> triangle (notice that if you decrease the value of any of the sides the resulting triangle will either be isosceles, degenerate, or non-acute). For this triangle, the semiperimeter is <INSERTION_INDEX_4>, so by Heron\u2019s Formula:</p><p>\\begin{align*}A&amp;=\\sqrt{\\frac{15}{2}\\cdot\\frac{7}{2}\\cdot\\frac{5}{2}\\cdot\\frac{3}{2}}\\\\&amp;=\\sqrt{\\frac{15^2\\cdot7}{16}}\\\\&amp;=\\frac{15}{4}\\sqrt{7}\\end{align*}</p><p>The surface area is simply four times the area of one of the triangles, or <INSERTION_INDEX_5>.</p><p>~eevee9406</p>",
           "insertions": {
             "INSERTION_INDEX_1": {
@@ -11312,6 +11375,9 @@
       "sources": [],
       "answer": "B",
       "solutions": [
+        {
+          "text": "<p>Symmetry about $y=x$ means that $f(x)=(ax+b)/(cx+d)$ is its own inverse. Comparing coefficients in $f(f(x))=x$ shows that either $a=-d$, or $c=0$, $a=d\\ne0$, and $b=0$. The first case gives $11^3=1331$ coefficient choices for $a,b,c$; the second gives $10$ additional copies of $y=x$. From the first case, exclude $11$ choices with $c=d=0$, $10$ choices with $c\\ne0$ and $a=b=d=0$, and $28$ canceled numerator-denominator pairs with $c,d\\ne0$ and $bc=-d^2$. For the last count, the numbers of factor pairs for $|d|=1,2,3,4,5$ are $2,6,2,2,2$, for each sign of $d$, totaling $28$. Therefore the number of valid graphs is $1331+10-11-10-28=1292$, so the answer is $\\boxed{\\textbf{(B)}\\ 1292}$.</p>"
+        },
         {
           "text": "<p>Symmetric about the line <INSERTION_INDEX_1> implies that the inverse function <INSERTION_INDEX_2>. Then we split the question into several cases to find the final answer.</p><p><br/></p><p>Case 1: <INSERTION_INDEX_3></p><p>Then <INSERTION_INDEX_4> and <INSERTION_INDEX_5>.Giving us <INSERTION_INDEX_6> and <INSERTION_INDEX_7></p><p>Therefore, we obtain 2 subcases: <INSERTION_INDEX_8> and <INSERTION_INDEX_9></p><p><br/></p><p>Case 2: <INSERTION_INDEX_10></p><p>Then <INSERTION_INDEX_11></p><p>And <INSERTION_INDEX_12></p><p>So <INSERTION_INDEX_13>, or <INSERTION_INDEX_14> (<INSERTION_INDEX_15>), and substitute that into <INSERTION_INDEX_16> gives us:</p><p><INSERTION_INDEX_17> (Otherwise <INSERTION_INDEX_18>, <INSERTION_INDEX_19>, and is not symmetric about <INSERTION_INDEX_20>)</p><p><br/></p><p>Therefore we get three cases:</p><p>Case 1.1: <INSERTION_INDEX_21></p><p>We have 10 choice of <INSERTION_INDEX_22>, 10 choice of <INSERTION_INDEX_23> and each choice of <INSERTION_INDEX_24> has one corresponding choice of <INSERTION_INDEX_25>. In total <INSERTION_INDEX_26> ways.</p><p><br/></p><p>Case 1.2: <INSERTION_INDEX_27></p><p>We have 10 choice for <INSERTION_INDEX_28> (<INSERTION_INDEX_29>), each choice of <INSERTION_INDEX_30> has 2 corresponding choice of <INSERTION_INDEX_31>, thus <INSERTION_INDEX_32> ways.</p><p><br/></p><p>Case 2: <INSERTION_INDEX_33></p><p><INSERTION_INDEX_34>: <INSERTION_INDEX_35> ways.</p><p><INSERTION_INDEX_36>: <INSERTION_INDEX_37> ways.</p><p><INSERTION_INDEX_38>: <INSERTION_INDEX_39> ways.</p><p><INSERTION_INDEX_40>: <INSERTION_INDEX_41> ways.</p><p><INSERTION_INDEX_42>: <INSERTION_INDEX_43> ways.</p><p><INSERTION_INDEX_44>: <INSERTION_INDEX_45> ways.</p><p>In total <INSERTION_INDEX_46> ways.</p><p><br/></p><p>So the answer is <INSERTION_INDEX_47></p><p>~ERiccc</p>",
           "insertions": {
