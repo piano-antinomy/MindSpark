@@ -178,7 +178,7 @@ def build_payload(problem: dict[str, Any], repo_root: Path) -> dict[str, Any]:
     insertions = question.get("insertions") if isinstance(question.get("insertions"), dict) else {}
     question_text = process_question_text(str(question.get("text") or ""), insertions, repo_root)
     choices = extract_choices(question, repo_root)
-    rendered_solutions = [render_solution_text(solution, insertions, repo_root) for solution in (problem.get("solutions") or [])]
+    rendered_solutions = [render_solution_text(solution, insertions, repo_root) for solution in (problem.get("solutions") or [])[:1]]
     return {
         "id": problem.get("id"),
         "questionText": question_text,
@@ -295,6 +295,7 @@ def build_html(problem_set: dict[str, Any], repo_root: Path, output_dir: Path) -
         <div class="question-card">
           <div class="question-card-header"><h3>Problem ${{state.index + 1}} of ${{window.__AMC_PROBLEMS.length}}</h3></div>
           <div class="question-card-body ${{stacked}}">${{questionPane + choicesPane}}</div>
+          <div class="answer-selection p-3" data-answer="${{problem.answer || ''}}">Correct answer: <strong>${{problem.answer || 'Missing'}}</strong></div>
         </div>
       `;
     }}
@@ -365,6 +366,11 @@ async def inspect_page(page, output_dir: Path, viewport_name: str, problem_index
               naturalWidth: img.naturalWidth,
               naturalHeight: img.naturalHeight,
             })),
+            questionText: document.querySelector('.question-text')?.textContent?.trim() || '',
+            choiceLabels: [...document.querySelectorAll('.choice-item .font-medium')].map(el => el.textContent.trim().replace(/:$/, '')),
+            choiceContents: [...document.querySelectorAll('.choice-item .choice-content, .choice-item .question-image-container')].map(el => el.textContent.trim() || (el.querySelector('img') ? 'image' : '')),
+            declaredAnswer: document.querySelector('.answer-selection')?.dataset.answer || '',
+            solutionTexts: [...document.querySelectorAll('.solution-text')].map(el => el.textContent.trim()),
             containers: [...document.querySelectorAll('.question-content-section, .choices-container, .solution-pane')].map(el => ({
               className: el.className,
               scrollHeight: el.scrollHeight,
@@ -378,11 +384,26 @@ async def inspect_page(page, output_dir: Path, viewport_name: str, problem_index
 
     baseline = output_dir / f"{viewport_name}-q{problem_index + 1}-{mode}-baseline.png"
     await page.screenshot(path=str(baseline), full_page=False)
+    snapshot = output_dir / f"{viewport_name}-q{problem_index + 1}-{mode}.html"
+    snapshot.write_text(await page.content(), encoding="utf-8")
 
     if metrics["bodyScrollWidth"] > metrics["innerWidth"] + 2:
         issues.append({"severity": "ERROR", "code": "horizontal-overflow", "message": "body exceeds viewport width", "viewport": viewport_name, "problemIndex": problem_index, "mode": mode})
     if metrics["insertionMarkers"]:
         issues.append({"severity": "ERROR", "code": "unresolved-marker", "message": "render still contains insertion markers", "viewport": viewport_name, "problemIndex": problem_index, "mode": mode})
+    if mode == "question":
+        if not metrics["questionText"]:
+            issues.append({"severity": "ERROR", "code": "empty-rendered-question", "message": "question text is empty after rendering", "viewport": viewport_name, "problemIndex": problem_index, "mode": mode})
+        if len(metrics["choiceLabels"]) != 5:
+            issues.append({"severity": "ERROR", "code": "wrong-rendered-choice-count", "message": f"expected 5 choices, found {len(metrics['choiceLabels'])}", "viewport": viewport_name, "problemIndex": problem_index, "mode": mode})
+        elif metrics["choiceLabels"] != list("ABCDE"):
+            issues.append({"severity": "ERROR", "code": "wrong-rendered-choice-labels", "message": f"expected labels A-E, found {metrics['choiceLabels']}", "viewport": viewport_name, "problemIndex": problem_index, "mode": mode})
+        if len(metrics["choiceContents"]) != 5 or any(not content for content in metrics["choiceContents"]):
+            issues.append({"severity": "ERROR", "code": "empty-rendered-choice", "message": "one or more rendered choices have no visible content", "viewport": viewport_name, "problemIndex": problem_index, "mode": mode})
+        if metrics["declaredAnswer"] not in set("ABCDE"):
+            issues.append({"severity": "ERROR", "code": "missing-rendered-answer", "message": "declared answer is not one of A-E", "viewport": viewport_name, "problemIndex": problem_index, "mode": mode})
+    elif not metrics["solutionTexts"] or any(not text for text in metrics["solutionTexts"]):
+        issues.append({"severity": "ERROR", "code": "empty-rendered-solution", "message": "solution text is empty after rendering", "viewport": viewport_name, "problemIndex": problem_index, "mode": mode})
 
     for image in metrics["images"]:
         if not image["complete"] or image["naturalWidth"] == 0 or image["naturalHeight"] == 0:

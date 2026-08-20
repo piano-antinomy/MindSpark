@@ -1,6 +1,8 @@
 export function buildApiHeaders(initHeaders = {}) {
   const headers = { ...initHeaders };
-  if (process.env.REACT_APP_LOCAL_MODE === 'false') {
+  const isLocalMode = process.env.REACT_APP_LOCAL_MODE === 'true'
+    || ['localhost', '127.0.0.1'].includes(window.location.hostname);
+  if (!isLocalMode) {
     const idToken = localStorage.getItem('idToken');
     if (idToken) {
       headers['Authorization'] = `Bearer ${idToken}`;
@@ -20,7 +22,8 @@ function handleAuthFailure() {
 
 export async function apiFetch(url, options = {}) {
   const headers = buildApiHeaders(options.headers || {});
-  const isLocalMode = process.env.REACT_APP_LOCAL_MODE === 'true';
+  const isLocalMode = process.env.REACT_APP_LOCAL_MODE === 'true'
+    || ['localhost', '127.0.0.1'].includes(window.location.hostname);
 
   try {
     const response = await fetch(url, { credentials: 'include', ...options, headers });
