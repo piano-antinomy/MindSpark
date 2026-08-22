@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
+  const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState('');
   const [showInAppBrowserWarning, setShowInAppBrowserWarning] = useState(false);
   const [oauthUrl, setOauthUrl] = useState('');
   const JAVA_API_BASE_URL = process.env.REACT_APP_API_BASE_URL || `http://${window.location.hostname}:4072/api`;
+  const isLocalReview = ['localhost', '127.0.0.1'].includes(window.location.hostname);
 
   // Cognito config (prefer env vars, with safe defaults)
   const COGNITO_DOMAIN = process.env.REACT_APP_COGNITO_DOMAIN || 'https://us-east-1kfqvyjnce.auth.us-east-1.amazoncognito.com';
@@ -116,6 +118,17 @@ function Login() {
     }
   };
 
+  const handleLocalSignIn = () => {
+    localStorage.setItem('currentUser', JSON.stringify({
+      username: 'local-reviewer',
+      userId: 'local-reviewer',
+      score: 0,
+      mathLevel: 3,
+      avatarLink: '1'
+    }));
+    navigate('/');
+  };
+
   const handleOpenInExternalBrowser = () => {
     if (oauthUrl) {
       // Try to open in external browser
@@ -159,7 +172,7 @@ function Login() {
         <form className="login-form">
           <button
             type="button"
-            onClick={handleGoogle}
+            onClick={isLocalReview ? handleLocalSignIn : handleGoogle}
             className="btn btn-secondary btn-full"
             style={{
               marginTop: '10px',
@@ -173,7 +186,7 @@ function Login() {
               backgroundColor: '#121212',
               color: '#fff'
             }}
-            aria-label="Continue with Google"
+            aria-label={isLocalReview ? 'Continue locally' : 'Continue with Google'}
           >
             <svg aria-hidden="true" width="20" height="20" viewBox="0 0 48 48">
               <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.64 4.657-6.086 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.156 7.961 3.039l5.657-5.657C34.869 6.053 29.692 4 24 4 12.954 4 4 12.954 4 24s8.954 20 20 20 20-8.954 20-20c0-1.341-.138-2.651-.389-3.917z"/>
@@ -181,7 +194,7 @@ function Login() {
               <path fill="#4CAF50" d="M24 44c5.565 0 10.63-2.138 14.39-5.61l-6.636-5.602C29.6 34.865 26.94 36 24 36c-5.196 0-9.63-3.317-11.265-7.957l-6.56 5.056C9.34 39.648 16.116 44 24 44z"/>
               <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.759 2.147-2.148 3.995-3.942 5.317l.003-.002 6.636 5.602C39.56 40.056 44 32 44 24c0-1.341-.138-2.651-.389-3.917z"/>
             </svg>
-            <span>Continue with Google</span>
+            <span>{isLocalReview ? 'Continue Locally' : 'Continue with Google'}</span>
           </button>
           
           {errorMessage && (
