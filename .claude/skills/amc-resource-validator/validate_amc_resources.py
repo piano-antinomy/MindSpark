@@ -621,16 +621,17 @@ def validate_question(
 
     question_markers = extract_markers(qtext)
     solutions = problem.get("solutions") or []
+    reviewed_solutions: list[Any] = []
     if not isinstance(solutions, list):
         report.issues.append(
             Issue("ERROR", "bad-solutions-array", f"{problem_id}: solutions must be an array", rel(file_path, repo_root), problem_id)
         )
         solutions = []
     else:
-        primary_solution = solutions[:1]
+        reviewed_solutions = solutions[:2]
 
     all_insertion_text = [qtext]
-    for solution in primary_solution if isinstance(solutions, list) else []:
+    for solution in reviewed_solutions:
         if isinstance(solution, dict):
             all_insertion_text.append(flatten_text(solution.get("text") or solution.get("content") or solution.get("value")))
         else:
@@ -694,7 +695,7 @@ def validate_question(
             Issue("ERROR", "missing-solutions", f"{problem_id}: solutions array is empty", rel(file_path, repo_root), problem_id)
         )
     else:
-        for idx, solution in enumerate(solutions[:1]):
+        for idx, solution in enumerate(solutions[:2]):
             validate_solution(solution, insertions, problem_id, report, repo_root, check_urls, timeout, idx, answer)
 
     if competition_group and expected_group and competition_group != expected_group:

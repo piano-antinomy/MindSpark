@@ -178,7 +178,7 @@ def build_payload(problem: dict[str, Any], repo_root: Path) -> dict[str, Any]:
     insertions = question.get("insertions") if isinstance(question.get("insertions"), dict) else {}
     question_text = process_question_text(str(question.get("text") or ""), insertions, repo_root)
     choices = extract_choices(question, repo_root)
-    rendered_solutions = [render_solution_text(solution, insertions, repo_root) for solution in (problem.get("solutions") or [])[:1]]
+    rendered_solutions = [render_solution_text(solution, insertions, repo_root) for solution in (problem.get("solutions") or [])[:2]]
     return {
         "id": problem.get("id"),
         "questionText": question_text,
