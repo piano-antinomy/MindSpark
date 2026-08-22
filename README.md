@@ -1,212 +1,143 @@
-# MindSpark Learning Platform
+# MindSpark
 
-Welcome to the MindSpark learning space! A comprehensive educational platform that provides personalized learning experiences across multiple subjects.
+MindSpark is a math-learning web application built around AMC 8, AMC 10, and AMC 12 problem sets. Learners sign in, choose an exam level and year, practice questions with MathJax-rendered content, take quizzes, view solutions and progress, and submit feedback.
 
-## 🚀 Features
+The active application is a React frontend and a Java API. The old Python/Flask setup described by historical files is not the current runtime.
 
-- **User Authentication**: Secure login system with test credentials
-- **Personalized Dashboard**: Track your progress and scores
-- **Subject Selection**: Choose from Math, Music, Chess, Python, and Java (Math currently implemented)
-- **Level Assessment**: Automatic skill level evaluation
-- **Interactive Learning**: Lessons with examples and explanations
-- **Quiz System**: Test your knowledge with generated quizzes
-- **Score Tracking**: Monitor your learning progress
-- **Modern UI**: Beautiful, responsive design
+## Start here (agents and contributors)
 
-## 📁 Project Structure
+Before changing code or AMC resources:
 
-```
-MindSpark/
-├── backend/           # Python Flask API
-│   ├── app.py        # Main Flask application
-│   └── requirements.txt
-├── website/          # Node.js Frontend
-│   ├── server.js     # Express server
-│   ├── package.json  # Node dependencies
-│   └── public/       # Static files
-│       ├── index.html    # Landing page
-│       ├── login.html    # Login page
-│       ├── dashboard.html # User dashboard
-│       ├── subjects.html  # Subject selection
-│       ├── math.html     # Math learning module
-│       ├── css/
-│       │   └── styles.css # Stylesheet
-│       └── js/
-│           ├── auth.js      # Authentication
-│           ├── dashboard.js # Dashboard functionality
-│           ├── subjects.js  # Subject selection
-│           └── math.js      # Math learning logic
-└── README.md         # This file
-```
+1. Read this README.
+2. List `.claude/skills/*/SKILL.md`.
+3. Read the `SKILL.md` file for the task you are performing, plus every file it explicitly references. For example, AMC resource work requires the JSON-schema skill and the appropriate validation skill.
+4. Follow the skill's validation and confirmation requirements. In particular, do not automatically apply AI-proposed answer or solution changes.
 
-## 🛠️ Setup Instructions
+The task-specific skills are:
 
-### Prerequisites
+| Skill | Use when |
+| --- | --- |
+| [`amc-question-json-structure`](.claude/skills/amc-question-json-structure/SKILL.md) | Understanding AMC JSON, Java models, or frontend question/solution rendering |
+| [`amc-resource-validator`](.claude/skills/amc-resource-validator/SKILL.md) | Validating AMC resources, browser rendering, or AI review of problems and solutions |
+| [`amc-resource-quality-control`](.claude/skills/amc-resource-quality-control/SKILL.md) | Checking rendered choice length and readability |
+| [`amc-ai-solution-sync`](.claude/skills/amc-ai-solution-sync/SKILL.md) | Copying matching AI solutions into question resources |
+| [`amc-categorization-apply-with-validation`](.claude/skills/amc-categorization-apply-with-validation/SKILL.md) | Applying validated category overrides to AMC resources |
+| [`python-scripts-setup`](.claude/skills/python-scripts-setup/SKILL.md) | Running parsing, labeling, and other Python utilities |
+| [`run-app-locally`](.claude/skills/run-app-locally/SKILL.md) | Running the complete local application stack |
 
-- Python 3.7+
-- Node.js 14+
-- npm or yarn
+## Architecture
 
-### Option 1: Quick Start (Automated)
+```text
+website/                         React 18 single-page application
+  src/components/                Screens: login, subjects, practice, quizzes, solutions, etc.
+  src/utils/                     API client and question/solution parsers
+  public/resources/images/       Local images referenced by AMC content
 
-**For macOS/Linux:**
-```bash
-./start.sh
+backend-java/                    Java 17 API
+  src/main/java/com/mindspark/   Jetty + Guice controllers, services, and AWS adapters
+  resources/math/questions/      Canonical AMC question JSON, grouped by AMC_8, AMC_10, AMC_12
+  resources/math/ai/             AI-generated solution data paired with question files
+  questions/                     Legacy/import source data; not the canonical editable resource path
+
+scripts/python/                  AMC parsing, labeling, and validation utilities
+.claude/skills/                  Task-specific agent instructions and helpers
 ```
 
-**For Windows:**
-```bash
-start.bat
+### Runtime flow
+
+1. The React app uses `REACT_APP_API_BASE_URL`, or defaults to `http://<host>:4072/api`.
+2. The Java backend serves the API on port `4072`.
+3. In local mode, the Java `QuestionService` reads `backend-java/resources/math/questions/` from the filesystem.
+4. In deployed mode, the backend reads question data from S3 and uses AWS services for persistence.
+5. DynamoDB stores user progress and quiz data. Local development uses DynamoDB Local on port `7076`.
+
+Level mapping is fixed: **1 = AMC 8**, **2 = AMC 10**, and **3 = AMC 12**.
+
+## Technology
+
+| Area | Implementation |
+| --- | --- |
+| Frontend | React 18, React Router, MathJax, Express static server |
+| API | Java 17, Jetty, Guice, Jackson |
+| Data and cloud | DynamoDB, S3, AWS Lambda/CDK |
+| Content tooling | Python 3 utilities |
+
+## Run locally
+
+Prerequisites: Java 17, Maven, Node.js with npm, and Python 3 for content tooling.
+
+1. Set up DynamoDB Local once:
+
+   ```bash
+   cd backend-java
+   bash setup-dynamodb-local.sh
+   bash test-dynamodb-local.sh
+   ```
+
+2. Start the Java API in local mode:
+
+   ```bash
+   cd backend-java
+   bash run.sh --local
+   ```
+
+3. In another terminal, start the React development server:
+
+   ```bash
+   cd website
+   npm install
+   npm run react-start
+   ```
+
+Open `http://localhost:3000`. Localhost uses a local review sign-in rather than the production Cognito redirect.
+
+For a production-style frontend server, run `npm run build && npm start` in `website/`. The Express server serves the generated `website/build/` directory.
+
+## API surface
+
+The Java API is mounted below `/api` on port `4072`.
+
+| Area | Examples |
+| --- | --- |
+| Authentication | `POST /auth/login`, `POST /auth/logout`, `GET /auth/profile`, `GET /auth/status` |
+| Subjects and questions | `GET /subjects`, `GET /questions/math`, `GET /questions/math/level/{level}/years`, `GET /questions/math/level/{level}/year/{year}` |
+| Progress and quizzes | `POST /progress/track`, `GET /progress/user/{userId}`, `POST /quiz/create`, `GET /quiz/user/{userId}` |
+| Community | `GET /leaderboard/*`, `POST /feedback/submit` |
+
+See [`backend-java/README.md`](backend-java/README.md) for the backend's endpoint details. Some older documentation describes legacy endpoints or implementation history; prefer this README, the code, and the task skills when they disagree.
+
+## AMC content workflow
+
+The canonical content location is:
+
+```text
+backend-java/resources/math/questions/{AMC_8,AMC_10,AMC_12}/*.json
 ```
 
-The automated scripts will handle dependency installation and start both servers automatically.
+Each file contains `competition_info` and a `problems` array. Problems include an ID, question payload, answer, and solutions. Rendering supports text, LaTeX, image insertions, and text/LaTeX/image choices.
 
-### Option 2: Manual Setup
+For any resource edit:
 
-If you prefer to start the servers manually or need more control:
+1. Read `amc-question-json-structure`.
+2. Run the static and browser checks in `amc-resource-validator`.
+3. Run the required AI quality review generated by that skill.
+4. For answer corrections or generated solutions, obtain explicit user confirmation before modifying the resource.
+5. Review the edited resource in the locally running application.
 
-#### 1. Backend Setup (Python Flask)
+Common commands are documented in the linked skills; run them from the repository root unless the skill says otherwise.
 
-**Terminal 1 - Backend Server:**
-```bash
-cd backend
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python app.py
-```
+## Development map
 
-The backend will start on `http://localhost:4092`
+- **Frontend behavior and routes:** `website/src/App.js` and `website/src/components/`
+- **Question rendering:** `website/src/components/QuestionRenderer.js`, `website/src/utils/QuestionParser.js`, and `website/src/utils/SolutionParser.js`
+- **API wiring:** `backend-java/src/main/java/com/mindspark/MindSparkApplication.java`
+- **Dependency injection and local/production service choice:** `backend-java/src/main/java/com/mindspark/config/MindSparkModule.java`
+- **Question loading:** `backend-java/src/main/java/com/mindspark/service/CacheBackedQuestionServiceImpl.java`
+- **AWS infrastructure:** `backend-java/src/main/java/com/mindspark/aws/cdk/`
 
-#### 2. Frontend Setup (Node.js)
+## Useful references
 
-**Terminal 2 - Frontend Server:**
-```bash
-cd website
-npm install
-npm start
-```
-
-The website will be available at `http://localhost:3000`
-
-**Note:** Both servers must be running simultaneously for the platform to work properly.
-
-## 🎓 How to Use
-
-### Test Credentials
-
-Use these credentials to log in:
-
-**Account 1:**
-- Username: `student1`
-- Password: `password123`
-
-**Account 2:**
-- Username: `demo`
-- Password: `demo123`
-
-### Learning Flow
-
-1. **Login**: Use the test credentials to access the platform
-2. **Dashboard**: View your progress and scores
-3. **Choose Subject**: Select Mathematics (other subjects coming soon)
-4. **Take Assessment**: Evaluate your current level
-5. **Learn Topics**: Study lessons based on your level
-6. **Take Quizzes**: Test your understanding
-7. **Track Progress**: Monitor your scores and achievements
-
-### Mathematics Learning
-
-The math module includes:
-
-- **Beginner Level**: Basic Addition, Basic Subtraction, Numbers 1-100
-- **Intermediate Level**: Multiplication, Division, Fractions
-- **Advanced Level**: Algebra, Geometry, Calculus Basics
-
-Each topic includes:
-- Comprehensive lessons with explanations
-- Real-world examples
-- Interactive quizzes with random questions
-- Progress tracking and scoring
-
-## 🎯 Current Implementation Status
-
-✅ **Completed:**
-- User authentication system
-- Dashboard with score tracking
-- Mathematics learning module
-- Level assessment
-- Interactive quizzes
-- Responsive design
-- Backend API integration
-
-🚧 **Coming Soon:**
-- Music learning module
-- Chess training
-- Python coding tutorials
-- Java programming lessons
-- Enhanced progress analytics
-
-## 🔧 Technical Details
-
-### Backend (Python Flask)
-- RESTful API design
-- Session-based authentication
-- In-memory data storage (demo)
-- Dynamic quiz generation
-- CORS enabled for frontend integration
-
-### Frontend (Node.js + Vanilla JS)
-- Express.js server for static file serving
-- Modern ES6+ JavaScript
-- Fetch API for backend communication
-- Responsive CSS Grid and Flexbox
-- Local storage for client-side state management
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **Backend not accessible**: Ensure Flask server is running on port 5000
-2. **Frontend not loading**: Check if Node.js server is running on port 3000
-3. **Login fails**: Verify backend server is running and accessible
-4. **CORS errors**: Make sure both servers are running on specified ports
-
-### Error Messages
-
-- **"Connection error"**: Backend server is not running
-- **"Authentication required"**: Session expired, please log in again
-- **"Failed to load"**: Network connectivity issue
-
-## 📝 Development Notes
-
-This is a demonstration project showing:
-- Organized full-stack architecture
-- Separation of concerns between frontend and backend
-- RESTful API design
-- Modern web development practices
-- Educational technology implementation
-
-For production use, consider:
-- Database integration (PostgreSQL, MongoDB)
-- Enhanced security measures
-- User registration system
-- Advanced progress analytics
-- Mobile app development
-
-## 🤝 Contributing
-
-This project is set up for educational purposes. To extend functionality:
-
-1. Add new subjects in the backend `math_content` pattern
-2. Create corresponding frontend pages and JavaScript modules
-3. Implement additional assessment types
-4. Enhance the scoring system
-
-## 📜 License
-
-This project is created for educational demonstration purposes.
-
----
-
-**Welcome to the MindSpark learning space!** 🎓✨
+- [`website/README.md`](website/README.md) - frontend commands and layout
+- [`backend-java/README.md`](backend-java/README.md) - backend setup and API details
+- [`backend-java/DYNAMODB_LOCAL_SETUP.md`](backend-java/DYNAMODB_LOCAL_SETUP.md) - local DynamoDB notes
+- [`scripts/python/requirements.txt`](scripts/python/requirements.txt) - Python tooling dependencies
