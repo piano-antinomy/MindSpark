@@ -1,6 +1,8 @@
 # Run app locally (MindSpark)
 
-Use this skill to start the MindSpark Java backend + website locally, with DynamoDB Local for quiz/progress data.
+Use this skill to review MindSpark from an isolated worktree. It runs the Java
+backend against DynamoDB Local and builds the website so that all browser calls,
+local sign-in, and redirects stay on localhost.
 
 ## Prerequisites
 
@@ -8,13 +10,16 @@ Use this skill to start the MindSpark Java backend + website locally, with Dynam
 - Node.js + npm installed
 - Maven installed (`mvn`)
 
-## 1) Set up DynamoDB Local (one-time)
+## 1) Install dependencies and set up DynamoDB Local (one-time)
 
 From repo root:
 
 ```bash
 cd backend-java
 bash setup-dynamodb-local.sh
+
+cd ../website
+npm install
 ```
 
 This installs:
@@ -35,7 +40,15 @@ Expected behavior:
 - confirms port is listening
 - stops it cleanly
 
-## 3) Start backend in local mode
+If this fails because port `7076` is already in use, identify the exact process:
+
+```bash
+lsof -nP -iTCP:7076 -sTCP:LISTEN
+```
+
+Stop only the reported stale process, then rerun the command.
+
+## 3) Start the backend in local mode
 
 ```bash
 cd backend-java
@@ -47,22 +60,64 @@ Important:
 - local mode is enabled via JVM property: `-Dmindspark.local.mode=true`
 - backend local DynamoDB client points to `http://localhost:7076`
 - in local mode, backend attempts to start DynamoDB Local itself
+- leave this terminal running
 
-## 4) Start frontend
+In a separate terminal, verify that the backend is serving the local API:
 
-In another terminal:
+```bash
+curl --fail http://localhost:4072/api/questions/math/
+curl --fail http://localhost:4072/api/quiz/user/local-reviewer
+```
+
+If port `4072` is already in use, identify the exact listener:
+
+```bash
+lsof -nP -iTCP:4072 -sTCP:LISTEN
+```
+
+Stop only the reported stale process before starting the backend again.
+
+## 4) Build and start the frontend in local mode
+
+In a separate terminal:
 
 ```bash
 cd website
-npm install
+REACT_APP_LOCAL_MODE=true \
+REACT_APP_API_BASE_URL=http://localhost:4072/api \
+REACT_APP_REDIRECT_URI=http://localhost:3000 \
+npm run build
 npm start
 ```
 
 Frontend runs on `http://localhost:3000`.
 
-- Sign-in on `localhost` uses a local review session and must stay on the local site. Do not use the production Cognito redirect while reviewing a worktree.
+Do not omit the three build-time variables. `npm start` serves the existing
+production build; without these variables, `.env.production` directs API calls
+and Cognito redirects to production instead of localhost.
 
-## 5) Local DDB admin UI (optional)
+If port `3000` is already in use, identify the exact listener:
+
+```bash
+lsof -nP -iTCP:3000 -sTCP:LISTEN
+```
+
+Stop only the reported stale process, then rerun the local build and server.
+
+## 5) Review local sign-in and quiz behavior
+
+1. Open `http://localhost:3000`.
+2. Navigate to sign-in.
+3. Confirm the button reads **Continue Locally**, not **Continue with Google**.
+4. Select **Continue Locally**. It creates the `local-reviewer` review session
+   and returns to the local home page without opening Cognito.
+5. Open a quiz and navigate between questions. The local review session must
+   remain active, even if a local API response is `401`.
+
+The local behavior applies only on `localhost` or `127.0.0.1`. Never use the
+production Cognito flow while reviewing a worktree locally.
+
+## 6) Local DDB admin UI (optional)
 
 Current helper script:
 
